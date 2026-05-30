@@ -1,0 +1,94 @@
+function syncExpenseCurrencyFromSettings() {
+  if (!els.settingsCurrencySelect || !els.currencySelect) return;
+  const selected = els.settingsCurrencySelect.value;
+  if (selected && els.currencySelect.querySelector(`option[value="${selected}"]`)) {
+    els.currencySelect.value = selected;
+    syncCustomSelect(els.currencySelect);
+  }
+}
+
+function syncSettingsCurrencyFromExpense() {
+  if (!els.settingsCurrencySelect || !els.currencySelect) return;
+  const selected = els.currencySelect.value;
+  if (selected && els.settingsCurrencySelect.querySelector(`option[value="${selected}"]`)) {
+    els.settingsCurrencySelect.value = selected;
+  }
+}
+
+function syncExpenseExchangeRateFromSettings() {
+  if (!els.settingsExchangeRateInput || !els.exchangeRateInput) return;
+  els.exchangeRateInput.value = els.settingsExchangeRateInput.value;
+}
+
+function syncSettingsExchangeRateFromExpense() {
+  if (!els.settingsExchangeRateInput || !els.exchangeRateInput) return;
+  if (els.exchangeRateInput.value) {
+    els.settingsExchangeRateInput.value = els.exchangeRateInput.value;
+  }
+}
+
+function ensureExpenseExchangeDefaults() {
+  syncExpenseCurrencyFromSettings();
+  if (els.settingsExchangeRateInput?.value && !els.exchangeRateInput.value) {
+    syncExpenseExchangeRateFromSettings();
+  }
+}
+
+function renderModeControls() {
+  const isOverseas = state.travelMode === "overseas";
+  const isLodging = isLodgingSplitMode();
+  updateBrandText();
+  els.domesticModeButton.classList.toggle("active", !isOverseas);
+  els.overseasModeButton.classList.toggle("active", isOverseas);
+  els.domesticModeButton.setAttribute("aria-pressed", String(!isOverseas));
+  els.overseasModeButton.setAttribute("aria-pressed", String(isOverseas));
+  els.settingsCurrencyArea.hidden = !isOverseas;
+  els.settingsDomesticTip.hidden = isOverseas;
+  els.foreignFields.hidden = !isOverseas;
+  if (isOverseas) ensureExpenseExchangeDefaults();
+  els.amountLabel.textContent = isLodging ? (isOverseas ? "원화 총액" : "숙소 총액") : isOverseas ? "원화 환산" : "금액";
+  els.amountInput.readOnly = isOverseas;
+  els.amountInput.required = true;
+  els.amountInput.placeholder = isLodging ? "총 숙소비" : isOverseas ? "자동 계산" : "0";
+  els.amountInput.step = "1";
+  updateExchangeRateGuide();
+  syncCustomSelect(els.currencySelect, { rebuild: true });
+
+  if (isOverseas) updateConvertedAmount();
+  renderExpenseFormMode();
+}
+
+function updateConvertedAmount() {
+  if (state.travelMode !== "overseas") return;
+  const currency = getCurrencyMeta(els.currencySelect.value);
+  const foreignAmount = Math.max(0, Number(els.foreignAmountInput.value || 0));
+  const exchangeRate = Math.max(0, Number(els.exchangeRateInput.value || 0));
+  const converted = Math.round((foreignAmount * exchangeRate) / currency.rateBase);
+  els.amountInput.value = converted || "";
+  updateLodgingPreview();
+}
+
+function updateExchangeRateGuide() {
+  const currency = getCurrencyMeta(els.currencySelect.value);
+  const baseLabel = formatRateBase(currency);
+  els.exchangeRateLabel.textContent = `환율 (${baseLabel} 기준)`;
+  els.exchangeRateInput.placeholder = `${baseLabel}당 원화`;
+  els.exchangeRateInput.title = `${baseLabel}당 원화 환율을 입력하세요.`;
+  if (els.settingsExchangeRateLabel) {
+    const rate = Number(els.settingsExchangeRateInput?.value || els.exchangeRateInput.value || 0);
+    els.settingsExchangeRateLabel.textContent = rate
+      ? `${baseLabel} = ${rate.toLocaleString("ko-KR", { maximumFractionDigits: 2 })}원`
+      : `${baseLabel}당 원화`;
+  }
+}
+
+window.TripLog.register("features.expenses.currencyControls", {
+  syncExpenseCurrencyFromSettings,
+  syncSettingsCurrencyFromExpense,
+  syncExpenseExchangeRateFromSettings,
+  syncSettingsExchangeRateFromExpense,
+  ensureExpenseExchangeDefaults,
+  renderModeControls,
+  updateConvertedAmount,
+  updateExchangeRateGuide,
+});
