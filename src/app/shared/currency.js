@@ -16,6 +16,28 @@ function getEntryCurrency(entry) {
   };
 }
 
+function getPreferredCurrencyMeta(sourceState = state) {
+  const liveCode = sourceState === state
+    ? els.settingsCurrencySelect?.value || els.currencySelect?.value
+    : "";
+  const fallback = getCurrencyMeta(sourceState?.currencyCode || liveCode || "JPY");
+  return {
+    ...fallback,
+    symbol: sourceState?.currencySymbol || fallback.symbol,
+    unit: sourceState?.currencyUnit || fallback.unit,
+    rateBase: Number(sourceState?.exchangeBase || fallback.rateBase || 1),
+  };
+}
+
+function setPreferredCurrency(code) {
+  const currency = getCurrencyMeta(code);
+  state.currencyCode = currency.code;
+  state.currencySymbol = currency.symbol;
+  state.currencyUnit = currency.unit;
+  state.exchangeBase = currency.rateBase;
+  return currency;
+}
+
 function getEditableExchangeRate(entry) {
   if (!isForeignEntry(entry)) return "";
   if (entry.exchangeBase) return entry.exchangeRate || "";
@@ -71,6 +93,8 @@ window.TripLog.register("shared.currency", {
   isForeignEntry,
   getCurrencyMeta,
   getEntryCurrency,
+  getPreferredCurrencyMeta,
+  setPreferredCurrency,
   getEditableExchangeRate,
   getDefaultTripName,
   getSnapshotDefaultTripName,

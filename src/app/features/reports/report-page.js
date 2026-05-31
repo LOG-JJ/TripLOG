@@ -7,7 +7,9 @@ function renderReportPage(totals, days) {
     const maxVal = totals.maxEntry ? totals.maxEntry.amount : 0;
     const maxDesc = totals.maxEntry ? totals.maxEntry.description : "-";
     reportMaxExpenseTitle.textContent = maxDesc;
-    reportMaxExpenseAmount.textContent = formatCurrency(maxVal);
+    reportMaxExpenseAmount.textContent = totals.maxEntry && isForeignEntry(totals.maxEntry)
+      ? formatEntryAmountText(totals.maxEntry)
+      : formatCurrency(maxVal);
 
     const activeDays = days.length || 1;
     const dailyAvg = totals.total / activeDays;

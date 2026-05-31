@@ -1,5 +1,5 @@
 (() => {
-  const scriptVersion = "mobile-no-scroll-2";
+  const scriptVersion = "ui-polish-20260531-9";
   const scriptFiles = [
     "core/namespace.js",
     "core/config.js",

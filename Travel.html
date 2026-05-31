@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>여행 가계부</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css?v=mobile-no-scroll-2" />
+    <link rel="stylesheet" href="./styles.css?v=ui-polish-20260531-9" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   </head>
@@ -446,13 +446,13 @@
         </div>
 
         <!-- 5. 실시간 인사이트 스티커 보드 -->
-        <div class="insight-stickers-wrap" style="display: flex; gap: 16px; margin-top: 24px; flex-wrap: wrap;">
-          <div class="insight-sticker max-expense" style="flex: 1; min-width: 250px; background: #ffe45c; border: 3px solid var(--line); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow-sm);">
+        <div class="insight-stickers-wrap" style="display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap;">
+          <div class="insight-sticker max-expense" style="flex: 1; min-width: 250px; background: #ffe45c; border: 2.5px solid var(--line); border-radius: var(--radius-sm); padding: 14px; box-shadow: var(--shadow-sm);">
             <p style="font-size: 11px; font-weight: 800; text-transform: uppercase;">🏆 최대 단일 지출</p>
             <h4 id="reportMaxExpenseTitle" style="font-size: 15px; font-weight: 900; margin: 4px 0 8px;">-</h4>
             <strong id="reportMaxExpenseAmount" style="font-size: 20px; font-weight: 900;">0원</strong>
           </div>
-          <div class="insight-sticker avg-expense" style="flex: 1; min-width: 250px; background: #d1fae5; border: 3px solid var(--line); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow-sm);">
+          <div class="insight-sticker avg-expense" style="flex: 1; min-width: 250px; background: #d1fae5; border: 2.5px solid var(--line); border-radius: var(--radius-sm); padding: 14px; box-shadow: var(--shadow-sm);">
             <p style="font-size: 11px; font-weight: 800; text-transform: uppercase;">💸 하루 평균 지출</p>
             <h4 style="font-size: 15px; font-weight: 900; margin: 4px 0 8px;">여행 일차별 평균</h4>
             <strong id="reportAvgExpenseAmount" style="font-size: 20px; font-weight: 900;">0원</strong>
@@ -562,10 +562,6 @@
               <span>일정 기간</span>
               <strong id="itineraryDateRange">-</strong>
             </div>
-            <div>
-              <span>등록 일정</span>
-              <strong id="itineraryCount">0건</strong>
-            </div>
             <div class="itinerary-route-card">
               <span>하루 전체 경로</span>
               <button class="text-button inline-route-btn" id="itineraryRouteButton" type="button" title="오늘 일정 동선 구글맵 연결">
@@ -665,9 +661,15 @@
                 <span>메모</span>
                 <input id="itineraryMemoInput" type="text" maxlength="80" placeholder="예약 시간, 준비물, 이동 팁 등" />
               </label>
-              <div class="wide sync-checkbox-row">
-                <input type="checkbox" id="itinerarySyncExpenseCheckbox" checked />
-                <label for="itinerarySyncExpenseCheckbox">기입한 이동 비용을 가계부(교통비)에 자동으로 등록 및 연동합니다.</label>
+              <div class="wide sync-toggle-row">
+                <input class="sync-toggle-input" type="checkbox" id="itinerarySyncExpenseCheckbox" checked />
+                <label class="sync-toggle" for="itinerarySyncExpenseCheckbox">
+                  <span class="sync-toggle-control" aria-hidden="true"></span>
+                  <span class="sync-toggle-copy">
+                    <strong>교통비 자동 연동</strong>
+                    <small>이동 비용을 입력하면 지출 기록에 함께 저장</small>
+                  </span>
+                </label>
               </div>
               <button class="submit-button" id="itinerarySubmitButton" type="submit">
                 <svg viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14" /></svg>
@@ -775,6 +777,6 @@
       </div>
     </template>
 
-    <script src="./app.js?v=mobile-no-scroll-2"></script>
+    <script src="./app.js?v=ui-polish-20260531-9"></script>
   </body>
 </html>

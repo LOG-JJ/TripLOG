@@ -7,6 +7,10 @@ function loadState() {
     selectedDate: "2026-06-09",
     selectedItineraryDate: "2026-06-09",
     selectedItineraryId: "",
+    currencyCode: "JPY",
+    currencySymbol: "¥",
+    currencyUnit: "엔",
+    exchangeBase: 100,
     entries: [],
     itineraryItems: [],
     packingList: getDefaultPackingList(),
@@ -24,10 +28,15 @@ function loadState() {
     if (!saved || typeof saved !== "object") return fallback;
     const normalizedTripName =
       isLegacyDefaultTripName(saved.tripName) && hasNoSavedRecords(saved) ? "" : typeof saved.tripName === "string" ? saved.tripName : "";
+    const preferredCurrency = currencies.find((currency) => currency.code === saved.currencyCode) || currencies[0];
     return {
       ...fallback,
       ...saved,
       tripName: normalizedTripName,
+      currencyCode: preferredCurrency.code,
+      currencySymbol: saved.currencySymbol || preferredCurrency.symbol,
+      currencyUnit: saved.currencyUnit || preferredCurrency.unit,
+      exchangeBase: Number(saved.exchangeBase || preferredCurrency.rateBase || 1),
       entries: Array.isArray(saved.entries) ? saved.entries : [],
       itineraryItems: Array.isArray(saved.itineraryItems) ? saved.itineraryItems : [],
       packingList: Array.isArray(saved.packingList) ? saved.packingList : getDefaultPackingList(),

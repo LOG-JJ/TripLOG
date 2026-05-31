@@ -1,17 +1,30 @@
 function syncExpenseCurrencyFromSettings() {
   if (!els.settingsCurrencySelect || !els.currencySelect) return;
-  const selected = els.settingsCurrencySelect.value;
-  if (selected && els.currencySelect.querySelector(`option[value="${selected}"]`)) {
-    els.currencySelect.value = selected;
+  const currency = setPreferredCurrency(els.settingsCurrencySelect.value);
+  if (currency.code && els.currencySelect.querySelector(`option[value="${currency.code}"]`)) {
+    els.currencySelect.value = currency.code;
     syncCustomSelect(els.currencySelect);
   }
 }
 
 function syncSettingsCurrencyFromExpense() {
   if (!els.settingsCurrencySelect || !els.currencySelect) return;
-  const selected = els.currencySelect.value;
-  if (selected && els.settingsCurrencySelect.querySelector(`option[value="${selected}"]`)) {
-    els.settingsCurrencySelect.value = selected;
+  const currency = setPreferredCurrency(els.currencySelect.value);
+  if (currency.code && els.settingsCurrencySelect.querySelector(`option[value="${currency.code}"]`)) {
+    els.settingsCurrencySelect.value = currency.code;
+  }
+}
+
+function syncCurrencyControlsFromPreferred() {
+  if (!els.settingsCurrencySelect || !els.currencySelect) return;
+  const currency = setPreferredCurrency(getPreferredCurrencyMeta().code);
+  if (els.settingsCurrencySelect.querySelector(`option[value="${currency.code}"]`)) {
+    els.settingsCurrencySelect.value = currency.code;
+    syncCustomSelect(els.settingsCurrencySelect);
+  }
+  if (els.currencySelect.querySelector(`option[value="${currency.code}"]`)) {
+    els.currencySelect.value = currency.code;
+    syncCustomSelect(els.currencySelect);
   }
 }
 
@@ -28,7 +41,7 @@ function syncSettingsExchangeRateFromExpense() {
 }
 
 function ensureExpenseExchangeDefaults() {
-  syncExpenseCurrencyFromSettings();
+  syncCurrencyControlsFromPreferred();
   if (els.settingsExchangeRateInput?.value && !els.exchangeRateInput.value) {
     syncExpenseExchangeRateFromSettings();
   }
@@ -85,6 +98,7 @@ function updateExchangeRateGuide() {
 window.TripLog.register("features.expenses.currencyControls", {
   syncExpenseCurrencyFromSettings,
   syncSettingsCurrencyFromExpense,
+  syncCurrencyControlsFromPreferred,
   syncExpenseExchangeRateFromSettings,
   syncSettingsExchangeRateFromExpense,
   ensureExpenseExchangeDefaults,

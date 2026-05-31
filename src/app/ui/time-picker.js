@@ -280,7 +280,11 @@ function refreshOpenTimePickerSelection(input) {
   if (!control) return;
 
   const selected = parseTimeValue(input.value);
-  control.value.textContent = input.value || "시간 선택";
+  if (control.value instanceof HTMLInputElement) {
+    control.value.value = input.value || "";
+  } else {
+    control.value.textContent = input.value || "시간 선택";
+  }
 
   const title = control.panel.querySelector(".time-panel-head strong");
   if (title) title.textContent = selected ? `${selected.hour}:${selected.minute}` : "--:--";

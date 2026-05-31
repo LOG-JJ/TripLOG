@@ -23,6 +23,7 @@ function initNavigationEvents() {
 
   const settlementExpenseSourceSelect = document.querySelector("#settlementExpenseSourceSelect");
   settlementExpenseSourceSelect?.addEventListener("change", (event) => {
+    syncCustomSelect(settlementExpenseSourceSelect);
     setSettlementSource(event.target.value);
   });
 }

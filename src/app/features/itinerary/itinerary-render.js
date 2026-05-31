@@ -6,7 +6,9 @@ function renderItineraryPage() {
 
   els.itineraryTripName.textContent = state.tripName || getDefaultTripName();
   els.itineraryDateRange.textContent = `${formatReadableDate(state.startDate)} - ${formatReadableDate(state.endDate)}`;
-  els.itineraryCount.textContent = `${Number(state.itineraryItems?.length || 0).toLocaleString("ko-KR")}건`;
+  if (els.itineraryCount) {
+    els.itineraryCount.textContent = `${Number(state.itineraryItems?.length || 0).toLocaleString("ko-KR")}건`;
+  }
 
   renderItineraryDaySelect(days);
   renderItineraryDayStrip(days);

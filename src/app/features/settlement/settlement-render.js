@@ -77,6 +77,7 @@ function renderSettlementPage(totals) {
       sourceSelect.appendChild(option);
     });
     sourceSelect.value = selectedSource.id;
+    syncCustomSelect(sourceSelect, { rebuild: true });
   }
 
   if (sourceSummary) {

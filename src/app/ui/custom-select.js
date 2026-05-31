@@ -66,7 +66,7 @@ function syncCustomSelect(select, options = {}) {
         item.appendChild(dot);
       }
 
-      if (select.id === "currencySelect") {
+      if (select.id === "currencySelect" || select.id === "settingsCurrencySelect") {
         const currency = getCurrencyMeta(option.value);
         const icon = document.createElement("span");
         icon.className = "custom-currency-icon";
@@ -75,7 +75,9 @@ function syncCustomSelect(select, options = {}) {
       }
 
       const label = document.createElement("span");
-      label.textContent = select.id === "currencySelect" ? getCurrencyMeta(option.value).label : option.textContent;
+      label.textContent = select.id === "currencySelect" || select.id === "settingsCurrencySelect"
+        ? getCurrencyMeta(option.value).label
+        : option.textContent;
       item.appendChild(label);
 
       if (option.disabled) item.disabled = true;
@@ -84,6 +86,7 @@ function syncCustomSelect(select, options = {}) {
         if (item.disabled) return;
         select.value = option.value;
         select.dispatchEvent(new Event("change", { bubbles: true }));
+        syncCustomSelect(select);
         closeCustomSelect(select);
       });
       item.addEventListener("keydown", (event) => handleCustomSelectOptionKeydown(event, select));
@@ -93,7 +96,7 @@ function syncCustomSelect(select, options = {}) {
 
   const selectedOption = select.selectedOptions[0] || select.options[0];
   control.value.replaceChildren();
-  if (select.id === "currencySelect" && selectedOption?.value) {
+  if ((select.id === "currencySelect" || select.id === "settingsCurrencySelect") && selectedOption?.value) {
     const currency = getCurrencyMeta(selectedOption.value);
     const icon = document.createElement("span");
     icon.className = "custom-currency-icon";

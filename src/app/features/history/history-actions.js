@@ -37,11 +37,16 @@ function restoreSnapshot(snapshot) {
 
 function normalizeSnapshot(snapshot) {
   const travelMode = snapshot?.travelMode === "overseas" ? "overseas" : "domestic";
+  const preferredCurrency = currencies.find((currency) => currency.code === snapshot?.currencyCode) || currencies[0];
   const snapshotTripName =
     typeof snapshot?.tripName === "string" && !isLegacyDefaultTripName(snapshot.tripName) ? snapshot.tripName : "";
   return {
     tripName: snapshotTripName,
     travelMode,
+    currencyCode: preferredCurrency.code,
+    currencySymbol: snapshot?.currencySymbol || preferredCurrency.symbol,
+    currencyUnit: snapshot?.currencyUnit || preferredCurrency.unit,
+    exchangeBase: Number(snapshot?.exchangeBase || preferredCurrency.rateBase || 1),
     startDate: snapshot?.startDate || "2026-06-09",
     endDate: snapshot?.endDate || snapshot?.startDate || "2026-06-09",
     selectedDate: snapshot?.selectedDate || snapshot?.startDate || "2026-06-09",

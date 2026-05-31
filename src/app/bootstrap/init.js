@@ -19,6 +19,7 @@ function init() {
   });
 
   els.expenseSortSelect.addEventListener("change", () => {
+    syncCustomSelect(els.expenseSortSelect);
     render();
   });
 
@@ -106,6 +107,7 @@ function init() {
     updateExchangeRateGuide();
     updateConvertedAmount();
     updateLodgingPreview();
+    saveAndRender();
   });
   els.foreignAmountInput.addEventListener("input", updateConvertedAmount);
   els.exchangeRateInput.addEventListener("input", () => {
@@ -115,9 +117,11 @@ function init() {
   });
   els.settingsCurrencySelect.addEventListener("change", () => {
     syncExpenseCurrencyFromSettings();
+    syncCustomSelect(els.settingsCurrencySelect);
     updateExchangeRateGuide();
     updateConvertedAmount();
     updateLodgingPreview();
+    saveAndRender();
   });
   els.settingsExchangeRateInput.addEventListener("input", () => {
     syncExpenseExchangeRateFromSettings();
@@ -150,6 +154,9 @@ function init() {
     if (els.itineraryDaySelect.value) state.selectedItineraryDate = els.itineraryDaySelect.value;
     syncCustomSelect(els.itineraryDaySelect);
     saveAndRender();
+  });
+  els.itineraryTransSelect.addEventListener("change", () => {
+    syncCustomSelect(els.itineraryTransSelect);
   });
   els.cancelItineraryEditButton.addEventListener("click", clearItineraryEditMode);
   initNavigationEvents();
@@ -226,7 +233,11 @@ function init() {
   setupCustomSelect(els.daySelect);
   setupCustomSelect(els.categorySelect);
   setupCustomSelect(els.currencySelect);
+  setupCustomSelect(els.expenseSortSelect);
+  setupCustomSelect(els.settingsCurrencySelect);
   setupCustomSelect(els.itineraryDaySelect);
+  setupCustomSelect(els.itineraryTransSelect);
+  setupCustomSelect(document.querySelector("#settlementExpenseSourceSelect"));
   setupCustomTimePicker(els.itineraryTimeInput);
   renderHistoryModal();
   render();
