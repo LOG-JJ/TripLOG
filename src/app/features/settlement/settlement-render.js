@@ -200,14 +200,14 @@ function renderSettlementExpenseLedger(expenseSplitList, entryRows, members, sou
     const tr = document.createElement("tr");
     tr.className = `${entry.invalid ? "is-invalid" : ""} ${expanded ? "is-expanded" : ""}`.trim();
     tr.innerHTML = `
-      <td>${escapeHtml(dayMeta.label)}</td>
-      <td>${escapeHtml(dayMeta.shortDate)}</td>
-      <td><span class="tag" style="--tag-color:${categoryColor}">${escapeHtml(entry.category)}</span></td>
-      <td class="settlement-description-cell">
+      <td data-label="일차">${escapeHtml(dayMeta.label)}</td>
+      <td data-label="날짜">${escapeHtml(dayMeta.shortDate)}</td>
+      <td data-label="항목"><span class="tag" style="--tag-color:${categoryColor}">${escapeHtml(entry.category)}</span></td>
+      <td class="settlement-description-cell" data-label="내용">
         <strong>${escapeHtml(entry.description)}</strong>
       </td>
-      <td class="number">${formatEntryAmountHtml(entry.raw || entry)}</td>
-      <td class="number">
+      <td class="number" data-label="금액">${formatEntryAmountHtml(entry.raw || entry)}</td>
+      <td class="number" data-label="사람별 할당">
         <div class="settlement-allocation-preview">
           ${members.map((member, index) => {
             const amount = entry.shares[member.key] || 0;
@@ -215,7 +215,7 @@ function renderSettlementExpenseLedger(expenseSplitList, entryRows, members, sou
           }).join("")}
         </div>
       </td>
-      <td class="actions-col">
+      <td class="actions-col" data-label="분담">
         <button class="settlement-split-action ${expanded ? "active" : ""}" type="button" data-split-toggle="${escapeHtml(entry.key)}" title="사람별 할당 금액 보기 및 편집">
           <span>👥</span>
           <strong>${expanded ? "닫기" : "분담"}</strong>

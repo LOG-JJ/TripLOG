@@ -29,13 +29,13 @@ function renderTable(entries, days) {
     const tr = document.createElement("tr");
     const color = getCategory(entry.category).color;
     tr.innerHTML = `
-      <td>${day ? day.label : "-"}</td>
-      <td>${day ? day.shortDate : formatShortDate(parseDate(entry.date))}</td>
-      <td><span class="tag" style="--tag-color:${color}">${escapeHtml(entry.category)}</span></td>
-      <td>${escapeHtml(entry.description)}</td>
-      <td class="number">${formatEntryAmountHtml(entry)}</td>
-      <td>${entry.note ? escapeHtml(entry.note) : "-"}</td>
-      <td class="actions-col">
+      <td data-label="일차">${day ? day.label : "-"}</td>
+      <td data-label="날짜">${day ? day.shortDate : formatShortDate(parseDate(entry.date))}</td>
+      <td data-label="항목"><span class="tag" style="--tag-color:${color}">${escapeHtml(entry.category)}</span></td>
+      <td data-label="내용">${escapeHtml(entry.description)}</td>
+      <td class="number" data-label="금액">${formatEntryAmountHtml(entry)}</td>
+      <td data-label="비고">${entry.note ? escapeHtml(entry.note) : "-"}</td>
+      <td class="actions-col" data-label="관리">
         <div class="row-actions">
           <button class="row-action edit" type="button" data-action="edit" data-id="${entry.id}" title="수정">
             <svg viewBox="0 0 24 24" focusable="false"><path d="M4 20h4l11-11a2.8 2.8 0 0 0-4-4L4 16v4Z" /><path d="m13.5 6.5 4 4" /></svg>

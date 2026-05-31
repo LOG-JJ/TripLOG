@@ -92,35 +92,36 @@ function renderItineraryList(days) {
     }
 
     card.innerHTML = `
-      <button class="itinerary-card-map" type="button" data-itinerary-action="map" data-id="${escapeHtml(item.id)}" title="지도에서 보기">
-        <svg viewBox="0 0 24 24" focusable="false"><path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11Z" /><path d="M12 10.5h.01" /></svg>
-      </button>
-      <div class="itinerary-card-main">
-        <div class="itinerary-card-head">
-          <div class="itinerary-card-head-top" style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; width: 100%;">
-            <span class="day-label">${day ? day.label : "-"}</span>
-            <strong>${escapeHtml(item.place)}</strong>
-            <input type="text" class="inline-time-input" data-id="${escapeHtml(item.id)}" value="${escapeHtml(item.time || "")}" placeholder="시간 미정" title="직접 시간 입력 (24H)" />
-          </div>
+      <div class="itinerary-card-top">
+        <div class="itinerary-title-group">
+          <span class="day-label">${day ? day.label : "-"}</span>
+          <strong class="itinerary-card-place">${escapeHtml(item.place)}</strong>
         </div>
-        <p>${escapeHtml(item.location)}</p>
-        <input type="text" class="inline-memo-input" data-id="${escapeHtml(item.id)}" value="${escapeHtml(item.memo || "")}" placeholder="메모 추가..." title="메모 직접 입력" />
-        <div class="itinerary-meta-badges-row">
-          <div class="inline-trans-wrap">
-            <select class="inline-trans-select" data-id="${escapeHtml(item.id)}">
-              <option value="none" ${item.trans === "none" ? "selected" : ""}>📍 이동 선택</option>
-              <option value="walk" ${item.trans === "walk" ? "selected" : ""}>🚶‍♂️ 도보</option>
-              <option value="car" ${item.trans === "car" ? "selected" : ""}>🚗 자동차</option>
-              <option value="bus" ${item.trans === "bus" ? "selected" : ""}>🚌 대중교통</option>
-              <option value="etc" ${item.trans === "etc" ? "selected" : ""}>✈️ 항공/기타</option>
-            </select>
-          </div>
-          ${statsBadgeRow}
+        <div class="itinerary-card-controls">
+          <input type="text" class="inline-time-input" data-id="${escapeHtml(item.id)}" value="${escapeHtml(item.time || "")}" placeholder="시간 미정" title="직접 시간 입력 (24H)" />
+          <select class="inline-trans-select" data-id="${escapeHtml(item.id)}" title="이동 수단">
+            <option value="none" ${item.trans === "none" ? "selected" : ""}>이동 선택</option>
+            <option value="walk" ${item.trans === "walk" ? "selected" : ""}>도보</option>
+            <option value="car" ${item.trans === "car" ? "selected" : ""}>자동차</option>
+            <option value="bus" ${item.trans === "bus" ? "selected" : ""}>대중교통</option>
+            <option value="etc" ${item.trans === "etc" ? "selected" : ""}>항공/기타</option>
+          </select>
         </div>
       </div>
-      <div class="itinerary-card-actions">
-        <button type="button" data-itinerary-action="edit" data-id="${escapeHtml(item.id)}">수정</button>
-        <button type="button" data-itinerary-action="delete" data-id="${escapeHtml(item.id)}">삭제</button>
+      <button class="itinerary-card-map" type="button" data-itinerary-action="map" data-id="${escapeHtml(item.id)}" title="지도에서 보기">
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11Z" /><path d="M12 10.5h.01" /></svg>
+        <span>${escapeHtml(item.location)}</span>
+      </button>
+      <label class="itinerary-memo-shell">
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M8 4h8l2 2v14H6V6l2-2Z" /><path d="M9 10h6M9 14h6" /></svg>
+        <input type="text" class="inline-memo-input" data-id="${escapeHtml(item.id)}" value="${escapeHtml(item.memo || "")}" placeholder="메모 추가..." title="메모 직접 입력" />
+      </label>
+      <div class="itinerary-card-footer">
+        ${statsBadgeRow}
+        <div class="itinerary-card-actions">
+          <button type="button" data-itinerary-action="edit" data-id="${escapeHtml(item.id)}">수정</button>
+          <button type="button" data-itinerary-action="delete" data-id="${escapeHtml(item.id)}">삭제</button>
+        </div>
       </div>
     `;
 
