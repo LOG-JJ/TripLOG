@@ -163,7 +163,7 @@ function renderOverviewPage() {
               <span class="timeline-text">
                 <span class="timeline-emoji">${emoji}</span>
                 <span class="timeline-place-name">${escapeHtml(item.place)}</span>
-                ${item.time ? `<small class="timeline-item-time">(${item.time})</small>` : ""}
+                ${item.time ? `<small class="timeline-item-time">(${item.time}${item.endTime ? ` ~ ${item.endTime}` : ""})</small>` : ""}
               </span>
             </div>
           `;

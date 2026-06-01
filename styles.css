@@ -1984,6 +1984,28 @@ td.number {
   margin-bottom: 24px;
 }
 
+.itinerary-time-range-field {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+  min-width: 0;
+}
+
+.itinerary-time-range-field .time-field-item,
+.itinerary-time-range-field .custom-time {
+  min-width: 0;
+}
+
+.itinerary-time-range-field .custom-time-button {
+  min-width: 0;
+}
+
+.itinerary-time-range-field .time-field-item:last-child .custom-time-panel {
+  right: 0;
+  left: auto;
+}
+
 .itinerary-form .wide {
   grid-column: span 3;
 }
@@ -3263,6 +3285,11 @@ td.number {
     gap: 12px;
   }
 
+  .itinerary-time-range-field {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
+  }
+
   .custom-time-panel {
     width: min(330px, calc(100vw - 32px));
     min-width: min(330px, calc(100vw - 32px));
@@ -3982,7 +4009,62 @@ td.number {
   gap: 8px;
 }
 
+.card-time-range-group {
+  display: grid;
+  grid-template-columns: auto 82px auto 82px;
+  align-items: center;
+  gap: 6px;
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.time-range-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  color: var(--line);
+  font-size: 14px;
+}
+
+.card-time-range-group .custom-time {
+  width: 82px;
+  min-width: 0;
+}
+
+.card-time-range-group .custom-time-button {
+  height: 36px;
+  min-height: 36px;
+  padding: 0 8px;
+  border-width: 2.5px;
+  border-radius: 9px;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.card-time-range-group .custom-time-value {
+  text-align: center;
+}
+
+.card-time-range-group .custom-time-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.card-time-range-group .custom-time-icon svg {
+  width: 15px;
+  height: 15px;
+}
+
+.card-time-range-group .custom-time-panel {
+  width: min(330px, calc(100vw - 48px));
+  min-width: min(330px, calc(100vw - 48px));
+}
+
 .inline-time-input,
+.inline-endtime-input,
 .inline-trans-select {
   min-height: 36px;
   margin: 0;
@@ -4013,6 +4095,7 @@ td.number {
 }
 
 .inline-time-input:focus,
+.inline-endtime-input:focus,
 .inline-trans-select:focus {
   background: #ffffff;
   border-color: var(--line);
@@ -4207,11 +4290,21 @@ td.number {
   .itinerary-card-actions {
     display: grid;
     grid-column: auto;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+  }
+
+  .card-time-range-group {
+    grid-template-columns: auto minmax(0, 1fr) auto minmax(0, 1fr);
+    width: 100%;
+  }
+
+  .card-time-range-group .custom-time {
     width: 100%;
   }
 
   .inline-time-input,
+  .inline-endtime-input,
   .inline-trans-select,
   .itinerary-card-actions button {
     width: 100%;
@@ -7963,4 +8056,482 @@ html[data-theme="toss"] .summary-trip-destination {
   margin-top: 0px !important;
   margin-bottom: 8px !important;
   font-family: inherit !important;
+}
+
+/* ==========================================================================
+   Premium Schedule End-Time and Inter-Schedule Travel Boxes Styling
+   ========================================================================== */
+.inline-endtime-input {
+  width: 82px;
+  padding: 0 8px;
+  color: #10b981;
+  background: #f0fdf4;
+  border: 2.5px solid #10b981;
+  border-radius: 9px;
+  box-shadow: none;
+  font-size: 13px;
+  font-weight: 900;
+  font-family: var(--font-heading);
+  transition: all 120ms ease;
+}
+
+.inline-endtime-input:focus {
+  background: #ffffff;
+  border-color: var(--line);
+  color: var(--text);
+}
+
+.inline-time-tilde {
+  font-weight: 900;
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 4px;
+}
+
+/* Itinerary Travel Connection Boxes */
+.itinerary-travel-box,
+.itinerary-travel-box-edit,
+.itinerary-travel-box-readonly {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 20px);
+  min-width: 0;
+}
+
+.itinerary-travel-box,
+.itinerary-travel-box-edit {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.itinerary-travel-box-readonly {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* Connector Dot on the timeline dashed line */
+.travel-connector-dot {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: var(--surface-soft);
+  border: 2px solid var(--line);
+  border-radius: 99px;
+  z-index: 2;
+}
+
+/* Travel Box Inner Layout (Interactive inputs) */
+.travel-inner,
+.travel-inner-edit {
+  width: 100%;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  transition: all 150ms ease;
+}
+
+.travel-inner {
+  display: flex;
+}
+
+.travel-inner-edit {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  background: linear-gradient(180deg, #fffdf7 0%, #ffffff 100%);
+  border-style: dashed;
+}
+
+.travel-inner:hover,
+.travel-inner-edit:hover {
+  background: #ffffff;
+  box-shadow: var(--shadow);
+  transform: translateY(-1px);
+}
+
+.travel-segments-list {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.travel-segment-row {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  padding: 8px;
+  background: #ffffff;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+}
+
+.travel-segment-main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 1px;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.travel-segment-main::-webkit-scrollbar {
+  display: none;
+}
+
+.travel-method-selector {
+  flex: 0 0 154px;
+  min-width: 154px;
+}
+
+/* Dropdown styling */
+.travel-method-selector select,
+.travel-trans-select {
+  width: 100%;
+  min-height: 32px;
+  margin: 0;
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  padding: 0 28px 0 9px;
+  background-color: #ffffff;
+  background-position:
+    calc(100% - 15px) 13px,
+    calc(100% - 10px) 13px;
+  box-shadow: 1px 1px 0 var(--line);
+  color: var(--text);
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.travel-method-selector select:focus,
+.travel-trans-select:focus {
+  background-color: #fffdf5;
+  box-shadow: 2px 2px 0 var(--line);
+}
+
+.travel-time-input-group {
+  flex: 0 0 88px;
+}
+
+.travel-cost-input-group {
+  flex: 0 0 112px;
+}
+
+.travel-time-input-group,
+.travel-cost-input-group {
+  min-height: 32px;
+  padding: 0 7px;
+  background: var(--surface-soft);
+  border: 2px solid var(--line);
+  border-radius: 7px;
+  box-shadow: 1px 1px 0 var(--line);
+  color: var(--text);
+}
+
+/* Input group styling for duration and cost */
+.travel-time-input-group,
+.travel-cost-input-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.travel-input-label {
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.travel-duration-input,
+.travel-cost-input {
+  min-height: 26px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 12px;
+  font-weight: 900;
+  font-family: var(--font-heading);
+  outline: none;
+}
+
+.travel-duration-input {
+  width: 34px;
+  text-align: center;
+  color: #e11d48;
+}
+
+.travel-cost-input {
+  width: 58px;
+  text-align: right;
+  color: #0284c7;
+}
+
+.travel-unit {
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.travel-segment-delete-btn {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 32px;
+  width: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  padding: 0;
+  color: #e11d48;
+  background: #fff1f2;
+  border: 2px solid var(--line);
+  border-radius: 7px;
+  box-shadow: 1px 1px 0 var(--line);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.travel-segment-memo-row {
+  min-width: 0;
+}
+
+.travel-memo-input {
+  width: 100%;
+  min-height: 36px;
+  margin: 0;
+  padding: 0 12px;
+  color: var(--text);
+  background: #ffffff;
+  border: 2px solid rgba(17, 24, 39, 0.28);
+  border-radius: 7px;
+  box-shadow: none;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.travel-memo-input:focus {
+  border-color: var(--line);
+  box-shadow: var(--shadow-sm);
+}
+
+.travel-footer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.travel-segment-add-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 0 12px;
+  color: var(--text);
+  background: var(--accent-mint);
+  border: 2px solid var(--line);
+  border-radius: 7px;
+  box-shadow: 2px 2px 0 var(--line);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.travel-segment-add-btn:hover,
+.travel-segment-delete-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--line);
+}
+
+/* Travel Box Readonly Layout */
+.travel-inner-readonly {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.travel-badge-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  font-size: 10px;
+  font-weight: 900;
+  border: 1.5px solid var(--line);
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 1px 1px 0px var(--line);
+}
+
+.travel-badge-item.trans {
+  background: #f0f9ff;
+  color: #0369a1;
+}
+
+.travel-badge-item.duration {
+  background: #fff1f2;
+  color: #be123c;
+}
+
+.travel-badge-item.cost {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+/* Specific theme overrides */
+html[data-theme="toss"] .travel-inner,
+html[data-theme="toss"] .travel-inner-edit {
+  background: #f9fafb !important;
+  border-color: #f2f4f6 !important;
+  box-shadow: none !important;
+  border-radius: 8px !important;
+}
+
+html[data-theme="toss"] .travel-inner select,
+html[data-theme="toss"] .travel-inner input,
+html[data-theme="toss"] .travel-inner-edit select,
+html[data-theme="toss"] .travel-inner-edit input {
+  border-color: #f2f4f6 !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="toss"] .travel-segment-row,
+html[data-theme="toss"] .travel-time-input-group,
+html[data-theme="toss"] .travel-cost-input-group {
+  border-color: #f2f4f6 !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] .travel-trans-select,
+html[data-theme="toss"] .travel-duration-input,
+html[data-theme="toss"] .travel-cost-input,
+html[data-theme="toss"] .travel-memo-input {
+  height: auto !important;
+  min-height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+html[data-theme="toss"] .travel-trans-select {
+  height: 32px !important;
+  min-height: 32px !important;
+  padding: 0 28px 0 9px !important;
+  background-color: #ffffff !important;
+}
+
+html[data-theme="toss"] .travel-memo-input {
+  min-height: 36px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+html[data-theme="toss"] .travel-segment-add-btn,
+html[data-theme="toss"] .travel-segment-delete-btn {
+  border: none !important;
+  box-shadow: none !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="toss"] .card-time-range-group .custom-time-button {
+  height: 36px !important;
+  min-height: 36px !important;
+  padding: 0 8px !important;
+  border-radius: 9px !important;
+}
+
+html[data-theme="toss"] .travel-connector-dot {
+  background: #e5e8eb !important;
+  border: none !important;
+}
+
+html[data-theme="toss"] .travel-badge-item {
+  border-color: #f2f4f6 !important;
+  box-shadow: none !important;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 600px) {
+  .itinerary-travel-box-edit,
+  .itinerary-travel-box-readonly {
+    margin-left: 12px;
+    padding-left: 12px;
+    width: calc(100% - 12px);
+  }
+
+  .travel-connector-dot {
+    left: -12px;
+  }
+
+  .travel-inner-edit {
+    padding: 8px;
+  }
+
+  .travel-segment-row {
+    padding: 7px;
+  }
+
+  .travel-segment-main {
+    gap: 6px;
+  }
+
+  .travel-method-selector {
+    flex: 1 1 104px;
+    min-width: 104px;
+  }
+
+  .travel-trans-select {
+    min-height: 30px;
+    padding-right: 22px;
+    padding-left: 7px;
+    background-position:
+      calc(100% - 12px) 12px,
+      calc(100% - 7px) 12px;
+    font-size: 11px;
+  }
+
+  .travel-time-input-group {
+    flex: 0 0 64px;
+  }
+
+  .travel-cost-input-group {
+    flex: 0 0 82px;
+  }
+
+  .travel-time-input-group,
+  .travel-cost-input-group {
+    min-height: 30px;
+    padding: 0 5px;
+    gap: 3px;
+  }
+
+  .travel-duration-input {
+    width: 24px;
+  }
+
+  .travel-cost-input {
+    width: 40px;
+  }
+
+  .travel-input-label,
+  .travel-unit {
+    font-size: 10px;
+  }
 }

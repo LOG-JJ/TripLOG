@@ -100,15 +100,41 @@ function renderItineraryList(days) {
     etc: { text: "기타", emoji: "🎈", label: "🎈 기타" }
   };
 
+  const getTransEmoji = (trans) => {
+    switch (trans) {
+      case "walk": return "🚶‍♂️";
+      case "car": return "🚗";
+      case "bus": return "🚌";
+      case "etc": return "✈️";
+      default: return "🚗";
+    }
+  };
+
+  const getTransLabel = (trans) => {
+    switch (trans) {
+      case "walk": return "도보";
+      case "car": return "자동차";
+      case "bus": return "대중교통";
+      case "etc": return "항공/기타";
+      default: return "이동";
+    }
+  };
+
   const dayMap = new Map(days.map((day) => [day.date, day]));
   const items = getFilteredItineraryItems();
   els.itineraryList.replaceChildren();
   els.itineraryEmpty.hidden = items.length > 0;
 
   let lastDate = null;
+  let prevItem = null;
 
-  items.forEach((item) => {
+  items.forEach((item, index) => {
     const day = dayMap.get(item.date);
+
+    // Ensure transits array exists for robust multi-segment data structures
+    if (!item.transits) {
+      item.transits = [{ trans: item.trans || "none", duration: item.duration || 0, cost: item.cost || 0, memo: "" }];
+    }
 
     // Grouping day headers in 'all' mode
     if (state.selectedItineraryDate === "all") {
@@ -127,6 +153,101 @@ function renderItineraryList(days) {
       }
     }
 
+    // Render Travel Connector Box between items of the same day
+    if (prevItem && prevItem.date === item.date) {
+      if (state.selectedItineraryDate === "all") {
+        const travelBox = document.createElement("div");
+        travelBox.className = "itinerary-travel-box-readonly";
+        
+        let segmentsHtml = "";
+        item.transits.forEach((seg, sIdx) => {
+          if (seg.trans === "none" && !seg.duration && !seg.cost && !seg.memo) return;
+          
+          const methodLabel = getTransLabel(seg.trans);
+          const methodEmoji = getTransEmoji(seg.trans);
+          
+          let segHtml = `<span class="travel-badge-item">`;
+          segHtml += `<span class="travel-badge-method">${methodEmoji} ${methodLabel}</span>`;
+          if (seg.duration > 0) segHtml += `<span class="travel-badge-duration">⏱️ ${seg.duration}분</span>`;
+          if (seg.cost > 0) segHtml += `<span class="travel-badge-cost">🪙 ${formatWon(seg.cost)}</span>`;
+          if (seg.memo) segHtml += `<span class="travel-badge-memo" title="${escapeHtml(seg.memo)}">📝 ${escapeHtml(seg.memo)}</span>`;
+          segHtml += `</span>`;
+          
+          if (sIdx > 0 && segmentsHtml) {
+            segmentsHtml += `<span class="travel-badge-arrow">→</span>`;
+          }
+          segmentsHtml += segHtml;
+        });
+
+        travelBox.innerHTML = `
+          <div class="travel-connector-dot"></div>
+          <div class="travel-inner-readonly">
+            ${segmentsHtml || `<span class="travel-badge-item empty">⏱️ 이동 정보 없음</span>`}
+          </div>
+        `;
+        els.itineraryList.appendChild(travelBox);
+      } else {
+        const travelBox = document.createElement("div");
+        travelBox.className = "itinerary-travel-box-edit";
+        
+        let segmentsHtml = "";
+        item.transits.forEach((seg, sIdx) => {
+          segmentsHtml += `
+            <div class="travel-segment-row" data-id="${escapeHtml(item.id)}" data-index="${sIdx}">
+              <div class="travel-segment-main">
+                <div class="travel-method-selector">
+                  <select class="travel-trans-select" data-id="${escapeHtml(item.id)}" data-index="${sIdx}" title="이동 방법">
+                    <option value="none" ${seg.trans === "none" ? "selected" : ""}>🚶‍♂️ 이동 수단</option>
+                    <option value="walk" ${seg.trans === "walk" ? "selected" : ""}>🚶‍♂️ 도보</option>
+                    <option value="car" ${seg.trans === "car" ? "selected" : ""}>🚗 자동차</option>
+                    <option value="bus" ${seg.trans === "bus" ? "selected" : ""}>🚌 대중교통</option>
+                    <option value="etc" ${seg.trans === "etc" ? "selected" : ""}>✈️ 항공/기타</option>
+                  </select>
+                </div>
+                
+                <div class="travel-time-input-group">
+                  <span class="travel-input-label">⏱️</span>
+                  <input type="number" class="travel-duration-input" data-id="${escapeHtml(item.id)}" data-index="${sIdx}" value="${seg.duration || ""}" min="0" placeholder="0" />
+                  <span class="travel-unit">분</span>
+                </div>
+                
+                <div class="travel-cost-input-group">
+                  <span class="travel-input-label">🪙</span>
+                  <input type="number" class="travel-cost-input" data-id="${escapeHtml(item.id)}" data-index="${sIdx}" value="${seg.cost || ""}" min="0" placeholder="0" />
+                  <span class="travel-unit">원</span>
+                </div>
+
+                ${item.transits.length > 1 ? `
+                  <button type="button" class="travel-segment-delete-btn" data-id="${escapeHtml(item.id)}" data-index="${sIdx}" title="세그먼트 삭제">
+                    −
+                  </button>
+                ` : ""}
+              </div>
+              
+              <div class="travel-segment-memo-row">
+                <input type="text" class="travel-memo-input" data-id="${escapeHtml(item.id)}" data-index="${sIdx}" value="${escapeHtml(seg.memo || "")}" placeholder="📝 비고 입력 (예: 버스 번호, 환승 정보...)" />
+              </div>
+            </div>
+          `;
+        });
+
+        travelBox.innerHTML = `
+          <div class="travel-connector-dot"></div>
+          <div class="travel-inner-edit">
+            <div class="travel-segments-list">
+              ${segmentsHtml}
+            </div>
+            <div class="travel-footer">
+              <button type="button" class="travel-segment-add-btn" data-id="${escapeHtml(item.id)}">
+                <span>+ 이동 수단 추가</span>
+              </button>
+            </div>
+          </div>
+        `;
+        els.itineraryList.appendChild(travelBox);
+      }
+    }
+
     const card = document.createElement("article");
     card.setAttribute("data-id", item.id);
 
@@ -138,22 +259,13 @@ function renderItineraryList(days) {
       // Dynamic Static Overview-Compact Card (Address Hidden)
       card.className = `itinerary-card itinerary-card-overview-compact${item.id === state.selectedItineraryId ? " active" : ""}`;
 
+      const timeDisplay = item.time ? (item.endTime ? `${item.time} ~ ${item.endTime}` : item.time) : "시간 미정";
       const transLabels = { walk: "🚶‍♂️ 도보", car: "🚗 자동차", bus: "🚌 대중교통", etc: "✈️ 항공/기타", none: "" };
       const transLabel = transLabels[item.trans] || "";
 
-      let statsBadgeRow = "";
-      if (item.duration > 0 || item.cost > 0) {
-        statsBadgeRow = `
-          <div class="overview-compact-badges">
-            ${item.duration > 0 ? `<span class="overview-compact-badge time">⏱️ ${item.duration}분</span>` : ""}
-            ${item.cost > 0 ? `<span class="overview-compact-badge cost">🪙 ${formatWon(item.cost)}</span>` : ""}
-          </div>
-        `;
-      }
-
       card.innerHTML = `
         <div class="overview-compact-left">
-          <span class="overview-compact-time">${item.time || "시간 미정"}</span>
+          <span class="overview-compact-time">${timeDisplay}</span>
           ${transLabel ? `<span class="overview-compact-trans">${transLabel}</span>` : ""}
         </div>
         <div class="overview-compact-center">
@@ -165,7 +277,6 @@ function renderItineraryList(days) {
           ${item.memo ? `<p class="overview-compact-memo">${escapeHtml(item.memo)}</p>` : ""}
         </div>
         <div class="overview-compact-right">
-          ${statsBadgeRow}
           <div class="overview-compact-actions">
             <button type="button" class="overview-compact-btn edit" data-itinerary-action="edit" data-id="${escapeHtml(item.id)}">수정</button>
             <button type="button" class="overview-compact-btn delete" data-itinerary-action="delete" data-id="${escapeHtml(item.id)}">삭제</button>
@@ -193,16 +304,6 @@ function renderItineraryList(days) {
       card.className = `itinerary-card${item.id === state.selectedItineraryId ? " active" : ""}`;
       card.setAttribute("draggable", "true");
 
-      let statsBadgeRow = "";
-      if (item.duration > 0 || item.cost > 0) {
-        statsBadgeRow = `
-          <div class="itinerary-card-badges">
-            ${item.duration > 0 ? `<span class="time-badge">⏱️ ${item.duration}분</span>` : ""}
-            ${item.cost > 0 ? `<span class="cost-badge">🪙 ${formatWon(item.cost)}</span>` : ""}
-          </div>
-        `;
-      }
-
       const cardDayNum = day ? day.label.replace(/[^0-9]/g, "") : "";
       const cardDayLabel = day ? `Day${cardDayNum}` : "-";
 
@@ -214,14 +315,12 @@ function renderItineraryList(days) {
             ${themeBadgeHtml}
           </div>
           <div class="itinerary-card-controls">
-            <input type="text" class="inline-time-input" data-id="${escapeHtml(item.id)}" value="${escapeHtml(item.time || "")}" placeholder="시간 미정" title="직접 시간 입력 (24H)" />
-            <select class="inline-trans-select" data-id="${escapeHtml(item.id)}" title="이동 수단">
-              <option value="none" ${item.trans === "none" ? "selected" : ""}>이동 선택</option>
-              <option value="walk" ${item.trans === "walk" ? "selected" : ""}>도보</option>
-              <option value="car" ${item.trans === "car" ? "selected" : ""}>자동차</option>
-              <option value="bus" ${item.trans === "bus" ? "selected" : ""}>대중교통</option>
-              <option value="etc" ${item.trans === "etc" ? "selected" : ""}>항공/기타</option>
-            </select>
+            <div class="card-time-range-group">
+              <span class="time-range-icon">🕒</span>
+              <input type="text" class="inline-time-input" data-id="${escapeHtml(item.id)}" value="${escapeHtml(item.time || "")}" placeholder="시작" title="시작 시간 (HH:MM)" />
+              <span class="inline-time-tilde">~</span>
+              <input type="text" class="inline-endtime-input" data-id="${escapeHtml(item.id)}" value="${escapeHtml(item.endTime || "")}" placeholder="종료" title="종료 시간 (HH:MM)" />
+            </div>
           </div>
         </div>
         <button class="itinerary-card-map" type="button" data-itinerary-action="map" data-id="${escapeHtml(item.id)}" title="지도에서 보기">
@@ -248,8 +347,7 @@ function renderItineraryList(days) {
             </div>
           </div>
         ` : ""}
-        <div class="itinerary-card-footer">
-          ${statsBadgeRow}
+        <div class="itinerary-card-footer" style="justify-content: flex-end;">
           <div class="itinerary-card-actions">
             <button type="button" data-itinerary-action="edit" data-id="${escapeHtml(item.id)}">수정</button>
             <button type="button" data-itinerary-action="delete" data-id="${escapeHtml(item.id)}">삭제</button>
@@ -316,25 +414,26 @@ function renderItineraryList(days) {
     });
 
     els.itineraryList.appendChild(card);
+    prevItem = item;
+  });
+
+  // Initialize custom time pickers for schedule cards
+  els.itineraryList.querySelectorAll(".inline-time-input, .inline-endtime-input").forEach(inputEl => {
+    if (window.TripLog?.ui?.timePicker?.setupCustomTimePicker) {
+      window.TripLog.ui.timePicker.setupCustomTimePicker(inputEl);
+    }
   });
 
   // Attach event listeners for inline fields
   els.itineraryList.querySelectorAll(".inline-time-input").forEach(inputEl => {
-    inputEl.addEventListener("input", () => {
-      let raw = inputEl.value.replace(/[^0-9:]/g, "");
-      if (raw.length === 4 && !raw.includes(":")) {
-        raw = raw.substring(0, 2) + ":" + raw.substring(2);
-      }
-      inputEl.value = raw;
-
-      if (/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/.test(raw)) {
-        updateInlineItineraryField(inputEl.dataset.id, "time", raw);
-      }
+    inputEl.addEventListener("change", () => {
+      updateInlineItineraryField(inputEl.dataset.id, "time", inputEl.value);
     });
+  });
 
-    inputEl.addEventListener("blur", () => {
-      const normalized = parseTypedTime(inputEl.value);
-      updateInlineItineraryField(inputEl.dataset.id, "time", normalized || "");
+  els.itineraryList.querySelectorAll(".inline-endtime-input").forEach(inputEl => {
+    inputEl.addEventListener("change", () => {
+      updateInlineItineraryField(inputEl.dataset.id, "endTime", inputEl.value);
     });
   });
 
@@ -344,9 +443,65 @@ function renderItineraryList(days) {
     });
   });
 
-  els.itineraryList.querySelectorAll(".inline-trans-select").forEach(selectEl => {
+  // Attach segment events for Multi-Segment Travel Box
+  els.itineraryList.querySelectorAll(".travel-trans-select").forEach(selectEl => {
     selectEl.addEventListener("change", () => {
-      updateInlineItineraryField(selectEl.dataset.id, "trans", selectEl.value);
+      const id = selectEl.dataset.id;
+      const index = Number(selectEl.dataset.index);
+      if (window.TripLog?.features?.itinerary?.listActions?.updateTravelSegmentField) {
+        window.TripLog.features.itinerary.listActions.updateTravelSegmentField(id, index, "trans", selectEl.value);
+      }
+    });
+  });
+
+  els.itineraryList.querySelectorAll(".travel-duration-input").forEach(inputEl => {
+    inputEl.addEventListener("change", () => {
+      const id = inputEl.dataset.id;
+      const index = Number(inputEl.dataset.index);
+      const val = Number(inputEl.value) || 0;
+      if (window.TripLog?.features?.itinerary?.listActions?.updateTravelSegmentField) {
+        window.TripLog.features.itinerary.listActions.updateTravelSegmentField(id, index, "duration", val);
+      }
+    });
+  });
+
+  els.itineraryList.querySelectorAll(".travel-cost-input").forEach(inputEl => {
+    inputEl.addEventListener("change", () => {
+      const id = inputEl.dataset.id;
+      const index = Number(inputEl.dataset.index);
+      const val = Number(inputEl.value) || 0;
+      if (window.TripLog?.features?.itinerary?.listActions?.updateTravelSegmentField) {
+        window.TripLog.features.itinerary.listActions.updateTravelSegmentField(id, index, "cost", val);
+      }
+    });
+  });
+
+  els.itineraryList.querySelectorAll(".travel-memo-input").forEach(inputEl => {
+    inputEl.addEventListener("change", () => {
+      const id = inputEl.dataset.id;
+      const index = Number(inputEl.dataset.index);
+      if (window.TripLog?.features?.itinerary?.listActions?.updateTravelSegmentField) {
+        window.TripLog.features.itinerary.listActions.updateTravelSegmentField(id, index, "memo", inputEl.value.trim());
+      }
+    });
+  });
+
+  els.itineraryList.querySelectorAll(".travel-segment-delete-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const id = btn.dataset.id;
+      const index = Number(btn.dataset.index);
+      if (window.TripLog?.features?.itinerary?.listActions?.deleteTravelSegment) {
+        window.TripLog.features.itinerary.listActions.deleteTravelSegment(id, index);
+      }
+    });
+  });
+
+  els.itineraryList.querySelectorAll(".travel-segment-add-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const id = btn.dataset.id;
+      if (window.TripLog?.features?.itinerary?.listActions?.addTravelSegment) {
+        window.TripLog.features.itinerary.listActions.addTravelSegment(id);
+      }
     });
   });
 

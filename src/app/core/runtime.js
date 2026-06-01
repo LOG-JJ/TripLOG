@@ -116,6 +116,7 @@ const els = {
   itineraryForm: document.querySelector("#itineraryForm"),
   itineraryDaySelect: document.querySelector("#itineraryDaySelect"),
   itineraryTimeInput: document.querySelector("#itineraryTimeInput"),
+  itineraryEndTimeInput: document.querySelector("#itineraryEndTimeInput"),
   itineraryPlaceInput: document.querySelector("#itineraryPlaceInput"),
   itineraryLocationInput: document.querySelector("#itineraryLocationInput"),
   manualAddressToggleButton: document.querySelector("#manualAddressToggleButton"),

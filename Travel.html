@@ -719,10 +719,16 @@
                 <span>일차</span>
                 <select id="itineraryDaySelect" required></select>
               </label>
-              <label for="itineraryTimeInput">
-                <span>시간</span>
-                <input id="itineraryTimeInput" type="time" />
-              </label>
+              <div class="itinerary-time-range-field">
+                <label class="time-field-item" for="itineraryTimeInput">
+                  <span>시작 시간</span>
+                  <input id="itineraryTimeInput" type="time" />
+                </label>
+                <label class="time-field-item" for="itineraryEndTimeInput">
+                  <span>종료 시간</span>
+                  <input id="itineraryEndTimeInput" type="time" />
+                </label>
+              </div>
               <label for="itineraryThemeSelect">
                 <span>일정 테마</span>
                 <select id="itineraryThemeSelect">

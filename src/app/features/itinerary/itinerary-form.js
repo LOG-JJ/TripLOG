@@ -29,11 +29,13 @@ function handleItinerarySubmit(event) {
     id,
     date: els.itineraryDaySelect.value || state.selectedItineraryDate,
     time: els.itineraryTimeInput.value,
+    endTime: els.itineraryEndTimeInput.value,
     place,
     location,
     memo: els.itineraryMemoInput.value.trim(),
     theme,
     trans,
+    transits: existingItem && existingItem.transits ? existingItem.transits : [{ trans, duration, cost, memo: "" }],
     voucherName,
     voucherCode,
     voucherFile: currentVoucherFile,
@@ -94,6 +96,7 @@ function startItineraryEdit(item) {
 
   els.itineraryDaySelect.value = item.date;
   els.itineraryTimeInput.value = item.time || "";
+  els.itineraryEndTimeInput.value = item.endTime || "";
   els.itineraryTransSelect.value = item.trans || "none";
   els.itineraryThemeSelect.value = item.theme || "sightseeing";
   els.itineraryDurationInput.value = item.duration || "";
@@ -132,6 +135,7 @@ function startItineraryEdit(item) {
   syncCustomSelect(els.itineraryTransSelect);
   syncCustomSelect(els.itineraryThemeSelect);
   syncCustomTimePicker(els.itineraryTimeInput);
+  syncCustomTimePicker(els.itineraryEndTimeInput);
   updateMapPreview(item);
   els.itineraryPlaceInput.focus();
 }
@@ -173,6 +177,7 @@ function clearItineraryEditMode(shouldRender = true) {
   syncCustomSelect(els.itineraryTransSelect);
   syncCustomSelect(els.itineraryThemeSelect);
   syncCustomTimePicker(els.itineraryTimeInput);
+  syncCustomTimePicker(els.itineraryEndTimeInput);
   if (shouldRender) renderItineraryPage();
 }
 

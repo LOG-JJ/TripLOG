@@ -26,9 +26,17 @@ function renderTimeBlockGrid(items) {
       const [itemH, itemM] = item.time.split(":").map(Number);
       if (itemH === h) return true;
       
-      if (item.duration > 0) {
-        const startMin = itemH * 60 + itemM;
-        const endMin = startMin + item.duration;
+      const startMin = itemH * 60 + itemM;
+      let endMin = startMin;
+      if (item.endTime) {
+        const [endH, endM] = item.endTime.split(":").map(Number);
+        endMin = endH * 60 + endM;
+        if (endMin < startMin) endMin += 1440; // Wrap midnight
+      } else if (item.duration > 0) {
+        endMin = startMin + item.duration;
+      }
+
+      if (endMin > startMin) {
         const currentHourStartMin = h * 60;
         const currentHourEndMin = (h + 1) * 60;
         return startMin < currentHourEndMin && endMin > currentHourStartMin;

@@ -229,8 +229,9 @@ function init() {
     const currentTime = els.itineraryTimeInput.value;
     if (!currentTime) return;
     const prevItem = getPrecedingItineraryItem();
-    if (prevItem && prevItem.time) {
-      const diff = getMinutesBetweenTimes(prevItem.time, currentTime);
+    const baseTime = prevItem ? (prevItem.endTime || prevItem.time) : null;
+    if (prevItem && baseTime) {
+      const diff = getMinutesBetweenTimes(baseTime, currentTime);
       els.itineraryDurationInput.value = diff || "";
     }
   });
@@ -241,8 +242,9 @@ function init() {
     const durationMins = parseInt(durationVal, 10);
     if (isNaN(durationMins) || durationMins < 0) return;
     const prevItem = getPrecedingItineraryItem();
-    if (prevItem && prevItem.time) {
-      const calculatedTime = addMinutesToTime(prevItem.time, durationMins);
+    const baseTime = prevItem ? (prevItem.endTime || prevItem.time) : null;
+    if (prevItem && baseTime) {
+      const calculatedTime = addMinutesToTime(baseTime, durationMins);
       if (calculatedTime) {
         els.itineraryTimeInput.value = calculatedTime;
         syncCustomTimePicker(els.itineraryTimeInput);
@@ -420,6 +422,7 @@ function init() {
   setupCustomSelect(els.overviewTripSelect);
   setupCustomSelect(document.querySelector("#settlementExpenseSourceSelect"));
   setupCustomTimePicker(els.itineraryTimeInput);
+  setupCustomTimePicker(els.itineraryEndTimeInput);
   renderHistoryModal();
   render();
 }
