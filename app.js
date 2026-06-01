@@ -1,5 +1,5 @@
 (() => {
-  const scriptVersion = "settings-mode-guide-20260601-1";
+  const scriptVersion = "google-coordinate-source-fix-20260601-2";
   const scriptFiles = [
     "core/namespace.js",
     "core/config.js",
@@ -49,6 +49,7 @@
     "shared/time-utils.js",
     "services/maps/leaflet-map.js",
     "services/maps/geocoding.js",
+    "features/settings/map-geocoding-settings.js",
     "services/maps/routing.js",
     "features/overview/overview-page.js",
     "features/reports/report-page.js",

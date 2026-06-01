@@ -13,7 +13,7 @@ function setNewTripMode(mode, { resetCountry = false } = {}) {
   els.newTripOverseasButton?.setAttribute("aria-pressed", String(isOverseas));
 
   if (els.newTripNameInput) {
-    els.newTripNameInput.placeholder = isOverseas ? "예: 도쿄 5박 6일" : "예: 제주도 3박 4일";
+    els.newTripNameInput.placeholder = isOverseas ? "예: 도쿄 5박 6일" : "예: 제주도 7박 8일";
   }
 
   if (els.newTripCountryInput) {
@@ -170,6 +170,9 @@ function init() {
     updateExchangeRateGuide();
     updateConvertedAmount();
   });
+  if (typeof setupMapGeocodingSettings === "function") {
+    setupMapGeocodingSettings();
+  }
   els.amountInput.addEventListener("input", () => {
     if (state.travelMode === "overseas") updateConvertedAmount();
     updateLodgingPreview();
@@ -307,7 +310,7 @@ function init() {
     els.createNewTripButton.addEventListener("click", () => {
       els.newTripForm?.reset();
       els.newTripStartDateInput.value = "2026-06-09";
-      els.newTripEndDateInput.value = "2026-06-12";
+      els.newTripEndDateInput.value = "2026-06-16";
       els.newTripNameInput.value = "";
       setNewTripMode(state.travelMode, { resetCountry: true });
       syncNewTripDatePickers();

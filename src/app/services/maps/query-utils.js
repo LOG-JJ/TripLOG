@@ -160,10 +160,68 @@ function parseDestinationFromTripName(value) {
   return normalized.split(" ").filter(Boolean).slice(0, 2).join(" ");
 }
 
-function getItemLatLng(item) {
+function extractLatLngFromText(value) {
+  const raw = String(value || "").trim();
+  if (!raw) return null;
+
+  const text = decodeCoordinateText(raw).replace(/\+/g, " ");
+  const labeled = extractLabeledLatLng(text);
+  if (labeled) return labeled;
+
+  const pairPatterns = [
+    /!3d([+-]?\d{1,3}(?:\.\d+)?)!4d([+-]?\d{1,3}(?:\.\d+)?)/i,
+    /@([+-]?\d{1,3}(?:\.\d+)?),\s*([+-]?\d{1,3}(?:\.\d+)?)/,
+    /(?:[?&#]|^)(?:q|query|ll|center|destination|origin|daddr|saddr)=([+-]?\d{1,3}(?:\.\d+)?),\s*([+-]?\d{1,3}(?:\.\d+)?)/i,
+    /(?:^|[^\d+-])([+-]?\d{1,3}\.\d{2,})\s*,\s*([+-]?\d{1,3}\.\d{2,})(?:[^\d.]|$)/,
+  ];
+
+  for (const pattern of pairPatterns) {
+    const match = text.match(pattern);
+    const coords = normalizeCoordinatePair(match?.[1], match?.[2]);
+    if (coords) return { ...coords, source: "coordinate-text", precision: "exact" };
+  }
+
+  return null;
+}
+
+function decodeCoordinateText(value) {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+}
+
+function extractLabeledLatLng(text) {
+  const latMatch = text.match(/(?:lat(?:itude)?|위도)\D*([+-]?\d{1,3}(?:\.\d+)?)/i);
+  const lonMatch = text.match(/(?:lng|lon(?:gitude)?|경도)\D*([+-]?\d{1,3}(?:\.\d+)?)/i);
+  return normalizeCoordinatePair(latMatch?.[1], lonMatch?.[1])
+    ? { ...normalizeCoordinatePair(latMatch?.[1], lonMatch?.[1]), source: "coordinate-text", precision: "exact" }
+    : null;
+}
+
+function extractLatLngFromItineraryItem(item) {
+  return extractLatLngFromText([
+    item?.mapQuery,
+    item?.location,
+    item?.place,
+  ].filter(Boolean).join(" "));
+}
+
+function normalizeCoordinatePair(firstValue, secondValue) {
+  const first = Number.parseFloat(firstValue);
+  const second = Number.parseFloat(secondValue);
+  if (isValidLatLng(first, second)) return { lat: first, lon: second };
+  if (isValidLatLng(second, first)) return { lat: second, lon: first };
+  return null;
+}
+
+function getItemLatLng(item, { requireSignature = false } = {}) {
   const lat = Number.parseFloat(item?.lat);
   const lon = Number.parseFloat(item?.lon);
   if (!isValidLatLng(lat, lon)) return null;
+  if (item?.coordinateSource === "google-query-preview") return null;
+  if (requireSignature && !hasMatchingCoordinateSignature(item)) return null;
   return { lat, lon };
 }
 
@@ -182,16 +240,69 @@ function cacheItemCoordinates(item, coords) {
   if (!item || !coords || !isValidLatLng(coords.lat, coords.lon)) return;
   item.lat = coords.lat;
   item.lon = coords.lon;
+  item.coordinateSignature = buildItemCoordinateSignature(item);
+  item.coordinateSource = coords.source || "";
+  item.coordinatePrecision = coords.precision || "";
+  item.coordinateAddress = coords.location || coords.formattedAddress || "";
+  item.googlePlaceId = coords.placeId || "";
 
   const savedItem = item.id ? findItineraryItem(item.id) : null;
   if (savedItem && savedItem !== item) {
     savedItem.lat = coords.lat;
     savedItem.lon = coords.lon;
+    savedItem.coordinateSignature = buildItemCoordinateSignature(savedItem);
+    savedItem.coordinateSource = item.coordinateSource;
+    savedItem.coordinatePrecision = item.coordinatePrecision;
+    savedItem.coordinateAddress = item.coordinateAddress;
+    savedItem.googlePlaceId = item.googlePlaceId;
   }
 }
 
-async function fetchLatLngForItineraryItem(item, { maxQueries = Infinity, context = "", near = null, ignoreSaved = false, allowNominatim = true, validateCoords = null } = {}) {
-  const savedCoords = getItemLatLng(item);
+function buildItemCoordinateSignature(item) {
+  return normalizePlaceAlias([
+    item?.place,
+    item?.location,
+    buildTripDestinationQuery(),
+  ].filter(Boolean).join("|"));
+}
+
+function hasMatchingCoordinateSignature(item) {
+  const signature = item?.coordinateSignature || "";
+  return Boolean(signature && signature === buildItemCoordinateSignature(item));
+}
+
+async function fetchLatLngForItineraryItem(item, { maxQueries = Infinity, context = "", near = null, ignoreSaved = false, requireSavedSignature = false, allowNominatim = true, validateCoords = null } = {}) {
+  const directCoords = extractLatLngFromItineraryItem(item);
+  if (directCoords && isAcceptedCoordinates(directCoords, item, validateCoords)) return directCoords;
+
+  const savedCoords = getItemLatLng(item, { requireSignature: requireSavedSignature });
+  const shouldRefreshSavedWithGoogle = savedCoords
+    && !ignoreSaved
+    && typeof hasGoogleGeocodingApiKey === "function"
+    && hasGoogleGeocodingApiKey()
+    && !isHighTrustCoordinateSource(item?.coordinateSource);
+  if (savedCoords && !ignoreSaved && !shouldRefreshSavedWithGoogle && isAcceptedCoordinates(savedCoords, item, validateCoords)) return savedCoords;
+
+  if (typeof fetchLatLngFromGooglePlacesTextSearch === "function") {
+    for (const query of buildGeocodeQueries(item, context).slice(0, maxQueries)) {
+      const googlePlaceCoords = await fetchLatLngFromGooglePlacesTextSearch(query, { context, near });
+      if (googlePlaceCoords && isAcceptedCoordinates(googlePlaceCoords, item, validateCoords)) {
+        setCachedGeocodeResult(query, context, googlePlaceCoords);
+        return googlePlaceCoords;
+      }
+    }
+  }
+
+  if (typeof fetchLatLngFromGoogleGeocoding === "function") {
+    for (const query of buildGeocodeQueries(item, context).slice(0, maxQueries)) {
+      const googleCoords = await fetchLatLngFromGoogleGeocoding(query, { context });
+      if (googleCoords && isAcceptedCoordinates(googleCoords, item, validateCoords)) {
+        setCachedGeocodeResult(query, context, googleCoords);
+        return googleCoords;
+      }
+    }
+  }
+
   if (savedCoords && !ignoreSaved && isAcceptedCoordinates(savedCoords, item, validateCoords)) return savedCoords;
 
   const knownCoords = findKnownPlaceCoordinates(item, context);
@@ -228,16 +339,51 @@ async function fetchLatLngForItineraryItem(item, { maxQueries = Infinity, contex
 }
 
 function findKnownPlaceCoordinates(item, context = "") {
+  const placeKey = normalizePlaceAlias(item?.place);
   const haystack = normalizePlaceAlias([item?.place, item?.location, context].filter(Boolean).join(" "));
-  if (!haystack) return null;
+  if (!placeKey && !haystack) return null;
 
-  const matched = knownPlaceCoordinates.find((entry) => {
-    const contextMatched = !entry.context || haystack.includes(normalizePlaceAlias(entry.context));
-    const aliasMatched = entry.aliases.some((alias) => haystack.includes(normalizePlaceAlias(alias)));
-    return contextMatched && aliasMatched;
-  });
+  const candidates = knownPlaceCoordinates
+    .map((entry) => ({
+      entry,
+      aliases: entry.aliases.map((alias) => normalizePlaceAlias(alias)).filter(Boolean),
+      contextKey: normalizePlaceAlias(entry.context || ""),
+    }))
+    .filter((candidate) => !candidate.contextKey || haystack.includes(candidate.contextKey))
+    .map((candidate) => {
+      const placeAlias = candidate.aliases.find((alias) => (
+        placeKey && (placeKey === alias || placeKey.includes(alias) || alias.includes(placeKey))
+      ));
+      const haystackAlias = candidate.aliases.find((alias) => haystack.includes(alias));
+      const bestAlias = placeAlias || haystackAlias || "";
+      return {
+        entry: candidate.entry,
+        score: (placeAlias ? 10000 : 0) + bestAlias.length,
+      };
+    })
+    .filter((candidate) => candidate.score > 0)
+    .sort((a, b) => b.score - a.score);
 
-  return matched ? { lat: matched.lat, lon: matched.lon } : null;
+  const matched = candidates[0]?.entry;
+
+  return matched ? { lat: matched.lat, lon: matched.lon, source: "known-place", precision: "exact" } : null;
+}
+
+function isHighTrustCoordinateSource(source) {
+  return ["coordinate-text", "google-places", "google-geocoding", "known-place"].includes(source || "");
+}
+
+function getCoordinateDistanceKm(a, b) {
+  if (!a || !b || !isValidLatLng(a.lat, a.lon) || !isValidLatLng(b.lat, b.lon)) return Infinity;
+  const toRadians = (degree) => degree * Math.PI / 180;
+  const earthRadiusKm = 6371;
+  const dLat = toRadians(b.lat - a.lat);
+  const dLon = toRadians(b.lon - a.lon);
+  const lat1 = toRadians(a.lat);
+  const lat2 = toRadians(b.lat);
+  const h = Math.sin(dLat / 2) ** 2
+    + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
+  return 2 * earthRadiusKm * Math.asin(Math.min(1, Math.sqrt(h)));
 }
 
 function normalizePlaceAlias(value) {
@@ -272,12 +418,21 @@ window.TripLog.register("services.maps.queryUtils", {
   normalizeGeocodeContext,
   normalizeTripDestinationPart,
   parseDestinationFromTripName,
+  extractLatLngFromText,
+  decodeCoordinateText,
+  extractLabeledLatLng,
+  extractLatLngFromItineraryItem,
+  normalizeCoordinatePair,
   getItemLatLng,
   isValidLatLng,
   isAcceptedCoordinates,
   cacheItemCoordinates,
+  buildItemCoordinateSignature,
+  hasMatchingCoordinateSignature,
   fetchLatLngForItineraryItem,
+  isHighTrustCoordinateSource,
   findKnownPlaceCoordinates,
+  getCoordinateDistanceKm,
   normalizePlaceAlias,
   buildGeocodeCacheKey,
   getCachedGeocodeResult,

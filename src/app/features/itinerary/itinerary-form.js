@@ -25,6 +25,15 @@ function handleItinerarySubmit(event) {
   const voucherName = els.itineraryVoucherName.value.trim();
   const voucherCode = els.itineraryVoucherCode.value.trim();
 
+  const candidateSelected = selectedPlaceCandidate && selectedPlaceCandidate.place === place;
+  const candidateHasCoords = candidateSelected
+    && isValidLatLng(parseFloat(selectedPlaceCandidate.lat), parseFloat(selectedPlaceCandidate.lon));
+  const existingCoordsStillValid = existingItem
+    && !candidateSelected
+    && existingItem.place === place
+    && existingItem.location === location
+    && hasMatchingCoordinateSignature(existingItem);
+
   const item = {
     id,
     date: els.itineraryDaySelect.value || state.selectedItineraryDate,
@@ -32,6 +41,7 @@ function handleItinerarySubmit(event) {
     endTime: els.itineraryEndTimeInput.value,
     place,
     location,
+    mapQuery: candidateSelected ? (selectedPlaceCandidate.mapQuery || "") : (existingItem?.mapQuery || ""),
     memo: els.itineraryMemoInput.value.trim(),
     theme,
     trans,
@@ -44,10 +54,25 @@ function handleItinerarySubmit(event) {
     cost,
     syncExpense,
     expenseId,
-    lat: selectedPlaceCandidate && selectedPlaceCandidate.place === place ? selectedPlaceCandidate.lat : (existingItem && existingItem.place === place ? existingItem.lat : undefined),
-    lon: selectedPlaceCandidate && selectedPlaceCandidate.place === place ? selectedPlaceCandidate.lon : (existingItem && existingItem.place === place ? existingItem.lon : undefined),
+    lat: candidateHasCoords ? selectedPlaceCandidate.lat : (existingCoordsStillValid ? existingItem.lat : undefined),
+    lon: candidateHasCoords ? selectedPlaceCandidate.lon : (existingCoordsStillValid ? existingItem.lon : undefined),
     createdAt: existingItem ? existingItem.createdAt : Date.now(),
   };
+
+  if (candidateSelected) {
+    item.coordinateSource = selectedPlaceCandidate.source || "";
+    item.coordinatePrecision = selectedPlaceCandidate.precision || "";
+    item.coordinateAddress = selectedPlaceCandidate.location || "";
+    item.googlePlaceId = selectedPlaceCandidate.placeId || "";
+  }
+
+  if (isValidLatLng(parseFloat(item.lat), parseFloat(item.lon))) {
+    item.coordinateSignature = buildItemCoordinateSignature(item);
+    item.coordinateSource = candidateHasCoords ? (selectedPlaceCandidate.source || "") : (existingItem.coordinateSource || "");
+    item.coordinatePrecision = candidateHasCoords ? (selectedPlaceCandidate.precision || "") : (existingItem.coordinatePrecision || "");
+    item.coordinateAddress = candidateHasCoords ? (selectedPlaceCandidate.location || "") : (existingItem.coordinateAddress || "");
+    item.googlePlaceId = candidateHasCoords ? (selectedPlaceCandidate.placeId || "") : (existingItem.googlePlaceId || "");
+  }
 
   // Sync with main expense ledger
   if (syncExpense && cost > 0) {

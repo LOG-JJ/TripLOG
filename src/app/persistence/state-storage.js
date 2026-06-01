@@ -2,17 +2,110 @@ const LEGACY_STORAGE_KEY = window.TripLog.core.config.STORAGE_KEY;
 const TRIPS_KEY = "domesticTravelExpensePlanner.trips.v2";
 const ACTIVE_TRIP_ID_KEY = "domesticTravelExpensePlanner.activeTripId.v2";
 const THEME_KEY = "domesticTravelExpensePlanner.theme.v1";
+const highTrustSavedCoordinateSources = new Set(["coordinate-text", "google-places", "google-geocoding", "known-place"]);
+
+const itineraryPlaceCleanupRules = {
+  "제주공항 도착": { place: "제주국제공항" },
+  "제주공항에서 코델리아S호텔로 이동": { place: "코델리아S호텔", memoPrefix: "제주공항에서 코델리아S호텔로 대중교통 이동." },
+  "코델리아S호텔 짐 맡기기": { place: "코델리아S호텔" },
+  "성산 주변 점심 식사": { place: "성산읍", memoPrefix: "성산 주변에서 점심 식사." },
+  "코델리아S호텔 체크인 및 휴식": { place: "코델리아S호텔" },
+  "성산 주변 저녁 식사": { place: "성산읍" },
+  "코델리아S호텔 출발": { place: "코델리아S호텔", memoPrefix: "숙소 출발." },
+  "성산항 도착": { place: "성산항", memoPrefix: "성산항 도착." },
+  "우도 하루 여행": { place: "우도" },
+  "성산항 복귀": { place: "성산항" },
+  "코델리아S호텔 복귀 및 저녁 식사": { place: "코델리아S호텔" },
+  "코델리아S호텔 복귀": { place: "코델리아S호텔" },
+  "용눈이오름 또는 다랑쉬오름": { place: "용눈이오름" },
+  "코델리아S호텔 체크아웃": { place: "코델리아S호텔" },
+  "성산에서 신신호텔 천지연으로 이동": { place: "신신호텔 천지연", memoPrefix: "성산에서 신신호텔 천지연으로 대중교통 이동." },
+  "신신호텔 천지연 체크인": { place: "신신호텔 천지연" },
+  "서귀포 매일올레시장 저녁 식사": { place: "서귀포 매일올레시장" },
+  "신신호텔 천지연 출발": { place: "신신호텔 천지연", memoPrefix: "숙소 출발." },
+  "신신호텔 천지연 복귀": { place: "신신호텔 천지연" },
+  "신신호텔 천지연 체크아웃 및 짐 보관": { place: "신신호텔 천지연" },
+  "서귀포에서 애월로 이동": { place: "애월 한담해안산책로", memoPrefix: "서귀포에서 애월로 대중교통 이동." },
+  "애월에서 신신호텔 천지연으로 복귀": { place: "신신호텔 천지연", memoPrefix: "애월에서 신신호텔 천지연으로 복귀." },
+  "신신호텔 천지연 짐 찾기": { place: "신신호텔 천지연" },
+  "신신호텔 천지연에서 제주공항으로 이동": { place: "제주국제공항", memoPrefix: "신신호텔 천지연에서 제주공항으로 대중교통 이동." },
+  "제주공항 출발": { place: "제주국제공항" },
+};
+
+function cleanSavedItineraryPlace(item) {
+  if (!item || typeof item !== "object") return item;
+
+  const rule = getItineraryPlaceCleanupRule(item);
+  const cleanedItem = rule ? {
+    ...item,
+    place: rule.place,
+    memo: mergeItineraryMemo(rule.memoPrefix, item.memo),
+  } : item;
+
+  return cleanSavedItineraryCoordinates(cleanedItem);
+}
+
+function cleanSavedItineraryCoordinates(item) {
+  const lat = Number.parseFloat(item?.lat);
+  const lon = Number.parseFloat(item?.lon);
+  const hasCoordinates = Number.isFinite(lat)
+    && Number.isFinite(lon)
+    && Math.abs(lat) <= 90
+    && Math.abs(lon) <= 180;
+  if (!hasCoordinates) return item;
+  if (highTrustSavedCoordinateSources.has(item.coordinateSource || "")) return item;
+
+  const cleanedItem = { ...item };
+  delete cleanedItem.lat;
+  delete cleanedItem.lon;
+  delete cleanedItem.coordinateSignature;
+  delete cleanedItem.coordinatePrecision;
+  delete cleanedItem.coordinateAddress;
+  delete cleanedItem.googlePlaceId;
+  if (cleanedItem.coordinateSource !== "google-query-preview") {
+    delete cleanedItem.coordinateSource;
+  }
+  return cleanedItem;
+}
+
+function getItineraryPlaceCleanupRule(item) {
+  if (item.place === "점심 식사") {
+    return { place: inferMealPlaceName(item) };
+  }
+  return itineraryPlaceCleanupRules[item.place] || null;
+}
+
+function inferMealPlaceName(item) {
+  const location = item.location || "";
+  if (location.includes("구좌읍")) return "구좌읍";
+  if (location.includes("함덕리")) return "함덕해수욕장";
+  if (location.includes("중문동")) return "중문동";
+  if (location.includes("서귀동")) return "서귀동";
+  if (location.includes("성산읍")) return "성산읍";
+  return "식사 장소 미정";
+}
+
+function mergeItineraryMemo(prefix, memo = "") {
+  const normalizedMemo = String(memo || "").trim();
+  const normalizedPrefix = String(prefix || "").trim();
+  if (!normalizedPrefix || normalizedMemo.includes(normalizedPrefix)) return normalizedMemo;
+  return [normalizedPrefix, normalizedMemo].filter(Boolean).join(" ");
+}
+
+function cleanSavedItineraryItems(items) {
+  return Array.isArray(items) ? items.map(cleanSavedItineraryPlace) : [];
+}
 
 function getFallbackState(tripId = "trip_default") {
   return {
     id: tripId,
-    tripName: "나의 첫 여행 ✈️",
+    tripName: "제주도 7박 8일 여행",
     country: "대한민국",
-    city: "서울",
+    city: "제주",
     travelMode: "domestic",
     theme: "brutalist",
     startDate: "2026-06-09",
-    endDate: "2026-06-12",
+    endDate: "2026-06-16",
     selectedDate: "2026-06-09",
     selectedItineraryDate: "2026-06-09",
     lastActiveItineraryDate: "2026-06-09",
@@ -73,6 +166,13 @@ function loadState() {
       localStorage.setItem(ACTIVE_TRIP_ID_KEY, activeTripId);
     }
 
+    const cleanedActiveItineraryItems = cleanSavedItineraryItems(activeTrip.itineraryItems);
+    if (JSON.stringify(cleanedActiveItineraryItems) !== JSON.stringify(activeTrip.itineraryItems || [])) {
+      activeTrip = { ...activeTrip, itineraryItems: cleanedActiveItineraryItems };
+      trips = trips.map((trip) => trip.id === activeTripId ? activeTrip : trip);
+      localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
+    }
+
     const preferredCurrency = currencies.find((currency) => currency.code === activeTrip.currencyCode) || currencies[0];
     const fallback = getFallbackState(activeTripId);
     const savedTheme = getSavedTheme();
@@ -85,7 +185,7 @@ function loadState() {
       currencyUnit: activeTrip.currencyUnit || preferredCurrency.unit,
       exchangeBase: Number(activeTrip.exchangeBase || preferredCurrency.rateBase || 1),
       entries: Array.isArray(activeTrip.entries) ? activeTrip.entries : [],
-      itineraryItems: Array.isArray(activeTrip.itineraryItems) ? activeTrip.itineraryItems : [],
+      itineraryItems: cleanedActiveItineraryItems,
       packingList: Array.isArray(activeTrip.packingList) ? activeTrip.packingList : (typeof getDefaultPackingList === "function" ? getDefaultPackingList() : []),
       companions: Array.isArray(activeTrip.companions) ? activeTrip.companions : [],
       settlement: normalizeSettlementSettings(activeTrip.settlement),
@@ -177,7 +277,10 @@ function switchTrip(tripId) {
       delete state[key];
     }
   }
-  Object.assign(state, targetTrip);
+  Object.assign(state, {
+    ...targetTrip,
+    itineraryItems: cleanSavedItineraryItems(targetTrip.itineraryItems),
+  });
   state.theme = currentTheme;
 
   // reset day selections
@@ -200,7 +303,7 @@ function createNewTrip({ tripName, country, city, travelMode, startDate, endDate
     travelMode: normalizedTravelMode,
     theme: normalizeThemeName(state.theme || getSavedTheme()),
     startDate: startDate || "2026-06-09",
-    endDate: endDate || "2026-06-12",
+    endDate: endDate || "2026-06-16",
     selectedDate: startDate || "2026-06-09",
     selectedItineraryDate: startDate || "2026-06-09",
     lastActiveItineraryDate: startDate || "2026-06-09",
@@ -249,6 +352,9 @@ window.TripLog.register("persistence.stateStorage", {
   hasNoSavedRecords,
   normalizeThemeName,
   getSavedTheme,
+  cleanSavedItineraryPlace,
+  cleanSavedItineraryCoordinates,
+  cleanSavedItineraryItems,
   normalizeSettlementSettings,
   saveAndRender,
   saveStateSilently,

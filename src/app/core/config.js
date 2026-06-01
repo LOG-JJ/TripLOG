@@ -1,5 +1,6 @@
 const STORAGE_KEY = "domesticTravelExpensePlanner.v1";
 const HISTORY_STORAGE_KEY = "domesticTravelExpensePlanner.history.v1";
+const GOOGLE_GEOCODING_API_KEY_STORAGE_KEY = "domesticTravelExpensePlanner.googleGeocodingApiKey.v1";
 const PAGE_TRANSITION_MS = 800;
 const TIME_EDGE_SCROLL_DURATION = 560;
 const TIME_WHEEL_SCROLL_DURATION = 180;
@@ -44,6 +45,7 @@ const currencies = [
 window.TripLog.register("core.config", {
   STORAGE_KEY,
   HISTORY_STORAGE_KEY,
+  GOOGLE_GEOCODING_API_KEY_STORAGE_KEY,
   PAGE_TRANSITION_MS,
   TIME_EDGE_SCROLL_DURATION,
   TIME_WHEEL_SCROLL_DURATION,

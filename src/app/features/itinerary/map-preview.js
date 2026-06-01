@@ -6,12 +6,19 @@ function updateMapPreview(item, { geocodeMissing = true, useGoogleMap = false } 
   els.mapCurrentPlace.textContent = item.place || query;
   const renderToken = ++leafletRenderToken;
 
-  if (useGoogleMap || item.source === "google-query") {
-    renderGoogleMapPreview(item, googleQuery);
-    return;
-  }
+  const isGoogleQueryPreview = item.source === "google-query-preview"
+    || item.coordinateSource === "google-query-preview";
+  const directTextCoords = extractLatLngFromItineraryItem(item);
+  const candidateCoords = item.source ? getItemLatLng(item, { requireSignature: false }) : null;
+  const savedCoords = directTextCoords || candidateCoords || (isGoogleQueryPreview ? null : getItemLatLng(item, { requireSignature: true }));
+  if (savedCoords) cacheItemCoordinates(item, savedCoords);
 
-  const savedCoords = getItemLatLng(item);
+  if (useGoogleMap || isGoogleQueryPreview || item.source === "google-query") {
+    if (!savedCoords) {
+      renderGoogleMapPreview(item, googleQuery);
+      return;
+    }
+  }
 
   if (!savedCoords && !geocodeMissing) {
     els.mapCurrentLabel.textContent = "검색 버튼을 누르면 지도에 표시됩니다";
@@ -30,7 +37,7 @@ function updateMapPreview(item, { geocodeMissing = true, useGoogleMap = false } 
   }
 
   if (!savedCoords) {
-    fetchLatLngForItineraryItem(item, { maxQueries: 1 }).then(coords => {
+    fetchLatLngForItineraryItem(item, { maxQueries: 2, requireSavedSignature: true }).then(coords => {
       if (renderToken !== leafletRenderToken) return;
       if (coords) {
         cacheItemCoordinates(item, coords);
@@ -39,8 +46,11 @@ function updateMapPreview(item, { geocodeMissing = true, useGoogleMap = false } 
         return;
       }
 
-      els.mapCurrentLabel.textContent = "지도 좌표를 찾지 못했습니다";
-      els.mapCurrentPlace.textContent = item.place || query;
+      renderGoogleMapPreview({
+        ...item,
+        source: "google-query-preview",
+        mapQuery: googleQuery,
+      }, googleQuery);
     });
   } else {
     renderSingleLeafletMarker(item, savedCoords.lat, savedCoords.lon);
