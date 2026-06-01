@@ -95,7 +95,7 @@ function updatePageChrome({ animateBrand = false } = {}) {
   els.budgetBrandIcon.classList.toggle("active", !isItinerary);
   els.itineraryBrandIcon.classList.toggle("active", isItinerary);
   [els.domesticModeButton, els.overseasModeButton].forEach((statusItem) => {
-    statusItem.tabIndex = -1;
+    if (statusItem) statusItem.tabIndex = -1;
   });
 
   // Highlight active navigation tab bar item

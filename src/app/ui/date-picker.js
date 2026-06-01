@@ -223,6 +223,7 @@ function setDatePickerValue(input, value) {
   if (isDateOutsideInputBounds(input, value)) return;
   input.value = value;
   input.dispatchEvent(new Event("change", { bubbles: true }));
+  syncCustomDatePicker(input);
   closeCustomDatePicker(input);
 }
 

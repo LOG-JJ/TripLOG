@@ -1,5 +1,5 @@
 (() => {
-  const scriptVersion = "rainbow-route-segments-20260601-1";
+  const scriptVersion = "settings-mode-guide-20260601-1";
   const scriptFiles = [
     "core/namespace.js",
     "core/config.js",

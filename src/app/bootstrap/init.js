@@ -35,6 +35,11 @@ function setNewTripMode(mode, { resetCountry = false } = {}) {
   }
 }
 
+function syncNewTripDatePickers() {
+  syncCustomDatePicker(els.newTripStartDateInput);
+  syncCustomDatePicker(els.newTripEndDateInput);
+}
+
 function init() {
   els.tripNameInput.value = state.tripName;
   els.startDateInput.value = state.startDate;
@@ -305,6 +310,7 @@ function init() {
       els.newTripEndDateInput.value = "2026-06-12";
       els.newTripNameInput.value = "";
       setNewTripMode(state.travelMode, { resetCountry: true });
+      syncNewTripDatePickers();
       els.newTripModal.hidden = false;
     });
   }
@@ -411,6 +417,8 @@ function init() {
   setupCustomDatePicker(els.endDateInput);
   setupCustomDatePicker(els.lodgingCheckInInput);
   setupCustomDatePicker(els.lodgingCheckOutInput);
+  setupCustomDatePicker(els.newTripStartDateInput);
+  setupCustomDatePicker(els.newTripEndDateInput);
   setupCustomSelect(els.daySelect);
   setupCustomSelect(els.categorySelect);
   setupCustomSelect(els.currencySelect);

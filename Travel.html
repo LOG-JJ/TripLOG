@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>여행 가계부</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css?v=trip-mode-status-20260601-1" />
+    <link rel="stylesheet" href="./styles.css?v=report-category-align-20260601-1" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   </head>
@@ -31,10 +31,6 @@
         <div class="mode-toggle header-theme-toggle" id="headerThemeToggle" role="group" aria-label="디자인 필터 선택">
           <button class="active" id="themeBrutalistButton" type="button" data-theme="brutalist">네오 브루탈리즘</button>
           <button id="themeTossButton" type="button" data-theme="toss">토스 디자인</button>
-        </div>
-        <div class="trip-mode-status header-mode-toggle" id="headerModeToggle" role="status" aria-live="polite" aria-label="현재 여행 유형">
-          <span class="active" id="settingsDomesticButton" data-mode="domestic" aria-current="true">국내 여행</span>
-          <span id="settingsOverseasButton" data-mode="overseas" aria-current="false">해외 여행</span>
         </div>
         <div class="top-actions" style="display:none !important;" hidden>
           <button id="saveStateButton" type="button" hidden></button>
@@ -579,10 +575,10 @@
             <h3 style="font-family: var(--font-heading); font-size: 16px; font-weight: 900; margin-bottom: 16px;">🌍 여행 방식 & 통화</h3>
 
             <div style="margin-bottom: 20px;">
-              <span style="font-size: 12px; font-weight: 800; display: block; margin-bottom: 8px;">국내 / 해외 여행 모드</span>
+              <span style="font-size: 12px; font-weight: 800; display: block; margin-bottom: 8px;">현재 여행 유형</span>
               <div class="settings-mode-handoff">
-                <strong>상단 여행 가계부 박스 우측</strong>
-                <span>국내/해외 여행 전환은 모든 화면에서 바로 바꿀 수 있습니다.</span>
+                <strong id="settingsModeCurrentLabel">현재 여행: 국내 여행</strong>
+                <span id="settingsModeCurrentCopy">새 여행 만들기에서 선택한 유형이 여행별로 저장됩니다.</span>
               </div>
             </div>
 
@@ -609,7 +605,7 @@
                 </div>
               </div>
             </div>
-            <p id="settingsDomesticTip" style="font-size: 12px; color: var(--muted); font-weight: 700; margin-top: 10px;">국내 여행 모드에서는 대한민국 원화(₩, KRW)를 기본 통화로 사용합니다.</p>
+            <p id="settingsDomesticTip" style="font-size: 12px; color: var(--muted); font-weight: 700; margin-top: 10px;">국내 여행은 대한민국 원화(₩, KRW)를 기본 통화로 사용합니다. 해외 여행이 필요하면 여행 개요의 새 여행 만들기에서 유형을 선택하세요.</p>
           </div>
 
           <!-- 2. 백업 및 저장 관리 -->
@@ -618,10 +614,10 @@
 
             <div style="display: flex; flex-direction: column; gap: 12px;">
               <button class="text-button" id="settingsSaveButton" type="button" style="width: 100%; font-weight: 900; background: #e0f2fe; border: 2.5px solid var(--line); box-shadow: 2px 2px 0px var(--line); padding: 10px;">
-                💾 현재 여행 기록 저장 (스냅샷)
+                💾 현재 여행 기록 저장
               </button>
               <button class="text-button" id="settingsHistoryButton" type="button" style="width: 100%; font-weight: 900; background: #ffffff; border: 2.5px solid var(--line); box-shadow: 2px 2px 0px var(--line); padding: 10px;">
-                📜 저장된 스냅샷 기록 보기
+                📜 저장된 기록 보기
               </button>
               <button class="text-button" id="settingsSampleButton" type="button" style="width: 100%; font-weight: 900; background: #fef3c7; border: 2.5px solid var(--line); box-shadow: 2px 2px 0px var(--line); padding: 10px;">
                 💡 제주도 3박 4일 샘플 데이터 채우기
@@ -916,7 +912,7 @@
     </div>
 
     <div class="modal-backdrop" id="newTripModal" role="dialog" aria-modal="true" aria-labelledby="newTripModalTitle" hidden>
-      <section class="history-modal" style="max-width: 440px;">
+      <section class="history-modal new-trip-modal">
         <div class="modal-head">
           <div>
             <p class="overline">Create Trip</p>
@@ -948,7 +944,7 @@
               <input id="newTripCityInput" type="text" maxlength="24" placeholder="예: 도쿄" required style="width:100%;" />
             </label>
           </div>
-          <div style="display: flex; gap: 12px;">
+          <div class="new-trip-date-row">
             <label for="newTripStartDateInput" style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
               <span style="font-size: 13px; font-weight: 700; color: var(--text);">시작일</span>
               <input id="newTripStartDateInput" type="date" required style="width:100%;" />
@@ -981,6 +977,6 @@
       </div>
     </template>
 
-    <script src="./app.js?v=rainbow-route-segments-20260601-1"></script>
+    <script src="./app.js?v=settings-mode-guide-20260601-1"></script>
   </body>
 </html>

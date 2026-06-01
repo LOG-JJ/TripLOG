@@ -67,7 +67,7 @@ body {
     radial-gradient(rgba(17, 24, 39, 0.08) 1.5px, transparent 1.5px);
   background-size: 24px 24px;
   font-family: var(--font);
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 body.modal-open {
@@ -932,6 +932,10 @@ select:focus {
   gap: 8px;
 }
 
+.calendar-actions {
+  margin-top: 14px;
+}
+
 .calendar-title {
   font-family: var(--font-heading);
   font-size: 15px;
@@ -1778,6 +1782,12 @@ td.number {
 .category-list {
   display: grid;
   gap: 10px;
+  width: min(360px, 100%);
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding: 0;
+  list-style: none;
 }
 
 .category-row {
@@ -2524,6 +2534,12 @@ td.number {
   animation: modalIn 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 
+.new-trip-modal {
+  width: min(560px, 100%);
+  max-height: min(88vh, 760px);
+  overflow: visible;
+}
+
 @keyframes modalIn {
   from {
     opacity: 0;
@@ -2578,13 +2594,13 @@ td.number {
 .new-trip-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 20px 0 0 0;
+  gap: 18px;
+  padding: 24px;
 }
 
 .new-trip-location-row {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   align-items: flex-end;
 }
 
@@ -2592,8 +2608,14 @@ td.number {
   min-width: 0;
 }
 
+.new-trip-date-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
 .new-trip-mode-field {
-  flex: 0 0 86px;
+  flex: 0 0 108px;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -2608,36 +2630,39 @@ td.number {
 .new-trip-mode-toggle {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 3px;
-  min-height: 44px;
+  gap: 4px;
+  min-height: 46px;
   padding: 4px;
-  background: var(--surface-soft);
-  border: 2px solid transparent;
-  border-radius: 12px;
+  background: #fffdf5;
+  border: 2.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
 }
 
 .new-trip-mode-toggle button {
   min-width: 0;
   min-height: 34px;
-  padding: 0 6px;
+  padding: 0 8px;
   color: var(--muted);
   background: transparent;
-  border: 0;
-  border-radius: 8px;
+  border: 2px solid transparent;
+  border-radius: 6px;
   font-size: 12px;
   font-weight: 900;
-  transition: background 140ms ease, color 140ms ease, transform 140ms ease;
+  transition: background 140ms ease, color 140ms ease, transform 140ms ease, box-shadow 140ms ease;
 }
 
 .new-trip-mode-toggle button.active {
-  color: #ffffff;
-  background: #2f80ed;
-  box-shadow: 0 6px 14px rgba(47, 128, 237, 0.22);
+  color: var(--text);
+  background: var(--accent);
+  border-color: var(--line);
+  box-shadow: var(--shadow-sm);
 }
 
 .new-trip-mode-toggle button:not(.active):hover {
   color: var(--text);
-  background: #ffffff;
+  background: var(--accent-blue);
+  border-color: var(--line);
 }
 
 .new-trip-mode-toggle button:active {
@@ -2647,6 +2672,41 @@ td.number {
 #newTripCountryInput[readonly] {
   color: var(--text);
   background: var(--surface-soft);
+}
+
+.new-trip-date-row .custom-date-panel {
+  width: 320px;
+}
+
+.new-trip-date-row label:last-child .custom-date-panel {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 560px) {
+  .new-trip-form {
+    padding: 20px;
+  }
+
+  .new-trip-location-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .new-trip-mode-field {
+    flex: 1 1 auto;
+  }
+
+  .new-trip-date-row {
+    grid-template-columns: 1fr;
+  }
+
+  .new-trip-date-row .custom-date-panel,
+  .new-trip-date-row label:last-child .custom-date-panel {
+    right: auto;
+    left: 0;
+    width: min(100%, 320px);
+  }
 }
 
 .history-list {
@@ -5751,6 +5811,79 @@ html[data-theme="toss"] .custom-time-button.open {
   box-shadow: 0 0 0 3px rgba(49, 130, 246, 0.12) !important;
 }
 
+html[data-theme="toss"] .custom-date-panel {
+  background: #ffffff !important;
+  border: 1px solid #e5e8eb !important;
+  border-radius: 16px !important;
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.14) !important;
+  padding: 16px !important;
+}
+
+html[data-theme="toss"] .calendar-title {
+  color: #191f28 !important;
+  font-family: var(--font) !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="toss"] .calendar-nav,
+html[data-theme="toss"] .calendar-soft-button {
+  background: #f2f4f6 !important;
+  border: 1px solid transparent !important;
+  border-radius: 10px !important;
+  color: #4e5968 !important;
+  box-shadow: none !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="toss"] .calendar-nav:hover,
+html[data-theme="toss"] .calendar-soft-button:hover {
+  background: #e8f3ff !important;
+  color: var(--accent) !important;
+}
+
+html[data-theme="toss"] .calendar-weekdays {
+  color: #8b95a1 !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="toss"] .calendar-day {
+  border: 1px solid transparent !important;
+  border-radius: 10px !important;
+  color: #333d4b !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="toss"] .calendar-day:hover:not(:disabled) {
+  background: #e8f3ff !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  color: var(--accent) !important;
+}
+
+html[data-theme="toss"] .calendar-day.today {
+  background: #f2f4f6 !important;
+  border-color: transparent !important;
+  color: #191f28 !important;
+}
+
+html[data-theme="toss"] .calendar-day.selected {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 8px 18px rgba(49, 130, 246, 0.22) !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="toss"] .calendar-day.outside {
+  color: #b0b8c1 !important;
+}
+
+html[data-theme="toss"] .calendar-day:disabled {
+  background: #f9fafb !important;
+  color: #d1d6db !important;
+  opacity: 1 !important;
+}
+
 /* 4. Action Buttons (Primary, Ghost, Hover, Active) */
 html[data-theme="toss"] .submit-button,
 html[data-theme="toss"] .icon-button.primary {
@@ -5974,6 +6107,32 @@ html[data-theme="toss"] .mode-toggle button.active {
   border: none !important;
 }
 
+html[data-theme="toss"] .new-trip-mode-toggle {
+  background: #eff2f5 !important;
+  border: none !important;
+  border-radius: 99px !important;
+  box-shadow: none !important;
+  padding: 3px !important;
+}
+
+html[data-theme="toss"] .new-trip-mode-toggle button {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 99px !important;
+  box-shadow: none !important;
+  color: var(--muted) !important;
+  font-weight: 600 !important;
+  min-height: 34px !important;
+  padding: 0 12px !important;
+}
+
+html[data-theme="toss"] .new-trip-mode-toggle button.active {
+  background: #ffffff !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
 html[data-theme="toss"] .header-theme-toggle,
 html[data-theme="toss"] .header-mode-toggle {
   box-shadow: none !important;
@@ -6093,7 +6252,7 @@ html[data-theme="toss"] .stat-sticker em { color: var(--accent) !important; }
   flex: 0 0 auto;
   margin-left: auto;
   width: auto;
-  margin-right: 12px;
+  margin-right: 0;
 }
 
 .header-theme-toggle button {

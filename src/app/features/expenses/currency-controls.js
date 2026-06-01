@@ -52,10 +52,18 @@ function renderModeControls() {
   const isLodging = isLodgingSplitMode();
   updateBrandText();
   els.modeToggle?.setAttribute("data-mode", isOverseas ? "overseas" : "domestic");
-  els.domesticModeButton.classList.toggle("active", !isOverseas);
-  els.overseasModeButton.classList.toggle("active", isOverseas);
-  els.domesticModeButton.setAttribute("aria-current", String(!isOverseas));
-  els.overseasModeButton.setAttribute("aria-current", String(isOverseas));
+  els.domesticModeButton?.classList.toggle("active", !isOverseas);
+  els.overseasModeButton?.classList.toggle("active", isOverseas);
+  els.domesticModeButton?.setAttribute("aria-current", String(!isOverseas));
+  els.overseasModeButton?.setAttribute("aria-current", String(isOverseas));
+  if (els.settingsModeCurrentLabel) {
+    els.settingsModeCurrentLabel.textContent = `현재 여행: ${isOverseas ? "해외 여행" : "국내 여행"}`;
+  }
+  if (els.settingsModeCurrentCopy) {
+    els.settingsModeCurrentCopy.textContent = isOverseas
+      ? "새 여행 만들기에서 선택한 해외 여행 유형입니다. 주요 통화와 환율은 아래에서 조정하세요."
+      : "새 여행 만들기에서 선택한 국내 여행 유형입니다. 다른 유형이 필요하면 새 여행을 만들 때 선택하세요.";
+  }
   els.settingsCurrencyArea.hidden = !isOverseas;
   els.settingsDomesticTip.hidden = isOverseas;
   els.foreignFields.hidden = !isOverseas;

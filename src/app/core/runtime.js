@@ -79,6 +79,8 @@ const els = {
   settingsCurrencySelect: document.querySelector("#settingsCurrencySelect"),
   settingsExchangeRateInput: document.querySelector("#settingsExchangeRateInput"),
   settingsExchangeRateLabel: document.querySelector("#settingsExchangeRateLabel"),
+  settingsModeCurrentLabel: document.querySelector("#settingsModeCurrentLabel"),
+  settingsModeCurrentCopy: document.querySelector("#settingsModeCurrentCopy"),
   settingsDomesticTip: document.querySelector("#settingsDomesticTip"),
   historyModal: document.querySelector("#historyModal"),
   historyCloseButton: document.querySelector("#historyCloseButton"),
