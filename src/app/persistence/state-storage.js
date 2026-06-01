@@ -2,6 +2,7 @@ function loadState() {
   const fallback = {
     tripName: "",
     travelMode: "domestic",
+    theme: "brutalist",
     startDate: "2026-06-09",
     endDate: "2026-06-12",
     selectedDate: "2026-06-09",
@@ -33,6 +34,7 @@ function loadState() {
       ...fallback,
       ...saved,
       tripName: normalizedTripName,
+      theme: saved.theme === "toss" ? "toss" : "brutalist",
       currencyCode: preferredCurrency.code,
       currencySymbol: saved.currencySymbol || preferredCurrency.symbol,
       currencyUnit: saved.currencyUnit || preferredCurrency.unit,

@@ -217,6 +217,8 @@ function init() {
   els.categoryDonut.addEventListener("mouseleave", () => highlightCategory(activeFilter === "전체" ? null : activeFilter));
   els.domesticModeButton.addEventListener("click", () => setTravelMode("domestic"));
   els.overseasModeButton.addEventListener("click", () => setTravelMode("overseas"));
+  els.themeBrutalistButton.addEventListener("click", () => window.TripLog.features.settings.themeToggle.setTheme("brutalist"));
+  els.themeTossButton.addEventListener("click", () => window.TripLog.features.settings.themeToggle.setTheme("toss"));
   setupDayStripDrag(els.dayStrip);
   setupDayStripDrag(els.itineraryDayStrip);
 

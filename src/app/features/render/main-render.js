@@ -6,6 +6,7 @@ function render() {
 
   syncPageVisibility();
   renderModeControls();
+  window.TripLog.features.settings.themeToggle.renderThemeControls();
   els.tripNameInput.value = state.tripName;
   els.startDateInput.value = state.startDate;
   els.endDateInput.value = state.endDate;
