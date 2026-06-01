@@ -41,12 +41,12 @@ function getRouteGeocodeAnchor(items, currentIndex, resolvedItems, fallbackAncho
   if (fallbackAnchor) return fallbackAnchor;
 
   for (let i = currentIndex + 1; i < items.length; i++) {
-    const coords = getItemLatLng(items[i], { requireSignature: true });
+    const coords = getBestRouteCoordinates(items[i], { requireSignature: true });
     if (coords) return coords;
   }
 
   for (let i = 0; i < currentIndex; i++) {
-    const coords = getItemLatLng(items[i], { requireSignature: true });
+    const coords = getBestRouteCoordinates(items[i], { requireSignature: true });
     if (coords) return coords;
   }
 

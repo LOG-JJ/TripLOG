@@ -3505,59 +3505,246 @@ td.number {
 
 /* ⏱️ Itinerary Visualizers & 🎒 Backpack Suitcase Checklist Styling */
 .time-block-grid-wrap {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   margin-top: 12px;
 }
 
-.time-hour-block {
-  border: 2px solid var(--line);
-  border-radius: 4px;
-  background: #ffffff;
-  padding: 4px;
-  min-height: 48px;
+/* ⏱️ 24H 시계 다이얼 & 카드 덱 스타일 */
+.clock-dial-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 290px;
+  margin: 0 auto;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  box-shadow: none;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+}
+
+.clock-dial-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* 시계 중심 데코 */
+.clock-center-disc {
+  fill: #ffffff;
+  stroke: var(--line);
+  stroke-width: 1.5px;
+  filter: drop-shadow(1px 1px 0px var(--line));
+}
+
+.clock-center-label {
+  font-family: var(--font-heading);
+  font-size: 8px;
+  font-weight: 900;
+  fill: var(--line);
+  text-anchor: middle;
+}
+
+/* 시계판의 숫자 라벨 (가독성을 위해 얇게 튜닝) */
+.clock-hour-text {
+  font-family: var(--font);
+  font-size: 7.2px;
+  font-weight: 600;
+  fill: var(--text);
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+/* 시계 눈금선 */
+.clock-tick-line {
+  stroke: var(--line);
+  stroke-linecap: round;
+}
+
+/* 부채꼴(Sector) */
+.clock-sector {
+  stroke: var(--line);
+  stroke-width: 1.0px;
+  cursor: pointer;
+  transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.15s ease;
+}
+
+/* 부채꼴 내부 장소 텍스트 라벨 (가독성 향상을 위해 얇은 폰트 적용) */
+.clock-sector-label {
+  font-family: var(--font);
+  font-size: 6.8px;
+  font-weight: 600;
+  fill: #111827;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  pointer-events: none; /* 글자 클릭 시 부채꼴 클릭 방해 방지 */
+}
+
+.clock-sector:hover {
+  transform: scale(1.02);
+  transform-origin: center;
+  filter: brightness(0.96) drop-shadow(1.5px 1.5px 0px var(--line));
+}
+
+/* 시계바늘 */
+.clock-hand {
+  stroke: #ef4444;
+  stroke-width: 2px;
+  stroke-linecap: round;
+}
+
+/* 카드 덱 리스트 */
+.schedule-deck-list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+/* 네오브루탈리즘 카드 덱 */
+.deck-card {
+  display: flex;
+  align-items: stretch;
+  background: #ffffff;
+  border: 3px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 3px 3px 0px var(--line);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+  overflow: hidden;
   position: relative;
-  transition: all 0.15s ease;
 }
 
-.time-hour-block.has-items {
-  background: #fffbeb;
-  box-shadow: 2px 2px 0px var(--line);
+.deck-card:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px var(--line);
 }
 
-.time-hour-block .hour-label {
-  font-size: 9px;
+.deck-card:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1.5px 1.5px 0px var(--line);
+}
+
+/* 카드 왼쪽 시간 배지 */
+.deck-card-time-badge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 14px;
+  background: #fee2e2;
+  border-right: 3px solid var(--line);
+  min-width: 76px;
+  text-align: center;
+}
+
+.deck-card-time-badge .badge-time {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--line);
+}
+
+.deck-card-time-badge .badge-day {
+  font-size: 10px;
   font-weight: 800;
+  color: var(--muted);
+  margin-top: 1px;
+}
+
+/* 카드 바디 */
+.deck-card-body {
+  flex: 1;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  background: linear-gradient(180deg, #fffdfa 0%, #ffffff 100%);
+}
+
+.deck-card-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.deck-card-title {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--text);
+  word-break: break-all;
+  white-space: normal;
+}
+
+.deck-card-status {
+  font-size: 9px;
+  font-weight: 900;
+  padding: 1px 5px;
+  border: 1.5px solid var(--line);
+  border-radius: 99px;
+  background: #d1fae5;
+  box-shadow: 1px 1px 0px var(--line);
+}
+
+.deck-card-memo {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  line-height: 1.35;
+  word-break: break-all;
+  white-space: normal;
+  border-top: 1.5px dashed rgba(17, 24, 39, 0.12);
+  padding-top: 3px;
+  margin-top: 1px;
+}
+
+/* 다꾸 스티커 데코 */
+.deck-card-sticker {
+  position: absolute;
+  right: 6px;
+  bottom: 2px;
+  font-size: 20px;
+  opacity: 0.12;
+  pointer-events: none;
+  transform: rotate(12deg);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.deck-card:hover .deck-card-sticker {
+  transform: rotate(-8deg) scale(1.08);
+  opacity: 0.22;
+}
+
+/* 빈 상태 */
+.clock-empty-state {
+  padding: 20px;
+  text-align: center;
+  background: #faf9f6;
+  border: 3px dashed var(--line);
+  border-radius: 12px;
   color: var(--muted);
 }
 
-.time-hour-block .hour-items-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  margin-top: 2px;
+.clock-empty-state strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--text);
+  margin-bottom: 4px;
 }
 
-.time-hour-block .hour-item-badge {
-  font-size: 9px;
-  font-weight: 800;
-  padding: 2px;
-  border: 1px solid var(--line);
-  border-radius: 2px;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: pointer;
-  transition: transform 0.1s ease;
-}
-
-.time-hour-block .hour-item-badge:hover {
-  transform: scale(1.05);
+.clock-empty-state span {
+  font-size: 10px;
+  font-weight: 700;
 }
 
 .donut-chart-container {
@@ -4406,6 +4593,22 @@ td.number {
   font-weight: 900;
   color: #111827;
   display: flex;
+  border: 2.5px solid var(--line);
+  border-radius: 50%;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 900;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2.5px solid var(--line);
+  border-radius: 50%;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 900;
+  color: #111827;
+  display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 2px 2px 0px var(--line);
@@ -4414,6 +4617,20 @@ td.number {
 }
 .leaflet-custom-marker.grouped {
   align-items: flex-start;
+}
+.clock-dial-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 310px;
+  margin: 0 auto;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  aspect-ratio: 1 / 1;
+  padding: 0;
 }
 .marker-pin-cluster {
   width: auto;

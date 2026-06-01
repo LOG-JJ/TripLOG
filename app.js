@@ -1,5 +1,5 @@
 (() => {
-  const scriptVersion = "google-coordinate-source-fix-20260601-2";
+  const scriptVersion = "google-coordinate-route-pins-20260601-1";
   const scriptFiles = [
     "core/namespace.js",
     "core/config.js",

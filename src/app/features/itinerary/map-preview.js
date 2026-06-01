@@ -79,7 +79,7 @@ function renderGoogleMapPreview(item, googleQuery) {
 }
 
 function buildGoogleMapsRouteUrls(items) {
-  const queries = items.map((item) => buildCleanRouteQuery(item)).filter(Boolean);
+  const queries = items.map(buildGoogleMapsRouteStopQuery).filter(Boolean);
   const origin = queries[0] || "대한민국";
   const destination = queries[queries.length - 1] || origin;
   const waypoints = queries.slice(1, -1);
@@ -106,7 +106,15 @@ function buildGoogleMapsRouteUrls(items) {
   };
 }
 
+function buildGoogleMapsRouteStopQuery(item) {
+  const coords = getBestRouteCoordinates(item, { requireSignature: true });
+  return formatLatLngForQuery(coords) || buildCleanRouteQuery(item);
+}
+
 function buildGoogleMapsSearchQuery(query) {
+  const coords = extractLatLngFromText(query);
+  if (coords) return formatLatLngForQuery(coords);
+
   const cleanQuery = (query || "").replace(/\s+/g, " ").trim();
   if (!cleanQuery) return "대한민국";
   return cleanQuery;
@@ -159,6 +167,7 @@ window.TripLog.register("features.itinerary.mapPreview", {
   updateMapPreview,
   renderGoogleMapPreview,
   buildGoogleMapsRouteUrls,
+  buildGoogleMapsRouteStopQuery,
   buildGoogleMapsSearchQuery,
   buildGoogleMapsSearchContext,
   buildGoogleCandidateId,

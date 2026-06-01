@@ -2,7 +2,7 @@ const LEGACY_STORAGE_KEY = window.TripLog.core.config.STORAGE_KEY;
 const TRIPS_KEY = "domesticTravelExpensePlanner.trips.v2";
 const ACTIVE_TRIP_ID_KEY = "domesticTravelExpensePlanner.activeTripId.v2";
 const THEME_KEY = "domesticTravelExpensePlanner.theme.v1";
-const highTrustSavedCoordinateSources = new Set(["coordinate-text", "google-places", "google-geocoding", "known-place"]);
+const highTrustSavedCoordinateSources = new Set(["coordinate-text", "google-places", "google-geocoding"]);
 
 const itineraryPlaceCleanupRules = {
   "제주공항 도착": { place: "제주국제공항" },

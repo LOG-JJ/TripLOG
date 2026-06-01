@@ -208,6 +208,20 @@ function extractLatLngFromItineraryItem(item) {
   ].filter(Boolean).join(" "));
 }
 
+function getBestRouteCoordinates(item, { requireSignature = true } = {}) {
+  return extractLatLngFromItineraryItem(item)
+    || getItemLatLng(item, { requireSignature });
+}
+
+function formatLatLngForQuery(coords) {
+  if (!coords || !isValidLatLng(coords.lat, coords.lon)) return "";
+  return `${trimCoordinate(coords.lat)},${trimCoordinate(coords.lon)}`;
+}
+
+function trimCoordinate(value) {
+  return Number.parseFloat(Number(value).toFixed(7)).toString();
+}
+
 function normalizeCoordinatePair(firstValue, secondValue) {
   const first = Number.parseFloat(firstValue);
   const second = Number.parseFloat(secondValue);
@@ -273,7 +287,7 @@ function hasMatchingCoordinateSignature(item) {
 
 async function fetchLatLngForItineraryItem(item, { maxQueries = Infinity, context = "", near = null, ignoreSaved = false, requireSavedSignature = false, allowNominatim = true, validateCoords = null } = {}) {
   const directCoords = extractLatLngFromItineraryItem(item);
-  if (directCoords && isAcceptedCoordinates(directCoords, item, validateCoords)) return directCoords;
+  if (directCoords) return directCoords;
 
   const savedCoords = getItemLatLng(item, { requireSignature: requireSavedSignature });
   const shouldRefreshSavedWithGoogle = savedCoords
@@ -305,9 +319,6 @@ async function fetchLatLngForItineraryItem(item, { maxQueries = Infinity, contex
 
   if (savedCoords && !ignoreSaved && isAcceptedCoordinates(savedCoords, item, validateCoords)) return savedCoords;
 
-  const knownCoords = findKnownPlaceCoordinates(item, context);
-  if (knownCoords && isAcceptedCoordinates(knownCoords, item, validateCoords)) return knownCoords;
-
   for (const query of buildGeocodeQueries(item, context).slice(0, maxQueries)) {
     const cachedCoords = getCachedGeocodeResult(query, context);
     if (cachedCoords && isAcceptedCoordinates(cachedCoords, item, validateCoords)) return cachedCoords;
@@ -338,39 +349,8 @@ async function fetchLatLngForItineraryItem(item, { maxQueries = Infinity, contex
   return null;
 }
 
-function findKnownPlaceCoordinates(item, context = "") {
-  const placeKey = normalizePlaceAlias(item?.place);
-  const haystack = normalizePlaceAlias([item?.place, item?.location, context].filter(Boolean).join(" "));
-  if (!placeKey && !haystack) return null;
-
-  const candidates = knownPlaceCoordinates
-    .map((entry) => ({
-      entry,
-      aliases: entry.aliases.map((alias) => normalizePlaceAlias(alias)).filter(Boolean),
-      contextKey: normalizePlaceAlias(entry.context || ""),
-    }))
-    .filter((candidate) => !candidate.contextKey || haystack.includes(candidate.contextKey))
-    .map((candidate) => {
-      const placeAlias = candidate.aliases.find((alias) => (
-        placeKey && (placeKey === alias || placeKey.includes(alias) || alias.includes(placeKey))
-      ));
-      const haystackAlias = candidate.aliases.find((alias) => haystack.includes(alias));
-      const bestAlias = placeAlias || haystackAlias || "";
-      return {
-        entry: candidate.entry,
-        score: (placeAlias ? 10000 : 0) + bestAlias.length,
-      };
-    })
-    .filter((candidate) => candidate.score > 0)
-    .sort((a, b) => b.score - a.score);
-
-  const matched = candidates[0]?.entry;
-
-  return matched ? { lat: matched.lat, lon: matched.lon, source: "known-place", precision: "exact" } : null;
-}
-
 function isHighTrustCoordinateSource(source) {
-  return ["coordinate-text", "google-places", "google-geocoding", "known-place"].includes(source || "");
+  return ["coordinate-text", "google-places", "google-geocoding"].includes(source || "");
 }
 
 function getCoordinateDistanceKm(a, b) {
@@ -422,6 +402,9 @@ window.TripLog.register("services.maps.queryUtils", {
   decodeCoordinateText,
   extractLabeledLatLng,
   extractLatLngFromItineraryItem,
+  getBestRouteCoordinates,
+  formatLatLngForQuery,
+  trimCoordinate,
   normalizeCoordinatePair,
   getItemLatLng,
   isValidLatLng,
@@ -431,7 +414,6 @@ window.TripLog.register("services.maps.queryUtils", {
   hasMatchingCoordinateSignature,
   fetchLatLngForItineraryItem,
   isHighTrustCoordinateSource,
-  findKnownPlaceCoordinates,
   getCoordinateDistanceKm,
   normalizePlaceAlias,
   buildGeocodeCacheKey,

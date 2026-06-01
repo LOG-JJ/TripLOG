@@ -14,14 +14,6 @@ const PRE_TRIP_EXPENSE_LABEL = "사전구매";
 const PRE_TRIP_EXPENSE_SHORT_DATE = "여행 전";
 const PRE_TRIP_EXPENSE_WEEKDAY = "결제";
 
-const knownPlaceCoordinates = [
-  { aliases: ["제주국제공항", "제주 공항", "jeju international airport"], context: "제주", lat: 33.5070711, lon: 126.4916441 },
-  { aliases: ["코델리아s호텔", "코델리아 s호텔", "코델리아s", "cordelia s hotel"], context: "제주", lat: 33.454925, lon: 126.9102771 },
-  { aliases: ["광치기해변", "광치기 해변", "gwangchigi beach"], context: "제주", lat: 33.4537662, lon: 126.9255233 },
-  { aliases: ["성산일출봉", "seongsan ilchulbong"], context: "제주", lat: 33.4588891, lon: 126.9408178 },
-  { aliases: ["우도", "udo island"], context: "제주", lat: 33.5072572, lon: 126.9550015 },
-];
-
 const categories = [
   { name: "숙소", color: "#ccb7ff" },
   { name: "식비", color: "#ffe45c" },
@@ -58,7 +50,6 @@ window.TripLog.register("core.config", {
   PRE_TRIP_EXPENSE_LABEL,
   PRE_TRIP_EXPENSE_SHORT_DATE,
   PRE_TRIP_EXPENSE_WEEKDAY,
-  knownPlaceCoordinates,
   categories,
   currencies,
 });
