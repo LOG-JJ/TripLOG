@@ -45,11 +45,11 @@ function init() {
       e.preventDefault();
       suitcaseArea.classList.add("drag-over");
     });
-    
+
     suitcaseArea.addEventListener("dragleave", () => {
       suitcaseArea.classList.remove("drag-over");
     });
-    
+
     suitcaseArea.addEventListener("drop", (e) => {
       e.preventDefault();
       suitcaseArea.classList.remove("drag-over");
@@ -67,11 +67,11 @@ function init() {
       e.preventDefault();
       shelfArea.classList.add("drag-over");
     });
-    
+
     shelfArea.addEventListener("dragleave", () => {
       shelfArea.classList.remove("drag-over");
     });
-    
+
     shelfArea.addEventListener("drop", (e) => {
       e.preventDefault();
       shelfArea.classList.remove("drag-over");
@@ -151,12 +151,38 @@ function init() {
   els.backToBudgetButton.addEventListener("click", () => setActivePage("budget"));
   els.itineraryForm.addEventListener("submit", handleItinerarySubmit);
   els.itineraryDaySelect.addEventListener("change", () => {
-    if (els.itineraryDaySelect.value) state.selectedItineraryDate = els.itineraryDaySelect.value;
+    if (els.itineraryDaySelect.value) {
+      state.selectedItineraryDate = els.itineraryDaySelect.value;
+      if (els.itineraryDaySelect.value !== "all") {
+        state.lastActiveItineraryDate = els.itineraryDaySelect.value;
+      }
+    }
     syncCustomSelect(els.itineraryDaySelect);
     saveAndRender();
   });
+  if (els.itineraryModeToggle) {
+    els.itineraryModeToggle.querySelectorAll("button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const mode = button.dataset.mode;
+        const days = getTripDays();
+
+        if (mode === "overview") {
+          state.selectedItineraryDate = "all";
+        } else {
+          // Switch back to last active specific day (or first day if none)
+          state.selectedItineraryDate = state.lastActiveItineraryDate || days[0]?.date || state.startDate;
+        }
+
+        clearItineraryEditMode(false);
+        saveAndRender();
+      });
+    });
+  }
   els.itineraryTransSelect.addEventListener("change", () => {
     syncCustomSelect(els.itineraryTransSelect);
+  });
+  els.itineraryThemeSelect.addEventListener("change", () => {
+    syncCustomSelect(els.itineraryThemeSelect);
   });
   els.cancelItineraryEditButton.addEventListener("click", clearItineraryEditMode);
   initNavigationEvents();
@@ -222,7 +248,64 @@ function init() {
   setupDayStripDrag(els.dayStrip);
   setupDayStripDrag(els.itineraryDayStrip);
 
-  document.querySelectorAll(".segmented button").forEach((button) => {
+  // Multi-Trip Event Listeners
+  if (els.overviewTripSelect) {
+    els.overviewTripSelect.addEventListener("change", () => {
+      const tripId = els.overviewTripSelect.value;
+      if (tripId) {
+        window.TripLog.persistence.stateStorage.switchTrip(tripId);
+      }
+    });
+  }
+
+  if (els.createNewTripButton) {
+    els.createNewTripButton.addEventListener("click", () => {
+      els.newTripStartDateInput.value = "2026-06-09";
+      els.newTripEndDateInput.value = "2026-06-12";
+      els.newTripNameInput.value = "";
+      els.newTripModal.hidden = false;
+    });
+  }
+
+  if (els.newTripCloseButton) {
+    els.newTripCloseButton.addEventListener("click", () => {
+      els.newTripModal.hidden = true;
+    });
+  }
+
+  if (els.deleteCurrentTripButton) {
+    els.deleteCurrentTripButton.addEventListener("click", () => {
+      const activeId = window.TripLog.persistence.stateStorage.getActiveTripId();
+      if (activeId) {
+        window.TripLog.persistence.stateStorage.deleteTrip(activeId);
+      }
+    });
+  }
+
+  if (els.newTripForm) {
+    els.newTripForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const tripName = els.newTripNameInput.value.trim();
+      const startDate = els.newTripStartDateInput.value;
+      const endDate = els.newTripEndDateInput.value;
+
+      if (startDate > endDate) {
+        window.alert("종료일은 시작일보다 빨라야 할 수 없습니다.");
+        return;
+      }
+
+      window.TripLog.persistence.stateStorage.createNewTrip({
+        tripName,
+        startDate,
+        endDate
+      });
+
+      els.newTripModal.hidden = true;
+      els.newTripForm.reset();
+    });
+  }
+
+  document.querySelectorAll(".segmented button[data-filter]").forEach((button) => {
     button.addEventListener("click", () => {
       setFilter(button.dataset.filter);
     });
@@ -239,6 +322,8 @@ function init() {
   setupCustomSelect(els.settingsCurrencySelect);
   setupCustomSelect(els.itineraryDaySelect);
   setupCustomSelect(els.itineraryTransSelect);
+  setupCustomSelect(els.itineraryThemeSelect);
+  setupCustomSelect(els.overviewTripSelect);
   setupCustomSelect(document.querySelector("#settlementExpenseSourceSelect"));
   setupCustomTimePicker(els.itineraryTimeInput);
   renderHistoryModal();

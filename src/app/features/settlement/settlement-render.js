@@ -189,8 +189,22 @@ function renderSettlementExpenseLedger(expenseSplitList, entryRows, members, sou
   `;
 
   const tbody = tableWrap.querySelector("tbody");
+  let lastGroupKey = "";
   entryRows.forEach((entry) => {
     const dayMeta = getSettlementEntryDayMeta(entry, sourceState);
+    const groupKey = dayMeta.date || entry.date || "";
+    if (groupKey !== lastGroupKey) {
+      const groupRow = document.createElement("tr");
+      groupRow.className = `settlement-day-group-row${isPreTripExpenseDate(dayMeta.date) ? " is-pretrip" : ""}`;
+      groupRow.innerHTML = `
+        <td colspan="7">
+          <span>${escapeHtml(dayMeta.label || "날짜 없음")}</span>
+          <em>${escapeHtml(dayMeta.shortDate || "-")}</em>
+        </td>
+      `;
+      tbody.appendChild(groupRow);
+      lastGroupKey = groupKey;
+    }
     const categoryColor = getCategory(entry.category).color;
     const expanded = entry.key === expandedEntryKey;
     const tr = document.createElement("tr");

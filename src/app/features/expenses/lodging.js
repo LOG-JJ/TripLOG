@@ -7,6 +7,8 @@ function renderExpenseFormMode() {
   const isOverseas = state.travelMode === "overseas";
   const isPreTrip = isPreTripExpenseDate(els.daySelect.value);
   els.lodgingFields.hidden = !isLodging;
+  els.lodgingCheckInInput.disabled = !isLodging;
+  els.lodgingCheckOutInput.disabled = !isLodging;
   els.descriptionInput.placeholder = isLodging
     ? "예: 호텔명 또는 숙소명"
     : isPreTrip
@@ -44,14 +46,31 @@ function syncLodgingDefaults(options = {}) {
   syncLodgingDateBounds();
 
   const defaultCheckIn = getDefaultLodgingCheckIn();
-  if (options.force || !els.lodgingCheckInInput.value) {
+  const tripStartValue = toInputDate(tripStart);
+  const tripEndValue = toInputDate(tripEnd);
+  const checkInMaxValue = toInputDate(tripStart < tripEnd ? addDays(tripEnd, -1) : tripEnd);
+  const currentCheckInValue = els.lodgingCheckInInput.value;
+  const shouldResetCheckIn = options.force
+    || !currentCheckInValue
+    || currentCheckInValue < tripStartValue
+    || currentCheckInValue > checkInMaxValue;
+
+  if (shouldResetCheckIn) {
     els.lodgingCheckInInput.value = defaultCheckIn;
   }
 
   const checkIn = parseDate(els.lodgingCheckInInput.value) || parseDate(defaultCheckIn);
   const checkoutFallback = checkIn < tripEnd ? addDays(checkIn, 1) : tripEnd;
   const currentCheckOut = parseDate(els.lodgingCheckOutInput.value);
-  if (options.force || !currentCheckOut || currentCheckOut <= checkIn) {
+  const checkOutMinValue = toInputDate(addDays(checkIn, 1));
+  const currentCheckOutValue = els.lodgingCheckOutInput.value;
+  const shouldResetCheckOut = options.force
+    || !currentCheckOut
+    || currentCheckOut <= checkIn
+    || currentCheckOutValue < checkOutMinValue
+    || currentCheckOutValue > tripEndValue;
+
+  if (shouldResetCheckOut) {
     els.lodgingCheckOutInput.value = toInputDate(checkoutFallback);
   }
 

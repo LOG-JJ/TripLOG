@@ -103,6 +103,7 @@ const els = {
   itineraryCount: document.querySelector("#itineraryCount"),
   itineraryRouteButton: document.querySelector("#itineraryRouteButton"),
   itineraryTransSelect: document.querySelector("#itineraryTransSelect"),
+  itineraryThemeSelect: document.querySelector("#itineraryThemeSelect"),
   itineraryDurationInput: document.querySelector("#itineraryDurationInput"),
   itineraryCostInput: document.querySelector("#itineraryCostInput"),
   itinerarySyncExpenseCheckbox: document.querySelector("#itinerarySyncExpenseCheckbox"),
@@ -131,17 +132,30 @@ const els = {
   itineraryDayStrip: document.querySelector("#itineraryDayStrip"),
   itineraryList: document.querySelector("#itineraryList"),
   itineraryEmpty: document.querySelector("#itineraryEmpty"),
+  itineraryWorkspace: document.querySelector(".itinerary-workspace"),
   googleMapFrame: document.querySelector("#googleMapFrame"),
   googleMapsLink: document.querySelector("#googleMapsLink"),
   mapCurrentLabel: document.querySelector("#mapCurrentLabel"),
   mapCurrentPlace: document.querySelector("#mapCurrentPlace"),
   printReport: document.querySelector("#printReport"),
   categoryRowTemplate: document.querySelector("#categoryRowTemplate"),
+  itineraryModeToggle: document.querySelector("#itineraryModeToggle"),
 
   // Design Theme additions
   themeToggle: document.querySelector("#headerThemeToggle"),
   themeBrutalistButton: document.querySelector("#themeBrutalistButton"),
   themeTossButton: document.querySelector("#themeTossButton"),
+
+  // Multi-Trip Management additions
+  overviewTripSelect: document.querySelector("#overviewTripSelect"),
+  createNewTripButton: document.querySelector("#createNewTripButton"),
+  deleteCurrentTripButton: document.querySelector("#deleteCurrentTripButton"),
+  newTripModal: document.querySelector("#newTripModal"),
+  newTripCloseButton: document.querySelector("#newTripCloseButton"),
+  newTripForm: document.querySelector("#newTripForm"),
+  newTripNameInput: document.querySelector("#newTripNameInput"),
+  newTripStartDateInput: document.querySelector("#newTripStartDateInput"),
+  newTripEndDateInput: document.querySelector("#newTripEndDateInput"),
 };
 
 window.TripLog.register("core.runtime", {

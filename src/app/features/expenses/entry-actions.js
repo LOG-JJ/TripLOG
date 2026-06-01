@@ -1,6 +1,7 @@
 function setFilter(filter) {
+  if (!filter) return;
   activeFilter = filter;
-  document.querySelectorAll(".segmented button").forEach((button) => {
+  document.querySelectorAll(".segmented button[data-filter]").forEach((button) => {
     button.classList.toggle("active", button.dataset.filter === activeFilter);
   });
   render();

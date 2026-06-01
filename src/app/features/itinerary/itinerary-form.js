@@ -6,8 +6,9 @@ function handleItinerarySubmit(event) {
 
   const id = editingItineraryId || createId();
   const existingItem = editingItineraryId ? findItineraryItem(editingItineraryId) : null;
-  
+
   const trans = els.itineraryTransSelect.value || "none";
+  const theme = els.itineraryThemeSelect.value || "sightseeing";
   const duration = Number(els.itineraryDurationInput.value) || 0;
   const cost = Number(els.itineraryCostInput.value) || 0;
   const syncExpense = els.itinerarySyncExpenseCheckbox.checked;
@@ -20,6 +21,7 @@ function handleItinerarySubmit(event) {
     place,
     location,
     memo: els.itineraryMemoInput.value.trim(),
+    theme,
     trans,
     duration,
     cost,
@@ -60,6 +62,7 @@ function handleItinerarySubmit(event) {
   }
 
   state.selectedItineraryDate = item.date;
+  state.lastActiveItineraryDate = item.date;
   state.selectedItineraryId = item.id;
   clearItineraryEditMode(false);
   saveAndRender();
@@ -68,10 +71,16 @@ function handleItinerarySubmit(event) {
 function startItineraryEdit(item) {
   editingItineraryId = item.id;
   state.selectedItineraryDate = item.date;
+  state.lastActiveItineraryDate = item.date;
   state.selectedItineraryId = item.id;
+
+  // Rerender so that the active day tab/dropdown switches cleanly first
+  saveAndRender();
+
   els.itineraryDaySelect.value = item.date;
   els.itineraryTimeInput.value = item.time || "";
   els.itineraryTransSelect.value = item.trans || "none";
+  els.itineraryThemeSelect.value = item.theme || "sightseeing";
   els.itineraryDurationInput.value = item.duration || "";
   els.itineraryCostInput.value = item.cost || "";
   els.itinerarySyncExpenseCheckbox.checked = item.syncExpense !== false;
@@ -87,6 +96,7 @@ function startItineraryEdit(item) {
   els.cancelItineraryEditButton.hidden = false;
   syncCustomSelect(els.itineraryDaySelect);
   syncCustomSelect(els.itineraryTransSelect);
+  syncCustomSelect(els.itineraryThemeSelect);
   syncCustomTimePicker(els.itineraryTimeInput);
   updateMapPreview(item);
   els.itineraryPlaceInput.focus();
@@ -97,6 +107,7 @@ function clearItineraryEditMode(shouldRender = true) {
   els.itineraryForm.reset();
   els.itineraryDaySelect.value = state.selectedItineraryDate || state.startDate;
   els.itineraryTransSelect.value = "none";
+  els.itineraryThemeSelect.value = "sightseeing";
   els.itineraryDurationInput.value = "";
   els.itineraryCostInput.value = "";
   els.itinerarySyncExpenseCheckbox.checked = true;
@@ -110,6 +121,7 @@ function clearItineraryEditMode(shouldRender = true) {
   els.cancelItineraryEditButton.hidden = true;
   syncCustomSelect(els.itineraryDaySelect);
   syncCustomSelect(els.itineraryTransSelect);
+  syncCustomSelect(els.itineraryThemeSelect);
   syncCustomTimePicker(els.itineraryTimeInput);
   if (shouldRender) renderItineraryPage();
 }
@@ -119,6 +131,7 @@ function selectItineraryItem(id) {
   const item = findItineraryItem(id);
   if (item) {
     state.selectedItineraryDate = item.date;
+    state.lastActiveItineraryDate = item.date;
     updateMapPreview(item);
   }
   saveAndRender();
@@ -140,6 +153,14 @@ function findItineraryItem(id) {
 }
 
 function getFilteredItineraryItems() {
+  if (state.selectedItineraryDate === "all") {
+    return [...state.itineraryItems].sort((a, b) => {
+      const dateDiff = (a.date || "").localeCompare(b.date || "");
+      if (dateDiff !== 0) return dateDiff;
+      const timeDiff = (a.time || "99:99").localeCompare(b.time || "99:99");
+      return timeDiff || a.createdAt - b.createdAt;
+    });
+  }
   return [...state.itineraryItems]
     .filter((item) => item.date === state.selectedItineraryDate)
     .sort((a, b) => {

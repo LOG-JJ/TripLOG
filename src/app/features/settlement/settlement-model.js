@@ -9,7 +9,10 @@ function getSettlementEntriesForSource(source) {
     note: entry.note || "",
     amount: Math.max(0, Math.round(Number(entry.amount || 0))),
     raw: entry,
-  }));
+  })).sort((a, b) => {
+    const dateDiff = compareExpenseEntryDates(a, b);
+    return dateDiff || Number(a.raw?.createdAt || 0) - Number(b.raw?.createdAt || 0) || a.index - b.index;
+  });
 }
 
 function addSettlementAmount(target, key, amount) {

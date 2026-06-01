@@ -2,6 +2,20 @@ function renderTimeBlockGrid(items) {
   if (!els.itineraryTimeBlockGrid) return;
   els.itineraryTimeBlockGrid.replaceChildren();
 
+  if (state.selectedItineraryDate === "all") {
+    const placeholder = document.createElement("div");
+    placeholder.className = "time-block-empty-overview";
+    placeholder.innerHTML = `
+      <div class="time-block-empty-overview-title">📅 전체 일정 모드 활성화됨</div>
+      <div class="time-block-empty-overview-desc">
+        전체 일정 모드에서는 일차별로 타임라인이 피드로 연결됩니다.<br>
+        일정별 상세 시간대 분포를 확인하려면 상단 일차 칩(Day Chip)을 선택해 주세요.
+      </div>
+    `;
+    els.itineraryTimeBlockGrid.appendChild(placeholder);
+    return;
+  }
+
   for (let h = 0; h < 24; h++) {
     const hourStr = String(h).padStart(2, "0");
     const block = document.createElement("div");
@@ -64,6 +78,30 @@ function getTransitColor(trans) {
 function renderTravelTimeChart(items) {
   if (!els.itineraryDurationChart) return;
   els.itineraryDurationChart.replaceChildren();
+
+  if (state.selectedItineraryDate === "all") {
+    const placeholder = document.createElement("div");
+    placeholder.className = "time-block-empty-overview";
+    placeholder.innerHTML = `
+      <div class="time-block-empty-overview-title">⏱️ 전체 이동 분석 정지</div>
+      <div class="time-block-empty-overview-desc">
+        전체 일정 모드에서는 소요 시간 차트가 제공되지 않습니다.<br>
+        개별 일차(Day Chip)를 선택하면 해당 일의 이동 분석 차트가 표시됩니다.
+      </div>
+    `;
+    els.itineraryDurationChart.appendChild(placeholder);
+
+    const reportDuration = document.querySelector("#reportItineraryDurationChart");
+    if (reportDuration) {
+      reportDuration.replaceChildren();
+      reportDuration.innerHTML = `
+        <div style="text-align: center; color: var(--muted); padding: 24px; font-size: 0.95rem; font-family: var(--font);">
+          보고서에서는 개별 일자별 이동 분석 차트가 제공됩니다.
+        </div>
+      `;
+    }
+    return;
+  }
 
   const activeItems = items.filter(item => item.duration > 0);
 

@@ -1940,7 +1940,7 @@ td.number {
 
 .itinerary-form {
   display: grid;
-  grid-template-columns: 0.8fr 0.8fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
   gap: 14px;
   margin-bottom: 24px;
@@ -4028,6 +4028,22 @@ td.number {
   border-color: rgba(17, 24, 39, 0.24);
 }
 
+.itinerary-card-theme-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-yellow, #ffe359);
+  border: 2px solid var(--line);
+  color: var(--text);
+  box-shadow: 2px 2px 0px var(--line);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 .itinerary-card-actions {
   grid-column: 2;
   justify-content: flex-end;
@@ -4626,6 +4642,44 @@ td.number {
 
 .settlement-expense-table tbody tr.is-expanded td {
   background: #f8fafc;
+}
+
+.settlement-expense-table tbody tr.settlement-day-group-row td {
+  padding: 8px 10px;
+  background: #f8fafc;
+  border-top: 2px solid var(--line);
+  border-bottom: 2px solid var(--line);
+}
+
+.settlement-day-group-row span,
+.settlement-day-group-row em {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.settlement-day-group-row span {
+  padding: 2px 8px;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 1px 1px 0 var(--line);
+}
+
+.settlement-day-group-row em {
+  margin-left: 8px;
+  color: var(--muted);
+  font-style: normal;
+}
+
+.settlement-day-group-row.is-pretrip td {
+  background: #f0fdf4;
+}
+
+.settlement-day-group-row.is-pretrip span {
+  background: #dcfce7;
 }
 
 .settlement-description-cell strong {
@@ -6124,6 +6178,18 @@ html[data-theme="toss"] .itinerary-card-hint {
   color: #4e5968 !important;
 }
 
+html[data-theme="toss"] .itinerary-card-theme-badge {
+  background: #f2f4f6 !important;
+  color: #4e5968 !important;
+  font-family: 'Pretendard', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  padding: 4px 8px !important;
+  border-radius: 8px !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
 html[data-theme="toss"] .itinerary-card-actions button {
   background: #f2f4f6 !important;
   color: #4e5968 !important;
@@ -6149,6 +6215,957 @@ html[data-theme="toss"] .itinerary-card-actions button:active {
 /* Specific styling for the delete button inside cards */
 html[data-theme="toss"] .itinerary-card-actions button:nth-of-type(2) {
   color: #f04452 !important; /* Soft premium Toss red */
+}
+
+/* Itinerary Overview (Option 1) Separator Headers & Empty/Placeholder States */
+
+.itinerary-list-day-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  padding: 8px 16px;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text);
+  background: var(--accent-blue);
+  border: 3px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  z-index: 2;
+  width: fit-content;
+  align-self: flex-start;
+}
+
+.itinerary-list-day-header svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.time-block-empty-overview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 24px;
+  background: var(--surface-soft);
+  border: 3px dashed var(--line);
+  border-radius: var(--radius);
+  margin: 16px 0;
+  color: var(--muted);
+  box-shadow: none;
+}
+
+.time-block-empty-overview-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.time-block-empty-overview-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* Toss Design Specific Styling overrides */
+html[data-theme="toss"] .itinerary-list-day-header {
+  background: #f2f4f6 !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 99px !important;
+  color: var(--accent) !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  padding: 6px 16px !important;
+  margin-top: 28px !important;
+  margin-bottom: 12px !important;
+  width: fit-content !important;
+  font-family: var(--font) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+html[data-theme="toss"] .itinerary-list-day-header svg {
+  fill: var(--accent) !important;
+}
+
+html[data-theme="toss"] .time-block-empty-overview {
+  background: #ffffff !important;
+  border: none !important;
+  border-radius: 24px !important;
+  box-shadow: var(--shadow) !important;
+  padding: 48px 32px !important;
+  margin: 20px 0 !important;
+}
+
+html[data-theme="toss"] .time-block-empty-overview-title {
+  font-family: var(--font) !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: #191f28 !important;
+  margin-bottom: 8px !important;
+}
+
+html[data-theme="toss"] .time-block-empty-overview-desc {
+  font-family: var(--font) !important;
+  font-size: 0.9rem !important;
+  color: var(--muted) !important;
+  line-height: 1.6 !important;
+}
+
+/* Itinerary Workspace Overview Mode Layout Overrides */
+.itinerary-workspace.overview-active {
+  grid-template-columns: 1fr !important;
+}
+
+.itinerary-workspace.overview-active .map-panel {
+  display: none !important;
+}
+
+.itinerary-workspace.overview-active .map-section-top {
+  display: none !important;
+}
+
+.itinerary-workspace.overview-active hr.section-divider {
+  display: none !important;
+}
+
+.itinerary-workspace.overview-active .itinerary-main-panel > .section-title-row.compact,
+.itinerary-workspace.overview-active .itinerary-form {
+  display: none !important;
+}
+
+/* Toss Design Specific panel elevation override in Overview mode */
+html[data-theme="toss"] .itinerary-main-panel {
+  border: none !important;
+  box-shadow: var(--shadow) !important;
+  border-radius: var(--radius) !important;
+  padding: 32px !important;
+  transition: all 0.25s ease !important;
+}
+
+/* Real Overview Compact Dashboard Card */
+.itinerary-card-overview-compact {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 12px 18px !important;
+  margin-bottom: 8px !important;
+  border-radius: 14px !important;
+  background: var(--surface) !important;
+  gap: 16px !important;
+  min-height: auto !important;
+  border: 3px solid var(--line) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.itinerary-card-overview-compact::before {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+.overview-compact-left {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 4px !important;
+  flex-shrink: 0 !important;
+  width: 90px !important;
+}
+
+.overview-compact-time {
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  color: var(--text) !important;
+  font-family: var(--font-heading) !important;
+}
+
+.overview-compact-trans {
+  font-size: 0.72rem !important;
+  padding: 1px 6px !important;
+  border-radius: 4px !important;
+  background: var(--surface-strong) !important;
+  color: var(--muted) !important;
+  border: 1px solid var(--line) !important;
+  font-weight: 600 !important;
+}
+
+.overview-compact-center {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  flex-grow: 1 !important;
+  min-width: 0 !important;
+}
+
+.overview-compact-place-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+
+.overview-compact-place {
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  color: var(--text) !important;
+  font-family: var(--font-heading) !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+}
+
+.overview-compact-place:hover {
+  color: var(--accent) !important;
+  text-decoration: underline !important;
+}
+
+.overview-compact-memo {
+  font-size: 0.8rem !important;
+  color: var(--muted) !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 450px !important;
+}
+
+.overview-compact-right {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  flex-shrink: 0 !important;
+}
+
+.overview-compact-badges {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.overview-compact-badge {
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  border: 1px solid var(--line) !important;
+  background: var(--surface-soft) !important;
+  color: var(--text) !important;
+}
+
+.overview-compact-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+.overview-compact-btn {
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  border: 2px solid var(--line) !important;
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+}
+
+.overview-compact-btn:hover {
+  background: var(--surface-strong) !important;
+  transform: translateY(-1px) !important;
+}
+
+.overview-compact-btn:active {
+  transform: scale(0.96) !important;
+}
+
+/* ==========================================
+   TOSS DESIGN THEME OVERRIDES FOR OVERVIEW
+   ========================================== */
+html[data-theme="toss"] .itinerary-card-overview-compact {
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+  border-radius: 16px !important;
+  background: #ffffff !important;
+  padding: 14px 20px !important;
+  margin-bottom: 8px !important;
+}
+
+html[data-theme="toss"] .itinerary-card-overview-compact::before {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  left: -23px !important;
+}
+
+html[data-theme="toss"] .overview-compact-time {
+  font-weight: 700 !important;
+  font-family: var(--font) !important;
+}
+
+html[data-theme="toss"] .overview-compact-trans {
+  border: none !important;
+  background: #f2f4f6 !important;
+  border-radius: 6px !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  font-family: var(--font) !important;
+}
+
+html[data-theme="toss"] .overview-compact-place {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  font-family: var(--font) !important;
+}
+
+html[data-theme="toss"] .overview-compact-badge {
+  border: none !important;
+  background: #f2f4f6 !important;
+  border-radius: 6px !important;
+  color: var(--muted) !important;
+  font-size: 0.75rem !important;
+  font-family: var(--font) !important;
+}
+
+html[data-theme="toss"] .overview-compact-btn {
+  border: none !important;
+  background: #f2f4f6 !important;
+  color: #4e5968 !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  padding: 6px 12px !important;
+  font-family: var(--font) !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] .overview-compact-btn:hover {
+  background: #e5e8eb !important;
+  color: #191f28 !important;
+}
+
+html[data-theme="toss"] .overview-compact-btn.delete {
+  color: #f04452 !important;
+  background: #feebee !important;
+}
+
+html[data-theme="toss"] .overview-compact-btn.delete:hover {
+  background: #fcd5db !important;
+}
+
+/* Premium Toss Toast Popup */
+.toss-toast {
+  position: fixed;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%) translateY(24px);
+  background: rgba(25, 31, 40, 0.95);
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 20px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  z-index: 10000;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -0.01em;
+}
+
+.toss-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+
+/* ==========================================================================
+   📂 PREMIUM TRIP SUMMARY DASHBOARD (TOSS STYLE)
+   ========================================================================== */
+
+.premium-dashboard-container {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  margin-top: 16px;
+}
+
+/* Card Common Layout */
+.dashboard-card {
+  background: #ffffff;
+  border: 3px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.dashboard-card-title {
+  font-size: 16px;
+  font-weight: 850;
+  color: var(--text);
+  margin: 0;
+  font-family: var(--font-heading);
+}
+
+.dashboard-card-subtitle {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 700;
+  margin-top: -12px;
+}
+
+/* Card 1: Travel Summary */
+.card-summary .summary-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.summary-trip-name {
+  font-size: 23px;
+  font-weight: 900;
+  color: var(--text);
+  font-family: var(--font-heading);
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+
+.summary-trip-date {
+  font-size: 13.5px;
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.summary-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.summary-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 10px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--line);
+  background: #f8fafc;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--line);
+  transition: all 0.1s ease;
+}
+
+.summary-btn:hover {
+  background: #f1f5f9;
+}
+
+.summary-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.summary-btn .btn-emoji {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.summary-btn .btn-label {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+/* Card 2: Essential Checklist */
+.checklist-progress-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.checklist-progress-box .progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.checklist-progress-box .progress-bar-track {
+  height: 10px;
+  background: var(--line);
+  border-radius: 99px;
+  overflow: hidden;
+  border: 1.5px solid var(--line);
+}
+
+.checklist-progress-box .progress-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+/* Card 3: Timeline */
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 4px;
+}
+
+.timeline-day-block {
+  position: relative;
+  padding-left: 24px;
+}
+
+.timeline-day-block::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 22px;
+  bottom: -22px;
+  width: 2px;
+  background: var(--line);
+}
+
+.timeline-day-block:last-child::before {
+  display: none;
+}
+
+.timeline-day-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.timeline-day-checkbox {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 2.5px solid var(--line);
+  background: #ffffff;
+  box-shadow: 1px 1px 0 var(--line);
+}
+
+.timeline-day-label {
+  font-size: 14.5px;
+  font-weight: 900;
+  color: var(--text);
+}
+
+.timeline-items-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 6px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+}
+
+.timeline-dot-node {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2.5px solid var(--line);
+  flex-shrink: 0;
+  margin-top: 5px;
+  box-shadow: 1px 1px 0 var(--line);
+}
+
+.timeline-dot-node.dot-checked {
+  background: var(--accent);
+  border-color: var(--line);
+}
+
+.timeline-dot-node.dot-empty {
+  background: #f1f5f9;
+}
+
+.timeline-text {
+  font-size: 13px;
+  font-weight: 750;
+  color: var(--text);
+  line-height: 1.35;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.timeline-emoji {
+  flex-shrink: 0;
+}
+
+.timeline-item-time {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.empty-timeline-info {
+  font-size: 12.5px;
+  color: var(--muted);
+  font-weight: 700;
+  text-align: center;
+  padding: 30px 10px;
+  border: 2px dashed var(--line);
+  border-radius: var(--radius-sm);
+}
+
+/* Card 4: Expense prediction */
+.expense-chart-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.donut-chart-wrap {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+}
+
+.donut-svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.donut-center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 900;
+  font-family: var(--font-heading);
+}
+
+.expense-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.legend-color-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-name {
+  flex-grow: 1;
+}
+
+.legend-ratio {
+  color: var(--text);
+  margin-left: 4px;
+}
+
+.expense-totals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  border-top: 2px dashed var(--line);
+  padding-top: 16px;
+  margin-top: auto;
+}
+
+.expense-totals .total-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.expense-totals .total-amount {
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--text);
+  font-family: var(--font-heading);
+}
+
+.expense-totals .total-label {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+/* Card 5: Packing bag checklist */
+.packing-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.suitcase-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #e0f2fe;
+  border: 2px solid var(--line);
+  box-shadow: 2px 2px 0 var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.suitcase-emoji {
+  font-size: 24px;
+}
+
+.packing-progress-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.packing-progress-info .progress-bar-track {
+  height: 8px;
+  background: var(--line);
+  border-radius: 99px;
+  border: 1.5px solid var(--line);
+}
+
+.packing-progress-info .progress-bar-fill {
+  height: 100%;
+  background: var(--accent-blue, #3182f6);
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+.packing-progress-info .progress-text {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.packing-quick-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 2px dashed var(--line);
+  padding-top: 16px;
+  margin-top: auto;
+}
+
+.packing-quick-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 750;
+  color: var(--text);
+  cursor: pointer;
+  user-select: none;
+}
+
+.packing-quick-item input[type="checkbox"] {
+  display: none;
+}
+
+.packing-quick-item .checkbox-custom {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  background: #ffffff;
+  position: relative;
+  flex-shrink: 0;
+  box-shadow: 1px 1px 0 var(--line);
+  transition: all 0.1s ease;
+}
+
+.packing-quick-item:hover .checkbox-custom {
+  background: #f8fafc;
+}
+
+.packing-quick-item input:checked + .checkbox-custom {
+  background: var(--accent);
+  border-color: var(--line);
+}
+
+.packing-quick-item input:checked + .checkbox-custom::after {
+  content: '✓';
+  position: absolute;
+  top: -2.5px;
+  left: 2.5px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.packing-quick-item.checked .packing-quick-name {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+
+/* ==========================================================================
+   ⚡ TOSS DESIGN OVERRIDES FOR PREMIUM DASHBOARD
+   ========================================================================== */
+
+html[data-theme="toss"] .dashboard-card {
+  background: #ffffff !important;
+  border: none !important;
+  border-radius: 24px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04) !important;
+  padding: 24px !important;
+}
+
+html[data-theme="toss"] .dashboard-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.07) !important;
+}
+
+html[data-theme="toss"] .summary-btn {
+  background: #f2f4f6 !important;
+  border: none !important;
+  border-radius: 16px !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] .summary-btn:hover {
+  background: #e5e8eb !important;
+}
+
+html[data-theme="toss"] .summary-btn:active {
+  transform: scale(0.96) !important;
+}
+
+html[data-theme="toss"] .summary-btn .btn-label {
+  color: #4e5968 !important;
+}
+
+html[data-theme="toss"] .checklist-progress-box .progress-bar-track,
+html[data-theme="toss"] .packing-progress-info .progress-bar-track {
+  background: #f2f4f6 !important;
+  border: none !important;
+}
+
+html[data-theme="toss"] .checklist-progress-box .progress-bar-fill {
+  background: #3182f6 !important;
+}
+
+html[data-theme="toss"] .timeline-day-block::before {
+  background: #f2f4f6 !important;
+}
+
+html[data-theme="toss"] .timeline-day-checkbox {
+  border: 2px solid #3182f6 !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] .timeline-dot-node {
+  border: 2px solid #f2f4f6 !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] .timeline-dot-node.dot-checked {
+  background: #3182f6 !important;
+}
+
+html[data-theme="toss"] .timeline-text {
+  color: #191f28 !important;
+}
+
+html[data-theme="toss"] .timeline-item-time {
+  color: #8b95a1 !important;
+}
+
+html[data-theme="toss"] .expense-totals {
+  border-top: 1px solid #f2f4f6 !important;
+}
+
+html[data-theme="toss"] .suitcase-icon-box {
+  background: #e8f3ff !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] .packing-progress-info .progress-bar-fill {
+  background: #3182f6 !important;
+}
+
+html[data-theme="toss"] .packing-quick-list {
+  border-top: 1px solid #f2f4f6 !important;
+}
+
+html[data-theme="toss"] .packing-quick-item .checkbox-custom {
+  border: 2px solid #e5e8eb !important;
+  box-shadow: none !important;
+  border-radius: 6px !important;
+}
+
+html[data-theme="toss"] .packing-quick-item input:checked + .checkbox-custom {
+  background: #3182f6 !important;
+  border-color: #3182f6 !important;
+}
+
+html[data-theme="toss"] .packing-quick-item input:checked + .checkbox-custom::after {
+  color: #ffffff !important;
 }
 
 

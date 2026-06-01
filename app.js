@@ -1,18 +1,18 @@
 (() => {
-  const scriptVersion = "ui-polish-20260601-pretrip-2";
+  const scriptVersion = "qa-settlement-ledger-pretrip-20260601-1";
   const scriptFiles = [
     "core/namespace.js",
     "core/config.js",
     "core/runtime.js",
     "bootstrap/init.js",
     "persistence/state-storage.js",
+    "features/settings/theme-toggle.js",
     "features/history/history-store.js",
     "features/history/history-modal.js",
     "navigation/page-router.js",
     "navigation/trip-dates.js",
     "features/expenses/expense-form.js",
     "features/settings/travel-mode.js",
-    "features/settings/theme-toggle.js",
     "features/expenses/currency-controls.js",
     "features/expenses/lodging.js",
     "ui/date-picker.js",
