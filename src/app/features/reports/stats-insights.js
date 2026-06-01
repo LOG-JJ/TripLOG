@@ -16,7 +16,7 @@ function renderStatsInsights(totals, days) {
   }
   
   const activeDays = days.length || 1;
-  const dailyAvg = Math.round(totals.total / activeDays);
+  const dailyAvg = Math.round(getTripDayEntryTotal(days) / activeDays);
   els.statDailyAverage.textContent = formatWon(dailyAvg);
 }
 

@@ -8,6 +8,10 @@ const DAY_STRIP_EDGE_SCROLL_DURATION = 460;
 const DAY_STRIP_DRAG_THRESHOLD = 12;
 const GEOCODE_TIMEOUT_MS = 4500;
 const ROUTE_SEGMENT_TIMEOUT_MS = 6500;
+const PRE_TRIP_EXPENSE_DATE = "__pretrip__";
+const PRE_TRIP_EXPENSE_LABEL = "사전구매";
+const PRE_TRIP_EXPENSE_SHORT_DATE = "여행 전";
+const PRE_TRIP_EXPENSE_WEEKDAY = "결제";
 
 const knownPlaceCoordinates = [
   { aliases: ["제주국제공항", "제주 공항", "jeju international airport"], context: "제주", lat: 33.5070711, lon: 126.4916441 },
@@ -48,6 +52,10 @@ window.TripLog.register("core.config", {
   DAY_STRIP_DRAG_THRESHOLD,
   GEOCODE_TIMEOUT_MS,
   ROUTE_SEGMENT_TIMEOUT_MS,
+  PRE_TRIP_EXPENSE_DATE,
+  PRE_TRIP_EXPENSE_LABEL,
+  PRE_TRIP_EXPENSE_SHORT_DATE,
+  PRE_TRIP_EXPENSE_WEEKDAY,
   knownPlaceCoordinates,
   categories,
   currencies,

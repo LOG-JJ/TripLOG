@@ -1,23 +1,25 @@
 function renderDailySpendTrend(days) {
-  if (!days || days.length === 0) {
+  const trendDays = getExpenseDayOptions(days || []);
+
+  if (!trendDays || trendDays.length === 0) {
     renderDailyTrendSummary([]);
     els.dailyBarChart.innerHTML = `<div class="chart-empty">여행 기간을 먼저 설정하면 일차별 지출 추이를 볼 수 있습니다.</div>`;
     return;
   }
 
-  const dayTotals = days.map(day => {
+  const dayTotals = trendDays.map(day => {
     const total = sumEntries(state.entries.filter(entry => entry.date === day.date));
     return { ...day, total, amount: total };
   });
 
-  renderDailyTrendSummary(dayTotals);
+  renderDailyTrendSummary(dayTotals, days || []);
 
   const totalSpent = sumEntries(dayTotals);
   if (!totalSpent) {
     els.dailyBarChart.innerHTML = `
       <div class="daily-trend-empty">
-        <strong>아직 일차별 지출 데이터가 없습니다.</strong>
-        <span>지출 기록 탭에서 금액을 추가하면 이곳에 큰 막대 그래프로 바로 반영됩니다.</span>
+        <strong>아직 지출 추이 데이터가 없습니다.</strong>
+        <span>사전구매나 여행 일차에 금액을 추가하면 이곳에 큰 막대 그래프로 바로 반영됩니다.</span>
       </div>
     `;
     return;
@@ -90,11 +92,12 @@ function renderDailySpendTrend(days) {
   els.dailyBarChart.innerHTML = svgContent;
 }
 
-function renderDailyTrendSummary(dayTotals) {
+function renderDailyTrendSummary(dayTotals, tripDays = dayTotals.filter((day) => !day.isPreTrip)) {
   if (!els.dailyTrendSummary) return;
   const total = sumEntries(dayTotals);
+  const tripDayTotal = sumEntries(dayTotals.filter((day) => !day.isPreTrip));
   const activeDays = dayTotals.filter((day) => day.total > 0);
-  const average = dayTotals.length ? Math.round(total / dayTotals.length) : 0;
+  const average = tripDays.length ? Math.round(tripDayTotal / tripDays.length) : 0;
   const highestDay = dayTotals.length
     ? dayTotals.reduce((best, day) => (day.total > best.total ? day : best), dayTotals[0])
     : null;
@@ -109,12 +112,12 @@ function renderDailyTrendSummary(dayTotals) {
       <strong>${formatWon(average)}</strong>
     </div>
     <div class="daily-trend-stat">
-      <span>최고 지출일</span>
+      <span>최고 지출</span>
       <strong>${highestDay && highestDay.total ? `${escapeHtml(highestDay.label)} · ${formatWon(highestDay.total)}` : "아직 없음"}</strong>
     </div>
     <div class="daily-trend-stat">
-      <span>지출 기록일</span>
-      <strong>${activeDays.length} / ${dayTotals.length}일</strong>
+      <span>지출 기록</span>
+      <strong>${activeDays.length} / ${dayTotals.length}개</strong>
     </div>
   `;
 }

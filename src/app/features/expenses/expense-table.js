@@ -1,36 +1,37 @@
 function renderDaySelect(days) {
   els.daySelect.replaceChildren();
+  const options = getExpenseDayOptions(days);
 
-  days.forEach((day) => {
+  options.forEach((day) => {
     const option = document.createElement("option");
     option.value = day.date;
-    option.textContent = `${day.label} · ${day.shortDate}`;
+    option.textContent = day.isPreTrip ? day.label : `${day.label} · ${day.shortDate}`;
     els.daySelect.appendChild(option);
   });
 
-  if (days.length === 0) {
+  if (options.length === 0) {
     const option = document.createElement("option");
     option.textContent = "일정 없음";
     option.value = "";
     els.daySelect.appendChild(option);
   }
 
-  els.daySelect.value = days.some((day) => day.date === state.selectedDate) ? state.selectedDate : days[0]?.date || "";
-  els.daySelect.disabled = days.length === 0;
+  const hasSelectedDate = options.some((day) => day.date === state.selectedDate);
+  els.daySelect.value = hasSelectedDate ? state.selectedDate : days[0]?.date || PRE_TRIP_EXPENSE_DATE;
+  els.daySelect.disabled = options.length === 0;
   syncCustomSelect(els.daySelect, { rebuild: true });
 }
 
 function renderTable(entries, days) {
-  const dayMap = new Map(days.map((day) => [day.date, day]));
   els.expenseTableBody.replaceChildren();
 
   entries.forEach((entry) => {
-    const day = dayMap.get(entry.date);
+    const day = getExpenseDayMeta(entry.date, days);
     const tr = document.createElement("tr");
     const color = getCategory(entry.category).color;
     tr.innerHTML = `
-      <td data-label="일차">${day ? day.label : "-"}</td>
-      <td data-label="날짜">${day ? day.shortDate : formatShortDate(parseDate(entry.date))}</td>
+      <td data-label="구분">${escapeHtml(day.label)}</td>
+      <td data-label="날짜">${escapeHtml(day.shortDate)}</td>
       <td data-label="항목"><span class="tag" style="--tag-color:${color}">${escapeHtml(entry.category)}</span></td>
       <td data-label="내용">${escapeHtml(entry.description)}</td>
       <td class="number" data-label="금액">${formatEntryAmountHtml(entry)}</td>

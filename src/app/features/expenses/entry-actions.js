@@ -30,7 +30,7 @@ function clearEditMode() {
   editingId = null;
   els.expenseForm.reset();
   els.daySelect.value = state.selectedDate;
-  els.categorySelect.value = "식비";
+  els.categorySelect.value = getDefaultExpenseCategory();
   els.currencySelect.value = "JPY";
   els.foreignAmountInput.value = "";
   els.exchangeRateInput.value = "";
@@ -77,7 +77,7 @@ function getFilteredEntries() {
     result.sort((a, b) => (a.description || "").localeCompare(b.description || ""));
   } else {
     result.sort((a, b) => {
-      const dateDiff = a.date.localeCompare(b.date);
+      const dateDiff = compareExpenseEntryDates(a, b);
       return dateDiff || a.createdAt - b.createdAt;
     });
   }

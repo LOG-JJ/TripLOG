@@ -12,7 +12,7 @@ function renderReportPage(totals, days) {
       : formatCurrency(maxVal);
 
     const activeDays = days.length || 1;
-    const dailyAvg = totals.total / activeDays;
+    const dailyAvg = getTripDayEntryTotal(days) / activeDays;
     reportAvgExpenseAmount.textContent = formatCurrency(dailyAvg);
   }
 

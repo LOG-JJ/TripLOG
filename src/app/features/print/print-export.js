@@ -5,8 +5,8 @@ function exportPdf() {
 
 function buildPrintReport() {
   const days = getTripDays();
-  const dayMap = new Map(days.map((day) => [day.date, day]));
   const totals = calculateTotals();
+  const tripDayTotal = getTripDayEntryTotal(days);
   const safeTripName = escapeHtml(state.tripName || getDefaultTripName());
   const dateRange = `${formatReadableDate(state.startDate)} - ${formatReadableDate(state.endDate)}`;
   const generatedAt = new Intl.DateTimeFormat("ko-KR", {
@@ -27,11 +27,11 @@ function buildPrintReport() {
 
   const expenseRows = getFilteredEntriesForPrint()
     .map((entry) => {
-      const day = dayMap.get(entry.date);
+      const day = getExpenseDayMeta(entry.date, days);
       return `
         <tr>
-          <td>${day ? day.label : "-"}</td>
-          <td>${day ? day.shortDate : formatShortDate(parseDate(entry.date))}</td>
+          <td>${escapeHtml(day.label)}</td>
+          <td>${escapeHtml(day.shortDate)}</td>
           <td>${escapeHtml(entry.category)}</td>
           <td>${escapeHtml(entry.description)}</td>
           <td class="number">${escapeHtml(formatEntryAmountText(entry))}</td>
@@ -48,7 +48,7 @@ function buildPrintReport() {
       <div class="print-card"><span>총 지출</span><strong>${formatWon(totals.total)}</strong></div>
       <div class="print-card"><span>여행 기간</span><strong>${days.length}일</strong></div>
       <div class="print-card"><span>기록 수</span><strong>${state.entries.length}건</strong></div>
-      <div class="print-card"><span>하루 평균</span><strong>${formatWon(days.length ? Math.round(totals.total / days.length) : 0)}</strong></div>
+      <div class="print-card"><span>일차 평균</span><strong>${formatWon(days.length ? Math.round(tripDayTotal / days.length) : 0)}</strong></div>
     </div>
     <h2 class="print-section-title">항목별 합계</h2>
     <table>
@@ -57,7 +57,7 @@ function buildPrintReport() {
     </table>
     <h2 class="print-section-title">지출 내역</h2>
     <table>
-      <thead><tr><th>일차</th><th>날짜</th><th>항목</th><th>내용</th><th class="number">금액</th><th>비고</th></tr></thead>
+      <thead><tr><th>구분</th><th>날짜</th><th>항목</th><th>내용</th><th class="number">금액</th><th>비고</th></tr></thead>
       <tbody>${expenseRows || '<tr><td colspan="6">기록된 경비가 없습니다.</td></tr>'}</tbody>
     </table>
   `;
@@ -65,7 +65,7 @@ function buildPrintReport() {
 
 function getFilteredEntriesForPrint() {
   return [...state.entries].sort((a, b) => {
-    const dateDiff = a.date.localeCompare(b.date);
+    const dateDiff = compareExpenseEntryDates(a, b);
     return dateDiff || a.createdAt - b.createdAt;
   });
 }

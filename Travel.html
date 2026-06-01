@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>여행 가계부</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css?v=ui-polish-20260531-9" />
+    <link rel="stylesheet" href="./styles.css?v=ui-polish-20260601-pretrip-2" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   </head>
@@ -153,8 +153,8 @@
 
         <!-- 💰 2. 지출 기록 페이지 -->
         <main class="page-view" id="budgetPage" hidden>
-          <section class="planner-panel" aria-label="일차 필터" style="padding: 16px 24px; margin-bottom: 24px;">
-            <div class="day-strip" id="dayStrip" aria-label="여행 일차"></div>
+          <section class="planner-panel" aria-label="지출 구분 필터" style="padding: 16px 24px; margin-bottom: 24px;">
+            <div class="day-strip" id="dayStrip" aria-label="지출 일차 및 사전구매"></div>
           </section>
 
         <div class="content-grid">
@@ -169,14 +169,14 @@
 
             <form class="expense-form" id="expenseForm">
               <label for="daySelect">
-                <span>일차</span>
+                <span>일차/구분</span>
                 <select id="daySelect" required></select>
               </label>
               <label for="categorySelect">
                 <span>항목</span>
                 <select id="categorySelect" required>
                   <option value="숙소">숙소</option>
-                  <option value="식비">식비</option>
+                  <option value="식비" selected>식비</option>
                   <option value="관광">관광</option>
                   <option value="교통">교통</option>
                   <option value="쇼핑">쇼핑</option>
@@ -264,7 +264,7 @@
               <table>
                 <thead>
                   <tr>
-                    <th>일차</th>
+                    <th>구분</th>
                     <th>날짜</th>
                     <th>항목</th>
                     <th>내용</th>
@@ -277,7 +277,7 @@
               </table>
               <div class="empty-state" id="emptyState">
                 <strong>아직 기록된 경비가 없습니다.</strong>
-                <span>일정과 항목을 선택한 뒤 금액을 추가하세요.</span>
+                <span>일차/구분과 항목을 선택한 뒤 금액을 추가하세요.</span>
               </div>
             </div>
           </section>
@@ -777,6 +777,6 @@
       </div>
     </template>
 
-    <script src="./app.js?v=ui-polish-20260531-9"></script>
+    <script src="./app.js?v=ui-polish-20260601-pretrip-2"></script>
   </body>
 </html>

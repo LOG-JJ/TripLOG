@@ -1,14 +1,15 @@
 function renderDayStrip(days) {
   els.dayStrip.replaceChildren();
+  const options = getExpenseDayOptions(days);
 
-  days.forEach((day) => {
+  options.forEach((day) => {
     const total = sumEntries(state.entries.filter((entry) => entry.date === day.date));
     const button = document.createElement("button");
     button.type = "button";
-    button.className = `day-chip${day.date === state.selectedDate ? " active" : ""}`;
+    button.className = `day-chip${day.isPreTrip ? " pretrip" : ""}${day.date === state.selectedDate ? " active" : ""}`;
     button.innerHTML = `
       <strong>${day.label}</strong>
-      <span>${day.shortDate} ${day.weekday}</span>
+      <span>${day.shortDate}${day.weekday ? ` ${day.weekday}` : ""}</span>
       <em>${formatWon(total)}</em>
     `;
     button.addEventListener("click", () => {

@@ -1,5 +1,5 @@
 (() => {
-  const scriptVersion = "ui-polish-20260531-9";
+  const scriptVersion = "ui-polish-20260601-pretrip-2";
   const scriptFiles = [
     "core/namespace.js",
     "core/config.js",

@@ -19,12 +19,13 @@ function loadSampleData() {
     exchangeRate: 0,
   });
   state.entries = [
+    createEntry(PRE_TRIP_EXPENSE_DATE, "교통", "왕복 항공권", 160000, "출발 전 결제"),
     createEntry("2026-06-09", "교통", "렌터카 예약", 120000, "공항 픽업"),
     createEntry("2026-06-09", "식비", "흑돼지 저녁", 68000, ""),
     createEntry("2026-06-10", "관광", "성산일출봉 입장료", 10000, "2인"),
     ...sampleLodgingEntries,
     createEntry("2026-06-11", "쇼핑", "기념품", 35000, ""),
-    createEntry("2026-06-12", "기타", "여행자보험", 12000, ""),
+    createEntry(PRE_TRIP_EXPENSE_DATE, "기타", "여행자보험", 12000, "가입 완료"),
   ];
   state.itineraryItems = [
     createItineraryItem("2026-06-09", "10:30", "제주국제공항", "제주특별자치도 제주시 공항로 2", "렌터카 픽업"),

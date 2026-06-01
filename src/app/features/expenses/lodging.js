@@ -5,8 +5,13 @@ function isLodgingSplitMode() {
 function renderExpenseFormMode() {
   const isLodging = isLodgingSplitMode();
   const isOverseas = state.travelMode === "overseas";
+  const isPreTrip = isPreTripExpenseDate(els.daySelect.value);
   els.lodgingFields.hidden = !isLodging;
-  els.descriptionInput.placeholder = isLodging ? "예: 호텔명 또는 숙소명" : "예: 숙소 예약금";
+  els.descriptionInput.placeholder = isLodging
+    ? "예: 호텔명 또는 숙소명"
+    : isPreTrip
+      ? "예: 항공권, eSIM, 입장권"
+      : "예: 숙소 예약금";
   els.amountLabel.textContent = isLodging ? (isOverseas ? "원화 총액" : "숙소 총액") : isOverseas ? "원화 환산" : "금액";
   els.amountInput.placeholder = isLodging ? "총 숙소비" : isOverseas ? "자동 계산" : "0";
   els.submitButton.querySelector("span").textContent = editingId ? "저장" : "추가";

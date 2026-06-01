@@ -1310,10 +1310,18 @@ select:focus {
   box-shadow: var(--shadow);
 }
 
+.day-chip.pretrip {
+  background: #f7fee7;
+}
+
 .day-chip.active {
   background: var(--accent-purple);
   transform: translateY(-4px);
   box-shadow: var(--shadow);
+}
+
+.day-chip.pretrip.active {
+  background: #bef264;
 }
 
 .day-chip.active em {

@@ -10,13 +10,8 @@ function getCompanionEmoji(index = 0) {
 }
 
 function getSettlementEntryDayMeta(entry, sourceState) {
-  const entryDate = parseDate(entry.date);
-  const startDate = parseDate(sourceState?.startDate);
-  const dayIndex = entryDate && startDate ? Math.round((entryDate - startDate) / 86400000) + 1 : 0;
-  return {
-    label: dayIndex > 0 ? `${dayIndex}일차` : "-",
-    shortDate: entryDate ? formatShortDate(entryDate) : "-",
-  };
+  const days = getTripDaysForRange(sourceState?.startDate, sourceState?.endDate);
+  return getExpenseDayMeta(entry.date, days);
 }
 
 function getSettlementEntryStatus(entry, sourceState) {
@@ -180,7 +175,7 @@ function renderSettlementExpenseLedger(expenseSplitList, entryRows, members, sou
     <table class="settlement-expense-table">
       <thead>
         <tr>
-          <th>일차</th>
+          <th>구분</th>
           <th>날짜</th>
           <th>항목</th>
           <th>내용</th>
@@ -201,7 +196,7 @@ function renderSettlementExpenseLedger(expenseSplitList, entryRows, members, sou
     const tr = document.createElement("tr");
     tr.className = `${entry.invalid ? "is-invalid" : ""} ${expanded ? "is-expanded" : ""}`.trim();
     tr.innerHTML = `
-      <td data-label="일차">${escapeHtml(dayMeta.label)}</td>
+      <td data-label="구분">${escapeHtml(dayMeta.label)}</td>
       <td data-label="날짜">${escapeHtml(dayMeta.shortDate)}</td>
       <td data-label="항목"><span class="tag" style="--tag-color:${categoryColor}">${escapeHtml(entry.category)}</span></td>
       <td class="settlement-description-cell" data-label="내용">

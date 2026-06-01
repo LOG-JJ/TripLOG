@@ -69,7 +69,7 @@ function handleExpenseSubmit(event) {
 function resetExpenseFormAfterSubmit() {
   els.expenseForm.reset();
   els.daySelect.value = state.selectedDate;
-  els.categorySelect.value = "식비";
+  els.categorySelect.value = getDefaultExpenseCategory();
   els.currencySelect.value = "JPY";
   els.lodgingCheckInInput.value = "";
   els.lodgingCheckOutInput.value = "";
@@ -81,7 +81,12 @@ function resetExpenseFormAfterSubmit() {
   renderExpenseFormMode();
 }
 
+function getDefaultExpenseCategory() {
+  return "식비";
+}
+
 window.TripLog.register("features.expenses.form", {
   handleExpenseSubmit,
   resetExpenseFormAfterSubmit,
+  getDefaultExpenseCategory,
 });
