@@ -1,5 +1,6 @@
 async function buildRouteLatLngs(validItems, renderToken) {
   const latlngs = [];
+  const segments = [];
   let routedSegments = 0;
   let fallbackSegments = 0;
 
@@ -12,14 +13,17 @@ async function buildRouteLatLngs(validItems, renderToken) {
 
     if (segmentLatLngs.length >= 2) {
       appendLatLngSegment(latlngs, segmentLatLngs);
+      segments.push({ fromIndex: i, toIndex: i + 1, latlngs: segmentLatLngs, routed: true });
       routedSegments++;
     } else {
-      appendLatLngSegment(latlngs, [[from.lat, from.lon], [to.lat, to.lon]]);
+      const fallbackLatLngs = [[from.lat, from.lon], [to.lat, to.lon]];
+      appendLatLngSegment(latlngs, fallbackLatLngs);
+      segments.push({ fromIndex: i, toIndex: i + 1, latlngs: fallbackLatLngs, routed: false });
       fallbackSegments++;
     }
   }
 
-  return { latlngs, routedSegments, fallbackSegments };
+  return { latlngs, segments, routedSegments, fallbackSegments };
 }
 
 async function fetchRouteSegmentFromOsrm(from, to, profile) {

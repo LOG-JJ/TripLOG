@@ -85,6 +85,54 @@ function calculateDistanceKm(a, b) {
   return 2 * earthRadiusKm * Math.asin(Math.min(1, Math.sqrt(h)));
 }
 
+const routeSegmentColors = [
+  "#ef4444",
+  "#f97316",
+  "#facc15",
+  "#22c55e",
+  "#06b6d4",
+  "#3b82f6",
+  "#8b5cf6",
+];
+
+function getRouteSegmentColor(index) {
+  return routeSegmentColors[index % routeSegmentColors.length];
+}
+
+function buildRainbowRouteLayers(routeSegments) {
+  const layers = [];
+
+  routeSegments.forEach((segment, index) => {
+    const latlngs = segment.latlngs || [];
+    if (latlngs.length < 2) return;
+    const color = getRouteSegmentColor(index);
+
+    layers.push(L.polyline(latlngs, {
+      color: "#ffffff",
+      weight: 12,
+      opacity: 0.92,
+      lineCap: "round",
+      lineJoin: "round",
+    }));
+    layers.push(L.polyline(latlngs, {
+      color: "#111827",
+      weight: 8,
+      opacity: 0.86,
+      lineCap: "round",
+      lineJoin: "round",
+    }));
+    layers.push(L.polyline(latlngs, {
+      color,
+      weight: 5,
+      opacity: 0.98,
+      lineCap: "round",
+      lineJoin: "round",
+    }));
+  });
+
+  return layers;
+}
+
 async function renderLeafletRoute(items) {
   initLeafletMap();
   if (!leafletMapInstance) return null;
@@ -157,36 +205,22 @@ async function renderLeafletRoute(items) {
 
   const routeResult = validItems.length >= 2
     ? await buildRouteLatLngs(validItems, renderToken)
-    : { latlngs: [], routedSegments: 0, fallbackSegments: 0 };
+    : { latlngs: [], segments: [], routedSegments: 0, fallbackSegments: 0 };
   if (routeResult.cancelled) return { cancelled: true };
 
   const markerLatLngs = validItems.map((data) => [data.lat, data.lon]);
   const routeLatLngs = routeResult.latlngs.length >= 2 ? routeResult.latlngs : markerLatLngs;
+  const routeSegments = routeResult.segments?.length > 0
+    ? routeResult.segments
+    : markerLatLngs.slice(0, -1).map((latlng, index) => ({
+      fromIndex: index,
+      toIndex: index + 1,
+      latlngs: [latlng, markerLatLngs[index + 1]],
+      routed: false,
+    }));
 
-  if (routeLatLngs.length >= 2) {
-    const routeCasing = L.polyline(routeLatLngs, {
-      color: '#ffffff',
-      weight: 11,
-      opacity: 0.9,
-      lineCap: 'round',
-      lineJoin: 'round'
-    });
-    const routeBase = L.polyline(routeLatLngs, {
-      color: '#111827',
-      weight: 7,
-      opacity: 0.96,
-      lineCap: 'round',
-      lineJoin: 'round'
-    });
-    const routeAccent = L.polyline(routeLatLngs, {
-      color: '#f43f5e',
-      weight: 3,
-      opacity: 0.98,
-      dashArray: '12, 8',
-      lineCap: 'round',
-      lineJoin: 'round'
-    });
-    leafletRouteLine = L.layerGroup([routeCasing, routeBase, routeAccent]).addTo(leafletMapInstance);
+  if (routeSegments.length > 0) {
+    leafletRouteLine = L.layerGroup(buildRainbowRouteLayers(routeSegments)).addTo(leafletMapInstance);
   }
 
   // Fit bounds so everything fits beautifully on screen
@@ -217,5 +251,8 @@ window.TripLog.register("services.maps.leafletMap", {
   isRouteCoordinateAcceptable,
   isPlaceOnlyItineraryItem,
   calculateDistanceKm,
+  routeSegmentColors,
+  getRouteSegmentColor,
+  buildRainbowRouteLayers,
   renderLeafletRoute,
 });
