@@ -35,9 +35,10 @@ function initLeafletMap() {
   }, 100);
 }
 
-function getRouteGeocodeAnchor(items, currentIndex, resolvedItems) {
+function getRouteGeocodeAnchor(items, currentIndex, resolvedItems, fallbackAnchor = null) {
   const previous = resolvedItems[resolvedItems.length - 1];
   if (previous) return { lat: previous.lat, lon: previous.lon };
+  if (fallbackAnchor) return fallbackAnchor;
 
   for (let i = currentIndex + 1; i < items.length; i++) {
     const coords = getItemLatLng(items[i]);
@@ -53,8 +54,16 @@ function getRouteGeocodeAnchor(items, currentIndex, resolvedItems) {
 }
 
 function shouldRefreshCachedRouteCoords(item, coords, { near, context }) {
-  if (!coords || !near || !context || !isPlaceOnlyItineraryItem(item)) return false;
-  return calculateDistanceKm(coords, near) > 160;
+  if (!coords || !near || !context) return false;
+  const distanceKm = calculateDistanceKm(coords, near);
+  if (state.travelMode === "overseas") return distanceKm > 700;
+  return isPlaceOnlyItineraryItem(item) && distanceKm > 160;
+}
+
+function isRouteCoordinateAcceptable(item, coords, { tripAnchor, context }) {
+  if (!coords || !isValidLatLng(coords.lat, coords.lon)) return false;
+  if (!tripAnchor || !context || state.travelMode !== "overseas" || !isPlaceOnlyItineraryItem(item)) return true;
+  return calculateDistanceKm(coords, tripAnchor) <= 700;
 }
 
 function isPlaceOnlyItineraryItem(item) {
@@ -81,6 +90,14 @@ async function renderLeafletRoute(items) {
   if (!leafletMapInstance) return null;
   const renderToken = ++leafletRenderToken;
   const geocodeContext = buildRouteGeocodeContext(items);
+  const tripAnchor = geocodeContext
+    ? await fetchLatLngForItineraryItem(buildTripMapFallbackItem(), {
+      context: geocodeContext,
+      maxQueries: 2,
+      ignoreSaved: true,
+    })
+    : null;
+  if (renderToken !== leafletRenderToken) return { cancelled: true };
 
   // Clear previous layers
   if (leafletMarkersGroup) leafletMarkersGroup.clearLayers();
@@ -89,23 +106,28 @@ async function renderLeafletRoute(items) {
     leafletRouteLine = null;
   }
 
-  // Resolve missing coordinates in parallel so the route appears quickly.
-  const resolvedItems = await Promise.all(items.map(async (item, i) => {
-    const near = getRouteGeocodeAnchor(items, i, []);
+  const resolvedItems = [];
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+    const near = getRouteGeocodeAnchor(items, i, resolvedItems, tripAnchor);
+    const savedCoords = getItemLatLng(item);
     const coords = await fetchLatLngForItineraryItem(item, {
       context: geocodeContext,
       near,
-      maxQueries: 3,
-      allowNominatim: false,
+      maxQueries: 4,
+      ignoreSaved: shouldRefreshCachedRouteCoords(item, savedCoords, { near, context: geocodeContext }),
+      allowNominatim: true,
+      validateCoords: (candidateCoords, candidateItem) => isRouteCoordinateAcceptable(candidateItem, candidateCoords, { tripAnchor, context: geocodeContext }),
     });
+    if (renderToken !== leafletRenderToken) return { cancelled: true };
 
     if (coords) {
       cacheItemCoordinates(item, coords);
-      return { item, lat: coords.lat, lon: coords.lon };
+      resolvedItems.push({ item, lat: coords.lat, lon: coords.lon });
+    } else {
+      resolvedItems.push(null);
     }
-    return null;
-  }));
-  if (renderToken !== leafletRenderToken) return { cancelled: true };
+  }
 
   const validItems = resolvedItems.filter(Boolean);
 
@@ -175,7 +197,11 @@ async function renderLeafletRoute(items) {
   }
 
   // Save the cached coordinates to state
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  if (window.TripLog?.persistence?.stateStorage?.saveStateSilently) {
+    window.TripLog.persistence.stateStorage.saveStateSilently();
+  } else {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  }
   return {
     validStops: validItems.length,
     routedSegments: routeResult.routedSegments,
@@ -188,6 +214,7 @@ window.TripLog.register("services.maps.leafletMap", {
   initLeafletMap,
   getRouteGeocodeAnchor,
   shouldRefreshCachedRouteCoords,
+  isRouteCoordinateAcceptable,
   isPlaceOnlyItineraryItem,
   calculateDistanceKm,
   renderLeafletRoute,

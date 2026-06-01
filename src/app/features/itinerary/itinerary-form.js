@@ -1,3 +1,11 @@
+let currentVoucherFile = null;
+let currentVoucherFileName = null;
+
+function setVoucherFile(base64, name) {
+  currentVoucherFile = base64;
+  currentVoucherFileName = name;
+}
+
 function handleItinerarySubmit(event) {
   event.preventDefault();
   const place = els.itineraryPlaceInput.value.trim();
@@ -14,6 +22,9 @@ function handleItinerarySubmit(event) {
   const syncExpense = els.itinerarySyncExpenseCheckbox.checked;
   let expenseId = existingItem ? existingItem.expenseId : null;
 
+  const voucherName = els.itineraryVoucherName.value.trim();
+  const voucherCode = els.itineraryVoucherCode.value.trim();
+
   const item = {
     id,
     date: els.itineraryDaySelect.value || state.selectedItineraryDate,
@@ -23,6 +34,10 @@ function handleItinerarySubmit(event) {
     memo: els.itineraryMemoInput.value.trim(),
     theme,
     trans,
+    voucherName,
+    voucherCode,
+    voucherFile: currentVoucherFile,
+    voucherFileName: currentVoucherFileName,
     duration,
     cost,
     syncExpense,
@@ -88,6 +103,25 @@ function startItineraryEdit(item) {
   els.itineraryLocationInput.value = item.location || "";
   els.manualAddressInput.value = item.location || "";
   els.itineraryMemoInput.value = item.memo || "";
+  
+  // Voucher binding
+  els.itineraryVoucherName.value = item.voucherName || "";
+  els.itineraryVoucherCode.value = item.voucherCode || "";
+  currentVoucherFile = item.voucherFile || null;
+  currentVoucherFileName = item.voucherFileName || null;
+  if (currentVoucherFileName) {
+    els.ticketFileNameDisplay.textContent = currentVoucherFileName;
+    els.ticketFileResetBtn.style.display = "inline-flex";
+  } else {
+    els.ticketFileNameDisplay.textContent = "선택된 파일 없음";
+    els.ticketFileResetBtn.style.display = "none";
+  }
+
+  const hasVoucher = !!(item.voucherName || item.voucherCode || item.voucherFileName);
+  els.itineraryTicketSection.hidden = !hasVoucher;
+  els.itineraryTicketToggleBtn.classList.toggle("open", hasVoucher);
+  els.itineraryTicketToggleBtn.querySelector(".ticket-toggle-chevron").textContent = hasVoucher ? "▲" : "▼";
+
   selectedPlaceCandidate = item.place && item.location ? { place: item.place, location: item.location } : null;
   setPlaceSearchStatus(item.location || "입력값 그대로 저장하거나 검색 결과를 선택할 수 있습니다.", item.location ? "success" : "neutral");
   closePlaceSearchResults();
@@ -113,6 +147,22 @@ function clearItineraryEditMode(shouldRender = true) {
   els.itinerarySyncExpenseCheckbox.checked = true;
   els.itineraryLocationInput.value = "";
   els.manualAddressInput.value = "";
+  
+  // Reset voucher fields
+  els.itineraryVoucherName.value = "";
+  els.itineraryVoucherCode.value = "";
+  els.itineraryVoucherFile.value = "";
+  els.ticketFileNameDisplay.textContent = "선택된 파일 없음";
+  els.ticketFileResetBtn.style.display = "none";
+  currentVoucherFile = null;
+  currentVoucherFileName = null;
+  
+  if (els.itineraryTicketSection) {
+    els.itineraryTicketSection.hidden = true;
+    els.itineraryTicketToggleBtn.classList.remove("open");
+    els.itineraryTicketToggleBtn.querySelector(".ticket-toggle-chevron").textContent = "▼";
+  }
+
   selectedPlaceCandidate = null;
   setPlaceSearchStatus("입력값 그대로 저장하거나 검색 결과를 선택할 수 있습니다.");
   closePlaceSearchResults();
@@ -177,4 +227,5 @@ window.TripLog.register("features.itinerary.form", {
   deleteItineraryItem,
   findItineraryItem,
   getFilteredItineraryItems,
+  setVoucherFile,
 });

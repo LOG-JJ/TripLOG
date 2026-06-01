@@ -153,9 +153,25 @@ const els = {
   newTripModal: document.querySelector("#newTripModal"),
   newTripCloseButton: document.querySelector("#newTripCloseButton"),
   newTripForm: document.querySelector("#newTripForm"),
+  newTripModeToggle: document.querySelector("#newTripModeToggle"),
+  newTripDomesticButton: document.querySelector("#newTripDomesticButton"),
+  newTripOverseasButton: document.querySelector("#newTripOverseasButton"),
   newTripNameInput: document.querySelector("#newTripNameInput"),
+  newTripCountryInput: document.querySelector("#newTripCountryInput"),
+  newTripCityInput: document.querySelector("#newTripCityInput"),
   newTripStartDateInput: document.querySelector("#newTripStartDateInput"),
   newTripEndDateInput: document.querySelector("#newTripEndDateInput"),
+
+  // Itinerary Ticket & Voucher additions
+  itineraryTicketToggleBtn: document.querySelector("#itineraryTicketToggleBtn"),
+  itineraryTicketSection: document.querySelector("#itineraryTicketSection"),
+  itineraryVoucherName: document.querySelector("#itineraryVoucherName"),
+  itineraryVoucherCode: document.querySelector("#itineraryVoucherCode"),
+  itineraryVoucherFile: document.querySelector("#itineraryVoucherFile"),
+  ticketFileSelectBtn: document.querySelector("#ticketFileSelectBtn"),
+  ticketFileNameDisplay: document.querySelector("#ticketFileNameDisplay"),
+  ticketFileResetBtn: document.querySelector("#ticketFileResetBtn"),
+  dbChecklistDetails: document.querySelector("#dbChecklistDetails"),
 };
 
 window.TripLog.register("core.runtime", {

@@ -1,5 +1,5 @@
 (() => {
-  const scriptVersion = "qa-settlement-ledger-pretrip-20260601-1";
+  const scriptVersion = "knowledge-coordinate-search-20260601-1";
   const scriptFiles = [
     "core/namespace.js",
     "core/config.js",

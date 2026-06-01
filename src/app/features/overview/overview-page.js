@@ -31,9 +31,19 @@ function renderOverviewPage() {
   const nightsText = tripNights > 0 ? `${tripNights}박 ${tripNights + 1}일` : "당일치기";
 
   const dbTripName = document.querySelector("#dbTripName");
+  const dbTripDestination = document.querySelector("#dbTripDestination");
   const dbTripDate = document.querySelector("#dbTripDate");
   if (dbTripName) {
     dbTripName.textContent = `${state.tripName || "새로운 여행"} · ${nightsText}`;
+  }
+  if (dbTripDestination) {
+    const displayCountry = state.country || "";
+    const displayCity = state.city || "";
+    if (displayCountry && displayCity) {
+      dbTripDestination.textContent = `📍 장소: ${displayCountry} · ${displayCity}`;
+    } else {
+      dbTripDestination.textContent = `📍 장소: ${displayCountry || displayCity || "장소 미정"}`;
+    }
   }
   if (dbTripDate && days.length > 0) {
     const startYear = new Date(state.startDate).getFullYear();
@@ -62,9 +72,36 @@ function renderOverviewPage() {
   // 4. Render Essential Preparation Checklist Card (카드 2: 필수 체크리스트)
   const hasLodging = state.entries.some(e => e.category === "숙소");
   const hasFlight = state.entries.some(e => e.category === "교통" && (e.description.includes("항공") || e.description.includes("비행기")));
-  let prepPercent = 30; // base prep
-  if (hasLodging && hasFlight) prepPercent = 100;
-  else if (hasLodging || hasFlight) prepPercent = 70;
+  
+  let lodgingScore = hasLodging ? 30 : 0;
+  let flightScore = hasFlight ? 30 : 0;
+  
+  const itemsWithVoucherName = state.itineraryItems.filter(item => !!item.voucherName);
+  let voucherScore = 40;
+  let voucherStatusText = "등록 대기";
+  let voucherClass = "pending";
+  
+  if (itemsWithVoucherName.length > 0) {
+    const uploadedCount = itemsWithVoucherName.filter(item => !!item.voucherFile).length;
+    voucherScore = Math.round((uploadedCount / itemsWithVoucherName.length) * 40);
+    voucherStatusText = `${itemsWithVoucherName.length}개 중 ${uploadedCount}개 완료`;
+    voucherClass = uploadedCount === itemsWithVoucherName.length ? "success" : "warning";
+  } else {
+    if (state.itineraryItems.length > 0) {
+      voucherScore = 40;
+      voucherStatusText = "연동 없음";
+      voucherClass = "success";
+    } else {
+      voucherScore = 0;
+      voucherStatusText = "일정 대기";
+      voucherClass = "pending";
+    }
+  }
+  
+  let prepPercent = lodgingScore + flightScore + voucherScore;
+  if (prepPercent === 0 && (state.entries.length > 0 || state.itineraryItems.length > 0)) {
+    prepPercent = 10;
+  }
 
   const dbChecklistPercent = document.querySelector("#dbChecklistPercent");
   const dbChecklistProgressFill = document.querySelector("#dbChecklistProgressFill");
@@ -73,6 +110,24 @@ function renderOverviewPage() {
   }
   if (dbChecklistProgressFill) {
     dbChecklistProgressFill.style.width = `${prepPercent}%`;
+  }
+
+  const dbChecklistDetails = document.querySelector("#dbChecklistDetails");
+  if (dbChecklistDetails) {
+    dbChecklistDetails.innerHTML = `
+      <div class="checklist-detail-item">
+        <span class="detail-label">✈️ 항공권 예약</span>
+        <span class="detail-status ${hasFlight ? 'success' : 'pending'}">${hasFlight ? '예약 완료' : '등록 대기'}</span>
+      </div>
+      <div class="checklist-detail-item">
+        <span class="detail-label">🏨 숙소 예약</span>
+        <span class="detail-status ${hasLodging ? 'success' : 'pending'}">${hasLodging ? '예약 완료' : '등록 대기'}</span>
+      </div>
+      <div class="checklist-detail-item">
+        <span class="detail-label">🎟️ 티켓/바우처</span>
+        <span class="detail-status ${voucherClass}">${voucherStatusText}</span>
+      </div>
+    `;
   }
 
   // 5. Render Vertical Itinerary Timelines Card (카드 3: 일차별 주요 일정)

@@ -58,14 +58,21 @@ function pickBestGeocodeCandidate(candidates, query, context = "") {
   if (candidates.length === 0) return null;
   const queryKey = normalizePlaceAlias(query);
   const contextKey = normalizePlaceAlias(context);
+  const expectedCountryCode = getExpectedTripCountryCode();
 
   const scored = candidates.map((candidate) => {
     const nameKey = normalizePlaceAlias(candidate.name);
     const locationKey = normalizePlaceAlias(candidate.location);
+    const candidateCountryCode = (candidate.countrycode || "").toUpperCase();
     let score = 0;
 
-    if (state.travelMode === "domestic") {
-      score += candidate.countrycode === "KR" ? 30 : -120;
+    if (expectedCountryCode) {
+      score += candidateCountryCode === expectedCountryCode ? 140 : -80;
+      if (candidateCountryCode === "KR" && expectedCountryCode !== "KR") score -= 180;
+    } else if (state.travelMode === "domestic") {
+      score += candidateCountryCode === "KR" ? 30 : -120;
+    } else {
+      if (candidateCountryCode === "KR") score -= 160;
     }
     if (contextKey && locationKey.includes(contextKey)) score += 24;
     if (nameKey && queryKey.includes(nameKey)) score += 45;
@@ -81,6 +88,29 @@ function pickBestGeocodeCandidate(candidates, query, context = "") {
   return best.score > -50 ? { lat: best.candidate.lat, lon: best.candidate.lon } : null;
 }
 
+function getExpectedTripCountryCode() {
+  const country = normalizePlaceAlias(state.country);
+  const tripContext = normalizePlaceAlias([state.country, state.city, state.tripName].filter(Boolean).join(" "));
+  const haystack = `${country} ${tripContext}`;
+
+  const countryCodes = [
+    { code: "JP", aliases: ["일본", "japan", "日本", "도쿄", "동경", "오사카", "교토", "후쿠오카", "삿포로", "오키나와", "나고야", "히로시마", "나라", "고베", "요코하마", "하코네", "Tokyo", "Osaka", "Kyoto", "Fukuoka", "Sapporo", "Okinawa", "Nagoya", "Hiroshima", "Yokohama"] },
+    { code: "US", aliases: ["미국", "usa", "unitedstates", "america"] },
+    { code: "CN", aliases: ["중국", "china", "中国"] },
+    { code: "TW", aliases: ["대만", "taiwan", "台灣", "台湾"] },
+    { code: "TH", aliases: ["태국", "thailand"] },
+    { code: "VN", aliases: ["베트남", "vietnam"] },
+    { code: "GB", aliases: ["영국", "uk", "unitedkingdom", "britain"] },
+    { code: "FR", aliases: ["프랑스", "france"] },
+    { code: "IT", aliases: ["이탈리아", "italy"] },
+    { code: "ES", aliases: ["스페인", "spain"] },
+    { code: "DE", aliases: ["독일", "germany"] },
+    { code: "KR", aliases: ["대한민국", "한국", "korea", "southkorea"] },
+  ];
+
+  return countryCodes.find((entry) => entry.aliases.some((alias) => haystack.includes(normalizePlaceAlias(alias))))?.code || "";
+}
+
 async function fetchLatLngFromNominatim(query, { near = null, bounded = false } = {}) {
   try {
     await waitForNominatimSlot();
@@ -90,7 +120,10 @@ async function fetchLatLngFromNominatim(query, { near = null, bounded = false } 
     url.searchParams.set("limit", "5");
     url.searchParams.set("accept-language", "ko");
     url.searchParams.set("dedupe", "1");
-    if (state.travelMode === "domestic") {
+    const expectedCountryCode = getExpectedTripCountryCode();
+    if (expectedCountryCode) {
+      url.searchParams.set("countrycodes", expectedCountryCode.toLowerCase());
+    } else if (state.travelMode === "domestic") {
       url.searchParams.set("countrycodes", "kr");
     }
     if (near && bounded && isValidLatLng(near.lat, near.lon)) {
@@ -146,6 +179,7 @@ window.TripLog.register("services.maps.geocoding", {
   fetchLatLngFromPhoton,
   normalizePhotonResult,
   pickBestGeocodeCandidate,
+  getExpectedTripCountryCode,
   fetchLatLngFromNominatim,
   waitForNominatimSlot,
   fetchWithTimeout,

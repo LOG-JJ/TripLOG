@@ -160,6 +160,7 @@ function renderItineraryList(days) {
           <div class="overview-compact-place-row">
             ${themeBadgeHtml}
             <strong class="overview-compact-place" data-address="${escapeHtml(item.location)}" title="클릭하여 주소 복사">${escapeHtml(item.place)}</strong>
+            ${(item.voucherName || item.voucherFileName) ? `<span class="overview-compact-ticket-badge" title="${escapeHtml(item.voucherName || "연동된 바우처가 있습니다.")}">🎟️</span>` : ""}
           </div>
           ${item.memo ? `<p class="overview-compact-memo">${escapeHtml(item.memo)}</p>` : ""}
         </div>
@@ -231,6 +232,22 @@ function renderItineraryList(days) {
           <svg viewBox="0 0 24 24" focusable="false"><path d="M8 4h8l2 2v14H6V6l2-2Z" /><path d="M9 10h6M9 14h6" /></svg>
           <input type="text" class="inline-memo-input" data-id="${escapeHtml(item.id)}" value="${escapeHtml(item.memo || "")}" placeholder="메모 추가..." title="메모 직접 입력" />
         </label>
+        ${(item.voucherName || item.voucherCode || item.voucherFileName) ? `
+          <div class="itinerary-card-ticket-bar">
+            <div class="ticket-bar-main">
+              <span class="ticket-bar-emoji">🎟️</span>
+              <div class="ticket-bar-info">
+                <strong class="ticket-bar-name" title="${escapeHtml(item.voucherName || "연동된 바우처")}">${escapeHtml(item.voucherName || "연동된 바우처")}</strong>
+                ${item.voucherCode ? `<span class="ticket-bar-code">No. ${escapeHtml(item.voucherCode)}</span>` : ""}
+              </div>
+              ${item.voucherFile ? `
+                <button type="button" class="ticket-bar-view-btn" data-id="${escapeHtml(item.id)}" title="바우처 파일 다운로드/보기">
+                  <span>📄 보기</span>
+                </button>
+              ` : ""}
+            </div>
+          </div>
+        ` : ""}
         <div class="itinerary-card-footer">
           ${statsBadgeRow}
           <div class="itinerary-card-actions">
@@ -333,9 +350,26 @@ function renderItineraryList(days) {
     });
   });
 
+  els.itineraryList.querySelectorAll(".ticket-bar-view-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const itemId = btn.dataset.id;
+      const item = window.TripLog.features.itinerary.form.findItineraryItem(itemId);
+      if (item && item.voucherFile) {
+        const link = document.createElement("a");
+        link.href = item.voucherFile;
+        link.download = item.voucherFileName || "voucher";
+        link.target = "_blank";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    });
+  });
+
   const selected = findItineraryItem(state.selectedItineraryId) || items[0] || state.itineraryItems[0];
   if (selected) updateMapPreview(selected);
-  else updateMapPreview({ place: state.tripName || getDefaultTripName(), location: state.tripName || "대한민국" });
+  else updateMapPreview(buildTripMapFallbackItem());
 }
 
 function showToast(message) {

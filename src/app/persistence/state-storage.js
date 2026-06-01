@@ -1,11 +1,14 @@
 const LEGACY_STORAGE_KEY = window.TripLog.core.config.STORAGE_KEY;
 const TRIPS_KEY = "domesticTravelExpensePlanner.trips.v2";
 const ACTIVE_TRIP_ID_KEY = "domesticTravelExpensePlanner.activeTripId.v2";
+const THEME_KEY = "domesticTravelExpensePlanner.theme.v1";
 
 function getFallbackState(tripId = "trip_default") {
   return {
     id: tripId,
     tripName: "나의 첫 여행 ✈️",
+    country: "대한민국",
+    city: "서울",
     travelMode: "domestic",
     theme: "brutalist",
     startDate: "2026-06-09",
@@ -72,10 +75,11 @@ function loadState() {
 
     const preferredCurrency = currencies.find((currency) => currency.code === activeTrip.currencyCode) || currencies[0];
     const fallback = getFallbackState(activeTripId);
+    const savedTheme = getSavedTheme();
     return {
       ...fallback,
       ...activeTrip,
-      theme: activeTrip.theme === "toss" ? "toss" : "brutalist",
+      theme: savedTheme || normalizeThemeName(activeTrip.theme),
       currencyCode: preferredCurrency.code,
       currencySymbol: activeTrip.currencySymbol || preferredCurrency.symbol,
       currencyUnit: activeTrip.currencyUnit || preferredCurrency.unit,
@@ -93,6 +97,16 @@ function loadState() {
 
 function isLegacyDefaultTripName(value) {
   return value === "국내 여행" || value === "해외 여행";
+}
+
+function normalizeThemeName(themeName) {
+  return themeName === "toss" ? "toss" : "brutalist";
+}
+
+function getSavedTheme() {
+  const savedTheme = localStorage.getItem(THEME_KEY);
+  if (!savedTheme) return "";
+  return normalizeThemeName(savedTheme);
 }
 
 function hasNoSavedRecords(saved) {
@@ -115,19 +129,26 @@ function normalizeSettlementSettings(value = {}) {
 }
 
 function saveAndRender() {
+  saveStateSilently();
+  render();
+}
+
+function saveStateSilently() {
   try {
     let trips = JSON.parse(localStorage.getItem(TRIPS_KEY)) || [];
     const activeTripId = localStorage.getItem(ACTIVE_TRIP_ID_KEY);
+    const theme = normalizeThemeName(state.theme);
+    state.theme = theme;
 
     trips = trips.map(t => t.id === activeTripId ? { ...t, ...state } : t);
     localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
+    localStorage.setItem(THEME_KEY, theme);
 
     // Legacy support
     localStorage.setItem(LEGACY_STORAGE_KEY, JSON.stringify(state));
   } catch (e) {
     console.error("Save failed:", e);
   }
-  render();
 }
 
 function getTrips() {
@@ -146,6 +167,7 @@ function switchTrip(tripId) {
   const trips = getTrips();
   const targetTrip = trips.find(t => t.id === tripId);
   if (!targetTrip) return;
+  const currentTheme = normalizeThemeName(state.theme || getSavedTheme());
 
   localStorage.setItem(ACTIVE_TRIP_ID_KEY, tripId);
 
@@ -156,6 +178,7 @@ function switchTrip(tripId) {
     }
   }
   Object.assign(state, targetTrip);
+  state.theme = currentTheme;
 
   // reset day selections
   state.selectedDate = state.startDate;
@@ -165,13 +188,17 @@ function switchTrip(tripId) {
   saveAndRender();
 }
 
-function createNewTrip({ tripName, travelMode, startDate, endDate, totalBudget }) {
+function createNewTrip({ tripName, country, city, travelMode, startDate, endDate, totalBudget }) {
   const trips = getTrips();
   const newId = "trip_" + Date.now();
+  const normalizedTravelMode = travelMode === "overseas" ? "overseas" : "domestic";
   const newTrip = {
     ...getFallbackState(newId),
     tripName: tripName || "새로운 여행 ✈️",
-    travelMode: travelMode || "domestic",
+    country: country || (normalizedTravelMode === "domestic" ? "대한민국" : ""),
+    city: city || (normalizedTravelMode === "domestic" ? "서울" : ""),
+    travelMode: normalizedTravelMode,
+    theme: normalizeThemeName(state.theme || getSavedTheme()),
     startDate: startDate || "2026-06-09",
     endDate: endDate || "2026-06-12",
     selectedDate: startDate || "2026-06-09",
@@ -220,8 +247,11 @@ window.TripLog.register("persistence.stateStorage", {
   loadState,
   isLegacyDefaultTripName,
   hasNoSavedRecords,
+  normalizeThemeName,
+  getSavedTheme,
   normalizeSettlementSettings,
   saveAndRender,
+  saveStateSilently,
   getStateSnapshot,
   getTrips,
   getActiveTripId,

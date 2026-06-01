@@ -1,22 +1,22 @@
 function buildCleanRouteQuery(item) {
-  if (!item) return "대한민국";
+  if (!item) return buildTripDestinationQuery() || "대한민국";
   let place = (item.place || "").trim();
   let location = (item.location || "").trim();
   
   if (!place && !location) return "대한민국";
-  if (place && !location) return place;
-  if (!place && location) return simplifyAddress(location);
+  if (place && !location) return appendTripDestinationContext(place);
+  if (!place && location) return appendTripDestinationContext(simplifyAddress(location));
   
   if (place.includes("로 ") || place.includes("길 ") || place.includes("동 ")) {
-    return simplifyAddress(place);
+    return appendTripDestinationContext(simplifyAddress(place));
   }
   
   const simpleAddr = simplifyAddress(location);
   if (simpleAddr.includes(place) || place.includes(simpleAddr)) {
-    return simpleAddr;
+    return appendTripDestinationContext(simpleAddr);
   }
   
-  return `${place} ${simpleAddr}`;
+  return appendTripDestinationContext(`${place} ${simpleAddr}`);
 }
 
 function simplifyAddress(addr) {
@@ -35,7 +35,7 @@ function simplifyAddress(addr) {
 
 function buildGeocodeQueries(item, context = "") {
   const queries = [];
-  const contextHint = normalizeGeocodeContext(context);
+  const contextHint = normalizeGeocodeContext(context) || buildTripDestinationQuery();
   const addQuery = (value) => {
     const normalized = (value || "").replace(/\s+/g, " ").trim();
     if (!normalized || normalized === "대한민국" || queries.includes(normalized)) return;
@@ -57,11 +57,61 @@ function buildGeocodeQueries(item, context = "") {
 }
 
 function buildRouteGeocodeContext(items = []) {
+  const tripDestination = buildTripDestinationQuery();
+  if (tripDestination) return tripDestination;
+
   return [
     state.tripName,
     ...items.map((item) => item.location),
     ...state.itineraryItems.map((item) => item.location),
   ].map(extractGeocodeContext).find(Boolean) || "";
+}
+
+function buildTripDestinationQuery() {
+  const city = normalizeTripDestinationPart(state.city);
+  const country = normalizeTripDestinationPart(state.country);
+  const parts = [];
+
+  [city, country].forEach((part) => {
+    if (part && !parts.some((existing) => normalizePlaceAlias(existing) === normalizePlaceAlias(part))) {
+      parts.push(part);
+    }
+  });
+
+  if (parts.length > 0) return parts.join(" ");
+  return parseDestinationFromTripName(state.tripName);
+}
+
+function buildTripMapFallbackItem() {
+  const destinationQuery = buildTripDestinationQuery();
+  const parsedTripDestination = parseDestinationFromTripName(state.tripName);
+  const place = normalizeTripDestinationPart(state.city)
+    || normalizeTripDestinationPart(state.country)
+    || parsedTripDestination
+    || state.tripName
+    || getDefaultTripName();
+
+  return {
+    place,
+    location: destinationQuery || place || "대한민국",
+    mapQuery: destinationQuery || place || "대한민국",
+  };
+}
+
+function appendTripDestinationContext(query, context = buildTripDestinationQuery()) {
+  const normalizedQuery = (query || "").replace(/\s+/g, " ").trim();
+  const normalizedContext = normalizeGeocodeContext(context);
+  if (!normalizedQuery) return normalizedContext || "대한민국";
+  if (!normalizedContext) return normalizedQuery;
+
+  const queryKey = normalizePlaceAlias(normalizedQuery);
+  const missingContextParts = normalizedContext
+    .split(" ")
+    .filter(Boolean)
+    .filter((part) => !queryKey.includes(normalizePlaceAlias(part)));
+
+  if (missingContextParts.length === 0) return normalizedQuery;
+  return `${normalizedQuery} ${missingContextParts.join(" ")}`.replace(/\s+/g, " ").trim();
 }
 
 function extractGeocodeContext(value) {
@@ -78,7 +128,7 @@ function extractGeocodeContext(value) {
 
   const firstAddressPart = simplifyAddress(normalized).split(" ")[0] || "";
   if (/^[가-힣]{2,}(시|군|구|도)$/.test(firstAddressPart)) return firstAddressPart;
-  return "";
+  return parseDestinationFromTripName(normalized);
 }
 
 function normalizeGeocodeContext(value) {
@@ -86,6 +136,28 @@ function normalizeGeocodeContext(value) {
     .replace(/국내여행|해외여행|국내 여행|해외 여행|여행|일정|가계부/g, " ")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function normalizeTripDestinationPart(value) {
+  const normalized = normalizeGeocodeContext(value)
+    .replace(/^(국가|도시)$/g, "")
+    .trim();
+  if (!normalized || (typeof isLegacyDefaultTripName === "function" && isLegacyDefaultTripName(normalized))) return "";
+  return normalized;
+}
+
+function parseDestinationFromTripName(value) {
+  const normalized = normalizeGeocodeContext(value)
+    .replace(/\d{4}[-./]\d{1,2}[-./]\d{1,2}/g, " ")
+    .replace(/\d+\s*박\s*\d+\s*일/g, " ")
+    .replace(/\d+\s*일/g, " ")
+    .replace(/[()[\]{}]/g, " ")
+    .replace(/[~–—-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (!normalized || /^(나의|새로운|기존|첫|국내|해외)$/i.test(normalized)) return "";
+  return normalized.split(" ").filter(Boolean).slice(0, 2).join(" ");
 }
 
 function getItemLatLng(item) {
@@ -102,6 +174,10 @@ function isValidLatLng(lat, lon) {
     && Math.abs(lon) <= 180;
 }
 
+function isAcceptedCoordinates(coords, item, validateCoords) {
+  return !validateCoords || validateCoords(coords, item) !== false;
+}
+
 function cacheItemCoordinates(item, coords) {
   if (!item || !coords || !isValidLatLng(coords.lat, coords.lon)) return;
   item.lat = coords.lat;
@@ -114,19 +190,19 @@ function cacheItemCoordinates(item, coords) {
   }
 }
 
-async function fetchLatLngForItineraryItem(item, { maxQueries = Infinity, context = "", near = null, ignoreSaved = false, allowNominatim = true } = {}) {
+async function fetchLatLngForItineraryItem(item, { maxQueries = Infinity, context = "", near = null, ignoreSaved = false, allowNominatim = true, validateCoords = null } = {}) {
   const savedCoords = getItemLatLng(item);
-  if (savedCoords && !ignoreSaved) return savedCoords;
+  if (savedCoords && !ignoreSaved && isAcceptedCoordinates(savedCoords, item, validateCoords)) return savedCoords;
 
   const knownCoords = findKnownPlaceCoordinates(item, context);
-  if (knownCoords) return knownCoords;
+  if (knownCoords && isAcceptedCoordinates(knownCoords, item, validateCoords)) return knownCoords;
 
   for (const query of buildGeocodeQueries(item, context).slice(0, maxQueries)) {
     const cachedCoords = getCachedGeocodeResult(query, context);
-    if (cachedCoords) return cachedCoords;
+    if (cachedCoords && isAcceptedCoordinates(cachedCoords, item, validateCoords)) return cachedCoords;
 
     const photonCoords = await fetchLatLngFromPhoton(query, { context, near });
-    if (photonCoords) {
+    if (photonCoords && isAcceptedCoordinates(photonCoords, item, validateCoords)) {
       setCachedGeocodeResult(query, context, photonCoords);
       return photonCoords;
     }
@@ -136,13 +212,13 @@ async function fetchLatLngForItineraryItem(item, { maxQueries = Infinity, contex
 
   for (const query of buildGeocodeQueries(item, context).slice(0, maxQueries)) {
     const boundedCoords = near ? await fetchLatLngFromNominatim(query, { near, bounded: true }) : null;
-    if (boundedCoords) {
+    if (boundedCoords && isAcceptedCoordinates(boundedCoords, item, validateCoords)) {
       setCachedGeocodeResult(query, context, boundedCoords);
       return boundedCoords;
     }
 
     const coords = await fetchLatLngFromNominatim(query);
-    if (coords) {
+    if (coords && isAcceptedCoordinates(coords, item, validateCoords)) {
       setCachedGeocodeResult(query, context, coords);
       return coords;
     }
@@ -189,10 +265,16 @@ window.TripLog.register("services.maps.queryUtils", {
   simplifyAddress,
   buildGeocodeQueries,
   buildRouteGeocodeContext,
+  buildTripDestinationQuery,
+  buildTripMapFallbackItem,
+  appendTripDestinationContext,
   extractGeocodeContext,
   normalizeGeocodeContext,
+  normalizeTripDestinationPart,
+  parseDestinationFromTripName,
   getItemLatLng,
   isValidLatLng,
+  isAcceptedCoordinates,
   cacheItemCoordinates,
   fetchLatLngForItineraryItem,
   findKnownPlaceCoordinates,

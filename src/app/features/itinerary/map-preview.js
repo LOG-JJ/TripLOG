@@ -99,14 +99,12 @@ function buildGoogleMapsRouteUrls(items) {
 function buildGoogleMapsSearchQuery(query) {
   const cleanQuery = (query || "").replace(/\s+/g, " ").trim();
   if (!cleanQuery) return "대한민국";
-
-  const context = buildGoogleMapsSearchContext();
-  if (!context || cleanQuery.includes(context)) return cleanQuery;
-  return `${cleanQuery} ${context}`;
+  return cleanQuery;
 }
 
 function buildGoogleMapsSearchContext() {
-  return extractGeocodeContext(state.tripName)
+  return buildTripDestinationQuery()
+    || extractGeocodeContext(state.tripName)
     || extractGeocodeContext(state.itineraryItems.find((item) => item.location)?.location)
     || "";
 }
@@ -142,7 +140,8 @@ function renderSingleLeafletMarker(item, lat, lon) {
 }
 
 function buildMapQuery(item) {
-  return Array.from(new Set([item.place, item.location].filter(Boolean))).join(" ").trim() || "대한민국";
+  const query = Array.from(new Set([item.place, item.location].filter(Boolean))).join(" ").trim();
+  return appendTripDestinationContext(query) || "대한민국";
 }
 
 

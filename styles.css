@@ -267,6 +267,44 @@ svg {
   white-space: nowrap;
 }
 
+.trip-mode-status {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(86px, 1fr));
+  gap: 4px;
+  padding: 4px;
+  color: var(--muted);
+  background: var(--surface-soft);
+  border: 2.5px solid var(--line);
+  border-radius: 99px;
+  box-shadow: var(--shadow-sm);
+  cursor: default;
+  overflow: hidden;
+  user-select: none;
+}
+
+.trip-mode-status span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 16px;
+  color: var(--muted);
+  background: transparent;
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.trip-mode-status span.active {
+  color: var(--text);
+  background: var(--accent);
+  border: 2px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  font-weight: 900;
+}
+
 .settings-mode-handoff {
   display: grid;
   gap: 6px;
@@ -2515,6 +2553,80 @@ td.number {
   height: 18px;
 }
 
+.new-trip-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 0 0 0;
+}
+
+.new-trip-location-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.new-trip-location-row > label {
+  min-width: 0;
+}
+
+.new-trip-mode-field {
+  flex: 0 0 86px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.new-trip-field-label {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.new-trip-mode-toggle {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3px;
+  min-height: 44px;
+  padding: 4px;
+  background: var(--surface-soft);
+  border: 2px solid transparent;
+  border-radius: 12px;
+}
+
+.new-trip-mode-toggle button {
+  min-width: 0;
+  min-height: 34px;
+  padding: 0 6px;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 900;
+  transition: background 140ms ease, color 140ms ease, transform 140ms ease;
+}
+
+.new-trip-mode-toggle button.active {
+  color: #ffffff;
+  background: #2f80ed;
+  box-shadow: 0 6px 14px rgba(47, 128, 237, 0.22);
+}
+
+.new-trip-mode-toggle button:not(.active):hover {
+  color: var(--text);
+  background: #ffffff;
+}
+
+.new-trip-mode-toggle button:active {
+  transform: translateY(1px);
+}
+
+#newTripCountryInput[readonly] {
+  color: var(--text);
+  background: var(--surface-soft);
+}
+
 .history-list {
   padding: 20px;
   overflow-y: auto;
@@ -3106,11 +3218,13 @@ td.number {
   .brand,
   .top-actions,
   .icon-button,
-  .mode-toggle {
+  .mode-toggle,
+  .trip-mode-status {
     width: 100%;
   }
 
-  .mode-toggle {
+  .mode-toggle,
+  .trip-mode-status {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 100%;
   }
@@ -3299,6 +3413,7 @@ td.number {
   .settlement-share-input-wrap input {
     flex: 1;
   }
+
 }
 
 /* ⏱️ Itinerary Visualizers & 🎒 Backpack Suitcase Checklist Styling */
@@ -5771,6 +5886,32 @@ html[data-theme="toss"] .header-mode-toggle {
   box-shadow: none !important;
 }
 
+html[data-theme="toss"] .trip-mode-status {
+  background: #eff2f5 !important;
+  border: none !important;
+  padding: 3px !important;
+  border-radius: 99px !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] .trip-mode-status span {
+  color: var(--muted) !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  min-height: 34px !important;
+  padding: 0 16px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="toss"] .trip-mode-status span.active {
+  background: #ffffff !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
 /* 9. Tables - spacious borderless rows */
 html[data-theme="toss"] table {
   border-collapse: collapse !important;
@@ -7168,5 +7309,658 @@ html[data-theme="toss"] .packing-quick-item input:checked + .checkbox-custom::af
   color: #ffffff !important;
 }
 
+/* ==========================================================================
+   🎟️ Phase 7: Ticket & Voucher Management Integration
+   ========================================================================== */
+
+/* 1. Form Toggles & Collapsible Sections */
+.ticket-toggle-wrapper {
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.ticket-toggle-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #ffffff;
+  border: 2.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 100ms ease, box-shadow 100ms ease, background 120ms ease;
+  text-align: left;
+}
+
+.ticket-toggle-btn:hover {
+  background: #fffdf5;
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow);
+}
+
+.ticket-toggle-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px #111827;
+}
+
+.ticket-toggle-btn.open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 2.5px dashed var(--line);
+  background: var(--surface-strong);
+}
+
+.ticket-toggle-btn .ticket-toggle-icon {
+  font-size: 16px;
+}
+
+.ticket-toggle-btn .ticket-toggle-chevron {
+  margin-left: auto;
+  font-size: 11px;
+  transition: transform 140ms ease;
+}
+
+.ticket-collapsible-section {
+  background: #fcfcfc;
+  border: 2.5px solid var(--line);
+  border-top: none;
+  border-bottom-left-radius: var(--radius-sm);
+  border-bottom-right-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  padding: 18px;
+  margin-top: -2.5px;
+  position: relative;
+  z-index: 5;
+  animation: slideDownTicket 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideDownTicket {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ticket-input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.ticket-file-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.ticket-file-name-display {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 2px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  color: #4e5968;
+}
+
+/* 2. Visual Ticket Card Panel inside Itinerary Cards (Brutalist Style) */
+.itinerary-card-ticket-bar {
+  margin-top: 14px;
+  border: 2px dashed var(--line);
+  border-radius: 10px;
+  background: #fffdf2;
+  padding: 12px 14px;
+  position: relative;
+}
+
+.itinerary-card-ticket-bar::before,
+.itinerary-card-ticket-bar::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border: 2px solid var(--line);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.itinerary-card-ticket-bar::before {
+  left: -9px;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.itinerary-card-ticket-bar::after {
+  right: -9px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.ticket-bar-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.ticket-bar-emoji {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.ticket-bar-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+  min-width: 0;
+}
+
+.ticket-bar-name {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ticket-bar-code {
+  font-size: 11px;
+  font-weight: 700;
+  color: #6b7280;
+  font-family: monospace;
+}
+
+.ticket-bar-view-btn {
+  background: var(--accent-yellow, #ffe066);
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 100ms ease;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+}
+
+.ticket-bar-view-btn:hover {
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 1.5px 1.5px 0px #111827;
+}
+
+.ticket-bar-view-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: none;
+}
+
+/* 3. Overview Dashboard checklist details list */
+.checklist-details {
+  margin-top: 16px;
+  border-top: 2px solid var(--line);
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checklist-detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12.5px;
+  font-weight: 800;
+}
+
+.detail-label {
+  color: var(--text);
+}
+
+.detail-status {
+  font-size: 11.5px;
+  padding: 3px 8px;
+  border: 1.5px solid var(--line);
+  border-radius: 99px;
+  font-weight: 800;
+}
+
+.detail-status.success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.detail-status.warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.detail-status.pending {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.detail-status.neutral {
+  background: #eff6ff;
+  color: #1e40af;
+}
+
+/* 4. Compact Timeline Micro Tickets */
+.overview-compact-ticket-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  user-select: none;
+}
 
 
+/* ==========================================================================
+   🌀 Toss Design Theme Overrides for Ticket Management
+   ========================================================================== */
+
+html[data-theme="toss"] .ticket-toggle-btn {
+  background: #f2f4f6 !important;
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #4e5968 !important;
+  padding: 14px 18px !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+html[data-theme="toss"] .ticket-toggle-btn:hover {
+  background: #e5e8eb !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] .ticket-toggle-btn.open {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  background: #f2f4f6 !important;
+}
+
+html[data-theme="toss"] .ticket-collapsible-section {
+  background: #f2f4f6 !important;
+  border: none !important;
+  border-bottom-left-radius: 12px !important;
+  border-bottom-right-radius: 12px !important;
+  box-shadow: none !important;
+  padding: 0 18px 18px 18px !important;
+  margin-top: 0 !important;
+}
+
+html[data-theme="toss"] .ticket-file-name-display {
+  background: #ffffff !important;
+  border: 1px solid #e5e8eb !important;
+  border-radius: 10px !important;
+  color: #4e5968 !important;
+  font-weight: 500 !important;
+  box-shadow: none !important;
+  padding: 10px 14px !important;
+}
+
+html[data-theme="toss"] #ticketFileSelectBtn {
+  background: #ffffff !important;
+  border: 1px solid #e5e8eb !important;
+  border-radius: 10px !important;
+  color: #3182f6 !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  min-height: 44px !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+html[data-theme="toss"] #ticketFileSelectBtn:hover {
+  background: #f8f9fa !important;
+  border-color: #3182f6 !important;
+}
+
+html[data-theme="toss"] #ticketFileResetBtn {
+  background: #fee2e2 !important;
+  border: none !important;
+  border-radius: 10px !important;
+  color: #ef4444 !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  box-shadow: none !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+html[data-theme="toss"] #ticketFileResetBtn:hover {
+  background: #fecaca !important;
+}
+
+/* Toss style active ticket bar */
+html[data-theme="toss"] .itinerary-card-ticket-bar {
+  background: #e8f3ff !important;
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  padding: 12px 16px !important;
+  margin-top: 12px !important;
+}
+
+html[data-theme="toss"] .itinerary-card-ticket-bar::before,
+html[data-theme="toss"] .itinerary-card-ticket-bar::after {
+  display: none !important;
+}
+
+html[data-theme="toss"] .ticket-bar-name {
+  font-weight: 600 !important;
+  color: #191f28 !important;
+}
+
+html[data-theme="toss"] .ticket-bar-code {
+  color: #3182f6 !important;
+  font-weight: 600 !important;
+  font-size: 11px !important;
+}
+
+html[data-theme="toss"] .ticket-bar-view-btn {
+  background: #3182f6 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  padding: 6px 12px !important;
+  min-height: 28px !important;
+  box-shadow: none !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+html[data-theme="toss"] .ticket-bar-view-btn:hover {
+  background: #1b64da !important;
+  transform: none !important;
+}
+
+html[data-theme="toss"] .ticket-bar-view-btn:active {
+  transform: scale(0.96) !important;
+}
+
+/* Toss details in checklist card */
+html[data-theme="toss"] .checklist-details {
+  border-top: 1px solid #f2f4f6 !important;
+  margin-top: 14px !important;
+  padding-top: 12px !important;
+}
+
+html[data-theme="toss"] .checklist-detail-item {
+  font-weight: 500 !important;
+  color: #4e5968 !important;
+  font-size: 13px !important;
+}
+
+html[data-theme="toss"] .detail-label {
+  color: #4e5968 !important;
+}
+
+html[data-theme="toss"] .detail-status {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  border: none !important;
+  padding: 4px 10px !important;
+}
+
+html[data-theme="toss"] .detail-status.success {
+  background: #e8f3ff !important;
+  color: #3182f6 !important;
+}
+
+  border: 1.5px solid var(--line);
+  border-radius: 99px;
+  font-weight: 800;
+}
+
+.detail-status.success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.detail-status.warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.detail-status.pending {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.detail-status.neutral {
+  background: #eff6ff;
+  color: #1e40af;
+}
+
+/* 4. Compact Timeline Micro Tickets */
+.overview-compact-ticket-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+/* ==========================================================================
+   🌀 Toss Design Theme Overrides for Ticket Management
+   ========================================================================== */
+
+html[data-theme="toss"] .ticket-toggle-btn {
+  background: #f2f4f6 !important;
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #4e5968 !important;
+  padding: 14px 18px !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+html[data-theme="toss"] .ticket-toggle-btn:hover {
+  background: #e5e8eb !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] .ticket-toggle-btn.open {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  background: #f2f4f6 !important;
+}
+
+html[data-theme="toss"] .ticket-collapsible-section {
+  background: #f2f4f6 !important;
+  border: none !important;
+  border-bottom-left-radius: 12px !important;
+  border-bottom-right-radius: 12px !important;
+  box-shadow: none !important;
+  padding: 0 18px 18px 18px !important;
+  margin-top: 0 !important;
+}
+
+html[data-theme="toss"] .ticket-file-name-display {
+  background: #ffffff !important;
+  border: 1px solid #e5e8eb !important;
+  border-radius: 10px !important;
+  color: #4e5968 !important;
+  font-weight: 500 !important;
+  box-shadow: none !important;
+  padding: 10px 14px !important;
+}
+
+html[data-theme="toss"] #ticketFileSelectBtn {
+  background: #ffffff !important;
+  border: 1px solid #e5e8eb !important;
+  border-radius: 10px !important;
+  color: #3182f6 !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  min-height: 44px !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+html[data-theme="toss"] #ticketFileSelectBtn:hover {
+  background: #f8f9fa !important;
+  border-color: #3182f6 !important;
+}
+
+html[data-theme="toss"] #ticketFileResetBtn {
+  background: #fee2e2 !important;
+  border: none !important;
+  border-radius: 10px !important;
+  color: #ef4444 !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  box-shadow: none !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+html[data-theme="toss"] #ticketFileResetBtn:hover {
+  background: #fecaca !important;
+}
+
+/* Toss style active ticket bar */
+html[data-theme="toss"] .itinerary-card-ticket-bar {
+  background: #e8f3ff !important;
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  padding: 12px 16px !important;
+  margin-top: 12px !important;
+}
+
+html[data-theme="toss"] .itinerary-card-ticket-bar::before,
+html[data-theme="toss"] .itinerary-card-ticket-bar::after {
+  display: none !important;
+}
+
+html[data-theme="toss"] .ticket-bar-name {
+  font-weight: 600 !important;
+  color: #191f28 !important;
+}
+
+html[data-theme="toss"] .ticket-bar-code {
+  color: #3182f6 !important;
+  font-weight: 600 !important;
+  font-size: 11px !important;
+}
+
+html[data-theme="toss"] .ticket-bar-view-btn {
+  background: #3182f6 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  padding: 6px 12px !important;
+  min-height: 28px !important;
+  box-shadow: none !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+html[data-theme="toss"] .ticket-bar-view-btn:hover {
+  background: #1b64da !important;
+  transform: none !important;
+}
+
+html[data-theme="toss"] .ticket-bar-view-btn:active {
+  transform: scale(0.96) !important;
+}
+
+/* Toss details in checklist card */
+html[data-theme="toss"] .checklist-details {
+  border-top: 1px solid #f2f4f6 !important;
+  margin-top: 14px !important;
+  padding-top: 12px !important;
+}
+
+html[data-theme="toss"] .checklist-detail-item {
+  font-weight: 500 !important;
+  color: #4e5968 !important;
+  font-size: 13px !important;
+}
+
+html[data-theme="toss"] .detail-label {
+  color: #4e5968 !important;
+}
+
+html[data-theme="toss"] .detail-status {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  border: none !important;
+  padding: 4px 10px !important;
+}
+
+html[data-theme="toss"] .detail-status.success {
+  background: #e8f3ff !important;
+  color: #3182f6 !important;
+}
+
+html[data-theme="toss"] .detail-status.warning {
+  background: #fff0e6 !important;
+  color: #ff7e36 !important;
+}
+
+html[data-theme="toss"] .detail-status.pending {
+  background: #f2f4f6 !important;
+  color: #8b95a1 !important;
+}
+
+/* Destination styling on the Travel Summary Card */
+.summary-trip-destination {
+  font-size: 13.5px;
+  color: var(--text);
+  font-weight: 800;
+  margin-top: -2px;
+  margin-bottom: 8px;
+  font-family: var(--font-heading);
+}
+
+html[data-theme="toss"] .summary-trip-destination {
+  color: #4e5968 !important;
+  font-weight: 600 !important;
+  margin-top: 0px !important;
+  margin-bottom: 8px !important;
+  font-family: inherit !important;
+}

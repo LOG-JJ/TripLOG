@@ -1,3 +1,40 @@
+function getNewTripMode() {
+  return els.newTripOverseasButton?.classList.contains("active") ? "overseas" : "domestic";
+}
+
+function setNewTripMode(mode, { resetCountry = false } = {}) {
+  const nextMode = mode === "overseas" ? "overseas" : "domestic";
+  const isOverseas = nextMode === "overseas";
+
+  if (els.newTripModeToggle) els.newTripModeToggle.dataset.mode = nextMode;
+  els.newTripDomesticButton?.classList.toggle("active", !isOverseas);
+  els.newTripOverseasButton?.classList.toggle("active", isOverseas);
+  els.newTripDomesticButton?.setAttribute("aria-pressed", String(!isOverseas));
+  els.newTripOverseasButton?.setAttribute("aria-pressed", String(isOverseas));
+
+  if (els.newTripNameInput) {
+    els.newTripNameInput.placeholder = isOverseas ? "예: 도쿄 5박 6일" : "예: 제주도 3박 4일";
+  }
+
+  if (els.newTripCountryInput) {
+    const countryValue = els.newTripCountryInput.value.trim();
+    els.newTripCountryInput.readOnly = !isOverseas;
+    els.newTripCountryInput.placeholder = isOverseas ? "예: 일본" : "대한민국";
+
+    if (!isOverseas) {
+      if (resetCountry || !countryValue || countryValue === "일본") {
+        els.newTripCountryInput.value = "대한민국";
+      }
+    } else if (resetCountry || countryValue === "대한민국") {
+      els.newTripCountryInput.value = "";
+    }
+  }
+
+  if (els.newTripCityInput) {
+    els.newTripCityInput.placeholder = isOverseas ? "예: 도쿄" : "예: 제주";
+  }
+}
+
 function init() {
   els.tripNameInput.value = state.tripName;
   els.startDateInput.value = state.startDate;
@@ -241,8 +278,9 @@ function init() {
   els.categoryDonut.addEventListener("click", handleDonutClick);
   els.categoryDonut.addEventListener("mousemove", handleDonutMove);
   els.categoryDonut.addEventListener("mouseleave", () => highlightCategory(activeFilter === "전체" ? null : activeFilter));
-  els.domesticModeButton.addEventListener("click", () => setTravelMode("domestic"));
-  els.overseasModeButton.addEventListener("click", () => setTravelMode("overseas"));
+  [els.newTripDomesticButton, els.newTripOverseasButton].forEach((button) => {
+    button?.addEventListener("click", () => setNewTripMode(button.dataset.mode));
+  });
   els.themeBrutalistButton.addEventListener("click", () => window.TripLog.features.settings.themeToggle.setTheme("brutalist"));
   els.themeTossButton.addEventListener("click", () => window.TripLog.features.settings.themeToggle.setTheme("toss"));
   setupDayStripDrag(els.dayStrip);
@@ -260,9 +298,11 @@ function init() {
 
   if (els.createNewTripButton) {
     els.createNewTripButton.addEventListener("click", () => {
+      els.newTripForm?.reset();
       els.newTripStartDateInput.value = "2026-06-09";
       els.newTripEndDateInput.value = "2026-06-12";
       els.newTripNameInput.value = "";
+      setNewTripMode(state.travelMode, { resetCountry: true });
       els.newTripModal.hidden = false;
     });
   }
@@ -286,6 +326,9 @@ function init() {
     els.newTripForm.addEventListener("submit", (e) => {
       e.preventDefault();
       const tripName = els.newTripNameInput.value.trim();
+      const travelMode = getNewTripMode();
+      const country = els.newTripCountryInput.value.trim();
+      const city = els.newTripCityInput.value.trim();
       const startDate = els.newTripStartDateInput.value;
       const endDate = els.newTripEndDateInput.value;
 
@@ -296,12 +339,63 @@ function init() {
 
       window.TripLog.persistence.stateStorage.createNewTrip({
         tripName,
+        travelMode,
+        country,
+        city,
         startDate,
         endDate
       });
 
       els.newTripModal.hidden = true;
       els.newTripForm.reset();
+    });
+  }
+
+  // Itinerary Ticket collapsible & file upload event listeners
+  if (els.itineraryTicketToggleBtn) {
+    els.itineraryTicketToggleBtn.addEventListener("click", () => {
+      const sect = els.itineraryTicketSection;
+      const isHidden = sect.hidden;
+      sect.hidden = !isHidden;
+      els.itineraryTicketToggleBtn.classList.toggle("open", isHidden);
+      els.itineraryTicketToggleBtn.querySelector(".ticket-toggle-chevron").textContent = isHidden ? "▲" : "▼";
+    });
+  }
+
+  if (els.ticketFileSelectBtn) {
+    els.ticketFileSelectBtn.addEventListener("click", () => {
+      els.itineraryVoucherFile.click();
+    });
+  }
+
+  if (els.itineraryVoucherFile) {
+    els.itineraryVoucherFile.addEventListener("change", () => {
+      const file = els.itineraryVoucherFile.files[0];
+      if (!file) return;
+
+      const maxSizeBytes = 1.5 * 1024 * 1024;
+      if (file.size > maxSizeBytes) {
+        showToast("⚠️ 파일 크기는 최대 1.5MB까지 업로드할 수 있습니다.");
+        els.itineraryVoucherFile.value = "";
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        window.TripLog.features.itinerary.form.setVoucherFile(e.target.result, file.name);
+        els.ticketFileNameDisplay.textContent = file.name;
+        els.ticketFileResetBtn.style.display = "inline-flex";
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  if (els.ticketFileResetBtn) {
+    els.ticketFileResetBtn.addEventListener("click", () => {
+      window.TripLog.features.itinerary.form.setVoucherFile(null, null);
+      els.itineraryVoucherFile.value = "";
+      els.ticketFileNameDisplay.textContent = "선택된 파일 없음";
+      els.ticketFileResetBtn.style.display = "none";
     });
   }
 

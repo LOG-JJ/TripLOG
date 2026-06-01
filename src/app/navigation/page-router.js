@@ -94,8 +94,8 @@ function updatePageChrome({ animateBrand = false } = {}) {
   els.itineraryPageButton.setAttribute("aria-label", els.itineraryPageButton.title);
   els.budgetBrandIcon.classList.toggle("active", !isItinerary);
   els.itineraryBrandIcon.classList.toggle("active", isItinerary);
-  [els.domesticModeButton, els.overseasModeButton].forEach((button) => {
-    button.tabIndex = 0;
+  [els.domesticModeButton, els.overseasModeButton].forEach((statusItem) => {
+    statusItem.tabIndex = -1;
   });
 
   // Highlight active navigation tab bar item
