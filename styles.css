@@ -1973,7 +1973,7 @@ td.number {
 
 .itinerary-workspace {
   display: grid;
-  grid-template-columns: 1fr 340px;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 460px);
   gap: 24px;
   align-items: start;
 }
@@ -3512,13 +3512,55 @@ td.number {
 }
 
 /* ⏱️ 24H 시계 다이얼 & 카드 덱 스타일 */
+:root {
+  --clock-schedule-lodging: #d8b4fe;
+  --clock-schedule-food: #fdba74;
+  --clock-schedule-sightseeing: #a7f3d0;
+  --clock-schedule-transport: #f9a8d4;
+  --clock-schedule-shopping: #c4b5fd;
+  --clock-icon-lodging: #6d28d9;
+  --clock-icon-food: #ea580c;
+  --clock-icon-sightseeing: #059669;
+  --clock-icon-transport: #db2777;
+  --clock-icon-shopping: #7c3aed;
+}
+
+.clock-visual-card {
+  container-type: inline-size;
+  padding: 26px 28px 30px;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(255, 213, 61, 0.08), transparent 48%),
+    #fffdf8;
+  border: 4px solid var(--line);
+  border-radius: 26px;
+  box-shadow: 5px 6px 0 var(--line);
+  overflow: hidden;
+}
+
+.clock-visual-card .section-title-row {
+  margin-bottom: 8px;
+}
+
+.clock-visual-card .section-title-row h3 {
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 2cqw, 12px);
+  margin: 0;
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: clamp(14px, 4.9cqw, 28px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
 .clock-dial-container {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 100%;
-  max-width: 290px;
+  max-width: 590px;
   margin: 0 auto;
   background: transparent;
   border: none;
@@ -3529,73 +3571,355 @@ td.number {
 }
 
 .clock-dial-svg {
+  display: block;
   width: 100%;
   height: 100%;
   overflow: visible;
 }
 
-/* 시계 중심 데코 */
+.clock-face {
+  fill: rgba(255, 253, 248, 0.96);
+  stroke: #080b11;
+  stroke-width: 4.5px;
+  filter: drop-shadow(2px 3px 0 rgba(17, 24, 39, 0.42));
+}
+
+.clock-label-track {
+  fill: none;
+  stroke: rgba(17, 24, 39, 0.08);
+  stroke-width: 1.2px;
+}
+
+.clock-schedule-track {
+  fill: none;
+  stroke: #eef0f4;
+  stroke-linecap: butt;
+}
+
 .clock-center-disc {
-  fill: #ffffff;
-  stroke: var(--line);
-  stroke-width: 1.5px;
-  filter: drop-shadow(1px 1px 0px var(--line));
+  fill: #fffefa;
+  stroke: #080b11;
+  stroke-width: 4.5px;
+  filter: drop-shadow(3px 4px 0 rgba(17, 24, 39, 0.8));
+}
+
+.clock-center-dots {
+  fill: none;
+  stroke: rgba(17, 24, 39, 0.68);
+  stroke-width: 2.2px;
+  stroke-dasharray: 1 12;
+}
+
+.clock-center-label,
+.clock-hour-text,
+.clock-anchor-text,
+.clock-time-badge-text,
+.clock-weekday-text {
+  text-anchor: middle;
+  dominant-baseline: middle;
+  letter-spacing: 0;
+  pointer-events: none;
 }
 
 .clock-center-label {
-  font-family: var(--font-heading);
-  font-size: 8px;
-  font-weight: 900;
-  fill: var(--line);
-  text-anchor: middle;
-}
-
-/* 시계판의 숫자 라벨 (가독성을 위해 얇게 튜닝) */
-.clock-hour-text {
   font-family: var(--font);
-  font-size: 7.2px;
-  font-weight: 600;
-  fill: var(--text);
-  text-anchor: middle;
-  dominant-baseline: middle;
-}
-
-/* 시계 눈금선 */
-.clock-tick-line {
-  stroke: var(--line);
-  stroke-linecap: round;
-}
-
-/* 부채꼴(Sector) */
-.clock-sector {
-  stroke: var(--line);
-  stroke-width: 1.0px;
-  cursor: pointer;
-  transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.15s ease;
-}
-
-/* 부채꼴 내부 장소 텍스트 라벨 (가독성 향상을 위해 얇은 폰트 적용) */
-.clock-sector-label {
-  font-family: var(--font);
-  font-size: 6.8px;
-  font-weight: 600;
+  font-weight: 300;
   fill: #111827;
+}
+
+.clock-center-pin {
+  font-size: 37px;
   text-anchor: middle;
   dominant-baseline: middle;
-  pointer-events: none; /* 글자 클릭 시 부채꼴 클릭 방해 방지 */
+  pointer-events: none;
+}
+
+.clock-center-caption {
+  font-family: var(--font);
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.clock-center-main {
+  font-size: 43px;
+  font-weight: 300;
+}
+
+.clock-weekday-rect {
+  fill: #ffe773;
+  stroke: #080b11;
+  stroke-width: 3.2px;
+  filter: drop-shadow(1.5px 1.5px 0 #080b11);
+}
+
+.clock-weekday-text {
+  fill: #111827;
+  font-family: var(--font);
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.clock-hour-text {
+  fill: #090d14;
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 900;
+  paint-order: stroke;
+  stroke: #fffdf8;
+  stroke-width: 5px;
+  stroke-linejoin: round;
+}
+
+.clock-tick-line {
+  stroke: #080b11;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.clock-tick-minor {
+  opacity: 0.9;
+  stroke-width: 1.6px;
+}
+
+.clock-tick-major {
+  opacity: 1;
+  stroke-width: 2.8px;
+}
+
+.clock-tick-anchor {
+  opacity: 1;
+  stroke-width: 4px;
+}
+
+.clock-anchor-rect {
+  fill: #111111;
+  stroke: #050505;
+  stroke-width: 2.6px;
+  filter: drop-shadow(2px 2px 0 rgba(17, 24, 39, 0.64));
+}
+
+.clock-anchor-text {
+  fill: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 39px;
+  font-weight: 900;
+}
+
+.clock-anchor-top-main {
+  font-size: 38px;
+}
+
+.clock-anchor-top-sub {
+  font-size: 20px;
+}
+
+.clock-sector {
+  stroke: rgba(255, 255, 255, 0.94);
+  stroke-width: 4.5px;
+  cursor: pointer;
+  opacity: 0.92;
+  transform-box: fill-box;
+  transform-origin: center;
+  vector-effect: non-scaling-stroke;
+  transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.15s ease, opacity 0.15s ease;
 }
 
 .clock-sector:hover {
-  transform: scale(1.02);
-  transform-origin: center;
-  filter: brightness(0.96) drop-shadow(1.5px 1.5px 0px var(--line));
+  transform: scale(1.018);
+  filter: brightness(0.98) drop-shadow(2px 2px 0 rgba(17, 24, 39, 0.4));
+  opacity: 1;
 }
 
-/* 시계바늘 */
-.clock-hand {
-  stroke: #ef4444;
-  stroke-width: 2px;
+.clock-sector-icon {
+  fill: none;
+  stroke-width: 4px;
   stroke-linecap: round;
+  stroke-linejoin: round;
+  cursor: pointer;
+  vector-effect: non-scaling-stroke;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.clock-sector-icon:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(1px 1px 0 rgba(17, 24, 39, 0.32));
+}
+
+.clock-time-badge {
+  cursor: pointer;
+}
+
+.clock-time-badge-rect {
+  fill: #fffefa;
+  stroke: rgba(17, 24, 39, 0.55);
+  stroke-width: 2.2px;
+  filter: drop-shadow(1px 1px 0 rgba(17, 24, 39, 0.24));
+}
+
+.clock-time-badge-text {
+  fill: #111827;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.clock-current-hand {
+  stroke: #080b11;
+  stroke-width: 6.5px;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.clock-current-knob {
+  fill: #ff5b7c;
+  stroke: #080b11;
+  stroke-width: 5px;
+  filter: drop-shadow(1.5px 1.5px 0 rgba(17, 24, 39, 0.7));
+}
+
+html[data-theme="toss"] {
+  --clock-schedule-lodging: #ede9fe;
+  --clock-schedule-food: #fff4d6;
+  --clock-schedule-sightseeing: #dff8ee;
+  --clock-schedule-transport: #ffe8ef;
+  --clock-schedule-shopping: #e8f3ff;
+  --clock-icon-lodging: #7c3aed;
+  --clock-icon-food: #f59f00;
+  --clock-icon-sightseeing: #00a86b;
+  --clock-icon-transport: #f04452;
+  --clock-icon-shopping: #3182f6;
+}
+
+html[data-theme="toss"] .clock-visual-card {
+  background: #ffffff !important;
+  border: none !important;
+  border-radius: 28px !important;
+  box-shadow: var(--shadow) !important;
+  padding: 30px !important;
+}
+
+html[data-theme="toss"] .clock-visual-card .section-title-row h3 {
+  color: #191f28 !important;
+  font-size: clamp(14px, 4.8cqw, 24px) !important;
+  font-weight: 800 !important;
+}
+
+html[data-theme="toss"] .clock-face {
+  fill: #ffffff;
+  stroke: #e5e8eb;
+  stroke-width: 3px;
+  filter: none;
+}
+
+html[data-theme="toss"] .clock-label-track {
+  stroke: #f2f4f6;
+}
+
+html[data-theme="toss"] .clock-schedule-track {
+  stroke: #f2f4f6;
+}
+
+html[data-theme="toss"] .clock-tick-line {
+  stroke: #8b95a1;
+}
+
+html[data-theme="toss"] .clock-tick-minor {
+  opacity: 0.45;
+  stroke-width: 1.2px;
+}
+
+html[data-theme="toss"] .clock-tick-major,
+html[data-theme="toss"] .clock-tick-anchor {
+  opacity: 0.9;
+  stroke-width: 2px;
+}
+
+html[data-theme="toss"] .clock-hour-text {
+  fill: #333d4b;
+  stroke: #ffffff;
+  stroke-width: 5px;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+html[data-theme="toss"] .clock-anchor-rect {
+  fill: #e8f3ff;
+  stroke: none;
+  filter: none;
+}
+
+html[data-theme="toss"] .clock-anchor-text {
+  fill: #3182f6;
+  font-weight: 800;
+}
+
+html[data-theme="toss"] .clock-sector {
+  stroke: #ffffff;
+  stroke-width: 5px;
+  opacity: 1;
+}
+
+html[data-theme="toss"] .clock-time-badge-rect {
+  fill: #ffffff;
+  stroke: #d1d6db;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.04));
+}
+
+html[data-theme="toss"] .clock-time-badge-text {
+  fill: #191f28;
+  font-family: var(--font);
+  font-weight: 700;
+}
+
+html[data-theme="toss"] .clock-center-disc {
+  fill: #ffffff;
+  stroke: #d1d6db;
+  stroke-width: 2.4px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.04));
+}
+
+html[data-theme="toss"] .clock-center-dots {
+  stroke: #d1d6db;
+  stroke-width: 2px;
+}
+
+html[data-theme="toss"] .clock-center-label {
+  fill: #191f28;
+  font-family: var(--font);
+}
+
+html[data-theme="toss"] .clock-center-main {
+  font-size: 39px;
+  font-weight: 300;
+}
+
+html[data-theme="toss"] .clock-center-caption {
+  fill: #4e5968;
+  font-weight: 300;
+}
+
+html[data-theme="toss"] .clock-weekday-rect {
+  fill: #e8f3ff;
+  stroke: none;
+  filter: none;
+}
+
+html[data-theme="toss"] .clock-weekday-text {
+  fill: #3182f6;
+  font-family: var(--font);
+  font-weight: 300;
+}
+
+html[data-theme="toss"] .clock-current-hand {
+  stroke: #191f28;
+  stroke-width: 5px;
+}
+
+html[data-theme="toss"] .clock-current-knob {
+  fill: #3182f6;
+  stroke: #ffffff;
+  stroke-width: 5px;
+  filter: drop-shadow(0 6px 12px rgba(49, 130, 246, 0.26));
 }
 
 /* 카드 덱 리스트 */
@@ -4624,7 +4948,7 @@ td.number {
   align-items: center;
   position: relative;
   width: 100%;
-  max-width: 310px;
+  max-width: 590px;
   margin: 0 auto;
   background: transparent;
   border: none;
@@ -8579,7 +8903,7 @@ html[data-theme="toss"] .summary-trip-destination {
 
 .travel-inner-edit {
   display: grid;
-  gap: 8px;
+  gap: 6px;
   padding: 10px;
   background: linear-gradient(180deg, #fffdf7 0%, #ffffff 100%);
   border-style: dashed;
@@ -8599,8 +8923,7 @@ html[data-theme="toss"] .summary-trip-destination {
 }
 
 .travel-segment-row {
-  display: grid;
-  gap: 8px;
+  display: block;
   min-width: 0;
   padding: 8px;
   background: #ffffff;
@@ -8625,8 +8948,8 @@ html[data-theme="toss"] .summary-trip-destination {
 }
 
 .travel-method-selector {
-  flex: 0 0 154px;
-  min-width: 154px;
+  flex: 0 0 142px;
+  min-width: 142px;
 }
 
 /* Dropdown styling */
@@ -8657,7 +8980,7 @@ html[data-theme="toss"] .summary-trip-destination {
 }
 
 .travel-time-input-group {
-  flex: 0 0 88px;
+  flex: 0 0 82px;
 }
 
 .travel-cost-input-group {
@@ -8683,6 +9006,13 @@ html[data-theme="toss"] .summary-trip-destination {
   gap: 4px;
 }
 
+.travel-time-input-group {
+  display: grid;
+  grid-template-columns: 16px minmax(28px, 1fr) 16px;
+  justify-items: center;
+  gap: 3px;
+}
+
 .travel-input-label {
   font-size: 11px;
   font-weight: 800;
@@ -8704,7 +9034,7 @@ html[data-theme="toss"] .summary-trip-destination {
 }
 
 .travel-duration-input {
-  width: 34px;
+  width: 100%;
   text-align: center;
   color: #e11d48;
 }
@@ -8740,12 +9070,13 @@ html[data-theme="toss"] .summary-trip-destination {
 }
 
 .travel-segment-memo-row {
+  flex: 1 1 260px;
   min-width: 0;
 }
 
 .travel-memo-input {
   width: 100%;
-  min-height: 36px;
+  min-height: 32px;
   margin: 0;
   padding: 0 12px;
   color: var(--text);
@@ -8762,24 +9093,29 @@ html[data-theme="toss"] .summary-trip-destination {
   box-shadow: var(--shadow-sm);
 }
 
-.travel-footer {
-  display: flex;
-  justify-content: flex-start;
-}
-
 .travel-segment-add-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 34px;
+  width: 34px;
+  min-width: 34px;
   min-height: 32px;
-  padding: 0 12px;
+  padding: 0;
   color: var(--text);
   background: var(--accent-mint);
   border: 2px solid var(--line);
   border-radius: 7px;
   box-shadow: 2px 2px 0 var(--line);
-  font-size: 12px;
+  font-family: var(--font-heading);
+  font-size: 19px;
   font-weight: 900;
+  line-height: 1;
+}
+
+.travel-segment-add-btn span {
+  display: block;
+  transform: translateY(-1px);
 }
 
 .travel-segment-add-btn:hover,
@@ -8868,7 +9204,7 @@ html[data-theme="toss"] .travel-trans-select {
 }
 
 html[data-theme="toss"] .travel-memo-input {
-  min-height: 36px !important;
+  min-height: 32px !important;
   padding-left: 12px !important;
   padding-right: 12px !important;
 }
@@ -8923,8 +9259,8 @@ html[data-theme="toss"] .travel-badge-item {
   }
 
   .travel-method-selector {
-    flex: 1 1 104px;
-    min-width: 104px;
+    flex: 1 1 96px;
+    min-width: 96px;
   }
 
   .travel-trans-select {
@@ -8938,7 +9274,8 @@ html[data-theme="toss"] .travel-badge-item {
   }
 
   .travel-time-input-group {
-    flex: 0 0 64px;
+    flex: 0 0 62px;
+    grid-template-columns: 14px minmax(22px, 1fr) 14px;
   }
 
   .travel-cost-input-group {
@@ -8950,10 +9287,6 @@ html[data-theme="toss"] .travel-badge-item {
     min-height: 30px;
     padding: 0 5px;
     gap: 3px;
-  }
-
-  .travel-duration-input {
-    width: 24px;
   }
 
   .travel-cost-input {

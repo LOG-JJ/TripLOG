@@ -217,15 +217,21 @@ function renderItineraryList(days) {
                   <span class="travel-unit">원</span>
                 </div>
 
+                <div class="travel-segment-memo-row">
+                  <input type="text" class="travel-memo-input" data-id="${escapeHtml(item.id)}" data-index="${sIdx}" value="${escapeHtml(seg.memo || "")}" placeholder="📝 비고 입력 (예: 버스 번호, 환승 정보...)" />
+                </div>
+
+                ${sIdx === item.transits.length - 1 ? `
+                  <button type="button" class="travel-segment-add-btn" data-id="${escapeHtml(item.id)}" title="이동 수단 추가" aria-label="이동 수단 추가">
+                    <span>+</span>
+                  </button>
+                ` : ""}
+
                 ${item.transits.length > 1 ? `
                   <button type="button" class="travel-segment-delete-btn" data-id="${escapeHtml(item.id)}" data-index="${sIdx}" title="세그먼트 삭제">
                     −
                   </button>
                 ` : ""}
-              </div>
-              
-              <div class="travel-segment-memo-row">
-                <input type="text" class="travel-memo-input" data-id="${escapeHtml(item.id)}" data-index="${sIdx}" value="${escapeHtml(seg.memo || "")}" placeholder="📝 비고 입력 (예: 버스 번호, 환승 정보...)" />
               </div>
             </div>
           `;
@@ -236,11 +242,6 @@ function renderItineraryList(days) {
           <div class="travel-inner-edit">
             <div class="travel-segments-list">
               ${segmentsHtml}
-            </div>
-            <div class="travel-footer">
-              <button type="button" class="travel-segment-add-btn" data-id="${escapeHtml(item.id)}">
-                <span>+ 이동 수단 추가</span>
-              </button>
             </div>
           </div>
         `;
