@@ -12,6 +12,7 @@
     "navigation/trip-dates.js",
     "features/expenses/expense-form.js",
     "features/settings/travel-mode.js",
+    "features/settings/theme-toggle.js",
     "features/expenses/currency-controls.js",
     "features/expenses/lodging.js",
     "ui/date-picker.js",

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
 
 :root {
   color-scheme: light;
@@ -5375,3 +5376,772 @@ td.number {
     page-break-inside: avoid;
   }
 }
+
+/* ==========================================================================
+   TOSS DESIGN THEME OVERRIDES (data-theme="toss")
+   ========================================================================== */
+:root[data-theme="toss"] {
+  --bg: #f2f4f6; /* Toss light grey background */
+  --surface: #ffffff; /* White card surface */
+  --surface-soft: #f9fafb; /* Extra light surface */
+  --surface-strong: #eff2f5; /* Darker light grey surface */
+  --text: #191f28; /* Toss main dark text */
+  --muted: #4e5968; /* Toss subtext */
+  --muted-2: #8b95a1; /* Toss lighter subtext */
+  --line: #e5e8eb; /* Very soft Toss grey border */
+  --line-strong: #d1d6db;
+  --accent: #3182f6; /* Toss signature blue */
+  --accent-dark: #1b64da; /* Hover blue */
+  
+  /* Modern clean category colors */
+  --accent-purple: #ece9ff; /* Light soft purple */
+  --accent-pink: #ffebee; /* Light soft pink */
+  --accent-mint: #e6f9f3; /* Light soft mint */
+  --accent-blue: #e8f3ff; /* Light soft blue */
+  --accent-orange: #fff4cd; /* Light soft orange/yellow */
+  --accent-gray: #f2f4f6; /* Light soft grey */
+  
+  /* Toss Soft elegant shadows */
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 4px rgba(0, 0, 0, 0.01);
+  
+  --radius: 24px;
+  --radius-sm: 14px;
+  
+  --font: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-heading: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+/* 1. Global Reset & Core layout */
+html[data-theme="toss"] body {
+  background-image: none !important;
+  background-color: var(--bg) !important;
+  font-family: var(--font) !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* 2. Panels and Cards - Borderless white cards with soft drop shadows */
+html[data-theme="toss"] .topbar,
+html[data-theme="toss"] .planner-panel,
+html[data-theme="toss"] .entry-panel,
+html[data-theme="toss"] .summary-panel,
+html[data-theme="toss"] .itinerary-visual-card,
+html[data-theme="toss"] .packing-suitcase-card,
+html[data-theme="toss"] .stats-card,
+html[data-theme="toss"] .modal-backdrop section,
+html[data-theme="toss"] .settings-mode-handoff {
+  border: none !important;
+  box-shadow: var(--shadow) !important;
+  border-radius: var(--radius) !important;
+  background: var(--surface) !important;
+  padding: 28px !important;
+}
+
+html[data-theme="toss"] .topbar {
+  padding: 14px 24px !important;
+  margin-bottom: 28px !important;
+}
+
+/* 3. Inputs, selects & custom pickers - Clean rounded gray boxes */
+html[data-theme="toss"] input,
+html[data-theme="toss"] select,
+html[data-theme="toss"] .custom-date-button,
+html[data-theme="toss"] .custom-select-button,
+html[data-theme="toss"] .custom-time-button {
+  background-color: #f2f4f6 !important;
+  border: 1px solid transparent !important;
+  border-radius: var(--radius-sm) !important;
+  color: var(--text) !important;
+  box-shadow: none !important;
+  font-weight: 500 !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  padding: 0 16px !important;
+  transition: all 0.2s ease !important;
+}
+
+html[data-theme="toss"] .custom-select-menu,
+html[data-theme="toss"] .place-search-results,
+html[data-theme="toss"] .manual-address-panel {
+  border: 1px solid var(--line) !important;
+  box-shadow: var(--shadow-lg) !important;
+  border-radius: var(--radius-sm) !important;
+  background: var(--surface) !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="toss"] input:focus,
+html[data-theme="toss"] select:focus,
+html[data-theme="toss"] .custom-date-button.open,
+html[data-theme="toss"] .custom-select-button.open,
+html[data-theme="toss"] .custom-time-button.open {
+  background-color: #ffffff !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(49, 130, 246, 0.12) !important;
+}
+
+/* 4. Action Buttons (Primary, Ghost, Hover, Active) */
+html[data-theme="toss"] .submit-button,
+html[data-theme="toss"] .icon-button.primary {
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border: none !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+  border-radius: var(--radius-sm) !important;
+  height: 48px !important;
+  font-size: 15px !important;
+}
+
+html[data-theme="toss"] .submit-button svg,
+html[data-theme="toss"] .icon-button.primary svg {
+  stroke: #ffffff !important;
+}
+
+html[data-theme="toss"] .icon-button.ghost,
+html[data-theme="toss"] .text-button {
+  background: #f2f4f6 !important;
+  color: var(--muted) !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-weight: 600 !important;
+  border-radius: var(--radius-sm) !important;
+  min-height: 44px !important;
+}
+
+html[data-theme="toss"] .icon-button.ghost:hover,
+html[data-theme="toss"] .text-button:hover {
+  background: #e5e8eb !important;
+  color: var(--text) !important;
+}
+
+/* Remove neo-brutalist rigid transforms and apply soft springy transitions */
+html[data-theme="toss"] .icon-button,
+html[data-theme="toss"] .submit-button,
+html[data-theme="toss"] .text-button,
+html[data-theme="toss"] .row-action,
+html[data-theme="toss"] .segmented button,
+html[data-theme="toss"] .day-chip {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+html[data-theme="toss"] .icon-button:hover,
+html[data-theme="toss"] .submit-button:hover,
+html[data-theme="toss"] .text-button:hover,
+html[data-theme="toss"] .row-action:hover,
+html[data-theme="toss"] .segmented button:hover,
+html[data-theme="toss"] .day-chip:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06) !important;
+}
+
+html[data-theme="toss"] .icon-button:active,
+html[data-theme="toss"] .submit-button:active,
+html[data-theme="toss"] .text-button:active,
+html[data-theme="toss"] .row-action:active,
+html[data-theme="toss"] .segmented button:active,
+html[data-theme="toss"] .day-chip:active {
+  transform: scale(0.96) !important;
+  box-shadow: none !important;
+}
+
+/* 5. Brand elements & headers */
+html[data-theme="toss"] .brand-mark {
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 16px !important;
+  width: 48px !important;
+  height: 48px !important;
+}
+
+html[data-theme="toss"] .brand-mark svg {
+  stroke: #ffffff !important;
+}
+
+html[data-theme="toss"] .brand-copy h1 {
+  font-family: var(--font-heading) !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="toss"] .brand-copy p {
+  color: var(--muted-2) !important;
+  font-weight: 500 !important;
+}
+
+html[data-theme="toss"] .overline {
+  background: rgba(49, 130, 246, 0.08) !important;
+  color: var(--accent) !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-weight: 600 !important;
+  font-size: 10px !important;
+  border-radius: 6px !important;
+  padding: 4px 10px !important;
+}
+
+/* 6. Navigation Tabs */
+html[data-theme="toss"] .app-navbar {
+  background: var(--surface) !important;
+  border: none !important;
+  box-shadow: var(--shadow) !important;
+  border-radius: var(--radius) !important;
+  padding: 10px 24px !important;
+}
+
+html[data-theme="toss"] .nav-item {
+  color: var(--muted) !important;
+  font-family: var(--font) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="toss"] .nav-item .nav-icon {
+  stroke: var(--muted) !important;
+  stroke-width: 2 !important;
+}
+
+html[data-theme="toss"] .nav-item:hover {
+  color: var(--accent) !important;
+  transform: translateY(-1px) !important;
+}
+
+html[data-theme="toss"] .nav-item:hover .nav-icon {
+  stroke: var(--accent) !important;
+}
+
+html[data-theme="toss"] .nav-item.active {
+  color: var(--accent) !important;
+}
+
+html[data-theme="toss"] .nav-item.active .nav-icon {
+  stroke: var(--accent) !important;
+}
+
+html[data-theme="toss"] .nav-item.active::after {
+  background: var(--accent) !important;
+  height: 3px !important;
+  bottom: -4px !important;
+  border-radius: 99px !important;
+  width: 60% !important;
+  left: 20% !important;
+}
+
+/* 7. Days Strip & Chips - Soft white cards with active spring state */
+html[data-theme="toss"] .day-chip {
+  border: none !important;
+  background: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+  border-radius: 18px !important;
+  padding: 14px 20px !important;
+}
+
+html[data-theme="toss"] .day-chip strong {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="toss"] .day-chip em {
+  background: #f2f4f6 !important;
+  color: var(--muted) !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="toss"] .day-chip.active {
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(49, 130, 246, 0.22) !important;
+  transform: translateY(-2px) !important;
+}
+
+html[data-theme="toss"] .day-chip.active strong,
+html[data-theme="toss"] .day-chip.active span,
+html[data-theme="toss"] .day-chip.active em {
+  color: #ffffff !important;
+}
+
+html[data-theme="toss"] .day-chip.active em {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: transparent !important;
+}
+
+/* 8. Segmented controls & Mode Toggles (Floated capsule switches) */
+html[data-theme="toss"] .segmented,
+html[data-theme="toss"] .mode-toggle {
+  background: #eff2f5 !important;
+  border: none !important;
+  padding: 3px !important;
+  border-radius: 99px !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] .segmented button,
+html[data-theme="toss"] .mode-toggle button {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 99px !important;
+  background: transparent !important;
+  color: var(--muted) !important;
+  min-height: 34px !important;
+  padding: 0 16px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="toss"] .segmented button.active,
+html[data-theme="toss"] .mode-toggle button.active {
+  background: #ffffff !important;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  border: none !important;
+}
+
+html[data-theme="toss"] .header-theme-toggle,
+html[data-theme="toss"] .header-mode-toggle {
+  box-shadow: none !important;
+}
+
+/* 9. Tables - spacious borderless rows */
+html[data-theme="toss"] table {
+  border-collapse: collapse !important;
+  border: none !important;
+}
+
+html[data-theme="toss"] th {
+  background: #f9fafb !important;
+  color: var(--muted-2) !important;
+  font-weight: 600 !important;
+  border-bottom: 1px solid #f2f4f6 !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  font-size: 12px !important;
+  padding: 14px 16px !important;
+  text-transform: uppercase;
+}
+
+html[data-theme="toss"] td {
+  border-bottom: 1px solid #f2f4f6 !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  color: #333d4b !important;
+  font-size: 13.5px !important;
+  padding: 16px 16px !important;
+  font-weight: 500 !important;
+}
+
+html[data-theme="toss"] tr:hover td {
+  background-color: #f9fafb !important;
+}
+
+/* 10. Packing list shelf & Suitcase bag */
+html[data-theme="toss"] .packing-shelf,
+html[data-theme="toss"] .suitcase-backpack-area {
+  background: var(--surface-soft) !important;
+  border: 1px dashed var(--line) !important;
+  border-radius: 18px !important;
+  box-shadow: none !important;
+  padding: 20px !important;
+}
+
+html[data-theme="toss"] .suitcase-backpack-area.drag-over,
+html[data-theme="toss"] .packing-shelf.drag-over {
+  background: rgba(49, 130, 246, 0.05) !important;
+  border-color: var(--accent) !important;
+}
+
+html[data-theme="toss"] .packing-item-tag {
+  border: 1px solid var(--line) !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.01) !important;
+  border-radius: 99px !important;
+  background: #ffffff !important;
+  font-weight: 500 !important;
+  padding: 6px 14px !important;
+  font-size: 12.5px !important;
+}
+
+html[data-theme="toss"] .packing-item-tag.checked {
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 4px 12px rgba(49, 130, 246, 0.2) !important;
+}
+
+/* 11. Category Stickers */
+html[data-theme="toss"] .budget-sticker,
+html[data-theme="toss"] .stat-sticker,
+html[data-theme="toss"] .category-color-dot {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="toss"] .sticker-pink { background: #ffebee !important; color: #ff3366 !important; }
+html[data-theme="toss"] .sticker-blue { background: #e8f3ff !important; color: #3182f6 !important; }
+html[data-theme="toss"] .budget-sticker.safe { background: #e6f9f3 !important; color: #00b06c !important; }
+html[data-theme="toss"] .budget-sticker.warning { background: #ffebee !important; color: #ff3366 !important; }
+html[data-theme="toss"] .stat-sticker em { color: var(--accent) !important; }
+
+/* 12. Header positioning adjustments */
+.header-theme-toggle {
+  flex: 0 0 auto;
+  margin-left: auto;
+  width: auto;
+  margin-right: 12px;
+}
+
+.header-theme-toggle button {
+  min-width: 108px;
+  white-space: nowrap;
+}
+
+.header-mode-toggle {
+  margin-left: 0;
+}
+
+@media (max-width: 820px) {
+  .header-theme-toggle {
+    margin-right: 0;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+}
+
+/* 13. Budget Progress Dashboard & Percentage Badge (Toss Style) */
+html[data-theme="toss"] .budget-dashboard {
+  background: var(--surface-soft) !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 20px !important;
+}
+
+html[data-theme="toss"] .budget-dashboard-title {
+  font-weight: 600 !important;
+  font-size: 14.5px !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="toss"] .budget-dashboard-title strong {
+  background: var(--accent-blue) !important;
+  color: var(--accent) !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 8px !important;
+  padding: 3px 8px !important;
+  font-weight: 700 !important;
+  margin-left: 8px !important;
+}
+
+html[data-theme="toss"] .budget-bar-wrap {
+  height: 10px !important;
+  background: #e5e8eb !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 99px !important;
+  overflow: hidden !important;
+}
+
+html[data-theme="toss"] .budget-bar-fill {
+  background-image: none !important;
+  background-color: var(--accent) !important;
+  border: none !important;
+  border-radius: 99px !important;
+}
+
+html[data-theme="toss"] .budget-dashboard-footer {
+  font-weight: 600 !important;
+  color: var(--muted) !important;
+}
+
+html[data-theme="toss"] .budget-dashboard-footer strong {
+  color: var(--text) !important;
+  font-weight: 700 !important;
+}
+
+/* 14. Flat Donut Charts overrides (Toss style) */
+html[data-theme="toss"] .donut-depth,
+html[data-theme="toss"] .donut-empty-shadow {
+  display: none !important;
+}
+
+html[data-theme="toss"] .donut-top,
+html[data-theme="toss"] .donut-empty-top {
+  stroke: var(--surface) !important;
+  stroke-width: 2px !important;
+}
+
+html[data-theme="toss"] .donut-hole {
+  fill: var(--surface) !important;
+  stroke: none !important;
+}
+
+html[data-theme="toss"] .report-donut-metric .donut-label {
+  font-family: var(--font) !important;
+  font-weight: 600 !important;
+  color: var(--muted) !important;
+  font-size: 13px !important;
+}
+
+html[data-theme="toss"] .report-donut-metric .donut-value {
+  font-family: var(--font) !important;
+  font-weight: 700 !important;
+  color: var(--text) !important;
+  font-size: 20px !important;
+}
+
+/* 15. SVG Daily spend trend chart overrides (Toss style) */
+html[data-theme="toss"] .bar-chart-wrap {
+  border: none !important;
+  background: var(--surface-soft) !important;
+  box-shadow: none !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 20px !important;
+}
+
+html[data-theme="toss"] .daily-trend-summary {
+  border: none !important;
+  background: var(--surface-soft) !important;
+  box-shadow: none !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+html[data-theme="toss"] .daily-trend-stat {
+  border-right: 1px solid var(--line) !important;
+}
+
+/* SVG Overrides dynamically */
+html[data-theme="toss"] .daily-trend-chart > rect:first-of-type {
+  fill: var(--surface) !important;
+  rx: 20 !important;
+}
+
+html[data-theme="toss"] .daily-trend-chart line {
+  stroke: var(--line) !important;
+  stroke-width: 1px !important;
+  opacity: 0.8 !important;
+}
+
+html[data-theme="toss"] .bar-group rect {
+  stroke: none !important;
+  rx: 12 !important;
+}
+
+/* Hide brutalist solid shadow inside daily trend bar chart */
+html[data-theme="toss"] .bar-group rect[fill="#111827"] {
+  display: none !important;
+}
+
+/* Make daily trend track gray */
+html[data-theme="toss"] .bar-group rect[fill="#ffffff"] {
+  fill: #eff2f5 !important;
+  rx: 12 !important;
+}
+
+html[data-theme="toss"] .daily-value-plate {
+  fill: var(--surface) !important;
+  stroke: none !important;
+  opacity: 0.95 !important;
+}
+
+/* 16. Itinerary duration charts overrides */
+html[data-theme="toss"] .duration-bar-label {
+  font-weight: 600 !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="toss"] .duration-progress-wrap {
+  border: none !important;
+  background: #eff2f5 !important;
+  border-radius: 99px !important;
+  height: 8px !important;
+}
+
+html[data-theme="toss"] .duration-progress-fill {
+  border-radius: 99px !important;
+}
+
+html[data-theme="toss"] .duration-bar-value {
+  font-weight: 600 !important;
+  color: var(--muted) !important;
+}
+
+/* 17. Map frame wrapper overrides */
+html[data-theme="toss"] .map-frame-wrap {
+  border: none !important;
+  box-shadow: var(--shadow-sm) !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+/* 18. Premium Itinerary Card & Timeline overrides (Toss style) */
+html[data-theme="toss"] .itinerary-list {
+  gap: 12px !important;
+  padding-left: 20px !important;
+  margin-left: 4px !important;
+}
+
+html[data-theme="toss"] .itinerary-list::before {
+  background: #e5e8eb !important;
+  width: 2px !important;
+  left: 6px !important;
+  top: 18px !important;
+  bottom: 18px !important;
+}
+
+html[data-theme="toss"] .itinerary-card {
+  background: #ffffff !important;
+  border: none !important;
+  box-shadow: var(--shadow) !important;
+  border-radius: 20px !important;
+  padding: 20px 24px !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+html[data-theme="toss"] .itinerary-card::before {
+  background: var(--accent) !important;
+  border: 3px solid #ffffff !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1) !important;
+  width: 14px !important;
+  height: 14px !important;
+  border-radius: 99px !important;
+  left: -23px !important;
+  top: 26px !important;
+}
+
+html[data-theme="toss"] .itinerary-card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+html[data-theme="toss"] .itinerary-card.active {
+  background: #ffffff !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+html[data-theme="toss"] .itinerary-card-top {
+  border-bottom: 1px solid #f2f4f6 !important;
+  padding-bottom: 12px !important;
+}
+
+html[data-theme="toss"] .day-label {
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  min-height: 26px !important;
+  padding: 0 10px !important;
+}
+
+html[data-theme="toss"] .itinerary-card-place {
+  font-weight: 700 !important;
+  color: #191f28 !important;
+  font-size: 18.5px !important;
+}
+
+html[data-theme="toss"] .itinerary-card-map svg {
+  background: #eff2f5 !important;
+  border: none !important;
+  border-radius: 10px !important;
+  color: #8b95a1 !important;
+  width: 32px !important;
+  height: 32px !important;
+  padding: 6px !important;
+}
+
+html[data-theme="toss"] .itinerary-card-map span {
+  font-weight: 500 !important;
+  color: #4e5968 !important;
+  font-size: 13.5px !important;
+}
+
+html[data-theme="toss"] .itinerary-card-map::after {
+  color: #b0b8c1 !important;
+  font-weight: normal !important;
+  font-size: 20px !important;
+}
+
+html[data-theme="toss"] .itinerary-memo-shell {
+  background: #f9fafb !important;
+  border: none !important;
+  border-radius: 14px !important;
+  padding: 10px 14px !important;
+}
+
+html[data-theme="toss"] .itinerary-memo-shell svg {
+  color: #8b95a1 !important;
+}
+
+html[data-theme="toss"] .inline-memo-input {
+  color: #4e5968 !important;
+  font-weight: 500 !important;
+  font-size: 13.5px !important;
+}
+
+html[data-theme="toss"] .time-badge,
+html[data-theme="toss"] .cost-badge,
+html[data-theme="toss"] .itinerary-card-hint {
+  border: none !important;
+  font-weight: 600 !important;
+  border-radius: 99px !important;
+  padding: 0 12px !important;
+  min-height: 26px !important;
+  font-size: 11.5px !important;
+}
+
+html[data-theme="toss"] .time-badge {
+  background: #e8f3ff !important;
+  color: #3182f6 !important;
+}
+
+html[data-theme="toss"] .cost-badge {
+  background: #e6f9f3 !important;
+  color: #00b06c !important;
+}
+
+html[data-theme="toss"] .itinerary-card-hint {
+  background: #f2f4f6 !important;
+  color: #4e5968 !important;
+}
+
+html[data-theme="toss"] .itinerary-card-actions button {
+  background: #f2f4f6 !important;
+  color: #4e5968 !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  min-height: 34px !important;
+  min-width: 68px !important;
+  transition: all 0.2s ease !important;
+}
+
+html[data-theme="toss"] .itinerary-card-actions button:hover {
+  background: #e5e8eb !important;
+  color: #191f28 !important;
+  transform: translateY(-1px) !important;
+}
+
+html[data-theme="toss"] .itinerary-card-actions button:active {
+  transform: scale(0.96) !important;
+}
+
+/* Specific styling for the delete button inside cards */
+html[data-theme="toss"] .itinerary-card-actions button:nth-of-type(2) {
+  color: #f04452 !important; /* Soft premium Toss red */
+}
+
+
+

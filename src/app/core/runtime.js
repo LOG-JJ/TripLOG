@@ -137,6 +137,11 @@ const els = {
   mapCurrentPlace: document.querySelector("#mapCurrentPlace"),
   printReport: document.querySelector("#printReport"),
   categoryRowTemplate: document.querySelector("#categoryRowTemplate"),
+
+  // Design Theme additions
+  themeToggle: document.querySelector("#headerThemeToggle"),
+  themeBrutalistButton: document.querySelector("#themeBrutalistButton"),
+  themeTossButton: document.querySelector("#themeTossButton"),
 };
 
 window.TripLog.register("core.runtime", {
