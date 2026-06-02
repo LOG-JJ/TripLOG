@@ -1,3 +1,123 @@
+const GOOGLE_MAPS_JS_LOAD_TIMEOUT_MS = 12000;
+let googleMapsJavaScriptApiPromise = null;
+let googleMapsJavaScriptApiKey = "";
+let googleMapsGeocoderInstance = null;
+
+function readStoredGoogleGeocodingApiKey() {
+  try {
+    return String(window.localStorage?.getItem(GOOGLE_GEOCODING_API_KEY_STORAGE_KEY) || "").trim();
+  } catch (e) {
+    console.warn("Google API key storage read failed:", e);
+    return "";
+  }
+}
+
+function writeStoredGoogleGeocodingApiKey(key) {
+  try {
+    window.localStorage?.setItem(GOOGLE_GEOCODING_API_KEY_STORAGE_KEY, key);
+    return readStoredGoogleGeocodingApiKey() === key;
+  } catch (e) {
+    console.warn("Google API key storage write failed:", e);
+    return false;
+  }
+}
+
+function removeStoredGoogleGeocodingApiKey() {
+  try {
+    window.localStorage?.removeItem(GOOGLE_GEOCODING_API_KEY_STORAGE_KEY);
+  } catch (e) {
+    console.warn("Google API key storage clear failed:", e);
+  }
+}
+
+function setRuntimeGoogleGeocodingApiKey(key) {
+  window.TripLogGoogleMapsApiKey = String(key || "").trim();
+}
+
+function resetGoogleMapsJavaScriptApiRuntime(key = "") {
+  if (googleMapsJavaScriptApiKey && key && googleMapsJavaScriptApiKey !== key && window.google?.maps?.importLibrary) {
+    console.info("Google Maps API key changed. Reload the page if Google results still use the old key.");
+  }
+  googleMapsJavaScriptApiPromise = null;
+  googleMapsJavaScriptApiKey = key;
+  googleMapsGeocoderInstance = null;
+}
+
+function getGoogleMapsJavaScriptRegion() {
+  return (getExpectedTripCountryCode() || (state.travelMode === "domestic" ? "KR" : "")).toUpperCase();
+}
+
+function updateGoogleGeocodingSettingsStatus(message, tone = "warning") {
+  if (typeof setMapGeocodingSettingsStatus === "function") {
+    setMapGeocodingSettingsStatus(message, tone);
+  }
+}
+
+function loadGoogleMapsJavaScriptApi() {
+  const apiKey = getGoogleGeocodingApiKey();
+  if (!apiKey) return Promise.resolve(null);
+  if (window.google?.maps?.importLibrary) return Promise.resolve(window.google.maps);
+  if (googleMapsJavaScriptApiPromise && googleMapsJavaScriptApiKey === apiKey) return googleMapsJavaScriptApiPromise;
+
+  googleMapsJavaScriptApiKey = apiKey;
+  googleMapsJavaScriptApiPromise = new Promise((resolve, reject) => {
+    const callbackName = "__tripLogGoogleMapsApiReady";
+    const previousCallback = window[callbackName];
+    const previousAuthFailure = window.gm_authFailure;
+    let settled = false;
+
+    const settle = (handler, value) => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timeoutId);
+      window[callbackName] = previousCallback;
+      window.gm_authFailure = previousAuthFailure;
+      handler(value);
+    };
+
+    const timeoutId = setTimeout(() => {
+      settle(reject, new Error("Google Maps JavaScript API load timed out"));
+    }, GOOGLE_MAPS_JS_LOAD_TIMEOUT_MS);
+
+    window[callbackName] = () => {
+      settle(resolve, window.google?.maps || null);
+    };
+    window.gm_authFailure = () => {
+      if (typeof previousAuthFailure === "function") previousAuthFailure();
+      settle(reject, new Error("Google Maps JavaScript API authentication failed"));
+    };
+
+    const previousScript = document.querySelector("script[data-triplog-google-maps-api]");
+    if (previousScript) previousScript.remove();
+
+    const scriptUrl = new URL("https://maps.googleapis.com/maps/api/js");
+    scriptUrl.searchParams.set("key", apiKey);
+    scriptUrl.searchParams.set("v", "weekly");
+    scriptUrl.searchParams.set("language", "ko");
+    scriptUrl.searchParams.set("loading", "async");
+    scriptUrl.searchParams.set("callback", callbackName);
+    const region = getGoogleMapsJavaScriptRegion();
+    if (region) scriptUrl.searchParams.set("region", region);
+
+    const script = document.createElement("script");
+    script.src = scriptUrl.toString();
+    script.async = true;
+    script.defer = true;
+    script.dataset.triplogGoogleMapsApi = "true";
+    script.onerror = () => {
+      settle(reject, new Error("Google Maps JavaScript API script failed"));
+    };
+    document.head.appendChild(script);
+  }).catch((e) => {
+    googleMapsJavaScriptApiPromise = null;
+    console.warn("Google Maps JavaScript API unavailable:", e);
+    updateGoogleGeocodingSettingsStatus("Google API 연결 실패: Maps JavaScript API 허용/리퍼러를 확인하세요.", "warning");
+    return null;
+  });
+
+  return googleMapsJavaScriptApiPromise;
+}
+
 async function fetchLatLngFromPhoton(query, { context = "", near = null } = {}) {
   try {
     const url = new URL("https://photon.komoot.io/api/");
@@ -29,7 +149,7 @@ async function fetchLatLngFromPhoton(query, { context = "", near = null } = {}) 
 
 function getGoogleGeocodingApiKey() {
   const runtimeKey = String(window.TripLogGoogleMapsApiKey || window.GOOGLE_MAPS_API_KEY || "").trim();
-  const savedKey = String(localStorage.getItem(GOOGLE_GEOCODING_API_KEY_STORAGE_KEY) || "").trim();
+  const savedKey = readStoredGoogleGeocodingApiKey();
   return runtimeKey || savedKey;
 }
 
@@ -43,17 +163,28 @@ function saveGoogleGeocodingApiKey(value) {
     clearGoogleGeocodingApiKey();
     return false;
   }
-  localStorage.setItem(GOOGLE_GEOCODING_API_KEY_STORAGE_KEY, key);
+  const saved = writeStoredGoogleGeocodingApiKey(key);
+  if (!saved) return false;
+  setRuntimeGoogleGeocodingApiKey(key);
+  resetGoogleMapsJavaScriptApiRuntime(key);
   geocodeResultCache.clear();
   return true;
 }
 
 function clearGoogleGeocodingApiKey() {
-  localStorage.removeItem(GOOGLE_GEOCODING_API_KEY_STORAGE_KEY);
+  removeStoredGoogleGeocodingApiKey();
+  setRuntimeGoogleGeocodingApiKey("");
+  resetGoogleMapsJavaScriptApiRuntime("");
   geocodeResultCache.clear();
 }
 
 async function fetchGooglePlacesTextSearchCandidates(query, { context = "", near = null, signal = null } = {}) {
+  const jsCandidates = await fetchGooglePlacesTextSearchCandidatesViaJavaScript(query, { context, near, signal });
+  if (Array.isArray(jsCandidates)) return jsCandidates;
+  return fetchGooglePlacesTextSearchCandidatesViaRest(query, { context, near, signal });
+}
+
+async function fetchGooglePlacesTextSearchCandidatesViaRest(query, { context = "", near = null, signal = null } = {}) {
   const apiKey = getGoogleGeocodingApiKey();
   if (!apiKey) return [];
 
@@ -121,6 +252,85 @@ function buildGooglePlacesLocationBias(context = "", near = null) {
   return null;
 }
 
+function buildGooglePlacesJavaScriptLocationBias(context = "", near = null) {
+  const bias = buildGooglePlacesLocationBias(context, near);
+  if (!bias?.circle) return null;
+  return {
+    center: {
+      lat: bias.circle.center.latitude,
+      lng: bias.circle.center.longitude,
+    },
+    radius: bias.circle.radius,
+  };
+}
+
+async function fetchGooglePlacesTextSearchCandidatesViaJavaScript(query, { context = "", near = null, signal = null } = {}) {
+  if (signal?.aborted) return [];
+  const maps = await loadGoogleMapsJavaScriptApi();
+  if (!maps?.importLibrary) return null;
+
+  try {
+    const { Place } = await maps.importLibrary("places");
+    if (!Place?.searchByText) return null;
+
+    const request = {
+      textQuery: appendTripDestinationContext(query, context),
+      fields: ["id", "displayName", "formattedAddress", "location", "types", "googleMapsURI"],
+      language: "ko",
+      maxResultCount: 5,
+    };
+    const expectedCountryCode = getExpectedTripCountryCode();
+    if (expectedCountryCode) request.region = expectedCountryCode;
+    else if (state.travelMode === "domestic") request.region = "KR";
+
+    const locationBias = buildGooglePlacesJavaScriptLocationBias(context, near);
+    if (locationBias) request.locationBias = locationBias;
+
+    const data = await Place.searchByText(request);
+    return (data?.places || [])
+      .map(normalizeGoogleMapsJavaScriptPlaceResult)
+      .filter(Boolean);
+  } catch (e) {
+    if (e.name !== "AbortError") console.warn("Google JS places search failed:", query, e);
+    return null;
+  }
+}
+
+function normalizeGoogleMapsJavaScriptPlaceResult(place) {
+  const coords = parseGoogleMapsLatLng(place?.location);
+  if (!coords) return null;
+
+  return {
+    lat: coords.lat,
+    lon: coords.lon,
+    name: getGoogleMapsPlaceDisplayText(place?.displayName),
+    location: place.formattedAddress || "",
+    countrycode: inferCountryCodeFromAddress(place.formattedAddress),
+    state: inferStateFromAddress(place.formattedAddress),
+    city: "",
+    district: "",
+    source: "google-places",
+    precision: "PLACE",
+    placeId: place.id || "",
+    googleMapsUri: place.googleMapsURI || place.googleMapsUri || "",
+    types: Array.isArray(place.types) ? place.types : [],
+  };
+}
+
+function getGoogleMapsPlaceDisplayText(value) {
+  if (typeof value === "string") return value;
+  return value?.text || "";
+}
+
+function parseGoogleMapsLatLng(location) {
+  if (!location) return null;
+  const latValue = typeof location.lat === "function" ? location.lat() : location.lat ?? location.latitude;
+  const lonValue = typeof location.lng === "function" ? location.lng() : location.lng ?? location.lon ?? location.longitude;
+  const lat = parseFloat(latValue);
+  const lon = parseFloat(lonValue);
+  return isValidLatLng(lat, lon) ? { lat, lon } : null;
+}
+
 function normalizeGooglePlacesTextSearchResult(place) {
   const lat = parseFloat(place?.location?.latitude);
   const lon = parseFloat(place?.location?.longitude);
@@ -156,6 +366,49 @@ function inferStateFromAddress(address = "") {
 }
 
 async function fetchLatLngFromGoogleGeocoding(query, { context = "", signal = null } = {}) {
+  const jsCoords = await fetchLatLngFromGoogleMapsJavaScriptGeocoding(query, { context, signal });
+  if (jsCoords !== undefined) return jsCoords;
+  return fetchLatLngFromGoogleGeocodingViaRest(query, { context, signal });
+}
+
+async function fetchLatLngFromGoogleMapsJavaScriptGeocoding(query, { context = "", signal = null } = {}) {
+  if (signal?.aborted) return null;
+  const maps = await loadGoogleMapsJavaScriptApi();
+  if (!maps?.importLibrary) return undefined;
+
+  try {
+    const { Geocoder } = await maps.importLibrary("geocoding");
+    if (!Geocoder) return undefined;
+    googleMapsGeocoderInstance = googleMapsGeocoderInstance || new Geocoder();
+
+    const expectedCountryCode = getExpectedTripCountryCode();
+    const request = {
+      address: appendTripDestinationContext(query, context),
+      language: "ko",
+    };
+    if (expectedCountryCode) {
+      request.componentRestrictions = { country: expectedCountryCode };
+      request.region = expectedCountryCode.toLowerCase();
+    } else if (state.travelMode === "domestic") {
+      request.componentRestrictions = { country: "KR" };
+      request.region = "kr";
+    }
+
+    const data = await googleMapsGeocoderInstance.geocode(request);
+    const candidates = (data?.results || [])
+      .map(normalizeGoogleMapsJavaScriptGeocodingResult)
+      .filter(Boolean);
+    return pickBestGeocodeCandidate(candidates, query, context);
+  } catch (e) {
+    if (String(e.message || e).includes("ZERO_RESULTS")) return null;
+    if (e.name !== "AbortError") {
+      console.warn("Google JS geocoding failed:", query, e);
+    }
+    return undefined;
+  }
+}
+
+async function fetchLatLngFromGoogleGeocodingViaRest(query, { context = "", signal = null } = {}) {
   const apiKey = getGoogleGeocodingApiKey();
   if (!apiKey) return null;
 
@@ -195,6 +448,23 @@ async function fetchLatLngFromGoogleGeocoding(query, { context = "", signal = nu
     if (e.name !== "AbortError") console.warn("Google geocoding failed:", query, e);
     return null;
   }
+}
+
+function normalizeGoogleMapsJavaScriptGeocodingResult(result) {
+  const coords = parseGoogleMapsLatLng(result?.geometry?.location);
+  if (!coords) return null;
+
+  return normalizeGoogleGeocodingResult({
+    ...result,
+    geometry: {
+      ...result.geometry,
+      location: {
+        lat: coords.lat,
+        lng: coords.lon,
+      },
+      location_type: result.geometry?.location_type || result.geometry?.locationType || "",
+    },
+  });
 }
 
 function normalizeGoogleGeocodingResult(result) {
@@ -484,13 +754,22 @@ window.TripLog.register("services.maps.geocoding", {
   hasGoogleGeocodingApiKey,
   saveGoogleGeocodingApiKey,
   clearGoogleGeocodingApiKey,
+  readStoredGoogleGeocodingApiKey,
+  loadGoogleMapsJavaScriptApi,
   fetchGooglePlacesTextSearchCandidates,
+  fetchGooglePlacesTextSearchCandidatesViaJavaScript,
+  fetchGooglePlacesTextSearchCandidatesViaRest,
   fetchLatLngFromGooglePlacesTextSearch,
   buildGooglePlacesLocationBias,
+  buildGooglePlacesJavaScriptLocationBias,
+  normalizeGoogleMapsJavaScriptPlaceResult,
   normalizeGooglePlacesTextSearchResult,
   inferCountryCodeFromAddress,
   inferStateFromAddress,
   fetchLatLngFromGoogleGeocoding,
+  fetchLatLngFromGoogleMapsJavaScriptGeocoding,
+  fetchLatLngFromGoogleGeocodingViaRest,
+  normalizeGoogleMapsJavaScriptGeocodingResult,
   normalizeGoogleGeocodingResult,
   normalizePhotonResult,
   pickBestGeocodeCandidate,
