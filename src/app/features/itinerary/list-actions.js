@@ -19,7 +19,7 @@ function swapItineraryItems(draggedId, targetId) {
     if (item.syncExpense && item.expenseId && item.cost > 0) {
       state.entries = state.entries.map(entry => {
         if (entry.id === item.expenseId) {
-          const transLabels = { walk: "도보", car: "자동차", bus: "대중교통", etc: "항공/기타", none: "이동" };
+          const transLabels = { walk: "도보", car: "차량", train: "기차", bus: "버스", flight: "비행기", etc: "비행기", none: "이동" };
           const desc = `${item.place} 이동 경비 (${transLabels[item.trans] || "이동"})`;
           return { ...entry, date: item.date, description: desc };
         }
@@ -105,7 +105,7 @@ function addTravelSegment(id) {
   if (!item.transits) {
     item.transits = [{ trans: item.trans || "none", duration: item.duration || 0, cost: item.cost || 0, memo: "" }];
   }
-  item.transits.push({ trans: "none", duration: 0, cost: 0, memo: "" });
+  item.transits.push({ trans: "walk", duration: 0, cost: 0, memo: "" });
 
   syncTransitTotals(item);
 
@@ -175,7 +175,7 @@ function syncTransitTotals(item) {
 
 function syncSegmentExpense(item) {
   if (item.syncExpense && item.cost > 0) {
-    const transLabels = { walk: "도보", car: "자동차", bus: "대중교통", etc: "항공/기타", none: "이동" };
+    const transLabels = { walk: "도보", car: "차량", train: "기차", bus: "버스", flight: "비행기", etc: "비행기", none: "이동" };
     const segmentsDesc = item.transits.map(x => transLabels[x.trans] || "이동").filter(Boolean).join("+");
     const desc = `${item.place} 이동 경비 (${segmentsDesc})`;
     

@@ -138,6 +138,9 @@ async function openFullDayRoute() {
 
   const routeUrls = buildGoogleMapsRouteUrls(currentDayItems);
   els.googleMapsLink.href = routeUrls.external;
+  if (typeof syncNaverMapsLink === "function") {
+    syncNaverMapsLink(buildNaverMapsRouteSearchQuery(currentDayItems));
+  }
   els.mapCurrentLabel.textContent = "동선 그리는 중";
   els.mapCurrentPlace.textContent = `${currentDayItems.length}개 장소 경로 계산 중`;
   if (els.itineraryRouteButton) els.itineraryRouteButton.disabled = true;

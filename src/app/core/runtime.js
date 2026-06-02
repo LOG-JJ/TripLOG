@@ -1,6 +1,11 @@
 let activeFilter = "전체";
 let editingId = null;
-let activePage = new URLSearchParams(window.location.search).has("itinerary") ? "itinerary" : "overview";
+const initialPageParams = new URLSearchParams(window.location.search);
+const initialPage = initialPageParams.get("page");
+const initialAllowedPages = ["start", "overview", "itinerary", "budget", "settlement", "report", "settings"];
+let activePage = initialPageParams.has("itinerary")
+  ? "itinerary"
+  : (initialAllowedPages.includes(initialPage) ? initialPage : "start");
 let pageTransitionTimer = null;
 let brandTextTimer = null;
 let placeSearchTimer = null;
@@ -23,6 +28,7 @@ const geocodeResultCache = new Map();
 
 const els = {
   pageStage: document.querySelector("#pageStage"),
+  startPage: document.querySelector("#startPage"),
   budgetPage: document.querySelector("#budgetPage"),
   itineraryPage: document.querySelector("#itineraryPage"),
   itineraryPageButton: document.querySelector("#itineraryPageButton"),
@@ -30,8 +36,7 @@ const els = {
   settlementPage: document.querySelector("#settlementPage"),
   reportPage: document.querySelector("#reportPage"),
   settingsPage: document.querySelector("#settingsPage"),
-  budgetBrandIcon: document.querySelector(".brand-icon-budget"),
-  itineraryBrandIcon: document.querySelector(".brand-icon-itinerary"),
+  brandIcon: document.querySelector("#brandIcon"),
   brandCopy: document.querySelector("#brandCopy"),
   brandTitle: document.querySelector("#brandTitle"),
   backToBudgetButton: document.querySelector("#backToBudgetButton"),
@@ -59,6 +64,31 @@ const els = {
   expenseForm: document.querySelector("#expenseForm"),
   submitButton: document.querySelector("#submitButton"),
   cancelEditButton: document.querySelector("#cancelEditButton"),
+  pretripPurchasePanel: document.querySelector("#pretripPurchasePanel"),
+  pretripPurchaseTabs: document.querySelector("#pretripPurchaseTabs"),
+  pretripFlightTab: document.querySelector("#pretripFlightTab"),
+  pretripHotelTab: document.querySelector("#pretripHotelTab"),
+  pretripFlightForm: document.querySelector("#pretripFlightForm"),
+  pretripFlightAirlineInput: document.querySelector("#pretripFlightAirlineInput"),
+  pretripFlightNumberInput: document.querySelector("#pretripFlightNumberInput"),
+  pretripFlightFromInput: document.querySelector("#pretripFlightFromInput"),
+  pretripFlightToInput: document.querySelector("#pretripFlightToInput"),
+  pretripFlightDepartDateInput: document.querySelector("#pretripFlightDepartDateInput"),
+  pretripFlightDepartTimeInput: document.querySelector("#pretripFlightDepartTimeInput"),
+  pretripFlightReturnDateInput: document.querySelector("#pretripFlightReturnDateInput"),
+  pretripFlightReturnDepartTimeInput: document.querySelector("#pretripFlightReturnDepartTimeInput"),
+  pretripFlightBookingCodeInput: document.querySelector("#pretripFlightBookingCodeInput"),
+  pretripFlightAmountInput: document.querySelector("#pretripFlightAmountInput"),
+  pretripFlightNoteInput: document.querySelector("#pretripFlightNoteInput"),
+  pretripHotelForm: document.querySelector("#pretripHotelForm"),
+  pretripHotelNameInput: document.querySelector("#pretripHotelNameInput"),
+  pretripHotelCheckInInput: document.querySelector("#pretripHotelCheckInInput"),
+  pretripHotelCheckOutInput: document.querySelector("#pretripHotelCheckOutInput"),
+  pretripHotelRoomInput: document.querySelector("#pretripHotelRoomInput"),
+  pretripHotelGuestsInput: document.querySelector("#pretripHotelGuestsInput"),
+  pretripHotelBookingCodeInput: document.querySelector("#pretripHotelBookingCodeInput"),
+  pretripHotelAmountInput: document.querySelector("#pretripHotelAmountInput"),
+  pretripHotelNoteInput: document.querySelector("#pretripHotelNoteInput"),
   expenseTableBody: document.querySelector("#expenseTableBody"),
   emptyState: document.querySelector("#emptyState"),
   chartCaption: document.querySelector("#reportChartCaption"),
@@ -72,6 +102,8 @@ const els = {
   sampleButton: document.querySelector("#settingsSampleButton"),
   resetButton: document.querySelector("#settingsResetButton"),
   pdfButton: document.querySelector("#settingsPdfButton"),
+  itineraryPdfButton: document.querySelector("#settingsItineraryPdfButton"),
+  fullPdfButton: document.querySelector("#settingsFullPdfButton"),
   modeToggle: document.querySelector("#headerModeToggle"),
   domesticModeButton: document.querySelector("#settingsDomesticButton"),
   overseasModeButton: document.querySelector("#settingsOverseasButton"),
@@ -79,9 +111,16 @@ const els = {
   settingsCurrencySelect: document.querySelector("#settingsCurrencySelect"),
   settingsExchangeRateInput: document.querySelector("#settingsExchangeRateInput"),
   settingsExchangeRateLabel: document.querySelector("#settingsExchangeRateLabel"),
-  settingsModeCurrentLabel: document.querySelector("#settingsModeCurrentLabel"),
-  settingsModeCurrentCopy: document.querySelector("#settingsModeCurrentCopy"),
-  settingsDomesticTip: document.querySelector("#settingsDomesticTip"),
+  settingsTravelModeBadge: document.querySelector("#settingsTravelModeBadge"),
+  settingsCurrencySummary: document.querySelector("#settingsCurrencySummary"),
+  settingsExchangeSummary: document.querySelector("#settingsExchangeSummary"),
+  settingsCurrencyAutoStatus: document.querySelector("#settingsCurrencyAutoStatus"),
+  settingsStorageTitle: document.querySelector("#settingsStorageTitle"),
+  settingsStorageSummary: document.querySelector("#settingsStorageSummary"),
+  settingsStorageNote: document.querySelector("#settingsStorageNote"),
+  settingsExportJsonButton: document.querySelector("#settingsExportJsonButton"),
+  settingsImportJsonButton: document.querySelector("#settingsImportJsonButton"),
+  settingsImportJsonInput: document.querySelector("#settingsImportJsonInput"),
   settingsGoogleGeocodingKeyInput: document.querySelector("#settingsGoogleGeocodingKeyInput"),
   settingsGoogleGeocodingKeySaveButton: document.querySelector("#settingsGoogleGeocodingKeySaveButton"),
   settingsGoogleGeocodingKeyClearButton: document.querySelector("#settingsGoogleGeocodingKeyClearButton"),
@@ -110,9 +149,6 @@ const els = {
   itineraryRouteButton: document.querySelector("#itineraryRouteButton"),
   itineraryTransSelect: document.querySelector("#itineraryTransSelect"),
   itineraryThemeSelect: document.querySelector("#itineraryThemeSelect"),
-  itineraryDurationInput: document.querySelector("#itineraryDurationInput"),
-  itineraryCostInput: document.querySelector("#itineraryCostInput"),
-  itinerarySyncExpenseCheckbox: document.querySelector("#itinerarySyncExpenseCheckbox"),
   itineraryTimeBlockGrid: document.querySelector("#itineraryTimeBlockGrid"),
   itineraryDurationChart: document.querySelector("#itineraryDurationChart"),
   packingShelfItems: document.querySelector("#packingShelfItems"),
@@ -141,6 +177,7 @@ const els = {
   itineraryEmpty: document.querySelector("#itineraryEmpty"),
   itineraryWorkspace: document.querySelector(".itinerary-workspace"),
   googleMapFrame: document.querySelector("#googleMapFrame"),
+  naverMapsLink: document.querySelector("#naverMapsLink"),
   googleMapsLink: document.querySelector("#googleMapsLink"),
   mapCurrentLabel: document.querySelector("#mapCurrentLabel"),
   mapCurrentPlace: document.querySelector("#mapCurrentPlace"),
@@ -154,6 +191,8 @@ const els = {
   themeTossButton: document.querySelector("#themeTossButton"),
 
   // Multi-Trip Management additions
+  headerTripSelect: document.querySelector("#headerTripSelect"),
+  headerCreateTripButton: document.querySelector("#headerCreateTripButton"),
   overviewTripSelect: document.querySelector("#overviewTripSelect"),
   createNewTripButton: document.querySelector("#createNewTripButton"),
   deleteCurrentTripButton: document.querySelector("#deleteCurrentTripButton"),
@@ -164,7 +203,10 @@ const els = {
   newTripDomesticButton: document.querySelector("#newTripDomesticButton"),
   newTripOverseasButton: document.querySelector("#newTripOverseasButton"),
   newTripNameInput: document.querySelector("#newTripNameInput"),
+  newTripCountryCombobox: document.querySelector("#newTripCountryCombobox"),
+  newTripCountryFlag: document.querySelector("#newTripCountryFlag"),
   newTripCountryInput: document.querySelector("#newTripCountryInput"),
+  newTripCountryList: document.querySelector("#newTripCountryList"),
   newTripCityInput: document.querySelector("#newTripCityInput"),
   newTripStartDateInput: document.querySelector("#newTripStartDateInput"),
   newTripEndDateInput: document.querySelector("#newTripEndDateInput"),

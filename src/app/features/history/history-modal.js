@@ -4,6 +4,7 @@ function openHistoryModal() {
   els.historyModal.hidden = false;
   document.body.classList.add("modal-open");
   els.historyCloseButton.focus();
+  refreshHistoryRecordsFromDb({ renderModal: true });
 }
 
 function closeHistoryModal() {

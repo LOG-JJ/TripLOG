@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>여행 가계부</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css?v=report-category-align-20260601-1" />
+    <link rel="stylesheet" href="./styles.css?v=category-expenses-badge-20260603-1" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   </head>
@@ -14,23 +14,25 @@
       <header class="topbar" style="border-bottom: 1.5px solid var(--line);">
         <div class="brand">
           <button class="brand-mark" id="itineraryPageButton" type="button" title="TripLOG" aria-label="TripLOG Logo" style="cursor: default; pointer-events: none;">
-            <svg class="brand-icon brand-icon-budget active" viewBox="0 0 24 24" focusable="false">
-              <path d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-9Z" />
-              <path d="M8 5v14M16 5v14M4 10h16" />
-            </svg>
-            <svg class="brand-icon brand-icon-itinerary" viewBox="0 0 24 24" focusable="false">
-              <path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" />
-              <path d="M8 13h.01M12 13h.01M16 13h.01M8 16h.01M12 16h.01" />
+            <svg class="brand-icon active" id="brandIcon" viewBox="0 0 24 24" focusable="false">
+              <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm-5-7h-5v5h5v-5z" />
             </svg>
           </button>
           <div class="brand-copy" id="brandCopy">
-            <h1 id="brandTitle">TripLOG</h1>
-            <p id="brandSubtitle">국내 여행 경비 정리</p>
+            <div class="brand-heading-row">
+              <h1 id="brandTitle" aria-label="여행 시작"></h1>
+            </div>
+            <p id="brandSubtitle" hidden></p>
           </div>
         </div>
-        <div class="mode-toggle header-theme-toggle" id="headerThemeToggle" role="group" aria-label="디자인 필터 선택">
-          <button class="active" id="themeBrutalistButton" type="button" data-theme="brutalist">네오 브루탈리즘</button>
-          <button id="themeTossButton" type="button" data-theme="toss">토스 디자인</button>
+        <div class="header-trip-tools" aria-label="진행 중인 여행 빠른 선택">
+          <label class="header-trip-select-label" for="headerTripSelect">
+            <span>진행 중인 여행</span>
+            <select id="headerTripSelect"></select>
+          </label>
+          <button class="header-trip-add-button" id="headerCreateTripButton" type="button" title="새 여행 만들기" aria-label="새 여행 만들기">
+            <span aria-hidden="true">+</span>
+          </button>
         </div>
         <div class="top-actions" style="display:none !important;" hidden>
           <button id="saveStateButton" type="button" hidden></button>
@@ -41,9 +43,13 @@
         </div>
       </header>
 
-      <!-- 🗺️ 6-Tab App Navigation Bar -->
+      <!-- 🗺️ 7-Tab App Navigation Bar -->
       <nav class="app-navbar" aria-label="메인 메뉴">
-        <button class="nav-item active" data-target="overview" type="button">
+        <button class="nav-item active" data-target="start" type="button">
+          <svg class="nav-icon" viewBox="0 0 24 24"><path d="M5 21V5.5"/><path d="M5 5.5c2.5-1.8 5-1.8 7.5 0s5 1.8 7.5 0v10c-2.5 1.8-5 1.8-7.5 0s-5-1.8-7.5 0" fill="none"/></svg>
+          <span>여행 시작</span>
+        </button>
+        <button class="nav-item" data-target="overview" type="button">
           <svg class="nav-icon" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm-5-7h-5v5h5v-5z"/></svg>
           <span>여행 개요</span>
         </button>
@@ -70,14 +76,13 @@
       </nav>
 
       <div class="page-stage" id="pageStage">
-        <!-- 🌍 1. 여행 개요 페이지 -->
-        <main class="page-view page-active" id="overviewPage">
+        <!-- 🚀 0. 여행 시작 페이지 -->
+        <main class="page-view page-active" id="startPage">
           <!-- 📂 나의 여행 선택 및 생성 섹션 -->
           <section class="planner-panel trip-manage-panel" aria-label="여행 관리" style="margin-bottom: 24px;">
             <div class="section-title-row">
               <div>
                 <p class="overline">Trip Selector</p>
-                <h2>나의 여행 목록</h2>
               </div>
             </div>
 
@@ -98,11 +103,10 @@
           </section>
 
           <!-- ⚙️ 현재 선택된 여행 설정 편집 섹션 -->
-          <section class="planner-panel" aria-labelledby="tripSectionTitle">
+          <section class="planner-panel" aria-label="여행 개요 편집">
             <div class="section-title-row">
               <div>
-                <p class="overline">Trip Overview</p>
-                <h2 id="tripSectionTitle">여행 개요 편집</h2>
+                <p class="overline">TRIP EDIT</p>
               </div>
               <output id="tripDuration" class="duration-pill">0일</output>
             </div>
@@ -122,7 +126,7 @@
               </label>
               <label for="budgetInput">
                 <span>총 여행 예산</span>
-                <input id="budgetInput" type="number" min="0" step="1000" placeholder="예산 입력 (원)" />
+                <input id="budgetInput" type="text" inputmode="numeric" placeholder="예산 입력 (원)" />
               </label>
             </div>
 
@@ -146,23 +150,33 @@
             </div>
           </section>
 
-          <!-- 🌍 여행 개요 요약 카드 대시보드 -->
-          <div class="premium-dashboard-container" style="margin-top: 32px;">
-            <div class="section-title-row" style="margin-bottom: 16px;">
-              <div>
-                <p class="overline">Dashboard</p>
-                <h2>여행 요약 대시보드</h2>
-              </div>
+          <!-- ⏱️ 24시간 타임블록 그리드 스케줄러 -->
+          <div class="itinerary-visual-card clock-visual-card start-clock-panel">
+            <div class="section-title-row compact mini">
+              <h3 class="clock-title-badge">24H TIME SCHEDULE</h3>
             </div>
+            <div class="time-block-grid-wrap" id="itineraryTimeBlockGrid">
+              <!-- JS로 타임블록 24칸과 일정이 채워집니다 -->
+            </div>
+          </div>
 
+        </main>
+
+        <!-- 🌍 1. 여행 개요 페이지 -->
+        <main class="page-view" id="overviewPage" hidden>
+          <!-- 🌍 여행 개요 요약 카드 대시보드 -->
+          <div class="premium-dashboard-container" style="margin-top: 0;">
             <div class="dashboard-grid">
-              <!-- 카드 1: 여행 요약 -->
+              <!-- 카드 1: Travel Summary -->
               <div class="dashboard-card card-summary">
-                <h3 class="dashboard-card-title">여행 요약</h3>
+                <h3 class="dashboard-card-title dashboard-card-title-box">Travel Summary</h3>
                 <div class="summary-body">
                   <strong class="summary-trip-name" id="dbTripName">-</strong>
                   <span class="summary-trip-destination" id="dbTripDestination">-</span>
-                  <span class="summary-trip-date" id="dbTripDate">-</span>
+                  <div class="summary-trip-meta">
+                    <span class="summary-trip-date" id="dbTripDate">-</span>
+                    <span class="summary-trip-duration-badge" id="dbTripDurationBadge">-</span>
+                  </div>
                   <div class="summary-actions">
                     <button type="button" class="summary-btn" id="dbBtnFlights">
                       <span class="btn-emoji">✈️</span>
@@ -173,13 +187,21 @@
                       <span class="btn-label">Hotel</span>
                     </button>
                   </div>
+                  <div class="summary-trip-progress" aria-label="여행 진행률">
+                    <div class="summary-trip-progress-head">
+                      <span>여행 진행률</span>
+                      <strong id="dbTripProgressPercent">0%</strong>
+                    </div>
+                    <div class="summary-trip-progress-track">
+                      <div class="summary-trip-progress-fill" id="dbTripProgressFill" style="width: 0%"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <!-- 카드 2: 필수 체크리스트 -->
+              <!-- 카드 2: Essential Checklist -->
               <div class="dashboard-card card-checklist">
-                <h3 class="dashboard-card-title">필수 체크리스트</h3>
-                <span class="dashboard-card-subtitle">준비물, 예약 완료</span>
+                <h3 class="dashboard-card-title dashboard-card-title-box">ESSENTIAL CHECKLIST</h3>
                 <div class="checklist-progress-box">
                   <div class="progress-info">
                     <span>예약 완료</span>
@@ -192,17 +214,9 @@
                 </div>
               </div>
 
-              <!-- 카드 3: 일차별 주요 일정 (세로 타임라인) -->
-              <div class="dashboard-card card-timeline">
-                <h3 class="dashboard-card-title">일차별 주요 일정</h3>
-                <div class="timeline-container" id="dbTimelineContainer">
-                  <!-- 동적 렌더링 -->
-                </div>
-              </div>
-
-              <!-- 카드 4: 전체 지출 예상 -->
+              <!-- 카드 3: Expense Estimate -->
               <div class="dashboard-card card-expense">
-                <h3 class="dashboard-card-title">전체 지출 예상</h3>
+                <h3 class="dashboard-card-title dashboard-card-title-box">EXPENSE ESTIMATE</h3>
                 <div class="expense-chart-row">
                   <div class="donut-chart-wrap">
                     <svg viewBox="0 0 36 36" class="donut-svg">
@@ -227,9 +241,9 @@
                 </div>
               </div>
 
-              <!-- 카드 5: 짐 싸기 상태 -->
+              <!-- 카드 4: Packing Checklist -->
               <div class="dashboard-card card-packing">
-                <h3 class="dashboard-card-title">짐 싸기 상태</h3>
+                <h3 class="dashboard-card-title dashboard-card-title-box">PACKING CHECKLIST</h3>
                 <div class="packing-progress-row">
                   <div class="suitcase-icon-box">
                     <span class="suitcase-emoji">🧳</span>
@@ -245,13 +259,22 @@
                   <!-- 퀵 체크리스트 항목 -->
                 </div>
               </div>
+
+              <!-- 카드 5: Key Schedule (세로 타임라인) -->
+              <div class="dashboard-card card-timeline">
+                <h3 class="dashboard-card-title dashboard-card-title-box">KEY SCHEDULE</h3>
+                <div class="timeline-container" id="dbTimelineContainer">
+                  <!-- 동적 렌더링 -->
+                </div>
+              </div>
             </div>
           </div>
         </main>
 
         <!-- 💰 2. 지출 기록 페이지 -->
         <main class="page-view" id="budgetPage" hidden>
-          <section class="planner-panel" aria-label="지출 구분 필터" style="padding: 16px 24px; margin-bottom: 24px;">
+          <section class="planner-panel expense-day-filter-panel" aria-label="지출 구분 필터" style="padding: 16px 24px; margin-bottom: 24px;">
+            <div class="panel-box-title dashboard-card-title-box">EXPENSE DATE</div>
             <div class="day-strip" id="dayStrip" aria-label="지출 일차 및 사전구매"></div>
           </section>
 
@@ -259,18 +282,125 @@
           <section class="entry-panel" aria-labelledby="entrySectionTitle">
             <div class="section-title-row compact">
               <div>
-                <p class="overline">Expense</p>
-                <h2 id="entrySectionTitle">지출 입력</h2>
+                <h3 class="panel-box-title dashboard-card-title-box" id="entrySectionTitle">EXPENSE ENTRY</h3>
               </div>
               <button class="text-button" id="cancelEditButton" type="button" hidden>수정 취소</button>
             </div>
 
+            <section class="pretrip-purchase-panel" id="pretripPurchasePanel" aria-labelledby="pretripPurchaseTitle" hidden>
+              <div class="pretrip-purchase-head">
+                <h3 class="panel-box-title" id="pretripPurchaseTitle">사전구매</h3>
+                <div class="segmented pretrip-purchase-tabs" id="pretripPurchaseTabs" role="group" aria-label="사전구매 항목 선택">
+                  <button class="active" id="pretripFlightTab" type="button" data-pretrip-mode="flight">항공권</button>
+                  <button id="pretripHotelTab" type="button" data-pretrip-mode="hotel">숙소</button>
+                </div>
+              </div>
+
+              <form class="pretrip-special-form pretrip-flight-form" id="pretripFlightForm">
+                <div class="pretrip-form-grid">
+                  <label for="pretripFlightAirlineInput">
+                    <span>항공사</span>
+                    <input id="pretripFlightAirlineInput" type="text" maxlength="28" placeholder="예: 대한항공" required />
+                  </label>
+                  <label for="pretripFlightNumberInput">
+                    <span>편명</span>
+                    <input id="pretripFlightNumberInput" type="text" maxlength="18" placeholder="예: KE123" />
+                  </label>
+                  <label for="pretripFlightFromInput">
+                    <span>출발지</span>
+                    <input id="pretripFlightFromInput" type="text" maxlength="32" placeholder="예: 서울 ICN" required />
+                  </label>
+                  <label for="pretripFlightToInput">
+                    <span>도착지</span>
+                    <input id="pretripFlightToInput" type="text" maxlength="32" placeholder="예: 제주 CJU" required />
+                  </label>
+                  <div class="pretrip-flight-schedule-grid wide">
+                    <div class="pretrip-flight-schedule-column">
+                      <label for="pretripFlightDepartDateInput">
+                        <span>출발일</span>
+                        <input id="pretripFlightDepartDateInput" type="date" required />
+                      </label>
+                      <label for="pretripFlightDepartTimeInput">
+                        <span>출발 시간</span>
+                        <input id="pretripFlightDepartTimeInput" type="time" />
+                      </label>
+                    </div>
+                    <div class="pretrip-flight-schedule-column">
+                      <label for="pretripFlightReturnDateInput">
+                        <span>복귀일</span>
+                        <input id="pretripFlightReturnDateInput" type="date" />
+                      </label>
+                      <label for="pretripFlightReturnDepartTimeInput">
+                        <span>복귀 출발 시간</span>
+                        <input id="pretripFlightReturnDepartTimeInput" type="time" />
+                      </label>
+                    </div>
+                  </div>
+                  <label for="pretripFlightBookingCodeInput">
+                    <span>예약번호</span>
+                    <input id="pretripFlightBookingCodeInput" type="text" maxlength="28" placeholder="예: ABC123" />
+                  </label>
+                  <label for="pretripFlightAmountInput">
+                    <span>결제 금액</span>
+                    <input id="pretripFlightAmountInput" type="text" inputmode="numeric" placeholder="0" required />
+                  </label>
+                  <label class="wide" for="pretripFlightNoteInput">
+                    <span>메모</span>
+                    <input id="pretripFlightNoteInput" type="text" maxlength="80" placeholder="좌석, 수하물, 발권 메모 등" />
+                  </label>
+                </div>
+                <button class="submit-button pretrip-submit-button" type="submit">
+                  <span>항공권 사전구매 등록</span>
+                </button>
+              </form>
+
+              <form class="pretrip-special-form pretrip-hotel-form" id="pretripHotelForm" hidden>
+                <div class="pretrip-form-grid">
+                  <label class="wide" for="pretripHotelNameInput">
+                    <span>숙소명</span>
+                    <input id="pretripHotelNameInput" type="text" maxlength="40" placeholder="예: 코델리아S호텔" required />
+                  </label>
+                  <label for="pretripHotelCheckInInput">
+                    <span>체크인</span>
+                    <input id="pretripHotelCheckInInput" type="date" required />
+                  </label>
+                  <label for="pretripHotelCheckOutInput">
+                    <span>체크아웃</span>
+                    <input id="pretripHotelCheckOutInput" type="date" required />
+                  </label>
+                  <label for="pretripHotelRoomInput">
+                    <span>객실/요금제</span>
+                    <input id="pretripHotelRoomInput" type="text" maxlength="36" placeholder="예: 더블룸, 조식 포함" />
+                  </label>
+                  <label for="pretripHotelGuestsInput">
+                    <span>인원</span>
+                    <input id="pretripHotelGuestsInput" type="number" min="1" step="1" placeholder="2" />
+                  </label>
+                  <label for="pretripHotelBookingCodeInput">
+                    <span>예약번호</span>
+                    <input id="pretripHotelBookingCodeInput" type="text" maxlength="28" placeholder="예: HTL-12345" />
+                  </label>
+                  <label for="pretripHotelAmountInput">
+                    <span>결제 금액</span>
+                    <input id="pretripHotelAmountInput" type="text" inputmode="numeric" placeholder="0" required />
+                  </label>
+                  <label class="wide" for="pretripHotelNoteInput">
+                    <span>메모</span>
+                    <input id="pretripHotelNoteInput" type="text" maxlength="80" placeholder="취소 규정, 체크인 요청, 결제 메모 등" />
+                  </label>
+                </div>
+                <button class="submit-button pretrip-submit-button" type="submit">
+                  <span>숙소 사전구매 등록</span>
+                </button>
+              </form>
+            </section>
+
             <form class="expense-form" id="expenseForm">
-              <label for="daySelect">
-                <span>일차/구분</span>
+              <label class="expense-date-field" for="daySelect">
+                <span>일자</span>
                 <select id="daySelect" required></select>
               </label>
-              <label for="categorySelect">
+              <label class="expense-category-field" for="categorySelect">
                 <span>항목</span>
                 <select id="categorySelect" required>
                   <option value="숙소">숙소</option>
@@ -285,14 +415,16 @@
                 <span>내용</span>
                 <input id="descriptionInput" type="text" maxlength="44" placeholder="예: 숙소 예약금" required />
               </label>
-              <label for="amountInput">
+              <span id="amountFieldAnchor" hidden></span>
+              <label class="expense-amount-field" for="amountInput">
                 <span id="amountLabel">금액</span>
-                <input id="amountInput" type="number" min="0" step="1" placeholder="0" required />
+                <input id="amountInput" type="text" inputmode="numeric" placeholder="0" required />
               </label>
               <div class="foreign-fields" id="foreignFields" hidden>
-                <label for="currencySelect">
+                <label class="foreign-currency-field" for="currencySelect">
                   <span>통화</span>
                   <select id="currencySelect">
+                    <option value="KRW" data-symbol="₩" data-unit="원" data-rate-base="1">₩ 원화</option>
                     <option value="JPY" data-symbol="¥" data-unit="엔" data-rate-base="100">¥ 엔화</option>
                     <option value="USD" data-symbol="$" data-unit="달러" data-rate-base="1">$ 달러</option>
                     <option value="CNY" data-symbol="¥" data-unit="위안" data-rate-base="1">¥ 위안화</option>
@@ -303,13 +435,13 @@
                     <option value="VND" data-symbol="₫" data-unit="동" data-rate-base="100">₫ 베트남동</option>
                   </select>
                 </label>
-                <label for="exchangeRateInput">
+                <label class="foreign-exchange-field" for="exchangeRateInput">
                   <span id="exchangeRateLabel">환율</span>
-                  <input id="exchangeRateInput" type="number" min="0" step="0.01" placeholder="100엔당 원화" />
+                  <input id="exchangeRateInput" type="text" inputmode="decimal" placeholder="100엔당 원화" />
                 </label>
-                <label for="foreignAmountInput">
+                <label class="foreign-payment-field" for="foreignAmountInput">
                   <span>해외 결제액</span>
-                  <input id="foreignAmountInput" type="number" min="0" step="0.01" placeholder="0" />
+                  <input id="foreignAmountInput" type="text" inputmode="decimal" placeholder="0" />
                 </label>
               </div>
               <div class="lodging-fields" id="lodgingFields" hidden>
@@ -362,8 +494,7 @@
               <table>
                 <thead>
                   <tr>
-                    <th>구분</th>
-                    <th>날짜</th>
+                    <th>일자</th>
                     <th>항목</th>
                     <th>내용</th>
                     <th class="number">금액</th>
@@ -375,21 +506,22 @@
               </table>
               <div class="empty-state" id="emptyState">
                 <strong>아직 기록된 경비가 없습니다.</strong>
-                <span>일차/구분과 항목을 선택한 뒤 금액을 추가하세요.</span>
+                <span>일자와 항목을 선택한 뒤 금액을 추가하세요.</span>
               </div>
             </div>
           </section>
 
-          <aside class="summary-panel" aria-labelledby="summarySectionTitle">
-            <div class="section-title-row compact">
+          <aside class="summary-panel" aria-label="요약">
+            <div class="section-title-row compact empty-title-row">
               <div>
-                <p class="overline">Summary</p>
-                <h2 id="summarySectionTitle">지출 인사이트</h2>
+                <p class="overline" hidden>Summary</p>
+                <h2 id="summarySectionTitle" hidden>요약</h2>
               </div>
             </div>
 
-            <!-- 지출 인사이트 통계 카드 섹션 -->
-            <div class="stats-card" style="margin-top: 0;">
+            <!-- 지출 통계 카드 섹션 -->
+            <div class="stats-card expense-summary-card" style="margin-top: 0;">
+              <div class="panel-box-title dashboard-card-title-box">EXPENSE SUMMARY</div>
               <div class="stats-stickers-grid" style="display: flex; flex-direction: column; gap: 14px;">
                 <div class="stat-sticker sticker-pink">
                   <span>단일 최대 지출</span>
@@ -409,12 +541,6 @@
       <!-- 👥 3. 정산 (더치페이) 페이지 -->
       <main class="page-view" id="settlementPage" hidden>
         <section class="planner-panel" aria-label="경비 정산" style="margin-bottom: 24px;">
-          <div class="section-title-row">
-            <div>
-              <p class="overline">Split Expense</p>
-              <h2>여행 경비 정산 (더치페이)</h2>
-            </div>
-          </div>
           <div class="settlement-source-controls">
             <label class="settlement-field" for="settlementExpenseSourceSelect">
               <span>정산할 지출 기록</span>
@@ -495,20 +621,11 @@
 
       <!-- 📊 4. 통계 리포트 페이지 -->
       <main class="page-view" id="reportPage" hidden>
-        <section class="planner-panel" aria-label="통계 리포트" style="margin-bottom: 24px;">
-          <div class="section-title-row">
-            <div>
-              <p class="overline">Analytics</p>
-              <h2>여행 통계 리포트</h2>
-            </div>
-          </div>
-        </section>
-
         <div class="report-grid" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px;">
           <!-- 1. 카테고리 지출 분석 -->
           <div class="itinerary-visual-card report-analysis-card" style="margin: 0; padding: 20px;">
             <div class="section-title-row compact mini">
-              <h3>📊 카테고리별 지출</h3>
+              <h3 class="panel-box-title dashboard-card-title-box report-heading-badge">CATEGORY EXPENSES</h3>
             </div>
             <div class="chart-caption" id="reportChartCaption" style="margin-bottom: 10px;">지출을 입력하면 분석을 시작합니다.</div>
             <div class="report-donut-panel">
@@ -521,10 +638,10 @@
             <ul class="category-list" id="reportCategoryList" style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px;"></ul>
           </div>
 
-          <!-- 2. 일차별 지출 추이 가로 그래프 -->
+          <!-- 2. Daily expense trend bar chart -->
           <div class="itinerary-visual-card report-trend-card" style="margin: 0; padding: 20px;">
             <div class="section-title-row compact mini">
-              <h3>📈 일차별 지출 추이</h3>
+              <h3 class="panel-box-title dashboard-card-title-box report-heading-badge">DAILY EXPENSE TREND</h3>
             </div>
             <div class="daily-trend-summary" id="reportDailySummary" aria-live="polite"></div>
             <div class="bar-chart-wrap report-daily-chart" id="reportDailyBarChart">
@@ -532,10 +649,10 @@
             </div>
           </div>
 
-          <!-- 3. 장소간 이동 소요시간 막대 차트 -->
+          <!-- 3. Place duration bar chart -->
           <div class="itinerary-visual-card report-analysis-card" style="margin: 0; padding: 20px;">
             <div class="section-title-row compact mini">
-              <h3>📈 장소별 소요 시간</h3>
+              <h3 class="panel-box-title dashboard-card-title-box visual-heading-badge">PLACE DURATION</h3>
             </div>
             <div class="itinerary-duration-chart-wrap" id="reportItineraryDurationChart">
               <!-- 동적 SVG 소요 시간 차트 -->
@@ -560,11 +677,14 @@
 
       <!-- ⚙️ 5. 서비스 설정 페이지 -->
       <main class="page-view" id="settingsPage" hidden>
-        <section class="planner-panel" aria-label="서비스 설정" style="margin-bottom: 24px;">
-          <div class="section-title-row">
+        <section class="planner-panel settings-hero-panel" aria-label="서비스 설정" style="margin-bottom: 24px;">
+          <div class="section-title-row settings-title-row">
             <div>
-              <p class="overline">System Settings</p>
-              <h2>여행 및 서비스 설정</h2>
+              <p class="overline">DESIGN SETTING</p>
+            </div>
+            <div class="mode-toggle header-theme-toggle settings-theme-toggle" id="headerThemeToggle" role="group" aria-label="디자인 필터 선택">
+              <button class="active" id="themeBrutalistButton" type="button" data-theme="brutalist">Neo</button>
+              <button id="themeTossButton" type="button" data-theme="toss">Toss</button>
             </div>
           </div>
         </section>
@@ -574,17 +694,25 @@
           <div class="itinerary-main-panel" style="margin: 0; padding: 20px;">
             <h3 style="font-family: var(--font-heading); font-size: 16px; font-weight: 900; margin-bottom: 16px;">🌍 여행 방식 & 통화</h3>
 
-            <div style="margin-bottom: 20px;">
-              <span style="font-size: 12px; font-weight: 800; display: block; margin-bottom: 8px;">현재 여행 유형</span>
-              <div class="settings-mode-handoff">
-                <strong id="settingsModeCurrentLabel">현재 여행: 국내 여행</strong>
-                <span id="settingsModeCurrentCopy">새 여행 만들기에서 선택한 유형이 여행별로 저장됩니다.</span>
+            <div class="settings-currency-summary">
+              <div class="currency-summary-row">
+                <span>여행 유형</span>
+                <strong id="settingsTravelModeBadge">국내 여행</strong>
+              </div>
+              <div class="currency-summary-row">
+                <span>적용 통화</span>
+                <strong id="settingsCurrencySummary">KRW · 원화</strong>
+              </div>
+              <div class="currency-summary-row wide">
+                <span>환율</span>
+                <strong id="settingsExchangeSummary">1원 = 1원</strong>
               </div>
             </div>
 
-            <div id="settingsCurrencyArea" hidden>
-              <label for="settingsCurrencySelect" style="display: block; margin-bottom: 8px; font-size: 12px; font-weight: 800;">주요 외국 통화</label>
+            <div id="settingsCurrencyArea">
+              <label for="settingsCurrencySelect" style="display: block; margin-bottom: 8px; font-size: 12px; font-weight: 800;">주요 결제 통화</label>
               <select id="settingsCurrencySelect" style="width: 100%; border: 2.5px solid var(--line); border-radius: var(--radius-sm); padding: 10px; font-family: var(--font); font-weight: 800; font-size: 13px; margin-bottom: 16px;">
+                <option value="KRW" data-symbol="₩" data-unit="원" data-rate-base="1">₩ 원화 (대한민국)</option>
                 <option value="JPY" data-symbol="¥" data-unit="엔" data-rate-base="100">¥ 엔화 (일본)</option>
                 <option value="USD" data-symbol="$" data-unit="달러" data-rate-base="1">$ 달러 (미국)</option>
                 <option value="EUR" data-symbol="€" data-unit="유로" data-rate-base="1">€ 유로 (유럽)</option>
@@ -598,34 +726,46 @@
               <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 10px;">
                 <label for="settingsExchangeRateInput" style="font-size: 11px; font-weight: 800;">
                   <span>적용 환율</span>
-                  <input id="settingsExchangeRateInput" type="number" min="0.01" step="0.01" value="950" style="width: 100%; border: 2.5px solid var(--line); border-radius: var(--radius-sm); padding: 8px 10px;" />
+                  <input id="settingsExchangeRateInput" type="text" inputmode="decimal" value="950" style="width: 100%; border: 2.5px solid var(--line); border-radius: var(--radius-sm); padding: 8px 10px;" />
                 </label>
                 <div style="font-size: 11px; font-weight: 700; display: flex; align-items: flex-end; padding-bottom: 8px;" id="settingsExchangeRateLabel">
                   100엔 = 950.00원
                 </div>
               </div>
             </div>
-            <p id="settingsDomesticTip" style="font-size: 12px; color: var(--muted); font-weight: 700; margin-top: 10px;">국내 여행은 대한민국 원화(₩, KRW)를 기본 통화로 사용합니다. 해외 여행이 필요하면 여행 개요의 새 여행 만들기에서 유형을 선택하세요.</p>
+            <p id="settingsCurrencyAutoStatus" class="settings-currency-auto-status">설정된 국가 기준으로 통화와 환율을 자동 매칭합니다.</p>
           </div>
 
           <!-- 2. 백업 및 저장 관리 -->
           <div class="itinerary-main-panel" style="margin: 0; padding: 20px;">
             <h3 style="font-family: var(--font-heading); font-size: 16px; font-weight: 900; margin-bottom: 16px;">💾 데이터 저장 및 관리</h3>
 
-            <div style="display: flex; flex-direction: column; gap: 12px;">
-              <button class="text-button" id="settingsSaveButton" type="button" style="width: 100%; font-weight: 900; background: #e0f2fe; border: 2.5px solid var(--line); box-shadow: 2px 2px 0px var(--line); padding: 10px;">
-                💾 현재 여행 기록 저장
+            <div class="settings-storage-status">
+              <strong id="settingsStorageTitle">IndexedDB 로컬 저장소</strong>
+              <span id="settingsStorageSummary">저장 기록을 확인 중입니다.</span>
+            </div>
+            <div class="settings-storage-actions">
+              <button class="text-button primary" id="settingsSaveButton" type="button">
+                DB 저장
               </button>
-              <button class="text-button" id="settingsHistoryButton" type="button" style="width: 100%; font-weight: 900; background: #ffffff; border: 2.5px solid var(--line); box-shadow: 2px 2px 0px var(--line); padding: 10px;">
-                📜 저장된 기록 보기
+              <button class="text-button" id="settingsHistoryButton" type="button">
+                저장된 기록 보기
               </button>
-              <button class="text-button" id="settingsSampleButton" type="button" style="width: 100%; font-weight: 900; background: #fef3c7; border: 2.5px solid var(--line); box-shadow: 2px 2px 0px var(--line); padding: 10px;">
-                💡 제주도 7박 8일 전체 일정 채우기
+              <button class="text-button" id="settingsExportJsonButton" type="button">
+                JSON 내보내기
               </button>
-              <button class="text-button" id="settingsResetButton" type="button" style="width: 100%; font-weight: 900; background: #fee2e2; border: 2.5px solid var(--line); box-shadow: 2px 2px 0px var(--line); color: #dc2626; padding: 10px;">
-                ⚠️ 전체 여행 가계부 초기화
+              <button class="text-button" id="settingsImportJsonButton" type="button">
+                JSON 불러오기
+              </button>
+              <input id="settingsImportJsonInput" type="file" accept="application/json,.json" hidden />
+              <button class="text-button sample" id="settingsSampleButton" type="button">
+                제주도 샘플 채우기
+              </button>
+              <button class="text-button danger" id="settingsResetButton" type="button">
+                전체 기록 초기화
               </button>
             </div>
+            <p class="settings-storage-note" id="settingsStorageNote">여행, 지출, 정산 설정은 브라우저 IndexedDB에 저장되고 JSON으로 백업할 수 있습니다.</p>
           </div>
 
           <!-- 3. 지도 좌표 공급원 -->
@@ -650,29 +790,44 @@
           <div class="itinerary-main-panel" style="margin: 0; padding: 20px;">
             <h3 style="font-family: var(--font-heading); font-size: 16px; font-weight: 900; margin-bottom: 16px;">📄 보고서 다운로드</h3>
             <p style="font-size: 12px; color: var(--muted); margin-bottom: 16px; font-weight: 700;">작성하신 여행 일정과 지출 가계부 전체 내역을 하나의 깔끔한 A4 보고서 형태로 인쇄하거나 PDF 파일로 저장합니다.</p>
-            <button class="submit-button" id="settingsPdfButton" type="button" style="width: 100%; height: 48px; background: var(--accent); font-weight: 900; border: 2.5px solid var(--line); box-shadow: 3px 3px 0px var(--line);">
-              📄 PDF 문서 내보내기 / 인쇄
-            </button>
+            <div class="settings-report-actions">
+              <button class="submit-button" id="settingsPdfButton" type="button">
+                지출 PDF 저장/인쇄
+              </button>
+              <button class="submit-button" id="settingsItineraryPdfButton" type="button">
+                일정 PDF 저장/인쇄
+              </button>
+              <button class="submit-button" id="settingsFullPdfButton" type="button">
+                전체 PDF 저장/인쇄
+              </button>
+            </div>
           </div>
         </div>
       </main>
 
       <main class="page-view itinerary-page" id="itineraryPage" hidden>
-        <section class="planner-panel itinerary-hero" aria-labelledby="itineraryTitle">
-          <div class="section-title-row">
-            <div>
-              <p class="overline">Itinerary</p>
-              <h2 id="itineraryTitle">여행 일정</h2>
+        <section class="planner-panel itinerary-hero" aria-label="여행 일정">
+          <div class="section-title-row itinerary-title-row">
+            <div class="itinerary-title-cluster">
+              <div class="itinerary-label-row">
+                <p class="overline">Itinerary</p>
+              </div>
             </div>
-            <!-- Itinerary Mode Toggle: Edit vs OverView -->
-            <div class="segmented" id="itineraryModeToggle" style="margin-left: auto; margin-right: 16px;">
-              <button class="active" data-mode="edit" type="button">일정 편집</button>
-              <button data-mode="overview" type="button">전체 요약</button>
+            <div class="itinerary-title-actions">
+              <!-- Itinerary Mode Toggle: Edit vs OverView -->
+              <div class="segmented itinerary-mode-toggle-inline" id="itineraryModeToggle">
+                <button class="active" data-mode="edit" type="button">편집</button>
+                <button data-mode="overview" type="button">요약</button>
+              </div>
+              <button class="text-button inline-route-btn itinerary-header-route-btn" id="itineraryRouteButton" type="button" title="오늘 일정 동선 구글맵 연결">
+                <svg viewBox="0 0 24 24" focusable="false" style="width: 14px; height: 14px; margin-right: 4px; stroke-width: 2.8;"><path d="M9 18l6-6-6-6M9 12h11" /></svg>
+                <span>동선 연결하기</span>
+              </button>
+              <button class="icon-button ghost" id="backToBudgetButton" type="button" title="가계부로 돌아가기" hidden>
+                <svg viewBox="0 0 24 24" focusable="false"><path d="m15 18-6-6 6-6" /><path d="M9 12h11" /></svg>
+                <span>가계부</span>
+              </button>
             </div>
-            <button class="icon-button ghost" id="backToBudgetButton" type="button" title="가계부로 돌아가기">
-              <svg viewBox="0 0 24 24" focusable="false"><path d="m15 18-6-6 6-6" /><path d="M9 12h11" /></svg>
-              <span>가계부</span>
-            </button>
           </div>
           <div class="itinerary-hero-grid">
             <div>
@@ -682,13 +837,6 @@
             <div>
               <span>일정 기간</span>
               <strong id="itineraryDateRange">-</strong>
-            </div>
-            <div class="itinerary-route-card">
-              <span>하루 전체 경로</span>
-              <button class="text-button inline-route-btn" id="itineraryRouteButton" type="button" title="오늘 일정 동선 구글맵 연결">
-                <svg viewBox="0 0 24 24" focusable="false" style="width: 14px; height: 14px; margin-right: 4px; stroke-width: 2.8;"><path d="M9 18l6-6-6-6M9 12h11" /></svg>
-                <span>동선 연결하기</span>
-              </button>
             </div>
           </div>
           <div class="itinerary-day-strip" id="itineraryDayStrip" aria-label="일정 일차 필터"></div>
@@ -701,12 +849,17 @@
               <div class="section-title-row compact">
                 <div>
                   <p class="overline">Map</p>
-                  <h2 id="mapPanelTitle">여행 동선 지도</h2>
                 </div>
-                <a class="map-open-link map-icon-link" id="googleMapsLink" href="https://www.google.com/maps" target="_blank" rel="noreferrer" title="구글맵으로 열기" aria-label="구글맵으로 열기">
-                  <span class="google-color-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-                  <span class="map-open-emoji" aria-hidden="true">🗺️</span>
-                </a>
+                <div class="map-provider-links" aria-label="외부 지도 열기">
+                  <a class="map-open-link map-icon-link naver-map-link" id="naverMapsLink" href="https://map.naver.com" target="_blank" rel="noreferrer" title="네이버지도로 열기" aria-label="네이버지도로 열기">
+                    <span class="naver-color-mark" aria-hidden="true">N</span>
+                    <span class="map-open-emoji" aria-hidden="true">🗺️</span>
+                  </a>
+                  <a class="map-open-link map-icon-link" id="googleMapsLink" href="https://www.google.com/maps" target="_blank" rel="noreferrer" title="구글맵으로 열기" aria-label="구글맵으로 열기">
+                    <span class="google-color-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                    <span class="map-open-emoji" aria-hidden="true">🗺️</span>
+                  </a>
+                </div>
               </div>
               <div class="map-frame-wrap" style="position: relative; overflow: hidden;">
                 <iframe id="googleMapFrame" title="구글맵 위치 미리보기" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width: 100%; height: 100%; border: none;"></iframe>
@@ -723,16 +876,28 @@
             <div class="section-title-row compact">
               <div>
                 <p class="overline">Schedule</p>
-                <h2>일정 입력</h2>
               </div>
               <button class="text-button" id="cancelItineraryEditButton" type="button" hidden>수정 취소</button>
             </div>
 
             <form class="itinerary-form" id="itineraryForm">
-              <label for="itineraryDaySelect">
-                <span>일차</span>
-                <select id="itineraryDaySelect" required></select>
-              </label>
+              <div class="itinerary-day-theme-row wide">
+                <label for="itineraryDaySelect">
+                  <span>일자</span>
+                  <select id="itineraryDaySelect" required></select>
+                </label>
+                <label for="itineraryThemeSelect">
+                  <span>테마</span>
+                  <select id="itineraryThemeSelect">
+                    <option value="sightseeing">📸 명소</option>
+                    <option value="lodging">🏨 숙소</option>
+                    <option value="food">🍽️ 맛집</option>
+                    <option value="shopping">🛍️ 쇼핑</option>
+                    <option value="transport">🚗 이동</option>
+                    <option value="etc">🎈 기타</option>
+                  </select>
+                </label>
+              </div>
               <div class="itinerary-time-range-field">
                 <label class="time-field-item" for="itineraryTimeInput">
                   <span>시작 시간</span>
@@ -743,34 +908,15 @@
                   <input id="itineraryEndTimeInput" type="time" />
                 </label>
               </div>
-              <label for="itineraryThemeSelect">
-                <span>일정 테마</span>
-                <select id="itineraryThemeSelect">
-                  <option value="sightseeing">📸 명소</option>
-                  <option value="lodging">🏨 숙소</option>
-                  <option value="food">🍽️ 맛집</option>
-                  <option value="shopping">🛍️ 쇼핑</option>
-                  <option value="transport">🚗 이동</option>
-                  <option value="etc">🎈 기타</option>
-                </select>
-              </label>
-              <label for="itineraryTransSelect">
+              <label class="itinerary-trans-field" for="itineraryTransSelect" hidden>
                 <span>이동 수단</span>
                 <select id="itineraryTransSelect">
-                  <option value="none">선택 안함</option>
-                  <option value="walk">🚶‍♂️ 도보</option>
-                  <option value="car">🚗 자동차</option>
-                  <option value="bus">🚌 대중교통</option>
-                  <option value="etc">✈️ 항공/기타</option>
+                  <option value="walk">도보</option>
+                  <option value="car">차량</option>
+                  <option value="train">기차</option>
+                  <option value="bus">버스</option>
+                  <option value="flight">비행기</option>
                 </select>
-              </label>
-              <label for="itineraryDurationInput">
-                <span>소요 시간 (분)</span>
-                <input id="itineraryDurationInput" type="number" min="0" placeholder="예: 30" />
-              </label>
-              <label for="itineraryCostInput">
-                <span>이동 비용 (원)</span>
-                <input id="itineraryCostInput" type="number" min="0" step="100" placeholder="예: 0" />
               </label>
               <label class="place-search-field wide" for="itineraryPlaceInput">
                 <span>장소</span>
@@ -829,16 +975,6 @@
                   </div>
                 </div>
               </div>
-              <div class="wide sync-toggle-row">
-                <input class="sync-toggle-input" type="checkbox" id="itinerarySyncExpenseCheckbox" checked />
-                <label class="sync-toggle" for="itinerarySyncExpenseCheckbox">
-                  <span class="sync-toggle-control" aria-hidden="true"></span>
-                  <span class="sync-toggle-copy">
-                    <strong>교통비 자동 연동</strong>
-                    <small>이동 비용을 입력하면 지출 기록에 함께 저장</small>
-                  </span>
-                </label>
-              </div>
               <button class="submit-button" id="itinerarySubmitButton" type="submit">
                 <svg viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14" /></svg>
                 <span>일정 추가</span>
@@ -853,20 +989,10 @@
           </div>
 
           <aside class="map-panel" aria-label="일정 통계 및 가방 목록">
-            <!-- ⏱️ 24시간 타임블록 그리드 스케줄러 -->
-            <div class="itinerary-visual-card clock-visual-card">
-              <div class="section-title-row compact mini">
-                <h3>⏱️ 하루 24H 타임 스케줄</h3>
-              </div>
-              <div class="time-block-grid-wrap" id="itineraryTimeBlockGrid">
-                <!-- JS로 타임블록 24칸과 일정이 채워집니다 -->
-              </div>
-            </div>
-
-            <!-- 📈 장소간 이동 소요시간 막대 차트 -->
+            <!-- Place duration bar chart -->
             <div class="itinerary-visual-card">
               <div class="section-title-row compact mini">
-                <h3>📈 장소별 소요 시간</h3>
+                <h3 class="panel-box-title dashboard-card-title-box visual-heading-badge">PLACE DURATION</h3>
               </div>
               <div class="itinerary-duration-chart-wrap" id="itineraryDurationChart">
                 <!-- 동적 SVG 소요 시간 차트 -->
@@ -924,7 +1050,7 @@
         <div class="history-list" id="historyList"></div>
         <div class="history-empty" id="historyEmpty" hidden>
           <strong>저장된 기록이 없습니다.</strong>
-          <span>상단의 저장 버튼으로 현재 여행 가계부를 저장하세요.</span>
+          <span>DB 저장 버튼으로 현재 여행, 지출, 정산을 저장하세요.</span>
         </div>
       </section>
     </div>
@@ -953,9 +1079,13 @@
                 <button id="newTripOverseasButton" type="button" data-mode="overseas" aria-pressed="false">해외</button>
               </div>
             </div>
-            <label for="newTripCountryInput" style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
-              <span style="font-size: 13px; font-weight: 700; color: var(--text);">국가</span>
-              <input id="newTripCountryInput" type="text" maxlength="20" placeholder="예: 일본" required style="width:100%;" />
+            <label class="new-trip-country-field" for="newTripCountryInput">
+              <span class="new-trip-field-label">국가</span>
+              <div class="new-trip-country-combobox" id="newTripCountryCombobox">
+                <span class="new-trip-country-flag" id="newTripCountryFlag" aria-hidden="true">🇰🇷</span>
+                <input id="newTripCountryInput" type="text" maxlength="40" placeholder="예: 일본" required autocomplete="off" role="combobox" aria-autocomplete="list" aria-controls="newTripCountryList" aria-expanded="false" style="width:100%;" />
+                <div class="new-trip-country-list" id="newTripCountryList" role="listbox" aria-label="국가 선택 목록" hidden></div>
+              </div>
             </label>
             <label for="newTripCityInput" style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
               <span style="font-size: 13px; font-weight: 700; color: var(--text);">도시</span>
@@ -995,6 +1125,6 @@
       </div>
     </template>
 
-    <script src="./app.js?v=google-coordinate-route-pins-20260601-1"></script>
+    <script src="./app.js?v=start-clock-title-badge-20260603-1"></script>
   </body>
 </html>

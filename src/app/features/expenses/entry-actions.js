@@ -9,14 +9,14 @@ function setFilter(filter) {
 
 function startEdit(entry) {
   editingId = entry.id;
-  state.travelMode = isForeignEntry(entry) ? "overseas" : "domestic";
+  state.travelMode = entry.mode === "overseas" ? "overseas" : "domestic";
   els.daySelect.value = entry.date;
   els.categorySelect.value = entry.category;
   els.descriptionInput.value = entry.description;
   els.currencySelect.value = entry.currency || "JPY";
-  els.foreignAmountInput.value = entry.foreignAmount || "";
-  els.exchangeRateInput.value = getEditableExchangeRate(entry);
-  els.amountInput.value = entry.amount;
+  setCommaNumberInputValue(els.foreignAmountInput, entry.foreignAmount || "");
+  setCommaNumberInputValue(els.exchangeRateInput, getEditableExchangeRate(entry));
+  setCommaNumberInputValue(els.amountInput, entry.amount);
   els.noteInput.value = entry.note;
   renderModeControls();
   syncCustomSelect(els.daySelect);
@@ -32,10 +32,10 @@ function clearEditMode() {
   els.expenseForm.reset();
   els.daySelect.value = state.selectedDate;
   els.categorySelect.value = getDefaultExpenseCategory();
-  els.currencySelect.value = "JPY";
-  els.foreignAmountInput.value = "";
-  els.exchangeRateInput.value = "";
-  els.amountInput.value = "";
+  els.currencySelect.value = getExpenseDefaultCurrencyCode();
+  setCommaNumberInputValue(els.foreignAmountInput, "");
+  setCommaNumberInputValue(els.exchangeRateInput, "");
+  setCommaNumberInputValue(els.amountInput, "");
   renderModeControls();
   syncCustomSelect(els.daySelect);
   syncCustomSelect(els.categorySelect);

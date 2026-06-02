@@ -1,7 +1,8 @@
 function updateMapPreview(item, { geocodeMissing = true, useGoogleMap = false } = {}) {
   const query = buildMapQuery(item);
   const googleQuery = item.mapQuery || buildGoogleMapsSearchQuery(query);
-  els.googleMapsLink.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(googleQuery)}`;
+  syncGoogleMapsLink(googleQuery);
+  syncNaverMapsLink(item);
   els.mapCurrentLabel.textContent = item.location ? item.location : "위치 미입력";
   els.mapCurrentPlace.textContent = item.place || query;
   const renderToken = ++leafletRenderToken;
@@ -73,9 +74,98 @@ function renderGoogleMapPreview(item, googleQuery) {
     if (els.googleMapFrame.src !== embedUrl) els.googleMapFrame.src = embedUrl;
   }
 
-  els.googleMapsLink.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(googleQuery)}`;
+  syncGoogleMapsLink(googleQuery);
+  syncNaverMapsLink(item);
   els.mapCurrentLabel.textContent = "구글맵 검색 위치";
   els.mapCurrentPlace.textContent = item.place || googleQuery;
+}
+
+function syncGoogleMapsLink(query) {
+  if (!els.googleMapsLink) return;
+  els.googleMapsLink.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(buildGoogleMapsSearchQuery(query))}`;
+}
+
+function syncNaverMapsLink(query = "") {
+  if (!els.naverMapsLink) return;
+  const isDomestic = state.travelMode !== "overseas";
+  els.naverMapsLink.hidden = !isDomestic;
+  if (!isDomestic) return;
+  els.naverMapsLink.href = buildNaverMapsSearchUrl(query);
+}
+
+function buildNaverMapsSearchUrl(query = "") {
+  return `https://map.naver.com/p/search/${encodeURIComponent(buildNaverMapsSearchQuery(query))}?c=15.00,0,0,0,dh`;
+}
+
+function buildNaverMapsSearchQuery(query = "") {
+  if (query && typeof query === "object") {
+    const itemQuery = buildNaverMapsItemSearchQuery(query);
+    if (itemQuery) return itemQuery;
+  }
+
+  const cleanQuery = cleanNaverMapsSearchText(query);
+  const extractedNaverPlace = extractNaverMapsPlaceName(cleanQuery);
+  const extractedPlace = typeof extractGoogleMapsPlaceName === "function"
+    ? extractGoogleMapsPlaceName(cleanQuery)
+    : "";
+  return extractedNaverPlace
+    || extractedPlace
+    || stripNaverMapsTripContext(cleanQuery)
+    || buildTripDestinationQuery()
+    || "대한민국";
+}
+
+function buildNaverMapsRouteSearchQuery(items = []) {
+  const routeQueries = items
+    .map(buildNaverMapsItemSearchQuery)
+    .filter(Boolean);
+  return routeQueries.join(" ");
+}
+
+function buildNaverMapsItemSearchQuery(item = {}) {
+  const placeFromNaverUrl = extractNaverMapsPlaceName(item.mapQuery);
+  const placeFromGoogleUrl = typeof extractGoogleMapsPlaceName === "function"
+    ? extractGoogleMapsPlaceName(item.mapQuery)
+    : "";
+  const place = cleanNaverMapsSearchText(placeFromNaverUrl || placeFromGoogleUrl || item.place);
+  if (place) return place;
+
+  return cleanNaverMapsSearchText(item.location)
+    || cleanNaverMapsSearchText(item.mapQuery)
+    || "";
+}
+
+function extractNaverMapsPlaceName(value = "") {
+  const decoded = decodeCoordinateText(String(value || ""));
+  const placeMatch = decoded.match(/map\.naver\.com\/p\/search\/([^?#]+)/i);
+  if (!placeMatch?.[1]) return "";
+  return cleanNaverMapsSearchText(decodeCoordinateText(placeMatch[1]));
+}
+
+function cleanNaverMapsSearchText(value = "") {
+  return decodeCoordinateText(String(value || ""))
+    .replace(/\+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function stripNaverMapsTripContext(value = "") {
+  let cleanQuery = cleanNaverMapsSearchText(value);
+  const context = typeof buildTripDestinationQuery === "function"
+    ? cleanNaverMapsSearchText(buildTripDestinationQuery())
+    : "";
+  if (!cleanQuery || !context) return cleanQuery;
+
+  cleanQuery = cleanQuery.replace(new RegExp(`\\s+${escapeRegExp(context)}$`, "i"), "").trim();
+  context.split(" ").filter(Boolean).reverse().forEach((part) => {
+    cleanQuery = cleanQuery.replace(new RegExp(`\\s+${escapeRegExp(part)}$`, "i"), "").trim();
+  });
+
+  return cleanQuery;
+}
+
+function escapeRegExp(value = "") {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function buildGoogleMapsRouteUrls(items) {
@@ -171,6 +261,10 @@ window.TripLog.register("features.itinerary.mapPreview", {
   buildGoogleMapsSearchQuery,
   buildGoogleMapsSearchContext,
   buildGoogleCandidateId,
+  syncNaverMapsLink,
+  buildNaverMapsSearchUrl,
+  buildNaverMapsSearchQuery,
+  buildNaverMapsRouteSearchQuery,
   renderSingleLeafletMarker,
   buildMapQuery,
 });

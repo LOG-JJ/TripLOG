@@ -17,6 +17,7 @@ function handleHistoryAction(event) {
     if (!ok) return;
     historyRecords = historyRecords.filter((item) => item.id !== record.id);
     saveHistoryRecords();
+    deleteArchiveRecord(record.id).catch((error) => console.warn("Archive delete failed:", error));
     renderHistoryModal();
   }
 }
@@ -27,8 +28,8 @@ function restoreSnapshot(snapshot) {
   Object.assign(state, nextState);
   editingId = null;
   activeFilter = "전체";
-  els.budgetInput.value = state.totalBudget || "";
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  setCommaNumberInputValue(els.budgetInput, state.totalBudget || "");
+  saveStateSilently();
   document.querySelectorAll(".segmented button").forEach((button) => {
     button.classList.toggle("active", button.dataset.filter === activeFilter);
   });
@@ -40,13 +41,20 @@ function normalizeSnapshot(snapshot) {
   const preferredCurrency = currencies.find((currency) => currency.code === snapshot?.currencyCode) || currencies[0];
   const snapshotTripName =
     typeof snapshot?.tripName === "string" && !isLegacyDefaultTripName(snapshot.tripName) ? snapshot.tripName : "";
+  const restoredTripId = snapshot?.id || state.id || getActiveTripId() || "trip_default";
   return {
+    id: restoredTripId,
     tripName: snapshotTripName,
+    country: snapshot?.country || (travelMode === "domestic" ? "대한민국" : ""),
+    countryCode: String(snapshot?.countryCode || (travelMode === "domestic" ? "KR" : "")).toUpperCase(),
+    city: snapshot?.city || "",
     travelMode,
+    theme: normalizeThemeName(snapshot?.theme || state.theme),
     currencyCode: preferredCurrency.code,
     currencySymbol: snapshot?.currencySymbol || preferredCurrency.symbol,
     currencyUnit: snapshot?.currencyUnit || preferredCurrency.unit,
     exchangeBase: Number(snapshot?.exchangeBase || preferredCurrency.rateBase || 1),
+    exchangeRate: Number(snapshot?.exchangeRate || getDefaultExchangeRateForCurrency(preferredCurrency.code)),
     startDate: snapshot?.startDate || "2026-06-09",
     endDate: snapshot?.endDate || snapshot?.startDate || "2026-06-09",
     selectedDate: snapshot?.selectedDate || snapshot?.startDate || "2026-06-09",
@@ -56,6 +64,8 @@ function normalizeSnapshot(snapshot) {
     entries: Array.isArray(snapshot?.entries) ? snapshot.entries : [],
     itineraryItems: Array.isArray(snapshot?.itineraryItems) ? snapshot.itineraryItems : [],
     packingList: Array.isArray(snapshot?.packingList) ? snapshot.packingList : getDefaultPackingList(),
+    companions: Array.isArray(snapshot?.companions) ? snapshot.companions : [],
+    settlement: normalizeSettlementSettings(snapshot?.settlement),
   };
 }
 

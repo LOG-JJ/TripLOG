@@ -77,7 +77,7 @@ function renderSettlementPage(totals) {
 
   if (sourceSummary) {
     const prefix = selectedSource.isCurrent ? "현재 여행" : "저장 기록";
-    sourceSummary.textContent = `${prefix}에서 ${entryRows.length}건의 지출을 불러왔습니다. 각 행의 👥 분담 버튼으로 사람별 할당 금액을 확인하고 편집합니다.`;
+    sourceSummary.textContent = `${prefix}에서 ${entryRows.length}건의 지출을 불러왔습니다.`;
   }
 
   if (settlementLoadedTripName) settlementLoadedTripName.textContent = selectedSource.name;
@@ -150,15 +150,16 @@ function renderCompanionSpentInputs(individualInputsWrap, companions) {
     row.innerHTML = `
       <span><em>${getCompanionEmoji(index)}</em> ${escapeHtml(companion.name)} 님의 개인 지출</span>
       <div class="member-spent-input-wrap">
-        <input type="number" min="0" step="100" class="companion-spent-input" data-index="${index}" value="${companion.individualSpent || 0}" placeholder="0" />
+        <input type="text" inputmode="numeric" class="companion-spent-input" data-index="${index}" value="${formatNumberWithCommas(companion.individualSpent || 0)}" placeholder="0" />
         <span>원</span>
       </div>
     `;
     row.querySelector(".companion-spent-input").addEventListener("change", (event) => {
-      updateCompanionSpent(index, Number(event.target.value) || 0);
+      updateCompanionSpent(index, parseFormattedNumber(event.target.value));
     });
     individualInputsWrap.appendChild(row);
   });
+  setupCommaNumberInputs(individualInputsWrap.querySelectorAll(".companion-spent-input"));
 }
 
 function renderSettlementExpenseLedger(expenseSplitList, entryRows, members, sourceState, expandedEntryKey) {
@@ -175,12 +176,9 @@ function renderSettlementExpenseLedger(expenseSplitList, entryRows, members, sou
     <table class="settlement-expense-table">
       <thead>
         <tr>
-          <th>구분</th>
-          <th>날짜</th>
           <th>항목</th>
           <th>내용</th>
-          <th class="number">금액</th>
-          <th class="number">사람별 할당</th>
+          <th class="number">금액 / 사람별 할당</th>
           <th class="actions-col">분담</th>
         </tr>
       </thead>
@@ -197,7 +195,7 @@ function renderSettlementExpenseLedger(expenseSplitList, entryRows, members, sou
       const groupRow = document.createElement("tr");
       groupRow.className = `settlement-day-group-row${isPreTripExpenseDate(dayMeta.date) ? " is-pretrip" : ""}`;
       groupRow.innerHTML = `
-        <td colspan="7">
+        <td colspan="4">
           <span>${escapeHtml(dayMeta.label || "날짜 없음")}</span>
           <em>${escapeHtml(dayMeta.shortDate || "-")}</em>
         </td>
@@ -210,15 +208,13 @@ function renderSettlementExpenseLedger(expenseSplitList, entryRows, members, sou
     const tr = document.createElement("tr");
     tr.className = `${entry.invalid ? "is-invalid" : ""} ${expanded ? "is-expanded" : ""}`.trim();
     tr.innerHTML = `
-      <td data-label="구분">${escapeHtml(dayMeta.label)}</td>
-      <td data-label="날짜">${escapeHtml(dayMeta.shortDate)}</td>
       <td data-label="항목"><span class="tag" style="--tag-color:${categoryColor}">${escapeHtml(entry.category)}</span></td>
       <td class="settlement-description-cell" data-label="내용">
         <strong>${escapeHtml(entry.description)}</strong>
       </td>
-      <td class="number" data-label="금액">${formatEntryAmountHtml(entry.raw || entry)}</td>
-      <td class="number" data-label="사람별 할당">
-        <div class="settlement-allocation-preview">
+      <td class="number settlement-amount-allocation-cell" data-label="금액">
+        <strong class="settlement-entry-amount">${formatEntryAmountHtml(entry.raw || entry)}</strong>
+        <div class="settlement-allocation-preview" aria-label="사람별 할당">
           ${members.map((member, index) => {
             const amount = entry.shares[member.key] || 0;
             return `<span class="allocation-mini-chip" title="${escapeHtml(member.name)}">${getSettlementMemberEmoji(member, index)} ${escapeHtml(formatSettlementCurrency(amount, sourceState))}</span>`;
@@ -253,12 +249,13 @@ function renderSettlementExpenseLedger(expenseSplitList, entryRows, members, sou
 
   tableWrap.querySelectorAll("[data-share-input]").forEach((input) => {
     const commitShareInput = (event) => {
-      updateSettlementEntryShare(event.target.dataset.entryKey, event.target.dataset.memberKey, Number(event.target.value) || 0);
+      updateSettlementEntryShare(event.target.dataset.entryKey, event.target.dataset.memberKey, parseFormattedNumber(event.target.value));
     };
     input.addEventListener("focus", (event) => event.target.select());
     input.addEventListener("change", commitShareInput);
     input.addEventListener("blur", commitShareInput);
   });
+  setupCommaNumberInputs(tableWrap.querySelectorAll("[data-share-input]"));
 
   expenseSplitList.appendChild(tableWrap);
 }
@@ -268,7 +265,7 @@ function createSettlementSplitEditorRow(entry, members, sourceState) {
   const status = getSettlementEntryStatus(entry, sourceState);
   row.className = `settlement-split-editor-row ${entry.invalid ? "is-invalid" : ""}`;
   row.innerHTML = `
-    <td colspan="7">
+    <td colspan="4">
       <div class="settlement-split-editor">
         <div class="settlement-split-editor-head">
           <div>
@@ -290,7 +287,7 @@ function createSettlementSplitEditorRow(entry, members, sourceState) {
                   <strong>${escapeHtml(member.name)}</strong>
                 </span>
                 <span class="settlement-share-input-wrap">
-                  <input type="number" min="0" step="100" value="${Math.round(amount)}" data-share-input="true" data-entry-key="${escapeHtml(entry.key)}" data-member-key="${escapeHtml(member.key)}" />
+                  <input type="text" inputmode="numeric" value="${formatNumberWithCommas(Math.round(amount))}" data-share-input="true" data-entry-key="${escapeHtml(entry.key)}" data-member-key="${escapeHtml(member.key)}" />
                   <small>원</small>
                 </span>
               </label>

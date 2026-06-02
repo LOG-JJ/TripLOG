@@ -26,6 +26,9 @@ function renderItineraryPage() {
   if (els.itineraryCount) {
     els.itineraryCount.textContent = `${Number(state.itineraryItems?.length || 0).toLocaleString("ko-KR")} spots`;
   }
+  if (typeof syncNaverMapsLink === "function") {
+    syncNaverMapsLink();
+  }
 
   renderItineraryDaySelect(days);
   renderItineraryDayStrip(days);
@@ -72,11 +75,9 @@ function renderItineraryDayStrip(days) {
     const button = document.createElement("button");
     button.type = "button";
     button.className = `itinerary-day-chip${day.date === state.selectedItineraryDate ? " active" : ""}`;
-    button.innerHTML = `
-      <strong>Day${dayNum}</strong>
-      <span>${day.shortDate} [${day.weekday}]</span>
-      <em>${count} spots</em>
-    `;
+    button.textContent = `Day${dayNum}`;
+    button.title = `Day${dayNum} · ${day.shortDate} [${day.weekday}] · ${count} spots`;
+    button.setAttribute("aria-label", button.title);
     button.addEventListener("click", () => {
       const scrollIntent = captureDayStripScrollIntent(els.itineraryDayStrip, button);
       state.selectedItineraryDate = day.date;
@@ -88,6 +89,37 @@ function renderItineraryDayStrip(days) {
     });
     els.itineraryDayStrip.appendChild(button);
   });
+}
+
+function buildItineraryCardMapSearchMeta(item = {}) {
+  const isDomestic = state.travelMode !== "overseas";
+  const query = (item.place || item.location || "").replace(/\s+/g, " ").trim()
+    || (typeof buildTripDestinationQuery === "function" ? buildTripDestinationQuery() : "")
+    || "대한민국";
+
+  if (isDomestic) {
+    const href = typeof buildNaverMapsSearchUrl === "function"
+      ? buildNaverMapsSearchUrl({ place: query })
+      : `https://map.naver.com/p/search/${encodeURIComponent(query)}?c=15.00,0,0,0,dh`;
+    return {
+      href,
+      provider: "naver",
+      mark: "N",
+      label: "",
+      title: `${query} 네이버지도 검색`,
+    };
+  }
+
+  const googleQuery = typeof buildGoogleMapsSearchQuery === "function"
+    ? buildGoogleMapsSearchQuery(query)
+    : query;
+  return {
+    href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(googleQuery)}`,
+    provider: "google",
+    mark: "G",
+    label: "",
+    title: `${query} 구글맵 검색`,
+  };
 }
 
 function renderItineraryList(days) {
@@ -104,7 +136,9 @@ function renderItineraryList(days) {
     switch (trans) {
       case "walk": return "🚶‍♂️";
       case "car": return "🚗";
+      case "train": return "🚆";
       case "bus": return "🚌";
+      case "flight":
       case "etc": return "✈️";
       default: return "🚗";
     }
@@ -113,11 +147,18 @@ function renderItineraryList(days) {
   const getTransLabel = (trans) => {
     switch (trans) {
       case "walk": return "도보";
-      case "car": return "자동차";
-      case "bus": return "대중교통";
-      case "etc": return "항공/기타";
+      case "car": return "차량";
+      case "train": return "기차";
+      case "bus": return "버스";
+      case "flight":
+      case "etc": return "비행기";
       default: return "이동";
     }
+  };
+
+  const normalizeTransitOptionValue = (trans) => {
+    if (trans === "etc") return "flight";
+    return ["walk", "car", "train", "bus", "flight"].includes(trans) ? trans : "walk";
   };
 
   const dayMap = new Map(days.map((day) => [day.date, day]));
@@ -192,16 +233,17 @@ function renderItineraryList(days) {
         
         let segmentsHtml = "";
         item.transits.forEach((seg, sIdx) => {
+          const selectedTrans = normalizeTransitOptionValue(seg.trans);
           segmentsHtml += `
             <div class="travel-segment-row" data-id="${escapeHtml(item.id)}" data-index="${sIdx}">
               <div class="travel-segment-main">
                 <div class="travel-method-selector">
                   <select class="travel-trans-select" data-id="${escapeHtml(item.id)}" data-index="${sIdx}" title="이동 방법">
-                    <option value="none" ${seg.trans === "none" ? "selected" : ""}>🚶‍♂️ 이동 수단</option>
-                    <option value="walk" ${seg.trans === "walk" ? "selected" : ""}>🚶‍♂️ 도보</option>
-                    <option value="car" ${seg.trans === "car" ? "selected" : ""}>🚗 자동차</option>
-                    <option value="bus" ${seg.trans === "bus" ? "selected" : ""}>🚌 대중교통</option>
-                    <option value="etc" ${seg.trans === "etc" ? "selected" : ""}>✈️ 항공/기타</option>
+                    <option value="walk" ${selectedTrans === "walk" ? "selected" : ""}>도보</option>
+                    <option value="car" ${selectedTrans === "car" ? "selected" : ""}>차량</option>
+                    <option value="train" ${selectedTrans === "train" ? "selected" : ""}>기차</option>
+                    <option value="bus" ${selectedTrans === "bus" ? "selected" : ""}>버스</option>
+                    <option value="flight" ${selectedTrans === "flight" ? "selected" : ""}>비행기</option>
                   </select>
                 </div>
                 
@@ -213,7 +255,7 @@ function renderItineraryList(days) {
                 
                 <div class="travel-cost-input-group">
                   <span class="travel-input-label">🪙</span>
-                  <input type="number" class="travel-cost-input" data-id="${escapeHtml(item.id)}" data-index="${sIdx}" value="${seg.cost || ""}" min="0" placeholder="0" />
+                  <input type="text" inputmode="numeric" class="travel-cost-input" data-id="${escapeHtml(item.id)}" data-index="${sIdx}" value="${seg.cost ? formatNumberWithCommas(seg.cost) : ""}" placeholder="0" />
                   <span class="travel-unit">원</span>
                 </div>
 
@@ -261,27 +303,26 @@ function renderItineraryList(days) {
       card.className = `itinerary-card itinerary-card-overview-compact${item.id === state.selectedItineraryId ? " active" : ""}`;
 
       const timeDisplay = item.time ? (item.endTime ? `${item.time} ~ ${item.endTime}` : item.time) : "시간 미정";
-      const transLabels = { walk: "🚶‍♂️ 도보", car: "🚗 자동차", bus: "🚌 대중교통", etc: "✈️ 항공/기타", none: "" };
-      const transLabel = transLabels[item.trans] || "";
 
       card.innerHTML = `
         <div class="overview-compact-left">
           <span class="overview-compact-time">${timeDisplay}</span>
-          ${transLabel ? `<span class="overview-compact-trans">${transLabel}</span>` : ""}
+          ${themeBadgeHtml}
         </div>
         <div class="overview-compact-center">
           <div class="overview-compact-place-row">
-            ${themeBadgeHtml}
             <strong class="overview-compact-place" data-address="${escapeHtml(item.location)}" title="클릭하여 주소 복사">${escapeHtml(item.place)}</strong>
             ${(item.voucherName || item.voucherFileName) ? `<span class="overview-compact-ticket-badge" title="${escapeHtml(item.voucherName || "연동된 바우처가 있습니다.")}">🎟️</span>` : ""}
           </div>
           ${item.memo ? `<p class="overview-compact-memo">${escapeHtml(item.memo)}</p>` : ""}
         </div>
-        <div class="overview-compact-right">
-          <div class="overview-compact-actions">
-            <button type="button" class="overview-compact-btn edit" data-itinerary-action="edit" data-id="${escapeHtml(item.id)}">수정</button>
-            <button type="button" class="overview-compact-btn delete" data-itinerary-action="delete" data-id="${escapeHtml(item.id)}">삭제</button>
-          </div>
+        <div class="overview-compact-actions itinerary-card-quick-actions" aria-label="일정 작업">
+          <button type="button" class="itinerary-icon-action edit" data-itinerary-action="edit" data-id="${escapeHtml(item.id)}" title="수정" aria-label="수정">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M4 20h4l11-11a2.8 2.8 0 0 0-4-4L4 16v4Z" /><path d="M13.5 6.5l4 4" /></svg>
+          </button>
+          <button type="button" class="itinerary-icon-action delete" data-itinerary-action="delete" data-id="${escapeHtml(item.id)}" title="삭제" aria-label="삭제">
+            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M4 7h16" /><path d="M9 7V4h6v3" /><path d="M7 7l1 16h8l1-16" /><path d="M10 11v6M14 11v6" /></svg>
+          </button>
         </div>
       `;
 
@@ -307,13 +348,21 @@ function renderItineraryList(days) {
 
       const cardDayNum = day ? day.label.replace(/[^0-9]/g, "") : "";
       const cardDayLabel = day ? `Day${cardDayNum}` : "-";
+      const mapSearchMeta = buildItineraryCardMapSearchMeta(item);
 
       card.innerHTML = `
         <div class="itinerary-card-top">
           <div class="itinerary-title-group">
             <span class="day-label">${cardDayLabel}</span>
             <strong class="itinerary-card-place">${escapeHtml(item.place)}</strong>
-            ${themeBadgeHtml}
+          </div>
+          <div class="itinerary-card-quick-actions" aria-label="일정 작업">
+            <button type="button" class="itinerary-icon-action edit" data-itinerary-action="edit" data-id="${escapeHtml(item.id)}" title="수정" aria-label="수정">
+              <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M4 20h4l11-11a2.8 2.8 0 0 0-4-4L4 16v4Z" /><path d="M13.5 6.5l4 4" /></svg>
+            </button>
+            <button type="button" class="itinerary-icon-action delete" data-itinerary-action="delete" data-id="${escapeHtml(item.id)}" title="삭제" aria-label="삭제">
+              <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M4 7h16" /><path d="M9 7V4h6v3" /><path d="M7 7l1 16h8l1-16" /><path d="M10 11v6M14 11v6" /></svg>
+            </button>
           </div>
           <div class="itinerary-card-controls">
             <div class="card-time-range-group">
@@ -324,10 +373,17 @@ function renderItineraryList(days) {
             </div>
           </div>
         </div>
-        <button class="itinerary-card-map" type="button" data-itinerary-action="map" data-id="${escapeHtml(item.id)}" title="지도에서 보기">
-          <svg viewBox="0 0 24 24" focusable="false"><path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11Z" /><path d="M12 10.5h.01" /></svg>
-          <span>${escapeHtml(item.location)}</span>
-        </button>
+        <div class="itinerary-card-location-row">
+          ${themeBadgeHtml}
+          <button class="itinerary-card-map" type="button" data-itinerary-action="map" data-id="${escapeHtml(item.id)}" title="지도에서 보기">
+            <svg viewBox="0 0 24 24" focusable="false"><path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11Z" /><path d="M12 10.5h.01" /></svg>
+            <span>${escapeHtml(item.location || item.place || "위치 미입력")}</span>
+          </button>
+          <a class="itinerary-card-map-search ${mapSearchMeta.provider}" href="${escapeHtml(mapSearchMeta.href)}" target="_blank" rel="noreferrer" title="${escapeHtml(mapSearchMeta.title)}" aria-label="${escapeHtml(mapSearchMeta.title)}">
+            <span class="map-search-mark" aria-hidden="true">${escapeHtml(mapSearchMeta.mark)}</span>
+            ${mapSearchMeta.label ? `<span class="map-search-text">${escapeHtml(mapSearchMeta.label)}</span>` : ""}
+          </a>
+        </div>
         <label class="itinerary-memo-shell">
           <svg viewBox="0 0 24 24" focusable="false"><path d="M8 4h8l2 2v14H6V6l2-2Z" /><path d="M9 10h6M9 14h6" /></svg>
           <input type="text" class="inline-memo-input" data-id="${escapeHtml(item.id)}" value="${escapeHtml(item.memo || "")}" placeholder="메모 추가..." title="메모 직접 입력" />
@@ -348,12 +404,6 @@ function renderItineraryList(days) {
             </div>
           </div>
         ` : ""}
-        <div class="itinerary-card-footer" style="justify-content: flex-end;">
-          <div class="itinerary-card-actions">
-            <button type="button" data-itinerary-action="edit" data-id="${escapeHtml(item.id)}">수정</button>
-            <button type="button" data-itinerary-action="delete" data-id="${escapeHtml(item.id)}">삭제</button>
-          </div>
-        </div>
       `;
     }
 
@@ -362,9 +412,14 @@ function renderItineraryList(days) {
       if (
         e.target.tagName === "INPUT" ||
         e.target.tagName === "SELECT" ||
+        e.target.closest(".custom-time") ||
+        e.target.closest(".custom-time-panel") ||
+        e.target.closest(".card-time-range-group") ||
+        e.target.closest(".itinerary-card-quick-actions") ||
         e.target.closest(".itinerary-card-actions") ||
         e.target.closest(".overview-compact-actions") ||
-        e.target.closest(".itinerary-card-map")
+        e.target.closest(".itinerary-card-map") ||
+        e.target.closest(".itinerary-card-map-search")
       ) {
         return;
       }
@@ -466,11 +521,13 @@ function renderItineraryList(days) {
     });
   });
 
+  setupCommaNumberInputs(els.itineraryList.querySelectorAll(".travel-cost-input"));
+
   els.itineraryList.querySelectorAll(".travel-cost-input").forEach(inputEl => {
     inputEl.addEventListener("change", () => {
       const id = inputEl.dataset.id;
       const index = Number(inputEl.dataset.index);
-      const val = Number(inputEl.value) || 0;
+      const val = parseFormattedNumber(inputEl.value);
       if (window.TripLog?.features?.itinerary?.listActions?.updateTravelSegmentField) {
         window.TripLog.features.itinerary.listActions.updateTravelSegmentField(id, index, "cost", val);
       }

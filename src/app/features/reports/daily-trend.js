@@ -132,12 +132,7 @@ function getNiceChartMax(value) {
 }
 
 function formatWonShort(amount) {
-  if (!amount) return "0원";
-  if (amount < 1000) return `${Math.round(amount).toLocaleString("ko-KR")}원`;
-  if (amount >= 10000) {
-    return `${Math.round(amount / 1000) / 10}만`;
-  }
-  return `${Math.round(amount / 100) / 10}천`;
+  return formatWon(Math.round(amount || 0));
 }
 
 

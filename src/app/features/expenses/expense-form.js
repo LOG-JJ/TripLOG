@@ -3,12 +3,12 @@ function handleExpenseSubmit(event) {
 
   if (state.travelMode === "overseas") updateConvertedAmount();
 
-  const amount = Math.max(0, Number(els.amountInput.value || 0));
+  const amount = Math.max(0, parseFormattedNumber(els.amountInput.value));
   if (!amount || !els.descriptionInput.value.trim()) return;
   const isOverseas = state.travelMode === "overseas";
   const currency = getCurrencyMeta(els.currencySelect.value);
-  const foreignAmount = Math.max(0, Number(els.foreignAmountInput.value || 0));
-  const exchangeRate = Math.max(0, Number(els.exchangeRateInput.value || 0));
+  const foreignAmount = Math.max(0, parseFormattedNumber(els.foreignAmountInput.value));
+  const exchangeRate = Math.max(0, parseFormattedNumber(els.exchangeRateInput.value));
 
   if (isLodgingSplitMode()) {
     const lodgingPlan = getLodgingPlan();
@@ -70,13 +70,13 @@ function resetExpenseFormAfterSubmit() {
   els.expenseForm.reset();
   els.daySelect.value = state.selectedDate;
   els.categorySelect.value = getDefaultExpenseCategory();
-  els.currencySelect.value = "JPY";
+  els.currencySelect.value = getExpenseDefaultCurrencyCode();
   els.lodgingCheckInInput.value = "";
   els.lodgingCheckOutInput.value = "";
   if (state.travelMode === "overseas") {
-    els.amountInput.value = "";
-    els.foreignAmountInput.value = "";
-    els.exchangeRateInput.value = "";
+    setCommaNumberInputValue(els.amountInput, "");
+    setCommaNumberInputValue(els.foreignAmountInput, "");
+    setCommaNumberInputValue(els.exchangeRateInput, "");
   }
   renderExpenseFormMode();
 }
@@ -85,8 +85,14 @@ function getDefaultExpenseCategory() {
   return "식비";
 }
 
+function getExpenseDefaultCurrencyCode() {
+  const preferredCode = getPreferredCurrencyMeta().code;
+  return els.currencySelect.querySelector(`option[value="${preferredCode}"]`) ? preferredCode : "JPY";
+}
+
 window.TripLog.register("features.expenses.form", {
   handleExpenseSubmit,
   resetExpenseFormAfterSubmit,
   getDefaultExpenseCategory,
+  getExpenseDefaultCurrencyCode,
 });

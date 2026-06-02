@@ -25,6 +25,7 @@ const categories = [
 
 const currencies = [
   { code: "JPY", symbol: "¥", unit: "엔", label: "엔화", rateBase: 100 },
+  { code: "KRW", symbol: "₩", unit: "원", label: "원화", rateBase: 1 },
   { code: "USD", symbol: "$", unit: "달러", label: "달러", rateBase: 1 },
   { code: "CNY", symbol: "¥", unit: "위안", label: "위안화", rateBase: 1 },
   { code: "EUR", symbol: "€", unit: "유로", label: "유로", rateBase: 1 },

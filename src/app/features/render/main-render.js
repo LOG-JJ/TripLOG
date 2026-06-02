@@ -6,11 +6,12 @@ function render() {
 
   syncPageVisibility();
   renderModeControls();
+  if (typeof renderStorageStatus === "function") renderStorageStatus();
   window.TripLog.features.settings.themeToggle.renderThemeControls();
   els.tripNameInput.value = state.tripName;
   els.startDateInput.value = state.startDate;
   els.endDateInput.value = state.endDate;
-  els.budgetInput.value = state.totalBudget || "";
+  setCommaNumberInputValue(els.budgetInput, state.totalBudget || "");
   syncCustomDatePicker(els.startDateInput);
   syncCustomDatePicker(els.endDateInput);
   els.tripDuration.value = `${days.length}일`;
@@ -27,13 +28,14 @@ function render() {
   renderStatsInsights(totals, days);
   syncCustomSelect(els.categorySelect, { rebuild: true });
   renderExpenseFormMode();
+  if (typeof renderPretripPurchasePanel === "function") renderPretripPurchasePanel();
   
   // Render new multi-tab dashboards
   renderOverviewPage();
   renderReportPage(totals, days);
   renderSettlementPage(totals);
 
-  if (activePage === "itinerary") renderItineraryPage();
+  if (activePage === "start" || activePage === "itinerary") renderItineraryPage();
 }
 
 window.TripLog.register("features.render.main", {

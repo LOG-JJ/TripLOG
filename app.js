@@ -1,11 +1,13 @@
 (() => {
-  const scriptVersion = "google-js-api-geocoding-20260602-1";
+  const scriptVersion = "start-clock-title-badge-20260603-1";
   const scriptFiles = [
     "core/namespace.js",
     "core/config.js",
     "core/runtime.js",
+    "data/countries.js",
     "bootstrap/init.js",
     "persistence/state-storage.js",
+    "persistence/archive-db.js",
     "features/settings/theme-toggle.js",
     "features/history/history-store.js",
     "features/history/history-modal.js",
@@ -15,6 +17,7 @@
     "features/settings/travel-mode.js",
     "features/expenses/currency-controls.js",
     "features/expenses/lodging.js",
+    "features/expenses/pretrip-purchases.js",
     "ui/date-picker.js",
     "ui/time-picker.js",
     "ui/custom-select.js",

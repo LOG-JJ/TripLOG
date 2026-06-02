@@ -101,6 +101,7 @@ function getFallbackState(tripId = "trip_default") {
     id: tripId,
     tripName: "제주도 7박 8일 여행",
     country: "대한민국",
+    countryCode: "KR",
     city: "제주",
     travelMode: "domestic",
     theme: "brutalist",
@@ -114,6 +115,10 @@ function getFallbackState(tripId = "trip_default") {
     currencySymbol: "¥",
     currencyUnit: "엔",
     exchangeBase: 100,
+    exchangeRate: 950,
+    exchangeRateUpdatedAt: "",
+    exchangeRateSource: "기본값",
+    currencyAutoMatchedCountryCode: "",
     entries: [],
     itineraryItems: [],
     packingList: typeof getDefaultPackingList === "function" ? getDefaultPackingList() : [],
@@ -291,17 +296,28 @@ function switchTrip(tripId) {
   saveAndRender();
 }
 
-function createNewTrip({ tripName, country, city, travelMode, startDate, endDate, totalBudget }) {
+function createNewTrip({ tripName, country, countryCode, city, travelMode, startDate, endDate, totalBudget }) {
   const trips = getTrips();
   const newId = "trip_" + Date.now();
   const normalizedTravelMode = travelMode === "overseas" ? "overseas" : "domestic";
+  const normalizedCountryCode = (countryCode || (normalizedTravelMode === "domestic" ? "KR" : "")).toUpperCase();
+  const matchedCurrencyCode = getCurrencyCodeForCountry(normalizedCountryCode, normalizedTravelMode);
+  const matchedCurrency = currencies.find((currency) => currency.code === matchedCurrencyCode) || currencies[0];
   const newTrip = {
     ...getFallbackState(newId),
     tripName: tripName || "새로운 여행 ✈️",
     country: country || (normalizedTravelMode === "domestic" ? "대한민국" : ""),
+    countryCode: normalizedCountryCode,
     city: city || (normalizedTravelMode === "domestic" ? "서울" : ""),
     travelMode: normalizedTravelMode,
     theme: normalizeThemeName(state.theme || getSavedTheme()),
+    currencyCode: matchedCurrency.code,
+    currencySymbol: matchedCurrency.symbol,
+    currencyUnit: matchedCurrency.unit,
+    exchangeBase: matchedCurrency.rateBase,
+    exchangeRate: getDefaultExchangeRateForCurrency(matchedCurrency.code),
+    exchangeRateSource: "국가 기본값",
+    currencyAutoMatchedCountryCode: normalizedCountryCode,
     startDate: startDate || "2026-06-09",
     endDate: endDate || "2026-06-16",
     selectedDate: startDate || "2026-06-09",
@@ -346,6 +362,19 @@ function getStateSnapshot() {
   return JSON.parse(JSON.stringify(state));
 }
 
+function resetPersistedTravelData(nextState = {}) {
+  const resetState = {
+    ...getFallbackState("trip_default"),
+    ...nextState,
+    id: "trip_default",
+    settlement: normalizeSettlementSettings(nextState.settlement),
+  };
+  localStorage.setItem(TRIPS_KEY, JSON.stringify([resetState]));
+  localStorage.setItem(ACTIVE_TRIP_ID_KEY, resetState.id);
+  localStorage.setItem(LEGACY_STORAGE_KEY, JSON.stringify(resetState));
+  return resetState;
+}
+
 window.TripLog.register("persistence.stateStorage", {
   loadState,
   isLegacyDefaultTripName,
@@ -359,6 +388,7 @@ window.TripLog.register("persistence.stateStorage", {
   saveAndRender,
   saveStateSilently,
   getStateSnapshot,
+  resetPersistedTravelData,
   getTrips,
   getActiveTripId,
   switchTrip,

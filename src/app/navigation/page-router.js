@@ -1,6 +1,6 @@
 function setActivePage(page) {
-  const allowedPages = ["overview", "itinerary", "budget", "settlement", "report", "settings"];
-  const nextPage = allowedPages.includes(page) ? page : "overview";
+  const allowedPages = ["start", "overview", "itinerary", "budget", "settlement", "report", "settings"];
+  const nextPage = allowedPages.includes(page) ? page : "start";
   if (nextPage === activePage && !isPageTransitioning) return;
 
   if (window.scrollY > 0) {
@@ -49,13 +49,14 @@ function setActivePage(page) {
 
 function getPageElement(page) {
   switch (page) {
+    case "start": return els.startPage;
     case "overview": return els.overviewPage;
     case "itinerary": return els.itineraryPage;
     case "budget": return els.budgetPage;
     case "settlement": return els.settlementPage;
     case "report": return els.reportPage;
     case "settings": return els.settingsPage;
-    default: return els.overviewPage;
+    default: return els.startPage;
   }
 }
 
@@ -70,6 +71,7 @@ function prepareIncomingPage(pageElement) {
 
 function syncPageVisibility() {
   if (isPageTransitioning) return;
+  els.startPage.hidden = activePage !== "start";
   els.overviewPage.hidden = activePage !== "overview";
   els.itineraryPage.hidden = activePage !== "itinerary";
   els.budgetPage.hidden = activePage !== "budget";
@@ -77,6 +79,7 @@ function syncPageVisibility() {
   els.reportPage.hidden = activePage !== "report";
   els.settingsPage.hidden = activePage !== "settings";
 
+  els.startPage.classList.toggle("page-active", activePage === "start");
   els.overviewPage.classList.toggle("page-active", activePage === "overview");
   els.itineraryPage.classList.toggle("page-active", activePage === "itinerary");
   els.budgetPage.classList.toggle("page-active", activePage === "budget");
@@ -92,8 +95,6 @@ function updatePageChrome({ animateBrand = false } = {}) {
   els.itineraryPageButton.classList.toggle("active", isItinerary);
   els.itineraryPageButton.title = isItinerary ? "가계부로 돌아가기" : "여행 일정 보기";
   els.itineraryPageButton.setAttribute("aria-label", els.itineraryPageButton.title);
-  els.budgetBrandIcon.classList.toggle("active", !isItinerary);
-  els.itineraryBrandIcon.classList.toggle("active", isItinerary);
   [els.domesticModeButton, els.overseasModeButton].forEach((statusItem) => {
     if (statusItem) statusItem.tabIndex = -1;
   });
@@ -103,15 +104,45 @@ function updatePageChrome({ animateBrand = false } = {}) {
     item.classList.toggle("active", item.dataset.target === activePage);
   });
 
+  syncBrandIconWithActiveNav();
   updateBrandText({ animate: animateBrand });
 }
 
+function syncBrandIconWithActiveNav() {
+  if (!els.brandIcon) return;
+  const activeNavIcon = document.querySelector(`.nav-item[data-target="${activePage}"] .nav-icon`);
+  if (!activeNavIcon) return;
+
+  const viewBox = activeNavIcon.getAttribute("viewBox") || "0 0 24 24";
+  const iconMarkup = activeNavIcon.innerHTML;
+  const specialClasses = Array.from(activeNavIcon.classList)
+    .filter((className) => className !== "nav-icon")
+    .join(" ");
+  const nextClassName = `brand-icon active${specialClasses ? ` ${specialClasses}` : ""}`;
+
+  if (els.brandIcon.getAttribute("viewBox") !== viewBox) {
+    els.brandIcon.setAttribute("viewBox", viewBox);
+  }
+  if (els.brandIcon.innerHTML !== iconMarkup) {
+    els.brandIcon.innerHTML = iconMarkup;
+  }
+  if (els.brandIcon.getAttribute("class") !== nextClassName) {
+    els.brandIcon.setAttribute("class", nextClassName);
+  }
+}
+
 function updateBrandText({ animate = false } = {}) {
-  const isItinerary = activePage === "itinerary";
-  const isOverseas = state.travelMode === "overseas";
-  const nextTitle = isItinerary ? "여행 일정" : "여행 가계부";
-  const nextSubtitle = isItinerary ? "여행 일정과 지도 정리" : isOverseas ? "해외 여행 경비 정리" : "국내 여행 경비 정리";
-  const hasChanged = els.brandTitle.textContent !== nextTitle || els.brandSubtitle.textContent !== nextSubtitle;
+  const titleByPage = {
+    start: "여행 시작",
+    overview: "여행",
+    itinerary: "일정",
+    budget: "가계부",
+    settlement: "가계부",
+    report: "가계부",
+    settings: "설정",
+  };
+  const accessibleTitle = titleByPage[activePage] || "여행 시작";
+  const hasChanged = els.brandTitle.textContent || els.brandTitle.getAttribute("aria-label") !== accessibleTitle || (els.brandSubtitle && els.brandSubtitle.textContent);
 
   if (!hasChanged) return;
 
@@ -119,8 +150,13 @@ function updateBrandText({ animate = false } = {}) {
     els.brandCopy.classList.remove("text-swap");
   }
 
-  els.brandTitle.textContent = nextTitle;
-  els.brandSubtitle.textContent = nextSubtitle;
+  els.brandTitle.textContent = "";
+  els.brandTitle.setAttribute("aria-label", accessibleTitle);
+  els.brandTitle.setAttribute("title", accessibleTitle);
+  if (els.brandSubtitle) {
+    els.brandSubtitle.textContent = "";
+    els.brandSubtitle.hidden = true;
+  }
 
   if (!animate) return;
 
@@ -144,6 +180,7 @@ window.TripLog.register("navigation.pageRouter", {
   prepareIncomingPage,
   syncPageVisibility,
   updatePageChrome,
+  syncBrandIconWithActiveNav,
   updateBrandText,
   startBrandIconFlip,
 });

@@ -30,26 +30,26 @@ function renderTimeBlockGrid(items) {
   const rFace = 296;
   const rHour = 252;
   const rTickOuter = 294;
-  const rScheduleIn = 164;
+  const rCenter = 92;
+  const rScheduleIn = rCenter - 2;
   const rScheduleOut = 232;
   const rScheduleMid = (rScheduleIn + rScheduleOut) / 2;
-  const rTimeBadge = 218;
-  const rCenter = 92;
+  const rScheduleIcon = rScheduleMid;
 
   svg.appendChild(createClockCircle(cx, cy, rFace, "clock-face"));
   svg.appendChild(createClockCircle(cx, cy, rScheduleOut + 32, "clock-label-track"));
+  svg.appendChild(createClockCircle(cx, cy, rScheduleOut, "clock-schedule-fill"));
 
   for (let slot = 0; slot < 48; slot++) {
     const minutes = slot * 30;
     const angle = (minutes * 0.25 - 90) * Math.PI / 180;
-    const isAnchor = minutes % 360 === 0;
     const isMajor = minutes % 120 === 0;
-    const tickInnerRadius = isAnchor ? rTickOuter - 46 : isMajor ? rTickOuter - 34 : rTickOuter - 18;
+    const tickInnerRadius = isMajor ? rTickOuter - 34 : rTickOuter - 18;
     const tickStart = getClockPoint(cx, cy, tickInnerRadius, angle);
     const tickEnd = getClockPoint(cx, cy, rTickOuter, angle);
 
     const tick = document.createElementNS("http://www.w3.org/2000/svg", "line");
-    tick.setAttribute("class", `clock-tick-line ${isAnchor ? "clock-tick-anchor" : isMajor ? "clock-tick-major" : "clock-tick-minor"}`);
+    tick.setAttribute("class", `clock-tick-line ${isMajor ? "clock-tick-major" : "clock-tick-minor"}`);
     tick.setAttribute("x1", String(tickStart.x));
     tick.setAttribute("y1", String(tickStart.y));
     tick.setAttribute("x2", String(tickEnd.x));
@@ -58,8 +58,6 @@ function renderTimeBlockGrid(items) {
   }
 
   for (let h = 0; h < 24; h += 2) {
-    if (h % 6 === 0) continue;
-
     const angle = (h * 15 - 90) * Math.PI / 180;
     const labelPoint = getClockPoint(cx, cy, rHour, angle);
     const hourText = createClockText(labelPoint.x, labelPoint.y, "clock-hour-text", String(h));
@@ -85,9 +83,8 @@ function renderTimeBlockGrid(items) {
     const visualDuration = Math.max(duration, 24);
     const endM = Math.min(startM + visualDuration, 1440);
     const midM = startM + (endM - startM) / 2;
-    const gap = Math.min(4, visualDuration / 7);
-    const arcStartM = startM + gap;
-    const arcEndM = Math.max(arcStartM + 1, endM - gap);
+    const arcStartM = startM;
+    const arcEndM = Math.max(arcStartM + 1, endM);
     const itemKind = getClockItemKind(item);
 
     const sector = document.createElementNS("http://www.w3.org/2000/svg", "path");
@@ -105,23 +102,11 @@ function renderTimeBlockGrid(items) {
     svg.appendChild(sector);
 
     const markerAngle = (midM * 0.25 - 90) * Math.PI / 180;
-    const iconPoint = getClockPoint(cx, cy, rScheduleMid, markerAngle);
+    const iconPoint = getClockPoint(cx, cy, rScheduleIcon, markerAngle);
     const icon = createClockCategoryIcon(itemKind, iconPoint.x, iconPoint.y, getClockIconColor(item));
     icon.appendChild(createSvgTitle(tooltipText));
     icon.addEventListener("click", () => startItineraryEdit(item));
     svg.appendChild(icon);
-
-    const badgeAngle = (startM * 0.25 - 90) * Math.PI / 180;
-    const badgePoint = getClockPoint(cx, cy, rTimeBadge, badgeAngle);
-    const timeBadge = createClockTimeBadge(badgePoint.x, badgePoint.y, formatClockMinutes(startM), tooltipText);
-    timeBadge.addEventListener("click", () => startItineraryEdit(item));
-    svg.appendChild(timeBadge);
-  });
-
-  [0, 6, 12, 18].forEach((hour) => {
-    const angle = (hour * 15 - 90) * Math.PI / 180;
-    const point = getClockPoint(cx, cy, rTickOuter - 7, angle);
-    svg.appendChild(createClockAnchorBadge(point.x, point.y, hour));
   });
 
   const now = new Date();
@@ -182,53 +167,6 @@ function createSvgTitle(textContent) {
   const title = document.createElementNS("http://www.w3.org/2000/svg", "title");
   title.textContent = textContent;
   return title;
-}
-
-function createClockAnchorBadge(x, y, hour) {
-  const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
-  group.setAttribute("class", `clock-anchor-badge clock-anchor-${hour}`);
-
-  const isTop = hour === 0;
-  const width = isTop ? 48 : 58;
-  const height = isTop ? 70 : 58;
-  const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-  rect.setAttribute("class", "clock-anchor-rect");
-  rect.setAttribute("x", String(x - width / 2));
-  rect.setAttribute("y", String(y - height / 2));
-  rect.setAttribute("width", String(width));
-  rect.setAttribute("height", String(height));
-  rect.setAttribute("rx", "8");
-  rect.setAttribute("ry", "8");
-  group.appendChild(rect);
-
-  if (isTop) {
-    group.appendChild(createClockText(x, y - 12, "clock-anchor-text clock-anchor-top-main", "0"));
-    group.appendChild(createClockText(x, y + 19, "clock-anchor-text clock-anchor-top-sub", "24"));
-  } else {
-    group.appendChild(createClockText(x, y + 2, "clock-anchor-text", String(hour)));
-  }
-
-  return group;
-}
-
-function createClockTimeBadge(x, y, label, titleText) {
-  const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
-  group.setAttribute("class", "clock-time-badge");
-
-  const width = 58;
-  const height = 24;
-  const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-  rect.setAttribute("class", "clock-time-badge-rect");
-  rect.setAttribute("x", String(x - width / 2));
-  rect.setAttribute("y", String(y - height / 2));
-  rect.setAttribute("width", String(width));
-  rect.setAttribute("height", String(height));
-  rect.setAttribute("rx", "11");
-  rect.setAttribute("ry", "11");
-  group.appendChild(rect);
-  group.appendChild(createClockText(x, y + 1, "clock-time-badge-text", label));
-  group.appendChild(createSvgTitle(titleText));
-  return group;
 }
 
 function createClockWeekdayPill(x, y, label) {
@@ -393,7 +331,9 @@ function getTransitColor(trans) {
   switch (trans) {
     case "walk": return "#d1fae5"; // emerald light
     case "car": return "#fee2e2";  // rose light
+    case "train": return "#ede9fe"; // violet light
     case "bus": return "#fef3c7";  // amber light
+    case "flight": return "#e0f2fe"; // sky light
     case "etc": return "#e0f2fe";  // sky light
     default: return "#f3f4f6";     // gray light
   }

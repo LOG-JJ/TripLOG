@@ -642,6 +642,9 @@ function stripGeocodeContext(query, context = "") {
 }
 
 function getExpectedTripCountryCode() {
+  const savedCountryCode = String(state.countryCode || "").trim().toUpperCase();
+  if (/^[A-Z]{2}$/.test(savedCountryCode)) return savedCountryCode;
+
   const country = normalizePlaceAlias(state.country);
   const tripContext = normalizePlaceAlias([state.country, state.city, state.tripName].filter(Boolean).join(" "));
   const haystack = `${country} ${tripContext}`;

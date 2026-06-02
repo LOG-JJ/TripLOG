@@ -16,13 +16,14 @@ function renderHistoryModal() {
         <p>${escapeHtml(formatHistoryTimestamp(record.timestamp))}</p>
         <div class="history-meta">
           <span>${escapeHtml(formatHistoryDateRange(savedState))}</span>
-          <span>${Number(savedState.entries?.length || 0).toLocaleString("ko-KR")}건</span>
+          <span>지출 ${Number(savedState.entries?.length || 0).toLocaleString("ko-KR")}건</span>
+          <span>정산 ${(savedState.companions?.length || 0).toLocaleString("ko-KR")}명</span>
           <span>${formatWon(calculateSnapshotTotal(savedState))}</span>
         </div>
       </div>
       <div class="history-actions">
-        <button class="history-load" type="button" data-history-action="load" data-history-id="${escapeHtml(record.id)}">불러오기</button>
-        <button class="history-delete" type="button" data-history-action="delete" data-history-id="${escapeHtml(record.id)}">삭제</button>
+        <button class="load" type="button" data-history-action="load" data-history-id="${escapeHtml(record.id)}">불러오기</button>
+        <button class="delete" type="button" data-history-action="delete" data-history-id="${escapeHtml(record.id)}">삭제</button>
       </div>
     `;
     els.historyList.appendChild(item);

@@ -1,0 +1,86 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - button "여행 일정 보기":
+        - img
+      - heading "여행 시작" [level=1] [ref=e7]
+    - generic "진행 중인 여행 빠른 선택" [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]: 진행 중인 여행
+        - generic [ref=e11]:
+          - combobox "진행 중인 여행 진행 중인 여행":
+            - option "제주도 7박 8일 여행" [selected]
+          - button "진행 중인 여행" [ref=e12] [cursor=pointer]:
+            - generic [ref=e13]: 제주도 7박 8일 여행
+      - button "새 여행 만들기" [ref=e15] [cursor=pointer]:
+        - generic [ref=e16]: +
+  - navigation "메인 메뉴" [ref=e17]:
+    - button "여행 시작" [ref=e18] [cursor=pointer]:
+      - img [ref=e19]
+      - generic [ref=e21]: 여행 시작
+    - button "여행 개요" [ref=e22] [cursor=pointer]:
+      - img [ref=e23]
+      - generic [ref=e25]: 여행 개요
+    - button "일정" [ref=e26] [cursor=pointer]:
+      - img [ref=e27]
+      - generic [ref=e29]: 일정
+    - button "지출 기록" [ref=e30] [cursor=pointer]:
+      - img [ref=e31]
+      - generic [ref=e34]: 지출 기록
+    - button "정산" [ref=e35] [cursor=pointer]:
+      - img [ref=e36]
+      - generic [ref=e38]: 정산
+    - button "리포트" [ref=e39] [cursor=pointer]:
+      - img [ref=e40]
+      - generic [ref=e42]: 리포트
+    - button "설정" [ref=e43] [cursor=pointer]:
+      - img [ref=e44]
+      - generic [ref=e46]: 설정
+  - main [ref=e48]:
+    - region "여행 관리" [ref=e49]:
+      - generic [ref=e51]:
+        - paragraph [ref=e52]: Trip Selector
+        - heading "나의 여행 목록" [level=2] [ref=e53]
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - generic [ref=e56]: 진행 중인 여행
+          - generic [ref=e57]:
+            - combobox "진행 중인 여행 진행 중인 여행":
+              - option "제주도 7박 8일 여행" [selected]
+            - button "진행 중인 여행" [ref=e58] [cursor=pointer]:
+              - generic [ref=e59]: 제주도 7박 8일 여행
+        - generic [ref=e61]:
+          - button "➕ 새 여행 만들기" [ref=e62] [cursor=pointer]:
+            - generic [ref=e63]: ➕ 새 여행 만들기
+          - button "삭제" [ref=e64] [cursor=pointer]:
+            - generic [ref=e65]: 삭제
+    - region "여행 개요 편집" [ref=e66]:
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - paragraph [ref=e69]: Trip Overview
+          - heading "여행 개요 편집" [level=2] [ref=e70]
+        - status [ref=e71]: 8일
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - generic [ref=e74]: 여행 이름
+          - textbox "여행 이름" [ref=e75]:
+            - /placeholder: "예: 제주도 7박 8일"
+            - text: 제주도 7박 8일 여행
+        - generic [ref=e76]:
+          - generic [ref=e77]: 시작일
+          - generic [ref=e78]:
+            - textbox "시작일 시작일": 2026-06-09
+            - button "시작일" [ref=e79] [cursor=pointer]:
+              - generic [ref=e80]: 2026-06-09
+              - img [ref=e82]
+        - generic [ref=e84]:
+          - generic [ref=e85]: 종료일
+          - generic [ref=e86]:
+            - textbox "종료일 종료일": 2026-06-16
+            - button "종료일" [ref=e87] [cursor=pointer]:
+              - generic [ref=e88]: 2026-06-16
+              - img [ref=e90]
+        - generic [ref=e92]:
+          - generic [ref=e93]: 총 여행 예산
+          - textbox "총 여행 예산" [ref=e94]:
+            - /placeholder: 예산 입력 (원)

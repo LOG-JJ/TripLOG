@@ -5,17 +5,18 @@ function renderOverviewPage() {
   // 1. Render Multi-Trip Selector Dropdown
   const trips = window.TripLog.persistence.stateStorage.getTrips();
   const activeId = window.TripLog.persistence.stateStorage.getActiveTripId();
-  if (els.overviewTripSelect) {
-    els.overviewTripSelect.replaceChildren();
+  [els.overviewTripSelect, els.headerTripSelect].forEach((select) => {
+    if (!select) return;
+    select.replaceChildren();
     trips.forEach(t => {
       const option = document.createElement("option");
       option.value = t.id;
       option.textContent = t.tripName || "이름 없는 여행";
       if (t.id === activeId) option.selected = true;
-      els.overviewTripSelect.appendChild(option);
+      select.appendChild(option);
     });
-    syncCustomSelect(els.overviewTripSelect, { rebuild: true });
-  }
+    syncCustomSelect(select, { rebuild: true });
+  });
 
   // 2. Render Existing Legacy Overview Details
   const overviewModeSticker = document.querySelector("#overviewModeSticker");
@@ -33,8 +34,9 @@ function renderOverviewPage() {
   const dbTripName = document.querySelector("#dbTripName");
   const dbTripDestination = document.querySelector("#dbTripDestination");
   const dbTripDate = document.querySelector("#dbTripDate");
+  const dbTripDurationBadge = document.querySelector("#dbTripDurationBadge");
   if (dbTripName) {
-    dbTripName.textContent = `${state.tripName || "새로운 여행"} · ${nightsText}`;
+    dbTripName.textContent = state.tripName || "새로운 여행";
   }
   if (dbTripDestination) {
     const displayCountry = state.country || "";
@@ -52,43 +54,57 @@ function renderOverviewPage() {
     const lastDay = days[days.length - 1].shortDate;
     dbTripDate.textContent = `${startYear}. ${startMonth}월 (${firstDay} - ${lastDay})`;
   }
+  if (dbTripDurationBadge) {
+    dbTripDurationBadge.textContent = nightsText;
+  }
 
   // Bind Buttons on Travel Summary to scroll or navigate to specific lists
   const flightsBtn = document.querySelector("#dbBtnFlights");
   const hotelBtn = document.querySelector("#dbBtnHotel");
   if (flightsBtn) {
     flightsBtn.onclick = () => {
-      setActivePage("budget");
-      setFilter("교통");
+      if (typeof openPretripPurchaseMenu === "function") openPretripPurchaseMenu("flight");
     };
   }
   if (hotelBtn) {
     hotelBtn.onclick = () => {
-      setActivePage("budget");
-      setFilter("숙소");
+      if (typeof openPretripPurchaseMenu === "function") openPretripPurchaseMenu("hotel");
     };
   }
 
+  const tripProgressPercent = getTripProgressPercent();
+  const dbTripProgressPercent = document.querySelector("#dbTripProgressPercent");
+  const dbTripProgressFill = document.querySelector("#dbTripProgressFill");
+  if (dbTripProgressPercent) {
+    dbTripProgressPercent.textContent = `${tripProgressPercent}%`;
+  }
+  if (dbTripProgressFill) {
+    dbTripProgressFill.style.width = `${tripProgressPercent}%`;
+  }
+
   // 4. Render Essential Preparation Checklist Card (카드 2: 필수 체크리스트)
-  const hasLodging = state.entries.some(e => e.category === "숙소");
-  const hasFlight = state.entries.some(e => e.category === "교통" && (e.description.includes("항공") || e.description.includes("비행기")));
+  const hasLodging = state.entries.some(e => e.category === "숙소" || e.pretripType === "hotel");
+  const hasFlight = state.entries.some(e => e.pretripType === "flight" || (e.category === "교통" && (e.description.includes("항공") || e.description.includes("비행기"))));
+  const hasInsurance = state.entries.some(e => [e.category, e.description, e.note].some(value => String(value || "").includes("보험")));
   
-  let lodgingScore = hasLodging ? 30 : 0;
-  let flightScore = hasFlight ? 30 : 0;
+  const checklistWeight = 25;
+  let lodgingScore = hasLodging ? checklistWeight : 0;
+  let flightScore = hasFlight ? checklistWeight : 0;
+  let insuranceScore = hasInsurance ? checklistWeight : 0;
   
   const itemsWithVoucherName = state.itineraryItems.filter(item => !!item.voucherName);
-  let voucherScore = 40;
+  let voucherScore = checklistWeight;
   let voucherStatusText = "등록 대기";
   let voucherClass = "pending";
   
   if (itemsWithVoucherName.length > 0) {
     const uploadedCount = itemsWithVoucherName.filter(item => !!item.voucherFile).length;
-    voucherScore = Math.round((uploadedCount / itemsWithVoucherName.length) * 40);
+    voucherScore = Math.round((uploadedCount / itemsWithVoucherName.length) * checklistWeight);
     voucherStatusText = `${itemsWithVoucherName.length}개 중 ${uploadedCount}개 완료`;
     voucherClass = uploadedCount === itemsWithVoucherName.length ? "success" : "warning";
   } else {
     if (state.itineraryItems.length > 0) {
-      voucherScore = 40;
+      voucherScore = checklistWeight;
       voucherStatusText = "연동 없음";
       voucherClass = "success";
     } else {
@@ -98,7 +114,7 @@ function renderOverviewPage() {
     }
   }
   
-  let prepPercent = lodgingScore + flightScore + voucherScore;
+  let prepPercent = lodgingScore + flightScore + insuranceScore + voucherScore;
   if (prepPercent === 0 && (state.entries.length > 0 || state.itineraryItems.length > 0)) {
     prepPercent = 10;
   }
@@ -124,13 +140,17 @@ function renderOverviewPage() {
         <span class="detail-status ${hasLodging ? 'success' : 'pending'}">${hasLodging ? '예약 완료' : '등록 대기'}</span>
       </div>
       <div class="checklist-detail-item">
+        <span class="detail-label">🛡️ 여행자 보험</span>
+        <span class="detail-status ${hasInsurance ? 'success' : 'pending'}">${hasInsurance ? '가입 완료' : '등록 대기'}</span>
+      </div>
+      <div class="checklist-detail-item">
         <span class="detail-label">🎟️ 티켓/바우처</span>
         <span class="detail-status ${voucherClass}">${voucherStatusText}</span>
       </div>
     `;
   }
 
-  // 5. Render Vertical Itinerary Timelines Card (카드 3: 일차별 주요 일정)
+  // 5. Render Vertical Itinerary Timelines Card (카드 3: 주요 일정)
   const timelineContainer = document.querySelector("#dbTimelineContainer");
   if (timelineContainer) {
     timelineContainer.replaceChildren();
@@ -262,7 +282,7 @@ function renderOverviewPage() {
     }
   }
 
-  // 7. Render Packaging Suitecases Checklist Card (카드 5: 짐 싸기 상태)
+  // 7. Render Packaging Suitecases Checklist Card (카드 5: 짐 체크리스트)
   const packingList = state.packingList || [];
   const totalPacking = packingList.length;
   const packedCount = packingList.filter(item => item.checked).length;
@@ -282,9 +302,10 @@ function renderOverviewPage() {
   if (quickListEl) {
     quickListEl.replaceChildren();
 
-    // Sort unchecked items first, display up to 4 quick checkboxes
-    const sortedItems = [...packingList].sort((a, b) => a.checked - b.checked).slice(0, 4);
-    sortedItems.forEach(item => {
+    // Keep the original packing order so checking an item does not move it.
+    const visibleItems = packingList.slice(0, 6);
+    quickListEl.classList.remove("is-two-column");
+    visibleItems.forEach(item => {
       const itemEl = document.createElement("label");
       itemEl.className = `packing-quick-item${item.checked ? " checked" : ""}`;
       itemEl.innerHTML = `
@@ -308,7 +329,31 @@ function renderOverviewPage() {
   }
 }
 
+function getTripProgressPercent() {
+  const start = parseLocalDate(state.startDate);
+  const end = parseLocalDate(state.endDate);
+  if (!start || !end) return 0;
+
+  const endExclusive = new Date(end);
+  endExclusive.setDate(endExclusive.getDate() + 1);
+  const now = new Date();
+
+  if (now < start) return 0;
+  if (now >= endExclusive) return 100;
+
+  const duration = Math.max(1, endExclusive.getTime() - start.getTime());
+  return Math.max(0, Math.min(100, Math.round(((now.getTime() - start.getTime()) / duration) * 100)));
+}
+
+function parseLocalDate(value) {
+  if (!value) return null;
+  const [year, month, day] = String(value).split("-").map(Number);
+  if (!year || !month || !day) return null;
+  return new Date(year, month - 1, day);
+}
+
 
 window.TripLog.register("features.overview.page", {
   renderOverviewPage,
+  getTripProgressPercent,
 });

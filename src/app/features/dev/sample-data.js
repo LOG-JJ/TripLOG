@@ -562,21 +562,31 @@ function loadSampleData() {
   saveAndRender();
 }
 
-function resetAll() {
-  const ok = window.confirm("모든 여행 경비 기록을 초기화할까요?");
+async function resetAll() {
+  const ok = window.confirm("현재 여행, 지출, 정산, 저장된 백업 기록을 모두 초기화할까요?");
   if (!ok) return;
 
-  state.tripName = "";
-  state.travelMode = "domestic";
-  state.startDate = "2026-06-09";
-  state.endDate = "2026-06-16";
-  state.selectedDate = "2026-06-09";
-  state.selectedItineraryDate = "2026-06-09";
-  state.selectedItineraryId = "";
-  state.totalBudget = 0;
-  state.entries = [];
-  state.itineraryItems = [];
-  state.packingList = getDefaultPackingList();
+  const resetState = window.TripLog.persistence.stateStorage.resetPersistedTravelData({
+    tripName: "새 여행",
+    country: "대한민국",
+    countryCode: "KR",
+    city: "서울",
+    travelMode: "domestic",
+    startDate: "2026-06-09",
+    endDate: "2026-06-16",
+    selectedDate: "2026-06-09",
+    selectedItineraryDate: "2026-06-09",
+    selectedItineraryId: "",
+    totalBudget: 0,
+    entries: [],
+    itineraryItems: [],
+    packingList: getDefaultPackingList(),
+    companions: [],
+    settlement: normalizeSettlementSettings({}),
+  });
+  Object.keys(state).forEach((key) => delete state[key]);
+  Object.assign(state, resetState);
+  await clearAllHistoryRecords();
   clearEditMode();
   clearItineraryEditMode(false);
   saveAndRender();

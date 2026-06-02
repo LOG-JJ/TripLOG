@@ -5,6 +5,7 @@ function isLodgingSplitMode() {
 function renderExpenseFormMode() {
   const isLodging = isLodgingSplitMode();
   const isOverseas = state.travelMode === "overseas";
+  const isWonPayment = isOverseas && isWonCurrency(els.currencySelect?.value);
   const isPreTrip = isPreTripExpenseDate(els.daySelect.value);
   els.lodgingFields.hidden = !isLodging;
   els.lodgingCheckInInput.disabled = !isLodging;
@@ -14,7 +15,7 @@ function renderExpenseFormMode() {
     : isPreTrip
       ? "예: 항공권, eSIM, 입장권"
       : "예: 숙소 예약금";
-  els.amountLabel.textContent = isLodging ? (isOverseas ? "원화 총액" : "숙소 총액") : isOverseas ? "원화 환산" : "금액";
+  els.amountLabel.textContent = isLodging ? (isOverseas ? "원화 총액" : "숙소 총액") : isWonPayment ? "원화 환산" : isOverseas ? "원화 환산" : "금액";
   els.amountInput.placeholder = isLodging ? "총 숙소비" : isOverseas ? "자동 계산" : "0";
   els.submitButton.querySelector("span").textContent = editingId ? "저장" : "추가";
 
@@ -106,7 +107,7 @@ function syncLodgingDateBounds() {
 function updateLodgingPreview() {
   if (!els.lodgingPreview) return;
   const plan = getLodgingPlan();
-  const amount = Math.max(0, Number(els.amountInput.value || 0));
+  const amount = Math.max(0, parseFormattedNumber(els.amountInput.value));
   els.lodgingPreview.classList.toggle("is-error", !plan.valid);
 
   if (!plan.valid) {

@@ -15,11 +15,14 @@ function handleItinerarySubmit(event) {
   const id = editingItineraryId || createId();
   const existingItem = editingItineraryId ? findItineraryItem(editingItineraryId) : null;
 
-  const trans = els.itineraryTransSelect.value || "none";
+  const trans = "none";
   const theme = els.itineraryThemeSelect.value || "sightseeing";
-  const duration = Number(els.itineraryDurationInput.value) || 0;
-  const cost = Number(els.itineraryCostInput.value) || 0;
-  const syncExpense = els.itinerarySyncExpenseCheckbox.checked;
+  const transits = Array.isArray(existingItem?.transits)
+    ? existingItem.transits
+    : [{ trans, duration: Number(existingItem?.duration) || 0, cost: Number(existingItem?.cost) || 0, memo: "" }];
+  const duration = transits.reduce((acc, segment) => acc + (Number(segment.duration) || 0), 0);
+  const cost = transits.reduce((acc, segment) => acc + (Number(segment.cost) || 0), 0);
+  const syncExpense = existingItem ? existingItem.syncExpense !== false : true;
   let expenseId = existingItem ? existingItem.expenseId : null;
 
   const voucherName = els.itineraryVoucherName.value.trim();
@@ -45,7 +48,7 @@ function handleItinerarySubmit(event) {
     memo: els.itineraryMemoInput.value.trim(),
     theme,
     trans,
-    transits: existingItem && existingItem.transits ? existingItem.transits : [{ trans, duration, cost, memo: "" }],
+    transits,
     voucherName,
     voucherCode,
     voucherFile: currentVoucherFile,
@@ -76,7 +79,7 @@ function handleItinerarySubmit(event) {
 
   // Sync with main expense ledger
   if (syncExpense && cost > 0) {
-    const transLabels = { walk: "도보", car: "자동차", bus: "대중교통", etc: "항공/기타", none: "이동" };
+    const transLabels = { walk: "도보", car: "차량", train: "기차", bus: "버스", flight: "비행기", etc: "비행기", none: "이동" };
     const desc = `${item.place} 이동 경비 (${transLabels[trans] || "이동"})`;
     if (expenseId) {
       state.entries = state.entries.map((entry) => {
@@ -122,11 +125,8 @@ function startItineraryEdit(item) {
   els.itineraryDaySelect.value = item.date;
   els.itineraryTimeInput.value = item.time || "";
   els.itineraryEndTimeInput.value = item.endTime || "";
-  els.itineraryTransSelect.value = item.trans || "none";
+  els.itineraryTransSelect.value = "none";
   els.itineraryThemeSelect.value = item.theme || "sightseeing";
-  els.itineraryDurationInput.value = item.duration || "";
-  els.itineraryCostInput.value = item.cost || "";
-  els.itinerarySyncExpenseCheckbox.checked = item.syncExpense !== false;
   els.itineraryPlaceInput.value = item.place || "";
   els.itineraryLocationInput.value = item.location || "";
   els.manualAddressInput.value = item.location || "";
@@ -171,9 +171,6 @@ function clearItineraryEditMode(shouldRender = true) {
   els.itineraryDaySelect.value = state.selectedItineraryDate || state.startDate;
   els.itineraryTransSelect.value = "none";
   els.itineraryThemeSelect.value = "sightseeing";
-  els.itineraryDurationInput.value = "";
-  els.itineraryCostInput.value = "";
-  els.itinerarySyncExpenseCheckbox.checked = true;
   els.itineraryLocationInput.value = "";
   els.manualAddressInput.value = "";
   
