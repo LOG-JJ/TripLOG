@@ -218,7 +218,7 @@ function getPrintTransitLabel(trans) {
     case "train": return "기차";
     case "bus": return "버스";
     case "flight":
-    case "etc": return "비행기";
+    case "etc": return "비행";
     default: return "";
   }
 }

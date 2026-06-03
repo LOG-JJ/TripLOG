@@ -72,7 +72,7 @@ function renderTable(entries, days) {
 function formatExpenseTableDayCell(day) {
   if (day.isPreTrip) return day.label;
   const dayNumber = day.index || String(day.label || "").replace(/[^0-9]/g, "");
-  return `Day ${dayNumber} ${day.shortDate}`;
+  return `Day${dayNumber}`;
 }
 
 window.TripLog.register("features.expenses.table", {

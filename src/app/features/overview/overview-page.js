@@ -84,7 +84,7 @@ function renderOverviewPage() {
 
   // 4. Render Essential Preparation Checklist Card (카드 2: 필수 체크리스트)
   const hasLodging = state.entries.some(e => e.category === "숙소" || e.pretripType === "hotel");
-  const hasFlight = state.entries.some(e => e.pretripType === "flight" || (e.category === "교통" && (e.description.includes("항공") || e.description.includes("비행기"))));
+  const hasFlight = state.entries.some(e => e.pretripType === "flight" || (e.category === "교통" && (e.description.includes("항공") || e.description.includes("비행"))));
   const hasInsurance = state.entries.some(e => [e.category, e.description, e.note].some(value => String(value || "").includes("보험")));
   
   const checklistWeight = 25;

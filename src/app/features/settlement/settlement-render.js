@@ -268,9 +268,9 @@ function createSettlementSplitEditorRow(entry, members, sourceState) {
     <td colspan="4">
       <div class="settlement-split-editor">
         <div class="settlement-split-editor-head">
-          <div>
+          <div class="settlement-split-editor-title">
             <strong>사람별 할당 금액</strong>
-            <span>할당 합계 ${escapeHtml(formatSettlementCurrency(entry.allocatedTotal, sourceState))} / 지출 ${escapeHtml(formatSettlementCurrency(entry.amount, sourceState))}</span>
+            <span class="settlement-split-editor-meta">할당 합계 ${escapeHtml(formatSettlementCurrency(entry.allocatedTotal, sourceState))} / 지출 ${escapeHtml(formatSettlementCurrency(entry.amount, sourceState))}</span>
           </div>
           <div class="settlement-item-mode-toggle" role="group" aria-label="${escapeHtml(entry.description)} 분담 방식">
             <button type="button" class="${entry.mode === "equal" ? "active" : ""}" data-entry-key="${escapeHtml(entry.key)}" data-entry-mode="equal">N분의 1</button>

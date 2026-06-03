@@ -1,5 +1,5 @@
 (() => {
-  const scriptVersion = "start-clock-title-badge-20260603-1";
+  const scriptVersion = "settlement-share-editor-fit-20260603-1";
   const scriptFiles = [
     "core/namespace.js",
     "core/config.js",

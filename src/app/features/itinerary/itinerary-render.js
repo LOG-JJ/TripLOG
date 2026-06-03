@@ -151,7 +151,7 @@ function renderItineraryList(days) {
       case "train": return "기차";
       case "bus": return "버스";
       case "flight":
-      case "etc": return "비행기";
+      case "etc": return "비행";
       default: return "이동";
     }
   };
@@ -243,7 +243,7 @@ function renderItineraryList(days) {
                     <option value="car" ${selectedTrans === "car" ? "selected" : ""}>차량</option>
                     <option value="train" ${selectedTrans === "train" ? "selected" : ""}>기차</option>
                     <option value="bus" ${selectedTrans === "bus" ? "selected" : ""}>버스</option>
-                    <option value="flight" ${selectedTrans === "flight" ? "selected" : ""}>비행기</option>
+                    <option value="flight" ${selectedTrans === "flight" ? "selected" : ""}>비행</option>
                   </select>
                 </div>
                 
@@ -253,12 +253,6 @@ function renderItineraryList(days) {
                   <span class="travel-unit">분</span>
                 </div>
                 
-                <div class="travel-cost-input-group">
-                  <span class="travel-input-label">🪙</span>
-                  <input type="text" inputmode="numeric" class="travel-cost-input" data-id="${escapeHtml(item.id)}" data-index="${sIdx}" value="${seg.cost ? formatNumberWithCommas(seg.cost) : ""}" placeholder="0" />
-                  <span class="travel-unit">원</span>
-                </div>
-
                 <div class="travel-segment-memo-row">
                   <input type="text" class="travel-memo-input" data-id="${escapeHtml(item.id)}" data-index="${sIdx}" value="${escapeHtml(seg.memo || "")}" placeholder="📝 비고 입력 (예: 버스 번호, 환승 정보...)" />
                 </div>
@@ -517,19 +511,6 @@ function renderItineraryList(days) {
       const val = Number(inputEl.value) || 0;
       if (window.TripLog?.features?.itinerary?.listActions?.updateTravelSegmentField) {
         window.TripLog.features.itinerary.listActions.updateTravelSegmentField(id, index, "duration", val);
-      }
-    });
-  });
-
-  setupCommaNumberInputs(els.itineraryList.querySelectorAll(".travel-cost-input"));
-
-  els.itineraryList.querySelectorAll(".travel-cost-input").forEach(inputEl => {
-    inputEl.addEventListener("change", () => {
-      const id = inputEl.dataset.id;
-      const index = Number(inputEl.dataset.index);
-      const val = parseFormattedNumber(inputEl.value);
-      if (window.TripLog?.features?.itinerary?.listActions?.updateTravelSegmentField) {
-        window.TripLog.features.itinerary.listActions.updateTravelSegmentField(id, index, "cost", val);
       }
     });
   });
