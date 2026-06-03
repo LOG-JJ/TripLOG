@@ -1,7 +1,7 @@
 const LEGACY_STORAGE_KEY = window.TripLog.core.config.STORAGE_KEY;
 const TRIPS_KEY = "domesticTravelExpensePlanner.trips.v2";
 const ACTIVE_TRIP_ID_KEY = "domesticTravelExpensePlanner.activeTripId.v2";
-const THEME_KEY = "domesticTravelExpensePlanner.theme.v1";
+const THEME_KEY = "domesticTravelExpensePlanner.theme.v2";
 const highTrustSavedCoordinateSources = new Set(["coordinate-text", "google-places", "google-geocoding"]);
 
 const itineraryPlaceCleanupRules = {
@@ -104,7 +104,7 @@ function getFallbackState(tripId = "trip_default") {
     countryCode: "KR",
     city: "제주",
     travelMode: "domestic",
-    theme: "brutalist",
+    theme: "toss",
     startDate: "2026-06-09",
     endDate: "2026-06-16",
     selectedDate: "2026-06-09",
@@ -199,7 +199,7 @@ function loadState() {
     return {
       ...fallback,
       ...activeTrip,
-      theme: savedTheme || normalizeThemeName(activeTrip.theme),
+      theme: savedTheme || "toss",
       currencyCode: preferredCurrency.code,
       currencySymbol: activeTrip.currencySymbol || preferredCurrency.symbol,
       currencyUnit: activeTrip.currencyUnit || preferredCurrency.unit,

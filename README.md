@@ -52,7 +52,7 @@ TripLOG의 런타임 상태는 전역 `state` 객체입니다. 대부분의 상�
 
 - `domesticTravelExpensePlanner.trips.v2`: 여러 여행의 현재 데이터 배열
 - `domesticTravelExpensePlanner.activeTripId.v2`: 현재 선택된 여행 ID
-- `domesticTravelExpensePlanner.theme.v1`: 선택한 테마
+- `domesticTravelExpensePlanner.theme.v2`: 선택한 테마
 - `domesticTravelExpensePlanner.googleGeocodingApiKey.v1`: 선택적으로 저장한 Google 지오코딩 API 키
 - `domesticTravelExpensePlanner.v1`: 기존 단일 여행 저장 키 겸 호환용 미러
 - `domesticTravelExpensePlanner.history.v1`: 저장 스냅샷의 localStorage 미러

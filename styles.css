@@ -9012,7 +9012,7 @@ html[data-theme="toss"] body {
   background-image: none !important;
   background-color: var(--bg) !important;
   font-family: var(--font) !important;
-  letter-spacing: -0.02em !important;
+  letter-spacing: 0 !important;
 }
 
 /* 2. Panels and Cards - Borderless white cards with soft drop shadows */
@@ -10785,7 +10785,7 @@ html[data-theme="toss"] .overview-compact-btn.delete:hover {
   display: flex;
   align-items: center;
   gap: 8px;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 .toss-toast.show {
@@ -10800,7 +10800,7 @@ html[data-theme="toss"] .overview-compact-btn.delete:hover {
 
 .premium-dashboard-container {
   font-family: "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 .dashboard-grid {
@@ -12879,5 +12879,624 @@ html[data-theme="toss"] .travel-badge-item {
   .card-time-range-group .time-dropdown-option {
     min-height: 28px;
     font-size: 11px;
+  }
+}
+
+/* ==========================================================================
+   TOSS HARDENING LAYER
+   Final guardrail so late feature styles and inline neo-brutalist remnants
+   cannot visually leak into the Toss experience.
+   ========================================================================== */
+:root[data-theme="toss"] {
+  --bg: #f2f4f6;
+  --surface: #ffffff;
+  --surface-soft: #f9fafb;
+  --surface-strong: #eef1f4;
+  --text: #191f28;
+  --muted: #4e5968;
+  --muted-2: #8b95a1;
+  --line: #e5e8eb;
+  --line-strong: #d1d6db;
+  --accent: #3182f6;
+  --accent-dark: #1b64da;
+  --accent-purple: #f1efff;
+  --accent-pink: #fff0f3;
+  --accent-mint: #e9fbf3;
+  --accent-blue: #e8f3ff;
+  --accent-orange: #fff6dc;
+  --accent-gray: #f2f4f6;
+  --danger: #f04452;
+  --success: #00b06c;
+  --warning: #f6a609;
+  --shadow: 0 10px 28px rgba(25, 31, 40, 0.06);
+  --shadow-lg: 0 18px 44px rgba(25, 31, 40, 0.1);
+  --shadow-sm: 0 4px 14px rgba(25, 31, 40, 0.05);
+  --radius: 24px;
+  --radius-sm: 14px;
+}
+
+html[data-theme="toss"] body {
+  background: var(--bg) !important;
+  background-image: none !important;
+  color: var(--text) !important;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif !important;
+  letter-spacing: 0 !important;
+}
+
+html[data-theme="toss"] .app-shell {
+  padding: 24px !important;
+}
+
+html[data-theme="toss"] :is(
+  .topbar,
+  .app-navbar,
+  .planner-panel,
+  .entry-panel,
+  .summary-panel,
+  .itinerary-main-panel,
+  .map-panel,
+  .itinerary-workspace,
+  .itinerary-visual-card,
+  .packing-suitcase-card,
+  .dashboard-card,
+  .stats-card,
+  .report-analysis-card,
+  .report-trend-card,
+  .settings-mode-handoff,
+  .settings-currency-summary,
+  .settings-storage-status,
+  .settings-account-status,
+  .settings-supabase-box,
+  .modal-backdrop section,
+  .history-modal-content,
+  .settlement-share-card,
+  .map-popup-card
+) {
+  background: var(--surface) !important;
+  border: 1px solid rgba(229, 232, 235, 0.76) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow) !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="toss"] :is(.topbar, .app-navbar) {
+  border-color: transparent !important;
+}
+
+html[data-theme="toss"] .topbar {
+  padding: 12px !important;
+  margin-bottom: 20px !important;
+}
+
+html[data-theme="toss"] .app-navbar {
+  padding: 8px 18px !important;
+  margin-bottom: 20px !important;
+}
+
+html[data-theme="toss"] :is(
+  .planner-panel,
+  .entry-panel,
+  .summary-panel,
+  .itinerary-main-panel,
+  .map-panel,
+  .itinerary-workspace,
+  .itinerary-visual-card,
+  .packing-suitcase-card,
+  .stats-card,
+  .dashboard-card
+) {
+  padding: 24px !important;
+}
+
+html[data-theme="toss"] :is(.settings-grid, .report-grid, .dashboard-grid, .itinerary-workspace, .settlement-layout) {
+  gap: 16px !important;
+}
+
+html[data-theme="toss"] :is(.section-title-row, .settings-title-row, .itinerary-title-row) {
+  gap: 12px !important;
+}
+
+html[data-theme="toss"] :is(.overline, .dashboard-card-title-box, .panel-box-title, .report-heading-badge, .visual-heading-badge) {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 26px !important;
+  padding: 5px 10px !important;
+  color: var(--accent) !important;
+  background: var(--accent-blue) !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  font-family: var(--font) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+}
+
+html[data-theme="toss"] :is(h1, h2, h3, h4, .summary-trip-name, .itinerary-card-place, .timeline-day-label) {
+  color: var(--text) !important;
+  font-family: var(--font) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+}
+
+html[data-theme="toss"] :is(p, span, em, label, output, td, th, .chart-caption, .timeline-text, .settings-storage-note) {
+  letter-spacing: 0 !important;
+}
+
+html[data-theme="toss"] :is(input, select, textarea, .custom-date-button, .custom-select-button, .custom-time-button) {
+  min-height: 46px !important;
+  color: var(--text) !important;
+  background: #f2f4f6 !important;
+  border: 1px solid transparent !important;
+  border-radius: var(--radius-sm) !important;
+  box-shadow: none !important;
+  font-family: var(--font) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+}
+
+html[data-theme="toss"] :is(input, select, textarea, .custom-date-button, .custom-select-button, .custom-time-button):is(:hover, :focus, :focus-visible, .open) {
+  background: #ffffff !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(49, 130, 246, 0.12) !important;
+  outline: none !important;
+}
+
+html[data-theme="toss"] :is(
+  .submit-button,
+  .icon-button.primary,
+  .text-button.primary,
+  .settings-account-actions .primary,
+  .settings-supabase-actions .primary,
+  .header-trip-add-button
+) {
+  min-height: 44px !important;
+  color: #ffffff !important;
+  background: var(--accent) !important;
+  border: 0 !important;
+  border-radius: var(--radius-sm) !important;
+  box-shadow: none !important;
+  font-family: var(--font) !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="toss"] :is(
+  .text-button,
+  .icon-button.ghost,
+  .row-action,
+  .overview-compact-btn,
+  .summary-btn,
+  .ticket-toggle-btn,
+  .ticket-bar-view-btn,
+  .travel-segment-add-btn,
+  .travel-segment-delete-btn,
+  .header-trip-invite-button
+) {
+  color: var(--muted) !important;
+  background: #f2f4f6 !important;
+  border: 0 !important;
+  border-radius: var(--radius-sm) !important;
+  box-shadow: none !important;
+  font-family: var(--font) !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="toss"] :is(
+  .submit-button,
+  .icon-button,
+  .text-button,
+  .row-action,
+  .summary-btn,
+  .ticket-toggle-btn,
+  .ticket-bar-view-btn,
+  .day-chip,
+  .dashboard-card,
+  .itinerary-card,
+  .overview-compact-btn,
+  .travel-segment-add-btn,
+  .travel-segment-delete-btn
+) {
+  transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease, transform 160ms ease !important;
+}
+
+html[data-theme="toss"] :is(
+  .submit-button,
+  .icon-button,
+  .text-button,
+  .row-action,
+  .summary-btn,
+  .ticket-toggle-btn,
+  .ticket-bar-view-btn,
+  .day-chip,
+  .overview-compact-btn,
+  .travel-segment-add-btn,
+  .travel-segment-delete-btn
+):hover {
+  transform: translateY(-1px) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+html[data-theme="toss"] :is(
+  .submit-button,
+  .icon-button,
+  .text-button,
+  .row-action,
+  .summary-btn,
+  .ticket-toggle-btn,
+  .ticket-bar-view-btn,
+  .day-chip,
+  .overview-compact-btn,
+  .travel-segment-add-btn,
+  .travel-segment-delete-btn
+):active {
+  transform: scale(0.98) !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] :is(.text-button.danger, .settings-account-actions .danger, .settings-storage-actions .danger, #deleteCurrentTripButton, #ticketFileResetBtn, .travel-segment-delete-btn) {
+  color: var(--danger) !important;
+  background: #fff0f3 !important;
+}
+
+html[data-theme="toss"] :is(.mode-toggle, .segmented, .new-trip-mode-toggle, .trip-mode-status) {
+  background: #eef1f4 !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  padding: 3px !important;
+}
+
+html[data-theme="toss"] :is(.mode-toggle button, .segmented button, .new-trip-mode-toggle button, .trip-mode-status span) {
+  color: var(--muted) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  font-family: var(--font) !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="toss"] :is(.mode-toggle button.active, .segmented button.active, .new-trip-mode-toggle button.active, .trip-mode-status span.active) {
+  color: var(--accent) !important;
+  background: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(25, 31, 40, 0.08) !important;
+}
+
+html[data-theme="toss"] .brand-mark {
+  color: #ffffff !important;
+  background: var(--accent) !important;
+  border: 0 !important;
+  border-radius: 16px !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] .brand-mark svg {
+  stroke: #ffffff !important;
+}
+
+html[data-theme="toss"] .nav-item {
+  color: var(--muted) !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="toss"] .nav-item.active,
+html[data-theme="toss"] .nav-item:hover {
+  color: var(--accent) !important;
+}
+
+html[data-theme="toss"] .nav-item :is(svg, .nav-icon) {
+  stroke: currentColor !important;
+}
+
+html[data-theme="toss"] .nav-item.active::after {
+  background: var(--accent) !important;
+  border-radius: 999px !important;
+  height: 3px !important;
+}
+
+html[data-theme="toss"] :is(.budget-dashboard, .bar-chart-wrap, .daily-trend-summary, .report-donut-panel, .itinerary-duration-chart-wrap, .packing-shelf, .suitcase-backpack-area, .time-block-empty-overview, .settings-account-form, .settings-privacy-options, .settings-storage-actions, .settings-report-actions) {
+  background: var(--surface-soft) !important;
+  border: 1px solid rgba(229, 232, 235, 0.72) !important;
+  border-radius: 18px !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] :is(.budget-bar-wrap, .summary-trip-progress-track, .progress-bar-track, .duration-progress-wrap, .checklist-progress-box .progress-bar-track, .packing-progress-info .progress-bar-track) {
+  background: #e5e8eb !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+
+html[data-theme="toss"] :is(.budget-bar-fill, .summary-trip-progress-fill, .progress-bar-fill, .duration-progress-fill, .checklist-progress-box .progress-bar-fill, .packing-progress-info .progress-bar-fill) {
+  background: var(--accent) !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: inherit !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] :is(.budget-sticker, .stat-sticker, .tag, .expense-category-chip, .itinerary-card-theme-badge, .overview-compact-badge, .travel-badge-item, .detail-status, .summary-trip-duration-badge, .time-badge, .cost-badge, .itinerary-card-hint) {
+  border: 0 !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  font-family: var(--font) !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="toss"] :is(.tag, .expense-category-chip, .itinerary-card-theme-badge, .overview-compact-badge, .travel-badge-item, .summary-trip-duration-badge, .itinerary-card-hint) {
+  color: var(--muted) !important;
+  background: #f2f4f6 !important;
+}
+
+html[data-theme="toss"] :is(.time-badge, .sticker-blue, .detail-status.neutral) {
+  color: var(--accent) !important;
+  background: var(--accent-blue) !important;
+}
+
+html[data-theme="toss"] :is(.cost-badge, .budget-sticker.safe, .detail-status.success) {
+  color: var(--success) !important;
+  background: var(--accent-mint) !important;
+}
+
+html[data-theme="toss"] :is(.budget-sticker.warning, .detail-status.warning) {
+  color: var(--warning) !important;
+  background: var(--accent-orange) !important;
+}
+
+html[data-theme="toss"] :is(.insight-sticker, .max-expense, .avg-expense) {
+  background: #ffffff !important;
+  border: 1px solid rgba(229, 232, 235, 0.76) !important;
+  border-radius: 18px !important;
+  box-shadow: var(--shadow-sm) !important;
+  padding: 18px !important;
+}
+
+html[data-theme="toss"] .insight-sticker p {
+  color: var(--muted-2) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+}
+
+html[data-theme="toss"] .insight-sticker h4 {
+  color: var(--text) !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+}
+
+html[data-theme="toss"] .insight-sticker strong {
+  color: var(--accent) !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+}
+
+html[data-theme="toss"] .dashboard-card {
+  gap: 14px !important;
+}
+
+html[data-theme="toss"] .dashboard-card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+html[data-theme="toss"] .summary-btn {
+  min-height: 76px !important;
+}
+
+html[data-theme="toss"] .summary-btn .btn-label {
+  color: var(--muted) !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="toss"] .timeline-day-block::before,
+html[data-theme="toss"] .itinerary-list::before {
+  background: #e5e8eb !important;
+}
+
+html[data-theme="toss"] :is(.timeline-day-checkbox, .timeline-dot-node, .clock-current-knob, .clock-center-disc, .travel-connector-dot) {
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 0 0 2px #e5e8eb !important;
+}
+
+html[data-theme="toss"] :is(.timeline-dot-node.dot-checked, .day-label, .packing-item-tag.checked, .packing-quick-item input:checked + .checkbox-custom) {
+  color: #ffffff !important;
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+html[data-theme="toss"] .itinerary-list-day-header {
+  color: var(--accent) !important;
+  background: var(--accent-blue) !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] .itinerary-card,
+html[data-theme="toss"] .itinerary-card-overview-compact {
+  background: #ffffff !important;
+  border: 1px solid rgba(229, 232, 235, 0.76) !important;
+  border-radius: 20px !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+html[data-theme="toss"] .itinerary-card:hover,
+html[data-theme="toss"] .itinerary-card-overview-compact:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+html[data-theme="toss"] .itinerary-card::before,
+html[data-theme="toss"] .itinerary-card-overview-compact::before {
+  background: var(--accent) !important;
+  border: 3px solid #ffffff !important;
+  box-shadow: 0 0 0 2px rgba(49, 130, 246, 0.12) !important;
+}
+
+html[data-theme="toss"] :is(.itinerary-memo-shell, .ticket-collapsible-section, .ticket-file-name-display, .travel-inner, .travel-inner-edit, .travel-segment-row, .travel-time-input-group, .travel-cost-input-group) {
+  background: var(--surface-soft) !important;
+  border: 1px solid rgba(229, 232, 235, 0.9) !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] :is(.travel-inner, .travel-inner-edit):hover {
+  background: #ffffff !important;
+  box-shadow: var(--shadow-sm) !important;
+  transform: translateY(-1px) !important;
+}
+
+html[data-theme="toss"] :is(.travel-duration-input, .travel-cost-input, .inline-endtime-input, .inline-memo-input, .travel-memo-input) {
+  color: var(--text) !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] .travel-trans-select {
+  background-color: #ffffff !important;
+  border: 1px solid transparent !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] .travel-segment-add-btn {
+  color: #ffffff !important;
+  background: var(--accent) !important;
+}
+
+html[data-theme="toss"] .itinerary-card-ticket-bar {
+  color: var(--text) !important;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f9ff 100%) !important;
+  border: 1px solid rgba(49, 130, 246, 0.18) !important;
+  border-radius: 16px !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] .itinerary-card-ticket-bar::before,
+html[data-theme="toss"] .itinerary-card-ticket-bar::after {
+  display: none !important;
+}
+
+html[data-theme="toss"] .ticket-bar-view-btn {
+  color: var(--accent) !important;
+  background: var(--accent-blue) !important;
+}
+
+html[data-theme="toss"] :is(table, thead, tbody, tr, th, td) {
+  border-left: 0 !important;
+  border-right: 0 !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] th {
+  color: var(--muted-2) !important;
+  background: var(--surface-soft) !important;
+  border-bottom: 1px solid var(--line) !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+}
+
+html[data-theme="toss"] td {
+  border-bottom: 1px solid #f2f4f6 !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="toss"] :is(.expense-record-card, .settlement-source-card, .history-record-card) {
+  background: #ffffff !important;
+  border: 1px solid rgba(229, 232, 235, 0.76) !important;
+  border-radius: 16px !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] :is(.custom-select-menu, .custom-date-panel, .custom-time-panel, .place-search-results, .manual-address-panel, .new-trip-country-list) {
+  background: #ffffff !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 16px !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+html[data-theme="toss"] :is(.calendar-day, .time-dropdown-option, .custom-select-option, .new-trip-country-option) {
+  border: 0 !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="toss"] :is(.calendar-day:hover, .time-dropdown-option:hover, .custom-select-option:hover, .new-trip-country-option:hover) {
+  color: var(--accent) !important;
+  background: var(--accent-blue) !important;
+}
+
+html[data-theme="toss"] .calendar-day.selected {
+  color: #ffffff !important;
+  background: var(--accent) !important;
+  box-shadow: 0 8px 18px rgba(49, 130, 246, 0.22) !important;
+}
+
+html[data-theme="toss"] :is(.clock-visual-card, .clock-face, .time-block-grid-wrap) {
+  background: #ffffff !important;
+  border-color: rgba(229, 232, 235, 0.76) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+html[data-theme="toss"] :is(.clock-hour-text, .clock-center-caption, .clock-center-label) {
+  fill: var(--muted) !important;
+  color: var(--muted) !important;
+}
+
+html[data-theme="toss"] :is(.donut-depth, .donut-empty-shadow, .donut-base-shadow, .donut-hole-shadow) {
+  display: none !important;
+}
+
+html[data-theme="toss"] .map-frame-wrap {
+  border: 1px solid rgba(229, 232, 235, 0.76) !important;
+  border-radius: 20px !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+
+html[data-theme="toss"] .section-divider {
+  border-color: var(--line) !important;
+}
+
+html[data-theme="toss"] :is(.delete, .danger) svg {
+  stroke: currentColor !important;
+}
+
+html[data-theme="toss"] * {
+  text-shadow: none !important;
+}
+
+@media (max-width: 820px) {
+  html[data-theme="toss"] .app-shell {
+    padding: 16px 14px 84px !important;
+  }
+
+  html[data-theme="toss"] .topbar {
+    gap: 8px !important;
+  }
+
+  html[data-theme="toss"] :is(
+    .planner-panel,
+    .entry-panel,
+    .summary-panel,
+    .itinerary-main-panel,
+    .map-panel,
+    .itinerary-workspace,
+    .itinerary-visual-card,
+    .packing-suitcase-card,
+    .stats-card,
+    .dashboard-card
+  ) {
+    padding: 18px !important;
+    border-radius: 20px !important;
+  }
+
+  html[data-theme="toss"] .report-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
   }
 }

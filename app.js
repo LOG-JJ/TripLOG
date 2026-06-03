@@ -1,5 +1,5 @@
 (() => {
-  const scriptVersion = "header-dropdown-fit-20260603-1";
+  const scriptVersion = "toss-hardening-20260603-1";
   const scriptFiles = [
     "core/namespace.js",
     "core/config.js",
