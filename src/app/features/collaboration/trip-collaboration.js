@@ -11,6 +11,7 @@
   const INVITE_PARAM = "invite";
   const INVITE_EXPIRES_DAYS = 14;
   const AUTH_PASSWORD_MIN_LENGTH = 8;
+  const MEMBER_SYNC_INTERVAL_MS = 15000;
 
   let setupComplete = false;
   let supabaseClient = null;
@@ -24,6 +25,8 @@
   let authGateBusy = false;
   let passwordRecoveryRequested = false;
   let authStatusOverride = null;
+  let memberSyncIntervalId = null;
+  let memberSyncInFlight = false;
 
   function readJsonStorage(key, fallback) {
     try {
@@ -82,6 +85,7 @@
     authListenerAttached = false;
     currentSession = null;
     supabaseStatusOverride = null;
+    stopSupabaseMembersSync();
   }
 
   function loadSupabaseScript() {
@@ -149,14 +153,30 @@
       || message.includes("jwt");
   }
 
+  function getEmailDisplayFallback(email) {
+    return String(email || "").split("@")[0] || "나";
+  }
+
+  function isCustomDisplayName(name, email) {
+    const normalizedName = String(name || "").trim();
+    if (!normalizedName) return false;
+    return normalizedName.toLowerCase() !== getEmailDisplayFallback(email).toLowerCase();
+  }
+
   function getSessionAccount() {
     const user = currentSession?.user;
     if (!user) return null;
     const metadata = user.user_metadata || {};
+    const email = user.email || "";
+    const storedAccount = getStoredAccount();
+    const storedName = storedAccount?.email === email && isCustomDisplayName(storedAccount.displayName, email)
+      ? storedAccount.displayName
+      : "";
+    const metadataName = metadata.full_name || metadata.display_name || metadata.name || "";
     return {
       id: user.id,
-      email: user.email || "",
-      displayName: metadata.full_name || metadata.name || user.email?.split("@")[0] || "나",
+      email,
+      displayName: storedName || metadataName || getEmailDisplayFallback(email),
       provider: "supabase",
     };
   }
@@ -165,19 +185,29 @@
     return getSessionAccount() || getStoredAccount();
   }
 
+  function saveStoredAccount(account) {
+    const normalizedEmail = String(account?.email || "").trim();
+    const normalizedName = String(account?.displayName || "").trim() || getEmailDisplayFallback(normalizedEmail);
+    const previous = getStoredAccount();
+    const savedAccount = {
+      id: account?.id || previous?.id || `local_${Date.now()}`,
+      email: normalizedEmail,
+      displayName: normalizedName,
+      provider: account?.provider || "local",
+    };
+    writeJsonStorage(ACCOUNT_STORAGE_KEY, savedAccount);
+    applyOwnerAccount(savedAccount);
+    return savedAccount;
+  }
+
   function saveLocalAccount({ email, displayName }) {
     const normalizedEmail = String(email || "").trim();
-    const normalizedName = String(displayName || "").trim() || normalizedEmail.split("@")[0] || "나";
-    const previous = getStoredAccount();
-    const account = {
-      id: previous?.id || `local_${Date.now()}`,
+    const normalizedName = String(displayName || "").trim() || getEmailDisplayFallback(normalizedEmail);
+    return saveStoredAccount({
       email: normalizedEmail,
       displayName: normalizedName,
       provider: "local",
-    };
-    writeJsonStorage(ACCOUNT_STORAGE_KEY, account);
-    applyOwnerAccount(account);
-    return account;
+    });
   }
 
   function clearLocalAccount() {
@@ -213,6 +243,7 @@
   async function syncSupabaseSession() {
     if (!hasSupabaseConfig()) {
       currentSession = null;
+      stopSupabaseMembersSync();
       renderTripCollaboration();
       return;
     }
@@ -235,9 +266,14 @@
           } else if (event === "SIGNED_OUT") {
             passwordRecoveryRequested = false;
             authGateMode = "login";
+            stopSupabaseMembersSync();
           }
           const account = getSessionAccount();
-          if (account) applyOwnerAccount(account);
+          if (account) {
+            applyOwnerAccount(account);
+            startSupabaseMembersSync();
+            syncSupabaseTripMembers({ render: true, quiet: true });
+          }
           renderTripCollaboration();
           if (event === "SIGNED_IN") refreshInviteAfterAuth();
         });
@@ -259,9 +295,16 @@
         };
       }
       const sessionAccount = getSessionAccount();
-      if (sessionAccount) applyOwnerAccount(sessionAccount);
+      if (sessionAccount) {
+        applyOwnerAccount(sessionAccount);
+        await syncSupabaseTripMembers({ quiet: true });
+        startSupabaseMembersSync();
+      } else {
+        stopSupabaseMembersSync();
+      }
     } catch (error) {
       currentSession = null;
+      stopSupabaseMembersSync();
       supabaseStatusOverride = {
         message: `Supabase 세션 확인 실패: ${error.message}`,
         tone: "warning",
@@ -313,6 +356,106 @@
     });
 
     return members;
+  }
+
+  function normalizeSupabaseMember(row) {
+    return {
+      id: row.user_id,
+      name: row.display_name || getEmailDisplayFallback(row.email),
+      email: row.email || "",
+      role: row.role || "member",
+      status: row.status || "accepted",
+      joinedAt: row.joined_at || "",
+      source: "supabase",
+    };
+  }
+
+  function mergeSupabaseMembers(rows) {
+    const collaboration = getCollaboration();
+    const previousSnapshot = JSON.stringify({
+      ownerId: collaboration.ownerId,
+      ownerName: collaboration.ownerName,
+      ownerEmail: collaboration.ownerEmail,
+      members: collaboration.members || [],
+    });
+
+    const acceptedRows = (rows || []).filter((row) => row.status === "accepted");
+    const ownerRow = acceptedRows.find((row) => row.role === "owner");
+    if (ownerRow) {
+      collaboration.ownerId = ownerRow.user_id || collaboration.ownerId;
+      collaboration.ownerName = ownerRow.display_name || collaboration.ownerName || "나";
+      collaboration.ownerEmail = ownerRow.email || collaboration.ownerEmail || "";
+    }
+
+    const remoteMembers = acceptedRows
+      .filter((row) => row.role !== "owner")
+      .map(normalizeSupabaseMember);
+    const remoteKeys = new Set(remoteMembers.map((member) => getMemberKey(member)));
+    const localMembers = Array.isArray(collaboration.members) ? collaboration.members : [];
+    const preservedMembers = localMembers.filter((member) => {
+      const key = getMemberKey(member);
+      return member.source !== "supabase" && !remoteKeys.has(key);
+    });
+    collaboration.members = [...preservedMembers, ...remoteMembers];
+
+    const nextSnapshot = JSON.stringify({
+      ownerId: collaboration.ownerId,
+      ownerName: collaboration.ownerName,
+      ownerEmail: collaboration.ownerEmail,
+      members: collaboration.members || [],
+    });
+    return previousSnapshot !== nextSnapshot;
+  }
+
+  async function syncSupabaseTripMembers({ render = false, quiet = true } = {}) {
+    if (!hasSupabaseConfig() || !isSignedIn() || memberSyncInFlight) return false;
+    memberSyncInFlight = true;
+    try {
+      const client = await getSupabaseClient();
+      const { data: tripRow, error: tripError } = await client
+        .from("triplog_trips")
+        .select("id")
+        .eq("app_trip_id", state.id)
+        .maybeSingle();
+      if (tripError) throw tripError;
+      if (!tripRow?.id) return false;
+
+      const { data: memberRows, error: membersError } = await client
+        .from("triplog_trip_members")
+        .select("user_id, email, display_name, role, status, joined_at")
+        .eq("trip_id", tripRow.id)
+        .order("joined_at", { ascending: true });
+      if (membersError) throw membersError;
+
+      const changed = mergeSupabaseMembers(memberRows || []);
+      if (changed) saveStateSilently();
+      if (render && changed) renderTripCollaboration();
+      return changed;
+    } catch (error) {
+      if (!quiet) {
+        supabaseStatusOverride = {
+          message: `멤버 동기화 실패: ${error.message}`,
+          tone: "warning",
+        };
+        if (render) renderTripCollaboration();
+      }
+      return false;
+    } finally {
+      memberSyncInFlight = false;
+    }
+  }
+
+  function startSupabaseMembersSync() {
+    if (memberSyncIntervalId || !isSignedIn()) return;
+    memberSyncIntervalId = window.setInterval(() => {
+      syncSupabaseTripMembers({ render: true, quiet: true });
+    }, MEMBER_SYNC_INTERVAL_MS);
+  }
+
+  function stopSupabaseMembersSync() {
+    if (!memberSyncIntervalId) return;
+    window.clearInterval(memberSyncIntervalId);
+    memberSyncIntervalId = null;
   }
 
   function getMemberInitial(member) {
@@ -1051,16 +1194,66 @@
     }
   }
 
-  function saveProfileFromSettings() {
+  async function updateCurrentSupabaseMemberProfile(account) {
+    if (!account?.id || !hasSupabaseConfig()) return;
+    const client = await getSupabaseClient();
+    const { data: tripRow, error: tripError } = await client
+      .from("triplog_trips")
+      .select("id")
+      .eq("app_trip_id", state.id)
+      .maybeSingle();
+    if (tripError) throw tripError;
+    if (!tripRow?.id) return;
+
+    const { error: memberError } = await client
+      .from("triplog_trip_members")
+      .update({
+        email: account.email,
+        display_name: account.displayName,
+      })
+      .eq("trip_id", tripRow.id)
+      .eq("user_id", account.id);
+    if (memberError) throw memberError;
+  }
+
+  async function saveProfileFromSettings() {
     const email = els.settingsAccountEmailInput?.value.trim();
     const displayName = els.settingsAccountNameInput?.value.trim();
     if (!displayName && !email) {
       setText(els.settingsAccountStatus, "표시 이름 또는 이메일을 입력해 주세요.");
       return;
     }
-    saveLocalAccount({ email, displayName });
-    renderTripCollaboration();
-    setText(els.settingsAccountStatus, "이 기기 프로필을 저장했습니다.");
+
+    try {
+      const sessionAccount = getSessionAccount();
+      if (sessionAccount && hasSupabaseConfig()) {
+        const nextName = displayName || sessionAccount.displayName || getEmailDisplayFallback(sessionAccount.email);
+        const client = await getSupabaseClient();
+        const { data, error } = await client.auth.updateUser({
+          data: {
+            display_name: nextName,
+            full_name: nextName,
+            name: nextName,
+          },
+        });
+        if (error) throw error;
+        if (data?.user) currentSession = { ...currentSession, user: data.user };
+
+        const nextAccount = getSessionAccount();
+        saveStoredAccount(nextAccount);
+        await updateCurrentSupabaseMemberProfile(nextAccount);
+        await syncSupabaseTripMembers({ quiet: true });
+        renderTripCollaboration();
+        setText(els.settingsAccountStatus, "Supabase 프로필을 저장했습니다.");
+        return;
+      }
+
+      saveLocalAccount({ email, displayName });
+      renderTripCollaboration();
+      setText(els.settingsAccountStatus, "이 기기 프로필을 저장했습니다.");
+    } catch (error) {
+      setText(els.settingsAccountStatus, `프로필 저장 실패: ${error.message}`);
+    }
   }
 
   async function logoutTripAccount() {
@@ -1074,6 +1267,7 @@
     }
     clearLocalAccount();
     currentSession = null;
+    stopSupabaseMembersSync();
     renderTripCollaboration();
   }
 
@@ -1216,7 +1410,8 @@
       ? tripRow.travel_state
       : { id: invite.app_trip_id, tripName: invite.trip_name };
     window.TripLog.persistence.stateStorage.importSharedTripSnapshot(snapshot, { makeActive: true });
-    addAcceptedMemberToState(sessionAccount);
+    saveStoredAccount(account);
+    addAcceptedMemberToState(account);
     saveAndRender();
   }
 
@@ -1246,7 +1441,14 @@
       return;
     }
 
-    const account = getSessionAccount() || saveLocalAccount({ email, displayName });
+    const sessionAccount = getSessionAccount();
+    const account = sessionAccount
+      ? {
+        ...sessionAccount,
+        displayName: displayName || sessionAccount.displayName,
+        email: sessionAccount.email || email,
+      }
+      : saveLocalAccount({ email, displayName });
     try {
       if (pendingInviteRecord.source === "login_required") {
         setAuthGateMode("login");
@@ -1261,6 +1463,7 @@
       }
       if (pendingInviteRecord.source === "supabase") {
         await acceptSupabaseInvite(account);
+        await syncSupabaseTripMembers({ quiet: true });
       } else {
         acceptLocalInvite(account);
       }
