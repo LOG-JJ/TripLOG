@@ -516,6 +516,22 @@ button.brand-mark {
   box-shadow: var(--shadow-sm);
 }
 
+.brand-mark.is-dirty {
+  background: var(--accent-mint);
+}
+
+.brand-mark.is-syncing {
+  background: var(--accent-blue);
+}
+
+.brand-mark.is-synced {
+  background: var(--accent-mint);
+}
+
+.brand-mark.is-warning {
+  background: var(--accent-pink);
+}
+
 .brand-mark:active {
   transform: translate(1px, 1px);
   box-shadow: 0 0 0 #000;
@@ -556,6 +572,10 @@ svg {
 
 .brand-mark.icon-flip .brand-icon.active {
   animation: iconPageFlip 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.brand-mark.is-syncing .brand-icon.active {
+  animation: syncIconSpin 0.8s linear infinite;
 }
 
 .brand-copy {
@@ -1438,6 +1458,15 @@ main {
   100% {
     opacity: 1;
     transform: translateZ(0) rotateY(0deg) scale(1);
+  }
+}
+
+@keyframes syncIconSpin {
+  0% {
+    transform: translateZ(0) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translateZ(0) rotate(360deg) scale(1);
   }
 }
 

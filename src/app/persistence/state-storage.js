@@ -301,6 +301,9 @@ function saveStateSilently() {
 
     // Legacy support
     localStorage.setItem(LEGACY_STORAGE_KEY, JSON.stringify(state));
+    window.dispatchEvent(new CustomEvent("triplog:state-saved", {
+      detail: { tripId: state.id },
+    }));
   } catch (e) {
     console.error("Save failed:", e);
   }

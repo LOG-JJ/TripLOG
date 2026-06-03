@@ -151,12 +151,19 @@ create policy "trip members can read trips"
   );
 
 drop policy if exists "trip owners can update trips" on public.triplog_trips;
-create policy "trip owners can update trips"
+drop policy if exists "trip members can update trips" on public.triplog_trips;
+create policy "trip members can update trips"
   on public.triplog_trips
   for update
   to authenticated
-  using (owner_id = (select auth.uid()))
-  with check (owner_id = (select auth.uid()));
+  using (
+    owner_id = (select auth.uid())
+    or private.triplog_is_trip_member(id)
+  )
+  with check (
+    owner_id = (select auth.uid())
+    or private.triplog_is_trip_member(id)
+  );
 
 drop policy if exists "trip owners can delete trips" on public.triplog_trips;
 create policy "trip owners can delete trips"

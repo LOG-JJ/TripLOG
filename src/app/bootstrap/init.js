@@ -345,7 +345,6 @@ function init() {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && !els.historyModal.hidden) closeHistoryModal();
   });
-  els.itineraryPageButton.addEventListener("click", () => setActivePage(activePage === "budget" ? "itinerary" : "budget"));
   els.backToBudgetButton.addEventListener("click", () => setActivePage("budget"));
   els.itineraryForm.addEventListener("submit", handleItinerarySubmit);
   els.itineraryDaySelect.addEventListener("change", () => {

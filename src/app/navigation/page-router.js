@@ -91,10 +91,6 @@ function syncPageVisibility() {
 }
 
 function updatePageChrome({ animateBrand = false } = {}) {
-  const isItinerary = activePage === "itinerary";
-  els.itineraryPageButton.classList.toggle("active", isItinerary);
-  els.itineraryPageButton.title = isItinerary ? "가계부로 돌아가기" : "여행 일정 보기";
-  els.itineraryPageButton.setAttribute("aria-label", els.itineraryPageButton.title);
   [els.domesticModeButton, els.overseasModeButton].forEach((statusItem) => {
     if (statusItem) statusItem.tabIndex = -1;
   });
@@ -104,7 +100,6 @@ function updatePageChrome({ animateBrand = false } = {}) {
     item.classList.toggle("active", item.dataset.target === activePage);
   });
 
-  syncBrandIconWithActiveNav();
   updateBrandText({ animate: animateBrand });
 }
 
