@@ -1,5 +1,5 @@
 (() => {
-  const scriptVersion = "auth-callback-20260603-1";
+  const scriptVersion = "auth-error-copy-20260603-1";
   const scriptFiles = [
     { path: "../../vendor/supabase-js-2.107.0.min.js", optional: true },
     "core/namespace.js",

@@ -471,6 +471,12 @@
   function getFriendlyAuthError(error) {
     const message = String(error?.message || "인증에 실패했습니다.");
     const normalized = message.toLowerCase();
+    if (normalized.includes("email rate limit exceeded") || normalized.includes("over_email_send_rate_limit")) {
+      return "확인 이메일 요청이 너무 잦습니다. 잠시 후 다시 시도해 주세요. 이미 가입했다면 회원가입이 아니라 로그인으로 들어가 주세요.";
+    }
+    if (normalized.includes("email link is invalid or has expired") || normalized.includes("one-time token")) {
+      return "확인 링크가 만료되었거나 이미 사용되었습니다.";
+    }
     if (normalized.includes("invalid login credentials")) return "이메일 또는 비밀번호를 확인해 주세요.";
     if (normalized.includes("email not confirmed")) return "가입 확인 이메일을 먼저 열어 주세요.";
     if (normalized.includes("signup is disabled")) return "Supabase에서 회원가입이 꺼져 있습니다.";
