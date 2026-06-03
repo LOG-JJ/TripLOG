@@ -123,6 +123,21 @@ function getFallbackState(tripId = "trip_default") {
     itineraryItems: [],
     packingList: typeof getDefaultPackingList === "function" ? getDefaultPackingList() : [],
     companions: [],
+    collaboration: {
+      ownerId: "",
+      ownerName: "나",
+      ownerEmail: "",
+      inviteToken: "",
+      lastInviteUrl: "",
+      members: [],
+      pendingInvites: [],
+      privacy: {
+        shareItinerary: true,
+        shareExpenses: true,
+        showMemberEmail: false,
+        allowInviteRequests: true,
+      },
+    },
     settlement: {
       sourceId: "current",
       splitMode: "equal",
@@ -193,6 +208,7 @@ function loadState() {
       itineraryItems: cleanedActiveItineraryItems,
       packingList: Array.isArray(activeTrip.packingList) ? activeTrip.packingList : (typeof getDefaultPackingList === "function" ? getDefaultPackingList() : []),
       companions: Array.isArray(activeTrip.companions) ? activeTrip.companions : [],
+      collaboration: normalizeCollaborationSettings(activeTrip.collaboration),
       settlement: normalizeSettlementSettings(activeTrip.settlement),
     };
   } catch {
@@ -233,6 +249,39 @@ function normalizeSettlementSettings(value = {}) {
   };
 }
 
+function normalizeCollaborationSettings(value = {}) {
+  const source = value && typeof value === "object" ? value : {};
+  const privacy = source.privacy && typeof source.privacy === "object" ? source.privacy : {};
+  return {
+    ownerId: typeof source.ownerId === "string" ? source.ownerId : "",
+    ownerName: typeof source.ownerName === "string" && source.ownerName.trim() ? source.ownerName.trim() : "나",
+    ownerEmail: typeof source.ownerEmail === "string" ? source.ownerEmail : "",
+    inviteToken: typeof source.inviteToken === "string" ? source.inviteToken : "",
+    lastInviteUrl: typeof source.lastInviteUrl === "string" ? source.lastInviteUrl : "",
+    members: Array.isArray(source.members)
+      ? source.members
+          .filter((member) => member && typeof member === "object")
+          .map((member) => ({
+            id: typeof member.id === "string" ? member.id : "",
+            name: typeof member.name === "string" && member.name.trim() ? member.name.trim() : "여행 멤버",
+            email: typeof member.email === "string" ? member.email : "",
+            role: member.role === "owner" ? "owner" : "member",
+            status: member.status === "pending" ? "pending" : "accepted",
+            joinedAt: typeof member.joinedAt === "string" ? member.joinedAt : "",
+          }))
+      : [],
+    pendingInvites: Array.isArray(source.pendingInvites)
+      ? source.pendingInvites.filter((invite) => invite && typeof invite === "object")
+      : [],
+    privacy: {
+      shareItinerary: privacy.shareItinerary !== false,
+      shareExpenses: privacy.shareExpenses !== false,
+      showMemberEmail: privacy.showMemberEmail === true,
+      allowInviteRequests: privacy.allowInviteRequests !== false,
+    },
+  };
+}
+
 function saveAndRender() {
   saveStateSilently();
   render();
@@ -244,6 +293,7 @@ function saveStateSilently() {
     const activeTripId = localStorage.getItem(ACTIVE_TRIP_ID_KEY);
     const theme = normalizeThemeName(state.theme);
     state.theme = theme;
+    state.collaboration = normalizeCollaborationSettings(state.collaboration);
 
     trips = trips.map(t => t.id === activeTripId ? { ...t, ...state } : t);
     localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
@@ -283,8 +333,11 @@ function switchTrip(tripId) {
     }
   }
   Object.assign(state, {
+    ...getFallbackState(tripId),
     ...targetTrip,
     itineraryItems: cleanSavedItineraryItems(targetTrip.itineraryItems),
+    collaboration: normalizeCollaborationSettings(targetTrip.collaboration),
+    settlement: normalizeSettlementSettings(targetTrip.settlement),
   });
   state.theme = currentTheme;
 
@@ -328,6 +381,7 @@ function createNewTrip({ tripName, country, countryCode, city, travelMode, start
     itineraryItems: [],
     packingList: typeof getDefaultPackingList === "function" ? getDefaultPackingList() : [],
     companions: [],
+    collaboration: normalizeCollaborationSettings({}),
   };
 
   trips.push(newTrip);
@@ -358,6 +412,33 @@ function deleteTrip(tripId) {
   }
 }
 
+function importSharedTripSnapshot(snapshot = {}, { makeActive = true } = {}) {
+  const importedId = typeof snapshot.id === "string" && snapshot.id
+    ? snapshot.id
+    : `trip_shared_${Date.now()}`;
+  const importedTrip = {
+    ...getFallbackState(importedId),
+    ...snapshot,
+    id: importedId,
+    entries: Array.isArray(snapshot.entries) ? snapshot.entries : [],
+    itineraryItems: cleanSavedItineraryItems(snapshot.itineraryItems),
+    packingList: Array.isArray(snapshot.packingList) ? snapshot.packingList : (typeof getDefaultPackingList === "function" ? getDefaultPackingList() : []),
+    companions: Array.isArray(snapshot.companions) ? snapshot.companions : [],
+    collaboration: normalizeCollaborationSettings(snapshot.collaboration),
+    settlement: normalizeSettlementSettings(snapshot.settlement),
+  };
+  let trips = getTrips();
+  const existingIndex = trips.findIndex((trip) => trip.id === importedTrip.id);
+  if (existingIndex >= 0) {
+    trips[existingIndex] = { ...trips[existingIndex], ...importedTrip };
+  } else {
+    trips.push(importedTrip);
+  }
+  localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
+  if (makeActive) switchTrip(importedTrip.id);
+  return importedTrip;
+}
+
 function getStateSnapshot() {
   return JSON.parse(JSON.stringify(state));
 }
@@ -367,6 +448,7 @@ function resetPersistedTravelData(nextState = {}) {
     ...getFallbackState("trip_default"),
     ...nextState,
     id: "trip_default",
+    collaboration: normalizeCollaborationSettings(nextState.collaboration),
     settlement: normalizeSettlementSettings(nextState.settlement),
   };
   localStorage.setItem(TRIPS_KEY, JSON.stringify([resetState]));
@@ -385,6 +467,7 @@ window.TripLog.register("persistence.stateStorage", {
   cleanSavedItineraryCoordinates,
   cleanSavedItineraryItems,
   normalizeSettlementSettings,
+  normalizeCollaborationSettings,
   saveAndRender,
   saveStateSilently,
   getStateSnapshot,
@@ -394,4 +477,5 @@ window.TripLog.register("persistence.stateStorage", {
   switchTrip,
   createNewTrip,
   deleteTrip,
+  importSharedTripSnapshot,
 });

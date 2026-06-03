@@ -319,6 +319,7 @@ function init() {
   if (typeof setupMapGeocodingSettings === "function") {
     setupMapGeocodingSettings();
   }
+  window.TripLog.features?.collaboration?.tripCollaboration?.setupTripCollaboration?.();
   els.amountInput.addEventListener("input", () => {
     if (state.travelMode === "overseas") updateConvertedAmount();
     updateLodgingPreview();

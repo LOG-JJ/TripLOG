@@ -7,6 +7,7 @@ function render() {
   syncPageVisibility();
   renderModeControls();
   if (typeof renderStorageStatus === "function") renderStorageStatus();
+  window.TripLog.features?.collaboration?.tripCollaboration?.renderTripCollaboration?.();
   window.TripLog.features.settings.themeToggle.renderThemeControls();
   els.tripNameInput.value = state.tripName;
   els.startDateInput.value = state.startDate;

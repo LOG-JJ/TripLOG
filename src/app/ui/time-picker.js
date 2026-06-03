@@ -35,16 +35,20 @@ function setupCustomTimePicker(input) {
 
   const panel = document.createElement("div");
   panel.className = "custom-time-panel";
+  panel.id = input.id ? `${input.id}Panel` : `customTimePanel${customTimePickers.size + 1}`;
   panel.setAttribute("role", "dialog");
   panel.hidden = true;
+  button.setAttribute("aria-controls", panel.id);
 
   input.parentNode.insertBefore(shell, input);
   shell.appendChild(input);
   button.append(value, icon);
-  shell.append(button, panel);
+  shell.append(button);
+  (document.body || shell).appendChild(panel);
   input.classList.add("native-time-hidden");
 
   customTimePickers.set(input, { shell, button, value, panel });
+  ensureCustomTimePickerViewportListeners();
 
   // Open panel on input focus
   value.addEventListener("focus", () => {
@@ -153,10 +157,32 @@ function setupCustomTimePicker(input) {
     handleTimePickerKeydown(event, input);
   });
   document.addEventListener("click", (event) => {
-    if (!shell.contains(event.target)) closeCustomTimePicker(input);
+    if (!shell.contains(event.target) && !panel.contains(event.target)) {
+      closeCustomTimePicker(input);
+    }
   });
 
   syncCustomTimePicker(input);
+}
+
+function ensureCustomTimePickerViewportListeners() {
+  if (ensureCustomTimePickerViewportListeners.isAttached) return;
+  window.addEventListener("resize", scheduleOpenTimePanelAlignment, { passive: true });
+  window.addEventListener("orientationchange", scheduleOpenTimePanelAlignment, { passive: true });
+  window.addEventListener("scroll", scheduleOpenTimePanelAlignment, { capture: true, passive: true });
+  ensureCustomTimePickerViewportListeners.isAttached = true;
+}
+
+function scheduleOpenTimePanelAlignment() {
+  if (scheduleOpenTimePanelAlignment.frame) return;
+  scheduleOpenTimePanelAlignment.frame = requestAnimationFrame(() => {
+    scheduleOpenTimePanelAlignment.frame = 0;
+    customTimePickers.forEach((control, input) => {
+      if (!control.panel.hidden) {
+        alignCustomTimePanel(input);
+      }
+    });
+  });
 }
 
 function syncCustomTimePicker(input) {
@@ -211,6 +237,9 @@ function closeCustomTimePicker(input, { commit = true } = {}) {
   control.panel.hidden = true;
   control.panel.style.removeProperty("--time-panel-shift-x");
   control.panel.style.removeProperty("--time-panel-shift-y");
+  control.panel.style.removeProperty("--time-panel-left");
+  control.panel.style.removeProperty("--time-panel-top");
+  control.panel.style.removeProperty("--time-panel-width");
   control.button.classList.remove("open");
   control.button.setAttribute("aria-expanded", "false");
   setTimePickerLayerState(input, false);
@@ -231,6 +260,7 @@ function setTimePickerLayerState(input, isOpen) {
 
   control.shell.classList.toggle("is-open", isOpen);
   control.shell.closest(".itinerary-card")?.classList.toggle("time-picker-active", isOpen);
+  control.shell.closest(".pretrip-purchase-panel")?.classList.toggle("time-picker-active", isOpen);
 }
 
 function alignCustomTimePanel(input) {
@@ -239,36 +269,68 @@ function alignCustomTimePanel(input) {
 
   control.panel.style.removeProperty("--time-panel-shift-x");
   control.panel.style.removeProperty("--time-panel-shift-y");
+  if (control.panel.hidden) return;
+
+  const margin = window.matchMedia("(max-width: 768px)").matches ? 12 : 14;
+  const viewportWidth = document.documentElement.clientWidth || window.innerWidth;
+  const maxPanelWidth = Math.max(240, viewportWidth - margin * 2);
+  const preferredWidth = window.matchMedia("(max-width: 768px)").matches
+    ? Math.min(252, maxPanelWidth)
+    : Math.min(260, maxPanelWidth);
+  const panelWidth = Math.min(preferredWidth, maxPanelWidth);
+
+  control.panel.style.setProperty("--time-panel-width", `${Math.round(panelWidth)}px`);
+
   requestAnimationFrame(() => {
     if (control.panel.hidden) return;
-    const margin = 12;
+    const viewportHeight = window.innerHeight;
+    const anchorRect = control.button.getBoundingClientRect();
     const rect = control.panel.getBoundingClientRect();
-    const navRect = document.querySelector(".app-navbar")?.getBoundingClientRect();
-    const usableBottom = navRect && navRect.top > 0 && navRect.top < window.innerHeight
-      ? navRect.top - 8
-      : window.innerHeight - margin;
-    let shift = 0;
-    let verticalShift = 0;
+    const { usableTop, usableBottom } = getTimePickerViewportBounds(margin);
+    const panelHeight = rect.height;
+    const gap = 8;
+    let left = anchorRect.left;
+    const actualPanelWidth = rect.width || panelWidth;
 
-    if (rect.right > window.innerWidth - margin) {
-      shift = window.innerWidth - margin - rect.right;
+    if (window.matchMedia("(max-width: 768px)").matches && actualPanelWidth > anchorRect.width) {
+      left = anchorRect.left + ((anchorRect.width - actualPanelWidth) / 2);
     }
 
-    if (rect.left + shift < margin) {
-      shift += margin - (rect.left + shift);
+    left = Math.min(left, viewportWidth - margin - actualPanelWidth);
+    left = Math.max(margin, left);
+
+    const spaceBelow = usableBottom - anchorRect.bottom - gap;
+    const spaceAbove = anchorRect.top - usableTop - gap;
+    let top = anchorRect.bottom + gap;
+
+    if (panelHeight > spaceBelow && spaceAbove > spaceBelow) {
+      top = anchorRect.top - panelHeight - gap;
     }
 
-    if (rect.bottom > usableBottom) {
-      verticalShift = usableBottom - rect.bottom;
+    const maxTop = Math.max(usableTop, usableBottom - panelHeight);
+    top = Math.max(usableTop, Math.min(top, maxTop));
+
+    if (top + panelHeight > viewportHeight - margin && spaceAbove > 0) {
+      top = Math.max(usableTop, viewportHeight - margin - panelHeight);
     }
 
-    if (rect.top + verticalShift < margin) {
-      verticalShift += margin - (rect.top + verticalShift);
-    }
-
-    control.panel.style.setProperty("--time-panel-shift-x", `${Math.round(shift)}px`);
-    control.panel.style.setProperty("--time-panel-shift-y", `${Math.round(verticalShift)}px`);
+    control.panel.style.setProperty("--time-panel-left", `${Math.round(left)}px`);
+    control.panel.style.setProperty("--time-panel-top", `${Math.round(top)}px`);
   });
+}
+
+function getTimePickerViewportBounds(margin) {
+  const viewportHeight = window.innerHeight;
+  const nav = document.querySelector(".app-navbar");
+  const navRect = nav?.getBoundingClientRect();
+  const navStyle = nav ? window.getComputedStyle(nav) : null;
+  const hasBottomNav = navStyle?.position === "fixed" && navRect?.top > (viewportHeight / 2);
+  return {
+    usableTop: margin,
+    usableBottom: hasBottomNav && navRect.top < viewportHeight
+      ? navRect.top - 8
+      : viewportHeight - margin,
+  };
 }
 
 function renderTimePicker(input) {
@@ -278,10 +340,6 @@ function renderTimePicker(input) {
   const selected = getTimePickerSelection(input.value);
 
   control.panel.replaceChildren();
-  const head = document.createElement("div");
-  head.className = "time-panel-head";
-  head.innerHTML = `<strong>${selected.hour24}:${selected.minute}</strong><span>일정 시간</span>`;
-
   const grid = document.createElement("div");
   grid.className = "time-panel-grid";
   grid.append(createTimeColumn("시", "hour", Array.from({ length: 24 }, (_, index) => {
@@ -300,17 +358,12 @@ function renderTimePicker(input) {
     <button type="button" class="time-soft-button" data-time-action="close">확인</button>
   `;
 
-  control.panel.append(head, grid, actions);
+  control.panel.append(grid, actions);
 }
 
 function createTimeColumn(label, part, values, selectedValue) {
   const column = document.createElement("div");
   column.className = "time-dropdown-field";
-
-  const title = document.createElement("span");
-  title.className = "time-dropdown-label";
-  title.textContent = label;
-  column.appendChild(title);
 
   const trigger = document.createElement("button");
   trigger.type = "button";
@@ -470,6 +523,7 @@ function refreshOpenTimePickerSelection(input) {
   const fallback = selected || getTimePickerSelection("09:00");
   updateTimeDropdownField(control.panel, "hour", fallback.hour24);
   updateTimeDropdownField(control.panel, "minute", fallback.minute);
+  alignCustomTimePanel(input);
 }
 
 function alignSelectedTimeOptions(input) {

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>여행 가계부</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css?v=settlement-share-editor-fit-20260603-1" />
+    <link rel="stylesheet" href="./styles.css?v=header-dropdown-fit-20260603-1" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   </head>
@@ -24,6 +24,19 @@
             </div>
             <p id="brandSubtitle" hidden></p>
           </div>
+        </div>
+        <div class="header-trip-members" id="headerTripMembers" aria-label="현재 여행 인원">
+          <div class="header-trip-member-stack">
+            <div class="header-trip-member-avatars" id="headerTripMemberAvatars" aria-hidden="true"></div>
+            <div class="header-trip-member-copy">
+              <span>현재 인원</span>
+              <strong id="headerTripMemberCount">1명</strong>
+              <em id="headerTripMemberNames">나</em>
+            </div>
+          </div>
+          <button class="header-trip-invite-button" id="headerTripInviteButton" type="button" title="현재 여행 초대 링크 만들기">
+            초대
+          </button>
         </div>
         <div class="header-trip-tools" aria-label="진행 중인 여행 빠른 선택">
           <label class="header-trip-select-label" for="headerTripSelect">
@@ -290,9 +303,15 @@
             <section class="pretrip-purchase-panel" id="pretripPurchasePanel" aria-labelledby="pretripPurchaseTitle" hidden>
               <div class="pretrip-purchase-head">
                 <h3 class="panel-box-title" id="pretripPurchaseTitle">사전구매</h3>
-                <div class="segmented pretrip-purchase-tabs" id="pretripPurchaseTabs" role="group" aria-label="사전구매 항목 선택">
-                  <button class="active" id="pretripFlightTab" type="button" data-pretrip-mode="flight">항공권</button>
-                  <button id="pretripHotelTab" type="button" data-pretrip-mode="hotel">숙소</button>
+                <div class="pretrip-purchase-controls">
+                  <div class="segmented pretrip-purchase-tabs" id="pretripPurchaseTabs" role="group" aria-label="사전구매 항목 선택">
+                    <button class="active" id="pretripFlightTab" type="button" data-pretrip-mode="flight">항공권</button>
+                    <button id="pretripHotelTab" type="button" data-pretrip-mode="hotel">숙소</button>
+                  </div>
+                  <button class="pretrip-options-toggle" id="pretripOptionsToggleButton" type="button" aria-expanded="true" aria-controls="pretripFlightForm pretripHotelForm" aria-label="사전구매 옵션 닫기">
+                    <span class="pretrip-options-toggle-icon" aria-hidden="true"></span>
+                    <span class="pretrip-options-toggle-text">옵션 닫기</span>
+                  </button>
                 </div>
               </div>
 
@@ -490,7 +509,7 @@
               </div>
             </div>
 
-            <div class="table-wrap">
+            <div class="table-wrap expense-records-wrap">
               <table>
                 <thead>
                   <tr>
@@ -521,16 +540,30 @@
 
             <!-- 지출 통계 카드 섹션 -->
             <div class="stats-card expense-summary-card" style="margin-top: 0;">
-              <div class="panel-box-title dashboard-card-title-box">EXPENSE SUMMARY</div>
-              <div class="stats-stickers-grid" style="display: flex; flex-direction: column; gap: 14px;">
-                <div class="stat-sticker sticker-pink">
-                  <span>단일 최대 지출</span>
+              <div class="expense-summary-head">
+                <div>
+                  <span class="expense-summary-kicker">EXPENSE SUMMARY</span>
+                </div>
+                <span class="expense-summary-state">현재 기록</span>
+              </div>
+              <div class="stats-stickers-grid">
+                <div class="stat-sticker sticker-pink stat-sticker-max">
+                  <div class="stat-sticker-top">
+                    <span>단일 최대 지출</span>
+                    <i aria-hidden="true"></i>
+                  </div>
                   <strong id="statMaxExpenseItem">-</strong>
                   <em id="statMaxExpenseAmount">0원</em>
+                  <div class="stat-sticker-track" aria-hidden="true"><span></span></div>
                 </div>
-                <div class="stat-sticker sticker-blue">
-                  <span>하루 평균 지출</span>
+                <div class="stat-sticker sticker-blue stat-sticker-average">
+                  <div class="stat-sticker-top">
+                    <span>하루 평균 지출</span>
+                    <i aria-hidden="true"></i>
+                  </div>
                   <strong id="statDailyAverage">0원</strong>
+                  <em>DAY PACE</em>
+                  <div class="stat-sticker-track" aria-hidden="true"><span></span></div>
                 </div>
               </div>
             </div>
@@ -734,6 +767,74 @@
               </div>
             </div>
             <p id="settingsCurrencyAutoStatus" class="settings-currency-auto-status">설정된 국가 기준으로 통화와 환율을 자동 매칭합니다.</p>
+          </div>
+
+          <!-- 2. 계정 및 여행 초대 -->
+          <div class="itinerary-main-panel settings-account-panel" style="margin: 0; padding: 20px;">
+            <h3 style="font-family: var(--font-heading); font-size: 16px; font-weight: 900; margin-bottom: 16px;">계정 & 여행 초대</h3>
+
+            <div class="settings-account-status" id="settingsAccountStatus">
+              로그인 상태를 확인 중입니다.
+            </div>
+
+            <div class="settings-account-form">
+              <label for="settingsAccountNameInput">
+                <span>표시 이름</span>
+                <input id="settingsAccountNameInput" type="text" maxlength="28" autocomplete="name" placeholder="예: 민수" />
+              </label>
+              <label for="settingsAccountEmailInput">
+                <span>이메일</span>
+                <input id="settingsAccountEmailInput" type="email" autocomplete="email" placeholder="you@example.com" />
+              </label>
+            </div>
+
+            <div class="settings-account-actions">
+              <button class="text-button primary" id="settingsMagicLinkButton" type="button">
+                로그인 링크
+              </button>
+              <button class="text-button" id="settingsLocalLoginButton" type="button">
+                프로필 저장
+              </button>
+              <button class="text-button danger" id="settingsLogoutButton" type="button">
+                로그아웃
+              </button>
+            </div>
+
+            <div class="settings-supabase-box">
+              <strong>Supabase 연결</strong>
+              <label for="settingsSupabaseUrlInput">
+                <span>Project URL</span>
+                <input id="settingsSupabaseUrlInput" type="url" autocomplete="off" placeholder="https://project-ref.supabase.co" />
+              </label>
+              <label for="settingsSupabaseKeyInput">
+                <span>Publishable key</span>
+                <input id="settingsSupabaseKeyInput" type="password" autocomplete="off" placeholder="sb_publishable_... 또는 anon key" />
+              </label>
+              <div class="settings-supabase-actions">
+                <button class="text-button primary" id="settingsSupabaseSaveButton" type="button">연결 저장</button>
+                <button class="text-button" id="settingsSupabaseClearButton" type="button">연결 해제</button>
+              </div>
+              <p id="settingsSupabaseStatus">Supabase URL과 공개 키를 저장하면 로그인 링크와 초대 수락을 서버에 기록합니다.</p>
+            </div>
+
+            <div class="settings-privacy-options" aria-label="개인정보 및 공유 옵션">
+              <label>
+                <input id="privacyShareItineraryInput" type="checkbox" checked />
+                <span>초대 멤버에게 일정 공개</span>
+              </label>
+              <label>
+                <input id="privacyShareExpensesInput" type="checkbox" checked />
+                <span>초대 멤버에게 지출 공개</span>
+              </label>
+              <label>
+                <input id="privacyShowEmailInput" type="checkbox" />
+                <span>멤버 목록에 이메일 표시</span>
+              </label>
+              <label>
+                <input id="privacyAllowInviteInput" type="checkbox" checked />
+                <span>초대 링크 수락 허용</span>
+              </label>
+            </div>
           </div>
 
           <!-- 2. 백업 및 저장 관리 -->
@@ -1055,6 +1156,67 @@
       </section>
     </div>
 
+    <div class="modal-backdrop" id="tripInviteModal" role="dialog" aria-modal="true" aria-labelledby="tripInviteTitle" hidden>
+      <section class="history-modal trip-invite-modal">
+        <div class="modal-head">
+          <div>
+            <p class="overline">Trip Invite</p>
+            <h2 id="tripInviteTitle">여행 초대 링크</h2>
+          </div>
+          <button class="modal-close" id="tripInviteCloseButton" type="button" aria-label="초대 창 닫기">
+            <svg viewBox="0 0 24 24" focusable="false"><path d="M6 6l12 12M18 6 6 18" /></svg>
+          </button>
+        </div>
+        <div class="trip-invite-body">
+          <div class="trip-invite-summary">
+            <span>현재 여행</span>
+            <strong id="tripInviteTripName">-</strong>
+            <em id="tripInviteMemberSummary">인원 1명</em>
+          </div>
+          <label class="trip-invite-link-field" for="tripInviteLinkInput">
+            <span>공유 링크</span>
+            <input id="tripInviteLinkInput" type="text" readonly value="" />
+          </label>
+          <div class="trip-invite-actions">
+            <button class="submit-button" id="tripInviteCopyButton" type="button">링크 복사</button>
+            <button class="text-button" id="tripInviteRefreshButton" type="button">새 링크 만들기</button>
+          </div>
+          <p class="trip-invite-status" id="tripInviteStatus">링크를 복사해 여행 멤버에게 보내세요.</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="modal-backdrop" id="tripInviteAcceptModal" role="dialog" aria-modal="true" aria-labelledby="tripInviteAcceptTitle" hidden>
+      <section class="history-modal trip-invite-accept-modal">
+        <div class="modal-head">
+          <div>
+            <p class="overline">Join Trip</p>
+            <h2 id="tripInviteAcceptTitle">여행 초대 수락</h2>
+          </div>
+          <button class="modal-close" id="tripInviteAcceptCloseButton" type="button" aria-label="초대 수락 창 닫기">
+            <svg viewBox="0 0 24 24" focusable="false"><path d="M6 6l12 12M18 6 6 18" /></svg>
+          </button>
+        </div>
+        <form class="trip-invite-accept-body" id="tripInviteAcceptForm">
+          <div class="trip-invite-summary">
+            <span>초대된 여행</span>
+            <strong id="tripInviteAcceptTripName">-</strong>
+            <em id="tripInviteAcceptMeta">로그인 후 수락하면 이 여행에 참여합니다.</em>
+          </div>
+          <label for="tripInviteAcceptNameInput">
+            <span>표시 이름</span>
+            <input id="tripInviteAcceptNameInput" type="text" maxlength="28" autocomplete="name" placeholder="예: 민수" />
+          </label>
+          <label for="tripInviteAcceptEmailInput">
+            <span>이메일</span>
+            <input id="tripInviteAcceptEmailInput" type="email" autocomplete="email" placeholder="you@example.com" />
+          </label>
+          <button class="submit-button" id="tripInviteAcceptButton" type="submit">초대 수락</button>
+          <p class="trip-invite-status" id="tripInviteAcceptStatus">이름과 이메일을 확인해 주세요.</p>
+        </form>
+      </section>
+    </div>
+
     <div class="modal-backdrop" id="newTripModal" role="dialog" aria-modal="true" aria-labelledby="newTripModalTitle" hidden>
       <section class="history-modal new-trip-modal">
         <div class="modal-head">
@@ -1125,6 +1287,6 @@
       </div>
     </template>
 
-    <script src="./app.js?v=settlement-share-editor-fit-20260603-1"></script>
+    <script src="./app.js?v=header-dropdown-fit-20260603-1"></script>
   </body>
 </html>

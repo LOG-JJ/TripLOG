@@ -1,5 +1,5 @@
 (() => {
-  const scriptVersion = "settlement-share-editor-fit-20260603-1";
+  const scriptVersion = "header-dropdown-fit-20260603-1";
   const scriptFiles = [
     "core/namespace.js",
     "core/config.js",
@@ -42,6 +42,7 @@
     "shared/totals.js",
     "shared/date-time.js",
     "shared/formatters.js",
+    "features/collaboration/trip-collaboration.js",
     "features/overview/budget-dashboard.js",
     "features/reports/daily-trend.js",
     "features/reports/stats-insights.js",

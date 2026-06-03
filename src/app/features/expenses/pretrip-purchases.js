@@ -1,10 +1,15 @@
 let activePretripPurchaseMode = "flight";
+let isPretripOptionsExpanded = true;
 
 function normalizePretripPurchaseMode(mode = "") {
   return mode === "hotel" ? "hotel" : "flight";
 }
 
 function setupPretripPurchaseForms() {
+  els.pretripOptionsToggleButton?.addEventListener("click", () => {
+    setPretripOptionsExpanded(!isPretripOptionsExpanded);
+  });
+
   els.pretripPurchaseTabs?.querySelectorAll("button[data-pretrip-mode]").forEach((button) => {
     button.addEventListener("click", () => {
       setPretripPurchaseMode(button.dataset.pretripMode);
@@ -42,6 +47,37 @@ function renderPretripPurchasePanel() {
   setPretripPurchaseMode(activePretripPurchaseMode, { skipFocus: true });
 }
 
+function setPretripOptionsExpanded(isExpanded, { skipFocus = false } = {}) {
+  isPretripOptionsExpanded = Boolean(isExpanded);
+  if (!isPretripOptionsExpanded) {
+    if (typeof closeAllCustomDatePickers === "function") closeAllCustomDatePickers();
+    if (typeof closeAllCustomTimePickers === "function") closeAllCustomTimePickers();
+  }
+  syncPretripOptionsVisibility({ skipFocus });
+}
+
+function syncPretripOptionsVisibility({ skipFocus = true } = {}) {
+  const isFlight = activePretripPurchaseMode === "flight";
+
+  els.pretripPurchasePanel?.classList.toggle("is-options-collapsed", !isPretripOptionsExpanded);
+
+  if (els.pretripOptionsToggleButton) {
+    const label = isPretripOptionsExpanded ? "옵션 닫기" : "옵션 열기";
+    els.pretripOptionsToggleButton.setAttribute("aria-expanded", String(isPretripOptionsExpanded));
+    els.pretripOptionsToggleButton.setAttribute("aria-label", `사전구매 ${label}`);
+    const text = els.pretripOptionsToggleButton.querySelector(".pretrip-options-toggle-text");
+    if (text) text.textContent = label;
+  }
+
+  if (els.pretripFlightForm) els.pretripFlightForm.hidden = !isPretripOptionsExpanded || !isFlight;
+  if (els.pretripHotelForm) els.pretripHotelForm.hidden = !isPretripOptionsExpanded || isFlight;
+
+  if (isPretripOptionsExpanded && !skipFocus) {
+    const focusTarget = isFlight ? els.pretripFlightAirlineInput : els.pretripHotelNameInput;
+    focusTarget?.focus();
+  }
+}
+
 function syncPretripPurchaseDefaults() {
   if (els.pretripFlightDepartDateInput && !els.pretripFlightDepartDateInput.value) {
     els.pretripFlightDepartDateInput.value = state.startDate || "";
@@ -73,17 +109,12 @@ function setPretripPurchaseMode(mode, { skipFocus = false } = {}) {
   els.pretripFlightTab?.setAttribute("aria-pressed", String(isFlight));
   els.pretripHotelTab?.setAttribute("aria-pressed", String(!isFlight));
 
-  if (els.pretripFlightForm) els.pretripFlightForm.hidden = !isFlight;
-  if (els.pretripHotelForm) els.pretripHotelForm.hidden = isFlight;
-
-  if (!skipFocus) {
-    const focusTarget = isFlight ? els.pretripFlightAirlineInput : els.pretripHotelNameInput;
-    focusTarget?.focus();
-  }
+  syncPretripOptionsVisibility({ skipFocus });
 }
 
 function openPretripPurchaseMenu(mode = "flight") {
   activePretripPurchaseMode = normalizePretripPurchaseMode(mode);
+  isPretripOptionsExpanded = true;
   state.selectedDate = PRE_TRIP_EXPENSE_DATE;
   if (els.daySelect) els.daySelect.value = PRE_TRIP_EXPENSE_DATE;
 
@@ -226,5 +257,6 @@ window.TripLog.register("features.expenses.pretripPurchases", {
   setupPretripPurchaseForms,
   renderPretripPurchasePanel,
   setPretripPurchaseMode,
+  setPretripOptionsExpanded,
   openPretripPurchaseMenu,
 });

@@ -206,7 +206,7 @@ function renderSettlementExpenseLedger(expenseSplitList, entryRows, members, sou
     const categoryColor = getCategory(entry.category).color;
     const expanded = entry.key === expandedEntryKey;
     const tr = document.createElement("tr");
-    tr.className = `${entry.invalid ? "is-invalid" : ""} ${expanded ? "is-expanded" : ""}`.trim();
+    tr.className = ["settlement-entry-row", entry.invalid ? "is-invalid" : "", expanded ? "is-expanded" : ""].filter(Boolean).join(" ");
     tr.innerHTML = `
       <td data-label="항목"><span class="tag" style="--tag-color:${categoryColor}">${escapeHtml(entry.category)}</span></td>
       <td class="settlement-description-cell" data-label="내용">
@@ -222,7 +222,7 @@ function renderSettlementExpenseLedger(expenseSplitList, entryRows, members, sou
         </div>
       </td>
       <td class="actions-col" data-label="분담">
-        <button class="settlement-split-action ${expanded ? "active" : ""}" type="button" data-split-toggle="${escapeHtml(entry.key)}" title="사람별 할당 금액 보기 및 편집">
+        <button class="settlement-split-action ${expanded ? "active" : ""}" type="button" data-split-toggle="${escapeHtml(entry.key)}" aria-expanded="${expanded}" title="사람별 할당 금액 보기 및 편집">
           <span>👥</span>
           <strong>${expanded ? "닫기" : "분담"}</strong>
         </button>
