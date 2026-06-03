@@ -49,11 +49,17 @@ create table if not exists public.triplog_trip_invites (
 create index if not exists triplog_trip_members_user_idx
   on public.triplog_trip_members(user_id);
 
+create index if not exists triplog_trips_owner_idx
+  on public.triplog_trips(owner_id);
+
 create index if not exists triplog_trip_invites_token_idx
   on public.triplog_trip_invites(token);
 
 create index if not exists triplog_trip_invites_trip_idx
   on public.triplog_trip_invites(trip_id);
+
+create index if not exists triplog_trip_invites_created_by_idx
+  on public.triplog_trip_invites(created_by);
 
 create schema if not exists private;
 
@@ -108,17 +114,24 @@ as $$
   );
 $$;
 
-grant execute on function private.triplog_is_trip_owner(uuid) to authenticated;
-grant execute on function private.triplog_is_trip_member(uuid) to authenticated;
-grant execute on function private.triplog_is_valid_invite(uuid, text) to authenticated;
-
 alter table public.triplog_trips enable row level security;
 alter table public.triplog_trip_members enable row level security;
 alter table public.triplog_trip_invites enable row level security;
 
+grant usage on schema public to authenticated;
+revoke all on public.triplog_trips from public, anon;
+revoke all on public.triplog_trip_members from public, anon;
+revoke all on public.triplog_trip_invites from public, anon;
 grant select, insert, update, delete on public.triplog_trips to authenticated;
 grant select, insert, update, delete on public.triplog_trip_members to authenticated;
 grant select, insert, update, delete on public.triplog_trip_invites to authenticated;
+
+revoke all on function private.triplog_is_trip_owner(uuid) from public;
+revoke all on function private.triplog_is_trip_member(uuid) from public;
+revoke all on function private.triplog_is_valid_invite(uuid, text) from public;
+grant execute on function private.triplog_is_trip_owner(uuid) to authenticated;
+grant execute on function private.triplog_is_trip_member(uuid) to authenticated;
+grant execute on function private.triplog_is_valid_invite(uuid, text) to authenticated;
 
 drop policy if exists "trip owners can create trips" on public.triplog_trips;
 create policy "trip owners can create trips"
@@ -191,9 +204,34 @@ create policy "members can update themselves"
   );
 
 drop policy if exists "owners can manage invites" on public.triplog_trip_invites;
-create policy "owners can manage invites"
+drop policy if exists "authenticated users can resolve open invite links" on public.triplog_trip_invites;
+drop policy if exists "owners and authenticated users can read invites" on public.triplog_trip_invites;
+-- MVP client flow: authenticated users can resolve open invite links by token.
+-- For production hardening, move token resolution to a Supabase Edge Function so open invite rows
+-- are not broadly listable through the Data API.
+create policy "owners and authenticated users can read invites"
   on public.triplog_trip_invites
-  for all
+  for select
+  to authenticated
+  using (
+    private.triplog_is_trip_owner(trip_id)
+    or (status = 'open' and expires_at > now())
+  );
+
+drop policy if exists "owners can create invites" on public.triplog_trip_invites;
+create policy "owners can create invites"
+  on public.triplog_trip_invites
+  for insert
+  to authenticated
+  with check (
+    created_by = (select auth.uid())
+    and private.triplog_is_trip_owner(trip_id)
+  );
+
+drop policy if exists "owners can update invites" on public.triplog_trip_invites;
+create policy "owners can update invites"
+  on public.triplog_trip_invites
+  for update
   to authenticated
   using (private.triplog_is_trip_owner(trip_id))
   with check (
@@ -201,12 +239,9 @@ create policy "owners can manage invites"
     and private.triplog_is_trip_owner(trip_id)
   );
 
--- MVP client flow: authenticated users can resolve open invite links by token.
--- For production hardening, move token resolution to a Supabase Edge Function so open invite rows
--- are not broadly listable through the Data API.
-drop policy if exists "authenticated users can resolve open invite links" on public.triplog_trip_invites;
-create policy "authenticated users can resolve open invite links"
+drop policy if exists "owners can delete invites" on public.triplog_trip_invites;
+create policy "owners can delete invites"
   on public.triplog_trip_invites
-  for select
+  for delete
   to authenticated
-  using (status = 'open' and expires_at > now());
+  using (private.triplog_is_trip_owner(trip_id));

@@ -15,7 +15,7 @@
   }
 
   function renderThemeControls() {
-    const theme = state.theme || "toss";
+    const theme = state.theme || "brutalist";
     
     // Ensure document attribute is in sync
     document.documentElement.setAttribute("data-theme", theme);

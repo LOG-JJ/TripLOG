@@ -1,16 +1,78 @@
 <!doctype html>
-<html lang="ko" data-theme="toss">
+<html lang="ko" data-theme="brutalist">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>여행 가계부</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css?v=toss-hardening-20260603-1" />
+    <link rel="stylesheet" href="./styles.css?v=neo-auth-gate-20260603-1" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   </head>
   <body>
-    <div class="app-shell">
+    <section class="auth-gate" id="authGate" aria-labelledby="authGateTitle">
+      <div class="auth-shell">
+        <div class="auth-brand-panel" aria-label="TripLOG 계정">
+          <div class="auth-brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm-5-7h-5v5h5v-5z" />
+            </svg>
+          </div>
+          <p class="auth-eyebrow">TripLOG</p>
+          <h1>여행을 시작하려면 로그인하세요</h1>
+          <p class="auth-brand-copy">웹 편집과 모바일 앱 배포까지 같은 계정으로 이어집니다.</p>
+          <div class="auth-signal-row" aria-label="계정 상태">
+            <span>일정</span>
+            <span>지출</span>
+            <span>초대</span>
+          </div>
+        </div>
+
+        <form class="auth-panel" id="authGateForm">
+          <div class="auth-panel-head">
+            <span class="auth-service-pill">보안 계정</span>
+            <h2 id="authGateTitle">로그인</h2>
+            <p id="authGateSubtitle">TripLOG 계정으로 계속합니다.</p>
+          </div>
+
+          <div class="auth-mode-toggle" id="authModeToggle" role="group" aria-label="계정 모드">
+            <button class="active" id="authModeLogin" type="button" aria-pressed="true">로그인</button>
+            <button id="authModeSignup" type="button" aria-pressed="false">회원가입</button>
+          </div>
+
+          <label class="auth-field" id="authGateNameField" for="authGateNameInput" hidden>
+            <span>이름</span>
+            <input id="authGateNameInput" type="text" maxlength="28" autocomplete="name" placeholder="예: 민수" />
+          </label>
+
+          <label class="auth-field" id="authGateEmailField" for="authGateEmailInput">
+            <span>이메일</span>
+            <input id="authGateEmailInput" type="email" autocomplete="email" placeholder="you@example.com" required />
+          </label>
+
+          <label class="auth-field" id="authGatePasswordField" for="authGatePasswordInput">
+            <span>비밀번호</span>
+            <input id="authGatePasswordInput" type="password" autocomplete="current-password" minlength="8" placeholder="8자 이상" required />
+          </label>
+
+          <label class="auth-field" id="authGatePasswordConfirmField" for="authGatePasswordConfirmInput" hidden>
+            <span>비밀번호 확인</span>
+            <input id="authGatePasswordConfirmInput" type="password" autocomplete="new-password" minlength="8" placeholder="한 번 더 입력" />
+          </label>
+
+          <button class="auth-primary-button" id="authGateSubmitButton" type="submit">로그인</button>
+
+          <div class="auth-secondary-actions">
+            <button class="auth-link-button" id="authGateForgotButton" type="button">비밀번호 재설정</button>
+            <button class="auth-link-button" id="authGateResetSupabaseButton" type="button">기본 연결 복구</button>
+          </div>
+
+          <p class="auth-status" id="authGateStatus" aria-live="polite">세션을 확인하고 있습니다.</p>
+        </form>
+      </div>
+    </section>
+
+    <div class="app-shell" id="appShell" hidden>
       <header class="topbar" style="border-bottom: 1.5px solid var(--line);">
         <div class="brand">
           <button class="brand-mark" id="itineraryPageButton" type="button" title="TripLOG" aria-label="TripLOG Logo" style="cursor: default; pointer-events: none;">
@@ -716,8 +778,8 @@
               <p class="overline">DESIGN SETTING</p>
             </div>
             <div class="mode-toggle header-theme-toggle settings-theme-toggle" id="headerThemeToggle" role="group" aria-label="디자인 필터 선택">
-              <button id="themeBrutalistButton" type="button" data-theme="brutalist">Neo</button>
-              <button class="active" id="themeTossButton" type="button" data-theme="toss">Toss</button>
+              <button class="active" id="themeBrutalistButton" type="button" data-theme="brutalist">Neo</button>
+              <button id="themeTossButton" type="button" data-theme="toss">Toss</button>
             </div>
           </div>
         </section>
@@ -790,7 +852,7 @@
 
             <div class="settings-account-actions">
               <button class="text-button primary" id="settingsMagicLinkButton" type="button">
-                로그인 링크
+                이메일 링크
               </button>
               <button class="text-button" id="settingsLocalLoginButton" type="button">
                 프로필 저장
@@ -812,9 +874,9 @@
               </label>
               <div class="settings-supabase-actions">
                 <button class="text-button primary" id="settingsSupabaseSaveButton" type="button">연결 저장</button>
-                <button class="text-button" id="settingsSupabaseClearButton" type="button">연결 해제</button>
+                <button class="text-button" id="settingsSupabaseClearButton" type="button">기본값 복구</button>
               </div>
-              <p id="settingsSupabaseStatus">Supabase URL과 공개 키를 저장하면 로그인 링크와 초대 수락을 서버에 기록합니다.</p>
+              <p id="settingsSupabaseStatus">기본 Supabase 연결로 계정 로그인과 이메일 인증을 처리합니다. 다른 프로젝트는 URL과 공개 키로 덮어쓸 수 있습니다.</p>
             </div>
 
             <div class="settings-privacy-options" aria-label="개인정보 및 공유 옵션">
@@ -1287,6 +1349,6 @@
       </div>
     </template>
 
-    <script src="./app.js?v=toss-hardening-20260603-1"></script>
+    <script src="./app.js?v=neo-auth-gate-20260603-1"></script>
   </body>
 </html>

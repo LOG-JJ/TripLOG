@@ -1,6 +1,7 @@
 (() => {
-  const scriptVersion = "toss-hardening-20260603-1";
+  const scriptVersion = "neo-auth-gate-20260603-1";
   const scriptFiles = [
+    { path: "../../vendor/supabase-js-2.107.0.min.js", optional: true },
     "core/namespace.js",
     "core/config.js",
     "core/runtime.js",
@@ -70,12 +71,20 @@
   const baseUrl = new URL("./src/app/", currentScript?.src || window.location.href);
   let chain = Promise.resolve();
 
-  scriptFiles.forEach((file) => {
+  scriptFiles.forEach((entry) => {
+    const file = typeof entry === "string" ? entry : entry.path;
+    const optional = typeof entry === "object" && entry.optional;
     chain = chain.then(() => new Promise((resolve, reject) => {
       const script = document.createElement("script");
       script.src = `${new URL(file, baseUrl).toString()}?v=${scriptVersion}`;
       script.onload = resolve;
-      script.onerror = () => reject(new Error(`TripLOG script load failed: ${file}`));
+      script.onerror = () => {
+        if (optional) {
+          resolve();
+          return;
+        }
+        reject(new Error(`TripLOG script load failed: ${file}`));
+      };
       document.head.appendChild(script);
     }));
   });
