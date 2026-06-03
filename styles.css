@@ -235,13 +235,18 @@ body.auth-required {
 .auth-brand-panel h1 {
   position: relative;
   z-index: 1;
-  max-width: 520px;
+  max-width: 640px;
   margin: 0;
   font-family: var(--font-heading);
-  font-size: clamp(38px, 6vw, 74px);
+  font-size: clamp(36px, 5vw, 66px);
   font-weight: 900;
-  line-height: 0.95;
+  line-height: 0.96;
   letter-spacing: 0;
+}
+
+.auth-title-line {
+  display: block;
+  white-space: nowrap;
 }
 
 .auth-brand-copy {
@@ -5530,8 +5535,8 @@ td.number {
   }
 
   .auth-brand-panel h1 {
-    max-width: 320px;
-    font-size: 38px;
+    max-width: 100%;
+    font-size: clamp(28px, 8.8vw, 38px);
   }
 
   .auth-brand-copy {
