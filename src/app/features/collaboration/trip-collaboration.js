@@ -2,6 +2,7 @@
   const ACCOUNT_STORAGE_KEY = "domesticTravelExpensePlanner.account.v1";
   const INVITES_STORAGE_KEY = "domesticTravelExpensePlanner.invites.v1";
   const SUPABASE_CONFIG_STORAGE_KEY = "domesticTravelExpensePlanner.supabaseConfig.v1";
+  const AUTH_PENDING_EMAIL_KEY = "domesticTravelExpensePlanner.authPendingEmail.v1";
   const SUPABASE_CDN_URL = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.107.0/dist/umd/supabase.min.js";
   const DEFAULT_SUPABASE_CONFIG = {
     url: "https://iehdziiplzgvxcrbizgv.supabase.co",
@@ -120,6 +121,7 @@
       auth: {
         autoRefreshToken: true,
         detectSessionInUrl: true,
+        flowType: "implicit",
         persistSession: true,
       },
     });
@@ -182,6 +184,19 @@
     localStorage.removeItem(ACCOUNT_STORAGE_KEY);
   }
 
+  function getPendingAuthEmail() {
+    return String(localStorage.getItem(AUTH_PENDING_EMAIL_KEY) || "").trim();
+  }
+
+  function setPendingAuthEmail(email) {
+    const normalizedEmail = String(email || "").trim();
+    if (normalizedEmail) localStorage.setItem(AUTH_PENDING_EMAIL_KEY, normalizedEmail);
+  }
+
+  function clearPendingAuthEmail() {
+    localStorage.removeItem(AUTH_PENDING_EMAIL_KEY);
+  }
+
   function applyOwnerAccount(account) {
     if (!account) return;
     const collaboration = getCollaboration();
@@ -227,6 +242,8 @@
         });
         authListenerAttached = true;
       }
+
+      await consumeAuthCallback(client);
 
       const { data, error } = await client.auth.getSession();
       if (error) throw error;
@@ -326,6 +343,123 @@
     return type === "recovery" || type === "password_recovery";
   }
 
+  function getAuthCallbackParams() {
+    const hashParams = new URLSearchParams(String(window.location.hash || "").replace(/^#/, ""));
+    const queryParams = new URLSearchParams(window.location.search);
+    const read = (name) => queryParams.get(name) || hashParams.get(name) || "";
+    const params = {
+      accessToken: read("access_token"),
+      code: read("code"),
+      error: read("error"),
+      errorCode: read("error_code"),
+      errorDescription: read("error_description"),
+      refreshToken: read("refresh_token"),
+      tokenHash: read("token_hash"),
+      type: read("type"),
+    };
+    params.hasCallback = Boolean(
+      params.accessToken
+      || params.code
+      || params.error
+      || params.errorCode
+      || params.errorDescription
+      || params.tokenHash
+    );
+    return params;
+  }
+
+  function cleanAuthCallbackUrl() {
+    const url = new URL(window.location.href);
+    [
+      "access_token",
+      "code",
+      "error",
+      "error_code",
+      "error_description",
+      "expires_at",
+      "expires_in",
+      "next",
+      "refresh_token",
+      "token_hash",
+      "token_type",
+      "type",
+    ].forEach((key) => url.searchParams.delete(key));
+    if (url.pathname.startsWith("/auth/")) url.pathname = "/Travel.html";
+    if (!url.searchParams.has("page") && !url.searchParams.has(INVITE_PARAM)) {
+      url.searchParams.set("page", "settings");
+    }
+    url.hash = "";
+    window.history.replaceState({}, document.title, url.toString());
+  }
+
+  async function consumeAuthCallback(client) {
+    const params = getAuthCallbackParams();
+    if (!params.hasCallback) return false;
+
+    try {
+      setAuthGateBusy(true);
+      if (params.error || params.errorDescription || params.errorCode) {
+        throw new Error(params.errorDescription || params.error || params.errorCode);
+      }
+
+      let session = null;
+      if (params.accessToken && params.refreshToken) {
+        const { data, error } = await client.auth.setSession({
+          access_token: params.accessToken,
+          refresh_token: params.refreshToken,
+        });
+        if (error) throw error;
+        session = data.session || null;
+      } else if (params.code) {
+        const { data, error } = await client.auth.exchangeCodeForSession(params.code);
+        if (error) throw error;
+        session = data.session || null;
+      } else if (params.tokenHash && params.type) {
+        const { data, error } = await client.auth.verifyOtp({
+          token_hash: params.tokenHash,
+          type: params.type,
+        });
+        if (error) throw error;
+        session = data.session || null;
+      }
+
+      if (session) currentSession = session;
+      if (params.type === "recovery" || params.type === "password_recovery") {
+        passwordRecoveryRequested = true;
+        authGateMode = "recovery";
+        authStatusOverride = {
+          message: "복구 링크가 확인되었습니다. 새 비밀번호를 입력해 주세요.",
+          tone: "success",
+        };
+      } else if (session) {
+        passwordRecoveryRequested = false;
+        authGateMode = "login";
+        authStatusOverride = null;
+        clearPendingAuthEmail();
+        const account = getSessionAccount();
+        if (account) applyOwnerAccount(account);
+      } else {
+        authGateMode = "login";
+        authStatusOverride = {
+          message: "이메일 확인은 완료되었습니다. 같은 이메일과 비밀번호로 로그인해 주세요.",
+          tone: "success",
+        };
+      }
+      return true;
+    } catch (error) {
+      currentSession = null;
+      authGateMode = "login";
+      authStatusOverride = {
+        message: `인증 링크 처리 실패: ${getFriendlyAuthError(error)} 다시 로그인해 주세요.`,
+        tone: "warning",
+      };
+      return false;
+    } finally {
+      cleanAuthCallbackUrl();
+      setAuthGateBusy(false);
+    }
+  }
+
   function isSignedIn() {
     return Boolean(currentSession?.user);
   }
@@ -365,9 +499,13 @@
   }
 
   function fillAuthEmailFromAccount(account = getCurrentAccount()) {
-    if (!account) return;
-    setInputValue(els.authGateNameInput, account.displayName);
-    setInputValue(els.authGateEmailInput, account.email);
+    if (account) {
+      setInputValue(els.authGateNameInput, account.displayName);
+      setInputValue(els.authGateEmailInput, account.email);
+      return;
+    }
+    const pendingEmail = getPendingAuthEmail();
+    if (pendingEmail) setInputValue(els.authGateEmailInput, pendingEmail);
   }
 
   function renderAuthGate() {
@@ -488,6 +626,7 @@
       }
 
       if (isSignup) {
+        setPendingAuthEmail(email);
         const { data, error } = await client.auth.signUp({
           email,
           password,
@@ -502,12 +641,13 @@
         if (error) throw error;
         if (data.session) {
           currentSession = data.session;
+          clearPendingAuthEmail();
           applyOwnerAccount(getSessionAccount());
           authStatusOverride = null;
           renderTripCollaboration();
         } else {
           authStatusOverride = {
-            message: "가입 확인 이메일을 보냈습니다. 이메일을 확인한 뒤 로그인해 주세요.",
+            message: "가입 확인 이메일을 보냈습니다. 확인 후 자동으로 돌아오지 않으면 같은 이메일과 비밀번호로 로그인해 주세요.",
             tone: "success",
           };
           clearAuthPasswordInputs();
@@ -519,6 +659,7 @@
       const { data, error } = await client.auth.signInWithPassword({ email, password });
       if (error) throw error;
       currentSession = data.session || null;
+      clearPendingAuthEmail();
       const account = getSessionAccount();
       if (account) applyOwnerAccount(account);
       authStatusOverride = null;
@@ -693,6 +834,21 @@
 
   function buildAuthRedirectUrl() {
     const url = new URL(window.location.href);
+    [
+      "access_token",
+      "code",
+      "error",
+      "error_code",
+      "error_description",
+      "expires_at",
+      "expires_in",
+      "next",
+      "refresh_token",
+      "token_hash",
+      "token_type",
+      "type",
+    ].forEach((key) => url.searchParams.delete(key));
+    if (url.pathname.startsWith("/auth/")) url.pathname = "/Travel.html";
     if (!url.searchParams.has(INVITE_PARAM)) url.searchParams.set("page", "settings");
     url.hash = "";
     return url.toString();
