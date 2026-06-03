@@ -239,6 +239,7 @@
           const account = getSessionAccount();
           if (account) applyOwnerAccount(account);
           renderTripCollaboration();
+          if (event === "SIGNED_IN") refreshInviteAfterAuth();
         });
         authListenerAttached = true;
       }
@@ -271,6 +272,7 @@
       };
     } finally {
       renderTripCollaboration();
+      refreshInviteAfterAuth();
     }
   }
 
@@ -462,6 +464,23 @@
 
   function isSignedIn() {
     return Boolean(currentSession?.user);
+  }
+
+  function getInviteTokenFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(INVITE_PARAM) || params.get("tripInvite") || "";
+  }
+
+  function shouldRefreshInviteAfterAuth(token) {
+    if (!token || !isSignedIn()) return false;
+    if (!pendingInviteRecord) return true;
+    if (pendingInviteRecord.token !== token) return true;
+    return ["login_required", "missing", "error", "loading"].includes(pendingInviteRecord.source);
+  }
+
+  function refreshInviteAfterAuth() {
+    const token = getInviteTokenFromUrl();
+    if (shouldRefreshInviteAfterAuth(token)) openInviteAcceptModal(token);
   }
 
   function setAuthStatus(message, tone = "neutral") {
@@ -831,7 +850,8 @@
   }
 
   function buildInviteUrl(token) {
-    const url = new URL(window.location.href);
+    const cleanPath = window.location.pathname.endsWith(".html") ? window.location.pathname : "/Travel";
+    const url = new URL(cleanPath, window.location.origin);
     url.searchParams.set(INVITE_PARAM, token);
     url.searchParams.set("trip", state.id || "");
     url.searchParams.set("page", "start");
@@ -903,7 +923,7 @@
 
     if (tripError) throw tripError;
 
-    await client.from("triplog_trip_members").upsert({
+    const { error: memberError } = await client.from("triplog_trip_members").upsert({
       trip_id: tripRow.id,
       user_id: sessionAccount.id,
       email: sessionAccount.email,
@@ -912,6 +932,7 @@
       status: "accepted",
       joined_at: new Date().toISOString(),
     }, { onConflict: "trip_id,user_id" });
+    if (memberError) throw memberError;
 
     const { error: inviteError } = await client
       .from("triplog_trip_invites")
@@ -1090,6 +1111,10 @@
       return { token, tripName: "초대 정보를 찾을 수 없음", source: "missing" };
     }
 
+    if (!isSignedIn()) {
+      return { token, tripName: "로그인 후 초대 확인", source: "login_required" };
+    }
+
     try {
       const client = await getSupabaseClient();
       const { data, error } = await client
@@ -1262,8 +1287,7 @@
   }
 
   function checkInitialInviteParam() {
-    const params = new URLSearchParams(window.location.search);
-    const token = params.get(INVITE_PARAM) || params.get("tripInvite");
+    const token = getInviteTokenFromUrl();
     if (token) openInviteAcceptModal(token);
   }
 
