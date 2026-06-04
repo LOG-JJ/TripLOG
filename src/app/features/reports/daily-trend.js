@@ -31,23 +31,38 @@ function renderDailySpendTrend(days) {
   const containerWidth = Math.floor(els.dailyBarChart.getBoundingClientRect().width || els.dailyBarChart.clientWidth || 0);
   const compactChart = containerWidth > 0 && containerWidth < 430;
   const rowHeight = compactChart ? 58 : 64;
-  const margin = compactChart
-    ? { top: 36, right: 58, bottom: 42, left: 62 }
-    : { top: 40, right: 92, bottom: 44, left: 82 };
-  const maxChartWidth = 534;
-  const chartWidth = containerWidth
-    ? Math.min(maxChartWidth, Math.max(compactChart ? 286 : maxChartWidth, containerWidth - 4))
-    : maxChartWidth;
-  const plotWidth = Math.max(compactChart ? 166 : 320, chartWidth - margin.left - margin.right);
-  const chartHeight = margin.top + numBars * rowHeight + margin.bottom;
-  const barHeight = compactChart ? 24 : 28;
-  const minBarWidth = compactChart ? 28 : 36;
   const chartTextFontFamily = "'Plus Jakarta Sans', 'Pretendard', sans-serif";
   const chartNumberFontFamily = "'Outfit', 'Pretendard', sans-serif";
   const labelFontSize = compactChart ? 11 : 12;
   const dateFontSize = compactChart ? 9 : 10;
   const valueFontSize = compactChart ? 10 : 12;
   const tickFontSize = compactChart ? 9 : 10;
+  const valueLabels = dayTotals.map((day) => day.total ? formatWonShort(day.total) : "0원");
+  const longestValueLabel = valueLabels.reduce((longest, label) => (
+    label.length > longest.length ? label : longest
+  ), "0원");
+  const valuePlateWidth = Math.max(
+    compactChart ? 48 : 58,
+    estimateDailyValueLabelWidth(longestValueLabel, valueFontSize) + (compactChart ? 16 : 22)
+  );
+  const valuePlateHeight = compactChart ? 18 : 20;
+  const valueEdgePadding = compactChart ? 10 : 18;
+  const valueTrackGap = compactChart ? 10 : 16;
+  const reservedValueWidth = valuePlateWidth + valueEdgePadding + valueTrackGap + 4;
+  const margin = compactChart
+    ? { top: 36, right: Math.max(58, reservedValueWidth), bottom: 42, left: 62 }
+    : { top: 40, right: Math.max(92, reservedValueWidth), bottom: 44, left: 82 };
+  const maxChartWidth = 534;
+  const minPlotWidth = compactChart ? 128 : 260;
+  const minChartWidth = margin.left + margin.right + minPlotWidth;
+  const chartWidth = containerWidth
+    ? Math.max(minChartWidth, Math.min(maxChartWidth, Math.max(compactChart ? 286 : maxChartWidth, containerWidth - 4)))
+    : maxChartWidth;
+  const plotWidth = Math.max(minPlotWidth, chartWidth - margin.left - margin.right);
+  const chartHeight = margin.top + numBars * rowHeight + margin.bottom;
+  const barHeight = compactChart ? 24 : 28;
+  const minBarWidth = compactChart ? 28 : 36;
+  const valueX = chartWidth - valueEdgePadding;
   const highestDay = dayTotals.reduce((best, day) => (day.total > best.total ? day : best), dayTotals[0]);
 
   let svgContent = `
@@ -67,13 +82,10 @@ function renderDailySpendTrend(days) {
   dayTotals.forEach((data, index) => {
     const y = margin.top + index * rowHeight;
     const centerY = y + rowHeight / 2;
-    const barWidth = data.total ? Math.max(minBarWidth, (data.total / niceMax) * plotWidth) : 0;
+    const barWidth = data.total ? Math.min(plotWidth, Math.max(minBarWidth, (data.total / niceMax) * plotWidth)) : 0;
     const barColors = ["#ccb7ff", "#ffd53d", "#6ee7b7", "#fda4af", "#7dd3fc", "#fdba74"];
     const fillColor = barColors[index % barColors.length];
     const isHighest = data.date === highestDay.date && data.total > 0;
-    const valueX = chartWidth - (compactChart ? 10 : 28);
-    const valuePlateWidth = compactChart ? 40 : 52;
-    const valuePlateHeight = compactChart ? 18 : 20;
 
     svgContent += `
       <g class="bar-group${isHighest ? " is-highest" : ""}" tabindex="0" role="img" aria-label="${data.label}: ${formatWon(data.total)}">
@@ -135,10 +147,19 @@ function formatWonShort(amount) {
   return formatWon(Math.round(amount || 0));
 }
 
+function estimateDailyValueLabelWidth(label = "", fontSize = 12) {
+  return Math.ceil(Array.from(String(label)).reduce((width, char) => {
+    if (/\d/.test(char)) return width + fontSize * 0.58;
+    if (char === ",") return width + fontSize * 0.28;
+    return width + fontSize * 0.9;
+  }, 0));
+}
+
 
 window.TripLog.register("features.reports.dailyTrend", {
   renderDailySpendTrend,
   renderDailyTrendSummary,
   getNiceChartMax,
   formatWonShort,
+  estimateDailyValueLabelWidth,
 });

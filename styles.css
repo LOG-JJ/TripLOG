@@ -851,8 +851,8 @@ svg {
   right: auto;
   width: 100%;
   min-width: 0;
-  gap: 0;
-  padding: 0;
+  gap: 4px;
+  padding: 6px;
   border-width: 2px;
   border-radius: 9px;
   z-index: 2002;
@@ -861,18 +861,18 @@ svg {
 
 .header-trip-tools .custom-select-option,
 .header-trip-tools .custom-select-item {
-  min-height: 32px;
+  min-height: 30px;
   padding: 0 9px;
-  border-width: 0;
-  border-radius: 7px;
+  border-width: 1px;
+  border-radius: 6px;
   font-size: 12px;
   font-weight: 900;
 }
 
 .header-trip-tools .custom-select-option.selected,
 .header-trip-tools .custom-select-item.selected {
-  border-color: transparent;
-  box-shadow: none;
+  border-color: var(--line);
+  box-shadow: var(--shadow-sm);
 }
 
 .header-trip-add-button {
@@ -1894,6 +1894,7 @@ select:focus {
 .custom-select-item.selected {
   background: var(--accent-blue);
   border-color: var(--line);
+  box-shadow: var(--shadow-sm);
   font-weight: 800;
 }
 
@@ -2058,8 +2059,8 @@ select:focus {
   left: var(--time-panel-left, 0);
   right: auto;
   z-index: 10080;
-  width: min(var(--time-panel-width, 260px), calc(100vw - 24px));
-  min-width: min(var(--time-panel-width, 260px), calc(100vw - 24px));
+  width: min(var(--time-panel-width, 232px), calc(100vw - 24px));
+  min-width: min(var(--time-panel-width, 232px), calc(100vw - 24px));
   max-width: calc(100vw - 24px);
   padding: 10px;
   background:
@@ -2107,7 +2108,7 @@ select:focus {
 
 .time-panel-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(86px, 96px));
+  grid-template-columns: repeat(2, minmax(78px, 86px));
   justify-content: center;
   gap: 8px;
 }
@@ -2141,8 +2142,8 @@ select:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
-  padding: 0 10px;
+  gap: 6px;
+  padding: 0 6px 0 9px;
   color: var(--text);
   background-color: #ffffff;
   border: 2.5px solid var(--line);
@@ -2156,8 +2157,42 @@ select:focus {
   transition: transform 100ms ease, box-shadow 100ms ease, background 120ms ease;
 }
 
+.time-dropdown-input {
+  width: 2.4ch;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  font: inherit;
+  line-height: 1;
+  text-align: center;
+}
+
+.time-dropdown-input::selection {
+  color: var(--text);
+  background: var(--accent-blue);
+}
+
+.time-dropdown-toggle {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  min-width: 24px;
+  height: 28px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: var(--text);
+  cursor: pointer;
+}
+
 .time-dropdown-trigger:hover,
 .time-dropdown-trigger:focus-visible,
+.time-dropdown-trigger:focus-within,
 .time-dropdown-trigger.open {
   background: #fffdf5;
   border-color: var(--line);
@@ -2344,7 +2379,7 @@ select:focus {
 
 .time-panel-actions {
   display: grid;
-  grid-template-columns: repeat(2, minmax(86px, 96px));
+  grid-template-columns: repeat(2, minmax(78px, 86px));
   justify-content: center;
   gap: 8px;
   margin-top: 10px;
@@ -2937,9 +2972,12 @@ td.number {
 }
 
 .tag {
-  display: inline-block;
+  display: inline-grid;
+  place-items: center;
   font-size: 11px;
   font-weight: 800;
+  line-height: 1;
+  text-align: center;
   padding: 3px 8px;
   border: 2px solid var(--line);
   border-radius: 6px;
@@ -7099,8 +7137,8 @@ html[data-theme="toss"] .clock-current-knob {
 }
 
 .card-time-range-group .custom-time-panel {
-  width: min(330px, calc(100vw - 48px));
-  min-width: min(330px, calc(100vw - 48px));
+  width: min(232px, calc(100vw - 48px));
+  min-width: min(232px, calc(100vw - 48px));
 }
 
 .inline-time-input,
@@ -8153,7 +8191,7 @@ html[data-theme="toss"] .clock-current-knob {
 }
 
 .settlement-expense-table tbody tr.settlement-day-group-row td {
-  padding: 2px 6px;
+  padding: 3px 8px;
   background: #f8fafc;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -8163,13 +8201,14 @@ html[data-theme="toss"] .clock-current-knob {
 .settlement-day-group-row em {
   display: inline-flex;
   align-items: center;
-  min-height: 16px;
+  min-height: 18px;
   font-size: 10px;
   font-weight: 900;
+  line-height: 1;
 }
 
 .settlement-day-group-row span {
-  padding: 1px 6px;
+  padding: 0 8px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: #ffffff;
@@ -8949,14 +8988,16 @@ html[data-theme="toss"] .clock-current-knob {
     padding: 0;
     border-width: 1px;
     border-radius: 7px;
+    overflow: hidden;
   }
 
   .settlement-expense-table tbody tr.settlement-day-group-row td {
     display: flex;
+    align-items: center;
     width: 100%;
-    min-height: 0;
+    min-height: 26px;
     gap: 4px;
-    padding: 2px 6px;
+    padding: 3px 8px;
   }
 
   .settlement-expense-table tbody tr.settlement-day-group-row td::before {
@@ -9156,12 +9197,15 @@ html[data-theme="toss"] .clock-current-knob {
   }
 
   .settlement-expense-table tbody tr.settlement-entry-row td[data-label="항목"] .tag {
+    display: inline-grid;
+    place-items: center;
     min-height: 30px;
     padding: 0 10px;
     border-width: 2px;
     border-radius: 8px;
     box-shadow: 1px 1px 0 var(--line);
     font-size: 12px;
+    line-height: 1;
   }
 
   .settlement-expense-table tbody tr.settlement-entry-row .settlement-description-cell strong {
@@ -9673,8 +9717,21 @@ html[data-theme="toss"] .time-dropdown-trigger {
   font-weight: 700 !important;
 }
 
+html[data-theme="toss"] .time-dropdown-input {
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font: inherit !important;
+  text-align: center !important;
+}
+
 html[data-theme="toss"] .time-dropdown-trigger:hover,
 html[data-theme="toss"] .time-dropdown-trigger:focus-visible,
+html[data-theme="toss"] .time-dropdown-trigger:focus-within,
 html[data-theme="toss"] .time-dropdown-trigger.open {
   background: #ffffff !important;
   border-color: var(--accent) !important;
@@ -12739,6 +12796,10 @@ html[data-theme="toss"] .summary-trip-destination {
   transform: translateY(-1px);
 }
 
+.itinerary-travel-box-edit:has(.custom-select-button.open) {
+  z-index: 10020;
+}
+
 .travel-segments-list {
   display: grid;
   gap: 8px;
@@ -12798,6 +12859,53 @@ html[data-theme="toss"] .summary-trip-destination {
 .travel-trans-select:focus {
   background-color: #fffdf5;
   box-shadow: 2px 2px 0 var(--line);
+}
+
+.travel-method-selector .custom-select-button {
+  height: 32px;
+  min-height: 32px;
+  padding: 0 9px;
+  border-width: 2px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 0 var(--line);
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.travel-method-selector .custom-select-button:hover,
+.travel-method-selector .custom-select-button.open,
+.travel-method-selector .custom-select-button:focus-visible {
+  box-shadow: 2px 2px 0 var(--line);
+}
+
+.travel-method-selector .custom-select-value {
+  gap: 4px;
+}
+
+.travel-method-selector .custom-select-chevron {
+  width: 7px;
+  height: 7px;
+}
+
+.travel-method-selector .custom-select-menu {
+  z-index: 140;
+  gap: 4px;
+  min-width: 100%;
+  padding: 6px;
+  border-width: 2px;
+  border-radius: 8px;
+}
+
+.travel-method-selector .custom-select-option,
+.travel-method-selector .custom-select-item {
+  min-height: 30px;
+  padding: 0 9px;
+  border-width: 1px;
+  border-radius: 6px;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 900;
 }
 
 .travel-time-input-group {
@@ -13041,6 +13149,22 @@ html[data-theme="toss"] .travel-trans-select {
   min-height: 32px !important;
   padding: 0 28px 0 9px !important;
   background-color: #ffffff !important;
+}
+
+html[data-theme="toss"] .travel-method-selector .custom-select-button {
+  height: 32px !important;
+  min-height: 32px !important;
+  padding: 0 9px !important;
+  border-color: #f2f4f6 !important;
+  border-radius: 6px !important;
+  background-color: #ffffff !important;
+  box-shadow: none !important;
+  font-weight: 600 !important;
+}
+
+html[data-theme="toss"] .travel-method-selector .custom-select-menu {
+  border: none !important;
+  box-shadow: 0 10px 24px rgba(25, 31, 40, 0.12) !important;
 }
 
 html[data-theme="toss"] .travel-memo-input {
@@ -13319,9 +13443,9 @@ html[data-theme="toss"] .travel-badge-item {
 
 @media (max-width: 600px) {
   .card-time-range-group .custom-time-panel {
-    width: min(312px, calc(100vw - 32px));
-    min-width: min(312px, calc(100vw - 32px));
-    padding: 12px;
+    width: min(224px, calc(100vw - 32px));
+    min-width: min(224px, calc(100vw - 32px));
+    padding: 10px;
   }
 
   .card-time-range-group .time-panel-grid {
@@ -13499,6 +13623,20 @@ html[data-theme="toss"] :is(input, select, textarea, .custom-date-button, .custo
   border-color: var(--accent) !important;
   box-shadow: 0 0 0 3px rgba(49, 130, 246, 0.12) !important;
   outline: none !important;
+}
+
+html[data-theme="toss"] .time-dropdown-input,
+html[data-theme="toss"] .time-dropdown-input:is(:hover, :focus, :focus-visible) {
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  color: inherit !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font: inherit !important;
+  text-align: center !important;
 }
 
 html[data-theme="toss"] :is(

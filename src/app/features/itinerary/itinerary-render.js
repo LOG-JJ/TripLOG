@@ -495,6 +495,9 @@ function renderItineraryList(days) {
 
   // Attach segment events for Multi-Segment Travel Box
   els.itineraryList.querySelectorAll(".travel-trans-select").forEach(selectEl => {
+    if (window.TripLog?.ui?.customSelect?.setupCustomSelect) {
+      window.TripLog.ui.customSelect.setupCustomSelect(selectEl);
+    }
     selectEl.addEventListener("change", () => {
       const id = selectEl.dataset.id;
       const index = Number(selectEl.dataset.index);

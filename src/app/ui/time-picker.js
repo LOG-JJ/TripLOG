@@ -148,9 +148,17 @@ function setupCustomTimePicker(input) {
     event.stopPropagation();
     handleTimePickerClick(event, input);
   });
+  panel.addEventListener("input", (event) => {
+    event.stopPropagation();
+    handleTimePickerInput(event, input);
+  });
   panel.addEventListener("change", (event) => {
     event.stopPropagation();
     handleTimePickerChange(event, input);
+  });
+  panel.addEventListener("focusin", (event) => {
+    const partInput = event.target.closest("[data-time-part-input]");
+    if (partInput) partInput.select();
   });
   panel.addEventListener("keydown", (event) => {
     event.stopPropagation();
@@ -234,6 +242,9 @@ function closeCustomTimePicker(input, { commit = true } = {}) {
   const control = customTimePickers.get(input);
   if (!control) return;
   const wasOpen = !control.panel.hidden;
+  if (wasOpen && commit) {
+    commitTimePanelInputs(input);
+  }
   control.panel.hidden = true;
   control.panel.style.removeProperty("--time-panel-shift-x");
   control.panel.style.removeProperty("--time-panel-shift-y");
@@ -273,10 +284,11 @@ function alignCustomTimePanel(input) {
 
   const margin = window.matchMedia("(max-width: 768px)").matches ? 12 : 14;
   const viewportWidth = document.documentElement.clientWidth || window.innerWidth;
-  const maxPanelWidth = Math.max(240, viewportWidth - margin * 2);
+  const horizontalBounds = getTimePickerHorizontalBounds(input, margin, viewportWidth);
+  const maxPanelWidth = Math.max(216, horizontalBounds.right - horizontalBounds.left);
   const preferredWidth = window.matchMedia("(max-width: 768px)").matches
-    ? Math.min(252, maxPanelWidth)
-    : Math.min(260, maxPanelWidth);
+    ? Math.min(224, maxPanelWidth)
+    : Math.min(232, maxPanelWidth);
   const panelWidth = Math.min(preferredWidth, maxPanelWidth);
 
   control.panel.style.setProperty("--time-panel-width", `${Math.round(panelWidth)}px`);
@@ -296,8 +308,8 @@ function alignCustomTimePanel(input) {
       left = anchorRect.left + ((anchorRect.width - actualPanelWidth) / 2);
     }
 
-    left = Math.min(left, viewportWidth - margin - actualPanelWidth);
-    left = Math.max(margin, left);
+    left = Math.min(left, horizontalBounds.right - actualPanelWidth);
+    left = Math.max(horizontalBounds.left, left);
 
     const spaceBelow = usableBottom - anchorRect.bottom - gap;
     const spaceAbove = anchorRect.top - usableTop - gap;
@@ -317,6 +329,23 @@ function alignCustomTimePanel(input) {
     control.panel.style.setProperty("--time-panel-left", `${Math.round(left)}px`);
     control.panel.style.setProperty("--time-panel-top", `${Math.round(top)}px`);
   });
+}
+
+function getTimePickerHorizontalBounds(input, margin, viewportWidth) {
+  const control = customTimePickers.get(input);
+  const container = control?.shell.closest(
+    ".itinerary-card, .pretrip-purchase-panel, .itinerary-main-panel, .planner-panel, .page-view"
+  );
+  const rect = container?.getBoundingClientRect();
+  const fallback = {
+    left: margin,
+    right: viewportWidth - margin,
+  };
+  if (!rect || rect.width < 216) return fallback;
+
+  const left = Math.max(margin, rect.left + 8);
+  const right = Math.min(viewportWidth - margin, rect.right - 8);
+  return right - left >= 216 ? { left, right } : fallback;
 }
 
 function getTimePickerViewportBounds(margin) {
@@ -365,17 +394,31 @@ function createTimeColumn(label, part, values, selectedValue) {
   const column = document.createElement("div");
   column.className = "time-dropdown-field";
 
-  const trigger = document.createElement("button");
-  trigger.type = "button";
+  const trigger = document.createElement("div");
   trigger.className = "time-dropdown-trigger";
   trigger.dataset.timeDropdownTrigger = part;
+  trigger.setAttribute("role", "group");
   trigger.setAttribute("aria-haspopup", "listbox");
   trigger.setAttribute("aria-expanded", "false");
-  trigger.setAttribute("aria-label", `${label} 선택`);
-  trigger.innerHTML = `
-    <span class="time-dropdown-trigger-value">${selectedValue}</span>
-    <span class="time-dropdown-chevron" aria-hidden="true"></span>
-  `;
+  trigger.setAttribute("aria-label", `${label} 직접 입력 및 선택`);
+
+  const input = document.createElement("input");
+  input.type = "text";
+  input.className = "time-dropdown-input";
+  input.dataset.timePartInput = part;
+  input.value = selectedValue;
+  input.maxLength = 2;
+  input.inputMode = "numeric";
+  input.autocomplete = "off";
+  input.setAttribute("aria-label", `${label} 직접 입력`);
+
+  const toggle = document.createElement("button");
+  toggle.type = "button";
+  toggle.className = "time-dropdown-toggle";
+  toggle.dataset.timeDropdownToggle = part;
+  toggle.setAttribute("aria-label", `${label} 목록 열기`);
+  toggle.innerHTML = `<span class="time-dropdown-chevron" aria-hidden="true"></span>`;
+  trigger.append(input, toggle);
 
   const menu = document.createElement("div");
   menu.className = "time-dropdown-menu";
@@ -408,10 +451,23 @@ function handleTimePickerClick(event, input) {
     return;
   }
 
+  const toggle = event.target.closest("[data-time-dropdown-toggle]");
+  if (toggle) {
+    event.preventDefault();
+    toggleTimeDropdown(input, toggle.dataset.timeDropdownToggle);
+    return;
+  }
+
+  const partInput = event.target.closest("[data-time-part-input]");
+  if (partInput) {
+    partInput.select();
+    return;
+  }
+
   const trigger = event.target.closest("[data-time-dropdown-trigger]");
   if (trigger) {
     event.preventDefault();
-    toggleTimeDropdown(input, trigger.dataset.timeDropdownTrigger);
+    trigger.querySelector("[data-time-part-input]")?.focus();
     return;
   }
 
@@ -421,12 +477,31 @@ function handleTimePickerClick(event, input) {
     setTimePickerPart(input, option.dataset.timePart, option.dataset.timeOption);
     closeTimeDropdowns(input);
     const trigger = customTimePickers.get(input)?.panel.querySelector(`[data-time-dropdown-trigger="${option.dataset.timePart}"]`);
-    trigger?.focus();
+    trigger?.querySelector("[data-time-part-input]")?.focus();
     return;
   }
 }
 
+function handleTimePickerInput(event, input) {
+  const partInput = event.target.closest("[data-time-part-input]");
+  if (!partInput) return;
+
+  const digits = partInput.value.replace(/\D/g, "").slice(0, 2);
+  partInput.value = digits;
+
+  if (digits.length === 2) {
+    commitTimePartInput(input, partInput);
+  }
+}
+
 function handleTimePickerChange(event, input) {
+  const partInput = event.target.closest("[data-time-part-input]");
+  if (partInput) {
+    event.preventDefault();
+    commitTimePartInput(input, partInput);
+    return;
+  }
+
   const select = event.target.closest(".time-dropdown-select");
   if (!select) return;
   event.preventDefault();
@@ -444,6 +519,7 @@ function handleTimePickerAction(action, input) {
   }
 
   if (action === "close") {
+    commitTimePanelInputs(input);
     closeCustomTimePicker(input);
   }
 }
@@ -458,11 +534,27 @@ function handleTimePickerKeydown(event, input) {
     if (openMenu) {
       closeTimeDropdowns(input);
       const trigger = control.panel.querySelector(`[data-time-dropdown-trigger="${openMenu.dataset.timeDropdownMenu}"]`);
-      trigger?.focus();
+      trigger?.querySelector("[data-time-part-input]")?.focus();
     } else {
       closeCustomTimePicker(input, { commit: false });
     }
     return;
+  }
+
+  const partInput = event.target.closest("[data-time-part-input]");
+  if (partInput) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      commitTimePanelInputs(input);
+      closeCustomTimePicker(input);
+      return;
+    }
+
+    if (event.key === "ArrowDown" && event.altKey) {
+      event.preventDefault();
+      openTimeDropdown(input, partInput.dataset.timePartInput);
+      return;
+    }
   }
 
   const trigger = event.target.closest("[data-time-dropdown-trigger]");
@@ -480,7 +572,9 @@ function handleTimePickerKeydown(event, input) {
       event.preventDefault();
       setTimePickerPart(input, option.dataset.timePart, option.dataset.timeOption);
       closeTimeDropdowns(input);
-      control.panel.querySelector(`[data-time-dropdown-trigger="${option.dataset.timePart}"]`)?.focus();
+      control.panel
+        .querySelector(`[data-time-dropdown-trigger="${option.dataset.timePart}"] [data-time-part-input]`)
+        ?.focus();
       return;
     }
 
@@ -546,7 +640,46 @@ function getTimePickerSelection(value) {
 
 function composeTimeFromSelection(selection) {
   const hour24 = Math.max(0, Math.min(23, Number(selection.hour24) || 0));
-  return `${padNumber(hour24)}:${selection.minute || "00"}`;
+  const minute = Math.max(0, Math.min(59, Number(selection.minute) || 0));
+  return `${padNumber(hour24)}:${padNumber(minute)}`;
+}
+
+function commitTimePanelInputs(input) {
+  const control = customTimePickers.get(input);
+  if (!control) return;
+
+  const current = getTimePickerSelection(input.value);
+  const hourInput = control.panel.querySelector('[data-time-part-input="hour"]');
+  const minuteInput = control.panel.querySelector('[data-time-part-input="minute"]');
+  const next = {
+    hour24: normalizeTimePartInputValue("hour", hourInput?.value, current.hour24),
+    minute: normalizeTimePartInputValue("minute", minuteInput?.value, current.minute),
+  };
+
+  const nextValue = composeTimeFromSelection(next);
+  if (input.value !== nextValue) {
+    input.value = nextValue;
+    input.dispatchEvent(new Event("input", { bubbles: true }));
+  }
+  refreshOpenTimePickerSelection(input);
+}
+
+function commitTimePartInput(input, partInput) {
+  const part = partInput?.dataset.timePartInput;
+  if (!part) return;
+  const current = getTimePickerSelection(input.value);
+  const fallback = part === "hour" ? current.hour24 : current.minute;
+  const normalized = normalizeTimePartInputValue(part, partInput.value, fallback);
+  partInput.value = normalized;
+  setTimePickerPart(input, part, normalized);
+}
+
+function normalizeTimePartInputValue(part, value, fallback = "00") {
+  const digits = String(value || "").replace(/\D/g, "");
+  if (!digits) return fallback;
+  const max = part === "hour" ? 23 : 59;
+  const numeric = Math.max(0, Math.min(max, Number(digits)));
+  return padNumber(numeric);
 }
 
 function toggleTimeDropdown(input, part) {
@@ -597,8 +730,8 @@ function closeTimeDropdowns(input, exceptPart) {
 
 function updateTimeDropdownField(panel, part, selectedValue) {
   const trigger = panel.querySelector(`[data-time-dropdown-trigger="${part}"]`);
-  const value = trigger?.querySelector(".time-dropdown-trigger-value");
-  if (value) value.textContent = selectedValue;
+  const value = trigger?.querySelector("[data-time-part-input]");
+  if (value && document.activeElement !== value) value.value = selectedValue;
 
   panel.querySelectorAll(`[data-time-part="${part}"]`).forEach((option) => {
     const isSelected = option.dataset.timeOption === selectedValue;
@@ -695,10 +828,13 @@ window.TripLog.register("ui.timePicker", {
   alignCustomTimePanel,
   createTimeColumn,
   handleTimePickerClick,
+  handleTimePickerInput,
   handleTimePickerAction,
   handleTimePickerKeydown,
   setTimePickerPart,
   refreshOpenTimePickerSelection,
+  commitTimePanelInputs,
+  commitTimePartInput,
   alignSelectedTimeOptions,
   handleTimeOptionWheel,
   scrollTimeListFromEdge,
