@@ -5343,20 +5343,6 @@ td.number {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.stat-sticker::after {
-  content: "";
-  position: absolute;
-  top: 13px;
-  right: 13px;
-  z-index: 0;
-  width: 14px;
-  height: 14px;
-  background: #ffffff;
-  border: 2px solid var(--line);
-  border-radius: 999px;
-  box-shadow: 1px 1px 0 var(--line);
-}
-
 .stat-sticker > * {
   position: relative;
   z-index: 1;
@@ -12862,6 +12848,7 @@ html[data-theme="toss"] .summary-trip-destination {
 }
 
 .travel-method-selector .custom-select-button {
+  position: relative;
   height: 32px;
   min-height: 32px;
   padding: 0 9px;
@@ -12880,12 +12867,23 @@ html[data-theme="toss"] .summary-trip-destination {
 }
 
 .travel-method-selector .custom-select-value {
+  width: 100%;
+  justify-content: center;
   gap: 4px;
+  text-align: center;
 }
 
 .travel-method-selector .custom-select-chevron {
+  position: absolute;
+  top: 50%;
+  right: 10px;
   width: 7px;
   height: 7px;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.travel-method-selector .custom-select-button.open .custom-select-chevron {
+  transform: translateY(-50%) rotate(225deg);
 }
 
 .travel-method-selector .custom-select-menu {
@@ -12899,6 +12897,7 @@ html[data-theme="toss"] .summary-trip-destination {
 
 .travel-method-selector .custom-select-option,
 .travel-method-selector .custom-select-item {
+  justify-content: center;
   min-height: 30px;
   padding: 0 9px;
   border-width: 1px;
@@ -12906,6 +12905,7 @@ html[data-theme="toss"] .summary-trip-destination {
   font-family: var(--font-heading);
   font-size: 12px;
   font-weight: 900;
+  text-align: center;
 }
 
 .travel-time-input-group {
