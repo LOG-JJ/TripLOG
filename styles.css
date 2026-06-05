@@ -2054,19 +2054,15 @@ select:focus {
 
 /* Time picker details */
 .custom-time-panel {
-  position: fixed;
-  top: var(--time-panel-top, 0);
-  left: var(--time-panel-left, 0);
   right: auto;
   z-index: 10080;
-  width: min(var(--time-panel-width, 232px), calc(100vw - 24px));
-  min-width: min(var(--time-panel-width, 232px), calc(100vw - 24px));
+  width: min(232px, calc(100vw - 24px));
+  min-width: min(232px, calc(100vw - 24px));
   max-width: calc(100vw - 24px);
   padding: 10px;
   background:
     linear-gradient(180deg, #fffdf5 0%, #ffffff 100%);
   border-radius: var(--radius-sm);
-  transform: none;
 }
 
 .time-panel-head {
@@ -5734,8 +5730,8 @@ td.number {
   }
 
   .custom-time-panel {
-    width: min(var(--time-panel-width, 252px), calc(100vw - 24px));
-    min-width: min(var(--time-panel-width, 252px), calc(100vw - 24px));
+    width: min(252px, calc(100vw - 24px));
+    min-width: min(252px, calc(100vw - 24px));
   }
 
   .time-panel-grid {
@@ -7125,6 +7121,11 @@ html[data-theme="toss"] .clock-current-knob {
 .card-time-range-group .custom-time-panel {
   width: min(232px, calc(100vw - 48px));
   min-width: min(232px, calc(100vw - 48px));
+}
+
+.card-time-range-group .custom-time:last-child .custom-time-panel {
+  right: 0;
+  left: auto;
 }
 
 .inline-time-input,
@@ -11308,7 +11309,7 @@ html[data-theme="toss"] .overview-compact-btn.delete:hover {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
   margin-top: 0;
-  align-items: start;
+  align-items: stretch;
 }
 
 .card-timeline {
@@ -11337,8 +11338,13 @@ html[data-theme="toss"] .overview-compact-btn.delete:hover {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  height: 100%;
   position: relative;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dashboard-card:not(.card-timeline) {
+  min-height: 328px;
 }
 
 .dashboard-card:hover {
