@@ -415,11 +415,11 @@ function deleteTrip(tripId) {
   }
 }
 
-function importSharedTripSnapshot(snapshot = {}, { makeActive = true } = {}) {
+function normalizeImportedTripSnapshot(snapshot = {}) {
   const importedId = typeof snapshot.id === "string" && snapshot.id
     ? snapshot.id
     : `trip_shared_${Date.now()}`;
-  const importedTrip = {
+  return {
     ...getFallbackState(importedId),
     ...snapshot,
     id: importedId,
@@ -430,6 +430,10 @@ function importSharedTripSnapshot(snapshot = {}, { makeActive = true } = {}) {
     collaboration: normalizeCollaborationSettings(snapshot.collaboration),
     settlement: normalizeSettlementSettings(snapshot.settlement),
   };
+}
+
+function importSharedTripSnapshot(snapshot = {}, { makeActive = true } = {}) {
+  const importedTrip = normalizeImportedTripSnapshot(snapshot);
   let trips = getTrips();
   const existingIndex = trips.findIndex((trip) => trip.id === importedTrip.id);
   if (existingIndex >= 0) {
@@ -440,6 +444,73 @@ function importSharedTripSnapshot(snapshot = {}, { makeActive = true } = {}) {
   localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
   if (makeActive) switchTrip(importedTrip.id);
   return importedTrip;
+}
+
+function isEmptyDefaultSeedTrip(trip) {
+  if (!trip || trip.id !== "trip_default" || !hasNoSavedRecords(trip)) return false;
+  const fallback = getFallbackState("trip_default");
+  return (trip.tripName || "") === fallback.tripName
+    && (trip.startDate || "") === fallback.startDate
+    && (trip.endDate || "") === fallback.endDate;
+}
+
+function syncTripsFromSnapshots(snapshots = [], { preferredActiveId = "", removeEmptyDefault = true } = {}) {
+  const importedTrips = (Array.isArray(snapshots) ? snapshots : [])
+    .filter((snapshot) => snapshot && typeof snapshot === "object")
+    .map(normalizeImportedTripSnapshot);
+  if (!importedTrips.length) {
+    return {
+      changed: false,
+      activeTripId: getActiveTripId(),
+      importedCount: 0,
+      removedEmptyDefault: false,
+    };
+  }
+
+  const beforeTrips = getTrips();
+  const beforeSignature = JSON.stringify(beforeTrips);
+  const beforeActiveId = getActiveTripId();
+  const importedIds = new Set(importedTrips.map((trip) => trip.id));
+  let trips = [...beforeTrips];
+
+  importedTrips.forEach((importedTrip) => {
+    const existingIndex = trips.findIndex((trip) => trip.id === importedTrip.id);
+    if (existingIndex >= 0) {
+      trips[existingIndex] = { ...trips[existingIndex], ...importedTrip };
+    } else {
+      trips.push(importedTrip);
+    }
+  });
+
+  let removedEmptyDefault = false;
+  if (removeEmptyDefault && !importedIds.has("trip_default")) {
+    const nextTrips = trips.filter((trip) => !isEmptyDefaultSeedTrip(trip));
+    removedEmptyDefault = nextTrips.length !== trips.length;
+    if (nextTrips.length) trips = nextTrips;
+  }
+
+  const preferredId = preferredActiveId && trips.some((trip) => trip.id === preferredActiveId)
+    ? preferredActiveId
+    : "";
+  const activeStillExists = beforeActiveId && trips.some((trip) => trip.id === beforeActiveId);
+  const activeTripId = preferredId || (activeStillExists ? beforeActiveId : importedTrips[0]?.id || trips[0]?.id || "trip_default");
+
+  localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
+  localStorage.setItem(ACTIVE_TRIP_ID_KEY, activeTripId);
+
+  const changed = beforeSignature !== JSON.stringify(trips)
+    || beforeActiveId !== activeTripId
+    || state.id !== activeTripId;
+  if (activeTripId && trips.some((trip) => trip.id === activeTripId)) {
+    switchTrip(activeTripId);
+  }
+
+  return {
+    changed,
+    activeTripId,
+    importedCount: importedTrips.length,
+    removedEmptyDefault,
+  };
 }
 
 function getStateSnapshot() {
@@ -481,4 +552,5 @@ window.TripLog.register("persistence.stateStorage", {
   createNewTrip,
   deleteTrip,
   importSharedTripSnapshot,
+  syncTripsFromSnapshots,
 });
