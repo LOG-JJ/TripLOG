@@ -38,22 +38,16 @@ function updateInlineItineraryField(id, field, value) {
   if (item[field] === value) return;
   item[field] = value;
 
-  // Bidirectional calculations for start time, end time, and travel duration
+  // Keep transit duration as the fixed value between adjacent places.
   if (field === "time") {
     const dayItems = getFilteredItineraryItems();
     const idx = dayItems.findIndex(x => x.id === id);
     if (idx > 0) {
       const prevItem = dayItems[idx - 1];
-      const baseTime = prevItem.endTime || prevItem.time;
-      if (baseTime) {
-        const diff = getMinutesBetweenTimes(baseTime, value);
-        if (!item.transits) {
-          item.transits = [{ trans: item.trans || "none", duration: item.duration || 0, cost: item.cost || 0, memo: "" }];
-        }
-        if (item.transits.length > 0) {
-          item.transits[0].duration = diff || 0;
-        }
-        syncTransitTotals(item);
+      const transitDuration = getTransitDurationMinutes(item);
+      const calculatedEndTime = addMinutesToTime(value, -transitDuration);
+      if (calculatedEndTime) {
+        prevItem.endTime = calculatedEndTime;
       }
     }
   }
@@ -63,15 +57,10 @@ function updateInlineItineraryField(id, field, value) {
     const idx = dayItems.findIndex(x => x.id === id);
     if (idx < dayItems.length - 1) {
       const nextItem = dayItems[idx + 1];
-      if (nextItem.time) {
-        const diff = getMinutesBetweenTimes(value, nextItem.time);
-        if (!nextItem.transits) {
-          nextItem.transits = [{ trans: nextItem.trans || "none", duration: nextItem.duration || 0, cost: nextItem.cost || 0, memo: "" }];
-        }
-        if (nextItem.transits.length > 0) {
-          nextItem.transits[0].duration = diff || 0;
-        }
-        syncTransitTotals(nextItem);
+      const transitDuration = getTransitDurationMinutes(nextItem);
+      const calculatedStartTime = addMinutesToTime(value, transitDuration);
+      if (calculatedStartTime) {
+        nextItem.time = calculatedStartTime;
       }
     }
   }
@@ -173,6 +162,12 @@ function syncTransitTotals(item) {
   item.trans = item.transits[0]?.trans || "none";
 }
 
+function getTransitDurationMinutes(item) {
+  if (!item) return 0;
+  syncTransitTotals(item);
+  return Math.max(0, Number(item.duration) || 0);
+}
+
 function syncSegmentExpense(item) {
   if (item.syncExpense && item.cost > 0) {
     const transLabels = { walk: "도보", car: "차량", train: "기차", bus: "버스", flight: "비행", etc: "비행", none: "이동" };
@@ -226,4 +221,5 @@ window.TripLog.register("features.itinerary.listActions", {
   deleteTravelSegment,
   updateTravelSegmentField,
   syncTransitTotals,
+  getTransitDurationMinutes,
 });

@@ -14,7 +14,7 @@ function renderExpenseFormMode() {
     ? "예: 호텔명 또는 숙소명"
     : isPreTrip
       ? "예: 항공권, eSIM, 입장권"
-      : "예: 숙소 예약금";
+      : "예: 점심, 택시비";
   els.amountLabel.textContent = isLodging ? (isOverseas ? "원화 총액" : "숙소 총액") : isWonPayment ? "원화 환산" : isOverseas ? "원화 환산" : "금액";
   els.amountInput.placeholder = isLodging ? "총 숙소비" : isOverseas ? "자동 계산" : "0";
   els.submitButton.querySelector("span").textContent = editingId ? "저장" : "추가";

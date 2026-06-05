@@ -28,6 +28,11 @@ function setupPretripPurchaseForms() {
     if (input && typeof setupCustomDatePicker === "function") setupCustomDatePicker(input);
   });
 
+  els.pretripFlightDepartDateInput?.addEventListener("change", syncPretripPurchaseDefaults);
+  els.pretripFlightReturnDateInput?.addEventListener("change", syncPretripPurchaseDefaults);
+  els.pretripHotelCheckInInput?.addEventListener("change", () => handlePretripHotelDateChange("checkIn"));
+  els.pretripHotelCheckOutInput?.addEventListener("change", () => handlePretripHotelDateChange("checkOut"));
+
   [
     els.pretripFlightDepartTimeInput,
     els.pretripFlightReturnDepartTimeInput,
@@ -79,25 +84,70 @@ function syncPretripOptionsVisibility({ skipFocus = true } = {}) {
 }
 
 function syncPretripPurchaseDefaults() {
-  if (els.pretripFlightDepartDateInput && !els.pretripFlightDepartDateInput.value) {
-    els.pretripFlightDepartDateInput.value = state.startDate || "";
-    syncCustomDatePicker(els.pretripFlightDepartDateInput);
+  syncPretripPurchaseDateBounds();
+
+  syncPretripDateValue(els.pretripFlightDepartDateInput, state.startDate);
+  syncPretripDateValue(els.pretripFlightReturnDateInput, state.endDate);
+  syncPretripDateValue(els.pretripHotelCheckInInput, state.startDate);
+  syncPretripPurchaseDateBounds();
+  syncPretripDateValue(els.pretripHotelCheckOutInput, state.endDate);
+  syncPretripPurchaseDateBounds();
+}
+
+function handlePretripHotelDateChange(changedField) {
+  const checkIn = parseDate(els.pretripHotelCheckInInput?.value);
+  const checkOut = parseDate(els.pretripHotelCheckOutInput?.value);
+
+  if (changedField === "checkIn" && checkIn && (!checkOut || checkOut <= checkIn)) {
+    els.pretripHotelCheckOutInput.value = toInputDate(addDays(checkIn, 1));
   }
 
-  if (els.pretripFlightReturnDateInput && !els.pretripFlightReturnDateInput.value) {
-    els.pretripFlightReturnDateInput.value = state.endDate || "";
-    syncCustomDatePicker(els.pretripFlightReturnDateInput);
-  }
+  syncPretripPurchaseDefaults();
+}
 
-  if (els.pretripHotelCheckInInput && !els.pretripHotelCheckInInput.value) {
-    els.pretripHotelCheckInInput.value = state.startDate || "";
-    syncCustomDatePicker(els.pretripHotelCheckInInput);
-  }
+function syncPretripPurchaseDateBounds() {
+  const tripStart = parseDate(state.startDate);
+  const tripEnd = parseDate(state.endDate);
+  if (!tripStart || !tripEnd) return;
 
-  if (els.pretripHotelCheckOutInput && !els.pretripHotelCheckOutInput.value) {
-    els.pretripHotelCheckOutInput.value = state.endDate || "";
-    syncCustomDatePicker(els.pretripHotelCheckOutInput);
+  setPretripDateBounds(els.pretripFlightDepartDateInput, tripStart, tripEnd);
+  setPretripDateBounds(els.pretripFlightReturnDateInput, tripStart, tripEnd);
+
+  const hotelCheckIn = parseDate(els.pretripHotelCheckInInput?.value);
+  const checkInMax = tripStart < tripEnd ? addDays(tripEnd, -1) : tripEnd;
+  const checkOutMin = hotelCheckIn ? addDays(hotelCheckIn, 1) : addDays(tripStart, 1);
+
+  setPretripDateBounds(els.pretripHotelCheckInInput, tripStart, checkInMax);
+  setPretripDateBounds(els.pretripHotelCheckOutInput, checkOutMin, tripEnd);
+}
+
+function setPretripDateBounds(input, minDate, maxDate) {
+  if (!input) return;
+  input.min = toInputDate(minDate);
+  input.max = toInputDate(maxDate);
+  syncCustomDatePicker(input);
+}
+
+function syncPretripDateValue(input, fallbackValue) {
+  if (!input) return;
+  const nextValue = getPretripDateWithinBounds(input, fallbackValue);
+  if (nextValue !== input.value) {
+    input.value = nextValue;
   }
+  syncCustomDatePicker(input);
+}
+
+function getPretripDateWithinBounds(input, fallbackValue) {
+  const currentDate = parseDate(input.value);
+  if (currentDate && !isDateOutsideInputBounds(input, input.value)) return input.value;
+
+  const minDate = parseDate(input.min);
+  const maxDate = parseDate(input.max);
+  let nextDate = parseDate(fallbackValue) || minDate || maxDate;
+  if (!nextDate) return input.value || "";
+  if (minDate && nextDate < minDate) nextDate = minDate;
+  if (maxDate && nextDate > maxDate) nextDate = maxDate;
+  return toInputDate(nextDate);
 }
 
 function setPretripPurchaseMode(mode, { skipFocus = false } = {}) {
@@ -196,6 +246,12 @@ function handlePretripHotelSubmit(event) {
   const checkOut = els.pretripHotelCheckOutInput?.value || "";
   if (!amount || !hotelName || !checkIn || !checkOut) return;
 
+  syncPretripPurchaseDateBounds();
+  if (isDateOutsideInputBounds(els.pretripHotelCheckInInput, checkIn) || isDateOutsideInputBounds(els.pretripHotelCheckOutInput, checkOut)) {
+    window.alert("숙소 기간은 전체 여행 일정 안에서 선택해 주세요.");
+    return;
+  }
+
   if (checkIn >= checkOut) {
     window.alert("체크아웃은 체크인보다 늦어야 합니다.");
     return;
@@ -259,4 +315,5 @@ window.TripLog.register("features.expenses.pretripPurchases", {
   setPretripPurchaseMode,
   setPretripOptionsExpanded,
   openPretripPurchaseMenu,
+  syncPretripPurchaseDateBounds,
 });

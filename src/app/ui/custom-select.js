@@ -52,7 +52,7 @@ function syncCustomSelect(select, options = {}) {
   if (options.rebuild) {
     control.menu.replaceChildren();
 
-    Array.from(select.options).forEach((option) => {
+    Array.from(select.options).filter((option) => !option.hidden).forEach((option) => {
       const item = document.createElement("button");
       item.type = "button";
       item.className = "custom-select-option";

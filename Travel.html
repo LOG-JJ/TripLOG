@@ -490,17 +490,17 @@
               <label class="expense-category-field" for="categorySelect">
                 <span>항목</span>
                 <select id="categorySelect" required>
-                  <option value="숙소">숙소</option>
                   <option value="식비" selected>식비</option>
                   <option value="관광">관광</option>
                   <option value="교통">교통</option>
                   <option value="쇼핑">쇼핑</option>
                   <option value="기타">기타</option>
+                  <option value="숙소" hidden>숙소</option>
                 </select>
               </label>
               <label class="wide" for="descriptionInput">
                 <span>내용</span>
-                <input id="descriptionInput" type="text" maxlength="44" placeholder="예: 숙소 예약금" required />
+                <input id="descriptionInput" type="text" maxlength="44" placeholder="예: 점심, 입장권" required />
               </label>
               <span id="amountFieldAnchor" hidden></span>
               <label class="expense-amount-field" for="amountInput">

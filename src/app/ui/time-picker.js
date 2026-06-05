@@ -177,7 +177,6 @@ function ensureCustomTimePickerViewportListeners() {
   if (ensureCustomTimePickerViewportListeners.isAttached) return;
   window.addEventListener("resize", scheduleOpenTimePanelAlignment, { passive: true });
   window.addEventListener("orientationchange", scheduleOpenTimePanelAlignment, { passive: true });
-  window.addEventListener("scroll", scheduleOpenTimePanelAlignment, { capture: true, passive: true });
   ensureCustomTimePickerViewportListeners.isAttached = true;
 }
 
@@ -617,7 +616,6 @@ function refreshOpenTimePickerSelection(input) {
   const fallback = selected || getTimePickerSelection("09:00");
   updateTimeDropdownField(control.panel, "hour", fallback.hour24);
   updateTimeDropdownField(control.panel, "minute", fallback.minute);
-  alignCustomTimePanel(input);
 }
 
 function alignSelectedTimeOptions(input) {
