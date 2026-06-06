@@ -1,4 +1,43 @@
+let customSelectDocumentClickBound = false;
+
+function attachCustomSelectDocumentListener() {
+  if (customSelectDocumentClickBound) return;
+  customSelectDocumentClickBound = true;
+
+  document.addEventListener("click", (event) => {
+    pruneDetachedCustomSelects();
+    customSelects.forEach((control, select) => {
+      if (!control.shell.contains(event.target)) {
+        closeCustomSelect(select);
+      }
+    });
+  });
+}
+
+function pruneDetachedCustomSelects() {
+  Array.from(customSelects.entries()).forEach(([select, control]) => {
+    if (!select.isConnected || !control.shell.isConnected) {
+      customSelects.delete(select);
+    }
+  });
+}
+
+function destroyCustomSelect(select) {
+  const control = customSelects.get(select);
+  if (!control) return;
+
+  select.classList.remove("native-select-hidden");
+  if (control.shell.isConnected && control.shell.contains(select)) {
+    control.shell.parentNode?.insertBefore(select, control.shell);
+    control.shell.remove();
+  }
+
+  customSelects.delete(select);
+}
+
 function setupCustomSelect(select) {
+  if (!select) return;
+  pruneDetachedCustomSelects();
   if (customSelects.has(select)) return;
 
   const shell = document.createElement("div");
@@ -31,6 +70,7 @@ function setupCustomSelect(select) {
   select.classList.add("native-select-hidden");
 
   customSelects.set(select, { shell, button, value, menu });
+  attachCustomSelectDocumentListener();
 
   button.addEventListener("click", (event) => {
     event.preventDefault();
@@ -38,16 +78,16 @@ function setupCustomSelect(select) {
   });
   button.addEventListener("keydown", (event) => handleCustomSelectButtonKeydown(event, select));
 
-  document.addEventListener("click", (event) => {
-    if (!shell.contains(event.target)) closeCustomSelect(select);
-  });
-
   syncCustomSelect(select, { rebuild: true });
 }
 
 function syncCustomSelect(select, options = {}) {
   const control = customSelects.get(select);
   if (!control) return;
+  if (!select.isConnected || !control.shell.isConnected) {
+    destroyCustomSelect(select);
+    return;
+  }
 
   if (options.rebuild) {
     control.menu.replaceChildren();
@@ -122,6 +162,7 @@ function syncCustomSelect(select, options = {}) {
 }
 
 function toggleCustomSelect(select) {
+  pruneDetachedCustomSelects();
   const control = customSelects.get(select);
   if (!control || control.button.disabled) return;
 
@@ -142,13 +183,18 @@ function toggleCustomSelect(select) {
 function closeCustomSelect(select) {
   const control = customSelects.get(select);
   if (!control) return;
+  if (!select.isConnected || !control.shell.isConnected) {
+    customSelects.delete(select);
+    return;
+  }
   control.menu.hidden = true;
   control.button.classList.remove("open");
   control.button.setAttribute("aria-expanded", "false");
 }
 
 function closeAllCustomSelects(exceptSelect) {
-  customSelects.forEach((_, select) => {
+  pruneDetachedCustomSelects();
+  Array.from(customSelects.keys()).forEach((select) => {
     if (select !== exceptSelect) closeCustomSelect(select);
   });
 }
@@ -192,6 +238,8 @@ function getEnabledCustomOptions(menu) {
 
 window.TripLog.register("ui.customSelect", {
   setupCustomSelect,
+  destroyCustomSelect,
+  pruneDetachedCustomSelects,
   syncCustomSelect,
   toggleCustomSelect,
   closeCustomSelect,

@@ -122,6 +122,20 @@ function buildItineraryCardMapSearchMeta(item = {}) {
   };
 }
 
+function disposeItineraryListWidgets() {
+  if (!els.itineraryList) return;
+
+  const timePicker = window.TripLog?.ui?.timePicker;
+  els.itineraryList.querySelectorAll(".inline-time-input, .inline-endtime-input").forEach((inputEl) => {
+    timePicker?.destroyCustomTimePicker?.(inputEl);
+  });
+
+  const customSelect = window.TripLog?.ui?.customSelect;
+  els.itineraryList.querySelectorAll(".travel-trans-select").forEach((selectEl) => {
+    customSelect?.destroyCustomSelect?.(selectEl);
+  });
+}
+
 function renderItineraryList(days) {
   const themeMeta = {
     sightseeing: { text: "명소", emoji: "📸", label: "📸 명소" },
@@ -163,6 +177,7 @@ function renderItineraryList(days) {
 
   const dayMap = new Map(days.map((day) => [day.date, day]));
   const items = getFilteredItineraryItems();
+  disposeItineraryListWidgets();
   els.itineraryList.replaceChildren();
   els.itineraryEmpty.hidden = items.length > 0;
 
@@ -593,5 +608,6 @@ window.TripLog.register("features.itinerary.render", {
   renderItineraryDaySelect,
   renderItineraryDayStrip,
   renderItineraryList,
+  disposeItineraryListWidgets,
   showToast,
 });

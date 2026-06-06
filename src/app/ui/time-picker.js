@@ -1,4 +1,45 @@
+let customTimeDocumentClickBound = false;
+
+function attachCustomTimePickerDocumentListener() {
+  if (customTimeDocumentClickBound) return;
+  customTimeDocumentClickBound = true;
+
+  document.addEventListener("click", (event) => {
+    pruneDetachedCustomTimePickers();
+    customTimePickers.forEach((control, input) => {
+      if (!control.shell.contains(event.target)) {
+        closeCustomTimePicker(input);
+      }
+    });
+  });
+}
+
+function pruneDetachedCustomTimePickers() {
+  Array.from(customTimePickers.entries()).forEach(([input, control]) => {
+    if (!input.isConnected || !control.shell.isConnected) {
+      customTimePickers.delete(input);
+    }
+  });
+}
+
+function destroyCustomTimePicker(input) {
+  const control = customTimePickers.get(input);
+  if (!control) return;
+
+  setTimePickerLayerState(input, false);
+  input.classList.remove("native-time-hidden");
+
+  if (control.shell.isConnected && control.shell.contains(input)) {
+    control.shell.parentNode?.insertBefore(input, control.shell);
+    control.shell.remove();
+  }
+
+  customTimePickers.delete(input);
+}
+
 function setupCustomTimePicker(input) {
+  if (!input) return;
+  pruneDetachedCustomTimePickers();
   if (customTimePickers.has(input)) return;
 
   const shell = document.createElement("div");
@@ -46,7 +87,8 @@ function setupCustomTimePicker(input) {
   shell.append(button, panel);
   input.classList.add("native-time-hidden");
 
-  customTimePickers.set(input, { shell, button, value, panel });
+  customTimePickers.set(input, { shell, button, value, panel, openValue: input.value || "", panelDirty: false });
+  attachCustomTimePickerDocumentListener();
 
   // Open panel on input focus
   value.addEventListener("focus", () => {
@@ -162,18 +204,16 @@ function setupCustomTimePicker(input) {
     event.stopPropagation();
     handleTimePickerKeydown(event, input);
   });
-  document.addEventListener("click", (event) => {
-    if (!shell.contains(event.target) && !panel.contains(event.target)) {
-      closeCustomTimePicker(input);
-    }
-  });
-
   syncCustomTimePicker(input);
 }
 
 function syncCustomTimePicker(input) {
   const control = customTimePickers.get(input);
   if (!control) return;
+  if (!input.isConnected || !control.shell.isConnected) {
+    destroyCustomTimePicker(input);
+    return;
+  }
 
   if (control.value instanceof HTMLInputElement) {
     if (document.activeElement !== control.value) {
@@ -201,6 +241,7 @@ function toggleCustomTimePicker(input) {
 }
 
 function openCustomTimePicker(input) {
+  pruneDetachedCustomTimePickers();
   const control = customTimePickers.get(input);
   if (!control || control.button.disabled) return;
 
@@ -208,6 +249,8 @@ function openCustomTimePicker(input) {
   closeAllCustomDatePickers();
   closeAllCustomTimePickers(input);
   renderTimePicker(input);
+  control.openValue = input.value || "";
+  control.panelDirty = false;
   control.panel.hidden = false;
   control.button.classList.add("open");
   control.button.setAttribute("aria-expanded", "true");
@@ -218,21 +261,33 @@ function openCustomTimePicker(input) {
 function closeCustomTimePicker(input, { commit = true } = {}) {
   const control = customTimePickers.get(input);
   if (!control) return;
+  if (!input.isConnected || !control.shell.isConnected) {
+    customTimePickers.delete(input);
+    return;
+  }
+
   const wasOpen = !control.panel.hidden;
+  let shouldDispatchChange = false;
   if (wasOpen && commit) {
-    commitTimePanelInputs(input);
+    const previousValue = control.openValue ?? input.value ?? "";
+    if (input.value || control.panelDirty) {
+      commitTimePanelInputs(input);
+    }
+    shouldDispatchChange = input.value !== previousValue;
   }
   control.panel.hidden = true;
   control.button.classList.remove("open");
   control.button.setAttribute("aria-expanded", "false");
   setTimePickerLayerState(input, false);
-  if (wasOpen && commit) {
+  control.openValue = input.value || "";
+  if (wasOpen && commit && shouldDispatchChange) {
     input.dispatchEvent(new Event("change", { bubbles: true }));
   }
 }
 
 function closeAllCustomTimePickers(exceptInput) {
-  customTimePickers.forEach((_, input) => {
+  pruneDetachedCustomTimePickers();
+  Array.from(customTimePickers.keys()).forEach((input) => {
     if (input !== exceptInput) closeCustomTimePicker(input);
   });
 }
@@ -370,6 +425,9 @@ function handleTimePickerInput(event, input) {
   const partInput = event.target.closest("[data-time-part-input]");
   if (!partInput) return;
 
+  const control = customTimePickers.get(input);
+  if (control) control.panelDirty = true;
+
   const digits = partInput.value.replace(/\D/g, "").slice(0, 2);
   partInput.value = digits;
 
@@ -405,7 +463,6 @@ function handleTimePickerAction(action, input) {
   }
 
   if (action === "close") {
-    commitTimePanelInputs(input);
     closeCustomTimePicker(input);
   }
 }
@@ -431,7 +488,6 @@ function handleTimePickerKeydown(event, input) {
   if (partInput) {
     if (event.key === "Enter") {
       event.preventDefault();
-      commitTimePanelInputs(input);
       closeCustomTimePicker(input);
       return;
     }
@@ -475,6 +531,8 @@ function handleTimePickerKeydown(event, input) {
 }
 
 function setTimePickerPart(input, part, value) {
+  const control = customTimePickers.get(input);
+  if (control) control.panelDirty = true;
   const current = getTimePickerSelection(input.value);
   const next = {
     hour24: part === "hour" ? value : current.hour24,
@@ -549,6 +607,8 @@ function commitTimePanelInputs(input) {
 }
 
 function commitTimePartInput(input, partInput) {
+  const control = customTimePickers.get(input);
+  if (control) control.panelDirty = true;
   const part = partInput?.dataset.timePartInput;
   if (!part) return;
   const current = getTimePickerSelection(input.value);
@@ -725,6 +785,8 @@ function animateTimeListScroll(list, delta, duration) {
 
 window.TripLog.register("ui.timePicker", {
   setupCustomTimePicker,
+  destroyCustomTimePicker,
+  pruneDetachedCustomTimePickers,
   syncCustomTimePicker,
   toggleCustomTimePicker,
   openCustomTimePicker,
