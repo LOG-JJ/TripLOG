@@ -155,55 +155,68 @@ function renderOverviewPage() {
   if (timelineContainer) {
     timelineContainer.replaceChildren();
 
-    // Only display up to 6 days to fit cleanly into Toss Dashboard
-    const displayDays = days.slice(0, 6);
-    displayDays.forEach((day) => {
-      const dayItems = state.itineraryItems.filter(item => item.date === day.date)
-        .sort((a, b) => (a.time || "99:99").localeCompare(b.time || "99:99"));
-
-      const dayBlock = document.createElement("div");
-      dayBlock.className = "timeline-day-block";
-
-      let itemsHtml = "";
-      if (dayItems.length === 0) {
-        itemsHtml = `
-          <div class="timeline-item empty">
-            <span class="timeline-dot-node dot-empty"></span>
-            <span class="timeline-text">등록된 일정이 없습니다.</span>
-          </div>
-        `;
-      } else {
-        itemsHtml = dayItems.map((item, idx) => {
-          const themeEmojis = { sightseeing: "📸", lodging: "🏨", food: "🍽️", shopping: "🛍️", transport: "🚗", etc: "🎈" };
-          const emoji = themeEmojis[item.theme] || "📍";
-          const dotClass = idx === 0 ? "dot-checked" : "dot-normal";
-          return `
-            <div class="timeline-item">
-              <span class="timeline-dot-node ${dotClass}"></span>
-              <span class="timeline-text">
-                <span class="timeline-emoji">${emoji}</span>
-                <span class="timeline-place-name">${escapeHtml(item.place)}</span>
-                ${item.time ? `<small class="timeline-item-time">(${item.time}${item.endTime ? ` ~ ${item.endTime}` : ""})</small>` : ""}
-              </span>
-            </div>
-          `;
-        }).join("");
-      }
-
-      dayBlock.innerHTML = `
-        <div class="timeline-day-header">
-          <span class="timeline-day-checkbox"></span>
-          <strong class="timeline-day-label">Day ${day.index}</strong>
-        </div>
-        <div class="timeline-items-wrapper">
-          ${itemsHtml}
-        </div>
-      `;
-      timelineContainer.appendChild(dayBlock);
-    });
-
     if (days.length === 0) {
       timelineContainer.innerHTML = `<div class="empty-timeline-info">일정 탭에서 시작일과 종료일을 지정하면 일차별 타임라인이 시작됩니다.</div>`;
+    } else {
+      const daysPerTimelineColumn = 4;
+      const themeEmojis = { sightseeing: "📸", lodging: "🏨", food: "🍽️", shopping: "🛍️", transport: "🚗", etc: "🎈" };
+      let timelineColumn = null;
+
+      days.forEach((day, dayIndex) => {
+        if (dayIndex % daysPerTimelineColumn === 0) {
+          timelineColumn = document.createElement("div");
+          timelineColumn.className = "timeline-column";
+          timelineContainer.appendChild(timelineColumn);
+        }
+
+        const dayItems = state.itineraryItems.filter(item => item.date === day.date)
+          .sort((a, b) => (a.time || "99:99").localeCompare(b.time || "99:99"));
+
+        const dayBlock = document.createElement("div");
+        dayBlock.className = "timeline-day-block";
+        if ((dayIndex + 1) % daysPerTimelineColumn === 0) {
+          dayBlock.classList.add("is-column-end");
+        }
+        if (dayIndex === days.length - 1) {
+          dayBlock.classList.add("is-timeline-end");
+        }
+
+        let itemsHtml = "";
+        if (dayItems.length === 0) {
+          itemsHtml = `
+            <div class="timeline-item empty">
+              <span class="timeline-dot-node dot-empty"></span>
+              <span class="timeline-text">등록된 일정이 없습니다.</span>
+            </div>
+          `;
+        } else {
+          itemsHtml = dayItems.map((item, idx) => {
+            const emoji = themeEmojis[item.theme] || "📍";
+            const dotClass = idx === 0 ? "dot-checked" : "dot-normal";
+            return `
+              <div class="timeline-item">
+                <span class="timeline-dot-node ${dotClass}"></span>
+                <span class="timeline-text">
+                  <span class="timeline-emoji">${emoji}</span>
+                  <span class="timeline-place-name">${escapeHtml(item.place)}</span>
+                  ${item.time ? `<small class="timeline-item-time">(${item.time}${item.endTime ? ` ~ ${item.endTime}` : ""})</small>` : ""}
+                </span>
+              </div>
+            `;
+          }).join("");
+        }
+
+        dayBlock.innerHTML = `
+          <div class="timeline-day-header">
+            <span class="timeline-day-checkbox"></span>
+            <strong class="timeline-day-label">Day ${day.index}</strong>
+          </div>
+          <div class="timeline-items-wrapper">
+            ${itemsHtml}
+          </div>
+        `;
+        timelineColumn.appendChild(dayBlock);
+      });
     }
   }
 

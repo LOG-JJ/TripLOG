@@ -11546,6 +11546,10 @@ html[data-theme="toss"] .overview-compact-btn.delete:hover {
   margin-top: 4px;
 }
 
+.timeline-column {
+  display: contents;
+}
+
 .timeline-day-block {
   position: relative;
   padding-left: 24px;
@@ -11561,8 +11565,29 @@ html[data-theme="toss"] .overview-compact-btn.delete:hover {
   background: var(--line);
 }
 
-.timeline-day-block:last-child::before {
+.timeline-day-block.is-timeline-end::before {
   display: none;
+}
+
+@media (min-width: 681px) {
+  .timeline-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items: start;
+    column-gap: 36px;
+    row-gap: 20px;
+  }
+
+  .timeline-column {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .timeline-day-block.is-column-end::before {
+    display: none;
+  }
 }
 
 .timeline-day-header {
