@@ -6,7 +6,7 @@ create extension if not exists pgcrypto;
 
 create table if not exists public.triplog_trips (
   id uuid primary key default gen_random_uuid(),
-  app_trip_id text not null unique,
+  app_trip_id text not null,
   owner_id uuid not null references auth.users(id) on delete cascade,
   trip_name text not null default '현재 여행',
   start_date date,
@@ -51,6 +51,15 @@ create index if not exists triplog_trip_members_user_idx
 
 create index if not exists triplog_trips_owner_idx
   on public.triplog_trips(owner_id);
+
+alter table public.triplog_trips
+  drop constraint if exists triplog_trips_app_trip_id_key;
+
+create unique index if not exists triplog_trips_owner_app_trip_id_idx
+  on public.triplog_trips(owner_id, app_trip_id);
+
+create index if not exists triplog_trips_app_trip_id_idx
+  on public.triplog_trips(app_trip_id);
 
 create index if not exists triplog_trip_invites_token_idx
   on public.triplog_trip_invites(token);

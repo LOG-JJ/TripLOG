@@ -6,8 +6,12 @@ const outDir = path.join(rootDir, "dist");
 const deployEntries = [
   "_headers",
   "_redirects",
+  "apple-touch-icon.png",
   "app.js",
+  "favicon-32.png",
+  "icons",
   "index.html",
+  "site.webmanifest",
   "styles.css",
   "Travel.html",
   "src",

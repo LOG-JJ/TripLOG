@@ -1,0 +1,24 @@
+{
+  "name": "TripLOG 여행 가계부",
+  "short_name": "TripLOG",
+  "description": "여행 일정, 지출, 정산을 함께 관리하는 TripLOG 웹앱",
+  "start_url": "/Travel.html?page=settings",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#101317",
+  "theme_color": "#101317",
+  "icons": [
+    {
+      "src": "/icons/triplog-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/triplog-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,5 +1,9 @@
 (() => {
+<<<<<<< HEAD
   const scriptVersion = "manual-trip-sync-20260605-8";
+=======
+  const scriptVersion = "account-trip-list-sync-20260606-2";
+>>>>>>> cf57465a6834d7ff101d027fe6fbc08a95893769
   const scriptFiles = [
     { path: "../../vendor/supabase-js-2.107.0.min.js", optional: true },
     "core/namespace.js",
