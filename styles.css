@@ -532,6 +532,17 @@ button.brand-mark {
   background: var(--accent-pink);
 }
 
+.brand-mark::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 2px solid currentColor;
+  border-radius: 7px;
+  opacity: 0;
+  transform: scale(0.7);
+  pointer-events: none;
+}
+
 .brand-mark:active {
   transform: translate(1px, 1px);
   box-shadow: 0 0 0 #000;
@@ -576,6 +587,16 @@ svg {
 
 .brand-mark.is-syncing .brand-icon.active {
   animation: syncIconSpin 0.8s linear infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.brand-mark.is-syncing::after {
+  animation: syncButtonPulse 0.8s ease-out infinite;
+}
+
+.brand-mark.is-synced::after {
+  animation: syncButtonPop 0.52s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .brand-copy {
@@ -1467,6 +1488,36 @@ main {
   }
   100% {
     transform: translateZ(0) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes syncButtonPulse {
+  0% {
+    opacity: 0.85;
+    transform: scale(0.68);
+  }
+  70% {
+    opacity: 0.18;
+    transform: scale(1.14);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes syncButtonPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.72);
+  }
+  45% {
+    opacity: 0.9;
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.22);
   }
 }
 
@@ -9979,6 +10030,25 @@ html[data-theme="toss"] .brand-mark svg {
   stroke: #ffffff !important;
 }
 
+html[data-theme="toss"] .trip-sync-toast {
+  color: #191f28 !important;
+  background: rgba(255, 255, 255, 0.96) !important;
+  border: 1px solid rgba(209, 214, 219, 0.9) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 14px 36px rgba(25, 31, 40, 0.14) !important;
+  font-weight: 700 !important;
+}
+
+html[data-theme="toss"] .trip-sync-toast::before {
+  border: none !important;
+  box-shadow: none !important;
+  background: #00c471 !important;
+}
+
+html[data-theme="toss"] .trip-sync-toast[data-tone="warning"]::before {
+  background: #f04452 !important;
+}
+
 html[data-theme="toss"] .brand-copy h1 {
   font-family: var(--font-heading) !important;
   font-size: 22px !important;
@@ -11292,6 +11362,65 @@ html[data-theme="toss"] .overview-compact-btn.delete:hover {
 .toss-toast.show {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+
+.trip-sync-toast {
+  position: fixed;
+  top: max(16px, env(safe-area-inset-top));
+  left: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: max-content;
+  max-width: calc(100vw - 32px);
+  min-height: 42px;
+  padding: 10px 16px;
+  color: var(--text);
+  background: var(--surface);
+  border: 2.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-align: center;
+  z-index: 10020;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-14px) scale(0.98);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.trip-sync-toast::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  background: var(--accent-mint);
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  box-shadow: 1.5px 1.5px 0 var(--line);
+}
+
+.trip-sync-toast[data-tone="warning"]::before {
+  background: var(--accent-pink);
+}
+
+.trip-sync-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+@media (max-width: 560px) {
+  .trip-sync-toast {
+    top: max(10px, env(safe-area-inset-top));
+    width: calc(100vw - 24px);
+    min-height: 40px;
+    padding: 9px 12px;
+    font-size: 12px;
+  }
 }
 
 

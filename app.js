@@ -1,5 +1,5 @@
 (() => {
-  const scriptVersion = "auth-loader-fix-20260607-1";
+  const scriptVersion = "sync-feedback-fix-20260608-3";
   const scriptFiles = [
     { path: "../../vendor/supabase-js-2.107.0.min.js", optional: true },
     "core/namespace.js",
