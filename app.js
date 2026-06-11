@@ -1,5 +1,5 @@
 (() => {
-  const scriptVersion = "sync-feedback-fix-20260608-3";
+  const scriptVersion = "manual-sync-fix-20260611-1";
   const scriptFiles = [
     { path: "../../vendor/supabase-js-2.107.0.min.js", optional: true },
     "core/namespace.js",
