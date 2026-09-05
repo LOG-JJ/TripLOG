@@ -8278,10 +8278,15 @@ html[data-theme="toss"] .clock-current-knob {
 }
 
 .settlement-amount-allocation-cell {
+  vertical-align: middle;
+}
+
+.settlement-amount-allocation-content {
   display: grid;
   grid-template-columns: minmax(74px, 0.42fr) minmax(0, 1fr);
   align-items: center;
   gap: 8px;
+  min-width: 0;
 }
 
 .settlement-entry-amount {
@@ -9077,6 +9082,12 @@ html[data-theme="toss"] .clock-current-knob {
     align-items: center;
     min-width: 0;
     gap: 8px;
+  }
+
+  .settlement-expense-table .settlement-amount-allocation-content {
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 0;
   }
 
   .settlement-expense-table .actions-col {

@@ -1,5 +1,5 @@
 (() => {
-  const scriptVersion = "sync-feedback-fix-20260608-3";
+  const scriptVersion = "overview-table-alignment-20260901-1";
   const scriptFiles = [
     { path: "../../vendor/supabase-js-2.107.0.min.js", optional: true },
     "core/namespace.js",

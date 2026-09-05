@@ -19,6 +19,7 @@
   let supabaseClientSignature = "";
   let supabaseScriptPromise = null;
   let authListenerAttached = false;
+  let intentionalSignOut = false;
   let currentSession = null;
   let pendingInviteRecord = null;
   let supabaseStatusOverride = null;
@@ -81,6 +82,48 @@
     return /^https?:\/\//.test(config.url) && config.publishableKey.length > 20;
   }
 
+  function isInvalidSupabaseSessionError(error) {
+    const message = String(error?.message || "").toLowerCase();
+    const code = String(error?.code || "").toLowerCase();
+    return code === "invalid_refresh_token"
+      || code === "refresh_token_not_found"
+      || code === "session_not_found"
+      || message.includes("invalid refresh token")
+      || message.includes("refresh token not found")
+      || message.includes("refresh_token_not_found")
+      || message.includes("session not found");
+  }
+
+  function removeSupabaseAuthStorage(config = getSupabaseConfig()) {
+    try {
+      const projectRef = new URL(config.url).hostname.split(".")[0];
+      if (projectRef) localStorage.removeItem(`sb-${projectRef}-auth-token`);
+    } catch {
+      // An invalid custom URL is reported by the normal connection error flow.
+    }
+  }
+
+  async function clearExpiredSupabaseSession(client) {
+    const storedAccount = getStoredAccount();
+    if (storedAccount?.provider === "supabase" && storedAccount.email) {
+      setPendingAuthEmail(storedAccount.email);
+    }
+
+    // signOut removes the client-managed storage. The direct removal is a
+    // fallback for sessions whose refresh token is already rejected by Auth.
+    try {
+      await client?.auth.signOut({ scope: "local" });
+    } catch {
+      // Continue clearing the local state even when the server rejects the old token.
+    }
+    removeSupabaseAuthStorage();
+    if (storedAccount?.provider === "supabase") clearLocalAccount();
+    currentSession = null;
+    initialTripListSyncComplete = false;
+    stopSupabaseMembersSync();
+    stopSupabaseTripStateSync();
+  }
+
   function saveSupabaseConfig(url, publishableKey) {
     const next = { url: url.trim(), publishableKey: publishableKey.trim() };
     writeJsonStorage(SUPABASE_CONFIG_STORAGE_KEY, next);
@@ -139,7 +182,9 @@
     supabaseClient = window.supabase.createClient(config.url, config.publishableKey, {
       auth: {
         autoRefreshToken: true,
-        detectSessionInUrl: true,
+        // Auth callback URLs are consumed explicitly below. Disabling the
+        // second automatic consumer avoids races with expired/one-time links.
+        detectSessionInUrl: false,
         flowType: "implicit",
         persistSession: true,
       },
@@ -264,8 +309,9 @@
       return;
     }
 
+    let client = null;
     try {
-      const client = await getSupabaseClient();
+      client = await getSupabaseClient();
       if (!authListenerAttached) {
         client.auth.onAuthStateChange((event, session) => {
           currentSession = session || null;
@@ -285,6 +331,12 @@
             initialTripListSyncComplete = false;
             stopSupabaseMembersSync();
             stopSupabaseTripStateSync();
+            if (!intentionalSignOut) {
+              authStatusOverride = {
+                message: "오래된 로그인 세션이 만료되었습니다. 이메일과 비밀번호로 다시 로그인해 주세요.",
+                tone: "warning",
+              };
+            }
           }
           const account = getSessionAccount();
           if (account) {
@@ -329,17 +381,30 @@
         stopSupabaseTripStateSync();
       }
     } catch (error) {
+      if (isInvalidSupabaseSessionError(error)) {
+        await clearExpiredSupabaseSession(client);
+        supabaseStatusOverride = {
+          message: "저장된 로그인 세션이 만료되었습니다. 다시 로그인해 주세요.",
+          tone: "warning",
+        };
+        authStatusOverride = {
+          message: "오래된 로그인 세션이 만료되었습니다. 이메일과 비밀번호로 다시 로그인해 주세요.",
+          tone: "warning",
+        };
+      }
       currentSession = null;
       stopSupabaseMembersSync();
       stopSupabaseTripStateSync();
-      supabaseStatusOverride = {
-        message: `Supabase 세션 확인 실패: ${error.message}`,
-        tone: "warning",
-      };
-      authStatusOverride = {
-        message: `Supabase 연결 확인 실패: ${error.message}`,
-        tone: "warning",
-      };
+      if (!isInvalidSupabaseSessionError(error)) {
+        supabaseStatusOverride = {
+          message: `Supabase 세션 확인 실패: ${error.message}`,
+          tone: "warning",
+        };
+        authStatusOverride = {
+          message: `Supabase 연결 확인 실패: ${error.message}`,
+          tone: "warning",
+        };
+      }
     } finally {
       renderTripCollaboration();
       refreshInviteAfterAuth();
@@ -991,7 +1056,7 @@
     ].forEach((key) => url.searchParams.delete(key));
     if (url.pathname.startsWith("/auth/")) url.pathname = "/Travel.html";
     if (!url.searchParams.has("page") && !url.searchParams.has(INVITE_PARAM)) {
-      url.searchParams.set("page", "settings");
+      url.searchParams.set("page", "overview");
     }
     url.hash = "";
     window.history.replaceState({}, document.title, url.toString());
@@ -1052,6 +1117,7 @@
       }
       return true;
     } catch (error) {
+      if (isInvalidSupabaseSessionError(error)) await clearExpiredSupabaseSession(client);
       currentSession = null;
       authGateMode = "login";
       authStatusOverride = {
@@ -1100,6 +1166,7 @@
       return "확인 링크가 만료되었거나 이미 사용되었습니다.";
     }
     if (normalized.includes("invalid login credentials")) return "이메일 또는 비밀번호를 확인해 주세요.";
+    if (isInvalidSupabaseSessionError(error)) return "오래된 로그인 세션이 만료되었습니다. 이메일과 비밀번호로 다시 로그인해 주세요.";
     if (normalized.includes("email not confirmed")) return "가입 확인 이메일을 먼저 열어 주세요.";
     if (normalized.includes("signup is disabled")) return "Supabase에서 회원가입이 꺼져 있습니다.";
     if (normalized.includes("password should be")) return "비밀번호는 Supabase 보안 기준에 맞게 더 길고 안전하게 입력해 주세요.";
@@ -1293,7 +1360,10 @@
       currentSession = data.session || null;
       clearPendingAuthEmail();
       const account = getSessionAccount();
-      if (account) applyOwnerAccount(account);
+      if (account) {
+        saveStoredAccount(account);
+        applyOwnerAccount(account);
+      }
       await syncSupabaseTripList({ render: true, quiet: true });
       await syncSupabaseTripMembers({ quiet: true });
       startSupabaseMembersSync();
@@ -1486,7 +1556,7 @@
       "type",
     ].forEach((key) => url.searchParams.delete(key));
     if (url.pathname.startsWith("/auth/")) url.pathname = "/Travel.html";
-    if (!url.searchParams.has(INVITE_PARAM)) url.searchParams.set("page", "settings");
+    if (!url.searchParams.has(INVITE_PARAM)) url.searchParams.set("page", "overview");
     url.hash = "";
     return url.toString();
   }
@@ -1725,6 +1795,7 @@
   }
 
   async function logoutTripAccount() {
+    intentionalSignOut = true;
     try {
       if (hasSupabaseConfig()) {
         const client = await getSupabaseClient();
@@ -1739,6 +1810,7 @@
     stopSupabaseMembersSync();
     stopSupabaseTripStateSync();
     renderTripCollaboration();
+    intentionalSignOut = false;
   }
 
   function updatePrivacySetting(key, checked) {

@@ -213,12 +213,14 @@ function renderSettlementExpenseLedger(expenseSplitList, entryRows, members, sou
         <strong>${escapeHtml(entry.description)}</strong>
       </td>
       <td class="number settlement-amount-allocation-cell" data-label="금액">
-        <strong class="settlement-entry-amount">${formatEntryAmountHtml(entry.raw || entry)}</strong>
-        <div class="settlement-allocation-preview" aria-label="사람별 할당">
-          ${members.map((member, index) => {
-            const amount = entry.shares[member.key] || 0;
-            return `<span class="allocation-mini-chip" title="${escapeHtml(member.name)}">${getSettlementMemberEmoji(member, index)} ${escapeHtml(formatSettlementCurrency(amount, sourceState))}</span>`;
-          }).join("")}
+        <div class="settlement-amount-allocation-content">
+          <strong class="settlement-entry-amount">${formatEntryAmountHtml(entry.raw || entry)}</strong>
+          <div class="settlement-allocation-preview" aria-label="사람별 할당">
+            ${members.map((member, index) => {
+              const amount = entry.shares[member.key] || 0;
+              return `<span class="allocation-mini-chip" title="${escapeHtml(member.name)}">${getSettlementMemberEmoji(member, index)} ${escapeHtml(formatSettlementCurrency(amount, sourceState))}</span>`;
+            }).join("")}
+          </div>
         </div>
       </td>
       <td class="actions-col" data-label="분담">

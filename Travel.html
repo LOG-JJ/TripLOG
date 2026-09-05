@@ -17,7 +17,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="/icons/triplog-icon-152.png" />
     <link rel="apple-touch-icon" sizes="167x167" href="/icons/triplog-icon-167.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/triplog-icon-180.png" />
-    <link rel="stylesheet" href="./styles.css?v=sync-feedback-fix-20260608-2" />
+    <link rel="stylesheet" href="./styles.css?v=overview-table-alignment-20260901-1" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   </head>
@@ -137,11 +137,11 @@
 
       <!-- 🗺️ 7-Tab App Navigation Bar -->
       <nav class="app-navbar" aria-label="메인 메뉴">
-        <button class="nav-item active" data-target="start" type="button">
+        <button class="nav-item" data-target="start" type="button">
           <svg class="nav-icon" viewBox="0 0 24 24"><path d="M5 21V5.5"/><path d="M5 5.5c2.5-1.8 5-1.8 7.5 0s5 1.8 7.5 0v10c-2.5 1.8-5 1.8-7.5 0s-5-1.8-7.5 0" fill="none"/></svg>
           <span>여행 시작</span>
         </button>
-        <button class="nav-item" data-target="overview" type="button">
+        <button class="nav-item active" data-target="overview" type="button">
           <svg class="nav-icon" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm-5-7h-5v5h5v-5z"/></svg>
           <span>여행 개요</span>
         </button>
@@ -169,7 +169,7 @@
 
       <div class="page-stage" id="pageStage">
         <!-- 🚀 0. 여행 시작 페이지 -->
-        <main class="page-view page-active" id="startPage">
+        <main class="page-view" id="startPage" hidden>
           <!-- 📂 나의 여행 선택 및 생성 섹션 -->
           <section class="planner-panel trip-manage-panel" aria-label="여행 관리" style="margin-bottom: 24px;">
             <div class="section-title-row">
@@ -255,7 +255,7 @@
         </main>
 
         <!-- 🌍 1. 여행 개요 페이지 -->
-        <main class="page-view" id="overviewPage" hidden>
+        <main class="page-view page-active" id="overviewPage">
           <!-- 🌍 여행 개요 요약 카드 대시보드 -->
           <div class="premium-dashboard-container" style="margin-top: 0;">
             <div class="dashboard-grid">
@@ -1366,6 +1366,6 @@
       </div>
     </template>
 
-    <script src="./app.js?v=sync-feedback-fix-20260608-3"></script>
+    <script src="./app.js?v=overview-table-alignment-20260901-1"></script>
   </body>
 </html>

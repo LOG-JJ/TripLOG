@@ -5,7 +5,7 @@ const initialPage = initialPageParams.get("page");
 const initialAllowedPages = ["start", "overview", "itinerary", "budget", "settlement", "report", "settings"];
 let activePage = initialPageParams.has("itinerary")
   ? "itinerary"
-  : (initialAllowedPages.includes(initialPage) ? initialPage : "start");
+  : (initialAllowedPages.includes(initialPage) ? initialPage : "overview");
 let pageTransitionTimer = null;
 let brandTextTimer = null;
 let placeSearchTimer = null;
