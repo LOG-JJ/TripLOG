@@ -1,5 +1,5 @@
 (() => {
-  const scriptVersion = "overview-table-alignment-20260901-1";
+  const scriptVersion = "login-overview-entry-20260905-1";
   const scriptFiles = [
     { path: "../../vendor/supabase-js-2.107.0.min.js", optional: true },
     "core/namespace.js",

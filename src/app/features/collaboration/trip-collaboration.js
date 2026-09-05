@@ -24,6 +24,7 @@
   let supabaseStatusOverride = null;
   let authGateMode = "login";
   let authGateBusy = false;
+  let authGateWasVisible = false;
   let passwordRecoveryRequested = false;
   let authStatusOverride = null;
   let memberSyncIntervalId = null;
@@ -1175,6 +1176,8 @@
 
   function renderAuthGate() {
     const shouldShowGate = passwordRecoveryRequested || !isSignedIn();
+    const justSignedIn = authGateWasVisible && !shouldShowGate;
+    authGateWasVisible = shouldShowGate;
     if (els.appShell) {
       els.appShell.hidden = shouldShowGate;
       els.appShell.setAttribute("aria-hidden", String(shouldShowGate));
@@ -1185,7 +1188,17 @@
     }
     document.body?.classList.toggle("auth-required", shouldShowGate);
     document.documentElement.dataset.auth = shouldShowGate ? "locked" : "signed-in";
-    if (!shouldShowGate) return;
+    if (!shouldShowGate) {
+      // Run only when leaving the login/recovery screen, not on session refresh
+      // or ordinary renders while the user is browsing another tab.
+      if (justSignedIn && !getInviteTokenFromUrl() && !initialPageParams.has("itinerary")) {
+        const landingUrl = new URL(window.location.href);
+        landingUrl.searchParams.set("page", "overview");
+        window.history.replaceState({}, document.title, landingUrl.toString());
+        setActivePage("overview");
+      }
+      return;
+    }
 
     const isSignup = authGateMode === "signup";
     const isRecovery = authGateMode === "recovery";
