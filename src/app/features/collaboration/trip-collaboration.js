@@ -12,7 +12,6 @@
   const INVITE_EXPIRES_DAYS = 14;
   const AUTH_PASSWORD_MIN_LENGTH = 8;
   const MEMBER_SYNC_INTERVAL_MS = 15000;
-  const TRIP_STATE_AUTO_UPLOAD_DELAY_MS = 1200;
 
   let setupComplete = false;
   let supabaseClient = null;
@@ -36,7 +35,6 @@
   let tripStateHasLocalChanges = false;
   let tripListSyncInFlight = false;
   let initialTripListSyncComplete = false;
-  let tripStateAutoUploadTimer = null;
   let lastTripStateUpdatedAt = "";
   let lastTripStateSignature = "";
   let headerSyncStatusTimer = null;
@@ -345,7 +343,7 @@
               .then(() => syncSupabaseTripMembers({ render: true, quiet: true }))
               .finally(() => {
                 startSupabaseMembersSync();
-                scheduleSupabaseTripStateUpload();
+                updateHeaderSyncButton();
               });
           }
           renderTripCollaboration();
@@ -374,7 +372,7 @@
         await syncSupabaseTripList({ render: true, quiet: true });
         await syncSupabaseTripMembers({ quiet: true });
         startSupabaseMembersSync();
-        scheduleSupabaseTripStateUpload();
+        updateHeaderSyncButton();
       } else {
         initialTripListSyncComplete = false;
         stopSupabaseMembersSync();
@@ -607,7 +605,8 @@
       if (!remoteRows.length) return false;
 
       const remoteSnapshots = remoteRows.map(getRemoteTripSnapshot);
-      const preserveActiveLocalChanges = tripStateHasLocalChanges
+      const preserveActiveLocalChanges = Boolean(lastTripStateSignature)
+        && tripStateHasLocalChanges
         && remoteSnapshots.some((snapshot) => snapshot.id === state.id);
       const mergedSnapshots = preserveActiveLocalChanges
         ? remoteSnapshots.map((snapshot) => snapshot.id === state.id ? getStateSnapshot() : snapshot)
@@ -800,11 +799,7 @@
         return false;
       }
 
-      const remoteUpdatedAt = Date.parse(tripRow.updated_at || "");
-      const knownUpdatedAt = Date.parse(lastTripStateUpdatedAt || "");
-      if (!force && Number.isFinite(remoteUpdatedAt) && Number.isFinite(knownUpdatedAt) && remoteUpdatedAt <= knownUpdatedAt) {
-        return false;
-      }
+      if (!force && tripStateHasLocalChanges) return false;
 
       applyingRemoteTripState = true;
       const selectedDate = state.selectedDate;
@@ -839,29 +834,10 @@
   }
 
   function stopSupabaseTripStateSync() {
-    window.clearTimeout(tripStateAutoUploadTimer);
-    tripStateAutoUploadTimer = null;
     tripStateSyncInFlight = false;
     tripStateUploadInFlight = false;
     tripStateHasLocalChanges = false;
     updateHeaderSyncButton();
-  }
-
-  function scheduleSupabaseTripStateUpload() {
-    window.clearTimeout(tripStateAutoUploadTimer);
-    tripStateAutoUploadTimer = null;
-    if (!tripStateHasLocalChanges || applyingRemoteTripState) return;
-    if (!hasSupabaseConfig() || !isSignedIn() || !initialTripListSyncComplete) return;
-
-    tripStateAutoUploadTimer = window.setTimeout(async () => {
-      tripStateAutoUploadTimer = null;
-      if (!tripStateHasLocalChanges || applyingRemoteTripState || tripStateUploadInFlight) return;
-      updateHeaderSyncButton({ message: "변경사항 저장 중", tone: "syncing" });
-      const uploaded = await uploadSupabaseTripState({ quiet: true });
-      updateHeaderSyncButton(uploaded
-        ? { message: "변경사항 저장됨", tone: "success", transient: true }
-        : {});
-    }, TRIP_STATE_AUTO_UPLOAD_DELAY_MS);
   }
 
   function updateHeaderSyncButton({ message = "", tone = "", transient = false } = {}) {
@@ -933,22 +909,17 @@
     try {
       let uploaded = false;
       let downloaded = false;
-      window.clearTimeout(tripStateAutoUploadTimer);
-      tripStateAutoUploadTimer = null;
       if (tripStateHasLocalChanges) {
         uploaded = await uploadSupabaseTripState({ quiet: false, force: true });
         if (tripStateHasLocalChanges && !uploaded) {
           throw new Error("변경사항 업로드가 완료되지 않았습니다.");
         }
+        await syncSupabaseTripList({ render: true, quiet: false });
+      } else {
+        downloaded = await syncSupabaseTripState({ render: true, quiet: false, force: true });
+        const listChanged = await syncSupabaseTripList({ render: true, quiet: false });
+        downloaded = downloaded || listChanged;
       }
-      await syncSupabaseTripList({ render: true, quiet: false });
-      if (tripStateHasLocalChanges) {
-        uploaded = await uploadSupabaseTripState({ quiet: false, force: true }) || uploaded;
-        if (tripStateHasLocalChanges && !uploaded) {
-          throw new Error("변경사항 업로드가 완료되지 않았습니다.");
-        }
-      }
-      downloaded = await syncSupabaseTripState({ render: true, quiet: false, force: true });
       await syncSupabaseTripMembers({ render: true, quiet: true });
       if (uploaded || downloaded) tripStateHasLocalChanges = false;
 
@@ -980,7 +951,6 @@
     if (applyingRemoteTripState) return;
     tripStateHasLocalChanges = true;
     updateHeaderSyncButton();
-    scheduleSupabaseTripStateUpload();
   }
 
   function getMemberInitial(member) {
@@ -1341,7 +1311,7 @@
           await syncSupabaseTripList({ render: true, quiet: true });
           await syncSupabaseTripMembers({ quiet: true });
           startSupabaseMembersSync();
-          scheduleSupabaseTripStateUpload();
+          updateHeaderSyncButton();
           authStatusOverride = null;
           renderTripCollaboration();
         } else {
@@ -1367,7 +1337,7 @@
       await syncSupabaseTripList({ render: true, quiet: true });
       await syncSupabaseTripMembers({ quiet: true });
       startSupabaseMembersSync();
-      scheduleSupabaseTripStateUpload();
+      updateHeaderSyncButton();
       authStatusOverride = null;
       clearAuthPasswordInputs();
       renderTripCollaboration();
