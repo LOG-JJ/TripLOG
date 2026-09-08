@@ -90,14 +90,23 @@ function setupCustomTimePicker(input) {
   customTimePickers.set(input, { shell, button, value, panel, openValue: input.value || "", panelDirty: false });
   attachCustomTimePickerDocumentListener();
 
-  // Open panel on input focus
+  // Pointer users expect the whole field to behave like the clock icon. Open
+  // before the browser focuses the text input (and before a mobile keyboard can
+  // block the UI). Keyboard users can still focus the input with Tab and type.
+  value.addEventListener("pointerdown", (event) => {
+    if (event.button !== 0 || input.disabled) return;
+    event.preventDefault();
+    event.stopPropagation();
+    openCustomTimePicker(input);
+  });
+
+  // Open panel on keyboard focus.
   value.addEventListener("focus", () => {
     openCustomTimePicker(input);
   });
 
   value.addEventListener("click", (event) => {
     event.stopPropagation();
-    openCustomTimePicker(input);
   });
 
   // Typing formatting and syncing

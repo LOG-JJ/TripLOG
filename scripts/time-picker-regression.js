@@ -1,7 +1,7 @@
 // Run with playwright-cli run-code --filename scripts/time-picker-regression.js
 // against a fresh local Travel.html page (never a production session).
 async (page) => {
-  if (!['localhost', '127.0.0.1'].includes(new URL(page.url()).hostname)) {
+  if (!/^https?:\/\/(localhost|127\.0\.0\.1)(?::\d+)?\//.test(page.url())) {
     throw new Error('This fixture only runs against a local server');
   }
   const results = await page.evaluate(() => {
@@ -21,10 +21,11 @@ async (page) => {
     let renders = 0;
     renderTimePicker = (target) => { renders++; return renderOriginal(target); };
     const started = performance.now();
-    control.value.focus();
+    control.value.dispatchEvent(new PointerEvent('pointerdown', {button:0, bubbles:true, cancelable:true}));
     control.value.click();
     const openMs = performance.now() - started;
-    assert(renders === 1, 'Focus + click must open only once');
+    assert(renders === 1, 'Pointer interaction must open only once');
+    assert(document.activeElement !== control.value, 'Pointer interaction must not focus the text input');
     const firstChild = control.panel.firstChild;
     setTimePickerPart(input, 'hour', '13');
     setTimePickerPart(input, 'minute', '25');
@@ -50,7 +51,7 @@ async (page) => {
     assert(control.panel.hidden, 'Disabled input stays closed');
     input.disabled = false;
     renderTimePicker = renderOriginal;
-    return {openMs, assertions:8, options:control.panel.querySelectorAll('.time-dropdown-option').length};
+    return {openMs, assertions:9, options:control.panel.querySelectorAll('.time-dropdown-option').length};
   });
   console.log(JSON.stringify(results));
 }
