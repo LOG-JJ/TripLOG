@@ -124,7 +124,7 @@ function openCustomDatePicker(input) {
 
 function closeCustomDatePicker(input) {
   const control = customDatePickers.get(input);
-  if (!control) return;
+  if (!control || control.panel.hidden) return;
   control.panel.hidden = true;
   control.button.classList.remove("open");
   control.button.setAttribute("aria-expanded", "false");

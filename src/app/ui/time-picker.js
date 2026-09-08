@@ -176,6 +176,7 @@ function setupCustomTimePicker(input) {
   });
 
   button.addEventListener("keydown", (event) => {
+    if (event.target === value) return;
     if (["ArrowDown", "Enter", " "].includes(event.key)) {
       event.preventDefault();
       openCustomTimePicker(input);
@@ -243,7 +244,9 @@ function toggleCustomTimePicker(input) {
 function openCustomTimePicker(input) {
   pruneDetachedCustomTimePickers();
   const control = customTimePickers.get(input);
-  if (!control || control.button.disabled) return;
+  // A pointer click also focuses the text input. Do not rebuild the panel twice
+  // or reset the original value used to commit changes when it closes.
+  if (!control || input.disabled || !control.panel.hidden) return;
 
   closeAllCustomSelects();
   closeAllCustomDatePickers();
@@ -255,7 +258,6 @@ function openCustomTimePicker(input) {
   control.button.classList.add("open");
   control.button.setAttribute("aria-expanded", "true");
   setTimePickerLayerState(input, true);
-  alignSelectedTimeOptions(input);
 }
 
 function closeCustomTimePicker(input, { commit = true } = {}) {
@@ -267,6 +269,7 @@ function closeCustomTimePicker(input, { commit = true } = {}) {
   }
 
   const wasOpen = !control.panel.hidden;
+  if (!wasOpen) return;
   let shouldDispatchChange = false;
   if (wasOpen && commit) {
     const previousValue = control.openValue ?? input.value ?? "";
@@ -276,6 +279,7 @@ function closeCustomTimePicker(input, { commit = true } = {}) {
     shouldDispatchChange = input.value !== previousValue;
   }
   control.panel.hidden = true;
+  closeTimeDropdowns(input);
   control.button.classList.remove("open");
   control.button.setAttribute("aria-expanded", "false");
   setTimePickerLayerState(input, false);
@@ -304,6 +308,12 @@ function setTimePickerLayerState(input, isOpen) {
 function renderTimePicker(input) {
   const control = customTimePickers.get(input);
   if (!control) return;
+
+  // Reuse the fixed option DOM instead of rebuilding it on every interaction.
+  if (control.panel.childElementCount) {
+    refreshOpenTimePickerSelection(input);
+    return;
+  }
 
   const selected = getTimePickerSelection(input.value);
 
@@ -566,6 +576,7 @@ function alignSelectedTimeOptions(input) {
   const control = customTimePickers.get(input);
   if (!control) return;
   control.panel.querySelectorAll(".time-dropdown-menu").forEach((menu) => {
+    if (menu.hidden) return;
     const selected = menu.querySelector(".time-dropdown-option.selected");
     scrollTimeDropdownOptionIntoView(menu, selected);
   });
@@ -684,6 +695,7 @@ function closeTimeDropdowns(input, exceptPart) {
   const control = customTimePickers.get(input);
   if (!control) return;
   control.panel.querySelectorAll(".time-dropdown-menu").forEach((menu) => {
+    if (menu.hidden) return;
     if (menu.dataset.timeDropdownMenu === exceptPart) return;
     menu.hidden = true;
   });

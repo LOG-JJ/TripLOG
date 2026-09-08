@@ -187,6 +187,7 @@ function closeCustomSelect(select) {
     customSelects.delete(select);
     return;
   }
+  if (control.menu.hidden) return;
   control.menu.hidden = true;
   control.button.classList.remove("open");
   control.button.setAttribute("aria-expanded", "false");
