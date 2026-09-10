@@ -18,6 +18,7 @@ function startEdit(entry) {
   setCommaNumberInputValue(els.exchangeRateInput, getEditableExchangeRate(entry));
   setCommaNumberInputValue(els.amountInput, entry.amount);
   els.noteInput.value = entry.note;
+  setPaymentMethod(entry.paymentMethod || DEFAULT_PAYMENT_METHOD);
   renderModeControls();
   syncCustomSelect(els.daySelect);
   syncCustomSelect(els.categorySelect);
@@ -36,6 +37,7 @@ function clearEditMode() {
   setCommaNumberInputValue(els.foreignAmountInput, "");
   setCommaNumberInputValue(els.exchangeRateInput, "");
   setCommaNumberInputValue(els.amountInput, "");
+  setPaymentMethod(DEFAULT_PAYMENT_METHOD);
   renderModeControls();
   syncCustomSelect(els.daySelect);
   syncCustomSelect(els.categorySelect);
@@ -66,7 +68,8 @@ function getFilteredEntries() {
     result = result.filter((entry) => 
       (entry.description || "").toLowerCase().includes(query) ||
       (entry.note || "").toLowerCase().includes(query) ||
-      (entry.category || "").toLowerCase().includes(query)
+      (entry.category || "").toLowerCase().includes(query) ||
+      getPaymentMethodLabel(entry.paymentMethod).includes(query)
     );
   }
 

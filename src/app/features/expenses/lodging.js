@@ -147,7 +147,7 @@ function getLodgingPlan() {
   };
 }
 
-function createLodgingEntries({ checkIn, checkOut, nights, description, amount, note, isOverseas, currency, foreignAmount, exchangeRate }) {
+function createLodgingEntries({ checkIn, checkOut, nights, description, amount, note, paymentMethod, isOverseas, currency, foreignAmount, exchangeRate }) {
   const groupId = createId();
   const wonParts = splitWholeAmount(amount, nights);
   const foreignParts = isOverseas ? splitDecimalAmount(foreignAmount, nights) : [];
@@ -162,6 +162,7 @@ function createLodgingEntries({ checkIn, checkOut, nights, description, amount, 
       description,
       amount: nightAmount,
       note: formatLodgingNote(note, checkIn, checkOut, index + 1, nights),
+      paymentMethod,
       mode: isOverseas ? "overseas" : "domestic",
       currency: isOverseas ? currency.code : "",
       currencySymbol: isOverseas ? currency.symbol : "",

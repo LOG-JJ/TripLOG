@@ -560,6 +560,14 @@
                 <span>비고</span>
                 <input id="noteInput" type="text" maxlength="60" placeholder="선택 입력" />
               </label>
+              <fieldset class="payment-method-field">
+                <legend>결제 방식</legend>
+                <div class="payment-method-toggle" id="paymentMethodToggle" role="group" aria-label="결제 방식 선택">
+                  <button class="active" type="button" data-payment-method="card" aria-pressed="true">카드</button>
+                  <button type="button" data-payment-method="cash" aria-pressed="false">현금</button>
+                </div>
+                <input id="paymentMethodInput" type="hidden" value="card" />
+              </fieldset>
               <button class="submit-button" id="submitButton" type="submit">
                 <svg viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14" /></svg>
                 <span>추가</span>

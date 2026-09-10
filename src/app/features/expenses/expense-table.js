@@ -37,6 +37,7 @@ function renderTable(entries, days) {
     const tr = document.createElement("tr");
     const color = getCategory(entry.category).color;
     const dayCellText = formatExpenseTableDayCell(day);
+    const paymentMethodLabel = getPaymentMethodLabel(entry.paymentMethod);
     tr.className = "expense-record-card";
     tr.style.setProperty("--entry-color", color);
     tr.innerHTML = `
@@ -54,7 +55,10 @@ function renderTable(entries, days) {
         <strong class="expense-entry-title">${escapeHtml(entry.description)}</strong>
       </td>
       <td class="number expense-amount-cell" data-label="금액">
-        <span class="expense-field-label">금액</span>
+        <div class="expense-amount-meta">
+          <span class="expense-field-label">금액</span>
+          ${paymentMethodLabel ? `<span class="expense-payment-method-badge">${escapeHtml(paymentMethodLabel)}</span>` : ""}
+        </div>
         <span class="expense-entry-amount">${formatEntryAmountHtml(entry)}</span>
       </td>
       <td class="expense-note-cell${entry.note ? "" : " is-empty"}" data-label="비고">

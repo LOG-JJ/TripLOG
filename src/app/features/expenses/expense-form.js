@@ -1,3 +1,41 @@
+const DEFAULT_PAYMENT_METHOD = "card";
+const PAYMENT_METHOD_LABELS = {
+  card: "카드",
+  cash: "현금",
+};
+
+function normalizePaymentMethod(value) {
+  return Object.hasOwn(PAYMENT_METHOD_LABELS, value) ? value : DEFAULT_PAYMENT_METHOD;
+}
+
+function getPaymentMethodLabel(value) {
+  return PAYMENT_METHOD_LABELS[value] || "";
+}
+
+function getSelectedPaymentMethod() {
+  return normalizePaymentMethod(els.paymentMethodInput?.value);
+}
+
+function setPaymentMethod(value = DEFAULT_PAYMENT_METHOD) {
+  const normalizedValue = normalizePaymentMethod(value);
+  if (els.paymentMethodInput) els.paymentMethodInput.value = normalizedValue;
+  els.paymentMethodToggle?.querySelectorAll("[data-payment-method]").forEach((button) => {
+    const isActive = button.dataset.paymentMethod === normalizedValue;
+    button.classList.toggle("active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+}
+
+function setupPaymentMethodToggle() {
+  if (!els.paymentMethodToggle) return;
+  els.paymentMethodToggle.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-payment-method]");
+    if (!button || !els.paymentMethodToggle.contains(button)) return;
+    setPaymentMethod(button.dataset.paymentMethod);
+  });
+  setPaymentMethod(els.paymentMethodInput?.value);
+}
+
 function handleExpenseSubmit(event) {
   event.preventDefault();
 
@@ -26,6 +64,7 @@ function handleExpenseSubmit(event) {
         description: els.descriptionInput.value.trim(),
         amount,
         note: els.noteInput.value.trim(),
+        paymentMethod: getSelectedPaymentMethod(),
         isOverseas,
         currency,
         foreignAmount,
@@ -45,6 +84,7 @@ function handleExpenseSubmit(event) {
     description: els.descriptionInput.value.trim(),
     amount,
     note: els.noteInput.value.trim(),
+    paymentMethod: getSelectedPaymentMethod(),
     mode: isOverseas ? "overseas" : "domestic",
     currency: isOverseas ? currency.code : "",
     currencySymbol: isOverseas ? currency.symbol : "",
@@ -73,6 +113,7 @@ function resetExpenseFormAfterSubmit() {
   els.currencySelect.value = getExpenseDefaultCurrencyCode();
   els.lodgingCheckInInput.value = "";
   els.lodgingCheckOutInput.value = "";
+  setPaymentMethod(DEFAULT_PAYMENT_METHOD);
   if (state.travelMode === "overseas") {
     setCommaNumberInputValue(els.amountInput, "");
     setCommaNumberInputValue(els.foreignAmountInput, "");
@@ -91,6 +132,11 @@ function getExpenseDefaultCurrencyCode() {
 }
 
 window.TripLog.register("features.expenses.form", {
+  DEFAULT_PAYMENT_METHOD,
+  getPaymentMethodLabel,
+  getSelectedPaymentMethod,
+  setPaymentMethod,
+  setupPaymentMethodToggle,
   handleExpenseSubmit,
   resetExpenseFormAfterSubmit,
   getDefaultExpenseCategory,

@@ -188,6 +188,7 @@ function init() {
   els.startDateInput.value = state.startDate;
   els.endDateInput.value = state.endDate;
   setupMoneyNumberInputs();
+  setupPaymentMethodToggle();
   setCommaNumberInputValue(els.budgetInput, state.totalBudget || "");
 
   els.tripNameInput.addEventListener("input", () => {

@@ -2680,6 +2680,59 @@ select:focus {
   grid-column: span 1;
 }
 
+.payment-method-field {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.payment-method-field legend {
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.payment-method-toggle {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  min-height: 46px;
+  padding: 4px;
+  background: var(--surface);
+  border: 2.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.payment-method-toggle button {
+  min-width: 0;
+  min-height: 33px;
+  padding: 0 10px;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 800;
+  transition: color 120ms ease, background 120ms ease, box-shadow 120ms ease;
+}
+
+.payment-method-toggle button.active {
+  color: var(--text);
+  background: var(--accent-blue);
+  box-shadow: 1px 1px 0 var(--line);
+}
+
+.payment-method-toggle button:focus-visible {
+  outline: 2px solid var(--line);
+  outline-offset: 1px;
+}
+
 .expense-form .submit-button {
   grid-column: span 3;
   min-height: 48px;
@@ -3260,6 +3313,35 @@ td.number {
   overflow-wrap: anywhere;
 }
 
+.expense-amount-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  width: 100%;
+  min-width: 0;
+}
+
+.expense-amount-meta .expense-field-label {
+  white-space: nowrap;
+}
+
+.expense-payment-method-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 19px;
+  padding: 0 7px;
+  color: var(--text);
+  background: var(--surface-strong);
+  border: 1.5px solid var(--line);
+  border-radius: 99px;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+}
+
 .expense-entry-amount .foreign-amount {
   display: flex;
   justify-content: flex-end;
@@ -3354,6 +3436,10 @@ td.number {
     text-align: left;
   }
 
+  .expense-amount-meta {
+    justify-content: flex-start;
+  }
+
   .expense-entry-amount .foreign-amount {
     justify-content: flex-start;
   }
@@ -3397,6 +3483,7 @@ td.number {
   }
 
   .table-wrap.expense-records-wrap .expense-amount-cell {
+    grid-template-columns: minmax(0, 1fr);
     justify-items: start;
     padding: 10px 12px;
     background: #fffdf5;
@@ -13906,7 +13993,7 @@ html[data-theme="toss"] :is(.text-button.danger, .settings-account-actions .dang
   background: #fff0f3 !important;
 }
 
-html[data-theme="toss"] :is(.mode-toggle, .segmented, .new-trip-mode-toggle, .trip-mode-status) {
+html[data-theme="toss"] :is(.mode-toggle, .segmented, .new-trip-mode-toggle, .trip-mode-status, .payment-method-toggle) {
   background: #eef1f4 !important;
   border: 0 !important;
   border-radius: 999px !important;
@@ -13914,7 +14001,7 @@ html[data-theme="toss"] :is(.mode-toggle, .segmented, .new-trip-mode-toggle, .tr
   padding: 3px !important;
 }
 
-html[data-theme="toss"] :is(.mode-toggle button, .segmented button, .new-trip-mode-toggle button, .trip-mode-status span) {
+html[data-theme="toss"] :is(.mode-toggle button, .segmented button, .new-trip-mode-toggle button, .trip-mode-status span, .payment-method-toggle button) {
   color: var(--muted) !important;
   background: transparent !important;
   border: 0 !important;
@@ -13924,7 +14011,7 @@ html[data-theme="toss"] :is(.mode-toggle button, .segmented button, .new-trip-mo
   font-weight: 700 !important;
 }
 
-html[data-theme="toss"] :is(.mode-toggle button.active, .segmented button.active, .new-trip-mode-toggle button.active, .trip-mode-status span.active) {
+html[data-theme="toss"] :is(.mode-toggle button.active, .segmented button.active, .new-trip-mode-toggle button.active, .trip-mode-status span.active, .payment-method-toggle button.active) {
   color: var(--accent) !important;
   background: #ffffff !important;
   box-shadow: 0 2px 8px rgba(25, 31, 40, 0.08) !important;

@@ -89,6 +89,8 @@ const els = {
   lodgingCheckOutInput: document.querySelector("#lodgingCheckOutInput"),
   lodgingPreview: document.querySelector("#lodgingPreview"),
   noteInput: document.querySelector("#noteInput"),
+  paymentMethodToggle: document.querySelector("#paymentMethodToggle"),
+  paymentMethodInput: document.querySelector("#paymentMethodInput"),
   expenseForm: document.querySelector("#expenseForm"),
   submitButton: document.querySelector("#submitButton"),
   cancelEditButton: document.querySelector("#cancelEditButton"),
