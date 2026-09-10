@@ -83,8 +83,7 @@ function updateInlineItineraryField(id, field, value) {
   // Synchronize travel expenses in main ledger
   syncSegmentExpense(item);
 
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  render();
+  saveAndRender();
 }
 
 function addTravelSegment(id) {
@@ -98,8 +97,7 @@ function addTravelSegment(id) {
 
   syncTransitTotals(item);
 
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  render();
+  saveAndRender();
 }
 
 function deleteTravelSegment(id, index) {
@@ -111,8 +109,7 @@ function deleteTravelSegment(id, index) {
   syncTransitTotals(item);
   syncSegmentExpense(item);
 
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  render();
+  saveAndRender();
 }
 
 function updateTravelSegmentField(id, index, field, value) {
@@ -149,8 +146,7 @@ function updateTravelSegmentField(id, index, field, value) {
   // Sync expenses
   syncSegmentExpense(item);
 
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  render();
+  saveAndRender();
 }
 
 function syncTransitTotals(item) {
