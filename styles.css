@@ -2676,6 +2676,10 @@ select:focus {
   grid-column: span 2;
 }
 
+.expense-form > .note-field {
+  align-self: start;
+}
+
 .expense-amount-field {
   grid-column: span 1;
 }
@@ -2688,6 +2692,7 @@ select:focus {
   margin: 0;
   padding: 0;
   border: 0;
+  align-self: start;
 }
 
 .payment-method-label {
@@ -2704,6 +2709,8 @@ select:focus {
   gap: 0;
   width: 100%;
   height: 46px;
+  min-height: 46px;
+  max-height: 46px;
   overflow: hidden;
   background: #ffffff;
   border: 2.5px solid var(--line);
@@ -2740,6 +2747,16 @@ select:focus {
 .payment-method-toggle button:focus-visible {
   outline: 2px solid var(--line);
   outline-offset: -4px;
+}
+
+@media (min-width: 821px) {
+  .expense-form > .note-field {
+    grid-column: 1 / span 2;
+  }
+
+  .expense-form > .payment-method-field {
+    grid-column: 3;
+  }
 }
 
 .expense-form .submit-button {
