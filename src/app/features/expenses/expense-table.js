@@ -55,10 +55,10 @@ function renderTable(entries, days) {
         <strong class="expense-entry-title">${escapeHtml(entry.description)}</strong>
       </td>
       <td class="number expense-amount-cell" data-label="금액">
+        ${paymentMethodLabel ? `
         <div class="expense-amount-meta">
-          <span class="expense-field-label">금액</span>
-          ${paymentMethodLabel ? `<span class="expense-payment-method-badge">${escapeHtml(paymentMethodLabel)}</span>` : ""}
-        </div>
+          <span class="expense-payment-method-badge">${escapeHtml(paymentMethodLabel)}</span>
+        </div>` : ""}
         <span class="expense-entry-amount">${formatEntryAmountHtml(entry)}</span>
       </td>
       <td class="expense-note-cell${entry.note ? "" : " is-empty"}" data-label="비고">
