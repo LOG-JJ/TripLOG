@@ -192,7 +192,7 @@ function syncWonCurrencyFieldState(isWon = isWonCurrency(els.currencySelect?.val
     els.foreignAmountInput.placeholder = "0";
   }
   if (foreignAmountLabel) {
-    foreignAmountLabel.textContent = "해외 결제액";
+    foreignAmountLabel.textContent = "결제 금액";
   }
   els.foreignFields?.classList.toggle("is-won-currency", Boolean(isWon));
 }
