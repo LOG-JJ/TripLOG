@@ -803,13 +803,7 @@
       if (!force && tripStateHasLocalChanges) return false;
 
       applyingRemoteTripState = true;
-      const selectedDate = state.selectedDate;
-      const selectedItineraryDate = state.selectedItineraryDate;
-      const lastActiveItineraryDate = state.lastActiveItineraryDate;
       window.TripLog.persistence.stateStorage.importSharedTripSnapshot(remoteSnapshot, { makeActive: true });
-      state.selectedDate = selectedDate || state.startDate;
-      state.selectedItineraryDate = selectedItineraryDate || state.startDate;
-      state.lastActiveItineraryDate = lastActiveItineraryDate || state.startDate;
       await syncSupabaseTripMembers({ quiet: true });
       saveStateSilently();
       if (shouldRender) render();

@@ -326,6 +326,11 @@ function switchTrip(tripId) {
   const targetTrip = trips.find(t => t.id === tripId);
   if (!targetTrip) return;
   const currentTheme = normalizeThemeName(state.theme || getSavedTheme());
+  const currentNavigation = state.id === tripId ? {
+    selectedDate: state.selectedDate,
+    selectedItineraryDate: state.selectedItineraryDate,
+    lastActiveItineraryDate: state.lastActiveItineraryDate,
+  } : null;
 
   localStorage.setItem(ACTIVE_TRIP_ID_KEY, tripId);
 
@@ -344,10 +349,16 @@ function switchTrip(tripId) {
   });
   state.theme = currentTheme;
 
-  // reset day selections
-  state.selectedDate = state.startDate;
-  state.selectedItineraryDate = state.startDate;
-  state.lastActiveItineraryDate = state.startDate;
+  // Refreshing the same trip must preserve this device's current navigation.
+  const dayDates = new Set(getTripDays().map((day) => day.date));
+  state.selectedDate = currentNavigation
+    && (isPreTripExpenseDate(currentNavigation.selectedDate) || dayDates.has(currentNavigation.selectedDate))
+    ? currentNavigation.selectedDate : state.startDate;
+  state.selectedItineraryDate = currentNavigation
+    && (currentNavigation.selectedItineraryDate === "all" || dayDates.has(currentNavigation.selectedItineraryDate))
+    ? currentNavigation.selectedItineraryDate : state.startDate;
+  state.lastActiveItineraryDate = currentNavigation && dayDates.has(currentNavigation.lastActiveItineraryDate)
+    ? currentNavigation.lastActiveItineraryDate : state.startDate;
 
   saveAndRender();
 }

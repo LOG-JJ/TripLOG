@@ -1,5 +1,5 @@
 (() => {
-  const scriptVersion = "receipt-ocr-20260912-1";
+  const scriptVersion = "sync-navigation-20260912-1";
   const scriptFiles = [
     { path: "../../vendor/supabase-js-2.107.0.min.js", optional: true },
     "core/namespace.js",
