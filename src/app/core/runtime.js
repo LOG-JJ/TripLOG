@@ -35,6 +35,8 @@ let lastNominatimRequestAt = 0;
 const geocodeResultCache = new Map();
 
 const els = {
+  receiptDialog: document.querySelector("#receiptDialog"),
+  receiptOpenButton: document.querySelector("#receiptOpenButton"),
   appShell: document.querySelector("#appShell"),
   authGate: document.querySelector("#authGate"),
   authGateForm: document.querySelector("#authGateForm"),

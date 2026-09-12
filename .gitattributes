@@ -1,0 +1,2 @@
+# Preserve vendored OCR asset bytes so SHA256SUMS stays valid on every platform.
+vendor/receipt-ocr/** -text

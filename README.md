@@ -89,6 +89,20 @@ localStorage.removeItem("domesticTravelExpensePlanner.activeTripId.v2")
 localStorage.removeItem("domesticTravelExpensePlanner.history.v1")
 ```
 
+## 영수증으로 지출 입력
+
+지출 기록의 **영수증으로 입력**에서 촬영하거나 사진을 선택합니다. 한국어+영어, 일본어+영어, 영어 인식을 지원하며, 회전·영역 자르기 후 상호, 결제일, 최종 금액, 통화, 항목, 결제 방식을 검토할 수 있습니다. 인식이 어려우면 사진에서 복사한 글자를 붙여넣을 수도 있습니다.
+
+**지출 폼에 채우기**는 입력값만 반영합니다. 기존 지출 폼에서 **추가/저장**을 눌러야 지출로 저장됩니다. 여행 기간 밖의 결제일은 기록할 여행 일자 또는 사전구매를 직접 선택합니다. 외화는 해외 모드에서 기존 환율로 환산하며, 환불/취소·모호한 총액/통화는 직접 확인합니다.
+
+- OCR은 Tesseract.js 6.0.1 / Tesseract.js-core 6.1.2의 LSTM 엔진과 tessdata_fast 4.1.0으로 브라우저에서 실행합니다. 유료 API나 OCR 서버가 필요하지 않습니다.
+- 실행 파일과 한국어·영어·일본어 모델은 `vendor/receipt-ocr/`에서 필요할 때만 로드합니다. 언어 모델은 브라우저에 캐시하고, 인식 창을 닫으면 엔진 메모리를 해제합니다.
+- HEIC는 브라우저에서 먼저 열고, 필요할 때만 heic2any 0.0.4로 기기 내 변환합니다. 변환 실패 시 JPG/PNG 안내를 표시합니다.
+- 사진과 원문 전체는 저장/업로드하지 않습니다. 저장한 지출에는 중복 확인용 파일 해시와 확인한 결제일만 `receipt` 메타데이터로 추가됩니다. 기존 지출 수정·JSON 내보내기·여행 동기화 시 함께 유지됩니다.
+- iPhone 14 Pro의 393×852 화면을 기준으로 구성했습니다. 데스크톱 브라우저의 모바일 크기 검증과 실제 iOS Safari의 성능 검증은 구분해야 합니다.
+
+추출 로직 회귀 검증: `node scripts/receipt-parser-regression.js`. 배포 파일 생성: `npm run build`.
+
 ## Codex Skill
 
 이 프로젝트는 개인 Codex skill `triplog`를 사용합니다. Windows 기준 `%USERPROFILE%\.codex\skills\triplog\SKILL.md`에 프로젝트 구조, 작업 규칙, 디버깅 절차가 들어 있으며, Codex 작업에서 `$triplog`로 불러올 수 있습니다.

@@ -17,7 +17,8 @@
     <link rel="apple-touch-icon" sizes="152x152" href="/icons/triplog-icon-152.png" />
     <link rel="apple-touch-icon" sizes="167x167" href="/icons/triplog-icon-167.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/triplog-icon-180.png" />
-    <link rel="stylesheet" href="./styles.css?v=payment-method-layout-20260910-2" />
+    <link rel="stylesheet" href="./styles.css?v=receipt-ocr-20260912-1" />
+    <link rel="stylesheet" href="./src/styles/receipt.css?v=receipt-ocr-20260912-1" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   </head>
@@ -378,6 +379,15 @@
               </div>
               <button class="text-button" id="cancelEditButton" type="button" hidden>수정 취소</button>
             </div>
+
+            <div class="receipt-entry-launcher">
+              <button class="receipt-button" id="receiptOpenButton" type="button" aria-haspopup="dialog">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v18l-2-1-3 1-3-1-2 1V3ZM10 7h4m-4 4h4m-4 4h3" /></svg>
+                영수증으로 입력
+              </button>
+              <span>사진 한 장으로 금액·날짜 채우기</span>
+            </div>
+            <p id="receiptAppliedStatus" class="receipt-applied-status" role="status" hidden></p>
 
             <section class="pretrip-purchase-panel" id="pretripPurchasePanel" aria-labelledby="pretripPurchaseTitle" hidden>
               <div class="pretrip-purchase-head">
@@ -1374,6 +1384,52 @@
       </div>
     </template>
 
-    <script src="./app.js?v=payment-method-polish-20260910-1"></script>
+    <dialog id="receiptDialog" class="receipt-dialog" aria-labelledby="receiptDialogTitle" aria-describedby="receiptPrivacyHint">
+      <div class="receipt-dialog-head">
+        <div><span class="receipt-eyebrow">RECEIPT SCAN</span><h2 id="receiptDialogTitle">영수증으로 입력</h2></div>
+        <button id="receiptCloseButton" class="receipt-icon-button" type="button" aria-label="영수증 입력 닫기">×</button>
+      </div>
+      <div class="receipt-dialog-body">
+        <p id="receiptPrivacyHint" class="receipt-hint">사진은 이 기기에서만 인식해요. 원본은 서버에 저장하지 않습니다.</p>
+        <div class="receipt-upload-actions">
+          <button id="receiptCameraButton" class="receipt-button" type="button">카메라로 촬영</button>
+          <button id="receiptAlbumButton" class="receipt-button receipt-secondary" type="button">앨범에서 선택</button>
+        </div>
+        <input id="receiptCameraInput" type="file" accept="image/*,.heic,.heif" capture="environment" hidden />
+        <input id="receiptAlbumInput" type="file" accept="image/*,.heic,.heif" hidden />
+        <div id="receiptImageArea" class="receipt-image-area" hidden>
+          <div class="receipt-preview-wrap"><canvas id="receiptPreview" aria-label="선택한 영수증 미리보기"></canvas><div id="receiptCropBox" class="receipt-crop-box" hidden></div></div>
+          <div class="receipt-image-actions">
+            <button id="receiptRotateButton" class="receipt-small-button" type="button">90° 회전</button>
+            <button id="receiptCropButton" class="receipt-small-button" type="button" aria-pressed="false">영역 자르기</button>
+            <button id="receiptCropApplyButton" class="receipt-small-button" type="button" hidden disabled>선택 영역 적용</button>
+          </div>
+          <p id="receiptCropHint" class="receipt-hint" hidden>사진 위에서 손가락으로 인식할 영역을 그려 주세요.</p>
+        </div>
+        <div class="receipt-scan-controls">
+          <label for="receiptLanguage"><span>영수증 언어</span><select id="receiptLanguage"><option value="kor+eng">한국어 + 영어</option><option value="jpn+eng">일본어 + 영어</option><option value="eng">영어</option></select></label>
+          <button id="receiptRecognizeButton" class="receipt-button" type="button" disabled>영수증 인식</button>
+        </div>
+        <p class="receipt-hint">처음에는 언어 파일을 내려받아 시간이 더 걸릴 수 있어요. 작은 글자가 선명하게 보이도록 촬영해 주세요.</p>
+        <div id="receiptProgressArea" hidden><progress id="receiptProgress" max="1" value="0" aria-label="영수증 인식 진행률"></progress><button id="receiptCancelButton" class="receipt-small-button" type="button">인식 취소</button></div>
+        <p id="receiptStatus" class="receipt-status" role="status" aria-live="polite">영수증 한 장을 선택해 주세요.</p>
+        <form id="receiptReviewForm" hidden>
+          <ul id="receiptWarnings" class="receipt-warnings"></ul>
+          <div class="receipt-review-grid">
+            <label class="receipt-wide" for="receiptMerchant"><span>상호·지출 내용</span><input id="receiptMerchant" maxlength="44" required placeholder="원본을 보고 확인해 주세요" /></label>
+            <label for="receiptDate"><span>영수증 결제일</span><input id="receiptDate" type="date" /></label>
+            <label for="receiptExpenseDate"><span>기록할 일자</span><select id="receiptExpenseDate" required></select></label>
+            <label for="receiptAmount"><span>최종 결제금액</span><input id="receiptAmount" inputmode="decimal" required placeholder="예: 12,500" /></label>
+            <label for="receiptCurrency"><span>결제 통화</span><select id="receiptCurrency" required><option value="">선택해 주세요</option><option value="KRW">KRW · 원</option><option value="JPY">JPY · 엔</option><option value="USD">USD · 달러</option><option value="CNY">CNY · 위안</option><option value="EUR">EUR · 유로</option><option value="GBP">GBP · 파운드</option><option value="TWD">TWD · 대만달러</option><option value="THB">THB · 바트</option><option value="VND">VND · 동</option></select></label>
+            <label for="receiptCategory"><span>항목</span><select id="receiptCategory"><option>식비</option><option>관광</option><option>교통</option><option>쇼핑</option><option>기타</option><option>숙소</option></select></label>
+            <label for="receiptPayment"><span>결제 방식</span><select id="receiptPayment" required><option value="">선택해 주세요</option><option value="card">카드</option><option value="cash">현금</option></select></label>
+          </div>
+          <p class="receipt-hint">금액·통화·일자를 원본과 비교해 주세요. 외화는 지출 폼의 환율로 환산하며, 숙소는 체크인·체크아웃도 확인해야 합니다.</p>
+        </form>
+        <details id="receiptTextDetails" class="receipt-text-details"><summary>인식한 글자 보기·직접 붙여넣기</summary><label for="receiptRawText" class="receipt-hint">인식이 어려우면 아이폰에서 복사한 영수증 글자를 붙여넣어도 됩니다.</label><textarea id="receiptRawText" rows="6" maxlength="18000" placeholder="상호, 날짜, 합계금액이 포함된 글자"></textarea><button id="receiptParseTextButton" class="receipt-small-button" type="button">글자로 정보 채우기</button></details>
+      </div>
+      <div class="receipt-dialog-footer"><button id="receiptApplyButton" class="receipt-button" type="submit" form="receiptReviewForm" disabled>지출 폼에 채우기</button><span>지출 폼에서 ‘추가’를 눌러야 저장돼요.</span></div>
+    </dialog>
+    <script src="./app.js?v=receipt-ocr-20260912-1"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 (() => {
-  const scriptVersion = "payment-method-polish-20260910-1";
+  const scriptVersion = "receipt-ocr-20260912-1";
   const scriptFiles = [
     { path: "../../vendor/supabase-js-2.107.0.min.js", optional: true },
     "core/namespace.js",
@@ -15,6 +15,9 @@
     "navigation/page-router.js",
     "navigation/trip-dates.js",
     "features/expenses/expense-form.js",
+    "features/expenses/receipt-parser.js",
+    "features/expenses/receipt-ocr.js",
+    "features/expenses/receipt-input.js",
     "features/settings/travel-mode.js",
     "features/expenses/currency-controls.js",
     "features/expenses/lodging.js",

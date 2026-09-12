@@ -8,6 +8,7 @@ function setFilter(filter) {
 }
 
 function startEdit(entry) {
+  window.TripLog.features.expenses.receiptInput.reset();
   editingId = entry.id;
   state.travelMode = entry.mode === "overseas" ? "overseas" : "domestic";
   els.daySelect.value = entry.date;
@@ -29,6 +30,7 @@ function startEdit(entry) {
 }
 
 function clearEditMode() {
+  window.TripLog.features.expenses.receiptInput.reset();
   editingId = null;
   els.expenseForm.reset();
   els.daySelect.value = state.selectedDate;

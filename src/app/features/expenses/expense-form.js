@@ -47,6 +47,9 @@ function handleExpenseSubmit(event) {
   const currency = getCurrencyMeta(els.currencySelect.value);
   const foreignAmount = Math.max(0, parseFormattedNumber(els.foreignAmountInput.value));
   const exchangeRate = Math.max(0, parseFormattedNumber(els.exchangeRateInput.value));
+  const receiptInput = window.TripLog.features.expenses.receiptInput;
+  if (!receiptInput.beforeSubmit()) return;
+  const receipt = receiptInput.metadata() || (editingId ? findEntry(editingId)?.receipt : null);
 
   if (isLodgingSplitMode()) {
     const lodgingPlan = getLodgingPlan();
@@ -69,7 +72,7 @@ function handleExpenseSubmit(event) {
         currency,
         foreignAmount,
         exchangeRate,
-      }),
+      }).map((entry) => receipt ? { ...entry, receipt } : entry),
     );
 
     resetExpenseFormAfterSubmit();
@@ -93,6 +96,7 @@ function handleExpenseSubmit(event) {
     foreignAmount: isOverseas ? foreignAmount : 0,
     exchangeRate: isOverseas ? exchangeRate : 0,
     createdAt: editingId ? findEntry(editingId)?.createdAt || Date.now() : Date.now(),
+    ...(receipt ? { receipt } : {}),
   };
 
   if (editingId) {
@@ -107,6 +111,7 @@ function handleExpenseSubmit(event) {
 }
 
 function resetExpenseFormAfterSubmit() {
+  window.TripLog.features.expenses.receiptInput.reset();
   els.expenseForm.reset();
   els.daySelect.value = state.selectedDate;
   els.categorySelect.value = getDefaultExpenseCategory();

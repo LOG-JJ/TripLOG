@@ -331,6 +331,7 @@ function init() {
     setupPretripPurchaseForms();
   }
   els.expenseForm.addEventListener("submit", handleExpenseSubmit);
+  window.TripLog.features.expenses.receiptInput.setup();
   els.cancelEditButton.addEventListener("click", clearEditMode);
   els.saveStateButton.addEventListener("click", saveCurrentSnapshot);
   els.historyButton.addEventListener("click", openHistoryModal);
