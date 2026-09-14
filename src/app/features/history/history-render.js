@@ -1,6 +1,8 @@
 function renderHistoryModal() {
   const records = [...historyRecords].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
   els.historyList.replaceChildren();
+  const countLabel=document.querySelector("#rdHistoryCount");
+  if(countLabel)countLabel.textContent=`저장한 여행 ${records.length}개`;
   els.historyEmpty.hidden = records.length > 0;
 
   records.forEach((record) => {
@@ -15,15 +17,13 @@ function renderHistoryModal() {
         </div>
         <p>${escapeHtml(formatHistoryTimestamp(record.timestamp))}</p>
         <div class="history-meta">
-          <span>${escapeHtml(formatHistoryDateRange(savedState))}</span>
-          <span>지출 ${Number(savedState.entries?.length || 0).toLocaleString("ko-KR")}건</span>
-          <span>정산 ${(savedState.companions?.length || 0).toLocaleString("ko-KR")}명</span>
-          <span>${formatWon(calculateSnapshotTotal(savedState))}</span>
+          <span class="rd-history-period">${escapeHtml(formatHistoryDateRange(savedState))}</span>
+          <div class="rd-history-stats"><span><small>일정</small><strong>${Number(savedState.itineraryItems?.length || 0).toLocaleString("ko-KR")}개</strong></span><span><small>지출</small><strong>${formatWon(calculateSnapshotTotal(savedState))}</strong></span></div>
         </div>
       </div>
       <div class="history-actions">
-        <button class="load" type="button" data-history-action="load" data-history-id="${escapeHtml(record.id)}">불러오기</button>
-        <button class="delete" type="button" data-history-action="delete" data-history-id="${escapeHtml(record.id)}">삭제</button>
+        <button class="load" type="button" data-history-action="load" data-history-id="${escapeHtml(record.id)}"><i class="ph ph-folder-open" aria-hidden="true"></i> 불러오기</button>
+        <button class="delete" type="button" data-history-action="delete" data-history-id="${escapeHtml(record.id)}"><i class="ph ph-trash" aria-hidden="true"></i> 삭제</button>
       </div>
     `;
     els.historyList.appendChild(item);

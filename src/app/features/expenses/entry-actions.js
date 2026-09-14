@@ -10,6 +10,7 @@ function setFilter(filter) {
 function startEdit(entry) {
   window.TripLog.features.expenses.receiptInput.reset();
   editingId = entry.id;
+  state.selectedDate = entry.date;
   state.travelMode = entry.mode === "overseas" ? "overseas" : "domestic";
   els.daySelect.value = entry.date;
   els.categorySelect.value = entry.category;
@@ -27,6 +28,7 @@ function startEdit(entry) {
   els.submitButton.querySelector("span").textContent = "저장";
   els.cancelEditButton.hidden = false;
   els.descriptionInput.focus();
+  window.TripLog.features.redesign?.workspace?.openExpenseEditor(entry);
 }
 
 function clearEditMode() {

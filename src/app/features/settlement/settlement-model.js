@@ -72,7 +72,12 @@ function buildSettlementModel(selectedSource) {
   const outsideSpent = getCompanionTotalSpent();
   const totalTripSpent = sourceTotal + outsideSpent;
   const owedTotals = Object.fromEntries(members.map((member) => [member.key, 0]));
-  const paidTotals = Object.fromEntries(members.map((member) => [member.key, member.isLeader ? sourceTotal : member.paid]));
+  const paidTotals = Object.fromEntries(members.map((member) => [member.key, member.isLeader ? 0 : member.paid]));
+  // Legacy entries without a payer retain the original leader-paid behavior.
+  entries.forEach((entry) => {
+    const payer = members.some((member) => member.key === entry.raw?.payerKey) ? entry.raw.payerKey : "leader";
+    addSettlementAmount(paidTotals, payer, entry.amount);
+  });
 
   entryRows.forEach((row) => {
     members.forEach((member) => addSettlementAmount(owedTotals, member.key, row.shares[member.key] || 0));

@@ -1,0 +1,23 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>TripLOG companion QA</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#edf0f3;font-family:system-ui}header{height:44px;padding:10px 18px;font-size:14px}main{display:flex;gap:20px;padding:0 18px 14px;align-items:start}section{width:393px;flex:none;background:white}img{width:393px;display:block}iframe{width:393px;height:852px;border:0;display:block}</style>
+<header id="label"></header><main><section id="referencePanel"><img id="reference"></section><section id="appPanel"><iframe id="app"></iframe></section></main>
+<script>
+const params=new URLSearchParams(location.search),scene=params.get('view')||'today',width=Number(params.get('width'))||393;
+document.querySelector('#label').textContent=`${scene} · reference / implementation · ${width} CSS px`;
+document.querySelector('#reference').src=`../${scene}.png`;
+if(params.has('width'))document.querySelector('#referencePanel').hidden=true;
+document.querySelector('#appPanel').style.width=width+'px';
+const frame=document.querySelector('#app');frame.style.width=width+'px';frame.src='/Travel.html?page=overview&qa=companion';
+frame.onload=()=>{
+  const w=frame.contentWindow,d=w.document;if(!d.documentElement)return;
+  const start=()=>{
+    if(d.documentElement.dataset.qaReady!=='true')return false;
+    if(scene==='review'||scene==='adjustment')w.eval(`state.itineraryItems.find(i=>i.id==='qa-hanok').time='11:40';state.itineraryItems.find(i=>i.id==='qa-hanok').endTime='12:40';state.itineraryItems.find(i=>i.id==='qa-market').time='12:30';state.itineraryItems.find(i=>i.id==='qa-market').endTime='13:30';`);
+    w.TripLog.features.travelCompanion.workspace.open(scene==='adjustment'?'review':scene==='reservation-editor'?'wallet':scene);
+    if(scene==='adjustment'){d.querySelector('[data-tt-action="adjustment"]').click();d.querySelector('[data-delay="30"]').click();}
+    if(scene==='reservation-editor'){d.querySelector('[data-tt-action="reservation-new"]').click();d.querySelector('[data-type="stay"]').click();const form=d.querySelector('#ttReservationForm');Object.entries({title:'종로 스테이',reference:'SEOUL-2026',location:'서울 종로구',note:'체크인 15:00 이후'}).forEach(([key,value])=>form.elements.namedItem(key).value=value);}
+    document.documentElement.dataset.qaReady='true';return true;
+  };
+  if(start())return;const observer=new MutationObserver(()=>{if(start())observer.disconnect()});observer.observe(d.documentElement,{subtree:true,childList:true,attributes:true});
+};
+</script></html>

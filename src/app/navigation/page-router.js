@@ -7,6 +7,9 @@ function setActivePage(page) {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }
 
+  const pageUrl = new URL(location.href);
+  if (pageUrl.searchParams.get('page') !== nextPage) { pageUrl.searchParams.set('page',nextPage); history.replaceState({page:nextPage},'',pageUrl); }
+
   const previousPage = activePage;
   const outgoing = getPageElement(previousPage);
   const incoming = getPageElement(nextPage);
@@ -91,6 +94,8 @@ function syncPageVisibility() {
 }
 
 function updatePageChrome({ animateBrand = false } = {}) {
+  document.body.dataset.page = activePage;
+  if (activePage !== "itinerary") window.TripLog.features.itinerary.workspace?.close?.();
   [els.domesticModeButton, els.overseasModeButton].forEach((statusItem) => {
     if (statusItem) statusItem.tabIndex = -1;
   });

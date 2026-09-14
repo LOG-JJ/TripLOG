@@ -19,6 +19,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/triplog-icon-180.png" />
     <link rel="stylesheet" href="./styles.css?v=receipt-ocr-20260912-1" />
     <link rel="stylesheet" href="./src/styles/receipt.css?v=receipt-ocr-20260912-1" />
+    <link rel="stylesheet" href="./vendor/phosphor-2.1.1/regular.css" />
+    <link rel="stylesheet" href="./src/styles/itinerary.css?v=itinerary-20260912-14" />
+    <link rel="stylesheet" href="./src/styles/redesign.css?v=redesign-20260914-24" />
+    <link rel="stylesheet" href="./src/styles/travel-companion.css?v=companion-20260914-2" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   </head>
@@ -1004,189 +1008,127 @@
       </main>
 
       <main class="page-view itinerary-page" id="itineraryPage" hidden>
-        <section class="planner-panel itinerary-hero" aria-label="여행 일정">
-          <div class="section-title-row itinerary-title-row">
-            <div class="itinerary-title-cluster">
-              <div class="itinerary-label-row">
-                <p class="overline">Itinerary</p>
-              </div>
-            </div>
-            <div class="itinerary-title-actions">
-              <!-- Itinerary Mode Toggle: Edit vs OverView -->
-              <div class="segmented itinerary-mode-toggle-inline" id="itineraryModeToggle">
-                <button class="active" data-mode="edit" type="button">편집</button>
-                <button data-mode="overview" type="button">요약</button>
-              </div>
-              <button class="text-button inline-route-btn itinerary-header-route-btn" id="itineraryRouteButton" type="button" title="오늘 일정 동선 구글맵 연결">
-                <svg viewBox="0 0 24 24" focusable="false" style="width: 14px; height: 14px; margin-right: 4px; stroke-width: 2.8;"><path d="M9 18l6-6-6-6M9 12h11" /></svg>
-                <span>동선 연결하기</span>
-              </button>
-              <button class="icon-button ghost" id="backToBudgetButton" type="button" title="가계부로 돌아가기" hidden>
-                <svg viewBox="0 0 24 24" focusable="false"><path d="m15 18-6-6 6-6" /><path d="M9 12h11" /></svg>
-                <span>가계부</span>
-              </button>
-            </div>
-          </div>
-          <div class="itinerary-hero-grid">
-            <div>
-              <span>여행 이름</span>
-              <strong id="itineraryTripName">국내 여행</strong>
-            </div>
-            <div>
-              <span>일정 기간</span>
-              <strong id="itineraryDateRange">-</strong>
-            </div>
-          </div>
-          <div class="itinerary-day-strip" id="itineraryDayStrip" aria-label="일정 일차 필터"></div>
+        <header class="itinerary-brandbar">
+          <img class="itinerary-wordmark" src="./src/assets/triplog-wordmark.png" alt="TripLOG" width="108" height="31" />
+          <button class="itinerary-icon-button" id="itineraryMenuButton" type="button" aria-label="여행 메뉴 열기" aria-haspopup="dialog"><i class="ph ph-list" aria-hidden="true"></i></button>
+        </header>
+        <section class="itinerary-heading" aria-label="여행 일정">
+          <h1>일정 계획</h1>
+          <p id="itineraryTripName"></p>
+          <span id="itineraryDateRange" hidden></span>
         </section>
-
+        <div class="itinerary-day-strip" id="itineraryDayStrip" aria-label="일정 일차 선택"></div>
         <section class="itinerary-workspace">
-          <div class="itinerary-main-panel">
-            <!-- 🗺️ 대형 여행 동선 지도 영역 (일정 입력 위에 크게 배치) -->
-            <div class="map-section-top">
-              <div class="section-title-row compact">
-                <div>
-                  <p class="overline">Map</p>
-                </div>
-                <div class="map-provider-links" aria-label="외부 지도 열기">
-                  <a class="map-open-link map-icon-link naver-map-link" id="naverMapsLink" href="https://map.naver.com" target="_blank" rel="noreferrer" title="네이버지도로 열기" aria-label="네이버지도로 열기">
-                    <span class="naver-color-mark" aria-hidden="true">N</span>
-                    <span class="map-open-emoji" aria-hidden="true">🗺️</span>
-                  </a>
-                  <a class="map-open-link map-icon-link" id="googleMapsLink" href="https://www.google.com/maps" target="_blank" rel="noreferrer" title="구글맵으로 열기" aria-label="구글맵으로 열기">
-                    <span class="google-color-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-                    <span class="map-open-emoji" aria-hidden="true">🗺️</span>
-                  </a>
-                </div>
-              </div>
-              <div class="map-frame-wrap" style="position: relative; overflow: hidden;">
-                <iframe id="googleMapFrame" title="구글맵 위치 미리보기" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width: 100%; height: 100%; border: none;"></iframe>
-                <div id="leafletMap" style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 10;" hidden></div>
-              </div>
-              <div class="map-current">
-                <span id="mapCurrentLabel">장소를 선택하세요</span>
-                <strong id="mapCurrentPlace">-</strong>
-              </div>
-            </div>
-
-            <hr class="section-divider" style="margin: 24px 0; border: 1.5px dashed var(--line);" />
-
-            <div class="section-title-row compact">
-              <div>
-                <p class="overline">Schedule</p>
-              </div>
-              <button class="text-button" id="cancelItineraryEditButton" type="button" hidden>수정 취소</button>
-            </div>
-
-            <form class="itinerary-form" id="itineraryForm">
-              <div class="itinerary-day-theme-row wide">
-                <label for="itineraryDaySelect">
-                  <span>일자</span>
-                  <select id="itineraryDaySelect" required></select>
-                </label>
-                <label for="itineraryThemeSelect">
-                  <span>테마</span>
-                  <select id="itineraryThemeSelect">
-                    <option value="sightseeing">📸 명소</option>
-                    <option value="lodging">🏨 숙소</option>
-                    <option value="food">🍽️ 맛집</option>
-                    <option value="shopping">🛍️ 쇼핑</option>
-                    <option value="transport">🚗 이동</option>
-                    <option value="etc">🎈 기타</option>
-                  </select>
-                </label>
-              </div>
-              <div class="itinerary-time-range-field">
-                <label class="time-field-item" for="itineraryTimeInput">
-                  <span>시작 시간</span>
-                  <input id="itineraryTimeInput" type="time" />
-                </label>
-                <label class="time-field-item" for="itineraryEndTimeInput">
-                  <span>종료 시간</span>
-                  <input id="itineraryEndTimeInput" type="time" />
-                </label>
-              </div>
-              <label class="itinerary-trans-field" for="itineraryTransSelect" hidden>
-                <span>이동 수단</span>
-                <select id="itineraryTransSelect">
-                  <option value="walk">도보</option>
-                  <option value="car">차량</option>
-                  <option value="train">기차</option>
-                  <option value="bus">버스</option>
-                  <option value="flight">비행</option>
-                </select>
-              </label>
-              <label class="place-search-field wide" for="itineraryPlaceInput">
-                <span>장소</span>
-                <div class="place-search-row">
-                  <input id="itineraryPlaceInput" type="text" maxlength="80" placeholder="장소명 또는 주소 입력" autocomplete="off" required />
-                  <button class="place-search-button" id="placeSearchButton" type="button">검색</button>
-                </div>
-                <input id="itineraryLocationInput" type="hidden" />
-                <div class="place-search-meta">
-                  <div class="place-search-status" id="placeSearchStatus">입력값 그대로 저장하거나 검색 결과를 선택할 수 있습니다.</div>
-                  <button class="manual-address-toggle" id="manualAddressToggleButton" type="button">주소 직접 입력</button>
-                </div>
-                <div class="manual-address-panel" id="manualAddressPanel" hidden>
-                  <div class="manual-address-head">
-                    <span>직접 주소</span>
-                    <button id="manualAddressCloseButton" type="button">닫기</button>
-                  </div>
-                  <div class="manual-address-row">
-                    <input id="manualAddressInput" type="text" maxlength="120" placeholder="주소 또는 지도 검색어 입력" autocomplete="off" />
-                    <button id="manualAddressApplyButton" type="button">지도 반영</button>
-                  </div>
-                </div>
-                <div class="place-search-results" id="placeSearchResults" role="listbox" hidden></div>
-              </label>
-              <label class="wide" for="itineraryMemoInput">
-                <span>메모</span>
-                <input id="itineraryMemoInput" type="text" maxlength="80" placeholder="예약 시간, 준비물, 이동 팁 등" />
-              </label>
-
-              <!-- 🎟️ 티켓 / 바우처 입력 섹션 -->
-              <div class="wide ticket-toggle-wrapper">
-                <button type="button" id="itineraryTicketToggleBtn" class="ticket-toggle-btn">
-                  <span class="ticket-toggle-icon">🎟️</span>
-                  <span>티켓 및 예약 바우처 연동 (선택)</span>
-                  <span class="ticket-toggle-chevron">▼</span>
-                </button>
-                <div id="itineraryTicketSection" class="ticket-collapsible-section" hidden>
-                  <div class="ticket-input-grid">
-                    <label for="itineraryVoucherName">
-                      <span>바우처/티켓 이름</span>
-                      <input id="itineraryVoucherName" type="text" maxlength="36" placeholder="예: 시부야스카이 입장권" />
-                    </label>
-                    <label for="itineraryVoucherCode">
-                      <span>예약 번호</span>
-                      <input id="itineraryVoucherCode" type="text" maxlength="32" placeholder="예: RSV-938210" />
-                    </label>
-                    <label class="wide" for="itineraryVoucherFile">
-                      <span>예약 증빙 파일 (이미지 또는 PDF, 최대 1.5MB)</span>
-                      <div class="ticket-file-row">
-                        <input id="itineraryVoucherFile" type="file" accept="image/*,application/pdf" style="display:none;" />
-                        <button type="button" id="ticketFileSelectBtn" class="text-button" style="margin: 0; min-height: 44px; font-size: 13px;">파일 선택</button>
-                        <span id="ticketFileNameDisplay" class="ticket-file-name-display">선택된 파일 없음</span>
-                        <button type="button" id="ticketFileResetBtn" class="text-button" style="color: #ef4444; border-color: rgba(239, 68, 68, 0.2); background: #fff1f2; display: none; margin: 0; min-height: 44px; font-size: 13px;">삭제</button>
-                      </div>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <button class="submit-button" id="itinerarySubmitButton" type="submit">
-                <svg viewBox="0 0 24 24" focusable="false"><path d="M12 5v14M5 12h14" /></svg>
-                <span>일정 추가</span>
-              </button>
-            </form>
-
-            <div class="itinerary-list" id="itineraryList"></div>
-            <div class="empty-state itinerary-empty" id="itineraryEmpty">
-              <strong>아직 등록된 일정이 없습니다.</strong>
-              <span>장소를 입력하거나 검색 결과를 선택하면 지도에서 바로 확인할 수 있습니다.</span>
-            </div>
+          <div class="itinerary-day-heading">
+            <h2 id="itinerarySelectedDayTitle"></h2>
+            <button class="itinerary-map-button" id="itineraryMapButton" type="button"><i class="ph ph-map-pin" aria-hidden="true"></i><span>지도 보기</span></button>
           </div>
+          <div class="itinerary-list" id="itineraryList"></div>
+          <div class="itinerary-empty" id="itineraryEmpty">
+            <i class="ph ph-calendar-plus" aria-hidden="true"></i>
+            <strong>하루의 첫 일정을 담아보세요</strong>
+            <p>가고 싶은 장소부터 하나씩 추가해 보세요.</p>
+          </div>
+          <button class="itinerary-inline-add" type="button" data-itinerary-add><i class="ph ph-plus-circle" aria-hidden="true"></i><span>일정 추가하기</span></button>
+        </section>
+        <div class="itinerary-add-dock"><button class="itinerary-primary" id="itineraryAddButton" type="button" data-itinerary-add><i class="ph ph-plus" aria-hidden="true"></i><span>일정 추가</span></button></div>
+        <nav class="itinerary-bottom-nav" aria-label="일정 화면 메뉴">
+  <button type="button" data-itinerary-target="overview"><i class="ph ph-house" aria-hidden="true"></i><span>개요</span></button>
+  <button type="button" data-itinerary-target="itinerary" aria-current="page"><i class="ph ph-calendar-blank" aria-hidden="true"></i><span>일정</span></button>
+  <button type="button" data-itinerary-target="budget"><i class="ph ph-wallet" aria-hidden="true"></i><span>지출</span></button>
+  <button type="button" data-itinerary-target="report"><i class="ph ph-chart-bar" aria-hidden="true"></i><span>리포트</span></button>
+  <button type="button" data-itinerary-menu><i class="ph ph-dots-three" aria-hidden="true"></i><span>더보기</span></button>
+</nav>
 
-          <aside class="map-panel" aria-label="일정 통계 및 가방 목록">
+        <dialog class="itinerary-editor" id="itineraryEditor" aria-labelledby="itineraryEditorTitle">
+          <div class="itinerary-editor-shell">
+            <header class="itinerary-editor-header">
+              <img class="itinerary-wordmark" src="./src/assets/triplog-wordmark.png" alt="TripLOG" width="108" height="31" />
+              <div><strong>일정 계획</strong><p id="itineraryEditorTripName"></p></div>
+              <button class="itinerary-icon-button" type="button" id="itineraryEditorClose" aria-label="일정 편집 창 닫기"><i class="ph ph-x" aria-hidden="true"></i></button>
+            </header>
+            <div class="itinerary-editor-days" id="itineraryEditorDays" aria-label="추가할 일차 선택"></div>
+            <div class="itinerary-editor-scroll">
+              <section class="map-section-top itinerary-editor-map" aria-label="일정 동선 지도">
+                <div class="map-frame-wrap">
+                  <iframe id="googleMapFrame" title="지도 위치 미리보기" loading="lazy" referrerpolicy="no-referrer-when-downgrade" hidden></iframe>
+                  <div id="leafletMap"></div>
+                  <div class="itinerary-map-empty" id="itineraryMapEmpty" hidden><i class="ph ph-map-trifold" aria-hidden="true"></i><span>장소를 검색하면 지도에서 확인할 수 있어요.</span></div>
+                </div>
+                <button class="itinerary-route-button" id="itineraryRouteButton" type="button"><i class="ph ph-crosshair" aria-hidden="true"></i><span>전체 동선</span></button>
+                <div class="map-current" hidden><span id="mapCurrentLabel"></span><strong id="mapCurrentPlace"></strong></div>
+              </section>
+              <section class="itinerary-editor-sheet">
+                <div class="itinerary-sheet-handle" aria-hidden="true"></div>
+                <h2 id="itineraryEditorTitle" tabindex="-1">장소 추가</h2>
+                <form class="itinerary-form" id="itineraryForm">
+                  <label class="itinerary-editor-day-field" hidden><span>일자</span><select id="itineraryDaySelect" required></select></label>
+                  <div class="itinerary-place-summary" id="itineraryPlaceSummary" hidden>
+                    <img id="itineraryPlaceThumbnail" alt="선택한 장소의 지도" width="66" height="66" hidden />
+                    <div><strong id="itineraryPlaceName"></strong><p id="itineraryPlaceAddress"></p></div>
+                    <button class="itinerary-map-button" type="button" id="itineraryChangePlace">장소 변경</button>
+                  </div>
+                  <div class="place-search-field wide" id="itineraryPlaceSearchPanel">
+                    <label for="itineraryPlaceInput">장소</label>
+                    <div class="place-search-row">
+                      <input id="itineraryPlaceInput" type="text" maxlength="80" placeholder="장소명 또는 주소 입력" autocomplete="off" required />
+                      <button class="place-search-button" id="placeSearchButton" type="button">검색</button>
+                    </div>
+                    <input id="itineraryLocationInput" type="hidden" />
+                    <div class="place-search-meta"><p class="place-search-status" id="placeSearchStatus" aria-live="polite">장소를 검색하거나 직접 입력하세요.</p><button class="manual-address-toggle" id="manualAddressToggleButton" type="button">주소 직접 입력</button></div>
+                    <div class="manual-address-panel" id="manualAddressPanel" hidden>
+                      <div class="manual-address-head"><span>직접 주소</span><button id="manualAddressCloseButton" type="button">닫기</button></div>
+                      <div class="manual-address-row"><input id="manualAddressInput" type="text" maxlength="120" placeholder="주소 또는 지도 검색어" /><button id="manualAddressApplyButton" type="button">지도 반영</button></div>
+                    </div>
+                    <div class="place-search-results" id="placeSearchResults" role="listbox" aria-label="장소 검색 결과" hidden></div>
+                  </div>
+                  <label class="itinerary-theme-field" for="itineraryThemeSelect"><span>테마</span><select id="itineraryThemeSelect"><option value="sightseeing">명소</option><option value="lodging">숙소</option><option value="food">맛집</option><option value="shopping">쇼핑</option><option value="transport">이동</option><option value="etc">기타</option></select></label>
+                  <div class="itinerary-time-range-field">
+                    <label class="time-field-item" for="itineraryTimeInput"><span>시작</span><input id="itineraryTimeInput" type="time" /></label>
+                    <label class="time-field-item" for="itineraryEndTimeInput"><span>종료</span><input id="itineraryEndTimeInput" type="time" /></label>
+                  </div>
+                  <label hidden><span>이동 수단</span><select id="itineraryTransSelect"><option value="none">미정</option><option value="walk">도보</option><option value="car">차량</option><option value="train">기차</option><option value="bus">버스</option><option value="flight">비행</option></select></label>
+                  <details class="itinerary-extra-details" id="itineraryExtraDetails">
+                    <summary><i class="ph ph-note" aria-hidden="true"></i><span>메모 · 티켓 추가</span><i class="ph ph-caret-right" aria-hidden="true"></i></summary>
+                    <div class="itinerary-extra-fields">
+                      <label for="itineraryMemoInput"><span>메모</span><input id="itineraryMemoInput" type="text" maxlength="80" placeholder="예약 시간, 준비물, 이동 팁 등" /></label>
+                      <button type="button" id="itineraryTicketToggleBtn" class="ticket-toggle-btn" aria-expanded="false"><i class="ph ph-ticket" aria-hidden="true"></i><span>티켓 · 바우처</span><span class="ticket-toggle-chevron ph ph-caret-down" aria-hidden="true"></span></button>
+                      <div id="itineraryTicketSection" class="ticket-collapsible-section" hidden>
+                        <div class="ticket-input-grid">
+                          <label for="itineraryVoucherName"><span>티켓 이름</span><input id="itineraryVoucherName" type="text" maxlength="36" placeholder="예: 전망대 입장권" /></label>
+                          <label for="itineraryVoucherCode"><span>예약 번호</span><input id="itineraryVoucherCode" type="text" maxlength="32" placeholder="예약 번호 입력" /></label>
+                          <label class="wide" for="itineraryVoucherFile"><span>예약 증빙 (이미지·PDF, 최대 1.5MB)</span><input id="itineraryVoucherFile" type="file" accept="image/*,application/pdf" hidden /><div class="ticket-file-row"><button type="button" id="ticketFileSelectBtn">파일 선택</button><span id="ticketFileNameDisplay">선택된 파일 없음</span><button type="button" id="ticketFileResetBtn" style="display:none">삭제</button></div></label>
+                        </div>
+                      </div>
+                    </div>
+                  </details>
+                  <p class="itinerary-form-error" id="itineraryFormError" role="alert" hidden></p>
+
+                  <div class="itinerary-edit-actions" id="itineraryEditActions" hidden><button type="button" id="itineraryDeleteButton"><i class="ph ph-trash" aria-hidden="true"></i>일정 삭제</button></div>
+                  <button id="cancelItineraryEditButton" type="button" hidden>수정 취소</button>
+                </form>
+
+              </section>
+            </div>
+            <div class="itinerary-editor-actions"><button class="itinerary-primary submit-button" id="itinerarySubmitButton" type="submit" form="itineraryForm"><span>일정에 추가</span></button></div>
+            <nav class="itinerary-bottom-nav" aria-label="일정 화면 메뉴">
+  <button type="button" data-itinerary-target="overview"><i class="ph ph-house" aria-hidden="true"></i><span>개요</span></button>
+  <button type="button" data-itinerary-target="itinerary" aria-current="page"><i class="ph ph-calendar-blank" aria-hidden="true"></i><span>일정</span></button>
+  <button type="button" data-itinerary-target="budget"><i class="ph ph-wallet" aria-hidden="true"></i><span>지출</span></button>
+  <button type="button" data-itinerary-target="report"><i class="ph ph-chart-bar" aria-hidden="true"></i><span>리포트</span></button>
+  <button type="button" data-itinerary-menu><i class="ph ph-dots-three" aria-hidden="true"></i><span>더보기</span></button>
+</nav>
+          </div>
+        </dialog>
+
+        <dialog class="itinerary-menu-dialog" id="itineraryMenuDialog" aria-labelledby="itineraryMenuTitle">
+          <header><h2 id="itineraryMenuTitle">여행 메뉴</h2><button class="itinerary-icon-button" type="button" data-close-itinerary-menu aria-label="여행 메뉴 닫기" autofocus><i class="ph ph-x" aria-hidden="true"></i></button></header>
+          <div class="itinerary-menu-links"><button type="button" data-itinerary-target="start">여행 선택 · 만들기<i class="ph ph-caret-right" aria-hidden="true"></i></button><button type="button" data-itinerary-sync>여행 동기화<i class="ph ph-arrows-clockwise" aria-hidden="true"></i></button><button type="button" data-itinerary-target="settlement">정산<i class="ph ph-caret-right" aria-hidden="true"></i></button><button type="button" data-itinerary-tools>준비물 · 시간 통계<i class="ph ph-caret-right" aria-hidden="true"></i></button><button type="button" data-itinerary-target="settings">설정<i class="ph ph-caret-right" aria-hidden="true"></i></button></div>
+          <div class="itinerary-map-links"><a id="naverMapsLink" href="https://map.naver.com" target="_blank" rel="noreferrer">네이버지도 열기</a><a id="googleMapsLink" href="https://maps.google.com" target="_blank" rel="noreferrer">Google 지도 열기</a></div>
+          <div class="segmented" id="itineraryModeToggle" aria-label="일정 보기"><button data-mode="edit" type="button">일차별 보기</button><button data-mode="overview" type="button">전체 일정</button></div>
+          <button id="backToBudgetButton" type="button" hidden>가계부</button>
+        </dialog>
+        <dialog class="itinerary-tools-dialog" id="itineraryToolsDialog" aria-label="준비물 및 일정 통계"><header><h2>여행 준비</h2><button class="itinerary-icon-button" type="button" id="itineraryToolsClose" aria-label="여행 준비 닫기" autofocus><i class="ph ph-x" aria-hidden="true"></i></button></header><aside class="map-panel" aria-label="일정 통계 및 가방 목록">
             <!-- Place duration bar chart -->
             <div class="itinerary-visual-card">
               <div class="section-title-row compact mini">
@@ -1228,8 +1170,7 @@
                 <button type="button" id="packingAddBtn">넣기</button>
               </form>
             </div>
-          </aside>
-        </section>
+          </aside></dialog>
       </main>
       </div>
     </div>
@@ -1338,14 +1279,15 @@
                 <button id="newTripOverseasButton" type="button" data-mode="overseas" aria-pressed="false">해외</button>
               </div>
             </div>
-            <label class="new-trip-country-field" for="newTripCountryInput">
-              <span class="new-trip-field-label">국가</span>
+            <div class="new-trip-country-field">
+              <label for="newTripCountryInput"><span class="new-trip-field-label">국가</span></label>
               <div class="new-trip-country-combobox" id="newTripCountryCombobox">
                 <span class="new-trip-country-flag" id="newTripCountryFlag" aria-hidden="true">🇰🇷</span>
-                <input id="newTripCountryInput" type="text" maxlength="40" placeholder="예: 일본" required autocomplete="off" role="combobox" aria-autocomplete="list" aria-controls="newTripCountryList" aria-expanded="false" style="width:100%;" />
-                <div class="new-trip-country-list" id="newTripCountryList" role="listbox" aria-label="국가 선택 목록" hidden></div>
+                <input id="newTripCountryInput" type="text" maxlength="40" placeholder="일본 / Japan" required autocomplete="off" autocapitalize="none" spellcheck="false" aria-label="국가" style="width:100%;" />
+                <button id="newTripCountryClearButton" class="new-trip-country-clear" type="button" aria-label="국가 입력 지우기" hidden><i class="ph ph-x" aria-hidden="true"></i></button>
+                <div class="new-trip-country-list" id="newTripCountryList" role="group" aria-label="국가 검색 결과" hidden></div>
               </div>
-            </label>
+            </div>
             <label for="newTripCityInput" style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
               <span style="font-size: 13px; font-weight: 700; color: var(--text);">도시</span>
               <input id="newTripCityInput" type="text" maxlength="24" placeholder="예: 도쿄" required style="width:100%;" />
@@ -1430,6 +1372,6 @@
       </div>
       <div class="receipt-dialog-footer"><button id="receiptApplyButton" class="receipt-button" type="submit" form="receiptReviewForm" disabled>지출 폼에 채우기</button><span>지출 폼에서 ‘추가’를 눌러야 저장돼요.</span></div>
     </dialog>
-    <script src="./app.js?v=receipt-ocr-20260912-1"></script>
+    <script src="./app.js?v=companion-20260914-2"></script>
   </body>
 </html>

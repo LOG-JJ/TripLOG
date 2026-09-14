@@ -1,6 +1,6 @@
 function initLeafletMap() {
   const container = document.querySelector("#leafletMap");
-  if (!container) return;
+  if (!container || !window.L) return;
   
   // Show Leaflet container and hide Google iframe
   container.hidden = false;
@@ -20,11 +20,10 @@ function initLeafletMap() {
     scrollWheelZoom: true
   }).setView([33.3616, 126.5292], 10);
 
-  // CartoDB Voyager map tiles: Cream base with colorful road lines, perfectly matching our retro theme!
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    subdomains: 'abcd',
-    maxZoom: 20
+  // Standard browser tiles: retain attribution and normal browser caching.
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 19
   }).addTo(leafletMapInstance);
 
   leafletMarkersGroup = L.featureGroup().addTo(leafletMapInstance);
@@ -111,6 +110,11 @@ function buildRainbowRouteLayers(routeSegments) {
     if (latlngs.length < 2) return;
     const color = getRouteSegmentColor(index);
 
+    if (document.querySelector("#itineraryEditor")?.open) {
+      layers.push(L.polyline(latlngs, { color: "#0b1020", weight: 3, opacity: 0.9, dashArray: "5 8", lineCap: "round" }));
+      return;
+    }
+
     layers.push(L.polyline(latlngs, {
       color: "#ffffff",
       weight: 12,
@@ -182,6 +186,11 @@ function renderRouteMarkers(validItems) {
 
 function buildRouteMarkerIcon(group) {
   const numbers = group.entries.map((entry) => entry.stopNumber);
+  if (document.querySelector("#itineraryEditor")?.open && numbers.length === 1) {
+    const active = group.entries.some(entry => entry.item?.id === state.selectedItineraryId);
+    return L.divIcon({ className: `itinerary-numbered-pin${active ? " active" : ""}`,
+      html: `<span>${numbers.join("·")}</span>`, iconSize: [34, 42], iconAnchor: [17, 42] });
+  }
   const firstItem = group.entries[0]?.item || {};
   const iconWidth = Math.min(112, Math.max(34, numbers.length * 24 + 14));
   const markerClass = numbers.length > 1 ? "marker-pin marker-pin-cluster" : "marker-pin";

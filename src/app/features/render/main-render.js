@@ -37,6 +37,8 @@ function render() {
   renderSettlementPage(totals);
 
   if (activePage === "start" || activePage === "itinerary") renderItineraryPage();
+  window.TripLog.features.redesign?.workspace?.render();
+  window.TripLog.features.travelCompanion?.workspace?.render();
 }
 
 window.TripLog.register("features.render.main", {

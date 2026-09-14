@@ -1,4 +1,4 @@
-function handleHistoryAction(event) {
+async function handleHistoryAction(event) {
   const button = event.target.closest("button[data-history-action]");
   if (!button) return;
 
@@ -6,14 +6,14 @@ function handleHistoryAction(event) {
   if (!record) return;
 
   if (button.dataset.historyAction === "load") {
-    const ok = window.confirm("선택한 저장 기록으로 현재 화면을 덮어쓸까요?");
+    const ok = await (window.TripLog.features.redesign?.workspace?.confirmAction?.("선택한 저장 기록으로 현재 화면을 덮어쓸까요?") ?? window.confirm("선택한 저장 기록으로 현재 화면을 덮어쓸까요?"));
     if (!ok) return;
     restoreSnapshot(record.state);
     closeHistoryModal();
   }
 
   if (button.dataset.historyAction === "delete") {
-    const ok = window.confirm("이 저장 기록을 삭제할까요?");
+    const ok = await (window.TripLog.features.redesign?.workspace?.confirmAction?.("이 저장 기록을 삭제할까요?") ?? window.confirm("이 저장 기록을 삭제할까요?"));
     if (!ok) return;
     historyRecords = historyRecords.filter((item) => item.id !== record.id);
     saveHistoryRecords();
@@ -24,10 +24,14 @@ function handleHistoryAction(event) {
 
 function restoreSnapshot(snapshot) {
   const nextState = normalizeSnapshot(snapshot);
-  Object.keys(state).forEach((key) => delete state[key]);
-  Object.assign(state, nextState);
   editingId = null;
+  editingItineraryId = null;
   activeFilter = "전체";
+  // Restore by the archived trip id so another active trip is never overwritten.
+  window.TripLog.persistence.stateStorage.importSharedTripSnapshot(nextState, { makeActive: true });
+  state.selectedDate = nextState.selectedDate;
+  state.selectedItineraryDate = nextState.selectedItineraryDate;
+  state.selectedItineraryId = nextState.selectedItineraryId;
   setCommaNumberInputValue(els.budgetInput, state.totalBudget || "");
   saveStateSilently();
   document.querySelectorAll(".segmented button").forEach((button) => {
@@ -63,9 +67,11 @@ function normalizeSnapshot(snapshot) {
     totalBudget: Number(snapshot?.totalBudget || 0),
     entries: Array.isArray(snapshot?.entries) ? snapshot.entries : [],
     itineraryItems: Array.isArray(snapshot?.itineraryItems) ? snapshot.itineraryItems : [],
+    travelCompanion: normalizeTravelCompanion(snapshot?.travelCompanion, snapshot?.itineraryItems || []),
     packingList: Array.isArray(snapshot?.packingList) ? snapshot.packingList : getDefaultPackingList(),
     companions: Array.isArray(snapshot?.companions) ? snapshot.companions : [],
     settlement: normalizeSettlementSettings(snapshot?.settlement),
+    collaboration: normalizeCollaborationSettings(snapshot?.collaboration),
   };
 }
 

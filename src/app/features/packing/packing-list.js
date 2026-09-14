@@ -18,8 +18,8 @@ function renderPackingBag() {
     const checkIcon = item.checked ? "💼 " : "📦 ";
     tag.innerHTML = `
       <span class="tag-icon">${checkIcon}</span>
-      <span class="tag-name">${item.name}</span>
-      <button class="tag-delete-btn" title="삭제" aria-label="${item.name} 삭제">&times;</button>
+      <span class="tag-name">${escapeHtml(item.name)}</span>
+      <button class="tag-delete-btn" title="삭제" aria-label="${escapeHtml(item.name)} 삭제">&times;</button>
     `;
 
     tag.addEventListener("click", (e) => {

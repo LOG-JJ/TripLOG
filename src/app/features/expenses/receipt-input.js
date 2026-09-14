@@ -181,7 +181,7 @@
     if (!pendingReceipt || pendingReceipt.tripId !== state.id || pendingReceipt.editingId !== editingId) return null;
     return { fingerprint: pendingReceipt.fingerprint, recognizedDate: pendingReceipt.recognizedDate };
   }
-  function beforeSubmit() {
+  async function beforeSubmit() {
     const receipt = metadata();
     if (!receipt) return true;
     const duplicate = parser.findReceiptDuplicate(state.entries, {
@@ -189,7 +189,7 @@
       currency: state.travelMode === 'overseas' ? els.currencySelect.value : 'KRW',
       amount: parseFormattedNumber(state.travelMode === 'overseas' ? els.foreignAmountInput.value : els.amountInput.value),
     }, editingId);
-    return !duplicate || window.confirm('같은 영수증 또는 비슷한 지출이 이미 있습니다. 별도 지출로 다시 저장할까요?');
+    return !duplicate || await (window.TripLog.features.redesign?.workspace?.confirmAction?.('같은 영수증 또는 비슷한 지출이 이미 있습니다. 별도 지출로 다시 저장할까요?') ?? window.confirm('같은 영수증 또는 비슷한 지출이 이미 있습니다. 별도 지출로 다시 저장할까요?'));
   }
   function pointerPosition(event) {
     const rect = ui.Preview.getBoundingClientRect();

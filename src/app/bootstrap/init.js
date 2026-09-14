@@ -3,6 +3,72 @@ function getNewTripMode() {
 }
 
 let newTripCountryActiveIndex = -1;
+let newTripCountryIsComposing = false;
+let newTripCountrySearchTimer = 0;
+
+function syncNewTripCountryEditor() {
+  const canClear = !!els.newTripCountryInput?.value && !els.newTripCountryInput.readOnly;
+  if (els.newTripCountryClearButton) els.newTripCountryClearButton.hidden = !canClear;
+  els.newTripCountryCombobox?.classList.toggle('has-value', canClear);
+}
+
+function handleNewTripCountryInput(event = {}) {
+  syncNewTripCountryEditor();
+  if (getNewTripMode() !== 'overseas') return;
+  if (newTripCountryIsComposing || event.isComposing) {
+    delete els.newTripCountryInput.dataset.countryCode;
+    return;
+  }
+  syncNewTripCountryFromInput();
+  window.clearTimeout(newTripCountrySearchTimer);
+  newTripCountrySearchTimer = window.setTimeout(() => {
+    newTripCountrySearchTimer = 0;
+    if (!els.newTripModal.hidden && document.activeElement === els.newTripCountryInput) {
+      renderNewTripCountryList(els.newTripCountryInput.value);
+    }
+  }, 120);
+}
+
+function handleNewTripCountryCompositionStart() {
+  newTripCountryIsComposing = true;
+  closeNewTripCountryList();
+}
+
+function handleNewTripCountryCompositionEnd() {
+  newTripCountryIsComposing = false;
+  handleNewTripCountryInput();
+}
+
+function handleNewTripCountryKeydown(event) {
+  // IME confirmation belongs to the text editor, not the country suggestions.
+  if (getNewTripMode() !== 'overseas' || newTripCountryIsComposing || event.isComposing || event.keyCode === 229) return;
+  if (event.key === 'ArrowDown') {
+    event.preventDefault();
+    if (els.newTripCountryList?.hidden) renderNewTripCountryList(els.newTripCountryInput.value);
+    moveNewTripCountryActive(1);
+  } else if (event.key === 'ArrowUp') {
+    event.preventDefault();
+    if (els.newTripCountryList?.hidden) renderNewTripCountryList(els.newTripCountryInput.value);
+    moveNewTripCountryActive(-1);
+  } else if (event.key === 'Enter' && !els.newTripCountryList?.hidden) {
+    event.preventDefault();
+    if (newTripCountryActiveIndex >= 0) selectActiveNewTripCountry();
+    else closeNewTripCountryList();
+  } else if (event.key === 'Escape' && !els.newTripCountryList?.hidden) {
+    event.preventDefault();
+    event.stopPropagation();
+    closeNewTripCountryList();
+  }
+}
+
+function clearNewTripCountryInput(event) {
+  event?.preventDefault();
+  if (!els.newTripCountryInput || els.newTripCountryInput.readOnly) return;
+  newTripCountryIsComposing = false;
+  els.newTripCountryInput.value = '';
+  handleNewTripCountryInput();
+  els.newTripCountryInput.focus({ preventScroll: true });
+}
 
 function getCountryTools() {
   return window.TripLog?.data?.countries || {};
@@ -25,24 +91,31 @@ function setNewTripCountryFlag(country) {
 }
 
 function closeNewTripCountryList() {
+  window.clearTimeout(newTripCountrySearchTimer);
+  newTripCountrySearchTimer = 0;
   if (!els.newTripCountryList) return;
   els.newTripCountryList.hidden = true;
-  els.newTripCountryInput?.setAttribute("aria-expanded", "false");
   newTripCountryActiveIndex = -1;
 }
 
 function selectNewTripCountry(country) {
   if (!country || !els.newTripCountryInput) return;
-  els.newTripCountryInput.value = country.name;
+  const englishInput = /[a-z]/i.test(els.newTripCountryInput.value);
+  els.newTripCountryInput.value = englishInput && country.englishName ? country.englishName : country.name;
   els.newTripCountryInput.dataset.countryCode = country.code;
   setNewTripCountryFlag(country);
+  syncNewTripCountryEditor();
+  els.newTripCountryInput.focus({ preventScroll: true });
   closeNewTripCountryList();
 }
 
 function openNewTripModal() {
+  newTripCountryIsComposing = false;
   els.newTripForm?.reset();
-  els.newTripStartDateInput.value = "2026-06-09";
-  els.newTripEndDateInput.value = "2026-06-16";
+  const start = new Date(), end = new Date(start);
+  end.setDate(end.getDate() + 2);
+  els.newTripStartDateInput.value = toInputDate(start);
+  els.newTripEndDateInput.value = toInputDate(end);
   els.newTripNameInput.value = "";
   setNewTripMode(state.travelMode, { resetCountry: true });
   syncNewTripDatePickers();
@@ -50,11 +123,16 @@ function openNewTripModal() {
 }
 
 function renderNewTripCountryList(query = "") {
-  if (!els.newTripCountryList || getNewTripMode() !== "overseas") return;
+  if (!els.newTripCountryList || getNewTripMode() !== "overseas" || newTripCountryIsComposing) return;
+  if (!query.trim()) { closeNewTripCountryList(); els.newTripCountryList.replaceChildren(); return; }
+  if (!els.newTripCountryList.hidden && els.newTripCountryList.dataset.query === query) return;
 
-  const countries = getCountryTools().searchCountries?.(query) || [];
+  const matches = getCountryTools().searchCountries?.(query) || [];
+  const countries = matches.slice(0, 8);
+  const englishInput = /[a-z]/i.test(query);
+  els.newTripCountryList.dataset.query = query;
   els.newTripCountryList.replaceChildren();
-  newTripCountryActiveIndex = countries.length ? 0 : -1;
+  newTripCountryActiveIndex = -1;
 
   if (!countries.length) {
     const empty = document.createElement("div");
@@ -63,28 +141,44 @@ function renderNewTripCountryList(query = "") {
     els.newTripCountryList.appendChild(empty);
   } else {
     countries.forEach((country, index) => {
+      const primary = englishInput && country.englishName ? country.englishName : country.name;
+      const secondary = englishInput ? country.name : country.englishName;
       const option = document.createElement("button");
       option.type = "button";
-      option.className = `new-trip-country-option${index === newTripCountryActiveIndex ? " is-active" : ""}`;
-      option.setAttribute("role", "option");
-      option.setAttribute("aria-selected", String(index === newTripCountryActiveIndex));
+      option.tabIndex = -1;
+      option.className = 'new-trip-country-option';
       option.dataset.countryCode = country.code;
       option.innerHTML = `
         <span class="country-flag" aria-hidden="true">
           <img src="${escapeHtml(country.flagImage)}" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false;" />
           <span class="country-flag-fallback" hidden>${country.flag}</span>
         </span>
-        <span class="country-name">${escapeHtml(country.name)}</span>
+        <span class="country-name"><span lang="${englishInput?'en':'ko'}">${escapeHtml(primary)}</span>${secondary&&secondary!==primary?`<small lang="${englishInput?'ko':'en'}">${escapeHtml(secondary)}</small>`:''}</span>
         <span class="country-code">${country.code}</span>
       `;
       option.addEventListener("mousedown", (event) => event.preventDefault());
       option.addEventListener("click", () => selectNewTripCountry(country));
+      option.addEventListener('keydown', event => {
+        if (event.isComposing || event.keyCode === 229) return;
+        if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+          event.preventDefault();
+          moveNewTripCountryActive(event.key === 'ArrowDown' ? 1 : -1);
+        } else if (event.key === 'Escape') {
+          event.preventDefault();event.stopPropagation();
+          els.newTripCountryInput.focus({preventScroll:true});closeNewTripCountryList();
+        }
+      });
       els.newTripCountryList.appendChild(option);
     });
+    if (matches.length > countries.length) {
+      const hint = document.createElement('div');
+      hint.className = 'new-trip-country-empty';
+      hint.textContent = '국가 이름을 더 입력하면 결과를 좁힐 수 있어요.';
+      els.newTripCountryList.appendChild(hint);
+    }
   }
 
   els.newTripCountryList.hidden = false;
-  els.newTripCountryInput?.setAttribute("aria-expanded", "true");
 }
 
 function syncNewTripCountryFromInput() {
@@ -104,12 +198,13 @@ function moveNewTripCountryActive(delta) {
   if (!els.newTripCountryList || els.newTripCountryList.hidden) return;
   const options = [...els.newTripCountryList.querySelectorAll(".new-trip-country-option")];
   if (!options.length) return;
-  newTripCountryActiveIndex = (newTripCountryActiveIndex + delta + options.length) % options.length;
+  newTripCountryActiveIndex = newTripCountryActiveIndex < 0
+    ? (delta > 0 ? 0 : options.length - 1)
+    : (newTripCountryActiveIndex + delta + options.length) % options.length;
   options.forEach((option, index) => {
     const active = index === newTripCountryActiveIndex;
     option.classList.toggle("is-active", active);
-    option.setAttribute("aria-selected", String(active));
-    if (active) option.scrollIntoView({ block: "nearest" });
+    if (active) { option.focus({preventScroll:true}); option.scrollIntoView({ block: "nearest" }); }
   });
 }
 
@@ -121,6 +216,7 @@ function selectActiveNewTripCountry() {
 }
 
 function setNewTripMode(mode, { resetCountry = false } = {}) {
+  newTripCountryIsComposing = false;
   const nextMode = mode === "overseas" ? "overseas" : "domestic";
   const isOverseas = nextMode === "overseas";
 
@@ -137,7 +233,7 @@ function setNewTripMode(mode, { resetCountry = false } = {}) {
   if (els.newTripCountryInput) {
     const countryValue = els.newTripCountryInput.value.trim();
     els.newTripCountryInput.readOnly = !isOverseas;
-    els.newTripCountryInput.placeholder = isOverseas ? "예: 일본" : "대한민국";
+    els.newTripCountryInput.placeholder = isOverseas ? "일본 / Japan" : "대한민국";
 
     if (!isOverseas) {
       els.newTripCountryInput.value = "대한민국";
@@ -156,6 +252,7 @@ function setNewTripMode(mode, { resetCountry = false } = {}) {
   if (els.newTripCityInput) {
     els.newTripCityInput.placeholder = isOverseas ? "예: 도쿄" : "예: 제주";
   }
+  syncNewTripCountryEditor();
 }
 
 function syncNewTripDatePickers() {
@@ -211,7 +308,7 @@ function init() {
   });
 
   els.itineraryRouteButton.addEventListener("click", () => {
-    openFullDayRoute();
+    window.TripLog.features.itinerary.workspace.showFullRoute();
   });
 
   els.packingAddBtn.addEventListener("click", () => {
@@ -426,27 +523,12 @@ function init() {
     els.newTripCountryInput.addEventListener("click", () => {
       if (getNewTripMode() === "overseas") renderNewTripCountryList(els.newTripCountryInput.value);
     });
-    els.newTripCountryInput.addEventListener("input", () => {
-      if (getNewTripMode() !== "overseas") return;
-      syncNewTripCountryFromInput();
-      renderNewTripCountryList(els.newTripCountryInput.value);
-    });
-    els.newTripCountryInput.addEventListener("keydown", (event) => {
-      if (getNewTripMode() !== "overseas") return;
-      if (event.key === "ArrowDown") {
-        event.preventDefault();
-        if (els.newTripCountryList?.hidden) renderNewTripCountryList(els.newTripCountryInput.value);
-        else moveNewTripCountryActive(1);
-      } else if (event.key === "ArrowUp") {
-        event.preventDefault();
-        moveNewTripCountryActive(-1);
-      } else if (event.key === "Enter" && !els.newTripCountryList?.hidden) {
-        event.preventDefault();
-        selectActiveNewTripCountry();
-      } else if (event.key === "Escape") {
-        closeNewTripCountryList();
-      }
-    });
+    els.newTripCountryInput.addEventListener('input', handleNewTripCountryInput);
+    els.newTripCountryInput.addEventListener('compositionstart', handleNewTripCountryCompositionStart);
+    els.newTripCountryInput.addEventListener('compositionend', handleNewTripCountryCompositionEnd);
+    els.newTripCountryInput.addEventListener('keydown', handleNewTripCountryKeydown);
+    els.newTripCountryClearButton?.addEventListener('mousedown', event => event.preventDefault());
+    els.newTripCountryClearButton?.addEventListener('click', clearNewTripCountryInput);
   }
   document.addEventListener("click", (event) => {
     if (!event.target.closest("#newTripCountryCombobox")) closeNewTripCountryList();
@@ -544,6 +626,7 @@ function init() {
       els.newTripModal.hidden = true;
       closeNewTripCountryList();
       els.newTripForm.reset();
+      showToast('새 여행을 만들었어요.');
     });
   }
 
@@ -554,6 +637,7 @@ function init() {
       const isHidden = sect.hidden;
       sect.hidden = !isHidden;
       els.itineraryTicketToggleBtn.classList.toggle("open", isHidden);
+      els.itineraryTicketToggleBtn.setAttribute("aria-expanded", String(isHidden));
       els.itineraryTicketToggleBtn.querySelector(".ticket-toggle-chevron").textContent = isHidden ? "▲" : "▼";
     });
   }
@@ -620,6 +704,9 @@ function init() {
   setupCustomSelect(document.querySelector("#settlementExpenseSourceSelect"));
   setupCustomTimePicker(els.itineraryTimeInput);
   setupCustomTimePicker(els.itineraryEndTimeInput);
+  window.TripLog.features.itinerary.workspace.setup();
+  window.TripLog.features.redesign.workspace.setup();
+  window.TripLog.features.travelCompanion.workspace.setup();
   renderHistoryModal();
   renderStorageStatus();
   refreshHistoryRecordsFromDb({ renderModal: false });

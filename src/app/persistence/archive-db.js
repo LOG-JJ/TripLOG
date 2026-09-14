@@ -187,13 +187,21 @@ function downloadArchiveJson(payload) {
 
 function extractArchiveRecordsFromPayload(payload) {
   if (!payload || typeof payload !== "object") return [];
-  if (Array.isArray(payload.records)) return payload.records;
-  if (Array.isArray(payload.historyRecords)) return payload.historyRecords;
-  if (payload.state && typeof payload.state === "object") return [payload];
+  const records = Array.isArray(payload.records) ? [...payload.records]
+    : Array.isArray(payload.historyRecords) ? [...payload.historyRecords]
+    : payload.state && typeof payload.state === "object" ? [payload] : [];
+  // A full backup also includes trips that have never been saved as snapshots.
+  // Import them as reviewable records; loading a record explicitly restores it.
   if (Array.isArray(payload.trips)) {
-    return payload.trips.map((trip) => createArchiveRecord(trip, "import-trip"));
+    payload.trips.filter(trip => trip && typeof trip === "object" && typeof trip.id === "string" && trip.id).forEach(trip => {
+      if (records.some(record => record?.state?.id === trip.id && JSON.stringify(record.state) === JSON.stringify(trip))) return;
+      const record = createArchiveRecord(trip, "import-trip");
+      record.id = `backup-trip:${trip.id}:${payload.exportedAt || "undated"}`;
+      if (payload.exportedAt && Number.isFinite(Date.parse(payload.exportedAt))) record.timestamp = payload.exportedAt;
+      records.push(record);
+    });
   }
-  return [];
+  return records;
 }
 
 async function importArchiveJsonFile(file) {

@@ -555,6 +555,7 @@ function loadSampleData() {
   state.totalBudget = 0;
   state.entries = [];
   state.itineraryItems = createJejuSevenNightItineraryItems();
+  state.travelCompanion = normalizeTravelCompanion();
   state.packingList = getDefaultPackingList();
   state.selectedItineraryId = state.itineraryItems[0]?.id || "";
   clearEditMode();
@@ -563,7 +564,7 @@ function loadSampleData() {
 }
 
 async function resetAll() {
-  const ok = window.confirm("현재 여행, 지출, 정산, 저장된 백업 기록을 모두 초기화할까요?");
+  const ok = await (window.TripLog.features.redesign?.workspace?.confirmAction?.("현재 여행, 지출, 정산, 저장된 백업 기록을 모두 초기화할까요?") ?? window.confirm("현재 여행, 지출, 정산, 저장된 백업 기록을 모두 초기화할까요?"));
   if (!ok) return;
 
   const resetState = window.TripLog.persistence.stateStorage.resetPersistedTravelData({

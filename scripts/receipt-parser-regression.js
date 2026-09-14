@@ -7,6 +7,8 @@ let parser;
 const context = vm.createContext({ window: { TripLog: { register(_name, api) { parser = api; } } } });
 vm.runInContext(fs.readFileSync(path.join(__dirname, '../src/app/features/expenses/receipt-parser.js'), 'utf8'), context);
 const cases = [
+  ['Malformed OCR grouping never becomes 2', '광장시장\n합 계 36,0002! |', { amount: null }],
+  ['Sparse receipt layout', '광장시장\n식사권\n2026-09-12 12:28\n식사권\n36,000\n합계\n36,000원', { merchant: '광장시장', amount: 36000, currency: 'KRW', date: '2026-09-12' }],
   ['Korean cash total', '서울카페\n2026-09-12 12:30\n공급가액 11,364\n부가세 1,136\n합 계 12,500원\n현금결제\n받은 돈 20,000\n거스름돈 7,500', { merchant: '서울카페', date: '2026-09-12', amount: 12500, currency: 'KRW', paymentMethod: 'cash', category: '식비' }],
   ['Japanese date and total', '東京カフェ\n2026年09月12日\n小計 1,000\n合計 1,100円\nお預り 2,000\nお釣り 900\n現金', { date: '2026-09-12', amount: 1100, currency: 'JPY', paymentMethod: 'cash' }],
   ['USD decimal total', 'PARK CAFE\n2026/09/12\nSUBTOTAL 10.00\nTAX 0.90\nTOTAL USD 10.90\nVISA', { amount: 10.9, currency: 'USD', paymentMethod: 'card' }],

@@ -96,6 +96,27 @@ function cleanSavedItineraryItems(items) {
   return Array.isArray(items) ? items.map(cleanSavedItineraryPlace) : [];
 }
 
+function normalizeTravelCompanion(value, items) {
+  const source = value && typeof value === "object" ? value : {};
+  const string = input => typeof input === "string" ? input : "";
+  const ids = Array.isArray(items) ? new Set(items.filter(Boolean).map(item => item.id)) : null;
+  const normalizeIds = list => [...new Set((Array.isArray(list) ? list : []).filter(id => typeof id === "string" && id && (!ids || ids.has(id))))];
+  let timeZone = string(source.timeZone);
+  try { if (timeZone) new Intl.DateTimeFormat("en", { timeZone }); } catch { timeZone = ""; }
+  const seen = new Set();
+  const reservations = (Array.isArray(source.reservations) ? source.reservations : []).filter(row => row && typeof row === "object" && typeof row.id === "string" && row.id && typeof row.title === "string" && row.title.trim()).filter(row => { if (seen.has(row.id)) return false; seen.add(row.id); return true; }).map(row => ({
+    id: row.id,
+    type: ["transport", "stay", "activity", "other"].includes(row.type) ? row.type : "other",
+    title: row.title.trim(), date: string(row.date), endDate: string(row.endDate), time: string(row.time),
+    reference: string(row.reference), location: string(row.location), url: string(row.url), note: string(row.note),
+  }));
+  const undo = source.lastAdjustment;
+  const lastAdjustment = undo && typeof undo === "object" && typeof undo.tripId === "string" && typeof undo.date === "string" && typeof undo.afterSignature === "string" && Array.isArray(undo.before)
+    ? { tripId: undo.tripId, date: undo.date, afterSignature: undo.afterSignature, before: undo.before.filter(item => item && typeof item.id === "string" && typeof item.time === "string" && typeof item.endTime === "string").map(item => ({ id: item.id, time: item.time, endTime: item.endTime })) }
+    : null;
+  return { completedItineraryIds: normalizeIds(source.completedItineraryIds), lockedItineraryIds: normalizeIds(source.lockedItineraryIds), reservations, timeZone, lastAdjustment };
+}
+
 function getFallbackState(tripId = "trip_default") {
   return {
     id: tripId,
@@ -121,6 +142,7 @@ function getFallbackState(tripId = "trip_default") {
     currencyAutoMatchedCountryCode: "",
     entries: [],
     itineraryItems: [],
+    travelCompanion: normalizeTravelCompanion(),
     packingList: typeof getDefaultPackingList === "function" ? getDefaultPackingList() : [],
     companions: [],
     collaboration: {
@@ -206,6 +228,7 @@ function loadState() {
       exchangeBase: Number(activeTrip.exchangeBase || preferredCurrency.rateBase || 1),
       entries: Array.isArray(activeTrip.entries) ? activeTrip.entries : [],
       itineraryItems: cleanedActiveItineraryItems,
+      travelCompanion: normalizeTravelCompanion(activeTrip.travelCompanion, cleanedActiveItineraryItems),
       packingList: Array.isArray(activeTrip.packingList) ? activeTrip.packingList : (typeof getDefaultPackingList === "function" ? getDefaultPackingList() : []),
       companions: Array.isArray(activeTrip.companions) ? activeTrip.companions : [],
       collaboration: normalizeCollaborationSettings(activeTrip.collaboration),
@@ -233,7 +256,7 @@ function getSavedTheme() {
 function hasNoSavedRecords(saved) {
   const entries = Array.isArray(saved?.entries) ? saved.entries : [];
   const itineraryItems = Array.isArray(saved?.itineraryItems) ? saved.itineraryItems : [];
-  return entries.length === 0 && itineraryItems.length === 0;
+  return entries.length === 0 && itineraryItems.length === 0 && !saved?.travelCompanion?.reservations?.length;
 }
 
 function normalizeSettlementSettings(value = {}) {
@@ -294,6 +317,7 @@ function saveStateSilently() {
     const theme = normalizeThemeName(state.theme);
     state.theme = theme;
     state.collaboration = normalizeCollaborationSettings(state.collaboration);
+    state.travelCompanion = normalizeTravelCompanion(state.travelCompanion, state.itineraryItems);
 
     trips = trips.map(t => t.id === activeTripId ? { ...t, ...state } : t);
     localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
@@ -339,6 +363,7 @@ function switchTrip(tripId) {
     ...getFallbackState(tripId),
     ...targetTrip,
     itineraryItems: cleanSavedItineraryItems(targetTrip.itineraryItems),
+    travelCompanion: normalizeTravelCompanion(targetTrip.travelCompanion, targetTrip.itineraryItems || []),
     collaboration: normalizeCollaborationSettings(targetTrip.collaboration),
     settlement: normalizeSettlementSettings(targetTrip.settlement),
   });
@@ -393,17 +418,19 @@ function createNewTrip({ tripName, country, countryCode, city, travelMode, start
   switchTrip(newId);
 }
 
-function deleteTrip(tripId) {
+async function deleteTrip(tripId) {
   let trips = getTrips();
   if (trips.length <= 1) {
     window.alert("최소 한 개의 여행은 존재해야 합니다.");
     return;
   }
 
-  if (!window.confirm("정말 이 여행을 삭제하시겠습니까? 관련 모든 일정과 지출 기록이 삭제됩니다.")) {
+  if (!await (window.TripLog.features.redesign?.workspace?.confirmAction?.("정말 이 여행을 삭제하시겠습니까? 관련 모든 일정과 지출 기록이 삭제됩니다.") ?? window.confirm("정말 이 여행을 삭제하시겠습니까? 관련 모든 일정과 지출 기록이 삭제됩니다."))) {
     return;
   }
 
+  trips = getTrips();
+  if (trips.length <= 1) return;
   trips = trips.filter(t => t.id !== tripId);
   localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
 
@@ -425,6 +452,7 @@ function normalizeImportedTripSnapshot(snapshot = {}) {
     id: importedId,
     entries: Array.isArray(snapshot.entries) ? snapshot.entries : [],
     itineraryItems: cleanSavedItineraryItems(snapshot.itineraryItems),
+    travelCompanion: normalizeTravelCompanion(snapshot.travelCompanion, snapshot.itineraryItems || []),
     packingList: Array.isArray(snapshot.packingList) ? snapshot.packingList : (typeof getDefaultPackingList === "function" ? getDefaultPackingList() : []),
     companions: Array.isArray(snapshot.companions) ? snapshot.companions : [],
     collaboration: normalizeCollaborationSettings(snapshot.collaboration),
@@ -524,6 +552,7 @@ function resetPersistedTravelData(nextState = {}) {
     id: "trip_default",
     collaboration: normalizeCollaborationSettings(nextState.collaboration),
     settlement: normalizeSettlementSettings(nextState.settlement),
+    travelCompanion: normalizeTravelCompanion(nextState.travelCompanion, nextState.itineraryItems || []),
   };
   localStorage.setItem(TRIPS_KEY, JSON.stringify([resetState]));
   localStorage.setItem(ACTIVE_TRIP_ID_KEY, resetState.id);
@@ -541,6 +570,7 @@ window.TripLog.register("persistence.stateStorage", {
   cleanSavedItineraryCoordinates,
   cleanSavedItineraryItems,
   normalizeSettlementSettings,
+  normalizeTravelCompanion,
   normalizeCollaborationSettings,
   saveAndRender,
   saveStateSilently,

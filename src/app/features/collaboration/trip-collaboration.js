@@ -569,8 +569,12 @@
   function getRemoteSafeSnapshot(remoteSnapshot = {}) {
     const snapshot = remoteSnapshot && typeof remoteSnapshot === "object" ? { ...remoteSnapshot } : {};
     const privacy = snapshot.collaboration?.privacy || getCollaboration().privacy || {};
-    if (privacy.shareExpenses === false) snapshot.entries = state.entries;
-    if (privacy.shareItinerary === false) snapshot.itineraryItems = state.itineraryItems;
+    const localTrip = snapshot.id === state.id ? state : window.TripLog.persistence.stateStorage.getTrips().find(trip => trip.id === snapshot.id);
+    if (privacy.shareExpenses === false) snapshot.entries = localTrip?.entries || [];
+    if (privacy.shareItinerary === false) snapshot.itineraryItems = localTrip?.itineraryItems || [];
+    if (privacy.shareItinerary === false || !Object.prototype.hasOwnProperty.call(snapshot, "travelCompanion")) {
+      snapshot.travelCompanion = normalizeTravelCompanion(localTrip?.travelCompanion, snapshot.itineraryItems || []);
+    }
     return snapshot;
   }
 
@@ -1193,9 +1197,10 @@
       // or ordinary renders while the user is browsing another tab.
       if (justSignedIn && !getInviteTokenFromUrl() && !initialPageParams.has("itinerary")) {
         const landingUrl = new URL(window.location.href);
-        landingUrl.searchParams.set("page", "overview");
+        const landingPage = initialAllowedPages.includes(initialPage) ? initialPage : "overview";
+        landingUrl.searchParams.set("page", landingPage);
         window.history.replaceState({}, document.title, landingUrl.toString());
-        setActivePage("overview");
+        setActivePage(landingPage);
       }
       return;
     }
@@ -1562,6 +1567,8 @@
       .privacy;
     if (!privacy.shareExpenses) snapshot.entries = [];
     if (!privacy.shareItinerary) snapshot.itineraryItems = [];
+    snapshot.travelCompanion = normalizeTravelCompanion(privacy.shareItinerary ? snapshot.travelCompanion : null, snapshot.itineraryItems);
+    snapshot.travelCompanion.lastAdjustment = null;
     return snapshot;
   }
 
@@ -2074,5 +2081,7 @@
     uploadSupabaseTripState,
     manualSyncSupabaseTripState,
     showSyncToast,
+    buildSharedTripSnapshot,
+    getRemoteSafeSnapshot,
   });
 })();

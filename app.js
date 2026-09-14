@@ -1,5 +1,5 @@
 (() => {
-  const scriptVersion = "receipt-ocr-20260912-1";
+  const scriptVersion = "companion-20260914-2";
   const scriptFiles = [
     { path: "../../vendor/supabase-js-2.107.0.min.js", optional: true },
     "core/namespace.js",
@@ -33,6 +33,7 @@
     "features/itinerary/place-search.js",
     "features/itinerary/itinerary-form.js",
     "features/itinerary/map-preview.js",
+    "features/itinerary/itinerary-workspace.js",
     "features/history/history-actions.js",
     "ui/day-strip.js",
     "features/expenses/expense-table.js",
@@ -66,6 +67,10 @@
     "features/settlement/settlement-model.js",
     "features/settlement/settlement-render.js",
     "features/settlement/companions.js",
+    "features/redesign/design-model.js",
+    "features/redesign/design-workspace.js",
+    "features/travel-companion/model.js",
+    "features/travel-companion/workspace.js",
     "bootstrap/navigation-events.js",
     "bootstrap/start.js",
   ];

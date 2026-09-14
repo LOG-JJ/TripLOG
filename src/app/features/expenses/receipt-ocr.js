@@ -104,7 +104,7 @@
         });
       }
       if (finished || signal.aborted) { await worker.terminate(); throw abortError(); }
-      await worker.setParameters({ tessedit_pageseg_mode: '6', preserve_interword_spaces: '1', user_defined_dpi: '300' });
+      await worker.setParameters({ tessedit_pageseg_mode: '11', preserve_interword_spaces: '1', user_defined_dpi: '300' });
       const lines = [];
       const stripHeight = 2800;
       const stride = stripHeight - 160;

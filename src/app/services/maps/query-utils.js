@@ -252,13 +252,19 @@ function isAcceptedCoordinates(coords, item, validateCoords) {
 
 function cacheItemCoordinates(item, coords) {
   if (!item || !coords || !isValidLatLng(coords.lat, coords.lon)) return;
+  const reuseMetadata = !coords.source && hasMatchingCoordinateSignature(item)
+    && Math.abs(Number(item.lat) - coords.lat) < 1e-7 && Math.abs(Number(item.lon) - coords.lon) < 1e-7;
+  const previous = reuseMetadata ? {
+    source: item.coordinateSource, precision: item.coordinatePrecision,
+    address: item.coordinateAddress, placeId: item.googlePlaceId,
+  } : {};
   item.lat = coords.lat;
   item.lon = coords.lon;
   item.coordinateSignature = buildItemCoordinateSignature(item);
-  item.coordinateSource = coords.source || "";
-  item.coordinatePrecision = coords.precision || "";
-  item.coordinateAddress = coords.location || coords.formattedAddress || "";
-  item.googlePlaceId = coords.placeId || "";
+  item.coordinateSource = coords.source || previous.source || "";
+  item.coordinatePrecision = coords.precision || previous.precision || "";
+  item.coordinateAddress = coords.location || coords.formattedAddress || previous.address || "";
+  item.googlePlaceId = coords.placeId || previous.placeId || "";
 
   const savedItem = item.id ? findItineraryItem(item.id) : null;
   if (savedItem && savedItem !== item) {

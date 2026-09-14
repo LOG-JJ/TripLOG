@@ -228,13 +228,13 @@ function renderSingleLeafletMarker(item, lat, lon) {
   if (!isValidLatLng(parsedLat, parsedLon)) return;
 
   const pinIcon = L.divIcon({
-    className: 'leaflet-custom-marker-single',
-    html: `<div class="marker-pin-single">📍</div>`,
-    iconSize: [28, 28],
-    iconAnchor: [14, 14]
+    className: 'itinerary-numbered-pin active',
+    html: '<span aria-hidden="true"></span>',
+    iconSize: [34, 42],
+    iconAnchor: [17, 42]
   });
 
-  const marker = L.marker([parsedLat, parsedLon], { icon: pinIcon })
+  const marker = L.marker([parsedLat, parsedLon], { icon: pinIcon, title: item.place || "선택된 위치" })
     .bindPopup(`
       <div class="map-popup-card">
         <strong class="popup-place">${escapeHtml(item.place || "선택된 위치")}</strong>

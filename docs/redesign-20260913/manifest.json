@@ -1,0 +1,150 @@
+{
+  "createdAt": "2026-09-13",
+  "type": "image-mockups",
+  "designAnchor": "approved itinerary timeline and map editor",
+  "pages": [
+    {
+      "key": "overview",
+      "title": "여행 개요",
+      "source": "overviewPage",
+      "flow": "개요",
+      "purpose": "여행 요약, 예약, 예산, 첫날 일정과 준비물",
+      "original": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a09336-42f7-7b90-a9d5-5d9e136353b5\\exec-c9e965fd-3249-43df-909b-abd68bede8c0.png",
+      "file": "overview.png",
+      "width": 853,
+      "height": 1844
+    },
+    {
+      "key": "start",
+      "title": "나의 여행",
+      "source": "startPage",
+      "flow": "더보기 → 나의 여행",
+      "purpose": "여행 선택, 일정·예산 수정과 새 여행",
+      "original": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a09336-42f7-7b90-a9d5-5d9e136353b5\\exec-71451a5c-e1a0-49b1-8361-29cd8495f4a0.png",
+      "file": "start.png",
+      "width": 853,
+      "height": 1844
+    },
+    {
+      "key": "budget",
+      "title": "지출 기록",
+      "source": "budgetPage",
+      "flow": "지출",
+      "purpose": "지출 요약과 목록, 영수증 입력 진입",
+      "original": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a09336-42f7-7b90-a9d5-5d9e136353b5\\exec-42ee9ec5-56f0-42a9-b934-a46656f0a72b.png",
+      "file": "budget.png",
+      "width": 853,
+      "height": 1844
+    },
+    {
+      "key": "settlement",
+      "title": "경비 정산",
+      "source": "settlementPage",
+      "flow": "더보기 → 경비 정산",
+      "purpose": "멤버별 부담과 송금 안내",
+      "original": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a09336-42f7-7b90-a9d5-5d9e136353b5\\exec-02c7f445-5fde-4823-84ac-f3564ac36f5a.png",
+      "file": "settlement.png",
+      "width": 853,
+      "height": 1844
+    },
+    {
+      "key": "report",
+      "title": "여행 리포트",
+      "source": "reportPage",
+      "flow": "리포트",
+      "purpose": "카테고리와 결제일별 분석, PDF",
+      "original": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a09336-42f7-7b90-a9d5-5d9e136353b5\\exec-1e69f467-9b86-466f-8b01-8ed906a586ea.png",
+      "file": "report.png",
+      "width": 853,
+      "height": 1844
+    },
+    {
+      "key": "settings",
+      "title": "설정",
+      "source": "settingsPage",
+      "flow": "더보기 → 설정",
+      "purpose": "여행·공유·기록 설정",
+      "original": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a09336-42f7-7b90-a9d5-5d9e136353b5\\exec-fbc8c0c0-5ad2-4361-9e77-ddc35b9a03e7.png",
+      "file": "settings.png",
+      "width": 853,
+      "height": 1844
+    },
+    {
+      "key": "login",
+      "title": "로그인",
+      "source": "authGate",
+      "flow": "로그인 전",
+      "purpose": "로그인·회원가입·비밀번호 재설정 진입",
+      "original": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a09336-42f7-7b90-a9d5-5d9e136353b5\\exec-9d51e158-74dd-4b8e-807c-b9affa58fd58.png",
+      "file": "login.png",
+      "width": 934,
+      "height": 1684
+    },
+    {
+      "key": "new-trip",
+      "title": "새 여행 만들기",
+      "source": "newTripModal",
+      "flow": "나의 여행 → 새 여행 만들기",
+      "purpose": "여행 이름·국내외·목적지·기간",
+      "original": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a09336-42f7-7b90-a9d5-5d9e136353b5\\exec-0adf1fe7-98b8-4193-8944-0ac6a54d024f.png",
+      "file": "new-trip.png",
+      "width": 934,
+      "height": 1684
+    },
+    {
+      "key": "expense-add",
+      "title": "지출 추가",
+      "source": "expenseForm",
+      "flow": "지출 → 지출 추가",
+      "purpose": "금액·내용·일자·항목·결제 방식",
+      "original": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a09336-42f7-7b90-a9d5-5d9e136353b5\\exec-7a92fe14-e81d-40ce-8d2c-8fe6fc76a57a.png",
+      "file": "expense-add.png",
+      "width": 853,
+      "height": 1844
+    },
+    {
+      "key": "receipt",
+      "title": "영수증 인식",
+      "source": "receiptDialog",
+      "flow": "지출 → 영수증으로 입력",
+      "purpose": "이미지와 인식 결과 확인 후 입력 반영",
+      "original": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a09336-42f7-7b90-a9d5-5d9e136353b5\\exec-10c554ca-a225-444c-ae1f-ff8c3e4f2f2c.png",
+      "file": "receipt.png",
+      "width": 853,
+      "height": 1844
+    },
+    {
+      "key": "packing",
+      "title": "여행 준비물",
+      "source": "itineraryToolsDialog / packingList",
+      "flow": "개요 또는 더보기 → 준비물",
+      "purpose": "준비물 확인·추가·자동 저장",
+      "original": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a09336-42f7-7b90-a9d5-5d9e136353b5\\exec-a1f29f97-6bb7-4427-a3c4-d64f5b465d47.png",
+      "file": "packing.png",
+      "width": 934,
+      "height": 1685
+    },
+    {
+      "key": "invite",
+      "title": "멤버·초대",
+      "source": "tripInviteModal",
+      "flow": "더보기 또는 설정 → 멤버·초대",
+      "purpose": "멤버 확인과 초대 링크 복사",
+      "original": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a09336-42f7-7b90-a9d5-5d9e136353b5\\exec-a773e319-501f-42db-8e42-0c95196e53b9.png",
+      "file": "invite.png",
+      "width": 853,
+      "height": 1844
+    },
+    {
+      "key": "history",
+      "title": "저장 기록",
+      "source": "historyModal",
+      "flow": "설정 → 저장 기록",
+      "purpose": "여행 스냅샷 저장·불러오기·백업",
+      "original": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a09336-42f7-7b90-a9d5-5d9e136353b5\\exec-04716e3e-5351-4bcf-b2bf-27f3959687fa.png",
+      "file": "history.png",
+      "width": 852,
+      "height": 1846
+    }
+  ]
+}

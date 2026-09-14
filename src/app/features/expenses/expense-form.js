@@ -36,19 +36,21 @@ function setupPaymentMethodToggle() {
   setPaymentMethod(els.paymentMethodInput?.value);
 }
 
-function handleExpenseSubmit(event) {
+async function handleExpenseSubmit(event) {
   event.preventDefault();
 
   if (state.travelMode === "overseas") updateConvertedAmount();
 
   const amount = Math.max(0, parseFormattedNumber(els.amountInput.value));
-  if (!amount || !els.descriptionInput.value.trim()) return;
+  if (!amount || !els.descriptionInput.value.trim()) { showToast("내용과 0보다 큰 금액을 입력해 주세요."); return; }
   const isOverseas = state.travelMode === "overseas";
   const currency = getCurrencyMeta(els.currencySelect.value);
   const foreignAmount = Math.max(0, parseFormattedNumber(els.foreignAmountInput.value));
   const exchangeRate = Math.max(0, parseFormattedNumber(els.exchangeRateInput.value));
   const receiptInput = window.TripLog.features.expenses.receiptInput;
-  if (!receiptInput.beforeSubmit()) return;
+  const submitTrip=state.id, submitEditingId=editingId;
+  if (!await receiptInput.beforeSubmit()) return;
+  if(submitTrip!==state.id || submitEditingId!==editingId) { showToast("입력 중 여행이 변경됐어요. 다시 확인해 주세요."); return; }
   const receipt = receiptInput.metadata() || (editingId ? findEntry(editingId)?.receipt : null);
 
   if (isLodgingSplitMode()) {
@@ -72,15 +74,17 @@ function handleExpenseSubmit(event) {
         currency,
         foreignAmount,
         exchangeRate,
-      }).map((entry) => receipt ? { ...entry, receipt } : entry),
+      }).map((entry) => ({...entry, ...(receipt ? {receipt} : {}), ...window.TripLog.features.redesign?.workspace?.expenseMetadata()})),
     );
 
     resetExpenseFormAfterSubmit();
     saveAndRender();
+    window.TripLog.features.redesign?.workspace?.expenseSaved();
     return;
   }
 
   const entry = {
+    ...(editingId ? findEntry(editingId) : {}),
     id: editingId || createId(),
     date: els.daySelect.value,
     category: els.categorySelect.value,
@@ -97,6 +101,7 @@ function handleExpenseSubmit(event) {
     exchangeRate: isOverseas ? exchangeRate : 0,
     createdAt: editingId ? findEntry(editingId)?.createdAt || Date.now() : Date.now(),
     ...(receipt ? { receipt } : {}),
+    ...window.TripLog.features.redesign?.workspace?.expenseMetadata(),
   };
 
   if (editingId) {
@@ -108,6 +113,7 @@ function handleExpenseSubmit(event) {
   }
 
   saveAndRender();
+  window.TripLog.features.redesign?.workspace?.expenseSaved();
 }
 
 function resetExpenseFormAfterSubmit() {

@@ -1,14 +1,6 @@
 let activeFilter = "전체";
 let editingId = null;
 const initialPageParams = new URLSearchParams(window.location.search);
-// Older login links and bookmarks explicitly point to settings.
-// Settings is still available from the navbar, but is no longer an entry page.
-if (initialPageParams.get("page") === "settings") {
-  initialPageParams.set("page", "overview");
-  const entryUrl = new URL(window.location.href);
-  entryUrl.searchParams.set("page", "overview");
-  window.history.replaceState({}, document.title, entryUrl.toString());
-}
 const initialPage = initialPageParams.get("page");
 const initialAllowedPages = ["start", "overview", "itinerary", "budget", "settlement", "report", "settings"];
 let activePage = initialPageParams.has("itinerary")
@@ -244,6 +236,7 @@ const els = {
   newTripCountryCombobox: document.querySelector("#newTripCountryCombobox"),
   newTripCountryFlag: document.querySelector("#newTripCountryFlag"),
   newTripCountryInput: document.querySelector("#newTripCountryInput"),
+  newTripCountryClearButton: document.querySelector("#newTripCountryClearButton"),
   newTripCountryList: document.querySelector("#newTripCountryList"),
   newTripCityInput: document.querySelector("#newTripCityInput"),
   newTripStartDateInput: document.querySelector("#newTripStartDateInput"),

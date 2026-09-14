@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TRIPLOG 전체 개편 목업 모음</title>
+<style>
+:root{font-family:Pretendard,"Malgun Gothic",sans-serif;color:#0b1020;background:#f5f6f8}
+*{box-sizing:border-box}body{margin:0}header,main,footer{max-width:1500px;margin:auto;padding:32px}
+header{padding-bottom:8px}h1{font-size:30px;margin:8px 0 12px;letter-spacing:-1px}p{color:#61656e;line-height:1.7;margin:0 0 16px}
+.tag{display:inline-block;padding:7px 11px;border:1px solid #0b1020;background:#f7afc7;border-radius:6px;font-size:13px;font-weight:800}
+nav{display:flex;gap:10px;flex-wrap:wrap}nav a{color:inherit;text-decoration:none;padding:9px 14px;background:white;border:1px solid #dfe1e5;border-radius:6px}
+h2{font-size:22px;margin:12px 0 20px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;align-items:start;margin-bottom:50px}
+figure{margin:0;min-width:0}figure>a{display:block;background:#fff;border:1px solid #dfe1e5;overflow:hidden;border-radius:4px}img{display:block;width:100%;height:auto}
+figcaption{padding:12px 2px;line-height:1.5}figcaption strong{display:block;font-size:16px}figcaption span{display:block;font-size:13px;color:#61656e;margin-top:4px}
+.refs{max-width:680px;grid-template-columns:repeat(2,minmax(0,1fr))}
+footer{padding-top:0;color:#61656e;font-size:13px}a:focus-visible{outline:3px solid #1b67ae;outline-offset:4px}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.refs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){header,main,footer{padding:20px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}h1{font-size:26px}}
+@media(max-width:420px){.grid{grid-template-columns:1fr}.refs{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><span class="tag">TRIPLOG · 전체 개편 목업</span><h1>모든 화면을 하나의 디자인으로</h1>
+<p>선택한 일정 디자인을 이어받은 13개 화면입니다. 이미지를 누르면 원본 크기로 볼 수 있습니다.<br>모바일 중심 디자인 시안 · 2026.09.13 · 샘플 여행 데이터</p>
+<nav aria-label="목업 모음 이동"><a href="#main">주요 페이지 6개</a><a href="#flows">보조 화면 7개</a><a href="#references">기존 일정 목업</a></nav></header>
+<main>
+<section id="main"><h2>주요 페이지</h2><div class="grid"><figure><a href="overview.png" target="_blank" rel="noopener"><img src="overview.png" alt="여행 개요 목업" loading="lazy"></a><figcaption><strong>여행 개요</strong><span>여행 요약, 예약, 예산, 첫날 일정과 준비물</span></figcaption></figure>
+<figure><a href="start.png" target="_blank" rel="noopener"><img src="start.png" alt="나의 여행 목업" loading="lazy"></a><figcaption><strong>나의 여행</strong><span>여행 선택, 일정·예산 수정과 새 여행</span></figcaption></figure>
+<figure><a href="budget.png" target="_blank" rel="noopener"><img src="budget.png" alt="지출 기록 목업" loading="lazy"></a><figcaption><strong>지출 기록</strong><span>지출 요약과 목록, 영수증 입력 진입</span></figcaption></figure>
+<figure><a href="settlement.png" target="_blank" rel="noopener"><img src="settlement.png" alt="경비 정산 목업" loading="lazy"></a><figcaption><strong>경비 정산</strong><span>멤버별 부담과 송금 안내</span></figcaption></figure>
+<figure><a href="report.png" target="_blank" rel="noopener"><img src="report.png" alt="여행 리포트 목업" loading="lazy"></a><figcaption><strong>여행 리포트</strong><span>카테고리와 결제일별 분석, PDF</span></figcaption></figure>
+<figure><a href="settings.png" target="_blank" rel="noopener"><img src="settings.png" alt="설정 목업" loading="lazy"></a><figcaption><strong>설정</strong><span>여행·공유·기록 설정</span></figcaption></figure></div></section>
+<section id="flows"><h2>로그인과 입력·관리 화면</h2><div class="grid"><figure><a href="login.png" target="_blank" rel="noopener"><img src="login.png" alt="로그인 목업" loading="lazy"></a><figcaption><strong>로그인</strong><span>로그인·회원가입·비밀번호 재설정 진입</span></figcaption></figure>
+<figure><a href="new-trip.png" target="_blank" rel="noopener"><img src="new-trip.png" alt="새 여행 만들기 목업" loading="lazy"></a><figcaption><strong>새 여행 만들기</strong><span>여행 이름·국내외·목적지·기간</span></figcaption></figure>
+<figure><a href="expense-add.png" target="_blank" rel="noopener"><img src="expense-add.png" alt="지출 추가 목업" loading="lazy"></a><figcaption><strong>지출 추가</strong><span>금액·내용·일자·항목·결제 방식</span></figcaption></figure>
+<figure><a href="receipt.png" target="_blank" rel="noopener"><img src="receipt.png" alt="영수증 인식 목업" loading="lazy"></a><figcaption><strong>영수증 인식</strong><span>이미지와 인식 결과 확인 후 입력 반영</span></figcaption></figure>
+<figure><a href="packing.png" target="_blank" rel="noopener"><img src="packing.png" alt="여행 준비물 목업" loading="lazy"></a><figcaption><strong>여행 준비물</strong><span>준비물 확인·추가·자동 저장</span></figcaption></figure>
+<figure><a href="invite.png" target="_blank" rel="noopener"><img src="invite.png" alt="멤버·초대 목업" loading="lazy"></a><figcaption><strong>멤버·초대</strong><span>멤버 확인과 초대 링크 복사</span></figcaption></figure>
+<figure><a href="history.png" target="_blank" rel="noopener"><img src="history.png" alt="저장 기록 목업" loading="lazy"></a><figcaption><strong>저장 기록</strong><span>여행 스냅샷 저장·불러오기·백업</span></figcaption></figure></div></section>
+<section id="references"><h2>디자인 기준 · 기존 일정 목업</h2><div class="grid refs">
+<figure><a href="../itinerary-design/reference-timeline.png" target="_blank" rel="noopener"><img src="../itinerary-design/reference-timeline.png" alt="선택한 일정 타임라인 목업" loading="lazy"></a><figcaption><strong>일정 타임라인</strong><span>기본 일정 화면</span></figcaption></figure>
+<figure><a href="../itinerary-design/reference-editor.png" target="_blank" rel="noopener"><img src="../itinerary-design/reference-editor.png" alt="선택한 일정 추가 지도 목업" loading="lazy"></a><figcaption><strong>지도와 일정 추가</strong><span>일정 추가·수정 화면</span></figcaption></figure>
+</div></section>
+</main><footer>이 페이지는 이미지 검토용 목업 모음입니다. 화면에 표시한 버튼과 입력 내용은 디자인 시안에 포함된 예시입니다.</footer>
+</body></html>

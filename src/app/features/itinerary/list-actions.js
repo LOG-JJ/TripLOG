@@ -204,6 +204,9 @@ function handleItineraryListAction(event) {
     startItineraryEdit(item);
   }
 
+  if (button.dataset.itineraryAction === "select") selectItineraryItem(item.id);
+  if (button.dataset.itineraryAction === "ticket") window.TripLog.features.itinerary.workspace?.downloadTicket?.(item);
+
   if (button.dataset.itineraryAction === "delete") {
     deleteItineraryItem(item.id);
   }

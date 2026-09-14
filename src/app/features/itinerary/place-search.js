@@ -46,6 +46,7 @@ async function searchPlacesFromInput({ force = false } = {}) {
   try {
     const googleQuery = buildGoogleMapsSearchQuery(query);
     const results = await fetchPlaceSearchResults(query, controller);
+    if (controller.signal.aborted || placeSearchAbortController !== controller || els.itineraryPlaceInput.value.trim() !== query) return;
     const finalResults = renderPlaceSearchResults(results, query, {
       previewedResultId: force ? buildGoogleCandidateId(googleQuery) : "",
       googleQuery,
@@ -483,6 +484,8 @@ function previewPlaceSearchResult(result, { statusMessage = "", updateStatus = t
 function applyPlaceSearchResult(result, { closeResults = true } = {}) {
   previewPlaceSearchResult(result);
   if (closeResults) closePlaceSearchResults();
+  window.TripLog.features.itinerary.workspace?.syncPlace?.({ selected: true });
+  window.TripLog.features.itinerary.workspace?.previewRoute?.();
 }
 
 function markPreviewedPlaceSearchResult(id) {

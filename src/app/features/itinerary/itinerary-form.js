@@ -11,6 +11,13 @@ function handleItinerarySubmit(event) {
   const place = els.itineraryPlaceInput.value.trim();
   const location = els.itineraryLocationInput.value.trim() || place;
   if (!place) return;
+  if (!getTripDays().some(day => day.date === els.itineraryDaySelect.value)) {
+    const error = document.querySelector("#itineraryFormError");
+    error.textContent = "일정을 추가할 날짜를 선택해 주세요.";
+    error.hidden = false;
+    return;
+  }
+  const wasEditing = Boolean(editingItineraryId);
 
   const id = editingItineraryId || createId();
   const existingItem = editingItineraryId ? findItineraryItem(editingItineraryId) : null;
@@ -38,6 +45,7 @@ function handleItinerarySubmit(event) {
     && hasMatchingCoordinateSignature(existingItem);
 
   const item = {
+    ...existingItem,
     id,
     date: els.itineraryDaySelect.value || state.selectedItineraryDate,
     time: els.itineraryTimeInput.value,
@@ -109,8 +117,10 @@ function handleItinerarySubmit(event) {
   state.selectedItineraryDate = item.date;
   state.lastActiveItineraryDate = item.date;
   state.selectedItineraryId = item.id;
+  window.TripLog.features.itinerary.workspace?.close?.();
   clearItineraryEditMode(false);
   saveAndRender();
+  showToast(wasEditing ? "일정을 저장했어요." : "일정을 추가했어요.");
 }
 
 function startItineraryEdit(item) {
@@ -148,9 +158,10 @@ function startItineraryEdit(item) {
   const hasVoucher = !!(item.voucherName || item.voucherCode || item.voucherFileName);
   els.itineraryTicketSection.hidden = !hasVoucher;
   els.itineraryTicketToggleBtn.classList.toggle("open", hasVoucher);
+  els.itineraryTicketToggleBtn.setAttribute("aria-expanded", String(hasVoucher));
   els.itineraryTicketToggleBtn.querySelector(".ticket-toggle-chevron").textContent = hasVoucher ? "▲" : "▼";
 
-  selectedPlaceCandidate = item.place && item.location ? { place: item.place, location: item.location } : null;
+  selectedPlaceCandidate = item.place ? { ...item, source: item.coordinateSource || "" } : null;
   setPlaceSearchStatus(item.location || "입력값 그대로 저장하거나 검색 결과를 선택할 수 있습니다.", item.location ? "success" : "neutral");
   closePlaceSearchResults();
   closeManualAddressPanel();
@@ -161,8 +172,8 @@ function startItineraryEdit(item) {
   syncCustomSelect(els.itineraryThemeSelect);
   syncCustomTimePicker(els.itineraryTimeInput);
   syncCustomTimePicker(els.itineraryEndTimeInput);
-  updateMapPreview(item);
-  els.itineraryPlaceInput.focus();
+  if (window.TripLog.features.itinerary.workspace) window.TripLog.features.itinerary.workspace.show({ edit: true });
+  else { updateMapPreview(item); els.itineraryPlaceInput.focus(); }
 }
 
 function clearItineraryEditMode(shouldRender = true) {
@@ -186,6 +197,7 @@ function clearItineraryEditMode(shouldRender = true) {
   if (els.itineraryTicketSection) {
     els.itineraryTicketSection.hidden = true;
     els.itineraryTicketToggleBtn.classList.remove("open");
+    els.itineraryTicketToggleBtn.setAttribute("aria-expanded", "false");
     els.itineraryTicketToggleBtn.querySelector(".ticket-toggle-chevron").textContent = "▼";
   }
 
@@ -209,7 +221,7 @@ function selectItineraryItem(id) {
   if (item) {
     state.selectedItineraryDate = item.date;
     state.lastActiveItineraryDate = item.date;
-    updateMapPreview(item);
+    if (document.querySelector("#itineraryEditor")?.open) updateMapPreview(item);
   }
   saveAndRender();
 }

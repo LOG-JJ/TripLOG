@@ -86,6 +86,10 @@ function syncCustomDatePicker(input) {
 
   const selectedDate = parseDate(input.value);
   control.value.textContent = selectedDate ? toInputDate(selectedDate) : "날짜 선택";
+  if (selectedDate && document.body.classList.contains('rd-app')) {
+    const short = input.id.startsWith('newTrip');
+    control.value.textContent = `${short ? '' : selectedDate.getFullYear()+'.'}${String(selectedDate.getMonth()+1).padStart(2,'0')}.${String(selectedDate.getDate()).padStart(2,'0')} (${'일월화수목금토'[selectedDate.getDay()]})`;
+  }
   control.button.disabled = input.disabled;
   control.button.classList.toggle("is-disabled", input.disabled);
 

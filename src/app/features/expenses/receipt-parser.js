@@ -28,7 +28,7 @@
   }
 
   function amountsInLine(text) {
-    return (text.match(/[-+]?\d+(?:[.,'’ ]\d{3})*(?:[.,]\d{1,2})?/g) || [])
+    return (text.match(/[-+]?\d[\d.,'’]*(?: \d{3})*/g) || [])
       .map(parseReceiptNumber).filter((value) => value !== null);
   }
 

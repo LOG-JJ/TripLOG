@@ -48,10 +48,14 @@ const COUNTRY_NAME_OVERRIDES = {
 
 const COUNTRY_ALIAS_OVERRIDES = {
   CN: ["중국", "china", "中国"],
+  CZ: ["체코", "czech republic", "czechia"],
   GB: ["영국", "uk", "united kingdom", "britain", "great britain"],
+  HK: ["홍콩", "hong kong", "hong kong sar"],
   JP: ["일본", "japan", "日本"],
   KR: ["대한민국", "한국", "korea", "south korea"],
+  MO: ["마카오", "macau", "macao"],
   RU: ["러시아", "russia"],
+  TR: ["튀르키예", "터키", "turkey", "turkiye", "türkiye"],
   TW: ["대만", "taiwan", "台灣", "台湾"],
   US: ["미국", "usa", "united states", "america"],
 };
