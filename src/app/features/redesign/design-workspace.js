@@ -11,6 +11,7 @@
   let ready = false, tripTab = 'upcoming', expenseTab = 'all', reportTab = 'expenses', reportDay = 'all', expenseTrip = '', expenseReturnMode = '', lastTrip = '';
   let overlayReturnFocus = null;
   let editingTripId = '';
+  let removingTripId = '';
   function isTripEditing() { return Boolean(editingTripId && editingTripId === state.id); }
   function syncTripEdit() {
     const editing = isTripEditing();
@@ -104,11 +105,30 @@
     });
     $('[data-rd-action="trip-search-clear"]').hidden=!$('#rdTripSearch').value;
     $('#rdTripSearchCount').textContent=query?`${matching.length}개의 여행을 찾았어요`:`저장된 여행 ${trips.length}개`;
+    $('#rdTripChooserList').setAttribute('aria-busy', String(Boolean(removingTripId)));
     $('#rdTripChooserList').innerHTML=matching.length?matching.map(trip=>{
       const current=trip.id===state.id, past=trip.endDate&&trip.endDate<today;
+      const name=trip.tripName||'새로운 여행', deleteDisabled=trips.length<=1||Boolean(removingTripId);
       const thumbnail=/서울/.test(trip.city||'')?'<img src="src/assets/seoul-tower.png" alt="">':icon(trip.travelMode==='overseas'?'airplane-tilt':'suitcase-rolling');
-      return `<button type="button" class="rd-trip-choice ${current?'is-current':''}" data-rd-action="trip-select" data-id="${text(trip.id)}" aria-pressed="${current}"><span class="rd-trip-thumbnail">${thumbnail}</span><span class="rd-trip-choice-copy"><strong>${text(trip.tripName||'새로운 여행')}</strong><span>${text([trip.city,trip.country].filter(Boolean).join(' · ')||'목적지 미정')}</span><small>${text(trip.startDate?.slice(0,4)||'')} · ${period(trip)} · ${duration(trip)}</small>${current?'<em>현재 여행</em>':past?'<em class="is-past">지난 여행</em>':''}</span>${icon(current?'radio-button':'circle')}</button>`;
+      return `<div class="rd-trip-choice ${current?'is-current':''}"><button type="button" class="rd-trip-choice-select" data-rd-action="trip-select" data-id="${text(trip.id)}" aria-pressed="${current}" ${removingTripId?'disabled':''}><span class="rd-trip-thumbnail">${thumbnail}</span><span class="rd-trip-choice-copy"><strong>${text(name)}</strong><span>${text([trip.city,trip.country].filter(Boolean).join(' · ')||'목적지 미정')}</span><small>${text(trip.startDate?.slice(0,4)||'')} · ${period(trip)} · ${duration(trip)}</small>${current?'<em>현재 여행</em>':past?'<em class="is-past">지난 여행</em>':''}</span>${icon(current?'radio-button':'circle')}</button><button type="button" class="rd-trip-delete" data-rd-action="trip-choice-delete" data-id="${text(trip.id)}" aria-label="${text(name)} 여행 삭제" title="${trips.length<=1?'마지막 여행은 삭제할 수 없어요':'여행 삭제'}" ${deleteDisabled?'disabled':''}>${icon('trash')}</button></div>`;
     }).join(''):`<div class="rd-trip-search-empty">${icon('magnifying-glass')}<strong>검색 결과가 없어요</strong><p>다른 여행 이름이나 여행지를 입력해 보세요.</p></div>`;
+  }
+  async function removeTripFromChooser(id) {
+    if (removingTripId) return;
+    const chooser=$('#rdTripChooser'), list=$('#rdTripChooserList'), scrollTop=list.scrollTop;
+    removingTripId=id;
+    renderTripChooser();
+    try {
+      const removed=await window.TripLog.persistence.stateStorage.deleteTrip(id);
+      if (removed) showToast('여행을 목록에서 삭제했어요. 복구 기록에서 다시 열 수 있어요.');
+    } finally {
+      removingTripId='';
+      if (chooser.open) {
+        renderTripChooser();list.scrollTop=scrollTop;
+        const button=$$('.rd-trip-delete').find(button=>button.dataset.id===id&&!button.disabled);
+        (button||$('#rdTripSearch')).focus({preventScroll:true});
+      }
+    }
   }
   function openTripChooser() {
     $('#rdTripSearch').value='';renderTripChooser();open('rdTripChooser');
@@ -428,6 +448,7 @@
       case 'trips-upcoming':tripTab='upcoming';renderTrips();break;
       case 'trips-past':tripTab='past';renderTrips();break;
       case 'trip-choose':openTripChooser();break;
+      case 'trip-choice-delete':await removeTripFromChooser(el.dataset.id);break;
       case 'trip-search-clear':$('#rdTripSearch').value='';renderTripChooser();$('#rdTripSearch').focus();break;
       case 'trip-select':{
         const target=window.TripLog.persistence.stateStorage.getTrips().find(trip=>trip.id===el.dataset.id);

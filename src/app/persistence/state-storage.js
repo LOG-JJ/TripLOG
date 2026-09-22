@@ -509,35 +509,51 @@ async function createNewTrip({ tripName, country, countryCode, city, travelMode,
 
 async function deleteTrip(tripId) {
   let trips = getTrips();
+  const trip = trips.find(trip => trip.id === tripId);
+  if (!trip) return false;
   if (trips.length <= 1) {
-    window.alert("최소 한 개의 여행은 존재해야 합니다.");
-    return;
+    showToast("마지막 여행은 삭제할 수 없어요.");
+    return false;
   }
 
   const record = window.TripLogSyncRepository?.cached(tripId);
-  const message = record?.serverId && record.role === "owner" ? "이 여행을 보관할까요? 모든 멤버에게 읽기 전용으로 전환되며, 복구 기록에서 다시 열 수 있습니다." : "이 여행을 기기 목록에서 보관할까요? 복구 기록에서 다시 열 수 있습니다.";
+  const scope = record?.serverId && record.role === "owner"
+    ? "공유 여행은 모든 멤버에게 읽기 전용으로 전환됩니다."
+    : "이 기기의 여행 목록에서만 삭제됩니다.";
+  const message = `“${trip.tripName || '새로운 여행'}” 여행을 목록에서 삭제할까요?\n${scope} 복구 기록에서 다시 열 수 있어요.`;
   if (!await (window.TripLog.features.redesign?.workspace?.confirmAction?.(message) ?? window.confirm(message))) {
-    return;
+    return false;
   }
 
   trips = getTrips();
-  if (trips.length <= 1) return;
+  if (trips.length <= 1 || !trips.some(trip => trip.id === tripId)) return false;
+  const latest = window.TripLogSyncRepository?.cached(tripId);
+  if (latest?.serverId !== record?.serverId || latest?.role !== record?.role) {
+    showToast("여행의 공유 상태가 바뀌었어요. 다시 선택해 주세요.");
+    return false;
+  }
   trips = trips.filter(t => t.id !== tripId);
-  if (repositoryReady) {
-    if (record?.serverId && record.role === "owner") {
-      try { await window.TripLog.sync.controller.engine.control(tripId, "archive", {}); }
-      catch (_) { showToast("여행을 보관하지 못했습니다. 인터넷 연결과 권한을 확인해 주세요."); return; }
-    }
-    await window.TripLogSyncRepository.update(tripId, record => ({ ...record, hidden: true }), { snapshot: true, source: "before-trip-hide" });
-    repositoryTrips = trips;
-  } else localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
+  try {
+    if (repositoryReady) {
+      if (record?.serverId && record.role === "owner") {
+        await window.TripLog.sync.controller.engine.control(tripId, "archive", {});
+      }
+      await window.TripLogSyncRepository.update(tripId, record => ({ ...record, hidden: true }), { snapshot: true, source: "before-trip-hide" });
+      repositoryTrips = getTrips().filter(trip => trip.id !== tripId);
+      trips = repositoryTrips;
+    } else localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
+  } catch (_) {
+    showToast("여행을 삭제하지 못했어요. 연결과 저장 상태를 확인한 뒤 다시 시도해 주세요.");
+    return false;
+  }
 
   const activeTripId = getActiveTripId();
   if (activeTripId === tripId) {
-    switchTrip(trips[0].id);
+    await switchTrip(trips[0].id);
   } else {
-    saveAndRender();
+    render();
   }
+  return true;
 }
 
 function normalizeImportedTripSnapshot(snapshot = {}) {
