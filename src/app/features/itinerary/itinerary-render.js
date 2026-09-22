@@ -10,23 +10,123 @@ const itineraryTransitModes = {
 };
 
 function itineraryIcon(name) { return `<i class="ph ph-${name}" aria-hidden="true"></i>`; }
+function itineraryPlaceLabel(item) {
+  const name = String(item.place || '').trim();
+  return name && !/^[-–—]+$/.test(name) ? name : item.theme === 'food' ? '식사 장소 미정' : item.theme === 'lodging' ? '숙소 미정' : '장소 미정';
+}
 function getItineraryTransits(item) {
   return item.transits?.length ? item.transits : [{ trans: item.trans || "none", duration: item.duration || 0, cost: item.cost || 0, memo: "" }];
+}
+
+let itineraryDragSession = null;
+let itineraryDragDropReady = false;
+let cancelItineraryDragSession = () => {};
+function setupItineraryDragDrop() {
+  if (itineraryDragDropReady) return;
+  itineraryDragDropReady = true;
+  const list = els.itineraryList;
+  const clearIndicator = () => list.querySelectorAll('.is-drop-before, .is-drop-after').forEach(row => row.classList.remove('is-drop-before', 'is-drop-after'));
+  const finish = ({ animate = false } = {}) => {
+    const previousRects = animate ? itineraryDragSession?.preview?.capture() : null;
+    itineraryDragSession?.preview?.finish();
+    clearIndicator();
+    list.querySelectorAll('.is-dragging').forEach(row => row.classList.remove('is-dragging'));
+    itineraryDragSession = null;
+    if (previousRects) animateItineraryDrop(list, previousRects);
+  };
+  const pointerDrag = setupItineraryPointerDrag(list, finish);
+  cancelItineraryDragSession = options => { pointerDrag.cancel(options); finish(options); };
+  const targetAt = event => {
+    const drag = itineraryDragSession;
+    if (!drag || itineraryReorderPending || drag.tripId !== state.id || drag.date !== state.selectedItineraryDate
+      || findItineraryItem(drag.id)?.date !== drag.date) return null;
+    const target = drag.preview?.targetAt(event.clientY);
+    return target && findItineraryItem(target.row.dataset.id)?.date === drag.date ? target : null;
+  };
+  list.addEventListener('dragstart', event => {
+    const row = event.target.closest('.timeline-stop');
+    const item = row && findItineraryItem(row.dataset.id);
+    if (!row || !item || pointerDrag.active || itineraryReorderPending || state.selectedItineraryDate === 'all' || event.target.closest('button, input, a')) {
+      event.preventDefault(); return;
+    }
+    finish();
+    itineraryDragSession = { id: item.id, tripId: state.id, date: item.date };
+    event.dataTransfer.setData('application/x-triplog-itinerary', item.id);
+    event.dataTransfer.setData('text/plain', item.id);
+    event.dataTransfer.effectAllowed = 'move';
+    itineraryDragSession.preview = createItineraryDragPreview(list, row, event);
+    row.classList.add('is-dragging');
+  });
+  list.addEventListener('dragover', event => {
+    const target = targetAt(event); clearIndicator();
+    if (!target) return;
+    event.preventDefault(); event.dataTransfer.dropEffect = 'move';
+    target.row.classList.add(`is-drop-${target.placement}`);
+    itineraryDragSession.preview?.update(target);
+  });
+  list.addEventListener('dragleave', event => {
+    const rect = list.getBoundingClientRect();
+    if (event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom) return;
+    clearIndicator(); itineraryDragSession?.preview?.reset();
+  });
+  list.addEventListener('dragend', () => finish({ animate: true }));
+  list.addEventListener('drop', event => {
+    const target = targetAt(event), draggedId = itineraryDragSession?.id;
+    const previousRects = itineraryDragSession?.preview?.capture();
+    event.preventDefault(); finish();
+    if (target && event.dataTransfer.getData('application/x-triplog-itinerary') === draggedId) {
+      void moveItineraryItem(draggedId, target.row.dataset.id, target.placement);
+      animateItineraryDrop(list, previousRects, draggedId);
+    }
+  });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') finish({ animate: true }); }, true);
+  window.addEventListener('resize', () => finish());
+  window.addEventListener('pagehide', () => finish());
+  document.addEventListener('visibilitychange', () => { if (document.hidden) finish(); });
+  list.addEventListener('keydown', event => {
+    const row = event.target.closest('.timeline-stop');
+    if (!row || (event.target !== row && !event.target.closest('.timeline-drag-handle')) || !event.altKey || !['ArrowUp', 'ArrowDown'].includes(event.key)) return;
+    event.preventDefault();
+    const items = getFilteredItineraryItems(), index = items.findIndex(item => item.id === row.dataset.id);
+    const target = items[index + (event.key === 'ArrowUp' ? -1 : 1)];
+    if (!target || target.date !== items[index]?.date) return;
+    const id = row.dataset.id;
+    void moveItineraryItem(id, target.id, event.key === 'ArrowUp' ? 'before' : 'after').then(() => {
+      [...list.querySelectorAll('.timeline-stop')].find(item => item.dataset.id === id)?.focus({ preventScroll: true });
+    });
+  });
 }
 
 function renderItineraryPage() {
   const days = getTripDays();
   if (state.selectedItineraryDate !== "all" && !days.some(day => day.date === state.selectedItineraryDate)) state.selectedItineraryDate = days[0]?.date || state.startDate;
   els.itineraryTripName.textContent = state.tripName || getDefaultTripName();
-  els.itineraryDateRange.textContent = `${formatReadableDate(state.startDate)} - ${formatReadableDate(state.endDate)}`;
+  els.itineraryDateRange.textContent = days.length
+    ? `${days[0].shortDate} ${days[0].weekday} – ${days.at(-1).shortDate} ${days.at(-1).weekday} · ${days.length > 1 ? `${days.length - 1}박 ${days.length}일` : "당일치기"}` : "여행 기간을 설정해 주세요";
   const day = days.find(entry => entry.date === state.selectedItineraryDate);
   document.querySelector("#itinerarySelectedDayTitle").textContent = day
-    ? `${Number(day.date.slice(0, 4))}년 ${Number(day.date.slice(5, 7))}월 ${Number(day.date.slice(8, 10))}일 (${day.weekday})` : "전체 일정";
+    ? `${Number(day.date.slice(5, 7))}월 ${Number(day.date.slice(8, 10))}일 (${day.weekday})` : "전체 일정";
+  const all = state.selectedItineraryDate === "all";
+  els.itineraryViewAllButton.setAttribute("aria-pressed", String(all));
+  els.itineraryViewAllButton.querySelector("span").textContent = all ? "일차별" : "전체";
+  els.itineraryViewAllButton.setAttribute('aria-label', all ? '일차별 보기' : '전체 일정 보기');
+  els.itineraryViewAllButton.title = all ? '일차별 보기' : '전체 일정 보기';
+  const items = getFilteredItineraryItems();
+  // Only count the incoming travel segments actually shown between same-day stops.
+  const travelMinutes = items.reduce((sum, item, index) => {
+    if (!index || items[index - 1].date !== item.date) return sum;
+    return sum + getItineraryTransits(item).reduce((minutes, segment) => minutes + Math.max(0, Number(segment.duration) || 0), 0);
+  }, 0);
+  const travelLabel = travelMinutes >= 60 ? `${Math.floor(travelMinutes / 60)}시간${travelMinutes % 60 ? ` ${travelMinutes % 60}분` : ""}` : `${travelMinutes}분`;
+  els.itineraryDaySummary.textContent = `일정 ${items.length}개${travelMinutes ? ` · 이동 ${travelLabel}` : ""}`;
   els.itineraryModeToggle?.querySelectorAll("button").forEach(button => {
     const active = (state.selectedItineraryDate === "all") === (button.dataset.mode === "overview");
     button.classList.toggle("active", active); button.setAttribute("aria-pressed", String(active));
   });
-  renderItineraryDaySelect(days); renderItineraryDayStrip(days); renderItineraryList(days);
+  renderItineraryDaySelect(days);
+  const summary = window.TripLog.features.itinerary.summary;
+  if (!summary?.isActive()) { renderItineraryDayStrip(days); renderItineraryList(days); }
+  summary?.render();
   syncNaverMapsLink();
   window.TripLog.features.itinerary.workspace?.render?.(days);
   if (document.querySelector("#itineraryToolsDialog")?.open) {
@@ -66,46 +166,36 @@ function renderItineraryDayStrip(days) {
       const intent = captureDayStripScrollIntent(els.itineraryDayStrip, button);
       state.selectedItineraryDate = day.date; state.lastActiveItineraryDate = day.date;
       clearItineraryEditMode(false); saveAndRender(); applyDayStripScrollIntent(els.itineraryDayStrip, intent);
+      [...els.itineraryDayStrip.children].find(chip => chip.dataset.date === day.date)?.focus({ preventScroll: true });
     });
     return button;
   }));
   els.itineraryDayStrip.scrollLeft = left;
 }
 
-function buildItineraryTransit(item, openIds) {
+function buildItineraryTransit(item, previous) {
   const segments = getItineraryTransits(item);
-  const details = document.createElement("details"); details.className = "timeline-transit";
-  details.dataset.id = item.id; details.open = openIds.has(item.id);
-  const meaningful = segments.filter(segment => segment.trans !== "none" || segment.duration || segment.memo || segment.cost);
-  const firstMode = itineraryTransitModes[segments[0]?.trans] || itineraryTransitModes.none;
-  const description = meaningful.map(segment => {
-    const mode = itineraryTransitModes[segment.trans] || itineraryTransitModes.none;
-    return `${mode.label}${Number(segment.duration) > 0 ? ` ${Number(segment.duration)}분` : ""}`;
-  }).join(" · ") || "이동 정보 추가";
-  details.innerHTML = `<summary aria-label="${escapeHtml(item.place)}까지 ${escapeHtml(description)}, 이동 정보 편집"><span class="timeline-transit-axis">${itineraryIcon(firstMode.icon)}</span><span class="timeline-transit-label">${escapeHtml(description)}</span></summary><div class="timeline-transit-fields">${segments.map((segment, index) => `
-    <div class="timeline-transit-segment" data-index="${index}">
-      <label><span>이동 수단</span><select data-transit-field="trans" aria-label="이동 수단">${Object.entries(itineraryTransitModes).map(([key, mode]) => `<option value="${key}"${key === (segment.trans === "etc" ? "flight" : segment.trans) ? " selected" : ""}>${mode.label}</option>`).join("")}</select></label>
-      <label><span>이동 시간 (분)</span><input data-transit-field="duration" aria-label="이동 시간 (분)" type="number" min="0" max="1440" value="${Number(segment.duration) || 0}" /></label>
-      <label class="wide"><span>이동 메모</span><input data-transit-field="memo" aria-label="이동 메모" maxlength="120" value="${escapeHtml(segment.memo || "")}" placeholder="버스 번호, 환승 정보 등" /></label>
-      ${segment.cost ? `<p class="timeline-transit-cost">이동 경비 ${escapeHtml(formatWon(segment.cost))}</p>` : ""}
-      ${segments.length > 1 ? `<button type="button" data-remove-transit="${index}">이동 구간 삭제</button>` : ""}
-    </div>`).join("")}<button type="button" data-add-transit>${itineraryIcon("plus")}이동 수단 추가</button></div>`;
-  details.addEventListener("change", event => {
-    const field = event.target.dataset.transitField; if (!field) return;
-    const index = Number(event.target.closest("[data-index]").dataset.index);
-    const value = field === "duration" ? Math.min(1440, Math.max(0, Number(event.target.value) || 0)) : event.target.value;
-    updateTravelSegmentField(item.id, index, field, value);
-  });
-  details.addEventListener("click", event => {
-    if (event.target.closest("[data-add-transit]")) addTravelSegment(item.id);
-    const remove = event.target.closest("[data-remove-transit]"); if (remove) deleteTravelSegment(item.id, Number(remove.dataset.removeTransit));
-  });
-  return details;
+  const meaningful = segments.filter(segment => (segment.trans && segment.trans !== "none") || Number(segment.duration) || segment.memo || Number(segment.cost));
+  const modeFor = segment => itineraryTransitModes[segment?.trans === 'etc' ? 'flight' : segment?.trans] || itineraryTransitModes.none;
+  const modes = [...new Set(meaningful.map(segment => modeFor(segment).label))];
+  const total = segments.reduce((sum, segment) => sum + Math.max(0, Number(segment.duration) || 0), 0);
+  const time = total >= 60 ? `${Math.floor(total / 60)}시간${total % 60 ? ` ${total % 60}분` : ''}` : `${total}분`;
+  const description = meaningful.length ? `${modes.join(' + ')} · ${total ? time : '시간 미정'}` : '길찾기 · 이동 기록';
+  const group = document.createElement('div'); group.className = 'timeline-transit'; group.dataset.id = item.id;
+  const button = document.createElement('button'); button.type = 'button'; button.className = `timeline-transit-button${meaningful.length ? ' has-transit' : ''}`;
+  button.dataset.transitOpen = ''; button.dataset.id = item.id;
+  button.setAttribute('aria-haspopup', 'dialog'); button.setAttribute('aria-controls', 'itineraryTransitDialog'); button.setAttribute('aria-expanded', 'false');
+  const routeLabel = isDomesticMapTrip() ? '지도 · 길찾기' : 'Google 경로';
+  button.setAttribute('aria-label', `${itineraryPlaceLabel(previous)}에서 ${itineraryPlaceLabel(item)}까지, ${description}, ${routeLabel} 확인 및 이동 정보 편집`);
+  button.innerHTML = `<span aria-hidden="true"></span><span class="timeline-transit-axis" aria-hidden="true"></span><span class="timeline-transit-summary">${itineraryIcon(meaningful.length ? modeFor(meaningful[0]).icon : 'path')}<span class="timeline-transit-copy"><strong>${escapeHtml(description)}</strong><small>${escapeHtml(itineraryPlaceLabel(item))}까지 · ${routeLabel}${meaningful.length > 1 ? ` · ${meaningful.length}개 구간` : ''}</small></span>${itineraryIcon('caret-right')}</span>`;
+  button.addEventListener('click', () => window.TripLog.features.itinerary.transitEditor.open(item.id, previous.id));
+  group.appendChild(button); return group;
 }
 
 function renderItineraryList(days) {
+  setupItineraryDragDrop();
+  cancelItineraryDragSession();
   const dayMap = new Map(days.map(day => [day.date, day])); const items = getFilteredItineraryItems();
-  const openIds = new Set([...els.itineraryList.querySelectorAll("details[open]")].map(el => el.dataset.id));
   els.itineraryList.replaceChildren(); els.itineraryEmpty.hidden = items.length > 0;
   document.querySelector(".itinerary-inline-add").hidden = !items.length;
   const selectedId = items.some(item => item.id === state.selectedItineraryId) ? state.selectedItineraryId : items[0]?.id;
@@ -115,30 +205,24 @@ function renderItineraryList(days) {
       const day = dayMap.get(item.date); const heading = document.createElement("h3"); heading.className = "timeline-day-heading";
       heading.textContent = day ? `${day.label} · ${day.shortDate} (${day.weekday})` : item.date; els.itineraryList.append(heading);
     }
-    if (previous?.date === item.date) els.itineraryList.append(buildItineraryTransit(item, openIds));
+    if (previous?.date === item.date) els.itineraryList.append(buildItineraryTransit(item, previous));
     const theme = itineraryThemes[item.theme] || itineraryThemes.sightseeing;
     const article = document.createElement("article"); article.className = `timeline-stop${selectedId === item.id ? " is-selected" : ""}`;
-    article.dataset.id = item.id; article.draggable = state.selectedItineraryDate !== "all";
+    article.dataset.theme = item.theme || "sightseeing";
+    const canReorder = state.selectedItineraryDate !== 'all';
+    article.dataset.id = item.id; article.draggable = canReorder && !matchMedia('(pointer: coarse)').matches;
+    if (canReorder) {
+      article.tabIndex = 0;
+      article.setAttribute('aria-label', `${itineraryPlaceLabel(item)}, 드래그하여 순서 이동. 키보드는 Alt와 위아래 방향키`);
+    }
     article.innerHTML = `
-      <button class="timeline-times" type="button" data-itinerary-action="edit" data-id="${escapeHtml(item.id)}" aria-label="${escapeHtml(item.place)} 시간 수정"><time>${escapeHtml(item.time || "미정")}</time>${item.endTime ? `<time>${escapeHtml(item.endTime)}</time>` : ""}</button>
+      <button class="timeline-times" type="button" data-itinerary-action="edit" data-id="${escapeHtml(item.id)}" aria-label="${escapeHtml(itineraryPlaceLabel(item))} 시간 수정"><time>${escapeHtml(item.time || "미정")}</time>${item.theme !== 'lodging' && item.endTime ? `<time>${escapeHtml(item.endTime)}</time>` : ""}</button>
       <span class="timeline-axis" aria-hidden="true">${itineraryIcon("circle")}</span>
       <div class="timeline-stop-body">
-        <div class="timeline-stop-heading"><button class="timeline-place" type="button" data-itinerary-action="select" data-id="${escapeHtml(item.id)}" aria-pressed="${selectedId === item.id}">${escapeHtml(item.place || "장소 미정")}</button><button class="timeline-edit" type="button" data-itinerary-action="edit" data-id="${escapeHtml(item.id)}" aria-label="${escapeHtml(item.place)} 수정">${itineraryIcon("pencil-simple")}</button></div>
-        <p class="timeline-theme">${itineraryIcon("map-pin")}<span>${theme.label}</span></p>
-        ${item.memo ? `<p class="timeline-memo">${itineraryIcon("note")}<span>${escapeHtml(item.memo)}</span></p>` : ""}
+        <div class="timeline-stop-heading"><span class="timeline-place-icon">${itineraryIcon(theme.icon)}</span><button class="timeline-place" type="button" data-itinerary-action="select" data-id="${escapeHtml(item.id)}" aria-pressed="${selectedId === item.id}">${escapeHtml(itineraryPlaceLabel(item))}</button><span class="timeline-stop-actions"><button class="timeline-edit" type="button" data-itinerary-action="edit" data-id="${escapeHtml(item.id)}" aria-label="${escapeHtml(itineraryPlaceLabel(item))} 수정">${itineraryIcon("pencil-simple")}</button>${canReorder && items.length > 1 ? `<button class="timeline-drag-handle" type="button" aria-describedby="itineraryDragInstructions" aria-label="${escapeHtml(itineraryPlaceLabel(item))} 순서 이동" aria-pressed="false" title="바로 잡아서 이동 · 키보드는 Alt + ↑↓">${itineraryIcon('dots-six-vertical')}</button>` : ''}</span></div>
+        <div class="timeline-stop-detail"><span class="timeline-theme">${theme.label}</span>${item.memo ? `<p class="timeline-memo">${escapeHtml(item.memo)}</p>` : ""}</div>
         ${item.voucherName || item.voucherCode || item.voucherFileName ? `<button class="timeline-ticket" type="button" data-itinerary-action="${item.voucherFile ? "ticket" : "edit"}" data-id="${escapeHtml(item.id)}">${itineraryIcon("ticket")}<span>${escapeHtml(item.voucherName || item.voucherFileName || "예약 정보")}${item.voucherCode ? ` · ${escapeHtml(item.voucherCode)}` : ""}</span>${itineraryIcon("arrow-up-right")}</button>` : ""}
       </div>`;
-    article.addEventListener("dragstart", event => {
-      if (event.target.closest("button") || state.selectedItineraryDate === "all") { event.preventDefault(); return; }
-      event.dataTransfer.setData("text/plain", item.id); event.dataTransfer.effectAllowed = "move"; article.classList.add("is-dragging");
-    });
-    article.addEventListener("dragend", () => article.classList.remove("is-dragging"));
-    article.addEventListener("dragover", event => { event.preventDefault(); article.classList.add("is-drag-over"); });
-    article.addEventListener("dragleave", () => article.classList.remove("is-drag-over"));
-    article.addEventListener("drop", event => {
-      event.preventDefault(); article.classList.remove("is-drag-over"); const id = event.dataTransfer.getData("text/plain");
-      if (id !== item.id && state.itineraryItems.some(entry => entry.id === id && entry.date === item.date)) swapItineraryItems(id, item.id);
-    });
     els.itineraryList.append(article); previous = item;
   }
 }

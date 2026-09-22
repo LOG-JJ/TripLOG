@@ -6,10 +6,10 @@ async function handleHistoryAction(event) {
   if (!record) return;
 
   if (button.dataset.historyAction === "load") {
-    const ok = await (window.TripLog.features.redesign?.workspace?.confirmAction?.("선택한 저장 기록으로 현재 화면을 덮어쓸까요?") ?? window.confirm("선택한 저장 기록으로 현재 화면을 덮어쓸까요?"));
+    const ok = await (window.TripLog.features.redesign?.workspace?.confirmAction?.("선택한 기록을 별도 여행으로 복원할까요?") ?? window.confirm("선택한 기록을 별도 여행으로 복원할까요?"));
     if (!ok) return;
-    restoreSnapshot(record.state);
-    closeHistoryModal();
+    try { if (await restoreSnapshot(record.state)) closeHistoryModal(); }
+    catch (error) { showToast(error.message || "복원하지 못했습니다. 기존 기록은 보존됩니다."); }
   }
 
   if (button.dataset.historyAction === "delete") {
@@ -22,22 +22,28 @@ async function handleHistoryAction(event) {
   }
 }
 
-function restoreSnapshot(snapshot) {
+async function restoreSnapshot(snapshot) {
   const nextState = normalizeSnapshot(snapshot);
+  if (window.TripLogSyncModel) {
+    nextState.id = window.TripLogSyncModel.uuid();
+    nextState.tripName = `${nextState.tripName || "여행"} (복원 사본)`;
+    nextState.collaboration = normalizeCollaborationSettings({ ownerId: window.TripLog.sync.controller.engine.status().accountId });
+  }
   editingId = null;
   editingItineraryId = null;
   activeFilter = "전체";
-  // Restore by the archived trip id so another active trip is never overwritten.
-  window.TripLog.persistence.stateStorage.importSharedTripSnapshot(nextState, { makeActive: true });
+  // A restore creates a separate trip; pending edits on the original remain intact.
+  await window.TripLog.persistence.stateStorage.importSharedTripSnapshot(nextState, { makeActive: true });
   state.selectedDate = nextState.selectedDate;
   state.selectedItineraryDate = nextState.selectedItineraryDate;
   state.selectedItineraryId = nextState.selectedItineraryId;
   setCommaNumberInputValue(els.budgetInput, state.totalBudget || "");
-  saveStateSilently();
+  if (!await saveStateSilently()) return false;
   document.querySelectorAll(".segmented button").forEach((button) => {
     button.classList.toggle("active", button.dataset.filter === activeFilter);
   });
   render();
+  return true;
 }
 
 function normalizeSnapshot(snapshot) {
@@ -72,6 +78,7 @@ function normalizeSnapshot(snapshot) {
     companions: Array.isArray(snapshot?.companions) ? snapshot.companions : [],
     settlement: normalizeSettlementSettings(snapshot?.settlement),
     collaboration: normalizeCollaborationSettings(snapshot?.collaboration),
+    ...(snapshot?._syncRecovery ? { _syncRecovery: window.TripLogSyncModel.clone(snapshot._syncRecovery) } : {}),
   };
 }
 

@@ -1,0 +1,4 @@
+[functions.triplog-sync]
+# Every request is authenticated with auth.getUser(bearer) before the service client
+# or a database command is used. This supports current asymmetric Auth signing keys.
+verify_jwt = false

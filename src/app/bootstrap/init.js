@@ -289,22 +289,26 @@ function init() {
   setCommaNumberInputValue(els.budgetInput, state.totalBudget || "");
 
   els.tripNameInput.addEventListener("input", () => {
+    if (window.TripLog.features.redesign?.workspace?.isTripEditing?.()) return;
     state.tripName = els.tripNameInput.value;
     saveAndRender();
   });
 
   els.budgetInput.addEventListener("input", () => {
+    if (window.TripLog.features.redesign?.workspace?.isTripEditing?.()) return;
     state.totalBudget = parseFormattedNumber(els.budgetInput.value);
     saveAndRender();
   });
 
   els.expenseSearchInput.addEventListener("input", () => {
-    render();
+    if (window.TripLog.features.expenses.workspace) window.TripLog.features.expenses.workspace.renderLedger();
+    else render();
   });
 
   els.expenseSortSelect.addEventListener("change", () => {
     syncCustomSelect(els.expenseSortSelect);
-    render();
+    if (window.TripLog.features.expenses.workspace) window.TripLog.features.expenses.workspace.renderLedger();
+    else render();
   });
 
   els.itineraryRouteButton.addEventListener("click", () => {
@@ -366,8 +370,12 @@ function init() {
     });
   }
 
-  els.startDateInput.addEventListener("change", () => updateTripDate("startDate", els.startDateInput.value));
-  els.endDateInput.addEventListener("change", () => updateTripDate("endDate", els.endDateInput.value));
+  els.startDateInput.addEventListener("change", () => {
+    if (!window.TripLog.features.redesign?.workspace?.isTripEditing?.()) updateTripDate("startDate", els.startDateInput.value);
+  });
+  els.endDateInput.addEventListener("change", () => {
+    if (!window.TripLog.features.redesign?.workspace?.isTripEditing?.()) updateTripDate("endDate", els.endDateInput.value);
+  });
   els.daySelect.addEventListener("change", () => {
     if (els.daySelect.value && state.selectedDate !== els.daySelect.value) {
       state.selectedDate = els.daySelect.value;
@@ -386,19 +394,21 @@ function init() {
     renderExpenseFormMode();
   });
   els.currencySelect.addEventListener("change", () => {
-    syncSettingsCurrencyFromExpense();
+    if (editingId) setCommaNumberInputValue(els.exchangeRateInput, getDefaultExchangeRateForCurrency(els.currencySelect.value));
+    else syncSettingsCurrencyFromExpense();
     syncCustomSelect(els.currencySelect);
     updateExchangeRateGuide();
     updateConvertedAmount();
     updateLodgingPreview();
-    saveAndRender();
+    window.TripLog.features.expenses.workspace?.syncEditor();
+    if (!editingId) saveStateSilently();
   });
   els.foreignAmountInput.addEventListener("input", updateConvertedAmount);
   els.exchangeRateInput.addEventListener("input", () => {
-    syncSettingsExchangeRateFromExpense();
+    if (!editingId) syncSettingsExchangeRateFromExpense();
     updateExchangeRateGuide();
     updateConvertedAmount();
-    saveStateSilently();
+    if (!editingId) saveStateSilently();
   });
   els.settingsCurrencySelect.addEventListener("change", () => {
     syncExpenseCurrencyFromSettings();
@@ -582,7 +592,7 @@ function init() {
   }
 
   if (els.newTripForm) {
-    els.newTripForm.addEventListener("submit", (e) => {
+    els.newTripForm.addEventListener("submit", async (e) => {
       e.preventDefault();
       const tripName = els.newTripNameInput.value.trim();
       const travelMode = getNewTripMode();
@@ -613,7 +623,7 @@ function init() {
         return;
       }
 
-      window.TripLog.persistence.stateStorage.createNewTrip({
+      const created = await window.TripLog.persistence.stateStorage.createNewTrip({
         tripName,
         travelMode,
         country,
@@ -623,6 +633,7 @@ function init() {
         endDate
       });
 
+      if (created === false) return;
       els.newTripModal.hidden = true;
       closeNewTripCountryList();
       els.newTripForm.reset();
@@ -652,6 +663,9 @@ function init() {
     els.itineraryVoucherFile.addEventListener("change", () => {
       const file = els.itineraryVoucherFile.files[0];
       if (!file) return;
+      if (!["image/jpeg", "image/png", "image/gif", "image/webp", "application/pdf"].includes(file.type)) {
+        showToast("JPG·PNG·GIF·WebP 이미지 또는 PDF를 선택해 주세요."); els.itineraryVoucherFile.value = ""; return;
+      }
 
       const maxSizeBytes = 1.5 * 1024 * 1024;
       if (file.size > maxSizeBytes) {
@@ -661,11 +675,18 @@ function init() {
       }
 
       const reader = new FileReader();
-      reader.onload = (e) => {
-        window.TripLog.features.itinerary.form.setVoucherFile(e.target.result, file.name);
-        els.ticketFileNameDisplay.textContent = file.name;
-        els.ticketFileResetBtn.style.display = "inline-flex";
-      };
+      const tripId = state.id, itemId = editingItineraryId;
+      window.TripLog.features.itinerary.form.setVoucherLoading(new Promise(resolve => {
+        reader.onload = (e) => {
+          if (state.id !== tripId || editingItineraryId !== itemId || els.itineraryVoucherFile.files[0] !== file) { resolve(false); return; }
+          window.TripLog.features.itinerary.form.setVoucherFile(e.target.result, file.name);
+          els.ticketFileNameDisplay.textContent = file.name;
+          els.ticketFileResetBtn.style.display = "inline-flex";
+          els.itineraryMemoInput.dispatchEvent(new Event("input", { bubbles: true }));
+          resolve(true);
+        };
+        reader.onerror = reader.onabort = () => resolve(false);
+      }));
       reader.readAsDataURL(file);
     });
   }
@@ -707,6 +728,7 @@ function init() {
   window.TripLog.features.itinerary.workspace.setup();
   window.TripLog.features.redesign.workspace.setup();
   window.TripLog.features.travelCompanion.workspace.setup();
+  window.TripLog.ui.formControls.setup();
   renderHistoryModal();
   renderStorageStatus();
   refreshHistoryRecordsFromDb({ renderModal: false });

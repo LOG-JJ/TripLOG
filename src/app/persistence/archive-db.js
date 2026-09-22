@@ -53,10 +53,16 @@ function cloneForArchive(value) {
 
 function createArchiveRecord(snapshot = getStateSnapshot(), source = "manual") {
   const archivedState = cloneForArchive(snapshot);
+  if (source === "manual" && window.TripLogSyncRepository && window.TripLogSyncModel) {
+    const record = window.TripLogSyncRepository.cached(snapshot.id);
+    if (record) archivedState._syncRecovery = { sourceLocalId: record.localId, documents: Object.values(window.TripLogSyncModel.apply(record.base || {}, record.queue.flatMap(q => q.patches)).entities).filter(e => !e.deleted && ["note_update", "comment"].includes(e.kind)) };
+  }
   const entries = Array.isArray(archivedState.entries) ? archivedState.entries : [];
   const itineraryItems = Array.isArray(archivedState.itineraryItems) ? archivedState.itineraryItems : [];
   const companions = Array.isArray(archivedState.companions) ? archivedState.companions : [];
   return {
+    accountId: window.TripLog?.sync?.controller?.engine.status().active ? window.TripLog.sync.controller.engine.status().accountId : "",
+    projectId: window.TripLog?.sync?.controller?.engine.status().projectId || "",
     id: createArchiveId(),
     schemaVersion: ARCHIVE_SCHEMA_VERSION,
     source,
@@ -116,7 +122,19 @@ function readLegacyArchiveMirror() {
 }
 
 function writeLegacyArchiveMirror(records = []) {
-  localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify(sortArchiveRecords(records)));
+  const foreign = readLegacyArchiveMirror().filter(record => !isArchiveInCurrentScope(record));
+  localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify(sortArchiveRecords([...foreign, ...records])));
+}
+
+function isArchiveInCurrentScope(record) {
+  const runtime = window.TripLog?.sync?.controller?.engine.status();
+  if (!runtime) return true;
+  const account = runtime.active ? runtime.accountId : "";
+  if (record.accountId) return record.accountId === account && (!record.projectId || record.projectId === runtime.projectId);
+  const stored = window.TripLogSyncRepository?.cached(record.state?.id);
+  if (stored?.accountId) return stored.accountId === account && (!stored.projectId || stored.projectId === runtime.projectId);
+  const owner = record.state?.collaboration?.ownerId;
+  return !owner || owner.startsWith("local_") || owner === account;
 }
 
 async function saveArchiveRecord(record) {
@@ -155,7 +173,8 @@ async function deleteArchiveRecord(id) {
 
 async function clearArchiveRecords() {
   if (isArchiveDbSupported()) {
-    await withArchiveStore("readwrite", (store) => store.clear());
+    const records = (await loadArchiveRecords()).filter(isArchiveInCurrentScope);
+    await withArchiveStore("readwrite", (store) => records.forEach(record => store.delete(record.id)));
   }
   writeLegacyArchiveMirror([]);
 }
@@ -209,6 +228,8 @@ async function importArchiveJsonFile(file) {
   const text = await file.text();
   const payload = JSON.parse(text);
   const records = extractArchiveRecordsFromPayload(payload).map(normalizeArchiveRecord).filter(Boolean);
+  const identity = window.TripLog?.sync?.controller?.engine.status();
+  if (identity?.active) for (const record of records) { record.accountId = identity.accountId; record.projectId = identity.projectId; }
   if (!records.length) throw new Error("가져올 여행 기록이 없습니다.");
   await Promise.all(records.map(saveArchiveRecord));
   return sortArchiveRecords(records);
@@ -217,6 +238,7 @@ async function importArchiveJsonFile(file) {
 window.TripLog.register("persistence.archiveDb", {
   ARCHIVE_DB_NAME,
   ARCHIVE_SCHEMA_VERSION,
+  isArchiveInCurrentScope,
   isArchiveDbSupported,
   createArchiveRecord,
   normalizeArchiveRecord,

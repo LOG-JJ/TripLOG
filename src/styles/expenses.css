@@ -1,0 +1,246 @@
+/* Expense layout uses the shared TripLOG palette and control proportions. */
+.ex-ledger, .ex-editor {
+  --ex-ink: var(--text);
+  --ex-muted: var(--muted);
+  --ex-line: var(--rd-divider);
+  --ex-yellow: var(--rd-yellow);
+  --ex-blue: var(--rd-blue);
+  color: var(--ex-ink);
+  font-variant-numeric: tabular-nums;
+}
+.ex-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.rd-app .ex-ledger { max-width: 960px; padding: 10px 24px 96px; }
+.rd-app .ex-ledger .ph, .rd-app .ex-editor .ph { -webkit-text-stroke: 0; font-size: 22px; }
+.ex-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: 16px; }
+.rd-app .ex-heading h1 { font-size: 32px; line-height: 1.2; letter-spacing: -.8px; font-weight: 750; margin: 0 0 4px; color: var(--ex-ink); }
+.ex-trip-line { display: flex; align-items: center; gap: 12px; }
+.ex-trip-line > .ph { color: var(--ex-muted); font-size: 28px !important; }
+.ex-trip-line p { margin: 0 0 4px; font-size: 16px; line-height: 1.35; font-weight: 550; overflow-wrap: anywhere; }
+.ex-trip-line small { color: var(--ex-muted); font-size: 13px; line-height: 1.5; }
+.ex-heading-actions { display: flex; gap: 10px; padding-top: 2px; flex-shrink: 0; }
+.rd-app .ex-button { display: inline-flex; justify-content: center; align-items: center; gap: 8px; min-height: 44px; border: 1.8px solid var(--text); padding: 9px 14px; border-radius: 9px; color: var(--text); background: white; font-size: 15px; line-height: 1.35; font-weight: 700; box-shadow: none; }
+.rd-app .ex-primary { background: var(--rd-yellow); box-shadow: 1px 2px 0 var(--text); }
+.rd-app .ex-secondary { background: var(--rd-blue); }
+.rd-app .ex-button:hover { filter: brightness(.98); }
+.rd-app .ex-button:active { transform: translateY(1px) scale(.99); box-shadow: none; }
+.ex-budget-summary { border: 1.5px solid var(--ex-ink); border-radius: 10px; padding: 18px 22px 16px; margin-bottom: 20px; background: #fff; }
+.ex-budget-values { display: grid; grid-template-columns: 1.12fr 1.14fr 1fr; }
+.ex-budget-values > div { padding: 0 24px; border-left: 1px solid var(--ex-line); min-width: 0; }
+.ex-budget-values > div:first-child { padding-left: 0; border: 0; }
+.ex-budget-values > div:last-child { padding-right: 0; }
+.ex-budget-values span { display: block; font-size: 14px; line-height: 1.35; font-weight: 500; margin-bottom: 6px; }
+.ex-budget-values strong { display: block; font-size: clamp(21px, 2.35vw, 28px); line-height: 1.3; letter-spacing: -.65px; font-weight: 750; white-space: nowrap; }
+.ex-budget-values .ex-remaining strong { color: var(--ex-ink); }
+.ex-budget-values .is-over strong { color: #d33365; }
+.ex-progress-row { display: flex; align-items: center; gap: 18px; margin-top: 16px; }
+.ex-progress-row progress { appearance: none; display: block; flex: 1; width: 0; height: 10px; overflow: hidden; border: 1px solid var(--ex-ink); border-radius: 100px; background: #f0f1f4; box-shadow: none; }
+.ex-progress-row progress::-webkit-progress-bar { background: #f0f1f4; border-radius: 100px; }
+.ex-progress-row progress::-webkit-progress-value { background: var(--rd-yellow); border-radius: 100px; transition: width 180ms ease; }
+.ex-progress-row progress::-moz-progress-bar { background: var(--rd-yellow); border-radius: 100px; }
+.ex-progress-row b { min-width: 40px; font-size: 16px; font-weight: 650; }
+.ex-toolbar { display: grid; grid-template-columns: minmax(0, 1fr) 185px 160px; gap: 14px; align-items: center; }
+.ex-filter-controls { display: contents; }
+#exFilterToggle { display: none; }
+.ex-search { display: flex; align-items: center; gap: 10px; border: 1.5px solid var(--ex-ink); border-radius: 9px; min-height: 44px; padding: 0 12px; background: white; }
+.ex-search #rdSearchMount { display: block; flex: 1; min-width: 0; border: 0; }
+.rd-app .ex-search #expenseSearchInput { display: block; height: 44px; min-height: 44px; width: 100%; max-width: none; border: 0 !important; border-radius: 0; box-shadow: none !important; padding: 0 !important; background: transparent !important; color: var(--ex-ink); font-size: 15px; font-weight: 400; }
+.ex-search input::placeholder { color: var(--ex-muted); opacity: 1; }
+.ex-search input::-webkit-search-cancel-button { appearance: none; }
+.ex-search > button { display: grid; place-items: center; width: 30px; min-height: 44px; padding: 0; border: 0; background: none; box-shadow: none; color: var(--ex-muted); }
+.ex-toolbar label { margin: 0; }
+.rd-app .ex-toolbar .custom-select-button { border: 1.5px solid var(--ex-ink); border-radius: 9px; min-height: 44px; height: 44px; padding: 9px 12px; color: var(--ex-ink); box-shadow: none; font-size: 14px; font-weight: 600; }
+.rd-app .ex-toolbar :is(.custom-select-value, .custom-select-value > span) { font: inherit; }
+.rd-app .ex-ledger .custom-select-menu { border: 1.5px solid var(--ex-ink); border-radius: 9px; box-shadow: 2px 3px 0 var(--ex-ink); }
+.rd-app .ex-ledger .custom-select-option { min-height: 44px; font-size: 14px; font-weight: 500; }
+.rd-app .ex-ledger .custom-select-option[aria-selected="true"] { background: var(--rd-yellow); color: var(--ex-ink); }
+.ex-list-controls { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 14px 0 12px; }
+.ex-tabs { display: flex; gap: 9px; min-width: 0; max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+.rd-app .ex-tabs button { min-height: 40px; padding: 8px 22px; border: 1.5px solid var(--ex-ink); border-radius: 8px; background: white; font-size: 14px; font-weight: 600; box-shadow: none; white-space: nowrap; }
+.rd-app .ex-tabs button.active { background: var(--rd-yellow); color: var(--ex-ink); font-weight: 700; box-shadow: 1px 2px 0 var(--ex-ink); }
+.rd-app .ex-text-button { padding: 8px 0; min-height: 40px; border: 0; background: none; color: var(--ex-muted); box-shadow: none; font-size: 12px; white-space: nowrap; }
+.ex-result-summary { font-size: 13px; color: var(--ex-muted); line-height: 1.5; margin: 0 0 10px; }
+.ex-table-wrap { min-width: 0; }
+.rd-app .ex-table { display: table; table-layout: fixed; width: 100%; border-collapse: separate; border-spacing: 0; text-align: left; margin: 0; border: 0; color: var(--ex-ink); }
+.ex-table th { height: 40px; padding: 10px 12px; background: #f5f6f8; border: 0; font-size: 13px; font-weight: 650; color: var(--ex-muted); text-align: left; }
+.ex-table th:first-child { width: 105px; border-radius: 8px 0 0 8px; }
+.ex-table th:nth-child(3) { width: 105px; }
+.ex-table th:nth-child(4) { width: 110px; }
+.ex-table th:nth-child(5) { width: 142px; text-align: right; }
+.ex-table th:last-child { width: 46px; border-radius: 0 8px 8px 0; }
+.ex-table td { height: 56px; padding: 7px 12px; border: 0; border-bottom: 1px solid #e8edf4; background: transparent; vertical-align: middle; font-size: 15px; line-height: 1.35; }
+.ex-table tbody tr { cursor: pointer; transition: background-color 140ms ease; }
+.ex-table tbody tr:hover, .ex-table tbody tr:focus-within { background: #fffbd6; }
+.ex-row-date { white-space: nowrap; }
+.rd-app .ex-entry-title { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; max-width: 100%; text-align: left; font-size: 16px; font-weight: 550; line-height: 1.35; background: none; padding: 0; margin: 0; border: 0; box-shadow: none; overflow-wrap: anywhere; }
+.ex-row-copy small { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; color: var(--ex-muted); font-size: 14px; line-height: 1.35; margin-top: 2px; overflow-wrap: anywhere; }
+.ex-row-category > span { display: inline-flex; align-items: center; gap: 9px; white-space: nowrap; }
+.ex-row-category .ph { color: var(--ex-ink); background: var(--ex-category); border: 1px solid var(--ex-ink); border-radius: 6px; padding: 4px; font-size: 18px !important; }
+.ex-row-payment .ph { display: inline-block; vertical-align: middle; margin-right: 8px; }
+.ex-row-payment span { vertical-align: middle; }
+.ex-row-amount { text-align: right; white-space: nowrap; }
+.ex-row-amount strong { font-size: 17px; font-weight: 700; line-height: 1.5; }
+.ex-row-amount small { display: block; color: var(--ex-muted); font-size: 12px; }
+.ex-row-edit { padding: 0 !important; }
+.rd-app .ex-row-edit button { display: grid; place-items: center; width: 44px; min-height: 44px; padding: 0; border: 0; border-radius: 8px; background: none; box-shadow: none; }
+.rd-app .ex-row-edit button:hover { background: var(--rd-yellow); }
+.ex-row-mobile-meta, .ex-mobile-add { display: none; }
+.ex-empty { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 300px; padding: 30px 20px; text-align: center; }
+.rd-app .ex-empty > .ph { font-size: 42px; color: var(--ex-muted); margin-bottom: 18px; }
+.rd-app .ex-empty h2 { font-size: 20px; font-weight: 650; margin: 0 0 8px; }
+.ex-empty p { color: var(--ex-muted); font-size: 14px; line-height: 1.6; margin: 0 0 20px; }
+
+/* The existing form fields remain the source of truth for saving and receipt import. */
+.rd-app #rdExpenseEditor.ex-editor { width: 430px; height: fit-content; max-width: calc(100vw - 32px); max-height: calc(100dvh - 32px); padding: 18px; border: 2px solid var(--ex-ink); border-radius: 14px; background: #fff; box-shadow: 3px 4px 0 var(--ex-ink); color: var(--ex-ink); }
+.rd-app #rdExpenseEditor.ex-editor[open] { display: flex; flex-direction: column; overflow: hidden; }
+.ex-editor .rd-dialog-head { flex: 0 0 auto; min-height: 30px; margin: 0 0 12px; }
+.ex-editor .rd-dialog-head > .rd-logo { width: 96px; height: 30px; }
+.rd-app .ex-editor .rd-dialog-head .rd-icon-button { min-height: 36px; width: 36px; padding: 0; border: 0; background: none; box-shadow: none; }
+.rd-app .ex-editor .rd-dialog-body { flex: 1; min-height: 0; padding: 0 2px; margin: 0 -2px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #dce4ef transparent; }
+.ex-editor-title { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 0 0 14px; }
+.rd-app #rdExpenseEditor.ex-editor h1 { margin: 0; font-size: 24px; line-height: 1.25; letter-spacing: -.6px; font-weight: 800; }
+.ex-editor .rd-expense-tools { margin: 0; padding: 0; }
+.rd-app .ex-editor .rd-receipt-launch { min-height: 40px; padding: 8px 11px; border: 1.5px solid var(--ex-ink); border-radius: 8px; background: var(--rd-blue); color: var(--ex-ink); font-size: 13px; font-weight: 700; box-shadow: 1px 2px 0 var(--ex-ink); }
+.rd-app .ex-editor .rd-receipt-launch.is-active { background: var(--rd-yellow); color: var(--ex-ink); }
+.ex-editor-trip { display: none; }
+.rd-app #rdExpenseEditor.ex-editor .expense-form { display: flex; flex-direction: column; align-items: stretch; gap: 14px; margin: 0; padding: 0; border: 0; background: none; }
+.rd-app #rdExpenseEditor.ex-editor .expense-form > * { order: 0; }
+.rd-app #rdExpenseEditor.ex-editor #foreignFields { display: none !important; }
+.rd-app #rdExpenseEditor.ex-editor .expense-form label { min-width: 0; display: flex; flex-direction: column; gap: 6px; margin: 0; color: var(--ex-ink); font-size: 14px; font-weight: 650; line-height: 1.4; }
+.rd-app #rdExpenseEditor.ex-editor .expense-form label[hidden], .rd-app #rdExpenseEditor.ex-editor .expense-form [hidden] { display: none !important; }
+.rd-app #rdExpenseEditor.ex-editor :is(input:not([type="hidden"]), .custom-select-button, .custom-date-button) { min-height: 44px; height: 44px; padding: 9px 11px; border: 1.5px solid var(--ex-ink); border-radius: 9px; background: #fff; box-shadow: none; color: var(--ex-ink); font-size: 16px; line-height: 22px; font-weight: 500; }
+.rd-app #rdExpenseEditor.ex-editor :is(.custom-select-value, .custom-select-value > span, .custom-date-value, .custom-date-text, .custom-date-text span) { font: inherit; }
+.rd-app #rdExpenseEditor.ex-editor .expense-form label > span { font: inherit; }
+.rd-app #rdExpenseEditor.ex-editor input::placeholder { color: var(--ex-muted); opacity: 1; }
+.rd-app #rdExpenseEditor.ex-editor :is(input,button,summary):focus-visible, .rd-app .ex-ledger :is(input,button):focus-visible { outline: 2px solid var(--ex-ink); outline-offset: 2px; }
+.ex-field-title, .ex-category-field legend { font-size: 14px; line-height: 20px; font-weight: 650; margin: 0 0 6px; }
+.ex-field-title > span, .ex-category-field legend > span { color: #ff4b70; margin-left: 4px; }
+.ex-amount-input-row { display: flex; align-items: center; border: 1.8px solid var(--ex-ink); border-radius: 9px; padding: 0; min-height: 46px; transition: background-color var(--rd-motion), box-shadow var(--rd-motion); }
+.ex-amount-input-row:focus-within { background: #fffbd6; box-shadow: 1px 2px 0 var(--ex-ink); }
+#exAmountInputs { flex: 1; min-width: 0; }
+.rd-app #rdExpenseEditor.ex-editor .ex-payment-amount > span { position: absolute; clip-path: inset(50%); width: 1px; height: 1px; overflow: hidden; }
+.rd-app #rdExpenseEditor.ex-editor .ex-payment-amount input { border: 0; border-radius: 7px; width: 100%; min-width: 0; padding: 7px 11px; background: transparent; font-size: 22px; line-height: 1.25; height: 42px; min-height: 42px; font-weight: 750; letter-spacing: -.35px; font-variant-numeric: tabular-nums; }
+.rd-app #rdExpenseEditor.ex-editor .ex-payment-amount input:focus-visible, .rd-app #rdExpenseEditor.ex-editor #exCurrencyMount .custom-select-button:focus-visible { outline: none; box-shadow: none; }
+#exCurrencyMount { flex: 0 0 112px; width: 112px; }
+.ex-editor #exCurrencyMount label > span { display: none; }
+.rd-app #rdExpenseEditor.ex-editor #exCurrencyMount .custom-select-button { height: 42px; min-height: 42px; padding: 8px 10px; background: transparent; border: 0; border-left: 1px solid var(--ex-ink); border-radius: 0 7px 7px 0; font-size: 14px; font-weight: 650; }
+.rd-app #rdExpenseEditor.ex-editor #exCurrencyMount .custom-select-button[aria-expanded="true"] { background: var(--rd-yellow); }
+.rd-app #rdExpenseEditor.ex-editor #exCurrencyMount .custom-select-button:disabled { opacity: 1; color: var(--ex-muted); }
+#exCurrencyMount.is-fixed .custom-select-chevron { visibility: hidden; }
+.ex-conversion-row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-top: 5px; min-height: 18px; }
+#exConversionSummary { font-size: 12px; line-height: 1.5; color: var(--ex-muted); }
+.rd-app #exRateToggle { flex-shrink: 0; min-height: 24px; padding: 0; border: 0; background: none; color: var(--ex-ink); font-size: 12px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; box-shadow: none; }
+#exRatePanel { padding: 10px; margin-top: 8px; border: 1px solid var(--ex-ink); border-radius: 9px; background: #fffbd6; }
+.ex-description-field { position: relative; }
+.rd-app #rdExpenseEditor.ex-editor .ex-description-field input { padding-right: 44px; }
+.rd-app #rdExpenseEditor.ex-editor .ex-description-clear { position: absolute; right: 4px; bottom: 2px; display: grid; place-items: center; width: 38px; min-height: 42px; padding: 0; border: 0; background: none; color: #8293ae; box-shadow: none; }
+.ex-category-field { min-width: 0; margin: 0; padding: 0; border: 0; }
+.ex-category-field legend { padding: 0; }
+.ex-category-choices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+.rd-app .ex-category-choices button { display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 7px; min-height: 44px; padding: 8px 5px; background: #fff; border: 1.5px solid var(--ex-ink); border-radius: 8px; font-size: 14px; line-height: 19px; font-weight: 600; color: var(--ex-ink); box-shadow: none; }
+.rd-app .ex-category-choices .ph { font-size: 20px; }
+.rd-app .ex-category-choices button.active { color: var(--ex-ink); border-color: var(--ex-ink); background: var(--rd-yellow); box-shadow: 1px 2px 0 var(--ex-ink); }
+.rd-app .ex-category-choices button.active span { color: var(--ex-ink); }
+.ex-date-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.rd-app #rdExpenseEditor.ex-editor .ex-date-row .wide { grid-column: auto; }
+.rd-app #rdExpenseEditor.ex-editor .ex-date-row .custom-date-button, .rd-app #rdExpenseEditor.ex-editor .ex-date-row .custom-select-button { font-size: 15px; padding: 10px; }
+.ex-required { font-style: normal; font-size: 14px; color: #ff4b70; padding-left: 5px; }
+.ex-date-row .custom-date-text, .ex-date-row .custom-select-value { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.rd-app .ex-date-row .custom-date-icon { display: none; }
+.rd-app #rdExpenseEditor.ex-editor .payment-method-field { width: 100%; align-self: stretch; gap: 8px; }
+.rd-app .ex-editor .payment-method-label { font-size: 14px; font-weight: 600; }
+.rd-app #rdExpenseEditor.ex-editor .payment-method-toggle { display: flex; align-self: stretch; width: 100%; gap: 12px; border: 0; padding: 0; background: none; box-shadow: none; overflow: visible; }
+.rd-app #rdExpenseEditor.ex-editor .payment-method-toggle button { min-height: 44px; padding: 9px; border: 1.5px solid var(--ex-ink); border-radius: 8px; font-size: 14px; font-weight: 650; background: #fff; box-shadow: none; }
+.rd-app #rdExpenseEditor.ex-editor .payment-method-toggle button.active { border-color: var(--ex-ink); background: var(--rd-yellow); color: var(--ex-ink); box-shadow: 1px 2px 0 var(--ex-ink); }
+.rd-app .ex-editor #rdExpenseMemo { padding: 0; border: 0; margin: 0; background: #fff; }
+.rd-app .ex-editor #rdExpenseMemo > summary { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px; border: 1.5px solid var(--ex-ink); border-radius: 9px; font-size: 14px; line-height: 1.5; font-weight: 600; list-style: none; }
+.ex-editor #rdExpenseMemo > summary::marker { content: ''; }
+.ex-editor #rdExpenseMemo > summary::-webkit-details-marker { display: none; }
+.ex-editor #rdExpenseMemo > summary span { flex: 1; }
+.ex-editor #rdExpenseMemo > :not(summary) { margin-top: 12px !important; }
+.ex-editor #rdExpenseMemo[open] > summary .ph:last-child { transform: rotate(180deg); }
+.rd-app #rdExpenseEditor.ex-editor .rd-dialog-footer { flex: 0 0 auto; display: flex; flex-wrap: wrap; gap: 10px; position: static; margin: 0; padding: 14px 0 3px; background: #fff; border: 0; box-shadow: none; }
+.rd-app #rdExpenseEditor.ex-editor .rd-dialog-footer > button { flex: 1; min-height: 46px; border: 1.8px solid var(--ex-ink); border-radius: 9px; font-size: 15px; line-height: 1.4; font-weight: 750; box-shadow: 1px 2px 0 var(--ex-ink); }
+.rd-app #rdExpenseEditor.ex-editor #rdExpenseSubmit { background: var(--rd-yellow); color: var(--ex-ink); }
+.rd-app #rdExpenseEditor.ex-editor #exExpenseError { flex-basis: 100%; margin: 0; color: #ba244f; font-size: 13px; line-height: 1.5; }
+.rd-app #rdExpenseEditor.ex-editor [aria-invalid="true"] { border-color: #d83969; }
+.rd-app #rdExpenseEditor.ex-editor #lodgingFields { border: 1px solid var(--ex-line); border-radius: 12px; padding: 12px; gap: 10px; background: #f7f9fc; }
+.ex-editor #lodgingPreview { font-size: 12px; line-height: 1.5; border: 0; padding: 0; }
+.rd-app .ex-editor :is(.custom-select-menu, .custom-date-panel) { border: 1.5px solid var(--ex-ink); border-radius: 9px; box-shadow: 2px 3px 0 var(--ex-ink); }
+.rd-app .ex-editor .custom-select-option { min-height: 44px; font-size: 14px; font-weight: 500; }
+.rd-app .ex-editor .custom-select-option[aria-selected="true"] { background: var(--rd-yellow); color: var(--ex-ink); }
+.ex-editor #rdReceiptNotice:empty { display: none; }
+
+@media (max-width: 760px) {
+  .rd-app[data-page="budget"] > .app-shell { margin: 0; border: 0; border-radius: 0; min-height: 100dvh; }
+  .rd-app[data-page="budget"] .rd-header { padding: 14px 20px 8px; height: 60px; }
+  .rd-app .ex-ledger { padding: 14px 20px 162px; }
+  .ex-heading { gap: 10px; margin-bottom: 18px; }
+  .rd-app .ex-heading h1 { font-size: 28px; margin-bottom: 8px; }
+  .ex-trip-line { gap: 0; }
+  .ex-trip-line > .ph { display: none; }
+  .ex-trip-line p { font-size: 14px; }
+  .ex-trip-line small { display: none; }
+  .rd-app .ex-heading-actions .ex-button { min-height: 42px; padding: 10px 12px; font-size: 13px; }
+  .ex-heading-actions .ex-desktop-add { display: none; }
+  .ex-budget-summary { padding: 16px 18px; margin-bottom: 18px; }
+  .ex-budget-values { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); row-gap: 12px; align-items: end; }
+  .ex-budget-values > div { padding: 0; border: 0; }
+  .ex-budget-values > div:nth-child(2) { padding-left: 12px; border-left: 1px solid var(--ex-line); }
+  .ex-budget-values > div:nth-child(3) { grid-column: 1 / -1; display: flex; align-items: center; gap: 8px; color: var(--ex-muted); }
+  .ex-budget-values span { font-size: 12px; margin-bottom: 4px; }
+  .ex-budget-values strong { font-size: 18px; letter-spacing: -.5px; }
+  .ex-budget-values > div:first-child strong { font-size: clamp(22px, 6.5vw, 26px); }
+  .ex-budget-values > div:nth-child(3) strong { font-size: 13px; font-weight: 500; letter-spacing: 0; }
+  .ex-budget-values > div:nth-child(3) span { margin: 0; }
+  .ex-progress-row { margin-top: 12px; gap: 12px; }
+  .ex-progress-row progress { height: 10px; }
+  .ex-progress-row b { min-width: 32px; font-size: 14px; }
+  .ex-toolbar { grid-template-columns: minmax(0, 1fr) auto; gap: 10px; }
+  .ex-search { grid-column: 1; }
+  .ex-filter-controls { grid-column: 1 / -1; display: none; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .ex-toolbar.is-expanded .ex-filter-controls { display: grid; }
+  .rd-app #exFilterToggle { display: inline-flex; justify-content: center; align-items: center; gap: 6px; min-height: 44px; padding: 9px 12px; border: 1.5px solid var(--ex-ink); border-radius: 9px; font-size: 14px; font-weight: 650; background: white; color: var(--ex-ink); box-shadow: none; }
+  .rd-app #exFilterToggle.is-active { color: var(--ex-ink); background: var(--rd-yellow); }
+  .rd-app .ex-tabs { gap: 7px; }
+  .rd-app .ex-tabs button { padding: 9px 15px; font-size: 13px; min-height: 40px; }
+  .ex-list-controls { flex-wrap: wrap; margin: 14px 0 4px; }
+  .rd-app .ex-table, .ex-table tbody { display: block; }
+  .ex-table thead { display: none; }
+  .ex-table tr { display: grid; grid-template-columns: minmax(0, 1fr) auto 32px; gap: 3px 9px; position: relative; padding: 15px 0; border-bottom: 1px solid #e8edf4; }
+  .ex-table td { display: block; height: auto; padding: 0; border: 0; }
+  .ex-table .ex-row-date { grid-column: 1 / -1; color: var(--ex-muted); font-size: 12px; margin-bottom: 3px; }
+  .ex-table .ex-row-copy { grid-column: 1; }
+  .rd-app .ex-entry-title { font-size: 15px; }
+  .ex-row-copy small { font-size: 12px; }
+  .ex-table .ex-row-category, .ex-table .ex-row-payment { display: none; }
+  .ex-row-mobile-meta { display: block; margin-top: 5px; color: var(--ex-muted); font-size: 12px; }
+  .ex-table .ex-row-amount { grid-column: 2; grid-row: 2; padding-top: 1px; }
+  .ex-row-amount strong { font-size: 15px; }
+  .ex-row-amount small { font-size: 11px; }
+  .ex-table .ex-row-edit { grid-column: 3; grid-row: 2; }
+  .rd-app .ex-row-edit button { width: 32px; min-height: 44px; margin-top: -10px; }
+  .rd-app .ex-row-edit .ph { font-size: 20px; }
+  .ex-mobile-add { display: block; position: fixed; z-index: 50; left: 0; right: 0; bottom: calc(69px + env(safe-area-inset-bottom)); padding: 10px 20px; background: #fff; border-top: 1px solid #edf0f5; }
+  .ex-mobile-add .ex-button { width: 100%; min-height: 48px; }
+  .rd-app[data-page="budget"] .toss-toast { bottom: calc(148px + env(safe-area-inset-bottom)); }
+}
+@media (max-width: 599px) {
+  .rd-app #rdExpenseEditor.ex-editor { width: 100%; max-width: 100%; height: 100dvh; max-height: 100dvh; padding: 20px 20px calc(12px + env(safe-area-inset-bottom)); margin: 0; border: 0; border-radius: 0; box-shadow: none; }
+  .ex-editor .rd-dialog-head { margin-bottom: 12px; }
+  .ex-editor-title { margin-bottom: 12px; }
+  .rd-app #rdExpenseEditor.ex-editor .rd-dialog-footer { padding-top: 16px; }
+  .rd-app #rdExpenseEditor.ex-editor .expense-form { gap: 12px; }
+  .rd-app #rdExpenseEditor.ex-editor .ex-category-choices button { min-height: 44px; }
+}
+@media (max-width: 359px) {
+  .rd-app .ex-ledger { padding-left: 14px; padding-right: 14px; }
+  .rd-app[data-page="budget"] .rd-header { padding-left: 14px; padding-right: 14px; }
+  .ex-budget-values strong { font-size: 17px; }
+  .ex-budget-values > div:first-child strong { font-size: 22px; }
+  .rd-app .ex-tabs button { padding: 9px 12px; }
+  .ex-table tr { column-gap: 6px; grid-template-columns: minmax(0, 1fr) auto 28px; }
+  .rd-app #rdExpenseEditor.ex-editor { padding-left: 14px; padding-right: 14px; }
+  #exCurrencyMount { flex-basis: 112px; width: 112px; }
+  .ex-date-row { gap: 10px; }
+  .rd-app #rdExpenseEditor.ex-editor .ex-payment-amount input { font-size: 22px; }
+}

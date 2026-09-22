@@ -17,6 +17,7 @@ function attachCustomTimePickerDocumentListener() {
 function pruneDetachedCustomTimePickers() {
   Array.from(customTimePickers.entries()).forEach(([input, control]) => {
     if (!input.isConnected || !control.shell.isConnected) {
+      stopTimeWheels(input, true);
       customTimePickers.delete(input);
     }
   });
@@ -26,6 +27,7 @@ function destroyCustomTimePicker(input) {
   const control = customTimePickers.get(input);
   if (!control) return;
 
+  stopTimeWheels(input, true);
   setTimePickerLayerState(input, false);
   input.classList.remove("native-time-hidden");
 
@@ -46,13 +48,13 @@ function setupCustomTimePicker(input) {
   shell.className = "custom-time";
   shell.dataset.timeId = input.id;
 
-  const button = document.createElement("div"); // Change to div container to contain text input
+  const button = document.createElement("div");
   button.className = "custom-time-button";
   button.setAttribute("role", "combobox");
   button.setAttribute("aria-haspopup", "dialog");
   button.setAttribute("aria-expanded", "false");
 
-  const value = document.createElement("input"); // Change to text input for typing!
+  const value = document.createElement("input");
   value.type = "text";
   value.className = "custom-time-value";
   value.placeholder = "시간 선택";
@@ -75,19 +77,36 @@ function setupCustomTimePicker(input) {
   icon.innerHTML = '<svg viewBox="0 0 24 24" focusable="false"><path d="M12 7v5l3 2" /><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>';
 
   const panel = document.createElement("div");
-  panel.className = "custom-time-panel";
+  panel.className = "custom-time-panel control-popover control-time-wheel";
   panel.id = input.id ? `${input.id}Panel` : `customTimePanel${customTimePickers.size + 1}`;
   panel.setAttribute("role", "dialog");
+  panel.setAttribute('aria-label', '시간 선택');
   panel.hidden = true;
   button.setAttribute("aria-controls", panel.id);
 
   input.parentNode.insertBefore(shell, input);
   shell.appendChild(input);
-  button.append(value, icon);
+  const chevron = document.createElement('span');
+  chevron.className = 'custom-select-chevron';
+  chevron.setAttribute('aria-hidden', 'true');
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'custom-time-toggle';
+  toggle.setAttribute('aria-label', '시간 선택 열기');
+  toggle.setAttribute('aria-controls', panel.id);
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.setAttribute('aria-haspopup', 'dialog');
+  toggle.append(chevron);
+  button.append(icon, value, toggle);
   shell.append(button, panel);
   input.classList.add("native-time-hidden");
+  input.tabIndex = -1;
+  input.setAttribute("aria-hidden", "true");
+  value.id = `${input.id}Text`;
+  const label = input.closest("label");
+  if (label?.htmlFor === input.id) label.htmlFor = value.id;
 
-  customTimePickers.set(input, { shell, button, value, panel, openValue: input.value || "", panelDirty: false });
+  customTimePickers.set(input, { shell, button, value, panel, toggle, openValue: input.value || "", panelDirty: false });
   attachCustomTimePickerDocumentListener();
 
   // Pointer users expect the whole field to behave like the clock icon. Open
@@ -102,7 +121,7 @@ function setupCustomTimePicker(input) {
 
   // Open panel on keyboard focus.
   value.addEventListener("focus", () => {
-    openCustomTimePicker(input);
+    if (!customTimePickers.get(input)?.suppressFocusOpen) openCustomTimePicker(input);
   });
 
   value.addEventListener("click", (event) => {
@@ -122,7 +141,7 @@ function setupCustomTimePicker(input) {
       if (input.value !== raw) {
         input.value = raw;
         input.dispatchEvent(new Event("input", { bubbles: true }));
-        renderTimePicker(input);
+        refreshOpenTimePickerSelection(input, { animate: true });
       }
     }
   });
@@ -176,16 +195,27 @@ function setupCustomTimePicker(input) {
     toggleCustomTimePicker(input);
   });
 
+  // Keep focus inside the control on pointer press. Otherwise blur can close
+  // the panel before click, and label activation can focus/reopen the text box.
+  button.addEventListener('pointerdown', event => {
+    if (event.button === 0 && event.target !== value) event.preventDefault();
+  });
+  toggle.addEventListener('click', event => {
+    event.preventDefault(); event.stopPropagation();
+    toggleCustomTimePicker(input);
+  });
+
   button.addEventListener("click", (event) => {
+    event.preventDefault();
     event.stopPropagation();
-    // If clicking container but not input itself, focus input
+    // The chevron must reopen after Confirm has already restored input focus.
     if (event.target !== value && event.target !== icon && !icon.contains(event.target)) {
-      focusTimePickerElement(value);
+      toggleCustomTimePicker(input);
     }
   });
 
   button.addEventListener("keydown", (event) => {
-    if (event.target === value) return;
+    if (event.target === value || toggle.contains(event.target)) return;
     if (["ArrowDown", "Enter", " "].includes(event.key)) {
       event.preventDefault();
       openCustomTimePicker(input);
@@ -214,6 +244,10 @@ function setupCustomTimePicker(input) {
     event.stopPropagation();
     handleTimePickerKeydown(event, input);
   });
+  shell.addEventListener('focusout', () => {
+    setTimeout(() => { if (!shell.contains(document.activeElement)) closeCustomTimePicker(input); }, 0);
+  });
+  renderTimePicker(input);
   syncCustomTimePicker(input);
 }
 
@@ -236,6 +270,9 @@ function syncCustomTimePicker(input) {
   }
 
   control.button.classList.toggle("is-disabled", input.disabled);
+  control.toggle.disabled = input.disabled;
+  control.button.setAttribute('aria-disabled', String(input.disabled));
+  if (input.disabled && !control.panel.hidden) closeCustomTimePicker(input, { commit: false });
   if (!control.panel.hidden) renderTimePicker(input);
 }
 
@@ -266,13 +303,18 @@ function openCustomTimePicker(input) {
   control.panel.hidden = false;
   control.button.classList.add("open");
   control.button.setAttribute("aria-expanded", "true");
+  control.toggle.setAttribute('aria-expanded', 'true');
+  control.toggle.setAttribute('aria-label', '시간 선택 닫기');
   setTimePickerLayerState(input, true);
+  positionFormPopup(control.panel, control.button, 304);
+  alignSelectedTimeOptions(input);
 }
 
 function closeCustomTimePicker(input, { commit = true } = {}) {
   const control = customTimePickers.get(input);
   if (!control) return;
   if (!input.isConnected || !control.shell.isConnected) {
+    stopTimeWheels(input, true);
     customTimePickers.delete(input);
     return;
   }
@@ -281,18 +323,26 @@ function closeCustomTimePicker(input, { commit = true } = {}) {
   if (!wasOpen) return;
   let shouldDispatchChange = false;
   if (wasOpen && commit) {
+    flushTimeWheels(input);
     const previousValue = control.openValue ?? input.value ?? "";
     if (input.value || control.panelDirty) {
       commitTimePanelInputs(input);
     }
     shouldDispatchChange = input.value !== previousValue;
   }
-  control.panel.hidden = true;
-  closeTimeDropdowns(input);
+  if (!commit && input.value !== control.openValue) {
+    input.value = control.openValue;
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+  stopTimeWheels(input);
+  hideFormPopup(control.panel);
   control.button.classList.remove("open");
   control.button.setAttribute("aria-expanded", "false");
+  control.toggle.setAttribute('aria-expanded', 'false');
+  control.toggle.setAttribute('aria-label', '시간 선택 열기');
   setTimePickerLayerState(input, false);
   control.openValue = input.value || "";
+  refreshOpenTimePickerSelection(input);
   if (wasOpen && commit && shouldDispatchChange) {
     input.dispatchEvent(new Event("change", { bubbles: true }));
   }
@@ -317,516 +367,193 @@ function setTimePickerLayerState(input, isOpen) {
 function renderTimePicker(input) {
   const control = customTimePickers.get(input);
   if (!control) return;
-
-  // Reuse the fixed option DOM instead of rebuilding it on every interaction.
-  if (control.panel.childElementCount) {
-    refreshOpenTimePickerSelection(input);
-    return;
-  }
-
-  const selected = getTimePickerSelection(input.value);
-
-  control.panel.replaceChildren();
-  const grid = document.createElement("div");
-  grid.className = "time-panel-grid";
-  grid.append(createTimeColumn("시", "hour", Array.from({ length: 24 }, (_, index) => {
-    const value = padNumber(index);
-    return { value, label: value };
-  }), selected.hour24));
-  grid.append(createTimeColumn("분", "minute", Array.from({ length: 60 }, (_, index) => {
-    const value = padNumber(index);
-    return { value, label: value };
-  }), selected.minute));
-
-  const actions = document.createElement("div");
-  actions.className = "time-panel-actions";
-  actions.innerHTML = `
-    <button type="button" class="time-soft-button" data-time-action="clear">시간 없음</button>
-    <button type="button" class="time-soft-button" data-time-action="close">확인</button>
-  `;
-
+  if (control.panel.childElementCount) { refreshOpenTimePickerSelection(input); return; }
+  control.wheels = new Map();
+  const grid = document.createElement('div'); grid.className = 'time-panel-grid';
+  grid.append(createTimeColumn(input, '시', 'hour', 24), createTimeColumn(input, '분', 'minute', 60));
+  const actions = document.createElement('div'); actions.className = 'time-panel-actions';
+  actions.innerHTML = '<button type="button" class="time-soft-button" data-time-action="clear">시간 없음</button><button type="button" class="time-soft-button" data-time-action="close">확인</button>';
   control.panel.append(grid, actions);
+  refreshOpenTimePickerSelection(input);
 }
 
-function createTimeColumn(label, part, values, selectedValue) {
-  const column = document.createElement("div");
-  column.className = "time-dropdown-field";
-
-  const trigger = document.createElement("div");
-  trigger.className = "time-dropdown-trigger";
-  trigger.dataset.timeDropdownTrigger = part;
-  trigger.setAttribute("role", "group");
-  trigger.setAttribute("aria-haspopup", "listbox");
-  trigger.setAttribute("aria-expanded", "false");
-  trigger.setAttribute("aria-label", `${label} 직접 입력 및 선택`);
-
-  const input = document.createElement("input");
-  input.type = "text";
-  input.className = "time-dropdown-input";
-  input.dataset.timePartInput = part;
-  input.value = selectedValue;
-  input.maxLength = 2;
-  input.inputMode = "numeric";
-  input.autocomplete = "off";
-  input.setAttribute("aria-label", `${label} 직접 입력`);
-
-  const toggle = document.createElement("button");
-  toggle.type = "button";
-  toggle.className = "time-dropdown-toggle";
-  toggle.dataset.timeDropdownToggle = part;
-  toggle.setAttribute("aria-label", `${label} 목록 열기`);
-  toggle.innerHTML = `<span class="time-dropdown-chevron" aria-hidden="true"></span>`;
-  trigger.append(input, toggle);
-
-  const menu = document.createElement("div");
-  menu.className = "time-dropdown-menu";
-  menu.dataset.timeDropdownMenu = part;
-  menu.setAttribute("role", "listbox");
-  menu.hidden = true;
-
-  values.forEach((optionValue) => {
-    const value = typeof optionValue === "object" ? optionValue.value : optionValue;
-    const option = document.createElement("button");
-    option.type = "button";
-    option.className = "time-dropdown-option";
-    option.dataset.timeOption = value;
-    option.dataset.timePart = part;
-    option.setAttribute("role", "option");
-    option.setAttribute("aria-selected", String(value === selectedValue));
-    option.textContent = typeof optionValue === "object" ? optionValue.label : optionValue;
-    option.classList.toggle("selected", value === selectedValue);
-    menu.appendChild(option);
+function createTimeColumn(input, label, part, count) {
+  const control = customTimePickers.get(input);
+  const column = document.createElement('div'); column.className = 'time-wheel-column';
+  const caption = document.createElement('span'); caption.className = 'time-wheel-label'; caption.textContent = label;
+  const frame = document.createElement('div'); frame.className = 'time-wheel-frame';
+  const band = document.createElement('div'); band.className = 'time-wheel-band'; band.setAttribute('aria-hidden', 'true');
+  const list = document.createElement('div'); list.className = 'time-wheel-list'; list.dataset.timeWheel = part;
+  list.setAttribute('aria-hidden', 'true');
+  for (let index = 0; index < count * 3; index++) {
+    const row = document.createElement('div'); row.className = 'time-wheel-option';
+    row.dataset.timeOption = padNumber(index % count); row.dataset.wheelIndex = index;
+    const number = document.createElement('span'); number.className = 'time-wheel-number'; number.textContent = row.dataset.timeOption;
+    row.append(number); list.append(row);
+  }
+  const editor = document.createElement('input'); editor.type = 'text'; editor.className = 'time-wheel-input';
+  editor.dataset.timePartInput = part; editor.inputMode = 'numeric'; editor.maxLength = 2; editor.autocomplete = 'off';
+  editor.setAttribute('role', 'spinbutton'); editor.setAttribute('aria-label', `${label} 직접 입력`);
+  editor.setAttribute('aria-valuemin', '0'); editor.setAttribute('aria-valuemax', String(count - 1));
+  editor.addEventListener('beforeinput', () => frame.classList.add('is-editing'));
+  editor.addEventListener('blur', () => {
+    if (!control.panel.hidden && frame.classList.contains('is-editing')) commitTimePartInput(input, editor);
+    frame.classList.remove('is-editing');
   });
-  column.append(trigger, menu);
+  frame.append(band, list, editor); column.append(caption, frame);
+  const wheel = window.TripLogTimeWheel.create(list, {
+    count, isOpen: () => input.isConnected && !input.disabled && !control.panel.hidden,
+    onSelect: value => setTimePickerPart(input, part, padNumber(value), { fromWheel: true }),
+    onEdit: () => { frame.classList.add('is-editing'); focusTimePickerElement(editor); editor.select(); },
+    onInteract: () => {
+      control.panel.querySelectorAll('.time-wheel-frame.is-editing').forEach(activeFrame => {
+        const activeEditor = activeFrame.querySelector('[data-time-part-input]');
+        commitTimePartInput(input, activeEditor, { animate: false });
+        activeFrame.classList.remove('is-editing');
+        if (document.activeElement === activeEditor) returnTimePickerFocus(control);
+      });
+    }
+  });
+  control.wheels.set(part, wheel);
   return column;
 }
 
 function handleTimePickerClick(event, input) {
-  const action = event.target.closest("[data-time-action]")?.dataset.timeAction;
-  if (action) {
-    event.preventDefault();
-    handleTimePickerAction(action, input);
-    return;
-  }
-
-  const toggle = event.target.closest("[data-time-dropdown-toggle]");
-  if (toggle) {
-    event.preventDefault();
-    toggleTimeDropdown(input, toggle.dataset.timeDropdownToggle);
-    return;
-  }
-
-  const partInput = event.target.closest("[data-time-part-input]");
-  if (partInput) {
-    selectTimePartInput(partInput);
-    return;
-  }
-
-  const trigger = event.target.closest("[data-time-dropdown-trigger]");
-  if (trigger) {
-    event.preventDefault();
-    focusTimePickerElement(trigger.querySelector("[data-time-part-input]"));
-    return;
-  }
-
-  const option = event.target.closest("[data-time-option]");
-  if (option) {
-    event.preventDefault();
-    setTimePickerPart(input, option.dataset.timePart, option.dataset.timeOption);
-    closeTimeDropdowns(input);
-    const trigger = customTimePickers.get(input)?.panel.querySelector(`[data-time-dropdown-trigger="${option.dataset.timePart}"]`);
-    focusTimePickerElement(trigger?.querySelector("[data-time-part-input]"));
-    return;
-  }
+  const action = event.target.closest('[data-time-action]')?.dataset.timeAction;
+  if (action) { event.preventDefault(); handleTimePickerAction(action, input); }
 }
 
 function handleTimePickerInput(event, input) {
-  const partInput = event.target.closest("[data-time-part-input]");
-  if (!partInput) return;
-
+  const editor = event.target.closest('[data-time-part-input]');
   const control = customTimePickers.get(input);
-  if (control) control.panelDirty = true;
-
-  const digits = partInput.value.replace(/\D/g, "").slice(0, 2);
-  partInput.value = digits;
-
-  if (digits.length === 2) {
-    commitTimePartInput(input, partInput);
-  }
+  if (!editor || !control || control.panel.hidden) return;
+  control.panelDirty = true;
+  editor.closest('.time-wheel-frame').classList.add('is-editing');
+  editor.value = editor.value.replace(/\D/g, '').slice(0, 2);
+  if (editor.value.length === 2) commitTimePartInput(input, editor);
 }
 
 function handleTimePickerChange(event, input) {
-  const partInput = event.target.closest("[data-time-part-input]");
-  if (partInput) {
-    event.preventDefault();
-    commitTimePartInput(input, partInput);
-    return;
-  }
+  if (customTimePickers.get(input)?.panel.hidden) return;
+  const editor = event.target.closest('[data-time-part-input]');
+  if (editor?.closest('.time-wheel-frame').classList.contains('is-editing')) commitTimePartInput(input, editor);
+}
 
-  const select = event.target.closest(".time-dropdown-select");
-  if (!select) return;
-  event.preventDefault();
-  setTimePickerPart(input, select.dataset.timePart, select.value);
+function focusTimePickerElement(element) { element?.focus({ preventScroll: true }); }
+function returnTimePickerFocus(control) {
+  control.suppressFocusOpen = true; focusTimePickerElement(control.value); control.suppressFocusOpen = false;
 }
 
 function handleTimePickerAction(action, input) {
   const control = customTimePickers.get(input);
   if (!control) return;
-
-  if (action === "clear") {
-    input.value = "";
-    input.dispatchEvent(new Event("input", { bubbles: true }));
-    input.dispatchEvent(new Event("change", { bubbles: true }));
-    syncCustomTimePicker(input);
+  if (action === 'clear') {
+    stopTimeWheels(input);
+    const changed = input.value !== '';
+    control.openValue = ''; input.value = '';
+    input.dispatchEvent(new Event('input', { bubbles: true }));
     closeCustomTimePicker(input, { commit: false });
+    if (changed) input.dispatchEvent(new Event('change', { bubbles: true }));
   }
-
-  if (action === "close") {
-    closeCustomTimePicker(input);
-  }
+  if (action === 'close') { control.panelDirty = true; closeCustomTimePicker(input); }
+  if (action === 'clear' || action === 'close') returnTimePickerFocus(control);
 }
 
 function handleTimePickerKeydown(event, input) {
   const control = customTimePickers.get(input);
   if (!control) return;
-
-  if (event.key === "Escape") {
-    event.preventDefault();
-    const openMenu = control.panel.querySelector(".time-dropdown-menu:not([hidden])");
-    if (openMenu) {
-      closeTimeDropdowns(input);
-      const trigger = control.panel.querySelector(`[data-time-dropdown-trigger="${openMenu.dataset.timeDropdownMenu}"]`);
-      focusTimePickerElement(trigger?.querySelector("[data-time-part-input]"));
-    } else {
-      closeCustomTimePicker(input, { commit: false });
-    }
-    return;
+  if (event.key === 'Escape') {
+    event.preventDefault(); closeCustomTimePicker(input, { commit: false }); returnTimePickerFocus(control); return;
   }
-
-  const partInput = event.target.closest("[data-time-part-input]");
-  if (partInput) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      closeCustomTimePicker(input);
-      return;
-    }
-
-    if (event.key === "ArrowDown" && event.altKey) {
-      event.preventDefault();
-      openTimeDropdown(input, partInput.dataset.timePartInput);
-      return;
-    }
-  }
-
-  const trigger = event.target.closest("[data-time-dropdown-trigger]");
-  if (trigger && ["ArrowDown", "ArrowUp", "Enter", " "].includes(event.key)) {
-    event.preventDefault();
-    openTimeDropdown(input, trigger.dataset.timeDropdownTrigger, {
-      focusOption: event.key === "ArrowUp" ? "last" : "selected",
-    });
-    return;
-  }
-
-  const option = event.target.closest("[data-time-option]");
-  if (option) {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      setTimePickerPart(input, option.dataset.timePart, option.dataset.timeOption);
-      closeTimeDropdowns(input);
-      focusTimePickerElement(control.panel.querySelector(`[data-time-dropdown-trigger="${option.dataset.timePart}"] [data-time-part-input]`));
-      return;
-    }
-
-    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
-      event.preventDefault();
-      const options = getTimeDropdownOptions(option.closest(".time-dropdown-menu"));
-      const currentIndex = options.indexOf(option);
-      const direction = event.key === "ArrowDown" ? 1 : -1;
-      const nextIndex = Math.max(0, Math.min(options.length - 1, currentIndex + direction));
-      scrollTimeDropdownOptionIntoView(option.closest(".time-dropdown-menu"), options[nextIndex]);
-      focusTimePickerElement(options[nextIndex]);
-    }
+  const editor = event.target.closest('[data-time-part-input]');
+  if (!editor) return;
+  if (event.key === 'Enter') { event.preventDefault(); commitTimePartInput(input, editor); closeCustomTimePicker(input); returnTimePickerFocus(control); return; }
+  if (['ArrowUp', 'ArrowDown', 'Home', 'End', 'PageUp', 'PageDown'].includes(event.key)) {
+    event.preventDefault(); editor.closest('.time-wheel-frame').classList.remove('is-editing');
+    const part = editor.dataset.timePartInput, count = part === 'hour' ? 24 : 60;
+    const current = Number(editor.value) || 0;
+    const delta = { ArrowUp: 1, ArrowDown: -1, PageUp: 5, PageDown: -5 }[event.key] || 0;
+    const next = event.key === 'Home' ? 0 : event.key === 'End' ? count - 1 : (current + delta + count) % count;
+    setTimePickerPart(input, part, padNumber(next));
   }
 }
 
-function setTimePickerPart(input, part, value) {
+function setTimePickerPart(input, part, value, { fromWheel = false, animate = true } = {}) {
   const control = customTimePickers.get(input);
-  if (control) control.panelDirty = true;
+  if (!control || control.panel.hidden || input.disabled) return;
+  control.panelDirty = true;
   const current = getTimePickerSelection(input.value);
-  const next = {
-    hour24: part === "hour" ? value : current.hour24,
-    minute: part === "minute" ? value : current.minute,
-  };
-  input.value = composeTimeFromSelection(next);
-  input.dispatchEvent(new Event("input", { bubbles: true }));
-  refreshOpenTimePickerSelection(input);
+  const next = { hour24: part === 'hour' ? value : current.hour24, minute: part === 'minute' ? value : current.minute };
+  const composed = composeTimeFromSelection(next), changed = input.value !== composed;
+  input.value = composed;
+  updateTimeEditor(control, part, value, true);
+  control.value.value = input.value;
+  if (!fromWheel) control.wheels.get(part)?.select(Number(value), { animate, notify: false });
+  if (changed) input.dispatchEvent(new Event('input', { bubbles: true }));
 }
 
-function refreshOpenTimePickerSelection(input) {
+function updateTimeEditor(control, part, value, force = false) {
+  const editor = control.panel.querySelector(`[data-time-part-input="${part}"]`);
+  if (!editor) return;
+  if (force || !editor.closest('.time-wheel-frame').classList.contains('is-editing')) editor.value = value;
+  editor.setAttribute('aria-valuenow', String(Number(value)));
+  editor.setAttribute('aria-valuetext', `${Number(value)}${part === 'hour' ? '시' : '분'}`);
+}
+
+function refreshOpenTimePickerSelection(input, { animate = false } = {}) {
   const control = customTimePickers.get(input);
   if (!control) return;
-
-  const selected = input.value ? getTimePickerSelection(input.value) : null;
-  if (control.value instanceof HTMLInputElement) {
-    control.value.value = input.value || "";
-  } else {
-    control.value.textContent = input.value || "시간 선택";
+  if (document.activeElement !== control.value) control.value.value = input.value || '';
+  const selected = getTimePickerSelection(input.value);
+  for (const [part, value] of [['hour', selected.hour24], ['minute', selected.minute]]) {
+    updateTimeEditor(control, part, value);
+    const wheel = control.wheels?.get(part);
+    if (animate && !control.panel.hidden) wheel?.select(Number(value), { notify: false });
+    else wheel?.sync(Number(value));
   }
-
-  const title = control.panel.querySelector(".time-panel-head strong");
-  if (title) title.textContent = selected ? `${selected.hour24}:${selected.minute}` : "--:--";
-
-  const fallback = selected || getTimePickerSelection("09:00");
-  updateTimeDropdownField(control.panel, "hour", fallback.hour24);
-  updateTimeDropdownField(control.panel, "minute", fallback.minute);
 }
 
-function alignSelectedTimeOptions(input) {
+function alignSelectedTimeOptions(input) { refreshOpenTimePickerSelection(input); }
+function flushTimeWheels(input) { customTimePickers.get(input)?.wheels?.forEach(wheel => wheel.finish()); }
+function stopTimeWheels(input, destroy = false) {
   const control = customTimePickers.get(input);
-  if (!control) return;
-  control.panel.querySelectorAll(".time-dropdown-menu").forEach((menu) => {
-    if (menu.hidden) return;
-    const selected = menu.querySelector(".time-dropdown-option.selected");
-    scrollTimeDropdownOptionIntoView(menu, selected);
-  });
+  control?.wheels?.forEach(wheel => destroy ? wheel.destroy() : wheel.finish({ commit: false }));
+  control?.panel.querySelectorAll('.is-editing').forEach(frame => frame.classList.remove('is-editing'));
 }
 
 function getTimePickerSelection(value) {
-  const parsed = parseTimeValue(value) || { hour: "09", minute: "00" };
-  const numericHour = Number(parsed.hour);
-  return {
-    hour24: padNumber(numericHour),
-    minute: parsed.minute,
-  };
+  const parsed = parseTimeValue(value) || { hour: '09', minute: '00' };
+  return { hour24: padNumber(Number(parsed.hour)), minute: parsed.minute };
 }
-
 function composeTimeFromSelection(selection) {
-  const hour24 = Math.max(0, Math.min(23, Number(selection.hour24) || 0));
-  const minute = Math.max(0, Math.min(59, Number(selection.minute) || 0));
-  return `${padNumber(hour24)}:${padNumber(minute)}`;
+  return `${padNumber(Math.max(0, Math.min(23, Number(selection.hour24) || 0)))}:${padNumber(Math.max(0, Math.min(59, Number(selection.minute) || 0)))}`;
 }
-
+function normalizeTimePartInputValue(part, value, fallback = '00') {
+  const digits = String(value || '').replace(/\D/g, '');
+  return digits ? padNumber(Math.max(0, Math.min(part === 'hour' ? 23 : 59, Number(digits)))) : fallback;
+}
+function commitTimePartInput(input, editor, { animate = true } = {}) {
+  const part = editor?.dataset.timePartInput;
+  if (!part) return;
+  const current = getTimePickerSelection(input.value);
+  const normalized = normalizeTimePartInputValue(part, editor.value, part === 'hour' ? current.hour24 : current.minute);
+  editor.value = normalized;
+  setTimePickerPart(input, part, normalized, { animate });
+}
 function commitTimePanelInputs(input) {
   const control = customTimePickers.get(input);
   if (!control) return;
-
   const current = getTimePickerSelection(input.value);
-  const hourInput = control.panel.querySelector('[data-time-part-input="hour"]');
-  const minuteInput = control.panel.querySelector('[data-time-part-input="minute"]');
-  const next = {
-    hour24: normalizeTimePartInputValue("hour", hourInput?.value, current.hour24),
-    minute: normalizeTimePartInputValue("minute", minuteInput?.value, current.minute),
-  };
-
-  const nextValue = composeTimeFromSelection(next);
-  if (input.value !== nextValue) {
-    input.value = nextValue;
-    input.dispatchEvent(new Event("input", { bubbles: true }));
-  }
-  refreshOpenTimePickerSelection(input);
+  const hour = control.panel.querySelector('[data-time-part-input="hour"]');
+  const minute = control.panel.querySelector('[data-time-part-input="minute"]');
+  const next = composeTimeFromSelection({ hour24: normalizeTimePartInputValue('hour', hour?.value, current.hour24), minute: normalizeTimePartInputValue('minute', minute?.value, current.minute) });
+  if (input.value !== next) { input.value = next; input.dispatchEvent(new Event('input', { bubbles: true })); }
 }
 
-function commitTimePartInput(input, partInput) {
-  const control = customTimePickers.get(input);
-  if (control) control.panelDirty = true;
-  const part = partInput?.dataset.timePartInput;
-  if (!part) return;
-  const current = getTimePickerSelection(input.value);
-  const fallback = part === "hour" ? current.hour24 : current.minute;
-  const normalized = normalizeTimePartInputValue(part, partInput.value, fallback);
-  partInput.value = normalized;
-  setTimePickerPart(input, part, normalized);
-}
-
-function normalizeTimePartInputValue(part, value, fallback = "00") {
-  const digits = String(value || "").replace(/\D/g, "");
-  if (!digits) return fallback;
-  const max = part === "hour" ? 23 : 59;
-  const numeric = Math.max(0, Math.min(max, Number(digits)));
-  return padNumber(numeric);
-}
-
-function toggleTimeDropdown(input, part) {
-  const control = customTimePickers.get(input);
-  if (!control) return;
-  const menu = control.panel.querySelector(`[data-time-dropdown-menu="${part}"]`);
-  if (!menu) return;
-  if (menu.hidden) {
-    openTimeDropdown(input, part);
-  } else {
-    closeTimeDropdowns(input);
-  }
-}
-
-function openTimeDropdown(input, part, { focusOption = null } = {}) {
-  const control = customTimePickers.get(input);
-  if (!control) return;
-  closeTimeDropdowns(input, part);
-  const menu = control.panel.querySelector(`[data-time-dropdown-menu="${part}"]`);
-  const trigger = control.panel.querySelector(`[data-time-dropdown-trigger="${part}"]`);
-  if (!menu || !trigger) return;
-
-  menu.hidden = false;
-  trigger.classList.add("open");
-  trigger.setAttribute("aria-expanded", "true");
-  const selected = menu.querySelector(".time-dropdown-option.selected") || menu.querySelector(".time-dropdown-option");
-  scrollTimeDropdownOptionIntoView(menu, selected);
-  if (focusOption) {
-    const options = getTimeDropdownOptions(menu);
-    const focusTarget = focusOption === "last" ? options[options.length - 1] : selected;
-    focusTimePickerElement(focusTarget);
-  }
-}
-
-function focusTimePickerElement(element) {
-  if (!element) return;
-  try {
-    element.focus({ preventScroll: true });
-  } catch (_) {
-    element.focus();
-  }
-}
-
-function selectTimePartInput(partInput) {
-  if (!partInput) return;
-  focusTimePickerElement(partInput);
-  partInput.select();
-}
-
-function scrollTimeDropdownOptionIntoView(menu, option) {
-  if (!menu || !option) return;
-  const maxScroll = Math.max(0, menu.scrollHeight - menu.clientHeight);
-  const target = option.offsetTop - ((menu.clientHeight - option.offsetHeight) / 2);
-  menu.scrollTop = Math.max(0, Math.min(maxScroll, target));
-}
-
-function closeTimeDropdowns(input, exceptPart) {
-  const control = customTimePickers.get(input);
-  if (!control) return;
-  control.panel.querySelectorAll(".time-dropdown-menu").forEach((menu) => {
-    if (menu.hidden) return;
-    if (menu.dataset.timeDropdownMenu === exceptPart) return;
-    menu.hidden = true;
-  });
-  control.panel.querySelectorAll("[data-time-dropdown-trigger]").forEach((trigger) => {
-    if (trigger.dataset.timeDropdownTrigger === exceptPart) return;
-    trigger.classList.remove("open");
-    trigger.setAttribute("aria-expanded", "false");
-  });
-}
-
-function updateTimeDropdownField(panel, part, selectedValue) {
-  const trigger = panel.querySelector(`[data-time-dropdown-trigger="${part}"]`);
-  const value = trigger?.querySelector("[data-time-part-input]");
-  if (value && document.activeElement !== value) value.value = selectedValue;
-
-  panel.querySelectorAll(`[data-time-part="${part}"]`).forEach((option) => {
-    const isSelected = option.dataset.timeOption === selectedValue;
-    option.classList.toggle("selected", isSelected);
-    option.setAttribute("aria-selected", String(isSelected));
-  });
-}
-
-function getTimeDropdownOptions(menu) {
-  return Array.from(menu?.querySelectorAll(".time-dropdown-option") || []);
-}
-
-function handleTimeOptionWheel(event) {
-  const list = event.currentTarget;
-  const maxScroll = list.scrollHeight - list.clientHeight;
-  if (!maxScroll) return;
-
-  const direction = Math.sign(event.deltaY);
-  const isAtStart = list.scrollTop <= 0;
-  const isAtEnd = list.scrollTop >= maxScroll;
-  if ((direction < 0 && isAtStart) || (direction > 0 && isAtEnd)) return;
-
-  event.preventDefault();
-  animateTimeListScroll(list, event.deltaY * TIME_WHEEL_SCROLL_FACTOR, TIME_WHEEL_SCROLL_DURATION);
-}
-
-function scrollTimeListFromEdge(option) {
-  const list = option?.closest(".time-option-list");
-  if (!list) return;
-
-  const visibleOptions = getVisibleTimeOptions(list);
-  const firstVisible = visibleOptions[0];
-  const lastVisible = visibleOptions[visibleOptions.length - 1];
-  const scrollAmount = getTimeOptionStep(option);
-
-  if (option === firstVisible) {
-    animateTimeListScroll(list, -scrollAmount, TIME_EDGE_SCROLL_DURATION);
-  }
-
-  if (option === lastVisible) {
-    animateTimeListScroll(list, scrollAmount, TIME_EDGE_SCROLL_DURATION);
-  }
-}
-
-function getVisibleTimeOptions(list) {
-  const listRect = list.getBoundingClientRect();
-  return Array.from(list.querySelectorAll(".time-option")).filter((option) => {
-    const optionRect = option.getBoundingClientRect();
-    return optionRect.bottom > listRect.top + 2 && optionRect.top < listRect.bottom - 2;
-  });
-}
-
-function getTimeOptionStep(option) {
-  const list = option.closest(".time-option-list");
-  const style = window.getComputedStyle(list);
-  const gap = Number.parseFloat(style.rowGap || style.gap) || 4;
-  return option.getBoundingClientRect().height + gap;
-}
-
-function animateTimeListScroll(list, delta, duration) {
-  const maxScroll = list.scrollHeight - list.clientHeight;
-  const start = list.scrollTop;
-  const target = Math.max(0, Math.min(maxScroll, start + delta));
-  if (Math.abs(target - start) < 1) return;
-
-  const existingFrame = timeListScrollAnimations.get(list);
-  if (existingFrame) cancelAnimationFrame(existingFrame);
-
-  const startTime = performance.now();
-  const easeOut = (progress) => 1 - Math.pow(1 - progress, 3);
-
-  const step = (now) => {
-    const progress = Math.min(1, (now - startTime) / duration);
-    list.scrollTop = start + (target - start) * easeOut(progress);
-
-    if (progress < 1) {
-      timeListScrollAnimations.set(list, requestAnimationFrame(step));
-    } else {
-      timeListScrollAnimations.delete(list);
-    }
-  };
-
-  timeListScrollAnimations.set(list, requestAnimationFrame(step));
-}
-
-window.TripLog.register("ui.timePicker", {
-  setupCustomTimePicker,
-  destroyCustomTimePicker,
-  pruneDetachedCustomTimePickers,
-  syncCustomTimePicker,
-  toggleCustomTimePicker,
-  openCustomTimePicker,
-  closeCustomTimePicker,
-  closeAllCustomTimePickers,
-  renderTimePicker,
-  createTimeColumn,
-  handleTimePickerClick,
-  handleTimePickerInput,
-  handleTimePickerAction,
-  handleTimePickerKeydown,
-  setTimePickerPart,
-  refreshOpenTimePickerSelection,
-  commitTimePanelInputs,
-  commitTimePartInput,
-  alignSelectedTimeOptions,
-  handleTimeOptionWheel,
-  scrollTimeListFromEdge,
-  getVisibleTimeOptions,
-  getTimeOptionStep,
-  animateTimeListScroll,
+window.TripLog.register('ui.timePicker', {
+  setupCustomTimePicker, destroyCustomTimePicker, pruneDetachedCustomTimePickers,
+  syncCustomTimePicker, toggleCustomTimePicker, openCustomTimePicker, closeCustomTimePicker,
+  closeAllCustomTimePickers, renderTimePicker, createTimeColumn, handleTimePickerClick,
+  handleTimePickerInput, handleTimePickerAction, handleTimePickerKeydown, setTimePickerPart,
+  refreshOpenTimePickerSelection, commitTimePanelInputs, commitTimePartInput, alignSelectedTimeOptions,
 });

@@ -8,9 +8,11 @@ const deployEntries = [
   "_redirects",
   "apple-touch-icon.png",
   "app.js",
+  "sw.js",
   "favicon-32.png",
   "icons",
   "index.html",
+  "repair.html",
   "site.webmanifest",
   "styles.css",
   "Travel.html",
@@ -34,6 +36,7 @@ async function copyEntry(source, target) {
 }
 
 async function build() {
+  if (path.resolve(outDir) !== path.join(rootDir, "dist")) throw new Error("Unsafe build output directory");
   await fs.rm(outDir, { recursive: true, force: true });
   await fs.mkdir(outDir, { recursive: true });
 

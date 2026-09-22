@@ -1,0 +1,7 @@
+Create one exceptionally polished, production-quality UI/UX redesign concept for TripLOG's travel transit dialog. Present two coordinated states side by side: route viewing and manual transit recording, sharing one coherent design system. Use a 1536 × 1024 canvas with two naturally proportioned, complete dialog surfaces. These are two states of the same concept.
+
+Direction: map-led. Give the route map dominant visual space, with compact origin/destination context and transport controls. Make manual recording a light, elegant segment timeline with readable duration inputs and one clear save action. Preserve the existing functions and Korean product content from the references. Organize with typography, whitespace, alignment, and subtle dividers; avoid stacked bordered boxes. Retain TripLOG's yellow accent and dark ink from the existing product, using the accent selectively. Use refined Pretendard-style Korean typography, readable 14–16px body text at native scale, precise spacing, generous touch targets, and restrained elevation. Make the result sophisticated, attractive, and practical. Show app content without device hardware or browser chrome. Current date anchor: 2026-09-22; dates need not be added.
+
+Input images:
+- codex-clipboard-f7f36922-636f-4ef4-a453-f13c2f75b643.png: existing UI supplied by the user for redesign.
+- codex-clipboard-105effe8-5caf-469c-a907-75bce428fb6e.png: existing UI supplied by the user for redesign.

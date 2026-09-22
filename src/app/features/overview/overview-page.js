@@ -169,8 +169,7 @@ function renderOverviewPage() {
           timelineContainer.appendChild(timelineColumn);
         }
 
-        const dayItems = state.itineraryItems.filter(item => item.date === day.date)
-          .sort((a, b) => (a.time || "99:99").localeCompare(b.time || "99:99"));
+        const dayItems = sortItineraryItems(state.itineraryItems.filter(item => item.date === day.date));
 
         const dayBlock = document.createElement("div");
         dayBlock.className = "timeline-day-block";
@@ -199,7 +198,7 @@ function renderOverviewPage() {
                 <span class="timeline-text">
                   <span class="timeline-emoji">${emoji}</span>
                   <span class="timeline-place-name">${escapeHtml(item.place)}</span>
-                  ${item.time ? `<small class="timeline-item-time">(${item.time}${item.endTime ? ` ~ ${item.endTime}` : ""})</small>` : ""}
+                  ${item.time ? `<small class="timeline-item-time">(${item.time}${item.theme !== 'lodging' && item.endTime ? ` ~ ${item.endTime}` : ""})</small>` : ""}
                 </span>
               </div>
             `;

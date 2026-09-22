@@ -23,6 +23,7 @@ function renderExpenseFormMode() {
     syncLodgingDefaults();
     updateLodgingPreview();
   }
+  window.TripLog.features.expenses.workspace?.syncEditor();
 }
 
 function handleLodgingDateChange(changedField) {
@@ -120,9 +121,12 @@ function updateLodgingPreview() {
 
   const lastNight = addDays(parseDate(plan.checkOut), -1);
   const average = amount ? Math.round(amount / plan.nights) : 0;
+  const checkIn = parseDate(plan.checkIn);
+  const nightRange = `${checkIn.getMonth() + 1}.${checkIn.getDate()}–${lastNight.getMonth() + 1}.${lastNight.getDate()}`;
   els.lodgingPreview.innerHTML = `
-    <strong>${plan.nights}박 · 1박당 ${escapeHtml(formatWon(average))}</strong>
-    <span>${escapeHtml(formatShortDate(parseDate(plan.checkIn)))}부터 ${escapeHtml(formatShortDate(lastNight))}까지 기록하고 체크아웃일은 0원으로 둡니다.</span>
+    <span class="ex-night-count"><i class="ph ph-moon" aria-hidden="true"></i>${plan.nights}박</span>
+    <span class="ex-night-price"><span>1박당${amount % plan.nights ? ' 약' : ''}</span><strong>${escapeHtml(formatWon(average))}</strong></span>
+    <span class="ex-night-dates"><span><i class="ph ph-calendar-blank" aria-hidden="true"></i>${nightRange}</span><span class="ex-night-excluded">체크아웃 제외</span></span>
   `;
 }
 

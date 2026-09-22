@@ -1,4 +1,15 @@
+const placeSearchResultCache = new Map();
+const PLACE_LOOKUP_BUDGET_MS = 2500;
+
+function cancelPlaceLookup() {
+  placeSearchAbortController?.abort();
+  placeSearchAbortController = null;
+  els.placeSearchButton.disabled = false;
+  els.placeSearchButton.removeAttribute('aria-busy');
+}
+
 function handlePlaceInput() {
+  cancelPlaceLookup();
   const query = els.itineraryPlaceInput.value.trim();
   selectedPlaceCandidate = null;
   els.itineraryLocationInput.value = query;
@@ -29,61 +40,52 @@ function handlePlaceInputKeydown(event) {
 async function searchPlacesFromInput({ force = false } = {}) {
   const query = els.itineraryPlaceInput.value.trim();
   clearPlaceSearchTimer();
-
   if (query.length < 2) {
     if (force) setPlaceSearchStatus("두 글자 이상 입력하면 장소를 검색할 수 있습니다.", "warning");
     closePlaceSearchResults();
     return;
   }
-
-  if (placeSearchAbortController) placeSearchAbortController.abort();
+  cancelPlaceLookup();
   const controller = new AbortController();
   placeSearchAbortController = controller;
+  const googleQuery = appendTripDestinationContext(query);
+  const key = [buildGoogleMapsSearchContext(), query].join('|');
+  // The Google search stays independent of other providers' address candidates.
+  renderPlaceSearchResults([], query, { googleQuery });
   if (force) previewGoogleMapSearch(query, { revealMap: true });
-  setPlaceSearchStatus(force ? "입력한 검색어로 주소와 좌표를 찾는 중입니다..." : "주소 후보를 찾는 중입니다...");
-  els.placeSearchButton.disabled = true;
-
+  setPlaceSearchStatus(`${getTripMapLabel()}에서 확인할 장소를 준비하고 있어요. 주소 후보도 확인 중입니다.`);
+  els.placeSearchButton.setAttribute('aria-busy', 'true');
+  let timer, timedOut = false;
+  const isCurrent = () => placeSearchAbortController === controller
+    && els.itineraryPlaceInput.value.trim() === query;
   try {
-    const googleQuery = buildGoogleMapsSearchQuery(query);
-    const results = await fetchPlaceSearchResults(query, controller);
-    if (controller.signal.aborted || placeSearchAbortController !== controller || els.itineraryPlaceInput.value.trim() !== query) return;
-    const finalResults = renderPlaceSearchResults(results, query, {
-      previewedResultId: force ? buildGoogleCandidateId(googleQuery) : "",
-      googleQuery,
-    });
-
-    if (force) {
-      const matchedResult = findBestForcedPlaceSearchResult(finalResults, query);
-      if (matchedResult) {
-        previewPlaceSearchResult(matchedResult, { updateStatus: false, revealMap: true });
-      }
-      setPlaceSearchStatus(
-        matchedResult?.source === "coordinate-text"
-          ? "입력한 지도 좌표를 일정 위치에 정확히 반영했습니다."
-          : matchedResult?.source === "map-match"
-          ? "검색어와 맞는 지도 좌표를 일정 위치에 반영했습니다."
-          : matchedResult
-            ? "지도 검색 위치를 일정에 반영했습니다. 동선 계산 때 좌표를 다시 확인합니다."
-          : "좌표를 찾지 못했습니다. 주소 후보를 선택하거나 직접 주소를 입력해주세요.",
-        matchedResult ? "success" : "warning",
-      );
+    const results = placeSearchResultCache.get(key) || await Promise.race([
+      fetchPlaceSearchResults(query, controller),
+      new Promise(resolve => { timer = setTimeout(() => { timedOut = true; resolve([]); controller.abort(); }, PLACE_LOOKUP_BUDGET_MS); }),
+    ]);
+    if (!isCurrent()) return;
+    if (timedOut) {
+      setPlaceSearchStatus(`${getTripMapLabel()}에서 위치를 확인해 주세요. 입력한 장소로 바로 저장할 수 있어요.`);
+      return;
     }
+    if (controller.signal.aborted) return;
+    if (results.length) {
+      placeSearchResultCache.set(key, results);
+      if (placeSearchResultCache.size > 40) placeSearchResultCache.delete(placeSearchResultCache.keys().next().value);
+    }
+    renderPlaceSearchResults(results, query, { googleQuery, previewedResultId: buildGoogleCandidateId(googleQuery) });
+    setPlaceSearchStatus(results.some(hasPlaceSearchCoordinates)
+      ? '검색한 지도를 그대로 사용하거나, 주소를 확인하고 다른 후보를 선택하세요.'
+      : `${getTripMapLabel()}에서 위치를 확인한 뒤 장소를 선택해 주세요.`, 'success');
   } catch (error) {
-    if (error.name !== "AbortError") {
-      if (force) {
-        const googleQuery = buildGoogleMapsSearchQuery(query);
-        previewGoogleMapSearch(query, { revealMap: true });
-        renderPlaceSearchResults([], query, { previewedResultId: buildGoogleCandidateId(googleQuery), googleQuery });
-        setPlaceSearchStatus("주소와 좌표를 불러오지 못했습니다. 직접 주소를 입력해주세요.", "warning");
-      } else {
-        setPlaceSearchStatus("주소 후보 검색을 사용할 수 없습니다. 직접 주소를 입력해주세요.", "warning");
-        closePlaceSearchResults();
-      }
+    if (isCurrent() && error.name !== 'AbortError') {
+      setPlaceSearchStatus('주소 후보를 불러오지 못했지만, 입력한 장소로 바로 저장할 수 있어요.');
     }
   } finally {
+    clearTimeout(timer);
     if (placeSearchAbortController === controller) {
       placeSearchAbortController = null;
-      els.placeSearchButton.disabled = false;
+      els.placeSearchButton.removeAttribute('aria-busy');
     }
   }
 }
@@ -93,14 +95,16 @@ async function fetchPlaceSearchResults(query, controller) {
   if (coordinateCandidate) return [coordinateCandidate];
 
   const googleResults = await fetchGooglePlacesPlaceSearchResults(query, controller);
+  if (controller.signal.aborted) return [];
   if (googleResults.some(hasPlaceSearchCoordinates)) return googleResults;
 
   for (const searchQuery of buildPlaceSearchQueries(query)) {
     const results = await fetchNominatimPlaceSearchResults(searchQuery, controller);
+    if (controller.signal.aborted) return [];
     if (results.some(hasPlaceSearchCoordinates)) return results;
   }
 
-  return fetchKnowledgePlaceSearchResults(query, controller);
+  return controller.signal.aborted ? [] : fetchKnowledgePlaceSearchResults(query, controller);
 }
 
 function createCoordinateTextPlaceCandidate(query) {
@@ -340,6 +344,7 @@ function normalizePlaceSearchResult(result) {
     lat: parseFloat(result.lat),
     lon: parseFloat(result.lon),
     type: result.type || result.class || "장소",
+    source: "nominatim-search",
   };
 }
 
@@ -348,11 +353,13 @@ function renderPlaceSearchResults(results, query, { previewedResultId = "", goog
 
   const googleMapQuery = googleQuery || buildGoogleMapsSearchQuery(query);
   const hasCoordinateTextCandidate = results.some((result) => result.source === "coordinate-text");
-  const mapMatchedCandidate = hasCoordinateTextCandidate ? null : createMapMatchedPlaceCandidate(results, query, googleMapQuery);
+  // A matching name does not identify the place shown inside Google's iframe.
+  // Never graft a different provider's coordinates onto this search option.
+  const googleCandidate = hasCoordinateTextCandidate ? null : createGoogleMapSearchCandidate(query, googleMapQuery);
   const finalResults = hasCoordinateTextCandidate
     ? results
-    : mapMatchedCandidate
-      ? [mapMatchedCandidate, ...results.filter((result) => result.id !== mapMatchedCandidate.sourceResultId)]
+    : googleCandidate
+      ? [googleCandidate, ...results]
       : results;
 
   finalResults.forEach((result) => {
@@ -364,19 +371,15 @@ function renderPlaceSearchResults(results, query, { previewedResultId = "", goog
     button.setAttribute("aria-selected", String(result.id === previewedResultId));
     button.classList.toggle("is-previewed", result.id === previewedResultId);
     
-    const isMapMatch = result.source === "map-match";
     const sourceLabel = getPlaceSearchSourceLabel(result);
     button.innerHTML = `
       <strong>
-        ${isMapMatch ? `<span class="tag" style="--tag-color: var(--accent-mint); margin-right: 6px; border-width: 1.5px; padding: 1px 5px; font-size: 10px; box-shadow: none;">지도 매칭</span>` : ""}
         ${sourceLabel ? `<span class="tag" style="--tag-color: var(--accent-sky); margin-right: 6px; border-width: 1.5px; padding: 1px 5px; font-size: 10px; box-shadow: none;">${sourceLabel}</span>` : ""}
         ${escapeHtml(result.place)}
       </strong>
-      <span>${escapeHtml(result.location)}</span>
+      <span>${escapeHtml(result.location)}${result.source === "google-query-preview" ? " · 검색한 지도 그대로 사용" : ""}</span>
     `;
     button.addEventListener("click", () => selectPlaceSearchResult(result));
-    button.addEventListener("mouseenter", () => previewPlaceSearchResult(result, { updateStatus: false }));
-    button.addEventListener("focus", () => previewPlaceSearchResult(result, { updateStatus: false }));
     els.placeSearchResults.appendChild(button);
   });
 
@@ -391,31 +394,12 @@ function renderPlaceSearchResults(results, query, { previewedResultId = "", goog
 }
 
 function getPlaceSearchSourceLabel(result) {
+  if (result.source === "google-query-preview") return `${getTripMapLabel()} 검색`;
   if (result.source === "google-places") return "Google";
+  if (result.source === "nominatim-search") return "주소 후보";
   if (result.source === "coordinate-text") return "좌표";
   if (result.source === "knowledge-search") return "지식";
   return "";
-}
-
-function createMapMatchedPlaceCandidate(results, query, googleMapQuery) {
-  const trustedSource = results
-    .filter(hasPlaceSearchCoordinates)
-    .map((result) => ({ result, score: scorePlaceSearchResult(result, query) }))
-    .sort((a, b) => b.score - a.score)
-    .find((entry) => entry.score >= 72)?.result;
-
-  if (!trustedSource) return createGoogleMapSearchCandidate(query, googleMapQuery);
-
-  return {
-    ...trustedSource,
-    id: buildGoogleCandidateId(googleMapQuery),
-    place: query,
-    location: googleMapQuery,
-    mapQuery: googleMapQuery,
-    source: "map-match",
-    sourceResultId: trustedSource.id,
-    type: "지도 매칭",
-  };
 }
 
 function createGoogleMapSearchCandidate(query, googleMapQuery) {
@@ -431,37 +415,6 @@ function createGoogleMapSearchCandidate(query, googleMapQuery) {
   };
 }
 
-function findBestForcedPlaceSearchResult(results, query) {
-  return results.find((result) => result.source === "coordinate-text")
-    || results.find((result) => result.source === "map-match")
-    || results.find((result) => isTrustedPlaceSearchResult(result, query))
-    || results.find((result) => result.source === "google-query-preview")
-    || null;
-}
-
-function isTrustedPlaceSearchResult(result, query) {
-  return hasPlaceSearchCoordinates(result) && scorePlaceSearchResult(result, query) >= 72;
-}
-
-function scorePlaceSearchResult(result, query) {
-  const queryKey = normalizePlaceAlias(query);
-  const placeKey = normalizePlaceAlias(result?.place);
-  const locationKey = normalizePlaceAlias(result?.location);
-  const typeKey = normalizePlaceAlias(result?.type);
-  let score = 0;
-
-  if (!queryKey) return score;
-  if (placeKey === queryKey) score += 130;
-  else if (placeKey && placeKey.includes(queryKey)) score += 84;
-  else if (placeKey && queryKey.includes(placeKey)) score += 48;
-  if (locationKey.includes(queryKey)) score += 42;
-  if (locationKey.includes(normalizePlaceAlias(buildGoogleMapsSearchContext()))) score += 18;
-  if (locationKey.includes(normalizePlaceAlias("제주"))) score += 16;
-  if (/road|administrative|village|suburb|quarter|neighbourhood|동|리|읍/.test(typeKey) && placeKey !== queryKey) score -= 28;
-
-  return score;
-}
-
 function hasPlaceSearchCoordinates(result) {
   return isValidLatLng(parseFloat(result?.lat), parseFloat(result?.lon));
 }
@@ -475,17 +428,17 @@ function previewPlaceSearchResult(result, { statusMessage = "", updateStatus = t
   els.itineraryPlaceInput.value = result.place;
   els.itineraryLocationInput.value = result.location;
   closeManualAddressPanel();
-  updateMapPreview(result, { useGoogleMap: result.source === "google-query-preview" });
+  updateMapPreview(result);
   markPreviewedPlaceSearchResult(result.id);
   if (updateStatus) setPlaceSearchStatus(statusMessage || result.location, "success");
   if (revealMap) revealMapPreview();
 }
 
 function applyPlaceSearchResult(result, { closeResults = true } = {}) {
+  cancelPlaceLookup();
   previewPlaceSearchResult(result);
   if (closeResults) closePlaceSearchResults();
   window.TripLog.features.itinerary.workspace?.syncPlace?.({ selected: true });
-  window.TripLog.features.itinerary.workspace?.previewRoute?.();
 }
 
 function markPreviewedPlaceSearchResult(id) {
@@ -512,15 +465,10 @@ function applyGoogleMapSearch(query, { revealMap = false } = {}) {
 }
 
 function previewGoogleMapSearch(query, { revealMap = false } = {}) {
-  const googleQuery = buildGoogleMapsSearchQuery(query);
+  const googleQuery = appendTripDestinationContext(query);
+  selectedPlaceCandidate = createGoogleMapSearchCandidate(query, googleQuery);
   els.itineraryLocationInput.value = query;
-  renderGoogleMapPreview({
-    id: buildGoogleCandidateId(googleQuery),
-    place: query,
-    location: query,
-    mapQuery: googleQuery,
-    source: "google-query-preview",
-  }, googleQuery);
+  renderTripMapPreview(selectedPlaceCandidate, googleQuery);
   if (revealMap) revealMapPreview();
 }
 
@@ -565,6 +513,7 @@ function handleManualAddressKeydown(event) {
 }
 
 function applyManualAddressInput() {
+  cancelPlaceLookup();
   const address = els.manualAddressInput.value.trim();
   const place = els.itineraryPlaceInput.value.trim() || address;
 
@@ -626,11 +575,7 @@ window.TripLog.register("features.itinerary.placeSearch", {
   normalizePlaceSearchResult,
   renderPlaceSearchResults,
   getPlaceSearchSourceLabel,
-  createMapMatchedPlaceCandidate,
   createGoogleMapSearchCandidate,
-  findBestForcedPlaceSearchResult,
-  isTrustedPlaceSearchResult,
-  scorePlaceSearchResult,
   hasPlaceSearchCoordinates,
   selectPlaceSearchResult,
   previewPlaceSearchResult,

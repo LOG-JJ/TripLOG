@@ -1,0 +1,157 @@
+/* Reservation list, detail and editor share the compact TripLOG hierarchy. */
+.rd-app .tt-wallet-ui {
+  width: calc(100% - 40px); max-width: 560px;
+  height: min(840px, calc(100dvh - 44px)); max-height: calc(100dvh - 44px);
+  padding: 14px 16px 0; border: 1.5px solid var(--text); border-radius: 12px;
+  box-shadow: 3px 4px 0 var(--text); color: var(--text); font-size: 13px; line-height: 1.5;
+}
+.rd-app :is(#ttReservationEditor, #ttReservationDetail, #ttCopy) { max-width: 480px; height: fit-content; }
+.rd-app .tt-wallet-ui h1 { font-size: 24px; font-weight: 800; line-height: 1.25; letter-spacing: -.7px; }
+.rd-app .tt-wallet-ui h2 { font-size: 15px; font-weight: 700; line-height: 1.4; letter-spacing: -.25px; }
+.tt-wallet-ui .tt-header { min-height: 40px; margin-bottom: 12px; }
+.tt-wallet-ui .tt-logo { width: 104px; }
+.tt-wallet-ui .tt-heading { margin-bottom: 14px; }
+.tt-wallet-ui .tt-heading > p { margin-top: 6px; font-size: 13px; line-height: 1.4; font-weight: 500; }
+.rd-app .tt-wallet-ui .tt-button { min-height: 40px; padding: 8px 10px; gap: 6px; border-width: 1.5px; border-radius: 8px; font-size: 13px; font-weight: 650; transition: background var(--rd-motion), box-shadow var(--rd-motion), transform var(--rd-motion); }
+.tt-wallet-ui .tt-button > .ph { font-size: 18px; }
+.rd-app .tt-wallet-ui .tt-icon { width: 40px; height: 40px; padding: 4px; border: 0; }
+.tt-wallet-ui .tt-icon > .ph { font-size: 24px; }
+.rd-app .tt-wallet-ui .tt-primary { min-height: 44px; font-size: 15px; font-weight: 750; background: var(--rd-yellow); box-shadow: 1px 2px 0 var(--text); }
+.tt-wallet-ui .tt-scroll { padding: 0 2px 2px; margin: 0 -2px; }
+.tt-wallet-ui :is(button, a, input, select, textarea, summary):focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+.tt-wallet-ui [tabindex="-1"]:focus { outline: none; }
+.tt-wallet-ui .tt-wallet-toolbar { position: sticky; top: 0; z-index: 20; padding: 0 0 5px; margin-bottom: 9px; background: #fff; }
+.tt-wallet-search { display: flex; align-items: center; gap: 8px; padding: 0 10px; min-height: 44px; border: 1.3px solid #9199a6; border-radius: 8px; background: #fff; }
+.tt-wallet-search > .ph { flex-shrink: 0; font-size: 20px; }
+.tt-wallet-search:focus-within { background: #fffdf0; border-color: var(--text); box-shadow: 1px 2px 0 var(--text); }
+.rd-app .tt-wallet-ui #ttWalletSearch { flex: 1; min-width: 0; min-height: 40px; height: 40px; padding: 7px 0; border: 0; border-radius: 0; background: transparent; font-size: 16px; font-weight: 500; box-shadow: none; outline: none; }
+#ttWalletSearch::placeholder { font-size: 13px; color: var(--muted); }
+#ttWalletSearch::-webkit-search-cancel-button { display: none; }
+.rd-app .tt-wallet-ui .tt-wallet-clear { flex-shrink: 0; min-width: 32px; width: 32px; height: 40px; min-height: 40px; border: 0; padding: 4px; background: transparent; box-shadow: none; }
+.tt-wallet-clear .ph { font-size: 18px; }
+.tt-wallet-ui #ttWalletFilters { display: flex; flex-wrap: nowrap; gap: 6px; margin: 10px 0 4px; padding: 1px 1px 4px; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; overscroll-behavior-x: contain; }
+#ttWalletFilters::-webkit-scrollbar { display: none; }
+.rd-app .tt-wallet-ui #ttWalletFilters > .tt-button { flex: 0 0 auto; min-width: 0; min-height: 36px; padding: 7px 10px; gap: 5px; border: 1px solid #b2b9c5; border-radius: 8px; font-size: 12px; font-weight: 550; background: #fff; box-shadow: none; white-space: nowrap; }
+#ttWalletFilters b { font-size: 12px; font-weight: 650; }
+.rd-app .tt-wallet-ui #ttWalletFilters > .active { border-color: var(--text); background: var(--rd-yellow); color: var(--text); box-shadow: 1px 2px 0 var(--text); }
+.tt-wallet-resultbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 36px; border-bottom: 1px solid var(--rd-divider); }
+#ttWalletCount { min-width: 0; font-size: 12px; font-weight: 600; }
+.rd-app .tt-wallet-ui .tt-wallet-sort { display: block; width: 123px; flex-shrink: 0; margin: 0; }
+.tt-wallet-ui .tt-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.rd-app .tt-wallet-ui .tt-wallet-sort .custom-select-button { min-height: 34px; height: 34px; padding: 6px 3px 6px 8px; border: 0; border-radius: 6px; font-size: 12px; background: #fff; box-shadow: none; }
+.tt-wallet-sort .custom-select-value { text-align: right; font-size: 12px; }
+.tt-wallet-sort .custom-select-chevron { width: 7px; height: 7px; border-width: 0 1.5px 1.5px 0; margin-right: 4px; }
+.tt-wallet-ui .tt-wallet-day { margin: 0 0 14px; }
+.rd-app .tt-wallet-ui .tt-wallet-day > h2 { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin: 0 0 8px; font-size: 13px; font-weight: 700; }
+.tt-wallet-day > h2 > span { color: var(--muted); font-size: 12px; font-weight: 500; }
+.tt-wallet-ui .tt-reservation { padding: 0; margin: 0 0 8px; border: 1.3px solid #727987; border-radius: 8px; overflow: hidden; background: #fff; }
+.rd-app .tt-wallet-ui .tt-reservation-main { min-height: 0; align-items: flex-start; gap: 10px !important; padding: 10px; border-radius: 0; }
+.tt-wallet-ui .tt-reservation-icon { width: 38px; height: 40px; font-size: 23px; border-radius: 8px; color: var(--text); }
+.tt-wallet-ui .tt-reservation-icon.blue { background: var(--rd-blue); }
+.tt-wallet-ui .tt-reservation-icon.pink { background: var(--rd-pink); }
+.tt-wallet-ui .tt-reservation-icon.green { background: var(--rd-yellow); }
+.tt-wallet-ui .tt-reservation-icon.yellow { background: #eff1f5; }
+.tt-wallet-ui .tt-reservation-copy { min-width: 0; flex: 1; }
+.tt-wallet-ui .tt-reservation-copy .tt-type { padding: 0; border: 0; border-radius: 0; background: none; color: #626a78; font-size: 11px; font-weight: 500; line-height: 1.3; }
+.tt-wallet-ui .tt-reservation-main strong { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin: 3px 0; font-size: 15px; font-weight: 700; line-height: 1.4; letter-spacing: -.2px; overflow-wrap: anywhere; }
+.tt-wallet-ui .tt-reservation-main small { font-size: 12px; line-height: 1.45; font-weight: 500; color: #596171; }
+.tt-wallet-ui .tt-reservation-main .tt-reservation-location { margin-top: 2px; font-weight: 400; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tt-wallet-ui .tt-reservation-main > .ph { align-self: center; font-size: 18px; color: #4b5361; }
+.tt-wallet-ui .tt-reference { min-height: 42px; margin: 0; padding: 4px 10px; border-color: var(--rd-divider); gap: 8px; }
+.tt-wallet-ui .tt-reference > span { font-size: 11px; font-weight: 500; }
+.tt-wallet-ui .tt-reference > b { font-size: 14px; font-weight: 650; font-variant-numeric: tabular-nums; line-height: 1.4; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.rd-app .tt-wallet-ui .tt-reference > .tt-button { min-width: 66px; min-height: 32px; height: 32px; padding: 5px 6px; border: 0; border-radius: 5px; background: none; font-size: 12px; box-shadow: none; }
+.tt-wallet-ui .tt-reference .ph { font-size: 17px; }
+.rd-app .tt-wallet-ui .tt-reference .tt-reference-add { margin-left: auto; min-width: 0; text-decoration: underline; text-underline-offset: 3px; }
+.rd-app .tt-wallet-ui .tt-button.is-copied { opacity: 1; background: var(--rd-yellow); color: var(--text); }
+.tt-wallet-ui #ttPrimary > .tt-button { width: 100%; min-height: 44px; margin-bottom: 8px; font-size: 15px; }
+.tt-wallet-ui #ttPrimary > .tt-button > .ph { position: static; right: auto; font-size: 20px; }
+.tt-wallet-ui #ttNav { margin-right: -16px; margin-left: -16px; min-height: 60px; }
+.rd-app .tt-dialog #ttNav .active { color: var(--text); }
+.tt-dialog #ttNav .active .ph { background: var(--rd-yellow); border-radius: 5px; }
+.tt-dialog #ttNav .active::after { background: var(--text); }
+.tt-wallet-ui #ttNav .ph { font-size: 22px; }
+.tt-wallet-ui .tt-empty { margin: 0; padding: 25px 14px; border-color: #b2bac6; }
+.rd-app .tt-wallet-ui .tt-empty h2 { font-size: 16px; font-weight: 700; }
+.tt-wallet-ui .tt-empty p { font-size: 13px; line-height: 1.5; margin: 9px 0 16px; }
+.tt-wallet-ui .tt-empty > .ph { color: var(--text); font-size: 30px; }
+
+/* The detail shows the full text and the original source of each reservation. */
+.tt-wallet-ui .tt-detail-hero { display: flex; align-items: center; gap: 12px; margin: 4px 0 18px; }
+.tt-wallet-ui .tt-detail-hero > div { min-width: 0; }
+.tt-wallet-ui .tt-detail-hero .tt-reservation-icon { width: 48px; height: 52px; font-size: 28px; }
+.tt-wallet-ui .tt-detail-hero .tt-type { border: 0; border-radius: 5px; padding: 2px 7px; font-size: 11px; color: var(--text); }
+.tt-wallet-ui .tt-detail-hero .blue { background: var(--rd-blue); }
+.tt-wallet-ui .tt-detail-hero .pink { background: var(--rd-pink); }
+.tt-wallet-ui .tt-detail-hero .green { background: var(--rd-yellow); }
+.rd-app .tt-wallet-ui .tt-detail-hero h2 { margin: 5px 0 0; font-size: 18px; font-weight: 750; line-height: 1.4; overflow-wrap: anywhere; }
+.tt-wallet-ui .tt-detail-list { margin: 0 0 14px; border: 1.3px solid #b1b8c3; border-radius: 9px; overflow: hidden; }
+.tt-wallet-ui .tt-detail-list > div { padding: 12px; border-bottom: 1px solid var(--rd-divider); }
+.tt-wallet-ui .tt-detail-list > div:last-child { border-bottom: 0; }
+.tt-wallet-ui .tt-detail-list dt { display: flex; align-items: center; gap: 7px; margin: 0; font-size: 12px; font-weight: 550; line-height: 1.4; color: #4f5766; }
+.tt-wallet-ui .tt-detail-list dt .ph { font-size: 19px; color: var(--text); }
+.tt-wallet-ui .tt-detail-list dd { margin: 6px 0 0 26px; font-size: 14px; line-height: 1.5; font-weight: 500; }
+.tt-wallet-ui .tt-detail-list code { font-family: var(--font); font-size: 15px; font-weight: 650; line-height: 1.45; letter-spacing: .2px; overflow-wrap: anywhere; }
+.tt-wallet-ui .tt-detail-reference { display: flex; align-items: center; gap: 10px; }
+.tt-wallet-ui .tt-detail-reference code { flex: 1; min-width: 0; }
+.tt-wallet-ui .tt-detail-reference .tt-button { flex-shrink: 0; min-width: 76px; }
+.rd-app .tt-wallet-ui .tt-copy-action { background: #fff6a1; border-color: #d9cd7c; }
+.tt-wallet-ui .tt-detail-address { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 10px; }
+.tt-wallet-ui .tt-detail-address > span { min-width: 0; flex: 1 1 150px; }
+.rd-app .tt-wallet-ui .tt-detail-map { background: var(--rd-blue); min-height: 40px; font-size: 12px; }
+.tt-wallet-ui .tt-detail-link { min-height: 44px; font-size: 13px; margin: 10px 0; }
+.tt-wallet-ui .tt-source-note { font-size: 12px !important; margin: 8px 0 0; }
+.tt-wallet-ui .tt-detail-actions { margin: 12px 0 0; gap: 10px; }
+.tt-wallet-ui .tt-detail-actions > .tt-button { min-height: 44px; font-size: 13px; }
+.rd-app .tt-wallet-ui .tt-detail-actions > .tt-danger { flex: .65; color: #a52748; border-color: #dca3b5; background: #fff0f5; }
+.tt-wallet-ui .tt-sub-footer { border-top: 1px solid var(--rd-divider); margin-top: 14px; padding: 12px 0 max(14px, env(safe-area-inset-bottom)); }
+.rd-app .tt-wallet-ui .tt-sub-footer .tt-button { min-height: 44px; font-size: 15px; }
+
+/* Compact fields retain 16px editable text to avoid automatic mobile zoom. */
+.tt-wallet-ui .tt-form { gap: 14px; }
+.tt-wallet-ui .tt-form label { font-size: 12px; font-weight: 650; line-height: 1.4; gap: 6px; }
+.tt-wallet-ui .tt-form .tt-required { color: #b5294d; font-weight: 650; }
+.tt-wallet-ui .tt-form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.rd-app .tt-wallet-ui .tt-form :is(input:not([type=hidden]), textarea) { min-height: 44px; padding: 10px 11px; border: 1.3px solid #9199a6; border-radius: 8px; background: #fff; font-size: 16px; font-weight: 500; line-height: 1.35; }
+.rd-app .tt-wallet-ui .tt-form input:focus, .rd-app .tt-wallet-ui .tt-form textarea:focus { border-color: var(--text); background: #fffdf0; box-shadow: none; }
+.tt-wallet-ui .tt-form input::placeholder, .tt-wallet-ui .tt-form textarea::placeholder { font-size: 13px; color: #757c89; }
+.tt-wallet-ui .tt-form textarea { resize: vertical; min-height: 78px; }
+.rd-app .tt-wallet-ui .tt-form :is(.custom-date-button, .custom-time-button) { min-height: 44px; height: 44px; padding: 8px 10px; border: 1.3px solid #9199a6; border-radius: 8px; font-size: 14px; }
+.tt-wallet-ui .tt-form .custom-time-value { font-size: 16px; }
+.tt-wallet-ui #ttReservationTypes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.rd-app .tt-wallet-ui #ttReservationTypes > .tt-button { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; min-height: 60px; padding: 7px 4px; border: 1.3px solid #a6aebb; border-radius: 8px; background: #fff; font-size: 12px; box-shadow: none; }
+#ttReservationTypes .ph { font-size: 23px; }
+.rd-app .tt-wallet-ui #ttReservationTypes > .active { background: var(--rd-yellow); border-color: var(--text); box-shadow: 1px 2px 0 var(--text); }
+.tt-reservation-extras { margin: 0; }
+.tt-reservation-extras > summary { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 9px 10px; border: 1.3px solid #9199a6; border-radius: 8px; font-size: 13px; font-weight: 550; list-style: none; cursor: pointer; }
+.tt-reservation-extras > summary::-webkit-details-marker { display: none; }
+.tt-reservation-extras > summary > .ph { font-size: 19px; }
+.tt-reservation-extras > summary > .ph:last-child { margin-left: auto; font-size: 17px; transition: transform var(--rd-motion); }
+.tt-reservation-extras small { font-size: 12px; color: var(--muted); }
+.tt-reservation-extras[open] > summary { background: #fff9cf; border-color: var(--text); }
+.tt-reservation-extras[open] > summary > .ph:last-child { transform: rotate(180deg); }
+.tt-reservation-extras > div { display: grid; gap: 12px; padding-top: 12px; }
+.tt-wallet-ui .tt-form .tt-muted { font-size: 12px !important; line-height: 1.45; margin-top: -4px; }
+.tt-wallet-ui .tt-form .tt-muted > .ph { font-size: 16px; }
+.tt-wallet-ui [role=alert] { font-size: 13px; }
+@media (hover: hover) {
+  .tt-wallet-ui .tt-reservation:hover { border-color: var(--text); }
+  .rd-app .tt-wallet-ui .tt-reservation-main:hover { background: #fffdf0; }
+  .rd-app .tt-wallet-ui .tt-reference > .tt-button:hover { background: #fff6a1; }
+}
+@media (max-width: 599px) {
+  .rd-app .tt-wallet-ui { width: 100%; max-width: none; height: 100dvh; max-height: 100dvh; margin: 0; padding: 12px 16px 0; border: 0; border-radius: 0; box-shadow: none; }
+  .rd-app :is(#ttReservationEditor, #ttReservationDetail, #ttCopy) { width: 100%; max-width: none; height: 100dvh; max-height: 100dvh; }
+}
+@media (max-width: 359px) {
+  .rd-app .tt-wallet-ui { padding-right: 14px; padding-left: 14px; }
+  .tt-wallet-ui #ttNav { margin-right: -14px; margin-left: -14px; }
+  .tt-wallet-ui .tt-reservation-icon { width: 32px; height: 36px; font-size: 21px; }
+  .rd-app .tt-wallet-ui .tt-reservation-main { gap: 8px !important; padding: 9px; }
+  .tt-wallet-ui .tt-detail-list > div { padding: 10px; }
+  .tt-wallet-ui .tt-detail-list dd { margin-left: 0; }
+  .tt-wallet-ui #ttReservationTypes { gap: 6px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tt-wallet-ui .tt-button, .tt-reservation-extras > summary > .ph:last-child { transition: none; }
+}

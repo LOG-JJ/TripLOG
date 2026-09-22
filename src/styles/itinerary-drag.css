@@ -1,0 +1,52 @@
+/* Fast pickup is confined to the handle; card content keeps native scrolling. */
+#itineraryPage .timeline-stop-heading { grid-template-columns: 19px minmax(0, 1fr) auto; }
+#itineraryPage .timeline-stop-actions { display: flex; align-items: center; align-self: start; gap: 0; margin: -5px -6px -7px 0; }
+#itineraryPage .timeline-stop-actions .timeline-edit { width: 28px; min-width: 28px; height: 44px; min-height: 44px; padding: 4px; margin: 0; }
+.rd-app #itineraryPage .timeline-drag-handle {
+  display: grid; place-items: center; width: 44px; height: 44px; min-width: 44px; min-height: 44px; flex: 0 0 44px;
+  padding: 10px; margin: 0; border: 0; border-radius: 7px; box-shadow: none; background: transparent; color: #737d8b;
+  touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; cursor: grab;
+}
+.rd-app #itineraryPage .timeline-drag-handle .ph { font-size: 22px; pointer-events: none; }
+.rd-app #itineraryPage .timeline-drag-handle:focus-visible { outline: 2px solid #236eab; outline-offset: -4px; }
+.rd-app #itineraryPage .timeline-drag-handle[aria-pressed="true"],
+.rd-app #itineraryPage .itinerary-touch-ghost .timeline-drag-handle { color: #101524; background: #fff05a; cursor: grabbing; }
+body.itinerary-pointer-dragging { user-select: none; -webkit-user-select: none; cursor: grabbing; }
+body.itinerary-pointer-dragging #itineraryList { overflow-anchor: none; }
+#itineraryPage .itinerary-list.is-drag-previewing > :is(.timeline-stop, .timeline-transit),
+#itineraryPage .timeline-drag-placeholder { transition: transform 170ms cubic-bezier(.2,.8,.25,1); }
+#itineraryPage .timeline-drag-placeholder { pointer-events: none; grid-template-columns: 43px 22px minmax(0, 1fr); }
+#itineraryPage .timeline-drag-placeholder-time { font-size: 12px; font-weight: 600; color: #537b9d; }
+#itineraryPage .timeline-drag-placeholder-dot { width: 10px; height: 10px; margin-left: 3px; background: #94cbed; box-shadow: 0 0 0 3px #e9f5fd; }
+#itineraryPage .timeline-drag-placeholder > div { padding: 9px 11px; gap: 8px; border: 1.5px dashed #75acd0; border-radius: 8px; background: #edf8ff; box-shadow: inset 0 0 0 2px #f7fcff; color: #286c9e; }
+#itineraryPage .timeline-drag-placeholder strong { font-size: 13px; font-weight: 650; }
+#itineraryPage .timeline-drag-placeholder > div > span { font-size: 11px; font-weight: 600; }
+#itineraryPage .itinerary-touch-ghost {
+  position: fixed; z-index: 1200; padding: 0; margin: 0; pointer-events: none;
+  will-change: transform; contain: layout style; transform: translate3d(0, -3px, 0);
+}
+#itineraryPage .itinerary-touch-ghost .timeline-stop { opacity: 1; }
+#itineraryPage .itinerary-touch-ghost .timeline-stop-body {
+  border: 1.5px solid #111525; border-radius: 9px; background: #fffef5;
+  box-shadow: 2px 3px 0 #111525, 0 9px 18px #11152520;
+  transform: scale(1.01); transform-origin: right center; animation: itinerary-pickup 120ms cubic-bezier(.2,.8,.25,1);
+}
+#itineraryPage .itinerary-touch-ghost .timeline-times { color: #707d8f; }
+#itineraryPage .itinerary-touch-ghost .timeline-axis { opacity: 0; }
+#itineraryPage .itinerary-touch-ghost .timeline-edit { visibility: hidden; }
+.itinerary-drag-announcement { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@keyframes itinerary-pickup {
+  from { transform: scale(.99); box-shadow: 0 0 0 #111525, 0 0 0 #11152500; }
+  to { transform: scale(1.01); box-shadow: 2px 3px 0 #111525, 0 9px 18px #11152520; }
+}
+@media (min-width: 850px) { #itineraryPage .timeline-drag-placeholder { grid-template-columns: 52px 28px minmax(0, 1fr); } }
+@media (max-width: 359px) {
+  #itineraryPage .timeline-drag-placeholder { grid-template-columns: 39px 19px minmax(0, 1fr); }
+  #itineraryPage .timeline-stop-actions .timeline-edit { width: 24px; min-width: 24px; padding: 2px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #itineraryPage .itinerary-list.is-drag-previewing > :is(.timeline-stop, .timeline-transit),
+  #itineraryPage .timeline-drag-placeholder { transition: none; }
+  #itineraryPage .itinerary-touch-ghost .timeline-stop-body { animation: none; transform: none; }
+}
+@media print { #itineraryPage .timeline-drag-handle, #itineraryPage .itinerary-touch-ghost { display: none !important; } }

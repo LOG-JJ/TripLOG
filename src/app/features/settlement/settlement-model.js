@@ -67,7 +67,11 @@ function buildSettlementModel(selectedSource) {
   const settings = getSettlementSettings();
   const members = getSettlementMembers();
   const entries = getSettlementEntriesForSource(selectedSource);
-  const entryRows = entries.map((entry) => getSettlementEntryAllocation(entry, members, settings));
+  const entryRows = entries.map((entry) => {
+    const allocation = getSettlementEntryAllocation(entry, members, settings);
+    const unknownPayer = Boolean(entry.raw?.payerKey && !members.some(member => member.key === entry.raw.payerKey));
+    return { ...allocation, unknownPayer, invalid: allocation.invalid || unknownPayer };
+  });
   const sourceTotal = entries.reduce((sum, entry) => sum + entry.amount, 0);
   const outsideSpent = getCompanionTotalSpent();
   const totalTripSpent = sourceTotal + outsideSpent;

@@ -29,17 +29,7 @@
   let authStatusOverride = null;
   let memberSyncIntervalId = null;
   let memberSyncInFlight = false;
-  let tripStateSyncInFlight = false;
-  let tripStateUploadInFlight = false;
-  let tripStateUploadPromise = null;
-  let applyingRemoteTripState = false;
-  let tripStateHasLocalChanges = false;
-  let tripListSyncInFlight = false;
   let initialTripListSyncComplete = false;
-  let lastTripStateUpdatedAt = "";
-  let lastTripStateSignature = "";
-  let headerSyncStatusTimer = null;
-  let manualSyncInFlight = false;
 
   function readJsonStorage(key, fallback) {
     try {
@@ -288,6 +278,8 @@
 
   function applyOwnerAccount(account) {
     if (!account) return;
+    const bound = window.TripLogSyncRepository?.cached(state.id);
+    if (bound?.serverId && bound.role !== "owner") return;
     const collaboration = getCollaboration();
     const canClaimOwner = !collaboration.ownerId
       || collaboration.ownerId.startsWith("local_")
@@ -498,47 +490,19 @@
     return previousSnapshot !== nextSnapshot;
   }
 
-  async function syncSupabaseTripMembers({ render = false, quiet = true } = {}) {
-    if (!hasSupabaseConfig() || !isSignedIn() || memberSyncInFlight) return false;
+  async function syncSupabaseTripMembers({ render: shouldRender = false, quiet = true } = {}) {
+    if (!isSignedIn() || memberSyncInFlight) return false;
+    const localId = state.id;
+    if (!window.TripLogSyncRepository.cached(localId)?.serverId) return false;
     memberSyncInFlight = true;
     try {
-      const client = await getSupabaseClient();
-      const { data: tripRow, error: tripError } = await client
-        .from("triplog_trips")
-        .select("id")
-        .eq("app_trip_id", state.id)
-        .maybeSingle();
-      if (tripError) throw tripError;
-      if (!tripRow?.id) return false;
-
-      const { data: memberRows, error: membersError } = await client
-        .from("triplog_trip_members")
-        .select("user_id, email, display_name, role, status, joined_at")
-        .eq("trip_id", tripRow.id)
-        .order("joined_at", { ascending: true });
-      if (membersError) throw membersError;
-
-      const changed = mergeSupabaseMembers(memberRows || []);
-      if (changed) {
-        const wasApplyingRemoteTripState = applyingRemoteTripState;
-        applyingRemoteTripState = true;
-        saveStateSilently();
-        applyingRemoteTripState = wasApplyingRemoteTripState;
-      }
-      if (render && changed) renderTripCollaboration();
+      const result = await window.TripLog.sync.controller.request("members", localId);
+      if (state.id !== localId || !isSignedIn()) return false;
+      const changed = mergeSupabaseMembers(result.members || []);
+      if (changed) { await saveStateSilently(); if (shouldRender) renderTripCollaboration(); }
       return changed;
-    } catch (error) {
-      if (!quiet) {
-        supabaseStatusOverride = {
-          message: `멤버 동기화 실패: ${error.message}`,
-          tone: "warning",
-        };
-        if (render) renderTripCollaboration();
-      }
-      return false;
-    } finally {
-      memberSyncInFlight = false;
-    }
+    } catch (error) { if (!quiet) throw error; return false; }
+    finally { memberSyncInFlight = false; }
   }
 
   function startSupabaseMembersSync() {
@@ -594,79 +558,22 @@
     return getRemoteTripSnapshot(row).id;
   }
 
-  async function syncSupabaseTripList({ render: shouldRender = false, quiet = true } = {}) {
-    if (!hasSupabaseConfig() || !isSignedIn() || tripListSyncInFlight) return false;
-    tripListSyncInFlight = true;
+  async function syncSupabaseTripList({ quiet = true } = {}) {
+    if (!hasSupabaseConfig() || !isSignedIn()) return false;
     try {
-      const client = await getSupabaseClient();
-      const { data: rows, error } = await client
-        .from("triplog_trips")
-        .select("id, app_trip_id, trip_name, start_date, end_date, travel_state, updated_at")
-        .order("updated_at", { ascending: false });
-      if (error) throw error;
-
-      const remoteRows = Array.isArray(rows) ? rows : [];
+      await window.TripLog.sync.controller.connect(await getSupabaseClient(), getSessionAccount(), getSupabaseConfig().url);
       initialTripListSyncComplete = true;
-      if (!remoteRows.length) return false;
-
-      const remoteSnapshots = remoteRows.map(getRemoteTripSnapshot);
-      const preserveActiveLocalChanges = Boolean(lastTripStateSignature)
-        && tripStateHasLocalChanges
-        && remoteSnapshots.some((snapshot) => snapshot.id === state.id);
-      const mergedSnapshots = preserveActiveLocalChanges
-        ? remoteSnapshots.map((snapshot) => snapshot.id === state.id ? getStateSnapshot() : snapshot)
-        : remoteSnapshots;
-      const hasCurrentTrip = remoteSnapshots.some((snapshot) => snapshot.id === state.id);
-      const preferredActiveId = hasCurrentTrip ? state.id : remoteSnapshots[0]?.id || state.id;
-      const previousApplyingRemoteTripState = applyingRemoteTripState;
-      applyingRemoteTripState = true;
-      let result;
-      try {
-        result = window.TripLog.persistence.stateStorage.syncTripsFromSnapshots(mergedSnapshots, {
-          preferredActiveId,
-          removeEmptyDefault: true,
-        });
-      } finally {
-        applyingRemoteTripState = previousApplyingRemoteTripState;
-      }
-
-      const activeRemoteRow = remoteRows.find((row) => getRemoteTripSnapshotId(row) === state.id);
-      if (!preserveActiveLocalChanges && activeRemoteRow?.travel_state && typeof activeRemoteRow.travel_state === "object") {
-        lastTripStateUpdatedAt = activeRemoteRow.updated_at || lastTripStateUpdatedAt;
-        lastTripStateSignature = getTripStateSignature(getRemoteSafeSnapshot(activeRemoteRow.travel_state));
-        tripStateHasLocalChanges = false;
-      }
-      if (shouldRender && result?.changed) render();
-      updateHeaderSyncButton();
-      return result?.changed || false;
+      return true;
     } catch (error) {
       initialTripListSyncComplete = false;
-      if (!quiet) {
-        supabaseStatusOverride = {
-          message: `여행 목록 동기화 실패: ${error.message}`,
-          tone: "warning",
-        };
-        if (shouldRender) renderTripCollaboration();
-        throw error;
-      }
+      if (!quiet) throw error;
       return false;
-    } finally {
-      tripListSyncInFlight = false;
     }
   }
 
-  async function upsertSupabaseOwnerMember(client, tripId, account) {
-    if (!tripId || !account?.id) return;
-    const { error } = await client.from("triplog_trip_members").upsert({
-      trip_id: tripId,
-      user_id: account.id,
-      email: account.email,
-      display_name: account.displayName || getEmailDisplayFallback(account.email),
-      role: "owner",
-      status: "accepted",
-      joined_at: new Date().toISOString(),
-    }, { onConflict: "trip_id,user_id" });
-    if (error) throw error;
+  async function upsertSupabaseOwnerMember() {
+    // Membership changes are authorized by the server command API.
+    return false;
   }
 
   function isSupabaseTripOwner(tripRow, account) {
@@ -681,191 +588,27 @@
       || (collaboration.ownerEmail && collaboration.ownerEmail === account?.email);
   }
 
-  async function ensureSupabaseTripRow(client, account) {
-    const { data: tripRow, error: tripError } = await client
-      .from("triplog_trips")
-      .select("id, owner_id, updated_at, travel_state")
-      .eq("app_trip_id", state.id)
-      .maybeSingle();
-    if (tripError) throw tripError;
-    if (tripRow?.id) {
-      if (isSupabaseTripOwner(tripRow, account)) {
-        await upsertSupabaseOwnerMember(client, tripRow.id, account);
-      }
-      return tripRow;
-    }
-
-    if (!canCreateSupabaseTripRow(account)) {
-      throw new Error("공유 여행의 서버 기록을 찾지 못했습니다. 초대 링크를 다시 수락하거나 새로고침 후 동기화해 주세요.");
-    }
-
-    const snapshot = buildSharedTripSnapshot();
-    const { data: createdTrip, error: createError } = await client
-      .from("triplog_trips")
-      .insert({
-        app_trip_id: state.id,
-        owner_id: account.id,
-        trip_name: state.tripName || "현재 여행",
-        start_date: state.startDate || null,
-        end_date: state.endDate || null,
-        travel_state: snapshot,
-        privacy: getCollaboration().privacy,
-        updated_at: new Date().toISOString(),
-      })
-      .select("id, owner_id, updated_at, travel_state")
-      .single();
-    if (createError) throw createError;
-    await upsertSupabaseOwnerMember(client, createdTrip.id, account);
-    return createdTrip;
+  async function ensureSupabaseTripRow() {
+    await window.TripLog.sync.controller.engine.pump();
+    const record = window.TripLogSyncRepository.cached(state.id);
+    if (!record?.serverId) throw new Error("여행의 서버 연결이 아직 완료되지 않았습니다.");
+    return { id: record.serverId };
   }
 
-  async function uploadSupabaseTripState({ quiet = true, force = false } = {}) {
-    if (!hasSupabaseConfig() || !isSignedIn() || applyingRemoteTripState) return false;
-    if (tripStateUploadInFlight) return tripStateUploadPromise || false;
-    const account = getSessionAccount();
-    if (!account) return false;
-
-    const snapshot = buildSharedTripSnapshot();
-    const signature = getTripStateSignature(snapshot);
-    if (signature && signature === lastTripStateSignature) {
-      tripStateHasLocalChanges = false;
-      return false;
-    }
-
-    tripStateUploadInFlight = true;
-    tripStateUploadPromise = (async () => {
-      const client = await getSupabaseClient();
-      const tripRow = await ensureSupabaseTripRow(client, account);
-      const now = new Date().toISOString();
-      const { data, error } = await client
-        .from("triplog_trips")
-        .update({
-          trip_name: state.tripName || "현재 여행",
-          start_date: state.startDate || null,
-          end_date: state.endDate || null,
-          travel_state: snapshot,
-          privacy: getCollaboration().privacy,
-          updated_at: now,
-        })
-        .eq("id", tripRow.id)
-        .select("updated_at, travel_state")
-        .single();
-      if (error) throw error;
-
-      lastTripStateUpdatedAt = data?.updated_at || now;
-      lastTripStateSignature = signature;
-      tripStateHasLocalChanges = false;
-      return true;
-    })();
-
-    try {
-      return await tripStateUploadPromise;
-    } catch (error) {
-      if (!quiet) {
-        supabaseStatusOverride = {
-          message: `여행 동기화 업로드 실패: ${error.message}`,
-          tone: "warning",
-        };
-        renderTripCollaboration();
-        throw error;
-      }
-      return false;
-    } finally {
-      tripStateUploadInFlight = false;
-      tripStateUploadPromise = null;
-    }
+  async function uploadSupabaseTripState() {
+    return window.TripLog.sync.controller.engine.pump();
   }
 
-  async function syncSupabaseTripState({ render: shouldRender = false, quiet = true, force = false } = {}) {
-    if (!hasSupabaseConfig() || !isSignedIn() || applyingRemoteTripState || tripStateSyncInFlight) return false;
-    tripStateSyncInFlight = true;
-    try {
-      const client = await getSupabaseClient();
-      const { data: tripRow, error } = await client
-        .from("triplog_trips")
-        .select("id, app_trip_id, travel_state, updated_at")
-        .eq("app_trip_id", state.id)
-        .maybeSingle();
-      if (error) throw error;
-      if (!tripRow?.travel_state || typeof tripRow.travel_state !== "object") return false;
-
-      const remoteSnapshot = getRemoteSafeSnapshot(tripRow.travel_state);
-      const remoteSignature = getTripStateSignature(remoteSnapshot);
-      const localSignature = getTripStateSignature(getStateSnapshot());
-      if (!remoteSignature || remoteSignature === localSignature) {
-        lastTripStateUpdatedAt = tripRow.updated_at || lastTripStateUpdatedAt;
-        lastTripStateSignature = remoteSignature || lastTripStateSignature;
-        if (remoteSignature === localSignature) tripStateHasLocalChanges = false;
-        return false;
-      }
-      if (!force && remoteSignature === lastTripStateSignature) {
-        lastTripStateUpdatedAt = tripRow.updated_at || lastTripStateUpdatedAt;
-        lastTripStateSignature = remoteSignature || lastTripStateSignature;
-        return false;
-      }
-
-      if (!force && tripStateHasLocalChanges) return false;
-
-      applyingRemoteTripState = true;
-      const selectedDate = state.selectedDate;
-      const selectedItineraryDate = state.selectedItineraryDate;
-      const lastActiveItineraryDate = state.lastActiveItineraryDate;
-      window.TripLog.persistence.stateStorage.importSharedTripSnapshot(remoteSnapshot, { makeActive: true });
-      state.selectedDate = selectedDate || state.startDate;
-      state.selectedItineraryDate = selectedItineraryDate || state.startDate;
-      state.lastActiveItineraryDate = lastActiveItineraryDate || state.startDate;
-      await syncSupabaseTripMembers({ quiet: true });
-      saveStateSilently();
-      if (shouldRender) render();
-
-      lastTripStateUpdatedAt = tripRow.updated_at || "";
-      lastTripStateSignature = remoteSignature;
-      tripStateHasLocalChanges = false;
-      return true;
-    } catch (error) {
-      if (!quiet) {
-        supabaseStatusOverride = {
-          message: `여행 동기화 다운로드 실패: ${error.message}`,
-          tone: "warning",
-        };
-        if (shouldRender) renderTripCollaboration();
-        throw error;
-      }
-      return false;
-    } finally {
-      applyingRemoteTripState = false;
-      tripStateSyncInFlight = false;
-    }
+  async function syncSupabaseTripState() {
+    return window.TripLog.sync.controller.engine.pump();
   }
 
   function stopSupabaseTripStateSync() {
-    tripStateSyncInFlight = false;
-    tripStateUploadInFlight = false;
-    tripStateHasLocalChanges = false;
-    updateHeaderSyncButton();
+    window.TripLog.sync.controller.disconnect();
   }
 
-  function updateHeaderSyncButton({ message = "", tone = "", transient = false } = {}) {
-    const button = els.itineraryPageButton;
-    if (!button) return;
-    if (manualSyncInFlight && !message && !tone && !transient) return;
-
-    window.clearTimeout(headerSyncStatusTimer);
-    headerSyncStatusTimer = null;
-
-    const nextTone = tone || (tripStateHasLocalChanges ? "dirty" : "idle");
-    const nextMessage = message || (tripStateHasLocalChanges ? "변경사항 동기화" : "여행 동기화");
-    button.classList.remove("is-dirty", "is-syncing", "is-synced", "is-warning");
-    if (nextTone === "dirty") button.classList.add("is-dirty");
-    if (nextTone === "syncing") button.classList.add("is-syncing");
-    if (nextTone === "success") button.classList.add("is-synced");
-    if (nextTone === "warning") button.classList.add("is-warning");
-    button.title = nextMessage;
-    button.setAttribute("aria-label", nextMessage);
-
-    if (transient) {
-      headerSyncStatusTimer = window.setTimeout(() => updateHeaderSyncButton(), 1800);
-    }
+  function updateHeaderSyncButton() {
+    window.TripLog.sync.statusUi?.render();
   }
 
   function showSyncToast(message, tone = "success") {
@@ -890,71 +633,12 @@
     }, tone === "warning" ? 3200 : 2400);
   }
 
-  async function manualSyncSupabaseTripState() {
-    if (!hasSupabaseConfig() || !isSignedIn()) {
-      updateHeaderSyncButton({
-        message: "로그인 후 동기화 가능",
-        tone: "warning",
-        transient: true,
-      });
-      showSyncToast("로그인 후 여행 동기화를 사용할 수 있습니다.", "warning");
-      setAuthGateMode("login");
-      renderAuthGate();
-      return false;
-    }
-
-    updateHeaderSyncButton({
-      message: "여행 동기화 중",
-      tone: "syncing",
-    });
-
-    const syncStartedAt = Date.now();
-    manualSyncInFlight = true;
-
-    try {
-      let uploaded = false;
-      let downloaded = false;
-      if (tripStateHasLocalChanges) {
-        uploaded = await uploadSupabaseTripState({ quiet: false, force: true });
-        if (tripStateHasLocalChanges && !uploaded) {
-          throw new Error("변경사항 업로드가 완료되지 않았습니다.");
-        }
-        await syncSupabaseTripList({ render: true, quiet: false });
-      } else {
-        downloaded = await syncSupabaseTripState({ render: true, quiet: false, force: true });
-        const listChanged = await syncSupabaseTripList({ render: true, quiet: false });
-        downloaded = downloaded || listChanged;
-      }
-      await syncSupabaseTripMembers({ render: true, quiet: true });
-      if (uploaded || downloaded) tripStateHasLocalChanges = false;
-
-      const elapsed = Date.now() - syncStartedAt;
-      if (elapsed < 650) await delay(650 - elapsed);
-
-      const message = downloaded
-        ? "서버 최신 여행을 불러왔습니다"
-        : uploaded
-          ? "내 변경사항을 저장했습니다"
-          : "이미 최신 상태입니다";
-      manualSyncInFlight = false;
-      updateHeaderSyncButton({ message, tone: "success", transient: true });
-      showSyncToast("동기화 완료", "success");
-      return uploaded || downloaded;
-    } catch (error) {
-      manualSyncInFlight = false;
-      updateHeaderSyncButton({
-        message: "동기화 실패",
-        tone: "warning",
-        transient: true,
-      });
-      showSyncToast(`동기화 실패 · ${error.message}`, "warning");
-      return false;
-    }
+  function openSyncStatus() {
+    window.TripLog.sync.statusUi?.open();
   }
 
   function handleTripStateSaved() {
-    if (applyingRemoteTripState) return;
-    tripStateHasLocalChanges = true;
+    window.TripLog.sync.controller.engine.wake();
     updateHeaderSyncButton();
   }
 
@@ -1195,9 +879,11 @@
     if (!shouldShowGate) {
       // Run only when leaving the login/recovery screen, not on session refresh
       // or ordinary renders while the user is browsing another tab.
-      if (justSignedIn && !getInviteTokenFromUrl() && !initialPageParams.has("itinerary")) {
+      // A restored session (including a background app update) must honor the
+      // page already being viewed instead of routing every return to overview.
+      if (justSignedIn && !getInviteTokenFromUrl() && !initialPageParams.has("itinerary") && !initialPageParams.has("page")) {
         const landingUrl = new URL(window.location.href);
-        const landingPage = initialAllowedPages.includes(initialPage) ? initialPage : "overview";
+        const landingPage = "overview";
         landingUrl.searchParams.set("page", landingPage);
         window.history.replaceState({}, document.title, landingUrl.toString());
         setActivePage(landingPage);
@@ -1572,96 +1258,31 @@
     return snapshot;
   }
 
-  async function syncTripInviteToSupabase(inviteRecord) {
-    const sessionAccount = getSessionAccount();
-    if (!sessionAccount) throw new Error("Supabase 로그인 후 서버 초대 저장이 가능합니다.");
-
-    const client = await getSupabaseClient();
-    const snapshot = buildSharedTripSnapshot();
-    const collaboration = getCollaboration();
-    const tripRow = await ensureSupabaseTripRow(client, sessionAccount);
-    const { error: tripUpdateError } = await client
-      .from("triplog_trips")
-      .update({
-        trip_name: state.tripName || "현재 여행",
-        start_date: state.startDate || null,
-        end_date: state.endDate || null,
-        travel_state: snapshot,
-        privacy: collaboration.privacy,
-        updated_at: new Date().toISOString(),
-      })
-      .eq("id", tripRow.id);
-
-    if (tripUpdateError) throw tripUpdateError;
-
-    const { error: memberError } = await client.from("triplog_trip_members").upsert({
-      trip_id: tripRow.id,
-      user_id: sessionAccount.id,
-      email: sessionAccount.email,
-      display_name: sessionAccount.displayName,
-      role: "owner",
-      status: "accepted",
-      joined_at: new Date().toISOString(),
-    }, { onConflict: "trip_id,user_id" });
-    if (memberError) throw memberError;
-
-    const { error: inviteError } = await client
-      .from("triplog_trip_invites")
-      .upsert({
-        token: inviteRecord.token,
-        trip_id: tripRow.id,
-        app_trip_id: state.id,
-        trip_name: state.tripName || "현재 여행",
-        created_by: sessionAccount.id,
-        expires_at: inviteRecord.expiresAt,
-        status: "open",
-      }, { onConflict: "token" });
-
-    if (inviteError) throw inviteError;
-    return tripRow;
+  async function syncTripInviteToSupabase() {
+    return window.TripLog.sync.controller.engine.control(state.id, "invite", { role: "editor" });
   }
 
   async function createTripInvite({ forceNew = false } = {}) {
+    const localId = state.id;
     const collaboration = getCollaboration();
-    if (!collaboration.privacy.allowInviteRequests) {
-      setStatus(els.tripInviteStatus, "개인정보 설정에서 초대 링크 수락이 꺼져 있습니다.", "warning");
-      return null;
-    }
-
-    const token = forceNew || !collaboration.inviteToken ? createInviteToken() : collaboration.inviteToken;
-    const inviteUrl = buildInviteUrl(token);
-    const inviteRecord = {
-      token,
-      tripId: state.id,
-      tripName: state.tripName || "현재 여행",
-      startDate: state.startDate || "",
-      endDate: state.endDate || "",
-      createdAt: new Date().toISOString(),
-      expiresAt: getInviteExpiry(),
-      createdBy: getCurrentAccount()?.email || "",
-      snapshot: buildSharedTripSnapshot(),
-      source: "local",
-    };
-
-    collaboration.inviteToken = token;
-    collaboration.lastInviteUrl = inviteUrl;
-    saveLocalInvite(inviteRecord);
-    saveStateSilently();
-    renderTripCollaboration();
-    if (els.tripInviteLinkInput) els.tripInviteLinkInput.value = inviteUrl;
-
-    if (hasSupabaseConfig()) {
-      try {
-        await syncTripInviteToSupabase(inviteRecord);
-        setStatus(els.tripInviteStatus, "Supabase에 초대 링크를 저장했습니다. 링크를 공유해도 됩니다.", "success");
-      } catch (error) {
-        setStatus(els.tripInviteStatus, `로컬 링크 생성됨 · 서버 저장 보류: ${error.message}`, "warning");
+    if (!isSignedIn()) { setStatus(els.tripInviteStatus, "로그인 후 초대를 만들 수 있습니다.", "warning"); return null; }
+    if (!collaboration.privacy.allowInviteRequests) { setStatus(els.tripInviteStatus, "여행 초대가 꺼져 있습니다.", "warning"); return null; }
+    try {
+      if (!forceNew && collaboration.inviteToken && collaboration.lastInviteUrl) {
+        if (els.tripInviteLinkInput) els.tripInviteLinkInput.value = collaboration.lastInviteUrl;
+        return { token: collaboration.inviteToken, source: "supabase" };
       }
-    } else {
-      setStatus(els.tripInviteStatus, "로컬 링크가 생성되었습니다. 다른 기기 수락은 Supabase 연결 후 가능합니다.", "warning");
-    }
-
-    return inviteRecord;
+      const result = await syncTripInviteToSupabase();
+      if (state.id !== localId) return null;
+      const current = getCollaboration();
+      current.inviteToken = result.token;
+      current.lastInviteUrl = buildInviteUrl(result.token);
+      if (!await saveStateSilently()) return null;
+      if (state.id !== localId) return null;
+      if (els.tripInviteLinkInput) els.tripInviteLinkInput.value = current.lastInviteUrl;
+      setStatus(els.tripInviteStatus, "초대 링크를 만들었습니다. 14일 동안 사용할 수 있습니다.", "success");
+      return { token: result.token, source: "supabase" };
+    } catch (error) { setStatus(els.tripInviteStatus, `초대 생성 실패: ${error.message}`, "warning"); return null; }
   }
 
   async function openTripInviteModal() {
@@ -1723,25 +1344,8 @@
   }
 
   async function updateCurrentSupabaseMemberProfile(account) {
-    if (!account?.id || !hasSupabaseConfig()) return;
-    const client = await getSupabaseClient();
-    const { data: tripRow, error: tripError } = await client
-      .from("triplog_trips")
-      .select("id")
-      .eq("app_trip_id", state.id)
-      .maybeSingle();
-    if (tripError) throw tripError;
-    if (!tripRow?.id) return;
-
-    const { error: memberError } = await client
-      .from("triplog_trip_members")
-      .update({
-        email: account.email,
-        display_name: account.displayName,
-      })
-      .eq("trip_id", tripRow.id)
-      .eq("user_id", account.id);
-    if (memberError) throw memberError;
+    if (!account?.id || !window.TripLogSyncRepository.cached(state.id)?.serverId) return;
+    await window.TripLog.sync.controller.engine.control(state.id, "profile", { displayName: account.displayName });
   }
 
   async function saveProfileFromSettings() {
@@ -1803,10 +1407,32 @@
     intentionalSignOut = false;
   }
 
-  function updatePrivacySetting(key, checked) {
+  async function updatePrivacySetting(key, checked) {
+    const localId = state.id;
     const collaboration = getCollaboration();
-    collaboration.privacy[key] = checked;
-    saveAndRender();
+    const previous = { ...collaboration.privacy };
+    const next = { ...previous, [key]: checked };
+    try {
+      if (window.TripLogSyncRepository.cached(localId)?.serverId) await window.TripLog.sync.controller.engine.control(localId, "privacy", { ...next, _expected: previous });
+      if (state.id !== localId) return;
+      state.collaboration.privacy = next;
+      await saveAndRender();
+      if (checked && ["shareItinerary", "shareExpenses"].includes(key)) {
+        const R = window.TripLogSyncRepository, M = window.TripLogSyncModel;
+        const current = await R.read(localId);
+        const scope = key === "shareItinerary" ? "itinerary" : "expenses";
+        if (current.base) {
+          const pendingView = M.apply(current.base, current.queue.flatMap(q => q.patches)).entities;
+          const select = entities => M.selectScope(entities, scope);
+          const patches = M.diff(select(pendingView), select(M.encode(current.snapshot)));
+          if (patches.length) await R.enqueue(localId, patches);
+        }
+      }
+      await window.TripLog.sync.controller.engine.refresh();
+    } catch (error) {
+      if (state.id === localId) { state.collaboration.privacy = previous; renderTripCollaboration(); }
+      showSyncToast("공유 설정을 저장하지 못했습니다. " + error.message, "warning");
+    }
   }
 
   function handleSupabaseSave() {
@@ -1830,33 +1456,12 @@
   }
 
   async function resolveInvite(token) {
-    const localInvite = getLocalInvites().find((invite) => invite.token === token);
-    if (localInvite) return { ...localInvite, source: "local" };
-
-    if (!hasSupabaseConfig()) {
-      return { token, tripName: "초대 정보를 찾을 수 없음", source: "missing" };
-    }
-
-    if (!isSignedIn()) {
-      return { token, tripName: "로그인 후 초대 확인", source: "login_required" };
-    }
-
+    if (!isSignedIn()) return { token, tripName: "로그인 후 초대 확인", source: "login_required" };
     try {
-      const client = await getSupabaseClient();
-      const { data, error } = await client
-        .from("triplog_trip_invites")
-        .select("id, token, trip_id, app_trip_id, trip_name, expires_at, status")
-        .eq("token", token)
-        .maybeSingle();
-      if (error) throw error;
-      if (!data) return { token, tripName: "초대 정보를 찾을 수 없음", source: "missing" };
-      return { ...data, source: "supabase" };
-    } catch (error) {
-      if (isSupabaseAuthRequiredError(error)) {
-        return { token, tripName: "로그인 후 초대 확인", source: "login_required" };
-      }
-      return { token, tripName: "초대 확인 실패", source: "error", errorMessage: error.message };
-    }
+      await syncSupabaseTripList({ quiet: false });
+      const result = await window.TripLog.sync.controller.engine.request({ action: "resolve", token });
+      return { ...result.invite, token, source: "supabase" };
+    } catch (error) { return { token, tripName: "초대 확인 실패", source: "error", errorMessage: error.message }; }
   }
 
   async function openInviteAcceptModal(token) {
@@ -1905,58 +1510,16 @@
   }
 
   async function acceptSupabaseInvite(account) {
-    const sessionAccount = getSessionAccount();
-    if (!sessionAccount) {
-      setAuthGateMode("login");
-      fillAuthEmailFromAccount(account);
-      authStatusOverride = {
-        message: "초대 수락은 로그인 후 가능합니다. 이메일과 비밀번호로 로그인해 주세요.",
-        tone: "neutral",
-      };
-      renderAuthGate();
-      throw new Error("먼저 로그인한 뒤 초대를 수락해 주세요.");
-    }
-
-    const client = await getSupabaseClient();
-    const invite = pendingInviteRecord;
-    const { error: memberError } = await client.from("triplog_trip_members").upsert({
-      trip_id: invite.trip_id,
-      user_id: sessionAccount.id,
-      email: sessionAccount.email || account.email,
-      display_name: account.displayName || sessionAccount.displayName,
-      role: "member",
-      status: "accepted",
-      invite_token: invite.token,
-      joined_at: new Date().toISOString(),
-    }, { onConflict: "trip_id,user_id" });
-    if (memberError) throw memberError;
-
-    const { data: tripRow, error: tripError } = await client
-      .from("triplog_trips")
-      .select("travel_state")
-      .eq("id", invite.trip_id)
-      .single();
-    if (tripError) throw tripError;
-
-    const snapshot = tripRow?.travel_state && typeof tripRow.travel_state === "object"
-      ? tripRow.travel_state
-      : { id: invite.app_trip_id, tripName: invite.trip_name };
-    window.TripLog.persistence.stateStorage.importSharedTripSnapshot(snapshot, { makeActive: true });
+    if (!getSessionAccount()) throw new Error("먼저 로그인한 뒤 초대를 수락해 주세요.");
+    const remote = await window.TripLog.sync.controller.engine.request({ action: "accept", token: pendingInviteRecord.token });
+    const record = await window.TripLog.sync.controller.engine.acceptRemote(remote);
+    window.TripLog.persistence.stateStorage.applyRepositoryChange(record.localId);
+    window.TripLog.persistence.stateStorage.switchTrip(record.localId);
     saveStoredAccount(account);
-    addAcceptedMemberToState(account);
-    saveAndRender();
   }
 
-  function acceptLocalInvite(account) {
-    const invite = pendingInviteRecord;
-    if (invite.snapshot) {
-      window.TripLog.persistence.stateStorage.importSharedTripSnapshot(invite.snapshot, { makeActive: true });
-    } else if (invite.tripId && invite.tripId !== state.id) {
-      const hasTrip = window.TripLog.persistence.stateStorage.getTrips().some((trip) => trip.id === invite.tripId);
-      if (hasTrip) window.TripLog.persistence.stateStorage.switchTrip(invite.tripId);
-    }
-    addAcceptedMemberToState(account);
-    saveAndRender();
+  function acceptLocalInvite() {
+    throw new Error("서버에서 확인한 초대 링크를 사용해 주세요.");
   }
 
   async function acceptPendingInvite(event) {
@@ -2049,7 +1612,7 @@
     els.settingsLogoutButton?.addEventListener("click", logoutTripAccount);
     els.settingsSupabaseSaveButton?.addEventListener("click", handleSupabaseSave);
     els.settingsSupabaseClearButton?.addEventListener("click", handleSupabaseClear);
-    els.itineraryPageButton?.addEventListener("click", manualSyncSupabaseTripState);
+    els.itineraryPageButton?.addEventListener("click", openSyncStatus);
 
     els.privacyShareItineraryInput?.addEventListener("change", (event) => updatePrivacySetting("shareItinerary", event.target.checked));
     els.privacyShareExpensesInput?.addEventListener("change", (event) => updatePrivacySetting("shareExpenses", event.target.checked));
@@ -2079,7 +1642,7 @@
     syncSupabaseTripList,
     syncSupabaseTripState,
     uploadSupabaseTripState,
-    manualSyncSupabaseTripState,
+    openSyncStatus,
     showSyncToast,
     buildSharedTripSnapshot,
     getRemoteSafeSnapshot,

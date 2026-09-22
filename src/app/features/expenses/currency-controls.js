@@ -103,7 +103,7 @@ function renderModeControls() {
   }
   els.foreignFields.hidden = !isOverseas;
   syncAmountFieldPlacement(isOverseas);
-  if (isOverseas) ensureExpenseExchangeDefaults();
+  if (isOverseas && !editingId && !document.querySelector('#rdExpenseEditor')?.open) ensureExpenseExchangeDefaults();
   els.amountLabel.textContent = isLodging ? (isOverseas ? "원화 총액" : "숙소 총액") : isOverseas ? "원화 환산" : "금액";
   els.amountInput.readOnly = isOverseas;
   els.amountInput.required = true;
@@ -118,10 +118,18 @@ function renderModeControls() {
 }
 
 function syncAmountFieldPlacement(isOverseas) {
+  if (document.querySelector('#rdExpenseEditor')?.classList.contains('ex-editor')) return;
   const amountField = els.amountInput?.closest("label");
   const anchor = document.querySelector("#amountFieldAnchor");
   const foreignAmountField = els.foreignAmountInput?.closest("label");
   if (!amountField || !anchor || !els.foreignFields) return;
+
+  // The redesigned editor keeps its main amount visible in both travel modes.
+  if (els.expenseForm.closest("#rdExpenseEditor")) {
+    amountField.classList.toggle("foreign-amount-converted-field", isOverseas);
+    if (amountField.previousElementSibling !== anchor) anchor.after(amountField);
+    return;
+  }
 
   if (isOverseas) {
     amountField.classList.add("foreign-amount-converted-field");
@@ -144,6 +152,7 @@ function updateConvertedAmount() {
   const converted = Math.round((foreignAmount * exchangeRate) / currency.rateBase);
   setCommaNumberInputValue(els.amountInput, converted || "");
   updateLodgingPreview();
+  window.TripLog.features.expenses.workspace?.syncAmount();
 }
 
 function updateExchangeRateGuide() {

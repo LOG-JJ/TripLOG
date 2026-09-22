@@ -3,3 +3,15 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(self)
   X-Frame-Options: DENY
+
+/sw.js
+  Cache-Control: no-cache
+
+/Travel*
+  Cache-Control: no-cache
+
+/app.js
+  Cache-Control: no-cache
+
+/repair*
+  Cache-Control: no-cache

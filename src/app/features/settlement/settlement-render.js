@@ -349,7 +349,7 @@ function renderSettlementSummary({
   }
 
   if (invalidEntries.length > 0) {
-    settlementGuideList.innerHTML = `<div class="settlement-guide-warning">커스텀 항목 ${invalidEntries.length}건의 멤버별 합계가 지출 금액과 맞아야 송금 가이드를 계산할 수 있습니다.</div>`;
+    settlementGuideList.innerHTML = `<div class="settlement-guide-warning">${invalidEntries.length}건의 결제자 또는 분담 금액을 확인해 주세요. 결제자가 현재 멤버에 포함되고 멤버별 합계가 지출 금액과 맞아야 송금 가이드를 계산할 수 있습니다.</div>`;
     return;
   }
 

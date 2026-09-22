@@ -71,7 +71,7 @@ function addPackingItem() {
   }
 
   const newItem = {
-    id: "pack-" + Date.now(),
+    id: createId(),
     name: name,
     checked: false
   };
@@ -83,6 +83,7 @@ function addPackingItem() {
 
 function deletePackingItem(id) {
   if (!state.packingList) return;
+  window.TripLog.persistence.stateStorage.markDeletedEntity("packing", id);
   state.packingList = state.packingList.filter(item => item.id !== id);
   saveAndRender();
 }
@@ -136,33 +137,7 @@ async function openFullDayRoute() {
     return;
   }
 
-  const routeUrls = buildGoogleMapsRouteUrls(currentDayItems);
-  els.googleMapsLink.href = routeUrls.external;
-  if (typeof syncNaverMapsLink === "function") {
-    syncNaverMapsLink(buildNaverMapsRouteSearchQuery(currentDayItems));
-  }
-  els.mapCurrentLabel.textContent = "동선 그리는 중";
-  els.mapCurrentPlace.textContent = `${currentDayItems.length}개 장소 경로 계산 중`;
-  if (els.itineraryRouteButton) els.itineraryRouteButton.disabled = true;
-
-  try {
-    const result = await renderLeafletRoute(currentDayItems);
-    if (result?.cancelled) return;
-
-    if (!result || result.validStops < 2) {
-      els.mapCurrentLabel.textContent = "동선 연결 실패";
-      els.mapCurrentPlace.textContent = "좌표를 찾은 장소가 2개 미만입니다";
-      alert("좌표를 찾은 장소가 2개 미만이라 동선을 그릴 수 없습니다. 장소명을 더 구체적으로 입력해 주세요.");
-      return;
-    }
-
-    els.mapCurrentLabel.textContent = result.fallbackSegments > 0
-      ? "일부 구간은 직선으로 보정됨"
-      : "실제 도로 동선 연결됨";
-    els.mapCurrentPlace.textContent = `${result.validStops}개 장소 순서대로 연결`;
-  } finally {
-    if (els.itineraryRouteButton) els.itineraryRouteButton.disabled = false;
-  }
+  renderTripMapRoute(currentDayItems);
 }
 
 window.TripLog.register("features.packing.list", {

@@ -1,7 +1,15 @@
 function setActivePage(page) {
   const allowedPages = ["start", "overview", "itinerary", "budget", "settlement", "report", "settings"];
-  const nextPage = allowedPages.includes(page) ? page : "start";
+  const nextPage = allowedPages.includes(page) ? page : "overview";
   if (nextPage === activePage && !isPageTransitioning) return;
+
+  closeAllCustomDatePickers();
+  closeAllCustomTimePickers();
+  closeAllCustomSelects();
+  cancelItineraryDragSession();
+  if (activePage === "start" && nextPage !== "start") {
+    window.TripLog.features.redesign?.workspace?.cancelTripEdit?.();
+  }
 
   if (window.scrollY > 0) {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
@@ -10,44 +18,13 @@ function setActivePage(page) {
   const pageUrl = new URL(location.href);
   if (pageUrl.searchParams.get('page') !== nextPage) { pageUrl.searchParams.set('page',nextPage); history.replaceState({page:nextPage},'',pageUrl); }
 
-  const previousPage = activePage;
-  const outgoing = getPageElement(previousPage);
-  const incoming = getPageElement(nextPage);
   activePage = nextPage;
-
-  if (nextPage === "itinerary") renderItineraryPage();
-  render(); // Sync all states before transition finishes
-  prepareIncomingPage(incoming);
-  updatePageChrome({ animateBrand: true });
-  startBrandIconFlip();
-  renderModeControls();
-
-  const outgoingHeight = measurePageHeight(outgoing);
-  const incomingHeight = measurePageHeight(incoming);
-  els.pageStage.style.height = `${outgoingHeight}px`;
-  els.pageStage.classList.add("is-transitioning");
-  outgoing.classList.remove("page-enter", "page-active");
-  incoming.classList.remove("page-exit");
-
-  requestAnimationFrame(() => {
-    els.pageStage.style.height = `${incomingHeight}px`;
-    outgoing.classList.add("page-exit");
-    incoming.classList.add("page-enter", "page-active");
-  });
-
-  isPageTransitioning = true;
   window.clearTimeout(pageTransitionTimer);
-  pageTransitionTimer = window.setTimeout(() => {
-    outgoing.hidden = true;
-    outgoing.classList.remove("page-exit", "page-enter", "page-active");
-    incoming.hidden = false;
-    incoming.classList.remove("page-exit", "page-enter");
-    incoming.classList.add("page-active");
-    els.pageStage.classList.remove("is-transitioning");
-    els.pageStage.style.removeProperty("height");
-    isPageTransitioning = false;
-    syncPageVisibility();
-  }, PAGE_TRANSITION_MS + 40);
+  isPageTransitioning = false;
+  els.pageStage.classList.remove("is-transitioning");
+  els.pageStage.style.removeProperty("height");
+  // Visibility and navigation feedback are immediate. Only render the destination.
+  render({ pageOnly: true });
 }
 
 function getPageElement(page) {

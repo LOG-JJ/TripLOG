@@ -3,6 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "node scripts/build.js"
+    "prepare:sync": "node scripts/prepare-sync-assets.js",
+    "preview": "node scripts/serve-test.js",
+    "build": "npm run prepare:sync && node scripts/build.js",
+    "test:sync": "node scripts/sync-database-regression.js && node scripts/sync-client-regression.js && node scripts/sync-service-regression.js && node scripts/sync-presentation-regression.js",
+    "test:browser": "npm run prepare:sync && node scripts/run-browser-regressions.js",
+    "test:offline": "node scripts/sync-offline-browser-regression.js",
+    "test:maps": "node scripts/coordinate-cache-regression.js && node scripts/place-selection-regression.js",
+    "test:order": "node scripts/itinerary-order-regression.js",
+    "test": "npm run test:sync && node scripts/persistence-backup-regression.js && node scripts/travel-companion-regression.js && node scripts/redesign-regression.js && npm run test:maps && npm run test:order && node scripts/country-search-regression.js && node scripts/time-picker-regression.js && node scripts/receipt-parser-regression.js"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.8",
+    "esbuild": "0.28.2",
+    "fake-indexeddb": "6.2.5",
+    "playwright": "1.62.1"
+  },
+  "dependencies": {
+    "yjs": "13.6.32"
   }
 }

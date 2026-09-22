@@ -1,0 +1,9 @@
+{
+  "prompt": "Refine TripLOG's mobile expense-entry screen to match the existing compact application design tone. Reduce oversized typography and reduce sentence-like guidance while keeping monetary meaning and clear field labels. Use approximately 20 px for \"지출 추가\" and the entered amount, 16 px for editable input text, 13 px for field labels and action labels, with practical touch targets. Show the amount \"2,400\" and the currency selector \"JPY · 엔\" in one compact row, followed by a short visual conversion strip \"≈ 21,600원\" and a pencil/edit-rate control labeled \"100엔 = 900원\". Show \"니시키 시장 점심\" in the content field. Preserve the six compact category buttons with icons, selecting \"식비\". Keep \"여행 일정\" and \"결제일\" aligned side by side, using \"Day 2 · 9.26\" and \"09.26 (토)\". Use compact icon-and-label options for \"카드\" and \"현금\", selecting \"현금\". Represent optional notes and payer as a quiet collapsed icon row labeled \"메모 · 결제자\". Keep \"저장 후 계속\" as a white secondary button and \"지출 저장\" as the yellow primary button. Preserve TripLOG's outlines, modest corner radii, white background, and pale blue accent. Render the finished product screen without extra explanatory paragraphs.\n\nInput images:\n- editor-mobile-before.png: Current expense-entry screen to improve.",
+  "inputImages": [
+    "C:/Users/tbdk5/AppData/Local/Temp/TripLOG-Expense-Polish-20260920/editor-mobile-before.png"
+  ],
+  "mode": "edit",
+  "overwrite": false,
+  "output": "triplog-expense-editor-mockup-20260921.png"
+}

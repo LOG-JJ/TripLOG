@@ -1,0 +1,96 @@
+/* Pre-purchase forms follow the compact TripLOG reservation and expense UI. */
+.rd-app #rdReservation { width: calc(100% - 40px); max-width: 540px; height: fit-content; max-height: calc(100dvh - 40px); padding: 14px 16px 0; border: 1.5px solid var(--text); border-radius: 12px; box-shadow: 3px 4px 0 var(--text); }
+#rdReservation .rd-dialog-head { min-height: 40px; margin: 0 0 12px; padding: 0; }
+#rdReservation .rd-dialog-head .rd-logo { width: 104px; }
+#rdReservation .rd-dialog-head .rd-icon-button { min-height: 40px; width: 40px; height: 40px; }
+#rdReservation .rd-dialog-head .ph { font-size: 24px; }
+/* Override the legacy direct-child dialog heading size in redesign.css. */
+.rd-app #rdReservation h1 { margin: 0; font-size: 24px !important; font-weight: 800; line-height: 1.25; letter-spacing: -.7px; }
+#rdReservation .rd-dialog-body { flex: 1 1 auto; min-height: 0; padding: 0 2px 2px; margin: 0 -2px; overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; }
+#rdReservation .rd-dialog-body > [data-rd-trip] { margin: 6px 0 14px; font-size: 13px; line-height: 1.4; font-weight: 500; color: var(--muted); }
+#rdReservation .pp-panel { padding: 0; margin: 0; border: 0; background: none; box-shadow: none; }
+.pp-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+#rdReservation .pp-tabs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1.5px solid var(--text); border-radius: 8px; overflow: hidden; margin: 0 0 14px; }
+#rdReservation .pp-tabs > button { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 42px; padding: 8px; border: 0; border-radius: 0; box-shadow: none; background: #fff; color: var(--text); font-size: 14px; font-weight: 700; }
+#rdReservation .pp-tabs > button + button { border-left: 1.5px solid var(--text); }
+#rdReservation .pp-tabs > button[aria-pressed=true] { background: var(--rd-yellow); }
+#rdReservation .pp-tabs > button:disabled { opacity: .45; }
+#rdReservation .pp-tabs .ph { font-size: 21px; }
+#rdReservation .pp-form { display: flex; flex-direction: column; gap: 14px; margin: 0; }
+#rdReservation .pp-section { display: flex; flex-direction: column; gap: 10px; min-width: 0; margin: 0; padding: 0; border: 0; }
+.rd-app #rdReservation .pp-section h2 { margin: 0 0 1px; font-size: 15px; font-weight: 750; line-height: 1.35; letter-spacing: -.25px; }
+#rdReservation .pp-payment { border-top: 1px solid var(--rd-divider); padding-top: 14px; }
+#rdReservation .pp-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; min-width: 0; }
+#rdReservation .pp-route { display: grid; grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr); align-items: center; gap: 8px; }
+.rd-app #rdReservation .pp-field { display: flex; flex-direction: column; gap: 1px; min-width: 0; padding: 6px 10px 5px; border: 1.3px solid #8d95a3; border-radius: 8px; background: #fff; margin: 0; transition: background var(--rd-motion), box-shadow var(--rd-motion); }
+#rdReservation .pp-field > span { font-size: 12px; line-height: 16px; font-weight: 500; color: #505967; }
+#rdReservation .pp-field > span small { font-size: 11px; font-weight: 400; color: var(--muted); }
+#rdReservation .pp-field b, #rdReservation .pp-amount-label > span b { color: #b02a4d; font-weight: 650; }
+.rd-app #rdReservation .pp-field :is(input:not([type=hidden]), textarea) { min-width: 0; width: 100%; min-height: 30px; height: 30px; padding: 2px 0; margin: 0; border: 0; border-radius: 0; box-shadow: none; background: transparent; color: var(--text); font-family: var(--font); font-size: 16px; font-weight: 550; line-height: 1.4; outline: none; }
+#rdReservation .pp-field :is(input, textarea)::placeholder { color: #838b97; font-size: 13px; font-weight: 400; }
+.rd-app #rdReservation .pp-field textarea { height: auto; min-height: 58px; resize: vertical; }
+#rdReservation .pp-field:focus-within { background: #fffdf0; border-color: var(--text); box-shadow: 1px 2px 0 var(--text); }
+.rd-app #rdReservation .pp-field :is(.custom-date-button, .custom-time-button) { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 32px; height: 32px; padding: 2px 0; gap: 5px; border: 0; border-radius: 0; background: transparent; box-shadow: none; color: var(--text); font-size: 15px; font-weight: 550; }
+#rdReservation .pp-field :is(.custom-date-button, .custom-time-button) .ph { font-size: 18px; }
+#rdReservation .pp-field .custom-time-label { font-size: 14px; }
+#rdReservation .pp-field .custom-time-value { font-size: 16px; font-weight: 550; min-width: 0; }
+#rdReservation .pp-field .custom-time-icon { width: 24px; height: 28px; font-size: 18px; }
+#rdReservation .pp-field .custom-date-chevron { display: none; }
+#rdReservation .pp-field .custom-date-button.open { box-shadow: none; }
+#rdReservation .pp-swap { display: grid; place-items: center; width: 40px; min-height: 44px; padding: 5px; border: 1.3px solid #83bedc; border-radius: 8px; background: var(--rd-blue); box-shadow: none; color: var(--text); }
+#rdReservation .pp-swap .ph { font-size: 20px; }
+#rdReservation .pp-journey { display: grid; grid-template-columns: 1fr 1fr; align-self: center; width: 180px; border: 1.2px solid var(--text); border-radius: 20px; overflow: hidden; margin: -1px 0 0; }
+#rdReservation .pp-journey > button { min-height: 34px; padding: 5px 12px; border: 0; border-radius: 18px; background: #fff; box-shadow: none; color: var(--text); font-size: 12px; font-weight: 650; }
+#rdReservation .pp-journey > button[aria-pressed=true] { background: var(--rd-blue); }
+.rd-app #rdReservation .pp-amount-label { display: flex; flex-direction: column; gap: 6px; min-width: 0; font-size: 12px; font-weight: 650; margin: 0; }
+#rdReservation .pp-amount-row { display: flex; align-items: center; min-width: 0; height: 46px; border: 1.5px solid var(--text); border-radius: 8px; background: #fff; overflow: hidden; }
+#rdReservation .pp-amount-row:focus-within { background: #fffbd6; box-shadow: 1px 2px 0 var(--text); }
+.rd-app #rdReservation .pp-amount-row input { flex: 1; width: 0; min-width: 0; height: 42px; min-height: 42px; padding: 7px 12px; border: 0; border-radius: 0; background: transparent; box-shadow: none; outline: none; color: var(--text); font-size: 22px; font-weight: 750; line-height: 1.2; font-variant-numeric: tabular-nums; }
+#rdReservation .pp-currency { display: flex; align-items: center; justify-content: center; align-self: stretch; flex-shrink: 0; width: 90px; padding: 0 10px; border-left: 1px solid #c1c6cf; font-size: 13px; font-weight: 600; }
+#rdReservation .pp-method-field { min-width: 0; padding: 5px 6px 6px; margin: 0; border: 1.3px solid #8d95a3; border-radius: 8px; background: #fff; }
+#rdReservation .pp-method-field legend { float: left; width: 100%; padding: 0 3px; margin: 0 0 3px; font-size: 12px; line-height: 16px; font-weight: 500; color: #505967; }
+#rdReservation .pp-method { display: flex; gap: 5px; clear: both; }
+#rdReservation .pp-method > button { min-width: 0; flex: 1; min-height: 30px; height: 30px; padding: 4px; border: 1px solid #a4adba; border-radius: 6px; background: #fff; box-shadow: none; color: var(--text); font-size: 12px; font-weight: 600; }
+#rdReservation .pp-method > button[aria-pressed=true] { border-color: var(--text); background: var(--rd-yellow); }
+#rdReservation .pp-stay-summary { display: flex; align-items: center; min-height: 36px; padding: 8px 10px; margin: 0; border-radius: 7px; background: #ffe5ef; color: #963555; font-size: 12px; font-weight: 600; line-height: 1.4; }
+#rdReservation .pp-extra { margin: 0; }
+#rdReservation .pp-extra > summary { display: flex; align-items: center; gap: 7px; min-height: 44px; padding: 9px 10px; border: 1.3px solid #8d95a3; border-radius: 8px; background: #fff; font-size: 12px; font-weight: 600; line-height: 1.4; list-style: none; cursor: pointer; }
+#rdReservation .pp-extra > summary::-webkit-details-marker { display: none; }
+#rdReservation .pp-extra > summary .ph { flex-shrink: 0; font-size: 19px; }
+#rdReservation .pp-extra > summary .ph:last-child { margin-left: auto; font-size: 17px; transition: transform var(--rd-motion); }
+#rdReservation .pp-extra > summary small { font-size: 11px; color: var(--muted); font-weight: 400; }
+#rdReservation .pp-extra[open] > summary { background: #fff8ce; }
+#rdReservation .pp-extra[open] > summary .ph:last-child { transform: rotate(180deg); }
+#rdReservation .pp-extra > div { display: grid; gap: 10px; padding-top: 10px; }
+#rdReservation .pp-save-help { display: flex; align-items: flex-start; gap: 7px; padding: 9px 10px; margin: 12px 0 0; border-radius: 7px; background: #eaf7ff; color: #38556e; font-size: 12px; font-weight: 500; line-height: 1.45; }
+#rdReservation .pp-save-help .ph { font-size: 18px; flex-shrink: 0; }
+#rdReservation .pp-error { grid-column: 1 / -1; padding: 8px 10px; margin: 0; border: 1px solid #dfadc0; border-radius: 7px; background: #fff0f5; color: #a32748; font-size: 12px; font-weight: 550; line-height: 1.5; }
+#rdReservation .pp-field.is-invalid, #rdReservation .pp-amount-label.is-invalid .pp-amount-row { border-color: #ae2b4c; box-shadow: 0 0 0 1px #ae2b4c; }
+#rdReservation .rd-dialog-footer { display: grid; grid-template-columns: 1fr 1.5fr; gap: 10px; margin-top: 14px; padding: 12px 0 max(14px, env(safe-area-inset-bottom)); border-top: 1px solid var(--rd-divider); background: #fff; flex-shrink: 0; }
+.rd-app #rdReservation .rd-dialog-footer > button { min-height: 44px; padding: 9px 12px; margin: 0; width: 100%; border: 1.5px solid var(--text); border-radius: 8px; font-size: 15px; font-weight: 750; line-height: 1.2; }
+#rdReservation .rd-dialog-footer > .rd-primary { background: var(--rd-yellow); box-shadow: 1px 2px 0 var(--text); }
+#rdReservation :is(button, summary):focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+#rdReservation #rdReservationTitle:focus { outline: none; }
+.rd-app #rdExpenseEditor .ex-pretrip-shortcut { width: 100%; min-height: 40px; justify-content: flex-start; gap: 8px; padding: 8px 10px; margin: -3px 0 0; font-size: 12px; border: 1px solid #93b9d0; border-radius: 8px; background: #eaf7ff; box-shadow: none; }
+#rdExpenseEditor .ex-pretrip-shortcut .ph { font-size: 18px; }
+#rdExpenseEditor .ex-pretrip-shortcut .ph:last-child { margin-left: auto; }
+#rdExpenseList .pp-saved-entry { animation: pp-saved 1100ms ease-out; }
+@keyframes pp-saved { from { background: #fff7ae; } to { background: transparent; } }
+@media (hover: hover) {
+  #rdReservation .pp-tabs > button:not(:disabled):hover { background: #fff9c6; }
+  #rdReservation .pp-swap:hover { box-shadow: 1px 2px 0 var(--text); }
+}
+@media (max-width: 599px) {
+  .rd-app #rdReservation { width: 100%; max-width: none; height: 100dvh; max-height: 100dvh; margin: 0; padding: 12px 16px 0; border: 0; border-radius: 0; box-shadow: none; }
+}
+@media (max-width: 359px) {
+  .rd-app #rdReservation { padding-right: 14px; padding-left: 14px; }
+  #rdReservation .pp-grid { gap: 8px; }
+  #rdReservation .pp-route { grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr); gap: 6px; }
+  .rd-app #rdReservation .pp-field { padding-left: 8px; padding-right: 8px; }
+  #rdReservation .pp-currency { width: 78px; font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #rdReservation .pp-field, #rdReservation .pp-extra > summary .ph:last-child { transition: none; }
+  #rdExpenseList .pp-saved-entry { animation: none; }
+}

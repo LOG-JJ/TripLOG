@@ -1,0 +1,6 @@
+{
+  "mode": "built-in image_gen",
+  "inputImages": [],
+  "overwritten": false,
+  "prompt": "Create a mobile UI concept for TripLOG’s itinerary travel dialog. Match its existing compact Korean interface: white background, dark #0b1020 text and thin borders, yellow #fff05a active controls, pale blue route context, rounded corners and subtle hard shadows. Use a 390px-wide bottom sheet titled “이동 정보”. Show two tabs, “Google 경로” active and “직접 기록”. Show the origin “난바역” and destination “오사카성”, followed by “대중교통” and “도보” mode buttons. Place a Google map route preview beneath them. Use a compact note “여행 날짜·출발 시각은 Google 지도에서 확인해 주세요.” Keep a fixed footer with “닫기” and “Google 지도에서 열기”. Follow a consistent typography hierarchy: title 22px, place names 15px, controls 14px, supporting text 12px. Keep the interface readable and consistent with TripLOG."
+}

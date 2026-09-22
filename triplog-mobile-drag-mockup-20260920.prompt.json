@@ -1,0 +1,8 @@
+{
+  "prompt": "Create a refined mobile interaction mockup for TripLOG's itinerary reordering, matching the existing application's design tone, compact typography, spacing, and layout proportions. Show a Korean Kyoto trip itinerary while the user is moving a stop: a dedicated six-dot drag handle at the right edge of each stop, an active handle with the app's yellow accent, the picked-up stop slightly elevated with a restrained dark outline and short shadow, a soft blue insertion placeholder labeled \"여기에 놓기\", and nearby stops shifted apart to preview the actual insertion position. Keep the original itinerary structure and readable place/time information. Use the illustrative places \"교토역\", \"텐류지\", \"니시키 시장\", and \"교토 호텔\"; show \"텐류지\" being moved between \"니시키 시장\" and \"교토 호텔\". The interaction should communicate immediate pickup, precise finger tracking, and a calm settling motion without oversized controls or exaggerated effects. Render the actual product interface in the dragging state.\n\nInput images:\n- inserted-order-mobile.png: Current TripLOG mobile interface and design-tone reference.",
+  "inputImages": [
+    "C:/Users/tbdk5/AppData/Local/Temp/TripLOG-Drag-Preview/inserted-order-mobile.png"
+  ],
+  "generationMode": "built-in image_gen",
+  "overwritten": false
+}

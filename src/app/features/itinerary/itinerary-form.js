@@ -1,12 +1,29 @@
 let currentVoucherFile = null;
 let currentVoucherFileName = null;
+let voucherReadPromise = Promise.resolve(true);
 
 function setVoucherFile(base64, name) {
   currentVoucherFile = base64;
   currentVoucherFileName = name;
+  voucherReadPromise = Promise.resolve(true);
+}
+function setVoucherLoading(promise) { voucherReadPromise = promise.catch(() => false); }
+
+let itinerarySubmissionPending = false;
+async function handleItinerarySubmit(event) {
+  event.preventDefault();
+  if (itinerarySubmissionPending) return;
+  const tripId = state.id, itemId = editingItineraryId;
+  itinerarySubmissionPending = true;
+  try {
+    if (!await voucherReadPromise) { showToast("첨부 파일을 읽지 못했어요. 파일을 다시 선택해 주세요."); return; }
+    if (tripId !== state.id || itemId !== editingItineraryId) return;
+    await saveItineraryForm(event);
+  }
+  finally { itinerarySubmissionPending = false; }
 }
 
-function handleItinerarySubmit(event) {
+async function saveItineraryForm(event) {
   event.preventDefault();
   const place = els.itineraryPlaceInput.value.trim();
   const location = els.itineraryLocationInput.value.trim() || place;
@@ -18,11 +35,15 @@ function handleItinerarySubmit(event) {
     return;
   }
   const wasEditing = Boolean(editingItineraryId);
+  const submittedTrip = state.id;
+  const submittedEditId = editingItineraryId;
+  const previousItems = [...state.itineraryItems], previousEntries = [...state.entries];
 
   const id = editingItineraryId || createId();
   const existingItem = editingItineraryId ? findItineraryItem(editingItineraryId) : null;
 
-  const trans = "none";
+  // A place edit must preserve the incoming travel recorded in its own editor.
+  const trans = existingItem?.transits?.[0]?.trans || existingItem?.trans || "none";
   const theme = els.itineraryThemeSelect.value || "sightseeing";
   const transits = Array.isArray(existingItem?.transits)
     ? existingItem.transits
@@ -37,11 +58,11 @@ function handleItinerarySubmit(event) {
 
   const candidateSelected = selectedPlaceCandidate && selectedPlaceCandidate.place === place;
   const candidateHasCoords = candidateSelected
-    && isValidLatLng(parseFloat(selectedPlaceCandidate.lat), parseFloat(selectedPlaceCandidate.lon));
+    && Boolean(getItemLatLng(selectedPlaceCandidate));
+  const existingPlaceUnchanged = existingItem?.place === place && existingItem?.location === location;
   const existingCoordsStillValid = existingItem
     && !candidateSelected
-    && existingItem.place === place
-    && existingItem.location === location
+    && existingPlaceUnchanged
     && hasMatchingCoordinateSignature(existingItem);
 
   const item = {
@@ -49,10 +70,10 @@ function handleItinerarySubmit(event) {
     id,
     date: els.itineraryDaySelect.value || state.selectedItineraryDate,
     time: els.itineraryTimeInput.value,
-    endTime: els.itineraryEndTimeInput.value,
+    endTime: theme === 'lodging' ? '' : els.itineraryEndTimeInput.value,
     place,
     location,
-    mapQuery: candidateSelected ? (selectedPlaceCandidate.mapQuery || "") : (existingItem?.mapQuery || ""),
+    mapQuery: candidateSelected ? (selectedPlaceCandidate.mapQuery || "") : (existingPlaceUnchanged ? existingItem.mapQuery || "" : ""),
     memo: els.itineraryMemoInput.value.trim(),
     theme,
     trans,
@@ -67,6 +88,11 @@ function handleItinerarySubmit(event) {
     expenseId,
     lat: candidateHasCoords ? selectedPlaceCandidate.lat : (existingCoordsStillValid ? existingItem.lat : undefined),
     lon: candidateHasCoords ? selectedPlaceCandidate.lon : (existingCoordsStillValid ? existingItem.lon : undefined),
+    coordinateSource: "",
+    coordinateSignature: "",
+    coordinatePrecision: "",
+    coordinateAddress: "",
+    googlePlaceId: "",
     createdAt: existingItem ? existingItem.createdAt : Date.now(),
   };
 
@@ -74,7 +100,7 @@ function handleItinerarySubmit(event) {
     item.coordinateSource = selectedPlaceCandidate.source || "";
     item.coordinatePrecision = selectedPlaceCandidate.precision || "";
     item.coordinateAddress = selectedPlaceCandidate.location || "";
-    item.googlePlaceId = selectedPlaceCandidate.placeId || "";
+    item.googlePlaceId = isGoogleSearchOnlyItem(selectedPlaceCandidate) ? "" : selectedPlaceCandidate.placeId || selectedPlaceCandidate.googlePlaceId || "";
   }
 
   if (isValidLatLng(parseFloat(item.lat), parseFloat(item.lon))) {
@@ -82,13 +108,13 @@ function handleItinerarySubmit(event) {
     item.coordinateSource = candidateHasCoords ? (selectedPlaceCandidate.source || "") : (existingItem.coordinateSource || "");
     item.coordinatePrecision = candidateHasCoords ? (selectedPlaceCandidate.precision || "") : (existingItem.coordinatePrecision || "");
     item.coordinateAddress = candidateHasCoords ? (selectedPlaceCandidate.location || "") : (existingItem.coordinateAddress || "");
-    item.googlePlaceId = candidateHasCoords ? (selectedPlaceCandidate.placeId || "") : (existingItem.googlePlaceId || "");
+    item.googlePlaceId = candidateHasCoords ? (selectedPlaceCandidate.placeId || selectedPlaceCandidate.googlePlaceId || "") : (existingItem.googlePlaceId || "");
   }
 
   // Sync with main expense ledger
   if (syncExpense && cost > 0) {
     const transLabels = { walk: "도보", car: "차량", train: "기차", bus: "버스", flight: "비행", etc: "비행", none: "이동" };
-    const desc = `${item.place} 이동 경비 (${transLabels[trans] || "이동"})`;
+    const desc = `${item.place} 이동 경비 (${transits.map(segment => transLabels[segment.trans] || "이동").join("+")})`;
     if (expenseId) {
       state.entries = state.entries.map((entry) => {
         if (entry.id === expenseId) {
@@ -103,6 +129,7 @@ function handleItinerarySubmit(event) {
     }
   } else {
     if (expenseId) {
+      window.TripLog.persistence.stateStorage.markDeletedEntity("expense", expenseId);
       state.entries = state.entries.filter((entry) => entry.id !== expenseId);
       item.expenseId = null;
     }
@@ -117,10 +144,17 @@ function handleItinerarySubmit(event) {
   state.selectedItineraryDate = item.date;
   state.lastActiveItineraryDate = item.date;
   state.selectedItineraryId = item.id;
+  if (!await saveAndRender()) {
+    if (state.id === submittedTrip) { state.itineraryItems = previousItems; state.entries = previousEntries; }
+    showToast("기기에 저장하지 못했어요. 입력 내용은 유지됩니다.");
+    return;
+  }
+  if (state.id !== submittedTrip) return;
+  await window.TripLog.sync.drafts?.clear("itineraryForm", submittedTrip, submittedEditId);
   window.TripLog.features.itinerary.workspace?.close?.();
   clearItineraryEditMode(false);
-  saveAndRender();
-  showToast(wasEditing ? "일정을 저장했어요." : "일정을 추가했어요.");
+  window.TripLog.persistence.stateStorage.applyRepositoryChange?.(submittedTrip);
+  showToast(window.TripLogSyncRepository.cached(submittedTrip)?.conflicts.length ? "변경을 보관했어요. 상단 저장 상태에서 겹친 변경을 확인해 주세요." : wasEditing ? "일정을 저장했어요." : "일정을 추가했어요.");
 }
 
 function startItineraryEdit(item) {
@@ -147,6 +181,7 @@ function startItineraryEdit(item) {
   els.itineraryVoucherCode.value = item.voucherCode || "";
   currentVoucherFile = item.voucherFile || null;
   currentVoucherFileName = item.voucherFileName || null;
+  voucherReadPromise = Promise.resolve(true);
   if (currentVoucherFileName) {
     els.ticketFileNameDisplay.textContent = currentVoucherFileName;
     els.ticketFileResetBtn.style.display = "inline-flex";
@@ -193,6 +228,7 @@ function clearItineraryEditMode(shouldRender = true) {
   els.ticketFileResetBtn.style.display = "none";
   currentVoucherFile = null;
   currentVoucherFileName = null;
+  voucherReadPromise = Promise.resolve(true);
   
   if (els.itineraryTicketSection) {
     els.itineraryTicketSection.hidden = true;
@@ -228,7 +264,9 @@ function selectItineraryItem(id) {
 
 function deleteItineraryItem(id) {
   const item = findItineraryItem(id);
+  window.TripLog.persistence.stateStorage.markDeletedEntity("itinerary", id);
   if (item && item.expenseId) {
+    window.TripLog.persistence.stateStorage.markDeletedEntity("expense", item.expenseId);
     state.entries = state.entries.filter((entry) => entry.id !== item.expenseId);
   }
   state.itineraryItems = state.itineraryItems.filter((item) => item.id !== id);
@@ -242,20 +280,7 @@ function findItineraryItem(id) {
 }
 
 function getFilteredItineraryItems() {
-  if (state.selectedItineraryDate === "all") {
-    return [...state.itineraryItems].sort((a, b) => {
-      const dateDiff = (a.date || "").localeCompare(b.date || "");
-      if (dateDiff !== 0) return dateDiff;
-      const timeDiff = (a.time || "99:99").localeCompare(b.time || "99:99");
-      return timeDiff || a.createdAt - b.createdAt;
-    });
-  }
-  return [...state.itineraryItems]
-    .filter((item) => item.date === state.selectedItineraryDate)
-    .sort((a, b) => {
-      const timeDiff = (a.time || "99:99").localeCompare(b.time || "99:99");
-      return timeDiff || a.createdAt - b.createdAt;
-    });
+  return sortItineraryItems(state.itineraryItems.filter(item => state.selectedItineraryDate === 'all' || item.date === state.selectedItineraryDate));
 }
 
 window.TripLog.register("features.itinerary.form", {
@@ -267,4 +292,5 @@ window.TripLog.register("features.itinerary.form", {
   findItineraryItem,
   getFilteredItineraryItems,
   setVoucherFile,
+  setVoucherLoading,
 });

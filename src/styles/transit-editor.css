@@ -1,0 +1,355 @@
+/* Compact incoming travel connectors and an explicit draft/save editor. */
+#itineraryPage .timeline-memo { word-break: keep-all; overflow-wrap: anywhere; text-wrap: pretty; }
+body.rd-app #itineraryPage .timeline-transit-button {
+  display: grid; grid-template-columns: 43px 22px minmax(0, 1fr); width: 100%;
+  padding: 0; margin: 0; min-height: 58px; color: var(--text); background: none;
+  border: 0; border-radius: 0; box-shadow: none; text-align: left;
+}
+#itineraryPage .timeline-transit-button .timeline-transit-axis { grid-column: 2; }
+#itineraryPage .timeline-transit-button .timeline-transit-axis::before { top: 0; bottom: 0; height: auto; }
+#itineraryPage .timeline-transit-summary {
+  display: flex; align-items: center; gap: 8px; min-width: 0; margin: 6px 0;
+  min-height: 46px; padding: 7px 10px; border: 1px dashed #c9cdd5;
+  border-radius: 8px; background: #fafbfc; transition: background 150ms, border-color 150ms;
+}
+#itineraryPage .has-transit .timeline-transit-summary { background: #fffbed; border: 1px solid #e1d996; }
+#itineraryPage .timeline-transit-copy { display: grid; gap: 1px; min-width: 0; flex: 1; }
+#itineraryPage .timeline-transit-copy strong { font-size: var(--tl-text-label); font-weight: 650; line-height: 1.45; overflow-wrap: anywhere; }
+#itineraryPage .timeline-transit-copy small { font-size: var(--tl-text-meta); font-weight: 400; line-height: 1.4; color: var(--muted); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+#itineraryPage .timeline-transit-summary > .ph { font-size: 18px; flex-shrink: 0; }
+#itineraryPage .timeline-transit-summary > .ph:last-child { font-size: 16px; color: #596171; }
+#itineraryPage .timeline-transit-button:active .timeline-transit-summary,
+#itineraryPage .timeline-transit-button[aria-expanded=true] .timeline-transit-summary { background: var(--rd-yellow); border-color: var(--text); }
+#itineraryPage .timeline-transit-button:focus-visible { outline: none; }
+#itineraryPage .timeline-transit-button:focus-visible .timeline-transit-summary { outline: 2px solid var(--text); outline-offset: 2px; }
+#itineraryPage .timeline-transit-button.is-saved .timeline-transit-summary { animation: transit-saved 1000ms ease-out; }
+
+/* Journey editor: faithfully follows the selected 2026-09-22 timeline concept. */
+body.rd-app #itineraryTransitDialog {
+  --tl-text-title: 28px; --journey-ink: #0e1425; --journey-muted: #64718a;
+  --journey-border: #dbe2ec; --journey-yellow: #ffed4a;
+  display: none; width: calc(100% - 32px); max-width: 684px; height: fit-content;
+  max-height: calc(var(--transit-view-height, 100dvh) - 28px); margin: auto; padding: 14px 18px 0;
+  border: 1px solid #cfdbe8; border-radius: 14px; box-shadow: 0 14px 55px #263d5714;
+  background: #fff; color: var(--journey-ink); font-size: 14px; line-height: 1.45; overflow: hidden;
+}
+body.rd-app #itineraryTransitDialog[open] { display: flex; flex-direction: column; }
+#itineraryTransitDialog::backdrop { background: #1d30483d; backdrop-filter: blur(3px); }
+#itineraryTransitDialog [hidden] { display: none !important; }
+#itineraryTransitDialog .transit-editor-head { display: flex; align-items: center; justify-content: space-between; flex: 0 0 auto; min-height: 44px; padding: 0 6px; gap: 16px; }
+body.rd-app #itineraryTransitTitle { margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -.04em; line-height: 1.3; }
+#itineraryTransitTitle:focus { outline: none; }
+body.rd-app #itineraryTransitDialog .transit-close { display: grid; place-items: center; width: 36px; min-height: 40px; padding: 0; border: 0; background: transparent; color: inherit; box-shadow: none; }
+#itineraryTransitDialog .transit-close .ph { font-size: 26px; }
+#itineraryTransitDialog .transit-view-tabs { display: grid; grid-template-columns: 1fr 1fr; flex-shrink: 0; margin: 0 6px 0; border-bottom: 1px solid #e1e6ed; }
+body.rd-app #itineraryTransitDialog .transit-view-tabs button { position: relative; min-height: 40px; margin: 0; padding: 8px; border: 0; border-radius: 0; background: transparent; color: var(--journey-muted); font-size: 16px; font-weight: 600; line-height: 1.4; box-shadow: none; }
+body.rd-app #itineraryTransitDialog .transit-view-tabs button[aria-selected=true] { color: var(--journey-ink); font-weight: 750; }
+#itineraryTransitDialog .transit-view-tabs button[aria-selected=true]::after { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 4px; border-radius: 4px; background: var(--journey-yellow); }
+#itineraryTransitDialog .transit-editor-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 0 2px 2px; margin: 0 -2px; scrollbar-width: none; }
+#itineraryTransitDialog .transit-route { display: flex; align-items: center; gap: 9px; padding: 8px 10px; margin: 10px 0; border: 1px solid #e5ebf2; border-radius: 8px; background: #fff; }
+#itineraryTransitDialog .transit-route-symbol { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: #f0f6fb; flex: 0 0 auto; }
+#itineraryTransitDialog .transit-route-symbol .ph { font-size: 19px; }
+#itineraryTransitDialog .transit-route-copy { min-width: 0; flex: 1; }
+#itineraryTransitDialog .transit-route-places { display: flex; align-items: center; gap: 9px; min-width: 0; }
+#itineraryTransitDialog .transit-route-places > b { min-width: 0; max-width: 70%; }
+#itineraryTransitDialog .transit-route-places b { font-size: 14px; line-height: 1.35; font-weight: 650; letter-spacing: -.015em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#itineraryTransitDialog .transit-route-places > .ph { color: #8994a4; font-size: 14px; flex-shrink: 0; }
+#itineraryTransitDialog .transit-route-places > span { display: flex; align-items: center; min-width: 0; gap: 0; }
+#itineraryTransitDialog .transit-route-places > span > .ph { display: none; }
+#itineraryTransitDialog .transit-route-times { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; margin-top: 3px; color: #738095; font-size: 11px; font-variant-numeric: tabular-nums; }
+#itineraryTransitDialog .transit-route-times > .ph { font-size: 12px; color: #9aa5b4; }
+#itineraryTransitDialog .transit-route-total { border-left: 1px solid #dce3ec; padding-left: 8px; line-height: 1; }
+#itineraryTransitDialog .transit-segments-frame { padding: 0 16px; border: 1px solid #dfe5ed; border-radius: 10px; }
+#itineraryTransitSegments { display: block; }
+#itineraryTransitDialog :is(.transit-segment, .transit-journey-leg) { --leg-color: #748197; --leg-tint: #eef1f5; }
+#itineraryTransitDialog [data-transit-mode=bus] { --leg-color: #2278ef; --leg-tint: #e7f3ff; }
+#itineraryTransitDialog [data-transit-mode=train] { --leg-color: #ef393e; --leg-tint: #fff0f1; }
+#itineraryTransitDialog [data-transit-mode=car] { --leg-color: #447c69; --leg-tint: #eaf5f0; }
+#itineraryTransitDialog [data-transit-mode=flight] { --leg-color: #6a5ac7; --leg-tint: #f0edff; }
+#itineraryTransitDialog .transit-segment { position: relative; padding: 12px 0 8px; background: #fff; }
+#itineraryTransitDialog .transit-segment::before { content: ''; position: absolute; left: 72px; top: 26px; bottom: -26px; border-left: 1px solid #ced7e3; }
+#itineraryTransitDialog .transit-segment:last-child::before { bottom: -22px; }
+#itineraryTransitDialog :is(.transit-segment-stop, .transit-journey-stop) { display: grid; grid-template-columns: 48px 28px minmax(0, 1fr); gap: 10px; align-items: start; position: relative; }
+#itineraryTransitDialog :is(.transit-segment-stop, .transit-journey-stop) time { padding-top: 2px; text-align: center; font-size: 14px; font-weight: 650; line-height: 24px; font-variant-numeric: tabular-nums; }
+#itineraryTransitDialog .transit-stop-dot { width: 15px; height: 15px; margin: 6px auto 0; border: 3px solid #7b8799; border-radius: 50%; background: #fff; position: relative; z-index: 1; }
+#itineraryTransitDialog :is(.transit-segment:first-child, .transit-journey-leg:first-child) .transit-stop-dot { border-color: var(--journey-ink); }
+#itineraryTransitDialog .transit-segment-place { min-width: 0; padding-right: 20px; }
+#itineraryTransitDialog :is(.transit-segment-place, .transit-journey-stop) strong { display: block; font-size: 15px; line-height: 24px; font-weight: 700; letter-spacing: -.02em; overflow-wrap: anywhere; }
+#itineraryTransitDialog :is(.transit-segment-place, .transit-journey-stop) small { display: block; color: var(--journey-muted); font-size: 12px; font-weight: 400; line-height: 1.5; overflow-wrap: anywhere; }
+body.rd-app #itineraryTransitDialog .transit-segment-place input { width: 100%; min-height: 28px; height: 28px; padding: 2px 4px; margin: 0 0 0 -4px; border: 1px solid transparent; border-radius: 5px; background: transparent; color: var(--journey-ink); font-size: 15px; font-weight: 650; box-shadow: none; }
+#itineraryTransitDialog .transit-segment-place input::placeholder { color: #7b8798; font-weight: 400; font-size: 13px; }
+#itineraryTransitDialog .transit-segment-body { margin: 9px 0 0 96px; padding-bottom: 0; }
+#itineraryTransitDialog .transit-segment.is-continuation .transit-segment-stop { position: absolute; top: 12px; left: 0; right: 0; pointer-events: none; }
+#itineraryTransitDialog .transit-segment.is-continuation .transit-stop-dot { visibility: hidden; }
+#itineraryTransitDialog .transit-segment.is-continuation .transit-segment-place { display: none; }
+#itineraryTransitDialog .transit-segment.is-continuation .transit-segment-body { margin-top: 0; padding-top: 0; }
+#itineraryTransitDialog .transit-segment.is-continuation .transit-segment-icon { top: 14px; left: 60px; width: 24px; height: 24px; background: var(--leg-color); color: #fff; }
+#itineraryTransitDialog .transit-segment.is-continuation .transit-segment-icon .ph { font-size: 15px; }
+#itineraryTransitDialog .transit-segment + .transit-segment .transit-segment-place { border-top: 1px solid #e9edf3; padding-top: 7px; margin-top: -7px; }
+#itineraryTransitDialog .transit-segment-icon { position: absolute; top: 64px; left: 8px; display: grid; place-items: center; width: 48px; height: 48px; border: 3px solid #fff; border-radius: 50%; background: var(--leg-tint); color: var(--leg-color); }
+#itineraryTransitDialog .transit-segment:first-child:has(.transit-segment-place small) .transit-segment-icon { top: 80px; }
+#itineraryTransitDialog .transit-segment-icon .ph { font-size: 25px; }
+#itineraryTransitDialog [data-transit-mode=walk] .transit-segment-icon { color: var(--leg-color); }
+#itineraryTransitDialog .transit-segment-fields { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; margin-right: 44px; }
+body.rd-app #itineraryTransitDialog .transit-segment-fields label { display: flex; flex-direction: column; gap: 4px; min-width: 0; margin: 0; font-size: 13px; font-weight: 400; color: #52617d; line-height: 18px; }
+body.rd-app #itineraryTransitDialog .transit-mode-field > span:first-child { font-size: 13px; font-weight: 400; color: #52617d; }
+body.rd-app #itineraryTransitDialog .custom-select-value { font-size: 14px; font-weight: 600; line-height: 1.4; }
+body.rd-app #itineraryTransitDialog .transit-duration-field > label { display: block; margin-bottom: 4px; }
+#itineraryTransitDialog .transit-mode-control { display: block; position: relative; }
+#itineraryTransitDialog .transit-mode-icon { position: absolute; display: grid; place-items: center; width: 38px; height: 36px; left: 0; top: 0; color: var(--journey-ink); z-index: 1; pointer-events: none; }
+#itineraryTransitDialog .transit-mode-icon .ph { font-size: 23px; }
+body.rd-app #itineraryTransitDialog .custom-select-button { height: 36px; min-height: 36px; padding: 6px 10px; border: 1px solid #cbd4e2; border-radius: 6px; background: #fff; color: var(--journey-ink); font-size: 14px; font-weight: 600; box-shadow: none; }
+body.rd-app #itineraryTransitDialog .custom-select[data-select-id^=transitMode] .custom-select-button { grid-template-columns: 22px minmax(0, 1fr) 14px; gap: 6px; }
+body.rd-app #itineraryTransitDialog .custom-select[data-select-id^=transitMode] .custom-select-value { text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#itineraryTransitDialog .custom-select-chevron { width: 9px; height: 9px; }
+#itineraryTransitDialog .transit-stepper { display: grid; grid-template-columns: 34px minmax(0, 1fr) 34px; align-items: center; gap: 7px; }
+body.rd-app #itineraryTransitDialog .transit-stepper button { display: grid; place-items: center; height: 36px; min-height: 36px; padding: 0; margin: 0; border: 1px solid #dce3ed; border-radius: 6px; background: #f8fafc; color: var(--journey-ink); box-shadow: none; }
+#itineraryTransitDialog .transit-stepper .ph { font-size: 17px; }
+body.rd-app #itineraryTransitDialog .transit-stepper input { width: 100%; min-width: 0; height: 36px; min-height: 36px; margin: 0; padding: 4px 2px; border: 1px solid #cbd4e2; border-radius: 6px; background: #fff; color: var(--journey-ink); font-size: 14px; font-weight: 600; line-height: 1.4; text-align: center; font-variant-numeric: tabular-nums; box-shadow: none; }
+#itineraryTransitDialog .transit-stepper input::placeholder { color: #8993a3; font-weight: 400; }
+#itineraryTransitDialog .transit-memo { display: flex; align-items: center; gap: 12px; margin-top: 8px; }
+body.rd-app #itineraryTransitDialog .transit-memo label { flex: 0 0 auto; margin: 0; color: #52617d; font-size: 13px; line-height: 1.4; font-weight: 400; }
+body.rd-app #itineraryTransitDialog .transit-memo input { flex: 1; min-width: 0; width: 100%; height: 32px; min-height: 32px; padding: 5px 10px; margin: 0; border: 1px solid #d6deea; border-radius: 6px; background: #fff; color: var(--journey-ink); font-size: 14px; font-weight: 400; box-shadow: none; }
+#itineraryTransitDialog .transit-memo input::placeholder { color: #939eaf; }
+#itineraryTransitDialog .transit-segment-menu { position: absolute; right: -5px; top: 8px; z-index: 4; }
+#itineraryTransitDialog .transit-segment-menu > summary { display: grid; place-items: center; width: 30px; min-height: 28px; border-radius: 5px; color: #5c6b81; cursor: pointer; list-style: none; }
+#itineraryTransitDialog .transit-segment-menu > summary::-webkit-details-marker { display: none; }
+#itineraryTransitDialog .transit-segment-menu > summary .ph { font-size: 20px; }
+#itineraryTransitDialog .transit-segment-menu[open] { z-index: 12; }
+#itineraryTransitDialog .transit-segment-options { position: absolute; width: 240px; right: 0; top: 32px; padding: 12px; border: 1px solid #d6deea; border-radius: 9px; background: #fff; box-shadow: 0 8px 24px #1f32491f; }
+body.rd-app #itineraryTransitDialog .transit-segment-options label { display: block; margin: 0 0 5px; font-size: 12px; font-weight: 500; color: #52617d; }
+body.rd-app #itineraryTransitDialog .transit-segment-options input { width: 100%; min-height: 36px; border: 1px solid #cbd4e2; border-radius: 6px; padding: 7px; font-size: 14px; box-shadow: none; }
+body.rd-app #itineraryTransitDialog .transit-remove { display: flex; align-items: center; gap: 6px; width: 100%; min-height: 38px; padding: 8px 4px 0; margin: 4px 0 0; border: 0; border-top: 1px solid #ecedf1; border-radius: 0; background: #fff; color: #b42b41; font-size: 13px; font-weight: 500; box-shadow: none; }
+#itineraryTransitDialog .transit-cost { display: flex; align-items: center; gap: 5px; margin: 7px 0 0; color: var(--journey-muted); font-size: 12px; }
+#itineraryTransitDialog .transit-editor-destination { min-height: 44px; padding: 6px 0 8px; }
+#itineraryTransitDialog .transit-destination-pin { display: grid; place-items: center; width: 28px; height: 28px; color: #ef393e; background: #fff; position: relative; }
+#itineraryTransitDialog .transit-destination-pin .ph { font-size: 27px; }
+#itineraryTransitDialog .transit-editor-destination .transit-segment-place { display: flex; flex-wrap: wrap; align-items: baseline; gap: 3px 14px; padding: 0; }
+body.rd-app #itineraryTransitDialog .transit-add { display: flex; justify-content: center; align-items: center; gap: 7px; width: 100%; min-height: 34px; padding: 5px 12px; margin: 8px 0 0; border: 1px dashed #9daabc; border-radius: 8px; background: #fff; color: var(--journey-ink); font-size: 14px; font-weight: 500; box-shadow: none; }
+#itineraryTransitDialog .transit-add .ph { font-size: 19px; }
+#itineraryTransitDialog .transit-estimate { display: grid; grid-template-columns: minmax(60px, .65fr) minmax(14px, .7fr) minmax(90px, 1fr) minmax(14px, .7fr) minmax(60px, .65fr); align-items: center; gap: 0 9px; margin-top: 10px; padding: 12px 4px 9px; border: 0; border-radius: 0; background: #fff; }
+#itineraryTransitDialog .transit-estimate > div { display: grid; gap: 3px; min-width: 0; }
+#itineraryTransitDialog .transit-estimate-duration { text-align: center; }
+#itineraryTransitDialog .transit-estimate-time.is-arrival { text-align: right; }
+#itineraryTransitDialog .transit-estimate span { font-size: 11px; color: #7a8494; font-weight: 450; line-height: 1.3; }
+#itineraryTransitDialog .transit-estimate strong { font-size: 22px; font-weight: 700; letter-spacing: -.03em; line-height: 1.2; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; color: #111a29; }
+#itineraryTransitDialog .transit-estimate-connection { display: flex; align-items: center; gap: 5px; min-width: 0; padding-top: 14px; }
+#itineraryTransitDialog .transit-estimate-connection::after { content: ''; flex: 1; height: 1px; background: #ced5df; }
+#itineraryTransitDialog .transit-estimate-connection > .ph { font-size: 9px; -webkit-text-stroke: 1.5px currentColor; width: 10px; height: 10px; display: flex; align-items: center; justify-content: center; flex: 0 0 10px; color: #e6b900; }
+#itineraryTransitDialog .transit-estimate-connection.is-arrival { flex-direction: row-reverse; }
+#itineraryTransitDialog .transit-estimate p { grid-column: 1 / -1; margin: 8px 0 0; color: #52617b; font-size: 12px; line-height: 1.5; }
+#itineraryTransitDialog .transit-estimate p.is-late { color: #ad2943; }
+#itineraryTransitDialog .transit-editor-footer { display: grid; grid-template-columns: minmax(70px, .65fr) minmax(0, 1.55fr); flex-shrink: 0; gap: 10px; padding: 7px 0 max(12px, env(safe-area-inset-bottom)); margin: 0; background: #fff; }
+body.rd-app #itineraryTransitDialog .transit-editor-footer button, body.rd-app #itineraryTransitGoogleLink { display: flex; justify-content: center; align-items: center; gap: 8px; min-width: 0; min-height: 44px; padding: 8px; margin: 0; border: 1.5px solid var(--journey-ink); border-radius: 8px; background: #fff; color: var(--journey-ink); font-size: 16px; font-weight: 700; text-decoration: none; line-height: 1.4; box-shadow: none; }
+body.rd-app #itineraryTransitDialog #itineraryTransitSave, body.rd-app #itineraryTransitGoogleLink { background: var(--journey-yellow); box-shadow: 1px 2px 0 var(--journey-ink); }
+#itineraryTransitGoogleLink .ph { font-size: 20px; }
+#itineraryTransitDialog #itineraryTransitRouteFooter.is-empty { grid-template-columns: 1fr; }
+#itineraryTransitDialog .transit-map-stage { position: relative; }
+#itineraryTransitDialog .transit-map-toolbar { display: flex; align-items: center; gap: 4px; position: absolute; z-index: 450; top: 10px; right: 10px; border: 1px solid #d5dde8; border-radius: 8px; padding: 3px; background: #fff; box-shadow: 0 2px 6px #132a4320; }
+#itineraryTransitDialog .transit-map-modes { display: flex; gap: 2px; }
+body.rd-app #itineraryTransitDialog :where(.transit-map-modes button, #itineraryTransitMapRetry) { display: flex; align-items: center; justify-content: center; gap: 5px; min-height: 30px; padding: 5px 7px; margin: 0; border: 0; border-radius: 5px; background: #fff; color: #52617b; font-size: 12px; font-weight: 600; box-shadow: none; }
+body.rd-app #itineraryTransitDialog .transit-map-modes button[aria-pressed=true] { background: #fff6a6; color: #1e2634; }
+body.rd-app #itineraryTransitDialog #itineraryTransitMapRetry { width: 30px; padding: 0; }
+#itineraryTransitDialog .transit-map-toolbar .ph { font-size: 18px; }
+#itineraryTransitDialog .transit-map-shell { position: relative; overflow: hidden; border: 1px solid #d2dedb; border-radius: 10px; background: #f5f7fa; }
+#itineraryTransitMap { height: 304px; }
+#itineraryTransitMap iframe { display: block; width: 100%; height: 100%; border: 0; }
+#itineraryTransitDomesticMap { height: 306px; border: 1px solid #d2dedb; border-radius: 10px; }
+#itineraryTransitDialog #itineraryTransitMapLink { position: absolute; right: 12px; bottom: 28px; z-index: 450; display: flex; align-items: center; gap: 5px; padding: 8px 12px; border: 1px solid #e0e4eb; border-radius: 18px; background: #fff; color: #182033; font-size: 13px; font-weight: 600; text-decoration: none; box-shadow: 0 2px 7px #18284018; }
+#itineraryTransitMapStatus { position: absolute; inset: 0; display: grid; align-content: center; margin: 0; padding: 64px 20px; background: #f5f7fa; color: var(--journey-muted); text-align: center; font-size: 14px; pointer-events: none; }
+#itineraryTransitMapStatus.is-slow { inset: auto 0 0; display: block; padding: 10px 140px 10px 12px; background: #fffbed; text-align: left; font-size: 12px; }
+#itineraryTransitDialog .transit-journey-caption { display: flex; justify-content: flex-end; align-items: center; gap: 5px; margin: 7px 3px 0; color: var(--journey-muted); font-size: 11px; line-height: 16px; }
+#itineraryTransitDialog .transit-map-note { position: relative; display: flex; align-items: center; }
+#itineraryTransitDialog .transit-map-note > .ph { font-size: 14px; }
+#itineraryTransitDialog .transit-map-note > span { display: none; position: absolute; right: 0; top: 22px; width: 250px; z-index: 5; border: 1px solid #dce3eb; border-radius: 7px; padding: 10px; background: #fff; color: #52617b; font-size: 12px; box-shadow: 0 4px 12px #20334c16; }
+#itineraryTransitDialog .transit-map-note:is(:hover, :focus) > span { display: block; }
+#itineraryTransitDialog .transit-journey { list-style: none; margin: 0; padding: 8px 10px 0; }
+#itineraryTransitDialog .transit-journey-leg { position: relative; padding: 0 0 10px; }
+#itineraryTransitDialog .transit-journey-leg::before { content: ''; position: absolute; top: 13px; bottom: -14px; left: 72px; border-left: 3px solid var(--leg-color); }
+#itineraryTransitDialog .transit-journey-leg[data-transit-mode=walk]::before { border-left: 2px dotted #aeb9c9; }
+#itineraryTransitDialog .transit-journey-stop strong { font-size: 15px; }
+#itineraryTransitDialog .transit-journey-stop small { font-size: 13px; }
+body.rd-app #itineraryTransitDialog .transit-journey-edit { display: grid; grid-template-columns: 28px minmax(0, 1fr) 22px; gap: 18px; align-items: center; margin: 9px 0 0 58px; padding: 0; width: calc(100% - 58px); border: 0; border-radius: 6px; background: transparent; color: inherit; box-shadow: none; text-align: left; }
+#itineraryTransitDialog .transit-journey-mode { display: grid; place-items: center; position: relative; width: 32px; height: 32px; margin-left: -1px; border: 3px solid #fff; border-radius: 50%; background: var(--leg-color); color: #fff; }
+#itineraryTransitDialog .transit-journey-mode .ph { font-size: 18px; }
+#itineraryTransitDialog .transit-journey-detail { display: grid; justify-items: start; gap: 3px; min-width: 0; }
+#itineraryTransitDialog .transit-journey-badge { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0; padding: 3px 10px; border-radius: 12px; color: var(--leg-color); background: var(--leg-tint); font-size: 13px; line-height: 21px; }
+#itineraryTransitDialog .transit-journey-badge b { font-weight: 650; }
+#itineraryTransitDialog .transit-journey-badge > span { margin-left: 9px; padding-left: 9px; border-left: 1px solid currentColor; font-weight: 600; line-height: 14px; }
+#itineraryTransitDialog .transit-journey-memo { color: #42516c; font-size: 14px; font-weight: 400; line-height: 1.5; overflow-wrap: anywhere; }
+#itineraryTransitDialog .transit-journey-edit > .ph { font-size: 20px; color: #53637c; }
+#itineraryTransitDialog .transit-journey-destination { padding: 0 0 4px; }
+#itineraryTransitDialog .transit-route-empty { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 22px 14px; border: 1px dashed #c9cfd8; border-radius: 10px; text-align: center; }
+#itineraryTransitDialog .transit-route-empty > .ph { color: #5e6b80; font-size: 28px; }
+#itineraryTransitDialog .transit-route-empty strong { font-size: 15px; font-weight: 650; }
+#itineraryTransitDialog .transit-route-empty p { margin: 0; color: #5e6b80; font-size: 13px; line-height: 1.6; word-break: keep-all; }
+#itineraryTransitDialog #itineraryTransitNaver:not([aria-busy=true]) { margin-top: 8px; }
+#itineraryTransitDialog #itineraryTransitNaver { margin: 8px 0 0; padding: 10px 12px; }
+#itineraryTransitDialog #itineraryTransitNaver[aria-busy=false]:has(+ #itineraryTransitRouteEmpty[hidden]) { align-items: start; text-align: left; }
+#itineraryTransitDialog #itineraryTransitNaver > :is(.ph, small) { display: none; }
+#itineraryTransitDialog #itineraryTransitNaver[aria-busy=false]:has(~ .transit-journey-caption) { border-style: solid; border-color: #e5eaf0; }
+#itineraryTransitDialog #itineraryTransitNaver.is-ready { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); }
+body.rd-app #itineraryTransitDialog #itineraryTransitRecordInstead { min-height: 40px; padding: 7px 12px; margin-top: 4px; border: 1px solid #9ca9bb; border-radius: 7px; background: #fffbed; color: inherit; font-size: 14px; font-weight: 600; box-shadow: none; }
+#itineraryTransitDialog .transit-error { margin: 10px 0 0; padding: 9px 12px; border: 1px solid #e5b8c3; border-radius: 8px; background: #fff1f4; color: #a4284b; font-size: 13px; }
+body.rd-app #itineraryTransitDialog input[aria-invalid=true] { border-color: #b0304a; }
+#itineraryTransitDialog .transit-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+#itineraryTransitDialog :is(button, a, summary):focus-visible { outline: 2px solid #2278ef; outline-offset: 2px; }
+body.rd-app #itineraryTransitDialog input:focus { border-color: #a5b3c6; outline: 2px solid #ffe94c; outline-offset: 1px; }
+#itineraryTransitDialog :is(button, a, summary) { transition: background 130ms, border-color 130ms; }
+@media (hover: hover) {
+  #itineraryPage .timeline-transit-button:hover .timeline-transit-summary { border-color: var(--text); background: #fff7c9; }
+  body.rd-app #itineraryTransitDialog :is(.transit-add, .transit-stepper button, .transit-close, .transit-segment-menu > summary):hover:not(:disabled) { background: #f2f6fa; }
+  body.rd-app #itineraryTransitDialog .transit-journey-edit:hover { background: #f5f9fd; }
+  body.rd-app #itineraryTransitDialog .transit-segment-place input:hover { border-color: #d6deea; }
+}
+@media (min-width: 850px) { body.rd-app #itineraryPage .timeline-transit-button { grid-template-columns: 52px 28px minmax(0, 1fr); } }
+/* Compact mobile revision, generated from the selected journey concept. */
+#itineraryTransitDialog .transit-segment::before { border-left-color: var(--leg-color); }
+#itineraryTransitDialog .transit-segment[data-transit-mode=walk]::before { border-left-style: dotted; }
+#itineraryTransitDialog .transit-segment-fields { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; gap: 10px; margin-right: 0; align-items: end; }
+#itineraryTransitDialog .transit-colors { display: flex; align-items: center; gap: 3px; min-height: 36px; }
+body.rd-app #itineraryTransitDialog .transit-colors button { display: grid; place-items: center; width: 20px; height: 20px; min-height: 20px; margin: 0; padding: 0; background: var(--swatch); border: 2px solid transparent; border-radius: 5px; color: #fff; box-shadow: none; }
+#itineraryTransitDialog .transit-colors .ph { visibility: hidden; font-size: 12px; }
+body.rd-app #itineraryTransitDialog .transit-colors button[aria-pressed=true] { outline: 1px solid var(--swatch); outline-offset: 2px; border-color: #fff; }
+#itineraryTransitDialog .transit-colors button[aria-pressed=true] .ph { visibility: visible; }
+#itineraryTransitDialog .transit-map-stage { display: block; position: relative; }
+#itineraryTransitDialog :is(#itineraryTransitMapArea, #itineraryTransitDomesticMap) { width: 100%; min-width: 0; }
+#itineraryTransitDialog .transit-map-toolbar { position: absolute; top: 7px; right: 7px; display: flex; flex-direction: row; align-items: center; gap: 3px; padding: 3px; border: 1px solid #dce3eb; background: #fff; border-radius: 7px; box-shadow: 0 2px 7px #172b441a; }
+#itineraryTransitDialog .transit-map-modes { display: flex; gap: 3px; }
+body.rd-app #itineraryTransitDialog :where(.transit-map-modes button, #itineraryTransitMapRetry) { min-height: 30px; padding: 5px 6px; border: 1px solid #dde4ed; border-radius: 6px; background: #fff; color: #52617b; font-size: 12px; font-weight: 500; box-shadow: none; }
+body.rd-app #itineraryTransitDialog #itineraryTransitMapRetry { align-self: center; width: 28px; min-height: 28px; }
+#itineraryTransitDialog #itineraryTransitMapLink { position: absolute; right: 8px; bottom: 27px; width: 30px; height: 30px; min-height: 30px; padding: 0; margin: 0; display: grid; place-items: center; border: 1px solid #d6deea; border-radius: 6px; font-size: 18px; box-shadow: 0 2px 5px #172b4414; }
+#itineraryTransitMap, #itineraryTransitDomesticMap { height: 192px; }
+/* Scale the complete provider viewport, including its attribution and controls.
+   A 200px logical Google viewport still fits in the 160px mobile map. */
+#itineraryTransitMap iframe { width: 125%; height: 125%; transform: scale(.8); transform-origin: top left; }
+#itineraryTransitMapStatus.is-slow { padding: 8px; }
+#itineraryTransitDialog #itineraryTransitRouteFooter { display: flex; justify-content: flex-end; gap: 8px; }
+#itineraryTransitDialog #itineraryTransitRouteFooter > button { min-width: 70px; min-height: 32px; padding: 5px 14px; font-size: 13px; }
+body.rd-app #itineraryTransitGoogleLink { width: 32px; height: 32px; min-height: 32px; padding: 0; flex: 0 0 32px; box-shadow: none; }
+#itineraryTransitGoogleLink > span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+#itineraryTransitDialog .transit-journey-leg[data-transit-mode=walk] .transit-journey-mode { display: none; }
+body.rd-app #itineraryTransitDialog .transit-journey-leg[data-transit-mode=walk] .transit-journey-edit { grid-template-columns: minmax(0, 1fr) 22px; margin-left: 96px; width: calc(100% - 96px); margin-top: 0; }
+#itineraryTransitDialog .transit-journey-leg[data-transit-mode=walk] .transit-journey-badge { padding: 0; background: transparent; color: #64718a; }
+#itineraryTransitDialog .transit-journey-leg[data-transit-mode=walk] .transit-journey-badge > span { border: 0; margin-left: 4px; padding-left: 0; font-weight: 400; }
+#itineraryTransitDialog .transit-journey-leg[data-transit-mode=walk] .transit-journey-badge b { font-weight: 400; }
+#itineraryTransitDialog .transit-journey-leg[data-transit-mode=walk] .transit-journey-memo { display: none; }
+@media (max-width: 599px) {
+  body.rd-app #itineraryTransitDialog { --tl-text-title: 20px; width: 100%; max-width: none; max-height: calc(var(--transit-view-height, 100dvh) - 6px); margin: auto auto var(--transit-keyboard-offset, 0px); padding: 7px 10px 0; border-bottom: 0; border-radius: 13px 13px 0 0; box-shadow: none; font-size: 12px; }
+  #itineraryTransitDialog .transit-editor-head { min-height: 30px; padding: 0 2px; }
+  body.rd-app #itineraryTransitDialog .transit-close { width: 28px; height: 28px; min-height: 28px; }
+  #itineraryTransitDialog .transit-close .ph { font-size: 22px; }
+  #itineraryTransitDialog .transit-view-tabs { margin: 1px 0 0; }
+  body.rd-app #itineraryTransitDialog .transit-view-tabs button { min-height: 32px; padding: 6px; font-size: 12px; }
+  #itineraryTransitDialog .transit-view-tabs button[aria-selected=true]::after { height: 3px; }
+  #itineraryTransitDialog .transit-route { gap: 6px; margin: 6px 0; padding: 6px 7px; border-radius: 6px; }
+  #itineraryTransitDialog .transit-route-symbol { width: 23px; height: 23px; }
+  #itineraryTransitDialog .transit-route-symbol .ph { font-size: 16px; }
+  #itineraryTransitDialog .transit-route-places { gap: 5px; }
+  #itineraryTransitDialog .transit-route-places b { font-size: 11px; line-height: 1.35; }
+  #itineraryTransitDialog .transit-route-places > b { flex: 0 1 auto; max-width: 72%; }
+  #itineraryTransitDialog .transit-route-places > .ph { font-size: 11px; }
+  #itineraryTransitDialog .transit-route-times { font-size: 9px; gap: 3px 5px; margin-top: 2px; }
+  #itineraryTransitDialog .transit-route-times > .ph { font-size: 10px; }
+  #itineraryTransitDialog .transit-route-total { padding-left: 5px; }
+  #itineraryTransitDialog .transit-segments-frame { padding: 0 6px; border-radius: 7px; }
+  #itineraryTransitDialog .transit-segment { padding: 7px 0 5px; }
+  #itineraryTransitDialog :is(.transit-segment-stop, .transit-journey-stop) { grid-template-columns: 29px 14px minmax(0, 1fr); gap: 4px; }
+  #itineraryTransitDialog :is(.transit-segment-stop, .transit-journey-stop) time { font-size: 10px; line-height: 19px; padding-top: 0; }
+  #itineraryTransitDialog .transit-stop-dot { width: 11px; height: 11px; border-width: 2px; margin-top: 4px; }
+  #itineraryTransitDialog .transit-segment::before, #itineraryTransitDialog .transit-journey-leg::before { left: 40px; top: 15px; bottom: -18px; border-left-width: 1px; }
+  #itineraryTransitDialog .transit-segment:last-child::before { bottom: -14px; }
+  #itineraryTransitDialog .transit-segment-icon { left: 0; width: 29px; height: 29px; top: 33px; border-width: 2px; }
+  #itineraryTransitDialog .transit-segment:first-child:has(.transit-segment-place small) .transit-segment-icon { top: 47px; }
+  #itineraryTransitDialog .transit-segment-icon .ph { font-size: 18px; }
+  #itineraryTransitDialog .transit-segment-body { margin-left: 51px; margin-top: 6px; }
+  #itineraryTransitDialog .transit-segment.is-continuation .transit-segment-stop { position: relative; top: 0; }
+  #itineraryTransitDialog .transit-segment.is-continuation .transit-segment-place { display: block; }
+  #itineraryTransitDialog .transit-segment.is-continuation .transit-segment-body { margin-top: 6px; }
+  #itineraryTransitDialog .transit-segment.is-continuation .transit-segment-icon { left: 31px; top: 8px; width: 18px; height: 18px; }
+  #itineraryTransitDialog .transit-segment.is-continuation .transit-segment-icon .ph { font-size: 11px; }
+  #itineraryTransitDialog .transit-segment-fields { grid-template-columns: minmax(62px, 1fr) minmax(78px, 1fr) auto; gap: 5px; margin-right: 0; }
+  #itineraryTransitDialog .transit-segment-fields :is(.transit-mode-field > span:first-child, .transit-duration-field > label) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); margin: 0; }
+  #itineraryTransitDialog .transit-mode-control { width: 100%; }
+  #itineraryTransitDialog .transit-mode-icon { display: none; }
+  body.rd-app #itineraryTransitDialog .custom-select[data-select-id^=transitMode] .custom-select-button { height: 28px; min-height: 28px; padding: 4px 6px; grid-template-columns: minmax(0, 1fr) 10px; gap: 4px; border-radius: 5px; font-size: 12px; }
+  body.rd-app #itineraryTransitDialog .custom-select[data-select-id^=transitMode] .custom-select-value { grid-column: 1; font-size: 12px; font-weight: 500; }
+  body.rd-app #itineraryTransitDialog .custom-select[data-select-id^=transitMode] .custom-select-chevron { grid-column: 2; width: 7px; height: 7px; }
+  #itineraryTransitDialog .transit-stepper { grid-template-columns: 23px minmax(0, 1fr) 23px; gap: 0; }
+  body.rd-app #itineraryTransitDialog .transit-stepper :is(button, input) { height: 28px; min-height: 28px; padding: 2px; border-radius: 0; font-size: 12px; font-weight: 500; }
+  body.rd-app #itineraryTransitDialog .transit-stepper button:first-child { border-radius: 5px 0 0 5px; border-right: 0; }
+  body.rd-app #itineraryTransitDialog .transit-stepper button:last-child { border-radius: 0 5px 5px 0; border-left: 0; }
+  #itineraryTransitDialog .transit-stepper .ph { font-size: 13px; }
+  #itineraryTransitDialog .transit-colors { min-height: 28px; gap: 4px; }
+  body.rd-app #itineraryTransitDialog .transit-colors button { width: 20px; height: 20px; min-height: 20px; border-width: 1px; border-radius: 4px; }
+  #itineraryTransitDialog .transit-colors .ph { font-size: 10px; }
+  #itineraryTransitDialog .transit-memo { display: block; margin-top: 5px; }
+  #itineraryTransitDialog .transit-memo label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  body.rd-app #itineraryTransitDialog .transit-memo input { width: 100%; min-height: 26px; height: 26px; padding: 4px 7px; font-size: 11px; border-radius: 5px; }
+  #itineraryTransitDialog .transit-segment-place { padding-right: 18px; }
+  #itineraryTransitDialog .transit-segment-place strong { font-size: 12px; line-height: 19px; }
+  #itineraryTransitDialog .transit-segment-place small { font-size: 10px; line-height: 1.4; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  body.rd-app #itineraryTransitDialog .transit-segment-place input { font-size: 12px; line-height: 19px; height: 23px; min-height: 23px; padding: 1px 3px; }
+  #itineraryTransitDialog .transit-segment-place input::placeholder { font-size: 10px; }
+  #itineraryTransitDialog .transit-segment + .transit-segment .transit-segment-place { padding-top: 5px; margin-top: -5px; }
+  #itineraryTransitDialog .transit-segment-menu { top: 2px; right: -4px; }
+  #itineraryTransitDialog .transit-segment-menu > summary { min-height: 24px; width: 22px; }
+  #itineraryTransitDialog .transit-segment-menu > summary .ph { font-size: 15px; }
+  #itineraryTransitDialog .transit-segment-options { width: 210px; top: 25px; padding: 10px; }
+  #itineraryTransitDialog .transit-segment-options input { font-size: 13px; }
+  #itineraryTransitDialog .transit-editor-destination { min-height: 36px; padding: 5px 0 7px; }
+  #itineraryTransitDialog .transit-destination-pin { width: 15px; height: 21px; }
+  #itineraryTransitDialog .transit-destination-pin .ph { font-size: 21px; }
+  #itineraryTransitDialog .transit-editor-destination .transit-segment-place { display: block; }
+  body.rd-app #itineraryTransitDialog .transit-add { min-height: 28px; padding: 4px; margin-top: 5px; font-size: 11px; border-radius: 5px; gap: 4px; }
+  #itineraryTransitDialog .transit-add .ph { font-size: 14px; }
+  #itineraryTransitDialog .transit-estimate { margin-top: 6px; padding: 10px 2px 8px; grid-template-columns: minmax(43px, .65fr) minmax(8px, .7fr) minmax(76px, 1fr) minmax(8px, .7fr) minmax(43px, .65fr); gap: 0 6px; }
+  #itineraryTransitDialog .transit-estimate > div { gap: 3px; }
+  #itineraryTransitDialog .transit-estimate span { font-size: 9px; }
+  #itineraryTransitDialog .transit-estimate strong { font-size: 17px; font-weight: 700; }
+  #itineraryTransitDialog .transit-estimate-connection { gap: 4px; padding-top: 12px; }
+  #itineraryTransitDialog .transit-estimate-connection > .ph { font-size: 7px; width: 7px; height: 7px; flex-basis: 7px; }
+  #itineraryTransitDialog .transit-estimate p { font-size: 10px; margin-top: 5px; }
+  #itineraryTransitDialog .transit-editor-footer { padding: 5px 0 max(9px, env(safe-area-inset-bottom)); gap: 7px; }
+  body.rd-app #itineraryTransitDialog .transit-editor-footer button { min-height: 32px; padding: 5px 8px; font-size: 12px; border-radius: 6px; }
+  body.rd-app #itineraryTransitGoogleLink { width: 28px; height: 28px; min-height: 28px; flex-basis: 28px; border-radius: 6px; }
+  #itineraryTransitGoogleLink .ph { font-size: 17px; }
+  #itineraryTransitDialog #itineraryTransitRouteFooter > button { min-height: 28px; min-width: 58px; padding: 4px 10px; font-size: 12px; }
+  #itineraryTransitMap, #itineraryTransitDomesticMap { height: 160px; }
+  #itineraryTransitDialog .transit-map-toolbar { top: 5px; right: 5px; gap: 2px; padding: 2px; }
+  body.rd-app #itineraryTransitDialog :where(.transit-map-modes button, #itineraryTransitMapRetry) { min-height: 26px; padding: 3px; font-size: 10px; }
+  #itineraryTransitDialog .transit-map-toolbar .ph { font-size: 14px; }
+  #itineraryTransitDialog .transit-map-modes { gap: 2px; }
+  #itineraryTransitDialog #itineraryTransitMapLink { width: 26px; height: 26px; min-height: 26px; font-size: 16px; }
+  #itineraryTransitDialog .transit-map-note > span { width: 210px; font-size: 11px; }
+  #itineraryTransitDialog .transit-journey-caption { margin-top: 4px; font-size: 9px; line-height: 12px; }
+  #itineraryTransitDialog .transit-journey { padding: 5px 0 0; }
+  #itineraryTransitDialog .transit-journey-leg { padding-bottom: 7px; }
+  #itineraryTransitDialog .transit-journey-stop strong { font-size: 12px; line-height: 19px; }
+  #itineraryTransitDialog .transit-journey-stop small { font-size: 10px; line-height: 1.4; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  body.rd-app #itineraryTransitDialog .transit-journey-edit { margin: 5px 0 0 29px; width: calc(100% - 29px); grid-template-columns: 22px minmax(0, 1fr) 14px; gap: 7px; }
+  #itineraryTransitDialog .transit-journey-mode { width: 22px; height: 22px; margin: 0; border-width: 2px; }
+  #itineraryTransitDialog .transit-journey-mode .ph { font-size: 13px; }
+  #itineraryTransitDialog .transit-journey-badge { font-size: 10px; line-height: 17px; padding: 2px 7px; border-radius: 7px; }
+  #itineraryTransitDialog .transit-journey-badge > span { font-size: 10px; line-height: 11px; margin-left: 6px; padding-left: 6px; }
+  #itineraryTransitDialog .transit-journey-memo { font-size: 11px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  #itineraryTransitDialog .transit-journey-edit > .ph { font-size: 14px; }
+  body.rd-app #itineraryTransitDialog .transit-journey-leg[data-transit-mode=walk] .transit-journey-edit { grid-template-columns: minmax(0, 1fr) 14px; margin-left: 51px; width: calc(100% - 51px); margin-top: 0; }
+  #itineraryTransitDialog .transit-cost { font-size: 10px; margin-top: 4px; }
+  #itineraryTransitDialog .transit-route-empty { padding: 12px 8px; gap: 5px; }
+  #itineraryTransitDialog .transit-route-empty p { font-size: 11px; }
+}
+@media (max-width: 359px) {
+  body.rd-app #itineraryPage .timeline-transit-button { grid-template-columns: 39px 19px minmax(0, 1fr); }
+  body.rd-app #itineraryTransitDialog { padding-left: 8px; padding-right: 8px; }
+  #itineraryTransitDialog .transit-route-symbol { display: none; }
+  #itineraryTransitDialog .transit-segment-fields { grid-template-columns: minmax(58px, 1fr) minmax(78px, 1fr); }
+  #itineraryTransitDialog .transit-colors { grid-column: 1 / -1; min-height: 20px; justify-content: flex-end; }
+  #itineraryTransitDialog .transit-segment-options { width: 205px; }
+}
+@keyframes transit-saved { from { background: var(--rd-yellow); } to { background: #fffbed; } }
+@media (prefers-reduced-motion: reduce) {
+  #itineraryPage .timeline-transit-summary, #itineraryTransitDialog :is(button, a, summary) { transition: none; }
+  #itineraryPage .timeline-transit-button.is-saved .timeline-transit-summary { animation: none; }
+}
+@media print { body.rd-app #itineraryTransitDialog { display: none !important; } }

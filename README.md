@@ -1,16 +1,22 @@
 # TripLOG
 
-TripLOG는 여행 일정, 지출, 정산, 저장 기록, 리포트를 한 화면 흐름으로 관리하는 한국어 정적 웹 앱입니다. 별도 빌드 도구나 패키지 매니저 없이 `Travel.html`, `styles.css`, `app.js`, `src/app/`의 브라우저 전역 스크립트로 동작합니다.
+TripLOG는 여행 일정, 지출, 정산, 저장 기록, 리포트를 관리하는 한국어 여행 앱입니다. 프런트엔드는 `Travel.html`, `styles.css`, `app.js`, `src/app/`의 브라우저 전역 구조를 유지하며, 협업 버전은 IndexedDB 저장소와 Supabase 명령 API를 사용합니다. npm은 버전이 고정된 공동 메모 라이브러리, 테스트, 배포 자산 생성에 사용합니다.
+
+자동 저장·공동 편집 구현과 실제 검증 범위, 운영 전환 순서는 [협업 구현 및 배포 기록](docs/collaboration-implementation.md)을 확인하세요. 저장 상태 버튼은 상태·충돌·복구 화면을 엽니다. 변경 전송을 시작하는 수동 동기화 버튼은 없습니다.
+
+앱 갱신도 자동입니다. 새 앱을 백그라운드에서 준비하고 작성 중인 입력과 기기 저장이 끝난 뒤 적용합니다. 사용자가 버전을 고르거나 갱신 버튼을 누를 필요가 없으며, 미전송 변경과 초안은 유지합니다. 빌드 지문은 소스 내용에서 자동 생성됩니다.
 
 ## 실행
 
 운영 주소: [TripLOG](https://triplog-5qs.pages.dev/Travel?page=overview). 로컬 변경은 배포 후 운영 화면에 반영됩니다.
 
 ```powershell
-python -m http.server 8000
+npm ci
+npm run prepare:sync
+npm run preview
 ```
 
-브라우저에서 `http://localhost:8000/` 또는 `http://localhost:8000/Travel.html`을 엽니다. `index.html`은 `Travel.html`로 이동합니다. 특정 화면으로 바로 열 때는 `Travel.html?page=itinerary`, `Travel.html?page=budget`처럼 `page` 쿼리를 사용할 수 있습니다.
+브라우저에서 `http://127.0.0.1:18080/Travel.html`을 엽니다. 특정 화면은 `Travel.html?page=itinerary`, `Travel.html?page=budget`처럼 `page` 쿼리로 열 수 있습니다. 프런트엔드만 실행해도 실제 운영 서버에 연결될 수 있으므로, 자동 테스트는 별도 계정·브라우저·가상 서버 응답을 사용합니다.
 
 ## 주요 기능
 
@@ -20,8 +26,12 @@ python -m http.server 8000
 - **일정 점검과 지연 조정**: 겹치는 시간과 부족한 이동 시간을 찾고 0·15·30·60분 지연을 반영한 미리보기를 제공합니다. 완료·잠금 일정은 보호하며, 적용 후 한 번 되돌릴 수 있습니다.
 - **예약 지갑**: 항공·숙소 사전구매와 일정 바우처를 모아 보고 직접 예약을 추가·수정·삭제합니다. 예약번호 복사, 예약 링크 열기, 일정 연결을 지원하며 지출을 중복 생성하지 않습니다.
 - **여행 도구**: 여행지 시간대로 ICS 일정을 내보내고, 일정·예약번호·예산 포함 여부를 선택하여 독립 HTML 포켓노트를 저장합니다. 포켓노트는 오프라인에서 읽을 수 있습니다. iPhone 캘린더 가져오기 안내는 ICS 다운로드 후 표시됩니다.
-- **일정 관리**: 일차별 타임라인에서 시간과 장소를 확인합니다. `일정 추가`를 누르면 지도와 입력 패널이 열리며, 장소 검색·직접 입력·시작/종료 시간·메모·티켓/바우처를 저장한 뒤 타임라인으로 돌아옵니다. 이동 정보는 일정 사이에서 펼쳐 편집하고, 전체 일정·준비물·시간 통계는 여행 메뉴에서 확인합니다.
-- **지도와 동선**: Leaflet 지도, 네이버/구글 지도 링크, Google Places/Geocoding 선택 연동, Photon/Nominatim 보조 지오코딩, OSRM 경로 조회를 사용합니다.
+- **일정 관리**: 일차별 타임라인에서 시간과 장소를 확인합니다. `일정 추가`에서 장소 검색·직접 입력·시작/종료 시간·메모·티켓을 저장하고, 일정 사이 이동 정보를 눌러 길찾기 또는 이동 기록을 편집합니다. 국내여행은 네이버지도, 해외여행은 Google 지도로 자동 연결됩니다.
+- **일정 사이 지도와 길찾기**: 국내는 앱 안의 OpenStreetMap 지도에 출발지·도착지 핀을 표시하고 확대·축소·이동할 수 있습니다. 별도 가입·결제 등록·API 키가 필요하지 않습니다. 상세 자동차·대중교통·도보 길찾기는 네이버지도로 연결합니다. 이름만 저장된 장소도 여행 지역과 함께 자동 조회합니다. 기록된 이동 수단이 없으면 국내는 자동차를 기본으로 사용합니다. 조회 결과는 원본 일정·시간·좌표 선택을 덮어쓰지 않으며, 통신 실패는 다시 시도할 수 있습니다. 해외는 기존 Google 미리보기를 유지하고, 모바일 외부 지도에서 돌아오면 작성 중인 기록을 복원합니다.
+- **일정 요약**: 일정 화면의 `일정 편집 / 일정 요약`으로 같은 화면의 목록을 전환합니다. 날짜별 시간 범위·장소·일정 수와 기록된 이동 시간을 표시하고, 펼치기·접기·해당 날짜 편집·전체 요약 복사를 제공합니다. 이동 시간은 같은 날의 인접 장소 사이에 직접 기록한 구간만 합산하며, 미입력 시각·이동 시간과 여행 기간 밖의 일정도 구분합니다. 요약 보기는 일정 데이터를 변경하지 않으며, 보기 방식과 펼친 날짜는 기기 세션에 보관합니다. 편집 화면의 날짜 목록 옆 목록 아이콘으로 기존 전체 일정 보기도 사용할 수 있습니다.
+- **지도와 동선**: 국내는 일정 장소와 전체 동선을 앱 안 지도에서 확인하고, 번호 핀 아래에 구간별 네이버 링크를 표시합니다. 지도에는 확인된 장소 위치를 표시하며 실제 이동 경로는 네이버에서 확인합니다. Leaflet 1.9.4는 앱에 포함하고, 지도 타일은 현재 보이는 영역만 요청하며 OpenStreetMap 출처와 정상 HTTP 캐시를 유지합니다. 지도 오프라인 다운로드나 영역 사전 수집은 하지 않습니다. 해외는 Google 미리보기와 전체 경로를 사용합니다.
+- **모바일 지도 열기**: 지도 아래 버튼은 선택된 지도 서비스로 직접 연결합니다. 돌아오면 세션에 임시 보관한 일정 입력값을 복원하고, 저장하거나 닫으면 임시 입력값을 삭제합니다.
+- **지출 기록과 입력**: 목업을 기준으로 날짜·내용·카테고리·결제 수단·금액을 정렬하고 검색/필터/정렬을 제공합니다. 원화와 외화는 하나의 결제 금액 영역에서 입력하며, 환산 금액과 환율을 바로 확인합니다. `저장 후 계속`은 입력 조건을 유지하고 다음 지출을 받습니다. 설계와 검증은 `docs/expense-ui-design.md`, `docs/expense-ui-verification.md`에 정리했습니다.
 - **지출 가계부**: 결제일·결제한 사람·결제 방식을 기록하고, 사전구매 항공/숙소 입력, 카테고리 필터, 검색, 정렬, 숙소 박수별 자동 분할을 지원합니다.
 - **국내/해외 통화**: 해외 모드에서 통화, 환율, 외화 금액을 원화 지출로 환산합니다.
 - **패킹 리스트**: 준비물 체크, 직접 추가·삭제, 순서 이동과 자동 저장을 제공합니다.
@@ -47,7 +57,7 @@ python -m http.server 8000
 ```text
 TripLOG/
 ├─ index.html                 # Travel.html로 이동
-├─ Travel.html                # 앱 마크업, 7개 페이지, 모달, Leaflet CDN
+├─ Travel.html                # 앱 마크업, 7개 페이지, 모달, 국내/해외 지도 연결
 ├─ styles.css                 # 전체 UI와 반응형 스타일
 ├─ app.js                     # src/app 스크립트 순차 로더
 ├─ src/app/
@@ -58,54 +68,55 @@ TripLOG/
 │  ├─ navigation/             # 페이지 라우팅, 여행 날짜 계산
 │  ├─ ui/                     # 날짜/시간/셀렉트/일차 스트립 커스텀 UI
 │  ├─ shared/                 # 금액, 날짜, 합계, 포맷, SVG 유틸
-│  ├─ services/maps/          # 지도 쿼리, 지오코딩, Leaflet, OSRM 경로
+│  ├─ services/maps/          # 지도 쿼리, 지오코딩, 좌표·거리 계산
 │  └─ features/               # 화면별 기능 모듈
 └─ server.log / server.err.log # 로컬 서버 실행 중 생길 수 있는 로그
 ```
 
 ## 상태와 저장소
 
-TripLOG의 런타임 상태는 전역 `state` 객체입니다. 대부분의 상태 변경은 `saveAndRender()`로 저장과 렌더링을 함께 수행합니다.
+TripLOG의 런타임 상태는 전역 `state` 객체입니다. `await saveAndRender()` 또는 `await saveStateSilently()`의 `true`는 기기 저장 완료를 의미합니다. 서버 확인은 별도 저장 상태로 표시합니다. 폼을 닫거나 완료를 알리기 전에 기기 저장 결과를 확인해야 합니다.
 
-- `domesticTravelExpensePlanner.trips.v2`: 여러 여행의 현재 데이터 배열
-- `domesticTravelExpensePlanner.activeTripId.v2`: 현재 선택된 여행 ID
+- IndexedDB `triplog-collaboration-v2`: 여행 확정본·기기 변경·전송 큐·충돌·복구 사본·입력 초안·첨부 캐시
+- `domesticTravelExpensePlanner.trips.v2`: 기존 여행 이관 원본. 협업 버전의 실시간 상태를 기록하는 저장소가 아닙니다.
+- sessionStorage `domesticTravelExpensePlanner.activeTripId.v2`: 탭별 현재 여행 ID
 - `domesticTravelExpensePlanner.theme.v3`: 선택한 테마
 - `domesticTravelExpensePlanner.googleGeocodingApiKey.v1`: 선택적으로 저장한 Google 지오코딩 API 키
-- `domesticTravelExpensePlanner.v1`: 기존 단일 여행 저장 키 겸 호환용 미러
+- `domesticTravelExpensePlanner.v1`: 기존 단일 여행 이관 원본
 - `domesticTravelExpensePlanner.history.v1`: 저장 스냅샷의 localStorage 미러
 - IndexedDB `triplog-local-archive` / `travelSnapshots`: 저장 스냅샷의 주 저장소
 
-모든 데이터는 사용자의 브라우저 로컬 저장소에 남습니다. JSON 내보내기 파일은 현재 여행 목록과 저장 스냅샷을 함께 담습니다.
+변경은 기기에 먼저 기록하고 연결이 가능하면 자동 전송합니다. 서버 확인을 받지 못한 변경은 큐에 보존합니다. 새 JSON 백업은 여행·공동 메모·댓글·충돌·전송 대기 명령을 포함합니다. 접근할 수 있는 첨부는 파일 내용으로 포함하며, 불러오지 못한 첨부가 있으면 불완전 백업임을 표시합니다. 복원한 공동 작업 사본은 검토 후 새 공유 여행으로 저장할 수 있습니다.
 
 여행별 `travelCompanion`에는 완료·잠금 일정 ID, 직접 등록한 예약, 시간대와 마지막 시간 조정 기록을 저장합니다. 기존 백업에 이 필드가 없어도 빈 기본값으로 복원합니다. 일정 공유를 끄면 예약 지갑과 진행 상태도 서버 공유 스냅샷에서 제외하며, 시간 조정 되돌리기 기록은 공유하지 않습니다.
 
 ## 개발 규칙
 
-- npm, 번들러, 프레임워크가 없는 브라우저 전역 구조입니다. 새 기능도 이 구조를 유지합니다.
+- UI는 브라우저 전역 구조를 유지합니다. Yjs 번들과 서버용 공통 모델, 오프라인 앱 자산은 `npm run prepare:sync`로 생성합니다.
 - `app.js`의 `scriptFiles` 순서가 의존성 순서입니다. 새 모듈은 필요한 전역 함수보다 뒤에, 호출 지점보다 앞에 넣습니다.
 - 모듈은 `window.TripLog.register("영역.이름", { ... })`로 등록합니다. DevTools에서 `window.TripLog.registry`와 `document.documentElement.dataset.triplogLastModule`로 로드 상태를 확인할 수 있습니다.
 - DOM 요소를 추가하면 `Travel.html`의 ID, `src/app/core/runtime.js`의 `els`, 이벤트 연결 위치, 렌더 함수 위치를 함께 맞춥니다.
 - 상태 스키마를 바꾸면 `getFallbackState()`, 기존 저장값 정규화/마이그레이션, 샘플 데이터, 저장/복원, 관련 렌더링을 같이 확인합니다.
-- 지도 기능은 외부 네트워크에 의존합니다. Google API 키가 있으면 Google Places/Geocoding을 먼저 쓰고, 없거나 실패하면 공개 지오코더와 URL/좌표 파싱을 사용합니다.
+- 지도 서비스는 `shared/map-links.js`에서 여행 유형으로 선택합니다. 해외는 Google 프레임, 국내는 `services/maps/domestic-map.js`의 OpenStreetMap 지도와 네이버 길찾기 링크를 사용합니다. 주소 후보 조회는 별도로 진행하며 기존 좌표 출처 검증을 유지합니다. 국내 지도 표시에 네이버 클라우드 키나 유료 API는 사용하지 않습니다.
 - 캐시 때문에 변경이 보이지 않으면 브라우저 강력 새로고침을 하거나 `app.js`의 `scriptVersion`, `Travel.html`의 CSS/앱 쿼리 버전을 갱신합니다.
 
 ## 검증
 
-자동 테스트 설정은 없습니다. 변경 후 로컬 서버에서 브라우저로 확인합니다.
+`npm test`는 PostgreSQL(PGlite)·IndexedDB·독립 기기 동기화 및 기존 기능 회귀 테스트를 실행합니다. `npm run test:browser`는 별도 로컬 서버와 격리된 브라우저 두 개로 화면·오프라인 앱·초안을 확인합니다. Windows에서는 설치된 Edge, 다른 OS에서는 `npx playwright install chromium`으로 설치한 Chromium을 사용합니다.
+
+Edge Function 경계 검증: `deno test --node-modules-dir=auto --no-lock --allow-env supabase/functions/triplog-sync/handler_test.ts`. 배포 파일 생성: `npm run build`.
 
 1. 콘솔 오류 없이 앱이 열리는지 확인합니다.
 2. 변경한 페이지와 연동 페이지를 함께 확인합니다. 예를 들어 일정 변경은 지도, 지출 연동, 리포트, 저장 복원을 같이 봅니다.
 3. 새로고침 후 여행, 지출, 일정, 정산 설정이 유지되는지 확인합니다.
 4. 모바일 폭과 데스크톱 폭에서 탭, 폼, 표, 지도, 모달이 겹치지 않는지 확인합니다.
 
-저장 상태를 빠르게 확인하거나 초기화할 때는 DevTools 콘솔에서 다음 키를 사용합니다.
+저장 상태는 상단 버튼에서 확인하고, 지원용 진단 파일을 내려받을 수 있습니다. 개발 중 읽기 전용 확인 예시는 다음과 같습니다. 저장소를 지워 문제를 해결하려 하지 말고 먼저 JSON 백업을 생성하세요.
 
 ```javascript
-localStorage.getItem("domesticTravelExpensePlanner.trips.v2")
-localStorage.getItem("domesticTravelExpensePlanner.activeTripId.v2")
-localStorage.removeItem("domesticTravelExpensePlanner.trips.v2")
-localStorage.removeItem("domesticTravelExpensePlanner.activeTripId.v2")
-localStorage.removeItem("domesticTravelExpensePlanner.history.v1")
+TripLog.sync.controller.status()
+TripLog.sync.controller.engine.status()
+await TripLogSyncRepository.read(TripLog.persistence.stateStorage.getActiveTripId())
 ```
 
 ## 영수증으로 지출 입력

@@ -10,6 +10,46 @@
   const row = (label, name, action, value = '') => `<button type="button" class="rd-setting-row" data-rd-action="${action}">${icon(name)}<span>${label}</span><small>${text(value)}</small>${icon('caret-right')}</button>`;
   let ready = false, tripTab = 'upcoming', expenseTab = 'all', reportTab = 'expenses', reportDay = 'all', expenseTrip = '', expenseReturnMode = '', lastTrip = '';
   let overlayReturnFocus = null;
+  let editingTripId = '';
+  function isTripEditing() { return Boolean(editingTripId && editingTripId === state.id); }
+  function syncTripEdit() {
+    const editing = isTripEditing();
+    $('.rd-trip-edit').hidden = !editing;
+    $('#rdTripSave').hidden = !editing;
+    $('#rdTripCreate').hidden = editing;
+    if (editing) return;
+    els.tripNameInput.value = state.tripName;
+    els.startDateInput.value = state.startDate;
+    els.endDateInput.value = state.endDate;
+    setCommaNumberInputValue(els.budgetInput, state.totalBudget || '');
+    syncCustomDatePicker(els.startDateInput); syncCustomDatePicker(els.endDateInput);
+  }
+  function cancelTripEdit() { editingTripId = ''; if (ready) syncTripEdit(); }
+  function startTripEdit(id) {
+    cancelTripEdit();
+    window.TripLog.persistence.stateStorage.switchTrip(id);
+    editingTripId = state.id;
+    syncTripEdit();
+    $('.rd-trip-edit').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
+    els.tripNameInput.focus({ preventScroll: true });
+  }
+  async function saveTripEdit() {
+    if (!isTripEditing()) return;
+    const submittedTrip = state.id;
+    const tripName = els.tripNameInput.value.trim(), startDate = els.startDateInput.value, endDate = els.endDateInput.value;
+    if (!tripName) { showToast('여행 이름을 입력해 주세요.'); els.tripNameInput.focus(); return; }
+    if (!startDate || !endDate || startDate > endDate) { showToast('여행 시작일과 종료일을 확인해 주세요.'); return; }
+    Object.assign(state, { tripName, startDate, endDate, totalBudget: Math.max(0, parseFormattedNumber(els.budgetInput.value)) });
+    const dates = getTripDays().map(day => day.date);
+    if (!isPreTripExpenseDate(state.selectedDate) && !dates.includes(state.selectedDate)) state.selectedDate = startDate;
+    if (state.selectedItineraryDate !== 'all' && !dates.includes(state.selectedItineraryDate)) state.selectedItineraryDate = startDate;
+    if (!dates.includes(state.lastActiveItineraryDate)) state.lastActiveItineraryDate = startDate;
+    if (!await saveAndRender()) return;
+    if (state.id !== submittedTrip) return;
+    editingTripId = '';
+    syncTripEdit();
+    showToast('여행 정보를 수정했어요.');
+  }
   const dateShort = value => { const d = new Date(`${value}T12:00:00`); return Number.isFinite(d.getTime()) ? `${d.getMonth() + 1}.${d.getDate()} ${'일월화수목금토'[d.getDay()]}` : '날짜 미정'; };
   const period = trip => `${dateShort(trip.startDate)} – ${dateShort(trip.endDate)}`;
   const duration = trip => { const n = getTripDaysForRange(trip.startDate, trip.endDate).length; return n > 1 ? `${n - 1}박 ${n}일` : n ? '당일치기' : '기간 미정'; };
@@ -75,7 +115,7 @@
     $('#rdOverviewTripButton')?.setAttribute('aria-expanded','true');
   }
   function move(selector, target) { const node = typeof selector === 'string' ? $(selector) : selector; const parent = typeof target === 'string' ? $(target) : target; if (node && parent) parent.appendChild(node); return node; }
-  function openExpenseEditor(entry) {
+  function openExpenseEditor(entry, options = {}) {
     if (!ready) return;
     expenseTrip = state.id;
     $('#rdExpenseEditorTitle').textContent = entry ? '지출 수정' : '지출 추가';
@@ -85,22 +125,35 @@
     $('#rdExpenseSubmit').textContent = entry ? '변경 내용 저장' : '지출 저장';
     $('#rdExpenseMemo').open = Boolean(entry?.note || entry?.payerKey && entry.payerKey !== 'leader');
     open('rdExpenseEditor');
+    window.TripLog.features.expenses.workspace.editorOpened(entry, options);
   }
   function renderPayers(value = $('#rdPayer')?.value || 'leader') {
     $('#rdPayer').innerHTML = getSettlementMembers().map(member => `<option value="${text(member.key)}">${text(member.isLeader ? '나' : member.name)}</option>`).join('');
     $('#rdPayer').value = getSettlementMembers().some(m => m.key === value) ? value : 'leader';
   }
   function newExpense() { expenseReturnMode = state.travelMode; clearEditMode(); openExpenseEditor(); }
-  function expenseSaved() { if (!ready) return; $('#rdExpenseEditor').close(); showToast('지출을 저장했어요.'); }
+  function expenseSaved() { if (!ready) return; if (window.TripLog.features.expenses.workspace?.afterSave()) return; $('#rdExpenseEditor').close(); showToast('지출을 저장했어요.'); }
+  function showSavedPretrip(entry) {
+    // Opening or saving an expense preserves the user's current list controls.
+    renderExpenses(calculateTotals().total);
+    const button = $$('#rdExpenseList [data-rd-action="expense-edit"]').find(element => element.dataset.id === entry.id);
+    button?.closest('tr')?.classList.add('pp-saved-entry');
+    button?.scrollIntoView({ block: 'nearest' }); button?.focus({ preventScroll: true });
+  }
   function expenseMetadata() { return {paymentDate: $('#rdPaymentDate')?.value || '', payerKey: $('#rdPayer')?.value || 'leader'}; }
   function confirmAction(message) {
     const el=$('#rdConfirm'); if(el.open)return Promise.resolve(false);
     $('#rdConfirmMessage').textContent=message;
     return new Promise(resolve=>{el.addEventListener('close',()=>resolve(el.returnValue==='confirm'),{once:true});el.returnValue='';open('rdConfirm');$('#rdConfirmCancel').focus();});
   }
-  function showReservation(mode) { closeAll(); openPretripPurchaseMenu(mode); els.pretripPurchasePanel.hidden = false; open('rdReservation'); }
+  function showReservation(mode, options = {}) {
+    if (options.entry) { closeAll(); startEdit(options.entry, options); return; }
+    closeAll(); clearEditMode(); openPretripPurchaseMenu(mode, options);
+    els.pretripPurchasePanel.hidden = false; open('rdReservation');
+    if (options.focusBookingCode) { const input = mode === 'hotel' ? els.pretripHotelBookingCodeInput : els.pretripFlightBookingCodeInput; input.closest('details').open = true; input.focus(); }
+  }
   function setupForms() {
-    dialog('rdExpenseEditor','지출 추가',`<div class="rd-tabs"><button type="button" class="active" aria-pressed="true">직접 입력</button>${button(`${icon('camera')} 영수증`,'receipt')}</div><div id="rdExpenseFormMount"></div><p id="rdReceiptNotice"></p>${button(`${icon('airplane')} 항공권·숙소 사전구매 ${icon('caret-right')}`,'reservation','rd-subtle-row')}${button('지출 삭제','delete-expense','rd-danger','id="rdDeleteExpense" hidden')}`, '<button id="rdExpenseSubmit" class="rd-button rd-primary" type="submit" form="expenseForm">지출 저장</button>');
+    dialog('rdExpenseEditor','지출 추가',`<div class="rd-expense-tools">${button(`${icon('camera')} 영수증`,'receipt','rd-receipt-launch','aria-haspopup="dialog" aria-controls="receiptDialog" aria-expanded="false"')}</div><div id="rdExpenseFormMount"></div><p id="rdReceiptNotice"></p>${button(`${icon('airplane')} 항공권·숙소 사전구매 ${icon('caret-right')}`,'reservation','rd-subtle-row')}${button('지출 삭제','delete-expense','rd-danger','id="rdDeleteExpense" hidden')}`, '<button id="rdExpenseSubmit" class="rd-button rd-primary" type="submit" form="expenseForm">지출 저장</button>');
     move(els.expenseForm, '#rdExpenseFormMount');
     const form = els.expenseForm;
     const amount = els.amountInput.closest('label'), description = els.descriptionInput.closest('label');
@@ -118,8 +171,9 @@
     move($('#receiptAppliedStatus'), '#rdReceiptNotice');
     $('#rdExpenseEditor').addEventListener('cancel', () => { state.travelMode = expenseReturnMode || state.travelMode; clearEditMode(); });
     form.addEventListener('submit', event => { if (expenseTrip !== state.id) { event.preventDefault(); event.stopImmediatePropagation(); showToast('여행이 변경됐어요. 지출 창을 다시 열어 주세요.'); } }, true);
-    dialog('rdReservation','항공권·숙소 사전구매','<div id="rdReservationMount"></div>'); move(els.pretripPurchasePanel, '#rdReservationMount');
-    $('#rdReservation').addEventListener('submit', () => { const count = state.entries.length; setTimeout(() => { if (state.entries.length > count) { $('#rdReservation').close(); } },0); }, true);
+    dialog('rdReservation','사전구매','<div id="rdReservationMount"></div>', `${button('취소','close','pp-cancel')}<button id="pretripPurchaseSubmit" type="submit" form="pretripFlightForm" class="rd-button rd-primary">항공권 저장</button>`);
+    move(els.pretripPurchasePanel, '#rdReservationMount');
+    window.TripLog.features.expenses.pretripPurchases.connectDialog();
     dialog('rdFilter','지출 필터',`<div class="rd-filter-categories">${['전체','숙소','교통','식비','관광','쇼핑','기타'].map(c => button(c,'category','',`data-category="${c}"`)).join('')}</div><label><span>정렬</span><div id="rdSortMount"></div></label>`,button('적용','close','rd-primary'));
     move(els.expenseSortSelect.closest('.custom-select') || els.expenseSortSelect, '#rdSortMount');
   }
@@ -185,23 +239,26 @@
     $('#receiptReviewForm > .receipt-hint').textContent='사진은 이 기기에서만 인식해요. 금액·일자를 확인해 주세요.';
     $('#receiptApplyButton').textContent='지출 정보에 적용';$('#receiptDialog .receipt-dialog-footer span').textContent='내용을 확인한 뒤 지출 저장을 누르면 저장돼요.';
     new MutationObserver(()=>{const review=!$('#receiptReviewForm').hidden;$('#receiptDialog').classList.toggle('rd-receipt-review',review);if(review)$('#rdReceiptStatusInfo').open=false;}).observe($('#receiptReviewForm'),{attributes:true,attributeFilter:['hidden']});
+    $('#receiptDialog').addEventListener('toggle',()=> { const active=$('#receiptDialog').open; $$('[data-rd-action="receipt"],[data-rd-action="receipt-start"]').forEach(button=>{button.classList.toggle('active',active);button.setAttribute('aria-expanded',String(active));}); });
     $('#receiptDialog').addEventListener('close',()=> { if (!$('#receiptAppliedStatus').hidden && !$('#rdExpenseEditor').open) open('rdExpenseEditor'); const receiptDate=window.TripLog.features.expenses.receiptInput.metadata()?.recognizedDate;if(receiptDate&&!$('#receiptAppliedStatus').hidden){$('#rdPaymentDate').value=receiptDate;syncCustomDatePicker($('#rdPaymentDate'));} });
   }
   function setupAuth() {
-    $('.auth-brand-panel').innerHTML = `${logo}<h1>여행의 모든 순간,<br>한곳에.</h1><p>일정부터 지출까지, 함께 기록해요.</p><img class="rd-login-art" src="src/assets/login-travel.png" alt="하늘색 여행 가방과 여행 티켓">`;
-    $('.auth-brand-panel').insertAdjacentHTML('afterbegin',`<details class="rd-auth-help"><summary aria-label="로그인 도움말">${icon('list')}</summary><div id="rdAuthHelpMount"><p>로그인 연결에 문제가 있나요?</p></div></details>`);move($('#authGateResetSupabaseButton'),'#rdAuthHelpMount');
-    const pass = $('#authGatePasswordField'); const eye=document.createElement('button'); eye.type='button';eye.className='rd-password-eye';eye.setAttribute('aria-label','비밀번호 표시');eye.setAttribute('aria-pressed','false');eye.innerHTML=icon('eye');
-    eye.addEventListener('click',()=> {const shown=els.authGatePasswordInput.type==='password';els.authGatePasswordInput.type=shown?'text':'password';eye.setAttribute('aria-pressed',String(shown));eye.setAttribute('aria-label',shown?'비밀번호 숨기기':'비밀번호 표시');});pass.appendChild(eye);
-    $('#authGateForgotButton').textContent='비밀번호를 잊으셨나요?'; $('#authGateForm').insertBefore($('#authGateForgotButton'),$('#authGateSubmitButton'));
-    $('#authGateForm').insertAdjacentHTML('beforeend',`<p class="rd-signup-hint">처음 오셨나요? <button type="button" data-rd-action="signup">회원가입</button></p>`);
+    const eye = $('.rd-password-eye');
+    eye.addEventListener('click',()=> {const shown=els.authGatePasswordInput.type==='password';els.authGatePasswordInput.type=shown?'text':'password';eye.setAttribute('aria-pressed',String(shown));eye.setAttribute('aria-label',shown?'비밀번호 숨기기':'비밀번호 표시');});
   }
   function setup() {
     if(ready)return;ready=true;lastTrip=state.id;document.body.classList.add('rd-app');
     $('#appShell').insertAdjacentHTML('afterbegin',`<header class="rd-header">${logo}${button(icon('list'),'more','rd-icon-button','id="rdMenuButton" aria-label="여행 메뉴 열기"')}</header>`);
+    const sync = els.itineraryPageButton;
+    sync.className = 'rd-button rd-sync';
+    sync.replaceChildren();
+    sync.setAttribute('aria-label', '저장 상태 자세히 보기');
+    const headerActions = document.createElement('div'); headerActions.className = 'rd-header-actions';
+    $('.rd-header').appendChild(headerActions); headerActions.append(sync, $('#rdMenuButton'));
     $('#appShell').insertAdjacentHTML('beforeend',`<nav class="rd-nav" aria-label="주 메뉴">${[['overview','house','개요'],['itinerary','calendar-blank','일정'],['budget','wallet','지출'],['report','chart-bar','리포트'],['more','dots-three','더보기']].map(([page,name,label])=>`<button type="button" data-rd-nav="${page}">${icon(name)}<span>${label}</span></button>`).join('')}</nav>`);
-    addView('overview',`<div class="rd-heading"><div class="rd-overview-heading"><h1>여행 개요</h1>${button(`${icon('plus')} 새 여행`,'new-trip','rd-overview-new','aria-label="새 여행 만들기"')}</div><p>여행의 모든 정보를 한눈에 확인하세요</p></div><div id="rdOverview"></div>`);
-    addView('start',heading('나의 여행','다음 여행을 준비해 볼까요?')+`<div class="rd-tabs" id="rdTripTabs">${button('예정된 여행','trips-upcoming','active')}${button('지난 여행','trips-past')}</div><div id="rdTripList"></div><section class="rd-trip-edit"><h2>여행 정보</h2><p>선택한 여행의 정보를 수정할 수 있어요.</p><div id="rdTripEditMount" class="rd-form-grid"></div></section><div id="rdOtherTrips"></div><div class="rd-page-footer">${button(`${icon('plus')} 새 여행 만들기`,'new-trip','rd-primary')}</div>`);
-    ['#tripNameInput','#startDateInput','#endDateInput','#budgetInput'].forEach(s=>move($(s).closest('label'),'#rdTripEditMount'));els.tripNameInput.closest('label').hidden=true;els.budgetInput.closest('label').classList.add('rd-budget-input-label');els.budgetInput.closest('label').querySelector('span').textContent='총예산';
+    addView('overview',`<div class="rd-heading"><div class="rd-overview-heading"><h1>여행 개요</h1>${button(`${icon('plus')} 새 여행`,'new-trip','rd-overview-new','aria-label="새 여행 만들기"')}</div></div><div id="rdOverview"></div>`);
+    addView('start',heading('나의 여행','다음 여행을 준비해 볼까요?')+`<div class="rd-tabs" id="rdTripTabs">${button('예정된 여행','trips-upcoming','active')}${button('지난 여행','trips-past')}</div><div id="rdTripList"></div><section class="rd-trip-edit" hidden><div class="rd-section-head"><h2>여행 수정</h2>${button('취소','trip-cancel','rd-text-button')}</div><p>내용을 바꾼 뒤 아래 여행 수정 버튼을 눌러 저장해 주세요.</p><div id="rdTripEditMount" class="rd-form-grid"></div></section><div id="rdOtherTrips"></div><div class="rd-page-footer">${button(`${icon('plus')} 새 여행 만들기`,'new-trip','rd-primary','id="rdTripCreate"')}${button('여행 수정','trip-save','rd-primary','id="rdTripSave" hidden')}</div>`);
+    ['#tripNameInput','#startDateInput','#endDateInput','#budgetInput'].forEach(s=>move($(s).closest('label'),'#rdTripEditMount'));els.tripNameInput.closest('label').hidden=false;els.budgetInput.closest('label').classList.add('rd-budget-input-label');els.budgetInput.closest('label').querySelector('span').textContent='총예산';
     addView('budget',heading('지출 기록')+`<div id="rdBudgetSummary"></div>${button(`${icon('camera')} 영수증으로 입력 ${icon('caret-right')}`,'receipt-start','rd-secondary rd-scan')}<div class="rd-search"><div id="rdSearchMount">${icon('magnifying-glass')}</div>${button(icon('sliders-horizontal'),'filter','rd-icon-button','aria-label="지출 필터"')}</div><div class="rd-tabs" id="rdExpenseTabs">${[['all','전체'],['pretrip','사전구매'],['during','여행 중']].map(([key,label])=>button(label,'expense-tab',key==='all'?'active':'',`data-tab="${key}"`)).join('')}</div><div id="rdExpenseList"></div><div class="rd-page-footer">${button(`${icon('plus')} 지출 추가`,'expense-new','rd-primary')}</div>`);
     move(els.expenseSearchInput,'#rdSearchMount');els.expenseSearchInput.placeholder='지출 검색';
     addView('settlement',heading('경비 정산')+'<div id="rdSettlement"></div>');
@@ -210,21 +267,55 @@
     addView('settings',heading('설정','여행을 내 방식대로')+`<div id="rdProfileSummary"></div><section class="rd-setting-group"><h2>여행 설정</h2><div id="rdSettingsTrip"></div></section><section class="rd-setting-group"><h2>공유 설정</h2><div id="rdPrivacyMount"></div></section><section class="rd-setting-group"><h2>기록 관리</h2>${row('저장 기록','bookmark-simple','history')}${row('백업·불러오기','download-simple','backup')}${row('PDF 저장','file-text','pdf')}</section>${row('고급 연결 설정','gear','advanced')}<button class="rd-logout" data-rd-action="logout" type="button">로그아웃</button>`);
     setupForms();setupSettings();setupExistingDialogs();setupAuth();setupTripChooser();
     $$('.custom-date-button').forEach(el=>{el.insertAdjacentHTML('afterbegin',icon('calendar-blank'));$('.custom-date-icon',el).innerHTML=icon('caret-down');});
-    dialog('rdMore','여행 메뉴',`${row('오늘의 여행','compass','companion')}${row('예약 지갑','ticket','companion-wallet')}${row('여행 도구','suitcase','companion-tools')}${row('나의 여행','suitcase','nav-start')}${row('경비 정산','users-three','nav-settlement')}${row('여행 준비물','suitcase-rolling','packing')}${row('멤버·초대','user-plus','invite')}${row('저장 기록','bookmark-simple','history')}${row('설정','gear','nav-settings')}${row('여행 동기화','arrows-clockwise','sync')}${row('전체 일정 보기','calendar-blank','all-itinerary')}`);
+    dialog('rdMore','여행 메뉴',`${row('오늘의 여행','compass','companion')}${row('예약 지갑','ticket','companion-wallet')}${row('여행 도구','suitcase','companion-tools')}${row('나의 여행','suitcase','nav-start')}${row('경비 정산','users-three','nav-settlement')}${row('여행 준비물','suitcase-rolling','packing')}${row('멤버·초대','user-plus','invite')}${row('저장 기록','bookmark-simple','history')}${row('설정','gear','nav-settings')}${row('저장 상태·공동 작업','cloud-check','sync-status')}${row('전체 일정 보기','calendar-blank','all-itinerary')}`);
     dialog('rdMemberInfo','멤버 정보','<div id="rdMemberInfoBody"></div>');
     dialog('rdConfirm','확인해 주세요','<p id="rdConfirmMessage"></p>',`${button('취소','close','','id="rdConfirmCancel"')}${button('확인','confirm-accept','rd-primary')}`).setAttribute('role','alertdialog');
     const tools = move($('#itineraryToolsDialog'),document.body), park=document.createElement('div');park.hidden=true;park.className='rd-legacy';while(tools.firstChild)park.appendChild(tools.firstChild);tools.appendChild(park);tools.classList.add('rd-dialog');tools.insertAdjacentHTML('beforeend',`<div class="rd-dialog-head">${logo}${button(icon('x'),'close','rd-icon-button','aria-label="준비물 닫기"')}</div><div class="rd-dialog-body"><h1>여행 준비물</h1><p data-rd-trip></p><div id="rdPacking"></div><label class="rd-packing-add"><span>준비물 추가</span><div id="rdPackingInputMount"></div></label>${button('기본 목록으로 되돌리기','packing-reset','rd-text-button')}<p class="rd-muted">체크한 내용은 자동으로 저장돼요.</p></div><footer class="rd-dialog-footer">${button('완료','close','rd-primary')}</footer>`);move(els.packingInput,'#rdPackingInputMount');move(els.packingAddBtn,'#rdPackingInputMount');els.packingAddBtn.innerHTML=icon('plus');els.packingAddBtn.setAttribute('aria-label','준비물 추가');els.packingInput.placeholder='챙길 물건을 입력하세요';
     document.addEventListener('click',handleClick);
     document.addEventListener('click',event=>{if(event.target.closest('#itineraryMenuButton,[data-itinerary-menu]')){event.preventDefault();event.stopImmediatePropagation();open('rdMore');}},true);
     window.addEventListener('popstate',()=>{const page=new URL(location.href).searchParams.get('page');if(page)navigate(page);});
+    window.TripLog.features.expenses.workspace?.setup();
     render();
   }
   function renderOverview(total) {
-    const bookings=window.TripLog.features.travelCompanion.model.reservations(state),transportBookings=bookings.filter(row=>row.type==='transport'),stayBookings=bookings.filter(row=>row.type==='stay');
-    const team=members(),budget=Number(state.totalBudget)||0,pct=budget?Math.round(total/budget*100):0,plans=[...state.itineraryItems].sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time)),first=plans[0]?.date,items=plans.filter(p=>p.date===first).slice(0,3),packing=state.packingList||[];
-    $('#rdOverview').innerHTML=`<section class="rd-trip-hero rd-outline"><div><span class="rd-badge">${dday(state)}</span><h2><button type="button" class="rd-trip-name" id="rdOverviewTripButton" data-rd-action="trip-choose" aria-haspopup="dialog" aria-controls="rdTripChooser" aria-expanded="${!!$('#rdTripChooser')?.open}" aria-label="여행 바꾸기: ${text(state.tripName||'새로운 여행')}"><span>${text(state.tripName||'새로운 여행')}</span>${icon('caret-down')}</button></h2><p>${period(state)} · ${duration(state)}</p><button type="button" class="rd-team" data-rd-action="invite">${team.slice(0,3).map((m,i)=>avatar(m.name,i)).join('')}<span>${team.length}명</span></button></div>${/서울/.test(state.city||'')?'<figure><img src="src/assets/seoul-tower.png" alt="서울 남산타워"><figcaption>서울 · 대한민국</figcaption></figure>':''}</section><div class="rd-reservations">${button(`${icon('train')}<span><strong>교통 예약</strong><small>${text(transportBookings[0]?.title||'예약 없음')} · ${transportBookings.length}건</small></span>${icon('caret-right')}`,'companion-transport')}${button(`${icon('bed')}<span><strong>숙소 예약</strong><small>${text(stayBookings[0]?.title||'예약 없음')} · ${stayBookings.length}건</small></span>${icon('caret-right')}`,'companion-stay')}</div><section class="rd-outline rd-overview-budget"><div class="rd-section-head"><h2>여행 예산</h2><button type="button" data-rd-nav="budget">자세히 보기 ${icon('caret-right')}</button></div><div class="rd-budget-metric"><strong>${money(total)}</strong><span>/ ${money(budget)}</span></div><div class="rd-progress-row"><progress max="100" value="${Math.min(100,pct)}" aria-label="예산 사용률"></progress><b>${pct}%</b></div><p>${budget?`${total>budget?'초과 금액':'남은 예산'} ${money(Math.abs(budget-total))}`:'나의 여행에서 예산을 설정해 보세요.'}</p></section><section class="rd-outline rd-key-schedule"><div class="rd-section-head"><h2>${first&&first!==state.startDate?dateShort(first):'첫날'}의 일정</h2><button type="button" data-rd-nav="itinerary">전체 일정 보기 ${icon('caret-right')}</button></div>${items.length?items.map(p=>`<button type="button" class="rd-plan-row" data-rd-action="plan" data-id="${text(p.id)}"><time>${text(p.time||'미정')}</time>${icon('circle')}<b>${text(p.place)}</b></button>`).join(''):'<p class="rd-empty">첫 여행 일정을 추가해 보세요.</p>'}</section>${button(`${icon('suitcase-rolling')}<span><strong>준비물</strong><small>${packing.filter(p=>p.checked).length} / ${packing.length}개</small></span>${icon('caret-right')}`,'packing','rd-packing-summary')}<div class="rd-page-footer">${button(`오늘의 여행 시작 ${icon('arrow-right')}`,'companion','rd-primary')}</div>`;
+    const bookings = window.TripLog.features.travelCompanion.model.reservations(state);
+    const team = members(), budget = Number(state.totalBudget) || 0;
+    const pct = budget ? Math.round(total / budget * 100) : 0;
+    const days = getTripDays(), validDates = new Set(days.map(day => day.date));
+    const plans = sortItineraryItems(state.itineraryItems.filter(item => validDates.has(item.date)));
+    const today = M().localDate();
+    const scheduleDate = validDates.has(today) ? today : plans[0]?.date || state.startDate;
+    const scheduleDay = days.find(day => day.date === scheduleDate);
+    const scheduleTitle = scheduleDate === today ? '오늘 일정' : scheduleDate === state.startDate ? '첫날 일정' : `${scheduleDay?.label || ''} 일정`;
+    const items = plans.filter(item => item.date === scheduleDate).slice(0, 3), packing = state.packingList || [];
+    const reservation = (type, title, glyph) => {
+      const rows = bookings.filter(row => row.type === type);
+      const description = rows[0]?.title || '예약을 추가해 보세요';
+      return button(`${icon(glyph)}<strong>${title}</strong>${icon('caret-right')}<b class="rd-reservation-count">${rows.length}<small>건</small></b><small class="rd-reservation-description">${text(description)}</small>`, `companion-${type}`, `rd-reservation-${type}`, `aria-label="${title} ${rows.length}건, ${text(description)}"`);
+    };
+    $('#rdOverview').innerHTML = `
+      <section class="rd-trip-hero rd-outline"><div>
+        <span class="rd-badge">${dday(state)}</span>
+        <h2><button type="button" class="rd-trip-name" id="rdOverviewTripButton" data-rd-action="trip-choose" aria-haspopup="dialog" aria-controls="rdTripChooser" aria-expanded="${!!$('#rdTripChooser')?.open}" aria-label="여행 바꾸기: ${text(state.tripName || '새로운 여행')}"><span>${text(state.tripName || '새로운 여행')}</span>${icon('caret-down')}</button></h2>
+        <p>${period(state)} · ${duration(state)}</p>
+        <button type="button" class="rd-team" data-rd-action="invite" aria-label="여행 멤버 ${team.length}명 보기">${icon('users')}<span>${team.length}명</span></button>
+      </div></section>
+      <div class="rd-reservations">${reservation('transport', '교통 예약', 'airplane-tilt')}${reservation('stay', '숙소 예약', 'bed')}</div>
+      <section class="rd-outline rd-overview-budget${budget && total > budget ? ' is-over-budget' : ''}">
+        <div class="rd-section-head"><h2>${icon('coins')}여행 예산</h2><button type="button" data-rd-nav="budget" aria-label="지출 기록 자세히 보기">자세히 ${icon('caret-right')}</button></div>
+        <div class="rd-budget-metric"><strong>${money(total)}</strong><span>예산 ${money(budget)}</span></div>
+        <div class="rd-progress-row"><progress max="100" value="${Math.max(0, Math.min(100, pct))}" aria-label="예산 사용률" aria-valuetext="${pct}% 사용"></progress><b>${pct}%</b></div>
+        <p>${budget ? `${total > budget ? '초과 금액' : '남은 예산'} <strong>${money(Math.abs(budget - total))}</strong>` : '<button type="button" class="rd-budget-setup" data-rd-action="trip-edit" data-id="' + text(state.id) + '">여행 예산 설정하기 ' + icon('caret-right') + '</button>'}</p>
+      </section>
+      <section class="rd-outline rd-key-schedule">
+        <div class="rd-section-head"><h2>${icon('calendar-blank')}${scheduleTitle}</h2><span class="rd-schedule-date">${dateShort(scheduleDate)}</span><button type="button" data-rd-action="all-itinerary">전체 보기 ${icon('caret-right')}</button></div>
+        ${items.length ? items.map((item, index) => `<button type="button" class="rd-plan-row" data-rd-action="plan" data-id="${text(item.id)}" aria-label="${text(item.time || '시간 미정')} ${text(item.place || '장소 미정')} 일정 수정"><time>${text(item.time || '미정')}</time><span class="rd-plan-dot rd-plan-dot-${index}" aria-hidden="true"></span>${icon(itineraryThemes[item.theme]?.icon || 'map-pin')}<b>${text(item.place || '장소 미정')}</b></button>`).join('') : `<div class="rd-overview-empty"><p>아직 등록한 일정이 없어요.</p>${button(`${icon('plus')} 첫 일정 추가`, 'overview-add-plan', 'rd-empty-add', `data-date="${text(scheduleDate)}"`)}</div>`}
+      </section>
+      ${button(`${icon('clipboard-text')}<strong>준비물</strong><small>${packing.filter(item => item.checked).length} / ${packing.length}개 완료</small>${icon('caret-right')}`, 'packing', 'rd-packing-summary')}
+      <div class="rd-page-footer">${button(`일정 보러 가기 ${icon('caret-right')}`, 'overview-itinerary', 'rd-primary', `data-date="${text(scheduleDate)}"`)}</div>`;
   }
   function renderTrips() {
+    syncTripEdit();
     const trips=window.TripLog.persistence.stateStorage.getTrips(),today=M().localDate();
     $$('#rdTripTabs button').forEach((el,i)=>{el.classList.toggle('active',i===(tripTab==='upcoming'?0:1));el.setAttribute('aria-pressed',String(el.classList.contains('active')));});
     const list=trips.filter(t=>tripTab==='past'?t.endDate<today:t.endDate>=today);
@@ -232,6 +323,7 @@
     $('#rdOtherTrips').innerHTML=`<h2>다른 여행</h2>${trips.filter(t=>t.id!==state.id).map(t=>`<button type="button" class="rd-other-trip" data-rd-action="trip-open" data-id="${text(t.id)}"><strong>${text(t.tripName)}</strong><span>${period(t)} · ${dday(t)}</span>${icon('caret-right')}</button>`).join('')||'<p class="rd-muted">새 여행을 만들어 여행별로 기록해 보세요.</p>'}<details class="rd-trip-management"><summary>여행 관리</summary>${button('선택한 여행 삭제','trip-delete','rd-text-button rd-danger')}</details>`;
   }
   function renderExpenses(total) {
+    if (window.TripLog.features.expenses.workspace) { window.TripLog.features.expenses.workspace.renderLedger(total, expenseTab); return; }
     const budget=Number(state.totalBudget)||0,pct=budget?Math.round(total/budget*100):0;
     $('#rdBudgetSummary').innerHTML=`<p class="rd-metric-label">총 지출</p><strong class="rd-total">${money(total)}</strong><p class="rd-budget-caption">${budget?`예산의 ${pct}% · ${total>budget?'초과':'남은 예산'} ${money(Math.abs(budget-total))}`:'예산을 설정하면 사용률을 볼 수 있어요.'}</p><div class="rd-progress-row"><progress max="100" value="${Math.min(100,pct)}" aria-label="예산 사용률"></progress><span>${pct}%</span></div>`;
     const entries=getFilteredEntries().filter(e=>expenseTab==='all'||(expenseTab==='pretrip')===isPreTripExpenseDate(e.date));
@@ -249,7 +341,9 @@
     const canvas=$('#rdDonut');if(!canvas)return;
     const ctx=canvas.getContext('2d'),size=400;canvas.width=size;canvas.height=size;ctx.clearRect(0,0,size,size);let start=-Math.PI/2;
     if(!rows.length){ctx.strokeStyle='#e4e5e9';ctx.lineWidth=80;ctx.beginPath();ctx.arc(200,200,148,0,Math.PI*2);ctx.stroke();return;}
-    rows.forEach(row=>{const end=start+row.amount/total*Math.PI*2;ctx.beginPath();ctx.arc(200,200,198,start,end);ctx.arc(200,200,105,end,start,true);ctx.closePath();ctx.fillStyle=row.color;ctx.fill();ctx.strokeStyle='#0b1020';ctx.lineWidth=3;ctx.stroke();if(row.percent>=8){const mid=(start+end)/2;ctx.fillStyle='#0b1020';ctx.font='750 24px Pretendard, sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(row.percent+'%',200+Math.cos(mid)*152,200+Math.sin(mid)*152);}start=end;});
+    // Percentages live in the HTML legend at the shared metadata size.
+    // Text painted into a 400px canvas became unreadable as the chart shrank.
+    rows.forEach(row=>{const end=start+row.amount/total*Math.PI*2;ctx.beginPath();ctx.arc(200,200,198,start,end);ctx.arc(200,200,105,end,start,true);ctx.closePath();ctx.fillStyle=row.color;ctx.fill();ctx.strokeStyle='#0b1020';ctx.lineWidth=3;ctx.stroke();start=end;});
   }
   function renderReports(total) {
     const budget=Number(state.totalBudget)||0,rows=M().categoryShares(state.entries),trend=M().paymentTrend(state.entries),max=Math.max(1,...trend.map(t=>t.amount));
@@ -261,18 +355,18 @@
   function renderPlanAnalytics() {
     const days=getTripDays(),all=state.itineraryItems||[];
     if(reportDay!=='all'&&!days.some(day=>day.date===reportDay))reportDay='all';
-    const items=all.filter(item=>reportDay==='all'||item.date===reportDay).sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time));
-    const stays=items.map(item=>({...item,minutes:Math.max(0,getMinutesBetweenTimes(item.time,item.endTime)||0)}));
+    const items=sortItineraryItems(all.filter(item=>reportDay==='all'||item.date===reportDay));
+    const stays=items.filter(item=>item.theme!=='lodging').map(item=>({...item,minutes:Math.max(0,getMinutesBetweenTimes(item.time,item.endTime)||0)}));
     const stayTotal=stays.reduce((n,item)=>n+item.minutes,0),transitTotal=items.reduce((n,item)=>n+getItineraryTransits(item).reduce((sum,segment)=>sum+(Number(segment.duration)||0),0),0),max=Math.max(1,...stays.map(item=>item.minutes));
-    $('#rdPlanAnalytics').innerHTML=`<label class="rd-analysis-filter"><span>분석할 일자</span><select id="rdReportDay"><option value="all">전체 여행</option>${days.map((day,i)=>`<option value="${text(day.date)}" ${day.date===reportDay?'selected':''}>Day ${i+1} · ${dateShort(day.date)}</option>`).join('')}</select></label><div class="rd-analysis-metrics"><div><small>계획한 일정</small><strong>${items.length}개</strong></div><div><small>체류 시간</small><strong>${stayTotal}분</strong></div><div><small>이동 시간</small><strong>${transitTotal}분</strong></div></div><h2>장소별 체류 시간</h2>${stays.length?stays.map(item=>`<button type="button" class="rd-analysis-place" data-rd-action="plan" data-id="${text(item.id)}"><span><b>${text(item.place)}</b><small>${dateShort(item.date)} · ${text(item.time||'시간 미정')}${item.endTime?' – '+text(item.endTime):''}</small></span><strong>${item.minutes?item.minutes+'분':'시간 미입력'}</strong><span class="rd-analysis-track"><i style="width:${item.minutes/max*100}%"></i></span></button>`).join(''):'<p class="rd-empty">일정을 추가하면 체류 시간과 이동 시간을 확인할 수 있어요.</p>'}<p class="rd-muted">입력한 시간 기준이며, 같은 시간의 일정은 중복 합산됩니다.</p>`;
+    $('#rdPlanAnalytics').innerHTML=`<label class="rd-analysis-filter"><span>분석할 일자</span><select id="rdReportDay"><option value="all">전체 여행</option>${days.map((day,i)=>`<option value="${text(day.date)}" ${day.date===reportDay?'selected':''}>Day ${i+1} · ${dateShort(day.date)}</option>`).join('')}</select></label><div class="rd-analysis-metrics"><div><small>계획한 일정</small><strong>${items.length}개</strong></div><div><small>체류 시간</small><strong>${stayTotal}분</strong></div><div><small>이동 시간</small><strong>${transitTotal}분</strong></div></div><h2>장소별 체류 시간</h2>${stays.length?stays.map(item=>`<button type="button" class="rd-analysis-place" data-rd-action="plan" data-id="${text(item.id)}"><span><b>${text(item.place)}</b><small>${dateShort(item.date)} · ${text(item.time||'시간 미정')}${item.endTime?' – '+text(item.endTime):''}</small></span><strong>${item.minutes?item.minutes+'분':'시간 미입력'}</strong><span class="rd-analysis-track"><i style="width:${item.minutes/max*100}%"></i></span></button>`).join(''):'<p class="rd-empty">체류 시간을 기록할 일정이 없어요.</p>'}<p class="rd-muted">숙소는 체류 시간에서 제외합니다. 입력한 시간 기준이며, 같은 시간의 일정은 중복 합산됩니다.</p>`;
   }
   function renderPacking() {
     const list=state.packingList||[],done=list.filter(i=>i.checked).length;$('#itineraryToolsDialog [data-rd-trip]').textContent=`${state.tripName} · ${duration(state)}`;
     $('#rdPacking').innerHTML=`<div class="rd-pack-metric">${icon('suitcase-rolling')}<span><strong>${done} / ${list.length}개</strong><b>준비 완료</b></span></div><progress max="${list.length||1}" value="${done}" aria-label="준비물 완료"></progress><p class="rd-muted">${list.length-done?`${list.length-done}가지만 더 챙기면 준비 끝!`:'여행 준비를 마쳤어요!'}</p><div class="rd-pack-list">${list.map((item,i)=>`<div class="rd-pack-row"><label><input type="checkbox" data-rd-pack="${text(item.id)}" ${item.checked?'checked':''}><span>${text(item.name)}</span></label><div class="rd-pack-controls">${button(icon('arrow-up'),'packing-up','rd-icon-button',`data-id="${text(item.id)}" aria-label="${text(item.name)} 위로 이동" ${i?'':'disabled'}`)}${button(icon('trash'),'packing-delete','rd-icon-button',`data-id="${text(item.id)}" aria-label="${text(item.name)} 삭제"`)}</div></div>`).join('')}</div>`;
   }
-  function render() {
+  function render({ pageOnly = false } = {}) {
     if(!ready)return;
-    if(lastTrip!==state.id){closeAll();lastTrip=state.id;expenseTab='all';els.expenseSearchInput.value='';}
+    if(lastTrip!==state.id){closeAll();lastTrip=state.id;expenseTab='all';els.expenseSearchInput.value='';editingTripId='';}
     $$('[data-rd-trip]').forEach(el=>el.textContent=state.tripName||'새로운 여행');
     $$('.rd-nav [data-rd-nav]').forEach(el=>{const active=el.dataset.rdNav===activePage||el.dataset.rdNav==='more'&&['start','settings','settlement'].includes(activePage);el.classList.toggle('active',active);if(active)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');});
     const totals=calculateTotals();
@@ -286,7 +380,8 @@
       $('#settingsPage [data-rd-action="history"] small').textContent=`${historyRecords.length}개`;
       $('#rdSettingsTrip').innerHTML=row('나의 여행','suitcase','nav-start',state.tripName)+row('여행 방식·통화','currency-krw','currency',`${state.travelMode==='overseas'?'해외':'국내'} · ${state.currencyCode||'KRW'}`)+row('멤버·초대 관리','users-three','invite',`${members().length}명`);
     }
-    renderPacking();
+    if (pageOnly) return;
+    if ($('#itineraryToolsDialog').open) renderPacking();
     $('#rdInviteMembers').innerHTML=`<div class="rd-invite-period">${icon('users-three')}<span><b>${period(state)}</b><small>${duration(state)}</small></span></div><h2>함께하는 멤버</h2>${members().map((m,i)=>`<button type="button" class="rd-invite-member" data-rd-action="member-info" data-index="${i}">${avatar(m.name,i)}<b>${text(m.name)}</b><span>${m.role==='owner'||!i?'방장':'멤버'}</span>${icon('caret-right')}</button>`).join('')}<h2>초대 링크</h2>`;
     if($('#rdExpenseEditor').open)renderPayers();
     if($('#rdTripChooser').open)renderTripChooser();
@@ -328,9 +423,11 @@
         showToast(`${target.tripName||'선택한 여행'}으로 바꿨어요.`);break;
       }
       case 'trip-open':window.TripLog.persistence.stateStorage.switchTrip(el.dataset.id);navigate('overview');break;
-      case 'trip-edit':window.TripLog.persistence.stateStorage.switchTrip(el.dataset.id);els.tripNameInput.closest('label').hidden=false;$('#rdTripEditMount').scrollIntoView({behavior:'smooth',block:'center'});els.tripNameInput.focus({preventScroll:true});break;
+      case 'trip-edit':navigate('start');startTripEdit(el.dataset.id);break;
+      case 'trip-save':saveTripEdit();break;
+      case 'trip-cancel':cancelTripEdit();break;
       case 'trip-delete':els.deleteCurrentTripButton.click();break;
-      case 'new-trip':closeAll();openNewTripModal();$('#rdNewTripDuration').textContent=duration({startDate:els.newTripStartDateInput.value,endDate:els.newTripEndDateInput.value});break;
+      case 'new-trip':cancelTripEdit();closeAll();openNewTripModal();$('#rdNewTripDuration').textContent=duration({startDate:els.newTripStartDateInput.value,endDate:els.newTripEndDateInput.value});break;
       case 'flight':showReservation('flight');break;
       case 'hotel':showReservation('hotel');break;
       case 'reservation':showReservation('flight');break;
@@ -348,13 +445,21 @@
       case 'pdf-expenses':exportExpensePdf();break;
       case 'pdf-itinerary':exportItineraryPdf();break;
       case 'pdf-full':exportFullPdf();break;
-      case 'sync':closeAll();els.itineraryPageButton.click();break;
+      case 'sync-status':closeAll();window.TripLog.sync.statusUi.open();break;
       case 'logout':els.settingsLogoutButton.click();break;
       case 'signup':els.authModeSignup.click();break;
+      case 'overview-add-plan':
+      case 'overview-itinerary':{
+        state.selectedItineraryDate=el.dataset.date||state.startDate;
+        state.lastActiveItineraryDate=state.selectedItineraryDate;
+        clearItineraryEditMode(false);navigate('itinerary');saveAndRender();
+        if(action==='overview-add-plan')window.TripLog.features.itinerary.workspace.show();
+        break;
+      }
       case 'all-itinerary':state.selectedItineraryDate='all';navigate('itinerary');saveAndRender();break;
       case 'plan':{const item=findItineraryItem(el.dataset.id);if(item){state.selectedItineraryDate=item.date;navigate('itinerary');startItineraryEdit(item);}break;}
     }
   }
   document.addEventListener('change',event=>{if(event.target.id==='rdReportDay'){reportDay=event.target.value;renderPlanAnalytics();}const id=event.target.dataset.rdPack;if(id){const item=state.packingList.find(i=>i.id===id);if(item){item.checked=event.target.checked;saveAndRender();}}});
-  window.TripLog.register('features.redesign.workspace',{setup,render,navigate,open,openExpenseEditor,expenseSaved,expenseMetadata,confirmAction});
+  window.TripLog.register('features.redesign.workspace',{setup,render,navigate,open,openExpenseEditor,openPretripEditor:showReservation,showSavedPretrip,expenseSaved,expenseMetadata,confirmAction,isTripEditing,cancelTripEdit});
 })();

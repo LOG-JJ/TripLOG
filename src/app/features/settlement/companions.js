@@ -10,13 +10,18 @@ function addCompanion(name) {
     return;
   }
 
-  state.companions.push({ name, individualSpent: 0 });
+  state.companions.push({ id: createId(), name, individualSpent: 0 });
   saveAndRender();
 }
 
 function deleteCompanion(index) {
   if (!state.companions) return;
+  const member = state.companions[index];
+  if (member && state.entries.some(entry => entry.payerKey === getCompanionSettlementKey(member))) {
+    showToast("이 동행이 결제한 지출이 있어요. 지출의 결제자를 먼저 변경해 주세요."); return;
+  }
   const [removed] = state.companions.splice(index, 1);
+  if (removed) window.TripLog.persistence.stateStorage.markDeletedEntity("participant", removed.id);
   if (removed && state.settlement?.customShares) {
     delete state.settlement.customShares[getCompanionSettlementKey(removed)];
   }

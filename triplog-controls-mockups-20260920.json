@@ -1,0 +1,55 @@
+{
+  "product": "TripLOG",
+  "purpose": "Six individual control UI/UX mockups; image generation only, not implementation or deployment.",
+  "date": "2026-09-20",
+  "assets": [
+    {
+      "name": "01-time-picker",
+      "prompt": "Create a polished Korean UI/UX mockup for TripLOG, consistent with the current service. Use white surfaces, dark #0B1020 outlines, #FFF05A selection accents, restrained #BCE6FB details, rounded corners, compact offset shadows, and clear Korean typography. Show the open control and its trigger at a readable scale. Redesign time selection as a compact popover with two directly editable, vertically scrollable hour and minute columns. Show 09:00 as the selected time, with a single subtle yellow selection band and clear labels '시' and '분'. Use a quiet '시각 없음' action and a prominent yellow '확인' button. Make the hierarchy and touch targets feel refined and easy to use.\n\nInput images:\n- Image 1: current TripLOG time-selection component to improve.",
+      "input": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-1d6769ce-60c9-4f9b-9612-c37f8ff04aba.png",
+      "output": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/triplog-controls-01-time-picker-mockup-20260920.png",
+      "mode": "built-in",
+      "overwritten": false
+    },
+    {
+      "name": "02-theme-selector",
+      "prompt": "Create a polished Korean UI/UX mockup for TripLOG, consistent with the current service. Use white surfaces, dark #0B1020 outlines, #FFF05A selection accents, restrained #BCE6FB details, rounded corners, compact offset shadows, and clear Korean typography. Show the open control and its trigger at a readable scale. Redesign the itinerary theme selector as a compact two-column, three-row choice panel. Include all six options with an emoji beside each label: '📍 명소', '🏨 숙소', '🍽️ 맛집', '🛍️ 쇼핑', '🚆 이동', '✨ 기타'. Show '🏨 숙소' selected in yellow with a clear checkmark and the same emoji in the trigger. Keep all choices visible, use balanced tile spacing, and give the selected state a distinct but restrained emphasis.\n\nInput images:\n- Image 2: current TripLOG theme-selection component to improve.",
+      "input": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-3f01d482-7fb9-4e31-8d40-8a06cf7f3c41.png",
+      "output": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/triplog-controls-02-theme-selector-mockup-20260920.png",
+      "mode": "built-in",
+      "overwritten": false
+    },
+    {
+      "name": "03-category-filter",
+      "prompt": "Create a polished Korean UI/UX mockup for TripLOG, consistent with the current service. Use white surfaces, dark #0B1020 outlines, #FFF05A selection accents, restrained #BCE6FB details, rounded corners, compact offset shadows, and clear Korean typography. Show the open control and its trigger at a readable scale. Redesign the expense-category filter as a compact dropdown. Separate '전체 카테고리' from the six categories '식비', '교통', '숙소', '관광', '쇼핑', and '기타'. Give each category a consistent small outline icon, align the labels and selection checkmarks, and use comfortable uniform row heights. Show '전체 카테고리' selected in yellow. Keep every option fully visible with balanced padding and clear boundaries between the trigger and menu.\n\nInput images:\n- Image 3: current TripLOG expense-category filter to improve.",
+      "input": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-0bd714c1-8a63-47dc-9fe6-7a8baf0e6781.png",
+      "output": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/triplog-controls-03-category-filter-mockup-20260920.png",
+      "mode": "built-in",
+      "overwritten": false
+    },
+    {
+      "name": "04-currency-selector",
+      "prompt": "Create a polished Korean UI/UX mockup for TripLOG, consistent with the current service. Use white surfaces, dark #0B1020 outlines, #FFF05A selection accents, restrained #BCE6FB details, rounded corners, compact offset shadows, and clear Korean typography. Show the open control and its trigger at a readable scale. Redesign the currency selector with a menu wider than its compact amount-field trigger. Add a search field labeled '통화명 또는 코드 검색'. Use aligned columns for the currency symbol, full Korean currency name, and ISO code. Include '원화 KRW', '엔화 JPY', '달러 USD', '위안화 CNY', '유로 EUR', '파운드 GBP', '대만달러 TWD', '바트 THB', and '베트남동 VND'. Show KRW selected with a yellow row and checkmark. Keep currency names on one line with enough width and readable spacing.\n\nInput images:\n- Image 4: current TripLOG currency-selection component to improve.",
+      "input": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-4f0d689f-e987-4c6f-89e9-edd81e9700db.png",
+      "output": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/triplog-controls-04-currency-selector-mockup-20260920.png",
+      "mode": "built-in",
+      "overwritten": false
+    },
+    {
+      "name": "05-travel-day-selector",
+      "prompt": "Create a polished Korean UI/UX mockup for TripLOG, consistent with the current service. Use white surfaces, dark #0B1020 outlines, #FFF05A selection accents, restrained #BCE6FB details, rounded corners, compact offset shadows, and clear Korean typography. Show the open control and its trigger at a readable scale. Redesign the travel-day selector for recording an expense. Clearly separate '사전구매' from the trip-day choices using a small section divider and helpful visual hierarchy. Show '사전구매' selected with a yellow row, a ticket icon, and a checkmark. Below it show four balanced rows with day-number badges and right-aligned dates: 'Day 1' with '9.25 (금)', 'Day 2' with '9.26 (토)', 'Day 3' with '9.27 (일)', and 'Day 4' with '9.28 (월)'. Use a compact, comfortable menu with all options visible and preserve the field label '여행 일정'.\n\nInput images:\n- Image 5: current TripLOG travel-day selection component to improve.",
+      "input": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-7f0e7d65-1af4-484c-98d9-99bf0014bb13.png",
+      "output": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/triplog-controls-05-travel-day-selector-mockup-20260920.png",
+      "mode": "built-in",
+      "overwritten": false
+    },
+    {
+      "name": "06-payment-calendar",
+      "prompt": "Create a polished Korean UI/UX mockup for TripLOG, consistent with the current service. Use white surfaces, dark #0B1020 outlines, #FFF05A selection accents, restrained #BCE6FB details, rounded corners, compact offset shadows, and clear Korean typography. Show the open control and its trigger at a readable scale. Redesign the single-date payment calendar as a compact, balanced popover. Preserve the field label '결제일'. Show '2026년 9월' with clear previous and next month controls, a correct Sunday-first calendar grid, and evenly spaced date targets. Select September 26 in yellow and show '09.26 (토)' in the trigger. Distinguish September 20 as today with a small pale-blue marker. De-emphasize adjacent-month dates, use restrained weekend colors, and retain '오늘' and '닫기' footer actions. Clearly separate month navigation, date selection, and footer controls.\n\nInput images:\n- Image 6: current TripLOG payment-date calendar to improve.",
+      "input": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-7d9b108d-c96f-451d-91f9-236be08ca53b.png",
+      "output": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/triplog-controls-06-payment-calendar-mockup-20260920.png",
+      "mode": "built-in",
+      "overwritten": false
+    }
+  ]
+}

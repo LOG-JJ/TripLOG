@@ -1,0 +1,7 @@
+Create one outstanding, refined UI/UX redesign concept for TripLOG's transit workflow. Show the route-view state and manual-recording state side by side as a coordinated pair on a 1536 × 1024 canvas. Each complete dialog should retain a natural portrait proportion.
+
+Direction: journey timeline. Recompose the information architecture around the journey from origin to destination. Use a compact shared route heading, understated underline navigation, and a continuous timeline rather than a stack of cards. The route state should combine a generous map workspace with a concise journey strip. In the manual state, integrate transport choice, editable minutes, optional notes, and transfer addition directly into the journey's rows. Use a plausible filled example with mathematically consistent totals and arrival time. Keep the existing functionality and Korean product language. Use clear visual hierarchy, light separators, refined white surfaces, dark ink, and selective TripLOG yellow accents. Prefer a sophisticated editorial rhythm, readable 14–16px body text at native scale, careful alignment, and confident whitespace. Make the primary action immediately clear. Show only product UI, without device hardware or browser chrome. Current date anchor: 2026-09-22; no additional dates are necessary.
+
+Input images:
+- codex-clipboard-f7f36922-636f-4ef4-a453-f13c2f75b643.png: existing UI supplied by the user for redesign.
+- codex-clipboard-105effe8-5caf-469c-a907-75bce428fb6e.png: existing UI supplied by the user for redesign.

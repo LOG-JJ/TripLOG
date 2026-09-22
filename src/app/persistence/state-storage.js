@@ -2,7 +2,18 @@ const LEGACY_STORAGE_KEY = window.TripLog.core.config.STORAGE_KEY;
 const TRIPS_KEY = "domesticTravelExpensePlanner.trips.v2";
 const ACTIVE_TRIP_ID_KEY = "domesticTravelExpensePlanner.activeTripId.v2";
 const THEME_KEY = "domesticTravelExpensePlanner.theme.v3";
-const highTrustSavedCoordinateSources = new Set(["coordinate-text", "google-places", "google-geocoding"]);
+let repositoryReady = false;
+let repositoryAccount = "";
+let repositoryProject = "";
+let repositoryPreferredTrip = "";
+let repositoryTrips = [];
+const repositoryViews = new Map();
+const repositoryPending = new Map();
+const repositoryFailures = new Map();
+const repositoryDeletions = new Map();
+let repositoryWriteTail = Promise.resolve();
+let storageReadyPromise;
+const highTrustSavedCoordinateSources = new Set(["coordinate-text", "google-places", "google-geocoding", "nominatim-search", "knowledge-search"]);
 
 const itineraryPlaceCleanupRules = {
   "제주공항 도착": { place: "제주국제공항" },
@@ -192,27 +203,29 @@ function loadState() {
         trips.push(defaultTrip);
         activeTripId = "trip_default";
       }
-      localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
-      localStorage.setItem(ACTIVE_TRIP_ID_KEY, activeTripId);
+      if (!window.TripLogSyncRepository) {
+        localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
+        localStorage.setItem(ACTIVE_TRIP_ID_KEY, activeTripId);
+      }
     }
 
     if (!activeTripId) {
       activeTripId = trips[0].id;
-      localStorage.setItem(ACTIVE_TRIP_ID_KEY, activeTripId);
+      if (!window.TripLogSyncRepository) localStorage.setItem(ACTIVE_TRIP_ID_KEY, activeTripId);
     }
 
     let activeTrip = trips.find(t => t.id === activeTripId);
     if (!activeTrip) {
       activeTrip = trips[0];
       activeTripId = activeTrip.id;
-      localStorage.setItem(ACTIVE_TRIP_ID_KEY, activeTripId);
+      if (!window.TripLogSyncRepository) localStorage.setItem(ACTIVE_TRIP_ID_KEY, activeTripId);
     }
 
     const cleanedActiveItineraryItems = cleanSavedItineraryItems(activeTrip.itineraryItems);
     if (JSON.stringify(cleanedActiveItineraryItems) !== JSON.stringify(activeTrip.itineraryItems || [])) {
       activeTrip = { ...activeTrip, itineraryItems: cleanedActiveItineraryItems };
       trips = trips.map((trip) => trip.id === activeTripId ? activeTrip : trip);
-      localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
+      if (!window.TripLogSyncRepository) localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
     }
 
     const preferredCurrency = currencies.find((currency) => currency.code === activeTrip.currencyCode) || currencies[0];
@@ -265,6 +278,7 @@ function normalizeSettlementSettings(value = {}) {
   const itemSplits = value?.itemSplits && typeof value.itemSplits === "object" ? value.itemSplits : {};
   return {
     sourceId: typeof value?.sourceId === "string" ? value.sourceId : "current",
+    leaderName: typeof value?.leaderName === "string" && value.leaderName.trim() ? value.leaderName.trim().slice(0,80) : "여행 대표",
     splitMode,
     customShares,
     itemSplits,
@@ -306,11 +320,61 @@ function normalizeCollaborationSettings(value = {}) {
 }
 
 function saveAndRender() {
-  saveStateSilently();
+  const saving = saveStateSilently();
   render();
+  return saving;
+}
+
+function markDeletedEntity(kind, id) {
+  if (!id) return;
+  const deletions = repositoryDeletions.get(state.id) || [];
+  deletions.push({ kind, id });
+  repositoryDeletions.set(state.id, deletions);
 }
 
 function saveStateSilently() {
+  const M = window.TripLogSyncModel;
+  const R = window.TripLogSyncRepository;
+  if (M && R && repositoryReady) {
+    state.theme = normalizeThemeName(state.theme);
+    state.collaboration = normalizeCollaborationSettings(state.collaboration);
+    state.travelCompanion = normalizeTravelCompanion(state.travelCompanion, state.itineraryItems);
+    const snapshot = M.ensureIds(state);
+    const deletions = repositoryDeletions.get(snapshot.id) || [];
+    repositoryDeletions.delete(snapshot.id);
+    const observed = M.clone(repositoryViews.get(snapshot.id) || snapshot);
+    repositoryViews.set(snapshot.id, M.clone(snapshot));
+    repositoryPending.set(snapshot.id, (repositoryPending.get(snapshot.id) || 0) + 1);
+    window.TripLog.sync.controller?.localWrite(snapshot.id, 1);
+    const job = repositoryWriteTail.then(async () => {
+      try {
+        const failed = repositoryFailures.get(snapshot.id);
+        const record = await R.save(snapshot, failed?.observed || observed, { deletions: [...(failed?.deletions || []), ...deletions] });
+        repositoryFailures.delete(snapshot.id);
+        window.TripLog.sync.controller?.setLocalFailure(null, snapshot.id);
+        const index = repositoryTrips.findIndex(t => t.id === snapshot.id);
+        if (index < 0) repositoryTrips.push(record.snapshot); else repositoryTrips[index] = record.snapshot;
+        // Theme is a preference; failure of this optional mirror does not undo the IDB commit.
+        try { localStorage.setItem(THEME_KEY, snapshot.theme); } catch (_) { /* IndexedDB remains authoritative. */ }
+        window.dispatchEvent(new CustomEvent("triplog:state-saved", { detail: { tripId: snapshot.id } }));
+        return true;
+      } catch (error) {
+        repositoryFailures.set(snapshot.id, { snapshot, observed: repositoryFailures.get(snapshot.id)?.observed || observed, deletions: [...(repositoryFailures.get(snapshot.id)?.deletions || []), ...deletions] });
+        window.TripLog.sync.controller?.setLocalFailure(error, snapshot.id);
+        return false;
+      } finally {
+        repositoryPending.set(snapshot.id, Math.max(0, (repositoryPending.get(snapshot.id) || 1) - 1));
+        window.TripLog.sync.controller?.localWrite(snapshot.id, -1);
+        if (!repositoryPending.get(snapshot.id) && !repositoryFailures.has(snapshot.id)) applyRepositoryChange(snapshot.id);
+      }
+    });
+    repositoryWriteTail = job.catch(() => false);
+    return job;
+  }
+  if (R && !repositoryReady) {
+    window.TripLog.sync.controller?.setLocalFailure(new Error("기기 저장소를 준비하지 못했습니다. 입력을 보관하거나 내보내 주세요."));
+    return Promise.resolve(false);
+  }
   try {
     let trips = JSON.parse(localStorage.getItem(TRIPS_KEY)) || [];
     const activeTripId = localStorage.getItem(ACTIVE_TRIP_ID_KEY);
@@ -319,7 +383,8 @@ function saveStateSilently() {
     state.collaboration = normalizeCollaborationSettings(state.collaboration);
     state.travelCompanion = normalizeTravelCompanion(state.travelCompanion, state.itineraryItems);
 
-    trips = trips.map(t => t.id === activeTripId ? { ...t, ...state } : t);
+    const index = trips.findIndex(t => t.id === state.id);
+    if (index < 0) trips.push({ ...state }); else trips[index] = { ...trips[index], ...state };
     localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
     localStorage.setItem(THEME_KEY, theme);
 
@@ -328,12 +393,15 @@ function saveStateSilently() {
     window.dispatchEvent(new CustomEvent("triplog:state-saved", {
       detail: { tripId: state.id },
     }));
+    return Promise.resolve(true);
   } catch (e) {
     console.error("Save failed:", e);
+    return Promise.resolve(false);
   }
 }
 
 function getTrips() {
+  if (repositoryReady) return window.TripLogSyncModel.clone(repositoryTrips);
   try {
     return JSON.parse(localStorage.getItem(TRIPS_KEY)) || [];
   } catch {
@@ -342,6 +410,7 @@ function getTrips() {
 }
 
 function getActiveTripId() {
+  if (typeof state !== "undefined" && state.id) return state.id;
   return localStorage.getItem(ACTIVE_TRIP_ID_KEY);
 }
 
@@ -349,9 +418,10 @@ function switchTrip(tripId) {
   const trips = getTrips();
   const targetTrip = trips.find(t => t.id === tripId);
   if (!targetTrip) return;
+  repositoryPreferredTrip = tripId;
   const currentTheme = normalizeThemeName(state.theme || getSavedTheme());
 
-  localStorage.setItem(ACTIVE_TRIP_ID_KEY, tripId);
+  try { sessionStorage.setItem(ACTIVE_TRIP_ID_KEY, tripId); } catch (_) { /* The active state remains tab-local. */ }
 
   // mutate global state in place!
   for (let key in state) {
@@ -374,12 +444,12 @@ function switchTrip(tripId) {
   state.selectedItineraryDate = state.startDate;
   state.lastActiveItineraryDate = state.startDate;
 
-  saveAndRender();
+  return saveAndRender();
 }
 
-function createNewTrip({ tripName, country, countryCode, city, travelMode, startDate, endDate, totalBudget }) {
+async function createNewTrip({ tripName, country, countryCode, city, travelMode, startDate, endDate, totalBudget }) {
   const trips = getTrips();
-  const newId = "trip_" + Date.now();
+  const newId = window.TripLogSyncModel?.uuid() || "trip_" + Date.now();
   const normalizedTravelMode = travelMode === "overseas" ? "overseas" : "domestic";
   const normalizedCountryCode = (countryCode || (normalizedTravelMode === "domestic" ? "KR" : "")).toUpperCase();
   const matchedCurrencyCode = getCurrencyCodeForCountry(normalizedCountryCode, normalizedTravelMode);
@@ -412,10 +482,17 @@ function createNewTrip({ tripName, country, countryCode, city, travelMode, start
     collaboration: normalizeCollaborationSettings({}),
   };
 
+  if (repositoryReady) {
+    try { await window.TripLogSyncRepository.update(newId, () => ({ ...window.TripLogSyncRepository.makeRecord(newTrip), accountId: repositoryAccount, projectId: repositoryProject, localRevision: 1 })); }
+    catch (error) { window.TripLog.sync.controller?.setLocalFailure(error); return false; }
+  }
   trips.push(newTrip);
-  localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
+  if (repositoryReady) {
+    repositoryTrips = trips;
+    repositoryViews.set(newId, window.TripLogSyncModel.clone(newTrip));
+  } else localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
 
-  switchTrip(newId);
+  return switchTrip(newId);
 }
 
 async function deleteTrip(tripId) {
@@ -425,14 +502,23 @@ async function deleteTrip(tripId) {
     return;
   }
 
-  if (!await (window.TripLog.features.redesign?.workspace?.confirmAction?.("정말 이 여행을 삭제하시겠습니까? 관련 모든 일정과 지출 기록이 삭제됩니다.") ?? window.confirm("정말 이 여행을 삭제하시겠습니까? 관련 모든 일정과 지출 기록이 삭제됩니다."))) {
+  const record = window.TripLogSyncRepository?.cached(tripId);
+  const message = record?.serverId && record.role === "owner" ? "이 여행을 보관할까요? 모든 멤버에게 읽기 전용으로 전환되며, 복구 기록에서 다시 열 수 있습니다." : "이 여행을 기기 목록에서 보관할까요? 복구 기록에서 다시 열 수 있습니다.";
+  if (!await (window.TripLog.features.redesign?.workspace?.confirmAction?.(message) ?? window.confirm(message))) {
     return;
   }
 
   trips = getTrips();
   if (trips.length <= 1) return;
   trips = trips.filter(t => t.id !== tripId);
-  localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
+  if (repositoryReady) {
+    if (record?.serverId && record.role === "owner") {
+      try { await window.TripLog.sync.controller.engine.control(tripId, "archive", {}); }
+      catch (_) { showToast("여행을 보관하지 못했습니다. 인터넷 연결과 권한을 확인해 주세요."); return; }
+    }
+    await window.TripLogSyncRepository.update(tripId, record => ({ ...record, hidden: true }), { snapshot: true, source: "before-trip-hide" });
+    repositoryTrips = trips;
+  } else localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
 
   const activeTripId = getActiveTripId();
   if (activeTripId === tripId) {
@@ -460,7 +546,7 @@ function normalizeImportedTripSnapshot(snapshot = {}) {
   };
 }
 
-function importSharedTripSnapshot(snapshot = {}, { makeActive = true } = {}) {
+async function importSharedTripSnapshot(snapshot = {}, { makeActive = true } = {}) {
   const importedTrip = normalizeImportedTripSnapshot(snapshot);
   let trips = getTrips();
   const existingIndex = trips.findIndex((trip) => trip.id === importedTrip.id);
@@ -469,8 +555,16 @@ function importSharedTripSnapshot(snapshot = {}, { makeActive = true } = {}) {
   } else {
     trips.push(importedTrip);
   }
-  localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
-  if (makeActive) switchTrip(importedTrip.id);
+  if (repositoryReady) {
+    const R = window.TripLogSyncRepository;
+    const existing = await R.read(importedTrip.id);
+    if (existing) await R.update(importedTrip.id, record => record, { snapshot: true, source: "before-history-restore" });
+    if (!existing) await R.update(importedTrip.id, () => ({ ...R.makeRecord(importedTrip), accountId: repositoryAccount, projectId: repositoryProject, localRevision: 1 }));
+    await R.save(importedTrip, existing?.snapshot || importedTrip);
+    repositoryTrips = trips;
+    repositoryViews.set(importedTrip.id, window.TripLogSyncModel.clone(importedTrip));
+  } else localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
+  if (makeActive) await switchTrip(importedTrip.id);
   return importedTrip;
 }
 
@@ -483,6 +577,7 @@ function isEmptyDefaultSeedTrip(trip) {
 }
 
 function syncTripsFromSnapshots(snapshots = [], { preferredActiveId = "", removeEmptyDefault = true } = {}) {
+  if (repositoryReady) throw new Error("전체 스냅샷 덮어쓰기는 지원하지 않습니다. 항목 동기화 API를 사용해 주세요.");
   const importedTrips = (Array.isArray(snapshots) ? snapshots : [])
     .filter((snapshot) => snapshot && typeof snapshot === "object")
     .map(normalizeImportedTripSnapshot);
@@ -546,6 +641,13 @@ function getStateSnapshot() {
 }
 
 function resetPersistedTravelData(nextState = {}) {
+  if (repositoryReady) {
+    // A reset creates a separate local trip. Existing trips and pending edits remain recoverable.
+    const id = window.TripLogSyncModel.uuid();
+    const reset = normalizeImportedTripSnapshot({ ...getFallbackState(id), ...nextState, id });
+    repositoryTrips.push(reset); repositoryViews.set(id, window.TripLogSyncModel.clone(reset));
+    return reset;
+  }
   const resetState = {
     ...getFallbackState("trip_default"),
     ...nextState,
@@ -560,7 +662,102 @@ function resetPersistedTravelData(nextState = {}) {
   return resetState;
 }
 
+async function initializeRepository() {
+  if (storageReadyPromise) return storageReadyPromise;
+  storageReadyPromise = (async () => {
+    const R = window.TripLogSyncRepository, M = window.TripLogSyncModel;
+    if (!R) return;
+    const legacy = getTrips();
+    if (!legacy.length) legacy.push(window.TripLogSyncModel.clone(state));
+    let legacyAccount = "";
+    try {
+      const cached = JSON.parse(localStorage.getItem("domesticTravelExpensePlanner.account.v1") || "null");
+      if (cached?.provider === "supabase" && typeof cached.id === "string" && !cached.id.startsWith("local_")) legacyAccount = cached.id;
+    } catch (_) { /* Unknown device ownership remains unbound until authenticated reconciliation. */ }
+    await R.migrate(legacy, { accountId: legacyAccount });
+    repositoryTrips = (await R.all()).filter(r => !r.hidden && !r.accountId).map(r => r.snapshot);
+    repositoryReady = true;
+    let active;
+    try { active = sessionStorage.getItem(ACTIVE_TRIP_ID_KEY); } catch (_) { /* Use the existing tab state. */ }
+    repositoryPreferredTrip = active || state.id;
+    const current = repositoryTrips.find(t => t.id === (active || state.id)) || repositoryTrips[0];
+    if (current) { for (const key of Object.keys(state)) delete state[key]; Object.assign(state, normalizeImportedTripSnapshot(current)); }
+    else await activateAccount("");
+    for (const trip of repositoryTrips) repositoryViews.set(trip.id, M.clone(trip));
+    R.subscribe(applyRepositoryChange);
+  })();
+  window.TripLog.persistence.stateStorage.ready = storageReadyPromise;
+  return storageReadyPromise;
+}
+
+async function activateAccount(accountId, projectId = "") {
+  repositoryAccount = accountId || "";
+  repositoryProject = projectId;
+  const R = window.TripLogSyncRepository;
+  const records = await R.all();
+  if (repositoryAccount !== (accountId || "") || repositoryProject !== projectId) return;
+  repositoryTrips = records.filter(r => !r.hidden && (!r.accountId || r.accountId === repositoryAccount) && (!r.projectId || r.projectId === projectId)).map(r => r.snapshot);
+  const current = R.cached(state.id);
+  const bound = accountId && (repositoryTrips.find(t => t.id === repositoryPreferredTrip && R.cached(t.id)?.serverId) || repositoryTrips.find(t => R.cached(t.id)?.serverId));
+  if (!repositoryTrips.some(t => t.id === state.id) || (bound && (current?.placeholder || (!current?.serverId && !current?.localRevision && hasNoSavedRecords(state))))) {
+    let next = repositoryTrips.find(t => t.id === repositoryPreferredTrip) || bound || repositoryTrips[0];
+    if (bound && (!next || (!R.cached(next.id)?.serverId && !R.cached(next.id)?.localRevision && hasNoSavedRecords(next)))) next = bound;
+    if (!next) {
+      next = getFallbackState(window.TripLogSyncModel.uuid()); next.tripName = "새 여행";
+      await R.update(next.id, () => ({ ...R.makeRecord(next), accountId: repositoryAccount, projectId: repositoryProject, placeholder: true }));
+      repositoryTrips.push(next);
+    }
+    if (typeof editingId !== "undefined") editingId = null;
+    if (typeof editingItineraryId !== "undefined") editingItineraryId = null;
+    document.querySelectorAll("dialog[open]").forEach(dialog => dialog.close());
+    for (const key of Object.keys(state)) delete state[key];
+    Object.assign(state, normalizeImportedTripSnapshot(next));
+    repositoryViews.set(next.id, window.TripLogSyncModel.clone(state));
+  }
+  if (document.documentElement.dataset.triplogInitialized && typeof render === "function") render();
+}
+
+function applyRepositoryChange(localId) {
+  if (!repositoryReady || repositoryPending.get(localId) || repositoryFailures.has(localId)) return;
+  const M = window.TripLogSyncModel, record = window.TripLogSyncRepository.cached(localId);
+  if (!record || record.hidden || (record.accountId && record.accountId !== repositoryAccount) || (record.projectId && record.projectId !== repositoryProject)) return;
+  const index = repositoryTrips.findIndex(t => t.id === localId);
+  if (index < 0) repositoryTrips.push(record.snapshot); else repositoryTrips[index] = record.snapshot;
+  if (state.id !== localId) return;
+  const selected = Object.fromEntries(["theme", "selectedDate", "selectedItineraryDate", "lastActiveItineraryDate", "selectedItineraryId"].map(k => [k, state[k]]));
+  const previous = M.clone(state);
+  const next = normalizeImportedTripSnapshot(record.snapshot);
+  // Open editors retain the version they began editing. Only fields the user changes
+  // become patches, so a remote edit cannot be silently accepted as the edit baseline.
+  for (const [field, id] of [["itineraryItems", typeof editingItineraryId !== "undefined" ? editingItineraryId : null], ["entries", typeof editingId !== "undefined" ? editingId : null]]) {
+    const edited = id && previous[field]?.find(row => row.id === id);
+    if (edited) {
+      const index = next[field].findIndex(row => row.id === id);
+      if (index >= 0) next[field][index] = edited; else next[field].push(edited);
+    }
+  }
+  Object.assign(state, next, selected);
+  repositoryViews.set(localId, M.clone(state));
+  if (M.equal(previous, state) || typeof render !== "function") return;
+  const active = document.activeElement;
+  const scopes = [...document.querySelectorAll("dialog[open], form:focus-within")];
+  const values = [...new Set(scopes.flatMap(scope => [...scope.querySelectorAll("input[id],textarea[id],select[id]")]))].map(el => ({ id: el.id, value: el.value, checked: el.checked, start: el.selectionStart, end: el.selectionEnd }));
+  const scroll = { x: window.scrollX, y: window.scrollY };
+  render();
+  for (const saved of values) {
+    const el = document.getElementById(saved.id);
+    if (!el || el.type === "file") continue;
+    el.value = saved.value; el.checked = saved.checked;
+    if (active?.id === saved.id) { el.focus({ preventScroll: true }); try { el.setSelectionRange(saved.start, saved.end); } catch (_) { /* Select and date inputs have no selection range. */ } }
+  }
+  window.scrollTo(scroll.x, scroll.y);
+}
+
 window.TripLog.register("persistence.stateStorage", {
+  initializeRepository,
+  applyRepositoryChange,
+  activateAccount,
+  unsavedSnapshots: () => [...repositoryFailures.values()].map(failure => window.TripLogSyncModel.clone(failure.snapshot)),
   loadState,
   isLegacyDefaultTripName,
   hasNoSavedRecords,
@@ -573,6 +770,8 @@ window.TripLog.register("persistence.stateStorage", {
   normalizeTravelCompanion,
   normalizeCollaborationSettings,
   saveAndRender,
+  markDeletedEntity,
+  whenSaved: () => repositoryWriteTail,
   saveStateSilently,
   getStateSnapshot,
   resetPersistedTravelData,

@@ -80,7 +80,7 @@ function renderTimeBlockGrid(items) {
   svg.appendChild(scheduleTrack);
 
   timedItems.forEach(({ item, startM, duration }) => {
-    const visualDuration = Math.max(duration, 24);
+    const visualDuration = item.theme === 'lodging' ? 0 : Math.max(duration, 24);
     const endM = Math.min(startM + visualDuration, 1440);
     const midM = startM + (endM - startM) / 2;
     const arcStartM = startM;
@@ -92,14 +92,14 @@ function renderTimeBlockGrid(items) {
     sector.setAttribute("d", describeClockRingArc(cx, cy, rScheduleIn, rScheduleOut, arcStartM, arcEndM));
     sector.setAttribute("fill", getClockScheduleColor(item));
 
-    const tooltipText = `${item.time} - ${item.place} (${duration}분)`;
+    const tooltipText = `${item.time} - ${item.place}${item.theme === 'lodging' ? ' 도착' : ` (${duration}분)`}`;
     sector.appendChild(createSvgTitle(tooltipText));
 
     sector.addEventListener("click", () => {
       startItineraryEdit(item);
     });
 
-    svg.appendChild(sector);
+    if (item.theme !== 'lodging') svg.appendChild(sector);
 
     const markerAngle = (midM * 0.25 - 90) * Math.PI / 180;
     const iconPoint = getClockPoint(cx, cy, rScheduleIcon, markerAngle);

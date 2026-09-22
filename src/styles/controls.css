@@ -1,0 +1,208 @@
+/* Approved TripLOG control mockups, 2026-09-20.
+   Scoped skin overrides the legacy control rules, including their !important declarations. */
+.rd-app {
+  --control-ink: #111525;
+  --control-yellow: #fff052;
+  --control-blue: #eaf7ff;
+  --control-mint: #83e6c5;
+}
+.rd-app .control-popover {
+  box-sizing: border-box;
+  color: var(--control-ink);
+  font-family: 'TripLOG Collaboration', 'Pretendard', sans-serif;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.4;
+  border: 2px solid var(--control-ink) !important;
+  border-radius: 17px !important;
+  box-shadow: 4px 5px 0 var(--control-ink) !important;
+  background: #fff !important;
+  padding: 12px;
+  max-height: min(560px, var(--control-available-height, calc(100dvh - 24px))) !important;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #bddbec transparent;
+  isolation: isolate;
+}
+.rd-app .control-popover[hidden], .rd-app .control-popover [hidden] { display: none !important; }
+.rd-app .control-popover::backdrop { background: transparent; pointer-events: none; }
+.rd-app .control-popover :is(button, input) { font-family: inherit; }
+.rd-app .control-popover button { cursor: pointer; letter-spacing: -.02em; }
+.rd-app .control-popover :is(button, input):focus-visible {
+  outline: 3px solid #3282ba !important; outline-offset: -3px; z-index: 1;
+}
+.rd-app .control-popover button:disabled { opacity: .35; cursor: not-allowed; }
+.rd-app .control-popover .custom-select-option {
+  display: flex; align-items: center; gap: 12px;
+  width: 100%; min-width: 0; min-height: 54px; margin: 0;
+  padding: 10px 12px; border: 1.5px solid transparent;
+  border-radius: 10px; background: #fff; color: var(--control-ink);
+  text-align: left; font-size: 16px !important; font-weight: 700 !important; line-height: 1.4;
+  box-shadow: none; transform: none;
+}
+.rd-app .control-popover .custom-select-option:hover:not(.selected):not(:disabled) { background: #f2f8fc; }
+.rd-app .control-popover .custom-select-option.selected {
+  background: var(--control-yellow) !important; color: var(--control-ink) !important;
+  border: 1.5px solid var(--control-ink) !important; border-radius: 10px !important;
+  box-shadow: 0 2px 0 var(--control-ink) !important;
+}
+.rd-app .control-popover .control-option-label { flex: 1; min-width: 0; white-space: nowrap; font-size: inherit !important; font-weight: inherit !important; line-height: inherit; color: inherit; }
+.rd-app .control-option-check {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; flex: 0 0 22px; margin-left: auto;
+}
+.rd-app .control-option-check .ph { font-size: 19px; font-weight: bold; opacity: 0; }
+.rd-app .selected .control-option-check .ph { opacity: 1; }
+.rd-app .control-theme-emoji { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 20px; width: 20px; font-size: 18px; line-height: 1.2; }
+.rd-app .custom-select[data-control="theme"] .custom-select-value { display: flex; align-items: center; gap: 8px; }
+.rd-app .custom-select[data-control="theme"] [data-itinerary-theme-icon] { display: none; }
+.rd-app .custom-select[data-control="theme"] .custom-select-button { background: #fffbd6; }
+.rd-app .control-select-theme { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; padding: 8px; border-radius: 12px !important; box-shadow: 3px 3px 0 var(--control-ink) !important; }
+.rd-app .control-select-theme .custom-select-option { min-height: 44px; gap: 7px; padding: 8px; border-color: #e0e4e9; border-radius: 8px; font-size: 14px !important; font-weight: 650 !important; }
+.rd-app .control-select-theme .custom-select-option.selected { border-radius: 8px !important; box-shadow: 0 1px 0 var(--control-ink) !important; }
+.rd-app .control-select-theme .control-option-check { width: 14px; height: 18px; flex-basis: 14px; }
+.rd-app .control-select-theme .control-option-check .ph { font-size: 15px; }
+.rd-app .control-select-category { padding: 10px; }
+.rd-app .control-select-category .custom-select-option { min-height: 50px; gap: 12px; padding: 8px 10px; }
+.rd-app .control-select-category .custom-select-option + .custom-select-option { margin-top: 0; }
+.rd-app .control-select-category .custom-select-option:not(.selected) + .custom-select-option:not(.selected) { border-top-color: #e4e9ef; border-top-left-radius: 0; border-top-right-radius: 0; }
+.rd-app .control-category-icon { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; flex: 0 0 32px; border-radius: 8px; background: #cef0ff; }
+.rd-app .control-category-icon .ph { font-size: 23px; }
+.rd-app .selected .control-category-icon { background: transparent; }
+.rd-app .control-select-category .control-option-check { border: 1.4px solid #d4dce1; border-radius: 50%; width: 19px; height: 19px; flex-basis: 19px; }
+.rd-app .control-select-category .selected .control-option-check { border: 0; }
+.rd-app .control-select-category .custom-select-option:first-child { margin-bottom: 8px; }
+.rd-app :is(.control-select-category, .control-select-currency, .control-select-day) .custom-select-option.selected { border-color: transparent !important; box-shadow: none !important; }
+.rd-app .control-select-currency { padding: 12px 10px 10px; overflow: hidden; display: flex; flex-direction: column; }
+.rd-app .control-currency-search {
+  display: flex; align-items: center; flex: 0 0 auto; gap: 8px; min-height: 46px; margin: 0 2px 10px;
+  padding: 0 12px; border: 1px solid #c7dbe8; border-radius: 10px; background: #f3faff;
+}
+.rd-app .control-currency-search > .ph { font-size: 21px; color: #707b8d; }
+.rd-app .control-popover.control-select-currency .control-currency-search input,
+.rd-app #rdExpenseEditor .control-currency-search input {
+  flex: 1; width: 0; min-width: 0; min-height: 44px; height: 44px;
+  border: 0; border-radius: 0; padding: 0; margin: 0; box-shadow: none;
+  background: transparent; color: var(--control-ink); font-size: 14px; font-weight: 550;
+}
+.rd-app .control-currency-search input::placeholder { color: #627186; opacity: 1; }
+.rd-app .control-currency-search:focus-within { border-color: #3282ba; box-shadow: 0 0 0 2px #d2ecff; }
+.rd-app .control-popover .control-currency-search input:focus-visible,
+.rd-app #rdExpenseEditor .control-currency-search input:focus { outline: none !important; border: 0; box-shadow: none; background: transparent; }
+.rd-app .control-currency-list { overflow-y: auto; min-height: 0; padding: 0 2px 3px; scrollbar-width: thin; scrollbar-color: #bddbec transparent; overscroll-behavior: contain; }
+.rd-app .control-select-currency .custom-select-option { min-height: 46px; gap: 12px; padding: 6px 10px; }
+.rd-app .control-select-currency .custom-select-option + .custom-select-option { margin-top: 2px; }
+.rd-app .control-select-currency .custom-currency-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 31px; height: 31px; min-width: 31px; flex: 0 0 31px; margin: 0;
+  background: var(--control-mint); border: 1.7px solid var(--control-ink); border-radius: 8px;
+  color: var(--control-ink); font-size: 17px; font-weight: 800; line-height: 1; letter-spacing: -.06em;
+}
+.rd-app .control-select-currency .control-currency-code { flex: 0 0 36px; font-size: 13px; font-weight: 650; color: #626d80; text-align: right; }
+.rd-app .control-select-currency .control-option-check { flex-basis: 18px; width: 18px; margin-left: 2px; }
+.rd-app .control-search-empty { padding: 28px 12px; color: #717b8b; text-align: center; }
+.rd-app .control-sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.rd-app .control-select-day { padding: 12px; }
+.rd-app .control-select-day .custom-select-option { min-height: 48px; padding: 6px 12px; gap: 10px; }
+.rd-app .control-select-day .custom-select-option > .ph { font-size: 23px; }
+.rd-app .control-day-divider { display: flex; align-items: center; gap: 10px; margin: 17px 10px 8px; font-size: 12px; color: #667385; font-weight: 600; }
+.rd-app .control-day-divider::before, .rd-app .control-day-divider::after { content: ''; flex: 1; height: 1px; background: #e2e6ed; }
+.rd-app .control-day-badge { flex: 0 0 65px; text-align: center; padding: 6px 5px; border-radius: 9px; border: 0; background: #d8f1ff; font-size: 15px; font-weight: 750; }
+.rd-app .control-day-date { flex: 1; text-align: right; font-size: 15px; font-weight: 650; white-space: nowrap; }
+.rd-app .control-select-day .control-option-check { flex-basis: 20px; width: 20px; height: 20px; }
+.rd-app .control-select-day .custom-select-option:not(.selected) .control-option-check { display: none; }
+.rd-app .control-select-day .selected .control-option-check { border-radius: 50%; background: var(--control-ink); color: white; }
+.rd-app .control-select-day .selected .control-option-check .ph { font-size: 14px; }
+
+/* Time: a compact, continuous wheel with a stationary highlight. Text remains
+   in the moving rows; the accessible editor appears only during direct input. */
+.rd-app .custom-time-button { display: flex; align-items: center; gap: 10px; }
+.rd-app .custom-time-button .custom-time-icon { order: -1; flex: 0 0 18px; }
+.rd-app .custom-time-button .custom-select-chevron { flex-shrink: 0; }
+.rd-app .custom-time-button button.custom-time-toggle {
+  display: grid; place-items: center; flex: 0 0 28px; width: 28px; height: 28px;
+  min-width: 28px; min-height: 28px; padding: 0; margin: -3px -5px -3px 0;
+  border: 0; border-radius: 5px; background: transparent; box-shadow: none; color: inherit;
+}
+.rd-app .custom-time-button button.custom-time-toggle:focus-visible { outline: 2px solid #3282ba; outline-offset: 1px; }
+.rd-app .custom-time-button.open .custom-select-chevron { transform: rotate(225deg); }
+.rd-app .custom-time-button .custom-select-chevron.ph { transform: none; }
+.rd-app .custom-time-button.open .custom-select-chevron.ph { transform: rotate(180deg); }
+.rd-app .control-time-wheel { --time-row: 36px; padding: 16px; max-width: calc(100vw - 24px); }
+.rd-app .control-time-wheel .time-panel-grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 0; }
+.rd-app .control-time-wheel .time-panel-grid::after { content: ''; position: absolute; top: 30px; bottom: 0; left: 50%; width: 1px; background: #e5edf4; pointer-events: none; }
+.rd-app .time-wheel-column { min-width: 0; }
+.rd-app .control-time-wheel .time-wheel-label { display: block; padding: 0 0 10px; color: var(--control-ink); text-align: center; font-size: 13px !important; font-weight: 650 !important; line-height: 20px; }
+.rd-app .time-wheel-frame { position: relative; border: 1px solid #d4dde6; border-radius: 10px; overflow: hidden; background: #fbfdff; isolation: isolate; }
+.rd-app .time-wheel-frame:focus-within { border-color: #5286b0; box-shadow: 0 0 0 2px #e0f1ff; }
+.rd-app .time-wheel-band { position: absolute; top: calc(var(--time-row) * 2); left: 4px; right: 4px; height: var(--time-row); border-radius: 5px; background: var(--control-yellow); pointer-events: none; z-index: -1; }
+.rd-app .time-wheel-list {
+  position: relative; height: calc(var(--time-row) * 5); overflow-y: auto;
+  padding: calc(var(--time-row) * 2) 0; scroll-snap-type: none; scroll-behavior: auto;
+  scrollbar-width: none; overscroll-behavior: contain; touch-action: pan-y;
+  -webkit-overflow-scrolling: touch; box-sizing: border-box; cursor: grab;
+}
+.rd-app .time-wheel-list::-webkit-scrollbar { display: none; }
+.rd-app .time-wheel-list:active { cursor: grabbing; }
+.rd-app .control-time-wheel .time-wheel-option { height: var(--time-row); display: flex; align-items: center; justify-content: center; padding: 0; margin: 0; border: 0; background: transparent; user-select: none; -webkit-user-select: none; touch-action: pan-y; }
+.rd-app .control-time-wheel .time-wheel-number { display: inline-block; font-family: inherit; font-size: 18px !important; font-variant-numeric: tabular-nums; font-weight: 650; line-height: 1; color: #707a8b; pointer-events: none; transform-origin: center; }
+.rd-app .control-time-wheel input.time-wheel-input,
+.rd-app #rdExpenseEditor .control-time-wheel input.time-wheel-input {
+  position: absolute; top: calc(var(--time-row) * 2); left: 4px; width: calc(100% - 8px); min-width: 0; height: var(--time-row); min-height: var(--time-row);
+  margin: 0; padding: 0; border: 0; border-radius: 5px; background: transparent; box-shadow: none;
+  text-align: center; font-size: 18px; font-weight: 750; font-variant-numeric: tabular-nums;
+  line-height: var(--time-row); color: transparent; caret-color: transparent; pointer-events: none;
+}
+.rd-app .control-time-wheel .time-wheel-input::selection { background: transparent; color: transparent; }
+.rd-app .control-time-wheel .time-wheel-input:focus-visible { outline: none !important; }
+.rd-app .control-time-wheel .is-editing input.time-wheel-input,
+.rd-app #rdExpenseEditor .control-time-wheel .is-editing input.time-wheel-input { background: var(--control-yellow); color: var(--control-ink); caret-color: var(--control-ink); pointer-events: auto; }
+.rd-app .control-time-wheel .is-editing input.time-wheel-input::selection { background: #bce4ff; color: var(--control-ink); }
+.rd-app .control-time-wheel .time-panel-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 16px 0 0; margin: 0; border: 0; }
+.rd-app .control-time-wheel .time-soft-button { height: 42px; min-height: 42px; margin: 0; padding: 8px 10px; border: 1.7px solid var(--control-ink); border-radius: 9px; box-shadow: 0 2px 0 var(--control-ink); background: #fff; color: var(--control-ink); font-size: 14px; font-weight: 700; }
+.rd-app .control-time-wheel [data-time-action="close"] { background: var(--control-yellow); }
+@media (pointer: coarse) {
+  .rd-app .control-time-wheel { --time-row: 44px; }
+  .rd-app .control-time-wheel .time-soft-button { min-height: 44px; height: 44px; }
+  .rd-app .control-time-wheel .is-editing input.time-wheel-input { font-size: 18px; }
+}
+
+/* Calendar: airy seven-column grid, weekend colors, selected date and today dot. */
+.rd-app .control-calendar { padding: 16px; }
+.rd-app .control-calendar .calendar-head { display: grid; grid-template-columns: 44px 1fr 44px; align-items: center; gap: 8px; margin: 0 0 18px; }
+.rd-app .control-calendar .calendar-title { font-size: 20px; font-weight: 800; letter-spacing: -.03em; text-align: center; }
+.rd-app .control-calendar .calendar-nav { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; min-height: 44px; padding: 10px; border: 1.5px solid var(--control-ink); border-radius: 10px; background: white; color: var(--control-ink); box-shadow: 0 2px 0 var(--control-ink); }
+.rd-app .control-calendar .calendar-nav svg { width: 20px; height: 20px; }
+.rd-app .control-calendar .calendar-weekdays { display: grid; grid-template-columns: repeat(7, minmax(0,1fr)); gap: 0; margin: 0 0 8px; text-align: center; color: var(--control-ink); font-size: 14px; font-weight: 750; }
+.rd-app .control-calendar .calendar-weekdays span:first-child { color: #d33657; }
+.rd-app .control-calendar .calendar-weekdays span:last-child { color: #1778c8; }
+.rd-app .control-calendar .calendar-grid { display: grid; grid-template-columns: repeat(7, minmax(0,1fr)); gap: 3px 0; }
+.rd-app .control-calendar .calendar-week { display: contents; }
+.rd-app .control-calendar .calendar-day { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; height: 44px; min-height: 44px; padding: 0; border: 1.5px solid transparent; border-radius: 9px; box-shadow: none; color: var(--control-ink); background: white; font-size: 16px; font-weight: 650; line-height: 1; }
+.rd-app .control-calendar .calendar-day.sunday { color: #d33657; }
+.rd-app .control-calendar .calendar-day.saturday { color: #1778c8; }
+.rd-app .control-calendar .calendar-day.outside { color: #6c7585; font-weight: 500; }
+.rd-app .control-calendar .calendar-day.today { background: white; outline: none; border-color: transparent; box-shadow: none; }
+.rd-app .control-calendar .calendar-day.today::after { content: ''; position: absolute; bottom: 4px; left: calc(50% - 2.5px); width: 5px; height: 5px; border-radius: 50%; background: #83c1e6; }
+.rd-app .control-calendar .calendar-day:hover:not(:disabled):not(.selected) { background: #eff8fd; }
+.rd-app .control-calendar .calendar-day.selected { background: var(--control-yellow) !important; color: var(--control-ink) !important; border: 1.5px solid var(--control-ink) !important; border-radius: 9px !important; box-shadow: 0 2px 0 var(--control-ink) !important; }
+.rd-app .control-calendar .calendar-actions { display: flex; justify-content: space-between; margin: 14px 0 0; padding: 14px 0 0; border-top: 1px solid #e0e6ed; }
+.rd-app .control-calendar .calendar-soft-button { min-width: 65px; min-height: 44px; padding: 9px 14px; border: 1.5px solid var(--control-ink); border-radius: 9px; box-shadow: 0 2px 0 var(--control-ink); color: var(--control-ink); background: white; font-size: 14px; font-weight: 750; }
+@media (max-width: 360px) {
+  .rd-app .control-select-theme .custom-select-option { gap: 6px; }
+  .rd-app .control-calendar { padding: 10px; }
+  .rd-app .control-popover .custom-select-option { font-size: 14px; }
+}
+
+/* The transit editor keeps its scrolling behavior without visible tracks. */
+.rd-app #itineraryTransitDialog :is(.transit-editor-scroll, .custom-select-menu) { scrollbar-width: none; -ms-overflow-style: none; }
+.rd-app #itineraryTransitDialog :is(.transit-editor-scroll, .custom-select-menu)::-webkit-scrollbar { display: none; width: 0; height: 0; }
+.rd-app #itineraryTransitDialog .custom-select[data-select-id^="transitMode"] .custom-select-button { display: grid; grid-template-columns: 18px minmax(0, 1fr) 18px; gap: 4px; }
+.rd-app #itineraryTransitDialog .custom-select[data-select-id^="transitMode"] .custom-select-value { grid-column: 2; text-align: center; }
+.rd-app #itineraryTransitDialog .custom-select[data-select-id^="transitMode"] .custom-select-chevron { grid-column: 3; justify-self: center; }
+.rd-app #itineraryTransitDialog .custom-select[data-select-id^="transitMode"] .custom-select-option { text-align: center; justify-content: center; min-height: 40px; padding: 8px; font-size: 14px !important; }
+@media (prefers-reduced-motion: no-preference) {
+  .rd-app .control-popover { animation: control-appear 130ms ease-out; }
+  @keyframes control-appear { from { opacity: .4; translate: 0 3px; } to { opacity: 1; translate: 0 0; } }
+}

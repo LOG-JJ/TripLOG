@@ -725,12 +725,14 @@ function normalizeNominatimResult(result) {
 }
 
 async function waitForNominatimSlot() {
-  const elapsed = Date.now() - lastNominatimRequestAt;
-  const waitMs = Math.max(0, 1050 - elapsed);
+  // Reserve before waiting so concurrent origin/destination requests do not
+  // wake together and exceed the shared one-request-per-second limit.
+  const startAt = Math.max(Date.now(), lastNominatimRequestAt + 1050);
+  lastNominatimRequestAt = startAt;
+  const waitMs = Math.max(0, startAt - Date.now());
   if (waitMs > 0) {
     await new Promise((resolve) => setTimeout(resolve, waitMs));
   }
-  lastNominatimRequestAt = Date.now();
 }
 
 async function fetchWithTimeout(url, options = {}, timeoutMs = 5000) {

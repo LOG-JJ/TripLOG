@@ -21,8 +21,9 @@ function setupCustomDatePicker(input) {
   icon.innerHTML = '<svg viewBox="0 0 24 24" focusable="false"><path d="M7 3v3M17 3v3M4 9h16M6 5h12a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" /></svg>';
 
   const panel = document.createElement("div");
-  panel.className = "custom-date-panel";
+  panel.className = "custom-date-panel control-popover control-calendar";
   panel.setAttribute("role", "dialog");
+  panel.setAttribute('aria-label', '날짜 선택');
   panel.hidden = true;
 
   panel.innerHTML = `
@@ -30,7 +31,7 @@ function setupCustomDatePicker(input) {
       <button type="button" class="calendar-nav" data-calendar-action="prev" aria-label="이전 달">
         <svg viewBox="0 0 24 24" focusable="false"><path d="m15 18-6-6 6-6" /></svg>
       </button>
-      <strong class="calendar-title"></strong>
+      <strong class="calendar-title" aria-live="polite"></strong>
       <button type="button" class="calendar-nav" data-calendar-action="next" aria-label="다음 달">
         <svg viewBox="0 0 24 24" focusable="false"><path d="m9 18 6-6-6-6" /></svg>
       </button>
@@ -50,6 +51,13 @@ function setupCustomDatePicker(input) {
   button.append(value, icon);
   shell.append(button, panel);
   input.classList.add("native-date-hidden");
+  input.tabIndex = -1;
+  input.setAttribute("aria-hidden", "true");
+  button.id = `${input.id}Button`;
+  panel.id = `${input.id}Panel`;
+  button.setAttribute("aria-controls", panel.id);
+  const label = input.closest("label");
+  if (label?.htmlFor === input.id) label.htmlFor = button.id;
 
   const selectedDate = parseDate(input.value) || new Date();
   customDatePickers.set(input, {
@@ -68,13 +76,14 @@ function setupCustomDatePicker(input) {
     if (["ArrowDown", "Enter", " "].includes(event.key)) {
       event.preventDefault();
       openCustomDatePicker(input);
+      customDatePickers.get(input)?.panel.querySelector('.calendar-day[tabindex="0"]')?.focus({ preventScroll: true });
     }
   });
 
   panel.addEventListener("click", (event) => handleCalendarClick(event, input));
   panel.addEventListener("keydown", (event) => handleCalendarKeydown(event, input));
-  document.addEventListener("click", (event) => {
-    if (!shell.contains(event.target)) closeCustomDatePicker(input);
+  shell.addEventListener('focusout', () => {
+    setTimeout(() => { if (!shell.contains(document.activeElement)) closeCustomDatePicker(input); }, 0);
   });
 
   syncCustomDatePicker(input);
@@ -87,17 +96,19 @@ function syncCustomDatePicker(input) {
   const selectedDate = parseDate(input.value);
   control.value.textContent = selectedDate ? toInputDate(selectedDate) : "날짜 선택";
   if (selectedDate && document.body.classList.contains('rd-app')) {
-    const short = input.id.startsWith('newTrip');
+    const short = input.id.startsWith('newTrip') || input.dataset.compactDate === 'true';
     control.value.textContent = `${short ? '' : selectedDate.getFullYear()+'.'}${String(selectedDate.getMonth()+1).padStart(2,'0')}.${String(selectedDate.getDate()).padStart(2,'0')} (${'일월화수목금토'[selectedDate.getDay()]})`;
+    if (input.id === 'startDateInput' || input.id === 'endDateInput') control.value.textContent = input.value.replaceAll('-', '.');
   }
   control.button.disabled = input.disabled;
   control.button.classList.toggle("is-disabled", input.disabled);
 
-  if (selectedDate && !control.panel.hidden) {
+  if (selectedDate && !control.panel.hidden && control.lastValue !== input.value) {
     control.viewDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 1);
   }
+  control.lastValue = input.value;
 
-  renderCalendar(input);
+  if (!control.panel.hidden) renderCalendar(input);
 }
 
 function toggleCustomDatePicker(input) {
@@ -124,12 +135,15 @@ function openCustomDatePicker(input) {
   control.panel.hidden = false;
   control.button.classList.add("open");
   control.button.setAttribute("aria-expanded", "true");
+  control.shell.classList.add("is-open");
+  positionFormPopup(control.panel, control.button, 350);
 }
 
 function closeCustomDatePicker(input) {
   const control = customDatePickers.get(input);
   if (!control || control.panel.hidden) return;
-  control.panel.hidden = true;
+  hideFormPopup(control.panel);
+  control.shell.classList.remove("is-open");
   control.button.classList.remove("open");
   control.button.setAttribute("aria-expanded", "false");
 }
@@ -139,6 +153,12 @@ function closeAllCustomDatePickers(exceptInput) {
     if (input !== exceptInput) closeCustomDatePicker(input);
   });
 }
+
+document.addEventListener("click", event => {
+  customDatePickers.forEach((control, input) => {
+    if (!control.panel.hidden && !control.shell.contains(event.target)) closeCustomDatePicker(input);
+  });
+});
 
 function renderCalendar(input) {
   const control = customDatePickers.get(input);
@@ -156,9 +176,15 @@ function renderCalendar(input) {
   const today = toInputDate(new Date());
 
   title.textContent = `${year}년 ${month + 1}월`;
+  grid.setAttribute('aria-label', title.textContent);
+  control.panel.querySelector('[data-calendar-action="today"]').disabled = isDateOutsideInputBounds(input, today);
   grid.replaceChildren();
 
   for (let index = 0; index < 42; index += 1) {
+    if (index % 7 === 0) {
+      const row = document.createElement('div'); row.className = 'calendar-week';
+      row.setAttribute('role', 'row'); grid.append(row);
+    }
     const date = addDays(calendarStart, index);
     const value = toInputDate(date);
     const dayButton = document.createElement("button");
@@ -174,13 +200,20 @@ function renderCalendar(input) {
     dayButton.classList.toggle("outside", date.getMonth() !== month);
     dayButton.classList.toggle("today", value === today);
     dayButton.classList.toggle("selected", selectedDate && value === toInputDate(selectedDate));
+    dayButton.classList.toggle('sunday', date.getDay() === 0);
+    dayButton.classList.toggle('saturday', date.getDay() === 6);
+    dayButton.setAttribute('aria-selected', String(value === input.value));
+    if (value === today) dayButton.setAttribute('aria-current', 'date');
+    dayButton.tabIndex = -1;
     dayButton.addEventListener("click", (event) => {
       event.preventDefault();
       event.stopPropagation();
       setDatePickerValue(input, value);
     });
-    grid.appendChild(dayButton);
+    grid.lastElementChild.appendChild(dayButton);
   }
+  const focusDay = grid.querySelector('.selected:not(:disabled)') || grid.querySelector('.today:not(:disabled)') || grid.querySelector('.calendar-day:not(.outside):not(:disabled)');
+  if (focusDay) focusDay.tabIndex = 0;
 }
 
 function handleCalendarClick(event, input) {
@@ -216,11 +249,34 @@ function handleCalendarAction(action, input) {
 }
 
 function handleCalendarKeydown(event, input) {
+  const control = customDatePickers.get(input);
   if (event.key === "Escape") {
-    const control = customDatePickers.get(input);
+    event.preventDefault();
     closeCustomDatePicker(input);
     control?.button.focus();
+    return;
   }
+  const day = event.target.closest('.calendar-day');
+  if (!control || !day) return;
+  const offsets = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -7, ArrowDown: 7 };
+  if (!(event.key in offsets) && !['Home', 'End', 'PageUp', 'PageDown'].includes(event.key)) return;
+  event.preventDefault();
+  const current = parseDate(day.dataset.date);
+  let next = addDays(current, offsets[event.key] || 0);
+  if (event.key === 'Home') next = addDays(current, -current.getDay());
+  if (event.key === 'End') next = addDays(current, 6 - current.getDay());
+  if (event.key === 'PageUp' || event.key === 'PageDown') {
+    const month = current.getMonth() + (event.key === 'PageUp' ? -1 : 1);
+    const last = new Date(current.getFullYear(), month + 1, 0).getDate();
+    next = new Date(current.getFullYear(), month, Math.min(current.getDate(), last));
+  }
+  const nextValue = toInputDate(next);
+  if (isDateOutsideInputBounds(input, nextValue)) return;
+  if (next.getMonth() !== control.viewDate.getMonth() || next.getFullYear() !== control.viewDate.getFullYear()) {
+    control.viewDate = new Date(next.getFullYear(), next.getMonth(), 1); renderCalendar(input);
+  }
+  control.panel.querySelectorAll('.calendar-day').forEach(button => button.tabIndex = button.dataset.date === nextValue ? 0 : -1);
+  control.panel.querySelector(`[data-date="${nextValue}"]`)?.focus({ preventScroll: true });
 }
 
 function setDatePickerValue(input, value) {
@@ -229,6 +285,7 @@ function setDatePickerValue(input, value) {
   input.dispatchEvent(new Event("change", { bubbles: true }));
   syncCustomDatePicker(input);
   closeCustomDatePicker(input);
+  customDatePickers.get(input)?.button.focus({ preventScroll: true });
 }
 
 function isDateOutsideInputBounds(input, value) {

@@ -7,7 +7,7 @@ const clone = value => JSON.parse(JSON.stringify(value));
 const registry = {}, saved = new Map();
 const sandbox = { Intl, Date, TextEncoder, URL, console, localStorage: { getItem: key => saved.get(key) || null, setItem: (key, value) => saved.set(key, value) }, window: { TripLog: { core: { config: { STORAGE_KEY: 'legacy' } }, persistence: { stateStorage: {} }, register(name, api) { registry[name] = api; if (name === 'persistence.stateStorage') this.persistence.stateStorage = api; } } } };
 vm.createContext(sandbox);
-for (const file of ['src/app/persistence/state-storage.js', 'src/app/features/travel-companion/model.js']) vm.runInContext(fs.readFileSync(path.join(root, file), 'utf8'), sandbox, { filename: file });
+for (const file of ['src/app/shared/itinerary-order.js', 'src/app/shared/map-links.js', 'src/app/persistence/state-storage.js', 'src/app/features/travel-companion/model.js']) vm.runInContext(fs.readFileSync(path.join(root, file), 'utf8'), sandbox, { filename: file });
 const M = registry['features.travelCompanion.model'];
 const day = '2026-09-18';
 const trip = { id: 'test-trip', tripName: '서울 주말 여행', countryCode: 'KR', travelMode: 'domestic', startDate: day, endDate: '2026-09-20', totalBudget: 600000, entries: [{ id: 'pre', date: '__pretrip__', amount: 150000 }, { id: 'spent', date: day, amount: 54000 }], itineraryItems: [
@@ -46,6 +46,24 @@ assert.ok(M.planAdjustment(late, day, 30).errors.some(error => error.includes('�
 assert.ok(M.planAdjustment(trip, day, -1).errors.length);
 assert.ok(M.planAdjustment({ ...trip, itineraryItems: [{ ...trip.itineraryItems[0], endTime: '' }] }, day, 0).errors.length);
 assert.ok(M.planAdjustment(trip, '2026-09-17').errors.length);
+// Lodging records an arrival, not an activity duration. Legacy overnight ends
+// must not produce invalid-time warnings, block adjustment or leak into exports.
+const lodgingTrip = { ...clone(trip), itineraryItems: [
+  { id: 'dinner', date: day, theme: 'food', time: '18:00', endTime: '19:00', place: '저녁 식사' },
+  { id: 'hotel', date: day, theme: 'lodging', time: '19:30', endTime: '08:00', place: '교토 숙소', duration: 20 },
+] };
+assert.equal(M.reviewDay(lodgingTrip, day).length, 0);
+const lodgingPlan = M.planAdjustment(lodgingTrip, day, 60, 10);
+assert.equal(lodgingPlan.errors.length, 0);
+assert.deepEqual(Array.from(lodgingPlan.changes, row => [row.time, row.endTime]), [['19:00', '20:00'], ['20:20', '']]);
+const lodgingApplied = { ...lodgingTrip, ...M.applyAdjustment(lodgingTrip, lodgingPlan) };
+assert.equal(M.reviewDay(lodgingApplied, day).length, 0);
+assert.deepEqual(clone(M.undoAdjustment(lodgingApplied).itineraryItems), lodgingTrip.itineraryItems);
+const lodgingCalendar = M.createCalendar({ ...lodgingTrip, itineraryItems: [lodgingTrip.itineraryItems[1]] }, 'Asia/Seoul');
+assert.ok(lodgingCalendar.includes('DTSTART:20260918T103000Z'));
+assert.ok(!lodgingCalendar.includes('DTEND:'));
+assert.ok(!M.createPocketNote(lodgingTrip).includes('19:30 – 08:00'));
+assert.equal(M.reviewDay({ ...lodgingTrip, itineraryItems: [{ ...lodgingTrip.itineraryItems[1], endTime: '' }] }, day).length, 0);
 const daily = M.dailyBudget(trip, day);
 assert.deepEqual([daily.allowance, daily.used, daily.remaining, daily.percent], [150000, 54000, 96000, 64]);
 assert.equal(M.dailyBudget(trip, '2026-09-19').allowance, 198000);
@@ -65,7 +83,14 @@ assert.equal(M.validateReservation({ title: '숙소', type: 'stay', date: day, e
 assert.equal(M.validateReservation({ title: 'Ticket', type: 'activity', date: day, time: '10:00', url: 'https://example.com' }), '');
 assert.equal(M.safeUrl('javascript:alert(1)'), '');
 assert.equal(M.safeUrl('https://name:pass@example.com'), '');
-assert.ok(M.directions(trip.itineraryItems[0], trip).startsWith('https://www.google.com/maps/dir/?api=1&destination='));
+assert.ok(M.directions(trip.itineraryItems[0], trip).startsWith('https://map.naver.com/p/search/'));
+assert.ok(M.directions(trip.itineraryItems[0], { ...trip, travelMode: 'overseas' }).startsWith('https://www.google.com/maps/dir/?api=1&destination='));
+const naverRoute = new URL(M.directions({ place: '경복궁', lat: 37.5796, lon: 126.9769 }, trip));
+assert.equal(naverRoute.hostname, 'map.naver.com');
+assert.equal(naverRoute.searchParams.get('etext'), '경복궁');
+assert.equal(naverRoute.searchParams.get('elat'), '37.5796');
+assert.equal(naverRoute.searchParams.has('slat'), false);
+assert.ok(M.directions({ place: '경복궁', lat: null, lon: '' }, trip).includes('/p/search/'));
 assert.ok(M.directions({ place: '서울', lat: '', lon: '' }, trip).includes(encodeURIComponent('서울')));
 
 assert.equal(M.utcTime(day, '10:00', 'Asia/Seoul'), '20260918T010000Z');

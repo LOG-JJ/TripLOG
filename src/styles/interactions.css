@@ -1,0 +1,165 @@
+/* Shared controls and feedback use the established TripLOG palette. */
+body.rd-app {
+  --accent: var(--rd-yellow);
+  --accent-blue: var(--rd-blue);
+  --surface-soft: #f5f6f8;
+  --shadow-sm: 1px 2px 0 var(--text);
+  --shadow: 3px 4px 0 var(--text);
+  --rd-motion: 160ms cubic-bezier(.2,.7,.25,1);
+}
+
+/* The first paint uses the same login markup and chrome as the ready app. */
+.rd-app .auth-shell { position: relative; min-height: 0; padding-top: 22px; }
+.rd-app .auth-shell::before, .rd-app .auth-shell::after,
+.rd-app .auth-brand-panel::before, .rd-app .auth-brand-panel::after { display: none; }
+.rd-app .auth-brand-panel { min-height: 0; transform: none; }
+.rd-app .auth-gate { padding: 0; }
+.rd-app .rd-auth-help { top: 17px; right: 18px; }
+.rd-header-actions { display: flex; align-items: center; gap: 8px; }
+.rd-app .rd-sync { width: auto; min-width: 0; min-height: 38px; height: 38px; padding: 7px 10px; gap: 6px; font-size: 13px; border: 1.5px solid var(--text); border-radius: 9px; background: #fff; }
+.rd-app .rd-sync::before, .rd-app .rd-sync::after { display: none; }
+.rd-app .rd-sync svg { position: static; inset: auto; flex-shrink: 0; transform: none; width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.rd-app .rd-sync.is-dirty { background: #fffbd6; }
+.rd-app .rd-sync.is-syncing, .rd-app .rd-sync.is-synced { background: var(--rd-yellow); }
+.rd-app .rd-sync.is-syncing svg { animation: rd-spin 800ms linear infinite; }
+
+/* Every main page shares exactly one header and bottom navigation. */
+.rd-app[data-page="itinerary"] > .app-shell > .rd-header { display: flex; }
+.rd-app[data-page="itinerary"] > .app-shell > .rd-nav { display: grid; }
+.rd-app #itineraryPage > .itinerary-brandbar,
+.rd-app #itineraryPage > .itinerary-bottom-nav { display: none; }
+.rd-app .rd-nav { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.rd-app .rd-nav button { min-width: 0; line-height: 16px; }
+.rd-app .rd-nav button.active { color: var(--text); }
+.rd-app .rd-nav button.active .ph { background: var(--rd-yellow); border-radius: 6px; }
+.rd-app .rd-nav button.active::after { background: var(--text); }
+
+.rd-app #itineraryDayStrip, .rd-app #itineraryEditorDays {
+  display: flex; flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden;
+  gap: 8px; width: 100%; min-width: 0; max-width: 100%;
+  padding: 3px 2px 7px; touch-action: pan-x pan-y; overscroll-behavior-x: contain;
+}
+.rd-app #itineraryDayStrip .itinerary-day-chip,
+.rd-app #itineraryEditorDays .itinerary-day-chip { flex: 0 0 112px; min-width: 112px; }
+.rd-app .rd-reservations { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.rd-app .rd-reservations .rd-button { width: 100%; min-width: 0; gap: 6px; padding: 10px; }
+.rd-app .rd-reservations span { flex: 1; min-width: 0; }
+.rd-app .rd-reservations strong, .rd-app .rd-reservations small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rd-app .rd-reservations .ph:first-child { font-size: 22px; }
+.rd-app .rd-reservations .ph:last-child { font-size: 15px; margin: 0; }
+
+/* Hidden native controls must not inherit full-size form input rules. */
+.rd-app :is(.native-select-hidden, .native-date-hidden, .native-time-hidden) {
+  position: absolute !important; width: 1px !important; min-width: 0 !important;
+  height: 1px !important; min-height: 0 !important; padding: 0 !important; margin: 0 !important;
+  border: 0 !important; overflow: hidden !important; clip-path: inset(50%);
+  opacity: 0; pointer-events: none;
+}
+.rd-app :is(.custom-select, .custom-date, .custom-time) { width: 100%; min-width: 0; }
+.rd-app :is(.custom-select, .custom-date, .custom-time).is-open { z-index: 10020; }
+.rd-app :is(.custom-select-button, .custom-date-button, .custom-time-button) {
+  min-height: 44px; width: 100%; padding: 10px 12px;
+  border: 1.8px solid var(--text); border-radius: 9px; box-shadow: none;
+  background: #fff; color: var(--text); font-size: 15px; font-weight: 650;
+}
+.rd-app :is(.custom-select-button, .custom-date-button, .custom-time-button).open,
+.rd-app .custom-time:focus-within .custom-time-button { background: #fffbd6; box-shadow: 1px 2px 0 var(--text); }
+.rd-app .custom-select-value { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rd-app :is(.custom-select-menu, .custom-date-panel, .custom-time-panel, .time-dropdown-menu) {
+  background: #fff; background-image: none; color: var(--text);
+  border: 1.8px solid var(--text); border-radius: 10px; box-shadow: 3px 4px 0 var(--text);
+  padding: 8px; font-family: var(--font); z-index: 10080;
+  scrollbar-color: #b6bac3 transparent; scrollbar-width: thin; overscroll-behavior: contain;
+}
+/* Previously saved themes must not revive the old dropdown skin. */
+.rd-app :is(.custom-select-menu, .custom-date-panel, .custom-time-panel, .time-dropdown-menu) {
+  border: 1.8px solid var(--text) !important; border-radius: 10px !important;
+  box-shadow: 3px 4px 0 var(--text) !important; background: #fff !important;
+}
+.rd-app .form-popup {
+  position: fixed !important; right: auto !important; bottom: auto !important;
+  min-width: 0 !important; max-width: calc(100vw - 24px); margin: 0;
+}
+.rd-app .custom-select-menu { max-height: min(280px, 50dvh) !important; overflow-y: auto; }
+.rd-app .custom-select-option {
+  width: 100%; min-height: 42px; border: 1.5px solid transparent; border-radius: 7px;
+  padding: 8px 10px; color: var(--text); background: #fff; box-shadow: none; font-size: 14px;
+}
+.rd-app .custom-select-option.selected, .rd-app .time-dropdown-option.selected,
+.rd-app .calendar-day.selected { background: var(--rd-yellow); color: var(--text); border-color: var(--text); box-shadow: 1px 2px 0 var(--text); }
+.rd-app :is(.custom-select-option, .time-dropdown-option, .calendar-day).selected {
+  background: var(--rd-yellow) !important; color: var(--text) !important;
+  border: 1.5px solid var(--text) !important; border-radius: 7px !important; box-shadow: 1px 2px 0 var(--text) !important;
+}
+.rd-app .new-trip-country-option[aria-selected="true"], .rd-app .new-trip-country-option:hover { background: var(--rd-yellow); color: var(--text); }
+.rd-app :is(.custom-select-option, .time-dropdown-option):hover:not(:disabled) { background: #fff7ae; border-color: var(--text); }
+.rd-app .custom-date-panel { padding: 12px; overflow: auto; }
+.rd-app .calendar-title { font-size: 16px; }
+.rd-app .calendar-day { min-width: 0; min-height: 34px; border: 1px solid transparent; border-radius: 7px; background: #fff; color: var(--text); font-size: 14px; box-shadow: none; }
+.rd-app .calendar-day.today:not(.selected) { border-color: var(--text); background: var(--rd-blue); }
+.rd-app .calendar-day.outside { color: #9498a2; }
+.rd-app .calendar-day:hover:not(:disabled) { background: #fff7ae; }
+.rd-app :is(.calendar-nav, .calendar-soft-button, .time-soft-button) { min-height: 36px; border: 1.5px solid var(--text); border-radius: 8px; background: #fff; color: var(--text); box-shadow: none; }
+.rd-app .time-soft-button[data-time-action="close"] { background: var(--rd-yellow); }
+.rd-app .time-panel-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+.rd-app .time-dropdown-label { border: 0; background: none; padding: 0; margin-bottom: 5px; font-size: 12px; font-weight: 650; color: var(--muted); }
+.rd-app .time-dropdown-trigger { min-height: 44px; border: 1.5px solid var(--text); border-radius: 8px; background: #fff; box-shadow: none; padding: 0 8px; }
+.rd-app .time-dropdown-trigger.open, .rd-app .time-dropdown-trigger:focus-within { background: #fffbd6; box-shadow: 1px 2px 0 var(--text); }
+.rd-app .time-dropdown-trigger .time-dropdown-input { width: 100%; min-width: 0; height: 38px; min-height: 0; padding: 5px 0; font-size: 21px; border: 0; background: transparent; box-shadow: none; }
+.rd-app .time-dropdown-menu { top: 100%; max-height: 160px; padding: 4px; }
+.rd-app .time-dropdown-menu.form-popup { max-height: min(200px, 40dvh) !important; }
+.rd-app .time-dropdown-option { min-height: 36px; border-width: 1px; font-size: 14px; }
+.rd-app .custom-time-value { font-weight: 650; }
+.rd-app .custom-time-panel { overflow: visible; }
+.rd-app .time-dropdown-input:focus-visible { outline: none; box-shadow: none; }
+.rd-app .itinerary-bottom-nav [aria-current="page"] { color: var(--text); }
+.rd-app .itinerary-bottom-nav [aria-current="page"] .ph { background: var(--rd-yellow); }
+.rd-app .itinerary-bottom-nav [aria-current="page"]::after { background: var(--text); }
+.rd-app .time-panel-actions { margin-top: 12px; gap: 8px; }
+
+.rd-app .rd-expense-tools { display: flex; justify-content: flex-end; margin-bottom: 18px; }
+.rd-app .rd-receipt-launch { min-height: 40px; font-size: 14px; background: #fff; }
+.rd-app .rd-receipt-launch.active, .rd-app .rd-receipt-launch:active { background: var(--rd-yellow); }
+.rd-app .rd-trip-edit { padding: 18px; border: 1.8px solid var(--text); border-radius: 12px; background: #fffef1; }
+.rd-app #rdExpenseEditor .rd-amount-field { display: flex; }
+.rd-app #rdExpenseEditor .foreign-fields { width: 100%; }
+.rd-app details > summary { cursor: pointer; border-radius: 8px; }
+.rd-app details[open] > summary { background: #fffbd6; color: var(--text); }
+.rd-app details > summary .ph:last-child { transition: transform var(--rd-motion); }
+.rd-app details[open] > summary .ph-caret-down:last-child { transform: rotate(180deg); }
+.rd-app #rdReceiptStatusInfo[open] > summary { background: var(--rd-yellow); }
+
+/* Feedback stays short and never delays the state change or blocks input. */
+.rd-app :is(button, summary, a, input, textarea, select) {
+  transition: background-color var(--rd-motion), color var(--rd-motion), border-color var(--rd-motion), box-shadow var(--rd-motion), transform var(--rd-motion);
+}
+.rd-app button:active:not(:disabled), .rd-app summary:active { transform: translateY(1px) scale(.98); box-shadow: none; }
+.rd-app :is(input, textarea):focus-visible { outline: 2px solid var(--text); outline-offset: 2px; box-shadow: 0 0 0 5px #fff7ae; }
+.rd-app :is(button, summary):focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+.rd-app .rd-nav button:active { transform: scale(.94); }
+.rd-app .rd-nav .ph { transition: background-color var(--rd-motion), transform var(--rd-motion); }
+.rd-app .rd-nav button.active .ph { animation: rd-icon-in 180ms ease-out; }
+.rd-app :is(.rd-dialog, .rd-receipt, .itinerary-editor)[open],
+.rd-app .rd-overlay:not([hidden]) .rd-sheet { animation: rd-dialog-in 180ms cubic-bezier(.2,.7,.25,1); }
+.rd-app dialog[open]::backdrop { animation: rd-fade-in 160ms ease-out; }
+.rd-app .page-active > .rd-content, .rd-app .page-active > .itinerary-workspace { animation: rd-fade-in 160ms ease-out; }
+.rd-app :is(.custom-select-menu, .custom-date-panel, .custom-time-panel, .time-dropdown-menu):not([hidden]) { animation: rd-pop-in 130ms ease-out; }
+.rd-app details[open] > :not(summary) { animation: rd-fade-in 160ms ease-out; }
+@media (hover: hover) {
+  .rd-app button:hover:not(:disabled):not(.calendar-day):not(.custom-select-option):not(.time-dropdown-option) { background-color: #fff7ae; }
+  .rd-app :is(.rd-primary, .rd-secondary, .rd-overview-new, .tt-primary):hover:not(:disabled) { transform: translateY(-2px); box-shadow: 2px 4px 0 var(--text); }
+  .rd-app summary:hover { background: #fff7ae; }
+}
+@media (max-width: 359px) {
+  .rd-app .rd-reservations .rd-button { padding: 9px 7px; font-size: 13px; gap: 4px; }
+  .rd-app .rd-reservations .ph:first-child { font-size: 19px; }
+  .rd-app .rd-reservations small { font-size: 11px; }
+}
+@keyframes rd-dialog-in { from { opacity: 0; transform: translateY(14px) scale(.985); } to { opacity: 1; transform: none; } }
+@keyframes rd-pop-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+@keyframes rd-fade-in { from { opacity: .35; } to { opacity: 1; } }
+@keyframes rd-icon-in { from { transform: scale(.88); } to { transform: scale(1); } }
+@keyframes rd-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .rd-app *, .rd-app *::before, .rd-app *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

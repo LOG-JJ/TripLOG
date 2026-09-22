@@ -25,8 +25,9 @@ function renderDaySelect(days) {
 function formatExpenseDayOptionLabel(day) {
   if (day.isPreTrip) return day.label;
   const dayNumber = day.index || String(day.label || "").replace(/[^0-9]/g, "");
-  const weekday = day.weekday ? ` [${day.weekday}]` : "";
-  return `Day${dayNumber} · ${day.shortDate}${weekday}`;
+  const shortDate = /^\d{4}-\d{2}-\d{2}$/.test(day.date || '')
+    ? `${Number(day.date.slice(5, 7))}.${Number(day.date.slice(8, 10))}` : day.shortDate;
+  return `Day ${dayNumber} · ${shortDate}`;
 }
 
 function renderTable(entries, days) {

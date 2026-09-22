@@ -6,6 +6,8 @@
     <base href="/" />
     <title>여행 가계부</title>
     <meta name="application-name" content="TripLOG" />
+    <link rel="stylesheet" href="./vendor/leaflet-1.9.4/leaflet.css?v=cc8c00b843a1677c2694" />
+    <meta name="triplog-build" content="cc8c00b843a1677c2694" />
     <meta name="apple-mobile-web-app-title" content="TripLOG" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -17,34 +19,39 @@
     <link rel="apple-touch-icon" sizes="152x152" href="/icons/triplog-icon-152.png" />
     <link rel="apple-touch-icon" sizes="167x167" href="/icons/triplog-icon-167.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/triplog-icon-180.png" />
-    <link rel="stylesheet" href="./styles.css?v=receipt-ocr-20260912-1" />
-    <link rel="stylesheet" href="./src/styles/receipt.css?v=receipt-ocr-20260912-1" />
+    <link rel="stylesheet" href="./styles.css?v=cc8c00b843a1677c2694" />
+    <link rel="stylesheet" href="./src/styles/receipt.css?v=cc8c00b843a1677c2694" />
     <link rel="stylesheet" href="./vendor/phosphor-2.1.1/regular.css" />
-    <link rel="stylesheet" href="./src/styles/itinerary.css?v=itinerary-20260912-14" />
-    <link rel="stylesheet" href="./src/styles/redesign.css?v=redesign-20260914-24" />
-    <link rel="stylesheet" href="./src/styles/travel-companion.css?v=companion-20260914-2" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="./src/styles/itinerary.css?v=cc8c00b843a1677c2694" />
+    <link rel="stylesheet" href="./src/styles/redesign.css?v=cc8c00b843a1677c2694" />
+    <link rel="stylesheet" href="./src/styles/travel-companion.css?v=cc8c00b843a1677c2694" />
+    <link rel="stylesheet" href="./src/styles/interactions.css?v=cc8c00b843a1677c2694" />
+    <link rel="stylesheet" href="./src/styles/expenses.css?v=cc8c00b843a1677c2694" />
+    <link rel="stylesheet" href="./src/styles/planning.css?v=cc8c00b843a1677c2694" />
+    <link rel="stylesheet" href="./src/styles/reservation-wallet.css?v=cc8c00b843a1677c2694" />
+    <link rel="stylesheet" href="./src/styles/prepurchase.css?v=cc8c00b843a1677c2694" />
+    <link rel="stylesheet" href="./src/styles/typography.css?v=cc8c00b843a1677c2694" />
+    <link rel="stylesheet" href="./src/styles/transit-editor.css?v=cc8c00b843a1677c2694" />
+    <link rel="stylesheet" href="./src/styles/itinerary-summary.css?v=cc8c00b843a1677c2694" />
+    <link rel="stylesheet" href="./src/styles/sync.css?v=cc8c00b843a1677c2694" />
+    <link rel="stylesheet" href="./src/styles/controls.css?v=cc8c00b843a1677c2694" />
+    <link rel="stylesheet" href="./src/styles/itinerary-drag.css?v=cc8c00b843a1677c2694" />
+    <link rel="stylesheet" href="./src/styles/expense-polish.css?v=cc8c00b843a1677c2694" />
+    <link rel="stylesheet" href="./src/styles/companion-passport.css?v=cc8c00b843a1677c2694" />
+    <link rel="stylesheet" href="./src/styles/wallet-passbook.css?v=cc8c00b843a1677c2694" />
+    <link rel="preconnect" href="https://www.google.com" />
+    <link rel="preconnect" href="https://maps.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://maps.googleapis.com" />
   </head>
-  <body>
+  <body class="rd-app">
     <section class="auth-gate" id="authGate" aria-labelledby="authGateTitle">
       <div class="auth-shell">
         <div class="auth-brand-panel" aria-label="TripLOG 계정">
-          <div class="auth-brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" focusable="false">
-              <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm-5-7h-5v5h5v-5z" />
-            </svg>
-          </div>
-          <p class="auth-eyebrow">TripLOG</p>
-          <h1>
-            <span class="auth-title-line">Your Trip,</span>
-            <span class="auth-title-line">All In one place.</span>
-          </h1>
-          <div class="auth-signal-row" aria-label="계정 상태">
-            <span>일정</span>
-            <span>가계부</span>
-            <span>정산</span>
-          </div>
+          <details class="rd-auth-help"><summary aria-label="로그인 도움말"><i class="ph ph-list" aria-hidden="true"></i></summary><div id="rdAuthHelpMount"><p>로그인 연결에 문제가 있나요?</p><button class="auth-link-button" id="authGateResetSupabaseButton" type="button">기본 연결 복구</button></div></details>
+          <img class="rd-logo" src="src/assets/triplog-wordmark.png" alt="TripLOG">
+          <h1>여행의 모든 순간,<br>한곳에.</h1>
+          <p>일정부터 지출까지, 함께 기록해요.</p>
+          <img class="rd-login-art" src="src/assets/login-travel.png" alt="하늘색 여행 가방과 여행 티켓" fetchpriority="high">
         </div>
 
         <form class="auth-panel" id="authGateForm">
@@ -72,6 +79,7 @@
           <label class="auth-field" id="authGatePasswordField" for="authGatePasswordInput">
             <span>비밀번호</span>
             <input id="authGatePasswordInput" type="password" autocomplete="current-password" minlength="8" placeholder="8자 이상" required />
+            <button class="rd-password-eye" type="button" aria-label="비밀번호 표시" aria-pressed="false"><i class="ph ph-eye" aria-hidden="true"></i></button>
           </label>
 
           <label class="auth-field" id="authGatePasswordConfirmField" for="authGatePasswordConfirmInput" hidden>
@@ -79,14 +87,13 @@
             <input id="authGatePasswordConfirmInput" type="password" autocomplete="new-password" minlength="8" placeholder="한 번 더 입력" />
           </label>
 
-          <button class="auth-primary-button" id="authGateSubmitButton" type="submit">로그인</button>
+          <button class="auth-link-button" id="authGateForgotButton" type="button">비밀번호를 잊으셨나요?</button>
+          <button class="auth-primary-button" id="authGateSubmitButton" type="submit" disabled>로그인</button>
 
-          <div class="auth-secondary-actions">
-            <button class="auth-link-button" id="authGateForgotButton" type="button">비밀번호 재설정</button>
-            <button class="auth-link-button" id="authGateResetSupabaseButton" type="button">기본 연결 복구</button>
-          </div>
 
-          <p class="auth-status" id="authGateStatus" aria-live="polite">세션을 확인하고 있습니다.</p>
+
+          <p class="auth-status" id="authGateStatus" aria-live="polite">화면을 불러오고 있습니다.</p>
+          <p class="rd-signup-hint">처음 오셨나요? <button type="button" data-rd-action="signup">회원가입</button></p>
         </form>
       </div>
     </section>
@@ -94,7 +101,7 @@
     <div class="app-shell" id="appShell" hidden>
       <header class="topbar" style="border-bottom: 1.5px solid var(--line);">
         <div class="brand">
-          <button class="brand-mark" id="itineraryPageButton" type="button" title="여행 동기화" aria-label="여행 동기화">
+          <button class="brand-mark" id="itineraryPageButton" type="button" title="저장 상태 자세히 보기" aria-label="저장 상태 자세히 보기">
             <svg class="brand-icon active" id="brandIcon" viewBox="0 0 24 24" focusable="false">
               <path d="M20 8.6h-4.2V4.4" />
               <path d="M4.8 10.5A7.7 7.7 0 0 1 18.7 7" />
@@ -393,118 +400,77 @@
             </div>
             <p id="receiptAppliedStatus" class="receipt-applied-status" role="status" hidden></p>
 
-            <section class="pretrip-purchase-panel" id="pretripPurchasePanel" aria-labelledby="pretripPurchaseTitle" hidden>
-              <div class="pretrip-purchase-head">
-                <h3 class="panel-box-title" id="pretripPurchaseTitle">사전구매</h3>
-                <div class="pretrip-purchase-controls">
-                  <div class="segmented pretrip-purchase-tabs" id="pretripPurchaseTabs" role="group" aria-label="사전구매 항목 선택">
-                    <button class="active" id="pretripFlightTab" type="button" data-pretrip-mode="flight">항공권</button>
-                    <button id="pretripHotelTab" type="button" data-pretrip-mode="hotel">숙소</button>
-                  </div>
-                  <button class="pretrip-options-toggle" id="pretripOptionsToggleButton" type="button" aria-expanded="true" aria-controls="pretripFlightForm pretripHotelForm" aria-label="사전구매 옵션 닫기">
-                    <span class="pretrip-options-toggle-icon" aria-hidden="true"></span>
-                    <span class="pretrip-options-toggle-text">옵션 닫기</span>
-                  </button>
-                </div>
+            <section class="pp-panel" id="pretripPurchasePanel" aria-labelledby="pretripPurchaseTitle" hidden>
+              <h3 id="pretripPurchaseTitle" class="pp-sr-only">사전구매 항목</h3>
+              <div class="pp-tabs" id="pretripPurchaseTabs" role="group" aria-label="사전구매 항목 선택">
+                <button class="active" id="pretripFlightTab" type="button" data-pretrip-mode="flight" aria-pressed="true"><i class="ph ph-airplane-tilt" aria-hidden="true"></i>항공권</button>
+                <button id="pretripHotelTab" type="button" data-pretrip-mode="hotel" aria-pressed="false"><i class="ph ph-bed" aria-hidden="true"></i>숙소</button>
               </div>
-
-              <form class="pretrip-special-form pretrip-flight-form" id="pretripFlightForm">
-                <div class="pretrip-form-grid">
-                  <label for="pretripFlightAirlineInput">
-                    <span>항공사</span>
-                    <input id="pretripFlightAirlineInput" type="text" maxlength="28" placeholder="예: 대한항공" required />
-                  </label>
-                  <label for="pretripFlightNumberInput">
-                    <span>편명</span>
-                    <input id="pretripFlightNumberInput" type="text" maxlength="18" placeholder="예: KE123" />
-                  </label>
-                  <label for="pretripFlightFromInput">
-                    <span>출발지</span>
-                    <input id="pretripFlightFromInput" type="text" maxlength="32" placeholder="예: 서울 ICN" required />
-                  </label>
-                  <label for="pretripFlightToInput">
-                    <span>도착지</span>
-                    <input id="pretripFlightToInput" type="text" maxlength="32" placeholder="예: 제주 CJU" required />
-                  </label>
-                  <div class="pretrip-flight-schedule-grid wide">
-                    <div class="pretrip-flight-schedule-column">
-                      <label for="pretripFlightDepartDateInput">
-                        <span>출발일</span>
-                        <input id="pretripFlightDepartDateInput" type="date" required />
-                      </label>
-                      <label for="pretripFlightDepartTimeInput">
-                        <span>출발 시간</span>
-                        <input id="pretripFlightDepartTimeInput" type="time" />
-                      </label>
-                    </div>
-                    <div class="pretrip-flight-schedule-column">
-                      <label for="pretripFlightReturnDateInput">
-                        <span>복귀일</span>
-                        <input id="pretripFlightReturnDateInput" type="date" />
-                      </label>
-                      <label for="pretripFlightReturnDepartTimeInput">
-                        <span>복귀 출발 시간</span>
-                        <input id="pretripFlightReturnDepartTimeInput" type="time" />
-                      </label>
-                    </div>
+              <form class="pp-form" id="pretripFlightForm" novalidate>
+                <div id="pretripFlightJourneyToggle" class="pp-journey" role="group" aria-label="항공 여정">
+                  <button type="button" data-pretrip-journey="oneway" aria-pressed="true">편도</button><button type="button" data-pretrip-journey="roundtrip" aria-pressed="false">왕복</button>
+                </div>
+                <section class="pp-section" aria-labelledby="ppFlightSectionTitle">
+                  <h2 id="ppFlightSectionTitle">항공편 정보</h2>
+                  <div class="pp-grid">
+                    <label class="pp-field" for="pretripFlightAirlineInput"><span>항공사 <b aria-hidden="true">*</b></span><input id="pretripFlightAirlineInput" type="text" maxlength="28" placeholder="예: 제주항공" required autocomplete="off" /></label>
+                    <label class="pp-field" for="pretripFlightNumberInput"><span>편명 <small>(선택)</small></span><input id="pretripFlightNumberInput" type="text" maxlength="18" placeholder="예: 7C1301" autocomplete="off" /></label>
                   </div>
-                  <label for="pretripFlightBookingCodeInput">
-                    <span>예약번호</span>
-                    <input id="pretripFlightBookingCodeInput" type="text" maxlength="28" placeholder="예: ABC123" />
-                  </label>
-                  <label for="pretripFlightAmountInput">
-                    <span>결제 금액</span>
-                    <input id="pretripFlightAmountInput" type="text" inputmode="numeric" placeholder="0" required />
-                  </label>
-                  <label class="wide" for="pretripFlightNoteInput">
-                    <span>메모</span>
-                    <input id="pretripFlightNoteInput" type="text" maxlength="80" placeholder="좌석, 수하물, 발권 메모 등" />
-                  </label>
-                </div>
-                <button class="submit-button pretrip-submit-button" type="submit">
-                  <span>항공권 사전구매 등록</span>
-                </button>
+                  <div class="pp-route">
+                    <label class="pp-field" for="pretripFlightFromInput"><span>출발지 <b aria-hidden="true">*</b></span><input id="pretripFlightFromInput" type="text" maxlength="32" placeholder="인천 ICN" required autocomplete="off" /></label>
+                    <button type="button" id="pretripFlightSwapButton" class="pp-swap" aria-label="출발지와 도착지 바꾸기"><i class="ph ph-arrows-left-right" aria-hidden="true"></i></button>
+                    <label class="pp-field" for="pretripFlightToInput"><span>도착지 <b aria-hidden="true">*</b></span><input id="pretripFlightToInput" type="text" maxlength="32" placeholder="오사카 KIX" required autocomplete="off" /></label>
+                  </div>
+                  <div class="pp-grid">
+                    <label class="pp-field" for="pretripFlightDepartDateInput"><span>가는 날 <b aria-hidden="true">*</b></span><input id="pretripFlightDepartDateInput" type="date" data-compact-date="true" required /></label>
+                    <label class="pp-field" for="pretripFlightDepartTimeInput"><span>출발 시간 <small>(선택)</small></span><input id="pretripFlightDepartTimeInput" type="time" /></label>
+                  </div>
+                  <div id="pretripFlightReturnFields" class="pp-grid" hidden>
+                    <label class="pp-field" for="pretripFlightReturnDateInput"><span>오는 날 <b aria-hidden="true">*</b></span><input id="pretripFlightReturnDateInput" type="date" data-compact-date="true" disabled /></label>
+                    <label class="pp-field" for="pretripFlightReturnDepartTimeInput"><span>복귀 출발 시간 <small>(선택)</small></span><input id="pretripFlightReturnDepartTimeInput" type="time" disabled /></label>
+                  </div>
+                </section>
+                <section class="pp-section pp-payment" aria-labelledby="ppFlightPaymentTitle">
+                  <h2 id="ppFlightPaymentTitle">결제 정보</h2>
+                  <label class="pp-amount-label" for="pretripFlightAmountInput"><span>총 결제 금액 <b aria-hidden="true">*</b></span><div class="pp-amount-row"><input id="pretripFlightAmountInput" type="text" inputmode="numeric" maxlength="15" placeholder="0" required /><span class="pp-currency">KRW · 원</span></div></label>
+                  <div class="pp-grid">
+                    <label class="pp-field" for="pretripFlightPaymentDateInput"><span>결제일 <b aria-hidden="true">*</b></span><input id="pretripFlightPaymentDateInput" type="date" data-compact-date="true" required /></label>
+                    <fieldset class="pp-method-field"><legend>결제 수단</legend><input id="pretripFlightPaymentMethodInput" type="hidden" value="card" /><div class="pp-method" role="group" aria-label="항공권 결제 수단"><button type="button" data-pretrip-payment="card" aria-pressed="true">카드</button><button type="button" data-pretrip-payment="cash" aria-pressed="false">현금</button></div></fieldset>
+                  </div>
+                </section>
+                <details class="pp-extra" id="pretripFlightDetails"><summary><i class="ph ph-note" aria-hidden="true"></i><span>예약번호 · 메모 <small>(선택)</small></span><i class="ph ph-caret-down" aria-hidden="true"></i></summary><div>
+                  <label class="pp-field" for="pretripFlightBookingCodeInput"><span>예약번호</span><input id="pretripFlightBookingCodeInput" type="text" maxlength="28" placeholder="예: ABC123" autocomplete="off" spellcheck="false" /></label>
+                  <label class="pp-field" for="pretripFlightNoteInput"><span>메모</span><textarea id="pretripFlightNoteInput" maxlength="3000" rows="2" placeholder="좌석, 수하물, 발권 메모 등"></textarea></label>
+                </div></details>
+                <p id="pretripFlightError" class="pp-error" role="alert" hidden></p>
               </form>
-
-              <form class="pretrip-special-form pretrip-hotel-form" id="pretripHotelForm" hidden>
-                <div class="pretrip-form-grid">
-                  <label class="wide" for="pretripHotelNameInput">
-                    <span>숙소명</span>
-                    <input id="pretripHotelNameInput" type="text" maxlength="40" placeholder="예: 코델리아S호텔" required />
-                  </label>
-                  <label for="pretripHotelCheckInInput">
-                    <span>체크인</span>
-                    <input id="pretripHotelCheckInInput" type="date" required />
-                  </label>
-                  <label for="pretripHotelCheckOutInput">
-                    <span>체크아웃</span>
-                    <input id="pretripHotelCheckOutInput" type="date" required />
-                  </label>
-                  <label for="pretripHotelRoomInput">
-                    <span>객실/요금제</span>
-                    <input id="pretripHotelRoomInput" type="text" maxlength="36" placeholder="예: 더블룸, 조식 포함" />
-                  </label>
-                  <label for="pretripHotelGuestsInput">
-                    <span>인원</span>
-                    <input id="pretripHotelGuestsInput" type="number" min="1" step="1" placeholder="2" />
-                  </label>
-                  <label for="pretripHotelBookingCodeInput">
-                    <span>예약번호</span>
-                    <input id="pretripHotelBookingCodeInput" type="text" maxlength="28" placeholder="예: HTL-12345" />
-                  </label>
-                  <label for="pretripHotelAmountInput">
-                    <span>결제 금액</span>
-                    <input id="pretripHotelAmountInput" type="text" inputmode="numeric" placeholder="0" required />
-                  </label>
-                  <label class="wide" for="pretripHotelNoteInput">
-                    <span>메모</span>
-                    <input id="pretripHotelNoteInput" type="text" maxlength="80" placeholder="취소 규정, 체크인 요청, 결제 메모 등" />
-                  </label>
-                </div>
-                <button class="submit-button pretrip-submit-button" type="submit">
-                  <span>숙소 사전구매 등록</span>
-                </button>
+              <form class="pp-form" id="pretripHotelForm" novalidate hidden>
+                <section class="pp-section" aria-labelledby="ppHotelSectionTitle">
+                  <h2 id="ppHotelSectionTitle">숙박 정보</h2>
+                  <label class="pp-field" for="pretripHotelNameInput"><span>숙소명 <b aria-hidden="true">*</b></span><input id="pretripHotelNameInput" type="text" maxlength="120" placeholder="예: 난바 호텔" required autocomplete="off" /></label>
+                  <div class="pp-grid">
+                    <label class="pp-field" for="pretripHotelCheckInInput"><span>체크인 <b aria-hidden="true">*</b></span><input id="pretripHotelCheckInInput" type="date" data-compact-date="true" required /></label>
+                    <label class="pp-field" for="pretripHotelCheckOutInput"><span>체크아웃 <b aria-hidden="true">*</b></span><input id="pretripHotelCheckOutInput" type="date" data-compact-date="true" required /></label>
+                  </div>
+                  <p id="pretripHotelSummary" class="pp-stay-summary" role="status" aria-live="polite"></p>
+                </section>
+                <section class="pp-section pp-payment" aria-labelledby="ppHotelPaymentTitle">
+                  <h2 id="ppHotelPaymentTitle">결제 정보</h2>
+                  <label class="pp-amount-label" for="pretripHotelAmountInput"><span>숙박 전체 결제 금액 <b aria-hidden="true">*</b></span><div class="pp-amount-row"><input id="pretripHotelAmountInput" type="text" inputmode="numeric" maxlength="15" placeholder="0" required /><span class="pp-currency">KRW · 원</span></div></label>
+                  <div class="pp-grid">
+                    <label class="pp-field" for="pretripHotelPaymentDateInput"><span>결제일 <b aria-hidden="true">*</b></span><input id="pretripHotelPaymentDateInput" type="date" data-compact-date="true" required /></label>
+                    <fieldset class="pp-method-field"><legend>결제 수단</legend><input id="pretripHotelPaymentMethodInput" type="hidden" value="card" /><div class="pp-method" role="group" aria-label="숙소 결제 수단"><button type="button" data-pretrip-payment="card" aria-pressed="true">카드</button><button type="button" data-pretrip-payment="cash" aria-pressed="false">현금</button></div></fieldset>
+                  </div>
+                </section>
+                <details class="pp-extra" id="pretripHotelDetails"><summary><i class="ph ph-note" aria-hidden="true"></i><span>주소 · 예약번호 · 객실 · 메모 <small>(선택)</small></span><i class="ph ph-caret-down" aria-hidden="true"></i></summary><div>
+                  <label class="pp-field" for="pretripHotelAddressInput"><span>주소 · 장소</span><input id="pretripHotelAddressInput" type="text" maxlength="600" placeholder="숙소 주소 또는 지도 검색어" autocomplete="off" /></label>
+                  <label class="pp-field" for="pretripHotelBookingCodeInput"><span>예약번호</span><input id="pretripHotelBookingCodeInput" type="text" maxlength="28" placeholder="예: HTL89024" autocomplete="off" spellcheck="false" /></label>
+                  <div class="pp-grid"><label class="pp-field" for="pretripHotelRoomInput"><span>객실 · 요금제</span><input id="pretripHotelRoomInput" type="text" maxlength="100" placeholder="더블룸, 조식 포함" /></label><label class="pp-field" for="pretripHotelGuestsInput"><span>인원</span><input id="pretripHotelGuestsInput" type="number" min="1" max="999" step="1" inputmode="numeric" placeholder="2" /></label></div>
+                  <label class="pp-field" for="pretripHotelNoteInput"><span>메모</span><textarea id="pretripHotelNoteInput" maxlength="3000" rows="2" placeholder="취소 규정, 체크인 요청 등"></textarea></label>
+                </div></details>
+                <p id="pretripHotelError" class="pp-error" role="alert" hidden></p>
               </form>
+              <p class="pp-save-help"><i class="ph ph-info" aria-hidden="true"></i>지출 기록과 예약 지갑에 함께 저장돼요.</p>
             </section>
 
             <form class="expense-form" id="expenseForm">
@@ -525,7 +491,7 @@
               </label>
               <label class="wide" for="descriptionInput">
                 <span>내용</span>
-                <input id="descriptionInput" type="text" maxlength="44" placeholder="예: 점심, 입장권" required />
+                <input id="descriptionInput" type="text" maxlength="140" placeholder="예: 점심, 입장권" required />
               </label>
               <span id="amountFieldAnchor" hidden></span>
               <label class="expense-amount-field" for="amountInput">
@@ -1013,14 +979,19 @@
           <button class="itinerary-icon-button" id="itineraryMenuButton" type="button" aria-label="여행 메뉴 열기" aria-haspopup="dialog"><i class="ph ph-list" aria-hidden="true"></i></button>
         </header>
         <section class="itinerary-heading" aria-label="여행 일정">
-          <h1>일정 계획</h1>
+          <div class="itinerary-title-row"><h1>일정 계획</h1></div>
           <p id="itineraryTripName"></p>
-          <span id="itineraryDateRange" hidden></span>
+          <span class="itinerary-trip-meta" id="itineraryDateRange"></span>
         </section>
-        <div class="itinerary-day-strip" id="itineraryDayStrip" aria-label="일정 일차 선택"></div>
+        <div class="itinerary-view-switch" role="tablist" aria-label="일정 보기 방식">
+          <button id="itineraryEditTab" type="button" role="tab" aria-selected="true" aria-controls="itineraryEditView" data-itinerary-view="edit"><i class="ph ph-pencil-simple" aria-hidden="true"></i>일정 편집</button>
+          <button id="itinerarySummaryTab" type="button" role="tab" aria-selected="false" aria-controls="itinerarySummaryView" tabindex="-1" data-itinerary-view="summary"><i class="ph ph-list-bullets" aria-hidden="true"></i>일정 요약</button>
+        </div>
+        <section id="itineraryEditView" role="tabpanel" aria-labelledby="itineraryEditTab">
+        <div class="itinerary-days-toolbar"><div class="itinerary-day-strip" id="itineraryDayStrip" aria-label="일정 일차 선택"></div><button class="itinerary-view-all" id="itineraryViewAllButton" type="button" aria-pressed="false" aria-controls="itineraryList" aria-label="전체 일정 보기" title="전체 일정 보기"><i class="ph ph-list-bullets" aria-hidden="true"></i><span>전체 일정</span></button></div>
         <section class="itinerary-workspace">
           <div class="itinerary-day-heading">
-            <h2 id="itinerarySelectedDayTitle"></h2>
+            <div><h2 id="itinerarySelectedDayTitle"></h2><p class="itinerary-day-summary" id="itineraryDaySummary" aria-live="polite"></p></div>
             <button class="itinerary-map-button" id="itineraryMapButton" type="button"><i class="ph ph-map-pin" aria-hidden="true"></i><span>지도 보기</span></button>
           </div>
           <div class="itinerary-list" id="itineraryList"></div>
@@ -1032,6 +1003,14 @@
           <button class="itinerary-inline-add" type="button" data-itinerary-add><i class="ph ph-plus-circle" aria-hidden="true"></i><span>일정 추가하기</span></button>
         </section>
         <div class="itinerary-add-dock"><button class="itinerary-primary" id="itineraryAddButton" type="button" data-itinerary-add><i class="ph ph-plus" aria-hidden="true"></i><span>일정 추가</span></button></div>
+        </section>
+        <section id="itinerarySummaryView" role="tabpanel" aria-labelledby="itinerarySummaryTab" hidden>
+          <div class="itinerary-summary-toolbar"><div class="itinerary-summary-total"><i class="ph ph-calendar-blank" aria-hidden="true"></i><p id="itinerarySummaryTotal"></p></div><button id="itinerarySummaryCopy" type="button"><i class="ph ph-copy" aria-hidden="true"></i><span>요약 복사</span></button></div>
+          <p id="itinerarySummaryCopyStatus" class="itinerary-summary-copy-status" role="status" aria-live="polite" hidden></p>
+          <div id="itinerarySummaryCopyFallback" class="itinerary-summary-copy-fallback" hidden><label for="itinerarySummaryCopyText">복사할 일정 요약</label><textarea id="itinerarySummaryCopyText" rows="7" readonly></textarea></div>
+          <div id="itinerarySummaryDays"></div>
+          <div id="itinerarySummaryEmpty" class="itinerary-summary-empty" hidden><i class="ph ph-calendar-plus" aria-hidden="true"></i><h2>아직 등록한 일정이 없어요</h2><p>일정을 추가하면 날짜별 동선과 시간을 모아 볼 수 있어요.</p><button type="button" id="itinerarySummaryAdd">첫 일정 추가</button></div>
+        </section>
         <nav class="itinerary-bottom-nav" aria-label="일정 화면 메뉴">
   <button type="button" data-itinerary-target="overview"><i class="ph ph-house" aria-hidden="true"></i><span>개요</span></button>
   <button type="button" data-itinerary-target="itinerary" aria-current="page"><i class="ph ph-calendar-blank" aria-hidden="true"></i><span>일정</span></button>
@@ -1051,11 +1030,16 @@
             <div class="itinerary-editor-scroll">
               <section class="map-section-top itinerary-editor-map" aria-label="일정 동선 지도">
                 <div class="map-frame-wrap">
-                  <iframe id="googleMapFrame" title="지도 위치 미리보기" loading="lazy" referrerpolicy="no-referrer-when-downgrade" hidden></iframe>
-                  <div id="leafletMap"></div>
+                  <iframe id="googleMapFrame" title="Google 지도 위치 미리보기" loading="eager" referrerpolicy="no-referrer-when-downgrade" hidden></iframe>
+                  <div id="leafletMap" hidden></div>
+                  <div id="itineraryDomesticMap" class="triplog-domestic-map" hidden></div>
+                  <div id="naverMapPreview" class="itinerary-naver-preview" hidden></div>
                   <div class="itinerary-map-empty" id="itineraryMapEmpty" hidden><i class="ph ph-map-trifold" aria-hidden="true"></i><span>장소를 검색하면 지도에서 확인할 수 있어요.</span></div>
                 </div>
-                <button class="itinerary-route-button" id="itineraryRouteButton" type="button"><i class="ph ph-crosshair" aria-hidden="true"></i><span>전체 동선</span></button>
+                <div class="itinerary-map-actions">
+                  <a class="itinerary-map-open" id="googleMapsLink" href="https://www.google.com/maps" target="_self" rel="noopener noreferrer external"><i class="ph ph-arrow-square-out" aria-hidden="true"></i><span>Google 지도에서 열기</span></a>
+                  <button class="itinerary-route-button" id="itineraryRouteButton" type="button"><i class="ph ph-crosshair" aria-hidden="true"></i><span>전체 동선</span></button>
+                </div>
                 <div class="map-current" hidden><span id="mapCurrentLabel"></span><strong id="mapCurrentPlace"></strong></div>
               </section>
               <section class="itinerary-editor-sheet">
@@ -1097,7 +1081,7 @@
                         <div class="ticket-input-grid">
                           <label for="itineraryVoucherName"><span>티켓 이름</span><input id="itineraryVoucherName" type="text" maxlength="36" placeholder="예: 전망대 입장권" /></label>
                           <label for="itineraryVoucherCode"><span>예약 번호</span><input id="itineraryVoucherCode" type="text" maxlength="32" placeholder="예약 번호 입력" /></label>
-                          <label class="wide" for="itineraryVoucherFile"><span>예약 증빙 (이미지·PDF, 최대 1.5MB)</span><input id="itineraryVoucherFile" type="file" accept="image/*,application/pdf" hidden /><div class="ticket-file-row"><button type="button" id="ticketFileSelectBtn">파일 선택</button><span id="ticketFileNameDisplay">선택된 파일 없음</span><button type="button" id="ticketFileResetBtn" style="display:none">삭제</button></div></label>
+                          <label class="wide" for="itineraryVoucherFile"><span>예약 증빙 (JPG·PNG·GIF·WebP·PDF, 최대 1.5MB)</span><input id="itineraryVoucherFile" type="file" accept="image/jpeg,image/png,image/gif,image/webp,application/pdf" hidden /><div class="ticket-file-row"><button type="button" id="ticketFileSelectBtn">파일 선택</button><span id="ticketFileNameDisplay">선택된 파일 없음</span><button type="button" id="ticketFileResetBtn" style="display:none">삭제</button></div></label>
                         </div>
                       </div>
                     </div>
@@ -1123,8 +1107,8 @@
 
         <dialog class="itinerary-menu-dialog" id="itineraryMenuDialog" aria-labelledby="itineraryMenuTitle">
           <header><h2 id="itineraryMenuTitle">여행 메뉴</h2><button class="itinerary-icon-button" type="button" data-close-itinerary-menu aria-label="여행 메뉴 닫기" autofocus><i class="ph ph-x" aria-hidden="true"></i></button></header>
-          <div class="itinerary-menu-links"><button type="button" data-itinerary-target="start">여행 선택 · 만들기<i class="ph ph-caret-right" aria-hidden="true"></i></button><button type="button" data-itinerary-sync>여행 동기화<i class="ph ph-arrows-clockwise" aria-hidden="true"></i></button><button type="button" data-itinerary-target="settlement">정산<i class="ph ph-caret-right" aria-hidden="true"></i></button><button type="button" data-itinerary-tools>준비물 · 시간 통계<i class="ph ph-caret-right" aria-hidden="true"></i></button><button type="button" data-itinerary-target="settings">설정<i class="ph ph-caret-right" aria-hidden="true"></i></button></div>
-          <div class="itinerary-map-links"><a id="naverMapsLink" href="https://map.naver.com" target="_blank" rel="noreferrer">네이버지도 열기</a><a id="googleMapsLink" href="https://maps.google.com" target="_blank" rel="noreferrer">Google 지도 열기</a></div>
+          <div class="itinerary-menu-links"><button type="button" data-itinerary-target="start">여행 선택 · 만들기<i class="ph ph-caret-right" aria-hidden="true"></i></button><button type="button" data-itinerary-sync-status>저장 상태<i class="ph ph-arrows-clockwise" aria-hidden="true"></i></button><button type="button" data-itinerary-target="settlement">정산<i class="ph ph-caret-right" aria-hidden="true"></i></button><button type="button" data-itinerary-tools>준비물 · 시간 통계<i class="ph ph-caret-right" aria-hidden="true"></i></button><button type="button" data-itinerary-target="settings">설정<i class="ph ph-caret-right" aria-hidden="true"></i></button></div>
+          <div class="itinerary-map-links"><a id="naverMapsLink" href="https://map.naver.com" target="_blank" rel="noreferrer">네이버지도 열기</a></div>
           <div class="segmented" id="itineraryModeToggle" aria-label="일정 보기"><button data-mode="edit" type="button">일차별 보기</button><button data-mode="overview" type="button">전체 일정</button></div>
           <button id="backToBudgetButton" type="button" hidden>가계부</button>
         </dialog>
@@ -1372,6 +1356,6 @@
       </div>
       <div class="receipt-dialog-footer"><button id="receiptApplyButton" class="receipt-button" type="submit" form="receiptReviewForm" disabled>지출 폼에 채우기</button><span>지출 폼에서 ‘추가’를 눌러야 저장돼요.</span></div>
     </dialog>
-    <script src="./app.js?v=companion-20260914-2"></script>
+    <script src="./app.js?v=cc8c00b843a1677c2694"></script>
   </body>
 </html>

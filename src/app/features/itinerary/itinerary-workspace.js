@@ -1,6 +1,78 @@
 (() => {
   const query = selector => document.querySelector(selector);
   let dialog, menu, toolsDialog, returnFocus, draftTripId, ready = false;
+  const mapDraftKey = 'triplog.itineraryMapDraft.v1';
+  const mapDraftFields = ['itineraryDaySelect', 'itineraryTimeInput', 'itineraryEndTimeInput',
+    'itineraryThemeSelect', 'itineraryTransSelect', 'itineraryPlaceInput', 'itineraryLocationInput',
+    'manualAddressInput', 'itineraryMemoInput', 'itineraryVoucherName', 'itineraryVoucherCode'];
+  let pendingMapDraft = null, mapDraftAuthObserver;
+
+  function clearMapDraft() {
+    pendingMapDraft = null;
+    mapDraftAuthObserver?.disconnect();
+    try { sessionStorage.removeItem(mapDraftKey); } catch (_) { /* Storage may be unavailable. */ }
+  }
+
+  function prepareMapNavigation(event) {
+    // Keep native link activation: mobile app links must not wait for a lookup,
+    // window.open(), or a popup inside Google's cross-origin iframe.
+    const link = els.googleMapsLink;
+    if (!link.hasAttribute('href') || link.getAttribute('aria-disabled') === 'true') { event.preventDefault(); return; }
+    link.target = matchMedia('(any-pointer: coarse)').matches ? '_self' : '_blank';
+    if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey
+      || link.target !== '_self' || !dialog.open) return;
+    cancelPlaceLookup();
+    const external = new URL(link.href);
+    const draft = {
+      tripId: getActiveTripId(), savedAt: Date.now(), editingId: editingItineraryId,
+      fields: Object.fromEntries(mapDraftFields.map(id => [id, query(`#${id}`).value])),
+      candidate: selectedPlaceCandidate, voucherFile: currentVoucherFile, voucherFileName: currentVoucherFileName,
+      searchHidden: query('#itineraryPlaceSearchPanel').hidden,
+      extraOpen: query('#itineraryExtraDetails').open, ticketOpen: !els.itineraryTicketSection.hidden,
+      manualOpen: !els.manualAddressPanel.hidden,
+      mapQuery: link.dataset.mapQuery || external.searchParams.get('query'), mapPlaceId: external.searchParams.get('query_place_id'),
+      mapPlace: els.mapCurrentPlace.textContent, route: link.dataset.mapRoute === 'true' || external.pathname === '/maps/dir/',
+    };
+    try { sessionStorage.setItem(mapDraftKey, JSON.stringify(draft)); }
+    catch (_) {
+      // If storage is full/disabled, keep the live form in its existing tab.
+      link.target = '_blank';
+    }
+  }
+
+  function restoreMapDraft() {
+    if (!pendingMapDraft || document.documentElement.dataset.auth !== 'signed-in') return;
+    const draft = pendingMapDraft;
+    clearMapDraft();
+    if (dialog.open || draft.tripId !== getActiveTripId()
+      || !Number.isFinite(draft.savedAt) || Date.now() - draft.savedAt > 24 * 60 * 60 * 1000
+      || !getTripDays().some(day => day.date === draft.fields?.itineraryDaySelect)
+      || (draft.editingId && !findItineraryItem(draft.editingId))) return;
+    setActivePage('itinerary');
+    clearItineraryEditMode(false);
+    for (const id of mapDraftFields) {
+      if (typeof draft.fields[id] === 'string') query(`#${id}`).value = draft.fields[id];
+    }
+    editingItineraryId = draft.editingId || null;
+    selectedPlaceCandidate = draft.candidate || null;
+    setVoucherFile(draft.voucherFile || null, draft.voucherFileName || null);
+    els.ticketFileNameDisplay.textContent = currentVoucherFileName || '선택된 파일 없음';
+    els.ticketFileResetBtn.style.display = currentVoucherFileName ? 'inline-flex' : 'none';
+    [els.itineraryDaySelect, els.itineraryThemeSelect, els.itineraryTransSelect].forEach(input => syncCustomSelect(input));
+    [els.itineraryTimeInput, els.itineraryEndTimeInput].forEach(input => syncCustomTimePicker(input));
+    show({ edit: true, previewMap: false });
+    query('#itineraryPlaceSearchPanel').hidden = Boolean(draft.searchHidden);
+    query('#itineraryExtraDetails').open = Boolean(draft.extraOpen);
+    els.itineraryTicketSection.hidden = !draft.ticketOpen;
+    els.itineraryTicketToggleBtn.classList.toggle('open', Boolean(draft.ticketOpen));
+    els.itineraryTicketToggleBtn.setAttribute('aria-expanded', String(Boolean(draft.ticketOpen)));
+    els.itineraryTicketToggleBtn.querySelector('.ticket-toggle-chevron').textContent = draft.ticketOpen ? '▲' : '▼';
+    els.manualAddressPanel.hidden = !draft.manualOpen;
+    syncPlace();
+    if (draft.route) showFullRoute();
+    else if (draft.mapQuery) renderTripMapPreview({ place: draft.mapPlace, mapQuery: draft.mapQuery, placeId: draft.mapPlaceId });
+    else previewRoute();
+  }
 
   function render(days = getTripDays()) {
     if (!dialog) return;
@@ -24,9 +96,19 @@
     els.itinerarySubmitButton.querySelector("span").textContent = editingItineraryId ? "일정 저장" : "일정에 추가";
     const themeIcon = query("[data-itinerary-theme-icon]");
     if (themeIcon) themeIcon.className = `ph ph-${els.itineraryThemeSelect.value === "sightseeing" ? "bank" : (itineraryThemes[els.itineraryThemeSelect.value]?.icon || "map-pin")}`;
+    const lodging = els.itineraryThemeSelect.value === 'lodging';
+    const startField = els.itineraryTimeInput.closest('.time-field-item');
+    const endField = els.itineraryEndTimeInput.closest('.time-field-item');
+    startField.querySelector(':scope > span').textContent = lodging ? '도착 시각' : '시작';
+    startField.querySelector('.custom-time-button')?.setAttribute('aria-label', lodging ? '도착 시각 선택' : '시작 시간 선택');
+    startField.querySelector('.custom-time-value')?.setAttribute('aria-label', lodging ? '도착 시각' : '시작 시간');
+    endField.hidden = lodging;
+    els.itineraryEndTimeInput.disabled = lodging;
+    syncCustomTimePicker(els.itineraryEndTimeInput);
+    startField.parentElement.classList.toggle('is-lodging', lodging);
   }
 
-  function show({ edit = false } = {}) {
+  function show({ edit = false, previewMap = true } = {}) {
     if (!dialog) return;
     if (!dialog.open) returnFocus = document.activeElement;
     draftTripId = getActiveTripId();
@@ -45,17 +127,16 @@
     document.documentElement.classList.add("itinerary-dialog-open");
     dialog.querySelector(".itinerary-editor-scroll").scrollTop = 0;
     query("#itineraryEditorTitle").focus({ preventScroll: true });
-    requestAnimationFrame(() => {
-      previewRoute();
-      leafletMapInstance?.invalidateSize();
-    });
+    if (previewMap) previewRoute();
   }
 
   function close() { if (dialog?.open) dialog.close(); }
 
   function cleanup() {
+    hideEmbeddedDomesticMap(query('#itineraryDomesticMap'));
+    clearMapDraft();
     leafletRenderToken++;
-    placeSearchAbortController?.abort(); placeSearchAbortController = null;
+    cancelPlaceLookup();
     els.placeSearchButton.disabled = false;
     clearPlaceSearchTimer(); closePlaceSearchResults(); closeManualAddressPanel();
     clearItineraryEditMode(false);
@@ -75,92 +156,44 @@
       query("#itineraryPlaceSearchPanel").hidden = true;
       query("#itineraryPlaceSummary").hidden = false;
     }
-    const candidate = selectedPlaceCandidate || (editingItineraryId && findItineraryItem(editingItineraryId));
-    const coords = candidate && getItemLatLng(candidate, { requireSignature: false });
+    // The place summary does not fetch a second map provider's thumbnail.
     const thumbnail = query("#itineraryPlaceThumbnail");
-    thumbnail.hidden = !coords;
-    if (coords) {
-      // Use the same real map tiles as the map; never invent a photo of a saved place.
-      const zoom = 15, n = 2 ** zoom, radians = Math.max(-85, Math.min(85, coords.lat)) * Math.PI / 180;
-      const x = Math.floor((coords.lon + 180) / 360 * n);
-      const y = Math.floor((1 - Math.asinh(Math.tan(radians)) / Math.PI) / 2 * n);
-      thumbnail.src = `https://tile.openstreetmap.org/${zoom}/${x}/${y}.png`;
-    } else thumbnail.removeAttribute("src");
+    thumbnail.hidden = true;
+    thumbnail.removeAttribute("src");
   }
 
   function previewRoute() {
     if (!dialog?.open) return;
-    if (!window.L) {
-      query("#itineraryMapEmpty").hidden = false;
-      return;
-    }
-    query("#itineraryMapEmpty").hidden = true;
     const date = els.itineraryDaySelect.value;
-    const items = state.itineraryItems.filter(item => item.date === date).sort((a, b) => (a.time || "99:99").localeCompare(b.time || "99:99"));
-    const candidate = selectedPlaceCandidate;
-    const points = items.map(item => ({ item, coords: getItemLatLng(item, { requireSignature: true }) })).filter(point => point.coords);
-    if (candidate && getItemLatLng(candidate, { requireSignature: false })) {
-      const coords = getItemLatLng(candidate, { requireSignature: false });
-      const existing = points.find(point => point.item.id === editingItineraryId);
-      if (existing) { existing.item = { ...existing.item, ...candidate }; existing.coords = coords; }
-      else if (!points.some(point => point.item.place === candidate.place && point.coords.lat === coords.lat && point.coords.lon === coords.lon)) points.push({ item: candidate, coords });
-    }
-    if (!points.length) { updateMapPreview(candidate || buildTripMapFallbackItem()); return; }
-    leafletRenderToken++;
-    initLeafletMap();
-    leafletMapInstance.invalidateSize(); leafletMarkersGroup.clearLayers();
-    leafletMapInstance.eachLayer(layer => { if (layer instanceof L.Popup) leafletMapInstance.removeLayer(layer); });
-    if (leafletRouteLine) { leafletMapInstance.removeLayer(leafletRouteLine); leafletRouteLine = null; }
-    points.forEach((point, index) => {
-      const candidateCoords = candidate && getItemLatLng(candidate, { requireSignature: false });
-      const active = candidateCoords ? point.coords.lat === candidateCoords.lat && point.coords.lon === candidateCoords.lon : point.item.id === state.selectedItineraryId;
-      const icon = L.divIcon({ className: `itinerary-numbered-pin${active ? " active" : ""}`, html: `<span>${index + 1}</span>`, iconSize: [34, 42], iconAnchor: [17, 42] });
-      L.marker([point.coords.lat, point.coords.lon], { icon, title: point.item.place })
-        .bindTooltip(escapeHtml(point.item.place || "장소"), { direction: "bottom", offset: [0, 5], className: "itinerary-map-label" })
-        .on("click", () => {
-          // Picking a map position changes the draft place, never the record being edited.
-          applyPlaceSearchResult({ ...point.item, id: `map-selection:${index}`, lat: point.coords.lat, lon: point.coords.lon,
-            source: point.item.coordinateSource || point.item.source || "coordinate-text" });
-        }).addTo(leafletMarkersGroup);
-    });
-    const latlngs = points.map(point => [point.coords.lat, point.coords.lon]);
-    if (latlngs.length > 1) leafletRouteLine = L.polyline(latlngs, { color: "#111827", weight: 3, dashArray: "5 8", opacity: 0.9 }).addTo(leafletMapInstance);
-    if (latlngs.length === 1) leafletMapInstance.setView(latlngs[0], 14);
-    else leafletMapInstance.fitBounds(L.latLngBounds(latlngs), { padding: [40, 46], maxZoom: 15 });
-    const mapItem = candidate || points[0].item;
-    syncGoogleMapsLink(buildMapQuery(mapItem)); syncNaverMapsLink(mapItem);
-    if (items.length > 1) els.googleMapsLink.href = buildGoogleMapsRouteUrls(items).external;
+    const items = sortItineraryItems(state.itineraryItems.filter(item => item.date === date));
+    const selected = selectedPlaceCandidate
+      || items.find(item => item.id === editingItineraryId || item.id === state.selectedItineraryId)
+      || items[0]
+      || buildTripMapFallbackItem();
+    updateMapPreview(selected);
   }
 
-  async function showFullRoute() {
-    const items = state.itineraryItems.filter(item => item.date === els.itineraryDaySelect.value)
-      .sort((a, b) => (a.time || "99:99").localeCompare(b.time || "99:99"));
-    if (items.length < 2) { previewRoute(); return; }
-    const button = els.itineraryRouteButton;
-    button.disabled = true; button.querySelector("span").textContent = "동선 확인 중";
-    try {
-      const result = await renderLeafletRoute(items);
-      if (!dialog.open || result?.cancelled) return;
-      if (!result || result.validStops < 2) showToast("장소의 주소를 확인하면 전체 동선을 볼 수 있어요.");
-      else if (result.validStops < items.length) showToast(`${items.length}개 중 좌표를 확인한 ${result.validStops}개 장소를 표시했어요.`);
-      else if (result.fallbackSegments) showToast("경로를 찾지 못한 구간은 방문 순서로 연결했어요.");
-      els.googleMapsLink.href = buildGoogleMapsRouteUrls(items).external;
-      syncNaverMapsLink(buildNaverMapsRouteSearchQuery(items));
-    } catch (error) {
-      if (dialog.open) { previewRoute(); showToast("동선을 불러오지 못했어요. 지도 앱에서 길찾기를 열 수 있어요."); }
-    } finally {
-      button.disabled = false; button.querySelector("span").textContent = "전체 동선";
-    }
+  function showFullRoute() {
+    const items = sortItineraryItems(state.itineraryItems.filter(item => item.date === els.itineraryDaySelect.value));
+    if (!items.length) { previewRoute(); return; }
+    renderTripMapRoute(items);
   }
 
-  function openMenu() { if (!menu.open) menu.showModal(); }
+  function openMenu() { syncNaverMapsLink(); if (!menu.open) menu.showModal(); }
 
   function navigate(page) {
     menu?.close(); toolsDialog?.close(); close();
     setActivePage(page);
   }
 
-  function downloadTicket(item) {
+  async function downloadTicket(item) {
+    if (String(item.voucherFile || "").startsWith("triplog-attachment:")) {
+      try {
+        const url = await window.TripLog.sync.controller.attachmentUrl(state.id, item.voucherFile);
+        const link = document.createElement("a"); link.href = url; link.download = item.voucherFileName || "여행-티켓"; link.rel = "noopener noreferrer"; link.click();
+      } catch (_) { showToast("첨부 파일을 열지 못했어요. 인터넷 연결과 여행 권한을 확인해 주세요."); }
+      return;
+    }
     if (!/^data:(image\/[a-z0-9.+-]+|application\/pdf);base64,/i.test(item.voucherFile || "")) {
       showToast("첨부 파일 형식을 확인해 주세요."); return;
     }
@@ -171,13 +204,25 @@
   function setup() {
     if (ready) return; ready = true;
     dialog = query("#itineraryEditor"); menu = query("#itineraryMenuDialog"); toolsDialog = query("#itineraryToolsDialog");
-    dialog.querySelectorAll(".custom-time-icon").forEach(icon => { icon.innerHTML = itineraryIcon("caret-down"); });
+    els.googleMapFrame.addEventListener("load", () => els.googleMapFrame.setAttribute("aria-busy", "false"));
+    els.googleMapsLink.addEventListener('click', prepareMapNavigation);
+    try { pendingMapDraft = JSON.parse(sessionStorage.getItem(mapDraftKey) || 'null'); } catch (_) { clearMapDraft(); }
+    if (pendingMapDraft) {
+      // Authentication can finish after init; restore only inside the signed-in app.
+      mapDraftAuthObserver = new MutationObserver(restoreMapDraft);
+      mapDraftAuthObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-auth'] });
+      queueMicrotask(restoreMapDraft);
+    }
+    window.addEventListener('pageshow', event => {
+      if (event.persisted && dialog.open) clearMapDraft(); // bfcache already retained the live form.
+    });
+    document.addEventListener('visibilitychange', () => {
+      // App handoff can return without navigating away from this document.
+      if (document.visibilityState === 'visible' && dialog.open) clearMapDraft();
+    });
     [els.itineraryTimeInput, els.itineraryEndTimeInput].forEach(input => {
       const label = input === els.itineraryTimeInput ? "시작 시간" : "종료 시간";
       const shell = input.closest(".custom-time");
-      const clockIcon = document.createElement("i"); clockIcon.className = "ph ph-clock"; clockIcon.setAttribute("aria-hidden", "true");
-      clockIcon.addEventListener("click", () => shell.querySelector(".custom-time-icon").click());
-      shell.querySelector(".custom-time-button").prepend(clockIcon);
       shell.querySelector(".custom-time-value").setAttribute("aria-label", label);
       shell.querySelector(".custom-time-button").setAttribute("aria-label", `${label} 선택`);
     });
@@ -192,7 +237,7 @@
       if (event.target.closest("[data-itinerary-menu]")) openMenu();
       const nav = event.target.closest("[data-itinerary-target]"); if (nav) navigate(nav.dataset.itineraryTarget);
       if (event.target.closest("[data-close-itinerary-menu]")) menu.close();
-      if (event.target.closest("[data-itinerary-sync]")) { menu.close(); els.itineraryPageButton.click(); }
+      if (event.target.closest("[data-itinerary-sync-status]")) { menu.close(); els.itineraryPageButton.click(); }
       if (event.target.closest("[data-itinerary-tools]")) {
         menu.close(); toolsDialog.showModal(); renderItineraryPage();
       }
@@ -200,6 +245,10 @@
     query("#itineraryMenuButton").addEventListener("click", openMenu);
     query("#itineraryToolsClose").addEventListener("click", () => toolsDialog.close());
     query("#itineraryMapButton").addEventListener("click", () => show());
+    els.itineraryViewAllButton.addEventListener("click", () => {
+      const mode = state.selectedItineraryDate === "all" ? "edit" : "overview";
+      els.itineraryModeToggle.querySelector(`[data-mode="${mode}"]`).click();
+    });
     query("#itineraryEditorClose").addEventListener("click", close);
     dialog.addEventListener("close", cleanup);
     for (const modal of [dialog, menu, toolsDialog]) modal.addEventListener("click", event => { if (event.target === modal) modal.close(); });

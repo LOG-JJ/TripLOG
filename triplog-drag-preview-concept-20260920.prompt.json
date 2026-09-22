@@ -1,0 +1,8 @@
+{
+  "prompt": "Create a visual interaction concept for TripLOG itinerary drag and drop using the existing interface in the reference. Show the active drag state: a translucent card-sized placeholder for the dragged itinerary occupies the proposed insertion position between two itinerary rows, surrounding rows have shifted to make room, and the lifted itinerary card follows the cursor. Preserve the existing screen’s style, content, and hierarchy. Show the preview state for a smooth reorder animation.\n\nInput images:\n- insertion-indicator.png: existing TripLOG interface reference.",
+  "inputImages": [
+    "C:/Users/tbdk5/AppData/Local/Temp/TripLOG-Order-20260920/insertion-indicator.png"
+  ],
+  "mode": "built-in",
+  "overwritten": false
+}

@@ -7,4 +7,6 @@ window.TripLog.register("core.state", {
   set historyRecords(value) { historyRecords = value; },
 });
 
-init();
+window.TripLog.persistence.stateStorage.initializeRepository()
+  .catch(error => { window.TripLog.sync.controller?.setLocalFailure(error); })
+  .finally(() => { init(); window.TripLog.sync.statusUi.setup(); window.TripLog.sync.drafts.setup(); window.TripLog.sync.lifecycle.setup(); document.documentElement.dataset.triplogInitialized = "true"; });

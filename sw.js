@@ -1,0 +1,82 @@
+/* Generated app shell. Never cache account/API responses. */
+const CACHE = "triplog-shell-cc8c00b843a1677c2694";
+const BUILD = "cc8c00b843a1677c2694";
+const ASSETS = ["/Travel.html","/app.js","/apple-touch-icon.png","/favicon-32.png","/icons/triplog-icon-1024.png","/icons/triplog-icon-120.png","/icons/triplog-icon-152.png","/icons/triplog-icon-167.png","/icons/triplog-icon-180.png","/icons/triplog-icon-192.png","/icons/triplog-icon-512.png","/icons/triplog-icon-source.png","/index.html","/site.webmanifest","/src/app/bootstrap/init.js","/src/app/bootstrap/navigation-events.js","/src/app/bootstrap/start.js","/src/app/core/config.js","/src/app/core/namespace.js","/src/app/core/runtime.js","/src/app/data/countries.js","/src/app/features/collaboration/trip-collaboration.js","/src/app/features/dev/sample-data.js","/src/app/features/expenses/currency-controls.js","/src/app/features/expenses/entry-actions.js","/src/app/features/expenses/expense-form.js","/src/app/features/expenses/expense-table.js","/src/app/features/expenses/expense-workspace.js","/src/app/features/expenses/lodging.js","/src/app/features/expenses/pretrip-purchases.js","/src/app/features/expenses/receipt-input.js","/src/app/features/expenses/receipt-ocr.js","/src/app/features/expenses/receipt-parser.js","/src/app/features/expenses/reservation-expense-editor.js","/src/app/features/history/history-actions.js","/src/app/features/history/history-modal.js","/src/app/features/history/history-render.js","/src/app/features/history/history-store.js","/src/app/features/itinerary/drag-preview.js","/src/app/features/itinerary/itinerary-form.js","/src/app/features/itinerary/itinerary-render.js","/src/app/features/itinerary/itinerary-summary.js","/src/app/features/itinerary/itinerary-workspace.js","/src/app/features/itinerary/list-actions.js","/src/app/features/itinerary/map-preview.js","/src/app/features/itinerary/place-search.js","/src/app/features/itinerary/pointer-drag.js","/src/app/features/itinerary/time-views.js","/src/app/features/itinerary/transit-editor.js","/src/app/features/overview/budget-dashboard.js","/src/app/features/overview/overview-page.js","/src/app/features/packing/packing-defaults.js","/src/app/features/packing/packing-list.js","/src/app/features/print/print-export.js","/src/app/features/redesign/design-model.js","/src/app/features/redesign/design-workspace.js","/src/app/features/render/main-render.js","/src/app/features/reports/category-summary.js","/src/app/features/reports/daily-trend.js","/src/app/features/reports/donut-events.js","/src/app/features/reports/report-page.js","/src/app/features/reports/stats-insights.js","/src/app/features/settings/map-geocoding-settings.js","/src/app/features/settings/theme-toggle.js","/src/app/features/settings/travel-mode.js","/src/app/features/settlement/companions.js","/src/app/features/settlement/settlement-formatting.js","/src/app/features/settlement/settlement-model.js","/src/app/features/settlement/settlement-render.js","/src/app/features/settlement/settlement-sources.js","/src/app/features/travel-companion/model.js","/src/app/features/travel-companion/workspace.js","/src/app/navigation/page-router.js","/src/app/navigation/trip-dates.js","/src/app/persistence/archive-db.js","/src/app/persistence/state-storage.js","/src/app/services/maps/domestic-map.js","/src/app/services/maps/domestic-route.js","/src/app/services/maps/geocoding.js","/src/app/services/maps/leaflet-map.js","/src/app/services/maps/query-utils.js","/src/app/services/maps/routing.js","/src/app/shared/currency.js","/src/app/shared/date-time.js","/src/app/shared/factories.js","/src/app/shared/formatters.js","/src/app/shared/itinerary-order.js","/src/app/shared/map-links.js","/src/app/shared/svg-geometry.js","/src/app/shared/time-utils.js","/src/app/shared/totals.js","/src/app/sync/backup.js","/src/app/sync/comments.js","/src/app/sync/controller.js","/src/app/sync/drafts.js","/src/app/sync/engine.js","/src/app/sync/lifecycle.js","/src/app/sync/model.js","/src/app/sync/notes.js","/src/app/sync/presentation.js","/src/app/sync/repository.js","/src/app/sync/settlement-model.js","/src/app/sync/status-ui.js","/src/app/ui/custom-select.js","/src/app/ui/date-picker.js","/src/app/ui/day-strip.js","/src/app/ui/form-controls.js","/src/app/ui/time-picker.js","/src/app/ui/time-wheel.js","/src/assets/archive-box.png","/src/assets/companion-passport-cover.png","/src/assets/companion-passport-sketch.png","/src/assets/companion-ticket-edge.png","/src/assets/login-travel.png","/src/assets/seoul-tower.png","/src/assets/travel-tickets.png","/src/assets/triplog-wordmark.png","/src/assets/wallet-passbook-flight-stamp.png","/src/assets/wallet-passbook-greeting.png","/src/assets/wallet-passbook-notch.png","/src/styles/companion-passport.css","/src/styles/controls.css","/src/styles/expense-polish.css","/src/styles/expenses.css","/src/styles/interactions.css","/src/styles/itinerary-drag.css","/src/styles/itinerary-summary.css","/src/styles/itinerary.css","/src/styles/planning.css","/src/styles/prepurchase.css","/src/styles/receipt.css","/src/styles/redesign.css","/src/styles/reservation-wallet.css","/src/styles/sync.css","/src/styles/transit-editor.css","/src/styles/travel-companion.css","/src/styles/typography.css","/src/styles/wallet-passbook.css","/styles.css","/vendor/leaflet-1.9.4/LICENSE","/vendor/leaflet-1.9.4/SHA256SUMS.txt","/vendor/leaflet-1.9.4/images/layers-2x.png","/vendor/leaflet-1.9.4/images/layers.png","/vendor/leaflet-1.9.4/images/marker-icon-2x.png","/vendor/leaflet-1.9.4/images/marker-icon.png","/vendor/leaflet-1.9.4/images/marker-shadow.png","/vendor/leaflet-1.9.4/leaflet.css","/vendor/leaflet-1.9.4/leaflet.js","/vendor/phosphor-2.1.1/LICENSE","/vendor/phosphor-2.1.1/NOTICE.md","/vendor/phosphor-2.1.1/Phosphor.woff2","/vendor/phosphor-2.1.1/map-pin.svg","/vendor/phosphor-2.1.1/regular.css","/vendor/pretendard-1.3.9/LICENSE","/vendor/pretendard-1.3.9/NOTICE.md","/vendor/pretendard-1.3.9/PretendardVariable.woff2","/vendor/receipt-ocr/HEIC2ANY-LICENSE.md","/vendor/receipt-ocr/NOTICE.md","/vendor/receipt-ocr/SHA256SUMS.txt","/vendor/receipt-ocr/TESSERACT-LICENSE.md","/vendor/receipt-ocr/core-6.1.2/LICENSE","/vendor/receipt-ocr/core-6.1.2/tesseract-core-lstm.wasm.js","/vendor/receipt-ocr/core-6.1.2/tesseract-core-simd-lstm.wasm.js","/vendor/receipt-ocr/heic2any-0.0.4.min.js","/vendor/receipt-ocr/lang/LICENSE","/vendor/receipt-ocr/lang/eng.traineddata.gz","/vendor/receipt-ocr/lang/jpn.traineddata.gz","/vendor/receipt-ocr/lang/kor.traineddata.gz","/vendor/receipt-ocr/tesseract-6.0.1.min.js","/vendor/receipt-ocr/tesseract.min.js.LICENSE.txt","/vendor/receipt-ocr/worker-6.0.1.min.js","/vendor/receipt-ocr/worker.min.js.LICENSE.txt","/vendor/supabase-js-2.107.0.min.js","/vendor/yjs-13.6.32.min.js","/vendor/yjs-LICENSE.txt"];
+const clientBuilds = new Map();
+async function cleanUnusedBuilds() {
+  if (self.registration.installing || self.registration.waiting) return;
+  const pages = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+  // An older tab may still be loading or editing. Keep its complete app until it
+  // identifies its build or closes; never mix its modules with a newer shell.
+  if (pages.some(page => !clientBuilds.has(page.id))) return;
+  const used = new Set([CACHE, ...pages.map(page => `triplog-shell-${clientBuilds.get(page.id)}`)]);
+  const installed = await (await caches.open(CACHE)).match('/__triplog_installed__');
+  const ownTime = installed ? Number(await installed.text()) : 0;
+  for (const name of await caches.keys()) {
+    if (!name.startsWith('triplog-shell-') || used.has(name)) continue;
+    const candidate = await (await caches.open(name)).match('/__triplog_installed__');
+    // A still-finishing event from an old worker must never collect a newer
+    // worker's cache, including one being installed concurrently.
+    if (candidate && Number(await candidate.text()) < ownTime) await caches.delete(name);
+  }
+  for (const id of clientBuilds.keys()) if (!pages.some(page => page.id === id)) clientBuilds.delete(id);
+}
+// Pages canonicalizes .html URLs. Rebuild a followed redirect before returning
+// it to a navigation request whose redirect mode is "manual" (Chrome ERR_FAILED).
+function navigationResponse(response) {
+  if (!response.redirected) return response;
+  return new Response(response.body, { status: response.status, statusText: response.statusText, headers: response.headers });
+}
+self.addEventListener('install', event => {
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE);
+    await cache.addAll(ASSETS.map(path => new Request(path, { cache: 'reload' })));
+    for (const path of ['/Travel.html', '/index.html']) {
+      const response = await cache.match(path);
+      if (response?.redirected) await cache.put(path, navigationResponse(response));
+    }
+    await cache.put('/__triplog_installed__', new Response(String(Date.now())));
+    // Activate only after the complete shell is cached. Existing documents keep
+    // their inputs and running code; the next navigation uses the safe new build.
+    // Waiting for every phone/desktop tab to close left unsafe writers alive.
+    await self.skipWaiting();
+  })());
+});
+self.addEventListener('message', event => {
+  if (['TRIPLOG_REPAIR_NAVIGATION', 'TRIPLOG_ACTIVATE_UPDATE'].includes(event.data?.type)) event.waitUntil(self.skipWaiting());
+  if (event.data?.type === 'TRIPLOG_GET_BUILD') {
+    if (event.source?.id && /^[a-f0-9]{20}$/.test(event.data.build || '')) clientBuilds.set(event.source.id, event.data.build);
+    event.ports[0]?.postMessage({ type: 'TRIPLOG_BUILD', build: BUILD });
+    event.waitUntil(cleanUnusedBuilds());
+  }
+});
+self.addEventListener('activate', event => {
+  event.waitUntil((async () => {
+    // Remove the known broken navigation cache without evicting healthy builds
+    // still used by open editors in another tab.
+    for (const name of await caches.keys()) {
+      if (!name.startsWith('triplog-shell-') || name === CACHE) continue;
+      const previous = await (await caches.open(name)).match('/Travel.html');
+      if (previous?.redirected) await caches.delete(name);
+    }
+    await self.clients.claim();
+  })());
+});
+self.addEventListener('fetch', event => {
+  const request = event.request, url = new URL(request.url);
+  if (request.method !== 'GET' || url.origin !== self.location.origin) return;
+  const route = ['/', '/Travel', '/Travel.html', '/index.html'].includes(url.pathname) && request.mode === 'navigate';
+  if (!route && !ASSETS.includes(url.pathname)) return;
+  event.respondWith((async () => {
+    if (route && event.resultingClientId) clientBuilds.set(event.resultingClientId, BUILD);
+    const requested = url.searchParams.get('v');
+    if (!route && event.clientId && /^[a-f0-9]{20}$/.test(requested || '')) clientBuilds.set(event.clientId, requested);
+    const version = route ? BUILD : clientBuilds.get(event.clientId) || BUILD;
+    const name = `triplog-shell-${version}`;
+    const cache = await caches.open((await caches.keys()).includes(name) ? name : CACHE);
+    const cached = await cache.match(route ? '/Travel.html' : url.pathname, { ignoreSearch: true });
+    if (cached) return route ? navigationResponse(cached) : cached;
+    const response = await fetch(request);
+    return route ? navigationResponse(response) : response;
+  })());
+});

@@ -36,7 +36,21 @@ function setupPaymentMethodToggle() {
   setPaymentMethod(els.paymentMethodInput?.value);
 }
 
+let expenseSubmissionPending = false;
+
 async function handleExpenseSubmit(event) {
+  event.preventDefault();
+  if (expenseSubmissionPending) return;
+  expenseSubmissionPending = true;
+  window.TripLog.features.expenses.workspace?.beginSubmit(event.submitter);
+  try { await saveExpenseForm(event); }
+  finally {
+    expenseSubmissionPending = false;
+    window.TripLog.features.expenses.workspace?.setSaving(false);
+  }
+}
+
+async function saveExpenseForm(event) {
   event.preventDefault();
 
   if (state.travelMode === "overseas") updateConvertedAmount();
@@ -51,7 +65,11 @@ async function handleExpenseSubmit(event) {
   const submitTrip=state.id, submitEditingId=editingId;
   if (!await receiptInput.beforeSubmit()) return;
   if(submitTrip!==state.id || submitEditingId!==editingId) { showToast("입력 중 여행이 변경됐어요. 다시 확인해 주세요."); return; }
+  const reservationEditor = window.TripLog.features.expenses.reservationEditor;
+  const reservationIssue = reservationEditor.validate();
+  if (reservationIssue) { showToast(reservationIssue.message); reservationIssue.target?.focus(); return; }
   const receipt = receiptInput.metadata() || (editingId ? findEntry(editingId)?.receipt : null);
+  const previousEntries = [...state.entries];
 
   if (isLodgingSplitMode()) {
     const lodgingPlan = getLodgingPlan();
@@ -77,8 +95,10 @@ async function handleExpenseSubmit(event) {
       }).map((entry) => ({...entry, ...(receipt ? {receipt} : {}), ...window.TripLog.features.redesign?.workspace?.expenseMetadata()})),
     );
 
+    if (!await saveAndRender()) { if (state.id === submitTrip) state.entries = previousEntries; showToast("기기에 저장하지 못했어요. 입력 내용은 유지됩니다."); return; }
+    if (state.id !== submitTrip) return;
+    await window.TripLog.sync.drafts?.clear("expenseForm", submitTrip, submitEditingId);
     resetExpenseFormAfterSubmit();
-    saveAndRender();
     window.TripLog.features.redesign?.workspace?.expenseSaved();
     return;
   }
@@ -102,17 +122,25 @@ async function handleExpenseSubmit(event) {
     createdAt: editingId ? findEntry(editingId)?.createdAt || Date.now() : Date.now(),
     ...(receipt ? { receipt } : {}),
     ...window.TripLog.features.redesign?.workspace?.expenseMetadata(),
+    ...reservationEditor.metadata(),
   };
 
   if (editingId) {
+    const linked = state.itineraryItems.find(item => item.expenseId === editingId && item.syncExpense !== false);
+    if (linked && (entry.amount !== findEntry(editingId)?.amount || entry.date !== findEntry(editingId)?.date)) {
+      showToast("이동 경비의 금액과 날짜는 일정의 이동 정보에서 변경해 주세요.");
+      return;
+    }
     state.entries = state.entries.map((item) => (item.id === editingId ? entry : item));
-    clearEditMode();
   } else {
     state.entries.push(entry);
-    resetExpenseFormAfterSubmit();
   }
 
-  saveAndRender();
+  if (!await saveAndRender()) { if (state.id === submitTrip) state.entries = previousEntries; showToast("기기에 저장하지 못했어요. 입력 내용은 유지됩니다."); return; }
+  if (state.id !== submitTrip) return;
+  await window.TripLog.sync.drafts?.clear("expenseForm", submitTrip, submitEditingId);
+  if (submitEditingId) clearEditMode(); else resetExpenseFormAfterSubmit();
+  window.TripLog.persistence.stateStorage.applyRepositoryChange?.(submitTrip);
   window.TripLog.features.redesign?.workspace?.expenseSaved();
 }
 

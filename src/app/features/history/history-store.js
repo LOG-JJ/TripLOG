@@ -3,7 +3,7 @@ function loadHistoryRecords() {
     const saved = JSON.parse(localStorage.getItem(HISTORY_STORAGE_KEY));
     if (!Array.isArray(saved)) return [];
     return saved
-      .filter((record) => record?.id && record?.timestamp && record?.state)
+      .filter((record) => record?.id && record?.timestamp && record?.state && isArchiveInCurrentScope(record))
       .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
   } catch {
     return [];
@@ -17,7 +17,7 @@ function saveHistoryRecords() {
 
 async function refreshHistoryRecordsFromDb({ renderModal = false } = {}) {
   try {
-    historyRecords = await loadArchiveRecords();
+    historyRecords = (await loadArchiveRecords()).filter(isArchiveInCurrentScope);
     writeLegacyArchiveMirror(historyRecords);
     renderStorageStatus();
     if (renderModal) renderHistoryModal();
@@ -52,8 +52,11 @@ function saveCurrentSnapshot() {
 
 async function exportHistoryJson() {
   const records = await refreshHistoryRecordsFromDb();
-  downloadArchiveJson(buildArchiveExportPayload(records));
-  updateStorageNote("JSON 백업 파일을 생성했습니다.");
+  try {
+    const payload = window.TripLog.sync?.backup ? await window.TripLog.sync.backup.build(records) : buildArchiveExportPayload(records);
+    downloadArchiveJson(payload);
+    updateStorageNote(payload.missingAttachments?.length ? `여행과 공동 작업 내용을 백업했습니다. 연결 문제로 첨부 ${payload.missingAttachments.length}개는 참조만 포함됐습니다.` : "여행·공동 작업·전송 대기 내용을 포함한 JSON 백업을 생성했습니다.");
+  } catch (error) { updateStorageNote(error.message || "백업을 생성하지 못했습니다."); }
 }
 
 function requestImportHistoryJson() {

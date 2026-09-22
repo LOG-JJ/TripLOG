@@ -1,0 +1,100 @@
+/* Selected Ticket Passbook concept. Data and actions stay in the reservation wallet. */
+body.rd-app #ttCompanion.tt-wallet-ui { --pw-blue: #eaf7ff; --pw-pink: #ffe5ee; }
+body.rd-app #ttCompanion.tt-wallet-ui #ttPassportGreeting { display: block; }
+#ttCompanion.tt-wallet-ui #ttPassportGreeting img { display: block; width: 92px; height: 40px; object-fit: contain; mix-blend-mode: multiply; }
+body.rd-app #ttCompanion.tt-wallet-ui .tt-header { margin-bottom: 6px; }
+body.rd-app #ttCompanion.tt-wallet-ui .tt-heading { margin-bottom: 12px; }
+body.rd-app #ttCompanion.tt-wallet-ui h1 { font-size: 24px; letter-spacing: -.6px; }
+body.rd-app #ttCompanion.tt-wallet-ui .tt-heading > p { font-size: 12px; margin-top: 6px; }
+body.rd-app #ttCompanion.tt-wallet-ui .tt-wallet-toolbar { background: var(--pp-paper); margin: 0 0 10px; padding-bottom: 0; }
+body.rd-app #ttCompanion.tt-wallet-ui .tt-wallet-search { min-height: 38px; border: 1px solid #aeb4bc; background: transparent; }
+body.rd-app #ttCompanion.tt-wallet-ui #ttWalletSearch { height: 36px; min-height: 36px; padding: 7px 0; }
+body.rd-app #ttCompanion.tt-wallet-ui #ttWalletSearch::placeholder { font-size: 12px; }
+body.rd-app #ttCompanion.tt-wallet-ui .tt-wallet-search > .ph { font-size: 18px; }
+body.rd-app #ttCompanion.tt-wallet-ui .tt-wallet-clear { min-height: 34px; height: 34px; }
+body.rd-app #ttCompanion.tt-wallet-ui #ttWalletFilters { gap: 6px; margin: 8px 0 6px; }
+body.rd-app #ttCompanion.tt-wallet-ui #ttWalletFilters > .tt-button { min-height: 31px; padding: 6px 8px; font-size: 11px; gap: 4px; background: transparent; }
+body.rd-app #ttCompanion.tt-wallet-ui #ttWalletFilters b { font-size: 11px; }
+body.rd-app #ttCompanion.tt-wallet-ui #ttWalletFilters > .active { background: #ffeb50; border-color: #30363e; box-shadow: 1px 2px 0 #30363e; }
+body.rd-app #ttCompanion.tt-wallet-ui .tt-wallet-resultbar { min-height: 32px; border-color: #d7d9d9; }
+body.rd-app #ttCompanion.tt-wallet-ui .tt-wallet-sort { width: 107px; }
+body.rd-app #ttCompanion.tt-wallet-ui .tt-wallet-sort .custom-select-button { background: transparent; min-height: 30px; height: 30px; font-size: 11px; }
+body.rd-app #ttCompanion.tt-wallet-ui #ttWalletCount { font-size: 11px; }
+body.rd-app #ttCompanion .pw-ticket-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 0 0 8px; }
+body.rd-app #ttCompanion .pw-ticket-heading h2 { font-size: 14px; line-height: 1.3; }
+#ttCompanion .pw-ticket-heading > span { color: #69737d; font-size: 11px; white-space: nowrap; }
+body.rd-app #ttCompanion .pw-wallet-ticket { position: relative; margin: 0 0 14px; padding: 0; border: 1px solid #c9cdd0; border-radius: 10px; background: var(--pp-paper); overflow: visible; box-shadow: 0 3px 8px #333b4510; }
+/* The notch is a measured raster crop from the selected concept, not an invented CSS drawing. */
+#ttCompanion .pw-wallet-ticket::before, #ttCompanion .pw-wallet-ticket::after { content: ''; position: absolute; z-index: 2; top: calc(50% - 11px); width: 15px; height: 23px; background: url('../assets/wallet-passbook-notch.png') center / 100% 100% no-repeat; pointer-events: none; }
+#ttCompanion .pw-wallet-ticket::before { left: -4px; }
+#ttCompanion .pw-wallet-ticket::after { right: -4px; transform: scaleX(-1); }
+#ttCompanion .pw-ticket-band { display: grid; grid-template-columns: minmax(0, 1fr) 104px; min-height: 37px; border-radius: 9px 9px 0 0; background: var(--pw-blue); }
+#ttCompanion .pw-wallet-ticket.pink .pw-ticket-band { background: var(--pw-pink); }
+#ttCompanion .pw-wallet-ticket.green .pw-ticket-band { background: #e7f4eb; }
+#ttCompanion .pw-wallet-ticket.yellow .pw-ticket-band { background: #fff4ca; }
+#ttCompanion .pw-ticket-band > div:first-child { display: flex; align-items: center; gap: 6px; padding: 8px 12px; min-width: 0; }
+#ttCompanion .pw-ticket-band > div:first-child > .ph { font-size: 18px; flex-shrink: 0; }
+#ttCompanion .pw-ticket-band > div:first-child > span { font-size: 10px; font-weight: 700; white-space: nowrap; }
+#ttCompanion .pw-ticket-band strong { font-size: 11px; font-weight: 650; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#ttCompanion .pw-ticket-body { display: grid; grid-template-columns: minmax(0, 1fr) 104px; }
+body.rd-app #ttCompanion .pw-ticket-main { display: flex; flex-direction: column; align-items: stretch; justify-content: center; gap: 12px !important; min-width: 0; min-height: 112px; padding: 12px 13px; border: 0; background: transparent; border-radius: 0 0 0 9px; text-align: left; box-shadow: none; }
+body.rd-app #ttCompanion .pw-ticket-main:hover { background: #faf6e8; }
+#ttCompanion .pw-ticket-route { display: grid; grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr); align-items: center; gap: 4px; width: 100%; }
+#ttCompanion .pw-ticket-route > span:last-child { text-align: right; }
+body.rd-app #ttCompanion .pw-ticket-route strong { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; margin: 0; font-size: 22px; font-weight: 800; line-height: 1.15; letter-spacing: -.7px; }
+#ttCompanion .pw-ticket-route small { display: block; margin-top: 3px; font-size: 10px; font-weight: 450; color: #818994; }
+#ttCompanion .pw-ticket-route > .ph { font-size: 25px; justify-self: center; }
+#ttCompanion .pw-ticket-dates { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; width: 100%; }
+#ttCompanion .pw-ticket-dates > span { min-width: 0; }
+body.rd-app #ttCompanion .pw-ticket-dates small { display: block; font-size: 10px; color: #7b838e; margin-bottom: 4px; }
+#ttCompanion .pw-ticket-dates b { display: block; font-size: 11px; font-weight: 700; line-height: 1.5; font-variant-numeric: tabular-nums; }
+#ttCompanion .pw-ticket-dates time { white-space: nowrap; }
+body.rd-app #ttCompanion .pw-ticket-title strong { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 20px; font-weight: 750; line-height: 1.25; margin: 0 0 5px; }
+#ttCompanion .pw-ticket-title > small { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 11px; line-height: 1.4; color: #707a86; }
+#ttCompanion .pw-ticket-stub { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 8px; border-left: 1px dashed #bdc8cd; min-width: 0; }
+#ttCompanion .pw-ticket-stub img { width: 100%; height: auto; object-fit: contain; mix-blend-mode: multiply; }
+#ttCompanion .pw-ticket-stub > span { text-align: center; letter-spacing: 1.3px; color: #8b9199; font-size: 7px; line-height: 1.6; }
+#ttCompanion .pw-reference { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; min-width: 0; gap: 2px; }
+#ttCompanion .pw-reference > span { font-size: 9px; font-weight: 500; color: #7b8189; }
+body.rd-app #ttCompanion.tt-wallet-ui .pw-reference-action { display: inline-flex; justify-content: flex-end; align-items: center; min-width: 0; max-width: 100%; min-height: 28px; padding: 3px 0; gap: 3px; border: 0; border-radius: 3px; background: transparent; box-shadow: none; font-size: 11px; font-weight: 650; line-height: 1.2; white-space: nowrap; }
+body.rd-app #ttCompanion.tt-wallet-ui .pw-reference-action .ph { font-size: 14px; flex-shrink: 0; }
+#ttCompanion .pw-reference-action b { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; font-size: 10px; font-weight: 650; }
+#ttCompanion .pw-reference.is-empty .pw-reference-action { text-decoration: underline; text-underline-offset: 3px; }
+#ttCompanion .pw-ticket-band > .pw-reference { padding: 4px 8px; border-left: 1px dashed #bdc8cd; }
+#ttCompanion .pw-ticket-band .pw-reference > span { display: none; }
+body.rd-app #ttCompanion .pw-reference-action.is-copied { background: #ffeb50; }
+body.rd-app #ttCompanion .pw-wallet-row { display: grid; grid-template-columns: minmax(0, 1fr) 65px; align-items: center; gap: 4px; padding: 7px 0; margin: 0; border: 0; border-top: 1px solid #d6d9d9; border-radius: 0; background: transparent; overflow: visible; }
+body.rd-app #ttCompanion .pw-row-main { display: grid; grid-template-columns: 35px 29px minmax(0, 1fr) 10px; align-items: center; gap: 7px !important; min-width: 0; min-height: 51px; padding: 0; border: 0; background: transparent; border-radius: 5px; box-shadow: none; text-align: left; }
+body.rd-app #ttCompanion .pw-row-main:hover { background: #f8f3e5; }
+#ttCompanion .pw-row-day { height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 3px; border-right: 1px solid #e0e1dd; }
+#ttCompanion .pw-row-day b { font-size: 12px; font-weight: 750; }
+body.rd-app #ttCompanion .pw-row-day small { font-size: 10px; color: #6d7681; }
+#ttCompanion .pw-row-main .tt-reservation-icon { width: 29px; height: 32px; border-radius: 6px; font-size: 21px; display: grid; place-items: center; }
+#ttCompanion .pw-row-main .tt-reservation-icon.blue { background: #c6ebfc; }
+#ttCompanion .pw-row-main .tt-reservation-icon.pink { background: #ffd2e2; }
+body.rd-app #ttCompanion .pw-row-main strong { font-size: 12px; font-weight: 700; margin: 2px 0; line-height: 1.4; }
+body.rd-app #ttCompanion .pw-row-main .pw-row-type { display: block; font-size: 10px; font-weight: 450; color: #737c88; }
+body.rd-app #ttCompanion .pw-row-main .tt-reservation-date { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 10px; font-weight: 450; line-height: 1.45; }
+#ttCompanion .pw-row-main > .ph { font-size: 13px; }
+body.rd-app #ttCompanion.tt-wallet-ui #ttPrimary > .tt-button { margin: 0; }
+body.rd-app :is(#ttReservationDetail, #ttReservationEditor, #ttCopy).tt-wallet-ui { background: #fffdf7; border: 1px solid #d8d6cd; box-shadow: 0 12px 50px #18232b33; }
+body.rd-app :is(#ttReservationDetail, #ttReservationEditor, #ttCopy) :is(.tt-header, .tt-sub-footer, .tt-detail-list) { background: #fffdf7; }
+body.rd-app #ttWalletSortMenu.control-popover { padding: 0; gap: 0; font-size: 12px; border: 1px solid #3c444c !important; border-radius: 8px !important; box-shadow: 1px 2px 0 #3c444c !important; background: #fffdf7 !important; }
+body.rd-app #ttWalletSortMenu .custom-select-option { min-height: 34px; height: 34px; gap: 8px; padding: 7px 10px; font-size: 12px !important; font-weight: 550 !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; background: transparent; }
+body.rd-app #ttWalletSortMenu .custom-select-option + .custom-select-option { border-top: 1px solid #e5e5df !important; }
+body.rd-app #ttWalletSortMenu .custom-select-option.selected { background: #fff5a6 !important; }
+#ttWalletSortMenu .custom-select-option > .ph { font-size: 16px; }
+#ttWalletSortMenu .control-option-check { width: 14px; flex-basis: 14px; }
+#ttWalletSortMenu .control-option-check .ph { font-size: 14px; }
+@media (max-width: 359px) {
+  #ttCompanion .pw-ticket-band, #ttCompanion .pw-ticket-body { grid-template-columns: minmax(0, 1fr) 78px; }
+  #ttCompanion .pw-ticket-band > div:first-child { padding-inline: 8px; gap: 4px; }
+  body.rd-app #ttCompanion .pw-ticket-route strong { font-size: 19px; }
+  body.rd-app #ttCompanion .pw-ticket-main { padding-inline: 10px; }
+  #ttCompanion .pw-ticket-dates b { font-size: 10px; }
+  body.rd-app #ttCompanion .pw-wallet-row { grid-template-columns: minmax(0, 1fr) 53px; }
+  body.rd-app #ttCompanion .pw-row-main { grid-template-columns: 31px 25px minmax(0, 1fr) 8px; gap: 5px !important; }
+  #ttCompanion .pw-row-main .tt-reservation-icon { width: 25px; height: 29px; font-size: 19px; }
+  #ttCompanion .pw-reference-action b { font-size: 9px; }
+  #ttCompanion.tt-wallet-ui #ttPassportGreeting img { width: 80px; height: 40px; }
+}

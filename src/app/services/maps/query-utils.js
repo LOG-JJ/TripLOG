@@ -234,9 +234,16 @@ function getItemLatLng(item, { requireSignature = false } = {}) {
   const lat = Number.parseFloat(item?.lat);
   const lon = Number.parseFloat(item?.lon);
   if (!isValidLatLng(lat, lon)) return null;
-  if (item?.coordinateSource === "google-query-preview") return null;
+  if (isGoogleSearchOnlyItem(item)) return null;
   if (requireSignature && !hasMatchingCoordinateSignature(item)) return null;
   return { lat, lon };
+}
+
+function isGoogleSearchOnlyItem(item) {
+  // Legacy map-match records paired Google's search text with unrelated
+  // provider coordinates. Retain their data, but never navigate by that pair.
+  return [item?.source, item?.coordinateSource].some(source =>
+    source === "google-query-preview" || source === "map-match");
 }
 
 function isValidLatLng(lat, lon) {
@@ -294,6 +301,7 @@ function hasMatchingCoordinateSignature(item) {
 async function fetchLatLngForItineraryItem(item, { maxQueries = Infinity, context = "", near = null, ignoreSaved = false, requireSavedSignature = false, allowNominatim = true, validateCoords = null } = {}) {
   const directCoords = extractLatLngFromItineraryItem(item);
   if (directCoords) return directCoords;
+  if (isGoogleSearchOnlyItem(item)) return null;
 
   const savedCoords = getItemLatLng(item, { requireSignature: requireSavedSignature });
   const shouldRefreshSavedWithGoogle = savedCoords
@@ -356,7 +364,7 @@ async function fetchLatLngForItineraryItem(item, { maxQueries = Infinity, contex
 }
 
 function isHighTrustCoordinateSource(source) {
-  return ["coordinate-text", "google-places", "google-geocoding"].includes(source || "");
+  return ["coordinate-text", "google-places", "google-geocoding", "nominatim-search", "knowledge-search"].includes(source || "");
 }
 
 function getCoordinateDistanceKm(a, b) {
@@ -413,6 +421,7 @@ window.TripLog.register("services.maps.queryUtils", {
   trimCoordinate,
   normalizeCoordinatePair,
   getItemLatLng,
+  isGoogleSearchOnlyItem,
   isValidLatLng,
   isAcceptedCoordinates,
   cacheItemCoordinates,

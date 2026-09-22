@@ -174,17 +174,12 @@ function getFilteredEntriesForPrint() {
 }
 
 function getSortedItineraryItemsForPrint() {
-  return [...(state.itineraryItems || [])].sort((a, b) => {
-    const dateDiff = (a.date || "").localeCompare(b.date || "");
-    if (dateDiff) return dateDiff;
-    const timeDiff = (a.time || "99:99").localeCompare(b.time || "99:99");
-    return timeDiff || Number(a.createdAt || 0) - Number(b.createdAt || 0);
-  });
+  return sortItineraryItems(state.itineraryItems || []);
 }
 
 function formatPrintTimeRange(item) {
   const start = item?.time || "";
-  const end = item?.endTime || "";
+  const end = item?.theme === 'lodging' ? '' : item?.endTime || "";
   if (start && end) return `${start} - ${end}`;
   return start || end || "-";
 }

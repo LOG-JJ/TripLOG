@@ -1,10 +1,25 @@
 (() => {
-  const scriptVersion = "companion-20260914-2";
+  const scriptVersion = document.querySelector('meta[name="triplog-build"]')?.content || "development";
   const scriptFiles = [
     { path: "../../vendor/supabase-js-2.107.0.min.js", optional: true },
+    { path: "../../vendor/yjs-13.6.32.min.js", optional: true },
+    { path: "../../vendor/leaflet-1.9.4/leaflet.js", optional: true },
     "core/namespace.js",
     "core/config.js",
     "core/runtime.js",
+    "shared/itinerary-order.js",
+    "shared/map-links.js",
+    "sync/model.js",
+    "sync/repository.js",
+    "sync/engine.js",
+    "sync/controller.js",
+    "sync/presentation.js",
+    "sync/status-ui.js",
+    "sync/notes.js",
+    "sync/comments.js",
+    "sync/drafts.js",
+    "sync/lifecycle.js",
+    "sync/backup.js",
     "data/countries.js",
     "bootstrap/init.js",
     "persistence/state-storage.js",
@@ -23,13 +38,19 @@
     "features/expenses/lodging.js",
     "features/expenses/pretrip-purchases.js",
     "ui/date-picker.js",
+    "ui/time-wheel.js",
     "ui/time-picker.js",
     "ui/custom-select.js",
+    "ui/form-controls.js",
     "features/reports/donut-events.js",
     "features/render/main-render.js",
     "features/history/history-render.js",
     "features/itinerary/itinerary-render.js",
+    "features/itinerary/drag-preview.js",
+    "features/itinerary/pointer-drag.js",
+    "features/itinerary/itinerary-summary.js",
     "features/itinerary/list-actions.js",
+    "features/itinerary/transit-editor.js",
     "features/itinerary/place-search.js",
     "features/itinerary/itinerary-form.js",
     "features/itinerary/map-preview.js",
@@ -58,6 +79,8 @@
     "shared/time-utils.js",
     "services/maps/leaflet-map.js",
     "services/maps/geocoding.js",
+    "services/maps/domestic-route.js",
+    "services/maps/domestic-map.js",
     "features/settings/map-geocoding-settings.js",
     "services/maps/routing.js",
     "features/overview/overview-page.js",
@@ -69,6 +92,8 @@
     "features/settlement/companions.js",
     "features/redesign/design-model.js",
     "features/redesign/design-workspace.js",
+    "features/expenses/reservation-expense-editor.js",
+    "features/expenses/expense-workspace.js",
     "features/travel-companion/model.js",
     "features/travel-companion/workspace.js",
     "bootstrap/navigation-events.js",
@@ -77,13 +102,13 @@
 
   const currentScript = document.currentScript;
   const baseUrl = new URL("./src/app/", currentScript?.src || window.location.href);
-  let chain = Promise.resolve();
-
-  scriptFiles.forEach((entry) => {
+  // Download together; classic scripts with async=false still execute in order.
+  const loading = scriptFiles.map((entry) => {
     const file = typeof entry === "string" ? entry : entry.path;
     const optional = typeof entry === "object" && entry.optional;
-    chain = chain.then(() => new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       const script = document.createElement("script");
+      script.async = false;
       script.src = `${new URL(file, baseUrl).toString()}?v=${scriptVersion}`;
       script.onload = resolve;
       script.onerror = () => {
@@ -94,10 +119,15 @@
         reject(new Error(`TripLOG script load failed: ${file}`));
       };
       document.head.appendChild(script);
-    }));
+    });
   });
 
-  chain.catch((error) => {
+  Promise.all(loading).then(() => {
+    document.documentElement.dataset.appReady = "true";
+  }).catch((error) => {
+    document.documentElement.dataset.appReady = "error";
+    const status = document.querySelector("#authGateStatus");
+    if (status) status.textContent = "화면을 불러오지 못했어요. 새로고침해 주세요.";
     console.error(error);
   });
 })();

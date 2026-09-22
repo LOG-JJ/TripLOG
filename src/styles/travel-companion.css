@@ -213,9 +213,9 @@
 #ttAdjustmentResult{padding-top:10px;padding-bottom:10px;margin-top:8px}
 #ttAdjustmentResult>h2{margin-bottom:11px}
 @media(min-width:850px){
-  .rd-app #ttCompanion[data-tab=today]{max-width:900px}
-  #ttCompanion[data-tab=today] #ttContent{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:10px}
-  #ttCompanion[data-tab=today] #ttContent>:is(.tt-hero,.tt-days,.tt-progress,.tt-empty){grid-column:1/-1}
-  #ttCompanion[data-tab=today] #ttContent>*{margin:0}
-  #ttCompanion[data-tab=today] .tt-budget{align-self:start;padding:13px}
+  .rd-app #ttCompanion[data-tab=today]:not(.tt-passport-ui){max-width:900px}
+  #ttCompanion[data-tab=today]:not(.tt-passport-ui) #ttContent{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:10px}
+  #ttCompanion[data-tab=today]:not(.tt-passport-ui) #ttContent>:is(.tt-hero,.tt-days,.tt-progress,.tt-empty){grid-column:1/-1}
+  #ttCompanion[data-tab=today]:not(.tt-passport-ui) #ttContent>*{margin:0}
+  #ttCompanion[data-tab=today]:not(.tt-passport-ui) .tt-budget{align-self:start;padding:13px}
 }

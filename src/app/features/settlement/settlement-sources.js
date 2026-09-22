@@ -49,7 +49,7 @@ function getSelectedSettlementExpenseSource(sources = getSettlementExpenseSource
 function getSettlementMembers() {
   const companions = state.companions || [];
   return [
-    { key: "leader", name: "방장 (나)", paid: 0, isLeader: true },
+    { key: "leader", name: state.settlement?.leaderName || "여행 대표", paid: 0, isLeader: true },
     ...companions.map((companion) => ({
       key: getCompanionSettlementKey(companion),
       name: companion.name,
@@ -60,7 +60,7 @@ function getSettlementMembers() {
 }
 
 function getCompanionSettlementKey(companion) {
-  return `companion:${companion?.name || ""}`;
+  return `companion:${companion?.id || companion?.name || ""}`;
 }
 
 function getCompanionTotalSpent() {
