@@ -302,9 +302,10 @@ function normalizeCollaborationSettings(value = {}) {
             id: typeof member.id === "string" ? member.id : "",
             name: typeof member.name === "string" && member.name.trim() ? member.name.trim() : "여행 멤버",
             email: typeof member.email === "string" ? member.email : "",
-            role: member.role === "owner" ? "owner" : "member",
+            role: ["owner", "member", "editor", "viewer"].includes(member.role) ? member.role : "member",
             status: member.status === "pending" ? "pending" : "accepted",
             joinedAt: typeof member.joinedAt === "string" ? member.joinedAt : "",
+            ...(member.source === "supabase" ? { source: "supabase" } : {}),
           }))
       : [],
     pendingInvites: Array.isArray(source.pendingInvites)

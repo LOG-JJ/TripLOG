@@ -382,9 +382,23 @@
     }
     if (pageOnly) return;
     if ($('#itineraryToolsDialog').open) renderPacking();
-    $('#rdInviteMembers').innerHTML=`<div class="rd-invite-period">${icon('users-three')}<span><b>${period(state)}</b><small>${duration(state)}</small></span></div><h2>함께하는 멤버</h2>${members().map((m,i)=>`<button type="button" class="rd-invite-member" data-rd-action="member-info" data-index="${i}">${avatar(m.name,i)}<b>${text(m.name)}</b><span>${m.role==='owner'||!i?'방장':'멤버'}</span>${icon('caret-right')}</button>`).join('')}<h2>초대 링크</h2>`;
+    renderMembers();
     if($('#rdExpenseEditor').open)renderPayers();
     if($('#rdTripChooser').open)renderTripChooser();
+  }
+  function renderMembers() {
+    if (!ready) return;
+    const team = members();
+    const list = $('#rdInviteMembers');
+    const markup = `<div class="rd-invite-period">${icon('users-three')}<span><b>${period(state)}</b><small>${duration(state)}</small></span></div><h2>함께하는 멤버</h2>${team.map((m,i)=>`<button type="button" class="rd-invite-member" data-rd-action="member-info" data-index="${i}">${avatar(m.name,i)}<b>${text(m.name)}</b><span>${m.role==='owner'||!i?'방장':'멤버'}</span>${icon('caret-right')}</button>`).join('')}<h2>초대 링크</h2>`;
+    // Avoid replacing focused member buttons when the roster did not change.
+    if (list.innerHTML !== markup) list.innerHTML = markup;
+    $$('.rd-team').forEach(button => {
+      button.setAttribute('aria-label', `여행 멤버 ${team.length}명 보기`);
+      $('span', button).textContent = `${team.length}명`;
+    });
+    const settingCount = $('#rdSettingsTrip [data-rd-action="invite"] small');
+    if (settingCount) settingCount.textContent = `${team.length}명`;
   }
   async function handleClick(event) {
     const nav=event.target.closest('[data-rd-nav]');if(nav){nav.dataset.rdNav==='more'?open('rdMore'):navigate(nav.dataset.rdNav);return;}
@@ -461,5 +475,5 @@
     }
   }
   document.addEventListener('change',event=>{if(event.target.id==='rdReportDay'){reportDay=event.target.value;renderPlanAnalytics();}const id=event.target.dataset.rdPack;if(id){const item=state.packingList.find(i=>i.id===id);if(item){item.checked=event.target.checked;saveAndRender();}}});
-  window.TripLog.register('features.redesign.workspace',{setup,render,navigate,open,openExpenseEditor,openPretripEditor:showReservation,showSavedPretrip,expenseSaved,expenseMetadata,confirmAction,isTripEditing,cancelTripEdit});
+  window.TripLog.register('features.redesign.workspace',{setup,render,renderMembers,navigate,open,openExpenseEditor,openPretripEditor:showReservation,showSavedPretrip,expenseSaved,expenseMetadata,confirmAction,isTripEditing,cancelTripEdit});
 })();

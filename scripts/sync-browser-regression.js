@@ -11,6 +11,25 @@ async function main() {
   const db = await createDatabase();
   const rpc = async (name, args) => (await db.query(`select public.${name}(${args.map((_,i)=>'$'+(i+1)).join(',')}) result`, args.map(v=>v&&typeof v==='object'?JSON.stringify(v):v))).rows[0].result;
   const seed = { id:'browser-kyoto',tripName:'교토 공동 여행',startDate:'2026-09-25',endDate:'2026-09-28',entries:[],packingList:[],companions:[],itineraryItems:[{id:'kyoto',date:'2026-09-26',time:'10:00',endTime:'11:00',place:'교토역',location:'교토역',memo:'원본 메모'}],collaboration:{privacy:{shareItinerary:true,shareExpenses:true,showMemberEmail:false,allowInviteRequests:true}} };
+  // Use a complete currency baseline so a member-cache save does not trigger
+  // an unrelated first-run domestic-currency migration in this legacy fixture.
+  Object.assign(seed,{country:'일본',countryCode:'JP',city:'교토',travelMode:'overseas',currencyCode:'JPY',currencySymbol:'¥',currencyUnit:'엔',exchangeBase:100,exchangeRate:950,exchangeRateSource:'기본값',exchangeRateUpdatedAt:'',currencyAutoMatchedCountryCode:'JP'});
+  // Legacy snapshots contain emails; the current membership endpoint omits them.
+  // Both copies previously survived normalization and appeared as two people.
+  Object.assign(seed.collaboration, {
+    ownerId:actors[0],ownerName:'JJ',ownerEmail:'jj@example.test',
+    inviteToken:'fixture-invite',lastInviteUrl:origin+'/Travel?invite=fixture-invite',
+    members:[
+      {id:actors[1],name:'JH',email:'jh@example.test',role:'editor',status:'accepted'},
+      {id:actors[1],name:'JH',email:'',role:'editor',status:'accepted',source:'supabase'},
+      {id:'legacy-departed',name:'이전 멤버',email:'old@example.test',status:'accepted'},
+    ],
+  });
+  const initialRoster = [
+    {user_id:actors[0],display_name:'JJ',role:'owner',status:'accepted'},
+    {user_id:actors[1],display_name:'JH',role:'editor',status:'accepted'},
+  ];
+  let memberRoster = initialRoster, membersUnavailable = true;
   const tid = await rpc('triplog_create_sync',[actors[0],seed.id,seed,Object.values(M.encode(seed))]);
   await db.query("insert into public.triplog_trip_members(trip_id,user_id,role,status) values($1,$2,'editor','accepted')",[tid,actors[1]]);
   const browser = await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined),headless:true});
@@ -31,7 +50,7 @@ async function main() {
             setTimeout(()=>pages.forEach(page=>page.evaluate(()=>window.__testBroadcast?.()).catch(()=>{})),10);
             return result;
           }
-          if (body.action==='members') return {members:[{user_id:actors[0],display_name:'테스트 소유자',role:'owner'},{user_id:actors[1],display_name:'테스트 편집자',role:'editor'}]};
+          if (body.action==='members') return membersUnavailable ? {error:'NETWORK_ERROR'} : {members:memberRoster};
           if(body.action==='attachment-upload'){
             const bytes=Buffer.from(body.data.split(',')[1],'base64'),digest=require('node:crypto').createHash('sha256').update(bytes).digest('hex');
             await db.query("insert into public.triplog_attachments(trip_id,digest,object_path,content_type,byte_size,created_by) values($1,$2,$3,'image/png',$4,$5) on conflict do nothing",[tid,digest,`${tid}/${digest}`,bytes.length,actor]);
@@ -83,6 +102,51 @@ async function main() {
       await page.waitForFunction(()=>window.TripLogSyncRepository.cached(state.id)?.queue.length===0);
     }
     const [a,b]=pages;
+    const refreshMembers = page => page.evaluate(()=>window.TripLog.features.collaboration.tripCollaboration.syncSupabaseSession());
+    const memberNames = page => page.evaluate(()=>window.TripLog.features.collaboration.tripCollaboration.getTripMembers().map(m=>m.name));
+    for (const page of pages) {
+      assert.equal((await memberNames(page)).filter(name=>name==='JH').length,1,'Cached copies of the same account count once, even offline');
+    }
+    membersUnavailable = false;
+    for (const page of pages) {
+      await refreshMembers(page);
+      assert.deepEqual(await memberNames(page),['JJ','JH'],'The authoritative roster removes stale local memberships');
+      assert.deepEqual(await page.evaluate(()=>state.collaboration.members.map(m=>[m.role,m.source,m.email])),[['editor','supabase','']]);
+      await page.locator('#rdMenuButton').click();
+      await page.locator('#rdMore [data-rd-action="invite"]').click();
+      assert.deepEqual(await page.locator('#rdInviteMembers .rd-invite-member > b').allTextContents(),['JJ','JH'],'The open invite sheet must reflect the current roster');
+      const output=process.env.TRIPLOG_TEST_OUTPUT || path.join(process.cwd(),'.test-output');fs.mkdirSync(output,{recursive:true});
+      await page.screenshot({path:path.join(output,page===a?'members-desktop.png':'members-mobile.png'),animations:'disabled'});
+      await page.locator('#tripInviteCloseButton').click();
+    }
+    const stableRoster = await a.evaluate(()=>JSON.stringify(state.collaboration));
+    await refreshMembers(a);
+    assert.equal(await a.evaluate(()=>JSON.stringify(state.collaboration)),stableRoster,'Repeated normalization and sync preserve roles and provenance');
+    // The same display name can legitimately belong to two different accounts.
+    memberRoster=[...initialRoster,{user_id:actors[2],display_name:'JH',role:'viewer',status:'accepted'}];
+    await refreshMembers(a);
+    assert.deepEqual(await memberNames(a),['JJ','JH','JH']);
+    assert.equal(await a.evaluate(()=>state.collaboration.members.find(m=>m.id.endsWith('3')).role),'viewer');
+    memberRoster=[initialRoster[0],{...initialRoster[1],display_name:'JH 새 이름'}];
+    await refreshMembers(a);
+    assert.deepEqual(await memberNames(a),['JJ','JH 새 이름'],'Renames replace stale names and departed accounts disappear');
+    membersUnavailable=true;
+    await a.reload();
+    await a.waitForFunction(()=>document.documentElement.dataset.triplogInitialized==='true'&&document.documentElement.dataset.auth==='signed-in');
+    await a.waitForFunction(id=>state.id===id&&window.TripLogSyncRepository.cached(id)?.serverId,seed.id);
+    assert.deepEqual(await memberNames(a),['JJ','JH 새 이름'],'A failed member refresh preserves the persisted roster');
+    membersUnavailable=false;memberRoster=initialRoster;
+    await refreshMembers(a);
+    await a.waitForFunction(()=>state.collaboration.members[0]?.name==='JH',null,{timeout:30000});
+    const companionCheck=await a.evaluate(actor=>{
+      const original=state.companions;
+      const fixture=[{id:'settlement-only',userId:actor,name:'JH',individualSpent:7000},{id:'independent-person',name:'JH',individualSpent:9000}];
+      state.companions=fixture;
+      try { return {names:window.TripLog.features.collaboration.tripCollaboration.getTripMembers().map(m=>m.name),unchanged:JSON.stringify(state.companions)===JSON.stringify(fixture)}; }
+      finally {state.companions=original;}
+    },actors[1]);
+    assert.deepEqual(companionCheck,{names:['JJ','JH','JH'],unchanged:true},'Linked companions count once without deleting financial records or namesakes');
+    console.log('PASS browser: duplicate legacy membership heals on both devices; invite sheets, stable identity, role persistence, namesakes, rename/removal and offline reload verified');
     await a.evaluate(()=>{setActivePage('itinerary');startItineraryEdit(state.itineraryItems.find(i=>i.id==='kyoto'));});
     await a.locator('#itineraryMemoInput').fill('작성 중인 내 메모');
     await a.locator('#itineraryVoucherFile').setInputFiles({name:'fixture.png',mimeType:'image/png',buffer:Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aF1sAAAAASUVORK5CYII=','base64')});

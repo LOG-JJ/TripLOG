@@ -403,12 +403,16 @@
   }
 
   function getMemberKey(member) {
-    return String(member.email || member.id || member.name || "").trim().toLowerCase();
+    const id = String(member.id || "").trim().toLowerCase();
+    const email = String(member.email || "").trim().toLowerCase();
+    return id ? `id:${id}` : email ? `email:${email}` : `name:${String(member.name || '').trim()}`;
   }
 
-  function addUniqueMember(members, member) {
+  function addUniqueMember(members, member, { matchEmail = false } = {}) {
     const key = getMemberKey(member);
-    if (!key || members.some((existing) => getMemberKey(existing) === key)) return;
+    const email = String(member.email || '').trim().toLowerCase();
+    if (members.some(existing => getMemberKey(existing) === key
+      || (email && (matchEmail || !member.id || !existing.id) && String(existing.email || '').trim().toLowerCase() === email))) return;
     members.push(member);
   }
 
@@ -430,12 +434,12 @@
 
     (state.companions || []).forEach((companion, index) => {
       addUniqueMember(members, {
-        id: `companion_${index}_${companion.name}`,
+        id: companion.userId || companion.accountId || companion.id || `companion_${index}_${companion.name}`,
         name: companion.name,
         email: companion.email || "",
         role: "member",
         status: "accepted",
-      });
+      }, { matchEmail: true });
     });
 
     return members;
@@ -470,16 +474,12 @@
       collaboration.ownerEmail = ownerRow.email || collaboration.ownerEmail || "";
     }
 
-    const remoteMembers = acceptedRows
-      .filter((row) => row.role !== "owner")
-      .map(normalizeSupabaseMember);
-    const remoteKeys = new Set(remoteMembers.map((member) => getMemberKey(member)));
-    const localMembers = Array.isArray(collaboration.members) ? collaboration.members : [];
-    const preservedMembers = localMembers.filter((member) => {
-      const key = getMemberKey(member);
-      return member.source !== "supabase" && !remoteKeys.has(key);
-    });
-    collaboration.members = [...preservedMembers, ...remoteMembers];
+    // A successful server response is the complete membership roster. Keeping
+    // older email-bearing snapshots beside email-free responses creates ghosts.
+    const remoteMembers = [];
+    acceptedRows.filter(row => row.role !== 'owner' && row.user_id !== collaboration.ownerId)
+      .forEach(row => addUniqueMember(remoteMembers, normalizeSupabaseMember(row)));
+    collaboration.members = remoteMembers;
 
     const nextSnapshot = JSON.stringify({
       ownerId: collaboration.ownerId,
@@ -1191,6 +1191,7 @@
     renderAccountSettings();
     renderInviteModal();
     renderAcceptInviteModal();
+    window.TripLog.features.redesign?.workspace?.renderMembers?.();
   }
 
   function createInviteToken() {
