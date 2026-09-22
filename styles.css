@@ -3365,34 +3365,24 @@ td.number {
 }
 
 .expense-entry-amount .foreign-amount {
-  display: flex;
-  justify-content: flex-end;
-  align-items: baseline;
-  gap: 4px 6px;
-  flex-wrap: wrap;
+  display: grid;
+  justify-items: end;
+  gap: 4px;
   max-width: 100%;
+  font-variant-numeric: tabular-nums;
 }
 
 .expense-entry-amount .currency-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 24px;
-  min-height: 22px;
-  padding: 0 6px;
-  background: var(--accent-blue);
-  border: 2px solid var(--line);
-  border-radius: 6px;
-  box-shadow: 1px 1px 0 var(--line);
-  font-size: 12px;
-  line-height: 1;
+  /* The formatted amount already includes the currency unit. */
+  display: none;
 }
 
 .expense-entry-amount .foreign-amount em {
   color: var(--muted);
   font-size: 12px;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 700;
+  line-height: 1.35;
 }
 
 .table-wrap.expense-records-wrap .expense-note-cell {
@@ -3463,7 +3453,7 @@ td.number {
   }
 
   .expense-entry-amount .foreign-amount {
-    justify-content: flex-start;
+    justify-items: start;
   }
 }
 
