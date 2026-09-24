@@ -104,7 +104,7 @@
     const titleRow = document.createElement('div'); titleRow.className = 'ex-editor-title';
     $('#rdExpenseEditorTitle').before(titleRow); titleRow.append($('#rdExpenseEditorTitle'), $('.rd-expense-tools', dialog));
     $('.rd-dialog-body > [data-rd-trip]', dialog).classList.add('ex-editor-trip');
-    $('[data-rd-action="receipt"]', dialog).innerHTML = `${icon('clipboard-text')} 영수증`;
+    $('[data-rd-action="receipt"]', dialog).innerHTML = `${icon('clipboard-text')} 텍스트 · 영수증`;
     $$('.payment-method-toggle button', form).forEach(button => { button.innerHTML = `${icon(button.dataset.paymentMethod === 'cash' ? 'money' : 'credit-card')} ${button.dataset.paymentMethod === 'cash' ? '현금' : '카드'}`; });
     form.noValidate = true;
     form.insertAdjacentHTML('afterbegin', `<div class="ex-amount-group" id="exAmountGroup"><div class="ex-field-title">결제 금액 <span aria-hidden="true">*</span></div><div class="ex-amount-input-row"><div id="exAmountInputs"></div><div id="exCurrencyMount"></div></div><div class="ex-conversion-row"><span id="exConversionSummary" aria-live="polite"></span><button type="button" id="exRateToggle" aria-expanded="false" aria-controls="exRatePanel">환율 수정</button></div><div id="exRatePanel" hidden></div></div>`);

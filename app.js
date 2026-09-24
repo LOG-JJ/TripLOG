@@ -31,6 +31,7 @@
     "navigation/trip-dates.js",
     "features/expenses/expense-form.js",
     "features/expenses/receipt-parser.js",
+    "features/expenses/receipt-json.js",
     "features/expenses/receipt-ocr.js",
     "features/expenses/receipt-input.js",
     "features/settings/travel-mode.js",

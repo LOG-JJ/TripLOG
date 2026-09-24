@@ -253,8 +253,8 @@
     move($('#receiptStatus'),'#rdReceiptStatusMount');move($('#receiptWarnings'),'#rdReceiptGuidance');move($('#receiptTextDetails'),'#rdReceiptGuidance');
     $('.receipt-image-actions').insertAdjacentHTML('afterbegin',button(`${icon('image')} 다시 선택`,'receipt-reselect','receipt-small-button'));
     $('#receiptRotateButton').innerHTML=icon('arrow-clockwise');$('#receiptRotateButton').setAttribute('aria-label','영수증 90도 회전');$('#receiptCropButton').textContent='자르기';
-    $('#receiptDialogTitle').insertAdjacentHTML('afterend','<p class="rd-receipt-subtitle">사진 속 지출을 간편하게</p>');
-    $('#receiptDialogTitle').textContent = '영수증 인식'; $('#receiptCloseButton').innerHTML = icon('x');
+    $('#receiptDialogTitle').insertAdjacentHTML('afterend','<p class="rd-receipt-subtitle">텍스트 붙여넣기 또는 사진으로 입력</p>');
+    $('#receiptDialogTitle').textContent = '지출 정보 가져오기'; $('#receiptCloseButton').innerHTML = icon('x');
     const receiptGrid=$('.receipt-review-grid');['#receiptMerchant','#receiptAmount','#receiptCurrency','#receiptDate','#receiptExpenseDate','#receiptCategory','#receiptPayment'].forEach(id=>move($(id).closest('label'),receiptGrid));
     $('#receiptReviewForm > .receipt-hint').textContent='사진은 이 기기에서만 인식해요. 금액·일자를 확인해 주세요.';
     $('#receiptApplyButton').textContent='지출 정보에 적용';$('#receiptDialog .receipt-dialog-footer span').textContent='내용을 확인한 뒤 지출 저장을 누르면 저장돼요.';
