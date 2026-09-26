@@ -15,6 +15,45 @@ function runtime(factory = new IDBFactory()) {
 }
 
 async function main(){
+  const viewRuntime=runtime();
+  async function legacyView(id) {
+    const source={id,tripName:'표시 정규화 검증',itineraryItems:[{id:'old',date:'2026-09-26',place:'후시미이나리',location:'old location',lat:34.9688924,lon:135.7692389,coordinateSource:'',coordinateSignature:'old',memo:'기존 메모'}],entries:[],companions:[],packingList:[]};
+    await viewRuntime.R.update(id,()=>viewRuntime.R.makeRecord(source));
+    const shown=M.clone(source);delete shown.itineraryItems[0].lat;delete shown.itineraryItems[0].lon;delete shown.itineraryItems[0].coordinateSignature;
+    return {source,shown};
+  }
+  {
+    const {source,shown}=await legacyView('view-noop');
+    await viewRuntime.R.save(shown,shown,{sourceSnapshot:source});
+    const saved=await viewRuntime.R.read(source.id);
+    assert.equal(saved.localRevision,0);assert.equal(saved.snapshot.itineraryItems[0].lat,source.itineraryItems[0].lat);
+  }
+  {
+    const {source,shown}=await legacyView('view-edit');
+    await viewRuntime.R.update(source.id,r=>{r.snapshot.itineraryItems[0].memo='다른 탭 메모';return r;});
+    const edited=M.clone(shown);edited.itineraryItems[0].place='새 장소';
+    await viewRuntime.R.save(edited,shown,{sourceSnapshot:source});
+    const saved=await viewRuntime.R.read(source.id);
+    assert.equal(saved.conflicts.length,0);assert.equal(saved.snapshot.itineraryItems[0].place,'새 장소');assert.equal(saved.snapshot.itineraryItems[0].memo,'다른 탭 메모');
+  }
+  {
+    const {source,shown}=await legacyView('view-delete');
+    const deleted={...shown,itineraryItems:[]};
+    await viewRuntime.R.save(deleted,shown,{sourceSnapshot:source,deletions:[{kind:'itinerary',id:'old'}]});
+    const saved=await viewRuntime.R.read(source.id);assert.equal(saved.conflicts.length,0);assert.equal(saved.snapshot.itineraryItems.length,0);
+    assert.ok((await viewRuntime.R.snapshots(source.id)).some(row=>row.state.itineraryItems[0]?.place==='후시미이나리'));
+  }
+  for(const action of ['place','delete']) {
+    const {source,shown}=await legacyView('view-concurrent-'+action);
+    // Even a concurrent raw-coordinate change remains protected; comparing
+    // normalized fresh state alone would incorrectly overlook this change.
+    await viewRuntime.R.update(source.id,r=>{r.snapshot.itineraryItems[0].lat=35;return r;});
+    const edited=M.clone(shown);if(action==='delete')edited.itineraryItems=[];else edited.itineraryItems[0].place='내 수정';
+    await viewRuntime.R.save(edited,shown,{sourceSnapshot:source,deletions:action==='delete'?[{kind:'itinerary',id:'old'}]:[]});
+    const saved=await viewRuntime.R.read(source.id);assert.equal(saved.conflicts.length,1);assert.equal(saved.snapshot.itineraryItems[0].lat,35);assert.equal(saved.snapshot.itineraryItems[0].place,'후시미이나리');
+  }
+  viewRuntime.R.close();
+  console.log('PASS: rendered legacy cleanup is not a write/conflict; edits/deletes use their exact stored baseline, preserve independent changes and protect genuinely changed raw fields');
   const db=await createDatabase();
   const rpc=async(name,args)=>(await db.query(`select public.${name}(${args.map((_,i)=>'$'+(i+1)).join(',')}) as result`,args.map(v=>v&&typeof v==='object'?JSON.stringify(v):v))).rows[0].result;
   const snapshot={id:'client-trip',tripName:'클라이언트 회귀',startDate:'2026-09-25',endDate:'2026-09-28',entries:[],packingList:[],companions:[],itineraryItems:[{id:'one',date:'2026-09-26',time:'10:00',place:'교토역'}],collaboration:{privacy:{shareExpenses:true,shareItinerary:true}}};

@@ -10,6 +10,8 @@ function setVoucherFile(base64, name) {
 function setVoucherLoading(promise) { voucherReadPromise = promise.catch(() => false); }
 
 let itinerarySubmissionPending = false;
+const itineraryDeletionsPending = new Set();
+let initialPlaceCandidate = null;
 async function handleItinerarySubmit(event) {
   event.preventDefault();
   if (itinerarySubmissionPending) return;
@@ -51,7 +53,7 @@ async function saveItineraryForm(event) {
   const duration = transits.reduce((acc, segment) => acc + (Number(segment.duration) || 0), 0);
   const cost = transits.reduce((acc, segment) => acc + (Number(segment.cost) || 0), 0);
   const syncExpense = existingItem ? existingItem.syncExpense !== false : true;
-  let expenseId = existingItem ? existingItem.expenseId : null;
+  const expenseId = existingItem ? existingItem.expenseId : null;
 
   const voucherName = els.itineraryVoucherName.value.trim();
   const voucherCode = els.itineraryVoucherCode.value.trim();
@@ -59,7 +61,7 @@ async function saveItineraryForm(event) {
   const candidateSelected = selectedPlaceCandidate && selectedPlaceCandidate.place === place;
   const candidateHasCoords = candidateSelected
     && Boolean(getItemLatLng(selectedPlaceCandidate));
-  const existingPlaceUnchanged = existingItem?.place === place && existingItem?.location === location;
+  const existingPlaceUnchanged = existingItem?.place === place && (existingItem.location || existingItem.place) === location;
   const existingCoordsStillValid = existingItem
     && !candidateSelected
     && existingPlaceUnchanged
@@ -111,28 +113,33 @@ async function saveItineraryForm(event) {
     item.googlePlaceId = candidateHasCoords ? (selectedPlaceCandidate.placeId || selectedPlaceCandidate.googlePlaceId || "") : (existingItem.googlePlaceId || "");
   }
 
-  // Sync with main expense ledger
-  if (syncExpense && cost > 0) {
+  if (existingItem) {
+    // This editor owns place, schedule, memo and voucher inputs. Opening it or
+    // saving an unrelated field must not turn display defaults into new writes.
+    const unchanged = ['time', 'endTime', 'memo', 'voucherName', 'voucherCode', 'voucherFile', 'voucherFileName']
+      .filter(key => String(item[key] ?? '') === String(existingItem[key] ?? ''));
+    if (theme === (existingItem.theme || 'sightseeing')) unchanged.push('theme');
+    if (existingPlaceUnchanged && (!candidateSelected || selectedPlaceCandidate === initialPlaceCandidate)) {
+      unchanged.push('place', 'location', 'lat', 'lon', 'mapQuery', 'coordinateSource', 'coordinateSignature', 'coordinatePrecision', 'coordinateAddress', 'googlePlaceId');
+    }
+    unchanged.push('trans', 'transits', 'duration', 'cost', 'syncExpense', 'expenseId');
+    for (const key of unchanged) {
+      if (Object.hasOwn(existingItem, key)) item[key] = existingItem[key];
+      else delete item[key];
+    }
+  }
+
+  // Place edits update the linked description/date, never the money or the
+  // incoming transit settings owned by the separate movement editor.
+  const latestItem = existingItem && (window.TripLogSyncRepository?.cached(submittedTrip)?.snapshot.itineraryItems.find(entry => entry.id === id) || existingItem);
+  if (latestItem?.expenseId && (place !== existingItem.place || item.date !== existingItem.date)) {
     const transLabels = { walk: "도보", car: "차량", train: "기차", bus: "버스", flight: "비행", etc: "비행", none: "이동" };
-    const desc = `${item.place} 이동 경비 (${transits.map(segment => transLabels[segment.trans] || "이동").join("+")})`;
-    if (expenseId) {
-      state.entries = state.entries.map((entry) => {
-        if (entry.id === expenseId) {
-          return { ...entry, date: item.date, amount: cost, description: desc };
-        }
-        return entry;
-      });
-    } else {
-      const newEntry = createEntry(item.date, "교통", desc, cost, "일정 자동 연동");
-      item.expenseId = newEntry.id;
-      state.entries.push(newEntry);
-    }
-  } else {
-    if (expenseId) {
-      window.TripLog.persistence.stateStorage.markDeletedEntity("expense", expenseId);
-      state.entries = state.entries.filter((entry) => entry.id !== expenseId);
-      item.expenseId = null;
-    }
+    const desc = `${item.place} 이동 경비 (${getItineraryTransits(latestItem).map(segment => transLabels[segment.trans] || "이동").join("+")})`;
+    state.entries = state.entries.map(entry => entry.id === latestItem.expenseId ? {
+      ...entry,
+      ...(item.date !== existingItem.date ? {date:item.date} : {}),
+      ...(place !== existingItem.place ? {description:desc} : {}),
+    } : entry);
   }
 
   if (editingItineraryId) {
@@ -197,6 +204,7 @@ function startItineraryEdit(item) {
   els.itineraryTicketToggleBtn.querySelector(".ticket-toggle-chevron").textContent = hasVoucher ? "▲" : "▼";
 
   selectedPlaceCandidate = item.place ? { ...item, source: item.coordinateSource || "" } : null;
+  initialPlaceCandidate = selectedPlaceCandidate;
   setPlaceSearchStatus(item.location || "입력값 그대로 저장하거나 검색 결과를 선택할 수 있습니다.", item.location ? "success" : "neutral");
   closePlaceSearchResults();
   closeManualAddressPanel();
@@ -238,6 +246,7 @@ function clearItineraryEditMode(shouldRender = true) {
   }
 
   selectedPlaceCandidate = null;
+  initialPlaceCandidate = null;
   setPlaceSearchStatus("입력값 그대로 저장하거나 검색 결과를 선택할 수 있습니다.");
   closePlaceSearchResults();
   closeManualAddressPanel();
@@ -262,17 +271,42 @@ function selectItineraryItem(id) {
   saveAndRender();
 }
 
-function deleteItineraryItem(id) {
+async function deleteItineraryItem(id) {
+  const tripId = state.id, operation = `${tripId}:${id}`;
   const item = findItineraryItem(id);
-  window.TripLog.persistence.stateStorage.markDeletedEntity("itinerary", id);
-  if (item && item.expenseId) {
-    window.TripLog.persistence.stateStorage.markDeletedEntity("expense", item.expenseId);
-    state.entries = state.entries.filter((entry) => entry.id !== item.expenseId);
+  if (!item || itineraryDeletionsPending.has(operation)) return false;
+  itineraryDeletionsPending.add(operation);
+  const previous = {items:state.itineraryItems,entries:state.entries,companion:state.travelCompanion,selected:state.selectedItineraryId};
+  try {
+    window.TripLog.persistence.stateStorage.markDeletedEntity("itinerary", id);
+    if (item.expenseId) {
+      window.TripLog.persistence.stateStorage.markDeletedEntity("expense", item.expenseId);
+      state.entries = state.entries.filter(entry => entry.id !== item.expenseId);
+    }
+    state.itineraryItems = state.itineraryItems.filter(item => item.id !== id);
+    if (state.selectedItineraryId === id) state.selectedItineraryId = state.itineraryItems[0]?.id || "";
+    if (!await saveAndRender()) {
+      if (state.id === tripId) {
+        state.itineraryItems=previous.items;state.entries=previous.entries;state.travelCompanion=previous.companion;state.selectedItineraryId=previous.selected;
+        render();
+      }
+      showToast("삭제를 저장하지 못했어요. 일정은 유지됩니다. 다시 시도해 주세요.");
+      return false;
+    }
+    if (window.TripLogSyncRepository?.cached(tripId)?.snapshot.itineraryItems.some(item => item.id === id)) {
+      showToast("다른 변경과 겹쳐 삭제하지 않았어요. 저장 상태에서 변경 내용을 확인해 주세요.");
+      return false;
+    }
+    if (state.id === tripId && editingItineraryId === id) {
+      window.TripLog.features.itinerary.workspace?.close?.();
+      clearItineraryEditMode(false);
+    }
+    await window.TripLog.sync.drafts?.clear("itineraryForm", tripId, id);
+    showToast("일정 삭제를 저장했어요.");
+    return true;
+  } finally {
+    itineraryDeletionsPending.delete(operation);
   }
-  state.itineraryItems = state.itineraryItems.filter((item) => item.id !== id);
-  if (editingItineraryId === id) clearItineraryEditMode(false);
-  if (state.selectedItineraryId === id) state.selectedItineraryId = state.itineraryItems[0]?.id || "";
-  saveAndRender();
 }
 
 function findItineraryItem(id) {

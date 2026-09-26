@@ -8,6 +8,7 @@ let repositoryProject = "";
 let repositoryPreferredTrip = "";
 let repositoryTrips = [];
 const repositoryViews = new Map();
+const repositorySources = new Map();
 const repositoryPending = new Map();
 const repositoryFailures = new Map();
 const repositoryDeletions = new Map();
@@ -333,6 +334,12 @@ function markDeletedEntity(kind, id) {
   repositoryDeletions.set(state.id, deletions);
 }
 
+function rememberRepositoryView(snapshot, source = snapshot) {
+  const M = window.TripLogSyncModel;
+  repositoryViews.set(snapshot.id, M.clone(snapshot));
+  repositorySources.set(snapshot.id, M.clone(source));
+}
+
 function saveStateSilently() {
   const M = window.TripLogSyncModel;
   const R = window.TripLogSyncRepository;
@@ -344,13 +351,19 @@ function saveStateSilently() {
     const deletions = repositoryDeletions.get(snapshot.id) || [];
     repositoryDeletions.delete(snapshot.id);
     const observed = M.clone(repositoryViews.get(snapshot.id) || snapshot);
-    repositoryViews.set(snapshot.id, M.clone(snapshot));
+    const sourceSnapshot = M.clone(repositorySources.get(snapshot.id) || observed);
+    const ranked = M.reposition(snapshot, M.encode(observed));
+    const sourceEntities = M.encode(sourceSnapshot);
+    const changes = M.diff(M.encode(observed), M.encode(ranked), { source: sourceEntities });
+    // Consecutive queued saves observe our own optimistic writes, not unrelated
+    // changes that another tab made after this view was rendered.
+    rememberRepositoryView(snapshot, M.decode(M.apply(sourceEntities, changes).entities, ranked));
     repositoryPending.set(snapshot.id, (repositoryPending.get(snapshot.id) || 0) + 1);
     window.TripLog.sync.controller?.localWrite(snapshot.id, 1);
     const job = repositoryWriteTail.then(async () => {
       try {
         const failed = repositoryFailures.get(snapshot.id);
-        const record = await R.save(snapshot, failed?.observed || observed, { deletions: [...(failed?.deletions || []), ...deletions] });
+        const record = await R.save(snapshot, failed?.observed || observed, { sourceSnapshot: failed?.sourceSnapshot || sourceSnapshot, deletions: [...(failed?.deletions || []), ...deletions] });
         repositoryFailures.delete(snapshot.id);
         window.TripLog.sync.controller?.setLocalFailure(null, snapshot.id);
         const index = repositoryTrips.findIndex(t => t.id === snapshot.id);
@@ -360,7 +373,7 @@ function saveStateSilently() {
         window.dispatchEvent(new CustomEvent("triplog:state-saved", { detail: { tripId: snapshot.id } }));
         return true;
       } catch (error) {
-        repositoryFailures.set(snapshot.id, { snapshot, observed: repositoryFailures.get(snapshot.id)?.observed || observed, deletions: [...(repositoryFailures.get(snapshot.id)?.deletions || []), ...deletions] });
+        repositoryFailures.set(snapshot.id, { snapshot, observed: repositoryFailures.get(snapshot.id)?.observed || observed, sourceSnapshot: repositoryFailures.get(snapshot.id)?.sourceSnapshot || sourceSnapshot, deletions: [...(repositoryFailures.get(snapshot.id)?.deletions || []), ...deletions] });
         window.TripLog.sync.controller?.setLocalFailure(error, snapshot.id);
         return false;
       } finally {
@@ -444,6 +457,7 @@ function switchTrip(tripId) {
     settlement: normalizeSettlementSettings(targetTrip.settlement),
   });
   state.theme = currentTheme;
+  if (repositoryReady) rememberRepositoryView(state, targetTrip);
 
   // Refreshing the same trip must preserve this device's current navigation.
   const dayDates = new Set(getTripDays().map((day) => day.date));
@@ -501,7 +515,7 @@ async function createNewTrip({ tripName, country, countryCode, city, travelMode,
   trips.push(newTrip);
   if (repositoryReady) {
     repositoryTrips = trips;
-    repositoryViews.set(newId, window.TripLogSyncModel.clone(newTrip));
+    rememberRepositoryView(newTrip);
   } else localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
 
   return switchTrip(newId);
@@ -590,7 +604,7 @@ async function importSharedTripSnapshot(snapshot = {}, { makeActive = true } = {
     if (!existing) await R.update(importedTrip.id, () => ({ ...R.makeRecord(importedTrip), accountId: repositoryAccount, projectId: repositoryProject, localRevision: 1 }));
     await R.save(importedTrip, existing?.snapshot || importedTrip);
     repositoryTrips = trips;
-    repositoryViews.set(importedTrip.id, window.TripLogSyncModel.clone(importedTrip));
+    rememberRepositoryView(importedTrip);
   } else localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
   if (makeActive) await switchTrip(importedTrip.id);
   return importedTrip;
@@ -673,7 +687,7 @@ function resetPersistedTravelData(nextState = {}) {
     // A reset creates a separate local trip. Existing trips and pending edits remain recoverable.
     const id = window.TripLogSyncModel.uuid();
     const reset = normalizeImportedTripSnapshot({ ...getFallbackState(id), ...nextState, id });
-    repositoryTrips.push(reset); repositoryViews.set(id, window.TripLogSyncModel.clone(reset));
+    repositoryTrips.push(reset); rememberRepositoryView(reset);
     return reset;
   }
   const resetState = {
@@ -711,7 +725,7 @@ async function initializeRepository() {
     const current = repositoryTrips.find(t => t.id === (active || state.id)) || repositoryTrips[0];
     if (current) { for (const key of Object.keys(state)) delete state[key]; Object.assign(state, normalizeImportedTripSnapshot(current)); }
     else await activateAccount("");
-    for (const trip of repositoryTrips) repositoryViews.set(trip.id, M.clone(trip));
+    for (const trip of repositoryTrips) rememberRepositoryView(normalizeImportedTripSnapshot(trip), trip);
     R.subscribe(applyRepositoryChange);
   })();
   window.TripLog.persistence.stateStorage.ready = storageReadyPromise;
@@ -740,7 +754,7 @@ async function activateAccount(accountId, projectId = "") {
     document.querySelectorAll("dialog[open]").forEach(dialog => dialog.close());
     for (const key of Object.keys(state)) delete state[key];
     Object.assign(state, normalizeImportedTripSnapshot(next));
-    repositoryViews.set(next.id, window.TripLogSyncModel.clone(state));
+    rememberRepositoryView(state, next);
   }
   if (document.documentElement.dataset.triplogInitialized && typeof render === "function") render();
 }
@@ -755,6 +769,8 @@ function applyRepositoryChange(localId) {
   const selected = Object.fromEntries(["theme", "selectedDate", "selectedItineraryDate", "lastActiveItineraryDate", "selectedItineraryId"].map(k => [k, state[k]]));
   const previous = M.clone(state);
   const next = normalizeImportedTripSnapshot(record.snapshot);
+  const source = M.clone(record.snapshot);
+  const previousSource = repositorySources.get(localId);
   // Open editors retain the version they began editing. Only fields the user changes
   // become patches, so a remote edit cannot be silently accepted as the edit baseline.
   for (const [field, id] of [["itineraryItems", typeof editingItineraryId !== "undefined" ? editingItineraryId : null], ["entries", typeof editingId !== "undefined" ? editingId : null]]) {
@@ -762,10 +778,13 @@ function applyRepositoryChange(localId) {
     if (edited) {
       const index = next[field].findIndex(row => row.id === id);
       if (index >= 0) next[field][index] = edited; else next[field].push(edited);
+      const original = previousSource?.[field]?.find(row => row.id === id) || edited;
+      const sourceIndex = source[field].findIndex(row => row.id === id);
+      if (sourceIndex >= 0) source[field][sourceIndex] = M.clone(original); else source[field].push(M.clone(original));
     }
   }
   Object.assign(state, next, selected);
-  repositoryViews.set(localId, M.clone(state));
+  rememberRepositoryView(state, source);
   if (M.equal(previous, state) || typeof render !== "function") return;
   const active = document.activeElement;
   const scopes = [...document.querySelectorAll("dialog[open], form:focus-within")];

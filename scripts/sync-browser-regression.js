@@ -14,6 +14,15 @@ async function main() {
   // Use a complete currency baseline so a member-cache save does not trigger
   // an unrelated first-run domestic-currency migration in this legacy fixture.
   Object.assign(seed,{country:'일본',countryCode:'JP',city:'교토',travelMode:'overseas',currencyCode:'JPY',currencySymbol:'¥',currencyUnit:'엔',exchangeBase:100,exchangeRate:950,exchangeRateSource:'기본값',exchangeRateUpdatedAt:'',currencyAutoMatchedCountryCode:'JP'});
+  // Old saved coordinates are intentionally hidden by the rendering normalizer.
+  // Their raw storage shape must still be the comparison baseline for edits/deletes.
+  const legacyCoordinates={lat:34.9688924,lon:135.7692389,coordinateSource:'',coordinateSignature:'legacy-signature',coordinateAddress:'old address',coordinatePrecision:'',googlePlaceId:''};
+  Object.assign(seed.itineraryItems[0],legacyCoordinates);
+  seed.itineraryItems.push({id:'legacy-delete',date:'2026-09-27',time:'16:30',endTime:'17:30',place:'후시미이나리 삭제 검증',location:'후시미이나리',...legacyCoordinates,trans:'train',transits:[{trans:'train',cost:1200,duration:15}],cost:1200,duration:15,syncExpense:true,expenseId:'legacy-fare'});
+  seed.itineraryItems.push({id:'legacy-offline',date:'2026-09-28',time:'09:00',place:'오프라인 삭제 검증',location:'교토',...legacyCoordinates});
+  seed.entries.push({id:'legacy-fare',date:'2026-09-27',description:'연결된 이동 비용',category:'교통',amount:1200,currency:'KRW',mode:'domestic',payerKey:'leader'});
+  seed.settlement={itemSplits:{'current:legacy-fare':{mode:'equal',shares:{}}}};
+  seed.travelCompanion={completedItineraryIds:['legacy-delete'],lockedItineraryIds:['legacy-delete']};
   // Legacy snapshots contain emails; the current membership endpoint omits them.
   // Both copies previously survived normalization and appeared as two people.
   Object.assign(seed.collaboration, {
@@ -147,6 +156,53 @@ async function main() {
     },actors[1]);
     assert.deepEqual(companionCheck,{names:['JJ','JH','JH'],unchanged:true},'Linked companions count once without deleting financial records or namesakes');
     console.log('PASS browser: duplicate legacy membership heals on both devices; invite sheets, stable identity, role persistence, namesakes, rename/removal and offline reload verified');
+    await a.evaluate(()=>startItineraryEdit(state.itineraryItems.find(item=>item.id==='legacy-delete')));
+    await a.evaluate(()=>window.TripLog.persistence.stateStorage.whenSaved());
+    await b.evaluate(async()=>{
+      const item=state.itineraryItems.find(item=>item.id==='legacy-delete');item.cost=1500;item.transits[0].cost=1500;item.trans='bus';item.transits[0].trans='bus';
+      state.entries.find(entry=>entry.id==='legacy-fare').amount=1500;await saveAndRender();
+    });
+    await a.waitForFunction(()=>window.TripLogSyncRepository.cached(state.id).snapshot.entries.find(entry=>entry.id==='legacy-fare').amount===1500);
+    await a.locator('#itineraryChangePlace').click();await a.locator('#itineraryPlaceInput').fill('후시미이나리 변경 검증');
+    await a.locator('#itinerarySubmitButton').click();await a.locator('#itineraryEditor').waitFor({state:'hidden'});
+    await b.waitForFunction(()=>state.itineraryItems.find(item=>item.id==='legacy-delete').place==='후시미이나리 변경 검증');
+    assert.equal(await b.evaluate(()=>state.itineraryItems.find(item=>item.id==='legacy-delete').cost),1500,'Place edits preserve another device’s updated transit');
+    assert.equal(await b.evaluate(()=>state.entries.find(entry=>entry.id==='legacy-fare').amount),1500,'Place edits never revert linked money');
+    assert.match(await b.evaluate(()=>state.entries.find(entry=>entry.id==='legacy-fare').description),/버스/,'The linked description uses the latest transit mode');
+    assert.equal(await b.evaluate(()=>state.itineraryItems.find(item=>item.id==='legacy-delete').lat),undefined,'Changed places discard stale coordinates');
+    // Exercise direct place replacement on another legacy coordinate record.
+    await a.evaluate(()=>startItineraryEdit(state.itineraryItems.find(item=>item.id==='kyoto')));
+    await a.locator('#itineraryChangePlace').click();await a.locator('#itineraryPlaceInput').fill('교토역 변경 검증');
+    await a.locator('#itinerarySubmitButton').click();await a.locator('#itineraryEditor').waitFor({state:'hidden'});
+    await b.waitForFunction(()=>state.itineraryItems.find(item=>item.id==='kyoto').place==='교토역 변경 검증');
+    await a.evaluate(()=>startItineraryEdit(state.itineraryItems.find(item=>item.id==='legacy-delete')));
+    await a.evaluate(()=>window.TripLog.persistence.stateStorage.whenSaved());
+    await a.locator('#itineraryExtraDetails > summary').click();
+    await a.locator('#itineraryMemoInput').fill('삭제 실패 후에도 남을 입력');
+    await a.evaluate(()=>{window.__deleteOriginalSave=window.TripLogSyncRepository.save;window.TripLogSyncRepository.save=async()=>{throw new Error('QuotaExceededError delete fixture');};});
+    await a.locator('#itineraryDeleteButton').click();await a.locator('#rdConfirm').getByRole('button',{name:'확인',exact:true}).click();
+    await a.getByText('삭제를 저장하지 못했어요. 일정은 유지됩니다. 다시 시도해 주세요.',{exact:true}).waitFor();
+    await a.waitForFunction(()=>!document.querySelector('#itineraryDeleteButton').disabled);
+    assert(await a.locator('#itineraryEditor').isVisible());assert.equal(await a.locator('#itineraryMemoInput').inputValue(),'삭제 실패 후에도 남을 입력');
+    assert(await a.evaluate(()=>state.itineraryItems.some(item=>item.id==='legacy-delete')&&state.entries.some(entry=>entry.id==='legacy-fare')),'Failed delete restores the linked records');
+    await a.evaluate(()=>{window.TripLogSyncRepository.save=window.__deleteOriginalSave;});
+    await a.locator('#itineraryDeleteButton').click();
+    await a.locator('#rdConfirm').getByRole('button',{name:'확인',exact:true}).click();
+    await b.waitForFunction(()=>!state.itineraryItems.some(item=>item.id==='legacy-delete'),null,{timeout:8000});
+    assert.equal(await a.evaluate(()=>window.TripLogSyncRepository.cached(state.id).conflicts.length),0,'Normalization must not manufacture delete conflicts');
+    assert.equal(await b.evaluate(()=>state.entries.some(entry=>entry.id==='legacy-fare')),false,'Linked fare is removed in the same command');
+    assert.equal(await b.evaluate(()=>state.travelCompanion.completedItineraryIds.includes('legacy-delete')||state.travelCompanion.lockedItineraryIds.includes('legacy-delete')),false);
+    assert.equal(await a.evaluate(async()=> (await window.TripLog.sync.drafts.list(state.id)).some(row=>row.value.editId==='legacy-delete')),false,'Successful deletion clears its obsolete form draft');
+    console.log('PASS browser: legacy-coordinate deletion removes exactly the itinerary, linked fare and progress on both devices');
+    offline=true;
+    await b.evaluate(()=>startItineraryEdit(state.itineraryItems.find(item=>item.id==='legacy-offline')));
+    await b.locator('#itineraryDeleteButton').click();await b.locator('#rdConfirm').getByRole('button',{name:'확인',exact:true}).click();
+    await b.waitForFunction(()=>!state.itineraryItems.some(item=>item.id==='legacy-offline'));
+    await b.reload();await b.waitForFunction(()=>document.documentElement.dataset.triplogInitialized==='true'&&state.id==='browser-kyoto');
+    assert.equal(await b.evaluate(()=>state.itineraryItems.some(item=>item.id==='legacy-offline')),false);
+    offline=false;await b.evaluate(()=>window.dispatchEvent(new Event('online')));
+    await a.waitForFunction(()=>!state.itineraryItems.some(item=>item.id==='legacy-offline'));
+    console.log('PASS browser: actual place changes preserve concurrent transit/money; failed delete keeps editor/input; offline legacy delete survives reload and reconnect');
     await a.evaluate(()=>{setActivePage('itinerary');startItineraryEdit(state.itineraryItems.find(i=>i.id==='kyoto'));});
     await a.locator('#itineraryMemoInput').fill('작성 중인 내 메모');
     await a.locator('#itineraryVoucherFile').setInputFiles({name:'fixture.png',mimeType:'image/png',buffer:Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aF1sAAAAASUVORK5CYII=','base64')});
@@ -284,6 +340,7 @@ async function main() {
     assert.deepEqual(errors,[]);
     console.log('PASS browser: quota failure keeps editor open; retry persists and shares input; no runtime errors');
   } catch (error) {
+    for (const page of pages) console.error('Conflict detail:',JSON.stringify(await page.evaluate(()=>window.TripLogSyncRepository.cached(state.id)?.conflicts.map(c=>({source:c.source,patches:c.patches,details:c.details}))).catch(()=>[])));
     for (const page of pages) console.error(await page.evaluate(()=>({trip:state.id,page:activePage,items:state.itineraryItems.map(i=>({id:i.id,time:i.time,memo:i.memo})),engine:window.TripLog.sync.controller.engine.status(),queue:window.TripLogSyncRepository.cached(state.id)?.queue,conflicts:window.TripLogSyncRepository.cached(state.id)?.conflicts})).catch(()=>({closed:true})));
     throw error;
   } finally { await browser.close(); await db.close(); }

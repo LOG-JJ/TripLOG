@@ -260,7 +260,11 @@
     query("#itineraryDeleteButton").addEventListener("click", async () => {
       const item = findItineraryItem(editingItineraryId);
       const tripId=state.id;
-      if (item && await (window.TripLog.features.redesign?.workspace?.confirmAction?.(`'${item.place}' 일정을 삭제할까요?`) ?? window.confirm(`'${item.place}' 일정을 삭제할까요?`)) && state.id===tripId) { const id = item.id; close(); deleteItineraryItem(id); showToast("일정을 삭제했어요."); }
+      if (item && await (window.TripLog.features.redesign?.workspace?.confirmAction?.(`'${item.place}' 일정을 삭제할까요?`) ?? window.confirm(`'${item.place}' 일정을 삭제할까요?`)) && state.id===tripId && editingItineraryId===item.id) {
+        query('#itineraryDeleteButton').disabled=true;els.itinerarySubmitButton.disabled=true;
+        try { await deleteItineraryItem(item.id); }
+        finally { query('#itineraryDeleteButton').disabled=false;els.itinerarySubmitButton.disabled=false; }
+      }
     });
     // Native validation must be able to focus the place field when search is collapsed.
     els.itineraryPlaceInput.addEventListener("invalid", () => { query("#itineraryPlaceSearchPanel").hidden = false; });
