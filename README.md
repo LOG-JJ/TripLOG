@@ -90,6 +90,8 @@ TripLOG의 런타임 상태는 전역 `state` 객체입니다. `await saveAndRen
 
 여행별 `travelCompanion`에는 완료·잠금 일정 ID, 직접 등록한 예약, 시간대와 마지막 시간 조정 기록을 저장합니다. 기존 백업에 이 필드가 없어도 빈 기본값으로 복원합니다. 일정 공유를 끄면 예약 지갑과 진행 상태도 서버 공유 스냅샷에서 제외하며, 시간 조정 되돌리기 기록은 공유하지 않습니다.
 
+로그인 세션은 Supabase SDK의 저장·자동 갱신을 사용합니다. 현재 고정된 auth-js 2.107.0은 갱신 요청의 HTTP 429 및 일부 5xx를 세션 삭제로 처리하므로, `trip-collaboration.js`의 전용 fetch가 **토큰 갱신 요청에 한해** 재시도 가능한 오류로 전달합니다. `Retry-After` 동안 실제 재요청을 제한하고, 별도 토큰 사본이나 수동 저장소 삭제를 사용하지 않습니다. 인증 이벤트 밖에서 여행 동기화를 수행하며, 동일한 세션 확인 요청을 합치고 이전 클라이언트·로그인의 늦은 결과를 무시합니다. 서버가 실제로 인증을 취소하면 재로그인을 요구하고, 기존 계정의 여행·전송 대기 기록·초안은 보관합니다. SDK 버전 변경 시 이 호환 처리와 인증 회귀 테스트를 함께 검토해야 합니다.
+
 ## 개발 규칙
 
 - UI는 브라우저 전역 구조를 유지합니다. Yjs 번들과 서버용 공통 모델, 오프라인 앱 자산은 `npm run prepare:sync`로 생성합니다.
@@ -103,6 +105,8 @@ TripLOG의 런타임 상태는 전역 `state` 객체입니다. `await saveAndRen
 ## 검증
 
 `npm test`는 PostgreSQL(PGlite)·IndexedDB·독립 기기 동기화 및 기존 기능 회귀 테스트를 실행합니다. `npm run test:browser`는 별도 로컬 서버와 격리된 브라우저 두 개로 화면·오프라인 앱·초안을 확인합니다. Windows에서는 설치된 Edge, 다른 OS에서는 `npx playwright install chromium`으로 설치한 Chromium을 사용합니다.
+
+로그인만 검증하려면 `node scripts/auth-session-browser-regression.js`를 실행합니다. 배포용 Supabase SDK와 가상 인증 서버로 429/5xx/통신 실패, 동시 확인, 오래된 응답, 실제 만료 후 초안 보존, 이메일 복구 링크, 연결 초기화와 여러 탭의 로그아웃을 검사합니다. 실제 계정과 서버 데이터는 사용하지 않습니다.
 
 Edge Function 경계 검증: `deno test --node-modules-dir=auto --no-lock --allow-env supabase/functions/triplog-sync/handler_test.ts`. 배포 파일 생성: `npm run build`.
 
