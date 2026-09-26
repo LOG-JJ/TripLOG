@@ -1,0 +1,16 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const vm = require('node:vm');
+let api;
+vm.runInNewContext(fs.readFileSync('src/app/features/expenses/receipt-json.js', 'utf8'), { window: { TripLog: { register(name, value) { api = value; } } } });
+const data = { description: '점심', paymentDate: '2026-09-25', expenseDate: '2026-09-25', amount: 12500, currency: 'KRW', category: '식비', paymentMethod: 'cash', note: '두 명', payerKey: 'leader', exchangeRate: null, checkIn: null, checkOut: null };
+assert.equal(api.parse(JSON.stringify(data)).amount, 12500);
+assert.equal(api.parse('```json\n' + JSON.stringify(data) + '\n```').merchant, '점심');
+assert.equal(api.parse('{}').amount, null);
+assert.equal(api.parse(JSON.stringify({...data, expenseDate: '__pretrip__'})).structured.expenseDate, '__pretrip__');
+for (const input of ['[]', 'null', '{', '{"__proto__":{}}', JSON.stringify({...data, amount: '12,500'}), JSON.stringify({...data, amount: -1}), JSON.stringify({...data, amount: 1.2}), JSON.stringify({...data, paymentDate: '2026-02-30'}), JSON.stringify({...data, currency: 'BTC'}), JSON.stringify({...data, paymentMethod: 'unknown'}), JSON.stringify({...data, note: 'x'.repeat(61)}), JSON.stringify({...data, checkIn: '2026-09-25'}), JSON.stringify({...data, category: '숙소', checkIn: '2026-09-26', checkOut: '2026-09-25'}), '{"amount":1e999}']) assert.throws(() => api.parse(input), input);
+const prompt = api.prompt({startDate: '2026-09-25', payers: [{key: 'leader', name: '나'}]});
+assert.match(prompt, /100단위당/);
+assert.match(prompt, /2026-09-25/);
+assert.match(prompt, /추측하지 말고 null/);
+console.log('PASS: receipt JSON validation, fenced input, unknown values, prompt context');

@@ -2,7 +2,8 @@
   const ids = ['CameraButton', 'AlbumButton', 'CameraInput', 'AlbumInput', 'CloseButton', 'Language', 'ImageArea',
     'Preview', 'CropBox', 'RotateButton', 'CropButton', 'CropApplyButton', 'CropHint', 'RecognizeButton', 'ProgressArea',
     'Progress', 'CancelButton', 'Status', 'ReviewForm', 'Warnings', 'Merchant', 'Date', 'ExpenseDate', 'Amount',
-    'Currency', 'Category', 'Payment', 'RawText', 'ParseTextButton', 'ApplyButton', 'TextDetails'];
+    'Currency', 'Category', 'Payment', 'RawText', 'ParseTextButton', 'ApplyButton', 'TextDetails',
+    'JsonText', 'JsonPrompt', 'CopyPrompt', 'ParseJson', 'JsonStatus'];
   const ui = Object.fromEntries(ids.map((id) => [id, els.receiptDialog.querySelector(`#receipt${id}`)]));
   const parser = window.TripLog.features.expenses.receiptParser;
   const engine = window.TripLog.features.expenses.receiptOcr;
@@ -17,11 +18,13 @@
   let cropStart = null;
   let crop = null;
   let setupDone = false;
+  let structured = null;
 
   function formSignature() {
     return JSON.stringify([state.id, editingId, state.travelMode, state.startDate, state.endDate,
       ...['daySelect', 'categorySelect', 'descriptionInput', 'amountInput', 'currencySelect', 'foreignAmountInput',
-        'exchangeRateInput', 'noteInput', 'paymentMethodInput', 'lodgingCheckInInput', 'lodgingCheckOutInput'].map((id) => els[id]?.value)]);
+        'exchangeRateInput', 'noteInput', 'paymentMethodInput', 'lodgingCheckInInput', 'lodgingCheckOutInput'].map((id) => els[id]?.value),
+      document.getElementById('rdPaymentDate')?.value, document.getElementById('rdPayer')?.value]);
   }
   function status(message, error = false) {
     ui.Status.textContent = message;
@@ -29,7 +32,7 @@
   }
   function setBusy(value) {
     busy = value;
-    ['CameraButton', 'AlbumButton', 'RotateButton', 'CropButton', 'Language', 'ParseTextButton'].forEach((key) => { ui[key].disabled = value; });
+    ['CameraButton', 'AlbumButton', 'RotateButton', 'CropButton', 'Language', 'ParseTextButton', 'ParseJson', 'JsonText'].forEach((key) => { ui[key].disabled = value; });
     ui.RecognizeButton.disabled = value || !photo;
     ui.ApplyButton.disabled = value || ui.ReviewForm.hidden;
     ui.ProgressArea.hidden = !value;
@@ -37,6 +40,7 @@
     ui.RawText.disabled = value;
   }
   function resetReview() {
+    structured = null;
     ui.ReviewForm.reset(); ui.ReviewForm.hidden = true; ui.ApplyButton.disabled = true;
     ui.RawText.value = ''; ui.Warnings.replaceChildren();
   }
@@ -64,7 +68,12 @@
     ui.Language.value = state.travelMode === 'domestic' ? 'kor+eng' : state.currencyCode === 'JPY' ? 'jpn+eng' : 'eng';
     ui.ExpenseDate.replaceChildren(new Option('일자를 선택해 주세요', ''));
     for (const option of els.daySelect.options) ui.ExpenseDate.add(new Option(option.textContent, option.value));
-    setBusy(false); status('영수증 한 장을 선택해 주세요.');
+    ui.JsonText.value = ''; ui.JsonStatus.textContent = '';
+    ui.JsonPrompt.value = window.TripLog.features.expenses.receiptJson.prompt({
+      startDate: state.startDate, endDate: state.endDate,
+      payers: getSettlementMembers().map(member => ({ key: member.key, name: member.isLeader ? '나' : member.name })),
+    });
+    setBusy(false); status('AI 결과를 붙여넣거나 영수증 사진을 선택해 주세요.');
     els.receiptDialog.showModal();
   }
   async function choosePhoto(event) {
@@ -84,6 +93,7 @@
     } finally { if (token === generation) setBusy(false); }
   }
   function showResult(result) {
+    structured = result.structured || null;
     ui.Merchant.value = result.merchant;
     ui.Date.value = result.date;
     ui.Amount.value = result.amount === null ? '' : String(result.amount);
@@ -92,6 +102,7 @@
     ui.Payment.value = result.paymentMethod;
     ui.RawText.value = result.text;
     ui.ExpenseDate.value = [...ui.ExpenseDate.options].some((option) => option.value === result.date) ? result.date : '';
+    if (structured?.expenseDate) ui.ExpenseDate.value = structured.expenseDate;
     const warnings = [...result.warnings];
     if (!ui.ExpenseDate.value) warnings.push('여행의 어느 일자에 기록할지 선택해 주세요. 사전 결제는 ‘사전구매’를 선택할 수 있어요.');
     const duplicate = parser.findReceiptDuplicate(state.entries, { ...result, fingerprint }, editingId);
@@ -99,7 +110,7 @@
     ui.Warnings.replaceChildren(...warnings.map((message) => { const li = document.createElement('li'); li.textContent = message; return li; }));
     ui.Warnings.hidden = !warnings.length;
     ui.ReviewForm.hidden = false; ui.ApplyButton.disabled = false;
-    status('인식 결과를 확인해 주세요. 아직 지출에 저장되지 않았습니다.');
+    status('입력 정보를 확인해 주세요. 아직 지출에 저장되지 않았습니다.');
     ui.Status.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
   async function recognize() {
@@ -141,6 +152,13 @@
     if (![...els.daySelect.options].some((option) => option.value === date)) {
       status('기록할 여행 일자를 선택해 주세요.', true); return;
     }
+    if (structured) {
+      const issue = structuredIssue(structured);
+      if (issue) { status(issue, true); return; }
+      if ((structured.checkIn || structured.checkOut) && ui.Category.value !== '숙소') {
+        status('체크인·체크아웃이 있는 JSON입니다. 항목을 숙소로 선택하거나 날짜를 제거해 주세요.', true); return;
+      }
+    }
     els.daySelect.value = date;
     els.categorySelect.value = ui.Category.value;
     els.descriptionInput.value = ui.Merchant.value.trim();
@@ -164,6 +182,24 @@
     } else setCommaNumberInputValue(els.amountInput, amount);
     syncCustomSelect(els.daySelect); syncCustomSelect(els.categorySelect); syncCustomSelect(els.currencySelect);
     renderExpenseFormMode();
+    if (structured) {
+      els.noteInput.value = structured.note || '';
+      const paymentDate = document.getElementById('rdPaymentDate');
+      paymentDate.value = ui.Date.value; syncCustomDatePicker(paymentDate);
+      const payer = document.getElementById('rdPayer');
+      if (structured.payerKey) { payer.value = structured.payerKey; syncCustomSelect(payer); }
+      document.getElementById('rdExpenseMemo').open = Boolean(els.noteInput.value || payer.value !== 'leader');
+      if (state.travelMode === 'overseas' && structured.exchangeRate && ui.Currency.value !== 'KRW') {
+        setCommaNumberInputValue(els.exchangeRateInput, structured.exchangeRate);
+        updateExchangeRateGuide(); updateConvertedAmount();
+      }
+      if (isLodgingSplitMode()) {
+        els.lodgingCheckInInput.value = structured.checkIn || '';
+        els.lodgingCheckOutInput.value = structured.checkOut || '';
+        syncLodgingDateBounds(); updateLodgingPreview();
+      }
+      window.TripLog.features.expenses.workspace?.syncEditor();
+    }
     pendingReceipt = { tripId: state.id, editingId, fingerprint, recognizedDate: ui.Date.value };
     const applied = document.getElementById('receiptAppliedStatus');
     applied.textContent = `영수증 정보를 채웠어요. ${state.travelMode === 'overseas' ? '환율과 ' : ''}입력값을 확인한 뒤 ‘${editingId ? '저장' : '추가'}’를 눌러 주세요.`;
@@ -171,6 +207,29 @@
     els.receiptDialog.close();
     els.expenseForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
     els.descriptionInput.focus({ preventScroll: true });
+    // Programmatic filling must participate in the existing local draft flow.
+    els.descriptionInput.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+  function structuredIssue(data) {
+    if (data.expenseDate && ![...els.daySelect.options].some(option => option.value === data.expenseDate)) return 'expenseDate가 여행 기간 밖입니다. 여행 일자 또는 __pretrip__으로 수정해 주세요.';
+    if (data.payerKey && !getSettlementMembers().some(member => member.key === data.payerKey)) return '현재 여행에 없는 payerKey입니다. 프롬프트를 다시 복사해 결제자를 확인해 주세요.';
+    if (editingId && (data.checkIn || data.checkOut)) return '숙박 기간은 새 지출에서 입력해 주세요. 기존 숙소의 기간은 예약 상세에서 수정할 수 있어요.';
+    for (const key of ['checkIn', 'checkOut']) if (data[key] && (data[key] < state.startDate || data[key] > state.endDate)) return '체크인·체크아웃은 현재 여행 기간 안으로 입력해 주세요.';
+    return '';
+  }
+  function parseJson() {
+    if (busy) return;
+    resetReview(); fingerprint = '';
+    try {
+      const result = window.TripLog.features.expenses.receiptJson.parse(ui.JsonText.value);
+      const issue = structuredIssue(result.structured);
+      if (issue) throw new Error(issue);
+      showResult(result);
+      ui.JsonStatus.textContent = '정보를 읽었어요. 아래에서 확인한 뒤 지출 정보에 적용해 주세요.';
+      const guidance = document.getElementById('rdReceiptStatusInfo');
+      // The redesign observer collapses this on review; reopen after it runs.
+      if (guidance && result.warnings.length) queueMicrotask(() => { guidance.open = true; });
+    } catch (error) { ui.JsonStatus.textContent = error.message; status(error.message, true); }
   }
   function reset() {
     pendingReceipt = null;
@@ -198,6 +257,12 @@
   function setup() {
     if (setupDone) return; setupDone = true;
     els.receiptOpenButton.addEventListener('click', open);
+    ui.ParseJson.addEventListener('click', parseJson);
+    ui.JsonText.addEventListener('input', () => { resetReview(); ui.JsonStatus.textContent = ''; });
+    ui.CopyPrompt.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(ui.JsonPrompt.value); ui.JsonStatus.textContent = '프롬프트를 복사했어요. 외부 AI에 영수증과 함께 전달해 주세요.'; }
+      catch { ui.JsonPrompt.closest('details').open = true; ui.JsonPrompt.focus(); ui.JsonPrompt.select(); ui.JsonStatus.textContent = '자동 복사가 안 되어 텍스트를 선택했어요. 직접 복사해 주세요.'; }
+    });
     ui.CloseButton.addEventListener('click', () => els.receiptDialog.close());
     els.receiptDialog.addEventListener('close', () => {
       if (els.receiptDialog.open) return;
