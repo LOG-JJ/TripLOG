@@ -41,6 +41,7 @@ async function main(){
     assert.deepEqual(await page.evaluate(()=>getFilteredItineraryItems().map(i=>i.id)),['A','B','C','D']);
     assert.equal(await page.evaluate(()=>window.TripLogSyncRepository.cached(state.id).localRevision),beforeRevision);
     assert.equal(await page.locator('.is-dragging').evaluate(node=>getComputedStyle(node).opacity),'0');
+    await page.waitForFunction(()=>window.__dragMotion.includes('transform'));
     const running=await page.evaluate(()=>window.__dragMotion.includes('transform'));
     assert.equal(running,true,'Neighbor cards must animate while opening the preview slot');
     const samples=await page.evaluate(()=>new Promise(resolve=>{const seen=[];const end=performance.now()+350;function frame(){seen.push(document.querySelector('#itineraryList').dataset.dragPreviewOrder);if(performance.now()<end)setTimeout(frame,35);else resolve([...new Set(seen)]);}frame();}));
