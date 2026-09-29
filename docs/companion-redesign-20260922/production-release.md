@@ -1,5 +1,7 @@
 # Pocket Passport 운영 배포 — 2026-09-22
 
+> 배포 절차 안내 (2026-09-29): 이 문서의 Cloudflare Pages·Wrangler 기록은 과거 이력입니다. 현재 작업은 [프로젝트 지침](../../AGENTS.md)에 따라 Git 푸시 → 연결된 자동 배포로 진행합니다.
+
 ## 후속 배포 · 티켓 절취 가장자리
 
 - 운영 주소는 동일하다. 최신 배포: https://aac01ff5.triplog-5qs.pages.dev (`main` production).

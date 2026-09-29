@@ -8,7 +8,15 @@ TripLOG는 여행 일정, 지출, 정산, 저장 기록, 리포트를 관리하�
 
 ## 실행
 
-운영 주소: [TripLOG](https://triplog-5qs.pages.dev/Travel?page=overview). 로컬 변경은 배포 후 운영 화면에 반영됩니다.
+기존 문서에 기록된 접속 주소: [TripLOG](https://triplog-5qs.pages.dev/Travel?page=overview). 이 주소의 도메인을 근거로 배포 도구를 선택하지 않습니다.
+
+## 배포 절차
+
+2026-09-29 사용자 확인 기준으로 **Git 커밋·푸시 → 연결된 자동 배포**를 사용합니다. 사용자는 Supabase 연동을 사용한다고 확인했습니다. 작업 절차는 [AGENTS.md](AGENTS.md)를 따릅니다.
+
+원격 `main`의 변경을 반영하고 관련 테스트와 `npm run build`를 완료한 뒤 변경을 커밋·푸시합니다. 과거 문서의 Cloudflare Pages·Wrangler 직접 업로드는 이력이며 현재 기본 절차가 아닙니다. Git 푸시 성공과 자동 배포 완료는 별도로 확인·보고합니다.
+
+### 로컬 실행
 
 ```powershell
 npm ci
