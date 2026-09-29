@@ -2,6 +2,11 @@ let exchangeRateFetchToken = 0;
 
 function syncExpenseCurrencyFromSettings() {
   if (!els.settingsCurrencySelect || !els.currencySelect) return;
+  if (els.settingsCurrencySelect.value === state.currencyCode) {
+    syncExchangeRateInputsFromState();
+    return;
+  }
+  exchangeRateFetchToken++;
   const currency = setPreferredCurrency(els.settingsCurrencySelect.value);
   state.exchangeRate = getDefaultExchangeRateForCurrency(currency.code);
   state.exchangeRateSource = "기본값";
@@ -17,15 +22,11 @@ function syncExpenseCurrencyFromSettings() {
 
 function syncSettingsCurrencyFromExpense() {
   if (!els.settingsCurrencySelect || !els.currencySelect) return;
-  const currency = setPreferredCurrency(els.currencySelect.value);
-  state.exchangeRate = getDefaultExchangeRateForCurrency(currency.code);
-  state.exchangeRateSource = "기본값";
-  state.exchangeRateUpdatedAt = "";
-  if (currency.code && els.settingsCurrencySelect.querySelector(`option[value="${currency.code}"]`)) {
-    els.settingsCurrencySelect.value = currency.code;
-  }
-  syncExchangeRateInputsFromState();
-  requestLatestExchangeRateForCurrency(currency, { reason: "manual" });
+  // 결제 통화는 이 지출에만 적용하고 여행 설정은 유지합니다.
+  const currency = getCurrencyMeta(els.currencySelect.value);
+  const rate = currency.code === state.currencyCode
+    ? state.exchangeRate : getDefaultExchangeRateForCurrency(currency.code);
+  setCommaNumberInputValue(els.exchangeRateInput, isWonCurrency(currency) ? 1 : rate);
 }
 
 function syncCurrencyControlsFromPreferred() {
@@ -48,29 +49,20 @@ function syncCurrencyControlsFromPreferred() {
 
 function syncExpenseExchangeRateFromSettings() {
   if (!els.settingsExchangeRateInput || !els.exchangeRateInput) return;
-  if (isWonCurrency(els.currencySelect?.value)) {
-    setCommaNumberInputValue(els.exchangeRateInput, 1);
+  if (isWonCurrency(state.currencyCode)) return;
+  const rate = parseFormattedNumber(els.settingsExchangeRateInput.value);
+  if (!Number.isFinite(rate) || rate <= 0) {
+    els.settingsExchangeRateInput.setCustomValidity("환율을 0보다 크게 입력해 주세요.");
     return;
   }
-  const rate = parseFormattedNumber(els.settingsExchangeRateInput.value);
-  setCommaNumberInputValue(els.exchangeRateInput, rate || "");
+  els.settingsExchangeRateInput.setCustomValidity("");
+  exchangeRateFetchToken++;
   state.exchangeRate = rate;
   state.exchangeRateSource = "수동 입력";
   state.exchangeRateUpdatedAt = "";
-}
-
-function syncSettingsExchangeRateFromExpense() {
-  if (!els.settingsExchangeRateInput || !els.exchangeRateInput) return;
-  if (isWonCurrency(els.currencySelect?.value)) {
-    setCommaNumberInputValue(els.settingsExchangeRateInput, 1);
-    return;
-  }
-  if (els.exchangeRateInput.value) {
-    const rate = parseFormattedNumber(els.exchangeRateInput.value);
-    setCommaNumberInputValue(els.settingsExchangeRateInput, rate || "");
-    state.exchangeRate = rate;
-    state.exchangeRateSource = "수동 입력";
-    state.exchangeRateUpdatedAt = "";
+  state.currencyAutoMatchedCountryCode = getCurrentCurrencyMatchCountryKey();
+  if (!editingId && els.currencySelect.value === state.currencyCode) {
+    setCommaNumberInputValue(els.exchangeRateInput, rate);
   }
 }
 
@@ -172,7 +164,7 @@ function updateExchangeRateGuide() {
     if (els.settingsExchangeRateLabel) {
       els.settingsExchangeRateLabel.textContent = "1원 = 1원";
     }
-    renderCurrencySettingsSummary(currency, 1);
+    renderCurrencySettingsSummary();
     return;
   }
 
@@ -185,7 +177,7 @@ function updateExchangeRateGuide() {
       ? `${baseLabel} = ${rate.toLocaleString("ko-KR", { maximumFractionDigits: 2 })}원`
       : `${baseLabel}당 원화`;
   }
-  renderCurrencySettingsSummary(currency);
+  renderCurrencySettingsSummary();
 }
 
 function syncWonCurrencyFieldState(isWon = isWonCurrency(els.currencySelect?.value)) {
@@ -237,12 +229,12 @@ function syncExchangeRateInputsFromState() {
   const currency = getCurrencyMeta(state.currencyCode || els.settingsCurrencySelect?.value || "JPY");
   const rate = isWonCurrency(currency) ? 1 : Number(state.exchangeRate || getDefaultExchangeRateForCurrency(currency.code));
   if (els.settingsExchangeRateInput) setCommaNumberInputValue(els.settingsExchangeRateInput, rate);
-  if (els.exchangeRateInput && !isWonCurrency(currency)) setCommaNumberInputValue(els.exchangeRateInput, rate);
-  if (isWonCurrency(currency) && els.exchangeRateInput) setCommaNumberInputValue(els.exchangeRateInput, 1);
+  if (!editingId && els.exchangeRateInput && !isWonCurrency(currency)) setCommaNumberInputValue(els.exchangeRateInput, rate);
+  if (!editingId && isWonCurrency(currency) && els.exchangeRateInput) setCommaNumberInputValue(els.exchangeRateInput, 1);
 }
 
 function requestLatestExchangeRateForCurrency(currency = getCurrencyMeta(state.currencyCode), { reason = "auto" } = {}) {
-  if (state.travelMode !== "overseas" || isWonCurrency(currency)) {
+  if (state.exchangeRateSource === "수동 입력" || state.travelMode !== "overseas" || isWonCurrency(currency)) {
     updateExchangeRateGuide();
     return;
   }
@@ -281,6 +273,13 @@ function requestLatestExchangeRateForCurrency(currency = getCurrencyMeta(state.c
 function renderCurrencySettingsSummary(currency = getCurrencyMeta(state.currencyCode), rateValue = Number(state.exchangeRate || 0)) {
   const isOverseas = state.travelMode === "overseas";
   const rate = isWonCurrency(currency) ? 1 : Number(rateValue || state.exchangeRate || getDefaultExchangeRateForCurrency(currency.code));
+  if (els.settingsExchangeRateInput) {
+    els.settingsExchangeRateInput.disabled = isWonCurrency(currency);
+    els.settingsExchangeRateInput.setAttribute("aria-label", `적용 환율 (${formatRateBase(currency)}당 원화)`);
+  }
+  if (els.settingsExchangeRateLabel) {
+    els.settingsExchangeRateLabel.textContent = `${formatRateBase(currency)} = ${rate.toLocaleString("ko-KR", { maximumFractionDigits: 2 })}원`;
+  }
   const destination = [state.country, state.city].filter(Boolean).join(" · ");
   if (els.settingsTravelModeBadge) {
     els.settingsTravelModeBadge.textContent = `${isOverseas ? "해외 여행" : "국내 여행"}${destination ? ` · ${destination}` : ""}`;
@@ -296,7 +295,9 @@ function renderCurrencySettingsSummary(currency = getCurrencyMeta(state.currency
   if (els.settingsCurrencyAutoStatus) {
     const source = state.exchangeRateSource || (isOverseas ? "국가 기본값" : "국내 원화");
     const updatedAt = state.exchangeRateUpdatedAt ? ` · ${state.exchangeRateUpdatedAt}` : "";
-    els.settingsCurrencyAutoStatus.textContent = `${state.country || "설정 국가"} 기준 자동 매칭 · ${source}${updatedAt}`;
+    els.settingsCurrencyAutoStatus.textContent = source === "수동 입력"
+      ? "직접 입력한 환율 · 변경 후 새 지출부터 적용됩니다."
+      : `${state.country || "설정 국가"} 기준 자동 매칭 · ${source}${updatedAt}`;
   }
 }
 
@@ -305,7 +306,6 @@ window.TripLog.register("features.expenses.currencyControls", {
   syncSettingsCurrencyFromExpense,
   syncCurrencyControlsFromPreferred,
   syncExpenseExchangeRateFromSettings,
-  syncSettingsExchangeRateFromExpense,
   ensureExpenseExchangeDefaults,
   renderModeControls,
   updateConvertedAmount,

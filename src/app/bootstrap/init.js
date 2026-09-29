@@ -405,7 +405,6 @@ function init() {
   });
   els.foreignAmountInput.addEventListener("input", updateConvertedAmount);
   els.exchangeRateInput.addEventListener("input", () => {
-    if (!editingId) syncSettingsExchangeRateFromExpense();
     updateExchangeRateGuide();
     updateConvertedAmount();
     if (!editingId) saveStateSilently();
