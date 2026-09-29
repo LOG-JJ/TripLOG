@@ -181,11 +181,11 @@
   async function reconcile(localId) {
     return update(localId, record => reconcileLegacy(record), { snapshot: true, source: "before-automatic-reconcile" });
   }
-  async function save(snapshot, observed, { deletions = [] } = {}) {
+  async function save(snapshot, observed, { deletions = [], sourceSnapshot = observed || snapshot } = {}) {
     const localId = snapshot.id;
     const before = M.encode(observed || snapshot);
     const ranked = M.reposition(snapshot, before);
-    const patches = M.diff(before, M.encode(ranked));
+    const patches = M.diff(before, M.encode(ranked), { source: M.encode(sourceSnapshot) });
     const explicitDeletes = new Set(deletions.map(p => M.key(p.kind, p.id)));
     if (patches.some(p => p.action === "delete" && ["itinerary", "expense", "packing", "participant", "reservation"].includes(p.kind) && !explicitDeletes.has(M.key(p.kind, p.id)))) {
       throw new Error("기존 기록을 지우는 저장을 중단했습니다. 삭제할 항목에서 삭제 버튼을 사용해 주세요.");

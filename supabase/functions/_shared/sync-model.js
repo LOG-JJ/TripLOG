@@ -164,21 +164,24 @@
       return [[key, e]];
     }));
   }
-  function diff(before, after) {
+  function diff(before, after, { source = before } = {}) {
     const patches = [];
     for (const entityKey of new Set([...Object.keys(before), ...Object.keys(after)])) {
       const a = before[entityKey], b = after[entityKey];
+      // User intent comes from the displayed view; comparison values come from
+      // the exact stored snapshot that produced it, before rendering cleanup.
+      const original = source[entityKey] || a;
       if (!a || a.deleted) {
         if (b && !b.deleted) patches.push({ kind: b.kind, id: b.id, action: "create", before: null, fields: clone(b.fields), expectedVersion: a?.version || 0 });
       } else if (!b || b.deleted) {
-        patches.push({ kind: a.kind, id: a.id, action: "delete", before: clone(a.fields), expectedVersion: a.version || 0 });
+        patches.push({ kind: a.kind, id: a.id, action: "delete", before: clone(original.fields), expectedVersion: original.version || 0 });
       } else {
         const fields = {}, previous = {}, versions = {};
         for (const field of new Set([...Object.keys(a.fields), ...Object.keys(b.fields)])) {
           if (equal(a.fields[field], b.fields[field])) continue;
           fields[field] = Object.hasOwn(b.fields, field) ? clone(b.fields[field]) : null;
-          previous[field] = Object.hasOwn(a.fields, field) ? clone(a.fields[field]) : null;
-          versions[field] = a.fieldVersions?.[field] || 0;
+          previous[field] = Object.hasOwn(original.fields, field) ? clone(original.fields[field]) : null;
+          versions[field] = original.fieldVersions?.[field] || 0;
         }
         if (Object.keys(fields).length) patches.push({ kind: b.kind, id: b.id, action: "patch", before: previous, fields, expectedFields: versions });
       }

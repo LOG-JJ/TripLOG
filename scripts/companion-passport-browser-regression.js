@@ -130,6 +130,7 @@ async function main() {
       await page.setViewportSize({ width, height: width >= 768 ? 1050 : 844 });
       for (const key of ['today', 'review', 'tools']) {
         await tab(key); await fits();
+        await page.waitForFunction(()=>[...document.querySelectorAll('#ttCompanion img')].every(img=>img.complete&&img.naturalWidth>0));
         assert.equal(await dialog.locator('img').evaluateAll(images => images.every(img => img.complete && img.naturalWidth > 0)), true);
         await capture(`${key}-${width}`);
       }

@@ -17,7 +17,12 @@
   let supabaseClient = null;
   let supabaseClientSignature = "";
   let supabaseScriptPromise = null;
-  let authListenerAttached = false;
+  let authSubscription = null;
+  let authRevision = 0;
+  let clientGeneration = 0;
+  let sessionSyncPromise = null;
+  let sessionEffectsTimer = null;
+  let sessionRetryTimer = null;
   let intentionalSignOut = false;
   let currentSession = null;
   let pendingInviteRecord = null;
@@ -83,56 +88,84 @@
       || message.includes("session not found");
   }
 
-  function removeSupabaseAuthStorage(config = getSupabaseConfig()) {
-    try {
-      const projectRef = new URL(config.url).hostname.split(".")[0];
-      if (projectRef) localStorage.removeItem(`sb-${projectRef}-auth-token`);
-    } catch {
-      // An invalid custom URL is reported by the normal connection error flow.
-    }
-  }
-
-  async function clearExpiredSupabaseSession(client) {
-    const storedAccount = getStoredAccount();
-    if (storedAccount?.provider === "supabase" && storedAccount.email) {
-      setPendingAuthEmail(storedAccount.email);
-    }
-
-    // signOut removes the client-managed storage. The direct removal is a
-    // fallback for sessions whose refresh token is already rejected by Auth.
-    try {
-      await client?.auth.signOut({ scope: "local" });
-    } catch {
-      // Continue clearing the local state even when the server rejects the old token.
-    }
-    removeSupabaseAuthStorage();
-    if (storedAccount?.provider === "supabase") clearLocalAccount();
+  function resetSupabaseClient() {
+    clientGeneration++;
+    authRevision++;
+    authSubscription?.unsubscribe();
+    authSubscription = null;
+    // Retired clients must not keep refreshing or publishing auth events.
+    supabaseClient?.auth.stopAutoRefresh?.().catch(() => {});
+    supabaseClient = null;
+    supabaseClientSignature = "";
+    sessionSyncPromise = null;
+    window.clearTimeout(sessionEffectsTimer);
+    window.clearTimeout(sessionRetryTimer);
+    sessionEffectsTimer = sessionRetryTimer = null;
     currentSession = null;
     initialTripListSyncComplete = false;
     stopSupabaseMembersSync();
     stopSupabaseTripStateSync();
   }
 
+  function scheduleSessionRetry(generation = clientGeneration, wait = 30000) {
+    if (generation !== clientGeneration || sessionRetryTimer || intentionalSignOut) return;
+    sessionRetryTimer = window.setTimeout(() => {
+      sessionRetryTimer = null;
+      if (generation === clientGeneration && navigator.onLine !== false) syncSupabaseSession();
+    }, wait);
+  }
+
+  function createSupabaseFetch(config, generation) {
+    const tokenUrl = new URL(`${config.url.replace(/\/$/, "")}/auth/v1/token`);
+    let retryAt = 0;
+    const retryable = status => new window.supabase.AuthRetryableFetchError("로그인 연결을 잠시 후 다시 확인합니다.", status);
+    return async (input, options) => {
+      const url = new URL(typeof input === "string" || input instanceof URL ? input : input.url);
+      const isRefresh = url.origin === tokenUrl.origin && url.pathname === tokenUrl.pathname
+        && url.searchParams.get("grant_type") === "refresh_token";
+      if (!isRefresh) return window.fetch(input, options);
+      // auth-js 2.107.0 deletes its stored session for HTTP 429 (and some 5xx).
+      // Surface temporary refresh failures as the SDK's retryable fetch error;
+      // leave real 400/401 revocations to the SDK. Never save a second token copy.
+      if (Date.now() < retryAt) throw retryable(429);
+      try {
+        const response = await window.fetch(input, options);
+        if (response.status === 429 || response.status >= 500) {
+          const header = response.headers.get("Retry-After");
+          const seconds = header && /^\d+(\.\d+)?$/.test(header) ? Number(header) * 1000 : Date.parse(header || "") - Date.now();
+          const wait = Number.isFinite(seconds) ? Math.max(1000, seconds) : 30000;
+          retryAt = Date.now() + wait;
+          scheduleSessionRetry(generation, wait);
+          throw retryable(response.status);
+        }
+        retryAt = 0;
+        return response;
+      } catch (error) {
+        if (generation === clientGeneration) {
+          supabaseStatusOverride = {
+            message: "로그인 연결을 다시 확인하고 있어요. 연결이 복구되면 자동으로 이어집니다.",
+            tone: "warning",
+          };
+          window.setTimeout(() => { if (generation === clientGeneration) renderAuthGate(); }, 0);
+        }
+        scheduleSessionRetry(generation);
+        throw error;
+      }
+    };
+  }
+
   function saveSupabaseConfig(url, publishableKey) {
     const next = { url: url.trim(), publishableKey: publishableKey.trim() };
     writeJsonStorage(SUPABASE_CONFIG_STORAGE_KEY, next);
-    supabaseClient = null;
-    supabaseClientSignature = "";
-    authListenerAttached = false;
+    resetSupabaseClient();
     supabaseStatusOverride = null;
     return next;
   }
 
   function clearSupabaseConfig() {
     localStorage.removeItem(SUPABASE_CONFIG_STORAGE_KEY);
-    supabaseClient = null;
-    supabaseClientSignature = "";
-    authListenerAttached = false;
-    currentSession = null;
-    initialTripListSyncComplete = false;
+    resetSupabaseClient();
     supabaseStatusOverride = null;
-    stopSupabaseMembersSync();
-    stopSupabaseTripStateSync();
   }
 
   function loadSupabaseScript() {
@@ -164,11 +197,15 @@
   async function getSupabaseClient() {
     const config = getSupabaseConfig();
     if (!hasSupabaseConfig(config)) throw new Error("Supabase 연결 정보가 필요합니다.");
-    const signature = `${config.url}|${config.publishableKey.slice(0, 16)}`;
+    const signature = `${config.url}|${config.publishableKey}`;
     if (supabaseClient && supabaseClientSignature === signature) return supabaseClient;
-
+    const generation = clientGeneration;
     await loadSupabaseScript();
+    if (generation !== clientGeneration) return getSupabaseClient();
+    // Startup, login and reconnect can all arrive while the SDK script loads.
+    if (supabaseClient && supabaseClientSignature === signature) return supabaseClient;
     supabaseClient = window.supabase.createClient(config.url, config.publishableKey, {
+      global: { fetch: createSupabaseFetch(config, generation) },
       auth: {
         autoRefreshToken: true,
         // Auth callback URLs are consumed explicitly below. Disabling the
@@ -179,6 +216,7 @@
       },
     });
     supabaseClientSignature = signature;
+    attachAuthListener(supabaseClient);
     return supabaseClient;
   }
 
@@ -245,18 +283,19 @@
       provider: account?.provider || "local",
     };
     writeJsonStorage(ACCOUNT_STORAGE_KEY, savedAccount);
-    applyOwnerAccount(savedAccount);
     return savedAccount;
   }
 
   function saveLocalAccount({ email, displayName }) {
     const normalizedEmail = String(email || "").trim();
     const normalizedName = String(displayName || "").trim() || getEmailDisplayFallback(normalizedEmail);
-    return saveStoredAccount({
+    const account = saveStoredAccount({
       email: normalizedEmail,
       displayName: normalizedName,
       provider: "local",
     });
+    applyOwnerAccount(account);
+    return account;
   }
 
   function clearLocalAccount() {
@@ -291,114 +330,126 @@
     saveStateSilently();
   }
 
-  async function syncSupabaseSession() {
-    if (!hasSupabaseConfig()) {
-      currentSession = null;
+  async function syncSessionData(client, revision) {
+    const isCurrent = () => client === supabaseClient && revision === authRevision;
+    if (!isCurrent()) return;
+    const account = getSessionAccount();
+    if (!account) {
+      initialTripListSyncComplete = false;
       stopSupabaseMembersSync();
       stopSupabaseTripStateSync();
-      renderTripCollaboration();
-      return;
+    } else {
+      const connected = await syncSupabaseTripList({ quiet: true });
+      if (!isCurrent()) return;
+      if (!connected) { scheduleSessionRetry(); renderTripCollaboration(); return; }
+      // Claim/update the owner only after the repository has selected this
+      // account, so another account's cached trip is never edited on sign-in.
+      saveStoredAccount(account);
+      applyOwnerAccount(account);
+      await syncSupabaseTripMembers({ render: true, quiet: true });
+      if (!isCurrent()) return;
+      startSupabaseMembersSync();
+      updateHeaderSyncButton();
+      refreshInviteAfterAuth();
     }
+    renderTripCollaboration();
+  }
 
-    let client = null;
-    try {
-      client = await getSupabaseClient();
-      if (!authListenerAttached) {
-        client.auth.onAuthStateChange((event, session) => {
-          currentSession = session || null;
-          supabaseStatusOverride = null;
-          if (event === "PASSWORD_RECOVERY") {
-            passwordRecoveryRequested = true;
-            authGateMode = "recovery";
-            authStatusOverride = {
-              message: "새 비밀번호를 입력하면 계정 복구가 완료됩니다.",
-              tone: "neutral",
-            };
-          } else if (event === "SIGNED_IN") {
-            authStatusOverride = null;
-          } else if (event === "SIGNED_OUT") {
-            passwordRecoveryRequested = false;
-            authGateMode = "login";
-            initialTripListSyncComplete = false;
-            stopSupabaseMembersSync();
-            stopSupabaseTripStateSync();
-            if (!intentionalSignOut) {
-              authStatusOverride = {
-                message: "오래된 로그인 세션이 만료되었습니다. 이메일과 비밀번호로 다시 로그인해 주세요.",
-                tone: "warning",
-              };
-            }
-          }
-          const account = getSessionAccount();
-          if (account) {
-            applyOwnerAccount(account);
-            syncSupabaseTripList({ render: true, quiet: true })
-              .then(() => syncSupabaseTripMembers({ render: true, quiet: true }))
-              .finally(() => {
-                startSupabaseMembersSync();
-                updateHeaderSyncButton();
-              });
-          }
-          renderTripCollaboration();
-          if (event === "SIGNED_IN") refreshInviteAfterAuth();
-        });
-        authListenerAttached = true;
+  function attachAuthListener(client) {
+    const result = client.auth.onAuthStateChange((event, session) => {
+      if (client !== supabaseClient) return;
+      // INITIAL_SESSION may be null after a retryable network failure. It must
+      // not undo a newer SIGNED_IN/TOKEN_REFRESHED event.
+      if (event === "INITIAL_SESSION" && currentSession) return;
+      if (session || event === "SIGNED_OUT") {
+        currentSession = session || null;
+        authRevision++;
+        supabaseStatusOverride = null;
+        window.clearTimeout(sessionRetryTimer);
+        sessionRetryTimer = null;
       }
-
-      await consumeAuthCallback(client);
-
-      const { data, error } = await client.auth.getSession();
-      if (error) throw error;
-      currentSession = data.session || null;
-      supabaseStatusOverride = null;
-      if (currentSession && hasPasswordRecoveryParams()) {
+      if (event === "PASSWORD_RECOVERY") {
         passwordRecoveryRequested = true;
         authGateMode = "recovery";
-        authStatusOverride = {
-          message: "새 비밀번호를 입력하면 계정 복구가 완료됩니다.",
-          tone: "neutral",
+        authStatusOverride = { message: "새 비밀번호를 입력하면 계정 복구가 완료됩니다.", tone: "neutral" };
+      } else if (session && !passwordRecoveryRequested) {
+        authStatusOverride = null;
+      } else if (event === "SIGNED_OUT") {
+        passwordRecoveryRequested = false;
+        authGateMode = "login";
+        authStatusOverride = intentionalSignOut ? null : {
+          message: "로그인이 해제되었습니다. 다시 로그인해 주세요. 여행 기록과 작성 중인 내용은 보관되어 있습니다.",
+          tone: "warning",
         };
       }
-      const sessionAccount = getSessionAccount();
-      if (sessionAccount) {
-        applyOwnerAccount(sessionAccount);
-        await syncSupabaseTripList({ render: true, quiet: true });
-        await syncSupabaseTripMembers({ quiet: true });
-        startSupabaseMembersSync();
-        updateHeaderSyncButton();
-      } else {
-        initialTripListSyncComplete = false;
-        stopSupabaseMembersSync();
-        stopSupabaseTripStateSync();
+      // No Supabase API, repository activation or rendering under the SDK's
+      // auth lock. Coalesce repeated events and discard retired-client work.
+      window.clearTimeout(sessionEffectsTimer);
+      const revision = authRevision;
+      sessionEffectsTimer = window.setTimeout(() => {
+        sessionEffectsTimer = null;
+        syncSessionData(client, revision).catch(() => scheduleSessionRetry());
+      }, 0);
+    });
+    authSubscription = result.data.subscription;
+  }
+
+  function syncSupabaseSession() {
+    if (sessionSyncPromise) return sessionSyncPromise;
+    const generation = clientGeneration;
+    const work = checkSupabaseSession(generation).finally(() => {
+      if (sessionSyncPromise === work) sessionSyncPromise = null;
+    });
+    sessionSyncPromise = work;
+    return work;
+  }
+
+  async function checkSupabaseSession(generation) {
+    if (!hasSupabaseConfig()) return;
+    let client = null;
+    let revision = authRevision;
+    const isCurrent = () => generation === clientGeneration && client === supabaseClient && revision === authRevision;
+    try {
+      client = await getSupabaseClient();
+      if (generation !== clientGeneration) return;
+      await consumeAuthCallback(client);
+      revision = authRevision;
+      const { data, error } = await client.auth.getSession();
+      if (!isCurrent()) return;
+      if (error) throw error;
+      currentSession = data.session || null;
+      revision = ++authRevision;
+      if (currentSession) {
+        supabaseStatusOverride = null;
+        if (!passwordRecoveryRequested) authStatusOverride = null;
+        window.clearTimeout(sessionRetryTimer);
+        sessionRetryTimer = null;
       }
+      await syncSessionData(client, revision);
     } catch (error) {
+      if (!isCurrent()) return;
       if (isInvalidSupabaseSessionError(error)) {
-        await clearExpiredSupabaseSession(client);
-        supabaseStatusOverride = {
-          message: "저장된 로그인 세션이 만료되었습니다. 다시 로그인해 주세요.",
-          tone: "warning",
-        };
+        // The SDK owns session removal. Signing out again here can erase a
+        // fresh login/rotated token from another tab while this request ends.
+        currentSession = null;
+        authRevision++;
         authStatusOverride = {
-          message: "오래된 로그인 세션이 만료되었습니다. 이메일과 비밀번호로 다시 로그인해 주세요.",
+          message: "로그인 인증이 만료되었습니다. 다시 로그인해 주세요. 여행 기록과 작성 중인 내용은 보관되어 있습니다.",
           tone: "warning",
         };
-      }
-      currentSession = null;
-      stopSupabaseMembersSync();
-      stopSupabaseTripStateSync();
-      if (!isInvalidSupabaseSessionError(error)) {
+        await syncSessionData(client, authRevision);
+      } else {
+        // Network errors, rate limits and lock timeouts do not revoke a user.
+        // Keep the current session, repository scope and unsent changes intact.
         supabaseStatusOverride = {
-          message: `Supabase 세션 확인 실패: ${error.message}`,
+          message: "로그인 연결을 다시 확인하고 있어요. 연결이 복구되면 자동으로 이어집니다.",
           tone: "warning",
         };
-        authStatusOverride = {
-          message: `Supabase 연결 확인 실패: ${error.message}`,
-          tone: "warning",
-        };
+        if (!currentSession) authStatusOverride = supabaseStatusOverride;
+        scheduleSessionRetry(generation);
       }
     } finally {
-      renderTripCollaboration();
-      refreshInviteAfterAuth();
+      if (generation === clientGeneration) renderTripCollaboration();
     }
   }
 
@@ -493,11 +544,12 @@
   async function syncSupabaseTripMembers({ render: shouldRender = false, quiet = true } = {}) {
     if (!isSignedIn() || memberSyncInFlight) return false;
     const localId = state.id;
+    const accountId = currentSession.user.id, client = supabaseClient;
     if (!window.TripLogSyncRepository.cached(localId)?.serverId) return false;
     memberSyncInFlight = true;
     try {
       const result = await window.TripLog.sync.controller.request("members", localId);
-      if (state.id !== localId || !isSignedIn()) return false;
+      if (state.id !== localId || currentSession?.user?.id !== accountId || client !== supabaseClient) return false;
       const changed = mergeSupabaseMembers(result.members || []);
       if (changed) { await saveStateSilently(); if (shouldRender) renderTripCollaboration(); }
       return changed;
@@ -560,12 +612,18 @@
 
   async function syncSupabaseTripList({ quiet = true } = {}) {
     if (!hasSupabaseConfig() || !isSignedIn()) return false;
+    const revision = authRevision;
+    const account = getSessionAccount();
     try {
-      await window.TripLog.sync.controller.connect(await getSupabaseClient(), getSessionAccount(), getSupabaseConfig().url);
+      const client = await getSupabaseClient();
+      const isCurrent = () => revision === authRevision && client === supabaseClient;
+      if (!isCurrent()) return false;
+      await window.TripLog.sync.controller.connect(client, account, getSupabaseConfig().url, { isCurrent });
+      if (!isCurrent()) return false;
       initialTripListSyncComplete = true;
       return true;
     } catch (error) {
-      initialTripListSyncComplete = false;
+      if (revision === authRevision) initialTripListSyncComplete = false;
       if (!quiet) throw error;
       return false;
     }
@@ -665,13 +723,6 @@
     setStatus(els.settingsSupabaseStatus, message, tone);
   }
 
-  function hasPasswordRecoveryParams() {
-    const hashParams = new URLSearchParams(String(window.location.hash || "").replace(/^#/, ""));
-    const queryParams = new URLSearchParams(window.location.search);
-    const type = hashParams.get("type") || queryParams.get("type");
-    return type === "recovery" || type === "password_recovery";
-  }
-
   function getAuthCallbackParams() {
     const hashParams = new URLSearchParams(String(window.location.hash || "").replace(/^#/, ""));
     const queryParams = new URLSearchParams(window.location.search);
@@ -697,7 +748,9 @@
     return params;
   }
 
-  function cleanAuthCallbackUrl() {
+  function cleanAuthCallbackUrl(consumedParams) {
+    // A second email link can arrive while the first check is in flight.
+    if (consumedParams && JSON.stringify(getAuthCallbackParams()) !== JSON.stringify(consumedParams)) return;
     const url = new URL(window.location.href);
     [
       "access_token",
@@ -724,6 +777,7 @@
   async function consumeAuthCallback(client) {
     const params = getAuthCallbackParams();
     if (!params.hasCallback) return false;
+    const revision = authRevision;
 
     try {
       setAuthGateBusy(true);
@@ -752,6 +806,7 @@
         session = data.session || null;
       }
 
+      if (client !== supabaseClient || (session && currentSession?.access_token !== session.access_token)) return false;
       if (session) currentSession = session;
       if (params.type === "recovery" || params.type === "password_recovery") {
         passwordRecoveryRequested = true;
@@ -765,8 +820,6 @@
         authGateMode = "login";
         authStatusOverride = null;
         clearPendingAuthEmail();
-        const account = getSessionAccount();
-        if (account) applyOwnerAccount(account);
       } else {
         authGateMode = "login";
         authStatusOverride = {
@@ -776,8 +829,8 @@
       }
       return true;
     } catch (error) {
-      if (isInvalidSupabaseSessionError(error)) await clearExpiredSupabaseSession(client);
-      currentSession = null;
+      // An old/used email link must not sign out an existing valid session.
+      if (client !== supabaseClient || revision !== authRevision) return false;
       authGateMode = "login";
       authStatusOverride = {
         message: `인증 링크 처리 실패: ${getFriendlyAuthError(error)} 다시 로그인해 주세요.`,
@@ -785,7 +838,7 @@
       };
       return false;
     } finally {
-      cleanAuthCallbackUrl();
+      if (client === supabaseClient) cleanAuthCallbackUrl(params);
       setAuthGateBusy(false);
     }
   }
@@ -825,7 +878,8 @@
       return "확인 링크가 만료되었거나 이미 사용되었습니다.";
     }
     if (normalized.includes("invalid login credentials")) return "이메일 또는 비밀번호를 확인해 주세요.";
-    if (isInvalidSupabaseSessionError(error)) return "오래된 로그인 세션이 만료되었습니다. 이메일과 비밀번호로 다시 로그인해 주세요.";
+    if (isInvalidSupabaseSessionError(error)) return "로그인 인증이 만료되었습니다. 다시 로그인해 주세요. 저장된 여행 기록은 유지됩니다.";
+    if (error?.status === 429 || normalized.includes("over_request_rate_limit")) return "로그인 요청이 잠시 제한되었습니다. 조금 후 다시 시도해 주세요.";
     if (normalized.includes("email not confirmed")) return "가입 확인 이메일을 먼저 열어 주세요.";
     if (normalized.includes("signup is disabled")) return "Supabase에서 회원가입이 꺼져 있습니다.";
     if (normalized.includes("password should be")) return "비밀번호는 Supabase 보안 기준에 맞게 더 길고 안전하게 입력해 주세요.";
@@ -854,18 +908,23 @@
 
   function fillAuthEmailFromAccount(account = getCurrentAccount()) {
     if (account) {
-      setInputValue(els.authGateNameInput, account.displayName);
-      setInputValue(els.authGateEmailInput, account.email);
+      if (!els.authGateNameInput?.value.trim()) setInputValue(els.authGateNameInput, account.displayName);
+      if (!els.authGateEmailInput?.value.trim()) setInputValue(els.authGateEmailInput, account.email);
       return;
     }
     const pendingEmail = getPendingAuthEmail();
-    if (pendingEmail) setInputValue(els.authGateEmailInput, pendingEmail);
+    if (pendingEmail && !els.authGateEmailInput?.value.trim()) setInputValue(els.authGateEmailInput, pendingEmail);
   }
 
   function renderAuthGate() {
     const shouldShowGate = passwordRecoveryRequested || !isSignedIn();
     const justSignedIn = authGateWasVisible && !shouldShowGate;
+    const justLocked = !authGateWasVisible && shouldShowGate;
     authGateWasVisible = shouldShowGate;
+    // Native modal dialogs make the rest of the document inert even when their
+    // parent is hidden. Release them on real sign-out; persisted drafts remain
+    // available in the original account after login.
+    if (justLocked) document.querySelectorAll("dialog[open]").forEach(dialog => dialog.close());
     if (els.appShell) {
       els.appShell.hidden = shouldShowGate;
       els.appShell.setAttribute("aria-hidden", String(shouldShowGate));
@@ -1009,15 +1068,11 @@
         });
         if (error) throw error;
         if (data.session) {
-          currentSession = data.session;
+          if (client !== supabaseClient || currentSession?.access_token !== data.session.access_token) return;
           clearPendingAuthEmail();
-          applyOwnerAccount(getSessionAccount());
-          await syncSupabaseTripList({ render: true, quiet: true });
-          await syncSupabaseTripMembers({ quiet: true });
-          startSupabaseMembersSync();
-          updateHeaderSyncButton();
           authStatusOverride = null;
-          renderTripCollaboration();
+          await syncSessionData(client, authRevision);
+          clearAuthPasswordInputs();
         } else {
           authStatusOverride = {
             message: "가입 확인 이메일을 보냈습니다. 확인 후 자동으로 돌아오지 않으면 같은 이메일과 비밀번호로 로그인해 주세요.",
@@ -1031,20 +1086,11 @@
 
       const { data, error } = await client.auth.signInWithPassword({ email, password });
       if (error) throw error;
-      currentSession = data.session || null;
+      if (client !== supabaseClient || !data.session || currentSession?.access_token !== data.session.access_token) return;
       clearPendingAuthEmail();
-      const account = getSessionAccount();
-      if (account) {
-        saveStoredAccount(account);
-        applyOwnerAccount(account);
-      }
-      await syncSupabaseTripList({ render: true, quiet: true });
-      await syncSupabaseTripMembers({ quiet: true });
-      startSupabaseMembersSync();
-      updateHeaderSyncButton();
       authStatusOverride = null;
       clearAuthPasswordInputs();
-      renderTripCollaboration();
+      await syncSessionData(client, authRevision);
     } catch (error) {
       authStatusOverride = {
         message: getFriendlyAuthError(error),
@@ -1391,16 +1437,23 @@
 
   async function logoutTripAccount() {
     intentionalSignOut = true;
+    window.clearTimeout(sessionRetryTimer);
+    sessionRetryTimer = null;
     try {
       if (hasSupabaseConfig()) {
         const client = await getSupabaseClient();
-        await client.auth.signOut({ scope: "local" });
+        const { error } = await client.auth.signOut({ scope: "local" });
+        if (error) throw error;
       }
     } catch (error) {
       setText(els.settingsAccountStatus, `Supabase 로그아웃 확인 필요: ${error.message}`);
+      intentionalSignOut = false;
+      return;
     }
     clearLocalAccount();
     currentSession = null;
+    authRevision++;
+    authStatusOverride = null;
     initialTripListSyncComplete = false;
     stopSupabaseMembersSync();
     stopSupabaseTripStateSync();
@@ -1627,6 +1680,21 @@
     els.tripInviteAcceptForm?.addEventListener("submit", acceptPendingInvite);
 
     window.addEventListener("triplog:state-saved", handleTripStateSaved);
+    const resumeSession = () => {
+      if (document.visibilityState === "hidden" || navigator.onLine === false || authGateBusy || intentionalSignOut) return;
+      window.clearTimeout(sessionRetryTimer);
+      sessionRetryTimer = null;
+      syncSupabaseSession();
+    };
+    window.addEventListener("online", resumeSession);
+    window.addEventListener("pageshow", resumeSession);
+    document.addEventListener("visibilitychange", resumeSession);
+    window.addEventListener("hashchange", () => {
+      if (!getAuthCallbackParams().hasCallback) return;
+      // Joining an in-flight ordinary check would otherwise lose the new link.
+      const pending = sessionSyncPromise || Promise.resolve();
+      pending.finally(() => { if (getAuthCallbackParams().hasCallback) syncSupabaseSession(); });
+    });
     updateHeaderSyncButton();
 
     syncSupabaseSession();

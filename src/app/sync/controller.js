@@ -61,8 +61,9 @@
   });
   function setLocalFailure(error, id = typeof state === "undefined" ? "" : state.id) { if (error) localFailures.set(id, { message: error.message || String(error), at: Date.now() }); else localFailures.delete(id); window.dispatchEvent(new CustomEvent("triplog:sync-status")); }
   function localWrite(id, delta) { localWrites.set(id, Math.max(0, (localWrites.get(id) || 0) + delta)); window.dispatchEvent(new CustomEvent("triplog:sync-status")); }
-  async function connect(nextClient, nextAccount, projectId = "") {
+  async function connect(nextClient, nextAccount, projectId = "", { isCurrent = () => true } = {}) {
     await window.TripLog.persistence.stateStorage.ready;
+    if (!isCurrent()) return;
     client = nextClient; account = nextAccount;
     const scope = `${projectId}:${account?.id || ""}`;
     if (connection === scope) return initializing;

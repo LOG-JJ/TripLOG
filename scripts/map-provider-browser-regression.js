@@ -53,6 +53,7 @@ async function main() {
       const route = new URL(await page.locator('#googleMapsLink').getAttribute('href'));
       assert.equal(route.searchParams.get('slat'), '37.5547');
       assert.equal(route.searchParams.get('elat'), '37.5796');
+      await page.waitForFunction(()=>document.querySelector('#naverMapPreview').getAttribute('aria-busy')==='false');
       assert.match(await page.locator('#naverMapPreview ol a').last().getAttribute('href'), /\/p\/search\//);
       await page.screenshot({ path: path.join(output, `domestic-${mobile ? 'mobile' : 'desktop'}.png`), animations: 'disabled' });
 
