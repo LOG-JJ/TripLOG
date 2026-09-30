@@ -56,6 +56,16 @@ async function main() {
     await page.setViewportSize({width:390,height:844});
     await page.screenshot({path:path.join(output,'ledger-mobile.png')});
     await page.locator('.ex-mobile-add [data-rd-action="expense-new"]').click();
+    await page.evaluate(() => {
+      state.collaboration.members = [{ id: 'payer-member', name: '민지', role: 'member', status: 'accepted' },
+        { id: 'pending-member', name: '초대 대기', role: 'member', status: 'pending' }];
+      render();
+    });
+    assert.deepEqual(await page.locator('#rdPayer option').allTextContents(), ['나', '민지']);
+    await page.locator('#rdExpenseMemo summary').click();
+    await page.locator('#rdPayerButton').click();
+    await page.locator('#rdPayerMenu [data-value="companion:payer-member"]').click();
+    await page.locator('#rdExpenseMemo summary').click();
     await page.locator('#currencySelectButton').click();
     await page.locator('#currencySelectMenu [data-value="JPY"]').click();
     await page.locator('#exRateToggle').click();
@@ -86,6 +96,7 @@ async function main() {
     await page.locator('#rdExpenseSubmit').click();
     await page.waitForFunction(()=>!document.querySelector('#rdExpenseEditor').open && state.entries.length===7);
     const saved = await page.evaluate(()=>state.entries.find(e=>e.note==='저장 검증 메모'));
+    assert.equal(saved.payerKey, 'companion:payer-member');
     assert.deepEqual([saved.amount,saved.foreignAmount,saved.currency,saved.paymentMethod,saved.date,saved.paymentDate],[21600,2400,'JPY','cash','2026-09-26','2026-09-26']);
     await page.reload(); await ready();
     await page.evaluate(()=>setActivePage('budget'));
@@ -93,6 +104,7 @@ async function main() {
     await page.locator(`#rdExpenseList [data-id="${saved.id}"].ex-entry-title`).focus();
     await page.keyboard.press('Enter');
     assert.equal(await page.locator('#noteInput').inputValue(),'저장 검증 메모');
+    assert.equal(await page.locator('#rdPayer').inputValue(), 'companion:payer-member');
     await page.locator('#descriptionInput').fill('니시키 시장 점심 · 수정');
     await page.locator('#rdExpenseSubmit').click();
     await page.waitForFunction(()=>!document.querySelector('#rdExpenseEditor').open);

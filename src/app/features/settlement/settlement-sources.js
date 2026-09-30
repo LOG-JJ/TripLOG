@@ -48,12 +48,26 @@ function getSelectedSettlementExpenseSource(sources = getSettlementExpenseSource
 
 function getSettlementMembers() {
   const companions = state.companions || [];
+  const roster = window.TripLog.features?.collaboration?.tripCollaboration?.getTripMembers?.() || [];
+  const owner = roster.find(member => member.role === "owner");
+  const sameMember = (companion, member) => Boolean(
+    [companion.userId, companion.accountId, companion.id].filter(Boolean).includes(member.id)
+    || (companion.email && member.email && companion.email.trim().toLowerCase() === member.email.trim().toLowerCase())
+    || (!companion.id && !companion.userId && !companion.accountId && companion.name === member.name)
+  );
   return [
     { key: "leader", name: state.settlement?.leaderName || "여행 대표", paid: 0, isLeader: true },
     ...companions.map((companion) => ({
       key: getCompanionSettlementKey(companion),
       name: companion.name,
       paid: Number(companion.individualSpent || 0),
+      isLeader: false,
+    })),
+    ...roster.filter(member => member !== owner && member.status !== "pending"
+      && !companions.some(companion => sameMember(companion, member))).map(member => ({
+      key: getCompanionSettlementKey(member),
+      name: member.name,
+      paid: 0,
       isLeader: false,
     })),
   ];

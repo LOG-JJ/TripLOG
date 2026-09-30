@@ -148,8 +148,10 @@
     window.TripLog.features.expenses.workspace.editorOpened(entry, options);
   }
   function renderPayers(value = $('#rdPayer')?.value || 'leader') {
-    $('#rdPayer').innerHTML = getSettlementMembers().map(member => `<option value="${text(member.key)}">${text(member.isLeader ? '나' : member.name)}</option>`).join('');
-    $('#rdPayer').value = getSettlementMembers().some(m => m.key === value) ? value : 'leader';
+    const payers = getSettlementMembers();
+    $('#rdPayer').innerHTML = payers.map(member => `<option value="${text(member.key)}">${text(member.isLeader ? '나' : member.name)}</option>`).join('');
+    $('#rdPayer').value = payers.some(m => m.key === value) ? value : 'leader';
+    syncCustomSelect($('#rdPayer'));
   }
   function newExpense() { expenseReturnMode = state.travelMode; clearEditMode(); openExpenseEditor(); }
   function expenseSaved() { if (!ready) return; if (window.TripLog.features.expenses.workspace?.afterSave()) return; $('#rdExpenseEditor').close(); showToast('지출을 저장했어요.'); }

@@ -47,4 +47,16 @@ assert.equal(sandbox.paymentTrend(entries).length,4);
 assert.equal(sandbox.paymentTrend(entries)[0].date,'2026-09-10');
 assert.equal(sandbox.paymentDate({date:'__pretrip__',receipt:{recognizedDate:'2026-09-12'}}),'2026-09-12');
 assert.equal(sandbox.categoryShares([]).length,0);
+sandbox.state.settlement.itemSplits = {};
+sandbox.state.companions = [{ id: 'local-minji', name: '민지', email: 'minji@example.test' }];
+sandbox.window.TripLog.features = { collaboration: { tripCollaboration: { getTripMembers: () => [
+  { id: 'owner', name: '나', role: 'owner' },
+  { id: 'account-minji', name: '민지', email: 'MINJI@example.test', status: 'accepted' },
+  { id: 'account-junho', name: '준호', status: 'accepted' },
+  { id: 'pending', name: '대기', status: 'pending' },
+] } } };
+assert.deepEqual(Array.from(sandbox.getSettlementMembers(), member => member.key), ['leader', 'companion:local-minji', 'companion:account-junho']);
+const memberPaid = build([{ id: 'member-paid', date: '2026-09-18', amount: 300, payerKey: 'companion:account-junho' }]);
+assert.equal(memberPaid.invalidEntries.length, 0);
+assert.deepEqual(Array.from(memberPaid.memberSummaries, member => member.paid), [0, 0, 300]);
 console.log('PASS: payer allocation, legacy records, integer rounding, missing payer, outside expenses, invalid split, chart shares, payment dates, empty data.');
