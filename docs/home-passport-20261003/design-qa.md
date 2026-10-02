@@ -42,3 +42,9 @@ final result: passed
 - Desktop and empty/long-title states extend the selected mobile-only reference. Physical iOS/Android device testing was not available; responsive Chromium and the in-app browser were verified.
 
 No actionable P0/P1/P2 findings remain.
+
+## Production verification
+
+- Commit `8beac335b5f665e2139cd006c36474b72611326a` is present on `origin/main`. The deployed `/Travel?page=overview` entry automatically resolves to `/Travel?page=start` and renders the passport collection before selecting a trip.
+- The public `app.js`, home module, home stylesheet and blue passport asset match the local files. Public `Travel.html` and `sw.js` match after normalizing line endings and the generated build fingerprint; the production fingerprint is `f0476ebe6c19a1156613`.
+- In the production in-app browser, the upcoming filter displayed its empty state and returning to all trips restored the collection. No warning/error console entries were recorded. This check did not create or edit trip records.
