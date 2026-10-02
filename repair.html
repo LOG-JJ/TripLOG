@@ -32,7 +32,7 @@
           await navigator.serviceWorker.ready;
         }
         status.textContent = '복구했습니다. 여행 화면으로 이동합니다.';
-        location.replace('/Travel?page=overview');
+        location.replace('/Travel?page=start');
       } catch (error) { status.textContent = error.message || '연결을 확인한 뒤 다시 시도해 주세요.'; retry.hidden = false; }
     }
     retry.addEventListener('click',repair);repair();

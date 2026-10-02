@@ -593,6 +593,7 @@ function init() {
   if (els.newTripForm) {
     els.newTripForm.addEventListener("submit", async (e) => {
       e.preventDefault();
+      if (els.newTripForm.dataset.saving === 'true') return;
       const tripName = els.newTripNameInput.value.trim();
       const travelMode = getNewTripMode();
       let country = els.newTripCountryInput.value.trim();
@@ -622,20 +623,24 @@ function init() {
         return;
       }
 
-      const created = await window.TripLog.persistence.stateStorage.createNewTrip({
-        tripName,
-        travelMode,
-        country,
-        countryCode,
-        city,
-        startDate,
-        endDate
-      });
+      const submit = els.newTripForm.querySelector('button[type="submit"]');
+      els.newTripForm.dataset.saving = 'true';
+      els.newTripForm.setAttribute('aria-busy', 'true');
+      submit.disabled = true;
+      let created;
+      try {
+        created = await window.TripLog.persistence.stateStorage.createNewTrip({ tripName, travelMode, country, countryCode, city, startDate, endDate });
+      } finally {
+        delete els.newTripForm.dataset.saving;
+        els.newTripForm.setAttribute('aria-busy', 'false');
+        submit.disabled = false;
+      }
 
       if (created === false) return;
       els.newTripModal.hidden = true;
       closeNewTripCountryList();
       els.newTripForm.reset();
+      window.TripLog.features.redesign?.workspace?.navigate('overview');
       showToast('새 여행을 만들었어요.');
     });
   }

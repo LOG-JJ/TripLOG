@@ -16,6 +16,7 @@
   function syncTripEdit() {
     const editing = isTripEditing();
     $('.rd-trip-edit').hidden = !editing;
+    $('#rdTripEditFooter').hidden = !editing;
     $('#rdTripSave').hidden = !editing;
     $('#rdTripCreate').hidden = editing;
     if (editing) return;
@@ -25,12 +26,14 @@
     setCommaNumberInputValue(els.budgetInput, state.totalBudget || '');
     syncCustomDatePicker(els.startDateInput); syncCustomDatePicker(els.endDateInput);
   }
-  function cancelTripEdit() { editingTripId = ''; if (ready) syncTripEdit(); }
-  function startTripEdit(id) {
+  function cancelTripEdit() { editingTripId = ''; if (ready) { syncTripEdit(); window.TripLog.features.home.tripLibrary.render(); } }
+  async function startTripEdit(id) {
     cancelTripEdit();
-    window.TripLog.persistence.stateStorage.switchTrip(id);
+    if (!window.TripLog.persistence.stateStorage.getTrips().some(trip => trip.id === id)) return;
+    if (await window.TripLog.persistence.stateStorage.switchTrip(id) === false || state.id !== id) return;
     editingTripId = state.id;
     syncTripEdit();
+    window.TripLog.features.home.tripLibrary.render();
     $('.rd-trip-edit').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
     els.tripNameInput.focus({ preventScroll: true });
   }
@@ -49,6 +52,7 @@
     if (state.id !== submittedTrip) return;
     editingTripId = '';
     syncTripEdit();
+    window.TripLog.features.home.tripLibrary.render();
     showToast('여행 정보를 수정했어요.');
   }
   const dateShort = value => { const d = new Date(`${value}T12:00:00`); return Number.isFinite(d.getTime()) ? `${d.getMonth() + 1}.${d.getDate()} ${'일월화수목금토'[d.getDay()]}` : '날짜 미정'; };
@@ -80,7 +84,7 @@
     el.showModal(); document.documentElement.classList.add('rd-modal-open'); $(`#${id}Title`, el)?.focus({preventScroll:true});
   }
   function closeAll() { $$('.rd-dialog[open]').forEach(el => el.close()); }
-  function navigate(page) { closeAll(); const url=new URL(location.href); if(url.searchParams.get('page')!==page){url.searchParams.set('page',page);history.pushState({page},'',url);} setActivePage(page); }
+  function navigate(page, { replace = false } = {}) { closeAll(); const url=window.TripLog.navigation.pageRouter.pageUrl(page); if(url.href!==location.href)history[replace?'replaceState':'pushState']({page},'',url);setActivePage(page); }
   function setupTripChooser() {
     const chooser = dialog('rdTripChooser','여행 바꾸기',`<div class="rd-trip-search" role="search">${icon('magnifying-glass')}<input id="rdTripSearch" type="search" aria-label="여행 이름이나 여행지 검색" placeholder="여행 이름이나 여행지 검색" autocomplete="off">${button(icon('x'),'trip-search-clear','rd-icon-button','aria-label="검색어 지우기" hidden')}</div><p id="rdTripSearchCount" role="status" aria-live="polite"></p><div id="rdTripChooserList"></div>`,button(`${icon('plus')} 새 여행 만들기`,'new-trip','rd-primary'));
     chooser.classList.add('rd-trip-chooser');
@@ -270,7 +274,7 @@
   }
   function setup() {
     if(ready)return;ready=true;lastTrip=state.id;document.body.classList.add('rd-app');
-    $('#appShell').insertAdjacentHTML('afterbegin',`<header class="rd-header">${logo}${button(icon('list'),'more','rd-icon-button','id="rdMenuButton" aria-label="여행 메뉴 열기"')}</header>`);
+    $('#appShell').insertAdjacentHTML('afterbegin',`<header class="rd-header"><a href="/Travel?page=start" class="rd-brand-link" data-rd-nav="start" aria-label="내 여행 보관함">${logo}</a>${button(icon('user'),'profile','tl-library-profile','aria-label="내 프로필"')}${button(icon('list'),'more','rd-icon-button','id="rdMenuButton" aria-label="여행 메뉴 열기"')}</header>`);
     const sync = els.itineraryPageButton;
     sync.className = 'rd-button rd-sync';
     sync.replaceChildren();
@@ -279,7 +283,7 @@
     $('.rd-header').appendChild(headerActions); headerActions.append(sync, $('#rdMenuButton'));
     $('#appShell').insertAdjacentHTML('beforeend',`<nav class="rd-nav" aria-label="주 메뉴">${[['overview','house','개요'],['itinerary','calendar-blank','일정'],['budget','wallet','지출'],['report','chart-bar','리포트'],['more','dots-three','더보기']].map(([page,name,label])=>`<button type="button" data-rd-nav="${page}">${icon(name)}<span>${label}</span></button>`).join('')}</nav>`);
     addView('overview',`<div class="rd-heading"><div class="rd-overview-heading"><h1>여행 개요</h1>${button(`${icon('plus')} 새 여행`,'new-trip','rd-overview-new','aria-label="새 여행 만들기"')}</div></div><div id="rdOverview"></div>`);
-    addView('start',heading('나의 여행','다음 여행을 준비해 볼까요?')+`<div class="rd-tabs" id="rdTripTabs">${button('예정된 여행','trips-upcoming','active')}${button('지난 여행','trips-past')}</div><div id="rdTripList"></div><section class="rd-trip-edit" hidden><div class="rd-section-head"><h2>여행 수정</h2>${button('취소','trip-cancel','rd-text-button')}</div><p>내용을 바꾼 뒤 아래 여행 수정 버튼을 눌러 저장해 주세요.</p><div id="rdTripEditMount" class="rd-form-grid"></div></section><div id="rdOtherTrips"></div><div class="rd-page-footer">${button(`${icon('plus')} 새 여행 만들기`,'new-trip','rd-primary','id="rdTripCreate"')}${button('여행 수정','trip-save','rd-primary','id="rdTripSave" hidden')}</div>`);
+    addView('start',window.TripLog.features.home.tripLibrary.markup()+`<section class="rd-trip-edit" hidden><div class="rd-section-head"><h2>여행 수정</h2>${button('취소','trip-cancel','rd-text-button')}</div><p>내용을 바꾼 뒤 아래 여행 수정 버튼을 눌러 저장해 주세요.</p><div id="rdTripEditMount" class="rd-form-grid"></div></section><div class="rd-page-footer" id="rdTripEditFooter" hidden>${button('여행 수정','trip-save','rd-primary','id="rdTripSave" hidden')}</div>`);
     ['#tripNameInput','#startDateInput','#endDateInput','#budgetInput'].forEach(s=>move($(s).closest('label'),'#rdTripEditMount'));els.tripNameInput.closest('label').hidden=false;els.budgetInput.closest('label').classList.add('rd-budget-input-label');els.budgetInput.closest('label').querySelector('span').textContent='총예산';
     addView('budget',heading('지출 기록')+`<div id="rdBudgetSummary"></div>${button(`${icon('camera')} 영수증으로 입력 ${icon('caret-right')}`,'receipt-start','rd-secondary rd-scan')}<div class="rd-search"><div id="rdSearchMount">${icon('magnifying-glass')}</div>${button(icon('sliders-horizontal'),'filter','rd-icon-button','aria-label="지출 필터"')}</div><div class="rd-tabs" id="rdExpenseTabs">${[['all','전체'],['pretrip','사전구매'],['during','여행 중']].map(([key,label])=>button(label,'expense-tab',key==='all'?'active':'',`data-tab="${key}"`)).join('')}</div><div id="rdExpenseList"></div><div class="rd-page-footer">${button(`${icon('plus')} 지출 추가`,'expense-new','rd-primary')}</div>`);
     move(els.expenseSearchInput,'#rdSearchMount');els.expenseSearchInput.placeholder='지출 검색';
@@ -289,14 +293,25 @@
     addView('settings',heading('설정','여행을 내 방식대로')+`<div id="rdProfileSummary"></div><section class="rd-setting-group"><h2>여행 설정</h2><div id="rdSettingsTrip"></div></section><section class="rd-setting-group"><h2>공유 설정</h2><div id="rdPrivacyMount"></div></section><section class="rd-setting-group"><h2>기록 관리</h2>${row('저장 기록','bookmark-simple','history')}${row('백업·불러오기','download-simple','backup')}${row('PDF 저장','file-text','pdf')}</section>${row('고급 연결 설정','gear','advanced')}<button class="rd-logout" data-rd-action="logout" type="button">로그아웃</button>`);
     setupForms();setupSettings();setupExistingDialogs();setupAuth();setupTripChooser();
     $$('.custom-date-button').forEach(el=>{el.insertAdjacentHTML('afterbegin',icon('calendar-blank'));$('.custom-date-icon',el).innerHTML=icon('caret-down');});
-    dialog('rdMore','여행 메뉴',`${row('오늘의 여행','compass','companion')}${row('예약 지갑','ticket','companion-wallet')}${row('여행 도구','suitcase','companion-tools')}${row('나의 여행','suitcase','nav-start')}${row('경비 정산','users-three','nav-settlement')}${row('여행 준비물','suitcase-rolling','packing')}${row('멤버·초대','user-plus','invite')}${row('저장 기록','bookmark-simple','history')}${row('설정','gear','nav-settings')}${row('저장 상태·공동 작업','cloud-check','sync-status')}${row('전체 일정 보기','calendar-blank','all-itinerary')}`);
+    dialog('rdMore','여행 메뉴',`${row('오늘의 여행','compass','companion')}${row('예약 지갑','ticket','companion-wallet')}${row('여행 도구','suitcase','companion-tools')}${row('내 여행','suitcase','nav-start')}${row('여행 정보 수정','pencil-simple','trip-edit-current')}${row('경비 정산','users-three','nav-settlement')}${row('여행 준비물','suitcase-rolling','packing')}${row('멤버·초대','user-plus','invite')}${row('저장 기록','bookmark-simple','history')}${row('설정','gear','nav-settings')}${row('저장 상태·공동 작업','cloud-check','sync-status')}${row('전체 일정 보기','calendar-blank','all-itinerary')}`);
     dialog('rdMemberInfo','멤버 정보','<div id="rdMemberInfoBody"></div>');
     dialog('rdConfirm','확인해 주세요','<p id="rdConfirmMessage"></p>',`${button('취소','close','','id="rdConfirmCancel"')}${button('확인','confirm-accept','rd-primary')}`).setAttribute('role','alertdialog');
     const tools = move($('#itineraryToolsDialog'),document.body), park=document.createElement('div');park.hidden=true;park.className='rd-legacy';while(tools.firstChild)park.appendChild(tools.firstChild);tools.appendChild(park);tools.classList.add('rd-dialog');tools.insertAdjacentHTML('beforeend',`<div class="rd-dialog-head">${logo}${button(icon('x'),'close','rd-icon-button','aria-label="준비물 닫기"')}</div><div class="rd-dialog-body"><h1>여행 준비물</h1><p data-rd-trip></p><div id="rdPacking"></div><label class="rd-packing-add"><span>준비물 추가</span><div id="rdPackingInputMount"></div></label>${button('기본 목록으로 되돌리기','packing-reset','rd-text-button')}<p class="rd-muted">체크한 내용은 자동으로 저장돼요.</p></div><footer class="rd-dialog-footer">${button('완료','close','rd-primary')}</footer>`);move(els.packingInput,'#rdPackingInputMount');move(els.packingAddBtn,'#rdPackingInputMount');els.packingAddBtn.innerHTML=icon('plus');els.packingAddBtn.setAttribute('aria-label','준비물 추가');els.packingInput.placeholder='챙길 물건을 입력하세요';
     document.addEventListener('click',handleClick);
     document.addEventListener('click',event=>{if(event.target.closest('#itineraryMenuButton,[data-itinerary-menu]')){event.preventDefault();event.stopImmediatePropagation();open('rdMore');}},true);
-    window.addEventListener('popstate',()=>{const page=new URL(location.href).searchParams.get('page');if(page)navigate(page);});
+    window.addEventListener('popstate', async () => {
+      const url = new URL(location.href), tripId = url.searchParams.get('trip');
+      let page = url.searchParams.get('page') || 'start';
+      if (tripId && tripId !== state.id) {
+        if (window.TripLog.persistence.stateStorage.getTrips().some(trip => trip.id === tripId)) {
+          if (await window.TripLog.persistence.stateStorage.switchTrip(tripId) === false) return;
+          if (location.href !== url.href) return;
+        } else page = 'start';
+      }
+      navigate(page, { replace: true });
+    });
     window.TripLog.features.expenses.workspace?.setup();
+    window.TripLog.features.home.tripLibrary.setup();
     render();
   }
   function renderOverview(total) {
@@ -338,11 +353,7 @@
   }
   function renderTrips() {
     syncTripEdit();
-    const trips=window.TripLog.persistence.stateStorage.getTrips(),today=M().localDate();
-    $$('#rdTripTabs button').forEach((el,i)=>{el.classList.toggle('active',i===(tripTab==='upcoming'?0:1));el.setAttribute('aria-pressed',String(el.classList.contains('active')));});
-    const list=trips.filter(t=>tripTab==='past'?t.endDate<today:t.endDate>=today);
-    $('#rdTripList').innerHTML=list.map(t=>`<article class="rd-trip-card ${t.id===state.id?'selected':''}"><div class="rd-section-head"><h2>${text(t.tripName)}</h2>${button(icon('pencil-simple'),'trip-edit','rd-icon-button',`data-id="${text(t.id)}" aria-label="${text(t.tripName)} 수정"`)}</div><p>${icon('map-pin')} ${text([t.city,t.country].filter(Boolean).join(' · ')||'목적지 미정')}</p><p>${icon('calendar-blank')} ${period(t)}</p><div class="rd-section-head"><p>${duration(t)} · ${icon('users')} ${(t.companions?.length||0)+1}명</p><span class="rd-badge pink">${dday(t)}</span></div><button type="button" class="rd-trip-open" data-rd-action="trip-open" data-id="${text(t.id)}">여행 열기 ${icon('caret-right')}</button></article>`).join('')||'<p class="rd-empty">이 기간에 저장된 여행이 없어요.</p>';
-    $('#rdOtherTrips').innerHTML=`<h2>다른 여행</h2>${trips.filter(t=>t.id!==state.id).map(t=>`<button type="button" class="rd-other-trip" data-rd-action="trip-open" data-id="${text(t.id)}"><strong>${text(t.tripName)}</strong><span>${period(t)} · ${dday(t)}</span>${icon('caret-right')}</button>`).join('')||'<p class="rd-muted">새 여행을 만들어 여행별로 기록해 보세요.</p>'}<details class="rd-trip-management"><summary>여행 관리</summary>${button('선택한 여행 삭제','trip-delete','rd-text-button rd-danger')}</details>`;
+    window.TripLog.features.home.tripLibrary.render();
   }
   function renderExpenses(total) {
     if (window.TripLog.features.expenses.workspace) { window.TripLog.features.expenses.workspace.renderLedger(total, expenseTab); return; }
@@ -391,6 +402,10 @@
     if(lastTrip!==state.id){closeAll();lastTrip=state.id;expenseTab='all';els.expenseSearchInput.value='';editingTripId='';}
     $$('[data-rd-trip]').forEach(el=>el.textContent=state.tripName||'새로운 여행');
     $$('.rd-nav [data-rd-nav]').forEach(el=>{const active=el.dataset.rdNav===activePage||el.dataset.rdNav==='more'&&['start','settings','settlement'].includes(activePage);el.classList.toggle('active',active);if(active)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');});
+    if (!window.TripLog.features.home.tripLibrary.reconcileInitialTrip()) {
+      if (activePage === 'overview') $('#rdOverview').innerHTML = '<p class="rd-empty" role="status">여행을 불러오는 중이에요.</p>';
+      return;
+    }
     const totals=calculateTotals();
     if(activePage==='overview')renderOverview(totals.total);
     if(activePage==='start')renderTrips();
@@ -423,7 +438,7 @@
     if (settingCount) settingCount.textContent = `${team.length}명`;
   }
   async function handleClick(event) {
-    const nav=event.target.closest('[data-rd-nav]');if(nav){nav.dataset.rdNav==='more'?open('rdMore'):navigate(nav.dataset.rdNav);return;}
+    const nav=event.target.closest('[data-rd-nav]');if(nav){event.preventDefault();nav.dataset.rdNav==='more'?open('rdMore'):navigate(nav.dataset.rdNav);return;}
     const el=event.target.closest('[data-rd-action]');if(!el)return;const action=el.dataset.rdAction;
     if(action.startsWith('nav-')){navigate(action.slice(4));return;}
     const simple={more:'rdMore',filter:'rdFilter',profile:'rdProfile',currency:'rdCurrency',backup:'rdBackup',advanced:'rdAdvanced',pdf:'rdPdf',split:'rdSettlementDetails',companions:'rdCompanions'};
@@ -460,7 +475,8 @@
         showToast(`${target.tripName||'선택한 여행'}으로 바꿨어요.`);break;
       }
       case 'trip-open':window.TripLog.persistence.stateStorage.switchTrip(el.dataset.id);navigate('overview');break;
-      case 'trip-edit':navigate('start');startTripEdit(el.dataset.id);break;
+      case 'trip-edit':navigate('start');await startTripEdit(el.dataset.id);break;
+      case 'trip-edit-current':navigate('start');await startTripEdit(state.id);break;
       case 'trip-save':saveTripEdit();break;
       case 'trip-cancel':cancelTripEdit();break;
       case 'trip-delete':els.deleteCurrentTripButton.click();break;

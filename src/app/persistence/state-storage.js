@@ -721,8 +721,9 @@ async function initializeRepository() {
     repositoryReady = true;
     let active;
     try { active = sessionStorage.getItem(ACTIVE_TRIP_ID_KEY); } catch (_) { /* Use the existing tab state. */ }
-    repositoryPreferredTrip = active || state.id;
-    const current = repositoryTrips.find(t => t.id === (active || state.id)) || repositoryTrips[0];
+    const requestedTrip = typeof URLSearchParams === 'function' ? new URLSearchParams(window.location?.search || '').get('trip') : null;
+    repositoryPreferredTrip = requestedTrip || active || state.id;
+    const current = repositoryTrips.find(t => t.id === repositoryPreferredTrip) || repositoryTrips[0];
     if (current) { for (const key of Object.keys(state)) delete state[key]; Object.assign(state, normalizeImportedTripSnapshot(current)); }
     else await activateAccount("");
     for (const trip of repositoryTrips) rememberRepositoryView(normalizeImportedTripSnapshot(trip), trip);

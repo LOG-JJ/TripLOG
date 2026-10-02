@@ -41,6 +41,8 @@ async function main() {
       const box = await node.boundingBox(), viewport = page.viewportSize();
       assert(box.x >= 0 && box.y >= 0 && box.x + box.width <= viewport.width + 1 && box.y + box.height <= viewport.height + 1, `${name} must fit the viewport: ${JSON.stringify(box)}`);
     }
+    // Keep the payment calendar in the fixture's month as the real date moves on.
+    await page.clock.setFixedTime(new Date('2026-09-25T09:00:00+09:00'));
     await page.goto(`${origin}/Travel?page=itinerary`); await ready();
     await page.evaluate(() => setActivePage('itinerary'));
     await page.locator('#itineraryAddButton').click();

@@ -1,6 +1,14 @@
+function pageUrl(page) {
+  const url = new URL(location.href);
+  url.searchParams.set('page', page);
+  if (['overview', 'itinerary', 'budget', 'settlement', 'report'].includes(page) && typeof state !== 'undefined' && state.id) url.searchParams.set('trip', state.id);
+  else url.searchParams.delete('trip');
+  return url;
+}
+
 function setActivePage(page) {
   const allowedPages = ["start", "overview", "itinerary", "budget", "settlement", "report", "settings"];
-  const nextPage = allowedPages.includes(page) ? page : "overview";
+  const nextPage = allowedPages.includes(page) ? page : "start";
   if (nextPage === activePage && !isPageTransitioning) return;
 
   closeAllCustomDatePickers();
@@ -15,8 +23,8 @@ function setActivePage(page) {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }
 
-  const pageUrl = new URL(location.href);
-  if (pageUrl.searchParams.get('page') !== nextPage) { pageUrl.searchParams.set('page',nextPage); history.replaceState({page:nextPage},'',pageUrl); }
+  const nextUrl = pageUrl(nextPage);
+  if (nextUrl.href !== location.href) history.replaceState({page:nextPage},'',nextUrl);
 
   activePage = nextPage;
   window.clearTimeout(pageTransitionTimer);
@@ -110,7 +118,7 @@ function syncBrandIconWithActiveNav() {
 
 function updateBrandText({ animate = false } = {}) {
   const titleByPage = {
-    start: "여행 시작",
+    start: "내 여행",
     overview: "여행",
     itinerary: "일정",
     budget: "가계부",
@@ -152,6 +160,7 @@ function startBrandIconFlip() {
 
 window.TripLog.register("navigation.pageRouter", {
   setActivePage,
+  pageUrl,
   getPageElement,
   measurePageHeight,
   prepareIncomingPage,

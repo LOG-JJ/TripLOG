@@ -36,7 +36,7 @@ async function main(){
     await page.waitForFunction(()=>document.documentURI.startsWith('chrome-error://'));
     fixed=true;
     await page.goto(origin+'/repair');
-    await page.waitForURL('**/Travel?page=overview');
+    await page.waitForURL('**/Travel?page=start');
     await page.waitForFunction(()=>document.documentElement.dataset.triplogInitialized==='true');
     const after=await page.evaluate(async()=>({record:await window.TripLogSyncRepository.read('navigation-repair-fixture'),draft:await window.TripLogSyncRepository.draft('navigation-repair-draft'),local:localStorage.getItem('triplog-repair-fixture')}));
     assert.deepEqual(after.record,before.record);assert.deepEqual(after.draft,before.draft);assert.equal(after.local,'preserve-local-data');

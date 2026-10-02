@@ -45,7 +45,7 @@ async function main() {
     const accept=()=>page.locator('#rdConfirm [data-rd-action="confirm-accept"]').click();
     const snapshot=id=>page.evaluate(id=>window.TripLogSyncRepository.cached(id)?.snapshot,id);
     const waitRemoved=id=>page.waitForFunction(id=>window.TripLogSyncRepository.cached(id)?.hidden&&!window.TripLog.persistence.stateStorage.getTrips().some(trip=>trip.id===id),id);
-    await page.goto(`${origin}/Travel?page=overview`);await ready();
+    await page.goto(`${origin}/Travel?page=overview&trip=current`);await ready();
     assert.equal(await page.title(),'여행 가계부');assert.match(page.url(),/page=overview/);
     await open();assert.equal(await page.locator('.rd-trip-choice').count(),5);
     const dimensions=[];

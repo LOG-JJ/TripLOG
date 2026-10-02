@@ -93,6 +93,7 @@
     "features/settlement/companions.js",
     "features/redesign/design-model.js",
     "features/redesign/design-workspace.js",
+    "features/home/trip-library.js",
     "features/expenses/reservation-expense-editor.js",
     "features/expenses/expense-workspace.js",
     "features/travel-companion/model.js",

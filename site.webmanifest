@@ -2,7 +2,7 @@
   "name": "TripLOG 여행 가계부",
   "short_name": "TripLOG",
   "description": "여행 일정, 지출, 정산을 함께 관리하는 TripLOG 웹앱",
-  "start_url": "/Travel.html?page=settings",
+  "start_url": "/Travel?page=start",
   "scope": "/",
   "display": "standalone",
   "background_color": "#101317",

@@ -42,7 +42,7 @@ async function main() {
     assert(sizes.bottom <= sizes.viewport + 1, 'Bottom navigation remains reachable');
   };
   try {
-    await page.goto(`${origin}/Travel?page=overview`); await ready(); await open('today');
+    await page.goto(`${origin}/Travel?page=overview&trip=${fixture.id}`); await ready(); await open('today');
     // Inspect the fixture's populated day even when the real calendar has advanced.
     await dialog.locator(`[data-date="${fixture.startDate}"]`).click();
     assert.equal(await dialog.locator('.pp-place-title').innerText(), '경복궁');

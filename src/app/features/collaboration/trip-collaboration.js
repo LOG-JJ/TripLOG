@@ -942,7 +942,7 @@
       // page already being viewed instead of routing every return to overview.
       if (justSignedIn && !getInviteTokenFromUrl() && !initialPageParams.has("itinerary") && !initialPageParams.has("page")) {
         const landingUrl = new URL(window.location.href);
-        const landingPage = "overview";
+        const landingPage = "start";
         landingUrl.searchParams.set("page", landingPage);
         window.history.replaceState({}, document.title, landingUrl.toString());
         setActivePage(landingPage);
@@ -1708,6 +1708,7 @@
     getTripMembers,
     createTripInvite,
     syncSupabaseSession,
+    isTripListReady: () => initialTripListSyncComplete,
     syncSupabaseTripList,
     syncSupabaseTripState,
     uploadSupabaseTripState,

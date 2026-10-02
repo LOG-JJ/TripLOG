@@ -8,7 +8,11 @@ TripLOG는 여행 일정, 지출, 정산, 저장 기록, 리포트를 관리하�
 
 ## 실행
 
-기존 문서에 기록된 접속 주소: [TripLOG](https://triplog-5qs.pages.dev/Travel?page=overview). 이 주소의 도메인을 근거로 배포 도구를 선택하지 않습니다.
+접속 주소: [TripLOG 내 여행](https://triplog-5qs.pages.dev/Travel?page=start). 이 주소의 도메인을 근거로 배포 도구를 선택하지 않습니다.
+
+앱은 여권 모양의 **내 여행 보관함**에서 시작합니다. 여행 이름·여행지 검색과 예정/진행/지난 여행 필터를 사용하고, 표지를 눌러 해당 여행의 개요를 엽니다. 기존 `page=overview` 홈 북마크도 여행 ID가 없으면 보관함으로 연결됩니다. 선택한 여행의 URL에는 `trip`이 포함되어 새로고침·뒤로가기에서도 선택을 유지합니다. 상단 로고로 보관함에 돌아갈 수 있으며, 여행 메뉴에서 정보 수정과 기존 여행 바꾸기/삭제 흐름을 사용할 수 있습니다. 설치형 앱의 시작 주소도 보관함입니다.
+
+선택한 [1안 원본](triplog-home-passport-library-20261003.png)과 [구현 비교 및 QA](docs/home-passport-20261003/design-qa.md)를 보관합니다. 목업의 예시 여행은 운영 데이터로 넣지 않습니다. 격리된 시각 미리보기는 `node scripts/preview-trip-library.js`, 기능 검증은 `node scripts/trip-library-browser-regression.js`로 실행합니다.
 
 ## 배포 절차
 
