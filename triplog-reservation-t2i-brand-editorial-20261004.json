@@ -29,5 +29,12 @@
   "source": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-7a48cbcf-100d-4cad-b7d3-25f76a5ee52b.png",
   "savedFile": "triplog-reservation-t2i-brand-editorial-20261004.png",
   "overwritten": false,
-  "status": "Refined mockup only; awaiting review before implementation."
+  "status": "Selected by the user and implemented as the compact two-column reservation summary; see docs/reservation-summary-20261004/design-qa.md.",
+  "saveIntegrityCorrection": {
+    "reason": "Latest-file discovery chose a concurrent image; restored the exact PNG returned by the selected Image Gen result.",
+    "previousSavedSha256": "cd95fdea9572bc86b8f0f87db9c834f81ee72b404be3cc415d76b83de4a82e6b",
+    "selectedOriginalSha256": "f1ea723a2e566d653f3f87fe77c34beca6cfe8e3a3b6185b2a4d9f0a4bacc8d3",
+    "savedSha256": "f1ea723a2e566d653f3f87fe77c34beca6cfe8e3a3b6185b2a4d9f0a4bacc8d3",
+    "matchesExactOriginal": true
+  }
 }

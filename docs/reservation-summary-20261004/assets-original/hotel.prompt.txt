@@ -1,0 +1,15 @@
+Generation mode: built-in image_gen, text-to-image
+Generation calls: 1
+Image inputs: none; referenced_image_paths and num_last_images_to_include omitted
+Overwrite: none
+Transparent background: true
+Original PNG: C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/reservation-summary-20261004/assets-original/hotel.png
+Export WebP: C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/src/assets/reservation-summary-hotel.webp
+Export processing: trim to original alpha > 1 bounds to exclude near-transparent stray pixels, proportionally fit within 176x176 pixels, center on a transparent 192x192 canvas, save lossless WebP; no redrawing
+Provenance verification: saved original matches the exact source returned by this asset's image_gen call; no replacement required
+Exact generated source path: C:\Users\tbdk5\.codex\generated_images\01a10234-4547-7020-baf8-5f53995c8d96\exec-3ceda501-49e5-450d-9307-6cea60e7eb38.png
+Exact generated source SHA256: C223268899033DFA8C4716043D6E34BC974EA3BCED6A268E417CEF18BCAA1700
+Saved original PNG SHA256: C223268899033DFA8C4716043D6E34BC974EA3BCED6A268E417CEF18BCAA1700
+
+Exact prompt:
+Create a clean, flat, friendly, vector-like raster UI icon of a small front-facing hotel building. Use a white central rectangular building with simple low side wings, a small rounded rooftop block in pale pink #f7afc7, six pale sky-blue #bce6fb windows arranged in two rows of three, and a tiny central doorway with blue fill. Use a thick, smooth dark-ink #0b1020 outline. Keep the silhouette compact and square, readable at 28–32 CSS pixels. Use a transparent background. No text, logo, background scene, texture, or shadow.

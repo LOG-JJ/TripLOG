@@ -1,100 +1,74 @@
 (() => {
   const model = () => window.TripLog.features.travelCompanion.model;
   const text = value => model().esc(value);
+  const clean = value => String(value ?? '').trim().replace(/\s+/g, ' ');
   const icon = name => `<i class="ph ph-${name}" aria-hidden="true"></i>`;
-  const clean = value => String(value ?? '').normalize('NFKC').trim().replace(/\s+/g, ' ');
-  const keyText = value => clean(value).toLocaleLowerCase('en');
   const validDate = value => model().validDate(value);
-  const validTime = value => /^(?:[01]\d|2[0-3]):[0-5]\d$/.test(value || '');
-  const isFlight = row => row.transportKind === 'flight';
-  const hasReturn = row => isFlight(row) && validDate(row.endDate);
-  function dateLabel(value, showYear = false) {
-    if (!validDate(value)) return '날짜 미정';
-    const day = new Date(`${value}T12:00:00Z`).getUTCDay();
-    return `${showYear ? value.slice(0, 4) + '.' : ''}${Number(value.slice(5, 7))}.${Number(value.slice(8))} (${'일월화수목금토'[day]})`;
+  function dateLabel(value, year = false) {
+    return `${year ? value.slice(0, 4) + '.' : ''}${Number(value.slice(5, 7))}.${Number(value.slice(8))}`;
   }
-  function timeLabel(value) { return validTime(value) ? value : '시각 미정'; }
-  function routeLabel(row) {
-    if (clean(row.from) && clean(row.to)) return `${clean(row.from)} → ${clean(row.to)}`;
-    return clean(row.location) || clean(row.title) || '교통 예약';
+  function period(start, end) {
+    if (!validDate(start)) return '날짜 미정';
+    if (!end) return dateLabel(start);
+    if (!validDate(end) || end < start) return '날짜 확인하기';
+    if (end === start) return dateLabel(start);
+    const crossYear = start.slice(0, 4) !== end.slice(0, 4);
+    return `${dateLabel(start, crossYear)}–${dateLabel(end, crossYear)}`;
   }
-  // A presentation group is not a duplicate detector. Airport qualifiers, operators,
-  // service numbers and incomplete schedules must not be silently conflated.
-  function scheduleKey(row) {
-    if (!validDate(row.date) || !validTime(row.time)) return '';
-    if (row.endDate && !validDate(row.endDate)) return '';
-    if (row.endDate && row.endDate < row.date) return '';
-    if (row.endTime && !validTime(row.endTime)) return '';
-    if (hasReturn(row) && !validTime(row.endTime)) return '';
-    const route = clean(row.from) && clean(row.to)
-      ? [keyText(row.from), keyText(row.to)] : [keyText(row.location), keyText(row.title)];
-    if (isFlight(row) && (!clean(row.from) || !clean(row.to) || !clean(row.operator))) return '';
-    if (!route.every(Boolean)) return '';
-    return JSON.stringify([row.transportKind || '', route, keyText(row.operator), keyText(row.serviceNumber), row.date, row.time, row.endDate || '', row.endTime || '']);
+  function artwork(type, className = '') {
+    return `<img class="rs-summary-art ${className}" src="src/assets/reservation-summary-${type}.webp" alt="" aria-hidden="true" decoding="async">`;
   }
-  function groupTransport(rows) {
-    const groups = [], bySchedule = new Map();
-    rows.forEach(row => {
-      const key = scheduleKey(row), existing = key && bySchedule.get(key);
-      if (existing) { existing.rows.push(row); return; }
-      const group = { row, rows: [row] };
-      groups.push(group);
-      if (key) bySchedule.set(key, group);
-    });
-    return groups;
-  }
-  const remaining = count => count > 0 ? `<span class="rs-more">외 ${count}건 ${icon('arrow-right')}</span>` : '';
-  function bookingMark(group) {
-    const count = group.rows.length;
-    return `<span class="rs-booking-mark${count > 1 ? ' is-grouped' : ''}" aria-label="${count > 1 ? '같은 일정의 ' : ''}예약 ${count}건">${count}건</span>`;
+  function emptyBody(type) {
+    return `<div class="rs-summary-empty">${artwork(type === 'transport' ? 'plane' : 'hotel')}
+      <p>${type === 'transport' ? '이동 예약을' : '머무를 곳을'}<br>추가해 보세요</p></div>`;
   }
   function transportBody(rows) {
-    if (!rows.length) return `<span class="rs-empty"><strong>이동 계획을 채워보세요</strong><span class="rs-empty-description">항공·기차·버스 예약을<br>한곳에 모아둘 수 있어요</span><span class="rs-empty-action">교통 예약 추가 ${icon('caret-right')}</span></span>`;
-    const groups = groupTransport(rows), shown = groups.slice(0, 3), first = shown[0].row;
-    const commonRoute = shown.every(({ row }) => isFlight(row) && clean(row.from) && clean(row.to)
-      && keyText(row.from) === keyText(first.from) && keyText(row.to) === keyText(first.to)
-      && keyText(row.operator) === keyText(first.operator) && keyText(row.serviceNumber) === keyText(first.serviceNumber));
-    const commonDates = commonRoute && shown.every(({ row }) => row.date === first.date && row.endDate === first.endDate && hasReturn(row) === hasReturn(first));
-    const hiddenCount = rows.length - shown.reduce((sum, group) => sum + group.rows.length, 0);
-    if (commonDates) {
-      const roundTrip = hasReturn(first), crossYear = roundTrip && first.date.slice(0, 4) !== first.endDate.slice(0, 4);
-      return `<span class="rs-route-line"><span class="rs-route">${text(first.from)} ${icon(roundTrip ? 'arrows-left-right' : 'arrow-right')} ${text(first.to)}</span>
-        ${first.operator ? `<span class="rs-operator">· ${text(first.operator)}${first.serviceNumber ? ` ${text(first.serviceNumber)}` : ''}</span>` : ''}</span>
-        <span class="rs-flight-table${roundTrip ? '' : ' is-one-way'}">
-          <span class="rs-flight-head"><span>예약</span><span>가는 편<span> · ${text(dateLabel(first.date, crossYear))}</span></span>${roundTrip ? `<span>오는 편<span> · ${text(dateLabel(first.endDate, crossYear))}</span></span>` : ''}</span>
-          ${shown.map(group => `<span class="rs-flight-row" data-reservation-group-size="${group.rows.length}">${bookingMark(group)}<time>${text(timeLabel(group.row.time))}</time>${roundTrip ? `<time>${text(timeLabel(group.row.endTime))}</time>` : ''}</span>`).join('')}
-        </span>${remaining(hiddenCount)}`;
-    }
-    return `<span class="rs-journeys">${shown.map(group => {
-      const row = group.row, roundTrip = hasReturn(row);
-      return `<span class="rs-journey" data-reservation-group-size="${group.rows.length}">${bookingMark(group)}<span class="rs-journey-copy">
-        <strong>${text(routeLabel(row))}</strong>${row.operator && !routeLabel(row).includes(row.operator) ? `<span class="rs-carrier">${text(row.operator)}${row.serviceNumber ? ` · ${text(row.serviceNumber)}` : ''}</span>` : ''}
-        <span class="rs-journey-date">${text(dateLabel(row.date))} ${text(timeLabel(row.time))}${roundTrip ? `<span>귀국 ${text(dateLabel(row.endDate))} ${text(timeLabel(row.endTime))}</span>` : ''}</span>
-      </span></span>`;
-    }).join('')}</span>${remaining(hiddenCount)}`;
+    if (!rows.length) return emptyBody('transport');
+    // This is a preview of the first dated reservation, never a merge of records.
+    // Airport qualifiers and every original reservation remain intact in the wallet.
+    const first = rows[0], from = clean(first.from), to = clean(first.to);
+    const flight = first.transportKind === 'flight';
+    const returning = flight && validDate(first.date) && validDate(first.endDate) && first.endDate >= first.date;
+    const name = clean(first.title) || '교통 예약';
+    const route = from && to ? `${from} ${returning ? '↔' : '→'} ${to}` : name;
+    const secondary = clean(first.operator) || (from && to ? '' : clean(first.location));
+    const routeHtml = from && to
+      ? `<span class="rs-summary-city">${text(from)}</span>${icon(returning ? 'arrows-left-right' : 'arrow-right')}<span class="rs-summary-city">${text(to)}</span>`
+      : `<span class="rs-summary-transport-name">${text(name)}</span>`;
+    return `<div class="rs-transport-body${returning ? ' is-round-trip' : ''}" data-summary-source-id="${text(first.id)}" aria-label="교통 예약 ${rows.length}건 중 첫 번째 예약 요약">
+      ${flight ? artwork('plane', 'rs-transport-illustration') : `<span class="rs-transport-symbol">${icon(/KTX|기차|열차|철도/i.test(name) ? 'train' : 'ticket')}</span>`}
+      <strong class="rs-summary-route" title="${text(route)}">${routeHtml}</strong>
+      ${secondary && secondary !== route && secondary !== name ? `<span class="rs-summary-operator" title="${text(secondary)}">${text(secondary)}</span>` : ''}
+      <span class="rs-summary-period" title="${text(period(first.date, first.endDate))}">${text(period(first.date, first.endDate))}</span>
+    </div>`;
   }
   function stayBody(rows) {
-    if (!rows.length) return `<span class="rs-empty"><strong>머무를 곳을 담아보세요</strong><span class="rs-empty-description">숙소와 체크인 일정을<br>한눈에 확인할 수 있어요</span><span class="rs-empty-action">숙소 예약 추가 ${icon('caret-right')}</span></span>`;
-    return `<span class="rs-stays">${rows.slice(0, 2).map(row => {
+    if (!rows.length) return emptyBody('stay');
+    return `<div class="rs-summary-stays">${rows.slice(0, 2).map(row => {
+      const title = clean(row.title) || '이름 없는 숙소';
       const validPeriod = validDate(row.date) && validDate(row.endDate) && row.endDate > row.date;
       const nights = validPeriod ? Math.round((Date.parse(`${row.endDate}T12:00:00Z`) - Date.parse(`${row.date}T12:00:00Z`)) / 86400000) : 0;
-      const crossYear = validPeriod && row.date.slice(0, 4) !== row.endDate.slice(0, 4);
-      const dates = validPeriod ? `${dateLabel(row.date, crossYear)} → ${dateLabel(row.endDate, crossYear)} · ${nights}박` : '숙박 날짜 확인하기';
-      return `<span class="rs-stay">${icon('building')}<span><strong title="${text(row.title || '이름 없는 숙소')}">${text(row.title || '이름 없는 숙소')}</strong><span class="rs-stay-dates">${text(dates)}</span></span></span>`;
-    }).join('')}</span>${remaining(rows.length - 2)}`;
+      const dates = validPeriod ? period(row.date, row.endDate) : '숙박 날짜 확인';
+      return `<div class="rs-summary-stay-item" data-summary-source-id="${text(row.id)}">${artwork('hotel')}
+        <div class="rs-summary-stay-copy"><strong class="rs-summary-name" title="${text(title)}">${text(title)}</strong>
+          <span class="rs-summary-stay-meta" title="${text(dates)}${nights ? ` · ${nights}박` : ''}"><span class="rs-summary-stay-period">${text(dates)}</span>${nights ? `<span class="rs-summary-nights">· ${nights}박</span>` : ''}</span>
+        </div></div>`;
+    }).join('')}</div>`;
   }
-  function card(type, rows) {
+  function column(type, rows) {
     const title = type === 'transport' ? '교통 예약' : '숙소 예약';
-    return `<button type="button" class="rd-button rd-reservation-${type} rs-pocket${rows.length ? '' : ' is-empty'}" data-rd-action="companion-${type}${rows.length ? '' : '-new'}" aria-label="${title} ${rows.length}건, ${rows.length ? '예약 지갑 열기' : '예약 추가하기'}" aria-describedby="rs-${type}-content">
-      <img class="rs-pocket-art" src="src/assets/reservation-empty-${type}.webp" alt="" aria-hidden="true" decoding="async">
-      <span class="rs-pocket-copy"><span class="rs-pocket-heading"><span class="rs-pocket-label">${icon(type === 'transport' ? 'airplane-tilt' : 'bed')}<strong>${title}</strong></span>
-      <span class="rs-pocket-count">${rows.length}<small>건</small></span>${rows.length ? `<span class="rs-pocket-chevron">${icon('caret-right')}</span>` : ''}</span>
-      <span class="rs-pocket-body" id="rs-${type}-content">${type === 'transport' ? transportBody(rows) : stayBody(rows)}</span></span>
-    </button>`;
+    return `<section class="rs-summary-column rs-summary-${type}${rows.length ? '' : ' is-empty'}" aria-labelledby="rs-${type}-heading">
+      <header class="rs-summary-heading"><h2 id="rs-${type}-heading">${title}</h2><span class="rs-summary-count">${rows.length}<small>건</small></span></header>
+      <div class="rs-summary-body" id="rs-${type}-content">${type === 'transport' ? transportBody(rows) : stayBody(rows)}</div>
+      <button type="button" class="rs-summary-action rd-reservation-${type}" data-rd-action="companion-${type}${rows.length ? '' : '-new'}" aria-label="${title} ${rows.length}건, ${rows.length ? '예약 지갑 열기' : '예약 추가하기'}"><span>${rows.length ? '전체 보기' : '예약 추가'}</span>${icon('caret-right')}</button>
+    </section>`;
   }
   function render(bookings) {
     const rows = Array.isArray(bookings) ? bookings : [];
-    return `<div class="rd-reservations rs-reservations">${card('transport', rows.filter(row => row.type === 'transport'))}${card('stay', rows.filter(row => row.type === 'stay'))}</div>`;
+    return `<section class="rs-reservations" aria-label="예약 요약">
+      <div class="rs-summary-brand"><img src="src/assets/triplog-wordmark.png" alt="" aria-hidden="true" decoding="async"></div>
+      <div class="rs-summary-columns">${column('transport', rows.filter(row => row.type === 'transport'))}${column('stay', rows.filter(row => row.type === 'stay'))}</div>
+    </section>`;
   }
-  window.TripLog.register('features.overview.reservationPockets', { render, groupTransport });
+  window.TripLog.register('features.overview.reservationPockets', { render });
 })();

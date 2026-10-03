@@ -2,6 +2,9 @@
 const fixture = structuredClone(require('./wallet-passbook'));
 fixture.id = 'reservation-pockets-fixture';
 fixture.exchangeRateSource = '수동 입력';
+// Match the reported three-record case with distinct airport labels.
+fixture.entries[1].flightTo = '오사카(간사이)';
+fixture.entries[2].flightTo = '오사카(간사이)';
 Object.assign(fixture.entries[3], {
   hotelName: '02 그룹 스테이 클라세 뉴 호스텔 인 난바',
   description: '숙소 예약 · 02 그룹 스테이 클라세 뉴 호스텔 인 난바',

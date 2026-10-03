@@ -1,3 +1,16 @@
+# Compact two-column reservation summary — 2026-10-04
+
+final result: passed
+
+- Selected visual truth: `triplog-reservation-t2i-brand-editorial-20261004.png`, verified against the exact Image Gen original (1566 × 1005, SHA256 `f1ea723a2e566d653f3f87fe77c34beca6cfe8e3a3b6185b2a4d9f0a4bacc8d3`). A prior concurrent latest-file save mismatch was corrected before final comparison.
+- Equal-width comparison: original panel crop normalized to 354 × 221; rendered component 354 × 232 at a 390 × 844 viewport, scale 1. Full, 2× and focused evidence: `docs/reservation-summary-20261004/comparison-final.png`, `comparison-final-2x.png`, `comparison-final-text.png`.
+- Resolved P2 layout inheritance/row-class collision and excess height/small category type. The final component keeps equal columns at 320–1440 px, loaded local Pretendard, compact real raster artwork and aligned yellow actions.
+- The summary shows one representative transport and up to two stays; badges retain complete counts and the full wallet preserves all original records. Empty columns open the correct-type reservation form directly.
+- Five fidelity surfaces, responsive/long/empty states, wallet navigation, keyboard focus, direct add/cancel/save/reload, wallet/editor browser regressions, `npm test` and `npm run build` passed. In-app browser rendering and wallet interaction verified. Generated asset detail and the established logo have minor accepted P3 differences; physical mobile/Safari remain untested.
+- Detailed evidence, comparison history, normalization, behavior and limitations: [reservation summary QA](docs/reservation-summary-20261004/design-qa.md).
+
+---
+
 # Reservation cards — empty-state refinement, 2026-10-04
 
 final result: passed
