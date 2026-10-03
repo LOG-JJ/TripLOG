@@ -9,6 +9,7 @@ final result: passed
 - Fonts, spacing, color, raster asset fidelity and app copy were compared against the same-size source. Mobile stacking, 320/390/480/600/768/1440 layouts, empty/long/mixed data, keyboard and wallet navigation were checked. Relevant browser regressions, `npm test`, and `npm run build` passed.
 - In-app browser page identity/rendering and interactions were verified. No app error was found; blocked exchange-rate requests and connection retries are expected in the isolated preview. Standard icon shapes and generated texture details retain minor P3 differences. Physical mobile/Safari testing remains unavailable.
 - Full comparison history, evidence and implementation checklist: [reservation pocket design QA](docs/reservation-pockets-20261003/design-qa.md).
+- Follow-up P2 resolved: the user's production screenshot exposed native vertical centering in empty buttons. Explicit top-aligned flex layout separates the heading/chevron from the count tab, with a new geometry regression for populated and empty cards. Corrected evidence: `docs/reservation-pockets-20261003/empty-desktop.png` and `empty-320.png`. Targeted browser regression and build passed again.
 
 ---
 

@@ -21,6 +21,19 @@ async function main() {
     const transport = page.getByRole('button', { name: '교통 예약 3건, 예약 지갑 열기', exact: true });
     const stay = page.getByRole('button', { name: '숙소 예약 2건, 예약 지갑 열기', exact: true });
     const grid = page.locator('.rs-reservations');
+    const headerSeparation = async () => {
+      const overlaps = await grid.locator('.rs-pocket').evaluateAll(cards => cards.filter(card => {
+        const heading = card.querySelector('.rs-pocket-heading').getBoundingClientRect();
+        const count = card.querySelector('.rs-pocket-count').getBoundingClientRect();
+        return heading.left < count.right && heading.right > count.left && heading.top < count.bottom && heading.bottom > count.top;
+      }).map(card => ({ label: card.getAttribute('aria-label'), width: innerWidth,
+        align: getComputedStyle(card).alignContent, justify: getComputedStyle(card).justifyContent,
+        headingTop: card.querySelector('.rs-pocket-heading').getBoundingClientRect().top - card.getBoundingClientRect().top,
+        headingHeight: card.querySelector('.rs-pocket-heading').getBoundingClientRect().height,
+        countTop: card.querySelector('.rs-pocket-count').getBoundingClientRect().top - card.getBoundingClientRect().top,
+      })));
+      assert.deepEqual(overlaps, [], 'Card heading/chevron must never overlap the booking count tab');
+    };
     await page.goto(`${origin}/Travel?page=overview&trip=${fixture.id}`); await ready();
     await page.evaluate(() => document.fonts.ready);
     assert(await page.evaluate(() => {
@@ -39,6 +52,7 @@ async function main() {
       await page.setViewportSize({ width, height: width > 600 ? 1000 : 844 });
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `Page fits ${width}px`);
       assert.equal(await grid.evaluate(el => getComputedStyle(el).gridTemplateColumns.split(' ').length), width < 600 ? 1 : 2);
+      await headerSeparation();
       const nameLayout = await stay.locator('.rs-stay strong').first().evaluate(el => ({ height: el.getBoundingClientRect().height, line: parseFloat(getComputedStyle(el).lineHeight), weight: Number(getComputedStyle(el).fontWeight) }));
       assert(nameLayout.height > nameLayout.line && nameLayout.height <= nameLayout.line * 3 + 1, 'The full representative hotel name wraps into readable lines');
       assert(Number(await stay.locator('.rs-stay-dates').first().evaluate(el => getComputedStyle(el).fontWeight)) < nameLayout.weight, 'Dates retain a lighter weight than reservation names');
@@ -103,6 +117,12 @@ async function main() {
     await renderEntries([]);
     assert.equal(await grid.locator('.rs-pocket.is-empty').count(), 2);
     assert.equal(await grid.locator('.rs-empty-action').count(), 2);
+    for (const width of [320, 390, 600, 768, 1440]) {
+      await page.setViewportSize({ width, height: width > 600 ? 1000 : 844 });
+      await headerSeparation();
+      if (width === 1440) await grid.screenshot({ path: path.join(output, 'empty-desktop.png'), animations: 'disabled' });
+    }
+    await page.setViewportSize({ width: 320, height: 844 });
     await page.screenshot({ path: path.join(output, 'empty-320.png'), fullPage: true });
     assert.deepEqual(errors, []);
     console.log(`PASS reservation pockets: one-way/general transport, extra bookings, long/escaped names, empty states, and no runtime errors. Screenshots: ${output}`);
