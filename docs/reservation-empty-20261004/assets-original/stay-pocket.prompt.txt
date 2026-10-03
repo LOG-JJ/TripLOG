@@ -1,0 +1,13 @@
+Generation mode: built-in image_gen
+Generation calls: 1
+Overwrite: none
+Transparent background: true
+Input image: C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/triplog-reservation-empty-refined-20261004.png
+Output PNG: C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/reservation-empty-20261004/assets-original/stay-pocket.png
+Output WebP: C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/src/assets/reservation-empty-stay.webp
+
+Exact prompt:
+Create one standalone pink accommodation passport-pocket background asset matching the RIGHT card in Image 1. Preserve the continuous blank cream paper insert, pink stitched leather pocket, lower-right Japanese castle and cherry-blossom illustration, and blank protruding back paper. Remove all UI content: no text, numbers, UI icons, divider, yellow count pill, or yellow action button. The cream paper must remain uninterrupted and unobstructed throughout the header, body, and action area, especially the central inner region at x 12–88% and y 12–72%. Do not add a horizontal seam across the middle. Use a front-facing composition with a modest edge shadow, transparent surrounding canvas, and minimal outer margins. Use a 1024 × 875-pixel canvas with an overall card aspect ratio of 330:282.
+
+Input images:
+- Image 1, triplog-reservation-empty-refined-20261004.png: selected design reference for the RIGHT card.

@@ -2,7 +2,7 @@
 body.rd-app #overviewPage .rs-reservations { grid-column: 1 / -1; width: 100%; max-width: 682px; justify-self: center; gap: 12px; align-items: stretch; }
 body.rd-app #overviewPage .rd-trip-hero { grid-column: 1 / -1; }
 body.rd-app #overviewPage .rs-pocket.rd-button {
-  position: relative; display: flex; flex-direction: column; width: 100%; min-width: 0; min-height: 322px;
+  position: relative; display: flex; flex-direction: column; width: 100%; min-width: 0; min-height: 300px;
   align-content: start; align-items: stretch; justify-content: flex-start;
   margin: 0; padding: 0; border: 0; border-radius: 16px; box-shadow: none;
   background: transparent; text-align: left; color: #17212c; isolation: isolate;
@@ -16,16 +16,19 @@ body.rd-app #overviewPage .rs-pocket:active { transform: translateY(0); }
 body.rd-app #overviewPage :where(.rs-pocket) span { display: block; flex: none; flex-direction: row; min-width: 0; }
 body.rd-app #overviewPage .rs-pocket strong,
 body.rd-app #overviewPage .rs-pocket small { max-width: none; overflow: visible; white-space: normal; }
-body.rd-app #overviewPage .rs-pocket-copy { padding: 34px 30px 88px; }
-body.rd-app #overviewPage .rs-pocket-heading { display: flex; align-items: center; gap: 10px; margin: 0 3px 14px 10px; }
-body.rd-app #overviewPage .rs-pocket-heading strong { flex: 1; font-size: 20px; line-height: 1.2; font-weight: 800; letter-spacing: -.7px; }
-body.rd-app #overviewPage .rs-pocket-heading > .ph:first-child { font-size: 29px; }
-body.rd-app #overviewPage .rs-pocket-heading > .ph:last-child { margin: 0; font-size: 22px; }
-body.rd-app #overviewPage .rs-pocket-count { position: absolute; top: 28.5%; right: 3.8%; width: 16.6%; transform: translateY(-50%); font-size: 18px; line-height: 1.1; text-align: center; font-weight: 800; white-space: nowrap; }
-body.rd-app #overviewPage .rd-reservation-stay .rs-pocket-count { top: 27.2%; right: 2.6%; width: 16.8%; }
-body.rd-app #overviewPage .rs-pocket-count small { display: inline; margin-left: 1px; font-size: 12px; font-weight: 750; }
+body.rd-app #overviewPage .rs-pocket-copy { width: 100%; padding: 38px 14.5% 82px; }
+/* The second proportional row reserves the illustrated pocket below longer reservation lists. */
+body.rd-app #overviewPage .rs-pocket.rd-button:not(.is-empty) { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) minmax(0, .45fr); justify-content: stretch; }
+body.rd-app #overviewPage .rs-pocket:not(.is-empty) .rs-pocket-copy { padding-bottom: 0; }
+body.rd-app #overviewPage .rs-pocket-heading { display: flex; align-items: center; gap: 8px; margin: 0 0 15px; padding-bottom: 10px; border-bottom: 1px solid #c9cdca; }
+body.rd-app #overviewPage .rs-pocket-label { display: flex; align-items: center; gap: 10px; transform: translateY(4px); }
+body.rd-app #overviewPage .rs-pocket-heading strong { font-size: 19.5px; line-height: 1.2; font-weight: 750; letter-spacing: -.2px; white-space: nowrap; }
+body.rd-app #overviewPage .rs-pocket-label > .ph { font-size: 28px; }
+body.rd-app #overviewPage .rs-pocket-chevron { display: flex; align-items: center; font-size: 16px; }
+body.rd-app #overviewPage .rs-pocket-count { display: flex; align-items: center; justify-content: center; align-self: center; margin-left: auto; min-width: 50px; height: 32px; padding: 3px 8px; background: url('../assets/reservation-count-badge.webp') center / 100% 100% no-repeat; font-size: 18px; line-height: 1; text-align: center; font-weight: 800; white-space: nowrap; }
+body.rd-app #overviewPage .rs-pocket-count small { display: inline; margin-left: 2px; font-size: 12px; font-weight: 750; white-space: nowrap; }
 body.rd-app #overviewPage .rs-pocket-body { font-size: 14px; line-height: 1.45; font-weight: 400; }
-body.rd-app #overviewPage .rs-route-line { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 4px; row-gap: 2px; padding: 0 33px 0 10px; }
+body.rd-app #overviewPage .rs-route-line { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 4px; row-gap: 2px; padding: 0; }
 body.rd-app #overviewPage .rs-route { display: flex; align-items: center; gap: 5px; font-size: 16px; line-height: 1.4; font-weight: 750; letter-spacing: -.35px; overflow-wrap: anywhere; }
 body.rd-app #overviewPage .rs-route .ph { font-size: 16px; }
 body.rd-app #overviewPage .rs-operator { font-size: 14px; line-height: 1.4; font-weight: 650; letter-spacing: -.3px; overflow-wrap: anywhere; }
@@ -41,31 +44,38 @@ body.rd-app #overviewPage .rs-flight-table.is-one-way .rs-flight-head,
 body.rd-app #overviewPage .rs-flight-table.is-one-way .rs-flight-row { grid-template-columns: 44px minmax(0, 1fr); }
 body.rd-app #overviewPage .rs-booking-mark { color: #59646d; font-size: 12px; font-weight: 600; text-align: center; white-space: nowrap; }
 body.rd-app #overviewPage .rs-booking-mark.is-grouped { color: #17475e; font-weight: 800; }
-body.rd-app #overviewPage .rs-journeys { padding-top: 23px; }
+body.rd-app #overviewPage .rs-journeys { padding-top: 0; }
 body.rd-app #overviewPage .rs-journey { display: grid; grid-template-columns: 25px minmax(0, 1fr); gap: 8px; padding: 9px 0; border-bottom: 1px solid #cdd3d5; }
 body.rd-app #overviewPage .rs-journey:last-child { border-bottom: 0; }
 body.rd-app #overviewPage .rs-journey-copy strong { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; font-size: 14px; line-height: 1.4; font-weight: 700; overflow-wrap: anywhere; }
 body.rd-app #overviewPage .rs-carrier { font-size: 12px; color: #59646d; margin: 2px 0; }
 body.rd-app #overviewPage .rs-journey-date { font-size: 12px; line-height: 1.6; font-variant-numeric: tabular-nums; color: #59646d; }
-body.rd-app #overviewPage .rs-stays { padding-top: 10px; }
+body.rd-app #overviewPage .rs-stays { padding-top: 0; }
 body.rd-app #overviewPage .rs-stay { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #ced1d0; }
 body.rd-app #overviewPage .rs-stay:first-child { padding-top: 0; }
 body.rd-app #overviewPage .rs-stay:last-child { border-bottom: 0; padding-bottom: 0; }
 body.rd-app #overviewPage .rs-stay > .ph { font-size: 26px; margin-top: 3px; }
 body.rd-app #overviewPage .rs-stay > span { flex: 1; }
 body.rd-app #overviewPage .rs-stay strong { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; font-size: 15px; line-height: 1.35; font-weight: 750; letter-spacing: -.35px; word-break: keep-all; overflow-wrap: anywhere; text-wrap: balance; }
-body.rd-app #overviewPage .rs-stay:first-child strong { max-width: min(180px, calc(100% - 32px)); }
+body.rd-app #overviewPage .rs-stay:first-child strong { max-width: 195px; }
 body.rd-app #overviewPage .rs-stay-dates { margin-top: 8px; font-size: 12px; line-height: 1.5; font-weight: 500; letter-spacing: -.2px; color: #53616c; font-variant-numeric: tabular-nums; word-break: keep-all; }
 body.rd-app #overviewPage .rs-more { display: flex; justify-content: flex-end; align-items: center; gap: 5px; padding-top: 8px; font-size: 12px; font-weight: 600; color: #445762; }
 body.rd-app #overviewPage .rs-more .ph { font-size: 13px; }
-body.rd-app #overviewPage .rs-empty { min-height: 101px; padding: 48px 0 0; }
-body.rd-app #overviewPage .rs-empty strong { display: block; font-size: 14px; font-weight: 750; line-height: 1.5; }
-body.rd-app #overviewPage .rs-empty > span { margin-top: 5px; font-size: 12px; line-height: 1.5; color: #53616c; }
-body.rd-app #overviewPage .rs-empty .rs-empty-action { display: inline-block; margin-top: 12px; color: #202730; font-size: 12px; font-weight: 750; text-decoration: underline; text-underline-offset: 4px; }
+body.rd-app #overviewPage .rs-empty { padding: 0; }
+body.rd-app #overviewPage .rs-empty strong { display: block; font-size: 16px; font-weight: 750; line-height: 1.4; letter-spacing: -.4px; word-break: keep-all; }
+body.rd-app #overviewPage .rs-empty-description { margin-top: 4px; font-size: 13px; line-height: 18px; font-weight: 450; letter-spacing: -.15px; color: #53616c; word-break: keep-all; }
+body.rd-app #overviewPage .rs-empty .rs-empty-action { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; margin-top: 8px; padding: 7px 12px; color: #17212c; background: url('../assets/reservation-add-button.webp') center / 100% 100% no-repeat; font-size: 14px; font-weight: 750; letter-spacing: -.25px; }
+body.rd-app #overviewPage .rs-empty-action .ph { font-size: 16px; }
 @media (max-width: 599px) {
   body.rd-app #overviewPage .rs-reservations { grid-template-columns: minmax(0, 1fr); gap: 10px; }
-  body.rd-app #overviewPage .rs-pocket { min-height: 322px; max-width: 380px; justify-self: center; }
-  body.rd-app #overviewPage .rs-pocket-copy { padding-left: 9%; padding-right: 9%; }
+  body.rd-app #overviewPage .rs-pocket { max-width: 380px; justify-self: center; }
+}
+@media (max-width: 359px) {
+  body.rd-app #overviewPage .rs-pocket-copy { padding-left: 13%; padding-right: 13%; }
+  body.rd-app #overviewPage .rs-pocket-heading strong { font-size: 17px; }
+  body.rd-app #overviewPage .rs-pocket-label { gap: 7px; }
+  body.rd-app #overviewPage .rs-pocket-label > .ph { font-size: 25px; }
+  body.rd-app #overviewPage .rs-empty strong { font-size: 15px; }
 }
 @media (prefers-reduced-motion: reduce) {
   body.rd-app #overviewPage .rs-pocket { transition: none; }

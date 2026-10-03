@@ -49,7 +49,7 @@
     return `<span class="rs-booking-mark${count > 1 ? ' is-grouped' : ''}" aria-label="${count > 1 ? '같은 일정의 ' : ''}예약 ${count}건">${count}건</span>`;
   }
   function transportBody(rows) {
-    if (!rows.length) return '<span class="rs-empty"><strong>이동 계획을 담아보세요</strong><span>항공·기차·버스 예약을 한곳에</span><span class="rs-empty-action">예약 추가하기</span></span>';
+    if (!rows.length) return `<span class="rs-empty"><strong>이동 계획을 채워보세요</strong><span class="rs-empty-description">항공·기차·버스 예약을<br>한곳에 모아둘 수 있어요</span><span class="rs-empty-action">교통 예약 추가 ${icon('caret-right')}</span></span>`;
     const groups = groupTransport(rows), shown = groups.slice(0, 3), first = shown[0].row;
     const commonRoute = shown.every(({ row }) => isFlight(row) && clean(row.from) && clean(row.to)
       && keyText(row.from) === keyText(first.from) && keyText(row.to) === keyText(first.to)
@@ -74,7 +74,7 @@
     }).join('')}</span>${remaining(hiddenCount)}`;
   }
   function stayBody(rows) {
-    if (!rows.length) return '<span class="rs-empty"><strong>머물 곳을 기록해 보세요</strong><span>숙소와 체크인 일정을 한눈에</span><span class="rs-empty-action">예약 추가하기</span></span>';
+    if (!rows.length) return `<span class="rs-empty"><strong>머무를 곳을 담아보세요</strong><span class="rs-empty-description">숙소와 체크인 일정을<br>한눈에 확인할 수 있어요</span><span class="rs-empty-action">숙소 예약 추가 ${icon('caret-right')}</span></span>`;
     return `<span class="rs-stays">${rows.slice(0, 2).map(row => {
       const validPeriod = validDate(row.date) && validDate(row.endDate) && row.endDate > row.date;
       const nights = validPeriod ? Math.round((Date.parse(`${row.endDate}T12:00:00Z`) - Date.parse(`${row.date}T12:00:00Z`)) / 86400000) : 0;
@@ -85,10 +85,10 @@
   }
   function card(type, rows) {
     const title = type === 'transport' ? '교통 예약' : '숙소 예약';
-    return `<button type="button" class="rd-button rd-reservation-${type} rs-pocket${rows.length ? '' : ' is-empty'}" data-rd-action="companion-${type}" aria-label="${title} ${rows.length}건, ${rows.length ? '예약 지갑 열기' : '예약 추가하기'}" aria-describedby="rs-${type}-content">
-      <img class="rs-pocket-art" src="src/assets/reservation-pocket-${type}.webp" alt="" aria-hidden="true" decoding="async">
-      <span class="rs-pocket-copy"><span class="rs-pocket-heading">${icon(type === 'transport' ? 'airplane-tilt' : 'bed')}<strong>${title}</strong>${icon('caret-right')}</span>
-      <span class="rs-pocket-count">${rows.length}<small>건</small></span>
+    return `<button type="button" class="rd-button rd-reservation-${type} rs-pocket${rows.length ? '' : ' is-empty'}" data-rd-action="companion-${type}${rows.length ? '' : '-new'}" aria-label="${title} ${rows.length}건, ${rows.length ? '예약 지갑 열기' : '예약 추가하기'}" aria-describedby="rs-${type}-content">
+      <img class="rs-pocket-art" src="src/assets/reservation-empty-${type}.webp" alt="" aria-hidden="true" decoding="async">
+      <span class="rs-pocket-copy"><span class="rs-pocket-heading"><span class="rs-pocket-label">${icon(type === 'transport' ? 'airplane-tilt' : 'bed')}<strong>${title}</strong></span>
+      <span class="rs-pocket-count">${rows.length}<small>건</small></span>${rows.length ? `<span class="rs-pocket-chevron">${icon('caret-right')}</span>` : ''}</span>
       <span class="rs-pocket-body" id="rs-${type}-content">${type === 'transport' ? transportBody(rows) : stayBody(rows)}</span></span>
     </button>`;
   }

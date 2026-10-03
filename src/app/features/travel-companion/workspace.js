@@ -279,6 +279,14 @@
     $('#ttReservationExtras').open = Boolean(values.url || values.note);
     $('#ttReservationError').textContent = ''; updateReservationType(); openDialog('ttReservationEditor');
   }
+  function addReservation(type = 'transport') {
+    if (!ready) return;
+    const dates = M().days(state), today = M().dateInZone(M().defaultZone(state) || undefined);
+    if (openedTrip !== state.id || !dates.includes(selectedDay)) selectedDay = dates.includes(today) ? today : dates[0] || '';
+    openedTrip = state.id;
+    walletFilter = walletFilters.some(([key]) => key === type && key !== 'all') ? type : 'transport';
+    openReservationEditor();
+  }
   function updateReservationType() {
     const type = $('#ttReservationForm').elements.namedItem('type').value, stay = type === 'stay';
     $$('#ttReservationTypes button').forEach(el => { el.classList.toggle('active', el.dataset.type === type); el.setAttribute('aria-pressed', String(el.dataset.type === type)); });
@@ -471,5 +479,5 @@
       }
     });
   }
-  window.TripLog.register('features.travelCompanion.workspace', { setup, render, open });
+  window.TripLog.register('features.travelCompanion.workspace', { setup, render, open, addReservation });
 })();

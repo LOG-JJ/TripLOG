@@ -23,7 +23,7 @@ async function main() {
     const grid = page.locator('.rs-reservations');
     const headerSeparation = async () => {
       const overlaps = await grid.locator('.rs-pocket').evaluateAll(cards => cards.filter(card => {
-        const heading = card.querySelector('.rs-pocket-heading').getBoundingClientRect();
+        const heading = card.querySelector('.rs-pocket-label').getBoundingClientRect();
         const count = card.querySelector('.rs-pocket-count').getBoundingClientRect();
         return heading.left < count.right && heading.right > count.left && heading.top < count.bottom && heading.bottom > count.top;
       }).map(card => ({ label: card.getAttribute('aria-label'), width: innerWidth,
@@ -32,7 +32,7 @@ async function main() {
         headingHeight: card.querySelector('.rs-pocket-heading').getBoundingClientRect().height,
         countTop: card.querySelector('.rs-pocket-count').getBoundingClientRect().top - card.getBoundingClientRect().top,
       })));
-      assert.deepEqual(overlaps, [], 'Card heading/chevron must never overlap the booking count tab');
+      assert.deepEqual(overlaps, [], 'Card category and booking count must never overlap');
     };
     await page.goto(`${origin}/Travel?page=overview&trip=${fixture.id}`); await ready();
     await page.evaluate(() => document.fonts.ready);
@@ -58,8 +58,10 @@ async function main() {
       assert(Number(await stay.locator('.rs-stay-dates').first().evaluate(el => getComputedStyle(el).fontWeight)) < nameLayout.weight, 'Dates retain a lighter weight than reservation names');
       for (const card of await grid.locator('.rs-pocket').all()) {
         assert(await card.evaluate(el => el.scrollWidth <= el.clientWidth + 1), `Card content fits ${width}px`);
+        assert(await card.evaluate(el => Math.abs(el.querySelector('.rs-pocket-copy').getBoundingClientRect().width - el.getBoundingClientRect().width) < 1), 'The content column uses the full card width');
         const img = await card.locator('img').boundingBox(), content = await card.locator('.rs-pocket-body').boundingBox();
         assert(content.y + content.height <= img.y + img.height - 42, 'Text ends above the illustrated pocket edge');
+        assert(content.y + content.height <= img.y + img.height * .72 - 6, 'Populated-card text keeps clearance above the cream paper edge');
       }
       await page.screenshot({ path: path.join(output, `overview-${width}.png`), fullPage: true, animations: 'disabled' });
       if (width >= 600) await grid.screenshot({ path: path.join(output, `pockets-${width}.png`), animations: 'disabled' });
@@ -120,12 +122,65 @@ async function main() {
     for (const width of [320, 390, 600, 768, 1440]) {
       await page.setViewportSize({ width, height: width > 600 ? 1000 : 844 });
       await headerSeparation();
+      assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `Empty page fits ${width}px`);
+      const emptyLayout = await grid.locator('.rs-pocket').evaluateAll(cards => cards.map(card => {
+        const heading = card.querySelector('.rs-pocket-heading').getBoundingClientRect();
+        const title = card.querySelector('.rs-empty strong').getBoundingClientRect();
+        const description = card.querySelector('.rs-empty-description').getBoundingClientRect();
+        const action = card.querySelector('.rs-empty-action').getBoundingClientRect();
+        const bounds = card.getBoundingClientRect();
+        return { headingBottom: heading.bottom - bounds.top, titleTop: title.top - bounds.top,
+          descriptionBottom: description.bottom - bounds.top, actionTop: action.top - bounds.top,
+          actionHeight: action.height, actionBottom: action.bottom - bounds.top, height: bounds.height };
+      }));
+      for (const layout of emptyLayout) {
+        assert(layout.titleTop >= layout.headingBottom + 12, 'Empty-state copy clears the header divider');
+        assert(layout.actionTop >= layout.descriptionBottom + 8, 'Action does not overlap the two-line description');
+        assert(layout.actionHeight >= 40, 'Empty-state action has a substantial visible target');
+        assert(layout.actionBottom <= layout.height - 60, 'Action stays inside the paper, above the pocket illustration');
+        assert(layout.actionBottom <= layout.height * .72 - 6, 'Empty-state action keeps visible clearance above the cream paper edge');
+      }
+      assert(Math.abs(emptyLayout[0].actionTop - emptyLayout[1].actionTop) < 1, 'Both empty cards align the action at the same offset');
       if (width === 1440) await grid.screenshot({ path: path.join(output, 'empty-desktop.png'), animations: 'disabled' });
     }
     await page.setViewportSize({ width: 320, height: 844 });
     await page.screenshot({ path: path.join(output, 'empty-320.png'), fullPage: true });
+    // Rendering malformed/extreme fixtures above deliberately bypasses edit APIs.
+    // Exercise normal persistence on the separate, untouched empty trip.
+    await page.goto(`${origin}/Travel?page=overview&trip=reservation-empty-fixture`); await ready();
+    await page.getByRole('button', { name: '교통 예약 0건, 예약 추가하기', exact: true }).waitFor({ state: 'visible' });
+    const editor = page.getByRole('dialog', { name: '예약 추가', exact: true });
+    const beforeCancel = await page.evaluate(() => JSON.stringify(state));
+    for (const [type, label] of [['transport', '교통'], ['stay', '숙소']]) {
+      const trigger = page.getByRole('button', { name: `${label} 예약 0건, 예약 추가하기`, exact: true });
+      await trigger.focus(); await trigger.press('Enter');
+      assert.equal(await editor.locator('[name="type"]').inputValue(), type, 'Empty card opens the correct reservation form directly');
+      assert.equal(await wallet.isVisible(), false, 'No intermediate wallet is opened');
+      await editor.getByRole('button', { name: '취소', exact: true }).click();
+      assert.equal(await trigger.evaluate(el => el === document.activeElement), true, 'Cancel returns keyboard focus to the empty card');
+    }
+    assert.equal(await page.evaluate(() => JSON.stringify(state)), beforeCancel, 'Opening and cancelling an empty card does not change saved data');
+    for (const [type, label] of [['transport', '교통'], ['stay', '숙소']]) {
+      await page.getByRole('button', { name: `${label} 예약 0건, 예약 추가하기`, exact: true }).click();
+      await editor.getByLabel('예약 이름').fill(`포켓 UI 확인용 ${label} 예약`);
+      await editor.getByRole('button', { name: '예약 저장', exact: true }).click();
+      try { await editor.waitFor({ state: 'hidden' }); }
+      catch (error) {
+        console.error('Reservation form diagnostics:', await page.evaluate(() => ({
+          error: document.querySelector('#ttReservationError').textContent,
+          invalid: [...document.querySelectorAll('#ttReservationForm :invalid')].map(el => ({ name: el.name, value: el.value, reason: el.validationMessage })),
+          saved: state.travelCompanion?.reservations,
+        })));
+        throw error;
+      }
+      await page.getByRole('button', { name: `${label} 예약 1건, 예약 지갑 열기`, exact: true }).waitFor({ state: 'visible' });
+      assert.equal(await page.evaluate(kind => state.travelCompanion.reservations.filter(row => row.type === kind).length, type), 1);
+    }
+    await page.reload(); await ready();
+    assert.equal(await grid.locator('.is-empty').count(), 0, 'New reservations persist and replace the empty-state UI after reload');
+    assert.equal(await page.evaluate(() => state.travelCompanion.reservations.length), 2);
     assert.deepEqual(errors, []);
-    console.log(`PASS reservation pockets: one-way/general transport, extra bookings, long/escaped names, empty states, and no runtime errors. Screenshots: ${output}`);
+    console.log(`PASS reservation pockets: one-way/general transport, extra bookings, long/escaped names, aligned empty states, direct add/cancel/save/reload, and no runtime errors. Screenshots: ${output}`);
   } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

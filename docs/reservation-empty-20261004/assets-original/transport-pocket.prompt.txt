@@ -1,0 +1,15 @@
+Generation mode: built-in image_gen
+Generation calls: 1
+Transparent background: true
+Existing file overwritten: no
+Input image: C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/triplog-reservation-empty-refined-20261004.png
+Saved original: C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/reservation-empty-20261004/assets-original/transport-pocket.png
+WebP output: C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/src/assets/reservation-empty-transport.webp
+WebP processing: lossless format conversion only; original pixels and alpha preserved
+
+Exact prompt:
+Create one standalone blue transport pocket background asset, faithfully matching the left card in the selected design reference. Use a front-facing composition at 1024 × 875 pixels, matching a 330:282 card aspect ratio, with transparent surrounding canvas, minimal outer margins, and a modest edge shadow. Preserve the blue stitched leather pocket, lower-right lighthouse and coast illustration, blank protruding back paper, and one continuous blank cream paper insert. Remove all UI content: no text, numbers, icons, divider, yellow count pill, or yellow action button. Keep the cream paper uninterrupted and unobstructed throughout the header, body, and action area, especially the central inner area x 12–88% and y 12–72%. Do not include a horizontal seam in the middle.
+
+Input images:
+- Image1, triplog-reservation-empty-refined-20261004.png: selected design reference for the left transport pocket card.
+

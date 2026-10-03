@@ -4,15 +4,21 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { createServer } = require('./serve-test');
 const fixture = require('./fixtures/reservation-pockets');
+const emptyFixture = { ...fixture, id: 'reservation-empty-fixture', tripName: '예약을 준비하는 여행', entries: [], travelCompanion: { reservations: [] } };
 const root = path.resolve(__dirname, '..');
 function createReservationPocketPreview() {
   const staticFiles = createServer({ pagesRedirects: true });
   const user = { id: '00000000-0000-4000-8000-000000000097', email: 'pockets@example.test', user_metadata: { display_name: '예약 목업' } };
   const boot = `<script>(() => {
     if (!localStorage.getItem('reservation-pockets-preview')) {
-      localStorage.setItem('domesticTravelExpensePlanner.trips.v2', JSON.stringify([${JSON.stringify(fixture)}]));
+      localStorage.setItem('domesticTravelExpensePlanner.trips.v2', JSON.stringify([${JSON.stringify(fixture)}, ${JSON.stringify(emptyFixture)}]));
       localStorage.setItem('domesticTravelExpensePlanner.activeTripId.v2', ${JSON.stringify(fixture.id)});
       localStorage.setItem('reservation-pockets-preview', '1');
+    }
+    const previewTrips = JSON.parse(localStorage.getItem('domesticTravelExpensePlanner.trips.v2') || '[]');
+    if (!previewTrips.some(trip => trip.id === 'reservation-empty-fixture')) {
+      previewTrips.push(${JSON.stringify(emptyFixture)});
+      localStorage.setItem('domesticTravelExpensePlanner.trips.v2', JSON.stringify(previewTrips));
     }
   })();</script>`;
   const sdk = `window.supabase={createClient(){return {

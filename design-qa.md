@@ -1,3 +1,16 @@
+# Reservation cards — empty-state refinement, 2026-10-04
+
+final result: passed
+
+- Source: `triplog-reservation-empty-refined-20261004.png`, 1891 × 832, proportionally normalized to 682 × 300. Implementation: both cards empty, 682 × 300 CSS pixels (PNG 682 × 301 fractional clip), 1440 × 1000 viewport, device scale 1.
+- Final evidence: `docs/reservation-empty-20261004/comparison-final.png`, `comparison-final-text.png` and `empty-desktop.png`. Populated-card evidence: `pockets-1440.png`.
+- Resolved P2 findings: fragmented empty composition, insufficient inside padding, oversized category type, action touching the paper edge, and insufficient paper clearance for populated rows. Heading counts are now in layout; empty cards have coherent copy and aligned textured yellow actions.
+- The five fidelity surfaces (font/type, spacing, colors, artwork and copy) pass. New and populated states, 320–1440 px responsive widths, keyboard focus, direct correct-type entry, cancellation, save/reload, existing wallet/edit flows and `npm test` pass. The local in-app browser confirms real rendering and interactions.
+- User heading feedback resolved: category labels shifted down 4 px; live type changed from 18 px/800/−0.5 px tracking to 19.5 px/750/−0.2 px. Both states and all tested widths pass again.
+- Detailed comparison history, exact source/implementation paths, normalization, validation and P3 limits: [reservation empty-state QA](docs/reservation-empty-20261004/design-qa.md).
+
+---
+
 # Reservation Passport Pockets — 2026-10-04
 
 final result: passed

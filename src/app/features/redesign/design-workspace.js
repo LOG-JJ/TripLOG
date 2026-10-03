@@ -444,6 +444,8 @@
       case 'companion':window.TripLog.features.travelCompanion.workspace.open('today');break;
       case 'companion-transport':window.TripLog.features.travelCompanion.workspace.open('wallet','transport');break;
       case 'companion-stay':window.TripLog.features.travelCompanion.workspace.open('wallet','stay');break;
+      case 'companion-transport-new':window.TripLog.features.travelCompanion.workspace.addReservation('transport');break;
+      case 'companion-stay-new':window.TripLog.features.travelCompanion.workspace.addReservation('stay');break;
       case 'companion-wallet':window.TripLog.features.travelCompanion.workspace.open('wallet');break;
       case 'companion-tools':window.TripLog.features.travelCompanion.workspace.open('tools');break;
       case 'expense-new':newExpense();break;
