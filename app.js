@@ -85,6 +85,7 @@
     "features/settings/map-geocoding-settings.js",
     "services/maps/routing.js",
     "features/overview/overview-page.js",
+    "features/overview/reservation-pockets.js",
     "features/reports/report-page.js",
     "features/settlement/settlement-formatting.js",
     "features/settlement/settlement-sources.js",

@@ -1,3 +1,17 @@
+# Reservation Passport Pockets — 2026-10-04
+
+final result: passed
+
+- Selected target: `triplog-reservation-passport-pockets-refined-20261003.png` (1829 × 860), normalized to 682 × 321. The final component is 682 × 322 CSS pixels in a 1440 × 1000 viewport, density 1; the lossless element screenshot includes one fractional boundary pixel and is 682 × 323.
+- Implementation screenshot: `docs/reservation-pockets-20261003/pockets-desktop-final.png`. Full and focused comparisons: `comparison-final.png` and `comparison-final-text.png` in the same folder.
+- State: synthetic three transport/two accommodation reservations matching the source content. Exact shared schedules are intentionally grouped as `2건` + `1건`; all three records remain reachable in the wallet.
+- Resolved P2 issues: inherited desktop grid/flex rules, small/heavy type and unbalanced line wrapping, and an unregistered font family that caused system-font fallback. The component now uses the actual bundled Pretendard face, measured role weights and text widths, balanced hotel names, aligned dates and times, and count-tab clearance.
+- Fonts, spacing, color, raster asset fidelity and app copy were compared against the same-size source. Mobile stacking, 320/390/480/600/768/1440 layouts, empty/long/mixed data, keyboard and wallet navigation were checked. Relevant browser regressions, `npm test`, and `npm run build` passed.
+- In-app browser page identity/rendering and interactions were verified. No app error was found; blocked exchange-rate requests and connection retries are expected in the isolated preview. Standard icon shapes and generated texture details retain minor P3 differences. Physical mobile/Safari testing remains unavailable.
+- Full comparison history, evidence and implementation checklist: [reservation pocket design QA](docs/reservation-pockets-20261003/design-qa.md).
+
+---
+
 # Passport Library — 2026-10-03
 
 final result: passed

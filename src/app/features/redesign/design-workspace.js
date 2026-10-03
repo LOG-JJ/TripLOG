@@ -325,11 +325,6 @@
     const scheduleDay = days.find(day => day.date === scheduleDate);
     const scheduleTitle = scheduleDate === today ? '오늘 일정' : scheduleDate === state.startDate ? '첫날 일정' : `${scheduleDay?.label || ''} 일정`;
     const items = plans.filter(item => item.date === scheduleDate).slice(0, 3), packing = state.packingList || [];
-    const reservation = (type, title, glyph) => {
-      const rows = bookings.filter(row => row.type === type);
-      const description = rows[0]?.title || '예약을 추가해 보세요';
-      return button(`${icon(glyph)}<strong>${title}</strong>${icon('caret-right')}<b class="rd-reservation-count">${rows.length}<small>건</small></b><small class="rd-reservation-description">${text(description)}</small>`, `companion-${type}`, `rd-reservation-${type}`, `aria-label="${title} ${rows.length}건, ${text(description)}"`);
-    };
     $('#rdOverview').innerHTML = `
       <section class="rd-trip-hero rd-outline"><div>
         <span class="rd-badge">${dday(state)}</span>
@@ -337,7 +332,7 @@
         <p>${period(state)} · ${duration(state)}</p>
         <button type="button" class="rd-team" data-rd-action="invite" aria-label="여행 멤버 ${team.length}명 보기">${icon('users')}<span>${team.length}명</span></button>
       </div></section>
-      <div class="rd-reservations">${reservation('transport', '교통 예약', 'airplane-tilt')}${reservation('stay', '숙소 예약', 'bed')}</div>
+      ${window.TripLog.features.overview.reservationPockets.render(bookings)}
       <section class="rd-outline rd-overview-budget${budget && total > budget ? ' is-over-budget' : ''}">
         <div class="rd-section-head"><h2>${icon('coins')}여행 예산</h2><button type="button" data-rd-nav="budget" aria-label="지출 기록 자세히 보기">자세히 ${icon('caret-right')}</button></div>
         <div class="rd-budget-metric"><strong>${money(total)}</strong><span>예산 ${money(budget)}</span></div>
