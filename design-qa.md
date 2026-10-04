@@ -8,7 +8,7 @@ final result: passed
 - `comparison-canonical-390.png`, `comparison-canonical-1440.png` 및 `rendered-highlights-390.png`에서 실제 화면을 비교했습니다. 글꼴·배치·색상·그림 표시·문구의 다섯 항목을 확인했으며 P0/P1/P2 문제는 남아 있지 않습니다. 인앱 순천 → 오사카 전환과 오류 로그 0건도 확인했습니다.
 - 도쿄 그림 검사에 카드 테두리 두께가 포함되던 계산을 수정했습니다. 이미지나 헤더 CSS의 변경 없이 카드 안쪽 기준으로 동일한 2px 허용치를 적용했고 모든 화면이 통과했습니다. 실기기 iOS/Android와 Safari는 미검증입니다.
 - [상세 검증·비교·원본 기록](docs/trip-scenes-world-300-20261004/design-qa.md), [국가별 해외 300곳 목록](docs/trip-scenes-world-300-20261004/catalog-index.md).
-- 운영 반영은 푸시 후 공개 파일을 대조하여 별도로 기록합니다.
+- 런타임 커밋 `02f66b6`을 `main`에 푸시했습니다. 2026-10-04 23:05:33 KST 공개 이미지 650개와 관련 파일 5개가 일치했고 실패는 0개입니다. 공개 빌드 `61c887893997826a9d0a`의 HTML·서비스 워커 지문도 일치합니다. [운영 검증](docs/trip-scenes-world-300-20261004/production-verification.json).
 
 ---
 
