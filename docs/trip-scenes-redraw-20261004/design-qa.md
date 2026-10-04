@@ -55,4 +55,10 @@ No actionable P0/P1/P2 finding remains. Physical Safari/iOS/Android testing is n
 - [x] Verify all 30 cities at four viewport widths.
 - [x] Complete and connect all ten theme pairs.
 - [x] Pass core, header, fallback/cache checks and build.
-- [ ] Verify the Git-based automatic deployment separately from push success.
+- [x] Verify the Git-based automatic deployment separately from push success.
+
+## Production verification
+
+Runtime commit `b7599a7b786488d4706a822ad14e205978f0e9d2` was pushed to `origin/main`. At 2026-10-04 04:50:20 UTC, all 80 active public WebPs matched the prepared local files byte for byte, and the catalog, resolver, stylesheet, HTML and service worker matched after normalizing line endings and generated build IDs: 85 files, zero mismatches. Public build `7206fde3127fa4e46cae` is recorded in `production-verification.json`.
+
+The existing in-app production tab updated automatically to that build with a loaded illustration, no open dialogs and zero error logs. No production trip data was edited. The later documentation commit only records this verification; it does not alter the deployed runtime files.

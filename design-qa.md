@@ -9,6 +9,7 @@ final result: passed
 - Fixed a P2 found during comparison: portrait `cover` cropped foregrounds on wide phones. Full-image contain with right/bottom alignment now preserves landmarks, waterways and the card's bottom connection. Before and after 599px evidence is retained. Compact title sizes remain 20–24px mobile / 24–40px desktop; typography, copy and layout geometry are unchanged.
 - All five fidelity surfaces reviewed. Passed core tests, eleven-width header/interaction/fallback checks, 120 city/viewport renders, offline/cache checks and build. In-app trip selector exercised Osaka and the mountain theme, with zero error logs; final proof is `in-app-osaka-final.jpg` and `in-app-theme-mountain.jpg`.
 - New WebPs total 6,261,276 bytes. Only the current city variant downloads; the 48-image cache bound and offline theme coverage are verified. Physical Safari/iOS/Android remain untested.
+- Production verified after runtime commit `b7599a7`: all 80 active image files and five source/build files match; public build `7206fde3127fa4e46cae`. The in-app production tab updated automatically with zero error logs. Evidence: `docs/trip-scenes-redraw-20261004/production-verification.json`.
 - [Detailed findings, comparison history, generation provenance and verification](docs/trip-scenes-redraw-20261004/design-qa.md).
 
 ---
