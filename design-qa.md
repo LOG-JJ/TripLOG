@@ -8,7 +8,7 @@ final result: passed
 - Passed: full `npm test`, all 166 active image files, 292 city/viewport combinations, eleven-width header/interaction checks, post-build offline/cache regression and `npm run build`. Local build `2762e9428350f5fb6d06`. The optional scene cache still holds at most 48 files and never installs city art with the app shell.
 - In-app browser passed real Osaka → Interlaken → Osaka selection, both v3 illustrations loaded, zero error logs, preview kept open. Evidence: `in-app-interlaken.jpg`, `in-app-osaka-final.jpg`, and `in-app-osaka-header.jpg` in the batch folder. Fixtures are isolated from production writes.
 - Every original, exact prompt and generation source hash is retained. The 90 new WebPs total 8,050,148 bytes. Regional/country galleries and all 292 individual renders are retained. Physical Safari/iOS/Android remain untested.
-- Automatic deployment verification is pending the Git push and will be recorded separately from local QA success.
+- Runtime commit `06129ca` was pushed to `main`. At 2026-10-04 06:54:21 UTC, all 166 public images and five source/build files matched: 171 files, zero mismatches, public build `43f87ebd1fdeb397bbd0`. The production tab updated automatically with its current Suncheon trip, loaded image and zero errors. Evidence: `docs/trip-scenes-expansion-20261004/production-verification.json`.
 - [Detailed findings, references, generation provenance and verification](docs/trip-scenes-expansion-20261004/design-qa.md).
 
 ---

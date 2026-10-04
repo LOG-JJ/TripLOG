@@ -2,7 +2,7 @@
 
 final result: passed
 
-All requested artwork and local verification are complete. Automatic-deployment verification is recorded separately after the Git push.
+All requested artwork, local verification and automatic-deployment verification are complete. Publication evidence is recorded separately below.
 
 ## Scope and visual authority
 
@@ -56,6 +56,10 @@ No actionable P0/P1/P2 design or implementation finding remains. No subjective r
 
 ## Release verification
 
-The confirmed remote is `LOG-JJ/TripLOG`, deployment branch `main`; the pre-release fetch found no upstream divergence. Commit/push and public content verification are pending at this local QA checkpoint. Push success alone will not be reported as deployment success.
+The confirmed remote is `LOG-JJ/TripLOG`, deployment branch `main`; the pre-release fetch found no upstream divergence. Runtime commit `06129ca94e85e226b6a751600781f3b269b90ed5` was pushed successfully. The first public check still returned the preceding catalog, so publication was not claimed at that point.
+
+At 2026-10-04 06:54:21 UTC, all 166 active public WebPs matched the local files byte for byte and were served with image content types. The catalog, resolver, header stylesheet, HTML and service worker also matched after normalizing line endings and generated build IDs: 171 files, zero mismatches. Public build: `43f87ebd1fdeb397bbd0`. Full evidence is retained in `production-verification.json`.
+
+The existing production browser tab updated automatically to that build with the current Suncheon trip still selected, its illustration decoded, no open dialogs and zero error logs. No production trip data was edited, and no storage reset or forced reload was used. The following documentation-only commit records this confirmation without changing runtime files.
 
 Physical Safari/iOS/Android testing is not available in this workflow. The city scenes are editorial illustrations rather than geographic maps. Generation and local checks alone do not establish successful automatic deployment.
