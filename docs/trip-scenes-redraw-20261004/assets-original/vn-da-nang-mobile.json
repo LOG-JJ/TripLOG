@@ -1,0 +1,27 @@
+{
+  "jobId": "vn-da-nang-mobile",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104e7-e587-7d23-8d34-8e0712636c97/exec-8a273e8f-1c5a-4bc2-b975-0b31a58efad5.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-redraw-20261004/assets-original/vn-da-nang-mobile.png",
+  "generationMode": "built-in image_gen; single I2I using user-approved canonical Suncheon style reference",
+  "prompt": "Create one standalone destination illustration of Da Nang: the golden Dragon Bridge crossing the Han River, modest city buildings, and a distant beach and headland. Do not substitute Hoi An lantern streets. Match the user's selected current Suncheon illustration style in the reference. Preserve the same visual language and drawing character while depicting this destination's own subjects. Use a portrait 4:5 composition, intended for a 480 × 600 mobile asset displayed in a narrow right-side header slot. Compose the city directly for this portrait frame so its recognizable landmarks and natural irregular left silhouette remain readable at small size. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame, with quiet transparent space along the upper-left. The illustrated scenery must reach the right and bottom canvas edges without empty padding. Keep the destination's main features comfortably inside the frame. Artwork only, with no text, UI, labels, logos or border.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png"
+  ],
+  "generatedCityInputs": [],
+  "generationCount": 1,
+  "transparentBackground": true,
+  "overwrite": false,
+  "startedAt": "2026-10-04T04:19:10.418Z",
+  "startedEpoch": 1791087550.418,
+  "finishedAt": "2026-10-04T04:20:04.683Z",
+  "sourceSha256": "2e546e9c96518a4a4af464e8e2b10d93b4f748c3929479a5a22ac58a8df76c4a",
+  "savedSha256": "2e546e9c96518a4a4af464e8e2b10d93b4f748c3929479a5a22ac58a8df76c4a",
+  "sha256Match": true,
+  "referenceSha256": "9ee5b5e49a9fcc42f6ce7f1fdb9e4e740e6e4837ff51bad6394554bfa86c9dd6",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "pngColorType": 6,
+  "bytes": 1478909
+}

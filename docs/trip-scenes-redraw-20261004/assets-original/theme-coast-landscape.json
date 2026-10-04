@@ -1,0 +1,27 @@
+{
+  "jobId": "theme-coast-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104e7-e587-7d23-8d34-8e0712636c97/exec-46646a40-a35a-491e-bec1-64733a100df3.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-redraw-20261004/assets-original/theme-coast-landscape.png",
+  "generationMode": "built-in image_gen; single I2I using user-approved canonical Suncheon style reference",
+  "prompt": "Create one standalone travel illustration showing a temperate seaside cove, a small lighthouse, a modest fishing boat, and a low green headland, with no identifiable landmark or tropical palms. Match the user's selected current Suncheon illustration style in the reference. Preserve the same visual language and drawing character while depicting this theme's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset, with the focal scene toward the center-right and bottom. Use a transparent background. Leave quiet transparent space along the upper-left and a natural irregular left silhouette visibly inside the frame. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no text, UI, labels, logos or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "generatedCityInputs": [],
+  "generationCount": 1,
+  "transparentBackground": true,
+  "overwrite": false,
+  "startedAt": "2026-10-04T04:34:40.044Z",
+  "startedEpoch": 1791088480.044,
+  "finishedAt": "2026-10-04T04:35:28.940Z",
+  "sourceSha256": "8048cbb520c2d152babac78204a25122ee23766eeb4e60eda78c4e9c20a813f7",
+  "savedSha256": "8048cbb520c2d152babac78204a25122ee23766eeb4e60eda78c4e9c20a813f7",
+  "sha256Match": true,
+  "referenceSha256": "8be62382845e53791e695e49b20a1c631e3e621d40fee07935c0f4c9832af822",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "pngColorType": 6,
+  "bytes": 1221216
+}

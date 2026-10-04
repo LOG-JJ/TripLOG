@@ -16,6 +16,12 @@ for (const entry of D.catalog) {
     assert(resolved.src.startsWith('src/assets/trip-scenes/'));
   }
   assert(D.themes[entry.theme], entry.id);
+  assert(entry.mobileSrc.endsWith('-mobile.webp'), entry.id + ': mobile illustration is available');
+  assert.equal(R.resolve({ countryCode: entry.countryCodes[0], city: entry.aliases.at(-1) }).mobileSrc, entry.mobileSrc, entry.id + ': resolved mobile art');
+}
+for (const theme of Object.values(D.themes)) {
+  assert(theme.src.includes('/themes/v2/'), theme.id + ': revised desktop artwork');
+  assert(theme.mobileSrc.endsWith('-mobile.webp'), theme.id + ': revised mobile artwork');
 }
 assert.equal(R.resolve({ country: '대한민국', city: ' 순천시 ' }).artworkId, 'kr-suncheon');
 assert.equal(R.resolve({ countryCode: 'kr', city: 'Ｓｕｎｃｈｅｏｎ' }).destinationId, 'kr-suncheon');
@@ -28,6 +34,7 @@ for (const trip of [null, undefined, {}, { tripName: '제주 휴가', city: '' }
   { countryCode: 'KR', city: '처음 가보는 마을' }, { countryCode: 'KR', city: '<img src=x onerror=alert(1)>' },
   { countryCode: 'KR', city: { toString() { throw Error('Do not coerce malformed city'); } } }]) {
   assert.equal(R.resolve(trip).artworkId, 'theme-travel');
+  assert.equal(R.resolve(trip).mobileSrc, D.themes.travel.mobileSrc);
 }
 assert.equal(R.resolve({ countryCode: 'JP', city: '오사카 & 교토' }).match, 'multiple');
 assert.equal(R.resolve({ countryCode: 'VN', city: '호이안' }).destinationId, 'vn-hoi-an');
@@ -44,7 +51,9 @@ const before = JSON.stringify(saved);
 assert.deepEqual(R.resolve(saved), R.resolve(saved), 'A destination keeps the same artwork across renders');
 assert.equal(JSON.stringify(saved), before, 'Artwork selection never edits trip data');
 if (!process.argv.includes('--skip-assets')) {
-  for (const file of new Set([...D.catalog.flatMap(item => [item.src, item.mobileSrc].filter(Boolean)), ...Object.values(D.themes).map(item => item.src)])) {
+  const artwork = new Set([...D.catalog.flatMap(item => [item.src, item.mobileSrc]), ...Object.values(D.themes).flatMap(item => [item.src, item.mobileSrc])]);
+  assert.equal(artwork.size, 80, '30 city pairs and 10 theme pairs are active');
+  for (const file of artwork) {
     const fullPath = path.resolve(__dirname, '..', file);
     assert(fs.existsSync(fullPath), `Missing deployed scene: ${file}`);
     const image = fs.readFileSync(fullPath);

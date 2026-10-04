@@ -1,0 +1,27 @@
+{
+  "jobId": "theme-urban-mobile",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104e7-e587-7d23-8d34-8e0712636c97/exec-dcb17a34-66ff-4764-91bf-0149b642340c.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-redraw-20261004/assets-original/theme-urban-mobile.png",
+  "generationMode": "built-in image_gen; single I2I using user-approved canonical Suncheon style reference",
+  "prompt": "Create one standalone travel illustration showing a welcoming generic city with varied mid-rise buildings, a small tram on a street, and green trees, without recognizable landmarks or readable signs. Match the user's selected current Suncheon illustration style in the reference. Preserve the same visual language and drawing character while depicting this theme's own subjects. Use a portrait 4:5 composition intended for a 480 × 600 mobile asset in a narrow right-side header slot. Compose the subjects directly for that portrait frame so the natural irregular left silhouette remains visible at small size. Use a transparent background. Leave quiet transparent space along the upper-left and a natural irregular left silhouette visibly inside the frame. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no text, UI, labels, logos or border.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png"
+  ],
+  "generatedCityInputs": [],
+  "generationCount": 1,
+  "transparentBackground": true,
+  "overwrite": false,
+  "startedAt": "2026-10-04T04:32:19.641Z",
+  "startedEpoch": 1791088339.641,
+  "finishedAt": "2026-10-04T04:33:14.271Z",
+  "sourceSha256": "0443438302faca97885cd96543ab84fc37a2ac4265cb4e2d01a0bc02ac53a60e",
+  "savedSha256": "0443438302faca97885cd96543ab84fc37a2ac4265cb4e2d01a0bc02ac53a60e",
+  "sha256Match": true,
+  "referenceSha256": "9ee5b5e49a9fcc42f6ce7f1fdb9e4e740e6e4837ff51bad6394554bfa86c9dd6",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "pngColorType": 6,
+  "bytes": 1329490
+}

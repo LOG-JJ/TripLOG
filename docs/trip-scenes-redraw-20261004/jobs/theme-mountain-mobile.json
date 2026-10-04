@@ -1,0 +1,19 @@
+{
+  "id": "theme-mountain-mobile",
+  "cityId": "theme-mountain",
+  "cityName": "산악",
+  "kind": "theme",
+  "themeId": "mountain",
+  "variant": "mobile",
+  "reference": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png",
+  "prompt": "Create one standalone travel illustration showing a neutral layered mountain range, green foothills, a winding footpath, and a tiny simple cable car, without a named peak or snow-dominated season. Match the user's selected current Suncheon illustration style in the reference. Preserve the same visual language and drawing character while depicting this theme's own subjects. Use a portrait 4:5 composition intended for a 480 × 600 mobile asset in a narrow right-side header slot. Compose the subjects directly for that portrait frame so the natural irregular left silhouette remains visible at small size. Use a transparent background. Leave quiet transparent space along the upper-left and a natural irregular left silhouette visibly inside the frame. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no text, UI, labels, logos or border.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-redraw-20261004/assets-original/theme-mountain-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-redraw-20261004/assets-original/theme-mountain-mobile.json",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-redraw-20261004/assets-original/theme-mountain-mobile.prompt.txt",
+  "asset": "src/assets/trip-scenes/themes/v2/mountain-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "status": "prepared"
+}

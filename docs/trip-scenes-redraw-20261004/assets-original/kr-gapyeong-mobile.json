@@ -1,0 +1,27 @@
+{
+  "jobId": "kr-gapyeong-mobile",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104e7-e587-7d23-8d34-8e0712636c97/exec-16b20669-48d7-4645-87fd-d12777b76273.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-redraw-20261004/assets-original/kr-gapyeong-mobile.png",
+  "generationMode": "built-in image_gen; single I2I using user-approved canonical Suncheon style reference",
+  "prompt": "Create one standalone destination illustration of Gapyeong: wooded riverside hills, a calm river bend, a small camping tent, and a simple wooden cabin. Do not substitute Nami Island landmarks. Match the user's selected current Suncheon illustration style in the reference. Preserve the same visual language and drawing character while depicting this destination's own subjects. Use a portrait 4:5 composition, intended for a 480 × 600 mobile asset displayed in a narrow right-side header slot. Compose the city directly for this portrait frame so its recognizable landmarks and natural irregular left silhouette remain readable at small size. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame, with quiet transparent space along the upper-left. The illustrated scenery must reach the right and bottom canvas edges without empty padding. Keep the destination's main features comfortably inside the frame. Artwork only, with no text, UI, labels, logos or border.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png"
+  ],
+  "generatedCityInputs": [],
+  "generationCount": 1,
+  "transparentBackground": true,
+  "overwrite": false,
+  "startedAt": "2026-10-04T03:57:45.937Z",
+  "startedEpoch": 1791086265.937,
+  "finishedAt": "2026-10-04T03:58:20.322Z",
+  "sourceSha256": "af4264d5a8af971e180770f0a433ca3100feff33c102c9e7447a05e9fe499a9c",
+  "savedSha256": "af4264d5a8af971e180770f0a433ca3100feff33c102c9e7447a05e9fe499a9c",
+  "sha256Match": true,
+  "referenceSha256": "9ee5b5e49a9fcc42f6ce7f1fdb9e4e740e6e4837ff51bad6394554bfa86c9dd6",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "pngColorType": 6,
+  "bytes": 1513983
+}

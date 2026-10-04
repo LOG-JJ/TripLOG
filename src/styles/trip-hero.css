@@ -50,7 +50,8 @@ body.rd-app #overviewPage .th-hero-scene {
 }
 body.rd-app #overviewPage .th-hero-scene picture { display: block; width: 100%; height: 100%; }
 body.rd-app #overviewPage .th-hero-scene img {
-  display: block; width: 100%; height: 100%; margin: 0; object-fit: cover; object-position: right bottom;
+  /* Preserve the complete drawing at every slot ratio, including fallbacks. */
+  display: block; width: 100%; height: 100%; margin: 0; object-fit: contain; object-position: right bottom;
 }
 body.rd-app #overviewPage .th-hero-scene img[hidden] { display: none; }
 @media (hover: hover) {
@@ -58,13 +59,6 @@ body.rd-app #overviewPage .th-hero-scene img[hidden] { display: none; }
   body.rd-app #overviewPage .th-trip-members:hover { color: #1264a3; }
 }
 body.rd-app #overviewPage :is(.th-trip-name, .th-trip-members):focus-visible { outline: 3px solid #1264a3; outline-offset: 3px; border-radius: 5px; }
-@media (min-width: 768px) {
-  /* The landscape silhouette must survive in medium-width desktop panels. */
-  body.rd-app #overviewPage .th-hero-scene picture:has(source[data-trip-scene-mobile]) img { object-fit: contain; object-position: right bottom; }
-}
-@media (max-width: 767px) {
-  body.rd-app #overviewPage .th-hero-scene picture:has(source[data-trip-scene-mobile]) img { object-position: right top; }
-}
 @media (min-width: 600px) and (max-width: 767px) {
   body.rd-app #overviewPage .th-trip-dates { flex-basis: 100%; }
   body.rd-app #overviewPage .th-trip-duration { border-left: 0; padding-left: 0; }

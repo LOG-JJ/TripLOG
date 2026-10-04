@@ -4,14 +4,17 @@ const fs = require('node:fs');
 const http = require('node:http');
 const { chromium } = require('playwright');
 const { createTripHeaderPreview } = require('./preview-trip-header');
-const cityRoot = '/src/assets/trip-scenes/cities/v1/';
+const cityRoot = '/src/assets/trip-scenes/cities/v2/';
+const sceneData = require('../src/app/data/destination-scenes');
 const suncheonDesktop = '/src/assets/trip-scenes/cities/v2/kr-suncheon.webp';
 const suncheonMobile = '/src/assets/trip-scenes/cities/v2/kr-suncheon-mobile.webp';
 async function main() {
   const worker = fs.readFileSync('sw.js', 'utf8');
   const assets = JSON.parse(worker.match(/const ASSETS = (\[[^;]+\]);/)[1]);
   assert(!assets.some(file => file.includes('/trip-scenes/cities/')), 'City artwork is never installed with the app shell');
-  assert.equal(assets.filter(file => file.includes('/trip-scenes/themes/')).length, 10, 'The ten offline theme images are bundled');
+  const themeAssets = Object.values(sceneData.themes).flatMap(theme => [theme.src, theme.mobileSrc]);
+  assert.equal(themeAssets.length, 20, 'Ten themes each have desktop and mobile artwork');
+  for (const file of themeAssets) assert(assets.includes('/' + file), 'Offline theme is bundled: ' + file);
   const base = createTripHeaderPreview({ serviceWorkers: true }), requested = new Set();
   const tinyImage = Buffer.from('UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA', 'base64');
   const server = http.createServer((req, res) => {
@@ -62,11 +65,11 @@ async function main() {
     await context.setOffline(true);
     await select('trip-header-osaka'); await imageReady('/urban.webp');
     assert.equal(await page.locator('.th-trip-hero').getAttribute('data-destination-id'), 'jp-osaka');
-    assert(!(await cacheKeys()).includes(cityRoot + 'jp-osaka.webp'), 'An offline fallback is not cached as a city illustration');
+    assert(!(await cacheKeys()).some(key => key.startsWith(cityRoot + 'jp-osaka')), 'An offline fallback is not cached as a city illustration');
     await context.setOffline(false);
-    await select('trip-header-suncheon'); await select('trip-header-osaka'); await imageReady('/jp-osaka.webp');
-    await page.waitForFunction(async () => Boolean(await (await caches.open('triplog-destination-scenes-v1')).match('/src/assets/trip-scenes/cities/v1/jp-osaka.webp')));
-    assert.deepEqual(new Set(await cacheKeys()), new Set([suncheonMobile, suncheonDesktop, cityRoot + 'jp-osaka.webp']));
+    await select('trip-header-suncheon'); await select('trip-header-osaka'); await imageReady('/jp-osaka-mobile.webp');
+    await page.waitForFunction(async source => Boolean(await (await caches.open('triplog-destination-scenes-v1')).match(source)), cityRoot + 'jp-osaka-mobile.webp');
+    assert.deepEqual(new Set(await cacheKeys()), new Set([suncheonMobile, suncheonDesktop, cityRoot + 'jp-osaka-mobile.webp']));
     console.log('PASS scene cache: only selected mobile art loads, first-visible-source warming, offline mobile reload, uncached desktop/city fallback, online art-direction recovery');
     const rejectsHtml = await page.evaluate(async root => { try { await fetch(root + 'missing.webp'); return false; } catch (_) { return true; } }, cityRoot);
     assert(rejectsHtml, 'A 200 HTML fallback is rejected as an image');

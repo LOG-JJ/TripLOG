@@ -1,0 +1,5526 @@
+{
+  "passed": true,
+  "count": 120,
+  "results": [
+    {
+      "city": "kr-seoul",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-seoul-mobile.webp",
+      "filename": "kr-seoul-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6175902777777778,
+        "transparentFraction": 0.3774548611111111,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-gapyeong",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-gapyeong-mobile.webp",
+      "filename": "kr-gapyeong-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6236944444444444,
+        "transparentFraction": 0.36964930555555553,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-gangneung",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-gangneung-mobile.webp",
+      "filename": "kr-gangneung-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6070520833333334,
+        "transparentFraction": 0.38428819444444445,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-sokcho",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-sokcho-mobile.webp",
+      "filename": "kr-sokcho-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6883368055555555,
+        "transparentFraction": 0.3071770833333333,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-yangyang",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-yangyang-mobile.webp",
+      "filename": "kr-yangyang-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6006215277777778,
+        "transparentFraction": 0.3904236111111111,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-chuncheon",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-chuncheon-mobile.webp",
+      "filename": "kr-chuncheon-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6161736111111111,
+        "transparentFraction": 0.37815625,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-jeonju",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-jeonju-mobile.webp",
+      "filename": "kr-jeonju-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5865347222222222,
+        "transparentFraction": 0.40826388888888887,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-yeosu",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-yeosu-mobile.webp",
+      "filename": "kr-yeosu-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5244930555555556,
+        "transparentFraction": 0.4621458333333333,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-suncheon",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-suncheon-mobile.webp",
+      "filename": "kr-suncheon-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5975416666666666,
+        "transparentFraction": 0.39677083333333335,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-gyeongju",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-gyeongju-mobile.webp",
+      "filename": "kr-gyeongju-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6256215277777778,
+        "transparentFraction": 0.3686111111111111,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-busan",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-busan-mobile.webp",
+      "filename": "kr-busan-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5866284722222223,
+        "transparentFraction": 0.39998958333333334,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-tongyeong",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-tongyeong-mobile.webp",
+      "filename": "kr-tongyeong-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5691111111111111,
+        "transparentFraction": 0.42454166666666665,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-geoje",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-geoje-mobile.webp",
+      "filename": "kr-geoje-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6371076388888889,
+        "transparentFraction": 0.3559583333333333,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-namhae",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-namhae-mobile.webp",
+      "filename": "kr-namhae-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5805173611111111,
+        "transparentFraction": 0.41363194444444445,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-jeju",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-jeju-mobile.webp",
+      "filename": "kr-jeju-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 142.859375,
+          "bottom": 207,
+          "width": 113.859375,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6048958333333333,
+        "transparentFraction": 0.387,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-tokyo",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-tokyo-mobile.webp",
+      "filename": "jp-tokyo-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.4661284722222222,
+        "transparentFraction": 0.5247013888888888,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-osaka",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-osaka-mobile.webp",
+      "filename": "jp-osaka-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 142.859375,
+          "bottom": 207,
+          "width": 113.859375,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6460243055555556,
+        "transparentFraction": 0.34665972222222224,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-kyoto",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-kyoto-mobile.webp",
+      "filename": "jp-kyoto-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5921215277777778,
+        "transparentFraction": 0.4036527777777778,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-fukuoka",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-fukuoka-mobile.webp",
+      "filename": "jp-fukuoka-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 159.640625,
+          "bottom": 207,
+          "width": 130.640625,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.48665277777777777,
+        "transparentFraction": 0.5059270833333334,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-sapporo",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-sapporo-mobile.webp",
+      "filename": "jp-sapporo-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 142.859375,
+          "bottom": 207,
+          "width": 113.859375,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5737361111111111,
+        "transparentFraction": 0.4198854166666667,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-okinawa",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-okinawa-mobile.webp",
+      "filename": "jp-okinawa-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 159.640625,
+          "bottom": 207,
+          "width": 130.640625,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6383645833333333,
+        "transparentFraction": 0.3531006944444444,
+        "fits": true
+      }
+    },
+    {
+      "city": "tw-taipei",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/tw-taipei-mobile.webp",
+      "filename": "tw-taipei-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 159.640625,
+          "bottom": 207,
+          "width": 130.640625,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5271909722222222,
+        "transparentFraction": 0.46691666666666665,
+        "fits": true
+      }
+    },
+    {
+      "city": "hk-hong-kong",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/hk-hong-kong-mobile.webp",
+      "filename": "hk-hong-kong-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5766631944444445,
+        "transparentFraction": 0.41714930555555557,
+        "fits": true
+      }
+    },
+    {
+      "city": "vn-da-nang",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/vn-da-nang-mobile.webp",
+      "filename": "vn-da-nang-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6020902777777778,
+        "transparentFraction": 0.3919166666666667,
+        "fits": true
+      }
+    },
+    {
+      "city": "vn-nha-trang",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/vn-nha-trang-mobile.webp",
+      "filename": "vn-nha-trang-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 142.859375,
+          "bottom": 207,
+          "width": 113.859375,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6140173611111112,
+        "transparentFraction": 0.37899652777777776,
+        "fits": true
+      }
+    },
+    {
+      "city": "th-bangkok",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/th-bangkok-mobile.webp",
+      "filename": "th-bangkok-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5111840277777778,
+        "transparentFraction": 0.48103819444444446,
+        "fits": true
+      }
+    },
+    {
+      "city": "th-chiang-mai",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/th-chiang-mai-mobile.webp",
+      "filename": "th-chiang-mai-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 159.640625,
+          "bottom": 207,
+          "width": 130.640625,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6390763888888888,
+        "transparentFraction": 0.35529513888888886,
+        "fits": true
+      }
+    },
+    {
+      "city": "sg-singapore",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/sg-singapore-mobile.webp",
+      "filename": "sg-singapore-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 159.640625,
+          "bottom": 207,
+          "width": 130.640625,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5716354166666666,
+        "transparentFraction": 0.42111805555555554,
+        "fits": true
+      }
+    },
+    {
+      "city": "id-bali",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/id-bali-mobile.webp",
+      "filename": "id-bali-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6188125,
+        "transparentFraction": 0.3740173611111111,
+        "fits": true
+      }
+    },
+    {
+      "city": "fr-paris",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v2/fr-paris-mobile.webp",
+      "filename": "fr-paris-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.4665625,
+        "transparentFraction": 0.5259305555555556,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-seoul",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-seoul-mobile.webp",
+      "filename": "kr-seoul-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6175902777777778,
+        "transparentFraction": 0.3774548611111111,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-gapyeong",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-gapyeong-mobile.webp",
+      "filename": "kr-gapyeong-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6236944444444444,
+        "transparentFraction": 0.36964930555555553,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-gangneung",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-gangneung-mobile.webp",
+      "filename": "kr-gangneung-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6070520833333334,
+        "transparentFraction": 0.38428819444444445,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-sokcho",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-sokcho-mobile.webp",
+      "filename": "kr-sokcho-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6883368055555555,
+        "transparentFraction": 0.3071770833333333,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-yangyang",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-yangyang-mobile.webp",
+      "filename": "kr-yangyang-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6006215277777778,
+        "transparentFraction": 0.3904236111111111,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-chuncheon",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-chuncheon-mobile.webp",
+      "filename": "kr-chuncheon-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6161736111111111,
+        "transparentFraction": 0.37815625,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-jeonju",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-jeonju-mobile.webp",
+      "filename": "kr-jeonju-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5865347222222222,
+        "transparentFraction": 0.40826388888888887,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-yeosu",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-yeosu-mobile.webp",
+      "filename": "kr-yeosu-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5244930555555556,
+        "transparentFraction": 0.4621458333333333,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-suncheon",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-suncheon-mobile.webp",
+      "filename": "kr-suncheon-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5975416666666666,
+        "transparentFraction": 0.39677083333333335,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-gyeongju",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-gyeongju-mobile.webp",
+      "filename": "kr-gyeongju-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6256215277777778,
+        "transparentFraction": 0.3686111111111111,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-busan",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-busan-mobile.webp",
+      "filename": "kr-busan-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5866284722222223,
+        "transparentFraction": 0.39998958333333334,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-tongyeong",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-tongyeong-mobile.webp",
+      "filename": "kr-tongyeong-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5691111111111111,
+        "transparentFraction": 0.42454166666666665,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-geoje",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-geoje-mobile.webp",
+      "filename": "kr-geoje-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6371076388888889,
+        "transparentFraction": 0.3559583333333333,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-namhae",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-namhae-mobile.webp",
+      "filename": "kr-namhae-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5805173611111111,
+        "transparentFraction": 0.41363194444444445,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-jeju",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-jeju-mobile.webp",
+      "filename": "kr-jeju-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 153.125,
+          "bottom": 207,
+          "width": 120.125,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6048958333333333,
+        "transparentFraction": 0.387,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-tokyo",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-tokyo-mobile.webp",
+      "filename": "jp-tokyo-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.4661284722222222,
+        "transparentFraction": 0.5247013888888888,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-osaka",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-osaka-mobile.webp",
+      "filename": "jp-osaka-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 153.125,
+          "bottom": 207,
+          "width": 120.125,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6460243055555556,
+        "transparentFraction": 0.34665972222222224,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-kyoto",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-kyoto-mobile.webp",
+      "filename": "jp-kyoto-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5921215277777778,
+        "transparentFraction": 0.4036527777777778,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-fukuoka",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-fukuoka-mobile.webp",
+      "filename": "jp-fukuoka-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 171.109375,
+          "bottom": 207,
+          "width": 138.109375,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.48665277777777777,
+        "transparentFraction": 0.5059270833333334,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-sapporo",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-sapporo-mobile.webp",
+      "filename": "jp-sapporo-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 153.125,
+          "bottom": 207,
+          "width": 120.125,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5737361111111111,
+        "transparentFraction": 0.4198854166666667,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-okinawa",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-okinawa-mobile.webp",
+      "filename": "jp-okinawa-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 171.109375,
+          "bottom": 207,
+          "width": 138.109375,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6383645833333333,
+        "transparentFraction": 0.3531006944444444,
+        "fits": true
+      }
+    },
+    {
+      "city": "tw-taipei",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/tw-taipei-mobile.webp",
+      "filename": "tw-taipei-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 171.109375,
+          "bottom": 207,
+          "width": 138.109375,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5271909722222222,
+        "transparentFraction": 0.46691666666666665,
+        "fits": true
+      }
+    },
+    {
+      "city": "hk-hong-kong",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/hk-hong-kong-mobile.webp",
+      "filename": "hk-hong-kong-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5766631944444445,
+        "transparentFraction": 0.41714930555555557,
+        "fits": true
+      }
+    },
+    {
+      "city": "vn-da-nang",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/vn-da-nang-mobile.webp",
+      "filename": "vn-da-nang-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6020902777777778,
+        "transparentFraction": 0.3919166666666667,
+        "fits": true
+      }
+    },
+    {
+      "city": "vn-nha-trang",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/vn-nha-trang-mobile.webp",
+      "filename": "vn-nha-trang-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 153.125,
+          "bottom": 207,
+          "width": 120.125,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6140173611111112,
+        "transparentFraction": 0.37899652777777776,
+        "fits": true
+      }
+    },
+    {
+      "city": "th-bangkok",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/th-bangkok-mobile.webp",
+      "filename": "th-bangkok-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5111840277777778,
+        "transparentFraction": 0.48103819444444446,
+        "fits": true
+      }
+    },
+    {
+      "city": "th-chiang-mai",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/th-chiang-mai-mobile.webp",
+      "filename": "th-chiang-mai-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 171.109375,
+          "bottom": 207,
+          "width": 138.109375,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6390763888888888,
+        "transparentFraction": 0.35529513888888886,
+        "fits": true
+      }
+    },
+    {
+      "city": "sg-singapore",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/sg-singapore-mobile.webp",
+      "filename": "sg-singapore-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 171.109375,
+          "bottom": 207,
+          "width": 138.109375,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5716354166666666,
+        "transparentFraction": 0.42111805555555554,
+        "fits": true
+      }
+    },
+    {
+      "city": "id-bali",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/id-bali-mobile.webp",
+      "filename": "id-bali-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6188125,
+        "transparentFraction": 0.3740173611111111,
+        "fits": true
+      }
+    },
+    {
+      "city": "fr-paris",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v2/fr-paris-mobile.webp",
+      "filename": "fr-paris-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.4665625,
+        "transparentFraction": 0.5259305555555556,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-seoul",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-seoul-mobile.webp",
+      "filename": "kr-seoul-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6175902777777778,
+        "transparentFraction": 0.3774548611111111,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-gapyeong",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-gapyeong-mobile.webp",
+      "filename": "kr-gapyeong-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6236944444444444,
+        "transparentFraction": 0.36964930555555553,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-gangneung",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-gangneung-mobile.webp",
+      "filename": "kr-gangneung-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6070520833333334,
+        "transparentFraction": 0.38428819444444445,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-sokcho",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-sokcho-mobile.webp",
+      "filename": "kr-sokcho-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6883368055555555,
+        "transparentFraction": 0.3071770833333333,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-yangyang",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-yangyang-mobile.webp",
+      "filename": "kr-yangyang-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6006215277777778,
+        "transparentFraction": 0.3904236111111111,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-chuncheon",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-chuncheon-mobile.webp",
+      "filename": "kr-chuncheon-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6161736111111111,
+        "transparentFraction": 0.37815625,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-jeonju",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-jeonju-mobile.webp",
+      "filename": "kr-jeonju-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5865347222222222,
+        "transparentFraction": 0.40826388888888887,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-yeosu",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-yeosu-mobile.webp",
+      "filename": "kr-yeosu-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5244930555555556,
+        "transparentFraction": 0.4621458333333333,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-suncheon",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-suncheon-mobile.webp",
+      "filename": "kr-suncheon-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5975416666666666,
+        "transparentFraction": 0.39677083333333335,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-gyeongju",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-gyeongju-mobile.webp",
+      "filename": "kr-gyeongju-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6256215277777778,
+        "transparentFraction": 0.3686111111111111,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-busan",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-busan-mobile.webp",
+      "filename": "kr-busan-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5866284722222223,
+        "transparentFraction": 0.39998958333333334,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-tongyeong",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-tongyeong-mobile.webp",
+      "filename": "kr-tongyeong-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5691111111111111,
+        "transparentFraction": 0.42454166666666665,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-geoje",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-geoje-mobile.webp",
+      "filename": "kr-geoje-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6371076388888889,
+        "transparentFraction": 0.3559583333333333,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-namhae",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-namhae-mobile.webp",
+      "filename": "kr-namhae-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5805173611111111,
+        "transparentFraction": 0.41363194444444445,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-jeju",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-jeju-mobile.webp",
+      "filename": "kr-jeju-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 165.03125,
+          "bottom": 207,
+          "width": 132.03125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6048958333333333,
+        "transparentFraction": 0.387,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-tokyo",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-tokyo-mobile.webp",
+      "filename": "jp-tokyo-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.4661284722222222,
+        "transparentFraction": 0.5247013888888888,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-osaka",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-osaka-mobile.webp",
+      "filename": "jp-osaka-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 165.03125,
+          "bottom": 207,
+          "width": 132.03125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6460243055555556,
+        "transparentFraction": 0.34665972222222224,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-kyoto",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-kyoto-mobile.webp",
+      "filename": "jp-kyoto-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5921215277777778,
+        "transparentFraction": 0.4036527777777778,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-fukuoka",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-fukuoka-mobile.webp",
+      "filename": "jp-fukuoka-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 185.265625,
+          "bottom": 207,
+          "width": 152.265625,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.48665277777777777,
+        "transparentFraction": 0.5059270833333334,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-sapporo",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-sapporo-mobile.webp",
+      "filename": "jp-sapporo-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 165.03125,
+          "bottom": 207,
+          "width": 132.03125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5737361111111111,
+        "transparentFraction": 0.4198854166666667,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-okinawa",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-okinawa-mobile.webp",
+      "filename": "jp-okinawa-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 185.265625,
+          "bottom": 207,
+          "width": 152.265625,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6383645833333333,
+        "transparentFraction": 0.3531006944444444,
+        "fits": true
+      }
+    },
+    {
+      "city": "tw-taipei",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/tw-taipei-mobile.webp",
+      "filename": "tw-taipei-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 185.265625,
+          "bottom": 207,
+          "width": 152.265625,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5271909722222222,
+        "transparentFraction": 0.46691666666666665,
+        "fits": true
+      }
+    },
+    {
+      "city": "hk-hong-kong",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/hk-hong-kong-mobile.webp",
+      "filename": "hk-hong-kong-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5766631944444445,
+        "transparentFraction": 0.41714930555555557,
+        "fits": true
+      }
+    },
+    {
+      "city": "vn-da-nang",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/vn-da-nang-mobile.webp",
+      "filename": "vn-da-nang-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6020902777777778,
+        "transparentFraction": 0.3919166666666667,
+        "fits": true
+      }
+    },
+    {
+      "city": "vn-nha-trang",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/vn-nha-trang-mobile.webp",
+      "filename": "vn-nha-trang-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 165.03125,
+          "bottom": 207,
+          "width": 132.03125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6140173611111112,
+        "transparentFraction": 0.37899652777777776,
+        "fits": true
+      }
+    },
+    {
+      "city": "th-bangkok",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/th-bangkok-mobile.webp",
+      "filename": "th-bangkok-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5111840277777778,
+        "transparentFraction": 0.48103819444444446,
+        "fits": true
+      }
+    },
+    {
+      "city": "th-chiang-mai",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/th-chiang-mai-mobile.webp",
+      "filename": "th-chiang-mai-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 185.265625,
+          "bottom": 207,
+          "width": 152.265625,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6390763888888888,
+        "transparentFraction": 0.35529513888888886,
+        "fits": true
+      }
+    },
+    {
+      "city": "sg-singapore",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/sg-singapore-mobile.webp",
+      "filename": "sg-singapore-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 185.265625,
+          "bottom": 207,
+          "width": 152.265625,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5716354166666666,
+        "transparentFraction": 0.42111805555555554,
+        "fits": true
+      }
+    },
+    {
+      "city": "id-bali",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/id-bali-mobile.webp",
+      "filename": "id-bali-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6188125,
+        "transparentFraction": 0.3740173611111111,
+        "fits": true
+      }
+    },
+    {
+      "city": "fr-paris",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v2/fr-paris-mobile.webp",
+      "filename": "fr-paris-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.4665625,
+        "transparentFraction": 0.5259305555555556,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-seoul",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-seoul.webp",
+      "filename": "kr-seoul-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.475046875,
+        "transparentFraction": 0.5182916666666667,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-gapyeong",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-gapyeong.webp",
+      "filename": "kr-gapyeong-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5820833333333333,
+        "transparentFraction": 0.41490364583333333,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-gangneung",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-gangneung.webp",
+      "filename": "kr-gangneung-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5783723958333333,
+        "transparentFraction": 0.41416145833333334,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-sokcho",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-sokcho.webp",
+      "filename": "kr-sokcho-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.588734375,
+        "transparentFraction": 0.40808072916666666,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-yangyang",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-yangyang.webp",
+      "filename": "kr-yangyang-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.526,
+        "transparentFraction": 0.4659036458333333,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-chuncheon",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-chuncheon.webp",
+      "filename": "kr-chuncheon-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.4608098958333333,
+        "transparentFraction": 0.5358541666666666,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-jeonju",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-jeonju.webp",
+      "filename": "kr-jeonju-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5604166666666667,
+        "transparentFraction": 0.4363385416666667,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-yeosu",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-yeosu.webp",
+      "filename": "kr-yeosu-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.46898958333333335,
+        "transparentFraction": 0.5168411458333333,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-suncheon",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-suncheon.webp",
+      "filename": "kr-suncheon-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5988203125,
+        "transparentFraction": 0.39612760416666665,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-gyeongju",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-gyeongju.webp",
+      "filename": "kr-gyeongju-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5243463541666666,
+        "transparentFraction": 0.47153385416666665,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-busan",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-busan.webp",
+      "filename": "kr-busan-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.48444791666666664,
+        "transparentFraction": 0.5027447916666666,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-tongyeong",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-tongyeong.webp",
+      "filename": "kr-tongyeong-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.47912760416666667,
+        "transparentFraction": 0.5161380208333334,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-geoje",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-geoje.webp",
+      "filename": "kr-geoje-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.526953125,
+        "transparentFraction": 0.46796354166666665,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-namhae",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-namhae.webp",
+      "filename": "kr-namhae-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.506203125,
+        "transparentFraction": 0.48834895833333336,
+        "fits": true
+      }
+    },
+    {
+      "city": "kr-jeju",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/kr-jeju.webp",
+      "filename": "kr-jeju-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 503.5,
+          "bottom": 241,
+          "width": 214.5,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5655442708333334,
+        "transparentFraction": 0.4315807291666667,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-tokyo",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-tokyo.webp",
+      "filename": "jp-tokyo-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.4266875,
+        "transparentFraction": 0.5649010416666667,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-osaka",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-osaka.webp",
+      "filename": "jp-osaka-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 503.5,
+          "bottom": 241,
+          "width": 214.5,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6048125,
+        "transparentFraction": 0.3912421875,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-kyoto",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-kyoto.webp",
+      "filename": "jp-kyoto-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5644322916666666,
+        "transparentFraction": 0.43256770833333336,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-fukuoka",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-fukuoka.webp",
+      "filename": "jp-fukuoka-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 537.375,
+          "bottom": 241,
+          "width": 248.375,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.4460625,
+        "transparentFraction": 0.5490182291666666,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-sapporo",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-sapporo.webp",
+      "filename": "jp-sapporo-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 503.5,
+          "bottom": 241,
+          "width": 214.5,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5577265625,
+        "transparentFraction": 0.4354921875,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-okinawa",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/jp-okinawa.webp",
+      "filename": "jp-okinawa-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 537.375,
+          "bottom": 241,
+          "width": 248.375,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5548541666666666,
+        "transparentFraction": 0.4369401041666667,
+        "fits": true
+      }
+    },
+    {
+      "city": "tw-taipei",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/tw-taipei.webp",
+      "filename": "tw-taipei-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 537.375,
+          "bottom": 241,
+          "width": 248.375,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.4572994791666667,
+        "transparentFraction": 0.5377005208333333,
+        "fits": true
+      }
+    },
+    {
+      "city": "hk-hong-kong",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/hk-hong-kong.webp",
+      "filename": "hk-hong-kong-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5441328125,
+        "transparentFraction": 0.4512760416666667,
+        "fits": true
+      }
+    },
+    {
+      "city": "vn-da-nang",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/vn-da-nang.webp",
+      "filename": "vn-da-nang-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5084088541666667,
+        "transparentFraction": 0.4852109375,
+        "fits": true
+      }
+    },
+    {
+      "city": "vn-nha-trang",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/vn-nha-trang.webp",
+      "filename": "vn-nha-trang-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 503.5,
+          "bottom": 241,
+          "width": 214.5,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.48788020833333334,
+        "transparentFraction": 0.505296875,
+        "fits": true
+      }
+    },
+    {
+      "city": "th-bangkok",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/th-bangkok.webp",
+      "filename": "th-bangkok-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.42010416666666667,
+        "transparentFraction": 0.5737942708333333,
+        "fits": true
+      }
+    },
+    {
+      "city": "th-chiang-mai",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/th-chiang-mai.webp",
+      "filename": "th-chiang-mai-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 537.375,
+          "bottom": 241,
+          "width": 248.375,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.496625,
+        "transparentFraction": 0.4993984375,
+        "fits": true
+      }
+    },
+    {
+      "city": "sg-singapore",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/sg-singapore.webp",
+      "filename": "sg-singapore-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 537.375,
+          "bottom": 241,
+          "width": 248.375,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.54290625,
+        "transparentFraction": 0.450234375,
+        "fits": true
+      }
+    },
+    {
+      "city": "id-bali",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/id-bali.webp",
+      "filename": "id-bali-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.49795833333333334,
+        "transparentFraction": 0.4928020833333333,
+        "fits": true
+      }
+    },
+    {
+      "city": "fr-paris",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v2/fr-paris.webp",
+      "filename": "fr-paris-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.38819791666666664,
+        "transparentFraction": 0.6070234375,
+        "fits": true
+      }
+    }
+  ]
+}

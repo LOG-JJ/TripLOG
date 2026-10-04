@@ -1,0 +1,17 @@
+{
+  "jobId": "theme-travel-mobile",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-5e20-7f81-812c-b8a5c49d0800\\exec-c7a1e4e4-1f17-49a1-98d1-b5ed949f73e1.png",
+  "savedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\docs\\trip-scenes-redraw-20261004\\assets-original\\theme-travel-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "generationMode": "built-in image_gen, reference-guided image generation",
+  "prompt": "Create one standalone travel illustration showing a modest travel suitcase, a folded map with a simple route, a compact compass, and soft low hills, without any recognizable city landmark. Match the user's selected current Suncheon illustration style in the reference. Preserve the same visual language and drawing character while depicting this theme's own subjects. Use a portrait 4:5 composition intended for a 480 × 600 mobile asset in a narrow right-side header slot. Compose the subjects directly for that portrait frame so the natural irregular left silhouette remains visible at small size. Use a transparent background. Leave quiet transparent space along the upper-left and a natural irregular left silhouette visibly inside the frame. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no text, UI, labels, logos or border.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png"
+  ],
+  "sourceSha256": "58a3a381a156ad7f3062da2c1dc4e86127d820abefbb03e7e0edec3192e6eab5",
+  "savedSha256": "58a3a381a156ad7f3062da2c1dc4e86127d820abefbb03e7e0edec3192e6eab5",
+  "generationStartedAt": "2026-10-04T04:42:02.700Z"
+}

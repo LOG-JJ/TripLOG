@@ -1,0 +1,19 @@
+{
+  "jobId": "kr-gangneung-landscape",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-35a4-74c3-916e-ab6a0794b3ea\\exec-7148b7f9-c83a-4255-b984-cf2403fe0420.png",
+  "savedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\docs\\trip-scenes-redraw-20261004\\assets-original\\kr-gangneung-landscape.png",
+  "actualDimensions": [
+    1619,
+    972
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Gangneung: the blue East Sea, graceful coastal pine trees, and a modest beach cafe without lettering. Match the user's selected current Suncheon illustration style in the reference. Preserve the same visual language and drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition, intended for an 800 × 480 desktop header asset displayed on the right of a white postcard panel. Compose the focal scene toward the center-right and bottom. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame, with quiet transparent space along the upper-left. The illustrated scenery must reach the right and bottom canvas edges without empty padding. Keep the destination's main features comfortably inside the frame. Artwork only, with no text, UI, labels, logos or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "633871401ad1bf0f2bafd28146de9548e26ded48b2f30b0fe99beaddfcd9e69c",
+  "savedSha256": "633871401ad1bf0f2bafd28146de9548e26ded48b2f30b0fe99beaddfcd9e69c",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false
+}

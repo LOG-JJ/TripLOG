@@ -119,7 +119,7 @@ async function main() {
     await layout('same-day');
     // A failed optional city image falls back to its bundled scene, then universal.
     await context.route('**/src/assets/trip-scenes/cities/**', route => route.abort());
-    await context.route('**/src/assets/trip-scenes/themes/v1/coast.webp', route => route.abort());
+    await context.route('**/src/assets/trip-scenes/themes/v2/coast.webp', route => route.abort());
     // Use an unvisited city so an already-decoded image cannot bypass the failure.
     await render({ trip: { city: '여수' } });
     await page.waitForFunction(() => { const img = document.querySelector('.th-hero-scene img'); return img?.getAttribute('src')?.endsWith('/travel.webp') && img.complete && img.naturalWidth > 0; });

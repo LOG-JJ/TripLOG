@@ -1,3 +1,18 @@
+# Domestic and overseas scene redraw — 2026-10-04
+
+final result: passed
+
+- User visual authority: the current approved Suncheon landscape/portrait pair. Each of the 78 new assets uses only the corresponding fixed reference, without chained city references or overwriting prior artwork.
+- Completed 29 other destination pairs plus ten common theme pairs. With unchanged Suncheon, the active catalog has 30 dedicated destinations and ten common themes, each with desktop/mobile artwork; all 80 destination definitions retain existing matching rules.
+- Source/actual comparisons: `docs/trip-scenes-redraw-20261004/comparison-canonical-390.png` and `comparison-canonical-1440.png`. Approved Suncheon and real Seoul/Busan/Osaka/Paris headers share the same 390/1440px viewport and component sizes (354 × 172 / 912 × 232 at scale 1).
+- Final full-city contacts: `rendered-korea-390.png`, `rendered-world-390.png`, matching 599px and 1440px sheets in the same folder. Exact source PNGs/prompts/hashes and prepared WebP metadata are retained there.
+- Fixed a P2 found during comparison: portrait `cover` cropped foregrounds on wide phones. Full-image contain with right/bottom alignment now preserves landmarks, waterways and the card's bottom connection. Before and after 599px evidence is retained. Compact title sizes remain 20–24px mobile / 24–40px desktop; typography, copy and layout geometry are unchanged.
+- All five fidelity surfaces reviewed. Passed core tests, eleven-width header/interaction/fallback checks, 120 city/viewport renders, offline/cache checks and build. In-app trip selector exercised Osaka and the mountain theme, with zero error logs; final proof is `in-app-osaka-final.jpg` and `in-app-theme-mountain.jpg`.
+- New WebPs total 6,261,276 bytes. Only the current city variant downloads; the 48-image cache bound and offline theme coverage are verified. Physical Safari/iOS/Android remain untested.
+- [Detailed findings, comparison history, generation provenance and verification](docs/trip-scenes-redraw-20261004/design-qa.md).
+
+---
+
 # Illustrated postcard mobile correction — 2026-10-04
 
 final result: passed

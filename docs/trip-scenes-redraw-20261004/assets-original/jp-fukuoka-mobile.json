@@ -1,0 +1,17 @@
+{
+  "jobId": "jp-fukuoka-mobile",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-5e20-7f81-812c-b8a5c49d0800\\exec-b4b062c3-a061-4d4c-a8a7-e3e865831566.png",
+  "savedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\docs\\trip-scenes-redraw-20261004\\assets-original\\jp-fukuoka-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "generationMode": "built-in image_gen, reference-guided image generation",
+  "prompt": "Create one standalone destination illustration of Fukuoka: Fukuoka Tower near a blue waterfront, compact seaside city buildings, and restrained greenery. Match the user's selected current Suncheon illustration style in the reference. Preserve the same visual language and drawing character while depicting this destination's own subjects. Use a portrait 4:5 composition, intended for a 480 × 600 mobile asset displayed in a narrow right-side header slot. Compose the city directly for this portrait frame so its recognizable landmarks and natural irregular left silhouette remain readable at small size. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame, with quiet transparent space along the upper-left. The illustrated scenery must reach the right and bottom canvas edges without empty padding. Keep the destination's main features comfortably inside the frame. Artwork only, with no text, UI, labels, logos or border.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png"
+  ],
+  "sourceSha256": "335bd27dbbb7ab48ca2c6d3066cfb50709e7f9fd217bf5409e91f4fdfe47d026",
+  "savedSha256": "335bd27dbbb7ab48ca2c6d3066cfb50709e7f9fd217bf5409e91f4fdfe47d026",
+  "generationStartedAt": "2026-10-04T04:06:58.036Z"
+}
