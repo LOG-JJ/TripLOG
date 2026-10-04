@@ -3,11 +3,11 @@ const fs = require('node:fs');
 const path = require('node:path');
 const D = require('../src/app/data/destination-scenes');
 const R = require('../src/app/shared/destination-scenes');
-assert.equal(D.catalog.length, 80);
+assert.equal(D.catalog.length, 113);
 assert.equal(D.catalog.filter(item => item.countryCodes[0] === 'KR').length, 30);
-assert.equal(D.catalog.filter(item => item.dedicated).length, 30);
+assert.equal(D.catalog.filter(item => item.dedicated).length, 73);
 assert.equal(Object.keys(D.themes).length, 10);
-assert.equal(new Set(D.catalog.map(item => item.id)).size, 80);
+assert.equal(new Set(D.catalog.map(item => item.id)).size, 113);
 for (const entry of D.catalog) {
   for (const countryCode of entry.countryCodes) for (const alias of entry.aliases) {
     const resolved = R.resolve({ countryCode, city: alias });
@@ -28,6 +28,28 @@ assert.equal(R.resolve({ countryCode: 'kr', city: 'Ｓｕｎｃｈｅｏｎ' }).
 assert.equal(R.resolve({ countryCode: 'VN', city: 'Đà Nẵng' }).destinationId, 'vn-da-nang');
 assert.equal(R.resolve({ countryCode: 'GB', city: 'London' }).themeId, 'urban');
 assert.equal(R.resolve({ countryCode: 'UK', city: 'London' }).destinationId, 'gb-london');
+for (const [country, city, expected] of [
+  ['포르투갈', 'Lisboa', 'pt-lisbon'], ['포르투칼', 'Oporto', 'pt-porto'],
+  ['Deutschland', 'München', 'de-munich'], ['독일', 'Frankfurt am Main', 'de-frankfurt'],
+  ['Switzerland', 'Zürich', 'ch-zurich'], ['스위스', 'Genève', 'ch-geneva'],
+  ['Spain', 'València', 'es-valencia'], ['이탈리아', 'Firenze', 'it-florence'],
+  ['Nederland', 'Amsterdam', 'nl-amsterdam'], ['Österreich', 'Wien', 'at-vienna'],
+  ['카타르', 'Doha', 'qa-doha'], ['Oman', 'Muscat', 'om-muscat'],
+  ['Saudi Arabia', 'Jeddah', 'sa-jeddah'], ['사우디', 'Riyadh', 'sa-riyadh'],
+  ['USA', 'Washington, D.C.', 'us-washington-dc'], ['미국', 'Honolulu', 'us-honolulu'],
+]) {
+  const resolved = R.resolve({ country, city });
+  assert.equal(resolved.destinationId, expected, country + '/' + city);
+  assert.equal(resolved.artworkId, expected, city + ': own landmark artwork');
+  assert(resolved.src.includes('/cities/v3/'), city + ': immutable new artwork');
+}
+for (const city of ['Washington', '워싱턴', 'Washington State']) {
+  assert.equal(R.resolve({ countryCode: 'US', city }).artworkId, 'theme-travel', city + ': no guess between city and state');
+}
+for (const city of ['Sapporo', 'Osaka']) {
+  assert(R.resolve({ countryCode: 'JP', city }).src.includes('/cities/v3/'), city + ': requested revised scene');
+}
+assert(R.resolve({ countryCode: 'FR', city: 'Paris' }).src.includes('/cities/v2/'), 'Existing Paris artwork is retained');
 assert.equal(R.resolve({ travelMode: 'domestic', city: '서울' }).destinationId, 'kr-seoul');
 for (const trip of [null, undefined, {}, { tripName: '제주 휴가', city: '' },
   { city: 'Suncheon' }, { countryCode: 'JP', city: '서울' }, { countryCode: 'XX', city: 'Paris' },
@@ -42,6 +64,7 @@ assert.equal(R.resolve({ countryCode: 'VN', city: '호이안' }).dedicated, fals
 assert.equal(R.resolve({ countryCode: 'JP', city: '홋카이도' }).artworkId, 'theme-forest');
 assert.equal(R.resolve({ countryCode: 'US', city: '하와이' }).artworkId, 'theme-island');
 assert.equal(R.resolve({ countryCode: 'US', city: '오아후' }).destinationId, 'us-oahu');
+assert.equal(R.resolve({ countryCode: 'US', city: '오아후' }).artworkId, 'theme-island', 'Oahu does not become an alias for Honolulu');
 assert.equal(R.resolve({ countryCode: 'KR', city: '서귀포시' }).match, 'regional');
 assert.equal(R.resolve({ countryCode: 'KR', city: '서귀포시' }).destinationId, 'kr-jeju');
 assert.equal(R.resolve({ countryCode: 'KR', city: '광주시' }).artworkId, 'theme-travel');
@@ -52,7 +75,7 @@ assert.deepEqual(R.resolve(saved), R.resolve(saved), 'A destination keeps the sa
 assert.equal(JSON.stringify(saved), before, 'Artwork selection never edits trip data');
 if (!process.argv.includes('--skip-assets')) {
   const artwork = new Set([...D.catalog.flatMap(item => [item.src, item.mobileSrc]), ...Object.values(D.themes).flatMap(item => [item.src, item.mobileSrc])]);
-  assert.equal(artwork.size, 80, '30 city pairs and 10 theme pairs are active');
+  assert.equal(artwork.size, 166, '73 city pairs and 10 theme pairs are active');
   for (const file of artwork) {
     const fullPath = path.resolve(__dirname, '..', file);
     assert(fs.existsSync(fullPath), `Missing deployed scene: ${file}`);
@@ -61,4 +84,4 @@ if (!process.argv.includes('--skip-assets')) {
     assert.equal(image.subarray(8, 12).toString(), 'WEBP');
   }
 }
-console.log('PASS destination scenes: 80 destinations, 30 dedicated cities, 10 themes, exact country/alias matching, ambiguous/unknown/multiple/region fallbacks, deterministic non-mutating selection' + (process.argv.includes('--skip-assets') ? ' (asset generation in progress)' : ', all deployed images present'));
+console.log('PASS destination scenes: 113 destinations, 73 dedicated cities, 10 themes, exact country/alias matching, ambiguous/unknown/multiple/region fallbacks, deterministic non-mutating selection' + (process.argv.includes('--skip-assets') ? ' (asset generation in progress)' : ', all deployed images present'));

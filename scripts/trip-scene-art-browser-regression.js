@@ -8,6 +8,10 @@ const { chromium } = require('playwright');
 const { createTripHeaderPreview } = require('./preview-trip-header');
 const data = require('../src/app/data/destination-scenes');
 const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(os.tmpdir(), 'TripLOG-City-Scene-Review-20261004');
+const requestedIds = new Set((process.env.TRIPLOG_SCENE_REVIEW_IDS || '').split(',').map(id => id.trim()).filter(Boolean));
+const cities = data.catalog.filter(entry => entry.dedicated && (!requestedIds.size || requestedIds.has(entry.id)));
+for (const id of requestedIds) assert(cities.some(city => city.id === id), 'Unknown dedicated city requested for review: ' + id);
+assert(cities.length, 'At least one dedicated city must be reviewed');
 
 async function main() {
   fs.mkdirSync(output, { recursive: true });
@@ -27,7 +31,7 @@ async function main() {
     const originalTrip = await page.evaluate(() => ({ id: state.id, name: state.tripName, city: state.city }));
     for (const width of [320, 390, 599, 1440]) {
       await page.setViewportSize({ width, height: width < 600 ? 844 : 1000 });
-      for (const city of data.catalog.filter(entry => entry.dedicated)) {
+      for (const city of cities) {
         await page.evaluate(city => {
           document.querySelector('.th-trip-hero').outerHTML = window.TripLog.features.overview.tripHero.render({
             trip: { countryCode: city.countryCodes[0], city: city.name, tripName: city.name + ' 여행' },

@@ -1,0 +1,558 @@
+{
+  "passed": true,
+  "count": 12,
+  "results": [
+    {
+      "city": "jp-osaka",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v3/jp-osaka-mobile.webp",
+      "filename": "jp-osaka-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 142.859375,
+          "bottom": 207,
+          "width": 113.859375,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6646770833333333,
+        "transparentFraction": 0.33193055555555556,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-sapporo",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v3/jp-sapporo-mobile.webp",
+      "filename": "jp-sapporo-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 142.859375,
+          "bottom": 207,
+          "width": 113.859375,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5801458333333334,
+        "transparentFraction": 0.41369791666666667,
+        "fits": true
+      }
+    },
+    {
+      "city": "gb-london",
+      "width": 320,
+      "expected": "src/assets/trip-scenes/cities/v3/gb-london-mobile.webp",
+      "filename": "gb-london-320.png",
+      "metrics": {
+        "panel": {
+          "x": 14,
+          "y": 117,
+          "right": 306,
+          "bottom": 288.1875,
+          "width": 292,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 29,
+          "y": 132,
+          "right": 180.953125,
+          "bottom": 277.1875,
+          "width": 151.953125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 183.203125,
+          "y": 118,
+          "right": 305,
+          "bottom": 287.1875,
+          "width": 121.796875,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 29,
+          "y": 163,
+          "right": 126.078125,
+          "bottom": 207,
+          "width": 97.078125,
+          "height": 44
+        },
+        "titleSize": 20,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5034895833333334,
+        "transparentFraction": 0.48485069444444445,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-osaka",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v3/jp-osaka-mobile.webp",
+      "filename": "jp-osaka-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 153.125,
+          "bottom": 207,
+          "width": 120.125,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6646770833333333,
+        "transparentFraction": 0.33193055555555556,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-sapporo",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v3/jp-sapporo-mobile.webp",
+      "filename": "jp-sapporo-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 153.125,
+          "bottom": 207,
+          "width": 120.125,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5801458333333334,
+        "transparentFraction": 0.41369791666666667,
+        "fits": true
+      }
+    },
+    {
+      "city": "gb-london",
+      "width": 390,
+      "expected": "src/assets/trip-scenes/cities/v3/gb-london-mobile.webp",
+      "filename": "gb-london-390.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 372,
+          "bottom": 288.1875,
+          "width": 354,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 220.90625,
+          "bottom": 277.1875,
+          "width": 187.90625,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 223.171875,
+          "y": 118,
+          "right": 371,
+          "bottom": 287.1875,
+          "width": 147.828125,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 135.140625,
+          "bottom": 207,
+          "width": 102.140625,
+          "height": 44
+        },
+        "titleSize": 21.384,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5034895833333334,
+        "transparentFraction": 0.48485069444444445,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-osaka",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v3/jp-osaka-mobile.webp",
+      "filename": "jp-osaka-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 165.03125,
+          "bottom": 207,
+          "width": 132.03125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.6646770833333333,
+        "transparentFraction": 0.33193055555555556,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-sapporo",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v3/jp-sapporo-mobile.webp",
+      "filename": "jp-sapporo-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 165.03125,
+          "bottom": 207,
+          "width": 132.03125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5801458333333334,
+        "transparentFraction": 0.41369791666666667,
+        "fits": true
+      }
+    },
+    {
+      "city": "gb-london",
+      "width": 599,
+      "expected": "src/assets/trip-scenes/cities/v3/gb-london-mobile.webp",
+      "filename": "gb-london-599.png",
+      "metrics": {
+        "panel": {
+          "x": 18,
+          "y": 117,
+          "right": 581,
+          "bottom": 288.1875,
+          "width": 563,
+          "height": 171.1875
+        },
+        "copy": {
+          "x": 33,
+          "y": 132,
+          "right": 342.125,
+          "bottom": 277.1875,
+          "width": 309.125,
+          "height": 145.1875
+        },
+        "art": {
+          "x": 344.390625,
+          "y": 118,
+          "right": 580,
+          "bottom": 287.1875,
+          "width": 235.609375,
+          "height": 169.1875
+        },
+        "title": {
+          "x": 33,
+          "y": 163,
+          "right": 144.78125,
+          "bottom": 207,
+          "width": 111.78125,
+          "height": 44
+        },
+        "titleSize": 24,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5034895833333334,
+        "transparentFraction": 0.48485069444444445,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-osaka",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v3/jp-osaka.webp",
+      "filename": "jp-osaka-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 503.5,
+          "bottom": 241,
+          "width": 214.5,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.7125911458333334,
+        "transparentFraction": 0.2843880208333333,
+        "fits": true
+      }
+    },
+    {
+      "city": "jp-sapporo",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v3/jp-sapporo.webp",
+      "filename": "jp-sapporo-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 503.5,
+          "bottom": 241,
+          "width": 214.5,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.5608098958333333,
+        "transparentFraction": 0.43413541666666666,
+        "fits": true
+      }
+    },
+    {
+      "city": "gb-london",
+      "width": 1440,
+      "expected": "src/assets/trip-scenes/cities/v3/gb-london.webp",
+      "filename": "gb-london-1440.png",
+      "metrics": {
+        "panel": {
+          "x": 264,
+          "y": 123,
+          "right": 1176,
+          "bottom": 355,
+          "width": 912,
+          "height": 232
+        },
+        "copy": {
+          "x": 289,
+          "y": 146,
+          "right": 788.953125,
+          "bottom": 294,
+          "width": 499.953125,
+          "height": 148
+        },
+        "art": {
+          "x": 792.8125,
+          "y": 124,
+          "right": 1175,
+          "bottom": 354,
+          "width": 382.1875,
+          "height": 230
+        },
+        "title": {
+          "x": 289,
+          "y": 193,
+          "right": 469.640625,
+          "bottom": 241,
+          "width": 180.640625,
+          "height": 48
+        },
+        "titleSize": 40,
+        "imageFit": "contain",
+        "imagePosition": "100% 100%",
+        "visibleFraction": 0.4439661458333333,
+        "transparentFraction": 0.5464166666666667,
+        "fits": true
+      }
+    }
+  ]
+}

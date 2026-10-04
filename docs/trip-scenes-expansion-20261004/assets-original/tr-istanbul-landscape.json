@@ -1,0 +1,17 @@
+{
+  "jobId": "tr-istanbul-landscape",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-5e20-7f81-812c-b8a5c49d0800\\exec-98d4062a-fcd5-4572-8e82-82dd6a602928.png",
+  "savedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\docs\\trip-scenes-expansion-20261004\\assets-original\\tr-istanbul-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, reference-guided image generation",
+  "prompt": "Create one standalone destination illustration of Istanbul: the distinctive dome and minarets of Hagia Sophia above warm historic buildings, blue Bosphorus water and a small city ferry. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset, with the focal scene toward the center-right and bottom. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "8d465d2c80e9c97e76f0d74c9787deebcb8f8b570466e7948e4865791cd83381",
+  "savedSha256": "8d465d2c80e9c97e76f0d74c9787deebcb8f8b570466e7948e4865791cd83381",
+  "generationStartedAt": "2026-10-04T06:27:26.682Z"
+}

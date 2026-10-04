@@ -1,4 +1,4 @@
-"""Prepare immutable v2 city/theme illustrations from exact generated originals.
+"""Prepare immutable, versioned illustrations from exact generated originals.
 
 Raw generation PNGs and their provenance stay untouched. This performs only
 transparent-edge trimming, aspect-preserving web sizing/encoding and QA sheets.
@@ -9,6 +9,7 @@ from datetime import datetime, timezone
 import hashlib
 import io
 import json
+import re
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
@@ -20,6 +21,8 @@ def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 def prepare():
+    batch_file = DOCS / "batch.json"
+    batch = json.loads(batch_file.read_text(encoding="utf-8")) if batch_file.exists() else {}
     previous = json.loads(MANIFEST.read_text(encoding="utf-8")) if MANIFEST.exists() else {"assets": []}
     known = {entry["id"]: entry for entry in previous["assets"]}
     entries, pending = [], []
@@ -43,7 +46,7 @@ def prepare():
         assert sha(Path(record["sourcePath"])) == original_hash, job["id"] + ": source mismatch"
         destination = (ROOT / job["asset"]).resolve()
         assert destination.is_relative_to(ROOT / "src/assets/trip-scenes")
-        assert "/v2/" in job["asset"]
+        assert re.search(r"/v\d+/", job["asset"]), job["id"] + ": assets must be versioned"
         prior = known.get(job["id"])
         if prior and prior["originalSha256"] == original_hash and destination.exists() and sha(destination) == prior["assetSha256"]:
             entries.append(prior)
@@ -70,6 +73,7 @@ def prepare():
         entries.append({
             "id": job["id"], "cityId": job["cityId"], "name": job["cityName"],
             "kind": job.get("kind", "city"), "variant": job["variant"],
+            "group": job.get("group", "korea" if job["cityId"].startswith("kr-") else "world"),
             "original": original.relative_to(ROOT).as_posix(),
             "provenance": provenance.relative_to(ROOT).as_posix(),
             "originalSha256": original_hash, "sourceSize": source_size,
@@ -80,8 +84,8 @@ def prepare():
     assert len({entry["originalSha256"] for entry in entries}) == len(entries), "A generated original was assigned to more than one job"
     result = {
         "updatedAt": datetime.now(timezone.utc).isoformat(),
-        "scope": "29 dedicated destinations and 10 common themes; landscape and mobile; approved Suncheon remains unchanged",
-        "expected": 78, "prepared": len(entries), "bytes": sum(e["bytes"] for e in entries),
+        "scope": batch.get("scope", "29 dedicated destinations and 10 common themes; landscape and mobile; approved Suncheon remains unchanged"),
+        "expected": batch.get("expected", 78), "prepared": len(entries), "bytes": sum(e["bytes"] for e in entries),
         "assets": entries, "pending": pending,
     }
     MANIFEST.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -96,15 +100,21 @@ def contacts(result):
     # Fixed canonical Suncheon assets anchor the comparison, without copying
     # them into the generated batch or reporting them as newly generated.
     entries = list(result["assets"])
-    for variant, suffix in [("landscape", ""), ("mobile", "-mobile")]:
-        entries.append({"id": "kr-suncheon-" + variant, "cityId": "kr-suncheon", "name": "순천 · 기준",
-                        "kind": "city", "variant": variant, "asset": "src/assets/trip-scenes/cities/v2/kr-suncheon" + suffix + ".webp"})
+    batch_file = DOCS / "batch.json"
+    batch = json.loads(batch_file.read_text(encoding="utf-8")) if batch_file.exists() else {}
+    if batch.get("contactGroups"):
+        entries.extend(batch.get("existingArtwork", []))
+    else:
+        for variant, suffix in [("landscape", ""), ("mobile", "-mobile")]:
+            entries.append({"id": "kr-suncheon-" + variant, "cityId": "kr-suncheon", "name": "순천 · 기준",
+                            "kind": "city", "variant": variant, "asset": "src/assets/trip-scenes/cities/v2/kr-suncheon" + suffix + ".webp"})
     font_path = Path("C:/Windows/Fonts/malgun.ttf")
     font = ImageFont.truetype(str(font_path), 16) if font_path.exists() else ImageFont.load_default()
-    for group in ["korea", "world", "themes"]:
+    for group in batch.get("contactGroups", ["korea", "world", "themes"]):
         for variant in ["landscape", "mobile"]:
             selected = [e for e in entries if e["variant"] == variant and
-                        ((group == "themes" and e["kind"] == "theme") or
+                        ((bool(batch.get("contactGroups")) and e.get("group") == group) or
+                         (group == "themes" and e["kind"] == "theme") or
                          (group == "korea" and e["kind"] == "city" and e["cityId"].startswith("kr-")) or
                          (group == "world" and e["kind"] == "city" and not e["cityId"].startswith("kr-")))]
             selected.sort(key=lambda e: e["cityId"])
@@ -125,7 +135,13 @@ def contacts(result):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--contacts", action="store_true")
+    parser.add_argument("--batch", help="Project-relative docs directory containing this batch's jobs and originals")
     args = parser.parse_args()
+    if args.batch:
+        DOCS = (ROOT / args.batch).resolve()
+        if not DOCS.is_relative_to(ROOT / "docs") or not (DOCS / "jobs").is_dir():
+            raise ValueError("The batch must be an existing job directory under project docs")
+        MANIFEST = DOCS / "prepared.json"
     result = prepare()
     if args.contacts:
         contacts(result)

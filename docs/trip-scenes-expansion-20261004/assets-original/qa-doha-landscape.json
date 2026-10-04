@@ -1,0 +1,21 @@
+{
+  "jobId": "qa-doha-landscape",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-35a4-74c3-916e-ab6a0794b3ea\\exec-a0d004bb-5d68-4adc-9a94-e6c259973c11.png",
+  "savedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\docs\\trip-scenes-expansion-20261004\\assets-original\\qa-doha-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Doha: the geometric Museum of Islamic Art beside blue Doha Bay, curved Corniche waterfront and the West Bay skyline behind. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset, with the focal scene toward the center-right and bottom. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "962dc4fd8d8024db4b8fb70b74ba9810df45ebf60b3fcf58e3333f260920a494",
+  "savedSha256": "962dc4fd8d8024db4b8fb70b74ba9810df45ebf60b3fcf58e3333f260920a494",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T05:32:21.617Z",
+  "savedAt": "2026-10-04T05:33:13.119579+00:00"
+}

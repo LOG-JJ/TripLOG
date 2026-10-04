@@ -11,5 +11,5 @@ module.exports = [
   { ...structuredClone(base), id: 'trip-header-osaka', tripName: '오사카 주말여행', country: '일본', countryCode: 'JP', city: '오사카' },
   { ...structuredClone(fixture), id: 'trip-header-unknown', tripName: '새로운 마을 여행', city: '아직 등록하지 않은 마을' },
   { ...structuredClone(fixture), id: 'trip-header-region', tripName: '제주 남쪽 여행', city: '서귀포시' },
-  { ...structuredClone(fixture), id: 'trip-header-generic', tripName: '호수와 산 사이', travelMode: 'overseas', country: '스위스', countryCode: 'CH', city: '인터라켄' },
+  { ...structuredClone(fixture), id: 'trip-header-generic', tripName: '평창 산속 여행', city: '평창' },
 ];

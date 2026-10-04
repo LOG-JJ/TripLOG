@@ -1,3 +1,18 @@
+# Europe, USA and Middle East scene expansion — 2026-10-04
+
+final result: passed
+
+- User visual authority: the fixed approved Suncheon landscape/portrait, with the existing compact title sizes and information-left/art-right layout. Every asset uses only its matching canonical reference.
+- Completed 90 new images: Sapporo snow-festival and Osaka Glico revisions, plus 43 additional dedicated city pairs. With retained Paris, dedicated coverage is Europe 28, USA 10 and Middle East 6. The total catalog is 113 destinations, 73 dedicated pairs and ten common theme pairs: 166 active image files.
+- Same-width source/actual comparisons: `docs/trip-scenes-expansion-20261004/comparison-canonical-390.png` and `comparison-canonical-1440.png`. Component sizes remain 354 × 172 / 912 × 232 CSS px at scale 1. All five fidelity surfaces pass, with no actionable P0/P1/P2 finding.
+- Passed: full `npm test`, all 166 active image files, 292 city/viewport combinations, eleven-width header/interaction checks, post-build offline/cache regression and `npm run build`. Local build `2762e9428350f5fb6d06`. The optional scene cache still holds at most 48 files and never installs city art with the app shell.
+- In-app browser passed real Osaka → Interlaken → Osaka selection, both v3 illustrations loaded, zero error logs, preview kept open. Evidence: `in-app-interlaken.jpg`, `in-app-osaka-final.jpg`, and `in-app-osaka-header.jpg` in the batch folder. Fixtures are isolated from production writes.
+- Every original, exact prompt and generation source hash is retained. The 90 new WebPs total 8,050,148 bytes. Regional/country galleries and all 292 individual renders are retained. Physical Safari/iOS/Android remain untested.
+- Automatic deployment verification is pending the Git push and will be recorded separately from local QA success.
+- [Detailed findings, references, generation provenance and verification](docs/trip-scenes-expansion-20261004/design-qa.md).
+
+---
+
 # Domestic and overseas scene redraw — 2026-10-04
 
 final result: passed

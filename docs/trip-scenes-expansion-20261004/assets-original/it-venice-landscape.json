@@ -1,0 +1,17 @@
+{
+  "jobId": "it-venice-landscape",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-5e20-7f81-812c-b8a5c49d0800\\exec-c4620f0b-1a3e-492d-b719-15a5a2234e3a.png",
+  "savedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\docs\\trip-scenes-expansion-20261004\\assets-original\\it-venice-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, reference-guided image generation",
+  "prompt": "Create one standalone destination illustration of Venice: the Rialto Bridge over the Grand Canal, a gondola and pastel Venetian canal-side facades. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset, with the focal scene toward the center-right and bottom. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "5244d0c569365cd0d7bb8cc5b88443d2025cc4e97643f2a936aca8998aefe39c",
+  "savedSha256": "5244d0c569365cd0d7bb8cc5b88443d2025cc4e97643f2a936aca8998aefe39c",
+  "generationStartedAt": "2026-10-04T05:26:49.511Z"
+}

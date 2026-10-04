@@ -1,0 +1,21 @@
+{
+  "jobId": "jp-osaka-mobile",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-35a4-74c3-916e-ab6a0794b3ea\\exec-bf248b28-6ef6-415e-9aff-595a128efe85.png",
+  "savedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\docs\\trip-scenes-expansion-20261004\\assets-original\\jp-osaka-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Osaka's Dotonbori canal and Ebisu Bridge with the recognizable Glico Running Man billboard clearly visible as a primary landmark on the canal-side facade. Make the white-clad runner with both arms raised, the red circle, blue running-track background, and the word \"グリコ\" recognizable, large enough to read as the Glico sign inside a small header. Include the lively canal-side buildings, canal reflections and a small sightseeing boat. Integrate the billboard as part of the drawn scene. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a portrait 4:5 composition intended for a 480 × 600 mobile asset displayed in a narrow right-side header slot. Compose the main landmarks directly for this portrait frame so they remain recognizable at small size. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border. The Glico runner and its billboard are a required part of the illustration, not a separate UI overlay.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png"
+  ],
+  "sourceSha256": "47c0e68885ba29c3524714f797fb20a84fa4d191903bd88e82e7618768fd6f98",
+  "savedSha256": "47c0e68885ba29c3524714f797fb20a84fa4d191903bd88e82e7618768fd6f98",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T05:18:53.244Z",
+  "savedAt": "2026-10-04T05:19:49.732513+00:00"
+}

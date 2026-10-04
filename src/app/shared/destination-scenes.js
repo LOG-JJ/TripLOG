@@ -18,9 +18,13 @@
     PH: ['필리핀', 'Philippines'], FR: ['프랑스', 'France'], GB: ['영국', 'UK', 'United Kingdom'],
     IT: ['이탈리아', 'Italy'], ES: ['스페인', 'Spain'], CZ: ['체코', 'Czechia', 'Czech Republic'],
     CH: ['스위스', 'Switzerland'], TR: ['튀르키예', '터키', 'Türkiye', 'Turkey'],
+    PT: ['포르투갈', '포르투칼', 'Portugal'], DE: ['독일', 'Germany', 'Deutschland'],
+    NL: ['네덜란드', 'Netherlands', 'Nederland'], AT: ['오스트리아', 'Austria', 'Österreich'],
     US: ['미국', 'USA', 'United States', 'United States of America'], GU: ['괌', 'Guam'],
     MP: ['북마리아나 제도', '북마리아나제도', 'Northern Mariana Islands'],
     AU: ['호주', 'Australia'], AE: ['아랍에미리트', 'UAE', 'United Arab Emirates'], MV: ['몰디브', 'Maldives'],
+    QA: ['카타르', 'Qatar', 'قطر'], OM: ['오만', 'Oman', 'عمان'],
+    SA: ['사우디아라비아', '사우디', 'Saudi Arabia', 'Kingdom of Saudi Arabia', 'السعودية'],
   };
   const countries = new Map(Object.entries(countryNames).flatMap(([code, names]) => [code, ...names].map(name => [normalize(name), code])));
   const aliases = new Map();

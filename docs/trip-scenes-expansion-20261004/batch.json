@@ -1,0 +1,630 @@
+{
+  "scope": "Sapporo snow festival and Osaka Glico revisions, Europe 28 including existing Paris, USA 10 and Middle East 6 dedicated illustrations",
+  "expected": 90,
+  "newDestinations": 33,
+  "newDedicated": 43,
+  "unchangedParis": true,
+  "baseCommit": "a4ccd89",
+  "cities": [
+    {
+      "id": "jp-sapporo",
+      "name": "삿포로",
+      "countryCode": "JP",
+      "group": "japan",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": false,
+      "aliases": "삿포로시|Sapporo|札幌|札幌市",
+      "scene": "Sapporo with the atmosphere of the Sapporo Snow Festival: snow-covered Odori Park, a large architectural snow-castle sculpture and pale-blue ice sculptures as the main foreground, the recognizable red Sapporo TV Tower behind them, snow-covered trees, and restrained warm festival lights. The winter festival and snow sculptures must read clearly at small size",
+      "assetVersion": 3
+    },
+    {
+      "id": "jp-osaka",
+      "name": "오사카",
+      "countryCode": "JP",
+      "group": "japan",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": false,
+      "aliases": "오사카시|Osaka|Osaka City|大阪|大阪市",
+      "scene": "Osaka's Dotonbori canal and Ebisu Bridge with the recognizable Glico Running Man billboard clearly visible as a primary landmark on the canal-side facade. Make the white-clad runner with both arms raised, the red circle, blue running-track background, and the word \"グリコ\" recognizable, large enough to read as the Glico sign inside a small header. Include the lively canal-side buildings, canal reflections and a small sightseeing boat. Integrate the billboard as part of the drawn scene",
+      "assetVersion": 3
+    },
+    {
+      "id": "gb-london",
+      "name": "런던",
+      "countryCode": "GB",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": false,
+      "aliases": "London",
+      "scene": "London: the Elizabeth Tower with its Big Ben clock face and the Houses of Parliament beside the River Thames, Westminster Bridge and a small red double-decker bus",
+      "assetVersion": 3
+    },
+    {
+      "id": "it-rome",
+      "name": "로마",
+      "countryCode": "IT",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "isNew": false,
+      "aliases": "Rome|Roma",
+      "scene": "Rome: the recognizable Colosseum, a few Roman Forum columns, warm stone paving and umbrella pine trees",
+      "assetVersion": 3
+    },
+    {
+      "id": "it-venice",
+      "name": "베네치아",
+      "countryCode": "IT",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": false,
+      "aliases": "베니스|Venice|Venezia",
+      "scene": "Venice: the Rialto Bridge over the Grand Canal, a gondola and pastel Venetian canal-side facades",
+      "assetVersion": 3
+    },
+    {
+      "id": "it-florence",
+      "name": "피렌체",
+      "countryCode": "IT",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "플로렌스|Florence|Firenze",
+      "scene": "Florence: the red-tiled dome of Florence Cathedral, warm terracotta roofs and the Ponte Vecchio over the Arno",
+      "assetVersion": 3
+    },
+    {
+      "id": "it-milan",
+      "name": "밀라노",
+      "countryCode": "IT",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "밀란|Milan|Milano",
+      "scene": "Milan: the ornate white spires and broad facade of Milan Cathedral, a hint of the Galleria entrance and a yellow historic tram",
+      "assetVersion": 3
+    },
+    {
+      "id": "it-naples",
+      "name": "나폴리",
+      "countryCode": "IT",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Naples|Napoli",
+      "scene": "Naples: the Bay of Naples, Castel dell'Ovo on the waterfront, clustered warm-colored buildings and Mount Vesuvius in the distance",
+      "assetVersion": 3
+    },
+    {
+      "id": "es-barcelona",
+      "name": "바르셀로나",
+      "countryCode": "ES",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": false,
+      "aliases": "Barcelona",
+      "scene": "Barcelona: the recognizable towers of the Sagrada Familia, a curved colorful mosaic terrace inspired by Park Guell, and Mediterranean greenery",
+      "assetVersion": 3
+    },
+    {
+      "id": "es-madrid",
+      "name": "마드리드",
+      "countryCode": "ES",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Madrid",
+      "scene": "Madrid: the Metropolis Building's ornate corner dome, a short stretch of Gran Via architecture and a small leafy plaza",
+      "assetVersion": 3
+    },
+    {
+      "id": "es-seville",
+      "name": "세비야",
+      "countryCode": "ES",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "세빌|세빌리아|Seville|Sevilla",
+      "scene": "Seville: Plaza de Espana's curved arcades and tiled bridge over its canal, with the Giralda tower suggested behind and orange trees",
+      "assetVersion": 3
+    },
+    {
+      "id": "es-granada",
+      "name": "그라나다",
+      "countryCode": "ES",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Granada",
+      "scene": "Granada: the red-stone Alhambra on its green hill, warm Albaicin rooftops below and a restrained Sierra Nevada mountain backdrop",
+      "assetVersion": 3
+    },
+    {
+      "id": "es-valencia",
+      "name": "발렌시아",
+      "countryCode": "ES",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Valencia|València",
+      "scene": "Valencia: the white curved architecture of the City of Arts and Sciences beside its reflecting pool, with Mediterranean greenery",
+      "assetVersion": 3
+    },
+    {
+      "id": "ch-interlaken",
+      "name": "인터라켄",
+      "countryCode": "CH",
+      "group": "europe",
+      "theme": "mountain",
+      "kind": "city",
+      "isNew": false,
+      "aliases": "Interlaken",
+      "scene": "Interlaken: a green Swiss valley with chalet roofs and a turquoise lake, with the snowy Jungfrau massif rising prominently behind",
+      "assetVersion": 3
+    },
+    {
+      "id": "ch-zurich",
+      "name": "취리히",
+      "countryCode": "CH",
+      "group": "europe",
+      "theme": "lake",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Zurich|Zürich|Zuerich",
+      "scene": "Zurich: the twin towers of the Grossmunster above colorful old-town waterfront buildings along the Limmat River, with a small bridge",
+      "assetVersion": 3
+    },
+    {
+      "id": "ch-lucerne",
+      "name": "루체른",
+      "countryCode": "CH",
+      "group": "europe",
+      "theme": "lake",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Lucerne|Luzern",
+      "scene": "Lucerne: the wooden covered Chapel Bridge and its stone Water Tower over clear blue water, with old-town roofs and distant Alpine peaks",
+      "assetVersion": 3
+    },
+    {
+      "id": "ch-geneva",
+      "name": "제네바",
+      "countryCode": "CH",
+      "group": "europe",
+      "theme": "lake",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Geneva|Genève|Geneve",
+      "scene": "Geneva: the tall Jet d'Eau fountain on Lake Geneva, a lakeside promenade and compact historic city rooftops",
+      "assetVersion": 3
+    },
+    {
+      "id": "ch-zermatt",
+      "name": "체르마트",
+      "countryCode": "CH",
+      "group": "europe",
+      "theme": "mountain",
+      "kind": "town",
+      "isNew": true,
+      "aliases": "Zermatt",
+      "scene": "Zermatt: the unmistakable pointed Matterhorn above a small village of wooden Alpine chalets, snowy upper slopes and green lower meadows",
+      "assetVersion": 3
+    },
+    {
+      "id": "pt-lisbon",
+      "name": "리스본",
+      "countryCode": "PT",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Lisbon|Lisboa",
+      "scene": "Lisbon: a yellow vintage tram on a sloping cobbled street, tiled pastel facades and a distant glimpse of the Tagus waterfront",
+      "assetVersion": 3
+    },
+    {
+      "id": "pt-porto",
+      "name": "포르투",
+      "countryCode": "PT",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "포르토|Porto|Oporto",
+      "scene": "Porto: the Dom Luis I iron bridge above the Douro River, colorful Ribeira waterfront houses and a small rabelo boat",
+      "assetVersion": 3
+    },
+    {
+      "id": "de-berlin",
+      "name": "베를린",
+      "countryCode": "DE",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Berlin",
+      "scene": "Berlin: the Brandenburg Gate with its quadriga silhouette, the Berlin TV Tower in the distance and a restrained leafy urban foreground",
+      "assetVersion": 3
+    },
+    {
+      "id": "de-munich",
+      "name": "뮌헨",
+      "countryCode": "DE",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Munich|München|Munchen|Muenchen",
+      "scene": "Munich: the detailed New Town Hall tower on Marienplatz, the Frauenkirche's twin onion domes behind and warm Bavarian old-town roofs",
+      "assetVersion": 3
+    },
+    {
+      "id": "de-frankfurt",
+      "name": "프랑크푸르트",
+      "countryCode": "DE",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "프랑크푸르트암마인|Frankfurt|Frankfurt am Main",
+      "scene": "Frankfurt am Main: the timber-fronted Romer houses, a recognizable modern banking skyline behind and a small foreground curve of the Main River",
+      "assetVersion": 3
+    },
+    {
+      "id": "de-hamburg",
+      "name": "함부르크",
+      "countryCode": "DE",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Hamburg",
+      "scene": "Hamburg: the curved glass roof of the Elbphilharmonie beside red-brick Speicherstadt warehouse buildings, with harbor water and a small boat",
+      "assetVersion": 3
+    },
+    {
+      "id": "de-heidelberg",
+      "name": "하이델베르크",
+      "countryCode": "DE",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Heidelberg",
+      "scene": "Heidelberg: the old stone bridge over the Neckar, Heidelberg Castle above warm old-town rooftops and green wooded hills",
+      "assetVersion": 3
+    },
+    {
+      "id": "cz-prague",
+      "name": "프라하",
+      "countryCode": "CZ",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "isNew": false,
+      "aliases": "Prague|Praha",
+      "scene": "Prague: Charles Bridge with its stone arches and silhouettes of statues, Prague Castle and St Vitus Cathedral above terracotta old-town roofs",
+      "assetVersion": 3
+    },
+    {
+      "id": "tr-istanbul",
+      "name": "이스탄불",
+      "countryCode": "TR",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "isNew": false,
+      "aliases": "Istanbul|İstanbul",
+      "scene": "Istanbul: the distinctive dome and minarets of Hagia Sophia above warm historic buildings, blue Bosphorus water and a small city ferry",
+      "assetVersion": 3
+    },
+    {
+      "id": "nl-amsterdam",
+      "name": "암스테르담",
+      "countryCode": "NL",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Amsterdam",
+      "scene": "Amsterdam: narrow gabled canal houses, an arched canal bridge, a parked bicycle and a small canal boat",
+      "assetVersion": 3
+    },
+    {
+      "id": "at-vienna",
+      "name": "빈",
+      "countryCode": "AT",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "비엔나|Vienna|Wien",
+      "scene": "Vienna: St Stephen's Cathedral with its patterned tiled roof and tall spire, elegant Viennese facades and a small red tram",
+      "assetVersion": 3
+    },
+    {
+      "id": "us-new-york",
+      "name": "뉴욕",
+      "countryCode": "US",
+      "group": "usa",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": false,
+      "aliases": "New York|New York City|NYC",
+      "scene": "New York City: the Statue of Liberty prominently in front of the Lower Manhattan skyline, the Brooklyn Bridge suggested to one side, and harbor water",
+      "assetVersion": 3
+    },
+    {
+      "id": "us-san-francisco",
+      "name": "샌프란시스코",
+      "countryCode": "US",
+      "group": "usa",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": false,
+      "aliases": "San Francisco",
+      "scene": "San Francisco: the red Golden Gate Bridge over blue bay water, green coastal hills and a small classic cable car on a sloping foreground street",
+      "assetVersion": 3
+    },
+    {
+      "id": "us-los-angeles",
+      "name": "로스앤젤레스",
+      "countryCode": "US",
+      "group": "usa",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "LA|엘에이|로스엔젤레스|Los Angeles|Los Angeles City",
+      "scene": "Los Angeles: Griffith Observatory overlooking the city, palm trees and the Hollywood Hills with the exact hillside letters \"HOLLYWOOD\" as part of the landscape",
+      "assetVersion": 3
+    },
+    {
+      "id": "us-las-vegas",
+      "name": "라스베이거스",
+      "countryCode": "US",
+      "group": "usa",
+      "theme": "desert",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "라스베가스|Las Vegas|Las Vegas City",
+      "scene": "Las Vegas: the recognizable welcome-to-Las-Vegas roadside sign silhouette with \"LAS VEGAS\" lettering, a lively Strip hotel skyline, desert mountains and palms",
+      "assetVersion": 3
+    },
+    {
+      "id": "us-seattle",
+      "name": "시애틀",
+      "countryCode": "US",
+      "group": "usa",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Seattle",
+      "scene": "Seattle: the Space Needle clearly above a waterfront skyline, a small ferry on Puget Sound and Mount Rainier in the distance",
+      "assetVersion": 3
+    },
+    {
+      "id": "us-chicago",
+      "name": "시카고",
+      "countryCode": "US",
+      "group": "usa",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Chicago",
+      "scene": "Chicago: the Chicago River between recognizable tall buildings, a bascule bridge and an architectural tour boat, with the Willis Tower visible in the skyline",
+      "assetVersion": 3
+    },
+    {
+      "id": "us-washington-dc",
+      "name": "워싱턴 D.C.",
+      "countryCode": "US",
+      "group": "usa",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "워싱턴DC|워싱턴 DC|워싱턴디씨|Washington DC|Washington D.C.|Washington, D.C.|District of Columbia",
+      "scene": "Washington, D.C.: the United States Capitol dome and the Washington Monument across a green National Mall scene, with the reflecting pool and restrained cherry-blossom trees",
+      "assetVersion": 3
+    },
+    {
+      "id": "us-boston",
+      "name": "보스턴",
+      "countryCode": "US",
+      "group": "usa",
+      "theme": "urban",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Boston",
+      "scene": "Boston: the Massachusetts State House's gold dome above warm brick Beacon Hill streets, a hint of Boston Harbor and leafy trees",
+      "assetVersion": 3
+    },
+    {
+      "id": "us-miami",
+      "name": "마이애미",
+      "countryCode": "US",
+      "group": "usa",
+      "theme": "coast",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Miami",
+      "scene": "Miami: pastel Art Deco buildings along Ocean Drive, tall palms, a bright lifeguard tower and turquoise South Beach water",
+      "assetVersion": 3
+    },
+    {
+      "id": "us-honolulu",
+      "name": "호놀룰루",
+      "countryCode": "US",
+      "group": "usa",
+      "theme": "island",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "호놀룰루시|Honolulu",
+      "scene": "Honolulu: the recognizable Diamond Head ridge behind Waikiki Beach, turquoise surf, palms and a restrained line of beachfront buildings",
+      "assetVersion": 3
+    },
+    {
+      "id": "ae-dubai",
+      "name": "두바이",
+      "countryCode": "AE",
+      "group": "middle-east",
+      "theme": "desert",
+      "kind": "city",
+      "isNew": false,
+      "aliases": "Dubai|دبي",
+      "scene": "Dubai: the tall Burj Khalifa prominently above a clean modern skyline, with the sail-shaped Burj Al Arab farther to one side, warm sand and turquoise waterfront",
+      "assetVersion": 3
+    },
+    {
+      "id": "ae-abu-dhabi",
+      "name": "아부다비",
+      "countryCode": "AE",
+      "group": "middle-east",
+      "theme": "desert",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Abu Dhabi|Abudhabi|أبو ظبي",
+      "scene": "Abu Dhabi: the white domes and minarets of Sheikh Zayed Grand Mosque, a reflecting pool, palms and restrained warm desert tones",
+      "assetVersion": 3
+    },
+    {
+      "id": "qa-doha",
+      "name": "도하",
+      "countryCode": "QA",
+      "group": "middle-east",
+      "theme": "coast",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Doha|الدوحة",
+      "scene": "Doha: the geometric Museum of Islamic Art beside blue Doha Bay, curved Corniche waterfront and the West Bay skyline behind",
+      "assetVersion": 3
+    },
+    {
+      "id": "om-muscat",
+      "name": "무스카트",
+      "countryCode": "OM",
+      "group": "middle-east",
+      "theme": "coast",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Muscat|مسقط",
+      "scene": "Muscat: Mutrah's white waterfront buildings and mosque minarets beside turquoise harbor water, a small dhow and rugged brown mountains",
+      "assetVersion": 3
+    },
+    {
+      "id": "sa-riyadh",
+      "name": "리야드",
+      "countryCode": "SA",
+      "group": "middle-east",
+      "theme": "desert",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "Riyadh|الرياض",
+      "scene": "Riyadh: the distinctive cutout-topped Kingdom Centre tower above a modern skyline, warm Najdi-style low walls, a few date palms and desert tones",
+      "assetVersion": 3
+    },
+    {
+      "id": "sa-jeddah",
+      "name": "제다",
+      "countryCode": "SA",
+      "group": "middle-east",
+      "theme": "coast",
+      "kind": "city",
+      "isNew": true,
+      "aliases": "젯다|Jeddah|Jedda|جدة",
+      "scene": "Jeddah: the historic Al-Balad coral-stone houses with projecting wooden rawashin balconies, a glimpse of the Red Sea waterfront and a small traditional boat",
+      "assetVersion": 3
+    }
+  ],
+  "sources": [
+    {
+      "topic": "Sapporo festival",
+      "url": "https://www.snowfes.com/en/"
+    },
+    {
+      "topic": "Sapporo Odori Park",
+      "url": "https://odori-park.jp/en/"
+    },
+    {
+      "topic": "Glico sign",
+      "url": "https://www.glico.com/jp/health/contents/glicosign/"
+    },
+    {
+      "topic": "London landmarks",
+      "url": "https://www.visitlondon.com/things-to-do/sightseeing/famous-landmarks-london"
+    },
+    {
+      "topic": "Italy cities",
+      "url": "https://www.italia.it/en/italy/grandi-destinazioni-italiane"
+    },
+    {
+      "topic": "Spain destinations",
+      "url": "https://www.spain.info/en/destinations/"
+    },
+    {
+      "topic": "Switzerland destinations",
+      "url": "https://www.myswitzerland.com/en-us/destinations/holiday-destinations/holiday-destinations-search/"
+    },
+    {
+      "topic": "Germany cities",
+      "url": "https://www.germany.travel/de/staedte-kultur/ein-48-stunden-trip-steckt-voller-moeglichkeiten.html"
+    },
+    {
+      "topic": "Portugal cities",
+      "url": "https://www.visitportugal.com/en/destinos/lisboa-regi%C3%A3o/255867"
+    },
+    {
+      "topic": "Abu Dhabi mosque",
+      "url": "https://visitabudhabi.ae/en/things-to-do/culture/landmarks-and-architecture/sheikh-zayed-grand-mosque"
+    },
+    {
+      "topic": "Doha museum",
+      "url": "https://visitqatar.com/intl-en/things-to-do/art-culture/museums/museum-of-islamic-art"
+    },
+    {
+      "topic": "Riyadh skyline",
+      "url": "https://partner.visitsaudi.com/en/content-hub/visual-assets/asset-details.id-STA0083_002.html"
+    },
+    {
+      "topic": "Jeddah old town",
+      "url": "https://www.visitsaudi.com/content/dam/documents/jeddah-guide-en.pdf"
+    }
+  ],
+  "contactGroups": [
+    "japan",
+    "europe",
+    "usa",
+    "middle-east"
+  ],
+  "existingArtwork": [
+    {
+      "id": "fr-paris-landscape",
+      "cityId": "fr-paris",
+      "name": "파리 · 기존",
+      "kind": "city",
+      "group": "europe",
+      "variant": "landscape",
+      "asset": "src/assets/trip-scenes/cities/v2/fr-paris.webp"
+    },
+    {
+      "id": "fr-paris-mobile",
+      "cityId": "fr-paris",
+      "name": "파리 · 기존",
+      "kind": "city",
+      "group": "europe",
+      "variant": "mobile",
+      "asset": "src/assets/trip-scenes/cities/v2/fr-paris-mobile.webp"
+    }
+  ]
+}

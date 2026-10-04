@@ -1,0 +1,17 @@
+{
+  "jobId": "gb-london-mobile",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-5e20-7f81-812c-b8a5c49d0800\\exec-b74110c7-db2c-4d99-8a8e-df41e1a51e23.png",
+  "savedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\docs\\trip-scenes-expansion-20261004\\assets-original\\gb-london-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "generationMode": "built-in image_gen, reference-guided image generation",
+  "prompt": "Create one standalone destination illustration of London: the Elizabeth Tower with its Big Ben clock face and the Houses of Parliament beside the River Thames, Westminster Bridge and a small red double-decker bus. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a portrait 4:5 composition intended for a 480 × 600 mobile asset displayed in a narrow right-side header slot. Compose the main landmarks directly for this portrait frame so they remain recognizable at small size. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png"
+  ],
+  "sourceSha256": "6a96dd72174380810ce403086a0704341336cec251a10331ecef4645c0d8a1fe",
+  "savedSha256": "6a96dd72174380810ce403086a0704341336cec251a10331ecef4645c0d8a1fe",
+  "generationStartedAt": "2026-10-04T05:18:44.771Z"
+}
