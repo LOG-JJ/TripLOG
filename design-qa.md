@@ -2,6 +2,8 @@
 
 final result: passed
 
+- Latest user correction: title reduced to 20–24px on mobile and 24–40px on desktop; current in-app view changed 32px → 24px. Updated screenshots: `docs/trip-header-mobile-20261004/title-reduced-390.png` and `title-reduced-1440.png`. Existing eleven-width header checks and build pass. The original mock's larger title is superseded by this explicit correction.
+
 - User requirement: original hand-drawn postcard mood; information left and artwork right on both mobile and desktop.
 - Mobile visual truth: `triplog-trip-header-mobile-postcard-20261004.png`; desktop visual truth: `triplog-trip-header-postcard-20261004.png`. The rejected photo/banner concept is excluded from implementation.
 - Source/render comparison: mobile source normalized to 354 × 152 versus actual 354 × 172 at 390 × 844, scale 1; desktop source 912 × 246 versus actual 912 × 232 at 1440 × 1000. Live controls account for the mobile height difference.

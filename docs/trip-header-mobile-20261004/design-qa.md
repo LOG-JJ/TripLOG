@@ -2,6 +2,13 @@
 
 final result: passed
 
+## Follow-up: smaller trip title — 2026-10-04
+
+- The user explicitly requested a smaller trip title after viewing the implementation. This overrides the original mock's display-title scale without changing the selected composition or artwork.
+- Mobile title range is now 20–24px (previously 23–32px); desktop is 24–40px (previously 28–72px). The user's current 439px in-app viewport changed from 32px to 24px. Tracking was proportionally relaxed; font family/weight, controls, dates, art and left/right placement remain intact.
+- Inspected actual captures together at 390 and 1440px: `title-reduced-390.png` and `title-reduced-1440.png`. Existing comparison images below document the earlier stage; these two captures are the current title-size evidence.
+- Existing header browser regression passed all eleven widths and long-title/interaction/fallback cases; its readability bound now also prevents oversized titles. `npm run build` passed. No new test suite or image generation was needed for this scoped typography correction.
+
 ## User intent and visual targets
 
 - Preserve the original illustrated postcard mood. Both mobile and desktop place information on the left and the destination illustration on the right.
