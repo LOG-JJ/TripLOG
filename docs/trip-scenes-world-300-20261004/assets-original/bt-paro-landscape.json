@@ -1,0 +1,21 @@
+{
+  "jobId": "bt-paro-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-3ebe33ae-2c08-4797-846d-9dc45719fc84.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/bt-paro-landscape.png",
+  "actualDimensions": [
+    1619,
+    972
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Paro: the cliffside Tiger’s Nest monastery above the forested Paro valley, with traditional Bhutanese roofs below. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "8b9a12c13c93728dbd12999765f6a1ce560aa0f4a4eb261c68488beb11cceb30",
+  "savedSha256": "8b9a12c13c93728dbd12999765f6a1ce560aa0f4a4eb261c68488beb11cceb30",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T09:22:36.618Z",
+  "savedAt": "2026-10-04T09:23:14.256031+00:00"
+}

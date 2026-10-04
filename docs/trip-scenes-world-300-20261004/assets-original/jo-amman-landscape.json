@@ -1,0 +1,21 @@
+{
+  "jobId": "jo-amman-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104c1-35a4-74c3-916e-ab6a0794b3ea/exec-e0121d5f-b098-471e-8eee-bc75d83d2f07.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/jo-amman-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Amman: the Roman Temple of Hercules columns on Amman Citadel above layers of pale hillside buildings. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "9feef622f6da08641989b33e40607a55bd27473a1013f75b348d71ed4446caca",
+  "savedSha256": "9feef622f6da08641989b33e40607a55bd27473a1013f75b348d71ed4446caca",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T12:50:52.054Z",
+  "savedAt": "2026-10-04T12:51:39.429773+00:00"
+}

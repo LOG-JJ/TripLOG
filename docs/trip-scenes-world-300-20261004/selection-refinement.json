@@ -1,0 +1,43 @@
+{
+  "reason": "Broader geographic coverage before any affected artwork was generated; total 217 additions and 74 European additions stay unchanged.",
+  "replacement": [
+    {
+      "oldId": "gb-manchester",
+      "oldCountry": "GB",
+      "oldEnglish": "Manchester",
+      "oldTail": "'맨체스터', 'GB', 'city', 'urban', 'Manchester'",
+      "entry": {
+        "id": "ru-moscow",
+        "englishName": "Moscow",
+        "name": "모스크바",
+        "countryCode": "RU",
+        "group": "europe",
+        "theme": "traditional",
+        "kind": "city",
+        "aliases": "Moscow|Moskva|Москва",
+        "scene": "Moscow: the colorful onion domes of Saint Basil's Cathedral on Red Square, the red Kremlin walls and Spasskaya Tower",
+        "isNew": true,
+        "assetVersion": 4
+      }
+    },
+    {
+      "oldId": "nl-utrecht",
+      "oldCountry": "NL",
+      "oldEnglish": "Utrecht",
+      "oldTail": "'위트레흐트', 'NL', 'city', 'urban', '우트레흐트|Utrecht'",
+      "entry": {
+        "id": "ru-saint-petersburg",
+        "englishName": "Saint Petersburg",
+        "name": "상트페테르부르크",
+        "countryCode": "RU",
+        "group": "europe",
+        "theme": "urban",
+        "kind": "city",
+        "aliases": "상트페테르부르그|Saint Petersburg|St Petersburg|St. Petersburg|Санкт-Петербург",
+        "scene": "Saint Petersburg: the green and white Winter Palace beside the broad Neva River, Palace Bridge and elegant historic waterfront buildings",
+        "isNew": true,
+        "assetVersion": 4
+      }
+    }
+  ]
+}

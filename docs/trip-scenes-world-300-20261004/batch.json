@@ -1,0 +1,3973 @@
+{
+  "scope": "300 overseas destinations with dedicated landscape and mobile artwork; domestic 30 retained",
+  "targetOverseas": 300,
+  "baselineOverseas": 83,
+  "baselineDedicatedOverseas": 58,
+  "newDestinations": 217,
+  "newDedicated": 242,
+  "expected": 484,
+  "planningComplete": true,
+  "baseCommit": "3aab69a",
+  "cities": [
+    {
+      "id": "jp-nagoya",
+      "name": "나고야",
+      "countryCode": "JP",
+      "countryCodes": [
+        "JP"
+      ],
+      "kind": "city",
+      "theme": "urban",
+      "aliases": "Nagoya|名古屋|名古屋市",
+      "group": "east-asia",
+      "isNew": false,
+      "scene": "Nagoya: Nagoya Castle with green tiled roofs and golden shachihoko roof ornaments, stone ramparts and a few cherry trees",
+      "assetVersion": 4
+    },
+    {
+      "id": "jp-nara",
+      "name": "나라",
+      "countryCode": "JP",
+      "countryCodes": [
+        "JP"
+      ],
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": "나라시|Nara|奈良|奈良市",
+      "group": "east-asia",
+      "isNew": false,
+      "scene": "Nara: the monumental wooden Great Buddha Hall of Todai-ji, Nara Park greenery and a few calm sika deer in the foreground",
+      "assetVersion": 4
+    },
+    {
+      "id": "jp-yufuin",
+      "name": "유후인",
+      "countryCode": "JP",
+      "countryCodes": [
+        "JP"
+      ],
+      "kind": "region",
+      "theme": "mountain",
+      "aliases": "Yufuin|由布院|湯布院",
+      "group": "east-asia",
+      "isNew": false,
+      "scene": "Yufuin: Lake Kinrin with gentle steam above the water, traditional hot-spring town roofs and the twin peaks of Mount Yufu behind",
+      "assetVersion": 4
+    },
+    {
+      "id": "jp-hakone",
+      "name": "하코네",
+      "countryCode": "JP",
+      "countryCodes": [
+        "JP"
+      ],
+      "kind": "region",
+      "theme": "mountain",
+      "aliases": "Hakone|箱根",
+      "group": "east-asia",
+      "isNew": false,
+      "scene": "Hakone: the red lakeside torii on Lake Ashi, a sightseeing ship, wooded hills and Mount Fuji in the distance",
+      "assetVersion": 4
+    },
+    {
+      "id": "tw-kaohsiung",
+      "name": "가오슝",
+      "countryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "kind": "city",
+      "theme": "coast",
+      "aliases": "Kaohsiung|高雄|高雄市",
+      "group": "east-asia",
+      "isNew": false,
+      "scene": "Kaohsiung: the colorful Dragon and Tiger Pagodas beside Lotus Pond, their distinctive animal-mouth entrances and reflections on the water",
+      "assetVersion": 4
+    },
+    {
+      "id": "tw-taichung",
+      "name": "타이중",
+      "countryCode": "TW",
+      "countryCodes": [
+        "TW"
+      ],
+      "kind": "city",
+      "theme": "urban",
+      "aliases": "Taichung|臺中|台中|臺中市|台中市",
+      "group": "east-asia",
+      "isNew": false,
+      "scene": "Taichung: the distinctive rounded white facade of the National Taichung Theater, a green foreground lawn and a small urban plaza",
+      "assetVersion": 4
+    },
+    {
+      "id": "mo-macau",
+      "name": "마카오",
+      "countryCode": "MO",
+      "countryCodes": [
+        "MO",
+        "CN"
+      ],
+      "kind": "region",
+      "theme": "urban",
+      "aliases": "마카우|Macau|Macao|澳門|澳门",
+      "group": "east-asia",
+      "isNew": false,
+      "scene": "Macau: the recognizable Ruins of St. Paul facade, pastel Portuguese-style buildings and the flowing black-and-white paving of Senado Square",
+      "assetVersion": 4
+    },
+    {
+      "id": "cn-shanghai",
+      "name": "상하이",
+      "countryCode": "CN",
+      "countryCodes": [
+        "CN"
+      ],
+      "kind": "city",
+      "theme": "urban",
+      "aliases": "상해|Shanghai|上海|上海市",
+      "group": "east-asia",
+      "isNew": false,
+      "scene": "Shanghai: the Oriental Pearl Tower and Pudong skyline across the Huangpu River, historic Bund waterfront facades and a small river boat",
+      "assetVersion": 4
+    },
+    {
+      "id": "cn-beijing",
+      "name": "베이징",
+      "countryCode": "CN",
+      "countryCodes": [
+        "CN"
+      ],
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": "북경|Beijing|Peking|北京|北京市",
+      "group": "east-asia",
+      "isNew": false,
+      "scene": "Beijing: the blue circular roof of the Temple of Heaven Hall of Prayer for Good Harvests, white stone terraces and a restrained backdrop of imperial red walls and golden roofs",
+      "assetVersion": 4
+    },
+    {
+      "id": "cn-qingdao",
+      "name": "칭다오",
+      "countryCode": "CN",
+      "countryCodes": [
+        "CN"
+      ],
+      "kind": "city",
+      "theme": "coast",
+      "aliases": "청도|Qingdao|青岛|青島|青岛市",
+      "group": "east-asia",
+      "isNew": false,
+      "scene": "Qingdao: Zhanqiao pier and its traditional waterside pavilion, blue Jiaozhou Bay and the city’s characteristic red-roofed waterfront buildings",
+      "assetVersion": 4
+    },
+    {
+      "id": "cn-zhangjiajie",
+      "name": "장자제",
+      "countryCode": "CN",
+      "countryCodes": [
+        "CN"
+      ],
+      "kind": "region",
+      "theme": "mountain",
+      "aliases": "장가계|Zhangjiajie|张家界|張家界",
+      "group": "east-asia",
+      "isNew": false,
+      "scene": "Zhangjiajie: the distinctive tall sandstone pillars of the Wulingyuan landscape, green forest, light mist and a small winding path",
+      "assetVersion": 4
+    },
+    {
+      "id": "vn-hanoi",
+      "name": "하노이",
+      "countryCode": "VN",
+      "countryCodes": [
+        "VN"
+      ],
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": "Hanoi|Ha Noi|Hà Nội",
+      "group": "southeast-asia",
+      "isNew": false,
+      "scene": "Hanoi: Turtle Tower on Hoan Kiem Lake, the red Huc Bridge and a few leafy old-quarter rooftops",
+      "assetVersion": 4
+    },
+    {
+      "id": "vn-ho-chi-minh",
+      "name": "호찌민",
+      "countryCode": "VN",
+      "countryCodes": [
+        "VN"
+      ],
+      "kind": "city",
+      "theme": "urban",
+      "aliases": "호치민|사이공|Ho Chi Minh|Ho Chi Minh City|Hồ Chí Minh|Saigon|Sai Gon",
+      "group": "southeast-asia",
+      "isNew": false,
+      "scene": "Ho Chi Minh City: the red-brick Notre-Dame Cathedral with its twin towers, the warm-yellow Central Post Office facade and tropical city trees",
+      "assetVersion": 4
+    },
+    {
+      "id": "vn-hoi-an",
+      "name": "호이안",
+      "countryCode": "VN",
+      "countryCodes": [
+        "VN"
+      ],
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": "Hoi An|Hoian|Hội An",
+      "group": "southeast-asia",
+      "isNew": false,
+      "scene": "Hoi An: the Japanese Covered Bridge, warm-yellow riverside houses, colorful hanging lanterns and a small wooden boat on the Thu Bon River",
+      "assetVersion": 4
+    },
+    {
+      "id": "vn-phu-quoc",
+      "name": "푸꾸옥",
+      "countryCode": "VN",
+      "countryCodes": [
+        "VN"
+      ],
+      "kind": "island",
+      "theme": "island",
+      "aliases": "푸쿠옥|Phu Quoc|Phú Quốc",
+      "group": "southeast-asia",
+      "isNew": false,
+      "scene": "Phu Quoc: the Hon Thom cable-car line over turquoise islands, white sand, palms and small fishing boats",
+      "assetVersion": 4
+    },
+    {
+      "id": "th-phuket",
+      "name": "푸껫",
+      "countryCode": "TH",
+      "countryCodes": [
+        "TH"
+      ],
+      "kind": "island",
+      "theme": "island",
+      "aliases": "푸켓|Phuket|ภูเก็ต",
+      "group": "southeast-asia",
+      "isNew": false,
+      "scene": "Phuket: colorful Sino-Portuguese old-town shophouses, a palm-lined Andaman coast and a small traditional long-tail boat",
+      "assetVersion": 4
+    },
+    {
+      "id": "th-pattaya",
+      "name": "파타야",
+      "countryCode": "TH",
+      "countryCodes": [
+        "TH"
+      ],
+      "kind": "city",
+      "theme": "coast",
+      "aliases": "Pattaya|พัทยา",
+      "group": "southeast-asia",
+      "isNew": false,
+      "scene": "Pattaya: the intricately carved wooden Sanctuary of Truth with its pointed spires beside the blue Gulf of Thailand and a few palms",
+      "assetVersion": 4
+    },
+    {
+      "id": "my-kota-kinabalu",
+      "name": "코타키나발루",
+      "countryCode": "MY",
+      "countryCodes": [
+        "MY"
+      ],
+      "kind": "city",
+      "theme": "coast",
+      "aliases": "Kota Kinabalu|코타 키나발루",
+      "group": "southeast-asia",
+      "isNew": false,
+      "scene": "Kota Kinabalu: the blue-domed City Mosque reflected in its lagoon, tropical greenery and a distant silhouette of Mount Kinabalu",
+      "assetVersion": 4
+    },
+    {
+      "id": "ph-cebu",
+      "name": "세부",
+      "countryCode": "PH",
+      "countryCodes": [
+        "PH"
+      ],
+      "kind": "region",
+      "theme": "island",
+      "aliases": "Cebu|Cebu Island",
+      "group": "southeast-asia",
+      "isNew": false,
+      "scene": "Cebu: the octagonal Magellan’s Cross pavilion, the stone facade and belfry of Basilica Minore del Santo Niño and tropical palms",
+      "assetVersion": 4
+    },
+    {
+      "id": "ph-boracay",
+      "name": "보라카이",
+      "countryCode": "PH",
+      "countryCodes": [
+        "PH"
+      ],
+      "kind": "island",
+      "theme": "island",
+      "aliases": "Boracay|Boracay Island",
+      "group": "southeast-asia",
+      "isNew": false,
+      "scene": "Boracay: White Beach, the recognizable small rocky outcrop of Willy’s Rock, coconut palms and a white-sailed paraw boat on turquoise water",
+      "assetVersion": 4
+    },
+    {
+      "id": "us-oahu",
+      "name": "오아후",
+      "countryCode": "US",
+      "countryCodes": [
+        "US"
+      ],
+      "kind": "island",
+      "theme": "island",
+      "aliases": "오아후섬|Oahu|Oʻahu|Oahu Island",
+      "group": "north-america",
+      "isNew": false,
+      "scene": "Oahu: the dramatic green Koolau ridges of the Kualoa coast, a turquoise bay, palms and an outrigger canoe; depict the island coastline rather than a Honolulu city skyline",
+      "assetVersion": 4
+    },
+    {
+      "id": "gu-guam",
+      "name": "괌",
+      "countryCode": "GU",
+      "countryCodes": [
+        "GU",
+        "US"
+      ],
+      "kind": "island",
+      "theme": "island",
+      "aliases": "Guam",
+      "group": "oceania",
+      "isNew": false,
+      "scene": "Guam: Two Lovers Point’s cliffside viewing area above the blue ocean, Tumon Bay’s curved beach and lush tropical greenery",
+      "assetVersion": 4
+    },
+    {
+      "id": "mp-saipan",
+      "name": "사이판",
+      "countryCode": "MP",
+      "countryCodes": [
+        "MP",
+        "US"
+      ],
+      "kind": "island",
+      "theme": "island",
+      "aliases": "Saipan",
+      "group": "oceania",
+      "isNew": false,
+      "scene": "Saipan: the small palm-covered Managaha island in Saipan’s turquoise lagoon, white sand, a small boat and the green Saipan coast behind",
+      "assetVersion": 4
+    },
+    {
+      "id": "au-sydney",
+      "name": "시드니",
+      "countryCode": "AU",
+      "countryCodes": [
+        "AU"
+      ],
+      "kind": "city",
+      "theme": "coast",
+      "aliases": "Sydney",
+      "group": "oceania",
+      "isNew": false,
+      "scene": "Sydney: the unmistakable white shells of the Sydney Opera House, Sydney Harbour Bridge, blue harbor water and a small ferry",
+      "assetVersion": 4
+    },
+    {
+      "id": "mv-maldives",
+      "name": "몰디브",
+      "countryCode": "MV",
+      "countryCodes": [
+        "MV"
+      ],
+      "kind": "region",
+      "theme": "island",
+      "aliases": "Maldives|Maldives Islands",
+      "group": "south-asia",
+      "isNew": false,
+      "scene": "The Maldives: a low coral island, overwater villas on a wooden jetty, clear turquoise lagoon, coconut palms and a small dhoni boat",
+      "assetVersion": 4
+    },
+    {
+      "id": "jp-yokohama",
+      "englishName": "Yokohama",
+      "name": "요코하마",
+      "countryCode": "JP",
+      "group": "east-asia",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Yokohama|横浜|横浜市",
+      "scene": "Yokohama: the Minato Mirai waterfront, the tall Landmark Tower, the Cosmo Clock ferris wheel and historic red-brick warehouses",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "JP"
+      ]
+    },
+    {
+      "id": "jp-kobe",
+      "englishName": "Kobe",
+      "name": "고베",
+      "countryCode": "JP",
+      "group": "east-asia",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Kobe|Kōbe|神戸|神戸市",
+      "scene": "Kobe: the red lattice Kobe Port Tower, the white roof of the Maritime Museum and a small boat on the harbor",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "JP"
+      ]
+    },
+    {
+      "id": "jp-hiroshima",
+      "englishName": "Hiroshima",
+      "name": "히로시마",
+      "countryCode": "JP",
+      "group": "east-asia",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Hiroshima|広島|広島市",
+      "scene": "Hiroshima: the preserved Atomic Bomb Dome beside the Motoyasu River, Peace Memorial Park trees and a quiet bridge",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "JP"
+      ]
+    },
+    {
+      "id": "jp-nagasaki",
+      "englishName": "Nagasaki",
+      "name": "나가사키",
+      "countryCode": "JP",
+      "group": "east-asia",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Nagasaki|長崎|長崎市",
+      "scene": "Nagasaki: Oura Cathedral above Glover Garden rooftops, the hillside city and Nagasaki harbor",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "JP"
+      ]
+    },
+    {
+      "id": "jp-kanazawa",
+      "englishName": "Kanazawa",
+      "name": "가나자와",
+      "countryCode": "JP",
+      "group": "east-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "카나자와|Kanazawa|金沢|金沢市",
+      "scene": "Kanazawa: the two-legged Kotoji stone lantern at Kenrokuen Garden, a calm pond and a hint of Kanazawa Castle roofs",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "JP"
+      ]
+    },
+    {
+      "id": "jp-takayama",
+      "englishName": "Takayama",
+      "name": "다카야마",
+      "countryCode": "JP",
+      "group": "east-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "타카야마|Takayama|高山|高山市",
+      "scene": "Takayama: the dark wooden merchant houses of Sanmachi old town, a red bridge and distant Hida mountains",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "JP"
+      ]
+    },
+    {
+      "id": "jp-hakodate",
+      "englishName": "Hakodate",
+      "name": "하코다테",
+      "countryCode": "JP",
+      "group": "east-asia",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Hakodate|函館|函館市",
+      "scene": "Hakodate: the Kanemori red-brick warehouses along the harbor, a compact waterfront and Mount Hakodate behind",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "JP"
+      ]
+    },
+    {
+      "id": "jp-otaru",
+      "englishName": "Otaru",
+      "name": "오타루",
+      "countryCode": "JP",
+      "group": "east-asia",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Otaru|小樽|小樽市",
+      "scene": "Otaru: Otaru Canal, old stone warehouses, canal-side gas lamps and reflections on the water",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "JP"
+      ]
+    },
+    {
+      "id": "jp-asahikawa",
+      "englishName": "Asahikawa",
+      "name": "아사히카와",
+      "countryCode": "JP",
+      "group": "east-asia",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Asahikawa|旭川|旭川市",
+      "scene": "Asahikawa: the graceful Asahibashi bridge over the Ishikari River, a small northern city skyline and snowy Daisetsuzan peaks",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "JP"
+      ]
+    },
+    {
+      "id": "jp-sendai",
+      "englishName": "Sendai",
+      "name": "센다이",
+      "countryCode": "JP",
+      "group": "east-asia",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Sendai|仙台|仙台市",
+      "scene": "Sendai: the equestrian statue of Date Masamune at the castle site, wooded slopes and a leafy city view",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "JP"
+      ]
+    },
+    {
+      "id": "jp-niigata",
+      "englishName": "Niigata",
+      "name": "니가타",
+      "countryCode": "JP",
+      "group": "east-asia",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Niigata|新潟|新潟市",
+      "scene": "Niigata: the stone arches of Bandai Bridge across the Shinano River, waterfront buildings and a small river boat",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "JP"
+      ]
+    },
+    {
+      "id": "jp-kumamoto",
+      "englishName": "Kumamoto",
+      "name": "구마모토",
+      "countryCode": "JP",
+      "group": "east-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "쿠마모토|Kumamoto|熊本|熊本市",
+      "scene": "Kumamoto: Kumamoto Castle with its black-and-white keep, steep stone ramparts and cherry trees",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "JP"
+      ]
+    },
+    {
+      "id": "jp-kagoshima",
+      "englishName": "Kagoshima",
+      "name": "가고시마",
+      "countryCode": "JP",
+      "group": "east-asia",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "카고시마|Kagoshima|鹿児島|鹿児島市",
+      "scene": "Kagoshima: Sakurajima volcano across Kinko Bay, waterfront palms and a small city ferry",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "JP"
+      ]
+    },
+    {
+      "id": "jp-beppu",
+      "englishName": "Beppu",
+      "name": "벳푸",
+      "countryCode": "JP",
+      "group": "east-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "벳부|Beppu|別府|別府市",
+      "scene": "Beppu: steam rising from the hot-spring town, traditional bathhouse roofs, Beppu Bay and green hills",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "JP"
+      ]
+    },
+    {
+      "id": "jp-nikko",
+      "englishName": "Nikko",
+      "name": "닛코",
+      "countryCode": "JP",
+      "group": "east-asia",
+      "theme": "forest",
+      "kind": "city",
+      "aliases": "니코|Nikko|Nikkō|日光|日光市",
+      "scene": "Nikko: the red Shinkyo bridge above a clear mountain river, forest and a richly decorated shrine gate",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "JP"
+      ]
+    },
+    {
+      "id": "tw-tainan",
+      "englishName": "Tainan",
+      "name": "타이난",
+      "countryCode": "TW",
+      "group": "east-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Tainan|臺南|台南|臺南市|台南市",
+      "scene": "Tainan: Chihkan Tower with its red traditional roofs, historic brick walls and subtropical trees",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "TW"
+      ]
+    },
+    {
+      "id": "tw-hualien",
+      "englishName": "Hualien",
+      "name": "화롄",
+      "countryCode": "TW",
+      "group": "east-asia",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "화련|Hualien|花蓮|花蓮市",
+      "scene": "Hualien: the curving pebble shore of Qixingtan, blue Pacific water and the dramatic green coastal mountains",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "TW"
+      ]
+    },
+    {
+      "id": "tw-jiufen",
+      "englishName": "Jiufen",
+      "name": "지우펀",
+      "countryCode": "TW",
+      "group": "east-asia",
+      "theme": "traditional",
+      "kind": "town",
+      "aliases": "지우픈|Jiufen|Jiu Fen|九份",
+      "scene": "Jiufen: hillside tea houses and old lanes with red lanterns, tiled roofs and the sea visible beyond",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "TW"
+      ]
+    },
+    {
+      "id": "tw-chiayi",
+      "englishName": "Chiayi",
+      "name": "자이",
+      "countryCode": "TW",
+      "group": "east-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "치아이|Chiayi|嘉義|嘉义|嘉義市",
+      "scene": "Chiayi: the wooden Beimen railway station, a small red Alishan Forest Railway train and Hinoki Village style timber houses",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "TW"
+      ]
+    },
+    {
+      "id": "cn-guangzhou",
+      "englishName": "Guangzhou",
+      "name": "광저우",
+      "countryCode": "CN",
+      "group": "east-asia",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "광주 광둥|Guangzhou|Canton|广州|廣州|广州市",
+      "scene": "Guangzhou: the slender twisted Canton Tower above the Pearl River, modern waterfront buildings and a small cruise boat",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CN"
+      ]
+    },
+    {
+      "id": "cn-shenzhen",
+      "englishName": "Shenzhen",
+      "name": "선전",
+      "countryCode": "CN",
+      "group": "east-asia",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "심천|Shenzhen|深圳|深圳市",
+      "scene": "Shenzhen: the tapered Ping An Finance Centre, a modern skyline and green Civic Center park",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CN"
+      ]
+    },
+    {
+      "id": "cn-chengdu",
+      "englishName": "Chengdu",
+      "name": "청두",
+      "countryCode": "CN",
+      "group": "east-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "성도|Chengdu|成都|成都市",
+      "scene": "Chengdu: traditional Jinli street roofs, bamboo greenery and a giant panda seated calmly in the foreground",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CN"
+      ]
+    },
+    {
+      "id": "cn-chongqing",
+      "englishName": "Chongqing",
+      "name": "충칭",
+      "countryCode": "CN",
+      "group": "east-asia",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "중경|Chongqing|重庆|重慶|重庆市",
+      "scene": "Chongqing: the layered stilted facades of Hongya Cave above the river, a red bridge and a mountainous high-rise skyline",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CN"
+      ]
+    },
+    {
+      "id": "cn-xian",
+      "englishName": "Xian",
+      "name": "시안",
+      "countryCode": "CN",
+      "group": "east-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "서안|Xian|Xi'an|Xi’an|西安|西安市",
+      "scene": "Xian: the Bell Tower with traditional green roofs, the old city wall and a few warm-toned historic rooftops",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CN"
+      ]
+    },
+    {
+      "id": "cn-hangzhou",
+      "englishName": "Hangzhou",
+      "name": "항저우",
+      "countryCode": "CN",
+      "group": "east-asia",
+      "theme": "lake",
+      "kind": "city",
+      "aliases": "항주|Hangzhou|杭州|杭州市",
+      "scene": "Hangzhou: West Lake, a willow-lined causeway, a small traditional boat and Leifeng Pagoda on the green hill",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CN"
+      ]
+    },
+    {
+      "id": "cn-suzhou",
+      "englishName": "Suzhou",
+      "name": "쑤저우",
+      "countryCode": "CN",
+      "group": "east-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "소주|Suzhou|苏州|蘇州|苏州市",
+      "scene": "Suzhou: a narrow old-town canal with a stone arched bridge, white-walled tiled-roof houses and a classical garden pavilion",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CN"
+      ]
+    },
+    {
+      "id": "cn-guilin",
+      "englishName": "Guilin",
+      "name": "구이린",
+      "countryCode": "CN",
+      "group": "east-asia",
+      "theme": "mountain",
+      "kind": "city",
+      "aliases": "계림|Guilin|桂林|桂林市",
+      "scene": "Guilin: Elephant Trunk Hill beside clear river water, rounded limestone peaks and a small bamboo raft",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CN"
+      ]
+    },
+    {
+      "id": "cn-lijiang",
+      "englishName": "Lijiang",
+      "name": "리장",
+      "countryCode": "CN",
+      "group": "east-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "여강|Lijiang|丽江|麗江|丽江市",
+      "scene": "Lijiang: the tiled roofs and small canals of Lijiang Old Town with snow-capped Jade Dragon Snow Mountain behind",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CN"
+      ]
+    },
+    {
+      "id": "cn-dali",
+      "englishName": "Dali",
+      "name": "다리",
+      "countryCode": "CN",
+      "group": "east-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "대리|Dali|大理|大理市",
+      "scene": "Dali: the Three Pagodas, a glimpse of Erhai Lake and the Cangshan mountains",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CN"
+      ]
+    },
+    {
+      "id": "cn-xiamen",
+      "englishName": "Xiamen",
+      "name": "샤먼",
+      "countryCode": "CN",
+      "group": "east-asia",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "하문|Xiamen|厦门|廈門|厦门市",
+      "scene": "Xiamen: the waterfront historic villas of Gulangyu, leafy palms and small boats on the blue harbor",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CN"
+      ]
+    },
+    {
+      "id": "cn-harbin",
+      "englishName": "Harbin",
+      "name": "하얼빈",
+      "countryCode": "CN",
+      "group": "east-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Harbin|哈尔滨|哈爾濱|哈尔滨市",
+      "scene": "Harbin: Saint Sophia Cathedral with its green domes, snow-covered paving and a few sculpted blue ice towers",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CN"
+      ]
+    },
+    {
+      "id": "mn-ulaanbaatar",
+      "englishName": "Ulaanbaatar",
+      "name": "울란바토르",
+      "countryCode": "MN",
+      "group": "east-asia",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "울란바타르|Ulaanbaatar|Ulan Bator|Улаанбаатар",
+      "scene": "Ulaanbaatar: the Gandan monastery roofs, a compact city skyline and open green steppe hills",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "MN"
+      ]
+    },
+    {
+      "id": "vn-da-lat",
+      "englishName": "Da Lat",
+      "name": "달랏",
+      "countryCode": "VN",
+      "group": "southeast-asia",
+      "theme": "mountain",
+      "kind": "city",
+      "aliases": "다랏|Dalat|Da Lat|Đà Lạt",
+      "scene": "Da Lat: the Art Deco Dalat railway station, a small train and pine-covered highland slopes",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "VN"
+      ]
+    },
+    {
+      "id": "vn-hue",
+      "englishName": "Hue",
+      "name": "후에",
+      "countryCode": "VN",
+      "group": "southeast-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "훼|Hue|Huế",
+      "scene": "Hue: the Imperial City Noon Gate with its layered roofs and stone walls beside calm water",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "VN"
+      ]
+    },
+    {
+      "id": "vn-ha-long",
+      "englishName": "Ha Long",
+      "name": "하롱베이",
+      "countryCode": "VN",
+      "group": "southeast-asia",
+      "theme": "coast",
+      "kind": "region",
+      "aliases": "하롱|Ha Long|Halong|Hạ Long|Ha Long Bay|Halong Bay",
+      "scene": "Ha Long: Ha Long Bay’s limestone islands, emerald water and a traditional wooden sightseeing junk",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "VN"
+      ]
+    },
+    {
+      "id": "th-chiang-rai",
+      "englishName": "Chiang Rai",
+      "name": "치앙라이",
+      "countryCode": "TH",
+      "group": "southeast-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Chiang Rai|Chiangrai|เชียงราย",
+      "scene": "Chiang Rai: the ornate white spires of Wat Rong Khun, its curved bridge and a quiet reflective pond",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "TH"
+      ]
+    },
+    {
+      "id": "th-krabi",
+      "englishName": "Krabi",
+      "name": "끄라비",
+      "countryCode": "TH",
+      "group": "southeast-asia",
+      "theme": "coast",
+      "kind": "region",
+      "aliases": "크라비|Krabi|กระบี่",
+      "scene": "Krabi: Railay’s tall limestone cliffs, white sand, turquoise Andaman water and a long-tail boat",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "TH"
+      ]
+    },
+    {
+      "id": "th-ayutthaya",
+      "englishName": "Ayutthaya",
+      "name": "아유타야",
+      "countryCode": "TH",
+      "group": "southeast-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "아유타야시|Ayutthaya|Phra Nakhon Si Ayutthaya|อยุธยา",
+      "scene": "Ayutthaya: the brick towers and ruined temple walls of the historic city, a stone Buddha and green trees",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "TH"
+      ]
+    },
+    {
+      "id": "th-sukhothai",
+      "englishName": "Sukhothai",
+      "name": "수코타이",
+      "countryCode": "TH",
+      "group": "southeast-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "수코타이시|Sukhothai|สุโขทัย",
+      "scene": "Sukhothai: the lotus-bud tower and seated Buddha of Wat Mahathat, ancient brick ruins and a reflecting pond",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "TH"
+      ]
+    },
+    {
+      "id": "th-ko-samui",
+      "englishName": "Ko Samui",
+      "name": "코사무이",
+      "countryCode": "TH",
+      "group": "southeast-asia",
+      "theme": "island",
+      "kind": "island",
+      "aliases": "꼬사무이|사무이섬|Ko Samui|Koh Samui|เกาะสมุย",
+      "scene": "Ko Samui: the golden Big Buddha at Wat Phra Yai, coconut palms, a small island shore and turquoise water",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "TH"
+      ]
+    },
+    {
+      "id": "my-kuala-lumpur",
+      "englishName": "Kuala Lumpur",
+      "name": "쿠알라룸푸르",
+      "countryCode": "MY",
+      "group": "southeast-asia",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "쿠알라 룸푸르|Kuala Lumpur|KualaLumpur|KL",
+      "scene": "Kuala Lumpur: the paired Petronas Towers above KLCC Park, a reflective pool and lush city greenery",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "MY"
+      ]
+    },
+    {
+      "id": "my-george-town",
+      "englishName": "George Town",
+      "name": "조지타운",
+      "countryCode": "MY",
+      "group": "southeast-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "조지 타운|George Town|Georgetown|乔治市",
+      "scene": "George Town: the ornate Khoo Kongsi clan-house roof, colorful heritage shophouses and a compact old-town street",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "MY"
+      ]
+    },
+    {
+      "id": "my-malacca",
+      "englishName": "Malacca",
+      "name": "믈라카",
+      "countryCode": "MY",
+      "group": "southeast-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "말라카|멜라카|Malacca|Melaka",
+      "scene": "Malacca: the red Christ Church and Stadthuys buildings, a colorful trishaw and a glimpse of the river",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "MY"
+      ]
+    },
+    {
+      "id": "my-langkawi",
+      "englishName": "Langkawi",
+      "name": "랑카위",
+      "countryCode": "MY",
+      "group": "southeast-asia",
+      "theme": "island",
+      "kind": "island",
+      "aliases": "랑카위섬|Langkawi",
+      "scene": "Langkawi: the curved Sky Bridge above green rainforest peaks, turquoise island waters and a small cable car",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "MY"
+      ]
+    },
+    {
+      "id": "id-jakarta",
+      "englishName": "Jakarta",
+      "name": "자카르타",
+      "countryCode": "ID",
+      "group": "southeast-asia",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Jakarta|DKI Jakarta",
+      "scene": "Jakarta: the tall National Monument with its gold flame, Merdeka Square greenery and a restrained city skyline",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "ID"
+      ]
+    },
+    {
+      "id": "id-yogyakarta",
+      "englishName": "Yogyakarta",
+      "name": "욕야카르타",
+      "countryCode": "ID",
+      "group": "southeast-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "족자카르타|욕야|족자|Yogyakarta|Jogjakarta|Jogja",
+      "scene": "Yogyakarta: the white Tugu monument, traditional Javanese palace roofs and a small becak rickshaw",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "ID"
+      ]
+    },
+    {
+      "id": "ph-manila",
+      "englishName": "Manila",
+      "name": "마닐라",
+      "countryCode": "PH",
+      "group": "southeast-asia",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Manila|Maynila",
+      "scene": "Manila: the walls and stone gate of Fort Santiago, Intramuros rooftops and a small colorful jeepney",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "PH"
+      ]
+    },
+    {
+      "id": "ph-el-nido",
+      "englishName": "El Nido",
+      "name": "엘니도",
+      "countryCode": "PH",
+      "group": "southeast-asia",
+      "theme": "coast",
+      "kind": "town",
+      "aliases": "El Nido|Elnido",
+      "scene": "El Nido: Bacuit Bay’s limestone cliffs, a clear turquoise lagoon and a small outrigger boat",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "PH"
+      ]
+    },
+    {
+      "id": "ph-bohol",
+      "englishName": "Bohol",
+      "name": "보홀",
+      "countryCode": "PH",
+      "group": "southeast-asia",
+      "theme": "island",
+      "kind": "island",
+      "aliases": "보홀섬|Bohol|Bohol Island",
+      "scene": "Bohol: the rolling Chocolate Hills, lush tropical greenery and a small tarsier perched on a branch",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "PH"
+      ]
+    },
+    {
+      "id": "kh-siem-reap",
+      "englishName": "Siem Reap",
+      "name": "시엠레아프",
+      "countryCode": "KH",
+      "group": "southeast-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "씨엠립|씨엠리엡|시엠립|Siem Reap|Siemreap",
+      "scene": "Siem Reap: Angkor Wat’s five lotus-shaped towers, a reflecting pond and surrounding palm trees",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "KH"
+      ]
+    },
+    {
+      "id": "kh-phnom-penh",
+      "englishName": "Phnom Penh",
+      "name": "프놈펜",
+      "countryCode": "KH",
+      "group": "southeast-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Phnom Penh|Phnompenh",
+      "scene": "Phnom Penh: the gilded Royal Palace roofs, a white riverside balustrade and palms beside the Tonle Sap waterfront",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "KH"
+      ]
+    },
+    {
+      "id": "la-luang-prabang",
+      "englishName": "Luang Prabang",
+      "name": "루앙프라방",
+      "countryCode": "LA",
+      "group": "southeast-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "루앙프라뱅|Luang Prabang|Louangphabang",
+      "scene": "Luang Prabang: Wat Xieng Thong’s low sweeping roof, traditional wooden houses and the green Mekong riverside",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "LA"
+      ]
+    },
+    {
+      "id": "la-vientiane",
+      "englishName": "Vientiane",
+      "name": "비엔티안",
+      "countryCode": "LA",
+      "group": "southeast-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "비엔티엔|Vientiane",
+      "scene": "Vientiane: the golden Pha That Luang stupa, the Patuxai arch and a small leafy foreground",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "LA"
+      ]
+    },
+    {
+      "id": "mm-bagan",
+      "englishName": "Bagan",
+      "name": "바간",
+      "countryCode": "MM",
+      "group": "southeast-asia",
+      "theme": "traditional",
+      "kind": "region",
+      "aliases": "버간|Bagan|Pagan",
+      "scene": "Bagan: red-brick pagodas and temple spires across Bagan’s green and ochre plain, with a few small hot-air balloons",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "MM"
+      ]
+    },
+    {
+      "id": "in-delhi",
+      "englishName": "Delhi",
+      "name": "뉴델리",
+      "countryCode": "IN",
+      "group": "south-asia",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "델리|Delhi|New Delhi|NewDelhi|नई दिल्ली|दिल्ली",
+      "scene": "Delhi: India Gate, the red sandstone walls of the Red Fort and leafy ceremonial avenues",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "IN"
+      ]
+    },
+    {
+      "id": "in-agra",
+      "englishName": "Agra",
+      "name": "아그라",
+      "countryCode": "IN",
+      "group": "south-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Agra|आगरा",
+      "scene": "Agra: the white marble Taj Mahal, its four minarets, long reflecting pool and garden cypresses",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "IN"
+      ]
+    },
+    {
+      "id": "in-jaipur",
+      "englishName": "Jaipur",
+      "name": "자이푸르",
+      "countryCode": "IN",
+      "group": "south-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Jaipur|जयपुर",
+      "scene": "Jaipur: the pink honeycomb facade of Hawa Mahal, warm old-city walls and a small cycle rickshaw",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "IN"
+      ]
+    },
+    {
+      "id": "in-mumbai",
+      "englishName": "Mumbai",
+      "name": "뭄바이",
+      "countryCode": "IN",
+      "group": "south-asia",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "봄베이|Mumbai|Bombay|मुंबई",
+      "scene": "Mumbai: the Gateway of India facing the harbor, the Taj Mahal Palace hotel dome and a small ferry",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "IN"
+      ]
+    },
+    {
+      "id": "in-varanasi",
+      "englishName": "Varanasi",
+      "name": "바라나시",
+      "countryCode": "IN",
+      "group": "south-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "베나레스|Varanasi|Benares|Banaras|वाराणसी",
+      "scene": "Varanasi: the stepped ghats and historic riverside palaces along the Ganges, with small wooden rowboats",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "IN"
+      ]
+    },
+    {
+      "id": "in-udaipur",
+      "englishName": "Udaipur",
+      "name": "우다이푸르",
+      "countryCode": "IN",
+      "group": "south-asia",
+      "theme": "lake",
+      "kind": "city",
+      "aliases": "Udaipur|उदयपुर",
+      "scene": "Udaipur: the white Lake Palace on Lake Pichola, the City Palace waterfront and green Aravalli hills",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "IN"
+      ]
+    },
+    {
+      "id": "in-kochi",
+      "englishName": "Kochi",
+      "name": "코치",
+      "countryCode": "IN",
+      "group": "south-asia",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "코친|Kochi|Cochin|കൊച്ചി",
+      "scene": "Kochi: Fort Kochi’s cantilevered Chinese fishing nets, a quiet waterfront and colonial-era houses",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "IN"
+      ]
+    },
+    {
+      "id": "in-goa",
+      "englishName": "Goa",
+      "name": "고아",
+      "countryCode": "IN",
+      "group": "south-asia",
+      "theme": "coast",
+      "kind": "region",
+      "aliases": "Goa|गोवा",
+      "scene": "Goa: the white Church of Our Lady of the Immaculate Conception in Panaji, colorful Portuguese-style houses and a palm-lined coast",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "IN"
+      ]
+    },
+    {
+      "id": "np-kathmandu",
+      "englishName": "Kathmandu",
+      "name": "카트만두",
+      "countryCode": "NP",
+      "group": "south-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Kathmandu|काठमाडौँ",
+      "scene": "Kathmandu: the tiered pagoda roofs of Durbar Square, historic brick buildings and a distant Himalayan skyline",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "NP"
+      ]
+    },
+    {
+      "id": "np-pokhara",
+      "englishName": "Pokhara",
+      "name": "포카라",
+      "countryCode": "NP",
+      "group": "south-asia",
+      "theme": "lake",
+      "kind": "city",
+      "aliases": "Pokhara|पोखरा",
+      "scene": "Pokhara: Phewa Lake with small colorful boats, a lakeside pagoda and the pointed Machapuchare mountain behind",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "NP"
+      ]
+    },
+    {
+      "id": "lk-colombo",
+      "englishName": "Colombo",
+      "name": "콜롬보",
+      "countryCode": "LK",
+      "group": "south-asia",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Colombo",
+      "scene": "Colombo: the Lotus Tower rising above the city, Galle Face’s seafront promenade and the Indian Ocean",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "LK"
+      ]
+    },
+    {
+      "id": "lk-kandy",
+      "englishName": "Kandy",
+      "name": "캔디",
+      "countryCode": "LK",
+      "group": "south-asia",
+      "theme": "lake",
+      "kind": "city",
+      "aliases": "Kandy",
+      "scene": "Kandy: the Temple of the Sacred Tooth Relic beside Kandy Lake, white lakeside walls and green hills",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "LK"
+      ]
+    },
+    {
+      "id": "lk-galle",
+      "englishName": "Galle",
+      "name": "갈레",
+      "countryCode": "LK",
+      "group": "south-asia",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "갈|Galle",
+      "scene": "Galle: the white Galle lighthouse on the old fort ramparts, colonial houses, coconut palms and ocean waves",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "LK"
+      ]
+    },
+    {
+      "id": "bt-paro",
+      "englishName": "Paro",
+      "name": "파로",
+      "countryCode": "BT",
+      "group": "south-asia",
+      "theme": "mountain",
+      "kind": "town",
+      "aliases": "Paro",
+      "scene": "Paro: the cliffside Tiger’s Nest monastery above the forested Paro valley, with traditional Bhutanese roofs below",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "BT"
+      ]
+    },
+    {
+      "id": "ge-tbilisi",
+      "englishName": "Tbilisi",
+      "name": "트빌리시",
+      "countryCode": "GE",
+      "group": "caucasus-central-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Tbilisi|თბილისი",
+      "scene": "Tbilisi: the old town’s carved wooden balconies, Narikala fortress on its hill and the Mtkvari River",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "GE"
+      ]
+    },
+    {
+      "id": "az-baku",
+      "englishName": "Baku",
+      "name": "바쿠",
+      "countryCode": "AZ",
+      "group": "caucasus-central-asia",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Baku|Bakı",
+      "scene": "Baku: the stone Maiden Tower, the curved Flame Towers skyline and the blue Caspian waterfront",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "AZ"
+      ]
+    },
+    {
+      "id": "uz-samarkand",
+      "englishName": "Samarkand",
+      "name": "사마르칸트",
+      "countryCode": "UZ",
+      "group": "caucasus-central-asia",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Samarkand|Samarqand|Самарканд",
+      "scene": "Samarkand: Registan Square’s three monumental tiled madrasa facades, turquoise domes and warm stone paving",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "UZ"
+      ]
+    },
+    {
+      "id": "fr-nice",
+      "englishName": "Nice",
+      "name": "니스",
+      "countryCode": "FR",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Nice",
+      "scene": "Nice: the curved Promenade des Anglais beside the blue Bay of Angels, palm trees and pastel waterfront buildings",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "FR"
+      ]
+    },
+    {
+      "id": "fr-lyon",
+      "englishName": "Lyon",
+      "name": "리옹",
+      "countryCode": "FR",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Lyon",
+      "scene": "Lyon: the Basilica of Notre-Dame de Fourviere above old-town rooftops, the Saone river and an arched bridge",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "FR"
+      ]
+    },
+    {
+      "id": "fr-marseille",
+      "englishName": "Marseille",
+      "name": "마르세유",
+      "countryCode": "FR",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Marseille|Marseilles",
+      "scene": "Marseille: small boats in the Vieux-Port, waterfront buildings and Notre-Dame de la Garde on the hill",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "FR"
+      ]
+    },
+    {
+      "id": "fr-bordeaux",
+      "englishName": "Bordeaux",
+      "name": "보르도",
+      "countryCode": "FR",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Bordeaux",
+      "scene": "Bordeaux: the symmetrical Place de la Bourse reflected in the Miroir d'eau, with the Garonne river nearby",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "FR"
+      ]
+    },
+    {
+      "id": "fr-strasbourg",
+      "englishName": "Strasbourg",
+      "name": "스트라스부르",
+      "countryCode": "FR",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "스트라스부르그|Strasbourg",
+      "scene": "Strasbourg: half-timbered houses beside a Petite France canal and the single tall spire of Strasbourg Cathedral",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "FR"
+      ]
+    },
+    {
+      "id": "fr-avignon",
+      "englishName": "Avignon",
+      "name": "아비뇽",
+      "countryCode": "FR",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Avignon",
+      "scene": "Avignon: the Palace of the Popes above medieval walls and the surviving arches of Pont Saint-Benezet over the Rhone",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "FR"
+      ]
+    },
+    {
+      "id": "fr-annecy",
+      "englishName": "Annecy",
+      "name": "안시",
+      "countryCode": "FR",
+      "group": "europe",
+      "theme": "lake",
+      "kind": "city",
+      "aliases": "Annecy",
+      "scene": "Annecy: the triangular Palais de l'Isle in its canal, pastel old-town buildings and Lake Annecy with mountains behind",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "FR"
+      ]
+    },
+    {
+      "id": "fr-mont-saint-michel",
+      "englishName": "Mont-Saint-Michel",
+      "name": "몽생미셸",
+      "countryCode": "FR",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "town",
+      "aliases": "몽생미쉘|Mont Saint Michel|Mont-Saint-Michel|Le Mont-Saint-Michel",
+      "scene": "Mont-Saint-Michel: the abbey and compact stone village rising from a rocky tidal island, surrounded by broad tidal sands",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "FR"
+      ]
+    },
+    {
+      "id": "gb-edinburgh",
+      "englishName": "Edinburgh",
+      "name": "에든버러",
+      "countryCode": "GB",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "에딘버러|Edinburgh",
+      "scene": "Edinburgh: Edinburgh Castle on its rocky hill above layered Old Town buildings and a green foreground",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "GB"
+      ]
+    },
+    {
+      "id": "gb-bath",
+      "englishName": "Bath",
+      "name": "바스",
+      "countryCode": "GB",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "바스시|Bath",
+      "scene": "Bath: the curved Georgian Royal Crescent, its broad green lawn and Bath's honey-colored stone buildings",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "GB"
+      ]
+    },
+    {
+      "id": "gb-oxford",
+      "englishName": "Oxford",
+      "name": "옥스퍼드",
+      "countryCode": "GB",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Oxford",
+      "scene": "Oxford: the round Radcliffe Camera, stone college buildings and a quiet paved square",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "GB"
+      ]
+    },
+    {
+      "id": "ru-moscow",
+      "englishName": "Moscow",
+      "name": "모스크바",
+      "countryCode": "RU",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Moscow|Moskva|Москва",
+      "scene": "Moscow: the colorful onion domes of Saint Basil's Cathedral on Red Square, the red Kremlin walls and Spasskaya Tower",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "RU"
+      ]
+    },
+    {
+      "id": "it-pisa",
+      "englishName": "Pisa",
+      "name": "피사",
+      "countryCode": "IT",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Pisa",
+      "scene": "Pisa: the Leaning Tower of Pisa beside the cathedral and baptistery on the green Piazza dei Miracoli",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "IT"
+      ]
+    },
+    {
+      "id": "it-verona",
+      "englishName": "Verona",
+      "name": "베로나",
+      "countryCode": "IT",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Verona",
+      "scene": "Verona: the Roman Verona Arena, warm old-town rooftops and an arched bridge over the Adige",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "IT"
+      ]
+    },
+    {
+      "id": "it-bologna",
+      "englishName": "Bologna",
+      "name": "볼로냐",
+      "countryCode": "IT",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Bologna",
+      "scene": "Bologna: Bologna's Two Towers above red-roofed buildings, a portico arcade and a small piazza",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "IT"
+      ]
+    },
+    {
+      "id": "it-siena",
+      "englishName": "Siena",
+      "name": "시에나",
+      "countryCode": "IT",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Siena",
+      "scene": "Siena: the fan-shaped Piazza del Campo, Palazzo Pubblico and the slender Torre del Mangia",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "IT"
+      ]
+    },
+    {
+      "id": "it-turin",
+      "englishName": "Turin",
+      "name": "토리노",
+      "countryCode": "IT",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Turin|Torino",
+      "scene": "Turin: the tall spire and dome of the Mole Antonelliana above elegant city roofs, with the Alps in the distance",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "IT"
+      ]
+    },
+    {
+      "id": "es-malaga",
+      "englishName": "Malaga",
+      "name": "말라가",
+      "countryCode": "ES",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Malaga|Málaga",
+      "scene": "Malaga: the Alcazaba above the Roman theatre, Mediterranean city rooftops and a small palm-lined waterfront",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "ES"
+      ]
+    },
+    {
+      "id": "es-bilbao",
+      "englishName": "Bilbao",
+      "name": "빌바오",
+      "countryCode": "ES",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Bilbao|Bilbo",
+      "scene": "Bilbao: the curved metallic forms of the Guggenheim Museum beside the Nervion river and a modern bridge",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "ES"
+      ]
+    },
+    {
+      "id": "es-toledo",
+      "englishName": "Toledo",
+      "name": "톨레도",
+      "countryCode": "ES",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Toledo",
+      "scene": "Toledo: the Alcazar and cathedral above the compact hilltop old town, with the Tagus river curving below",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "ES"
+      ]
+    },
+    {
+      "id": "es-santiago-de-compostela",
+      "englishName": "Santiago de Compostela",
+      "name": "산티아고 데 콤포스텔라",
+      "countryCode": "ES",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "산티아고데콤포스텔라|Santiago de Compostela|Santiago de Compostela City",
+      "scene": "Santiago de Compostela: the twin-towered cathedral facade on Praza do Obradoiro, old stone buildings and a scallop-shell detail",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "ES"
+      ]
+    },
+    {
+      "id": "de-cologne",
+      "englishName": "Cologne",
+      "name": "쾰른",
+      "countryCode": "DE",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Cologne|Köln|Koln|Koeln",
+      "scene": "Cologne: the two dark Gothic spires of Cologne Cathedral, Hohenzollern Bridge and the Rhine river",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "DE"
+      ]
+    },
+    {
+      "id": "de-dresden",
+      "englishName": "Dresden",
+      "name": "드레스덴",
+      "countryCode": "DE",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Dresden",
+      "scene": "Dresden: the Frauenkirche dome, Baroque buildings along Bruhl's Terrace and the Elbe river",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "DE"
+      ]
+    },
+    {
+      "id": "de-nuremberg",
+      "englishName": "Nuremberg",
+      "name": "뉘른베르크",
+      "countryCode": "DE",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "뉘른베르그|Nuremberg|Nürnberg|Nurnberg|Nuernberg",
+      "scene": "Nuremberg: the Imperial Castle above red rooftops and half-timbered houses beside the Pegnitz river",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "DE"
+      ]
+    },
+    {
+      "id": "de-rothenburg-ob-der-tauber",
+      "englishName": "Rothenburg ob der Tauber",
+      "name": "로텐부르크",
+      "countryCode": "DE",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "town",
+      "aliases": "로텐부르크오프데어타우버|로텐부르크 오프 데어 타우버|Rothenburg ob der Tauber|Rothenburg",
+      "scene": "Rothenburg ob der Tauber: the Plonlein's half-timbered house between two cobbled lanes and medieval gate towers",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "DE"
+      ]
+    },
+    {
+      "id": "ch-bern",
+      "englishName": "Bern",
+      "name": "베른",
+      "countryCode": "CH",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Bern|Berne",
+      "scene": "Bern: the Zytglogge clock tower, sandstone arcades and the Aare river curving around the old town",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CH"
+      ]
+    },
+    {
+      "id": "ch-lausanne",
+      "englishName": "Lausanne",
+      "name": "로잔",
+      "countryCode": "CH",
+      "group": "europe",
+      "theme": "lake",
+      "kind": "city",
+      "aliases": "Lausanne",
+      "scene": "Lausanne: Lausanne Cathedral above hillside rooftops, Lake Geneva and a small waterfront promenade",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CH"
+      ]
+    },
+    {
+      "id": "ch-grindelwald",
+      "englishName": "Grindelwald",
+      "name": "그린델발트",
+      "countryCode": "CH",
+      "group": "europe",
+      "theme": "mountain",
+      "kind": "town",
+      "aliases": "그린델왈드|Grindelwald",
+      "scene": "Grindelwald: wooden Alpine chalets across a green valley, the immense Eiger mountain face and a small mountain train",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CH"
+      ]
+    },
+    {
+      "id": "pt-sintra",
+      "englishName": "Sintra",
+      "name": "신트라",
+      "countryCode": "PT",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "town",
+      "aliases": "Sintra",
+      "scene": "Sintra: the red and yellow towers of Pena Palace rising above wooded hills",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "PT"
+      ]
+    },
+    {
+      "id": "pt-funchal",
+      "englishName": "Funchal",
+      "name": "푼샬",
+      "countryCode": "PT",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "푼찰|Funchal",
+      "scene": "Funchal: Funchal's hillside red-roofed buildings, its harbor and a cable car above tropical greenery",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "PT"
+      ]
+    },
+    {
+      "id": "nl-rotterdam",
+      "englishName": "Rotterdam",
+      "name": "로테르담",
+      "countryCode": "NL",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Rotterdam",
+      "scene": "Rotterdam: the white Erasmus Bridge over the Nieuwe Maas, the yellow Cube Houses and a modern waterfront",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "NL"
+      ]
+    },
+    {
+      "id": "ru-saint-petersburg",
+      "englishName": "Saint Petersburg",
+      "name": "상트페테르부르크",
+      "countryCode": "RU",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "상트페테르부르그|Saint Petersburg|St Petersburg|St. Petersburg|Санкт-Петербург",
+      "scene": "Saint Petersburg: the green and white Winter Palace beside the broad Neva River, Palace Bridge and elegant historic waterfront buildings",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "RU"
+      ]
+    },
+    {
+      "id": "at-salzburg",
+      "englishName": "Salzburg",
+      "name": "잘츠부르크",
+      "countryCode": "AT",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Salzburg",
+      "scene": "Salzburg: Hohensalzburg Fortress above the cathedral domes and old town beside the Salzach river",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "AT"
+      ]
+    },
+    {
+      "id": "at-innsbruck",
+      "englishName": "Innsbruck",
+      "name": "인스브루크",
+      "countryCode": "AT",
+      "group": "europe",
+      "theme": "mountain",
+      "kind": "city",
+      "aliases": "Innsbruck",
+      "scene": "Innsbruck: the Golden Roof among colorful old-town facades with the Nordkette Alps rising behind",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "AT"
+      ]
+    },
+    {
+      "id": "at-hallstatt",
+      "englishName": "Hallstatt",
+      "name": "할슈타트",
+      "countryCode": "AT",
+      "group": "europe",
+      "theme": "lake",
+      "kind": "town",
+      "aliases": "Hallstatt",
+      "scene": "Hallstatt: Hallstatt's lakeside church spire and compact wooden houses below steep forested mountains reflected in the lake",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "AT"
+      ]
+    },
+    {
+      "id": "cz-cesky-krumlov",
+      "englishName": "Cesky Krumlov",
+      "name": "체스키 크룸로프",
+      "countryCode": "CZ",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "town",
+      "aliases": "체스키크룸로프|Cesky Krumlov|Český Krumlov",
+      "scene": "Cesky Krumlov: the decorated castle tower above red-roofed houses enclosed by a bend of the Vltava river",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CZ"
+      ]
+    },
+    {
+      "id": "be-brussels",
+      "englishName": "Brussels",
+      "name": "브뤼셀",
+      "countryCode": "BE",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "브뤼쎌|Brussels|Bruxelles|Brussel",
+      "scene": "Brussels: the ornate Grand Place guildhalls and Brussels Town Hall's slender Gothic tower",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "BE"
+      ]
+    },
+    {
+      "id": "be-bruges",
+      "englishName": "Bruges",
+      "name": "브뤼헤",
+      "countryCode": "BE",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "브루게|브루헤|Bruges|Brugge",
+      "scene": "Bruges: the Belfry above medieval brick houses, an arched canal bridge and a few swans on the water",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "BE"
+      ]
+    },
+    {
+      "id": "be-ghent",
+      "englishName": "Ghent",
+      "name": "겐트",
+      "countryCode": "BE",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "헨트|Ghent|Gent",
+      "scene": "Ghent: the stepped gables of Graslei beside the Leie river and the towers of Ghent's old center",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "BE"
+      ]
+    },
+    {
+      "id": "ie-dublin",
+      "englishName": "Dublin",
+      "name": "더블린",
+      "countryCode": "IE",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Dublin|Baile Átha Cliath",
+      "scene": "Dublin: the white Ha'penny Bridge over the River Liffey, Georgian buildings and a colorful traditional pub frontage",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "IE"
+      ]
+    },
+    {
+      "id": "ie-galway",
+      "englishName": "Galway",
+      "name": "골웨이",
+      "countryCode": "IE",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "골웨이시|Galway|Gaillimh",
+      "scene": "Galway: the colorful houses of the Long Walk along Galway Bay, the Spanish Arch and small fishing boats",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "IE"
+      ]
+    },
+    {
+      "id": "no-oslo",
+      "englishName": "Oslo",
+      "name": "오슬로",
+      "countryCode": "NO",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Oslo",
+      "scene": "Oslo: the sloping white roof of the Oslo Opera House beside the fjord and a restrained modern waterfront",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "NO"
+      ]
+    },
+    {
+      "id": "no-bergen",
+      "englishName": "Bergen",
+      "name": "베르겐",
+      "countryCode": "NO",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Bergen",
+      "scene": "Bergen: the colorful wooden gabled buildings of Bryggen along the harbor with green mountains behind",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "NO"
+      ]
+    },
+    {
+      "id": "se-stockholm",
+      "englishName": "Stockholm",
+      "name": "스톡홀름",
+      "countryCode": "SE",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Stockholm",
+      "scene": "Stockholm: the warm-colored facades of Gamla Stan, Stockholm City Hall's square tower and island waterways",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "SE"
+      ]
+    },
+    {
+      "id": "dk-copenhagen",
+      "englishName": "Copenhagen",
+      "name": "코펜하겐",
+      "countryCode": "DK",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "코펜하겐시|Copenhagen|København|Kobenhavn",
+      "scene": "Copenhagen: the colorful Nyhavn waterfront, traditional sailing boats and a small bicycle beside the canal",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "DK"
+      ]
+    },
+    {
+      "id": "fi-helsinki",
+      "englishName": "Helsinki",
+      "name": "헬싱키",
+      "countryCode": "FI",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Helsinki|Helsingfors",
+      "scene": "Helsinki: the white Helsinki Cathedral with its green dome above broad steps, waterfront market awnings and the harbor",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "FI"
+      ]
+    },
+    {
+      "id": "fi-rovaniemi",
+      "englishName": "Rovaniemi",
+      "name": "로바니에미",
+      "countryCode": "FI",
+      "group": "europe",
+      "theme": "forest",
+      "kind": "city",
+      "aliases": "Rovaniemi",
+      "scene": "Rovaniemi: wooden buildings at Santa Claus Village, snow-covered pine trees and a small reindeer beneath northern lights",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "FI"
+      ]
+    },
+    {
+      "id": "is-reykjavik",
+      "englishName": "Reykjavik",
+      "name": "레이캬비크",
+      "countryCode": "IS",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "레이캬비크시|Reykjavik|Reykjavík",
+      "scene": "Reykjavik: the stepped concrete tower of Hallgrimskirkja, colorful low roofs and a blue bay with distant mountains",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "IS"
+      ]
+    },
+    {
+      "id": "gr-athens",
+      "englishName": "Athens",
+      "name": "아테네",
+      "countryCode": "GR",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Athens|Athina|Αθήνα",
+      "scene": "Athens: the Parthenon on the Acropolis above pale city rooftops and a few olive trees",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "GR"
+      ]
+    },
+    {
+      "id": "gr-thessaloniki",
+      "englishName": "Thessaloniki",
+      "name": "테살로니키",
+      "countryCode": "GR",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "살로니키|Thessaloniki|Salonika|Θεσσαλονίκη",
+      "scene": "Thessaloniki: the round White Tower on the seafront promenade, the Thermaic Gulf and compact waterfront buildings",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "GR"
+      ]
+    },
+    {
+      "id": "gr-santorini",
+      "englishName": "Santorini",
+      "name": "산토리니",
+      "countryCode": "GR",
+      "group": "europe",
+      "theme": "island",
+      "kind": "island",
+      "aliases": "Santorini|Thira|산토리니섬|Σαντορίνη",
+      "scene": "Santorini: whitewashed cliffside houses and blue-domed churches above the deep-blue volcanic caldera",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "GR"
+      ]
+    },
+    {
+      "id": "gr-rhodes",
+      "englishName": "Rhodes",
+      "name": "로도스",
+      "countryCode": "GR",
+      "group": "europe",
+      "theme": "island",
+      "kind": "island",
+      "aliases": "로도스섬|로데스|Rhodes|Rodos|Ρόδος|Rhodes Island",
+      "scene": "Rhodes: Rhodes' medieval stone walls and Palace of the Grand Master beside the harbor and coastal windmills",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "GR"
+      ]
+    },
+    {
+      "id": "gr-heraklion",
+      "englishName": "Heraklion",
+      "name": "이라클리온",
+      "countryCode": "GR",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "헤라클리온|Heraklion|Iraklio|Ηράκλειο",
+      "scene": "Heraklion: the stone Koules fortress at Heraklion's harbor, fishing boats and old Venetian waterfront walls",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "GR"
+      ]
+    },
+    {
+      "id": "hu-budapest",
+      "englishName": "Budapest",
+      "name": "부다페스트",
+      "countryCode": "HU",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Budapest",
+      "scene": "Budapest: the Hungarian Parliament Building beside the Danube, the Chain Bridge and Buda's green hillside",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "HU"
+      ]
+    },
+    {
+      "id": "pl-warsaw",
+      "englishName": "Warsaw",
+      "name": "바르샤바",
+      "countryCode": "PL",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Warsaw|Warszawa",
+      "scene": "Warsaw: the colorful Old Town market-square facades, the Royal Castle and Sigismund's Column",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "PL"
+      ]
+    },
+    {
+      "id": "pl-krakow",
+      "englishName": "Krakow",
+      "name": "크라쿠프",
+      "countryCode": "PL",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "크라코프|Krakow|Kraków|Cracow",
+      "scene": "Krakow: the two unequal towers of St Mary's Basilica and the long Cloth Hall on the main market square",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "PL"
+      ]
+    },
+    {
+      "id": "pl-gdansk",
+      "englishName": "Gdansk",
+      "name": "그단스크",
+      "countryCode": "PL",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Gdansk|Gdańsk|Danzig",
+      "scene": "Gdansk: the historic wooden port crane over the Motlawa river, narrow gabled townhouses and a small boat",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "PL"
+      ]
+    },
+    {
+      "id": "hr-dubrovnik",
+      "englishName": "Dubrovnik",
+      "name": "두브로브니크",
+      "countryCode": "HR",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Dubrovnik",
+      "scene": "Dubrovnik: Dubrovnik's stone city walls around terracotta roofs beside the turquoise Adriatic",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "HR"
+      ]
+    },
+    {
+      "id": "hr-split",
+      "englishName": "Split",
+      "name": "스플리트",
+      "countryCode": "HR",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Split",
+      "scene": "Split: Diocletian's Palace walls and the tall cathedral bell tower behind the palm-lined Riva waterfront",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "HR"
+      ]
+    },
+    {
+      "id": "hr-zagreb",
+      "englishName": "Zagreb",
+      "name": "자그레브",
+      "countryCode": "HR",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Zagreb",
+      "scene": "Zagreb: St Mark's Church with its patterned tile roof, Upper Town facades and a small funicular",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "HR"
+      ]
+    },
+    {
+      "id": "si-ljubljana",
+      "englishName": "Ljubljana",
+      "name": "류블랴나",
+      "countryCode": "SI",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "루블랴나|Ljubljana",
+      "scene": "Ljubljana: the Triple Bridge over the Ljubljanica, pastel riverside facades and Ljubljana Castle on the green hill",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "SI"
+      ]
+    },
+    {
+      "id": "si-bled",
+      "englishName": "Bled",
+      "name": "블레드",
+      "countryCode": "SI",
+      "group": "europe",
+      "theme": "lake",
+      "kind": "town",
+      "aliases": "Bled|블레드호수|Lake Bled",
+      "scene": "Bled: the church on the small island in Lake Bled, a wooden pletna boat and the cliff-top castle",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "SI"
+      ]
+    },
+    {
+      "id": "sk-bratislava",
+      "englishName": "Bratislava",
+      "name": "브라티슬라바",
+      "countryCode": "SK",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Bratislava",
+      "scene": "Bratislava: the white four-towered Bratislava Castle above old-town roofs and the Danube",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "SK"
+      ]
+    },
+    {
+      "id": "ro-bucharest",
+      "englishName": "Bucharest",
+      "name": "부쿠레슈티",
+      "countryCode": "RO",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "부카레스트|Bucharest|București|Bucuresti",
+      "scene": "Bucharest: the circular Romanian Athenaeum with its colonnaded facade, a green garden and elegant city buildings",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "RO"
+      ]
+    },
+    {
+      "id": "bg-sofia",
+      "englishName": "Sofia",
+      "name": "소피아",
+      "countryCode": "BG",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Sofia|София",
+      "scene": "Sofia: the golden and green domes of Alexander Nevsky Cathedral and the distant slopes of Vitosha Mountain",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "BG"
+      ]
+    },
+    {
+      "id": "rs-belgrade",
+      "englishName": "Belgrade",
+      "name": "베오그라드",
+      "countryCode": "RS",
+      "group": "europe",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Belgrade|Beograd|Београд",
+      "scene": "Belgrade: Belgrade Fortress and Kalemegdan greenery above the meeting of the Sava and Danube rivers",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "RS"
+      ]
+    },
+    {
+      "id": "ee-tallinn",
+      "englishName": "Tallinn",
+      "name": "탈린",
+      "countryCode": "EE",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Tallinn|Tallin",
+      "scene": "Tallinn: red-tiled old-town roofs, medieval stone wall towers and church spires above the Baltic coast",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "EE"
+      ]
+    },
+    {
+      "id": "lv-riga",
+      "englishName": "Riga",
+      "name": "리가",
+      "countryCode": "LV",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Riga|Rīga",
+      "scene": "Riga: the ornate House of the Black Heads, the spire of St Peter's Church and a small old-town square",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "LV"
+      ]
+    },
+    {
+      "id": "lt-vilnius",
+      "englishName": "Vilnius",
+      "name": "빌뉴스",
+      "countryCode": "LT",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Vilnius",
+      "scene": "Vilnius: Gediminas Castle Tower on its green hill, the white cathedral and its separate bell tower",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "LT"
+      ]
+    },
+    {
+      "id": "mt-valletta",
+      "englishName": "Valletta",
+      "name": "발레타",
+      "countryCode": "MT",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Valletta|Il-Belt Valletta",
+      "scene": "Valletta: honey-colored limestone buildings and fortified bastions above the Grand Harbour, with a traditional painted boat",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "MT"
+      ]
+    },
+    {
+      "id": "me-kotor",
+      "englishName": "Kotor",
+      "name": "코토르",
+      "countryCode": "ME",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "town",
+      "aliases": "Kotor|Котор",
+      "scene": "Kotor: the walled stone old town and red roofs below rugged mountains, with the sheltered Bay of Kotor",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "ME"
+      ]
+    },
+    {
+      "id": "ba-sarajevo",
+      "englishName": "Sarajevo",
+      "name": "사라예보",
+      "countryCode": "BA",
+      "group": "europe",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Sarajevo|Сарајево",
+      "scene": "Sarajevo: the wooden Sebilj fountain in Bascarsija, Ottoman market roofs and green hills around the city",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "BA"
+      ]
+    },
+    {
+      "id": "tr-antalya",
+      "englishName": "Antalya",
+      "name": "안탈리아",
+      "countryCode": "TR",
+      "group": "europe",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Antalya",
+      "scene": "Antalya: the stone harbor walls and red roofs of Kaleici, the Yivli Minaret and small boats on the Mediterranean",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "TR"
+      ]
+    },
+    {
+      "id": "tr-cappadocia",
+      "englishName": "Cappadocia",
+      "name": "카파도키아",
+      "countryCode": "TR",
+      "group": "europe",
+      "theme": "mountain",
+      "kind": "region",
+      "aliases": "카파도키야|Cappadocia|Kapadokya",
+      "scene": "Cappadocia: the fairy-chimney rock formations of Cappadocia, cave dwellings and a few hot-air balloons over the valleys",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "TR"
+      ]
+    },
+    {
+      "id": "us-san-diego",
+      "englishName": "San Diego",
+      "name": "샌디에이고",
+      "countryCode": "US",
+      "group": "north-america",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "샌디에고|San Diego",
+      "scene": "San Diego: the waterfront skyline, a small harbor sailboat and the Spanish Colonial tower and arcades of Balboa Park",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "US"
+      ]
+    },
+    {
+      "id": "us-orlando",
+      "englishName": "Orlando",
+      "name": "올랜도",
+      "countryCode": "US",
+      "group": "north-america",
+      "theme": "lake",
+      "kind": "city",
+      "aliases": "Orlando",
+      "scene": "Orlando: the Lake Eola fountain, white swan boats, palms and the downtown skyline",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "US"
+      ]
+    },
+    {
+      "id": "us-new-orleans",
+      "englishName": "New Orleans",
+      "name": "뉴올리언스",
+      "countryCode": "US",
+      "group": "north-america",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "뉴올리언즈|New Orleans",
+      "scene": "New Orleans: St Louis Cathedral beside Jackson Square, French Quarter ironwork balconies and a historic streetcar",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "US"
+      ]
+    },
+    {
+      "id": "us-san-antonio",
+      "englishName": "San Antonio",
+      "name": "샌안토니오",
+      "countryCode": "US",
+      "group": "north-america",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "샌 안토니오|San Antonio",
+      "scene": "San Antonio: the Alamo's curved stone facade and the River Walk with an arched bridge and a small river boat",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "US"
+      ]
+    },
+    {
+      "id": "us-austin",
+      "englishName": "Austin",
+      "name": "오스틴",
+      "countryCode": "US",
+      "group": "north-america",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Austin",
+      "scene": "Austin: the pink-granite Texas State Capitol, Lady Bird Lake and a small kayak with the city skyline behind",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "US"
+      ]
+    },
+    {
+      "id": "us-philadelphia",
+      "englishName": "Philadelphia",
+      "name": "필라델피아",
+      "countryCode": "US",
+      "group": "north-america",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Philadelphia|Philly",
+      "scene": "Philadelphia: Independence Hall's brick facade and white clock tower, with the Liberty Bell as a small foreground landmark",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "US"
+      ]
+    },
+    {
+      "id": "us-denver",
+      "englishName": "Denver",
+      "name": "덴버",
+      "countryCode": "US",
+      "group": "north-america",
+      "theme": "mountain",
+      "kind": "city",
+      "aliases": "Denver",
+      "scene": "Denver: the historic Union Station facade, a modern downtown skyline and the Rocky Mountains behind",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "US"
+      ]
+    },
+    {
+      "id": "us-dallas",
+      "englishName": "Dallas",
+      "name": "댈러스",
+      "countryCode": "US",
+      "group": "north-america",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "달라스|Dallas",
+      "scene": "Dallas: Reunion Tower's distinctive sphere above the downtown skyline and the white arch of Margaret Hunt Hill Bridge",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "US"
+      ]
+    },
+    {
+      "id": "us-nashville",
+      "englishName": "Nashville",
+      "name": "내슈빌",
+      "countryCode": "US",
+      "group": "north-america",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "네슈빌|Nashville",
+      "scene": "Nashville: Broadway's music-venue facades, a small guitar motif and the twin-spired AT&T Building skyline",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "US"
+      ]
+    },
+    {
+      "id": "us-savannah",
+      "englishName": "Savannah",
+      "name": "서배너",
+      "countryCode": "US",
+      "group": "north-america",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "사바나|Savannah",
+      "scene": "Savannah: the Forsyth Park fountain framed by live oaks and Spanish moss, with historic brick houses",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "US"
+      ]
+    },
+    {
+      "id": "us-key-west",
+      "englishName": "Key West",
+      "name": "키웨스트",
+      "countryCode": "US",
+      "group": "north-america",
+      "theme": "island",
+      "kind": "city",
+      "aliases": "키 웨스트|Key West",
+      "scene": "Key West: pastel wooden conch houses, palms, the striped Southernmost Point marker and a blue ocean edge",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "US"
+      ]
+    },
+    {
+      "id": "us-santa-fe",
+      "englishName": "Santa Fe",
+      "name": "산타페",
+      "countryCode": "US",
+      "group": "north-america",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "산타 페|Santa Fe",
+      "scene": "Santa Fe: the adobe Palace of the Governors, warm pueblo-style buildings and a small plaza beneath distant mountains",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "US"
+      ]
+    },
+    {
+      "id": "us-anchorage",
+      "englishName": "Anchorage",
+      "name": "앵커리지",
+      "countryCode": "US",
+      "group": "north-america",
+      "theme": "mountain",
+      "kind": "city",
+      "aliases": "Anchorage",
+      "scene": "Anchorage: low downtown buildings and a small seaplane, the waters of Cook Inlet and snow-capped Chugach peaks",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "US"
+      ]
+    },
+    {
+      "id": "us-salt-lake-city",
+      "englishName": "Salt Lake City",
+      "name": "솔트레이크시티",
+      "countryCode": "US",
+      "group": "north-america",
+      "theme": "mountain",
+      "kind": "city",
+      "aliases": "솔트레이크 시티|Salt Lake City|SLC",
+      "scene": "Salt Lake City: the domed Utah State Capitol, landscaped grounds and the dramatic Wasatch Mountains behind the city",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "US"
+      ]
+    },
+    {
+      "id": "ca-vancouver",
+      "englishName": "Vancouver",
+      "name": "밴쿠버",
+      "countryCode": "CA",
+      "group": "north-america",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "벤쿠버|Vancouver",
+      "scene": "Vancouver: the white sails of Canada Place, harbor water and a small seaplane beneath forested coastal mountains",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CA"
+      ]
+    },
+    {
+      "id": "ca-toronto",
+      "englishName": "Toronto",
+      "name": "토론토",
+      "countryCode": "CA",
+      "group": "north-america",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Toronto",
+      "scene": "Toronto: the CN Tower above the downtown skyline, Lake Ontario and a small island ferry",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CA"
+      ]
+    },
+    {
+      "id": "ca-montreal",
+      "englishName": "Montreal",
+      "name": "몬트리올",
+      "countryCode": "CA",
+      "group": "north-america",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Montreal|Montréal",
+      "scene": "Montreal: the twin towers of Notre-Dame Basilica, old stone facades and the waterfront of the Old Port",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CA"
+      ]
+    },
+    {
+      "id": "ca-quebec-city",
+      "englishName": "Quebec City",
+      "name": "퀘벡시티",
+      "countryCode": "CA",
+      "group": "north-america",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "퀘벡|퀘벡 시티|Quebec City|Québec City|Ville de Québec|Quebec|Québec",
+      "scene": "Quebec City: Chateau Frontenac above the old city's stone buildings and the broad Saint Lawrence River",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CA"
+      ]
+    },
+    {
+      "id": "ca-victoria",
+      "englishName": "Victoria",
+      "name": "빅토리아",
+      "countryCode": "CA",
+      "group": "north-america",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Victoria|Victoria BC|Victoria British Columbia",
+      "scene": "Victoria: the domed British Columbia Parliament Buildings beside the Inner Harbour, flower beds and a small harbor ferry",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CA"
+      ]
+    },
+    {
+      "id": "ca-ottawa",
+      "englishName": "Ottawa",
+      "name": "오타와",
+      "countryCode": "CA",
+      "group": "north-america",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Ottawa",
+      "scene": "Ottawa: Parliament Hill's Gothic towers above the Ottawa River, with a small section of the Rideau Canal locks",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CA"
+      ]
+    },
+    {
+      "id": "ca-banff",
+      "englishName": "Banff",
+      "name": "밴프",
+      "countryCode": "CA",
+      "group": "north-america",
+      "theme": "mountain",
+      "kind": "town",
+      "aliases": "Banff",
+      "scene": "Banff: Banff Avenue's alpine town buildings, towering Cascade Mountain and the blue-green Bow River",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CA"
+      ]
+    },
+    {
+      "id": "mx-mexico-city",
+      "englishName": "Mexico City",
+      "name": "멕시코시티",
+      "countryCode": "MX",
+      "group": "latin-america",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "멕시코 시티|Mexico City|Ciudad de México|Ciudad de Mexico|CDMX",
+      "scene": "Mexico City: the Metropolitan Cathedral and National Palace around the broad Zocalo plaza",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "MX"
+      ]
+    },
+    {
+      "id": "mx-cancun",
+      "englishName": "Cancun",
+      "name": "칸쿤",
+      "countryCode": "MX",
+      "group": "latin-america",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Cancun|Cancún",
+      "scene": "Cancun: the long white-sand beach, bright turquoise Caribbean water, palms and a curved line of beachfront resort buildings",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "MX"
+      ]
+    },
+    {
+      "id": "mx-oaxaca",
+      "englishName": "Oaxaca",
+      "name": "오아하카",
+      "countryCode": "MX",
+      "group": "latin-america",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "와하카|Oaxaca|Oaxaca City|Oaxaca de Juárez|Oaxaca de Juarez",
+      "scene": "Oaxaca: the ornate Santo Domingo church facade, colorful low buildings and a small cobbled street",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "MX"
+      ]
+    },
+    {
+      "id": "br-rio-de-janeiro",
+      "englishName": "Rio de Janeiro",
+      "name": "리우데자네이루",
+      "countryCode": "BR",
+      "group": "latin-america",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "리우 데 자네이루|리우|Rio de Janeiro|Rio",
+      "scene": "Rio de Janeiro: Christ the Redeemer above green hills, Sugarloaf Mountain and the curved shoreline of Guanabara Bay",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "BR"
+      ]
+    },
+    {
+      "id": "br-sao-paulo",
+      "englishName": "Sao Paulo",
+      "name": "상파울루",
+      "countryCode": "BR",
+      "group": "latin-america",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Sao Paulo|São Paulo",
+      "scene": "Sao Paulo: the red-supported glass block of MASP on Avenida Paulista with the dense modern skyline behind",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "BR"
+      ]
+    },
+    {
+      "id": "br-salvador",
+      "englishName": "Salvador",
+      "name": "사우바도르",
+      "countryCode": "BR",
+      "group": "latin-america",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "살바도르|Salvador|Salvador da Bahia",
+      "scene": "Salvador: Pelourinho's colorful colonial facades, a Baroque church and the waterfront overlooking All Saints Bay",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "BR"
+      ]
+    },
+    {
+      "id": "ar-buenos-aires",
+      "englishName": "Buenos Aires",
+      "name": "부에노스아이레스",
+      "countryCode": "AR",
+      "group": "latin-america",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "부에노스 아이레스|Buenos Aires",
+      "scene": "Buenos Aires: the Obelisco and broad city avenue with a small grouping of La Boca's brightly painted facades",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "AR"
+      ]
+    },
+    {
+      "id": "ar-bariloche",
+      "englishName": "Bariloche",
+      "name": "바릴로체",
+      "countryCode": "AR",
+      "group": "latin-america",
+      "theme": "lake",
+      "kind": "city",
+      "aliases": "Bariloche|San Carlos de Bariloche",
+      "scene": "Bariloche: the stone and timber Centro Civico beside Lake Nahuel Huapi with snowy Andean peaks behind",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "AR"
+      ]
+    },
+    {
+      "id": "pe-lima",
+      "englishName": "Lima",
+      "name": "리마",
+      "countryCode": "PE",
+      "group": "latin-america",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Lima",
+      "scene": "Lima: Lima Cathedral and the yellow arcaded buildings around Plaza Mayor, with their carved wooden balconies",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "PE"
+      ]
+    },
+    {
+      "id": "pe-cusco",
+      "englishName": "Cusco",
+      "name": "쿠스코",
+      "countryCode": "PE",
+      "group": "latin-america",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "쿠즈코|Cusco|Cuzco",
+      "scene": "Cusco: Cusco's cathedral and Plaza de Armas, red-tiled rooftops and precise Inca stone walls below Andean hills",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "PE"
+      ]
+    },
+    {
+      "id": "pe-machu-picchu",
+      "englishName": "Machu Picchu",
+      "name": "마추픽추",
+      "countryCode": "PE",
+      "group": "latin-america",
+      "theme": "mountain",
+      "kind": "region",
+      "aliases": "마추 픽추|Machu Picchu|MachuPicchu",
+      "scene": "Machu Picchu: the terraced Inca stone ruins on the green ridge below the distinctive steep peak of Huayna Picchu",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "PE"
+      ]
+    },
+    {
+      "id": "co-bogota",
+      "englishName": "Bogota",
+      "name": "보고타",
+      "countryCode": "CO",
+      "group": "latin-america",
+      "theme": "mountain",
+      "kind": "city",
+      "aliases": "Bogota|Bogotá",
+      "scene": "Bogota: colorful La Candelaria houses, a colonial church and the green Monserrate hill above the city",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CO"
+      ]
+    },
+    {
+      "id": "co-cartagena",
+      "englishName": "Cartagena",
+      "name": "카르타헤나",
+      "countryCode": "CO",
+      "group": "latin-america",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Cartagena|Cartagena de Indias",
+      "scene": "Cartagena: the yellow Clock Tower gate, flower-covered colonial balconies and the old city's Caribbean sea walls",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CO"
+      ]
+    },
+    {
+      "id": "cl-santiago",
+      "englishName": "Santiago",
+      "name": "산티아고",
+      "countryCode": "CL",
+      "group": "latin-america",
+      "theme": "mountain",
+      "kind": "city",
+      "aliases": "칠레 산티아고|Santiago|Santiago de Chile",
+      "scene": "Santiago: the Metropolitan Cathedral and a modern skyline beneath the towering snow-capped Andes",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CL"
+      ]
+    },
+    {
+      "id": "ec-quito",
+      "englishName": "Quito",
+      "name": "키토",
+      "countryCode": "EC",
+      "group": "latin-america",
+      "theme": "mountain",
+      "kind": "city",
+      "aliases": "Quito|San Francisco de Quito",
+      "scene": "Quito: Quito's colonial churches and tiled roofs, the El Panecillo hilltop monument and distant Andean ridges",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "EC"
+      ]
+    },
+    {
+      "id": "cu-havana",
+      "englishName": "Havana",
+      "name": "아바나",
+      "countryCode": "CU",
+      "group": "latin-america",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "하바나|Havana|La Habana|Habana",
+      "scene": "Havana: the domed Capitolio, colorful old facades, a vintage car and the Malecon seafront",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CU"
+      ]
+    },
+    {
+      "id": "cr-san-jose",
+      "englishName": "San Jose",
+      "name": "산호세",
+      "countryCode": "CR",
+      "group": "latin-america",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "코스타리카 산호세|San Jose|San José|San Jose Costa Rica",
+      "scene": "San Jose: the National Theatre of Costa Rica beside a small planted plaza with green hills behind the city",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "CR"
+      ]
+    },
+    {
+      "id": "pa-panama-city",
+      "englishName": "Panama City",
+      "name": "파나마시티",
+      "countryCode": "PA",
+      "group": "latin-america",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "파나마 시티|Panama City|Ciudad de Panamá|Ciudad de Panama",
+      "scene": "Panama City: Casco Viejo's cathedral towers and colorful colonial facades with the modern waterfront skyline beyond",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "PA"
+      ]
+    },
+    {
+      "id": "eg-cairo",
+      "englishName": "Cairo",
+      "name": "카이로",
+      "countryCode": "EG",
+      "group": "africa",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Cairo|Al Qahirah|القاهرة",
+      "scene": "Cairo: the Cairo Tower beside the Nile, a small felucca sailboat and the domes and minarets of the historic city",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "EG"
+      ]
+    },
+    {
+      "id": "eg-giza",
+      "englishName": "Giza",
+      "name": "기자",
+      "countryCode": "EG",
+      "group": "africa",
+      "theme": "desert",
+      "kind": "city",
+      "aliases": "기자시|Giza|Gizeh|الجيزة",
+      "scene": "Giza: the three great pyramids rising from desert sand with the Great Sphinx in the foreground",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "EG"
+      ]
+    },
+    {
+      "id": "eg-luxor",
+      "englishName": "Luxor",
+      "name": "룩소르",
+      "countryCode": "EG",
+      "group": "africa",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Luxor|Al Uqsur|الأقصر",
+      "scene": "Luxor: the monumental columns and obelisk of Luxor Temple beside the Nile, with palms and a small felucca",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "EG"
+      ]
+    },
+    {
+      "id": "ma-marrakesh",
+      "englishName": "Marrakesh",
+      "name": "마라케시",
+      "countryCode": "MA",
+      "group": "africa",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "마라케슈|Marrakesh|Marrakech|مراكش",
+      "scene": "Marrakesh: the Koutoubia minaret, warm medina roofs and the market stalls of Jemaa el-Fnaa",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "MA"
+      ]
+    },
+    {
+      "id": "ma-fes",
+      "englishName": "Fes",
+      "name": "페스",
+      "countryCode": "MA",
+      "group": "africa",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Fes|Fez|Fès|فاس",
+      "scene": "Fes: the ornate blue Bab Bou Jeloud gate opening toward the dense ochre rooftops of the old medina",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "MA"
+      ]
+    },
+    {
+      "id": "ma-casablanca",
+      "englishName": "Casablanca",
+      "name": "카사블랑카",
+      "countryCode": "MA",
+      "group": "africa",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Casablanca|الدار البيضاء",
+      "scene": "Casablanca: the tall minaret and patterned facade of Hassan II Mosque beside the Atlantic Ocean",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "MA"
+      ]
+    },
+    {
+      "id": "za-cape-town",
+      "englishName": "Cape Town",
+      "name": "케이프타운",
+      "countryCode": "ZA",
+      "group": "africa",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "케이프 타운|Cape Town|Kaapstad",
+      "scene": "Cape Town: flat-topped Table Mountain above the waterfront, small harbor boats and colorful Bo-Kaap houses",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "ZA"
+      ]
+    },
+    {
+      "id": "za-johannesburg",
+      "englishName": "Johannesburg",
+      "name": "요하네스버그",
+      "countryCode": "ZA",
+      "group": "africa",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "요하네스버르그|Johannesburg|Joburg|Jozi",
+      "scene": "Johannesburg: the Nelson Mandela Bridge and downtown skyline with the tall Carlton Centre and a few jacaranda trees",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "ZA"
+      ]
+    },
+    {
+      "id": "zw-victoria-falls",
+      "englishName": "Victoria Falls",
+      "name": "빅토리아폴스",
+      "countryCode": "ZW",
+      "group": "africa",
+      "theme": "forest",
+      "kind": "town",
+      "aliases": "빅토리아 폴스|Victoria Falls|Victoria Falls Town",
+      "scene": "Victoria Falls: the broad curtain of Victoria Falls spilling into its green gorge with rising spray and a small rainbow",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "ZW"
+      ]
+    },
+    {
+      "id": "ke-nairobi",
+      "englishName": "Nairobi",
+      "name": "나이로비",
+      "countryCode": "KE",
+      "group": "africa",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Nairobi",
+      "scene": "Nairobi: the cylindrical Kenyatta International Convention Centre above the city and acacia trees in a green foreground",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "KE"
+      ]
+    },
+    {
+      "id": "tz-zanzibar-city",
+      "englishName": "Zanzibar City",
+      "name": "잔지바르시티",
+      "countryCode": "TZ",
+      "group": "africa",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "잔지바르 시티|스톤타운|스톤 타운|Zanzibar City|Stone Town|Zanzibar Town",
+      "scene": "Zanzibar City: Stone Town's carved wooden doorways, pale coral-stone buildings and a dhow sailing beside the waterfront",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "TZ"
+      ]
+    },
+    {
+      "id": "tn-tunis",
+      "englishName": "Tunis",
+      "name": "튀니스",
+      "countryCode": "TN",
+      "group": "africa",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Tunis|تونس",
+      "scene": "Tunis: the square minaret of the Zitouna Mosque above the medina, pale walls and narrow market lanes",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "TN"
+      ]
+    },
+    {
+      "id": "na-swakopmund",
+      "englishName": "Swakopmund",
+      "name": "스바코프문트",
+      "countryCode": "NA",
+      "group": "africa",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "스와코프문트|Swakopmund",
+      "scene": "Swakopmund: the striped red-and-white lighthouse, coastal town buildings and a wooden jetty with golden desert dunes nearby",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "NA"
+      ]
+    },
+    {
+      "id": "au-melbourne",
+      "englishName": "Melbourne",
+      "name": "멜버른",
+      "countryCode": "AU",
+      "group": "oceania",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Melbourne",
+      "scene": "Melbourne: the yellow Flinders Street Station facade, a green tram and the Yarra river with modern city towers",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "AU"
+      ]
+    },
+    {
+      "id": "au-brisbane",
+      "englishName": "Brisbane",
+      "name": "브리즈번",
+      "countryCode": "AU",
+      "group": "oceania",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Brisbane",
+      "scene": "Brisbane: the steel Story Bridge over the curving Brisbane River, city towers and subtropical greenery",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "AU"
+      ]
+    },
+    {
+      "id": "au-gold-coast",
+      "englishName": "Gold Coast",
+      "name": "골드코스트",
+      "countryCode": "AU",
+      "group": "oceania",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "골드 코스트|Gold Coast",
+      "scene": "Gold Coast: the long sandy beach at Surfers Paradise, curling surf and the tall coastal skyline with Q1",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "AU"
+      ]
+    },
+    {
+      "id": "au-cairns",
+      "englishName": "Cairns",
+      "name": "케언스",
+      "countryCode": "AU",
+      "group": "oceania",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "케언즈|Cairns",
+      "scene": "Cairns: the palm-lined Cairns Esplanade, its blue swimming lagoon and a small marina against green tropical hills",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "AU"
+      ]
+    },
+    {
+      "id": "au-perth",
+      "englishName": "Perth",
+      "name": "퍼스",
+      "countryCode": "AU",
+      "group": "oceania",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Perth",
+      "scene": "Perth: Elizabeth Quay's curved pedestrian bridge, the Swan River and Perth's skyline with Kings Park greenery",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "AU"
+      ]
+    },
+    {
+      "id": "au-adelaide",
+      "englishName": "Adelaide",
+      "name": "애들레이드",
+      "countryCode": "AU",
+      "group": "oceania",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "아들레이드|Adelaide",
+      "scene": "Adelaide: the arched glass roof of the Adelaide Botanic Garden Bicentennial Conservatory, garden palms and elegant city buildings",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "AU"
+      ]
+    },
+    {
+      "id": "au-hobart",
+      "englishName": "Hobart",
+      "name": "호바트",
+      "countryCode": "AU",
+      "group": "oceania",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Hobart",
+      "scene": "Hobart: Salamanca's sandstone warehouses, small fishing boats at the waterfront and kunanyi Mount Wellington",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "AU"
+      ]
+    },
+    {
+      "id": "nz-auckland",
+      "englishName": "Auckland",
+      "name": "오클랜드",
+      "countryCode": "NZ",
+      "group": "oceania",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Auckland|Tāmaki Makaurau|Tamaki Makaurau",
+      "scene": "Auckland: the Sky Tower above the Viaduct Harbour skyline, marina yachts and blue harbor water",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "NZ"
+      ]
+    },
+    {
+      "id": "nz-queenstown",
+      "englishName": "Queenstown",
+      "name": "퀸스타운",
+      "countryCode": "NZ",
+      "group": "oceania",
+      "theme": "lake",
+      "kind": "town",
+      "aliases": "퀸즈타운|Queenstown",
+      "scene": "Queenstown: Queenstown beside Lake Wakatipu, a small historic steamship and the steep Remarkables mountain range",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "NZ"
+      ]
+    },
+    {
+      "id": "nz-rotorua",
+      "englishName": "Rotorua",
+      "name": "로토루아",
+      "countryCode": "NZ",
+      "group": "oceania",
+      "theme": "lake",
+      "kind": "city",
+      "aliases": "Rotorua",
+      "scene": "Rotorua: the Pohutu geyser and steaming geothermal pools, a small carved Maori meeting-house facade and green surroundings",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "NZ"
+      ]
+    },
+    {
+      "id": "nz-christchurch",
+      "englishName": "Christchurch",
+      "name": "크라이스트처치",
+      "countryCode": "NZ",
+      "group": "oceania",
+      "theme": "urban",
+      "kind": "city",
+      "aliases": "Christchurch",
+      "scene": "Christchurch: a heritage tram, the Avon River with a small punt and the stone Gothic Revival buildings of the Arts Centre",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "NZ"
+      ]
+    },
+    {
+      "id": "fj-nadi",
+      "englishName": "Nadi",
+      "name": "난디",
+      "countryCode": "FJ",
+      "group": "oceania",
+      "theme": "island",
+      "kind": "town",
+      "aliases": "난디타운|Nadi",
+      "scene": "Nadi: the vividly colored tower of Sri Siva Subramaniya Temple, palm trees and green tropical hills",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "FJ"
+      ]
+    },
+    {
+      "id": "pf-bora-bora",
+      "englishName": "Bora Bora",
+      "name": "보라보라",
+      "countryCode": "PF",
+      "group": "oceania",
+      "theme": "island",
+      "kind": "island",
+      "aliases": "보라보라섬|Bora Bora|Borabora",
+      "scene": "Bora Bora: the steep green Mount Otemanu above a turquoise lagoon, overwater bungalows and a small outrigger canoe",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "PF"
+      ]
+    },
+    {
+      "id": "bh-manama",
+      "englishName": "Manama",
+      "name": "마나마",
+      "countryCode": "BH",
+      "group": "middle-east",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Manama|المنامة",
+      "scene": "Manama: the paired sail-shaped towers of Bahrain World Trade Center with their connecting wind turbines beside the waterfront",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "BH"
+      ]
+    },
+    {
+      "id": "kw-kuwait-city",
+      "englishName": "Kuwait City",
+      "name": "쿠웨이트시티",
+      "countryCode": "KW",
+      "group": "middle-east",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "쿠웨이트 시티|Kuwait City|مدينة الكويت",
+      "scene": "Kuwait City: the Kuwait Towers with their blue-green spheres beside the coastal promenade and Gulf water",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "KW"
+      ]
+    },
+    {
+      "id": "jo-amman",
+      "englishName": "Amman",
+      "name": "암만",
+      "countryCode": "JO",
+      "group": "middle-east",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Amman|عمان",
+      "scene": "Amman: the Roman Temple of Hercules columns on Amman Citadel above layers of pale hillside buildings",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "JO"
+      ]
+    },
+    {
+      "id": "jo-petra",
+      "englishName": "Petra",
+      "name": "페트라",
+      "countryCode": "JO",
+      "group": "middle-east",
+      "theme": "desert",
+      "kind": "region",
+      "aliases": "Petra|البتراء",
+      "scene": "Petra: the rose-colored Treasury facade carved into Petra's sandstone cliff, framed by the narrow Siq canyon",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "JO"
+      ]
+    },
+    {
+      "id": "il-jerusalem",
+      "englishName": "Jerusalem",
+      "name": "예루살렘",
+      "countryCode": "IL",
+      "countryCodes": [
+        "IL",
+        "PS"
+      ],
+      "group": "middle-east",
+      "theme": "traditional",
+      "kind": "city",
+      "aliases": "Jerusalem|Yerushalayim|Al Quds|Al-Quds|ירושלים|القدس",
+      "scene": "Jerusalem: the old city's pale stone walls and rooftops, the golden Dome of the Rock and a few olive trees",
+      "isNew": true,
+      "assetVersion": 4
+    },
+    {
+      "id": "il-tel-aviv",
+      "englishName": "Tel Aviv",
+      "name": "텔아비브",
+      "countryCode": "IL",
+      "group": "middle-east",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "텔아비브야포|텔아비브-야포|Tel Aviv|Tel Aviv Yafo|Tel Aviv-Yafo|תל אביב",
+      "scene": "Tel Aviv: the Mediterranean beach promenade, white Bauhaus-style buildings and the old port buildings of Jaffa",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "IL"
+      ]
+    },
+    {
+      "id": "om-salalah",
+      "englishName": "Salalah",
+      "name": "살랄라",
+      "countryCode": "OM",
+      "group": "middle-east",
+      "theme": "coast",
+      "kind": "city",
+      "aliases": "Salalah|صلالة",
+      "scene": "Salalah: coconut palms along a pale beach, the turquoise sea and the seasonally green hills of Dhofar",
+      "isNew": true,
+      "assetVersion": 4,
+      "countryCodes": [
+        "OM"
+      ]
+    }
+  ],
+  "contactGroups": [
+    "east-asia",
+    "southeast-asia",
+    "south-asia",
+    "europe",
+    "caucasus-central-asia",
+    "north-america",
+    "latin-america",
+    "middle-east",
+    "africa",
+    "oceania"
+  ],
+  "sources": [
+    {
+      "title": "Japan National Tourism Organization destinations",
+      "url": "https://www.japan.travel/en/destinations/"
+    },
+    {
+      "title": "Tourism Australia places",
+      "url": "https://www.australia.com/en-us/places.html"
+    },
+    {
+      "title": "Visit Europe official tourism portal",
+      "url": "https://visiteurope.com/?lang=en_gb"
+    },
+    {
+      "title": "Visit The USA official tourism",
+      "url": "https://www.visittheusa.com/"
+    },
+    {
+      "title": "Incredible India: Agra",
+      "url": "https://www.incredibleindia.gov.in/en/uttar-pradesh/agra"
+    },
+    {
+      "title": "UNESCO: Samarkand",
+      "url": "https://whc.unesco.org/en/list/603"
+    },
+    {
+      "title": "Tourism New Zealand",
+      "url": "https://www.newzealand.com/au/"
+    },
+    {
+      "title": "Visit Brasil experiences",
+      "url": "https://www.visitbrasil.com/en/experiences/"
+    },
+    {
+      "title": "South African Tourism cities",
+      "url": "https://www.southafrica.net/gl/en/travel/category/south-africas-cities"
+    },
+    {
+      "title": "Moroccan National Tourism Office",
+      "url": "https://www.visitmorocco.com/en/travel"
+    },
+    {
+      "title": "UNESCO: Tallinn",
+      "url": "https://whc.unesco.org/en/list/822"
+    },
+    {
+      "title": "UNESCO: Kotor",
+      "url": "https://whc.unesco.org/en/list/125"
+    },
+    {
+      "title": "UNESCO: Vilnius",
+      "url": "https://whc.unesco.org/en/list/541"
+    },
+    {
+      "title": "UNESCO: Cesky Krumlov",
+      "url": "https://whc.unesco.org/en/list/617/"
+    },
+    {
+      "title": "UNESCO: Riga",
+      "url": "https://whc.unesco.org/en/list/852"
+    },
+    {
+      "title": "UNESCO: Valletta",
+      "url": "https://whc.unesco.org/en/list/131/"
+    },
+    {
+      "title": "Visit Finland: Rovaniemi",
+      "url": "https://www.visitfinland.com/en/places-to-go/lapland/rovaniemi/"
+    },
+    {
+      "title": "Visit Finland: Helsinki",
+      "url": "https://www.visitfinland.com/en/places-to-go/helsinki-region/helsinki-city/"
+    },
+    {
+      "title": "UNESCO: Old City of Jerusalem and its Walls",
+      "url": "https://whc.unesco.org/en/list/148"
+    },
+    {
+      "title": "Tourism Fiji: Nadi",
+      "url": "https://www.fiji.travel/places-to-go/nadi/locations/top-things-to-do-in-nadi"
+    },
+    {
+      "title": "Visit Costa Rica: National Theatre",
+      "url": "https://www.visitcostarica.com/planning-your-trip/other-activities/teatro-nacional"
+    },
+    {
+      "title": "UNESCO: Kremlin and Red Square, Moscow",
+      "url": "https://whc.unesco.org/en/list/545/"
+    },
+    {
+      "title": "UNESCO: Historic Centre of Saint Petersburg",
+      "url": "https://whc.unesco.org/en/list/540/"
+    }
+  ],
+  "generationMode": "I2I continuation of the user's explicitly approved current Suncheon style; independent fixed canonical reference per asset, never a chain",
+  "composition": "Travel information left; destination art right; desktop 800x480 and mobile 480x600; existing small title sizes retained",
+  "selectionNote": "Editorial destination coverage, not a statistical ranking. Existing city, town, island and regional identities are retained."
+}

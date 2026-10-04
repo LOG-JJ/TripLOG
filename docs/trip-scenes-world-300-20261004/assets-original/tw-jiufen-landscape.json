@@ -1,0 +1,21 @@
+{
+  "jobId": "tw-jiufen-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104c1-35a4-74c3-916e-ab6a0794b3ea/exec-879741d0-12eb-4c9f-b5b6-766abeabd464.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/tw-jiufen-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Jiufen: hillside tea houses and old lanes with red lanterns, tiled roofs and the sea visible beyond. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "7d64dab07912019f82f54cb356f6e537f3c73af3ee3f5badaa410a5fbd3b11be",
+  "savedSha256": "7d64dab07912019f82f54cb356f6e537f3c73af3ee3f5badaa410a5fbd3b11be",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T08:13:34.586Z",
+  "savedAt": "2026-10-04T08:14:18.750541+00:00"
+}

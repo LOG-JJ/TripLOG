@@ -1,0 +1,21 @@
+{
+  "jobId": "ch-lausanne-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-6893bdb1-470d-4fa0-8d1d-3025a9ff1133.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/ch-lausanne-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Lausanne: Lausanne Cathedral above hillside rooftops, Lake Geneva and a small waterfront promenade. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "dc7c9f594081c8083bdc8e270e75a35fe9af092f00440312ad5c4eb273b512e4",
+  "savedSha256": "dc7c9f594081c8083bdc8e270e75a35fe9af092f00440312ad5c4eb273b512e4",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T10:01:54.212Z",
+  "savedAt": "2026-10-04T10:02:27.688503+00:00"
+}

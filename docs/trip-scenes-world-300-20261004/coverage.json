@@ -1,0 +1,6541 @@
+{
+  "scope": "300 overseas destinations; editorial coverage, not a visitor ranking",
+  "overseas": 300,
+  "domestic": 30,
+  "overseasWithPreparedArtwork": 300,
+  "newOriginalsSaved": 484,
+  "newOriginalsExpected": 484,
+  "records": [
+    {
+      "id": "gu-guam",
+      "name": "괌",
+      "kind": "island",
+      "countryCodes": [
+        "GU",
+        "US"
+      ],
+      "countries": [
+        "괌",
+        "미국"
+      ],
+      "aliases": [
+        "괌",
+        "Guam"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/gu-guam.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/gu-guam-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "gr-rhodes",
+      "name": "로도스",
+      "kind": "island",
+      "countryCodes": [
+        "GR"
+      ],
+      "countries": [
+        "그리스"
+      ],
+      "aliases": [
+        "로도스",
+        "로도스섬",
+        "로데스",
+        "Rhodes",
+        "Rodos",
+        "Ρόδος",
+        "Rhodes Island"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/gr-rhodes.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/gr-rhodes-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "gr-santorini",
+      "name": "산토리니",
+      "kind": "island",
+      "countryCodes": [
+        "GR"
+      ],
+      "countries": [
+        "그리스"
+      ],
+      "aliases": [
+        "산토리니",
+        "Santorini",
+        "Thira",
+        "산토리니섬",
+        "Σαντορίνη"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/gr-santorini.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/gr-santorini-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "gr-athens",
+      "name": "아테네",
+      "kind": "city",
+      "countryCodes": [
+        "GR"
+      ],
+      "countries": [
+        "그리스"
+      ],
+      "aliases": [
+        "아테네",
+        "Athens",
+        "Athina",
+        "Αθήνα"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/gr-athens.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/gr-athens-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "gr-heraklion",
+      "name": "이라클리온",
+      "kind": "city",
+      "countryCodes": [
+        "GR"
+      ],
+      "countries": [
+        "그리스"
+      ],
+      "aliases": [
+        "이라클리온",
+        "헤라클리온",
+        "Heraklion",
+        "Iraklio",
+        "Ηράκλειο"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/gr-heraklion.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/gr-heraklion-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "gr-thessaloniki",
+      "name": "테살로니키",
+      "kind": "city",
+      "countryCodes": [
+        "GR"
+      ],
+      "countries": [
+        "그리스"
+      ],
+      "aliases": [
+        "테살로니키",
+        "살로니키",
+        "Thessaloniki",
+        "Salonika",
+        "Θεσσαλονίκη"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/gr-thessaloniki.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/gr-thessaloniki-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "na-swakopmund",
+      "name": "스바코프문트",
+      "kind": "city",
+      "countryCodes": [
+        "NA"
+      ],
+      "countries": [
+        "나미비아"
+      ],
+      "aliases": [
+        "스바코프문트",
+        "스와코프문트",
+        "Swakopmund"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/na-swakopmund.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/na-swakopmund-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "za-johannesburg",
+      "name": "요하네스버그",
+      "kind": "city",
+      "countryCodes": [
+        "ZA"
+      ],
+      "countries": [
+        "남아프리카"
+      ],
+      "aliases": [
+        "요하네스버그",
+        "요하네스버르그",
+        "Johannesburg",
+        "Joburg",
+        "Jozi"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/za-johannesburg.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/za-johannesburg-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "za-cape-town",
+      "name": "케이프타운",
+      "kind": "city",
+      "countryCodes": [
+        "ZA"
+      ],
+      "countries": [
+        "남아프리카"
+      ],
+      "aliases": [
+        "케이프타운",
+        "케이프 타운",
+        "Cape Town",
+        "Kaapstad"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/za-cape-town.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/za-cape-town-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "nl-rotterdam",
+      "name": "로테르담",
+      "kind": "city",
+      "countryCodes": [
+        "NL"
+      ],
+      "countries": [
+        "네덜란드"
+      ],
+      "aliases": [
+        "로테르담",
+        "Rotterdam"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/nl-rotterdam.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/nl-rotterdam-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "nl-amsterdam",
+      "name": "암스테르담",
+      "kind": "city",
+      "countryCodes": [
+        "NL"
+      ],
+      "countries": [
+        "네덜란드"
+      ],
+      "aliases": [
+        "암스테르담",
+        "Amsterdam"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/nl-amsterdam.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/nl-amsterdam-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "np-kathmandu",
+      "name": "카트만두",
+      "kind": "city",
+      "countryCodes": [
+        "NP"
+      ],
+      "countries": [
+        "네팔"
+      ],
+      "aliases": [
+        "카트만두",
+        "Kathmandu",
+        "काठमाडौँ"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/np-kathmandu.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/np-kathmandu-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "np-pokhara",
+      "name": "포카라",
+      "kind": "city",
+      "countryCodes": [
+        "NP"
+      ],
+      "countries": [
+        "네팔"
+      ],
+      "aliases": [
+        "포카라",
+        "Pokhara",
+        "पोखरा"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/np-pokhara.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/np-pokhara-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "no-bergen",
+      "name": "베르겐",
+      "kind": "city",
+      "countryCodes": [
+        "NO"
+      ],
+      "countries": [
+        "노르웨이"
+      ],
+      "aliases": [
+        "베르겐",
+        "Bergen"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/no-bergen.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/no-bergen-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "no-oslo",
+      "name": "오슬로",
+      "kind": "city",
+      "countryCodes": [
+        "NO"
+      ],
+      "countries": [
+        "노르웨이"
+      ],
+      "aliases": [
+        "오슬로",
+        "Oslo"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/no-oslo.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/no-oslo-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "nz-rotorua",
+      "name": "로토루아",
+      "kind": "city",
+      "countryCodes": [
+        "NZ"
+      ],
+      "countries": [
+        "뉴질랜드"
+      ],
+      "aliases": [
+        "로토루아",
+        "Rotorua"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/nz-rotorua.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/nz-rotorua-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "nz-auckland",
+      "name": "오클랜드",
+      "kind": "city",
+      "countryCodes": [
+        "NZ"
+      ],
+      "countries": [
+        "뉴질랜드"
+      ],
+      "aliases": [
+        "오클랜드",
+        "Auckland",
+        "Tāmaki Makaurau",
+        "Tamaki Makaurau"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/nz-auckland.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/nz-auckland-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "nz-queenstown",
+      "name": "퀸스타운",
+      "kind": "town",
+      "countryCodes": [
+        "NZ"
+      ],
+      "countries": [
+        "뉴질랜드"
+      ],
+      "aliases": [
+        "퀸스타운",
+        "퀸즈타운",
+        "Queenstown"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/nz-queenstown.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/nz-queenstown-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "nz-christchurch",
+      "name": "크라이스트처치",
+      "kind": "city",
+      "countryCodes": [
+        "NZ"
+      ],
+      "countries": [
+        "뉴질랜드"
+      ],
+      "aliases": [
+        "크라이스트처치",
+        "Christchurch"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/nz-christchurch.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/nz-christchurch-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "tw-kaohsiung",
+      "name": "가오슝",
+      "kind": "city",
+      "countryCodes": [
+        "TW"
+      ],
+      "countries": [
+        "대만"
+      ],
+      "aliases": [
+        "가오슝",
+        "Kaohsiung",
+        "高雄",
+        "高雄市"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/tw-kaohsiung.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/tw-kaohsiung-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "tw-chiayi",
+      "name": "자이",
+      "kind": "city",
+      "countryCodes": [
+        "TW"
+      ],
+      "countries": [
+        "대만"
+      ],
+      "aliases": [
+        "자이",
+        "치아이",
+        "Chiayi",
+        "嘉義",
+        "嘉义",
+        "嘉義市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/tw-chiayi.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/tw-chiayi-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "tw-jiufen",
+      "name": "지우펀",
+      "kind": "town",
+      "countryCodes": [
+        "TW"
+      ],
+      "countries": [
+        "대만"
+      ],
+      "aliases": [
+        "지우펀",
+        "지우픈",
+        "Jiufen",
+        "Jiu Fen",
+        "九份"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/tw-jiufen.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/tw-jiufen-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "tw-tainan",
+      "name": "타이난",
+      "kind": "city",
+      "countryCodes": [
+        "TW"
+      ],
+      "countries": [
+        "대만"
+      ],
+      "aliases": [
+        "타이난",
+        "Tainan",
+        "臺南",
+        "台南",
+        "臺南市",
+        "台南市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/tw-tainan.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/tw-tainan-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "tw-taipei",
+      "name": "타이베이",
+      "kind": "city",
+      "countryCodes": [
+        "TW"
+      ],
+      "countries": [
+        "대만"
+      ],
+      "aliases": [
+        "타이베이",
+        "대만 타이베이",
+        "타이페이",
+        "Taipei",
+        "臺北",
+        "台北",
+        "臺北市",
+        "台北市"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v2/tw-taipei.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/tw-taipei-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "tw-taichung",
+      "name": "타이중",
+      "kind": "city",
+      "countryCodes": [
+        "TW"
+      ],
+      "countries": [
+        "대만"
+      ],
+      "aliases": [
+        "타이중",
+        "Taichung",
+        "臺中",
+        "台中",
+        "臺中市",
+        "台中市"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/tw-taichung.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/tw-taichung-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "tw-hualien",
+      "name": "화롄",
+      "kind": "city",
+      "countryCodes": [
+        "TW"
+      ],
+      "countries": [
+        "대만"
+      ],
+      "aliases": [
+        "화롄",
+        "화련",
+        "Hualien",
+        "花蓮",
+        "花蓮市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/tw-hualien.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/tw-hualien-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "dk-copenhagen",
+      "name": "코펜하겐",
+      "kind": "city",
+      "countryCodes": [
+        "DK"
+      ],
+      "countries": [
+        "덴마크"
+      ],
+      "aliases": [
+        "코펜하겐",
+        "코펜하겐시",
+        "Copenhagen",
+        "København",
+        "Kobenhavn"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/dk-copenhagen.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/dk-copenhagen-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "de-nuremberg",
+      "name": "뉘른베르크",
+      "kind": "city",
+      "countryCodes": [
+        "DE"
+      ],
+      "countries": [
+        "독일"
+      ],
+      "aliases": [
+        "뉘른베르크",
+        "뉘른베르그",
+        "Nuremberg",
+        "Nürnberg",
+        "Nurnberg",
+        "Nuernberg"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/de-nuremberg.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/de-nuremberg-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "de-dresden",
+      "name": "드레스덴",
+      "kind": "city",
+      "countryCodes": [
+        "DE"
+      ],
+      "countries": [
+        "독일"
+      ],
+      "aliases": [
+        "드레스덴",
+        "Dresden"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/de-dresden.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/de-dresden-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "de-rothenburg-ob-der-tauber",
+      "name": "로텐부르크",
+      "kind": "town",
+      "countryCodes": [
+        "DE"
+      ],
+      "countries": [
+        "독일"
+      ],
+      "aliases": [
+        "로텐부르크",
+        "로텐부르크오프데어타우버",
+        "로텐부르크 오프 데어 타우버",
+        "Rothenburg ob der Tauber",
+        "Rothenburg"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/de-rothenburg-ob-der-tauber.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/de-rothenburg-ob-der-tauber-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "de-munich",
+      "name": "뮌헨",
+      "kind": "city",
+      "countryCodes": [
+        "DE"
+      ],
+      "countries": [
+        "독일"
+      ],
+      "aliases": [
+        "뮌헨",
+        "Munich",
+        "München",
+        "Munchen",
+        "Muenchen"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/de-munich.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/de-munich-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "de-berlin",
+      "name": "베를린",
+      "kind": "city",
+      "countryCodes": [
+        "DE"
+      ],
+      "countries": [
+        "독일"
+      ],
+      "aliases": [
+        "베를린",
+        "Berlin"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/de-berlin.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/de-berlin-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "de-cologne",
+      "name": "쾰른",
+      "kind": "city",
+      "countryCodes": [
+        "DE"
+      ],
+      "countries": [
+        "독일"
+      ],
+      "aliases": [
+        "쾰른",
+        "Cologne",
+        "Köln",
+        "Koln",
+        "Koeln"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/de-cologne.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/de-cologne-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "de-frankfurt",
+      "name": "프랑크푸르트",
+      "kind": "city",
+      "countryCodes": [
+        "DE"
+      ],
+      "countries": [
+        "독일"
+      ],
+      "aliases": [
+        "프랑크푸르트",
+        "프랑크푸르트암마인",
+        "Frankfurt",
+        "Frankfurt am Main"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/de-frankfurt.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/de-frankfurt-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "de-heidelberg",
+      "name": "하이델베르크",
+      "kind": "city",
+      "countryCodes": [
+        "DE"
+      ],
+      "countries": [
+        "독일"
+      ],
+      "aliases": [
+        "하이델베르크",
+        "Heidelberg"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/de-heidelberg.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/de-heidelberg-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "de-hamburg",
+      "name": "함부르크",
+      "kind": "city",
+      "countryCodes": [
+        "DE"
+      ],
+      "countries": [
+        "독일"
+      ],
+      "aliases": [
+        "함부르크",
+        "Hamburg"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/de-hamburg.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/de-hamburg-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "la-luang-prabang",
+      "name": "루앙프라방",
+      "kind": "city",
+      "countryCodes": [
+        "LA"
+      ],
+      "countries": [
+        "라오스"
+      ],
+      "aliases": [
+        "루앙프라방",
+        "루앙프라뱅",
+        "Luang Prabang",
+        "Louangphabang"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/la-luang-prabang.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/la-luang-prabang-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "la-vientiane",
+      "name": "비엔티안",
+      "kind": "city",
+      "countryCodes": [
+        "LA"
+      ],
+      "countries": [
+        "라오스"
+      ],
+      "aliases": [
+        "비엔티안",
+        "비엔티엔",
+        "Vientiane"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/la-vientiane.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/la-vientiane-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "lv-riga",
+      "name": "리가",
+      "kind": "city",
+      "countryCodes": [
+        "LV"
+      ],
+      "countries": [
+        "라트비아"
+      ],
+      "aliases": [
+        "리가",
+        "Riga",
+        "Rīga"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/lv-riga.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/lv-riga-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ru-moscow",
+      "name": "모스크바",
+      "kind": "city",
+      "countryCodes": [
+        "RU"
+      ],
+      "countries": [
+        "러시아"
+      ],
+      "aliases": [
+        "모스크바",
+        "Moscow",
+        "Moskva",
+        "Москва"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ru-moscow.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ru-moscow-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ru-saint-petersburg",
+      "name": "상트페테르부르크",
+      "kind": "city",
+      "countryCodes": [
+        "RU"
+      ],
+      "countries": [
+        "러시아"
+      ],
+      "aliases": [
+        "상트페테르부르크",
+        "상트페테르부르그",
+        "Saint Petersburg",
+        "St Petersburg",
+        "St. Petersburg",
+        "Санкт-Петербург"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ru-saint-petersburg.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ru-saint-petersburg-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ro-bucharest",
+      "name": "부쿠레슈티",
+      "kind": "city",
+      "countryCodes": [
+        "RO"
+      ],
+      "countries": [
+        "루마니아"
+      ],
+      "aliases": [
+        "부쿠레슈티",
+        "부카레스트",
+        "Bucharest",
+        "București",
+        "Bucuresti"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ro-bucharest.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ro-bucharest-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "lt-vilnius",
+      "name": "빌뉴스",
+      "kind": "city",
+      "countryCodes": [
+        "LT"
+      ],
+      "countries": [
+        "리투아니아"
+      ],
+      "aliases": [
+        "빌뉴스",
+        "Vilnius"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/lt-vilnius.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/lt-vilnius-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "mo-macau",
+      "name": "마카오",
+      "kind": "region",
+      "countryCodes": [
+        "MO",
+        "CN"
+      ],
+      "countries": [
+        "마카오",
+        "중국"
+      ],
+      "aliases": [
+        "마카오",
+        "마카우",
+        "Macau",
+        "Macao",
+        "澳門",
+        "澳门"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/mo-macau.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/mo-macau-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "my-langkawi",
+      "name": "랑카위",
+      "kind": "island",
+      "countryCodes": [
+        "MY"
+      ],
+      "countries": [
+        "말레이시아"
+      ],
+      "aliases": [
+        "랑카위",
+        "랑카위섬",
+        "Langkawi"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/my-langkawi.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/my-langkawi-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "my-malacca",
+      "name": "믈라카",
+      "kind": "city",
+      "countryCodes": [
+        "MY"
+      ],
+      "countries": [
+        "말레이시아"
+      ],
+      "aliases": [
+        "믈라카",
+        "말라카",
+        "멜라카",
+        "Malacca",
+        "Melaka"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/my-malacca.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/my-malacca-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "my-george-town",
+      "name": "조지타운",
+      "kind": "city",
+      "countryCodes": [
+        "MY"
+      ],
+      "countries": [
+        "말레이시아"
+      ],
+      "aliases": [
+        "조지타운",
+        "조지 타운",
+        "George Town",
+        "Georgetown",
+        "乔治市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/my-george-town.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/my-george-town-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "my-kota-kinabalu",
+      "name": "코타키나발루",
+      "kind": "city",
+      "countryCodes": [
+        "MY"
+      ],
+      "countries": [
+        "말레이시아"
+      ],
+      "aliases": [
+        "코타키나발루",
+        "Kota Kinabalu",
+        "코타 키나발루"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/my-kota-kinabalu.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/my-kota-kinabalu-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "my-kuala-lumpur",
+      "name": "쿠알라룸푸르",
+      "kind": "city",
+      "countryCodes": [
+        "MY"
+      ],
+      "countries": [
+        "말레이시아"
+      ],
+      "aliases": [
+        "쿠알라룸푸르",
+        "쿠알라 룸푸르",
+        "Kuala Lumpur",
+        "KualaLumpur",
+        "KL"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/my-kuala-lumpur.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/my-kuala-lumpur-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "mx-mexico-city",
+      "name": "멕시코시티",
+      "kind": "city",
+      "countryCodes": [
+        "MX"
+      ],
+      "countries": [
+        "멕시코"
+      ],
+      "aliases": [
+        "멕시코시티",
+        "멕시코 시티",
+        "Mexico City",
+        "Ciudad de México",
+        "Ciudad de Mexico",
+        "CDMX"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/mx-mexico-city.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/mx-mexico-city-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "mx-oaxaca",
+      "name": "오아하카",
+      "kind": "city",
+      "countryCodes": [
+        "MX"
+      ],
+      "countries": [
+        "멕시코"
+      ],
+      "aliases": [
+        "오아하카",
+        "와하카",
+        "Oaxaca",
+        "Oaxaca City",
+        "Oaxaca de Juárez",
+        "Oaxaca de Juarez"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/mx-oaxaca.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/mx-oaxaca-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "mx-cancun",
+      "name": "칸쿤",
+      "kind": "city",
+      "countryCodes": [
+        "MX"
+      ],
+      "countries": [
+        "멕시코"
+      ],
+      "aliases": [
+        "칸쿤",
+        "Cancun",
+        "Cancún"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/mx-cancun.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/mx-cancun-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ma-marrakesh",
+      "name": "마라케시",
+      "kind": "city",
+      "countryCodes": [
+        "MA"
+      ],
+      "countries": [
+        "모로코"
+      ],
+      "aliases": [
+        "마라케시",
+        "마라케슈",
+        "Marrakesh",
+        "Marrakech",
+        "مراكش"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ma-marrakesh.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ma-marrakesh-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ma-casablanca",
+      "name": "카사블랑카",
+      "kind": "city",
+      "countryCodes": [
+        "MA"
+      ],
+      "countries": [
+        "모로코"
+      ],
+      "aliases": [
+        "카사블랑카",
+        "Casablanca",
+        "الدار البيضاء"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ma-casablanca.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ma-casablanca-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ma-fes",
+      "name": "페스",
+      "kind": "city",
+      "countryCodes": [
+        "MA"
+      ],
+      "countries": [
+        "모로코"
+      ],
+      "aliases": [
+        "페스",
+        "Fes",
+        "Fez",
+        "Fès",
+        "فاس"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ma-fes.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ma-fes-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "me-kotor",
+      "name": "코토르",
+      "kind": "town",
+      "countryCodes": [
+        "ME"
+      ],
+      "countries": [
+        "몬테네그로"
+      ],
+      "aliases": [
+        "코토르",
+        "Kotor",
+        "Котор"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/me-kotor.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/me-kotor-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "mv-maldives",
+      "name": "몰디브",
+      "kind": "region",
+      "countryCodes": [
+        "MV"
+      ],
+      "countries": [
+        "몰디브"
+      ],
+      "aliases": [
+        "몰디브",
+        "Maldives",
+        "Maldives Islands"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/mv-maldives.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/mv-maldives-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "mt-valletta",
+      "name": "발레타",
+      "kind": "city",
+      "countryCodes": [
+        "MT"
+      ],
+      "countries": [
+        "몰타"
+      ],
+      "aliases": [
+        "발레타",
+        "Valletta",
+        "Il-Belt Valletta"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/mt-valletta.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/mt-valletta-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "mn-ulaanbaatar",
+      "name": "울란바토르",
+      "kind": "city",
+      "countryCodes": [
+        "MN"
+      ],
+      "countries": [
+        "몽골"
+      ],
+      "aliases": [
+        "울란바토르",
+        "울란바타르",
+        "Ulaanbaatar",
+        "Ulan Bator",
+        "Улаанбаатар"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/mn-ulaanbaatar.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/mn-ulaanbaatar-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-nashville",
+      "name": "내슈빌",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "내슈빌",
+        "네슈빌",
+        "Nashville"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/us-nashville.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/us-nashville-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-new-orleans",
+      "name": "뉴올리언스",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "뉴올리언스",
+        "뉴올리언즈",
+        "New Orleans"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/us-new-orleans.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/us-new-orleans-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-new-york",
+      "name": "뉴욕",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "뉴욕",
+        "New York",
+        "New York City",
+        "NYC"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/us-new-york.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/us-new-york-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-dallas",
+      "name": "댈러스",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "댈러스",
+        "달라스",
+        "Dallas"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/us-dallas.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/us-dallas-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-denver",
+      "name": "덴버",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "덴버",
+        "Denver"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/us-denver.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/us-denver-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-las-vegas",
+      "name": "라스베이거스",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "라스베이거스",
+        "라스베가스",
+        "Las Vegas",
+        "Las Vegas City"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/us-las-vegas.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/us-las-vegas-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-los-angeles",
+      "name": "로스앤젤레스",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "로스앤젤레스",
+        "LA",
+        "엘에이",
+        "로스엔젤레스",
+        "Los Angeles",
+        "Los Angeles City"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/us-los-angeles.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/us-los-angeles-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-miami",
+      "name": "마이애미",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "마이애미",
+        "Miami"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/us-miami.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/us-miami-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-boston",
+      "name": "보스턴",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "보스턴",
+        "Boston"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/us-boston.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/us-boston-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-santa-fe",
+      "name": "산타페",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "산타페",
+        "산타 페",
+        "Santa Fe"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/us-santa-fe.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/us-santa-fe-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-san-diego",
+      "name": "샌디에이고",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "샌디에이고",
+        "샌디에고",
+        "San Diego"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/us-san-diego.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/us-san-diego-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-san-antonio",
+      "name": "샌안토니오",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "샌안토니오",
+        "샌 안토니오",
+        "San Antonio"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/us-san-antonio.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/us-san-antonio-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-san-francisco",
+      "name": "샌프란시스코",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "샌프란시스코",
+        "San Francisco"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/us-san-francisco.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/us-san-francisco-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-savannah",
+      "name": "서배너",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "서배너",
+        "사바나",
+        "Savannah"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/us-savannah.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/us-savannah-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-salt-lake-city",
+      "name": "솔트레이크시티",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "솔트레이크시티",
+        "솔트레이크 시티",
+        "Salt Lake City",
+        "SLC"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/us-salt-lake-city.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/us-salt-lake-city-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-seattle",
+      "name": "시애틀",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "시애틀",
+        "Seattle"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/us-seattle.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/us-seattle-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-chicago",
+      "name": "시카고",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "시카고",
+        "Chicago"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/us-chicago.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/us-chicago-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-anchorage",
+      "name": "앵커리지",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "앵커리지",
+        "Anchorage"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/us-anchorage.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/us-anchorage-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-austin",
+      "name": "오스틴",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "오스틴",
+        "Austin"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/us-austin.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/us-austin-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-oahu",
+      "name": "오아후",
+      "kind": "island",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "오아후",
+        "오아후섬",
+        "Oahu",
+        "Oʻahu",
+        "Oahu Island"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/us-oahu.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/us-oahu-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-orlando",
+      "name": "올랜도",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "올랜도",
+        "Orlando"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/us-orlando.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/us-orlando-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-washington-dc",
+      "name": "워싱턴 D.C.",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "워싱턴 D.C.",
+        "워싱턴DC",
+        "워싱턴 DC",
+        "워싱턴디씨",
+        "Washington DC",
+        "Washington D.C.",
+        "Washington, D.C.",
+        "District of Columbia"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/us-washington-dc.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/us-washington-dc-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-key-west",
+      "name": "키웨스트",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "키웨스트",
+        "키 웨스트",
+        "Key West"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/us-key-west.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/us-key-west-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-philadelphia",
+      "name": "필라델피아",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "필라델피아",
+        "Philadelphia",
+        "Philly"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/us-philadelphia.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/us-philadelphia-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "us-honolulu",
+      "name": "호놀룰루",
+      "kind": "city",
+      "countryCodes": [
+        "US"
+      ],
+      "countries": [
+        "미국"
+      ],
+      "aliases": [
+        "호놀룰루",
+        "호놀룰루시",
+        "Honolulu"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/us-honolulu.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/us-honolulu-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "mm-bagan",
+      "name": "바간",
+      "kind": "region",
+      "countryCodes": [
+        "MM"
+      ],
+      "countries": [
+        "미얀마"
+      ],
+      "aliases": [
+        "바간",
+        "버간",
+        "Bagan",
+        "Pagan"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/mm-bagan.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/mm-bagan-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "bh-manama",
+      "name": "마나마",
+      "kind": "city",
+      "countryCodes": [
+        "BH"
+      ],
+      "countries": [
+        "바레인"
+      ],
+      "aliases": [
+        "마나마",
+        "Manama",
+        "المنامة"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/bh-manama.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/bh-manama-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "vn-nha-trang",
+      "name": "나트랑",
+      "kind": "city",
+      "countryCodes": [
+        "VN"
+      ],
+      "countries": [
+        "베트남"
+      ],
+      "aliases": [
+        "나트랑",
+        "냐짱",
+        "Nha Trang",
+        "Nhatrang"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v2/vn-nha-trang.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/vn-nha-trang-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "vn-da-nang",
+      "name": "다낭",
+      "kind": "city",
+      "countryCodes": [
+        "VN"
+      ],
+      "countries": [
+        "베트남"
+      ],
+      "aliases": [
+        "다낭",
+        "Da Nang",
+        "Danang",
+        "Đà Nẵng"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v2/vn-da-nang.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/vn-da-nang-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "vn-da-lat",
+      "name": "달랏",
+      "kind": "city",
+      "countryCodes": [
+        "VN"
+      ],
+      "countries": [
+        "베트남"
+      ],
+      "aliases": [
+        "달랏",
+        "다랏",
+        "Dalat",
+        "Da Lat",
+        "Đà Lạt"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/vn-da-lat.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/vn-da-lat-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "vn-phu-quoc",
+      "name": "푸꾸옥",
+      "kind": "island",
+      "countryCodes": [
+        "VN"
+      ],
+      "countries": [
+        "베트남"
+      ],
+      "aliases": [
+        "푸꾸옥",
+        "푸쿠옥",
+        "Phu Quoc",
+        "Phú Quốc"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/vn-phu-quoc.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/vn-phu-quoc-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "vn-hanoi",
+      "name": "하노이",
+      "kind": "city",
+      "countryCodes": [
+        "VN"
+      ],
+      "countries": [
+        "베트남"
+      ],
+      "aliases": [
+        "하노이",
+        "Hanoi",
+        "Ha Noi",
+        "Hà Nội"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/vn-hanoi.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/vn-hanoi-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "vn-ha-long",
+      "name": "하롱베이",
+      "kind": "region",
+      "countryCodes": [
+        "VN"
+      ],
+      "countries": [
+        "베트남"
+      ],
+      "aliases": [
+        "하롱베이",
+        "하롱",
+        "Ha Long",
+        "Halong",
+        "Hạ Long",
+        "Ha Long Bay",
+        "Halong Bay"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/vn-ha-long.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/vn-ha-long-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "vn-hoi-an",
+      "name": "호이안",
+      "kind": "city",
+      "countryCodes": [
+        "VN"
+      ],
+      "countries": [
+        "베트남"
+      ],
+      "aliases": [
+        "호이안",
+        "Hoi An",
+        "Hoian",
+        "Hội An"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/vn-hoi-an.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/vn-hoi-an-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "vn-ho-chi-minh",
+      "name": "호찌민",
+      "kind": "city",
+      "countryCodes": [
+        "VN"
+      ],
+      "countries": [
+        "베트남"
+      ],
+      "aliases": [
+        "호찌민",
+        "호치민",
+        "사이공",
+        "Ho Chi Minh",
+        "Ho Chi Minh City",
+        "Hồ Chí Minh",
+        "Saigon",
+        "Sai Gon"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/vn-ho-chi-minh.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/vn-ho-chi-minh-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "vn-hue",
+      "name": "후에",
+      "kind": "city",
+      "countryCodes": [
+        "VN"
+      ],
+      "countries": [
+        "베트남"
+      ],
+      "aliases": [
+        "후에",
+        "훼",
+        "Hue",
+        "Huế"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/vn-hue.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/vn-hue-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "be-ghent",
+      "name": "겐트",
+      "kind": "city",
+      "countryCodes": [
+        "BE"
+      ],
+      "countries": [
+        "벨기에"
+      ],
+      "aliases": [
+        "겐트",
+        "헨트",
+        "Ghent",
+        "Gent"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/be-ghent.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/be-ghent-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "be-brussels",
+      "name": "브뤼셀",
+      "kind": "city",
+      "countryCodes": [
+        "BE"
+      ],
+      "countries": [
+        "벨기에"
+      ],
+      "aliases": [
+        "브뤼셀",
+        "브뤼쎌",
+        "Brussels",
+        "Bruxelles",
+        "Brussel"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/be-brussels.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/be-brussels-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "be-bruges",
+      "name": "브뤼헤",
+      "kind": "city",
+      "countryCodes": [
+        "BE"
+      ],
+      "countries": [
+        "벨기에"
+      ],
+      "aliases": [
+        "브뤼헤",
+        "브루게",
+        "브루헤",
+        "Bruges",
+        "Brugge"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/be-bruges.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/be-bruges-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ba-sarajevo",
+      "name": "사라예보",
+      "kind": "city",
+      "countryCodes": [
+        "BA"
+      ],
+      "countries": [
+        "보스니아 헤르체고비나"
+      ],
+      "aliases": [
+        "사라예보",
+        "Sarajevo",
+        "Сарајево"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ba-sarajevo.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ba-sarajevo-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "bt-paro",
+      "name": "파로",
+      "kind": "town",
+      "countryCodes": [
+        "BT"
+      ],
+      "countries": [
+        "부탄"
+      ],
+      "aliases": [
+        "파로",
+        "Paro"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/bt-paro.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/bt-paro-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "mp-saipan",
+      "name": "사이판",
+      "kind": "island",
+      "countryCodes": [
+        "MP",
+        "US"
+      ],
+      "countries": [
+        "북마리아나 제도",
+        "미국"
+      ],
+      "aliases": [
+        "사이판",
+        "Saipan"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/mp-saipan.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/mp-saipan-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "bg-sofia",
+      "name": "소피아",
+      "kind": "city",
+      "countryCodes": [
+        "BG"
+      ],
+      "countries": [
+        "불가리아"
+      ],
+      "aliases": [
+        "소피아",
+        "Sofia",
+        "София"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/bg-sofia.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/bg-sofia-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "br-rio-de-janeiro",
+      "name": "리우데자네이루",
+      "kind": "city",
+      "countryCodes": [
+        "BR"
+      ],
+      "countries": [
+        "브라질"
+      ],
+      "aliases": [
+        "리우데자네이루",
+        "리우 데 자네이루",
+        "리우",
+        "Rio de Janeiro",
+        "Rio"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/br-rio-de-janeiro.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/br-rio-de-janeiro-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "br-salvador",
+      "name": "사우바도르",
+      "kind": "city",
+      "countryCodes": [
+        "BR"
+      ],
+      "countries": [
+        "브라질"
+      ],
+      "aliases": [
+        "사우바도르",
+        "살바도르",
+        "Salvador",
+        "Salvador da Bahia"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/br-salvador.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/br-salvador-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "br-sao-paulo",
+      "name": "상파울루",
+      "kind": "city",
+      "countryCodes": [
+        "BR"
+      ],
+      "countries": [
+        "브라질"
+      ],
+      "aliases": [
+        "상파울루",
+        "Sao Paulo",
+        "São Paulo"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/br-sao-paulo.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/br-sao-paulo-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "sa-riyadh",
+      "name": "리야드",
+      "kind": "city",
+      "countryCodes": [
+        "SA"
+      ],
+      "countries": [
+        "사우디아라비아"
+      ],
+      "aliases": [
+        "리야드",
+        "Riyadh",
+        "الرياض"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/sa-riyadh.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/sa-riyadh-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "sa-jeddah",
+      "name": "제다",
+      "kind": "city",
+      "countryCodes": [
+        "SA"
+      ],
+      "countries": [
+        "사우디아라비아"
+      ],
+      "aliases": [
+        "제다",
+        "젯다",
+        "Jeddah",
+        "Jedda",
+        "جدة"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/sa-jeddah.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/sa-jeddah-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "rs-belgrade",
+      "name": "베오그라드",
+      "kind": "city",
+      "countryCodes": [
+        "RS"
+      ],
+      "countries": [
+        "세르비아"
+      ],
+      "aliases": [
+        "베오그라드",
+        "Belgrade",
+        "Beograd",
+        "Београд"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/rs-belgrade.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/rs-belgrade-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "lk-galle",
+      "name": "갈레",
+      "kind": "city",
+      "countryCodes": [
+        "LK"
+      ],
+      "countries": [
+        "스리랑카"
+      ],
+      "aliases": [
+        "갈레",
+        "갈",
+        "Galle"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/lk-galle.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/lk-galle-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "lk-kandy",
+      "name": "캔디",
+      "kind": "city",
+      "countryCodes": [
+        "LK"
+      ],
+      "countries": [
+        "스리랑카"
+      ],
+      "aliases": [
+        "캔디",
+        "Kandy"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/lk-kandy.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/lk-kandy-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "lk-colombo",
+      "name": "콜롬보",
+      "kind": "city",
+      "countryCodes": [
+        "LK"
+      ],
+      "countries": [
+        "스리랑카"
+      ],
+      "aliases": [
+        "콜롬보",
+        "Colombo"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/lk-colombo.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/lk-colombo-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "se-stockholm",
+      "name": "스톡홀름",
+      "kind": "city",
+      "countryCodes": [
+        "SE"
+      ],
+      "countries": [
+        "스웨덴"
+      ],
+      "aliases": [
+        "스톡홀름",
+        "Stockholm"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/se-stockholm.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/se-stockholm-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ch-grindelwald",
+      "name": "그린델발트",
+      "kind": "town",
+      "countryCodes": [
+        "CH"
+      ],
+      "countries": [
+        "스위스"
+      ],
+      "aliases": [
+        "그린델발트",
+        "그린델왈드",
+        "Grindelwald"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ch-grindelwald.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ch-grindelwald-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ch-lausanne",
+      "name": "로잔",
+      "kind": "city",
+      "countryCodes": [
+        "CH"
+      ],
+      "countries": [
+        "스위스"
+      ],
+      "aliases": [
+        "로잔",
+        "Lausanne"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ch-lausanne.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ch-lausanne-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ch-lucerne",
+      "name": "루체른",
+      "kind": "city",
+      "countryCodes": [
+        "CH"
+      ],
+      "countries": [
+        "스위스"
+      ],
+      "aliases": [
+        "루체른",
+        "Lucerne",
+        "Luzern"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/ch-lucerne.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/ch-lucerne-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ch-bern",
+      "name": "베른",
+      "kind": "city",
+      "countryCodes": [
+        "CH"
+      ],
+      "countries": [
+        "스위스"
+      ],
+      "aliases": [
+        "베른",
+        "Bern",
+        "Berne"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ch-bern.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ch-bern-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ch-interlaken",
+      "name": "인터라켄",
+      "kind": "city",
+      "countryCodes": [
+        "CH"
+      ],
+      "countries": [
+        "스위스"
+      ],
+      "aliases": [
+        "인터라켄",
+        "Interlaken"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/ch-interlaken.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/ch-interlaken-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ch-geneva",
+      "name": "제네바",
+      "kind": "city",
+      "countryCodes": [
+        "CH"
+      ],
+      "countries": [
+        "스위스"
+      ],
+      "aliases": [
+        "제네바",
+        "Geneva",
+        "Genève",
+        "Geneve"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/ch-geneva.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/ch-geneva-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ch-zermatt",
+      "name": "체르마트",
+      "kind": "town",
+      "countryCodes": [
+        "CH"
+      ],
+      "countries": [
+        "스위스"
+      ],
+      "aliases": [
+        "체르마트",
+        "Zermatt"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/ch-zermatt.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/ch-zermatt-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ch-zurich",
+      "name": "취리히",
+      "kind": "city",
+      "countryCodes": [
+        "CH"
+      ],
+      "countries": [
+        "스위스"
+      ],
+      "aliases": [
+        "취리히",
+        "Zurich",
+        "Zürich",
+        "Zuerich"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/ch-zurich.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/ch-zurich-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "es-granada",
+      "name": "그라나다",
+      "kind": "city",
+      "countryCodes": [
+        "ES"
+      ],
+      "countries": [
+        "스페인"
+      ],
+      "aliases": [
+        "그라나다",
+        "Granada"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/es-granada.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/es-granada-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "es-madrid",
+      "name": "마드리드",
+      "kind": "city",
+      "countryCodes": [
+        "ES"
+      ],
+      "countries": [
+        "스페인"
+      ],
+      "aliases": [
+        "마드리드",
+        "Madrid"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/es-madrid.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/es-madrid-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "es-malaga",
+      "name": "말라가",
+      "kind": "city",
+      "countryCodes": [
+        "ES"
+      ],
+      "countries": [
+        "스페인"
+      ],
+      "aliases": [
+        "말라가",
+        "Malaga",
+        "Málaga"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/es-malaga.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/es-malaga-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "es-barcelona",
+      "name": "바르셀로나",
+      "kind": "city",
+      "countryCodes": [
+        "ES"
+      ],
+      "countries": [
+        "스페인"
+      ],
+      "aliases": [
+        "바르셀로나",
+        "Barcelona"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/es-barcelona.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/es-barcelona-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "es-valencia",
+      "name": "발렌시아",
+      "kind": "city",
+      "countryCodes": [
+        "ES"
+      ],
+      "countries": [
+        "스페인"
+      ],
+      "aliases": [
+        "발렌시아",
+        "Valencia",
+        "València"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/es-valencia.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/es-valencia-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "es-bilbao",
+      "name": "빌바오",
+      "kind": "city",
+      "countryCodes": [
+        "ES"
+      ],
+      "countries": [
+        "스페인"
+      ],
+      "aliases": [
+        "빌바오",
+        "Bilbao",
+        "Bilbo"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/es-bilbao.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/es-bilbao-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "es-santiago-de-compostela",
+      "name": "산티아고 데 콤포스텔라",
+      "kind": "city",
+      "countryCodes": [
+        "ES"
+      ],
+      "countries": [
+        "스페인"
+      ],
+      "aliases": [
+        "산티아고 데 콤포스텔라",
+        "산티아고데콤포스텔라",
+        "Santiago de Compostela",
+        "Santiago de Compostela City"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/es-santiago-de-compostela.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/es-santiago-de-compostela-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "es-seville",
+      "name": "세비야",
+      "kind": "city",
+      "countryCodes": [
+        "ES"
+      ],
+      "countries": [
+        "스페인"
+      ],
+      "aliases": [
+        "세비야",
+        "세빌",
+        "세빌리아",
+        "Seville",
+        "Sevilla"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/es-seville.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/es-seville-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "es-toledo",
+      "name": "톨레도",
+      "kind": "city",
+      "countryCodes": [
+        "ES"
+      ],
+      "countries": [
+        "스페인"
+      ],
+      "aliases": [
+        "톨레도",
+        "Toledo"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/es-toledo.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/es-toledo-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "sk-bratislava",
+      "name": "브라티슬라바",
+      "kind": "city",
+      "countryCodes": [
+        "SK"
+      ],
+      "countries": [
+        "슬로바키아"
+      ],
+      "aliases": [
+        "브라티슬라바",
+        "Bratislava"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/sk-bratislava.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/sk-bratislava-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "si-ljubljana",
+      "name": "류블랴나",
+      "kind": "city",
+      "countryCodes": [
+        "SI"
+      ],
+      "countries": [
+        "슬로베니아"
+      ],
+      "aliases": [
+        "류블랴나",
+        "루블랴나",
+        "Ljubljana"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/si-ljubljana.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/si-ljubljana-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "si-bled",
+      "name": "블레드",
+      "kind": "town",
+      "countryCodes": [
+        "SI"
+      ],
+      "countries": [
+        "슬로베니아"
+      ],
+      "aliases": [
+        "블레드",
+        "Bled",
+        "블레드호수",
+        "Lake Bled"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/si-bled.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/si-bled-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "sg-singapore",
+      "name": "싱가포르",
+      "kind": "region",
+      "countryCodes": [
+        "SG"
+      ],
+      "countries": [
+        "싱가포르"
+      ],
+      "aliases": [
+        "싱가포르",
+        "Singapore",
+        "新加坡"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v2/sg-singapore.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/sg-singapore-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ae-dubai",
+      "name": "두바이",
+      "kind": "city",
+      "countryCodes": [
+        "AE"
+      ],
+      "countries": [
+        "아랍에미리트"
+      ],
+      "aliases": [
+        "두바이",
+        "Dubai",
+        "دبي"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/ae-dubai.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/ae-dubai-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ae-abu-dhabi",
+      "name": "아부다비",
+      "kind": "city",
+      "countryCodes": [
+        "AE"
+      ],
+      "countries": [
+        "아랍에미리트"
+      ],
+      "aliases": [
+        "아부다비",
+        "Abu Dhabi",
+        "Abudhabi",
+        "أبو ظبي"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/ae-abu-dhabi.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/ae-abu-dhabi-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ar-bariloche",
+      "name": "바릴로체",
+      "kind": "city",
+      "countryCodes": [
+        "AR"
+      ],
+      "countries": [
+        "아르헨티나"
+      ],
+      "aliases": [
+        "바릴로체",
+        "Bariloche",
+        "San Carlos de Bariloche"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ar-bariloche.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ar-bariloche-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ar-buenos-aires",
+      "name": "부에노스아이레스",
+      "kind": "city",
+      "countryCodes": [
+        "AR"
+      ],
+      "countries": [
+        "아르헨티나"
+      ],
+      "aliases": [
+        "부에노스아이레스",
+        "부에노스 아이레스",
+        "Buenos Aires"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ar-buenos-aires.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ar-buenos-aires-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "is-reykjavik",
+      "name": "레이캬비크",
+      "kind": "city",
+      "countryCodes": [
+        "IS"
+      ],
+      "countries": [
+        "아이슬란드"
+      ],
+      "aliases": [
+        "레이캬비크",
+        "레이캬비크시",
+        "Reykjavik",
+        "Reykjavík"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/is-reykjavik.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/is-reykjavik-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ie-galway",
+      "name": "골웨이",
+      "kind": "city",
+      "countryCodes": [
+        "IE"
+      ],
+      "countries": [
+        "아일랜드"
+      ],
+      "aliases": [
+        "골웨이",
+        "골웨이시",
+        "Galway",
+        "Gaillimh"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ie-galway.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ie-galway-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ie-dublin",
+      "name": "더블린",
+      "kind": "city",
+      "countryCodes": [
+        "IE"
+      ],
+      "countries": [
+        "아일랜드"
+      ],
+      "aliases": [
+        "더블린",
+        "Dublin",
+        "Baile Átha Cliath"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ie-dublin.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ie-dublin-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "az-baku",
+      "name": "바쿠",
+      "kind": "city",
+      "countryCodes": [
+        "AZ"
+      ],
+      "countries": [
+        "아제르바이잔"
+      ],
+      "aliases": [
+        "바쿠",
+        "Baku",
+        "Bakı"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/az-baku.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/az-baku-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ee-tallinn",
+      "name": "탈린",
+      "kind": "city",
+      "countryCodes": [
+        "EE"
+      ],
+      "countries": [
+        "에스토니아"
+      ],
+      "aliases": [
+        "탈린",
+        "Tallinn",
+        "Tallin"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ee-tallinn.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ee-tallinn-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ec-quito",
+      "name": "키토",
+      "kind": "city",
+      "countryCodes": [
+        "EC"
+      ],
+      "countries": [
+        "에콰도르"
+      ],
+      "aliases": [
+        "키토",
+        "Quito",
+        "San Francisco de Quito"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ec-quito.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ec-quito-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "gb-london",
+      "name": "런던",
+      "kind": "city",
+      "countryCodes": [
+        "GB"
+      ],
+      "countries": [
+        "영국"
+      ],
+      "aliases": [
+        "런던",
+        "London"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/gb-london.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/gb-london-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "gb-bath",
+      "name": "바스",
+      "kind": "city",
+      "countryCodes": [
+        "GB"
+      ],
+      "countries": [
+        "영국"
+      ],
+      "aliases": [
+        "바스",
+        "바스시",
+        "Bath"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/gb-bath.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/gb-bath-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "gb-edinburgh",
+      "name": "에든버러",
+      "kind": "city",
+      "countryCodes": [
+        "GB"
+      ],
+      "countries": [
+        "영국"
+      ],
+      "aliases": [
+        "에든버러",
+        "에딘버러",
+        "Edinburgh"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/gb-edinburgh.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/gb-edinburgh-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "gb-oxford",
+      "name": "옥스퍼드",
+      "kind": "city",
+      "countryCodes": [
+        "GB"
+      ],
+      "countries": [
+        "영국"
+      ],
+      "aliases": [
+        "옥스퍼드",
+        "Oxford"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/gb-oxford.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/gb-oxford-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "om-muscat",
+      "name": "무스카트",
+      "kind": "city",
+      "countryCodes": [
+        "OM"
+      ],
+      "countries": [
+        "오만"
+      ],
+      "aliases": [
+        "무스카트",
+        "Muscat",
+        "مسقط"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/om-muscat.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/om-muscat-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "om-salalah",
+      "name": "살랄라",
+      "kind": "city",
+      "countryCodes": [
+        "OM"
+      ],
+      "countries": [
+        "오만"
+      ],
+      "aliases": [
+        "살랄라",
+        "Salalah",
+        "صلالة"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/om-salalah.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/om-salalah-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "at-vienna",
+      "name": "빈",
+      "kind": "city",
+      "countryCodes": [
+        "AT"
+      ],
+      "countries": [
+        "오스트리아"
+      ],
+      "aliases": [
+        "빈",
+        "비엔나",
+        "Vienna",
+        "Wien"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/at-vienna.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/at-vienna-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "at-innsbruck",
+      "name": "인스브루크",
+      "kind": "city",
+      "countryCodes": [
+        "AT"
+      ],
+      "countries": [
+        "오스트리아"
+      ],
+      "aliases": [
+        "인스브루크",
+        "Innsbruck"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/at-innsbruck.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/at-innsbruck-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "at-salzburg",
+      "name": "잘츠부르크",
+      "kind": "city",
+      "countryCodes": [
+        "AT"
+      ],
+      "countries": [
+        "오스트리아"
+      ],
+      "aliases": [
+        "잘츠부르크",
+        "Salzburg"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/at-salzburg.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/at-salzburg-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "at-hallstatt",
+      "name": "할슈타트",
+      "kind": "town",
+      "countryCodes": [
+        "AT"
+      ],
+      "countries": [
+        "오스트리아"
+      ],
+      "aliases": [
+        "할슈타트",
+        "Hallstatt"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/at-hallstatt.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/at-hallstatt-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jo-amman",
+      "name": "암만",
+      "kind": "city",
+      "countryCodes": [
+        "JO"
+      ],
+      "countries": [
+        "요르단"
+      ],
+      "aliases": [
+        "암만",
+        "Amman",
+        "عمان"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/jo-amman.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jo-amman-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jo-petra",
+      "name": "페트라",
+      "kind": "region",
+      "countryCodes": [
+        "JO"
+      ],
+      "countries": [
+        "요르단"
+      ],
+      "aliases": [
+        "페트라",
+        "Petra",
+        "البتراء"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/jo-petra.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jo-petra-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "uz-samarkand",
+      "name": "사마르칸트",
+      "kind": "city",
+      "countryCodes": [
+        "UZ"
+      ],
+      "countries": [
+        "우즈베키스탄"
+      ],
+      "aliases": [
+        "사마르칸트",
+        "Samarkand",
+        "Samarqand",
+        "Самарканд"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/uz-samarkand.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/uz-samarkand-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "il-jerusalem",
+      "name": "예루살렘",
+      "kind": "city",
+      "countryCodes": [
+        "IL",
+        "PS"
+      ],
+      "countries": [
+        "이스라엘",
+        "팔레스타인 지구"
+      ],
+      "aliases": [
+        "예루살렘",
+        "Jerusalem",
+        "Yerushalayim",
+        "Al Quds",
+        "Al-Quds",
+        "ירושלים",
+        "القدس"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/il-jerusalem.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/il-jerusalem-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "il-tel-aviv",
+      "name": "텔아비브",
+      "kind": "city",
+      "countryCodes": [
+        "IL"
+      ],
+      "countries": [
+        "이스라엘"
+      ],
+      "aliases": [
+        "텔아비브",
+        "텔아비브야포",
+        "텔아비브-야포",
+        "Tel Aviv",
+        "Tel Aviv Yafo",
+        "Tel Aviv-Yafo",
+        "תל אביב"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/il-tel-aviv.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/il-tel-aviv-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "eg-giza",
+      "name": "기자",
+      "kind": "city",
+      "countryCodes": [
+        "EG"
+      ],
+      "countries": [
+        "이집트"
+      ],
+      "aliases": [
+        "기자",
+        "기자시",
+        "Giza",
+        "Gizeh",
+        "الجيزة"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/eg-giza.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/eg-giza-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "eg-luxor",
+      "name": "룩소르",
+      "kind": "city",
+      "countryCodes": [
+        "EG"
+      ],
+      "countries": [
+        "이집트"
+      ],
+      "aliases": [
+        "룩소르",
+        "Luxor",
+        "Al Uqsur",
+        "الأقصر"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/eg-luxor.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/eg-luxor-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "eg-cairo",
+      "name": "카이로",
+      "kind": "city",
+      "countryCodes": [
+        "EG"
+      ],
+      "countries": [
+        "이집트"
+      ],
+      "aliases": [
+        "카이로",
+        "Cairo",
+        "Al Qahirah",
+        "القاهرة"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/eg-cairo.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/eg-cairo-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "it-naples",
+      "name": "나폴리",
+      "kind": "city",
+      "countryCodes": [
+        "IT"
+      ],
+      "countries": [
+        "이탈리아"
+      ],
+      "aliases": [
+        "나폴리",
+        "Naples",
+        "Napoli"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/it-naples.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/it-naples-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "it-rome",
+      "name": "로마",
+      "kind": "city",
+      "countryCodes": [
+        "IT"
+      ],
+      "countries": [
+        "이탈리아"
+      ],
+      "aliases": [
+        "로마",
+        "Rome",
+        "Roma"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/it-rome.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/it-rome-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "it-milan",
+      "name": "밀라노",
+      "kind": "city",
+      "countryCodes": [
+        "IT"
+      ],
+      "countries": [
+        "이탈리아"
+      ],
+      "aliases": [
+        "밀라노",
+        "밀란",
+        "Milan",
+        "Milano"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/it-milan.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/it-milan-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "it-venice",
+      "name": "베네치아",
+      "kind": "city",
+      "countryCodes": [
+        "IT"
+      ],
+      "countries": [
+        "이탈리아"
+      ],
+      "aliases": [
+        "베네치아",
+        "베니스",
+        "Venice",
+        "Venezia"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/it-venice.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/it-venice-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "it-verona",
+      "name": "베로나",
+      "kind": "city",
+      "countryCodes": [
+        "IT"
+      ],
+      "countries": [
+        "이탈리아"
+      ],
+      "aliases": [
+        "베로나",
+        "Verona"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/it-verona.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/it-verona-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "it-bologna",
+      "name": "볼로냐",
+      "kind": "city",
+      "countryCodes": [
+        "IT"
+      ],
+      "countries": [
+        "이탈리아"
+      ],
+      "aliases": [
+        "볼로냐",
+        "Bologna"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/it-bologna.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/it-bologna-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "it-siena",
+      "name": "시에나",
+      "kind": "city",
+      "countryCodes": [
+        "IT"
+      ],
+      "countries": [
+        "이탈리아"
+      ],
+      "aliases": [
+        "시에나",
+        "Siena"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/it-siena.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/it-siena-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "it-turin",
+      "name": "토리노",
+      "kind": "city",
+      "countryCodes": [
+        "IT"
+      ],
+      "countries": [
+        "이탈리아"
+      ],
+      "aliases": [
+        "토리노",
+        "Turin",
+        "Torino"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/it-turin.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/it-turin-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "it-florence",
+      "name": "피렌체",
+      "kind": "city",
+      "countryCodes": [
+        "IT"
+      ],
+      "countries": [
+        "이탈리아"
+      ],
+      "aliases": [
+        "피렌체",
+        "플로렌스",
+        "Florence",
+        "Firenze"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/it-florence.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/it-florence-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "it-pisa",
+      "name": "피사",
+      "kind": "city",
+      "countryCodes": [
+        "IT"
+      ],
+      "countries": [
+        "이탈리아"
+      ],
+      "aliases": [
+        "피사",
+        "Pisa"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/it-pisa.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/it-pisa-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "in-goa",
+      "name": "고아",
+      "kind": "region",
+      "countryCodes": [
+        "IN"
+      ],
+      "countries": [
+        "인도"
+      ],
+      "aliases": [
+        "고아",
+        "Goa",
+        "गोवा"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/in-goa.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/in-goa-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "in-delhi",
+      "name": "뉴델리",
+      "kind": "city",
+      "countryCodes": [
+        "IN"
+      ],
+      "countries": [
+        "인도"
+      ],
+      "aliases": [
+        "뉴델리",
+        "델리",
+        "Delhi",
+        "New Delhi",
+        "NewDelhi",
+        "नई दिल्ली",
+        "दिल्ली"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/in-delhi.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/in-delhi-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "in-mumbai",
+      "name": "뭄바이",
+      "kind": "city",
+      "countryCodes": [
+        "IN"
+      ],
+      "countries": [
+        "인도"
+      ],
+      "aliases": [
+        "뭄바이",
+        "봄베이",
+        "Mumbai",
+        "Bombay",
+        "मुंबई"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/in-mumbai.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/in-mumbai-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "in-varanasi",
+      "name": "바라나시",
+      "kind": "city",
+      "countryCodes": [
+        "IN"
+      ],
+      "countries": [
+        "인도"
+      ],
+      "aliases": [
+        "바라나시",
+        "베나레스",
+        "Varanasi",
+        "Benares",
+        "Banaras",
+        "वाराणसी"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/in-varanasi.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/in-varanasi-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "in-agra",
+      "name": "아그라",
+      "kind": "city",
+      "countryCodes": [
+        "IN"
+      ],
+      "countries": [
+        "인도"
+      ],
+      "aliases": [
+        "아그라",
+        "Agra",
+        "आगरा"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/in-agra.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/in-agra-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "in-udaipur",
+      "name": "우다이푸르",
+      "kind": "city",
+      "countryCodes": [
+        "IN"
+      ],
+      "countries": [
+        "인도"
+      ],
+      "aliases": [
+        "우다이푸르",
+        "Udaipur",
+        "उदयपुर"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/in-udaipur.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/in-udaipur-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "in-jaipur",
+      "name": "자이푸르",
+      "kind": "city",
+      "countryCodes": [
+        "IN"
+      ],
+      "countries": [
+        "인도"
+      ],
+      "aliases": [
+        "자이푸르",
+        "Jaipur",
+        "जयपुर"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/in-jaipur.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/in-jaipur-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "in-kochi",
+      "name": "코치",
+      "kind": "city",
+      "countryCodes": [
+        "IN"
+      ],
+      "countries": [
+        "인도"
+      ],
+      "aliases": [
+        "코치",
+        "코친",
+        "Kochi",
+        "Cochin",
+        "കൊച്ചി"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/in-kochi.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/in-kochi-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "id-bali",
+      "name": "발리",
+      "kind": "island",
+      "countryCodes": [
+        "ID"
+      ],
+      "countries": [
+        "인도네시아"
+      ],
+      "aliases": [
+        "발리",
+        "발리섬",
+        "Bali",
+        "Bali Island"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v2/id-bali.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/id-bali-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "id-yogyakarta",
+      "name": "욕야카르타",
+      "kind": "city",
+      "countryCodes": [
+        "ID"
+      ],
+      "countries": [
+        "인도네시아"
+      ],
+      "aliases": [
+        "욕야카르타",
+        "족자카르타",
+        "욕야",
+        "족자",
+        "Yogyakarta",
+        "Jogjakarta",
+        "Jogja"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/id-yogyakarta.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/id-yogyakarta-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "id-jakarta",
+      "name": "자카르타",
+      "kind": "city",
+      "countryCodes": [
+        "ID"
+      ],
+      "countries": [
+        "인도네시아"
+      ],
+      "aliases": [
+        "자카르타",
+        "Jakarta",
+        "DKI Jakarta"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/id-jakarta.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/id-jakarta-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-kagoshima",
+      "name": "가고시마",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "가고시마",
+        "카고시마",
+        "Kagoshima",
+        "鹿児島",
+        "鹿児島市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/jp-kagoshima.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-kagoshima-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-kanazawa",
+      "name": "가나자와",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "가나자와",
+        "카나자와",
+        "Kanazawa",
+        "金沢",
+        "金沢市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/jp-kanazawa.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-kanazawa-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-kobe",
+      "name": "고베",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "고베",
+        "Kobe",
+        "Kōbe",
+        "神戸",
+        "神戸市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/jp-kobe.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-kobe-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-kyoto",
+      "name": "교토",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "교토",
+        "쿄토",
+        "교토시",
+        "Kyoto",
+        "京都",
+        "京都市"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v2/jp-kyoto.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/jp-kyoto-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-kumamoto",
+      "name": "구마모토",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "구마모토",
+        "쿠마모토",
+        "Kumamoto",
+        "熊本",
+        "熊本市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/jp-kumamoto.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-kumamoto-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-nagasaki",
+      "name": "나가사키",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "나가사키",
+        "Nagasaki",
+        "長崎",
+        "長崎市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/jp-nagasaki.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-nagasaki-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-nagoya",
+      "name": "나고야",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "나고야",
+        "Nagoya",
+        "名古屋",
+        "名古屋市"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/jp-nagoya.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-nagoya-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-nara",
+      "name": "나라",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "나라",
+        "나라시",
+        "Nara",
+        "奈良",
+        "奈良市"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/jp-nara.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-nara-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-niigata",
+      "name": "니가타",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "니가타",
+        "Niigata",
+        "新潟",
+        "新潟市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/jp-niigata.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-niigata-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-nikko",
+      "name": "닛코",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "닛코",
+        "니코",
+        "Nikko",
+        "Nikkō",
+        "日光",
+        "日光市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/jp-nikko.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-nikko-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-takayama",
+      "name": "다카야마",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "다카야마",
+        "타카야마",
+        "Takayama",
+        "高山",
+        "高山市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/jp-takayama.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-takayama-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-tokyo",
+      "name": "도쿄",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "도쿄",
+        "동경",
+        "Tokyo",
+        "東京",
+        "東京都"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v2/jp-tokyo.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/jp-tokyo-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-beppu",
+      "name": "벳푸",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "벳푸",
+        "벳부",
+        "Beppu",
+        "別府",
+        "別府市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/jp-beppu.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-beppu-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-sapporo",
+      "name": "삿포로",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "삿포로",
+        "삿포로시",
+        "Sapporo",
+        "札幌",
+        "札幌市"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/jp-sapporo.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/jp-sapporo-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-sendai",
+      "name": "센다이",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "센다이",
+        "Sendai",
+        "仙台",
+        "仙台市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/jp-sendai.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-sendai-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-asahikawa",
+      "name": "아사히카와",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "아사히카와",
+        "Asahikawa",
+        "旭川",
+        "旭川市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/jp-asahikawa.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-asahikawa-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-osaka",
+      "name": "오사카",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "오사카",
+        "오사카시",
+        "Osaka",
+        "Osaka City",
+        "大阪",
+        "大阪市"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/jp-osaka.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/jp-osaka-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-okinawa",
+      "name": "오키나와",
+      "kind": "region",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "오키나와",
+        "오키나와현",
+        "Okinawa",
+        "沖縄",
+        "沖縄県"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v2/jp-okinawa.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/jp-okinawa-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-otaru",
+      "name": "오타루",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "오타루",
+        "Otaru",
+        "小樽",
+        "小樽市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/jp-otaru.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-otaru-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-yokohama",
+      "name": "요코하마",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "요코하마",
+        "Yokohama",
+        "横浜",
+        "横浜市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/jp-yokohama.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-yokohama-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-yufuin",
+      "name": "유후인",
+      "kind": "region",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "유후인",
+        "Yufuin",
+        "由布院",
+        "湯布院"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/jp-yufuin.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-yufuin-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-hakone",
+      "name": "하코네",
+      "kind": "region",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "하코네",
+        "Hakone",
+        "箱根"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/jp-hakone.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-hakone-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-hakodate",
+      "name": "하코다테",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "하코다테",
+        "Hakodate",
+        "函館",
+        "函館市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/jp-hakodate.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-hakodate-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-fukuoka",
+      "name": "후쿠오카",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "후쿠오카",
+        "후쿠오카시",
+        "Fukuoka",
+        "福岡",
+        "福岡市"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v2/jp-fukuoka.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/jp-fukuoka-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "jp-hiroshima",
+      "name": "히로시마",
+      "kind": "city",
+      "countryCodes": [
+        "JP"
+      ],
+      "countries": [
+        "일본"
+      ],
+      "aliases": [
+        "히로시마",
+        "Hiroshima",
+        "広島",
+        "広島市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/jp-hiroshima.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/jp-hiroshima-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ge-tbilisi",
+      "name": "트빌리시",
+      "kind": "city",
+      "countryCodes": [
+        "GE"
+      ],
+      "countries": [
+        "조지아"
+      ],
+      "aliases": [
+        "트빌리시",
+        "Tbilisi",
+        "თბილისი"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ge-tbilisi.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ge-tbilisi-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cn-guangzhou",
+      "name": "광저우",
+      "kind": "city",
+      "countryCodes": [
+        "CN"
+      ],
+      "countries": [
+        "중국"
+      ],
+      "aliases": [
+        "광저우",
+        "광주 광둥",
+        "Guangzhou",
+        "Canton",
+        "广州",
+        "廣州",
+        "广州市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/cn-guangzhou.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cn-guangzhou-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cn-guilin",
+      "name": "구이린",
+      "kind": "city",
+      "countryCodes": [
+        "CN"
+      ],
+      "countries": [
+        "중국"
+      ],
+      "aliases": [
+        "구이린",
+        "계림",
+        "Guilin",
+        "桂林",
+        "桂林市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/cn-guilin.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cn-guilin-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cn-dali",
+      "name": "다리",
+      "kind": "city",
+      "countryCodes": [
+        "CN"
+      ],
+      "countries": [
+        "중국"
+      ],
+      "aliases": [
+        "다리",
+        "대리",
+        "Dali",
+        "大理",
+        "大理市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/cn-dali.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cn-dali-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cn-lijiang",
+      "name": "리장",
+      "kind": "city",
+      "countryCodes": [
+        "CN"
+      ],
+      "countries": [
+        "중국"
+      ],
+      "aliases": [
+        "리장",
+        "여강",
+        "Lijiang",
+        "丽江",
+        "麗江",
+        "丽江市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/cn-lijiang.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cn-lijiang-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cn-beijing",
+      "name": "베이징",
+      "kind": "city",
+      "countryCodes": [
+        "CN"
+      ],
+      "countries": [
+        "중국"
+      ],
+      "aliases": [
+        "베이징",
+        "북경",
+        "Beijing",
+        "Peking",
+        "北京",
+        "北京市"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/cn-beijing.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cn-beijing-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cn-shanghai",
+      "name": "상하이",
+      "kind": "city",
+      "countryCodes": [
+        "CN"
+      ],
+      "countries": [
+        "중국"
+      ],
+      "aliases": [
+        "상하이",
+        "상해",
+        "Shanghai",
+        "上海",
+        "上海市"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/cn-shanghai.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cn-shanghai-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cn-xiamen",
+      "name": "샤먼",
+      "kind": "city",
+      "countryCodes": [
+        "CN"
+      ],
+      "countries": [
+        "중국"
+      ],
+      "aliases": [
+        "샤먼",
+        "하문",
+        "Xiamen",
+        "厦门",
+        "廈門",
+        "厦门市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/cn-xiamen.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cn-xiamen-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cn-shenzhen",
+      "name": "선전",
+      "kind": "city",
+      "countryCodes": [
+        "CN"
+      ],
+      "countries": [
+        "중국"
+      ],
+      "aliases": [
+        "선전",
+        "심천",
+        "Shenzhen",
+        "深圳",
+        "深圳市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/cn-shenzhen.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cn-shenzhen-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cn-xian",
+      "name": "시안",
+      "kind": "city",
+      "countryCodes": [
+        "CN"
+      ],
+      "countries": [
+        "중국"
+      ],
+      "aliases": [
+        "시안",
+        "서안",
+        "Xian",
+        "Xi'an",
+        "Xi’an",
+        "西安",
+        "西安市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/cn-xian.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cn-xian-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cn-suzhou",
+      "name": "쑤저우",
+      "kind": "city",
+      "countryCodes": [
+        "CN"
+      ],
+      "countries": [
+        "중국"
+      ],
+      "aliases": [
+        "쑤저우",
+        "소주",
+        "Suzhou",
+        "苏州",
+        "蘇州",
+        "苏州市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/cn-suzhou.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cn-suzhou-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cn-zhangjiajie",
+      "name": "장자제",
+      "kind": "region",
+      "countryCodes": [
+        "CN"
+      ],
+      "countries": [
+        "중국"
+      ],
+      "aliases": [
+        "장자제",
+        "장가계",
+        "Zhangjiajie",
+        "张家界",
+        "張家界"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/cn-zhangjiajie.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cn-zhangjiajie-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cn-chengdu",
+      "name": "청두",
+      "kind": "city",
+      "countryCodes": [
+        "CN"
+      ],
+      "countries": [
+        "중국"
+      ],
+      "aliases": [
+        "청두",
+        "성도",
+        "Chengdu",
+        "成都",
+        "成都市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/cn-chengdu.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cn-chengdu-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cn-chongqing",
+      "name": "충칭",
+      "kind": "city",
+      "countryCodes": [
+        "CN"
+      ],
+      "countries": [
+        "중국"
+      ],
+      "aliases": [
+        "충칭",
+        "중경",
+        "Chongqing",
+        "重庆",
+        "重慶",
+        "重庆市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/cn-chongqing.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cn-chongqing-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cn-qingdao",
+      "name": "칭다오",
+      "kind": "city",
+      "countryCodes": [
+        "CN"
+      ],
+      "countries": [
+        "중국"
+      ],
+      "aliases": [
+        "칭다오",
+        "청도",
+        "Qingdao",
+        "青岛",
+        "青島",
+        "青岛市"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/cn-qingdao.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cn-qingdao-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cn-harbin",
+      "name": "하얼빈",
+      "kind": "city",
+      "countryCodes": [
+        "CN"
+      ],
+      "countries": [
+        "중국"
+      ],
+      "aliases": [
+        "하얼빈",
+        "Harbin",
+        "哈尔滨",
+        "哈爾濱",
+        "哈尔滨市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/cn-harbin.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cn-harbin-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cn-hangzhou",
+      "name": "항저우",
+      "kind": "city",
+      "countryCodes": [
+        "CN"
+      ],
+      "countries": [
+        "중국"
+      ],
+      "aliases": [
+        "항저우",
+        "항주",
+        "Hangzhou",
+        "杭州",
+        "杭州市"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/cn-hangzhou.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cn-hangzhou-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "zw-victoria-falls",
+      "name": "빅토리아폴스",
+      "kind": "town",
+      "countryCodes": [
+        "ZW"
+      ],
+      "countries": [
+        "짐바브웨"
+      ],
+      "aliases": [
+        "빅토리아폴스",
+        "빅토리아 폴스",
+        "Victoria Falls",
+        "Victoria Falls Town"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/zw-victoria-falls.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/zw-victoria-falls-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cz-cesky-krumlov",
+      "name": "체스키 크룸로프",
+      "kind": "town",
+      "countryCodes": [
+        "CZ"
+      ],
+      "countries": [
+        "체코"
+      ],
+      "aliases": [
+        "체스키 크룸로프",
+        "체스키크룸로프",
+        "Cesky Krumlov",
+        "Český Krumlov"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/cz-cesky-krumlov.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cz-cesky-krumlov-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cz-prague",
+      "name": "프라하",
+      "kind": "city",
+      "countryCodes": [
+        "CZ"
+      ],
+      "countries": [
+        "체코"
+      ],
+      "aliases": [
+        "프라하",
+        "Prague",
+        "Praha"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/cz-prague.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/cz-prague-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cl-santiago",
+      "name": "산티아고",
+      "kind": "city",
+      "countryCodes": [
+        "CL"
+      ],
+      "countries": [
+        "칠레"
+      ],
+      "aliases": [
+        "산티아고",
+        "칠레 산티아고",
+        "Santiago",
+        "Santiago de Chile"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/cl-santiago.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cl-santiago-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "qa-doha",
+      "name": "도하",
+      "kind": "city",
+      "countryCodes": [
+        "QA"
+      ],
+      "countries": [
+        "카타르"
+      ],
+      "aliases": [
+        "도하",
+        "Doha",
+        "الدوحة"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/qa-doha.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/qa-doha-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "kh-siem-reap",
+      "name": "시엠레아프",
+      "kind": "city",
+      "countryCodes": [
+        "KH"
+      ],
+      "countries": [
+        "캄보디아"
+      ],
+      "aliases": [
+        "시엠레아프",
+        "씨엠립",
+        "씨엠리엡",
+        "시엠립",
+        "Siem Reap",
+        "Siemreap"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/kh-siem-reap.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/kh-siem-reap-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "kh-phnom-penh",
+      "name": "프놈펜",
+      "kind": "city",
+      "countryCodes": [
+        "KH"
+      ],
+      "countries": [
+        "캄보디아"
+      ],
+      "aliases": [
+        "프놈펜",
+        "Phnom Penh",
+        "Phnompenh"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/kh-phnom-penh.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/kh-phnom-penh-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ca-montreal",
+      "name": "몬트리올",
+      "kind": "city",
+      "countryCodes": [
+        "CA"
+      ],
+      "countries": [
+        "캐나다"
+      ],
+      "aliases": [
+        "몬트리올",
+        "Montreal",
+        "Montréal"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ca-montreal.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ca-montreal-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ca-vancouver",
+      "name": "밴쿠버",
+      "kind": "city",
+      "countryCodes": [
+        "CA"
+      ],
+      "countries": [
+        "캐나다"
+      ],
+      "aliases": [
+        "밴쿠버",
+        "벤쿠버",
+        "Vancouver"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ca-vancouver.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ca-vancouver-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ca-banff",
+      "name": "밴프",
+      "kind": "town",
+      "countryCodes": [
+        "CA"
+      ],
+      "countries": [
+        "캐나다"
+      ],
+      "aliases": [
+        "밴프",
+        "Banff"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ca-banff.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ca-banff-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ca-victoria",
+      "name": "빅토리아",
+      "kind": "city",
+      "countryCodes": [
+        "CA"
+      ],
+      "countries": [
+        "캐나다"
+      ],
+      "aliases": [
+        "빅토리아",
+        "Victoria",
+        "Victoria BC",
+        "Victoria British Columbia"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ca-victoria.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ca-victoria-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ca-ottawa",
+      "name": "오타와",
+      "kind": "city",
+      "countryCodes": [
+        "CA"
+      ],
+      "countries": [
+        "캐나다"
+      ],
+      "aliases": [
+        "오타와",
+        "Ottawa"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ca-ottawa.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ca-ottawa-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ca-quebec-city",
+      "name": "퀘벡시티",
+      "kind": "city",
+      "countryCodes": [
+        "CA"
+      ],
+      "countries": [
+        "캐나다"
+      ],
+      "aliases": [
+        "퀘벡시티",
+        "퀘벡",
+        "퀘벡 시티",
+        "Quebec City",
+        "Québec City",
+        "Ville de Québec",
+        "Quebec",
+        "Québec"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ca-quebec-city.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ca-quebec-city-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ca-toronto",
+      "name": "토론토",
+      "kind": "city",
+      "countryCodes": [
+        "CA"
+      ],
+      "countries": [
+        "캐나다"
+      ],
+      "aliases": [
+        "토론토",
+        "Toronto"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ca-toronto.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ca-toronto-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ke-nairobi",
+      "name": "나이로비",
+      "kind": "city",
+      "countryCodes": [
+        "KE"
+      ],
+      "countries": [
+        "케냐"
+      ],
+      "aliases": [
+        "나이로비",
+        "Nairobi"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ke-nairobi.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ke-nairobi-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cr-san-jose",
+      "name": "산호세",
+      "kind": "city",
+      "countryCodes": [
+        "CR"
+      ],
+      "countries": [
+        "코스타리카"
+      ],
+      "aliases": [
+        "산호세",
+        "코스타리카 산호세",
+        "San Jose",
+        "San José",
+        "San Jose Costa Rica"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/cr-san-jose.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cr-san-jose-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "co-bogota",
+      "name": "보고타",
+      "kind": "city",
+      "countryCodes": [
+        "CO"
+      ],
+      "countries": [
+        "콜롬비아"
+      ],
+      "aliases": [
+        "보고타",
+        "Bogota",
+        "Bogotá"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/co-bogota.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/co-bogota-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "co-cartagena",
+      "name": "카르타헤나",
+      "kind": "city",
+      "countryCodes": [
+        "CO"
+      ],
+      "countries": [
+        "콜롬비아"
+      ],
+      "aliases": [
+        "카르타헤나",
+        "Cartagena",
+        "Cartagena de Indias"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/co-cartagena.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/co-cartagena-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "cu-havana",
+      "name": "아바나",
+      "kind": "city",
+      "countryCodes": [
+        "CU"
+      ],
+      "countries": [
+        "쿠바"
+      ],
+      "aliases": [
+        "아바나",
+        "하바나",
+        "Havana",
+        "La Habana",
+        "Habana"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/cu-havana.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/cu-havana-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "kw-kuwait-city",
+      "name": "쿠웨이트시티",
+      "kind": "city",
+      "countryCodes": [
+        "KW"
+      ],
+      "countries": [
+        "쿠웨이트"
+      ],
+      "aliases": [
+        "쿠웨이트시티",
+        "쿠웨이트 시티",
+        "Kuwait City",
+        "مدينة الكويت"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/kw-kuwait-city.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/kw-kuwait-city-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "hr-dubrovnik",
+      "name": "두브로브니크",
+      "kind": "city",
+      "countryCodes": [
+        "HR"
+      ],
+      "countries": [
+        "크로아티아"
+      ],
+      "aliases": [
+        "두브로브니크",
+        "Dubrovnik"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/hr-dubrovnik.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/hr-dubrovnik-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "hr-split",
+      "name": "스플리트",
+      "kind": "city",
+      "countryCodes": [
+        "HR"
+      ],
+      "countries": [
+        "크로아티아"
+      ],
+      "aliases": [
+        "스플리트",
+        "Split"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/hr-split.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/hr-split-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "hr-zagreb",
+      "name": "자그레브",
+      "kind": "city",
+      "countryCodes": [
+        "HR"
+      ],
+      "countries": [
+        "크로아티아"
+      ],
+      "aliases": [
+        "자그레브",
+        "Zagreb"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/hr-zagreb.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/hr-zagreb-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "tz-zanzibar-city",
+      "name": "잔지바르시티",
+      "kind": "city",
+      "countryCodes": [
+        "TZ"
+      ],
+      "countries": [
+        "탄자니아"
+      ],
+      "aliases": [
+        "잔지바르시티",
+        "잔지바르 시티",
+        "스톤타운",
+        "스톤 타운",
+        "Zanzibar City",
+        "Stone Town",
+        "Zanzibar Town"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/tz-zanzibar-city.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/tz-zanzibar-city-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "th-krabi",
+      "name": "끄라비",
+      "kind": "region",
+      "countryCodes": [
+        "TH"
+      ],
+      "countries": [
+        "태국"
+      ],
+      "aliases": [
+        "끄라비",
+        "크라비",
+        "Krabi",
+        "กระบี่"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/th-krabi.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/th-krabi-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "th-bangkok",
+      "name": "방콕",
+      "kind": "city",
+      "countryCodes": [
+        "TH"
+      ],
+      "countries": [
+        "태국"
+      ],
+      "aliases": [
+        "방콕",
+        "Bangkok",
+        "Krung Thep",
+        "กรุงเทพมหานคร"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v2/th-bangkok.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/th-bangkok-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "th-sukhothai",
+      "name": "수코타이",
+      "kind": "city",
+      "countryCodes": [
+        "TH"
+      ],
+      "countries": [
+        "태국"
+      ],
+      "aliases": [
+        "수코타이",
+        "수코타이시",
+        "Sukhothai",
+        "สุโขทัย"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/th-sukhothai.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/th-sukhothai-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "th-ayutthaya",
+      "name": "아유타야",
+      "kind": "city",
+      "countryCodes": [
+        "TH"
+      ],
+      "countries": [
+        "태국"
+      ],
+      "aliases": [
+        "아유타야",
+        "아유타야시",
+        "Ayutthaya",
+        "Phra Nakhon Si Ayutthaya",
+        "อยุธยา"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/th-ayutthaya.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/th-ayutthaya-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "th-chiang-rai",
+      "name": "치앙라이",
+      "kind": "city",
+      "countryCodes": [
+        "TH"
+      ],
+      "countries": [
+        "태국"
+      ],
+      "aliases": [
+        "치앙라이",
+        "Chiang Rai",
+        "Chiangrai",
+        "เชียงราย"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/th-chiang-rai.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/th-chiang-rai-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "th-chiang-mai",
+      "name": "치앙마이",
+      "kind": "city",
+      "countryCodes": [
+        "TH"
+      ],
+      "countries": [
+        "태국"
+      ],
+      "aliases": [
+        "치앙마이",
+        "Chiang Mai",
+        "Chiangmai",
+        "เชียงใหม่"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v2/th-chiang-mai.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/th-chiang-mai-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "th-ko-samui",
+      "name": "코사무이",
+      "kind": "island",
+      "countryCodes": [
+        "TH"
+      ],
+      "countries": [
+        "태국"
+      ],
+      "aliases": [
+        "코사무이",
+        "꼬사무이",
+        "사무이섬",
+        "Ko Samui",
+        "Koh Samui",
+        "เกาะสมุย"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/th-ko-samui.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/th-ko-samui-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "th-pattaya",
+      "name": "파타야",
+      "kind": "city",
+      "countryCodes": [
+        "TH"
+      ],
+      "countries": [
+        "태국"
+      ],
+      "aliases": [
+        "파타야",
+        "Pattaya",
+        "พัทยา"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/th-pattaya.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/th-pattaya-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "th-phuket",
+      "name": "푸껫",
+      "kind": "island",
+      "countryCodes": [
+        "TH"
+      ],
+      "countries": [
+        "태국"
+      ],
+      "aliases": [
+        "푸껫",
+        "푸켓",
+        "Phuket",
+        "ภูเก็ต"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/th-phuket.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/th-phuket-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "tn-tunis",
+      "name": "튀니스",
+      "kind": "city",
+      "countryCodes": [
+        "TN"
+      ],
+      "countries": [
+        "튀니지"
+      ],
+      "aliases": [
+        "튀니스",
+        "Tunis",
+        "تونس"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/tn-tunis.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/tn-tunis-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "tr-antalya",
+      "name": "안탈리아",
+      "kind": "city",
+      "countryCodes": [
+        "TR"
+      ],
+      "countries": [
+        "튀르키예"
+      ],
+      "aliases": [
+        "안탈리아",
+        "Antalya"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/tr-antalya.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/tr-antalya-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "tr-istanbul",
+      "name": "이스탄불",
+      "kind": "city",
+      "countryCodes": [
+        "TR"
+      ],
+      "countries": [
+        "튀르키예"
+      ],
+      "aliases": [
+        "이스탄불",
+        "Istanbul",
+        "İstanbul"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/tr-istanbul.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/tr-istanbul-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "tr-cappadocia",
+      "name": "카파도키아",
+      "kind": "region",
+      "countryCodes": [
+        "TR"
+      ],
+      "countries": [
+        "튀르키예"
+      ],
+      "aliases": [
+        "카파도키아",
+        "카파도키야",
+        "Cappadocia",
+        "Kapadokya"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/tr-cappadocia.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/tr-cappadocia-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "pa-panama-city",
+      "name": "파나마시티",
+      "kind": "city",
+      "countryCodes": [
+        "PA"
+      ],
+      "countries": [
+        "파나마"
+      ],
+      "aliases": [
+        "파나마시티",
+        "파나마 시티",
+        "Panama City",
+        "Ciudad de Panamá",
+        "Ciudad de Panama"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/pa-panama-city.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/pa-panama-city-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "pe-lima",
+      "name": "리마",
+      "kind": "city",
+      "countryCodes": [
+        "PE"
+      ],
+      "countries": [
+        "페루"
+      ],
+      "aliases": [
+        "리마",
+        "Lima"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/pe-lima.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/pe-lima-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "pe-machu-picchu",
+      "name": "마추픽추",
+      "kind": "region",
+      "countryCodes": [
+        "PE"
+      ],
+      "countries": [
+        "페루"
+      ],
+      "aliases": [
+        "마추픽추",
+        "마추 픽추",
+        "Machu Picchu",
+        "MachuPicchu"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/pe-machu-picchu.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/pe-machu-picchu-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "pe-cusco",
+      "name": "쿠스코",
+      "kind": "city",
+      "countryCodes": [
+        "PE"
+      ],
+      "countries": [
+        "페루"
+      ],
+      "aliases": [
+        "쿠스코",
+        "쿠즈코",
+        "Cusco",
+        "Cuzco"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/pe-cusco.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/pe-cusco-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "pt-lisbon",
+      "name": "리스본",
+      "kind": "city",
+      "countryCodes": [
+        "PT"
+      ],
+      "countries": [
+        "포르투갈"
+      ],
+      "aliases": [
+        "리스본",
+        "Lisbon",
+        "Lisboa"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/pt-lisbon.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/pt-lisbon-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "pt-sintra",
+      "name": "신트라",
+      "kind": "town",
+      "countryCodes": [
+        "PT"
+      ],
+      "countries": [
+        "포르투갈"
+      ],
+      "aliases": [
+        "신트라",
+        "Sintra"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/pt-sintra.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/pt-sintra-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "pt-porto",
+      "name": "포르투",
+      "kind": "city",
+      "countryCodes": [
+        "PT"
+      ],
+      "countries": [
+        "포르투갈"
+      ],
+      "aliases": [
+        "포르투",
+        "포르토",
+        "Porto",
+        "Oporto"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v3/pt-porto.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v3/pt-porto-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "pt-funchal",
+      "name": "푼샬",
+      "kind": "city",
+      "countryCodes": [
+        "PT"
+      ],
+      "countries": [
+        "포르투갈"
+      ],
+      "aliases": [
+        "푼샬",
+        "푼찰",
+        "Funchal"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/pt-funchal.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/pt-funchal-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "pl-gdansk",
+      "name": "그단스크",
+      "kind": "city",
+      "countryCodes": [
+        "PL"
+      ],
+      "countries": [
+        "폴란드"
+      ],
+      "aliases": [
+        "그단스크",
+        "Gdansk",
+        "Gdańsk",
+        "Danzig"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/pl-gdansk.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/pl-gdansk-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "pl-warsaw",
+      "name": "바르샤바",
+      "kind": "city",
+      "countryCodes": [
+        "PL"
+      ],
+      "countries": [
+        "폴란드"
+      ],
+      "aliases": [
+        "바르샤바",
+        "Warsaw",
+        "Warszawa"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/pl-warsaw.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/pl-warsaw-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "pl-krakow",
+      "name": "크라쿠프",
+      "kind": "city",
+      "countryCodes": [
+        "PL"
+      ],
+      "countries": [
+        "폴란드"
+      ],
+      "aliases": [
+        "크라쿠프",
+        "크라코프",
+        "Krakow",
+        "Kraków",
+        "Cracow"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/pl-krakow.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/pl-krakow-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "fr-nice",
+      "name": "니스",
+      "kind": "city",
+      "countryCodes": [
+        "FR"
+      ],
+      "countries": [
+        "프랑스"
+      ],
+      "aliases": [
+        "니스",
+        "Nice"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/fr-nice.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/fr-nice-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "fr-lyon",
+      "name": "리옹",
+      "kind": "city",
+      "countryCodes": [
+        "FR"
+      ],
+      "countries": [
+        "프랑스"
+      ],
+      "aliases": [
+        "리옹",
+        "Lyon"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/fr-lyon.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/fr-lyon-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "fr-marseille",
+      "name": "마르세유",
+      "kind": "city",
+      "countryCodes": [
+        "FR"
+      ],
+      "countries": [
+        "프랑스"
+      ],
+      "aliases": [
+        "마르세유",
+        "Marseille",
+        "Marseilles"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/fr-marseille.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/fr-marseille-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "fr-mont-saint-michel",
+      "name": "몽생미셸",
+      "kind": "town",
+      "countryCodes": [
+        "FR"
+      ],
+      "countries": [
+        "프랑스"
+      ],
+      "aliases": [
+        "몽생미셸",
+        "몽생미쉘",
+        "Mont Saint Michel",
+        "Mont-Saint-Michel",
+        "Le Mont-Saint-Michel"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/fr-mont-saint-michel.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/fr-mont-saint-michel-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "fr-bordeaux",
+      "name": "보르도",
+      "kind": "city",
+      "countryCodes": [
+        "FR"
+      ],
+      "countries": [
+        "프랑스"
+      ],
+      "aliases": [
+        "보르도",
+        "Bordeaux"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/fr-bordeaux.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/fr-bordeaux-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "fr-strasbourg",
+      "name": "스트라스부르",
+      "kind": "city",
+      "countryCodes": [
+        "FR"
+      ],
+      "countries": [
+        "프랑스"
+      ],
+      "aliases": [
+        "스트라스부르",
+        "스트라스부르그",
+        "Strasbourg"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/fr-strasbourg.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/fr-strasbourg-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "fr-avignon",
+      "name": "아비뇽",
+      "kind": "city",
+      "countryCodes": [
+        "FR"
+      ],
+      "countries": [
+        "프랑스"
+      ],
+      "aliases": [
+        "아비뇽",
+        "Avignon"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/fr-avignon.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/fr-avignon-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "fr-annecy",
+      "name": "안시",
+      "kind": "city",
+      "countryCodes": [
+        "FR"
+      ],
+      "countries": [
+        "프랑스"
+      ],
+      "aliases": [
+        "안시",
+        "Annecy"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/fr-annecy.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/fr-annecy-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "fr-paris",
+      "name": "파리",
+      "kind": "city",
+      "countryCodes": [
+        "FR"
+      ],
+      "countries": [
+        "프랑스"
+      ],
+      "aliases": [
+        "파리",
+        "Paris"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v2/fr-paris.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/fr-paris-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "pf-bora-bora",
+      "name": "보라보라",
+      "kind": "island",
+      "countryCodes": [
+        "PF"
+      ],
+      "countries": [
+        "프랑스령 폴리네시아"
+      ],
+      "aliases": [
+        "보라보라",
+        "보라보라섬",
+        "Bora Bora",
+        "Borabora"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/pf-bora-bora.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/pf-bora-bora-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "fj-nadi",
+      "name": "난디",
+      "kind": "town",
+      "countryCodes": [
+        "FJ"
+      ],
+      "countries": [
+        "피지"
+      ],
+      "aliases": [
+        "난디",
+        "난디타운",
+        "Nadi"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/fj-nadi.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/fj-nadi-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "fi-rovaniemi",
+      "name": "로바니에미",
+      "kind": "city",
+      "countryCodes": [
+        "FI"
+      ],
+      "countries": [
+        "핀란드"
+      ],
+      "aliases": [
+        "로바니에미",
+        "Rovaniemi"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/fi-rovaniemi.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/fi-rovaniemi-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "fi-helsinki",
+      "name": "헬싱키",
+      "kind": "city",
+      "countryCodes": [
+        "FI"
+      ],
+      "countries": [
+        "핀란드"
+      ],
+      "aliases": [
+        "헬싱키",
+        "Helsinki",
+        "Helsingfors"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/fi-helsinki.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/fi-helsinki-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ph-manila",
+      "name": "마닐라",
+      "kind": "city",
+      "countryCodes": [
+        "PH"
+      ],
+      "countries": [
+        "필리핀"
+      ],
+      "aliases": [
+        "마닐라",
+        "Manila",
+        "Maynila"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ph-manila.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ph-manila-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ph-boracay",
+      "name": "보라카이",
+      "kind": "island",
+      "countryCodes": [
+        "PH"
+      ],
+      "countries": [
+        "필리핀"
+      ],
+      "aliases": [
+        "보라카이",
+        "Boracay",
+        "Boracay Island"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/ph-boracay.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ph-boracay-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ph-bohol",
+      "name": "보홀",
+      "kind": "island",
+      "countryCodes": [
+        "PH"
+      ],
+      "countries": [
+        "필리핀"
+      ],
+      "aliases": [
+        "보홀",
+        "보홀섬",
+        "Bohol",
+        "Bohol Island"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ph-bohol.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ph-bohol-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ph-cebu",
+      "name": "세부",
+      "kind": "region",
+      "countryCodes": [
+        "PH"
+      ],
+      "countries": [
+        "필리핀"
+      ],
+      "aliases": [
+        "세부",
+        "Cebu",
+        "Cebu Island"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/ph-cebu.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ph-cebu-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "ph-el-nido",
+      "name": "엘니도",
+      "kind": "town",
+      "countryCodes": [
+        "PH"
+      ],
+      "countries": [
+        "필리핀"
+      ],
+      "aliases": [
+        "엘니도",
+        "El Nido",
+        "Elnido"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/ph-el-nido.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/ph-el-nido-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "hu-budapest",
+      "name": "부다페스트",
+      "kind": "city",
+      "countryCodes": [
+        "HU"
+      ],
+      "countries": [
+        "헝가리"
+      ],
+      "aliases": [
+        "부다페스트",
+        "Budapest"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/hu-budapest.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/hu-budapest-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "au-gold-coast",
+      "name": "골드코스트",
+      "kind": "city",
+      "countryCodes": [
+        "AU"
+      ],
+      "countries": [
+        "호주"
+      ],
+      "aliases": [
+        "골드코스트",
+        "골드 코스트",
+        "Gold Coast"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/au-gold-coast.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/au-gold-coast-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "au-melbourne",
+      "name": "멜버른",
+      "kind": "city",
+      "countryCodes": [
+        "AU"
+      ],
+      "countries": [
+        "호주"
+      ],
+      "aliases": [
+        "멜버른",
+        "Melbourne"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/au-melbourne.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/au-melbourne-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "au-brisbane",
+      "name": "브리즈번",
+      "kind": "city",
+      "countryCodes": [
+        "AU"
+      ],
+      "countries": [
+        "호주"
+      ],
+      "aliases": [
+        "브리즈번",
+        "Brisbane"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/au-brisbane.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/au-brisbane-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "au-sydney",
+      "name": "시드니",
+      "kind": "city",
+      "countryCodes": [
+        "AU"
+      ],
+      "countries": [
+        "호주"
+      ],
+      "aliases": [
+        "시드니",
+        "Sydney"
+      ],
+      "change": "new-dedicated-artwork",
+      "src": "src/assets/trip-scenes/cities/v4/au-sydney.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/au-sydney-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "au-adelaide",
+      "name": "애들레이드",
+      "kind": "city",
+      "countryCodes": [
+        "AU"
+      ],
+      "countries": [
+        "호주"
+      ],
+      "aliases": [
+        "애들레이드",
+        "아들레이드",
+        "Adelaide"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/au-adelaide.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/au-adelaide-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "au-cairns",
+      "name": "케언스",
+      "kind": "city",
+      "countryCodes": [
+        "AU"
+      ],
+      "countries": [
+        "호주"
+      ],
+      "aliases": [
+        "케언스",
+        "케언즈",
+        "Cairns"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/au-cairns.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/au-cairns-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "au-perth",
+      "name": "퍼스",
+      "kind": "city",
+      "countryCodes": [
+        "AU"
+      ],
+      "countries": [
+        "호주"
+      ],
+      "aliases": [
+        "퍼스",
+        "Perth"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/au-perth.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/au-perth-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "au-hobart",
+      "name": "호바트",
+      "kind": "city",
+      "countryCodes": [
+        "AU"
+      ],
+      "countries": [
+        "호주"
+      ],
+      "aliases": [
+        "호바트",
+        "Hobart"
+      ],
+      "change": "new-destination",
+      "src": "src/assets/trip-scenes/cities/v4/au-hobart.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v4/au-hobart-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    },
+    {
+      "id": "hk-hong-kong",
+      "name": "홍콩",
+      "kind": "region",
+      "countryCodes": [
+        "HK",
+        "CN"
+      ],
+      "countries": [
+        "홍콩",
+        "중국"
+      ],
+      "aliases": [
+        "홍콩",
+        "Hong Kong",
+        "Hongkong",
+        "香港"
+      ],
+      "change": "retained-artwork",
+      "src": "src/assets/trip-scenes/cities/v2/hk-hong-kong.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/hk-hong-kong-mobile.webp",
+      "webReady": true,
+      "originalPairReady": true
+    }
+  ]
+}

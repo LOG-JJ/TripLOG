@@ -3,11 +3,15 @@ const fs = require('node:fs');
 const path = require('node:path');
 const D = require('../src/app/data/destination-scenes');
 const R = require('../src/app/shared/destination-scenes');
-assert.equal(D.catalog.length, 113);
+assert.equal(D.catalog.length, 330);
 assert.equal(D.catalog.filter(item => item.countryCodes[0] === 'KR').length, 30);
-assert.equal(D.catalog.filter(item => item.dedicated).length, 73);
+const overseas = D.catalog.filter(item => item.countryCodes[0] !== 'KR');
+assert.equal(overseas.length, 300);
+assert(overseas.every(item => item.dedicated), 'Every overseas destination has its own landscape and mobile artwork');
+assert.equal(D.catalog.filter(item => item.dedicated).length, 315);
 assert.equal(Object.keys(D.themes).length, 10);
-assert.equal(new Set(D.catalog.map(item => item.id)).size, 113);
+assert.equal(new Set(D.catalog.map(item => item.id)).size, 330);
+const countryLabels = ['ko', 'en'].map(locale => new Intl.DisplayNames([locale], { type: 'region' }));
 for (const entry of D.catalog) {
   for (const countryCode of entry.countryCodes) for (const alias of entry.aliases) {
     const resolved = R.resolve({ countryCode, city: alias });
@@ -18,6 +22,10 @@ for (const entry of D.catalog) {
   assert(D.themes[entry.theme], entry.id);
   assert(entry.mobileSrc.endsWith('-mobile.webp'), entry.id + ': mobile illustration is available');
   assert.equal(R.resolve({ countryCode: entry.countryCodes[0], city: entry.aliases.at(-1) }).mobileSrc, entry.mobileSrc, entry.id + ': resolved mobile art');
+  for (const countryCode of entry.countryCodes) for (const labels of countryLabels) {
+    const resolved = R.resolve({ country: labels.of(countryCode), city: entry.aliases.at(-1) });
+    assert.equal(resolved.destinationId, entry.id, `${labels.of(countryCode)}/${entry.name}: country picker labels match`);
+  }
 }
 for (const theme of Object.values(D.themes)) {
   assert(theme.src.includes('/themes/v2/'), theme.id + ': revised desktop artwork');
@@ -60,11 +68,33 @@ for (const trip of [null, undefined, {}, { tripName: '제주 휴가', city: '' }
 }
 assert.equal(R.resolve({ countryCode: 'JP', city: '오사카 & 교토' }).match, 'multiple');
 assert.equal(R.resolve({ countryCode: 'VN', city: '호이안' }).destinationId, 'vn-hoi-an');
-assert.equal(R.resolve({ countryCode: 'VN', city: '호이안' }).dedicated, false);
+assert.equal(R.resolve({ countryCode: 'VN', city: '호이안' }).dedicated, true);
 assert.equal(R.resolve({ countryCode: 'JP', city: '홋카이도' }).artworkId, 'theme-forest');
 assert.equal(R.resolve({ countryCode: 'US', city: '하와이' }).artworkId, 'theme-island');
 assert.equal(R.resolve({ countryCode: 'US', city: '오아후' }).destinationId, 'us-oahu');
-assert.equal(R.resolve({ countryCode: 'US', city: '오아후' }).artworkId, 'theme-island', 'Oahu does not become an alias for Honolulu');
+assert.equal(R.resolve({ countryCode: 'US', city: '오아후' }).artworkId, 'us-oahu', 'Oahu keeps its own artwork instead of becoming an alias for Honolulu');
+for (const [country, city, expected] of [
+  ['캐나다', 'Québec', 'ca-quebec-city'], ['뉴질랜드', 'Queenstown', 'nz-queenstown'],
+  ['브라질', 'São Paulo', 'br-sao-paulo'], ['아르헨티나', 'Buenos Aires', 'ar-buenos-aires'],
+  ['코스타리카', 'San José', 'cr-san-jose'], ['멕시코', 'Ciudad de México', 'mx-mexico-city'],
+  ['모로코', 'Marrakech', 'ma-marrakesh'], ['남아공', 'Cape Town', 'za-cape-town'],
+  ['인도', 'New Delhi', 'in-delhi'], ['캄보디아', 'Siem Reap', 'kh-siem-reap'],
+  ['그루지야', 'Tbilisi', 'ge-tbilisi'], ['우즈베키스탄', 'Samarqand', 'uz-samarkand'],
+  ['Myanmar', 'Bagan', 'mm-bagan'], ['Palestine', 'Al-Quds', 'il-jerusalem'],
+  ['Israel', 'Jerusalem', 'il-jerusalem'], ['피지', 'Nadi', 'fj-nadi'],
+  ['스페인', 'Santiago de Compostela', 'es-santiago-de-compostela'], ['칠레', 'Santiago', 'cl-santiago'],
+]) {
+  const trip = { country, city }, before = JSON.stringify(trip);
+  const resolved = R.resolve(trip);
+  assert.equal(resolved.destinationId, expected, country + '/' + city);
+  assert.equal(resolved.artworkId, expected, city + ': dedicated artwork');
+  assert(resolved.src.includes('/cities/v4/'), city + ': immutable expanded artwork');
+  assert.equal(JSON.stringify(trip), before, city + ': saved country and city stay unchanged');
+}
+for (const trip of [{ countryCode: 'US', city: 'San Jose' }, { countryCode: 'ES', city: 'Santiago' },
+  { countryCode: 'US', city: 'Victoria' }, { countryCode: 'AU', city: 'Auckland' }]) {
+  assert.equal(R.resolve(trip).artworkId, 'theme-travel', 'Same-name cities are never inferred across countries');
+}
 assert.equal(R.resolve({ countryCode: 'KR', city: '서귀포시' }).match, 'regional');
 assert.equal(R.resolve({ countryCode: 'KR', city: '서귀포시' }).destinationId, 'kr-jeju');
 assert.equal(R.resolve({ countryCode: 'KR', city: '광주시' }).artworkId, 'theme-travel');
@@ -75,7 +105,7 @@ assert.deepEqual(R.resolve(saved), R.resolve(saved), 'A destination keeps the sa
 assert.equal(JSON.stringify(saved), before, 'Artwork selection never edits trip data');
 if (!process.argv.includes('--skip-assets')) {
   const artwork = new Set([...D.catalog.flatMap(item => [item.src, item.mobileSrc]), ...Object.values(D.themes).flatMap(item => [item.src, item.mobileSrc])]);
-  assert.equal(artwork.size, 166, '73 city pairs and 10 theme pairs are active');
+  assert.equal(artwork.size, 650, '315 destination pairs and 10 theme pairs are active');
   for (const file of artwork) {
     const fullPath = path.resolve(__dirname, '..', file);
     assert(fs.existsSync(fullPath), `Missing deployed scene: ${file}`);
@@ -84,4 +114,4 @@ if (!process.argv.includes('--skip-assets')) {
     assert.equal(image.subarray(8, 12).toString(), 'WEBP');
   }
 }
-console.log('PASS destination scenes: 113 destinations, 73 dedicated cities, 10 themes, exact country/alias matching, ambiguous/unknown/multiple/region fallbacks, deterministic non-mutating selection' + (process.argv.includes('--skip-assets') ? ' (asset generation in progress)' : ', all deployed images present'));
+console.log('PASS destination scenes: 330 destinations including 300 overseas with dedicated artwork, 315 dedicated destinations, 10 themes, country picker/alias matching, ambiguous/unknown/multiple/region fallbacks, deterministic non-mutating selection' + (process.argv.includes('--skip-assets') ? ' (asset generation in progress)' : ', all 650 deployed images present'));

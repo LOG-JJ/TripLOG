@@ -1,0 +1,424 @@
+{
+  "selection": "Editorial destination coverage, not a statistical ranking. Existing city, town, island and regional identities are retained.",
+  "targetOverseas": 300,
+  "baselineOverseas": 83,
+  "newOverseas": 217,
+  "targetDomesticRetained": 30,
+  "newDedicated": 242,
+  "newImageJobs": 484,
+  "counts": {
+    "eastAsia": 32,
+    "southeastAsia": 22,
+    "southAsia": 14,
+    "europe": 74,
+    "caucasus-central-asia": 3,
+    "northAmerica": 21,
+    "latinAmerica": 18,
+    "africa": 13,
+    "oceania": 13,
+    "middleEast": 7
+  },
+  "additions": {
+    "eastAsia": {
+      "JP": [
+        "Yokohama",
+        "Kobe",
+        "Hiroshima",
+        "Nagasaki",
+        "Kanazawa",
+        "Takayama",
+        "Hakodate",
+        "Otaru",
+        "Asahikawa",
+        "Sendai",
+        "Niigata",
+        "Kumamoto",
+        "Kagoshima",
+        "Beppu",
+        "Nikko"
+      ],
+      "TW": [
+        "Tainan",
+        "Hualien",
+        "Jiufen",
+        "Chiayi"
+      ],
+      "CN": [
+        "Guangzhou",
+        "Shenzhen",
+        "Chengdu",
+        "Chongqing",
+        "Xian",
+        "Hangzhou",
+        "Suzhou",
+        "Guilin",
+        "Lijiang",
+        "Dali",
+        "Xiamen",
+        "Harbin"
+      ],
+      "MN": [
+        "Ulaanbaatar"
+      ]
+    },
+    "southeastAsia": {
+      "VN": [
+        "Da Lat",
+        "Hue",
+        "Ha Long"
+      ],
+      "TH": [
+        "Chiang Rai",
+        "Krabi",
+        "Ayutthaya",
+        "Sukhothai",
+        "Ko Samui"
+      ],
+      "MY": [
+        "Kuala Lumpur",
+        "George Town",
+        "Malacca",
+        "Langkawi"
+      ],
+      "ID": [
+        "Jakarta",
+        "Yogyakarta"
+      ],
+      "PH": [
+        "Manila",
+        "El Nido",
+        "Bohol"
+      ],
+      "KH": [
+        "Siem Reap",
+        "Phnom Penh"
+      ],
+      "LA": [
+        "Luang Prabang",
+        "Vientiane"
+      ],
+      "MM": [
+        "Bagan"
+      ]
+    },
+    "southAsia": {
+      "IN": [
+        "Delhi",
+        "Agra",
+        "Jaipur",
+        "Mumbai",
+        "Varanasi",
+        "Udaipur",
+        "Kochi",
+        "Goa"
+      ],
+      "NP": [
+        "Kathmandu",
+        "Pokhara"
+      ],
+      "LK": [
+        "Colombo",
+        "Kandy",
+        "Galle"
+      ],
+      "BT": [
+        "Paro"
+      ]
+    },
+    "europe": {
+      "FR": [
+        "Nice",
+        "Lyon",
+        "Marseille",
+        "Bordeaux",
+        "Strasbourg",
+        "Avignon",
+        "Annecy",
+        "Mont-Saint-Michel"
+      ],
+      "GB": [
+        "Edinburgh",
+        "Bath",
+        "Oxford"
+      ],
+      "IT": [
+        "Pisa",
+        "Verona",
+        "Bologna",
+        "Siena",
+        "Turin"
+      ],
+      "ES": [
+        "Malaga",
+        "Bilbao",
+        "Toledo",
+        "Santiago de Compostela"
+      ],
+      "DE": [
+        "Cologne",
+        "Dresden",
+        "Nuremberg",
+        "Rothenburg ob der Tauber"
+      ],
+      "CH": [
+        "Bern",
+        "Lausanne",
+        "Grindelwald"
+      ],
+      "PT": [
+        "Sintra",
+        "Funchal"
+      ],
+      "NL": [
+        "Rotterdam"
+      ],
+      "AT": [
+        "Salzburg",
+        "Innsbruck",
+        "Hallstatt"
+      ],
+      "CZ": [
+        "Cesky Krumlov"
+      ],
+      "BE": [
+        "Brussels",
+        "Bruges",
+        "Ghent"
+      ],
+      "IE": [
+        "Dublin",
+        "Galway"
+      ],
+      "NO": [
+        "Oslo",
+        "Bergen"
+      ],
+      "SE": [
+        "Stockholm"
+      ],
+      "DK": [
+        "Copenhagen"
+      ],
+      "FI": [
+        "Helsinki",
+        "Rovaniemi"
+      ],
+      "IS": [
+        "Reykjavik"
+      ],
+      "GR": [
+        "Athens",
+        "Thessaloniki",
+        "Santorini",
+        "Rhodes",
+        "Heraklion"
+      ],
+      "HU": [
+        "Budapest"
+      ],
+      "PL": [
+        "Warsaw",
+        "Krakow",
+        "Gdansk"
+      ],
+      "HR": [
+        "Dubrovnik",
+        "Split",
+        "Zagreb"
+      ],
+      "SI": [
+        "Ljubljana",
+        "Bled"
+      ],
+      "SK": [
+        "Bratislava"
+      ],
+      "RO": [
+        "Bucharest"
+      ],
+      "BG": [
+        "Sofia"
+      ],
+      "RS": [
+        "Belgrade"
+      ],
+      "EE": [
+        "Tallinn"
+      ],
+      "LV": [
+        "Riga"
+      ],
+      "LT": [
+        "Vilnius"
+      ],
+      "MT": [
+        "Valletta"
+      ],
+      "ME": [
+        "Kotor"
+      ],
+      "BA": [
+        "Sarajevo"
+      ],
+      "TR": [
+        "Antalya",
+        "Cappadocia"
+      ],
+      "RU": [
+        "Moscow",
+        "Saint Petersburg"
+      ]
+    },
+    "caucasus-central-asia": {
+      "GE": [
+        "Tbilisi"
+      ],
+      "AZ": [
+        "Baku"
+      ],
+      "UZ": [
+        "Samarkand"
+      ]
+    },
+    "northAmerica": {
+      "US": [
+        "San Diego",
+        "Orlando",
+        "New Orleans",
+        "San Antonio",
+        "Austin",
+        "Philadelphia",
+        "Denver",
+        "Dallas",
+        "Nashville",
+        "Savannah",
+        "Key West",
+        "Santa Fe",
+        "Anchorage",
+        "Salt Lake City"
+      ],
+      "CA": [
+        "Vancouver",
+        "Toronto",
+        "Montreal",
+        "Quebec City",
+        "Victoria",
+        "Ottawa",
+        "Banff"
+      ]
+    },
+    "latinAmerica": {
+      "MX": [
+        "Mexico City",
+        "Cancun",
+        "Oaxaca"
+      ],
+      "BR": [
+        "Rio de Janeiro",
+        "Sao Paulo",
+        "Salvador"
+      ],
+      "AR": [
+        "Buenos Aires",
+        "Bariloche"
+      ],
+      "PE": [
+        "Lima",
+        "Cusco",
+        "Machu Picchu"
+      ],
+      "CO": [
+        "Bogota",
+        "Cartagena"
+      ],
+      "CL": [
+        "Santiago"
+      ],
+      "EC": [
+        "Quito"
+      ],
+      "CU": [
+        "Havana"
+      ],
+      "CR": [
+        "San Jose"
+      ],
+      "PA": [
+        "Panama City"
+      ]
+    },
+    "africa": {
+      "EG": [
+        "Cairo",
+        "Giza",
+        "Luxor"
+      ],
+      "MA": [
+        "Marrakesh",
+        "Fes",
+        "Casablanca"
+      ],
+      "ZA": [
+        "Cape Town",
+        "Johannesburg"
+      ],
+      "ZW": [
+        "Victoria Falls"
+      ],
+      "KE": [
+        "Nairobi"
+      ],
+      "TZ": [
+        "Zanzibar City"
+      ],
+      "TN": [
+        "Tunis"
+      ],
+      "NA": [
+        "Swakopmund"
+      ]
+    },
+    "oceania": {
+      "AU": [
+        "Melbourne",
+        "Brisbane",
+        "Gold Coast",
+        "Cairns",
+        "Perth",
+        "Adelaide",
+        "Hobart"
+      ],
+      "NZ": [
+        "Auckland",
+        "Queenstown",
+        "Rotorua",
+        "Christchurch"
+      ],
+      "FJ": [
+        "Nadi"
+      ],
+      "PF": [
+        "Bora Bora"
+      ]
+    },
+    "middleEast": {
+      "BH": [
+        "Manama"
+      ],
+      "KW": [
+        "Kuwait City"
+      ],
+      "JO": [
+        "Amman",
+        "Petra"
+      ],
+      "IL": [
+        "Jerusalem",
+        "Tel Aviv"
+      ],
+      "OM": [
+        "Salalah"
+      ]
+    }
+  }
+}

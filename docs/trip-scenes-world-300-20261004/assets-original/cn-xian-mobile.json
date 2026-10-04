@@ -1,0 +1,27 @@
+{
+  "jobId": "cn-xian-mobile",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104e7-e587-7d23-8d34-8e0712636c97/exec-c279fcfe-c263-4ec4-9dc1-4efdb42e4e59.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/cn-xian-mobile.png",
+  "generationMode": "built-in image_gen; single I2I using user-approved canonical Suncheon style reference",
+  "prompt": "Create one standalone destination illustration of Xian: the Bell Tower with traditional green roofs, the old city wall and a few warm-toned historic rooftops. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a portrait 4:5 composition intended for a 480 × 600 mobile asset displayed in a narrow right-side header slot. Compose the main landmarks directly for this portrait frame so they remain recognizable at small size. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png"
+  ],
+  "generatedCityInputs": [],
+  "generationCount": 1,
+  "transparentBackground": true,
+  "overwrite": false,
+  "startedAt": "2026-10-04T08:22:09.551Z",
+  "startedEpoch": 1791102129.551,
+  "finishedAt": "2026-10-04T08:23:03.629Z",
+  "sourceSha256": "cbf4fa23bde42be42715dce9d4a8f45974377c743f02dd24823e6e692fb49563",
+  "savedSha256": "cbf4fa23bde42be42715dce9d4a8f45974377c743f02dd24823e6e692fb49563",
+  "sha256Match": true,
+  "referenceSha256": "9ee5b5e49a9fcc42f6ce7f1fdb9e4e740e6e4837ff51bad6394554bfa86c9dd6",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "pngColorType": 6,
+  "bytes": 1419744
+}

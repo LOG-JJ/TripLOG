@@ -1,0 +1,27 @@
+{
+  "jobId": "jp-nagoya-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104e7-e587-7d23-8d34-8e0712636c97/exec-127dbcb6-4ba1-43cf-ae8b-0bbd1a6b802f.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/jp-nagoya-landscape.png",
+  "generationMode": "built-in image_gen; single I2I using user-approved canonical Suncheon style reference",
+  "prompt": "Create one standalone destination illustration of Nagoya: Nagoya Castle with green tiled roofs and golden shachihoko roof ornaments, stone ramparts and a few cherry trees. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "generatedCityInputs": [],
+  "generationCount": 1,
+  "transparentBackground": true,
+  "overwrite": false,
+  "startedAt": "2026-10-04T07:14:18.263Z",
+  "startedEpoch": 1791098058.263,
+  "finishedAt": "2026-10-04T07:15:19.465Z",
+  "sourceSha256": "98fe4ffaf9f3b073863c7dabc843d554f628b1bd1e7876dce0828610445a1b00",
+  "savedSha256": "98fe4ffaf9f3b073863c7dabc843d554f628b1bd1e7876dce0828610445a1b00",
+  "sha256Match": true,
+  "referenceSha256": "8be62382845e53791e695e49b20a1c631e3e621d40fee07935c0f4c9832af822",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "pngColorType": 6,
+  "bytes": 1621595
+}

@@ -1,0 +1,27 @@
+{
+  "jobId": "dk-copenhagen-mobile",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104e7-e587-7d23-8d34-8e0712636c97/exec-0940efeb-dff8-41af-819f-058b3ba4dc2d.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/dk-copenhagen-mobile.png",
+  "generationMode": "built-in image_gen; single I2I using user-approved canonical Suncheon style reference",
+  "prompt": "Create one standalone destination illustration of Copenhagen: the colorful Nyhavn waterfront, traditional sailing boats and a small bicycle beside the canal. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a portrait 4:5 composition intended for a 480 × 600 mobile asset displayed in a narrow right-side header slot. Compose the main landmarks directly for this portrait frame so they remain recognizable at small size. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png"
+  ],
+  "generatedCityInputs": [],
+  "generationCount": 1,
+  "transparentBackground": true,
+  "overwrite": false,
+  "startedAt": "2026-10-04T10:32:43.310Z",
+  "startedEpoch": 1791109963.31,
+  "finishedAt": "2026-10-04T10:33:58.809Z",
+  "sourceSha256": "45580862dc4dd6f7ab426aba5ec042c67bdf1cdc79ba10abe00598b6ff71af8d",
+  "savedSha256": "45580862dc4dd6f7ab426aba5ec042c67bdf1cdc79ba10abe00598b6ff71af8d",
+  "sha256Match": true,
+  "referenceSha256": "9ee5b5e49a9fcc42f6ce7f1fdb9e4e740e6e4837ff51bad6394554bfa86c9dd6",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "pngColorType": 6,
+  "bytes": 1763880
+}

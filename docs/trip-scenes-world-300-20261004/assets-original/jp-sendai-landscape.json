@@ -1,0 +1,27 @@
+{
+  "jobId": "jp-sendai-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104e7-e587-7d23-8d34-8e0712636c97/exec-b96ebffd-a153-4786-b88e-30a3098b837d.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/jp-sendai-landscape.png",
+  "generationMode": "built-in image_gen; single I2I using user-approved canonical Suncheon style reference",
+  "prompt": "Create one standalone destination illustration of Sendai: the equestrian statue of Date Masamune at the castle site, wooded slopes and a leafy city view. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "generatedCityInputs": [],
+  "generationCount": 1,
+  "transparentBackground": true,
+  "overwrite": false,
+  "startedAt": "2026-10-04T08:04:52.485Z",
+  "startedEpoch": 1791101092.485,
+  "finishedAt": "2026-10-04T08:05:38.606Z",
+  "sourceSha256": "aab335b378b1bc5c77b9c51e80dda5956c843b2c92fc86ba916b0944a54833b2",
+  "savedSha256": "aab335b378b1bc5c77b9c51e80dda5956c843b2c92fc86ba916b0944a54833b2",
+  "sha256Match": true,
+  "referenceSha256": "8be62382845e53791e695e49b20a1c631e3e621d40fee07935c0f4c9832af822",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "pngColorType": 6,
+  "bytes": 1472295
+}

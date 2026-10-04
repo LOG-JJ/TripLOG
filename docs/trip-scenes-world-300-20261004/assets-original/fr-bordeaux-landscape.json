@@ -1,0 +1,21 @@
+{
+  "jobId": "fr-bordeaux-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-daee632a-b05f-4524-8840-00bb4ab27c6e.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/fr-bordeaux-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Bordeaux: the symmetrical Place de la Bourse reflected in the Miroir d'eau, with the Garonne river nearby. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "0b1dbafe8b348f5db55cb6f77395a92a968941bda3678022fb6394448a3b5187",
+  "savedSha256": "0b1dbafe8b348f5db55cb6f77395a92a968941bda3678022fb6394448a3b5187",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T09:32:22.847Z",
+  "savedAt": "2026-10-04T09:32:55.226991+00:00"
+}

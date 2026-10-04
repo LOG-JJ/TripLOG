@@ -1,0 +1,21 @@
+{
+  "jobId": "us-oahu-mobile",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-35a4-74c3-916e-ab6a0794b3ea\\exec-512921b5-da60-4d2f-8c3c-b07589bc6d49.png",
+  "savedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\docs\\trip-scenes-world-300-20261004\\assets-original\\us-oahu-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Oahu: the dramatic green Koolau ridges of the Kualoa coast, a turquoise bay, palms and an outrigger canoe; depict the island coastline rather than a Honolulu city skyline. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a portrait 4:5 composition intended for a 480 × 600 mobile asset displayed in a narrow right-side header slot. Compose the main landmarks directly for this portrait frame so they remain recognizable at small size. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png"
+  ],
+  "sourceSha256": "dd0502cc217dd560260bb4a2a85b0534af3a6e55d21ab0177b4737eebc25fd2d",
+  "savedSha256": "dd0502cc217dd560260bb4a2a85b0534af3a6e55d21ab0177b4737eebc25fd2d",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T07:53:20.679Z",
+  "savedAt": "2026-10-04T07:54:08.058602+00:00"
+}

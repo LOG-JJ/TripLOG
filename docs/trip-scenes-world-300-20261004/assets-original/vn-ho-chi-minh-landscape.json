@@ -1,0 +1,17 @@
+{
+  "jobId": "vn-ho-chi-minh-landscape",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-5e20-7f81-812c-b8a5c49d0800\\exec-7b6096db-4198-4b0f-a1f3-6d70b344c8f6.png",
+  "savedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\docs\\trip-scenes-world-300-20261004\\assets-original\\vn-ho-chi-minh-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, reference-guided image generation",
+  "prompt": "Create one standalone destination illustration of Ho Chi Minh City: the red-brick Notre-Dame Cathedral with its twin towers, the warm-yellow Central Post Office facade and tropical city trees. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "04941aa4ed6e960f0a3f91db0b1f782f79d72dfa9f6698c6b1b925966936608c",
+  "savedSha256": "04941aa4ed6e960f0a3f91db0b1f782f79d72dfa9f6698c6b1b925966936608c",
+  "generationStartedAt": "2026-10-04T07:43:47.914Z"
+}

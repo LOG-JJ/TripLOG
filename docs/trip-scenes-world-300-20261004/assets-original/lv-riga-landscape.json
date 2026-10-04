@@ -1,0 +1,27 @@
+{
+  "jobId": "lv-riga-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104e7-e587-7d23-8d34-8e0712636c97/exec-0c5b1a59-64cf-4e37-b094-c0a868e79c6b.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/lv-riga-landscape.png",
+  "generationMode": "built-in image_gen; single I2I using user-approved canonical Suncheon style reference",
+  "prompt": "Create one standalone destination illustration of Riga: the ornate House of the Black Heads, the spire of St Peter's Church and a small old-town square. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "generatedCityInputs": [],
+  "generationCount": 1,
+  "transparentBackground": true,
+  "overwrite": false,
+  "startedAt": "2026-10-04T11:12:08.279Z",
+  "startedEpoch": 1791112328.279,
+  "finishedAt": "2026-10-04T11:12:54.151Z",
+  "sourceSha256": "b62b325a7d3c44275ec0759436d049d6b747d6fc644b8d735fef1e2b34799c4f",
+  "savedSha256": "b62b325a7d3c44275ec0759436d049d6b747d6fc644b8d735fef1e2b34799c4f",
+  "sha256Match": true,
+  "referenceSha256": "8be62382845e53791e695e49b20a1c631e3e621d40fee07935c0f4c9832af822",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "pngColorType": 6,
+  "bytes": 1664435
+}

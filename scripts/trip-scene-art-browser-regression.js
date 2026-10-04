@@ -51,13 +51,26 @@ async function main() {
           canvas.width = image.naturalWidth; canvas.height = image.naturalHeight;
           const ctx = canvas.getContext('2d', { willReadFrequently: true }); ctx.drawImage(image, 0, 0);
           const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-          let visible = 0, transparent = 0;
-          for (let i = 3; i < pixels.length; i += 4) { if (pixels[i] > 200) visible++; if (pixels[i] < 8) transparent++; }
+          let visible = 0, transparent = 0, visibleRight = 0, visibleBottom = 0;
+          for (let i = 3; i < pixels.length; i += 4) {
+            if (pixels[i] > 200) visible++;
+            if (pixels[i] < 8) transparent++;
+            else {
+              const pixel = (i - 3) / 4;
+              visibleRight = Math.max(visibleRight, pixel % canvas.width + 1);
+              visibleBottom = Math.max(visibleBottom, Math.floor(pixel / canvas.width) + 1);
+            }
+          }
+          const imageRect = rect(image), panelRect = rect(panel), panelStyle = getComputedStyle(panel);
+          const scale = Math.min(imageRect.width / canvas.width, imageRect.height / canvas.height);
           return {
-            panel: rect(panel), copy: rect(panel.querySelector('.th-hero-copy')), art: rect(panel.querySelector('.th-hero-scene')),
+            panel: panelRect, copy: rect(panel.querySelector('.th-hero-copy')), art: rect(panel.querySelector('.th-hero-scene')),
             title: rect(panel.querySelector('.th-trip-name')), titleSize: parseFloat(getComputedStyle(panel.querySelector('.th-trip-name')).fontSize),
             imageFit: getComputedStyle(image).objectFit, imagePosition: getComputedStyle(image).objectPosition,
             visibleFraction: visible / (pixels.length / 4), transparentFraction: transparent / (pixels.length / 4),
+            // Artwork meets the inside of the card border, not its outside edge.
+            paintedBottomGap: panelRect.bottom - parseFloat(panelStyle.borderBottomWidth) - (imageRect.bottom - (canvas.height - visibleBottom) * scale),
+            paintedRightGap: panelRect.right - parseFloat(panelStyle.borderRightWidth) - (imageRect.right - (canvas.width - visibleRight) * scale),
             fits: panel.scrollWidth <= panel.clientWidth + 1 && document.documentElement.scrollWidth <= innerWidth,
           };
         });
@@ -66,6 +79,7 @@ async function main() {
         assert(metrics.copy.right <= metrics.art.x + 1, city.id + ': information remains to the left of the artwork');
         assert(metrics.title.right <= metrics.art.x + 1, city.id + ': title does not cross the illustration');
         assert(Math.abs(metrics.panel.bottom - metrics.art.bottom) < 2, city.id + ': no empty band under artwork');
+        assert(metrics.paintedBottomGap < 2 && metrics.paintedRightGap < 2, city.id + '/' + width + ': actual painted pixels reach the card edges ' + JSON.stringify({ bottom: metrics.paintedBottomGap, right: metrics.paintedRightGap }));
         assert.equal(metrics.imageFit, 'contain', city.id + '/' + width + ': wider phone slots keep the full portrait instead of cropping the foreground');
         assert.equal(metrics.imagePosition, '100% 100%', city.id + ': artwork touches the right and bottom edges');
         assert(metrics.visibleFraction > .1 && metrics.transparentFraction > .005, city.id + ': visible transparent illustration');

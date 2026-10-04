@@ -1,0 +1,21 @@
+{
+  "jobId": "ru-saint-petersburg-mobile",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-341ec2e4-9163-40e0-8e31-b03a27a69c7c.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/ru-saint-petersburg-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Saint Petersburg: the green and white Winter Palace beside the broad Neva River, Palace Bridge and elegant historic waterfront buildings. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a portrait 4:5 composition intended for a 480 × 600 mobile asset displayed in a narrow right-side header slot. Compose the main landmarks directly for this portrait frame so they remain recognizable at small size. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png"
+  ],
+  "sourceSha256": "4758b28d0690835f20aca68688f06cc1bcb6ab074cf836c2eedf7a0372582296",
+  "savedSha256": "4758b28d0690835f20aca68688f06cc1bcb6ab074cf836c2eedf7a0372582296",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T10:12:09.916Z",
+  "savedAt": "2026-10-04T10:12:47.215113+00:00"
+}

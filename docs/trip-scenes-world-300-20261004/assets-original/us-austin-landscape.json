@@ -1,0 +1,21 @@
+{
+  "jobId": "us-austin-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104c1-5e20-7f81-812c-b8a5c49d0800/exec-4267925b-dcb6-46bc-8da8-09576d282331.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/us-austin-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Austin: the pink-granite Texas State Capitol, Lady Bird Lake and a small kayak with the city skyline behind. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "ade2382b74b16ddcf5a4dd9f576d7ff101e240798ef50875ace598353a31f8a4",
+  "savedSha256": "ade2382b74b16ddcf5a4dd9f576d7ff101e240798ef50875ace598353a31f8a4",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T11:25:00.665Z",
+  "savedAt": "2026-10-04T11:25:42.248787+00:00"
+}

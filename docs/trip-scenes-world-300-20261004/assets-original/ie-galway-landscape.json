@@ -1,0 +1,21 @@
+{
+  "jobId": "ie-galway-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104c1-35a4-74c3-916e-ab6a0794b3ea/exec-a0982e61-aed5-4ac6-8652-a033db0b6e51.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/ie-galway-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Galway: the colorful houses of the Long Walk along Galway Bay, the Spanish Arch and small fishing boats. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "85d0160b458d34491e5e78025111c5bc84419ba256de1725375e5aa3fc7f4e9e",
+  "savedSha256": "85d0160b458d34491e5e78025111c5bc84419ba256de1725375e5aa3fc7f4e9e",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T10:25:08.179Z",
+  "savedAt": "2026-10-04T10:26:21.762972+00:00"
+}

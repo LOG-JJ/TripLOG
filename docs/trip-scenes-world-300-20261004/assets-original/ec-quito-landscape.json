@@ -1,0 +1,27 @@
+{
+  "jobId": "ec-quito-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104e7-e587-7d23-8d34-8e0712636c97/exec-549c4861-2ece-4bd0-845c-99792438f846.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/ec-quito-landscape.png",
+  "generationMode": "built-in image_gen; single I2I using user-approved canonical Suncheon style reference",
+  "prompt": "Create one standalone destination illustration of Quito: Quito's colonial churches and tiled roofs, the El Panecillo hilltop monument and distant Andean ridges. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "generatedCityInputs": [],
+  "generationCount": 1,
+  "transparentBackground": true,
+  "overwrite": false,
+  "startedAt": "2026-10-04T12:02:21.821Z",
+  "startedEpoch": 1791115341.821,
+  "finishedAt": "2026-10-04T12:03:13.791Z",
+  "sourceSha256": "cc6c8f72ba6c1e24de66ccf03ea72a390157ee35c642ac70359267325ea45cb7",
+  "savedSha256": "cc6c8f72ba6c1e24de66ccf03ea72a390157ee35c642ac70359267325ea45cb7",
+  "sha256Match": true,
+  "referenceSha256": "8be62382845e53791e695e49b20a1c631e3e621d40fee07935c0f4c9832af822",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "pngColorType": 6,
+  "bytes": 1574610
+}

@@ -1,0 +1,21 @@
+{
+  "jobId": "it-pisa-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-46799716-e567-40af-8603-6d8c4fdf577a.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/it-pisa-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Pisa: the Leaning Tower of Pisa beside the cathedral and baptistery on the green Piazza dei Miracoli. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "0fac6e60c9497427cc3711dd70a402f91dd0479f433e8f3c13e4e29fd6be140d",
+  "savedSha256": "0fac6e60c9497427cc3711dd70a402f91dd0479f433e8f3c13e4e29fd6be140d",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T09:43:02.415Z",
+  "savedAt": "2026-10-04T09:43:34.228006+00:00"
+}

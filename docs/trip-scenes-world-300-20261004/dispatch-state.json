@@ -1,0 +1,2332 @@
+{
+  "active": {},
+  "history": [
+    {
+      "agent": "mobile_header_art",
+      "completed": "tw-kaohsiung-landscape",
+      "at": "2026-10-04T07:36:01.627720+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "mp-saipan-landscape",
+      "at": "2026-10-04T07:36:38.328505+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "tw-kaohsiung-mobile",
+      "at": "2026-10-04T07:37:57.036503+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "mp-saipan-mobile",
+      "at": "2026-10-04T07:38:05.619440+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "cn-qingdao-mobile",
+      "at": "2026-10-04T07:38:19.486893+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "tw-taichung-landscape",
+      "at": "2026-10-04T07:40:04.192976+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "tw-taichung-mobile",
+      "at": "2026-10-04T07:40:04.984334+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "cn-zhangjiajie-landscape",
+      "at": "2026-10-04T07:41:31.427082+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "mo-macau-mobile",
+      "at": "2026-10-04T07:42:10.164548+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "mo-macau-landscape",
+      "at": "2026-10-04T07:42:10.947524+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "cn-zhangjiajie-mobile",
+      "at": "2026-10-04T07:43:13.079183+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "vn-hanoi-landscape",
+      "at": "2026-10-04T07:44:06.231130+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "vn-hanoi-mobile",
+      "at": "2026-10-04T07:44:07.029638+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "vn-ho-chi-minh-landscape",
+      "at": "2026-10-04T07:44:56.926609+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "vn-hoi-an-landscape",
+      "at": "2026-10-04T07:45:43.686392+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "vn-ho-chi-minh-mobile",
+      "at": "2026-10-04T07:46:08.064465+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "vn-hoi-an-mobile",
+      "at": "2026-10-04T07:46:59.853447+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "vn-phu-quoc-landscape",
+      "at": "2026-10-04T07:47:11.808300+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "vn-phu-quoc-mobile",
+      "at": "2026-10-04T07:47:51.455721+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "th-phuket-mobile",
+      "at": "2026-10-04T07:48:34.769951+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "th-phuket-landscape",
+      "at": "2026-10-04T07:49:11.420487+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "th-pattaya-landscape",
+      "at": "2026-10-04T07:50:29.179109+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "th-pattaya-mobile",
+      "at": "2026-10-04T07:50:29.954435+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "my-kota-kinabalu-landscape",
+      "at": "2026-10-04T07:51:05.303814+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "my-kota-kinabalu-mobile",
+      "at": "2026-10-04T07:51:28.491095+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "ph-cebu-landscape",
+      "at": "2026-10-04T07:52:43.216671+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "ph-cebu-mobile",
+      "at": "2026-10-04T07:52:44.043467+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ph-boracay-landscape",
+      "at": "2026-10-04T07:52:44.828516+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "ph-boracay-mobile",
+      "at": "2026-10-04T07:53:22.161580+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "us-oahu-landscape",
+      "at": "2026-10-04T07:54:47.493310+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "us-oahu-mobile",
+      "at": "2026-10-04T07:54:48.331104+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "jp-yokohama-landscape",
+      "at": "2026-10-04T07:54:49.139351+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "jp-yokohama-mobile",
+      "at": "2026-10-04T07:55:27.116405+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "jp-kobe-mobile",
+      "at": "2026-10-04T07:56:32.460644+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "jp-kobe-landscape",
+      "at": "2026-10-04T07:56:53.725650+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "jp-nagasaki-landscape",
+      "at": "2026-10-04T07:58:33.349002+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "jp-hiroshima-mobile",
+      "at": "2026-10-04T07:58:34.155028+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "jp-hiroshima-landscape",
+      "at": "2026-10-04T07:58:34.972794+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "jp-nagasaki-mobile",
+      "at": "2026-10-04T07:59:17.394948+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "jp-kanazawa-landscape",
+      "at": "2026-10-04T08:00:29.094815+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "jp-takayama-mobile",
+      "at": "2026-10-04T08:01:22.607293+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "jp-kanazawa-mobile",
+      "at": "2026-10-04T08:02:25.789793+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "jp-hakodate-landscape",
+      "at": "2026-10-04T08:02:26.614788+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "jp-takayama-landscape",
+      "at": "2026-10-04T08:02:27.416934+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "jp-asahikawa-landscape",
+      "at": "2026-10-04T08:03:39.725567+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "jp-hakodate-mobile",
+      "at": "2026-10-04T08:03:45.571701+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "jp-asahikawa-mobile",
+      "at": "2026-10-04T08:05:09.809752+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "jp-otaru-mobile",
+      "at": "2026-10-04T08:05:15.734724+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "jp-otaru-landscape",
+      "at": "2026-10-04T08:05:16.539396+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "jp-sendai-mobile",
+      "at": "2026-10-04T08:06:36.086343+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "jp-sendai-landscape",
+      "at": "2026-10-04T08:06:42.085348+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "jp-kumamoto-landscape",
+      "at": "2026-10-04T08:07:49.157379+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "jp-niigata-landscape",
+      "at": "2026-10-04T08:07:58.522230+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "jp-niigata-mobile",
+      "at": "2026-10-04T08:07:59.312115+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "jp-kagoshima-landscape",
+      "at": "2026-10-04T08:09:21.724915+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "jp-kumamoto-mobile",
+      "at": "2026-10-04T08:09:27.908719+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "jp-kagoshima-mobile",
+      "at": "2026-10-04T08:10:01.884284+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "jp-beppu-landscape",
+      "at": "2026-10-04T08:10:12.799430+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "jp-beppu-mobile",
+      "at": "2026-10-04T08:11:18.280523+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "jp-nikko-landscape",
+      "at": "2026-10-04T08:11:39.766783+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "tw-tainan-mobile",
+      "at": "2026-10-04T08:12:48.500844+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "jp-nikko-mobile",
+      "at": "2026-10-04T08:12:55.977135+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "tw-tainan-landscape",
+      "at": "2026-10-04T08:12:56.845954+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "tw-hualien-mobile",
+      "at": "2026-10-04T08:14:23.055211+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "tw-hualien-landscape",
+      "at": "2026-10-04T08:14:31.461949+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "tw-jiufen-landscape",
+      "at": "2026-10-04T08:14:47.546212+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "tw-chiayi-landscape",
+      "at": "2026-10-04T08:16:03.150905+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "tw-jiufen-mobile",
+      "at": "2026-10-04T08:16:15.032709+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "cn-guangzhou-mobile",
+      "at": "2026-10-04T08:17:46.414091+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "tw-chiayi-mobile",
+      "at": "2026-10-04T08:17:54.487493+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "cn-guangzhou-landscape",
+      "at": "2026-10-04T08:17:55.313282+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "cn-shenzhen-mobile",
+      "at": "2026-10-04T08:19:28.390395+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "cn-shenzhen-landscape",
+      "at": "2026-10-04T08:19:35.364238+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "cn-chengdu-mobile",
+      "at": "2026-10-04T08:20:36.174729+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "cn-chengdu-landscape",
+      "at": "2026-10-04T08:20:58.516637+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "cn-chongqing-landscape",
+      "at": "2026-10-04T08:22:00.920444+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "cn-chongqing-mobile",
+      "at": "2026-10-04T08:22:39.035859+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "cn-xian-landscape",
+      "at": "2026-10-04T08:22:39.874624+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "cn-hangzhou-landscape",
+      "at": "2026-10-04T08:23:51.453758+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "cn-xian-mobile",
+      "at": "2026-10-04T08:24:01.862849+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "cn-suzhou-landscape",
+      "at": "2026-10-04T08:24:58.691497+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "cn-hangzhou-mobile",
+      "at": "2026-10-04T08:25:19.429044+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "cn-suzhou-mobile",
+      "at": "2026-10-04T08:26:34.365752+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "cn-guilin-landscape",
+      "at": "2026-10-04T08:27:00.798929+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "cn-lijiang-mobile",
+      "at": "2026-10-04T08:28:26.563356+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "cn-lijiang-landscape",
+      "at": "2026-10-04T08:28:36.910831+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "cn-guilin-mobile",
+      "at": "2026-10-04T08:28:37.711616+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "cn-dali-mobile",
+      "at": "2026-10-04T08:30:11.451085+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "cn-dali-landscape",
+      "at": "2026-10-04T08:30:32.422214+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "cn-xiamen-landscape",
+      "at": "2026-10-04T08:31:15.918677+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "cn-xiamen-mobile",
+      "at": "2026-10-04T08:31:16.732898+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "cn-harbin-landscape",
+      "at": "2026-10-04T08:32:39.206491+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "cn-harbin-mobile",
+      "at": "2026-10-04T08:33:12.398243+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "mn-ulaanbaatar-landscape",
+      "at": "2026-10-04T08:33:55.274488+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "mn-ulaanbaatar-mobile",
+      "at": "2026-10-04T08:34:14.675326+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "vn-da-lat-landscape",
+      "at": "2026-10-04T08:35:27.446391+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "vn-da-lat-mobile",
+      "at": "2026-10-04T08:36:04.035907+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "vn-hue-mobile",
+      "at": "2026-10-04T08:37:18.565665+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "vn-hue-landscape",
+      "at": "2026-10-04T08:37:19.422822+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "vn-ha-long-landscape",
+      "at": "2026-10-04T08:38:39.500591+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "vn-ha-long-mobile",
+      "at": "2026-10-04T08:39:20.369671+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "th-chiang-rai-landscape",
+      "at": "2026-10-04T08:39:59.198139+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "th-chiang-rai-mobile",
+      "at": "2026-10-04T08:40:00.004773+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "th-krabi-landscape",
+      "at": "2026-10-04T08:41:28.872667+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "th-krabi-mobile",
+      "at": "2026-10-04T08:42:06.177330+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "th-ayutthaya-landscape",
+      "at": "2026-10-04T08:42:29.093320+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "th-ayutthaya-mobile",
+      "at": "2026-10-04T08:42:48.843413+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "th-sukhothai-landscape",
+      "at": "2026-10-04T08:43:51.467027+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "my-kuala-lumpur-landscape",
+      "at": "2026-10-04T08:44:55.285574+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "th-ko-samui-landscape",
+      "at": "2026-10-04T08:45:15.012895+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "th-sukhothai-mobile",
+      "at": "2026-10-04T08:45:34.839292+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "th-ko-samui-mobile",
+      "at": "2026-10-04T08:45:35.625678+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "my-kuala-lumpur-mobile",
+      "at": "2026-10-04T08:47:36.420620+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "my-george-town-landscape",
+      "at": "2026-10-04T08:48:08.327987+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "my-malacca-landscape",
+      "at": "2026-10-04T08:48:40.478906+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "my-george-town-mobile",
+      "at": "2026-10-04T08:49:02.966932+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "my-malacca-mobile",
+      "at": "2026-10-04T08:50:27.880275+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "my-langkawi-landscape",
+      "at": "2026-10-04T08:50:53.577954+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "my-langkawi-mobile",
+      "at": "2026-10-04T08:51:38.790776+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "id-jakarta-landscape",
+      "at": "2026-10-04T08:52:04.758161+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "id-jakarta-mobile",
+      "at": "2026-10-04T08:53:26.525957+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "id-yogyakarta-landscape",
+      "at": "2026-10-04T08:53:40.658379+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ph-manila-mobile",
+      "at": "2026-10-04T08:55:39.991263+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "id-yogyakarta-mobile",
+      "at": "2026-10-04T08:55:52.951776+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "ph-manila-landscape",
+      "at": "2026-10-04T08:55:53.766731+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "ph-el-nido-landscape",
+      "at": "2026-10-04T08:56:32.665231+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ph-el-nido-mobile",
+      "at": "2026-10-04T08:58:04.083982+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "ph-bohol-landscape",
+      "at": "2026-10-04T08:58:32.656291+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "ph-bohol-mobile",
+      "at": "2026-10-04T08:59:13.500517+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "kh-siem-reap-landscape",
+      "at": "2026-10-04T08:59:46.165559+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "kh-siem-reap-mobile",
+      "at": "2026-10-04T09:01:13.235933+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "kh-phnom-penh-landscape",
+      "at": "2026-10-04T09:01:26.971134+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "la-luang-prabang-mobile",
+      "at": "2026-10-04T09:03:28.936655+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "kh-phnom-penh-mobile",
+      "at": "2026-10-04T09:03:42.087092+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "la-luang-prabang-landscape",
+      "at": "2026-10-04T09:03:42.877816+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "la-vientiane-landscape",
+      "at": "2026-10-04T09:04:17.937857+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "la-vientiane-mobile",
+      "at": "2026-10-04T09:05:52.737699+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "in-delhi-mobile",
+      "at": "2026-10-04T09:07:13.106361+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "mm-bagan-landscape",
+      "at": "2026-10-04T09:07:24.992693+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "mm-bagan-mobile",
+      "at": "2026-10-04T09:07:25.766435+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "in-delhi-landscape",
+      "at": "2026-10-04T09:07:26.567255+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "in-agra-landscape",
+      "at": "2026-10-04T09:10:02.495868+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "in-agra-mobile",
+      "at": "2026-10-04T09:10:28.297575+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "in-jaipur-landscape",
+      "at": "2026-10-04T09:10:42.529725+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "in-jaipur-mobile",
+      "at": "2026-10-04T09:10:53.006418+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "in-mumbai-landscape",
+      "at": "2026-10-04T09:11:45.250029+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "in-udaipur-landscape",
+      "at": "2026-10-04T09:13:12.582240+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "in-varanasi-landscape",
+      "at": "2026-10-04T09:13:23.999024+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "in-mumbai-mobile",
+      "at": "2026-10-04T09:13:24.903865+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "in-udaipur-mobile",
+      "at": "2026-10-04T09:14:34.061329+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "in-varanasi-mobile",
+      "at": "2026-10-04T09:14:39.861968+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "in-goa-landscape",
+      "at": "2026-10-04T09:15:40.378692+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "in-kochi-landscape",
+      "at": "2026-10-04T09:16:02.182083+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "np-kathmandu-landscape",
+      "at": "2026-10-04T09:16:55.044335+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "in-kochi-mobile",
+      "at": "2026-10-04T09:17:01.116225+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "np-pokhara-landscape",
+      "at": "2026-10-04T09:18:00.307986+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "in-goa-mobile",
+      "at": "2026-10-04T09:18:08.439388+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "lk-colombo-landscape",
+      "at": "2026-10-04T09:19:16.563844+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "np-kathmandu-mobile",
+      "at": "2026-10-04T09:19:25.578678+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "lk-kandy-landscape",
+      "at": "2026-10-04T09:20:20.746216+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "np-pokhara-mobile",
+      "at": "2026-10-04T09:20:28.108843+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "lk-galle-landscape",
+      "at": "2026-10-04T09:21:34.144382+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "lk-colombo-mobile",
+      "at": "2026-10-04T09:21:41.300877+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "lk-kandy-mobile",
+      "at": "2026-10-04T09:22:10.012971+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "bt-paro-landscape",
+      "at": "2026-10-04T09:23:15.045818+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ge-tbilisi-mobile",
+      "at": "2026-10-04T09:24:26.882011+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "lk-galle-mobile",
+      "at": "2026-10-04T09:24:36.369166+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "ge-tbilisi-landscape",
+      "at": "2026-10-04T09:25:06.265725+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "bt-paro-mobile",
+      "at": "2026-10-04T09:25:21.548137+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "az-baku-landscape",
+      "at": "2026-10-04T09:26:24.096695+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "fr-nice-landscape",
+      "at": "2026-10-04T09:27:42.495820+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "az-baku-mobile",
+      "at": "2026-10-04T09:27:51.687255+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "uz-samarkand-landscape",
+      "at": "2026-10-04T09:28:11.581357+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "uz-samarkand-mobile",
+      "at": "2026-10-04T09:28:31.953282+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "fr-nice-mobile",
+      "at": "2026-10-04T09:29:52.791548+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "fr-marseille-mobile",
+      "at": "2026-10-04T09:31:20.133735+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "fr-lyon-landscape",
+      "at": "2026-10-04T09:31:27.609636+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "fr-lyon-mobile",
+      "at": "2026-10-04T09:31:44.456840+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "fr-marseille-landscape",
+      "at": "2026-10-04T09:31:45.260090+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "fr-bordeaux-landscape",
+      "at": "2026-10-04T09:32:55.984320+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "fr-avignon-landscape",
+      "at": "2026-10-04T09:33:55.411053+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "fr-avignon-mobile",
+      "at": "2026-10-04T09:35:05.307950+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "fr-strasbourg-landscape",
+      "at": "2026-10-04T09:35:13.431551+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "fr-bordeaux-mobile",
+      "at": "2026-10-04T09:35:14.257295+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "fr-strasbourg-mobile",
+      "at": "2026-10-04T09:35:15.062462+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "fr-annecy-landscape",
+      "at": "2026-10-04T09:36:53.084841+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "gb-edinburgh-landscape",
+      "at": "2026-10-04T09:37:59.363888+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "fr-annecy-mobile",
+      "at": "2026-10-04T09:38:17.242240+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "fr-mont-saint-michel-landscape",
+      "at": "2026-10-04T09:38:35.941931+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "fr-mont-saint-michel-mobile",
+      "at": "2026-10-04T09:38:36.746215+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "gb-edinburgh-mobile",
+      "at": "2026-10-04T09:39:52.270700+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "gb-oxford-mobile",
+      "at": "2026-10-04T09:40:57.330128+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "gb-bath-landscape",
+      "at": "2026-10-04T09:41:04.600193+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ru-moscow-landscape",
+      "at": "2026-10-04T09:42:10.234454+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "gb-bath-mobile",
+      "at": "2026-10-04T09:42:19.413990+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "gb-oxford-landscape",
+      "at": "2026-10-04T09:42:20.239003+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "it-pisa-landscape",
+      "at": "2026-10-04T09:43:35.001707+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "it-verona-mobile",
+      "at": "2026-10-04T09:44:49.552656+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "ru-moscow-mobile",
+      "at": "2026-10-04T09:45:00.540080+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "it-pisa-mobile",
+      "at": "2026-10-04T09:45:28.915706+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "it-verona-landscape",
+      "at": "2026-10-04T09:45:29.714027+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "it-bologna-landscape",
+      "at": "2026-10-04T09:46:51.483590+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "it-turin-landscape",
+      "at": "2026-10-04T09:48:32.540592+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "it-siena-landscape",
+      "at": "2026-10-04T09:48:45.206689+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "it-siena-mobile",
+      "at": "2026-10-04T09:49:11.586063+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "it-bologna-mobile",
+      "at": "2026-10-04T09:49:12.409100+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "it-turin-mobile",
+      "at": "2026-10-04T09:51:14.638623+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "es-bilbao-mobile",
+      "at": "2026-10-04T09:52:11.253315+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "es-malaga-landscape",
+      "at": "2026-10-04T09:52:26.063164+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "es-malaga-mobile",
+      "at": "2026-10-04T09:52:26.893084+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "es-bilbao-landscape",
+      "at": "2026-10-04T09:53:01.382718+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "es-toledo-landscape",
+      "at": "2026-10-04T09:54:20.428285+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "de-cologne-landscape",
+      "at": "2026-10-04T09:55:21.526218+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "es-toledo-mobile",
+      "at": "2026-10-04T09:55:55.812371+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "es-santiago-de-compostela-landscape",
+      "at": "2026-10-04T09:56:23.300940+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "es-santiago-de-compostela-mobile",
+      "at": "2026-10-04T09:56:24.077624+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "de-cologne-mobile",
+      "at": "2026-10-04T09:57:53.681364+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "de-nuremberg-mobile",
+      "at": "2026-10-04T09:59:12.897821+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "de-dresden-landscape",
+      "at": "2026-10-04T09:59:25.161371+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "de-dresden-mobile",
+      "at": "2026-10-04T09:59:25.969879+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "de-nuremberg-landscape",
+      "at": "2026-10-04T10:00:06.286366+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "de-rothenburg-ob-der-tauber-landscape",
+      "at": "2026-10-04T10:01:22.387995+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ch-lausanne-landscape",
+      "at": "2026-10-04T10:02:28.430389+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "de-rothenburg-ob-der-tauber-mobile",
+      "at": "2026-10-04T10:02:52.660720+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "ch-bern-landscape",
+      "at": "2026-10-04T10:03:30.131605+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "ch-bern-mobile",
+      "at": "2026-10-04T10:03:30.911843+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ch-lausanne-mobile",
+      "at": "2026-10-04T10:05:11.728674+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "pt-sintra-mobile",
+      "at": "2026-10-04T10:06:34.454155+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "ch-grindelwald-landscape",
+      "at": "2026-10-04T10:06:52.108744+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "pt-sintra-landscape",
+      "at": "2026-10-04T10:06:52.909486+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "ch-grindelwald-mobile",
+      "at": "2026-10-04T10:07:33.175308+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "pt-funchal-landscape",
+      "at": "2026-10-04T10:09:13.763601+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ru-saint-petersburg-landscape",
+      "at": "2026-10-04T10:10:21.373840+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "pt-funchal-mobile",
+      "at": "2026-10-04T10:10:36.980544+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "nl-rotterdam-landscape",
+      "at": "2026-10-04T10:11:02.366559+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "nl-rotterdam-mobile",
+      "at": "2026-10-04T10:11:03.160789+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ru-saint-petersburg-mobile",
+      "at": "2026-10-04T10:12:48.009414+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "at-innsbruck-mobile",
+      "at": "2026-10-04T10:14:01.803657+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "at-salzburg-landscape",
+      "at": "2026-10-04T10:14:15.147445+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "at-salzburg-mobile",
+      "at": "2026-10-04T10:14:50.235075+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "at-hallstatt-landscape",
+      "at": "2026-10-04T10:17:05.384436+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "at-innsbruck-landscape",
+      "at": "2026-10-04T10:17:20.340381+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "cz-cesky-krumlov-mobile",
+      "at": "2026-10-04T10:19:14.690020+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "at-hallstatt-mobile",
+      "at": "2026-10-04T10:19:33.005190+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "cz-cesky-krumlov-landscape",
+      "at": "2026-10-04T10:19:33.847127+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "be-brussels-mobile",
+      "at": "2026-10-04T10:21:10.068150+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "be-brussels-landscape",
+      "at": "2026-10-04T10:21:27.383937+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "be-ghent-landscape",
+      "at": "2026-10-04T10:22:52.176179+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "be-bruges-landscape",
+      "at": "2026-10-04T10:23:08.610816+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "be-bruges-mobile",
+      "at": "2026-10-04T10:23:39.387581+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ie-dublin-landscape",
+      "at": "2026-10-04T10:25:09.908043+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "be-ghent-mobile",
+      "at": "2026-10-04T10:25:24.358570+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ie-galway-mobile",
+      "at": "2026-10-04T10:26:59.908851+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "ie-dublin-mobile",
+      "at": "2026-10-04T10:27:13.917999+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "ie-galway-landscape",
+      "at": "2026-10-04T10:27:14.739867+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "no-oslo-mobile",
+      "at": "2026-10-04T10:29:07.441503+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "no-oslo-landscape",
+      "at": "2026-10-04T10:29:19.312286+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "se-stockholm-landscape",
+      "at": "2026-10-04T10:30:41.573587+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "no-bergen-landscape",
+      "at": "2026-10-04T10:30:53.327858+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "no-bergen-mobile",
+      "at": "2026-10-04T10:30:54.127956+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "dk-copenhagen-landscape",
+      "at": "2026-10-04T10:32:53.286262+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "se-stockholm-mobile",
+      "at": "2026-10-04T10:33:08.175038+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "fi-helsinki-mobile",
+      "at": "2026-10-04T10:34:47.481533+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "dk-copenhagen-mobile",
+      "at": "2026-10-04T10:35:02.558174+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "fi-helsinki-landscape",
+      "at": "2026-10-04T10:35:03.365483+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "fi-rovaniemi-mobile",
+      "at": "2026-10-04T10:37:05.799931+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "fi-rovaniemi-landscape",
+      "at": "2026-10-04T10:37:22.712149+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "gr-athens-landscape",
+      "at": "2026-10-04T10:39:21.314817+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "is-reykjavik-landscape",
+      "at": "2026-10-04T10:39:39.581234+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "is-reykjavik-mobile",
+      "at": "2026-10-04T10:39:40.388307+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "gr-thessaloniki-landscape",
+      "at": "2026-10-04T10:41:20.793144+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "gr-athens-mobile",
+      "at": "2026-10-04T10:41:35.518588+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "gr-santorini-mobile",
+      "at": "2026-10-04T10:43:15.157967+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "gr-santorini-landscape",
+      "at": "2026-10-04T10:43:32.089600+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "gr-thessaloniki-mobile",
+      "at": "2026-10-04T10:45:04.215332+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "gr-rhodes-landscape",
+      "at": "2026-10-04T10:45:40.712311+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "gr-rhodes-mobile",
+      "at": "2026-10-04T10:48:01.321226+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "gr-heraklion-landscape",
+      "at": "2026-10-04T10:48:21.002653+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "hu-budapest-mobile",
+      "at": "2026-10-04T10:50:13.974891+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "gr-heraklion-mobile",
+      "at": "2026-10-04T10:50:34.835513+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "hu-budapest-landscape",
+      "at": "2026-10-04T10:50:35.643982+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "pl-warsaw-mobile",
+      "at": "2026-10-04T10:52:33.068063+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "pl-warsaw-landscape",
+      "at": "2026-10-04T10:52:53.899098+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "pl-gdansk-landscape",
+      "at": "2026-10-04T10:54:25.970975+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "pl-krakow-mobile",
+      "at": "2026-10-04T10:54:44.780795+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "hr-dubrovnik-landscape",
+      "at": "2026-10-04T10:56:44.776042+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "pl-krakow-landscape",
+      "at": "2026-10-04T10:57:07.634744+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "pl-gdansk-mobile",
+      "at": "2026-10-04T10:57:08.431232+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "hr-split-landscape",
+      "at": "2026-10-04T10:58:59.885331+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "hr-split-mobile",
+      "at": "2026-10-04T10:59:15.319749+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "hr-dubrovnik-mobile",
+      "at": "2026-10-04T10:59:16.128593+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "hr-zagreb-mobile",
+      "at": "2026-10-04T11:01:11.732604+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "si-ljubljana-landscape",
+      "at": "2026-10-04T11:01:33.340970+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "hr-zagreb-landscape",
+      "at": "2026-10-04T11:01:34.149128+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "si-bled-landscape",
+      "at": "2026-10-04T11:03:32.335373+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "si-bled-mobile",
+      "at": "2026-10-04T11:03:50.261953+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "si-ljubljana-mobile",
+      "at": "2026-10-04T11:03:51.082267+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "sk-bratislava-mobile",
+      "at": "2026-10-04T11:06:41.173997+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "ro-bucharest-landscape",
+      "at": "2026-10-04T11:07:02.451772+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "sk-bratislava-landscape",
+      "at": "2026-10-04T11:07:03.254890+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "ro-bucharest-mobile",
+      "at": "2026-10-04T11:08:34.137146+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "bg-sofia-mobile",
+      "at": "2026-10-04T11:09:18.617555+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "rs-belgrade-landscape",
+      "at": "2026-10-04T11:11:35.307974+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "ee-tallinn-landscape",
+      "at": "2026-10-04T11:11:36.260532+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "bg-sofia-landscape",
+      "at": "2026-10-04T11:12:32.232270+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "rs-belgrade-mobile",
+      "at": "2026-10-04T11:12:40.824701+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "lv-riga-mobile",
+      "at": "2026-10-04T11:13:50.430195+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "lv-riga-landscape",
+      "at": "2026-10-04T11:13:57.081600+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "lt-vilnius-mobile",
+      "at": "2026-10-04T11:15:08.870655+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "mt-valletta-mobile",
+      "at": "2026-10-04T11:16:10.507161+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "ee-tallinn-mobile",
+      "at": "2026-10-04T11:16:20.373329+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "me-kotor-landscape",
+      "at": "2026-10-04T11:17:21.169580+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "mt-valletta-landscape",
+      "at": "2026-10-04T11:17:29.405069+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "lt-vilnius-landscape",
+      "at": "2026-10-04T11:17:30.254812+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ba-sarajevo-landscape",
+      "at": "2026-10-04T11:18:34.563935+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "tr-antalya-mobile",
+      "at": "2026-10-04T11:19:43.880434+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "ba-sarajevo-mobile",
+      "at": "2026-10-04T11:19:50.923424+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "me-kotor-mobile",
+      "at": "2026-10-04T11:20:12.217930+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "tr-cappadocia-landscape",
+      "at": "2026-10-04T11:21:09.562686+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "tr-cappadocia-mobile",
+      "at": "2026-10-04T11:21:48.125572+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "us-san-diego-mobile",
+      "at": "2026-10-04T11:22:49.430868+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "tr-antalya-landscape",
+      "at": "2026-10-04T11:23:04.798106+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "us-orlando-landscape",
+      "at": "2026-10-04T11:23:19.903710+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "us-orlando-mobile",
+      "at": "2026-10-04T11:24:21.062132+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "us-san-diego-landscape",
+      "at": "2026-10-04T11:24:28.540699+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "us-new-orleans-landscape",
+      "at": "2026-10-04T11:24:29.368462+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "us-san-antonio-landscape",
+      "at": "2026-10-04T11:25:33.655833+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "us-new-orleans-mobile",
+      "at": "2026-10-04T11:25:41.035743+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "us-austin-landscape",
+      "at": "2026-10-04T11:25:57.553963+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "us-austin-mobile",
+      "at": "2026-10-04T11:27:12.988642+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "us-philadelphia-landscape",
+      "at": "2026-10-04T11:27:30.230095+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "us-philadelphia-mobile",
+      "at": "2026-10-04T11:27:47.790949+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "us-denver-landscape",
+      "at": "2026-10-04T11:28:50.055481+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "us-san-antonio-mobile",
+      "at": "2026-10-04T11:29:00.114931+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "us-dallas-landscape",
+      "at": "2026-10-04T11:29:18.997718+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "us-denver-mobile",
+      "at": "2026-10-04T11:29:31.610467+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "us-dallas-mobile",
+      "at": "2026-10-04T11:30:45.678756+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "us-savannah-mobile",
+      "at": "2026-10-04T11:32:10.662430+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "us-nashville-mobile",
+      "at": "2026-10-04T11:32:22.303647+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "us-savannah-landscape",
+      "at": "2026-10-04T11:32:23.112713+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "us-key-west-landscape",
+      "at": "2026-10-04T11:33:47.230319+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "us-nashville-landscape",
+      "at": "2026-10-04T11:34:04.794859+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "us-key-west-mobile",
+      "at": "2026-10-04T11:34:47.693263+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "us-santa-fe-landscape",
+      "at": "2026-10-04T11:35:05.360830+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "us-santa-fe-mobile",
+      "at": "2026-10-04T11:36:10.465586+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "us-anchorage-mobile",
+      "at": "2026-10-04T11:36:38.862606+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "us-salt-lake-city-mobile",
+      "at": "2026-10-04T11:37:49.425272+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "us-salt-lake-city-landscape",
+      "at": "2026-10-04T11:38:00.092996+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "us-anchorage-landscape",
+      "at": "2026-10-04T11:38:00.896609+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "ca-vancouver-landscape",
+      "at": "2026-10-04T11:38:26.940462+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ca-vancouver-mobile",
+      "at": "2026-10-04T11:39:50.887893+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "ca-toronto-mobile",
+      "at": "2026-10-04T11:40:02.306638+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "ca-toronto-landscape",
+      "at": "2026-10-04T11:40:23.311496+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "ca-montreal-landscape",
+      "at": "2026-10-04T11:40:24.135051+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ca-montreal-mobile",
+      "at": "2026-10-04T11:42:00.468825+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "ca-quebec-city-landscape",
+      "at": "2026-10-04T11:42:12.552954+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "ca-victoria-landscape",
+      "at": "2026-10-04T11:42:41.288983+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "ca-quebec-city-mobile",
+      "at": "2026-10-04T11:42:42.112192+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ca-victoria-mobile",
+      "at": "2026-10-04T11:44:14.230390+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "ca-ottawa-landscape",
+      "at": "2026-10-04T11:44:30.332058+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "ca-ottawa-mobile",
+      "at": "2026-10-04T11:44:58.131275+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "ca-banff-landscape",
+      "at": "2026-10-04T11:45:12.296701+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ca-banff-mobile",
+      "at": "2026-10-04T11:46:29.594423+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "mx-mexico-city-landscape",
+      "at": "2026-10-04T11:46:44.479047+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "mx-mexico-city-mobile",
+      "at": "2026-10-04T11:47:10.613646+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "mx-cancun-landscape",
+      "at": "2026-10-04T11:47:28.507209+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "mx-cancun-mobile",
+      "at": "2026-10-04T11:48:42.958611+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "mx-oaxaca-landscape",
+      "at": "2026-10-04T11:48:54.051735+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "mx-oaxaca-mobile",
+      "at": "2026-10-04T11:49:18.340341+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "br-rio-de-janeiro-landscape",
+      "at": "2026-10-04T11:49:48.677490+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "br-rio-de-janeiro-mobile",
+      "at": "2026-10-04T11:50:53.875413+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "br-sao-paulo-landscape",
+      "at": "2026-10-04T11:51:05.626155+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "br-sao-paulo-mobile",
+      "at": "2026-10-04T11:51:40.026523+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "br-salvador-landscape",
+      "at": "2026-10-04T11:52:05.895076+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "br-salvador-mobile",
+      "at": "2026-10-04T11:53:25.344805+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "ar-buenos-aires-landscape",
+      "at": "2026-10-04T11:53:40.699838+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "ar-buenos-aires-mobile",
+      "at": "2026-10-04T11:53:41.520703+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ar-bariloche-mobile",
+      "at": "2026-10-04T11:55:50.268505+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "ar-bariloche-landscape",
+      "at": "2026-10-04T11:56:05.085288+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "pe-lima-landscape",
+      "at": "2026-10-04T11:56:26.924748+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "pe-lima-mobile",
+      "at": "2026-10-04T11:56:46.164339+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "pe-cusco-landscape",
+      "at": "2026-10-04T11:57:58.310907+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "pe-machu-picchu-landscape",
+      "at": "2026-10-04T11:58:29.021416+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "pe-cusco-mobile",
+      "at": "2026-10-04T11:59:01.443098+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "pe-machu-picchu-mobile",
+      "at": "2026-10-04T11:59:02.242492+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "co-bogota-landscape",
+      "at": "2026-10-04T12:00:22.039019+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "co-bogota-mobile",
+      "at": "2026-10-04T12:00:54.706613+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "co-cartagena-landscape",
+      "at": "2026-10-04T12:01:18.933217+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "co-cartagena-mobile",
+      "at": "2026-10-04T12:01:45.343600+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "cl-santiago-landscape",
+      "at": "2026-10-04T12:02:57.340530+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "cl-santiago-mobile",
+      "at": "2026-10-04T12:03:21.987906+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "ec-quito-landscape",
+      "at": "2026-10-04T12:03:43.797455+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "ec-quito-mobile",
+      "at": "2026-10-04T12:04:24.081920+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "cu-havana-landscape",
+      "at": "2026-10-04T12:05:35.302602+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "cu-havana-mobile",
+      "at": "2026-10-04T12:05:55.984696+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "cr-san-jose-landscape",
+      "at": "2026-10-04T12:06:26.286032+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "pa-panama-city-landscape",
+      "at": "2026-10-04T12:07:43.918410+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "cr-san-jose-mobile",
+      "at": "2026-10-04T12:07:58.701360+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "pa-panama-city-mobile",
+      "at": "2026-10-04T12:08:27.886925+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "eg-cairo-mobile",
+      "at": "2026-10-04T12:09:54.313121+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "eg-cairo-landscape",
+      "at": "2026-10-04T12:10:07.567765+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "eg-giza-landscape",
+      "at": "2026-10-04T12:10:08.587571+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "eg-giza-mobile",
+      "at": "2026-10-04T12:10:46.917814+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "eg-luxor-landscape",
+      "at": "2026-10-04T12:12:06.636975+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ma-fes-landscape",
+      "at": "2026-10-04T12:13:27.524673+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "ma-marrakesh-landscape",
+      "at": "2026-10-04T12:13:44.425811+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "ma-marrakesh-mobile",
+      "at": "2026-10-04T12:13:45.316087+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "eg-luxor-mobile",
+      "at": "2026-10-04T12:13:46.257305+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "ma-fes-mobile",
+      "at": "2026-10-04T12:16:20.645259+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "ma-casablanca-mobile",
+      "at": "2026-10-04T12:16:47.743310+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "ma-casablanca-landscape",
+      "at": "2026-10-04T12:17:23.574600+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "za-cape-town-landscape",
+      "at": "2026-10-04T12:17:46.292091+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "za-cape-town-mobile",
+      "at": "2026-10-04T12:19:11.871728+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "za-johannesburg-landscape",
+      "at": "2026-10-04T12:19:25.056728+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "za-johannesburg-mobile",
+      "at": "2026-10-04T12:19:50.068057+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "zw-victoria-falls-mobile",
+      "at": "2026-10-04T12:21:19.580634+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "zw-victoria-falls-landscape",
+      "at": "2026-10-04T12:21:43.421697+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "ke-nairobi-landscape",
+      "at": "2026-10-04T12:21:44.338791+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "tz-zanzibar-city-landscape",
+      "at": "2026-10-04T12:23:43.397141+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "ke-nairobi-mobile",
+      "at": "2026-10-04T12:23:58.593669+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "tn-tunis-landscape",
+      "at": "2026-10-04T12:24:25.572960+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "tn-tunis-mobile",
+      "at": "2026-10-04T12:25:50.533162+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "tz-zanzibar-city-mobile",
+      "at": "2026-10-04T12:26:07.218834+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "na-swakopmund-landscape",
+      "at": "2026-10-04T12:26:54.402644+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "na-swakopmund-mobile",
+      "at": "2026-10-04T12:26:55.237307+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "au-melbourne-landscape",
+      "at": "2026-10-04T12:28:35.441348+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "au-melbourne-mobile",
+      "at": "2026-10-04T12:28:54.889283+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "au-brisbane-mobile",
+      "at": "2026-10-04T12:29:35.921774+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "au-brisbane-landscape",
+      "at": "2026-10-04T12:30:05.766394+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "au-gold-coast-landscape",
+      "at": "2026-10-04T12:31:36.257998+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "au-gold-coast-mobile",
+      "at": "2026-10-04T12:32:21.092094+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "au-cairns-mobile",
+      "at": "2026-10-04T12:32:49.089516+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "au-cairns-landscape",
+      "at": "2026-10-04T12:33:21.007105+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "au-perth-landscape",
+      "at": "2026-10-04T12:35:04.290303+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "au-perth-mobile",
+      "at": "2026-10-04T12:35:31.666249+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "au-adelaide-landscape",
+      "at": "2026-10-04T12:36:09.535354+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "au-adelaide-mobile",
+      "at": "2026-10-04T12:36:10.355647+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "au-hobart-landscape",
+      "at": "2026-10-04T12:37:54.908285+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "nz-auckland-landscape",
+      "at": "2026-10-04T12:38:48.951396+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "au-hobart-mobile",
+      "at": "2026-10-04T12:39:18.884748+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "nz-auckland-mobile",
+      "at": "2026-10-04T12:39:19.714359+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "nz-queenstown-landscape",
+      "at": "2026-10-04T12:41:24.028313+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "nz-queenstown-mobile",
+      "at": "2026-10-04T12:42:11.427212+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "nz-rotorua-mobile",
+      "at": "2026-10-04T12:42:45.215391+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "nz-rotorua-landscape",
+      "at": "2026-10-04T12:42:46.064735+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "nz-christchurch-landscape",
+      "at": "2026-10-04T12:44:42.061048+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "nz-christchurch-mobile",
+      "at": "2026-10-04T12:45:13.356083+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "fj-nadi-landscape",
+      "at": "2026-10-04T12:45:43.975840+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "fj-nadi-mobile",
+      "at": "2026-10-04T12:46:33.072576+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "pf-bora-bora-landscape",
+      "at": "2026-10-04T12:48:07.838761+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "pf-bora-bora-mobile",
+      "at": "2026-10-04T12:48:26.733131+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "bh-manama-landscape",
+      "at": "2026-10-04T12:49:24.601009+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "bh-manama-mobile",
+      "at": "2026-10-04T12:49:53.355424+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "kw-kuwait-city-landscape",
+      "at": "2026-10-04T12:51:21.044387+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "kw-kuwait-city-mobile",
+      "at": "2026-10-04T12:52:01.947303+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "jo-amman-landscape",
+      "at": "2026-10-04T12:52:31.164421+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "jo-petra-landscape",
+      "at": "2026-10-04T12:54:10.589728+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "jo-amman-mobile",
+      "at": "2026-10-04T12:54:26.204106+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "il-jerusalem-mobile",
+      "at": "2026-10-04T12:56:10.651345+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "jo-petra-mobile",
+      "at": "2026-10-04T12:56:29.434189+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "il-jerusalem-landscape",
+      "at": "2026-10-04T12:56:30.261585+00:00"
+    },
+    {
+      "agent": "mobile_header_art",
+      "completed": "il-tel-aviv-landscape",
+      "at": "2026-10-04T12:57:56.883774+00:00"
+    },
+    {
+      "agent": "root",
+      "completed": "il-tel-aviv-mobile",
+      "at": "2026-10-04T12:59:23.011841+00:00"
+    },
+    {
+      "agent": "trip_scene_c",
+      "completed": "om-salalah-landscape",
+      "at": "2026-10-04T12:59:47.224668+00:00"
+    },
+    {
+      "agent": "trip_scene_b",
+      "completed": "om-salalah-mobile",
+      "at": "2026-10-04T13:00:24.046209+00:00"
+    }
+  ],
+  "note": "Main-agent dispatch ledger. One raster asset is assigned to an asset agent per task.",
+  "updatedAt": "2026-10-04T13:00:24.082872+00:00"
+}

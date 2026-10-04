@@ -26,7 +26,10 @@ def prepare():
     previous = json.loads(MANIFEST.read_text(encoding="utf-8")) if MANIFEST.exists() else {"assets": []}
     known = {entry["id"]: entry for entry in previous["assets"]}
     entries, pending = [], []
-    for file in sorted((DOCS / "jobs").glob("*.json")):
+    job_files = sorted((DOCS / "jobs").glob("*.json"))
+    if batch.get("planningComplete"):
+        assert len(job_files) == batch["expected"], "The complete plan must contain every expected image job"
+    for file in job_files:
         job = json.loads(file.read_text(encoding="utf-8"))
         original, provenance = Path(job["original"]), Path(job["metadata"])
         if not original.exists() or not provenance.exists():
@@ -42,6 +45,7 @@ def prepare():
         assert record["sourceSha256"] == original_hash, job["id"] + ": wrong original"
         assert record["savedSha256"] == original_hash, job["id"] + ": save hash mismatch"
         assert record["prompt"] == job["prompt"], job["id"] + ": prompt mismatch"
+        assert Path(job["promptFile"]).read_text(encoding="utf-8-sig").rstrip("\r\n") == job["prompt"], job["id"] + ": saved prompt text mismatch"
         assert record["imageInputs"] == [job["reference"]], job["id"] + ": unexpected reference"
         assert sha(Path(record["sourcePath"])) == original_hash, job["id"] + ": source mismatch"
         destination = (ROOT / job["asset"]).resolve()

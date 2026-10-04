@@ -1,0 +1,21 @@
+{
+  "jobId": "ge-tbilisi-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104c1-35a4-74c3-916e-ab6a0794b3ea/exec-0a566d9d-2c96-45a4-8ec9-e04e4d91de4b.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/ge-tbilisi-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Tbilisi: the old town’s carved wooden balconies, Narikala fortress on its hill and the Mtkvari River. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "4fd628c04d844907d33fbfa84dc7575dd39e8db506111549979090b10f614e65",
+  "savedSha256": "4fd628c04d844907d33fbfa84dc7575dd39e8db506111549979090b10f614e65",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T09:23:14.958Z",
+  "savedAt": "2026-10-04T09:24:21.681201+00:00"
+}

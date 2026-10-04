@@ -1,0 +1,21 @@
+{
+  "jobId": "us-dallas-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104c1-5e20-7f81-812c-b8a5c49d0800/exec-883b9526-7030-4024-b40a-8d75977cbc38.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/us-dallas-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Dallas: Reunion Tower's distinctive sphere above the downtown skyline and the white arch of Margaret Hunt Hill Bridge. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "725525b19b0c1525c43036080626b97ae02b043530fa8da30c93f855910dddc6",
+  "savedSha256": "725525b19b0c1525c43036080626b97ae02b043530fa8da30c93f855910dddc6",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T11:28:15.962Z",
+  "savedAt": "2026-10-04T11:28:55.542935+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "kh-siem-reap-landscape",
+  "cityId": "kh-siem-reap",
+  "cityName": "시엠레아프",
+  "kind": "city",
+  "group": "southeast-asia",
+  "variant": "landscape",
+  "reference": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon.png",
+  "prompt": "Create one standalone destination illustration of Siem Reap: Angkor Wat’s five lotus-shaped towers, a reflecting pond and surrounding palm trees. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/kh-siem-reap-landscape.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/kh-siem-reap-landscape.json",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/kh-siem-reap-landscape.prompt.txt",
+  "asset": "src/assets/trip-scenes/cities/v4/kh-siem-reap.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "status": "queued"
+}

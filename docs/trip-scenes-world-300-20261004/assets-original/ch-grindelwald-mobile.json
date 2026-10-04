@@ -1,0 +1,21 @@
+{
+  "jobId": "ch-grindelwald-mobile",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104c1-5e20-7f81-812c-b8a5c49d0800/exec-666f5ee6-5e77-46e4-b2de-d64100f6fc25.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-scenes-world-300-20261004/assets-original/ch-grindelwald-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Grindelwald: wooden Alpine chalets across a green valley, the immense Eiger mountain face and a small mountain train. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a portrait 4:5 composition intended for a 480 × 600 mobile asset displayed in a narrow right-side header slot. Compose the main landmarks directly for this portrait frame so they remain recognizable at small size. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png"
+  ],
+  "sourceSha256": "19ce512d6c6763eb042f44693ae491b03911430520d1213f432a97fa81af65c4",
+  "savedSha256": "19ce512d6c6763eb042f44693ae491b03911430520d1213f432a97fa81af65c4",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T10:05:10.732Z",
+  "savedAt": "2026-10-04T10:06:19.888801+00:00"
+}
