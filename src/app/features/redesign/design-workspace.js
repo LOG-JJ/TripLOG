@@ -326,12 +326,7 @@
     const scheduleTitle = scheduleDate === today ? '오늘 일정' : scheduleDate === state.startDate ? '첫날 일정' : `${scheduleDay?.label || ''} 일정`;
     const items = plans.filter(item => item.date === scheduleDate).slice(0, 3), packing = state.packingList || [];
     $('#rdOverview').innerHTML = `
-      <section class="rd-trip-hero rd-outline"><div>
-        <span class="rd-badge">${dday(state)}</span>
-        <h2><button type="button" class="rd-trip-name" id="rdOverviewTripButton" data-rd-action="trip-choose" aria-haspopup="dialog" aria-controls="rdTripChooser" aria-expanded="${!!$('#rdTripChooser')?.open}" aria-label="여행 바꾸기: ${text(state.tripName || '새로운 여행')}"><span>${text(state.tripName || '새로운 여행')}</span>${icon('caret-down')}</button></h2>
-        <p>${period(state)} · ${duration(state)}</p>
-        <button type="button" class="rd-team" data-rd-action="invite" aria-label="여행 멤버 ${team.length}명 보기">${icon('users')}<span>${team.length}명</span></button>
-      </div></section>
+      ${window.TripLog.features.overview.tripHero.render({ trip: state, countdown: dday(state), period: period(state), duration: duration(state), memberCount: team.length, expanded: !!$('#rdTripChooser')?.open })}
       ${window.TripLog.features.overview.reservationPockets.render(bookings)}
       <section class="rd-outline rd-overview-budget${budget && total > budget ? ' is-over-budget' : ''}">
         <div class="rd-section-head"><h2>${icon('coins')}여행 예산</h2><button type="button" data-rd-nav="budget" aria-label="지출 기록 자세히 보기">자세히 ${icon('caret-right')}</button></div>

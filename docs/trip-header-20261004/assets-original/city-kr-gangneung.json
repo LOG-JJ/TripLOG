@@ -1,0 +1,23 @@
+{
+  "id": "kr-gangneung",
+  "kind": "city",
+  "mode": "built-in image_gen, text-to-image",
+  "imageInputsSent": [],
+  "prompt": "Standalone 800×480 landscape illustration of Gangneung: the blue East Sea, graceful coastal pine trees, and a modest beach café with no readable lettering. TripLOG postcard art direction with crisp delicate #0b1020 ink outlines, soft flat watercolor-like fills, pale blue #bce6fb, sage #b8d2bc, warm sand #f4d9a4, and restrained yellow and pink accents. Focal scene sits center-right and bottom, filling most of the canvas, with landscape contours opening organically at the left and top. Clean transparent exterior. Readable in a right-aligned 300×180 travel-header slot. No UI, text, frame, or logos.\n",
+  "source": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c0-feb5-7982-8f1c-72fc299c4bcf\\exec-194ef77a-0841-4cd8-84f6-6d94366cae6f.png",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "original": "docs\\trip-header-20261004\\assets-original\\city-kr-gangneung.png",
+  "sourceSha256": "3544f2a408734e05251dbd7fa397865f9352e7aef80cfae7f1a35fd5cb2e5fc2",
+  "originalMatchesSource": true,
+  "asset": "src/assets/trip-scenes/cities/v1/kr-gangneung.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "bytes": 158848,
+  "assetSha256": "549407991d26d36bd8e199397d4b380332b8f68059680816c410a853090d490a",
+  "overwritten": false
+}

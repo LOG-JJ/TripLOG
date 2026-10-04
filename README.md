@@ -55,6 +55,10 @@ npm run preview
 
 ## 전체 화면 개편
 
+여행 개요 상단은 선택한 [포스트카드 목업](triplog-trip-header-postcard-20261004.png)을 기준으로 여행명·D-day·날짜·인원과 목적지 일러스트를 함께 표시합니다. 국내 30곳·해외 50곳의 국가/도시/별칭을 구분하며, 우선 여행지 30곳에는 전용 그림을, 나머지는 10종의 공통 테마를 사용합니다. 저장된 목적지만 사용하고 여행 제목으로 도시를 추측하지 않습니다. 도시가 불명확하거나 여러 곳이면 공통 그림을 표시하며, 서귀포→제주 같은 명시적 지역 관계는 별도로 처리합니다. 긴 여행명은 두 줄로 줄이고 전체 이름은 접근성 이름·도움말과 기존 여행 선택 창에서 확인할 수 있습니다.
+
+도시 그림은 필요할 때만 내려받아 최대 48개를 별도 캐시에 보관합니다. 공통 테마는 앱에 포함되어, 오프라인에서 아직 받지 않은 도시 그림도 대체 표시됩니다. 여행 데이터나 인증 응답을 그림 캐시에 넣지 않습니다. 도시·별칭·테마의 기준은 `src/app/data/destination-scenes.js`, 선택 규칙은 `src/app/shared/destination-scenes.js`입니다. [도시 그림·화면 비교와 검증](docs/trip-header-20261004/design-qa.md)을 확인하세요. 격리 미리보기는 `node scripts/preview-trip-header.js`, 검증은 `node scripts/destination-scenes-regression.js`, `node scripts/trip-header-browser-regression.js`, `npm run prepare:sync && node scripts/trip-scene-cache-browser-regression.js`입니다.
+
 여행 개요의 교통·숙소 예약은 모바일에서도 나란한 **2열 요약**으로 표시합니다. 제목 옆 노란 배지는 전체 예약 수이며, 교통은 날짜순 첫 예약의 노선·항공사·기간을, 숙소는 최대 두 곳의 이름·기간·박수를 미리 보여줍니다. 긴 이름은 한 줄로 줄이고 상세 시각과 나머지 예약은 각 열의 `전체 보기`에서 확인합니다. 예약을 합치거나 원본을 변경하지 않으며, 공항 구분과 모든 예약 정보는 기존 예약 지갑에 보존됩니다. 예약이 없는 열의 `예약 추가`는 해당 종류가 선택된 입력창을 바로 엽니다. 선택된 [목업 원본](triplog-reservation-t2i-brand-editorial-20261004.png), [구현 비교와 검증](docs/reservation-summary-20261004/design-qa.md)을 확인하세요. 격리된 시각 미리보기는 `node scripts/preview-reservation-pockets.js`, 기능 검증은 `node scripts/reservation-pockets-browser-regression.js`로 실행합니다.
 
 승인된 [13개 목업](docs/redesign-20260913/README.md)을 기준으로 공통 메뉴, 6개 주요 페이지, 로그인과 입력·준비물·초대·기록 화면을 구현했습니다. 일정 타임라인과 지도 편집 창도 같은 색상 체계를 사용합니다.

@@ -1,0 +1,23 @@
+{
+  "id": "urban",
+  "kind": "theme",
+  "mode": "built-in image_gen, text-to-image",
+  "imageInputsSent": [],
+  "prompt": "Create a standalone urban travel illustration on an 800 × 480 landscape canvas for a compact website header. Show a welcoming generic city with varied mid-rise buildings, a small tram on a street, and green trees. Do not include recognizable landmarks or readable signs. Use crisp, delicate ink outlines in #0b1020 and soft, flat watercolor-like fills: pale blue #bce6fb, sage #b8d2bc, warm sand #f4d9a4, with restrained yellow and pink accents. Arrange the focal cluster toward the center-right and bottom, filling most of the canvas while retaining organic open edges at the left and top. Keep the exterior fully transparent. No UI, text, frame, or logos.\n",
+  "source": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-35a4-74c3-916e-ab6a0794b3ea\\exec-5fa721e6-888b-4f2f-9653-566e742f2ff7.png",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "original": "docs\\trip-header-20261004\\assets-original\\theme-urban.png",
+  "sourceSha256": "3aa63cd55e3b3e9918231b52e328437dc6c0e3f8bfaeb4cec8192616c8938e09",
+  "originalMatchesSource": true,
+  "asset": "src/assets/trip-scenes/themes/v1/urban.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "bytes": 127782,
+  "assetSha256": "648ef7621b216cbdc60bdeb1e6a3c224dd7c696b5bc4d0f6dfca0f7c59148da3",
+  "overwritten": false
+}

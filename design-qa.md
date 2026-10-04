@@ -1,3 +1,17 @@
+# Destination Postcard header and destination scenes — 2026-10-04
+
+final result: passed
+
+- Visual truth: `triplog-trip-header-postcard-20261004.png`, the exact user-selected first header concept, SHA256 `ce5f368a29ca49effc244b120a887567f298e3c4e1c493ffc03696c3453e1e97`.
+- Same-width comparison: source frame normalized to 912 × 246; implemented header 912 × 232 at a 1440 × 1000 viewport and scale 1, with matching Suncheon/D-6/October 10–11/two-person data. Full and focused evidence: `docs/trip-header-20261004/comparison-final.png`, `comparison-final-type.png`.
+- Resolved P2 inherited small type, weak countdown/metadata hierarchy, oversized long-name height and intermediate-width control/art overlap. Tested 320–1440 px, with a visible mobile illustration and intact trip/member controls.
+- Catalog has 80 country-aware destinations, 30 dedicated illustrations and 10 common themes. All 40 T2I source hashes and optimized assets verified. Unknown/ambiguous/multi-destination and parent-region rules preserve actual trip data.
+- City artwork loads on demand into a separate 48-entry cache. Real offline, unvisited-image fallback, concurrent cache bounds, API/HTML exclusion, first-visit warming and existing safe auto-update tests pass.
+- Core tests, relevant trip-library/chooser/reservation regressions, `npm run build` and actual in-app browser rendering/interactions pass. Source/render typography, spacing, colors, imagery and copy reviewed. Finer watercolor details, standard library icons and badge geometry are accepted P3 differences; physical mobile/Safari remain untested.
+- Detailed evidence, generation provenance, comparison history, loading behavior and verification: [trip header QA](docs/trip-header-20261004/design-qa.md).
+
+---
+
 # Compact two-column reservation summary — 2026-10-04
 
 final result: passed

@@ -1,0 +1,23 @@
+{
+  "id": "kr-gapyeong",
+  "kind": "city",
+  "mode": "built-in image_gen, text-to-image",
+  "imageInputsSent": [],
+  "prompt": "Standalone 800×480 landscape illustration of Gapyeong: wooded riverside hills, a calm river bend, a small tasteful camping tent, and a simple wooden cabin. No Nami Island landmark. TripLOG postcard art direction with crisp delicate #0b1020 ink outlines, soft flat watercolor-like fills, pale blue #bce6fb, sage #b8d2bc, warm sand #f4d9a4, and restrained yellow and pink accents. Focal scene sits center-right and bottom, filling most of the canvas, with landscape contours opening organically at the left and top. Clean transparent exterior. Readable in a right-aligned 300×180 travel-header slot. No UI, text, frame, or logos.\n",
+  "source": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c0-feb5-7982-8f1c-72fc299c4bcf\\exec-1e1d0a28-1a43-4a9e-b01c-8f10b8c356f3.png",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "original": "docs\\trip-header-20261004\\assets-original\\city-kr-gapyeong.png",
+  "sourceSha256": "a22edd040b30f387171ce035b239ebd982a9d9f2ef1291922c5c5eb1e19b29c8",
+  "originalMatchesSource": true,
+  "asset": "src/assets/trip-scenes/cities/v1/kr-gapyeong.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "bytes": 151248,
+  "assetSha256": "3543754adf7eb80701da7ef70a3445663c923d562c386cfa3915b98907c2b5f2",
+  "overwritten": false
+}

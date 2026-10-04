@@ -1,0 +1,23 @@
+{
+  "id": "kr-gyeongju",
+  "kind": "city",
+  "mode": "built-in image_gen, text-to-image",
+  "imageInputsSent": [],
+  "prompt": "Standalone 800×480 landscape illustration of Gyeongju: Cheomseongdae stone observatory, smooth grassy burial mounds, a modest traditional tiled roof, and a few trees. TripLOG postcard art direction with crisp delicate #0b1020 ink outlines, soft flat watercolor-like fills, pale blue #bce6fb, sage #b8d2bc, warm sand #f4d9a4, and restrained yellow and pink accents. Focal scene sits center-right and bottom, filling most of the canvas, with landscape contours opening organically at the left and top. Clean transparent exterior. Readable in a right-aligned 300×180 travel-header slot. No UI, text, frame, or logos.\n",
+  "source": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c0-feb5-7982-8f1c-72fc299c4bcf\\exec-90e9d6ba-8268-45b4-ade5-4f64f2fb08a3.png",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "original": "docs\\trip-header-20261004\\assets-original\\city-kr-gyeongju.png",
+  "sourceSha256": "1dfd8211b30dd1d060036d3eabfbebc952b9a1f618a587fe85bfee10eab568b3",
+  "originalMatchesSource": true,
+  "asset": "src/assets/trip-scenes/cities/v1/kr-gyeongju.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "bytes": 143186,
+  "assetSha256": "d1f88e7e1ae194a0e22221e0d6cce16f287853f88a5e25d2ca99d6d82ea38783",
+  "overwritten": false
+}

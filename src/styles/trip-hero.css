@@ -1,0 +1,79 @@
+/* A shared postcard header; only the destination illustration changes. */
+body.rd-app #overviewPage .th-trip-hero {
+  --font: 'TripLOG Collaboration', 'Pretendard', sans-serif;
+  --font-heading: var(--font);
+  position: relative; display: block; grid-column: 1 / -1; isolation: isolate; container-type: inline-size;
+  min-height: clamp(190px, 22vw, 232px); padding: 22px 24px 18px; margin: 0 0 8px; overflow: hidden;
+  border: 1.5px solid #0b1020; border-radius: 11px; background: #fff; color: #0b1020;
+  font-family: var(--font);
+}
+body.rd-app #overviewPage .th-hero-copy { position: relative; z-index: 1; width: 58%; min-width: 0; }
+body.rd-app #overviewPage .th-countdown {
+  display: inline-flex; align-items: center; min-height: 31px; padding: 5px 13px;
+  margin: 0 0 9px; border: 0; border-radius: 8px; background: #f7afc7;
+  color: #0b1020; font-family: var(--font); font-size: clamp(15px, 2.6cqw, 27px); font-weight: 800; line-height: 1.25;
+  letter-spacing: -.2px;
+}
+body.rd-app #overviewPage .th-trip-hero h2 { margin: 0 0 17px; }
+body.rd-app #overviewPage .th-trip-hero .th-trip-name {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 44px; max-width: 100%;
+  margin: 0; padding: 0; border: 0; background: transparent; box-shadow: none;
+  font-family: var(--font); font-size: clamp(28px, 8cqw, 72px); font-weight: 850;
+  line-height: 1.2; letter-spacing: -1.5px; text-align: left;
+}
+body.rd-app #overviewPage .th-trip-name > span {
+  min-width: 0; overflow-wrap: anywhere; text-wrap: balance; overflow: hidden;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+}
+body.rd-app #overviewPage .th-trip-name > .ph {
+  flex-shrink: 0; width: 27px; height: 27px; border: 0; background: transparent;
+  border-radius: 5px; color: #686b75; font-size: 22px; transition: transform .16s ease, background-color .16s ease;
+}
+body.rd-app #overviewPage .th-trip-facts { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 12px; }
+body.rd-app #overviewPage .th-trip-facts > * { display: inline-flex; align-items: center; gap: 6px; min-width: 0; }
+body.rd-app #overviewPage .th-trip-dates,
+body.rd-app #overviewPage .th-trip-duration { font-size: clamp(14px, 2.2cqw, 20px); font-weight: 650; line-height: 1.4; letter-spacing: -.2px; }
+body.rd-app #overviewPage .th-trip-dates > span { overflow-wrap: anywhere; }
+body.rd-app #overviewPage .th-trip-duration { white-space: nowrap; }
+body.rd-app #overviewPage .th-trip-facts > * + * { border-left: 1px solid #dfe2e7; padding-left: 12px; }
+body.rd-app #overviewPage .th-trip-facts .ph { flex-shrink: 0; font-size: clamp(23px, 3.2cqw, 30px); color: #0b1020; }
+body.rd-app #overviewPage .th-trip-members {
+  min-height: 36px; padding-top: 3px; padding-bottom: 3px; padding-right: 4px;
+  border-top: 0; border-right: 0; border-bottom: 0; border-radius: 0; background: transparent; box-shadow: none;
+  font-family: var(--font); font-size: clamp(14px, 2.2cqw, 20px); font-weight: 700; color: #0b1020; white-space: nowrap;
+  transition: color .16s ease;
+}
+body.rd-app #overviewPage .th-trip-members > .ph-caret-right { font-size: 17px; }
+body.rd-app #overviewPage .th-hero-scene {
+  position: absolute; z-index: 0; right: 0; bottom: 0; width: 42%; height: 100%;
+  pointer-events: none; overflow: hidden;
+}
+body.rd-app #overviewPage .th-hero-scene img {
+  display: block; width: 100%; height: 100%; margin: 0; object-fit: cover; object-position: right bottom;
+}
+body.rd-app #overviewPage .th-hero-scene img[hidden] { display: none; }
+@media (hover: hover) {
+  body.rd-app #overviewPage .th-trip-name:hover > .ph { background: #bce6fb; color: #0b1020; }
+  body.rd-app #overviewPage .th-trip-members:hover { color: #1264a3; }
+}
+body.rd-app #overviewPage :is(.th-trip-name, .th-trip-members):focus-visible { outline: 3px solid #1264a3; outline-offset: 3px; border-radius: 5px; }
+@media (max-width: 599px) {
+  body.rd-app #overviewPage .th-trip-hero { min-height: 188px; padding: 16px 14px 13px; }
+  body.rd-app #overviewPage .th-hero-copy { width: 100%; }
+  body.rd-app #overviewPage .th-countdown { min-height: 25px; padding: 4px 8px; margin-bottom: 10px; font-size: 13px; }
+  body.rd-app #overviewPage .th-trip-hero h2 { width: 60%; margin-bottom: 15px; }
+  body.rd-app #overviewPage .th-trip-hero .th-trip-name { gap: 5px; font-size: clamp(23px, 7.2cqw, 34px); line-height: 1.25; letter-spacing: -.8px; }
+  body.rd-app #overviewPage .th-trip-name > .ph { width: 21px; height: 24px; font-size: 17px; }
+  body.rd-app #overviewPage .th-trip-facts { max-width: 100%; gap: 5px 9px; }
+  body.rd-app #overviewPage .th-trip-dates { flex-basis: 100%; font-size: 12px; }
+  body.rd-app #overviewPage .th-trip-duration { font-size: 12px; }
+  body.rd-app #overviewPage .th-trip-duration { border-left: 0; padding-left: 0; }
+  body.rd-app #overviewPage .th-trip-members { min-height: 32px; padding-left: 9px; font-size: 12px; }
+  body.rd-app #overviewPage .th-trip-facts .ph { font-size: 19px; }
+  body.rd-app #overviewPage .th-trip-members > .ph-caret-right { font-size: 14px; }
+  body.rd-app #overviewPage .th-hero-scene { width: 40%; height: 104px; right: 0; top: 4px; bottom: auto; }
+  body.rd-app #overviewPage .th-hero-scene img { object-fit: contain; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.rd-app #overviewPage :is(.th-trip-name > .ph, .th-trip-members) { transition: none; }
+}

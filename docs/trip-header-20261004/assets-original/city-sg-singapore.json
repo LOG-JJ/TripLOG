@@ -1,0 +1,23 @@
+{
+  "id": "sg-singapore",
+  "kind": "city",
+  "mode": "built-in image_gen, text-to-image",
+  "imageInputsSent": [],
+  "prompt": "Create a standalone landscape travel illustration of Singapore, featuring the Merlion beside Marina Bay, a compact distinctive skyline, and gentle waterfront greenery. Use a logical 800 x 480 canvas for a header illustration displayed at about 300 x 180 CSS pixels. Draw crisp, delicate ink outlines in #0b1020 with soft, flat, watercolor-like fills in pale blue #bce6fb, sage #b8d2bc, and warm sand #f4d9a4, plus restrained pink and yellow accents. Place the focal scene toward the center-right and bottom, filling most of the canvas, with organic open edges toward the left and top and a clean transparent exterior. No UI, text, readable signs, logos, or frame.\n",
+  "source": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-5e20-7f81-812c-b8a5c49d0800\\exec-08e3ecbd-dfdc-4ef5-84e5-f2594b60e595.png",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "original": "docs\\trip-header-20261004\\assets-original\\city-sg-singapore.png",
+  "sourceSha256": "d160913fcf7321376a6588b3a62645d3223d760f41cf43f30e054b895f28eb5b",
+  "originalMatchesSource": true,
+  "asset": "src/assets/trip-scenes/cities/v1/sg-singapore.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "bytes": 159482,
+  "assetSha256": "58635610b460272c48a0dfb27e521d8b8160a1dcc00d141fb0694de47869ad2c",
+  "overwritten": false
+}

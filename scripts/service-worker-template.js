@@ -2,6 +2,38 @@
 const CACHE = __CACHE_NAME__;
 const BUILD = __BUILD_ID__;
 const ASSETS = __ASSETS__;
+// Versioned public illustrations use an independent, bounded, on-demand cache.
+// App code and account/API responses continue to follow the existing rules.
+const SCENE_CACHE = 'triplog-destination-scenes-v1';
+const SCENE_LIMIT = 48;
+const CITY_SCENE_PATH = /^\/src\/assets\/trip-scenes\/cities\/v\d+\/[a-z0-9-]+\.webp$/;
+let sceneWrites = Promise.resolve();
+async function citySceneResponse(request) {
+  const key = new URL(request.url).pathname;
+  let cache;
+  try {
+    cache = await caches.open(SCENE_CACHE);
+    const cached = await cache.match(key);
+    if (cached) return cached;
+  } catch (_) { /* Optional cache storage never prevents a network image. */ }
+  let response;
+  try { response = await fetch(request); } catch (_) { return Response.error(); }
+  // Static hosting may return a 200 HTML fallback for an absent file. Never put
+  // that response in the image cache; let the component choose its bundled theme.
+  if (!response.ok || !/^image\//i.test(response.headers.get('content-type') || '')) return Response.error();
+  if (cache) {
+    const copy = response.clone();
+    sceneWrites = sceneWrites.catch(() => {}).then(async () => {
+      try {
+        await cache.put(key, copy);
+        const keys = await cache.keys();
+        for (const stale of keys.slice(0, Math.max(0, keys.length - SCENE_LIMIT))) await cache.delete(stale);
+      } catch (_) { /* Quota/private-mode failures do not hide the loaded image. */ }
+    });
+    await sceneWrites;
+  }
+  return response;
+}
 const clientBuilds = new Map();
 async function cleanUnusedBuilds() {
   if (self.registration.installing || self.registration.waiting) return;
@@ -65,6 +97,10 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   const request = event.request, url = new URL(request.url);
   if (request.method !== 'GET' || url.origin !== self.location.origin) return;
+  if (CITY_SCENE_PATH.test(url.pathname)) {
+    event.respondWith(citySceneResponse(request));
+    return;
+  }
   const route = ['/', '/Travel', '/Travel.html', '/index.html'].includes(url.pathname) && request.mode === 'navigate';
   if (!route && !ASSETS.includes(url.pathname)) return;
   event.respondWith((async () => {

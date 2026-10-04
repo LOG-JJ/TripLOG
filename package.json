@@ -11,7 +11,7 @@
     "test:offline": "node scripts/sync-offline-browser-regression.js",
     "test:maps": "node scripts/coordinate-cache-regression.js && node scripts/place-selection-regression.js",
     "test:order": "node scripts/itinerary-order-regression.js",
-    "test": "npm run test:sync && node scripts/sync-navigation-regression.js && node scripts/persistence-backup-regression.js && node scripts/travel-companion-regression.js && node scripts/redesign-regression.js && npm run test:maps && npm run test:order && node scripts/country-search-regression.js && node scripts/time-picker-regression.js && node scripts/receipt-parser-regression.js && node scripts/receipt-json-regression.js"
+    "test": "npm run test:sync && node scripts/sync-navigation-regression.js && node scripts/persistence-backup-regression.js && node scripts/travel-companion-regression.js && node scripts/redesign-regression.js && npm run test:maps && npm run test:order && node scripts/country-search-regression.js && node scripts/destination-scenes-regression.js && node scripts/time-picker-regression.js && node scripts/receipt-parser-regression.js && node scripts/receipt-json-regression.js"
   },
   "devDependencies": {
     "@electric-sql/pglite": "0.5.8",

@@ -1,0 +1,23 @@
+{
+  "id": "kr-yangyang",
+  "kind": "city",
+  "mode": "built-in image_gen, text-to-image",
+  "imageInputsSent": [],
+  "prompt": "Create a standalone Yangyang travel illustration on an 800 × 480 landscape canvas for a compact website header. Show Yangyang's clean blue surf waves, a pair of unbranded surfboards beside a small sandy beach, coastal pine trees, and low hills. Use crisp, delicate ink outlines in #0b1020 and soft, flat watercolor-like fills: pale blue #bce6fb, sage #b8d2bc, warm sand #f4d9a4, with restrained yellow and pink accents. Arrange the focal cluster toward the center-right and bottom, filling most of the canvas while retaining organic open edges at the left and top. Keep the exterior fully transparent. No UI, text, frame, or logos.\n",
+  "source": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-35a4-74c3-916e-ab6a0794b3ea\\exec-2ea601b9-8094-4884-8bb8-fd318998728f.png",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "original": "docs\\trip-header-20261004\\assets-original\\city-kr-yangyang.png",
+  "sourceSha256": "a63d9f5006ec273fd22fb1248251a550edc6dfea0aae303f111277f6c29dd3be",
+  "originalMatchesSource": true,
+  "asset": "src/assets/trip-scenes/cities/v1/kr-yangyang.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "bytes": 123912,
+  "assetSha256": "d0cab7b052d937beb306c76545d7e275b46e2cf65966533c9c1d3924f1f7f8b4",
+  "overwritten": false
+}

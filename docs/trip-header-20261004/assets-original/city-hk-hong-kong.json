@@ -1,0 +1,23 @@
+{
+  "id": "hk-hong-kong",
+  "kind": "city",
+  "mode": "built-in image_gen, text-to-image",
+  "imageInputsSent": [],
+  "prompt": "Create a standalone landscape travel illustration of Hong Kong, featuring the dense Victoria Harbour skyline, blue water, one modest green-and-white ferry, and distant green hills. Use a logical 800 x 480 canvas for a header illustration displayed at about 300 x 180 CSS pixels. Draw crisp, delicate ink outlines in #0b1020 with soft, flat, watercolor-like fills in pale blue #bce6fb, sage #b8d2bc, and warm sand #f4d9a4, plus restrained pink and yellow accents. Place the focal scene toward the center-right and bottom, filling most of the canvas, with organic open edges toward the left and top and a clean transparent exterior. No UI, text, readable signs, logos, or frame.\n",
+  "source": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-5e20-7f81-812c-b8a5c49d0800\\exec-afd073e6-a727-4d13-965b-eb7ff55fb8f1.png",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "original": "docs\\trip-header-20261004\\assets-original\\city-hk-hong-kong.png",
+  "sourceSha256": "f365f1c334a1b00855b1a5bc4376064b1b02e6e7913b1fb38942db049d2e548c",
+  "originalMatchesSource": true,
+  "asset": "src/assets/trip-scenes/cities/v1/hk-hong-kong.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "bytes": 117182,
+  "assetSha256": "3abd364fdf7c002c05f59cc73068d2d8464dcbb516f8d439de2bd22d71569ca1",
+  "overwritten": false
+}

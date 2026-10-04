@@ -1,0 +1,23 @@
+{
+  "id": "wetland",
+  "kind": "theme",
+  "mode": "built-in image_gen, text-to-image",
+  "imageInputsSent": [],
+  "prompt": "Create a standalone wetland travel illustration on an 800 × 480 landscape canvas for a compact website header. Show a neutral wetland and open field with reeds, a gentle winding stream, low grassy hills, and a short simple boardwalk. Do not include identifiable landmarks. Use crisp, delicate ink outlines in #0b1020 and soft, flat watercolor-like fills: pale blue #bce6fb, sage #b8d2bc, warm sand #f4d9a4, with restrained yellow and pink accents. Arrange the focal cluster toward the center-right and bottom, filling most of the canvas while retaining organic open edges at the left and top. Keep the exterior fully transparent. No UI, text, frame, or logos.\n",
+  "source": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-35a4-74c3-916e-ab6a0794b3ea\\exec-76c97d47-2005-4b8f-b14b-331fb180d329.png",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "original": "docs\\trip-header-20261004\\assets-original\\theme-wetland.png",
+  "sourceSha256": "c805e00e4984baa3ee9e3581844f5d9756c698b6264ff0d09c0a79469dc9d683",
+  "originalMatchesSource": true,
+  "asset": "src/assets/trip-scenes/themes/v1/wetland.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "bytes": 144116,
+  "assetSha256": "082551702e7aa9528099ef1ef5356b1be9018ad11b638103876c5508c669ab01",
+  "overwritten": false
+}

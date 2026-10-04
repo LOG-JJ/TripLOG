@@ -1,0 +1,23 @@
+{
+  "id": "jp-okinawa",
+  "kind": "city",
+  "mode": "built-in image_gen, text-to-image",
+  "imageInputsSent": [],
+  "prompt": "Create a standalone landscape travel illustration of Okinawa, featuring a clear turquoise coast, a low red-tiled island roof, a small traditional shisa guardian figure, and a little tropical greenery. Use a logical 800 x 480 canvas for a header illustration displayed at about 300 x 180 CSS pixels. Draw crisp, delicate ink outlines in #0b1020 with soft, flat, watercolor-like fills in pale blue #bce6fb, sage #b8d2bc, and warm sand #f4d9a4, plus restrained pink and yellow accents. Place the focal scene toward the center-right and bottom, filling most of the canvas, with organic open edges toward the left and top and a clean transparent exterior. No UI, text, readable signs, logos, or frame.\n",
+  "source": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-5e20-7f81-812c-b8a5c49d0800\\exec-ed0ba3bb-4f19-494e-8ac0-587f047d80f4.png",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "original": "docs\\trip-header-20261004\\assets-original\\city-jp-okinawa.png",
+  "sourceSha256": "29355818b28d1a71632955a1bed125d7c1dccb3cc52aee433e77bffec34c79cd",
+  "originalMatchesSource": true,
+  "asset": "src/assets/trip-scenes/cities/v1/jp-okinawa.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "bytes": 131832,
+  "assetSha256": "08ba780b86e82bfce5cb9b869680fc789e1f8df44a4e50a08cf3acb85c389555",
+  "overwritten": false
+}
