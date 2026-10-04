@@ -42,7 +42,7 @@
       destinationId: item?.id || '', destinationName: item?.name || '', destinationKind: item?.kind || '',
       match, themeId: fallback.id, dedicated: Boolean(item?.dedicated),
       artworkId: item?.dedicated ? item.id : `theme-${fallback.id}`,
-      src: item?.src || fallback.src, fallbackSrc: fallback.src, universalSrc: data.themes.travel.src,
+      src: item?.src || fallback.src, mobileSrc: item?.mobileSrc || '', fallbackSrc: fallback.src, universalSrc: data.themes.travel.src,
     };
   }
   function resolve(trip = {}) {

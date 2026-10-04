@@ -104,10 +104,15 @@
     ['ae-dubai', '두바이', 'AE', 'city', 'desert', 'Dubai|دبي'],
     ['mv-maldives', '몰디브', 'MV', 'region', 'island', 'Maldives|Maldives Islands'],
   ];
+  // Keep revised paintings immutable so the on-demand cache can retain older
+  // releases without serving a previous illustration to an updated header.
+  const artworkVersions = Object.freeze({ 'kr-suncheon': 2 });
+  const mobileArtwork = Object.freeze({ 'kr-suncheon': `${base}/cities/v2/kr-suncheon-mobile.webp` });
   const catalog = Object.freeze(rows.map(([id, name, codes, kind, theme, aliases]) => Object.freeze({
     id, name, countryCodes: Object.freeze(codes.split(',')), kind, theme,
     aliases: Object.freeze([name, ...aliases.split('|')]), dedicated: primary.has(id),
-    src: primary.has(id) ? `${base}/cities/v1/${id}.webp` : themes[theme].src,
+    src: primary.has(id) ? `${base}/cities/v${artworkVersions[id] || 1}/${id}.webp` : themes[theme].src,
+    mobileSrc: mobileArtwork[id] || '',
   })));
-  return Object.freeze({ catalog, themes, version: 1 });
+  return Object.freeze({ catalog, themes, version: 2 });
 });

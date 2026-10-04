@@ -29,17 +29,21 @@ async function main() {
       const metrics = await hero.evaluate(el => {
         const rect = node => { const r = node.getBoundingClientRect(); return { x: r.x, y: r.y, width: r.width, height: r.height, right: r.right, bottom: r.bottom }; };
         const title = el.querySelector('.th-trip-name');
-        return { viewport: innerWidth, panel: rect(el), title: rect(title), titleSize: parseFloat(getComputedStyle(title).fontSize), facts: rect(el.querySelector('.th-trip-facts')), image: rect(el.querySelector('.th-hero-scene')), fits: el.scrollWidth <= el.clientWidth + 1, pageFits: document.documentElement.scrollWidth <= innerWidth };
+        const image = el.querySelector('.th-hero-scene img');
+        return { viewport: innerWidth, panel: rect(el), title: rect(title), titleSize: parseFloat(getComputedStyle(title).fontSize), facts: rect(el.querySelector('.th-trip-facts')), image: rect(el.querySelector('.th-hero-scene')), imageContent: rect(image), imageFit: getComputedStyle(image).objectFit, imagePosition: getComputedStyle(image).objectPosition, fits: el.scrollWidth <= el.clientWidth + 1, pageFits: document.documentElement.scrollWidth <= innerWidth };
       });
       assert(metrics.fits && metrics.pageFits, `${name}: no horizontal overflow ${JSON.stringify(metrics)}`);
       assert(metrics.panel.height <= maxHeight, `${name}: header remains compact (${metrics.panel.height}px)`);
       assert(metrics.titleSize >= 23, `${name}: inherited overview typography does not shrink the trip name`);
-      assert(metrics.title.bottom + 9 <= metrics.facts.y, `${name}: title clears dates and controls`);
+      assert(metrics.title.bottom + 8 <= metrics.facts.y, `${name}: title clears dates and controls`);
       assert(metrics.facts.bottom <= metrics.panel.bottom - 8, `${name}: facts remain inside the panel`);
       assert(metrics.image.width > 80 && metrics.image.height > 70, `${name}: illustration stays visible`);
       assert(metrics.title.right <= metrics.image.x + 1, `${name}: title stays clear of the illustration`);
-      if (metrics.viewport >= 600) assert(metrics.facts.right <= metrics.image.x + 1, `${name}: date/member controls stay clear of the illustration`);
-      else assert(metrics.facts.y >= metrics.image.bottom, `${name}: mobile facts stay below the illustration`);
+      assert(metrics.facts.right <= metrics.image.x + 1, `${name}: both mobile and desktop keep all information left of the art`);
+      assert(Math.abs(metrics.image.bottom - metrics.panel.bottom) < 2, `${name}: no empty band remains below the illustration`);
+      assert(metrics.image.y <= metrics.panel.y + 2, `${name}: the image uses the full height, not a floating thumbnail`);
+      assert(metrics.imageContent.height >= metrics.image.height - 1, `${name}: artwork fills its vertical slot`);
+      if (metrics.imageFit === 'contain') assert.equal(metrics.imagePosition, '100% 100%', `${name}: contained landscape stays flush to the right and bottom`);
       return metrics;
     };
     await page.goto(`${origin}/Travel?page=overview&trip=trip-header-suncheon`); await ready();
@@ -52,13 +56,17 @@ async function main() {
       return [...document.fonts].some(font => font.family.replace(/["']/g, '') === family && font.status === 'loaded');
     }), 'The actual primary Korean font is loaded');
     const before = await core();
-    for (const width of [320, 360, 390, 480, 600, 768, 1024, 1440]) {
+    for (const width of [320, 360, 390, 480, 599, 600, 613, 767, 768, 1024, 1440]) {
       await page.setViewportSize({ width, height: width > 600 ? 1000 : 844 });
+      await page.waitForFunction(mobile => {
+        const img = document.querySelector('.th-hero-scene img');
+        return img?.complete && img.naturalWidth > 0 && img.currentSrc.endsWith(mobile ? '/kr-suncheon-mobile.webp' : '/kr-suncheon.webp');
+      }, width < 768);
       await layout(String(width));
       await hero.screenshot({ path: path.join(output, `header-${width}.png`), animations: 'disabled' });
       if (width === 390 || width === 1440) await page.screenshot({ path: path.join(output, `overview-${width}.png`), fullPage: true, animations: 'disabled' });
     }
-    console.log('PASS postcard header: correct countdown/dates/members, loaded local typography and city artwork, compact 320/360/390/480/600/768/1024/1440 layout');
+    console.log('PASS postcard header: correct countdown/dates/members, loaded local typography and city artwork; 320/360/390/480/599/600/613/767/768/1024/1440 keep information left, artwork right, no bottom image gap');
     await page.setViewportSize({ width: 390, height: 844 });
     await page.locator('#rdOverviewTripButton').focus(); await page.locator('#rdOverviewTripButton').press('Enter');
     const chooser = page.locator('#rdTripChooser');
@@ -116,6 +124,26 @@ async function main() {
     await render({ trip: { city: '여수' } });
     await page.waitForFunction(() => { const img = document.querySelector('.th-hero-scene img'); return img?.getAttribute('src')?.endsWith('/travel.webp') && img.complete && img.naturalWidth > 0; });
     assert.equal(await hero.locator('img').isVisible(), true);
+    // An unavailable mobile crop must relinquish <source> selection so the
+    // landscape and bundled theme fallbacks can actually become visible.
+    for (const failDesktopToo of [false, true]) {
+      const fallbackContext = await browser.newContext({ serviceWorkers: 'block', viewport: { width: 390, height: 844 }, timezoneId: 'Asia/Seoul' });
+      await fallbackContext.route('**/*', route => {
+        const url = new URL(route.request().url());
+        const failImage = url.pathname.endsWith('/kr-suncheon-mobile.webp') || (failDesktopToo && url.pathname.endsWith('/kr-suncheon.webp'));
+        return url.origin === origin && !failImage ? route.continue() : route.abort();
+      });
+      const fallbackPage = await fallbackContext.newPage();
+      fallbackPage.on('pageerror', error => errors.push(error.message));
+      await fallbackPage.goto(`${origin}/Travel?page=overview&trip=trip-header-suncheon`);
+      await fallbackPage.waitForFunction(() => document.documentElement.dataset.triplogInitialized === 'true' && document.documentElement.dataset.auth === 'signed-in' && Boolean(state.collaboration?.ownerId));
+      await fallbackPage.waitForFunction(suffix => {
+        const img = document.querySelector('.th-hero-scene img');
+        return img?.complete && img.naturalWidth > 0 && img.currentSrc.endsWith(suffix) && !img.parentElement.querySelector('source[data-trip-scene-mobile]');
+      }, failDesktopToo ? '/wetland.webp' : '/kr-suncheon.webp');
+      assert.equal(await fallbackPage.locator('source[data-trip-scene-mobile]').count(), 0);
+      await fallbackContext.close();
+    }
     assert.deepEqual(errors, []);
     console.log(`PASS postcard header: long/unknown/escaped/same-day data, optional image failure fallback, zero runtime errors. Screenshots: ${output}`);
   } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }

@@ -1,3 +1,19 @@
+# Illustrated postcard mobile correction — 2026-10-04
+
+final result: passed
+
+- User requirement: original hand-drawn postcard mood; information left and artwork right on both mobile and desktop.
+- Mobile visual truth: `triplog-trip-header-mobile-postcard-20261004.png`; desktop visual truth: `triplog-trip-header-postcard-20261004.png`. The rejected photo/banner concept is excluded from implementation.
+- Source/render comparison: mobile source normalized to 354 × 152 versus actual 354 × 172 at 390 × 844, scale 1; desktop source 912 × 246 versus actual 912 × 232 at 1440 × 1000. Live controls account for the mobile height difference.
+- Full and magnified comparisons: `docs/trip-header-mobile-20261004/comparison-mobile.png`, `comparison-mobile-detail.png`, `comparison-desktop.png`. Responsive evidence includes both sides of 600/768px and long titles; final in-app proof is `final-iab.jpg`.
+- Fixed the 104px floating mobile image, hard crop edge, oversized divider, intermediate-width wrapping and failed offline image after responsive source changes. Suncheon now has original-style landscape/portrait WebP assets. All eleven test widths preserve left/right placement and bottom alignment.
+- Required typography, spacing, color, image and copy surfaces reviewed. Monochrome library icons and 44px controls are intentional runtime differences. Physical mobile/Safari remain untested.
+- Core tests, header/city-cache/trip-chooser/reservation browser checks and build passed; actual in-app controls/rendering verified with zero error logs.
+- [Detailed QA, exact image provenance, findings and checks](docs/trip-header-mobile-20261004/design-qa.md).
+
+---
+
+
 # Destination Postcard header and destination scenes — 2026-10-04
 
 final result: passed

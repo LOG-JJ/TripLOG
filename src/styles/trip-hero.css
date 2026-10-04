@@ -48,6 +48,7 @@ body.rd-app #overviewPage .th-hero-scene {
   position: absolute; z-index: 0; right: 0; bottom: 0; width: 42%; height: 100%;
   pointer-events: none; overflow: hidden;
 }
+body.rd-app #overviewPage .th-hero-scene picture { display: block; width: 100%; height: 100%; }
 body.rd-app #overviewPage .th-hero-scene img {
   display: block; width: 100%; height: 100%; margin: 0; object-fit: cover; object-position: right bottom;
 }
@@ -57,22 +58,35 @@ body.rd-app #overviewPage .th-hero-scene img[hidden] { display: none; }
   body.rd-app #overviewPage .th-trip-members:hover { color: #1264a3; }
 }
 body.rd-app #overviewPage :is(.th-trip-name, .th-trip-members):focus-visible { outline: 3px solid #1264a3; outline-offset: 3px; border-radius: 5px; }
-@media (max-width: 599px) {
-  body.rd-app #overviewPage .th-trip-hero { min-height: 188px; padding: 16px 14px 13px; }
-  body.rd-app #overviewPage .th-hero-copy { width: 100%; }
-  body.rd-app #overviewPage .th-countdown { min-height: 25px; padding: 4px 8px; margin-bottom: 10px; font-size: 13px; }
-  body.rd-app #overviewPage .th-trip-hero h2 { width: 60%; margin-bottom: 15px; }
-  body.rd-app #overviewPage .th-trip-hero .th-trip-name { gap: 5px; font-size: clamp(23px, 7.2cqw, 34px); line-height: 1.25; letter-spacing: -.8px; }
-  body.rd-app #overviewPage .th-trip-name > .ph { width: 21px; height: 24px; font-size: 17px; }
-  body.rd-app #overviewPage .th-trip-facts { max-width: 100%; gap: 5px 9px; }
-  body.rd-app #overviewPage .th-trip-dates { flex-basis: 100%; font-size: 12px; }
-  body.rd-app #overviewPage .th-trip-duration { font-size: 12px; }
+@media (min-width: 768px) {
+  /* The landscape silhouette must survive in medium-width desktop panels. */
+  body.rd-app #overviewPage .th-hero-scene picture:has(source[data-trip-scene-mobile]) img { object-fit: contain; object-position: right bottom; }
+}
+@media (max-width: 767px) {
+  body.rd-app #overviewPage .th-hero-scene picture:has(source[data-trip-scene-mobile]) img { object-position: right top; }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  body.rd-app #overviewPage .th-trip-dates { flex-basis: 100%; }
   body.rd-app #overviewPage .th-trip-duration { border-left: 0; padding-left: 0; }
-  body.rd-app #overviewPage .th-trip-members { min-height: 32px; padding-left: 9px; font-size: 12px; }
-  body.rd-app #overviewPage .th-trip-facts .ph { font-size: 19px; }
+}
+@media (max-width: 599px) {
+  /* Keep the postcard's left/right composition. A fixed-height contained
+     image here used to float above a large empty rectangle on mobile. */
+  body.rd-app #overviewPage .th-trip-hero { min-height: 168px; padding: 14px 14px 10px; }
+  body.rd-app #overviewPage .th-hero-copy { width: 58%; }
+  body.rd-app #overviewPage .th-countdown { min-height: 25px; padding: 4px 8px; margin-bottom: 6px; font-size: 13px; }
+  body.rd-app #overviewPage .th-trip-hero h2 { margin-bottom: 8px; }
+  body.rd-app #overviewPage .th-trip-hero .th-trip-name { gap: 5px; font-size: clamp(23px, 8.6cqw, 32px); line-height: 1.25; letter-spacing: -.8px; }
+  body.rd-app #overviewPage .th-trip-name > .ph { width: 21px; height: 24px; font-size: 17px; }
+  body.rd-app #overviewPage .th-trip-facts { max-width: 100%; gap: 0 6px; }
+  body.rd-app #overviewPage .th-trip-facts > * { gap: 4px; }
+  body.rd-app #overviewPage .th-trip-dates { flex-basis: 100%; font-size: 13px; }
+  body.rd-app #overviewPage .th-trip-duration { font-size: 13px; }
+  body.rd-app #overviewPage .th-trip-duration { border-left: 0; padding-left: 0; }
+  body.rd-app #overviewPage .th-trip-members { position: relative; min-height: 44px; border-left: 0; padding-left: 7px; font-size: 13px; }
+  body.rd-app #overviewPage .th-trip-members::before { content: ''; position: absolute; left: 0; top: 13px; height: 18px; border-left: 1px solid #dfe2e7; }
+  body.rd-app #overviewPage .th-trip-facts .ph { font-size: 18px; }
   body.rd-app #overviewPage .th-trip-members > .ph-caret-right { font-size: 14px; }
-  body.rd-app #overviewPage .th-hero-scene { width: 40%; height: 104px; right: 0; top: 4px; bottom: auto; }
-  body.rd-app #overviewPage .th-hero-scene img { object-fit: contain; }
 }
 @media (prefers-reduced-motion: reduce) {
   body.rd-app #overviewPage :is(.th-trip-name > .ph, .th-trip-members) { transition: none; }

@@ -44,7 +44,7 @@ const before = JSON.stringify(saved);
 assert.deepEqual(R.resolve(saved), R.resolve(saved), 'A destination keeps the same artwork across renders');
 assert.equal(JSON.stringify(saved), before, 'Artwork selection never edits trip data');
 if (!process.argv.includes('--skip-assets')) {
-  for (const file of new Set([...D.catalog.map(item => item.src), ...Object.values(D.themes).map(item => item.src)])) {
+  for (const file of new Set([...D.catalog.flatMap(item => [item.src, item.mobileSrc].filter(Boolean)), ...Object.values(D.themes).map(item => item.src)])) {
     const fullPath = path.resolve(__dirname, '..', file);
     assert(fs.existsSync(fullPath), `Missing deployed scene: ${file}`);
     const image = fs.readFileSync(fullPath);

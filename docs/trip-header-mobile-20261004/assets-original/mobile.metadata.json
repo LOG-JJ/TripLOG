@@ -1,0 +1,37 @@
+{
+  "prompt": "Create one standalone Suncheon destination illustration in a portrait 4:5 composition, intended for a 400 × 500 mobile artwork. Preserve the original reference's bold ink illustration style with pale flat light blue, sand yellow, and green colors and modest paper-pencil detail. Show a clear cloud and sun above hills, a winding pale blue river through wetlands, a boardwalk with a heron in the right half, and reeds extending to the bottom.\n\nUse a transparent background. Keep the natural irregular left silhouette visibly inside this narrow portrait frame, with transparent space following the organic contour along the left and a quiet transparent upper-left. The illustrated landscape reaches the right and bottom canvas edges without transparent padding there. Compose all recognizable subjects for the portrait frame so the organic left edge and the heron, boardwalk, river, hills, sun, and cloud remain readable at 148 × 186 pixels. Artwork only: no text, UI, or border. Keep it an outlined flat-color illustration, not a photo or a painterly realistic scene.\n\nInput images:\n- codex-clipboard-45b82e80-c258-4aa5-bbde-bed5bfd786f5.png: Original user-selected reference and exact style authority.",
+  "startedAt": "2026-10-04T03:19:01.477Z",
+  "startedEpoch": 1791083941.477,
+  "input": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-45b82e80-c258-4aa5-bbde-bed5bfd786f5.png",
+  "finishedAt": "2026-10-04T03:19:51.250Z",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104e7-e587-7d23-8d34-8e0712636c97/exec-af82bbd1-fc24-4920-9681-b7b05dc89529.png",
+  "destinationPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png",
+  "generationMode": "built-in image_gen; single I2I using original user-selected reference",
+  "transparentBackground": true,
+  "referenceRole": "Original user-selected reference and exact style authority",
+  "requestedAspectRatio": "4:5",
+  "intendedDisplayAssetSize": [
+    400,
+    500
+  ],
+  "mobileArtworkSlot": [
+    148,
+    186
+  ],
+  "imageInputs": [
+    "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-45b82e80-c258-4aa5-bbde-bed5bfd786f5.png"
+  ],
+  "generatedImageInputs": [],
+  "generationCount": 1,
+  "overwrite": false,
+  "sourceSha256": "9ee5b5e49a9fcc42f6ce7f1fdb9e4e740e6e4837ff51bad6394554bfa86c9dd6",
+  "savedSha256": "9ee5b5e49a9fcc42f6ce7f1fdb9e4e740e6e4837ff51bad6394554bfa86c9dd6",
+  "sha256Match": true,
+  "referenceSha256": "afe5d59804562aed7b1aafd6b9f40d17d454708da1c29602289dd818bd64b7c8",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "pngColorType": 6,
+  "bytes": 1667710
+}

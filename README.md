@@ -55,6 +55,8 @@ npm run preview
 
 ## 전체 화면 개편
 
+여행 헤더는 **모바일·PC 모두 왼쪽 정보 / 오른쪽 삽화**를 유지합니다. 그림 영역을 카드 아래까지 연결해 모바일의 빈칸을 없애고, 순천은 원안의 손그림 감성을 살린 가로·세로 그림을 화면에 맞춰 선택합니다. 제목·날짜·인원은 그림과 겹치지 않으며, 좁은 화면의 날짜는 별도 줄로 배치합니다. [모바일 개선 목업](triplog-trip-header-mobile-postcard-20261004.png)과 [화면 크기별 비교·검증](docs/trip-header-mobile-20261004/design-qa.md)에 구현 근거를 기록했습니다.
+
 여행 개요 상단은 선택한 [포스트카드 목업](triplog-trip-header-postcard-20261004.png)을 기준으로 여행명·D-day·날짜·인원과 목적지 일러스트를 함께 표시합니다. 국내 30곳·해외 50곳의 국가/도시/별칭을 구분하며, 우선 여행지 30곳에는 전용 그림을, 나머지는 10종의 공통 테마를 사용합니다. 저장된 목적지만 사용하고 여행 제목으로 도시를 추측하지 않습니다. 도시가 불명확하거나 여러 곳이면 공통 그림을 표시하며, 서귀포→제주 같은 명시적 지역 관계는 별도로 처리합니다. 긴 여행명은 두 줄로 줄이고 전체 이름은 접근성 이름·도움말과 기존 여행 선택 창에서 확인할 수 있습니다.
 
 도시 그림은 필요할 때만 내려받아 최대 48개를 별도 캐시에 보관합니다. 공통 테마는 앱에 포함되어, 오프라인에서 아직 받지 않은 도시 그림도 대체 표시됩니다. 여행 데이터나 인증 응답을 그림 캐시에 넣지 않습니다. 도시·별칭·테마의 기준은 `src/app/data/destination-scenes.js`, 선택 규칙은 `src/app/shared/destination-scenes.js`입니다. [도시 그림·화면 비교와 검증](docs/trip-header-20261004/design-qa.md)을 확인하세요. 격리 미리보기는 `node scripts/preview-trip-header.js`, 검증은 `node scripts/destination-scenes-regression.js`, `node scripts/trip-header-browser-regression.js`, `npm run prepare:sync && node scripts/trip-scene-cache-browser-regression.js`입니다.

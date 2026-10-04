@@ -16,29 +16,59 @@
           <button type="button" class="rd-team th-trip-members" data-rd-action="invite" aria-label="여행 멤버 ${members}명 보기">${icon('users')}<span>${members}명</span>${icon('caret-right')}</button>
         </div>
       </div>
-      <div class="th-hero-scene" aria-hidden="true"><img src="${text(scene.src)}" data-trip-scene data-scene-fallback="${text(scene.fallbackSrc)}" data-scene-universal="${text(scene.universalSrc)}" width="800" height="480" alt="" decoding="async"></div>
+      <div class="th-hero-scene" aria-hidden="true"><picture>${scene.mobileSrc ? `<source media="(max-width: 767px)" srcset="${text(scene.mobileSrc)}" data-trip-scene-mobile>` : ''}<img src="${text(scene.src)}" data-trip-scene data-scene-fallback="${text(scene.fallbackSrc)}" data-scene-universal="${text(scene.universalSrc)}" width="800" height="480" alt="" decoding="async"></picture></div>
     </section>`;
   }
-  // One delegated listener also covers new markup after trip changes or sync.
   // Missing artwork must never leave a broken-image icon over the trip controls.
-  document.addEventListener('error', event => {
-    const image = event.target;
+  function fallbackScene(image) {
     if (!(image instanceof HTMLImageElement) || !image.hasAttribute('data-trip-scene')) return;
+    const mobile = image.parentElement?.querySelector('source[data-trip-scene-mobile]');
+    if (mobile) {
+      const selected = window.matchMedia(mobile.media).matches;
+      mobile.remove();
+      if (selected) {
+        // Let an unavailable optional mobile crop try the desktop painting
+        // before the existing bundled-theme/universal fallback chain.
+        image.src = image.getAttribute('src');
+        return;
+      }
+    }
     const current = image.getAttribute('src');
     const next = [image.dataset.sceneFallback, image.dataset.sceneUniversal]
       .find(source => source && source !== current && source !== image.dataset.sceneFailed);
     image.dataset.sceneFailed = current;
     if (next) image.src = next;
     else image.hidden = true;
-  }, true);
+  }
+  // One delegated listener also covers new markup after trip changes or sync.
+  document.addEventListener('error', event => fallbackScene(event.target), true);
+  // A failed <picture> candidate can become complete without another error
+  // event after a media change. Decode the explicitly requested candidate:
+  // decoding the displayed element can still resolve its previous picture.
+  const mobileViewport = window.matchMedia('(max-width: 767px)');
+  mobileViewport.addEventListener('change', ({ matches }) => {
+    const image = document.querySelector('.th-hero-scene img[data-trip-scene]');
+    if (!image || image.hidden) return;
+    const source = image.getAttribute('src');
+    const mobileSource = () => image.parentElement?.querySelector('source[data-trip-scene-mobile]')?.getAttribute('srcset') || '';
+    const mobile = mobileSource();
+    if (!mobile) return;
+    const candidate = new Image();
+    candidate.src = matches ? mobile : source;
+    candidate.decode().catch(() => {
+      if (image.isConnected && mobileViewport.matches === matches && image.getAttribute('src') === source && mobileSource() === mobile) fallbackScene(image);
+    });
+  });
   // On a first visit the visible image can finish before the worker activates.
   // Warm only that same public city asset once control becomes available, so
   // the illustration the user just saw remains available on an offline reload.
   navigator.serviceWorker?.addEventListener('controllerchange', () => {
     const image = document.querySelector('.th-hero-scene img[data-trip-scene]');
-    const source = image?.getAttribute('src') || '';
-    if (!/^src\/assets\/trip-scenes\/cities\/v\d+\/[a-z0-9-]+\.webp$/.test(source)) return;
-    fetch(source).catch(() => {});
+    const source = image?.currentSrc || image?.getAttribute('src') || '';
+    if (!source) return;
+    const url = new URL(source, document.baseURI);
+    if (url.origin !== location.origin || !/^\/src\/assets\/trip-scenes\/cities\/v\d+\/[a-z0-9-]+\.webp$/.test(url.pathname)) return;
+    fetch(url.pathname).catch(() => {});
   });
   window.TripLog.register('features.overview.tripHero', { render });
 })();
