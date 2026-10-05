@@ -5,6 +5,39 @@
     activity: { label: '입장권', icon: 'ticket', color: 'green' },
     other: { label: '기타', icon: 'bookmark-simple', color: 'yellow' },
   };
+  const transportKinds = {
+    train: { label: '기차', icon: 'train', emoji: '🚆' },
+    flight: { label: '항공', icon: 'airplane-tilt', emoji: '✈️' },
+    bus: { label: '버스', icon: 'bus', emoji: '🚌' },
+    subway: { label: '지하철', icon: 'subway', emoji: '🚇' },
+    ferry: { label: '배 · 페리', icon: 'boat', emoji: '🚢' },
+    car: { label: '차량 · 렌터카', icon: 'car', emoji: '🚗' },
+    taxi: { label: '택시', icon: 'taxi', emoji: '🚕' },
+    other: { label: '기타 교통', icon: 'ticket', emoji: '🎫' },
+  };
+  function transportInfo(row) {
+    return Object.hasOwn(transportKinds, row.transportKind) ? transportKinds[row.transportKind] : transportKinds[/KTX|SRT|기차|열차|철도/i.test(row.title || '') ? 'train' : 'other'];
+  }
+  function transportFromItinerary(item) {
+    const route = item.transportReservation || {};
+    return { type: 'transport', title: item.voucherName || item.place || '교통 예약', date: item.date, time: item.time || '', endTime: item.endTime || '', arrivalDate: route.arrivalDate || '', transportKind: route.kind || '', from: route.from || '', to: route.to || '', reference: item.voucherCode || '', location: item.location || '', note: item.memo || '' };
+  }
+  function itineraryForReservation(row, item = {}) {
+    const transport = row.type === 'transport';
+    const result = { ...item, date: row.date, time: row.time || '', endTime: transport && row.source !== 'entry' ? row.endTime || '' : '', place: row.title, location: row.location || '', memo: row.note || '', theme: row.type === 'stay' ? 'lodging' : transport ? 'transport' : 'sightseeing', voucherName: row.title, voucherCode: row.reference || '' };
+    if (transport) result.transportReservation = { kind: row.transportKind || '', from: row.from || '', to: row.to || '', arrivalDate: row.source === 'entry' ? '' : row.arrivalDate || '' };
+    else delete result.transportReservation;
+    if (result.place !== item.place || result.location !== item.location) {
+      for (const key of ['lat', 'lon', 'mapQuery', 'coordinateSource', 'coordinateSignature', 'coordinatePrecision', 'coordinateAddress', 'googlePlaceId']) delete result[key];
+    }
+    return result;
+  }
+  function arrivalDay(item) { return item.theme === 'transport' && item.transportReservation?.arrivalDate || item.date; }
+  function endMinutes(item) {
+    const end = minutes(item.endTime), arrival = arrivalDay(item);
+    if (end === null || !validDate(item.date) || !validDate(arrival)) return null;
+    return end + Math.round((Date.parse(arrival) - Date.parse(item.date)) / 86400000) * 1440;
+  }
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const asList = value => Array.isArray(value) ? value.filter(item => item && typeof item === 'object') : [];
   function validDate(value) {
@@ -67,7 +100,7 @@
     let latestEnd = null;
     items.forEach((item, index) => {
       const lodging = item.theme === 'lodging';
-      const start = minutes(item.time), end = lodging ? start : minutes(item.endTime), previous = items[index - 1];
+      const start = minutes(item.time), end = lodging ? start : endMinutes(item), previous = items[index - 1];
       if (start === null || end === null) issues.push({ id: item.id, type: 'missing', title: lodging ? '도착 시각을 확인해 주세요' : '시작·종료 시간을 확인해 주세요', detail: item.place });
       else if (!lodging && end <= start) issues.push({ id: item.id, type: 'invalid', title: '종료 시간이 시작보다 빨라요', detail: item.place });
       if (start !== null && latestEnd !== null) {
@@ -95,7 +128,7 @@
     let cursor = null, firstPending = true;
     for (const item of items) {
       const lodging = item.theme === 'lodging';
-      const start = minutes(item.time), end = lodging ? start : minutes(item.endTime);
+      const start = minutes(item.time), end = lodging ? start : endMinutes(item);
       if (start === null || end === null || (!lodging && end <= start)) { errors.push(`${item.place}: ${lodging ? '도착 시각을' : '시작·종료 시간을'} 먼저 입력해 주세요.`); continue; }
       const fixed = status.completed.has(item.id) || status.locked.has(item.id);
       const earliest = cursor === null ? 0 : cursor + transitMinutes(item, fallback);
@@ -131,7 +164,10 @@
     try { const url = new URL(String(value || '')); return ['https:', 'http:'].includes(url.protocol) && !url.username && !url.password ? url.href : ''; } catch { return ''; }
   }
   function reservations(trip) {
-    const rows = asList(trip.travelCompanion?.reservations).map(row => ({ ...row, id: `manual:${row.id}`, sourceId: row.id, source: 'manual', type: types[row.type] ? row.type : 'other' }));
+    const rows = asList(trip.travelCompanion?.reservations).map(row => {
+      const linked = row.type === 'transport' && asList(trip.itineraryItems).find(item => item.linkedReservationId === `manual:${row.id}` && item.theme === 'transport' && item.transportReservation);
+      return { ...row, ...(linked ? transportFromItinerary(linked) : {}), id: `manual:${row.id}`, sourceId: row.id, source: 'manual', type: types[row.type] ? row.type : 'other' };
+    });
     asList(trip.entries).forEach(entry => {
       const stay = entry.pretripType === 'hotel' || !!entry.hotelName;
       const transport = entry.pretripType === 'flight' || !!entry.flightNumber;
@@ -145,17 +181,24 @@
     asList(trip.itineraryItems).forEach(item => {
       if (item.linkedReservationId && rows.some(row => row.id === item.linkedReservationId)) return;
       if (!item.voucherName && !item.voucherCode && !item.voucherFileName) return;
-      rows.push({ id: `plan:${item.id}`, sourceId: item.id, source: 'itinerary', type: 'activity', title: item.voucherName || item.place || '입장권', date: item.date, time: item.time || '', reference: item.voucherCode || '', location: item.location || item.place || '', note: item.memo || '', attachment: !!item.voucherFile });
+      rows.push({ id: `plan:${item.id}`, sourceId: item.id, source: 'itinerary', type: 'activity', title: item.voucherName || item.place || '입장권', date: item.date, time: item.time || '', reference: item.voucherCode || '', location: item.location || item.place || '', note: item.memo || '', ...(item.theme === 'transport' ? transportFromItinerary(item) : {}), attachment: !!item.voucherFile });
     });
     const order = { transport: 0, stay: 1, activity: 2, other: 3 };
     return rows.sort((a, b) => (a.date || '9999').localeCompare(b.date || '9999') || order[a.type] - order[b.type] || (a.time || '99:99').localeCompare(b.time || '99:99') || a.title.localeCompare(b.title));
   }
   function validateReservation(row) {
     if (!String(row.title || '').trim()) return '예약 이름을 입력해 주세요.';
-    if (!types[row.type]) return '예약 종류를 선택해 주세요.';
+    if (!Object.hasOwn(types, row.type)) return '예약 종류를 선택해 주세요.';
     if (!validDate(row.date)) return '올바른 예약 일자를 입력해 주세요.';
     if (row.type === 'stay' && (!validDate(row.endDate) || row.endDate <= row.date)) return '체크아웃은 체크인 다음 날 이후로 선택해 주세요.';
     if (row.time && minutes(row.time) === null) return '시간을 확인해 주세요.';
+    if (row.type === 'transport') {
+      if (row.transportKind && !Object.hasOwn(transportKinds, row.transportKind)) return '교통수단을 선택해 주세요.';
+      if (row.arrivalDate && (!validDate(row.arrivalDate) || row.arrivalDate < row.date)) return '도착일은 출발일 이후로 선택해 주세요.';
+      if (row.endTime && minutes(row.endTime) === null) return '도착 시간을 확인해 주세요.';
+      if (row.endTime && !row.time) return '출발 시간을 함께 입력해 주세요.';
+      if (row.endTime && (!row.arrivalDate || row.arrivalDate === row.date) && minutes(row.endTime) <= minutes(row.time)) return '도착 시간이 출발보다 늦어야 해요. 다음 날 도착하면 도착일을 변경해 주세요.';
+    }
     if (row.url && !safeUrl(row.url)) return '예약 링크는 http:// 또는 https:// 주소로 입력해 주세요.';
     return '';
   }
@@ -199,8 +242,8 @@
         const start = utcTime(item.date, item.time, timeZone);
         lines.push(`DTSTART:${start}`);
         if (item.theme !== 'lodging' && item.endTime) {
-          if (minutes(item.endTime) === null || minutes(item.endTime) <= minutes(item.time)) throw new Error(`${item.place}: 종료 시간을 확인해 주세요.`);
-          lines.push(`DTEND:${utcTime(item.date, item.endTime, timeZone)}`);
+          if (endMinutes(item) === null || endMinutes(item) <= minutes(item.time)) throw new Error(`${item.place}: 종료 시간을 확인해 주세요.`);
+          lines.push(`DTEND:${utcTime(arrivalDay(item), item.endTime, timeZone)}`);
         }
       } else {
         if (item.theme !== 'lodging' && item.endTime) throw new Error(`${item.place}: 시작 시간을 입력해 주세요.`);
@@ -220,5 +263,5 @@
     const header = /^data:image\/png;base64,[A-Za-z0-9+/=]+$/.test(logo) ? `<img width="108" alt="TripLOG" src="${logo}">` : '<strong class="logo">TRIP<span>LOG</span></strong>';
     return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'"><title>${esc(trip.tripName)} · 포켓노트</title><style>*{box-sizing:border-box}body{margin:0;background:#fff;color:#0b1020;font:16px/1.6 system-ui,sans-serif}main{max-width:760px;margin:auto;padding:24px 18px}h1{font-size:32px;line-height:1.2;margin:28px 0 8px}h2{font-size:23px;margin-top:30px}h3{margin:0 0 6px;font-size:19px}p{margin:6px 0;overflow-wrap:anywhere}article{border:2px solid #0b1020;border-radius:10px;padding:16px;margin:12px 0;break-inside:avoid}.muted{color:#686b75}.badge{background:#fff05a;border:1px solid;border-radius:6px;padding:2px 8px;display:inline-block}.logo{font-size:24px}.logo span{background:#f7afc7;border:2px solid;border-radius:7px}.summary{background:#bce6fb}code{font:inherit;font-weight:700;overflow-wrap:anywhere}footer{margin-top:32px;border-top:1px solid #e4e5e9;padding-top:14px}@media print{main{max-width:none}article{box-shadow:none}}</style></head><body><main>${header}<h1>${esc(trip.tripName || '나의 여행')}</h1><p class="muted">${esc(trip.startDate)} – ${esc(trip.endDate)} · ${esc([trip.city, trip.country].filter(Boolean).join(' · '))}</p><span class="badge">오프라인 포켓노트</span><p class="muted">저장한 시점의 기록입니다. 변경한 일정은 다시 저장해 주세요.</p>${itinerary ? `<h2>여행 일정</h2>${items.length ? items.map(item => `<article><small>${esc(item.date)} · ${esc(item.time || '시간 미정')}${item.theme !== 'lodging' && item.endTime ? ' – ' + esc(item.endTime) : ''}</small><h3>${esc(item.place)}</h3>${line('장소', item.location)}${line('메모', item.memo)}</article>`).join('') : '<p>등록된 일정이 없어요.</p>'}` : ''}<h2>예약 지갑</h2>${wallet.length ? wallet.map(row => `<article><span class="badge">${types[row.type].label}</span><h3>${esc(row.title)}</h3>${line('일자', [row.date, row.endDate ? '– ' + row.endDate : '', row.time].filter(Boolean).join(' '))}${line('장소', row.location)}${references ? line('예약번호', row.reference) : ''}${references ? line('메모', row.note) : ''}</article>`).join('') : '<p>등록된 예약이 없어요.</p>'}${budget ? `<article class="summary"><h2>여행 예산</h2>${line('예산', money(trip.totalBudget))}${line('기록한 지출', money(asList(trip.entries).reduce((sum, entry) => sum + (Number(entry.amount) || 0), 0)))}</article>` : ''}<footer class="muted">TripLOG · 이 문서는 인터넷 연결 없이 열 수 있습니다. ${references ? '예약번호가 포함되어 있으니 개인 기기에 보관하세요.' : '예약번호와 예약 메모는 제외했습니다.'}</footer></main></body></html>`;
   }
-  window.TripLog.register('features.travelCompanion.model', { types, esc, validDate, minutes, clock, days, dayItems, flags, transitMinutes, dateInZone, defaultZone, today, dailyBudget, reviewDay, outsideItems, signature, planAdjustment, applyAdjustment, undoAdjustment, safeUrl, reservations, validateReservation, directions, utcTime, foldLine, createCalendar, createPocketNote });
+  window.TripLog.register('features.travelCompanion.model', { types, transportKinds, transportInfo, transportFromItinerary, itineraryForReservation, arrivalDay, endMinutes, esc, validDate, minutes, clock, days, dayItems, flags, transitMinutes, dateInZone, defaultZone, today, dailyBudget, reviewDay, outsideItems, signature, planAdjustment, applyAdjustment, undoAdjustment, safeUrl, reservations, validateReservation, directions, utcTime, foldLine, createCalendar, createPocketNote });
 })();

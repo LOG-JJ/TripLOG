@@ -54,7 +54,7 @@ async function main() {
     assert.equal(await panel.locator('.rs-transport-body').count(), 1, 'Three transport records produce one representative summary');
     assert.equal(await panel.locator('.rs-summary-stay-item').count(), 2);
     assert.equal(await panel.locator('.rs-transport-body').getAttribute('data-summary-source-id'), 'entry:flight-1');
-    assert.match(await panel.innerText(), /서울[\s\S]+오사카[\s\S]+제주항공[\s\S]+9\.25–9\.28/);
+    assert.match(await panel.innerText(), /서울[\s\S]+오사카[\s\S]+제주항공[\s\S]+9\.25/);
     assert.doesNotMatch(await panel.innerText(), /09:05|10:40|13:35|16:30/, 'Detailed schedules are kept in the wallet');
     assert.deepEqual(await panel.locator('.rs-summary-count').allTextContents(), ['3건', '2건']);
     for (const width of [320, 360, 390, 480, 600, 768, 1440]) {
@@ -95,7 +95,7 @@ async function main() {
     assert.equal(await panel.locator('.is-round-trip').count(), 0);
     assert.equal(await panel.locator('.rs-summary-route .ph-arrow-right').count(), 1);
     await renderRows([{ id: 'rail', type: 'transport', title: 'KTX 서울 → 부산', location: '서울역 → 부산역', date: '2026-10-03', time: '08:30' }]);
-    assert.equal(await panel.locator('.rs-transport-symbol .ph-train').count(), 1);
+    assert.equal(await panel.locator('.rs-transport-symbol').textContent(), '🚆');
     assert.match(await panel.innerText(), /KTX 서울 → 부산[\s\S]+10\.3/);
     assert.equal(await panel.locator('.rs-transport-illustration').count(), 0, 'Generic transport is not presented as a flight');
     await renderRows([{ ...flight, date: '2026-12-31', endDate: '2027-01-02' }, { ...hotel, date: '2026-12-31', endDate: '2027-01-02' }]);

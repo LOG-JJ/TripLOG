@@ -4,7 +4,8 @@
   const mapDraftKey = 'triplog.itineraryMapDraft.v1';
   const mapDraftFields = ['itineraryDaySelect', 'itineraryTimeInput', 'itineraryEndTimeInput',
     'itineraryThemeSelect', 'itineraryTransSelect', 'itineraryPlaceInput', 'itineraryLocationInput',
-    'manualAddressInput', 'itineraryMemoInput', 'itineraryVoucherName', 'itineraryVoucherCode'];
+    'manualAddressInput', 'itineraryMemoInput', 'itineraryVoucherName', 'itineraryVoucherCode',
+    'itineraryTransportName', 'itineraryTransportKind', 'itineraryTransportFrom', 'itineraryTransportTo', 'itineraryArrivalDate'];
   let pendingMapDraft = null, mapDraftAuthObserver;
 
   function clearMapDraft() {
@@ -97,12 +98,20 @@
     const themeIcon = query("[data-itinerary-theme-icon]");
     if (themeIcon) themeIcon.className = `ph ph-${els.itineraryThemeSelect.value === "sightseeing" ? "bank" : (itineraryThemes[els.itineraryThemeSelect.value]?.icon || "map-pin")}`;
     const lodging = els.itineraryThemeSelect.value === 'lodging';
+    const transport = els.itineraryThemeSelect.value === 'transport';
+    query('#itineraryTransportFields').hidden = !transport;
+    query('#itineraryTransportFields').disabled = !transport;
+    els.itineraryVoucherName.closest('label').hidden = transport;
+    syncCustomSelect(query('#itineraryTransportKind'));
     const startField = els.itineraryTimeInput.closest('.time-field-item');
     const endField = els.itineraryEndTimeInput.closest('.time-field-item');
-    startField.querySelector(':scope > span').textContent = lodging ? '도착 시각' : '시작';
-    startField.querySelector('.custom-time-button')?.setAttribute('aria-label', lodging ? '도착 시각 선택' : '시작 시간 선택');
-    startField.querySelector('.custom-time-value')?.setAttribute('aria-label', lodging ? '도착 시각' : '시작 시간');
+    startField.querySelector(':scope > span').textContent = lodging ? '도착 시각' : transport ? '출발 시간' : '시작';
+    startField.querySelector('.custom-time-button')?.setAttribute('aria-label', lodging ? '도착 시각 선택' : transport ? '출발 시간 선택' : '시작 시간 선택');
+    startField.querySelector('.custom-time-value')?.setAttribute('aria-label', lodging ? '도착 시각' : transport ? '출발 시간' : '시작 시간');
     endField.hidden = lodging;
+    endField.querySelector(':scope > span').textContent = transport ? '도착 시간' : '종료';
+    endField.querySelector('.custom-time-button')?.setAttribute('aria-label', transport ? '도착 시간 선택' : '종료 시간 선택');
+    endField.querySelector('.custom-time-value')?.setAttribute('aria-label', transport ? '도착 시간' : '종료 시간');
     els.itineraryEndTimeInput.disabled = lodging;
     syncCustomTimePicker(els.itineraryEndTimeInput);
     startField.parentElement.classList.toggle('is-lodging', lodging);

@@ -27,19 +27,17 @@
     // This is a preview of the first dated reservation, never a merge of records.
     // Airport qualifiers and every original reservation remain intact in the wallet.
     const first = rows[0], from = clean(first.from), to = clean(first.to);
-    const flight = first.transportKind === 'flight';
-    const returning = flight && validDate(first.date) && validDate(first.endDate) && first.endDate >= first.date;
+    const returning = first.source === 'entry' && validDate(first.date) && validDate(first.endDate) && first.endDate >= first.date;
     const name = clean(first.title) || '교통 예약';
     const route = from && to ? `${from} ${returning ? '↔' : '→'} ${to}` : name;
-    const secondary = clean(first.operator) || (from && to ? '' : clean(first.location));
+    const transport = model().transportInfo(first);
     const routeHtml = from && to
       ? `<span class="rs-summary-city">${text(from)}</span>${icon(returning ? 'arrows-left-right' : 'arrow-right')}<span class="rs-summary-city">${text(to)}</span>`
       : `<span class="rs-summary-transport-name">${text(name)}</span>`;
     return `<div class="rs-transport-body${returning ? ' is-round-trip' : ''}" data-summary-source-id="${text(first.id)}" aria-label="교통 예약 ${rows.length}건 중 첫 번째 예약 요약">
-      ${flight ? artwork('plane', 'rs-transport-illustration') : `<span class="rs-transport-symbol">${icon(/KTX|기차|열차|철도/i.test(name) ? 'train' : 'ticket')}</span>`}
-      <strong class="rs-summary-route" title="${text(route)}">${routeHtml}</strong>
-      ${secondary && secondary !== route && secondary !== name ? `<span class="rs-summary-operator" title="${text(secondary)}">${text(secondary)}</span>` : ''}
-      <span class="rs-summary-period" title="${text(period(first.date, first.endDate))}">${text(period(first.date, first.endDate))}</span>
+      <span class="rs-transport-symbol" role="img" aria-label="${text(transport.label)}">${transport.emoji}</span>
+      <div class="rs-transport-copy"><strong class="rs-summary-route" title="${text(route)}">${routeHtml}</strong>
+      <div class="rs-transport-meta"><span class="rs-summary-booking-name" title="${text(name)}">${text(from && to ? name : clean(first.operator) || clean(first.location) || transport.label)}</span><span class="rs-summary-period" title="${text(period(first.date))}">${text(period(first.date))}</span></div></div>
     </div>`;
   }
   function stayBody(rows) {

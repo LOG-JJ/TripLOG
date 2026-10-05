@@ -120,8 +120,22 @@ function normalizeTravelCompanion(value, items) {
     id: row.id,
     type: ["transport", "stay", "activity", "other"].includes(row.type) ? row.type : "other",
     title: row.title.trim(), date: string(row.date), endDate: string(row.endDate), time: string(row.time),
+    endTime: string(row.endTime), arrivalDate: string(row.arrivalDate), transportKind: string(row.transportKind), from: string(row.from), to: string(row.to),
     reference: string(row.reference), location: string(row.location), url: string(row.url), note: string(row.note),
   }));
+  // A linked transport schedule owns its route and times. Persist the same values
+  // in the wallet after any itinerary edit (including quick time adjustments).
+  for (const row of reservations) {
+    if (row.type !== 'transport') continue;
+    const linked = Array.isArray(items) && items.find(item => item?.linkedReservationId === `manual:${row.id}` && item.theme === 'transport' && item.transportReservation);
+    if (!linked) continue;
+    Object.assign(row, {
+      title: string(linked.voucherName) || string(linked.place) || row.title,
+      date: string(linked.date), time: string(linked.time), endTime: string(linked.endTime),
+      transportKind: string(linked.transportReservation.kind), from: string(linked.transportReservation.from), to: string(linked.transportReservation.to), arrivalDate: string(linked.transportReservation.arrivalDate),
+      reference: string(linked.voucherCode), location: string(linked.location), note: string(linked.memo),
+    });
+  }
   const undo = source.lastAdjustment;
   const lastAdjustment = undo && typeof undo === "object" && typeof undo.tripId === "string" && typeof undo.date === "string" && typeof undo.afterSignature === "string" && Array.isArray(undo.before)
     ? { tripId: undo.tripId, date: undo.date, afterSignature: undo.afterSignature, before: undo.before.filter(item => item && typeof item.id === "string" && typeof item.time === "string" && typeof item.endTime === "string").map(item => ({ id: item.id, time: item.time, endTime: item.endTime })) }

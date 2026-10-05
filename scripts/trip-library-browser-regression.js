@@ -43,6 +43,7 @@ async function main() {
     await page.waitForFunction(() => [...document.querySelectorAll('.tl-passport img')].every(image => image.complete && image.naturalWidth > 0));
     for (const width of [390, 320, 768, 1440]) {
       await page.setViewportSize({ width, height: width > 600 ? 1000 : 844 });
+      await page.evaluate(() => Promise.all([...document.querySelectorAll('.tl-passport-art')].map(image => image.decode())));
       await page.screenshot({ path: path.join(output, `home-${width}.png`), fullPage: true, animations: 'disabled' });
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `No horizontal overflow at ${width}`);
       const grid = await page.locator('#rdTripList').evaluate(el => getComputedStyle(el).gridTemplateColumns.split(' ').length);

@@ -11,7 +11,7 @@
   const titles = { today: '오늘의 여행', review: '일정 점검', wallet: '예약 지갑', tools: '여행 도구' };
   let ready = false, activeTab = 'today', selectedDay = '', walletFilter = 'all', openedTrip = '', activePlan = null, editor = null, detailId = '';
   let walletQuery = '', walletSort = 'date';
-  let packingBusy = false;
+  let packingBusy = false, reservationSaving = false;
   const foldStates = new Map();
   const walletFilters = [['all', '전체'], ['transport', '교통'], ['stay', '숙소'], ['activity', '입장권'], ['other', '기타']];
   let pocketOptions = { itinerary: true, references: true, budget: false };
@@ -129,17 +129,17 @@
   }
   function reservationDate(row) {
     const stay = row.type === 'stay' && M().validDate(row.date) && M().validDate(row.endDate) && row.endDate > row.date;
-    if (row.type === 'transport' && M().validDate(row.endDate)) return `${dateLabel(row.date)}${row.time ? ' · ' + row.time : ''} → ${dateLabel(row.endDate)}${row.endTime ? ' · ' + row.endTime : ''} · 왕복`;
+    if (row.type === 'transport' && row.source === 'entry' && M().validDate(row.endDate)) return `${dateLabel(row.date)}${row.time ? ' · ' + row.time : ''} → ${dateLabel(row.endDate)}${row.endTime ? ' · ' + row.endTime : ''} · 왕복`;
+    if (row.type === 'transport' && row.endTime) return `${dateLabel(row.date)} · ${row.time} → ${row.arrivalDate && row.arrivalDate !== row.date ? dateLabel(row.arrivalDate) + ' · ' : ''}${row.endTime}`;
     return `${dateLabel(row.date)}${row.time ? ' · ' + row.time : ''}${stay ? ` – ${dateLabel(row.endDate)} · ${Math.round((Date.parse(row.endDate) - Date.parse(row.date)) / 86400000)}박` : ''}`;
   }
   const walletFold = value => String(value || '').normalize('NFKC').toLocaleLowerCase('ko-KR').replace(/\s+/g, '');
   function walletSearchMatches(row) {
     const query = walletFold(walletQuery);
-    return !query || walletFold([row.title, row.location, row.reference, row.note, row.date, row.endDate, reservationDate(row), M().types[row.type]?.label].join(' ')).includes(query);
+    return !query || walletFold([row.title, row.from, row.to, row.location, row.reference, row.note, row.date, row.endDate, reservationDate(row), walletType(row)?.label].join(' ')).includes(query);
   }
   function walletType(row) {
-    return row.type === 'transport' && row.transportKind === 'flight'
-      ? { label: '항공권', icon: 'airplane-tilt', color: 'blue' } : M().types[row.type] || M().types.other;
+    return row.type === 'transport' ? { ...M().transportInfo(row), color: 'blue' } : M().types[row.type] || M().types.other;
   }
   function walletReference(row) {
     return `<div class="pw-reference${row.reference ? '' : ' is-empty'}"><span>예약번호</span>${row.reference
@@ -149,6 +149,7 @@
   function walletTicketDates(row) {
     const stay = row.type === 'stay', transport = row.type === 'transport';
     const date = (label, value, time) => `<span><small>${label}</small><b>${text(dateLabel(value))}${time ? ` <time>${text(time)}</time>` : ''}</b></span>`;
+    if (transport && row.source !== 'entry') return `<span class="pw-ticket-dates">${date('출발', row.date, row.time)}${row.endTime ? date('도착', row.arrivalDate || row.date, row.endTime) : ''}</span>`;
     return `<span class="pw-ticket-dates">${date(stay ? '체크인' : transport ? '가는 날' : '예약 일자', row.date, row.time)}${stay || M().validDate(row.endDate) ? date(stay ? '체크아웃' : transport ? '오는 날' : '종료 일자', row.endDate, row.endTime) : ''}</span>`;
   }
   function walletTicket(row) {
@@ -271,10 +272,10 @@
   }
   function openReservationEditor(row) {
     const source = row?.source === 'manual' ? companion().reservations.find(item => item.id === row.sourceId) : null;
-    editor = { tripId: state.id, id: source?.id || '', signature: JSON.stringify(source || null) };
+    editor = { tripId: state.id, account: window.TripLog.sync.controller.getAccount()?.id, id: source?.id || '', signature: JSON.stringify(source || null) };
     const form = $('#ttReservationForm'); form.reset();
     $('#ttReservationEditorTitle').textContent = source ? '예약 수정' : '예약 추가';
-    const values = { type: source?.type || (walletFilter === 'all' ? 'transport' : walletFilter), title: source?.title || '', date: source?.date || selectedDay || state.startDate, endDate: source?.endDate || state.endDate, time: source?.time || '', reference: source?.reference || '', location: source?.location || '', url: source?.url || '', note: source?.note || '' };
+    const values = { type: source?.type || (walletFilter === 'all' ? 'transport' : walletFilter), title: source?.title || '', date: source?.date || selectedDay || state.startDate, endDate: source?.endDate || state.endDate, time: source?.time || '', endTime: source?.endTime || '', arrivalDate: source?.arrivalDate || '', transportKind: source?.transportKind || '', from: source?.from || '', to: source?.to || '', reference: source?.reference || '', location: source?.location || '', url: source?.url || '', note: source?.note || '' };
     Object.entries(values).forEach(([key, value]) => { form.elements.namedItem(key).value = value; });
     $('#ttReservationExtras').open = Boolean(values.url || values.note);
     $('#ttReservationError').textContent = ''; updateReservationType(); openDialog('ttReservationEditor');
@@ -288,30 +289,48 @@
     openReservationEditor();
   }
   function updateReservationType() {
-    const type = $('#ttReservationForm').elements.namedItem('type').value, stay = type === 'stay';
+    const type = $('#ttReservationForm').elements.namedItem('type').value, stay = type === 'stay', transport = type === 'transport';
     $$('#ttReservationTypes button').forEach(el => { el.classList.toggle('active', el.dataset.type === type); el.setAttribute('aria-pressed', String(el.dataset.type === type)); });
     $('#ttReservationDateLabel').textContent = stay ? '체크인' : '예약 일자';
     $('#ttReservationEndField').hidden = !stay; $('#ttReservationTimeField').hidden = stay;
     $('#ttReservationEnd').required = stay;
+    $('#ttReservationEnd').disabled = !stay; $('#ttReservationTime').disabled = stay;
+    $('#ttReservationTimeLabel').textContent = transport ? '출발 시간 (선택)' : '예약 시간 (선택)';
+    $('#ttReservationTransport').hidden = !transport;
+    $('#ttReservationArrivalField').hidden = !transport;
+    $('#ttReservationArrivalDateField').hidden = !transport;
+    ['transportKind', 'from', 'to', 'arrivalDate', 'endTime'].forEach(name => { $('#ttReservationForm').elements.namedItem(name).disabled = !transport; });
+    $('#ttReservationName').placeholder = transport ? '예: KTX 503' : stay ? '예: 난바 호텔' : '예: 전망대 입장권';
   }
   async function saveReservation(event) {
     event.preventDefault();
+    if (reservationSaving) return;
+    reservationSaving = true;
+    const submit = document.querySelector('[form="ttReservationForm"][type="submit"]'); submit.disabled = true;
     try {
-      if (!editor || editor.tripId !== state.id) throw new Error('여행이 변경됐어요. 예약 창을 다시 열어 주세요.');
+      if (!editor || editor.tripId !== state.id || editor.account !== window.TripLog.sync.controller.getAccount()?.id) throw new Error('여행이 변경됐어요. 예약 창을 다시 열어 주세요.');
       const current = companion(), existing = current.reservations.find(row => row.id === editor.id);
       if (JSON.stringify(existing || null) !== editor.signature) throw new Error('예약이 다른 곳에서 수정됐어요. 창을 다시 열어 주세요.');
       const data = Object.fromEntries(new FormData(event.target));
       Object.keys(data).forEach(key => { data[key] = String(data[key]).trim(); });
       if (data.type !== 'stay') data.endDate = ''; else data.time = '';
+      if (data.type !== 'transport') Object.assign(data, { endTime: '', arrivalDate: '', transportKind: '', from: '', to: '' });
       const problem = M().validateReservation(data); if (problem) throw new Error(problem);
-      const row = { ...data, id: editor.id || createId() };
+      const row = { ...existing, ...data, id: editor.id || createId() };
+      const linked = state.itineraryItems.filter(item => item.linkedReservationId === `manual:${row.id}`);
+      if (linked.length && !M().days(state).includes(row.date)) throw new Error('연결된 일정의 날짜는 여행 기간 안으로 선택해 주세요.');
       current.reservations = existing ? current.reservations.map(item => item.id === row.id ? row : item) : [...current.reservations, row];
       if (!existing) { walletFilter = row.type; walletQuery = ''; }
-      await commit({ travelCompanion: current });
+      const patch = { travelCompanion: current };
+      if (linked.length && (row.type === 'transport' || existing?.type === 'transport')) patch.itineraryItems = state.itineraryItems.map(item => linked.includes(item) ? M().itineraryForReservation(row, item) : item);
+      const savingEditor = editor;
+      await commit(patch);
+      if (editor !== savingEditor || state.id !== savingEditor.tripId) return;
       $('#ttReservationEditor').close();
       if ($('#ttReservationDetail').open) showReservationDetail(`manual:${row.id}`, false);
       showToast('예약을 저장했어요.');
     } catch (error) { $('#ttReservationError').textContent = error.message; $('#ttReservationError').scrollIntoView({ block: 'nearest' }); }
+    finally { reservationSaving = false; submit.disabled = false; }
   }
   function showReservationDetail(id, openModal = true) {
     const row = M().reservations(state).find(item => item.id === id); if (!row) return;
@@ -323,6 +342,7 @@
     $('#ttReservationDetailBody').innerHTML = `
       <div class="tt-detail-hero"><span class="tt-reservation-icon ${type.color}">${icon(type.icon)}</span><div><span class="tt-type ${type.color}">${type.label}</span><h2>${text(row.title)}</h2></div></div>
       <dl class="tt-detail-list">
+        ${row.type === 'transport' ? `<div><dt>${icon(type.icon)}교통수단 · 구간</dt><dd>${text(type.label)} · ${text(row.from || '출발지 미정')} → ${text(row.to || '도착지 미정')}</dd></div>` : ''}
         <div><dt>${icon('calendar-blank')}${row.type === 'stay' ? '체크인 · 체크아웃' : '예약 일자 · 시간'}</dt><dd>${text(reservationDate(row))}</dd></div>
         <div><dt>${icon('clipboard-text')}예약번호</dt><dd class="tt-detail-reference"><code>${text(row.reference || '등록한 번호가 없어요')}</code>${row.reference ? button(`${icon('copy')}<span>복사</span>`, 'copy', 'tt-copy-action', `data-id="${text(id)}" aria-label="예약번호 복사"`) : button('입력', row.source === 'manual' ? 'reservation-edit' : 'reservation-source', '', `data-id="${text(id)}" data-field="reference"`)}</dd></div>
         <div><dt>${icon('map-pin')}주소 · 장소</dt><dd class="tt-detail-address"><span>${text(row.location || '등록한 장소가 없어요')}</span>${mapLink ? `<a class="tt-button tt-detail-map" href="${text(mapLink)}" target="${mapTarget}" rel="noopener noreferrer external">${icon('arrow-square-out')} ${getTripMapLabel()}</a>` : ''}</dd></div>
@@ -346,8 +366,8 @@
     const linked = state.itineraryItems.find(item => item.linkedReservationId === row.id);
     if (linked) { editItinerary(linked); return; }
     if (!M().days(state).includes(row.date)) throw new Error('예약 일자가 여행 기간 밖에 있어요. 예약 또는 여행 일자를 먼저 수정해 주세요.');
-    const item = { id: createId(), date: row.date, time: row.time || '', endTime: '', place: row.title, location: row.location || '', memo: row.note || '', theme: row.type === 'stay' ? 'lodging' : row.type === 'transport' ? 'transport' : 'sightseeing', trans: 'none', transits: [], duration: 0, cost: 0, voucherName: row.title, voucherCode: row.reference || '', linkedReservationId: row.id, createdAt: Date.now() };
-    await commit({ itineraryItems: [...state.itineraryItems, item] }); editItinerary(item); showToast('일정에 추가했어요. 방문 시간을 설정해 주세요.');
+    const item = M().itineraryForReservation(row, { id: createId(), trans: 'none', transits: [], duration: 0, cost: 0, linkedReservationId: row.id, createdAt: Date.now() });
+    await commit({ itineraryItems: [...state.itineraryItems, item] }); editItinerary(item); showToast('예약 정보를 일정에 함께 추가했어요.');
   }
   function download(content, name, type) {
     const blob = new Blob([content], { type }), url = URL.createObjectURL(blob), link = document.createElement('a');
@@ -439,7 +459,8 @@
       <form id="ttReservationForm" class="tt-form"><input type="hidden" name="type" value="transport">
         <div id="ttReservationTypes" class="tt-filters" role="group" aria-label="예약 종류">${Object.entries(M().types).map(([type, entry]) => button(`${icon(entry.icon)}<span>${entry.label}</span>`, 'reservation-type', '', `data-type="${type}"`)).join('')}</div>
         <label for="ttReservationName"><span>예약 이름 <b class="tt-required" aria-hidden="true">*</b></span><input id="ttReservationName" name="title" required maxlength="200" autocomplete="off" placeholder="예: 난바 호텔"></label>
-        <div class="tt-form-grid"><label><span id="ttReservationDateLabel">예약 일자</span><input name="date" id="ttReservationDate" type="date" data-compact-date="true" required></label><label id="ttReservationEndField"><span>체크아웃</span><input name="endDate" id="ttReservationEnd" type="date" data-compact-date="true"></label><label id="ttReservationTimeField"><span>예약 시간 (선택)</span><input name="time" id="ttReservationTime" type="time"></label></div>
+        <div id="ttReservationTransport" class="tt-transport-fields"><label><span>교통수단</span><select name="transportKind" id="ttReservationKind"><option value="">선택 안 함</option>${Object.entries(M().transportKinds).map(([kind, entry]) => `<option value="${kind}">${entry.label}</option>`).join('')}</select></label><div class="tt-form-grid"><label><span>출발지</span><input name="from" id="ttReservationFrom" maxlength="200" placeholder="예: 용산역"></label><label><span>도착지</span><input name="to" id="ttReservationTo" maxlength="200" placeholder="예: 순천역"></label></div></div>
+        <div class="tt-form-grid"><label><span id="ttReservationDateLabel">예약 일자</span><input name="date" id="ttReservationDate" type="date" data-compact-date="true" required></label><label id="ttReservationEndField"><span>체크아웃</span><input name="endDate" id="ttReservationEnd" type="date" data-compact-date="true"></label><label id="ttReservationArrivalDateField"><span>도착일 (다른 날이면 선택)</span><input name="arrivalDate" id="ttReservationArrivalDate" type="date" data-compact-date="true"></label><label id="ttReservationTimeField"><span id="ttReservationTimeLabel">예약 시간 (선택)</span><input name="time" id="ttReservationTime" type="time"></label><label id="ttReservationArrivalField"><span>도착 시간 (선택)</span><input name="endTime" id="ttReservationArrivalTime" type="time"></label></div>
         <label for="ttReservationReference"><span>예약번호</span><input name="reference" id="ttReservationReference" maxlength="300" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="확인 메일의 예약번호"></label>
         <label for="ttReservationLocation"><span>주소 · 장소</span><input name="location" id="ttReservationLocation" maxlength="600" autocomplete="off" placeholder="장소명 또는 주소"></label>
         <details id="ttReservationExtras" class="tt-reservation-extras"><summary>${icon('note')}<span>예약 링크 · 메모 <small>(선택)</small></span>${icon('caret-down')}</summary><div>

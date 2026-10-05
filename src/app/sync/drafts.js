@@ -46,6 +46,7 @@
     document.querySelector("#itineraryExtraDetails").open = true;
     for (const id of ["itineraryDaySelect", "itineraryThemeSelect"]) syncCustomSelect(document.getElementById(id));
     for (const id of ["itineraryTimeInput", "itineraryEndTimeInput"]) syncCustomTimePicker(document.getElementById(id));
+    window.TripLog.features.itinerary.workspace.render();
     showToast("초안을 새 일정 입력창에 불러왔어요. 확인 후 추가해 주세요.");
   }
   function setup() {

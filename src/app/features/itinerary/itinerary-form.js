@@ -39,7 +39,7 @@ async function saveItineraryForm(event) {
   const wasEditing = Boolean(editingItineraryId);
   const submittedTrip = state.id;
   const submittedEditId = editingItineraryId;
-  const previousItems = [...state.itineraryItems], previousEntries = [...state.entries];
+  const previousItems = [...state.itineraryItems], previousEntries = [...state.entries], previousCompanion = state.travelCompanion;
 
   const id = editingItineraryId || createId();
   const existingItem = editingItineraryId ? findItineraryItem(editingItineraryId) : null;
@@ -55,7 +55,8 @@ async function saveItineraryForm(event) {
   const syncExpense = existingItem ? existingItem.syncExpense !== false : true;
   const expenseId = existingItem ? existingItem.expenseId : null;
 
-  const voucherName = els.itineraryVoucherName.value.trim();
+  const transportInput = id => document.querySelector(`#${id}`).value.trim();
+  const voucherName = theme === 'transport' ? transportInput('itineraryTransportName') || place : els.itineraryVoucherName.value.trim();
   const voucherCode = els.itineraryVoucherCode.value.trim();
 
   const candidateSelected = selectedPlaceCandidate && selectedPlaceCandidate.place === place;
@@ -97,6 +98,15 @@ async function saveItineraryForm(event) {
     googlePlaceId: "",
     createdAt: existingItem ? existingItem.createdAt : Date.now(),
   };
+
+  if (theme === 'transport') {
+    item.transportReservation = { kind: transportInput('itineraryTransportKind'), from: transportInput('itineraryTransportFrom'), to: transportInput('itineraryTransportTo'), arrivalDate: transportInput('itineraryArrivalDate') };
+    const problem = window.TripLog.features.travelCompanion.model.validateReservation(window.TripLog.features.travelCompanion.model.transportFromItinerary(item));
+    if (problem) { const error = document.querySelector('#itineraryFormError'); error.textContent = problem; error.hidden = false; error.scrollIntoView({ block: 'nearest' }); return; }
+  } else if (existingItem?.transportReservation) {
+    delete item.transportReservation;
+    if (existingItem.linkedReservationId?.startsWith('manual:')) delete item.linkedReservationId;
+  }
 
   if (candidateSelected) {
     item.coordinateSource = selectedPlaceCandidate.source || "";
@@ -152,7 +162,7 @@ async function saveItineraryForm(event) {
   state.lastActiveItineraryDate = item.date;
   state.selectedItineraryId = item.id;
   if (!await saveAndRender()) {
-    if (state.id === submittedTrip) { state.itineraryItems = previousItems; state.entries = previousEntries; }
+    if (state.id === submittedTrip) { state.itineraryItems = previousItems; state.entries = previousEntries; state.travelCompanion = previousCompanion; }
     showToast("기기에 저장하지 못했어요. 입력 내용은 유지됩니다.");
     return;
   }
@@ -186,6 +196,12 @@ function startItineraryEdit(item) {
   // Voucher binding
   els.itineraryVoucherName.value = item.voucherName || "";
   els.itineraryVoucherCode.value = item.voucherCode || "";
+  document.querySelector('#itineraryTransportName').value = item.voucherName || (item.theme === 'transport' ? item.place : '') || '';
+  document.querySelector('#itineraryTransportKind').value = item.transportReservation?.kind || '';
+  document.querySelector('#itineraryTransportFrom').value = item.transportReservation?.from || '';
+  document.querySelector('#itineraryTransportTo').value = item.transportReservation?.to || '';
+  document.querySelector('#itineraryArrivalDate').value = item.transportReservation?.arrivalDate || '';
+  syncCustomSelect(document.querySelector('#itineraryTransportKind'));
   currentVoucherFile = item.voucherFile || null;
   currentVoucherFileName = item.voucherFileName || null;
   voucherReadPromise = Promise.resolve(true);
