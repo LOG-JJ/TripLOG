@@ -1,0 +1,47 @@
+{
+  "status": "matched",
+  "checkedAt": "2026-10-05T06:18:10.885Z",
+  "origin": "https://triplog-5qs.pages.dev",
+  "runtimeCommit": "764f90a",
+  "localBuild": "4b04d8c1ee906f4d0905",
+  "publicBuild": "dea99c795b8f6ed3dd96",
+  "publicSwBuild": "dea99c795b8f6ed3dd96",
+  "buildsAgree": true,
+  "checked": 3,
+  "failed": 0,
+  "results": [
+    {
+      "file": "Travel.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "passed": true,
+      "comparison": "Normalized CRLF and the identified generated build fingerprints only",
+      "localSha256": "ec7533dd76e374d4848c1c437789c494a81031b4609fdd5324185243dd7f0218",
+      "publicSha256": "44a1cb14621f4de44ded257896dba7fcfa34cff6f5ec1d9c14a1a73eb7b529f9",
+      "normalizedLocalSha256": "366aca01b3aa9075a3c10bee2758012d5d88c012861bc3797241474303736095",
+      "normalizedPublicSha256": "366aca01b3aa9075a3c10bee2758012d5d88c012861bc3797241474303736095"
+    },
+    {
+      "file": "sw.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "passed": true,
+      "comparison": "Normalized CRLF and the identified generated build fingerprints only",
+      "localSha256": "6fe79dafebc22d459db9bedcfb6c6d7246dd393ef44b085f9e066426eb2f0472",
+      "publicSha256": "f00336bffe514fe1a36893cac42cfc8a8510ff737b65162fc6484a9606d96667",
+      "normalizedLocalSha256": "0a3c17008dc50cc76cb4b82107cb5891ddefd05c5950a8615bbee4533c362bb0",
+      "normalizedPublicSha256": "0a3c17008dc50cc76cb4b82107cb5891ddefd05c5950a8615bbee4533c362bb0"
+    },
+    {
+      "file": "src/app/features/itinerary/transit-editor.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "passed": true,
+      "comparison": "Normalized CRLF only",
+      "localSha256": "be586dcd47575fbcdbd4e756af848218ab3acb4c535b9515f24b8ed309ec7d5b",
+      "publicSha256": "be586dcd47575fbcdbd4e756af848218ab3acb4c535b9515f24b8ed309ec7d5b",
+      "normalizedLocalSha256": "be586dcd47575fbcdbd4e756af848218ab3acb4c535b9515f24b8ed309ec7d5b",
+      "normalizedPublicSha256": "be586dcd47575fbcdbd4e756af848218ab3acb4c535b9515f24b8ed309ec7d5b"
+    }
+  ]
+}
