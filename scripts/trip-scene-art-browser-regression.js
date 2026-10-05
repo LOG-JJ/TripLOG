@@ -75,7 +75,7 @@ async function main() {
           };
         });
         assert(metrics.fits, city.id + '/' + width + ': no overflow');
-        assert(metrics.titleSize >= 20 && metrics.titleSize <= 40, city.id + ': requested title scale');
+        assert(metrics.titleSize >= 18 && metrics.titleSize <= 34, city.id + ': requested title scale');
         assert(metrics.copy.right <= metrics.art.x + 1, city.id + ': information remains to the left of the artwork');
         assert(metrics.title.right <= metrics.art.x + 1, city.id + ': title does not cross the illustration');
         assert(Math.abs(metrics.panel.bottom - metrics.art.bottom) < 2, city.id + ': no empty band under artwork');

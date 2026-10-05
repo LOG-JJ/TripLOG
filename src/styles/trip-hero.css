@@ -18,7 +18,7 @@ body.rd-app #overviewPage .th-trip-hero h2 { margin: 0 0 17px; }
 body.rd-app #overviewPage .th-trip-hero .th-trip-name {
   display: inline-flex; align-items: center; gap: 10px; min-height: 44px; max-width: 100%;
   margin: 0; padding: 0; border: 0; background: transparent; box-shadow: none;
-  font-family: var(--font); font-size: clamp(24px, 5cqw, 40px); font-weight: 850;
+  font-family: var(--font); font-size: clamp(22px, 4.25cqw, 34px); font-weight: 700;
   line-height: 1.2; letter-spacing: -.7px; text-align: left;
 }
 body.rd-app #overviewPage .th-trip-name > span {
@@ -70,7 +70,7 @@ body.rd-app #overviewPage :is(.th-trip-name, .th-trip-members):focus-visible { o
   body.rd-app #overviewPage .th-hero-copy { width: 58%; }
   body.rd-app #overviewPage .th-countdown { min-height: 25px; padding: 4px 8px; margin-bottom: 6px; font-size: 13px; }
   body.rd-app #overviewPage .th-trip-hero h2 { margin-bottom: 8px; }
-  body.rd-app #overviewPage .th-trip-hero .th-trip-name { gap: 5px; font-size: clamp(20px, 6.6cqw, 24px); line-height: 1.25; letter-spacing: -.5px; }
+  body.rd-app #overviewPage .th-trip-hero .th-trip-name { gap: 5px; font-size: clamp(18px, 6.1cqw, 22px); line-height: 1.25; letter-spacing: -.5px; }
   body.rd-app #overviewPage .th-trip-name > .ph { width: 21px; height: 24px; font-size: 17px; }
   body.rd-app #overviewPage .th-trip-facts { max-width: 100%; gap: 0 6px; }
   body.rd-app #overviewPage .th-trip-facts > * { gap: 4px; }

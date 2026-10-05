@@ -34,7 +34,7 @@ async function main() {
       });
       assert(metrics.fits && metrics.pageFits, `${name}: no horizontal overflow ${JSON.stringify(metrics)}`);
       assert(metrics.panel.height <= maxHeight, `${name}: header remains compact (${metrics.panel.height}px)`);
-      assert(metrics.titleSize >= 20 && metrics.titleSize <= 40, `${name}: title remains readable without an oversized display scale`);
+      assert(metrics.titleSize >= 18 && metrics.titleSize <= 34, `${name}: title remains readable without an oversized display scale`);
       assert(metrics.title.bottom + 8 <= metrics.facts.y, `${name}: title clears dates and controls`);
       assert(metrics.facts.bottom <= metrics.panel.bottom - 8, `${name}: facts remain inside the panel`);
       assert(metrics.image.width > 80 && metrics.image.height > 70, `${name}: illustration stays visible`);
