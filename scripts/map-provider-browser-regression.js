@@ -83,9 +83,10 @@ async function main() {
       await page.locator('#itineraryTransitDialog [data-transit-cancel]').first().click();
       await page.locator('[data-transit-open][data-id="c"]').click();
       await page.waitForFunction(() => document.querySelector('#itineraryTransitNaver').getAttribute('aria-busy') === 'false');
-      assert.equal(await page.locator('#itineraryTransitGoogleLink').isVisible(), false);
+      assert.equal(await page.locator('#itineraryTransitGoogleLink').isVisible(), true);
+      assert.equal(await page.locator('#itineraryTransitMapLink').getAttribute('aria-label'), '네이버지도에서 도착지 검색');
       assert.equal(await page.locator('#itineraryTransitMapRetry').isVisible(), true);
-      assert.match(await page.locator('#itineraryTransitNaver').innerText(), /연결을 확인/);
+      assert.match(await page.locator('#itineraryTransitNaver').innerText(), /네이버지도에서 도착지를 검색/);
       await page.locator('#itineraryTransitDialog [data-transit-cancel]').first().click();
 
       await page.evaluate(() => window.TripLog.features.travelCompanion.workspace.open('today'));

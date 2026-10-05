@@ -40,6 +40,7 @@ async function main() {
       await context.route('**/*', async route => {
         const url = new URL(route.request().url());
         if (url.origin === origin) return route.continue();
+        if (url.hostname === 'map.naver.com') return route.fulfill({ contentType: 'text/html', body: '<!doctype html><title>Naver route fixture</title><p>Isolated external navigation</p>' });
         // Headless regressions do not download public map tiles. Real map
         // appearance is checked in a visible browser at the current viewport.
         if (url.hostname === 'tile.openstreetmap.org') return route.fulfill({ contentType: 'image/svg+xml',
@@ -65,7 +66,11 @@ async function main() {
       const resolved = () => page.waitForFunction(() => !document.querySelector('#itineraryTransitGoogleLink').hidden && document.querySelector('#itineraryTransitGoogleLink').href.includes('slat='));
       await open();
       assert.match(await page.locator('#itineraryTransitNaver strong').innerText(), /위치를 찾고/);
-      assert.equal(await page.locator('#itineraryTransitGoogleLink').isVisible(), false);
+      assert.equal(await page.locator('#itineraryTransitGoogleLink').isVisible(), true);
+      const mapLink = page.locator('#itineraryTransitMapLink');
+      assert.equal(await mapLink.isVisible(), true, 'The map shortcut is available while location lookup is pending');
+      assert.equal(await mapLink.getAttribute('aria-label'), '네이버지도에서 도착지 검색');
+      assert.match(decodeURIComponent(await mapLink.getAttribute('href')), /성산일출봉.*제주/);
       await page.locator('[data-transit-map-mode="walking"]').click();
       await page.locator('[data-transit-map-mode="transit"]').click();
       await page.locator('[data-transit-map-mode="driving"]').click();
@@ -76,6 +81,12 @@ async function main() {
       assert.ok(Number(url.searchParams.get('slat')) > 33.45 && Number(url.searchParams.get('slat')) < 33.55);
       assert.ok(Number(url.searchParams.get('elat')) > 33.4 && Number(url.searchParams.get('elat')) < 33.5);
       assert.equal(url.searchParams.get('pathType'), '0');
+      assert.equal(await mapLink.getAttribute('href'), url.toString());
+      assert.equal(await mapLink.getAttribute('aria-label'), '네이버지도에서 길찾기 열기');
+      for (const [mode, pathType] of [['walking', '3'], ['transit', '1'], ['driving', '0']]) {
+        await page.locator(`[data-transit-map-mode="${mode}"]`).click();
+        assert.equal(new URL(await mapLink.getAttribute('href')).searchParams.get('pathType'), pathType);
+      }
       assert.deepEqual(await page.evaluate(() => JSON.parse(JSON.stringify(state.itineraryItems))), before, 'A lookup must not rewrite itinerary selections, times or provenance');
       assert.equal(requests.length, 2, 'Rapid mode switches reuse the same lookups');
       assert.ok(requests[1].at - requests[0].at >= 900, 'Requests obey the shared geocoder rate limit');
@@ -86,7 +97,41 @@ async function main() {
       await page.locator('#itineraryTransitDomesticMap .leaflet-control-zoom-in').click();
       assert.ok(await page.evaluate(() => domesticMapViews.get(document.querySelector('#itineraryTransitDomesticMap')).map.getZoom()) > zoom);
       await page.screenshot({ path: path.join(output, `${live ? 'live-' : ''}${mobile ? 'mobile' : 'desktop'}.png`), animations: 'disabled' });
-      await close(); await open(); await resolved(); assert.equal(requests.length, 2, 'Reopening uses the verified cache');
+      if (!live) {
+        for (const width of mobile ? [320, 390] : [1440]) {
+          await page.setViewportSize({ width, height: 900 });
+          const geometry = await mapLink.evaluate(el => {
+            const b = el.getBoundingClientRect(), map = el.closest('.transit-map-stage').getBoundingClientRect();
+            return { inside: b.left >= map.left && b.right <= map.right && b.top >= map.top && b.bottom <= map.bottom, hit: el.contains(document.elementFromPoint(b.left + b.width / 2, b.top + b.height / 2)) };
+          });
+          assert(geometry.inside && geometry.hit, `The Naver shortcut is inside the map and can be tapped at ${width}px`);
+          assert(await page.locator('#itineraryTransitDialog').evaluate(el => el.scrollWidth <= el.clientWidth + 1), `No horizontal overflow at ${width}px`);
+        }
+        if (mobile) {
+          await page.locator('#itineraryTransitManualTab').click();
+          await page.locator('.transit-segment input[data-transit-field="duration"]').first().fill('23');
+          await page.locator('#itineraryTransitRouteTab').click();
+          assert.equal(await mapLink.getAttribute('target'), '_self');
+          await Promise.all([page.waitForURL('https://map.naver.com/**'), mapLink.click()]);
+          assert.equal(new URL(page.url()).searchParams.get('stext'), '우도');
+          assert.equal(new URL(page.url()).searchParams.get('etext'), '성산일출봉');
+          await page.goBack();
+          await page.waitForFunction(() => document.documentElement.dataset.appReady === 'true' && document.documentElement.dataset.auth === 'signed-in');
+          await page.locator('#itineraryTransitDialog[open]').waitFor();
+          await page.locator('#itineraryTransitManualTab').click();
+          assert.equal(await page.locator('.transit-segment input[data-transit-field="duration"]').first().inputValue(), '23', 'Returning from Naver restores unsaved movement input');
+          await page.locator('#itineraryTransitRouteTab').click();
+        } else {
+          assert.equal(await mapLink.getAttribute('target'), '_blank');
+          const [popup] = await Promise.all([page.waitForEvent('popup'), mapLink.click()]);
+          await popup.waitForURL('https://map.naver.com/**');
+          assert.equal(new URL(popup.url()).searchParams.get('stext'), '우도');
+          assert.equal(new URL(popup.url()).searchParams.get('etext'), '성산일출봉');
+          await popup.close();
+        }
+      }
+      await resolved(); const lookupsBeforeReopen = requests.length;
+      await close(); await open(); await resolved(); assert.equal(requests.length, lookupsBeforeReopen, 'Reopening uses the verified cache');
       assert.equal(await page.evaluate(() => domesticMapViews.size), 1, 'Reopening reuses its map instance'); await close();
       await page.locator('#itineraryAddButton').click(); await page.locator('#itineraryRouteButton').click();
       assert.ok((await page.locator('#googleMapsLink').getAttribute('href')).includes('slat='), 'Full-day route uses the same resolved places');
@@ -96,8 +141,12 @@ async function main() {
         // Retry actual transport failure, not a manually supplied coordinate.
         await page.evaluate(() => domesticRouteCache.clear()); fail = true;
         await open(); await page.locator('#itineraryTransitMapRetry').waitFor({ state: 'visible' });
-        assert.match(await page.locator('#itineraryTransitNaver p').innerText(), /연결을 확인/);
-        assert.equal(await page.locator('#itineraryTransitGoogleLink').isVisible(), false);
+        assert.match(await page.locator('#itineraryTransitNaver p').innerText(), /네이버지도에서 도착지를 검색/);
+        assert.equal(await page.locator('#itineraryTransitGoogleLink').isVisible(), true);
+        assert.equal(await mapLink.isVisible(), true);
+        assert.equal(await mapLink.getAttribute('aria-label'), '네이버지도에서 도착지 검색');
+        assert.match(new URL(await mapLink.getAttribute('href')).pathname, /^\/p\/search\//);
+        await page.screenshot({ path: path.join(output, `lookup-unavailable-${mobile ? 'mobile' : 'desktop'}.png`), animations: 'disabled' });
         fail = false; await page.locator('#itineraryTransitMapRetry').click(); await resolved(); await close();
         // An old response cannot replace a newly opened route or reopen a modal.
         await page.evaluate(() => domesticRouteCache.clear()); delay = 550;

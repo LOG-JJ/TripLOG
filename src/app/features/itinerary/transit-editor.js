@@ -35,6 +35,8 @@
     if (source.hasAttribute('href')) link.href = source.href;
     else link.removeAttribute('href');
     link.target = source.target;
+    link.setAttribute('aria-label', source.getAttribute('aria-label') || '지도에서 길찾기 열기');
+    link.title = source.getAttribute('aria-label') || '지도에서 길찾기 열기';
   }
 
   function clearNavigation() {
@@ -126,13 +128,14 @@
       return;
     }
     const urls = buildTripMapRouteUrls(stops, { travelMode: routeMode });
+    if (domestic && urls.isSearchFallback) urls.external = buildTripPlaceSearchUrl(stops[1].location || stops[1].place);
     const key = JSON.stringify([urls.provider, draft.tripId, draft.previous.id, draft.id, ...stops.map(buildGoogleMapsRouteStopQuery)]);
     if (routeKey !== key) { resetRouteFrames(); routeKey = key; }
     find('#itineraryTransitGoogleLink').href = urls.external;
     find('#itineraryTransitGoogleLink').target = matchMedia('(any-pointer: coarse)').matches ? '_self' : '_blank';
     find('#itineraryTransitGoogleLink span').textContent = urls.isSearchFallback ? '네이버지도에서 도착지 검색' : `${label}에서 열기`;
     find('#itineraryTransitGoogleLink').setAttribute('aria-label', urls.isSearchFallback ? '네이버지도에서 도착지 검색' : `${label}에서 길찾기 열기`);
-    find('#itineraryTransitGoogleLink').title = `${label}에서 길찾기 열기`;
+    find('#itineraryTransitGoogleLink').title = find('#itineraryTransitGoogleLink').getAttribute('aria-label');
     dialog.querySelectorAll('[data-transit-map-mode]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.transitMapMode === routeMode)));
     if (domestic) {
       const current = draft;
@@ -142,8 +145,9 @@
       if (urls.isSearchFallback && !draft.routeLookup) resolveRoute(stops);
       const loading = urls.isSearchFallback && draft.routeLookup?.status === 'loading';
       const failed = urls.isSearchFallback && !loading;
-      find('#itineraryTransitGoogleLink').hidden = urls.isSearchFallback;
-      find('#itineraryTransitRouteFooter').classList.toggle('is-empty', urls.isSearchFallback);
+      // Keep a native Naver link available even while geocoding is pending or
+      // unavailable. Its destination upgrades from place search to directions
+      // as soon as both stops are verified.
       find('#itineraryTransitMapRetry').hidden = !failed;
       find('#itineraryTransitMapRetry').setAttribute('aria-label', '장소 위치 다시 찾기');
       find('#itineraryTransitNaver').setAttribute('aria-busy', String(loading));
@@ -151,8 +155,8 @@
       find('#itineraryTransitNaver strong').textContent = loading ? '출발지와 도착지 위치를 찾고 있어요'
         : failed ? '장소 위치를 다시 확인해 주세요' : '출발지·도착지 위치';
       find('#itineraryTransitNaver p').textContent = loading ? '등록한 장소 이름과 여행 지역으로 길찾기를 준비하고 있어요.'
-        : failed ? (draft.routeLookup?.failed ? '위치를 불러오지 못했어요. 연결을 확인하고 다시 시도해 주세요.'
-          : '일치하는 장소를 찾지 못했어요. 장소 이름이나 주소를 확인한 뒤 다시 시도해 주세요.')
+        : failed ? (draft.routeLookup?.failed ? '위치를 불러오지 못했어요. 지도 위 바로가기로 네이버지도에서 도착지를 검색하거나 다시 시도해 주세요.'
+          : '일치하는 장소를 찾지 못했어요. 지도 위 바로가기로 네이버지도에서 도착지를 검색할 수 있어요.')
         : '지도에서 장소 위치를 확인하고, 아래 버튼으로 선택한 이동 수단의 상세 경로를 확인하세요.';
       find('#itineraryTransitGeocodeCredit').hidden = !urls.attribution;
       find('#itineraryTransitMap').setAttribute('aria-busy', 'false');
