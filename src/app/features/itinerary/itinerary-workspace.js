@@ -25,7 +25,7 @@
     cancelPlaceLookup();
     const external = new URL(link.href);
     const draft = {
-      tripId: getActiveTripId(), savedAt: Date.now(), editingId: editingItineraryId,
+      tripId: getActiveTripId(), savedAt: Date.now(), editingId: editingItineraryId, copying: itineraryCopying,
       fields: Object.fromEntries(mapDraftFields.map(id => [id, query(`#${id}`).value])),
       candidate: selectedPlaceCandidate, voucherFile: currentVoucherFile, voucherFileName: currentVoucherFileName,
       searchHidden: query('#itineraryPlaceSearchPanel').hidden,
@@ -55,6 +55,7 @@
       if (typeof draft.fields[id] === 'string') query(`#${id}`).value = draft.fields[id];
     }
     editingItineraryId = draft.editingId || null;
+    itineraryCopying = !editingItineraryId && Boolean(draft.copying);
     selectedPlaceCandidate = draft.candidate || null;
     setVoucherFile(draft.voucherFile || null, draft.voucherFileName || null);
     els.ticketFileNameDisplay.textContent = currentVoucherFileName || '선택된 파일 없음';
@@ -93,8 +94,8 @@
     }));
     strip.scrollLeft = left;
     query("#itineraryEditActions").hidden = !editingItineraryId;
-    query("#itineraryEditorTitle").textContent = editingItineraryId ? "장소 수정" : "장소 추가";
-    els.itinerarySubmitButton.querySelector("span").textContent = editingItineraryId ? "일정 저장" : "일정에 추가";
+    query("#itineraryEditorTitle").textContent = editingItineraryId ? "장소 수정" : itineraryCopying ? "일정 복사" : "장소 추가";
+    els.itinerarySubmitButton.querySelector("span").textContent = editingItineraryId ? "일정 저장" : itineraryCopying ? "복사해서 추가" : "일정에 추가";
     const themeIcon = query("[data-itinerary-theme-icon]");
     if (themeIcon) themeIcon.className = `ph ph-${els.itineraryThemeSelect.value === "sightseeing" ? "bank" : (itineraryThemes[els.itineraryThemeSelect.value]?.icon || "map-pin")}`;
     const lodging = els.itineraryThemeSelect.value === 'lodging';

@@ -69,7 +69,7 @@ async function saveExpenseForm(event) {
   const reservationIssue = reservationEditor.validate();
   if (reservationIssue) { showToast(reservationIssue.message); reservationIssue.target?.focus(); return; }
   const receipt = receiptInput.metadata() || (editingId ? findEntry(editingId)?.receipt : null);
-  const previousEntries = [...state.entries];
+  const previousEntries = [...state.entries], previousItems = state.itineraryItems;
 
   if (isLodgingSplitMode()) {
     const lodgingPlan = getLodgingPlan();
@@ -136,7 +136,13 @@ async function saveExpenseForm(event) {
     state.entries.push(entry);
   }
 
-  if (!await saveAndRender()) { if (state.id === submitTrip) state.entries = previousEntries; showToast("기기에 저장하지 못했어요. 입력 내용은 유지됩니다."); return; }
+  if (entry.pretripType === 'hotel') {
+    const model = window.TripLog.features.travelCompanion.model, previous = previousEntries.find(row => row.id === entry.id);
+    const stay = model.stayItinerary(state, model.stayFromEntry(entry), previous ? model.stayFromEntry(previous) : null);
+    state.itineraryItems = stay.itineraryItems;
+    stay.removedIds.forEach(id => window.TripLog.persistence.stateStorage.markDeletedEntity('itinerary', id));
+  }
+  if (!await saveAndRender()) { if (state.id === submitTrip) { state.entries = previousEntries; state.itineraryItems = previousItems; } showToast("기기에 저장하지 못했어요. 입력 내용은 유지됩니다."); return; }
   if (state.id !== submitTrip) return;
   await window.TripLog.sync.drafts?.clear("expenseForm", submitTrip, submitEditingId);
   if (submitEditingId) clearEditMode(); else resetExpenseFormAfterSubmit();

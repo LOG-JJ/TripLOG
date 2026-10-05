@@ -12,6 +12,7 @@ function setVoucherLoading(promise) { voucherReadPromise = promise.catch(() => f
 let itinerarySubmissionPending = false;
 const itineraryDeletionsPending = new Set();
 let initialPlaceCandidate = null;
+let itineraryCopying = false;
 async function handleItinerarySubmit(event) {
   event.preventDefault();
   if (itinerarySubmissionPending) return;
@@ -37,6 +38,7 @@ async function saveItineraryForm(event) {
     return;
   }
   const wasEditing = Boolean(editingItineraryId);
+  const wasCopying = itineraryCopying;
   const submittedTrip = state.id;
   const submittedEditId = editingItineraryId;
   const previousItems = [...state.itineraryItems], previousEntries = [...state.entries], previousCompanion = state.travelCompanion;
@@ -107,6 +109,10 @@ async function saveItineraryForm(event) {
     delete item.transportReservation;
     if (existingItem.linkedReservationId?.startsWith('manual:')) delete item.linkedReservationId;
   }
+  if (existingItem?.reservationStayDate && (item.date !== existingItem.date || theme !== 'lodging')) {
+    delete item.reservationStayDate;
+    delete item.linkedReservationId;
+  }
 
   if (candidateSelected) {
     item.coordinateSource = selectedPlaceCandidate.source || "";
@@ -171,11 +177,12 @@ async function saveItineraryForm(event) {
   window.TripLog.features.itinerary.workspace?.close?.();
   clearItineraryEditMode(false);
   window.TripLog.persistence.stateStorage.applyRepositoryChange?.(submittedTrip);
-  showToast(window.TripLogSyncRepository.cached(submittedTrip)?.conflicts.length ? "변경을 보관했어요. 상단 저장 상태에서 겹친 변경을 확인해 주세요." : wasEditing ? "일정을 저장했어요." : "일정을 추가했어요.");
+  showToast(window.TripLogSyncRepository.cached(submittedTrip)?.conflicts.length ? "변경을 보관했어요. 상단 저장 상태에서 겹친 변경을 확인해 주세요." : wasEditing ? "일정을 저장했어요." : wasCopying ? "일정을 복사했어요." : "일정을 추가했어요.");
 }
 
-function startItineraryEdit(item) {
-  editingItineraryId = item.id;
+function startItineraryEdit(item, { copy = false } = {}) {
+  itineraryCopying = copy;
+  editingItineraryId = copy ? null : item.id;
   state.selectedItineraryDate = item.date;
   state.lastActiveItineraryDate = item.date;
   state.selectedItineraryId = item.id;
@@ -237,6 +244,7 @@ function startItineraryEdit(item) {
 
 function clearItineraryEditMode(shouldRender = true) {
   editingItineraryId = null;
+  itineraryCopying = false;
   els.itineraryForm.reset();
   els.itineraryDaySelect.value = state.selectedItineraryDate || state.startDate;
   els.itineraryTransSelect.value = "none";

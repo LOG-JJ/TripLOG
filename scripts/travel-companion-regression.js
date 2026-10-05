@@ -18,6 +18,35 @@ const trip = { id: 'test-trip', tripName: '서울 주말 여행', countryCode: '
 assert.equal(M.days(trip).length, 3);
 assert.equal(M.validDate('2026-02-30'), false);
 assert.equal(M.validDate('2024-02-29'), true);
+// A stay occupies nights, never its checkout day. Re-saving must reuse IDs,
+// preserve per-day edits and leave the single hotel payment untouched.
+let staySequence = 0;
+const stayId = () => `night-${++staySequence}`;
+const stayRow = { id: 'manual:hotel-test', type: 'stay', title: '연박 호텔', date: day, endDate: '2026-09-20', location: '서울', note: '늦은 체크인', reference: 'HOTEL-1' };
+const stayTrip = { ...clone(trip), itineraryItems: [], entries: [{ id: 'payment', amount: 200000 }] };
+const addedStay = M.stayItinerary(stayTrip, stayRow, null, stayId);
+assert.deepEqual(Array.from(addedStay.itineraryItems, item => item.date), [day, '2026-09-19']);
+assert.ok(addedStay.itineraryItems.every(item => item.theme === 'lodging' && item.time === '' && item.linkedReservationId === stayRow.id && !item.expenseId));
+assert.deepEqual(stayTrip.itineraryItems, []);
+assert.deepEqual(stayTrip.entries, [{ id: 'payment', amount: 200000 }]);
+const withStay = { ...stayTrip, itineraryItems: addedStay.itineraryItems };
+assert.deepEqual(clone(M.stayItinerary(withStay, stayRow, stayRow, stayId).itineraryItems), clone(addedStay.itineraryItems));
+const firstNight = withStay.itineraryItems[0];
+Object.assign(firstNight, { time: '22:30', memo: '짐 맡기기', lat: 37.5, lon: 127, coordinateSignature: 'old' });
+const changedStay = { ...stayRow, title: '변경 호텔', location: '부산', note: '새 예약 메모', endDate: '2026-09-19' };
+const changedNights = M.stayItinerary(withStay, changedStay, stayRow, stayId);
+assert.equal(changedNights.itineraryItems.length, 1);
+assert.deepEqual(Array.from(changedNights.removedIds), [withStay.itineraryItems[1].id]);
+assert.deepEqual([changedNights.itineraryItems[0].id, changedNights.itineraryItems[0].time, changedNights.itineraryItems[0].memo, changedNights.itineraryItems[0].place], [firstNight.id, '22:30', '짐 맡기기', '변경 호텔']);
+assert.equal(changedNights.itineraryItems[0].lat, undefined, 'Changing a hotel invalidates its old coordinates');
+assert.deepEqual(Array.from(M.stayItinerary({ ...stayTrip, startDate: '2024-02-28', endDate: '2024-03-02' }, { ...stayRow, date: '2024-02-28', endDate: '2024-03-01' }, null, stayId).itineraryItems, item => item.date), ['2024-02-28', '2024-02-29']);
+assert.deepEqual(Array.from(M.stayItinerary(stayTrip, { ...stayRow, date: '2026-09-17', endDate: '2026-09-22' }, null, stayId).itineraryItems, item => item.date), [day, '2026-09-19', '2026-09-20'], 'Only travel dates are populated');
+assert.equal(M.stayItinerary(stayTrip, { ...stayRow, endDate: day }, null, stayId).itineraryItems.length, 0);
+assert.equal(M.stayItinerary(stayTrip, { ...stayRow, date: '2026-02-30' }, null, stayId).itineraryItems.length, 0);
+const legacyStay = { ...firstNight, id: 'legacy-stay' }; delete legacyStay.reservationStayDate;
+assert.equal(M.stayItinerary({ ...stayTrip, itineraryItems: [legacyStay] }, stayRow, stayRow, stayId).itineraryItems[0].id, 'legacy-stay');
+const purchaseStay = M.stayFromEntry({ id: 'hotel-purchase', hotelName: '예약 호텔', hotelCheckIn: day, hotelCheckOut: '2026-09-20', hotelAddress: '주소', bookingCode: 'CODE', pretripMemo: '예약 메모', amount: 200000 });
+assert.deepEqual([purchaseStay.id, purchaseStay.title, purchaseStay.date, purchaseStay.endDate, purchaseStay.note], ['entry:hotel-purchase', '예약 호텔', day, '2026-09-20', '예약 메모']);
 assert.equal(M.minutes('24:00'), null);
 assert.deepEqual(Array.from(M.reviewDay(trip, day), item => item.title), ['이동 시간 5분 부족', '일정이 10분 겹쳐요']);
 const nested = clone(trip); nested.itineraryItems[0].endTime = '15:00';

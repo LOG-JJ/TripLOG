@@ -318,17 +318,26 @@
       const problem = M().validateReservation(data); if (problem) throw new Error(problem);
       const row = { ...existing, ...data, id: editor.id || createId() };
       const linked = state.itineraryItems.filter(item => item.linkedReservationId === `manual:${row.id}`);
-      if (linked.length && !M().days(state).includes(row.date)) throw new Error('연결된 일정의 날짜는 여행 기간 안으로 선택해 주세요.');
+      if (row.type !== 'stay' && linked.length && !M().days(state).includes(row.date)) throw new Error('연결된 일정의 날짜는 여행 기간 안으로 선택해 주세요.');
       current.reservations = existing ? current.reservations.map(item => item.id === row.id ? row : item) : [...current.reservations, row];
       if (!existing) { walletFilter = row.type; walletQuery = ''; }
       const patch = { travelCompanion: current };
-      if (linked.length && (row.type === 'transport' || existing?.type === 'transport')) patch.itineraryItems = state.itineraryItems.map(item => linked.includes(item) ? M().itineraryForReservation(row, item) : item);
+      if (row.type === 'stay') {
+        const stay = M().stayItinerary(state, { ...row, id: `manual:${row.id}` }, existing);
+        patch.itineraryItems = stay.itineraryItems;
+        stay.removedIds.forEach(id => window.TripLog.persistence.stateStorage.markDeletedEntity('itinerary', id));
+      } else if (existing?.type === 'stay') {
+        patch.itineraryItems = state.itineraryItems.map(item => {
+          if (!linked.includes(item)) return item;
+          const detached = { ...item }; delete detached.linkedReservationId; delete detached.reservationStayDate; return detached;
+        });
+      } else if (linked.length && (row.type === 'transport' || existing?.type === 'transport')) patch.itineraryItems = state.itineraryItems.map(item => linked.includes(item) ? M().itineraryForReservation(row, item) : item);
       const savingEditor = editor;
       await commit(patch);
       if (editor !== savingEditor || state.id !== savingEditor.tripId) return;
       $('#ttReservationEditor').close();
       if ($('#ttReservationDetail').open) showReservationDetail(`manual:${row.id}`, false);
-      showToast('예약을 저장했어요.');
+      showToast(row.type === 'stay' && patch.itineraryItems.some(item => item.linkedReservationId === `manual:${row.id}`) ? '예약을 저장하고 숙박일마다 일정에 반영했어요.' : '예약을 저장했어요.');
     } catch (error) { $('#ttReservationError').textContent = error.message; $('#ttReservationError').scrollIntoView({ block: 'nearest' }); }
     finally { reservationSaving = false; submit.disabled = false; }
   }
@@ -363,6 +372,13 @@
   }
   async function linkReservation(row) {
     if (row.source === 'itinerary') { editItinerary(findItineraryItem(row.sourceId)); return; }
+    if (row.type === 'stay') {
+      const stay = M().stayItinerary(state, row, row);
+      const item = stay.itineraryItems.find(item => item.linkedReservationId === row.id);
+      if (!item) throw new Error('여행 기간 안에 숙박일이 없어요. 예약 또는 여행 일자를 먼저 수정해 주세요.');
+      stay.removedIds.forEach(id => window.TripLog.persistence.stateStorage.markDeletedEntity('itinerary', id));
+      await commit({ itineraryItems: stay.itineraryItems }); editItinerary(item); return;
+    }
     const linked = state.itineraryItems.find(item => item.linkedReservationId === row.id);
     if (linked) { editItinerary(linked); return; }
     if (!M().days(state).includes(row.date)) throw new Error('예약 일자가 여행 기간 밖에 있어요. 예약 또는 여행 일자를 먼저 수정해 주세요.');

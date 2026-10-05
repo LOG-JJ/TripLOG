@@ -194,6 +194,7 @@ function handleItineraryListAction(event) {
   if (button.dataset.itineraryAction === "edit") {
     startItineraryEdit(item);
   }
+  if (button.dataset.itineraryAction === "copy") startItineraryEdit(item, { copy: true });
 
   if (button.dataset.itineraryAction === "select") selectItineraryItem(item.id);
   if (button.dataset.itineraryAction === "ticket") window.TripLog.features.itinerary.workspace?.downloadTicket?.(item);

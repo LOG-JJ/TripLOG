@@ -243,10 +243,16 @@ async function savePretripEntry(fields) {
   const existing = pretripEditingEntry ? findEntry(pretripEditingEntry.id) : null;
   if (pretripEditingEntry && JSON.stringify(existing) !== pretripEntrySignature) return showPretripError("예약이 다른 곳에서 변경됐어요. 다시 열어 확인해 주세요.");
   const entry = { ...(existing || {}), ...fields, id: existing?.id || createId(), date: PRE_TRIP_EXPENSE_DATE, createdAt: existing?.createdAt || Date.now() };
-  const previous = state.entries, submittedTrip = state.id;
+  const previous = state.entries, previousItems = state.itineraryItems, submittedTrip = state.id;
+  if (entry.pretripType === 'hotel') {
+    const model = window.TripLog.features.travelCompanion.model;
+    const stay = model.stayItinerary(state, model.stayFromEntry(entry), existing ? model.stayFromEntry(existing) : null);
+    state.itineraryItems = stay.itineraryItems;
+    stay.removedIds.forEach(id => window.TripLog.persistence.stateStorage.markDeletedEntity('itinerary', id));
+  }
   state.entries = existing ? previous.map(row => row.id === entry.id ? entry : row) : [...previous, entry];
   if (!await saveAndRender()) {
-    if (state.id === submittedTrip) { state.entries = previous; render(); } return showPretripError("저장하지 못했어요. 기기 저장 공간을 확인한 뒤 다시 시도해 주세요.");
+    if (state.id === submittedTrip) { state.entries = previous; state.itineraryItems = previousItems; render(); } return showPretripError("저장하지 못했어요. 기기 저장 공간을 확인한 뒤 다시 시도해 주세요.");
   }
   if (state.id !== submittedTrip) return;
   pretripElement("rdReservation").close();
