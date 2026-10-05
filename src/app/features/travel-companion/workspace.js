@@ -27,7 +27,6 @@
     dialog.innerHTML = `<header class="tt-header">${logo}${button(icon('x'), 'close', 'tt-icon', 'aria-label="닫기"')}</header>${body}`;
     document.body.appendChild(dialog);
     dialog.addEventListener('close', () => {
-      document.documentElement.classList.toggle('rd-modal-open', !!$('dialog[open]'));
       if (dialog === $('#ttReservationEditor')) editor = null;
       const target = dialog.returnFocus?.isConnected ? dialog.returnFocus : $('#ttCompanion')?.open ? $('#ttCompanionTitle') : $('[data-rd-action="companion"]');
       target?.focus({ preventScroll: true });
@@ -38,7 +37,6 @@
     const dialog = $(`#${id}`);
     dialog.returnFocus = document.activeElement; dialog.tripId = state.id;
     if (!dialog.open) dialog.showModal();
-    document.documentElement.classList.add('rd-modal-open');
     $(`#${id}Title`)?.focus({ preventScroll: true });
   }
   function closeAll() { $$('.tt-dialog[open]').reverse().forEach(dialog => dialog.close()); }
@@ -458,7 +456,7 @@
         case 'attachment': { const row = M().reservations(state).find(item => item.id === id), item = findItineraryItem(row?.sourceId); if (item) window.TripLog.features.itinerary.workspace.downloadTicket(item); break; }
         case 'calendar': { const zone = $('#ttTimeZone').value; if (!zone) throw new Error('먼저 여행지의 일정 시간대를 선택해 주세요.'); const content = M().createCalendar(state, zone); download(content, fileName('여행일정.ics'), 'text/calendar;charset=utf-8'); $('#ttExportHelp').hidden = false; showToast('ICS 파일을 만들었어요. 화면의 가져오기 안내를 확인해 주세요.'); break; }
         case 'pocket': target.disabled = true; try { await savePocket(); } finally { target.disabled = false; } break;
-        case 'packing': closeAll(); $('#itineraryToolsDialog').showModal(); document.documentElement.classList.add('rd-modal-open'); break;
+        case 'packing': closeAll(); $('#itineraryToolsDialog').showModal(); break;
       }
     } catch (error) {
       if ($('#ttAdjustment')?.open) $('#ttAdjustmentError').textContent = error.message;

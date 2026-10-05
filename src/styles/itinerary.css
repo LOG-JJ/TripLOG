@@ -115,7 +115,6 @@ body[data-page="itinerary"] .page-stage { margin: 0; padding: 0; overflow: visib
 .itinerary-bottom-nav [aria-current="page"]::after { content: ""; position: absolute; bottom: 0; width: 43px; height: 2px; background: #0a559a; border-radius: 2px; }
 
 /* A native dialog keeps focus inside the editor and returns it to the timeline. */
-.itinerary-dialog-open, .itinerary-dialog-open body { overflow: hidden; }
 .itinerary-page dialog { color: var(--it-ink); font-family: var(--font); background: white; }
 .itinerary-page dialog::backdrop { background: rgb(11 16 32 / .35); }
 .itinerary-page .itinerary-editor { position: fixed; inset: 0; margin: auto; width: 100%; max-width: 100%; height: 100dvh; max-height: 100dvh; border: 0; padding: 0; border-radius: 0; overflow: hidden; }

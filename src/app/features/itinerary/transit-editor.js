@@ -431,7 +431,6 @@
     dialog.addEventListener('close', () => {
       if (dialog.open) return;
       hideEmbeddedDomesticMap(find('#itineraryTransitDomesticMap'));
-      document.documentElement.classList.toggle('rd-modal-open', Boolean(document.querySelector('dialog[open]')));
       const target = returnButton(); target?.setAttribute('aria-expanded', 'false'); target?.focus({ preventScroll: true });
       clearNavigation(); routeFrames.forEach(entry => clearTimeout(entry.timer));
       draft = null;
@@ -451,7 +450,7 @@
     clearError(); renderRows(); find('.transit-editor-scroll').scrollTop = 0;
     returnButton()?.setAttribute('aria-expanded', 'true'); fitViewport(); dialog.showModal();
     selectView('route');
-    document.documentElement.classList.add('rd-modal-open'); find('#itineraryTransitTitle').focus({ preventScroll: true });
+    find('#itineraryTransitTitle').focus({ preventScroll: true });
   }
   async function save(event) {
     event.preventDefault(); if (!draft || !dialog.open || submitting) return;

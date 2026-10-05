@@ -134,7 +134,6 @@
     query("#itineraryPlaceSearchPanel").hidden = edit && Boolean(els.itineraryPlaceInput.value);
     syncPlace(); render();
     if (!dialog.open) dialog.showModal();
-    document.documentElement.classList.add("itinerary-dialog-open");
     dialog.querySelector(".itinerary-editor-scroll").scrollTop = 0;
     query("#itineraryEditorTitle").focus({ preventScroll: true });
     if (previewMap) previewRoute();
@@ -150,7 +149,6 @@
     els.placeSearchButton.disabled = false;
     clearPlaceSearchTimer(); closePlaceSearchResults(); closeManualAddressPanel();
     clearItineraryEditMode(false);
-    document.documentElement.classList.remove("itinerary-dialog-open");
     draftTripId = null;
     (returnFocus?.isConnected ? returnFocus : query("#itineraryAddButton"))?.focus({ preventScroll: true });
   }

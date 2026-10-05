@@ -73,7 +73,7 @@
     const element = document.createElement('dialog'); element.id = id; element.className = 'rd-dialog'; element.setAttribute('aria-labelledby', `${id}Title`);
     element.innerHTML = `<div class="rd-dialog-head">${logo}${button(icon('x'),'close','rd-icon-button','aria-label="닫기"')}</div><div class="rd-dialog-body"><h1 id="${id}Title" tabindex="-1">${title}</h1><p data-rd-trip></p>${body}</div>${footer ? `<footer class="rd-dialog-footer">${footer}</footer>` : ''}`;
     document.body.appendChild(element);
-    element.addEventListener('close', () => { document.documentElement.classList.toggle('rd-modal-open', !!$('dialog[open]')); (element.returnFocus?.isConnected ? element.returnFocus : $('#rdMenuButton'))?.focus({preventScroll:true}); });
+    element.addEventListener('close', () => { (element.returnFocus?.isConnected ? element.returnFocus : $('#rdMenuButton'))?.focus({preventScroll:true}); });
     element.addEventListener('click', event => { if (event.target === element && (event.clientX < element.getBoundingClientRect().left || event.clientX > element.getBoundingClientRect().right || event.clientY < element.getBoundingClientRect().top || event.clientY > element.getBoundingClientRect().bottom)) element.close(); });
     return element;
   }
@@ -81,7 +81,7 @@
     const el = $(`#${id}`); if (!el || el.open) return;
     el.returnFocus = document.activeElement;
     if (id !== 'rdExpenseEditor' && $('#rdMore')?.open) $('#rdMore').close();
-    el.showModal(); document.documentElement.classList.add('rd-modal-open'); $(`#${id}Title`, el)?.focus({preventScroll:true});
+    el.showModal(); $(`#${id}Title`, el)?.focus({preventScroll:true});
   }
   function closeAll() { $$('.rd-dialog[open]').forEach(el => el.close()); }
   function navigate(page, { replace = false } = {}) { closeAll(); const url=window.TripLog.navigation.pageRouter.pageUrl(page); if(url.href!==location.href)history[replace?'replaceState':'pushState']({page},'',url);setActivePage(page); }
