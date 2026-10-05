@@ -107,7 +107,8 @@
 .tt-wallet-ui .tt-sub-footer { border-top: 1px solid var(--rd-divider); margin-top: 14px; padding: 12px 0 max(14px, env(safe-area-inset-bottom)); }
 .rd-app .tt-wallet-ui .tt-sub-footer .tt-button { min-height: 44px; font-size: 15px; }
 
-/* Compact fields retain 16px editable text to avoid automatic mobile zoom. */
+/* Compact fields retain 16px editable text to avoid automatic mobile zoom.
+   Shared control popovers own their internal inputs, including the time wheel. */
 .tt-wallet-ui .tt-form { gap: 14px; }
 .tt-wallet-ui .tt-form label { font-size: 12px; font-weight: 650; line-height: 1.4; gap: 6px; }
 .tt-wallet-ui .tt-form .tt-required { color: #b5294d; font-weight: 650; }
@@ -120,12 +121,11 @@
 .itinerary-transport-fields legend { padding: 0 5px; font-size: 13px; font-weight: 700; }
 .itinerary-transport-fields label { min-width: 0; margin: 0; }
 .itinerary-transport-fields .wide { grid-column: 1 / -1; }
-.rd-app .tt-wallet-ui .tt-form :is(input:not([type=hidden]), textarea) { min-height: 44px; padding: 10px 11px; border: 1.3px solid #9199a6; border-radius: 8px; background: #fff; font-size: 16px; font-weight: 500; line-height: 1.35; }
-.rd-app .tt-wallet-ui .tt-form input:focus, .rd-app .tt-wallet-ui .tt-form textarea:focus { border-color: var(--text); background: #fffdf0; box-shadow: none; }
-.tt-wallet-ui .tt-form input::placeholder, .tt-wallet-ui .tt-form textarea::placeholder { font-size: 13px; color: #757c89; }
+.rd-app .tt-wallet-ui .tt-form :is(input:not([type=hidden]), textarea):not(.control-popover input) { min-height: 44px; padding: 10px 11px; border: 1.3px solid #9199a6; border-radius: 8px; background: #fff; font-size: 16px; font-weight: 500; line-height: 1.35; }
+.rd-app .tt-wallet-ui .tt-form :is(input, textarea):not(.control-popover input):focus { border-color: var(--text); background: #fffdf0; box-shadow: none; }
+.tt-wallet-ui .tt-form :is(input, textarea):not(.control-popover input)::placeholder { font-size: 13px; color: #757c89; }
 .tt-wallet-ui .tt-form textarea { resize: vertical; min-height: 78px; }
 .rd-app .tt-wallet-ui .tt-form :is(.custom-date-button, .custom-time-button) { min-height: 44px; height: 44px; padding: 8px 10px; border: 1.3px solid #9199a6; border-radius: 8px; font-size: 14px; }
-.tt-wallet-ui .tt-form .custom-time-value { font-size: 16px; }
 .tt-wallet-ui #ttReservationTypes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
 .rd-app .tt-wallet-ui #ttReservationTypes > .tt-button { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; min-height: 60px; padding: 7px 4px; border: 1.3px solid #a6aebb; border-radius: 8px; background: #fff; font-size: 12px; box-shadow: none; }
 #ttReservationTypes .ph { font-size: 23px; }

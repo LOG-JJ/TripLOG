@@ -95,7 +95,8 @@ body.rd-app {
     .tt-badge, .tt-type, .rd-trip-choice-copy small, .rd-trip-choice-copy em) {
     font-size: var(--tl-text-meta); line-height: 1.4;
   }
-  body.rd-app :is(.rd-content, .rd-dialog, .rd-sheet, .tt-dialog) :is(input, textarea, select):not([type=checkbox]):not([type=radio]):not([type=hidden]) {
+  /* Shared pickers set their own input typography inside the popover. */
+  body.rd-app :is(.rd-content, .rd-dialog, .rd-sheet, .tt-dialog) :is(input, textarea, select):not([type=checkbox]):not([type=radio]):not([type=hidden]):not(.control-popover *) {
     font-size: var(--tl-text-input); font-weight: 500; line-height: 1.4;
   }
   body.rd-app :is(#expenseSearchInput, #rdTripSearch, #ttWalletSearch,
