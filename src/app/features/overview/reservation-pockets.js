@@ -64,7 +64,6 @@
   function render(bookings) {
     const rows = Array.isArray(bookings) ? bookings : [];
     return `<section class="rs-reservations" aria-label="예약 요약">
-      <div class="rs-summary-brand"><img src="src/assets/triplog-wordmark.png" alt="" aria-hidden="true" decoding="async"></div>
       <div class="rs-summary-columns">${column('transport', rows.filter(row => row.type === 'transport'))}${column('stay', rows.filter(row => row.type === 'stay'))}</div>
     </section>`;
   }
