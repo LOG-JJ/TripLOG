@@ -3,7 +3,7 @@ body.rd-app #overviewPage .rd-trip-hero { grid-column: 1 / -1; }
 body.rd-app #overviewPage .rs-reservations {
   --font: 'TripLOG Collaboration', 'Pretendard', sans-serif;
   --font-heading: var(--font);
-  grid-column: 1 / -1; width: 100%; max-width: 682px; justify-self: center;
+  grid-column: 1 / -1; width: 100%; justify-self: stretch;
   margin: 0 0 8px; padding: 8px 12px 9px; border: 1.5px solid #0b1020; border-radius: 10px;
   background: #fff; color: #0b1020; font-family: var(--font); font-size: 14px; line-height: 1.4;
 }
