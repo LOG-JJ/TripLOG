@@ -1,0 +1,157 @@
+{
+  "status": "matched",
+  "checkedAt": "2026-10-05T06:05:54.777Z",
+  "origin": "https://triplog-5qs.pages.dev",
+  "runtimeCommit": "721c5f7",
+  "localBuild": "7324a72666c6445e0f9e",
+  "publicBuild": "aa9cd98c3b2e667c60fd",
+  "publicSwBuild": "aa9cd98c3b2e667c60fd",
+  "buildsAgree": true,
+  "checked": 13,
+  "failed": 0,
+  "results": [
+    {
+      "file": "Travel.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "passed": true,
+      "comparison": "Normalized CRLF and the identified generated build fingerprints only",
+      "localSha256": "4c685013b04f3ff922a120159e940d5dbd54628be25bf964bb7a0d4b9f8bf451",
+      "publicSha256": "c88fbc682440eb51e780272e09faa6374022c99144261ce90d19fb2db228a13e",
+      "normalizedLocalSha256": "366aca01b3aa9075a3c10bee2758012d5d88c012861bc3797241474303736095",
+      "normalizedPublicSha256": "366aca01b3aa9075a3c10bee2758012d5d88c012861bc3797241474303736095"
+    },
+    {
+      "file": "sw.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "passed": true,
+      "comparison": "Normalized CRLF and the identified generated build fingerprints only",
+      "localSha256": "0a6df53c749fe83b79d3623ad24f91971243c3a9fa802df925f0a9f777be8e37",
+      "publicSha256": "90c1994f47d04abc55e7bd33916ae74d95c9724d07a578233711e00cdc15d02a",
+      "normalizedLocalSha256": "0a3c17008dc50cc76cb4b82107cb5891ddefd05c5950a8615bbee4533c362bb0",
+      "normalizedPublicSha256": "0a3c17008dc50cc76cb4b82107cb5891ddefd05c5950a8615bbee4533c362bb0"
+    },
+    {
+      "file": "src/app/features/home/trip-library.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "passed": true,
+      "comparison": "Normalized CRLF only",
+      "localSha256": "7533d15083151f8547a826b65e31979873d6436aa90968279f7196df07416504",
+      "publicSha256": "7533d15083151f8547a826b65e31979873d6436aa90968279f7196df07416504",
+      "normalizedLocalSha256": "7533d15083151f8547a826b65e31979873d6436aa90968279f7196df07416504",
+      "normalizedPublicSha256": "7533d15083151f8547a826b65e31979873d6436aa90968279f7196df07416504"
+    },
+    {
+      "file": "src/app/features/itinerary/itinerary-form.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "passed": true,
+      "comparison": "Normalized CRLF only",
+      "localSha256": "0336ee5a2941fd3cf2404599fd76ee1a86523f9984543fdf383f4e5a4f1cc811",
+      "publicSha256": "abb01ce6b5648bc07b6260324e64a437b362fc3e1743b9d9fb64de37454e3c2c",
+      "normalizedLocalSha256": "abb01ce6b5648bc07b6260324e64a437b362fc3e1743b9d9fb64de37454e3c2c",
+      "normalizedPublicSha256": "abb01ce6b5648bc07b6260324e64a437b362fc3e1743b9d9fb64de37454e3c2c"
+    },
+    {
+      "file": "src/app/features/itinerary/itinerary-workspace.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "passed": true,
+      "comparison": "Normalized CRLF only",
+      "localSha256": "694ac3a793e9aed75ee56b083cae0ac560c3b776a49b4924f93640d6abdc9e2f",
+      "publicSha256": "afa3c2b98eff58ede2b86d369e5100d5bc77584cf0d52b91a8946cb7a5a9699c",
+      "normalizedLocalSha256": "afa3c2b98eff58ede2b86d369e5100d5bc77584cf0d52b91a8946cb7a5a9699c",
+      "normalizedPublicSha256": "afa3c2b98eff58ede2b86d369e5100d5bc77584cf0d52b91a8946cb7a5a9699c"
+    },
+    {
+      "file": "src/app/features/overview/reservation-pockets.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "passed": true,
+      "comparison": "Normalized CRLF only",
+      "localSha256": "b030edc244cdca38f77ad09d6278fcb405dd735fe6a0cbdd28f83818a385fa70",
+      "publicSha256": "b030edc244cdca38f77ad09d6278fcb405dd735fe6a0cbdd28f83818a385fa70",
+      "normalizedLocalSha256": "b030edc244cdca38f77ad09d6278fcb405dd735fe6a0cbdd28f83818a385fa70",
+      "normalizedPublicSha256": "b030edc244cdca38f77ad09d6278fcb405dd735fe6a0cbdd28f83818a385fa70"
+    },
+    {
+      "file": "src/app/features/travel-companion/model.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "passed": true,
+      "comparison": "Normalized CRLF only",
+      "localSha256": "428de5da21e3c7a61e35b20ff1e0171cfef2907e93cb23d04ef6271b3263ec69",
+      "publicSha256": "47e800742f9701cc48ab17880bd55f292567b07a02a2dc57c612d252fd5ebe9c",
+      "normalizedLocalSha256": "47e800742f9701cc48ab17880bd55f292567b07a02a2dc57c612d252fd5ebe9c",
+      "normalizedPublicSha256": "47e800742f9701cc48ab17880bd55f292567b07a02a2dc57c612d252fd5ebe9c"
+    },
+    {
+      "file": "src/app/features/travel-companion/workspace.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "passed": true,
+      "comparison": "Normalized CRLF only",
+      "localSha256": "6ba5a693656e66995078741f1e811fc46ab51f70d4ee92070bb73f85d826696c",
+      "publicSha256": "4745c5e035e8c4d0952148f6bd4f149a077aed641343ca786a1918352c7e818e",
+      "normalizedLocalSha256": "4745c5e035e8c4d0952148f6bd4f149a077aed641343ca786a1918352c7e818e",
+      "normalizedPublicSha256": "4745c5e035e8c4d0952148f6bd4f149a077aed641343ca786a1918352c7e818e"
+    },
+    {
+      "file": "src/app/persistence/state-storage.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "passed": true,
+      "comparison": "Normalized CRLF only",
+      "localSha256": "e096da3626f0bd85da2f5340ad3e1e7a0b1c1ce2d832896a6384d6fa627ff60c",
+      "publicSha256": "9c090efd13cacf01d81f1e977547a90c80c76ecd80f8c468a1572f4785a8ca06",
+      "normalizedLocalSha256": "9c090efd13cacf01d81f1e977547a90c80c76ecd80f8c468a1572f4785a8ca06",
+      "normalizedPublicSha256": "9c090efd13cacf01d81f1e977547a90c80c76ecd80f8c468a1572f4785a8ca06"
+    },
+    {
+      "file": "src/app/sync/drafts.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "passed": true,
+      "comparison": "Normalized CRLF only",
+      "localSha256": "f00c362f440403853a9f45ca9a4e5c36c7721254d21c27262288debf6471633c",
+      "publicSha256": "f00c362f440403853a9f45ca9a4e5c36c7721254d21c27262288debf6471633c",
+      "normalizedLocalSha256": "f00c362f440403853a9f45ca9a4e5c36c7721254d21c27262288debf6471633c",
+      "normalizedPublicSha256": "f00c362f440403853a9f45ca9a4e5c36c7721254d21c27262288debf6471633c"
+    },
+    {
+      "file": "src/styles/reservation-pockets.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "passed": true,
+      "comparison": "Normalized CRLF only",
+      "localSha256": "0e694c2e1fa4cfa34d8261a191ee1125a6df2e698cac4b011114f8e3119be24c",
+      "publicSha256": "0e694c2e1fa4cfa34d8261a191ee1125a6df2e698cac4b011114f8e3119be24c",
+      "normalizedLocalSha256": "0e694c2e1fa4cfa34d8261a191ee1125a6df2e698cac4b011114f8e3119be24c",
+      "normalizedPublicSha256": "0e694c2e1fa4cfa34d8261a191ee1125a6df2e698cac4b011114f8e3119be24c"
+    },
+    {
+      "file": "src/styles/reservation-wallet.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "passed": true,
+      "comparison": "Normalized CRLF only",
+      "localSha256": "6b0663253fc5166f17441a510a630f872fea9c0dd7c561530f69d4454c26d1f8",
+      "publicSha256": "6b0663253fc5166f17441a510a630f872fea9c0dd7c561530f69d4454c26d1f8",
+      "normalizedLocalSha256": "6b0663253fc5166f17441a510a630f872fea9c0dd7c561530f69d4454c26d1f8",
+      "normalizedPublicSha256": "6b0663253fc5166f17441a510a630f872fea9c0dd7c561530f69d4454c26d1f8"
+    },
+    {
+      "file": "src/styles/trip-library.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "passed": true,
+      "comparison": "Normalized CRLF only",
+      "localSha256": "1bffdf15086b913405e344bffe7838bf3e9cf08947ab7056451b39ebe7d2009d",
+      "publicSha256": "1bffdf15086b913405e344bffe7838bf3e9cf08947ab7056451b39ebe7d2009d",
+      "normalizedLocalSha256": "1bffdf15086b913405e344bffe7838bf3e9cf08947ab7056451b39ebe7d2009d",
+      "normalizedPublicSha256": "1bffdf15086b913405e344bffe7838bf3e9cf08947ab7056451b39ebe7d2009d"
+    }
+  ]
+}

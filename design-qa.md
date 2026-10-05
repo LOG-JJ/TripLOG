@@ -7,6 +7,7 @@ final result: passed
 - T2I 목업 1장을 이미지 입력 없이 생성했습니다. 정확한 호출 원본과 프로젝트 저장본의 SHA256 일치를 확인했습니다. 기존 여권 그림을 유지하며 제거 버튼과 왼쪽 이모지/오른쪽 경로/아래 예약명·날짜 한 줄을 구현했습니다.
 - 전체 `npm test`, 전체 `npm run test:browser`, `npm run build` 통과. 새 교통 요약의 320/390/599/600/850/1440px 정렬·넘침 검사와 실제 모바일 입력 폼 검수를 완료했습니다. 실제 iOS/Android 기기 및 Safari는 별도 미검증입니다.
 - [목업 프롬프트·원본·실제 화면·검증 기록](docs/transport-reservations-20261005/README.md).
+- 런타임 `721c5f7`을 `origin/main`에 푸시했고, 2026-10-05 15:05:54 KST 운영 파일 13개가 일치했습니다. 공개 HTML·서비스 워커 빌드 `aa9cd98c3b2e667c60fd`. [운영 검증](docs/transport-reservations-20261005/production-verification.json).
 
 ---
 

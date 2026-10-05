@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-10-05T06:05:47.868Z",
+  "environment": "Isolated PGlite running the repository migrations; no production connection",
+  "checks": [
+    "Create/read preserves transport mode/from/to/arrival date and overnight end time",
+    "Existing protocol accepts a linked itinerary and reservation update",
+    "Readback preserves both arrival times and the arrival date"
+  ],
+  "databaseMigrationRequired": false,
+  "edgeFunctionDeploymentRequired": false
+}
