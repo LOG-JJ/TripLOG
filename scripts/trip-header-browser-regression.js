@@ -111,11 +111,11 @@ async function main() {
     }
     await page.setViewportSize({ width: 320, height: 844 });
     await hero.screenshot({ path: path.join(output, 'long-320.png'), animations: 'disabled' });
-    await render({ trip: { tripName: '<img src=x onerror=alert(1)>', city: '' }, countdown: '여행 준비', period: '날짜 미정', duration: '기간 미정', members: 0 });
+    await render({ trip: { tripName: '<img src=x onerror=alert(1)>', city: '' }, countdown: 'PLANNING', period: '날짜 미정', duration: '기간 미정', members: 0 });
     assert.equal(await hero.locator('.th-trip-name img').count(), 0);
     assert.equal(await hero.getAttribute('data-scene'), 'theme-travel');
     await readyImage(); await layout('unknown/escaped');
-    await render({ trip: { tripName: '당일 산책' }, countdown: '여행 중', period: '10.4 일 – 10.4 일', duration: '당일치기' });
+    await render({ trip: { tripName: '당일 산책' }, countdown: 'ON THE GO', period: '10.4 일 – 10.4 일', duration: '당일치기' });
     await layout('same-day');
     // A failed optional city image falls back to its bundled scene, then universal.
     await context.route('**/src/assets/trip-scenes/cities/**', route => route.abort());

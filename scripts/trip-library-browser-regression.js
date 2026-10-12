@@ -98,7 +98,7 @@ async function main() {
     assert.equal(await page.evaluate(() => window.__createCalls), 1, 'A repeated submit during storage latency must not duplicate the trip');
     const newId = await page.evaluate(() => state.id);
     await home(); assert.equal(await cards.count(), 4);
-    assert.match(await page.locator('[data-library-filter="ongoing"]').innerText(), /여행 중\s*1/);
+    assert.match(await page.locator('[data-library-filter="ongoing"]').innerText(), /ON THE GO\s*1/);
     assert.equal((await snapshot()).filter(t => t.id !== newId).length, 3);
     console.log('PASS library: cancel preserves the collection; create opens the new trip and adds exactly one passport');
     await page.locator(`[data-library-trip="${newId}"]`).click();
@@ -127,7 +127,7 @@ async function main() {
       } }));
     }, newId);
     const longTrip = page.locator(`[data-library-trip="${newId}"]`);
-    await page.waitForFunction(id => document.querySelector(`[data-library-trip="${id}"]`)?.textContent.includes('일정 미정'), newId);
+    await page.waitForFunction(id => document.querySelector(`[data-library-trip="${id}"]`)?.textContent.includes('PLANNING'), newId);
     assert.match(await longTrip.locator('.tl-passport-art').getAttribute('src'), /generic/);
     await page.setViewportSize({ width: 320, height: 844 });
     assert(await longTrip.evaluate(el => el.scrollWidth <= el.clientWidth + 1), 'Long titles and unspecified dates stay inside the passport');

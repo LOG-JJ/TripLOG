@@ -8,6 +8,7 @@
   let filter = 'all', opening = '', removing = '', ready = false;
   let pendingInitialTrip = new URLSearchParams(location.search).get('trip') || '';
   const today = () => window.TripLog.features.redesign.model.localDate();
+  const statusLabels = { upcoming: 'UP NEXT', ongoing: 'ON THE GO', past: 'MEMORIES', undated: 'PLANNING' };
   function validDate(value) {
     if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
     const date = new Date(`${value}T12:00:00Z`);
@@ -18,13 +19,11 @@
     if (trip.endDate < date) return 'past';
     return trip.startDate > date ? 'upcoming' : 'ongoing';
   }
-  function badge(trip, date) {
+  function badge(trip, date = today()) {
     const group = status(trip, date);
-    if (group === 'past') return '다녀온 여행';
-    if (group === 'ongoing') return '여행 중';
-    if (group === 'undated') return '일정 미정';
+    if (group !== 'upcoming') return statusLabels[group];
     const days = Math.round((Date.parse(`${trip.startDate}T12:00:00`) - Date.parse(`${date}T12:00:00`)) / 86400000);
-    return `D-${days}`;
+    return `${statusLabels.upcoming} · D-${days}`;
   }
   function dates(trip) {
     if (!validDate(trip.startDate) || !validDate(trip.endDate) || trip.endDate < trip.startDate) return '날짜를 정해 주세요';
@@ -57,7 +56,7 @@
     return `<section class="tl-library" aria-labelledby="tripLibraryTitle">
       <div class="tl-library-heading"><h1 id="tripLibraryTitle">내 여행</h1><p>떠날 여행도, 다녀온 순간도</p></div>
       <div class="tl-library-search" role="search">${icon('magnifying-glass')}<input id="tripLibrarySearch" type="search" placeholder="여행 이름이나 여행지 검색" aria-label="여행 이름이나 여행지 검색" autocomplete="off"><button id="tripLibrarySearchClear" type="button" aria-label="여행 검색 지우기" hidden>${icon('x')}</button></div>
-      <div class="tl-library-filters" id="rdTripTabs" role="group" aria-label="여행 기간 필터">${[['all', '전체'], ['upcoming', '예정'], ['ongoing', '여행 중'], ['past', '지난 여행']].map(([key, label]) => `<button type="button" data-library-filter="${key}" aria-pressed="${key === 'all'}" ${key === 'ongoing' ? 'hidden' : ''}>${label}<span>0</span></button>`).join('')}</div>
+      <div class="tl-library-filters" id="rdTripTabs" role="group" aria-label="여행 기간 필터">${[['all', 'ALL'], ['upcoming', statusLabels.upcoming], ['ongoing', statusLabels.ongoing], ['past', statusLabels.past]].map(([key, label]) => `<button type="button" data-library-filter="${key}" aria-pressed="${key === 'all'}" ${key === 'ongoing' ? 'hidden' : ''}>${label}<span>0</span></button>`).join('')}</div>
       <p class="tl-library-announcement" id="tripLibraryResult" role="status" aria-live="polite"></p>
       <div class="tl-library-empty" id="tripLibraryEmpty" hidden></div>
       <div class="tl-library-grid" id="rdTripList"><div id="tripLibraryItems"></div>
@@ -172,5 +171,5 @@
     showToast('이 여행을 찾을 수 없어요. 보관함에서 여행을 선택해 주세요.');
     return false;
   }
-  window.TripLog.register('features.home.tripLibrary', { markup, setup, render, openTrip, reconcileInitialTrip, trips, status, dates, cover });
+  window.TripLog.register('features.home.tripLibrary', { markup, setup, render, openTrip, reconcileInitialTrip, trips, status, statusLabels, badge, dates, cover });
 })();
