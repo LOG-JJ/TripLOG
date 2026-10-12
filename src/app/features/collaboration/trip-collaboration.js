@@ -1705,6 +1705,7 @@
   window.TripLog.register("features.collaboration.tripCollaboration", {
     setupTripCollaboration,
     renderTripCollaboration,
+    getCurrentAccount,
     getTripMembers,
     createTripInvite,
     syncSupabaseSession,

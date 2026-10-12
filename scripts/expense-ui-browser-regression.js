@@ -61,7 +61,7 @@ async function main() {
         { id: 'pending-member', name: '초대 대기', role: 'member', status: 'pending' }];
       render();
     });
-    assert.deepEqual(await page.locator('#rdPayer option').allTextContents(), ['나', '민지']);
+    assert.deepEqual(await page.locator('#rdPayer option').allTextContents(), ['여행 대표', '민지']);
     await page.locator('#rdExpenseMemo summary').click();
     await page.locator('#rdPayerButton').click();
     await page.locator('#rdPayerMenu [data-value="companion:payer-member"]').click();

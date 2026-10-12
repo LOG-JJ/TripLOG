@@ -114,7 +114,7 @@ function renderSettlementMemberChips(membersListWrap, companions) {
   leaderChip.className = "settlement-member-chip leader";
   leaderChip.innerHTML = `
     <span class="settlement-member-avatar">👑</span>
-    <span>방장 (나)</span>
+    <span>${escapeHtml(getSettlementMembers().find(member => member.isLeader)?.name || '여행 대표')}</span>
   `;
   membersListWrap.appendChild(leaderChip);
 

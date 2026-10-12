@@ -71,7 +71,7 @@
     ui.JsonText.value = ''; ui.JsonStatus.textContent = '';
     ui.JsonPrompt.value = window.TripLog.features.expenses.receiptJson.prompt({
       startDate: state.startDate, endDate: state.endDate,
-      payers: getSettlementMembers().map(member => ({ key: member.key, name: member.isLeader ? '나' : member.name })),
+      payers: getSettlementMembers().map(member => ({ key: member.key, name: member.name })),
     });
     setBusy(false); status('AI 결과를 붙여넣거나 영수증 사진을 선택해 주세요.');
     els.receiptDialog.showModal();

@@ -395,3 +395,10 @@ html:has(body.rd-app){scrollbar-width:none}html:has(body.rd-app)::-webkit-scroll
 
 /* Native open state keeps nested dialogs and handoffs in sync without stale locks. */
 html:has(dialog[open]), html:has(dialog[open]) body { overflow: hidden; }
+
+/* Edit the existing settlement identity without changing the payer key. */
+.rd-app .rd-settlement-name { display: inline-flex; align-items: center; align-self: flex-start; gap: 5px; max-width: 100%; min-height: 32px; padding: 0; border: 0; box-shadow: none; background: transparent; text-align: left; }
+.rd-app .rd-settlement-name .ph { font-size: 16px; color: var(--muted); }
+.rd-app .rd-settlement-name-form { padding-bottom: 16px; margin-bottom: 18px; border-bottom: 1px solid var(--rd-divider); }
+.rd-settlement-name-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+#rdSettlementNameError:empty { display: none; }
