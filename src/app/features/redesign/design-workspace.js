@@ -13,8 +13,9 @@
   let editingTripId = '';
   let removingTripId = '';
   let settlementNameDraft = null, settlementNameSaving = false;
+  let budgetDraft = null, budgetSaving = false;
   const profileAccount = () => window.TripLog.features.collaboration.tripCollaboration.getCurrentAccount();
-  const canEditSettlementName = () => {
+  const canEditTripSettings = () => {
     const record = window.TripLogSyncRepository.cached(state.id);
     return record?.role !== 'viewer' && !record?.archivedAt;
   };
@@ -23,9 +24,9 @@
     settlementNameDraft = { tripId: state.id, accountId: account?.id || '', name };
     $('#rdSettlementName').value = name;
     $('#rdSettlementNameError').textContent = '';
-    $('#rdSettlementName').disabled = !canEditSettlementName();
-    $('#rdSettlementNameSave').disabled = !canEditSettlementName();
-    $('#rdSettlementNameProfile').disabled = !canEditSettlementName() || !account?.displayName?.trim();
+    $('#rdSettlementName').disabled = !canEditTripSettings();
+    $('#rdSettlementNameSave').disabled = !canEditTripSettings();
+    $('#rdSettlementNameProfile').disabled = !canEditTripSettings() || !account?.displayName?.trim();
   }
   async function saveSettlementName(event) {
     event.preventDefault();
@@ -33,7 +34,7 @@
     const draft = settlementNameDraft, name = $('#rdSettlementName').value.trim();
     const error = message => { $('#rdSettlementNameError').textContent = message; };
     if (!draft || draft.tripId !== state.id || draft.accountId !== (profileAccount()?.id || '')) return error('여행이나 계정이 변경됐어요. 이름 수정 창을 다시 열어 주세요.');
-    if (!canEditSettlementName()) return error('이 여행의 이름을 수정할 권한이 없어요.');
+    if (!canEditTripSettings()) return error('이 여행의 이름을 수정할 권한이 없어요.');
     if (!name || name.length > 80) return error('이름을 1~80자로 입력해 주세요.');
     if (getSettlementSettings().leaderName !== draft.name) return error('다른 곳에서 이름이 변경됐어요. 창을 다시 열어 확인해 주세요.');
     const previous = state.settlement;
@@ -51,11 +52,40 @@
       $('#rdCompanions').close(); showToast('정산 이름을 저장했어요.');
     } finally {
       settlementNameSaving = false;
-      $('#rdSettlementName').disabled = $('#rdSettlementNameSave').disabled = !canEditSettlementName();
-      $('#rdSettlementNameProfile').disabled = !canEditSettlementName() || !profileAccount()?.displayName?.trim();
+      $('#rdSettlementName').disabled = $('#rdSettlementNameSave').disabled = !canEditTripSettings();
+      $('#rdSettlementNameProfile').disabled = !canEditTripSettings() || !profileAccount()?.displayName?.trim();
     }
   }
   function isTripEditing() { return Boolean(editingTripId && editingTripId === state.id); }
+  function prepareBudgetEdit() {
+    budgetDraft = { tripId: state.id, accountId: profileAccount()?.id || '', value: Number(state.totalBudget) || 0 };
+    setCommaNumberInputValue($('#rdBudgetAmount'), budgetDraft.value);
+    $('#rdBudgetError').textContent = '';
+    $('#rdBudgetAmount').disabled = $('#rdBudgetSave').disabled = !canEditTripSettings();
+  }
+  async function saveBudgetEdit(event) {
+    event.preventDefault(); if (budgetSaving) return;
+    const draft = budgetDraft, raw = $('#rdBudgetAmount').value.trim(), amount = Number(raw.replaceAll(',', ''));
+    const error = message => { $('#rdBudgetError').textContent = message; };
+    if (!draft || draft.tripId !== state.id || draft.accountId !== (profileAccount()?.id || '')) return error('여행이나 계정이 변경됐어요. 예산 편집창을 다시 열어 주세요.');
+    if (!canEditTripSettings()) return error('이 여행의 예산을 수정할 권한이 없어요.');
+    if (!/^(?:\d+|\d{1,3}(?:,\d{3})+)$/.test(raw) || !Number.isSafeInteger(amount) || amount < 0) return error('예산을 0원 이상의 정수로 입력해 주세요.');
+    if ((Number(state.totalBudget) || 0) !== draft.value) return error('다른 곳에서 예산이 변경됐어요. 창을 다시 열어 확인해 주세요.');
+    const previous = state.totalBudget;
+    budgetSaving = true; $('#rdBudgetAmount').disabled = $('#rdBudgetSave').disabled = true;
+    try {
+      state.totalBudget = amount;
+      if (!await saveAndRender()) {
+        if (state.id === draft.tripId) { state.totalBudget = previous; window.TripLog.features.render.main.render(); }
+        return error('예산을 저장하지 못했어요. 입력한 금액은 유지됩니다. 다시 시도해 주세요.');
+      }
+      if (state.id !== draft.tripId || budgetDraft !== draft) return;
+      const saved = window.TripLogSyncRepository.cached(draft.tripId);
+      if (saved && Number(saved.snapshot.totalBudget) !== amount) return error('다른 변경과 겹쳤어요. 저장 상태에서 변경 내용을 확인해 주세요.');
+      setCommaNumberInputValue(els.budgetInput, amount);
+      $('#rdBudgetEditor').close(); showToast('여행 예산을 수정했어요.');
+    } finally { budgetSaving = false; $('#rdBudgetAmount').disabled = $('#rdBudgetSave').disabled = !canEditTripSettings(); }
+  }
   function syncTripEdit() {
     const editing = isTripEditing();
     $('.rd-trip-edit').hidden = !editing;
@@ -123,6 +153,7 @@
   function open(id) {
     const el = $(`#${id}`); if (!el || el.open) return;
     if (id === 'rdCompanions') prepareSettlementName();
+    if (id === 'rdBudgetEditor') prepareBudgetEdit();
     el.returnFocus = document.activeElement;
     if (id !== 'rdExpenseEditor' && $('#rdMore')?.open) $('#rdMore').close();
     el.showModal(); $(`#${id}Title`, el)?.focus({preventScroll:true});
@@ -248,6 +279,14 @@
     move(els.expenseSortSelect.closest('.custom-select') || els.expenseSortSelect, '#rdSortMount');
   }
   function setupSettings() {
+    dialog('rdBudgetEditor','예산 수정',`<form id="rdBudgetForm" novalidate><label for="rdBudgetAmount"><span>총 여행 예산 (원)</span><input id="rdBudgetAmount" type="text" inputmode="numeric" autocomplete="off" placeholder="예: 500,000" required></label><p class="rd-muted">0원으로 저장하면 예산을 설정하지 않은 상태가 됩니다.</p><p id="rdBudgetError" class="rd-muted" role="alert"></p></form>`, `<button type="submit" form="rdBudgetForm" id="rdBudgetSave" class="rd-button rd-primary">예산 저장</button>`);
+    $('#rdBudgetForm').addEventListener('submit', saveBudgetEdit);
+    $('#rdBudgetAmount').addEventListener('input', event => {
+      // Reuse the amount formatter while keeping invalid signs/decimals visible
+      // for validation rather than silently saving a different budget.
+      if (/^[\d,]*$/.test(event.target.value)) formatCommaNumberInput(event.target);
+      $('#rdBudgetError').textContent = '';
+    });
     dialog('rdProfile','여행 프로필','<div id="rdProfileMount"></div>');
     ['#settingsAccountStatus','.settings-account-form','.settings-account-actions'].forEach(s => move(s,'#rdProfileMount'));
     dialog('rdCurrency','여행 방식·통화','<div id="rdCurrencyMount"></div>'); move($('#settingsCurrencyArea').parentElement,'#rdCurrencyMount');
@@ -375,9 +414,9 @@
       ${window.TripLog.features.overview.reservationPockets.render(bookings)}
       <section class="rd-outline rd-overview-budget${budget && total > budget ? ' is-over-budget' : ''}">
         <div class="rd-section-head"><h2>${icon('coins')}여행 예산</h2><button type="button" data-rd-nav="budget" aria-label="지출 기록 자세히 보기">자세히 ${icon('caret-right')}</button></div>
-        <div class="rd-budget-metric"><strong>${money(total)}</strong><span>예산 ${money(budget)}</span></div>
+        <div class="rd-budget-metric"><strong>${money(total)}</strong><button type="button" class="rd-budget-edit" data-rd-action="budget-edit" aria-label="여행 예산 수정"${canEditTripSettings() ? '' : ' disabled'}>예산 ${money(budget)} ${icon('pencil-simple')}</button></div>
         <div class="rd-progress-row"><progress max="100" value="${Math.max(0, Math.min(100, pct))}" aria-label="예산 사용률" aria-valuetext="${pct}% 사용"></progress><b>${pct}%</b></div>
-        <p>${budget ? `${total > budget ? '초과 금액' : '남은 예산'} <strong>${money(Math.abs(budget - total))}</strong>` : '<button type="button" class="rd-budget-setup" data-rd-action="trip-edit" data-id="' + text(state.id) + '">여행 예산 설정하기 ' + icon('caret-right') + '</button>'}</p>
+        <p>${budget ? `${total > budget ? '초과 금액' : '남은 예산'} <strong>${money(Math.abs(budget - total))}</strong>` : '<button type="button" class="rd-budget-setup" data-rd-action="budget-edit">여행 예산 설정하기 ' + icon('caret-right') + '</button>'}</p>
       </section>
       <section class="rd-outline rd-key-schedule">
         <div class="rd-section-head"><h2>${icon('calendar-blank')}${scheduleTitle}</h2><span class="rd-schedule-date">${dateShort(scheduleDate)}</span><button type="button" data-rd-action="all-itinerary">전체 보기 ${icon('caret-right')}</button></div>
@@ -403,7 +442,7 @@
     const source=getSelectedSettlementExpenseSource(getSettlementExpenseSources(totals)),model=buildSettlementModel(source);
     $('#settlementPage .rd-heading p').textContent=`${state.tripName} · ${model.members.length}명`;
     const unequal=model.entryRows.some(r=>r.mode==='custom'),n=model.members.length;
-    $('#rdSettlement').innerHTML=`<section class="rd-settle-hero rd-outline"><div><span>함께 쓴 돈</span><strong>${money(model.totalTripSpent)}</strong><hr><span>${unequal?'평균 부담액':'1인 부담액'}</span><strong>${money(model.totalTripSpent/n)}</strong></div><div><span class="rd-badge">${unequal?'직접 분담':'균등 분담'}</span>${button('분담 수정','split','rd-secondary')}</div></section><h2>멤버별 정산</h2><div class="rd-member-balances">${model.memberSummaries.map((m,i)=>`<div class="rd-balance-row">${avatar(m.name,i)}<span>${m.isLeader ? `<button type="button" class="rd-settlement-name" data-rd-action="settlement-name" aria-label="${text(m.name)} 정산 이름 수정"${canEditSettlementName() ? '' : ' disabled'}><b>${text(m.name)}</b>${icon('pencil-simple')}</button>` : `<b>${text(m.name)}</b>`}<small>낸 돈 ${money(m.paid)}</small></span><div class="${m.balance>0?'receives':''}"><b>${money(Math.abs(m.balance))}</b><small>${m.balance>0?'받을 돈':m.balance<0?'보낼 돈':'정산 완료'}</small></div></div>`).join('')}</div><h2>이렇게 보내면 끝!</h2><div class="rd-transfers rd-outline">${model.invalidEntries.length?'<p role="alert">항목별 분담 합계를 먼저 확인해 주세요.</p>':model.transactions.length?model.transactions.map(t=>`<div><b>${text(t.from)} → ${text(t.to)}</b><b>${money(t.amount)}</b></div>`).join(''):'<p>서로 주고받을 금액이 없어요.</p>'}</div><p class="rd-muted">송금 안내이며 실제 이체는 하지 않아요.</p>${row('항목별 분담 보기','file-text','split')}<div class="rd-page-footer">${button(`${icon('user-plus')} 멤버 추가·관리`,'companions','rd-secondary')}</div>`;
+    $('#rdSettlement').innerHTML=`<section class="rd-settle-hero rd-outline"><div><span>함께 쓴 돈</span><strong>${money(model.totalTripSpent)}</strong><hr><span>${unequal?'평균 부담액':'1인 부담액'}</span><strong>${money(model.totalTripSpent/n)}</strong></div><div><span class="rd-badge">${unequal?'직접 분담':'균등 분담'}</span>${button('분담 수정','split','rd-secondary')}</div></section><h2>멤버별 정산</h2><div class="rd-member-balances">${model.memberSummaries.map((m,i)=>`<div class="rd-balance-row">${avatar(m.name,i)}<span>${m.isLeader ? `<button type="button" class="rd-settlement-name" data-rd-action="settlement-name" aria-label="${text(m.name)} 정산 이름 수정"${canEditTripSettings() ? '' : ' disabled'}><b>${text(m.name)}</b>${icon('pencil-simple')}</button>` : `<b>${text(m.name)}</b>`}<small>낸 돈 ${money(m.paid)}</small></span><div class="${m.balance>0?'receives':''}"><b>${money(Math.abs(m.balance))}</b><small>${m.balance>0?'받을 돈':m.balance<0?'보낼 돈':'정산 완료'}</small></div></div>`).join('')}</div><h2>이렇게 보내면 끝!</h2><div class="rd-transfers rd-outline">${model.invalidEntries.length?'<p role="alert">항목별 분담 합계를 먼저 확인해 주세요.</p>':model.transactions.length?model.transactions.map(t=>`<div><b>${text(t.from)} → ${text(t.to)}</b><b>${money(t.amount)}</b></div>`).join(''):'<p>서로 주고받을 금액이 없어요.</p>'}</div><p class="rd-muted">송금 안내이며 실제 이체는 하지 않아요.</p>${row('항목별 분담 보기','file-text','split')}<div class="rd-page-footer">${button(`${icon('user-plus')} 멤버 추가·관리`,'companions','rd-secondary')}</div>`;
   }
   function drawDonut(rows,total) {
     const canvas=$('#rdDonut');if(!canvas)return;
@@ -479,10 +518,11 @@
     const simple={more:'rdMore',filter:'rdFilter',profile:'rdProfile',currency:'rdCurrency',backup:'rdBackup',advanced:'rdAdvanced',pdf:'rdPdf',split:'rdSettlementDetails',companions:'rdCompanions'};
     if(simple[action]){open(simple[action]);return;}
     switch(action){
+      case 'budget-edit':open('rdBudgetEditor');$('#rdBudgetAmount').focus();$('#rdBudgetAmount').select();break;
       case 'settlement-name':open('rdCompanions');$('#rdSettlementName').focus();$('#rdSettlementName').select();break;
       case 'settlement-name-profile':{
         const name=profileAccount()?.displayName?.trim();
-        if(name&&canEditSettlementName()){$('#rdSettlementName').value=name.slice(0,80);$('#rdSettlementName').focus();}
+        if(name&&canEditTripSettings()){$('#rdSettlementName').value=name.slice(0,80);$('#rdSettlementName').focus();}
         break;
       }
       case 'confirm-accept':$('#rdConfirm').close('confirm');break;
@@ -557,5 +597,5 @@
     }
   }
   document.addEventListener('change',event=>{if(event.target.id==='rdReportDay'){reportDay=event.target.value;renderPlanAnalytics();}const id=event.target.dataset.rdPack;if(id){const item=state.packingList.find(i=>i.id===id);if(item){item.checked=event.target.checked;saveAndRender();}}});
-  window.TripLog.register('features.redesign.workspace',{setup,render,renderMembers,navigate,open,openExpenseEditor,openPretripEditor:showReservation,showSavedPretrip,expenseSaved,expenseMetadata,confirmAction,isTripEditing,cancelTripEdit});
+  window.TripLog.register('features.redesign.workspace',{setup,render,renderMembers,navigate,open,openExpenseEditor,openPretripEditor:showReservation,showSavedPretrip,expenseSaved,expenseMetadata,confirmAction,canEditTripSettings,isTripEditing,cancelTripEdit});
 })();

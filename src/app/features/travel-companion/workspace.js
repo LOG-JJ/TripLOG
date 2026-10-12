@@ -427,7 +427,7 @@
         }
         case 'itinerary-new': closeAll(); state.selectedItineraryDate = selectedDay || state.startDate; window.TripLog.features.redesign.workspace.navigate('itinerary'); window.TripLog.features.itinerary.workspace.show(); break;
         case 'itinerary-day': case 'itinerary-all': closeAll(); state.selectedItineraryDate = action === 'itinerary-all' ? 'all' : selectedDay; window.TripLog.features.redesign.workspace.navigate('itinerary'); saveAndRender(); break;
-        case 'budget-settings': closeAll(); window.TripLog.features.redesign.workspace.navigate('start'); $('#budgetInput')?.focus(); break;
+        case 'budget-settings': closeAll(); window.TripLog.features.redesign.workspace.open('rdBudgetEditor'); break;
         case 'budget-info': { const data = M().dailyBudget(state, selectedDay); $('#ttBudgetInfoBody').innerHTML = `<p>오늘 이전에 기록한 지출과 사전구매를 전체 예산에서 뺀 뒤, 남은 ${data.remainingDays}일로 나눠 계산해요.</p><dl class="tt-detail-list"><dt>오늘 배정액</dt><dd>${money(data.allowance)}</dd><dt>오늘 기록한 지출</dt><dd>${money(data.used)}</dd><dt>오늘 남은 금액</dt><dd>${money(data.remaining)}</dd></dl><p class="tt-muted">지출을 기록할수록 가용 금액이 바뀝니다. 다른 멤버의 별도 지출은 포함하지 않아요.</p>`; openDialog('ttBudgetInfo'); break; }
         case 'adjustment': showAdjustment(); break;
         case 'delay': $('#ttDelay').value = target.dataset.delay; updateAdjustment(); break;
