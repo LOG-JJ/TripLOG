@@ -1,11 +1,31 @@
 (() => {
   'use strict';
-  function render(cost, variant = 'report') {
-    const money = value => escapeHtml(formatWon(Math.round(Number(value) || 0)));
-    if (variant === 'ledger') {
-      return `<div class="ex-budget-values"><div><span>여행 경비</span><strong>${money(cost.total)}</strong></div><div class="ex-per-person"><span>1인 평균</span><strong>${money(cost.perPerson)}</strong></div><div class="ex-budget-meta"><i class="ph ph-receipt" aria-hidden="true"></i><span>기록한 지출 <b>${cost.count}건</b></span><small>사전구매·환불 포함 · 누적 금액</small></div></div>`;
-    }
-    return `<p class="rd-metric-label">여행 경비</p><strong class="rd-total">${money(cost.total)}</strong><p class="rd-budget-caption">기록한 지출 ${cost.count}건 · 1인 평균 ${money(cost.perPerson)}</p>`;
+  function render(cost) {
+    const money = value => {
+      const label = escapeHtml(formatWon(Math.round(Number(value) || 0)));
+      const isLong = label.length > 11;
+      return `<strong class="cost-summary-amount${isLong ? ' is-long' : ''}">${isLong ? label.replaceAll(',', ',<wbr>') : label}</strong>`;
+    };
+    const count = Math.max(0, Math.floor(Number(cost.count) || 0)).toLocaleString('ko-KR');
+    return `<div class="cost-summary">
+      <div class="cost-summary-primary">
+        <span class="cost-summary-wallet" aria-hidden="true"><img src="./icons/cost-summary-wallet.png" width="120" height="120" alt="" /></span>
+        <div class="cost-summary-main">
+          <p class="cost-summary-title">여행 경비</p>
+          ${money(cost.total)}
+        </div>
+      </div>
+      <dl class="cost-summary-facts">
+        <div class="cost-summary-fact">
+          <dt><span class="cost-summary-icon" aria-hidden="true"><i class="ph ph-user"></i></span><span>1인 평균</span></dt>
+          <dd>${money(cost.perPerson)}</dd>
+        </div>
+        <div class="cost-summary-fact">
+          <dt><span class="cost-summary-icon" aria-hidden="true"><i class="ph ph-receipt"></i></span><span>기록한 지출</span></dt>
+          <dd><strong class="cost-summary-amount">${count}건</strong></dd>
+        </div>
+      </dl>
+    </div>`;
   }
   window.TripLog.register('ui.costSummary', { render });
 })();

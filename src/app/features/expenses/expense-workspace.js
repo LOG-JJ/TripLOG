@@ -25,7 +25,7 @@
     view.innerHTML = `
       <div class="ex-heading"><div><h1>지출 기록</h1><div class="ex-trip-line">${icon('airplane-tilt')}<div><p data-rd-trip></p><small id="exTripPeriod"></small></div></div></div>
         <div class="ex-heading-actions"><button type="button" class="ex-button ex-secondary" data-rd-action="receipt-start">${icon('receipt')} 영수증</button><button type="button" class="ex-button ex-primary ex-desktop-add" data-rd-action="expense-new">${icon('plus')} 지출 추가</button></div></div>
-      <section id="rdBudgetSummary" class="ex-budget-summary ex-cost-summary" aria-label="여행 경비 요약"></section>
+      <section id="rdBudgetSummary" class="cost-summary-host" aria-label="여행 경비 요약"></section>
       <div class="ex-toolbar"><div class="ex-search">${icon('magnifying-glass')}<span id="rdSearchMount"></span><button type="button" id="exSearchClear" aria-label="검색어 지우기" hidden>${icon('x')}</button></div>
         <button type="button" id="exFilterToggle" aria-expanded="false" aria-controls="exFilterControls">${icon('sliders-horizontal')}<span>필터</span></button>
         <div id="exFilterControls" class="ex-filter-controls"><label class="ex-filter"><span class="ex-sr-only">카테고리 필터</span><select id="exCategoryFilter" aria-label="카테고리 필터"><option value="전체">전체 카테고리</option>${categories.map(c => `<option value="${c}">${c}</option>`).join('')}</select></label>
@@ -62,7 +62,7 @@
     if (lastTrip !== state.id) { lastTrip = state.id; activeFilter = '전체'; }
     const cost = window.TripLog.shared.travelCosts.summarize(state, { members: window.TripLog.features.collaboration.tripCollaboration.getTripMembers().length });
     $('#exTripPeriod').textContent = state.startDate && state.endDate ? `${state.startDate.replaceAll('-', '. ')} – ${state.endDate.slice(5).replace('-', '. ')} · ${getTripDays().length}일` : '여행 기간 미정';
-    $('#rdBudgetSummary').innerHTML = window.TripLog.ui.costSummary.render(cost, 'ledger');
+    $('#rdBudgetSummary').innerHTML = window.TripLog.ui.costSummary.render(cost);
     const filtered = getFilteredEntries();
     const rows = filtered.filter(entry => tab === 'all' || (tab === 'pretrip') === isPreTripExpenseDate(entry.date));
     const counts = { all: filtered.length, pretrip: filtered.filter(e => isPreTripExpenseDate(e.date)).length, during: filtered.filter(e => !isPreTripExpenseDate(e.date)).length };
