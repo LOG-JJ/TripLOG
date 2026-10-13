@@ -5,6 +5,7 @@
   const dateShort = formatTripShortDate;
   const members = () => window.TripLog.features.collaboration.tripCollaboration.getTripMembers();
   const M = () => window.TripLog.shared.travelCosts;
+  const trendColors = [['#fff05a', '#806900'], ['#bce6fb', '#28698c'], ['#f7afc7', '#a43b65'], ['#e4e5e9', '#555b69']];
   let reportTab = 'expenses', reportDay = 'all';
   function drawDonut(rows) {
     const canvas=$('#rdDonut');if(!canvas)return;
@@ -14,12 +15,34 @@
     // Text painted into a 400px canvas became unreadable as the chart shrank.
     rows.forEach(row=>{const end=start+row.ratio*Math.PI*2;ctx.beginPath();ctx.arc(200,200,198,start,end);ctx.arc(200,200,105,end,start,true);ctx.closePath();ctx.fillStyle=row.color;ctx.fill();ctx.strokeStyle='#0b1020';ctx.lineWidth=3;ctx.stroke();start=end;});
   }
+  function renderPaymentTrend(cost) {
+    const trend = M().paymentTrend(state.entries);
+    const max = Math.max(1, ...trend.map(row => Math.abs(row.amount)));
+    const signed = trend.some(row => row.amount < 0);
+    const bars = trend.map((row, index) => {
+      const percent = M().percentOfTotal(row.amount, cost.total);
+      const share = M().formatShare(percent);
+      const [color, ink] = trendColors[index % trendColors.length];
+      const size = Math.abs(row.amount) / max * (signed ? 36 : 100);
+      return `<div class="rd-bar-item${row.amount < 0 ? ' is-refund' : row.amount === 0 ? ' is-zero' : ''}" role="listitem" style="--bar-size:${size}%;--bar-color:${color};--bar-ink:${ink}">
+        <div class="rd-bar-label"><strong class="rd-bar-percent"${percent === null ? ' aria-label="비중 계산 불가"' : ''}>${text(share)}</strong><span class="rd-bar-amount">${money(row.amount)}</span></div>
+        <div class="rd-bar" style="height:${size}%" aria-hidden="true"></div>
+        <span class="rd-bar-date">${row.date === '날짜 미지정' ? row.date : dateShort(row.date)}</span>
+      </div>`;
+    }).join('');
+    return `<section class="rd-trend"><h2>결제일별 지출</h2>
+      <p class="rd-trend-basis">전체 지출 대비 비중${cost.refunds < 0 ? ' · 환불 반영' : ''}</p>
+      ${bars ? `<div class="rd-chart-scroll"><div class="rd-bars${signed ? ' rd-bars-signed' : ''}" role="list" aria-label="결제일별 지출 금액과 전체 지출 대비 비중" style="--bars:${trend.length}">${bars}</div></div>` : '<p class="rd-empty">지출을 기록하면 날짜별 비중을 볼 수 있어요.</p>'}
+      ${bars && cost.total <= 0 ? '<p class="rd-trend-note">총 지출이 0원 이하이면 비중을 계산하지 않아요.</p>' : ''}
+      <p>${cost.count}건의 지출 기록 · 결제일 기준${signed ? ' · 0선 아래는 환불' : ''}</p>
+    </section>`;
+  }
   function renderReports() {
-    const cost=window.TripLog.shared.travelCosts.summarize(state,{members:members().length}),rows=M().categoryShares(state.entries),trend=M().paymentTrend(state.entries),max=Math.max(1,...trend.map(t=>Math.abs(t.amount))),signed=trend.some(t=>t.amount<0);
+    const cost=M().summarize(state,{members:members().length}),rows=M().categoryShares(state.entries);
     $('#rdReportSummary').innerHTML=window.TripLog.ui.costSummary.render(cost);
     $('#rdReportExpenses').hidden=reportTab!=='expenses';$('#rdReportItinerary').hidden=reportTab==='expenses';if(reportTab==='itinerary')renderPlanAnalytics();
     $('#rdReportExpenseTab').classList.toggle('active',reportTab==='expenses');$('#rdReportItineraryTab').classList.toggle('active',reportTab!=='expenses');
-    $('#rdReportExpenses').innerHTML=`<section class="rd-category-section"><h2>어디에 가장 많이 썼나요?</h2><div class="rd-donut-layout"><div class="rd-donut-wrap"><canvas id="rdDonut" role="img" aria-label="${text(rows.map(r=>`${r.name} ${r.percent}%`).join(', ')||'아직 지출 없음')}"></canvas><div><b>${money(cost.total)}</b><span>총 지출</span></div></div><ul class="rd-legend">${rows.map(r=>`<li><button type="button" data-rd-action="report-category" data-category="${text(r.name)}"><span style="background:${r.color}"></span><b>${text(r.name)}</b><strong>${money(r.amount)}</strong><small>${r.percent}%</small></button></li>`).join('')}</ul></div>${cost.refunds<0?`<p class="rd-muted">환불 ${money(Math.abs(cost.refunds))} 반영 · 지출 구성은 환불 전 금액 기준</p>`:''}${rows.length?'':'<p class="rd-empty">지출을 입력하면 분석을 시작해요.</p>'}</section><section class="rd-trend"><h2>결제일별 지출</h2><div class="rd-chart-scroll"><div class="rd-bars${signed ? ' rd-bars-signed' : ''}" style="--bars:${Math.max(4,trend.length)}">${trend.map((t,i)=>`<div class="rd-bar-item${t.amount<0 ? ' is-refund' : ''}" style="--bar-size:${Math.abs(t.amount)/max*36}%"><strong>${money(t.amount)}</strong><div class="rd-bar" style="height:${Math.max(signed ? 0 : 3,Math.abs(t.amount)/max*(signed ? 36 : 80))}%;background:${['#fff05a','#bce6fb','#f7afc7','#e4e5e9'][i%4]}"></div><span>${t.date==='날짜 미지정'?t.date:dateShort(t.date)}</span></div>`).join('')}</div></div><p>${state.entries.length}건의 지출 기록 · 결제일 기준</p></section>`;drawDonut(rows);
+    $('#rdReportExpenses').innerHTML=`<section class="rd-category-section"><h2>어디에 가장 많이 썼나요?</h2><div class="rd-donut-layout"><div class="rd-donut-wrap"><canvas id="rdDonut" role="img" aria-label="${text(rows.map(r=>`${r.name} ${r.percent}%`).join(', ')||'아직 지출 없음')}"></canvas><div><b>${money(cost.total)}</b><span>총 지출</span></div></div><ul class="rd-legend">${rows.map(r=>`<li><button type="button" data-rd-action="report-category" data-category="${text(r.name)}"><span style="background:${r.color}"></span><b>${text(r.name)}</b><strong>${money(r.amount)}</strong><small>${r.percent}%</small></button></li>`).join('')}</ul></div>${cost.refunds<0?`<p class="rd-muted">환불 ${money(Math.abs(cost.refunds))} 반영 · 지출 구성은 환불 전 금액 기준</p>`:''}${rows.length?'':'<p class="rd-empty">지출을 입력하면 분석을 시작해요.</p>'}</section>${renderPaymentTrend(cost)}`;drawDonut(rows);
   }
   function renderPlanAnalytics() {
     const days=getTripDays(),all=state.itineraryItems||[];

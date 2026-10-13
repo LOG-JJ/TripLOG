@@ -35,8 +35,7 @@
     if (entry.date && entry.date !== '__pretrip__') return entry.date;
     return entry.createdAt ? localDate(new Date(entry.createdAt)) : '';
   }
-  // Composition is explicitly gross spending; refunds remain signed in totals
-  // and daily charts. All chart consumers use this same percentage denominator.
+  // Category composition uses gross spending; daily shares use signed totals.
   function categoryShares(entries, view = 'report') {
     const sums = new Map();
     (entries || []).filter(Boolean).forEach(entry => {
@@ -66,5 +65,13 @@
     return groupByDate(entries, entry => paymentDate(entry) || '날짜 미지정')
       .sort((a, b) => a.date.localeCompare(b.date));
   }
-  return Object.freeze({ summarize, amount, localDate, paymentDate, categoryShares, groupByDate, paymentTrend });
+  function percentOfTotal(value, total) {
+    return Number.isFinite(value) && Number.isFinite(total) && total > 0 ? value / total * 100 : null;
+  }
+  function formatShare(percent) {
+    if (percent === null || !Number.isFinite(percent)) return '—';
+    if (percent && Math.abs(percent) < .05) return `${percent < 0 ? '-' : ''}<0.1%`;
+    return `${Number(percent.toFixed(1)).toFixed(1)}%`;
+  }
+  return Object.freeze({ summarize, amount, localDate, paymentDate, categoryShares, groupByDate, paymentTrend, percentOfTotal, formatShare });
 });

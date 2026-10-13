@@ -199,6 +199,10 @@ async function main() {
     await b.evaluate(()=>startItineraryEdit(state.itineraryItems.find(item=>item.id==='legacy-offline')));
     await b.locator('#itineraryDeleteButton').click();await b.locator('#rdConfirm').getByRole('button',{name:'확인',exact:true}).click();
     await b.waitForFunction(()=>!state.itineraryItems.some(item=>item.id==='legacy-offline'));
+    // The optimistic array updates before the IndexedDB write. Reload only
+    // after the editor closes, which is the user-visible save completion.
+    await b.locator('#itineraryEditor').waitFor({state:'hidden'});
+    assert.equal(await b.evaluate(()=>window.TripLog.persistence.stateStorage.whenSaved()),true);
     await b.reload();await b.waitForFunction(()=>document.documentElement.dataset.triplogInitialized==='true'&&state.id==='browser-kyoto');
     assert.equal(await b.evaluate(()=>state.itineraryItems.some(item=>item.id==='legacy-offline')),false);
     offline=false;await b.evaluate(()=>window.dispatchEvent(new Event('online')));

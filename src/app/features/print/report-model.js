@@ -129,7 +129,7 @@
   function dailyShares(report, maximum = 7) {
     const total = number(report.total), hasPercent = total > 0;
     const rows = trendBuckets(report.trend, maximum).map(row => ({
-      ...row, percent: hasPercent ? row.amount / total * 100 : null,
+      ...row, percent: costs.percentOfTotal(row.amount, total),
     }));
     // The normal track represents 0–100% of this report's net total. Refund
     // days extend the common scale to the left; shares above 100% stay honest.

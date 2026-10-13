@@ -134,8 +134,7 @@ function buildItineraryPrintSections() { return window.TripLog.features.print.re
       const day = report.calendar.indexOf(row.date) + 1;
       const tag = row.count > 1 ? `${row.count}일 합산` : day ? `DAY ${day}` : '';
       const color = row.amount < 0 ? '#b74770' : colors[(day ? day - 1 : index) % colors.length];
-      const rounded = row.percent === null ? null : Number(row.percent.toFixed(1));
-      const share = rounded === null ? '—' : row.percent && Math.abs(row.percent) < .05 ? `${row.percent < 0 ? '-' : ''}<0.1%` : `${rounded.toFixed(1)}%`;
+      const share = window.TripLog.shared.travelCosts.formatShare(row.percent);
       return `<li class="ex-daily-item${row.amount < 0 ? ' is-negative' : ''}" data-daily-date="${text(row.date)}" style="--ex-daily-color:${color}"><div class="ex-daily-label"><span class="ex-daily-date">${text(row.label)}</span>${tag ? `<small class="ex-daily-day">${tag}</small>` : ''}</div><b class="ex-daily-amount">${won(row.amount)}</b><div class="ex-daily-track" aria-hidden="true"><span style="left:${row.barStart}%;width:${row.barWidth}%"></span></div><strong class="ex-daily-share"${share === '—' ? ' aria-label="비중 계산 불가"' : ''}>${text(share)}</strong></li>`;
     }).join('') : '';
     const basis = report.expensePeriod === 'all' ? '전체 지출 대비 비중' : '선택한 기간의 지출 대비 비중';

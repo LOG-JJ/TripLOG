@@ -204,8 +204,7 @@ body.rd-app {
   body.rd-app .rd-legend button strong { grid-column: 2; grid-row: 2; text-align: left; font-size: var(--tl-text-meta); font-weight: 500; }
   body.rd-app .rd-legend button small { grid-column: 3; grid-row: 1 / span 2; font-size: var(--tl-text-meta); align-self: center; }
   body.rd-app :is(.rd-category-section, .rd-trend) h2 { margin-bottom: 12px; }
-  body.rd-app :is(.rd-bar-item > strong, .rd-bar-item > span, .rd-trend > p) { font-size: var(--tl-text-meta); font-weight: 500; }
-  body.rd-app .rd-bars { min-width: calc(var(--bars) * 82px); height: 126px; gap: 14px; }
+  body.rd-app :is(.rd-bar-date, .rd-trend > p) { font-size: var(--tl-text-meta); font-weight: 500; }
   body.rd-app .rd-analysis-metrics { gap: 8px; }
   body.rd-app .rd-analysis-metrics > div { min-width: 0; }
   body.rd-app .rd-analysis-place > strong { font-size: var(--tl-text-label); }

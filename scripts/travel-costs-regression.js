@@ -34,3 +34,13 @@ assert.equal(costs.summarize({ entries: refunded }).total, 0);
 assert.equal(costs.categoryShares(refunded)[0].ratio, 1, 'Full refunds never divide chart angles by zero');
 assert.deepEqual(costs.categoryShares([{ category: '교통', amount: 100 }, { category: '식비', amount: 100 }]).map(row => row.name), ['교통', '식비'], 'Equal screen shares keep their original order');
 console.log('PASS shared report accounting: signed payment totals, gross composition denominator, full refunds and stable equal-value order.');
+
+const paymentAmounts = [195600, 47200, 44000], paymentTotal = 286800;
+assert.deepEqual(paymentAmounts.map(value => costs.formatShare(costs.percentOfTotal(value, paymentTotal))), ['68.2%', '16.5%', '15.3%']);
+assert.equal(costs.formatShare(costs.percentOfTotal(80000, 80000)), '100.0%');
+assert.deepEqual([100000, -20000].map(value => costs.formatShare(costs.percentOfTotal(value, 80000))), ['125.0%', '-25.0%'], 'Daily percentages retain the net total and signed refunds');
+for (const total of [0, -20000]) assert.equal(costs.formatShare(costs.percentOfTotal(100000, total)), '—');
+assert.equal(costs.formatShare(costs.percentOfTotal(0, 100000)), '0.0%');
+assert.equal(costs.formatShare(costs.percentOfTotal(1, 100000)), '<0.1%');
+assert.equal(costs.formatShare(costs.percentOfTotal(-1, 100000)), '-<0.1%');
+console.log('PASS payment shares: supplied example, single-day totals, signed refunds, unavailable non-positive totals and tiny percentages.');
