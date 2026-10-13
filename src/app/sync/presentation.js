@@ -11,12 +11,15 @@
   function count(record) { return (record?.conflicts || []).reduce((n, c) => n + Math.max(1, c.patches?.length || 0), 0); }
   function badge(status, record) {
     const total = count(record);
-    if (status.tone === "error") return { label: "저장 확인", icon: "warning-circle" };
-    if (total && status.tone === "warning") return { label: `확인 ${total}건`, icon: "warning-circle" };
-    if (status.tone === "offline") return { label: "오프라인", icon: "wifi-slash" };
-    if (status.tone === "saving") return { label: "저장 중", icon: "arrow-clockwise" };
-    if (status.tone === "saved") return { label: status.label, icon: "check-circle" };
-    return { label: status.label, icon: status.tone === "warning" ? "warning-circle" : "device-mobile" };
+    const still = (label, icon) => ({ label, icon, motion: "idle" });
+    if (status.tone === "error") return still("저장 확인", "exclamation-mark");
+    if (total && status.tone === "warning") return still(`확인 ${total}건`, "exclamation-mark");
+    if (status.tone === "offline" || status.label?.startsWith("오프라인")) return still("오프라인", "pause");
+    if (status.tone === "saving" || status.tone === "warning" && status.label === "연결 재시도 중") {
+      return { label: status.tone === "saving" ? "저장 중" : status.label, icon: "arrows-clockwise", motion: "spin" };
+    }
+    if (status.tone === "saved") return still(status.label, "check");
+    return still(status.label, status.tone === "warning" ? "exclamation-mark" : "device-mobile");
   }
   function date(value) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(value || "")) return value === "__pretrip__" ? "여행 전" : value || "날짜 미정";

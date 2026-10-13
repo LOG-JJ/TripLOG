@@ -39,13 +39,22 @@
     const status = controller.status();
     const compact = P.badge(status, R.cached(state.id));
     control.dataset.syncTone = status.tone;
+    control.dataset.syncMotion = compact.motion;
     control.classList.remove("is-dirty", "is-syncing", "is-synced", "is-warning");
     control.disabled = false;
-    control.title = `${status.label} · 저장 상태 자세히 보기`;
+    control.title = `${status.label}${compact.label !== status.label ? ` · ${compact.label}` : ""} · 저장 상태 자세히 보기`;
     control.setAttribute("aria-label", control.title);
+    control.setAttribute("aria-haspopup", "dialog");
     control.setAttribute("aria-busy", "false");
     let label = control.querySelector("[data-sync-label]");
-    if (!label || !control.querySelector(".sync-badge-icon")) { control.replaceChildren(); const symbol = icon(compact.icon); symbol.classList.add("sync-badge-icon"); label = element("span"); label.dataset.syncLabel = ""; control.append(symbol, label); }
+    if (!label || !control.querySelector(".sync-cloud")) {
+      const cloud = element("span", null, "sync-cloud"); cloud.setAttribute("aria-hidden", "true");
+      const outline = element("span", null, "sync-cloud-outline");
+      const symbol = icon(compact.icon); symbol.classList.add("sync-badge-icon");
+      cloud.append(outline, symbol, element("span", null, "sync-badge-dot"));
+      label = element("span", null, "sync-badge-label"); label.dataset.syncLabel = "";
+      control.replaceChildren(cloud, label);
+    }
     control.querySelector(".sync-badge-icon").className = `ph ph-${compact.icon} sync-badge-icon`;
     label.textContent = compact.label;
     if (dialog?.open) updateHeader();

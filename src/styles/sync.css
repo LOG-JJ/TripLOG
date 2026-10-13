@@ -1,17 +1,26 @@
 /* Approved TripLOG collaboration mockup: scoped above global button styles. */
 @font-face{font-family:'TripLOG Collaboration';font-style:normal;font-weight:45 920;font-display:swap;src:url('../../vendor/pretendard-1.3.9/PretendardVariable.woff2') format('woff2')}
 body.rd-app .rd-sync[data-sync-tone] {
-  display:inline-flex;align-items:center;justify-content:center;gap:6px;width:auto;max-width:210px;
-  min-height:32px;padding:5px 11px;border:1px solid #dce4ee;border-radius:999px;box-shadow:none;
-  background:#f5f7fa;color:#526078;font-family:'TripLOG Collaboration','Pretendard',sans-serif;font-size:12px;font-weight:650;line-height:1.4;white-space:nowrap;flex-shrink:0;
+  --sync-dot:#a1aabd;--sync-rotation:1.8s;position:relative;display:inline-flex;align-items:center;justify-content:center;
+  width:48px;min-width:48px;max-width:none;height:44px;min-height:44px;padding:0;border:0;border-radius:12px;box-shadow:none;
+  background:transparent;color:#0b1020;line-height:1;flex:0 0 48px;transition:background-color .16s ease,transform .16s ease;
 }
 body.rd-app .rd-sync[data-sync-tone]::before{content:none}
-body.rd-app .rd-sync[data-sync-tone] .sync-badge-icon{font-size:16px;line-height:1}
-body.rd-app .rd-sync[data-sync-tone=saved]{color:#12845e;border-color:#cde9dd;background:#effaf5}
-body.rd-app .rd-sync[data-sync-tone=saving]{color:#0066e9;border-color:#cbe1fc;background:#f0f7ff}
-body.rd-app .rd-sync[data-sync-tone=warning]{color:#a66005;border-color:#f2d18a;background:#fff7e7}
-body.rd-app .rd-sync[data-sync-tone=error]{color:#b52d3c;border-color:#f1c9d0;background:#fff1f3}
-body.rd-app .rd-sync[data-sync-tone=saving] .sync-badge-icon{animation:sync-turn 1.5s linear infinite}
+body.rd-app .rd-sync[data-sync-tone]:hover{background:#f3f6f9;box-shadow:none;transform:translateY(-1px)}
+body.rd-app .rd-sync[data-sync-tone]:active{transform:scale(.94);box-shadow:none}
+body.rd-app .rd-sync[data-sync-tone]:focus-visible{outline:2px solid #28698c;outline-offset:3px;box-shadow:none}
+body.rd-app .rd-sync[data-sync-tone] .sync-cloud{position:relative;display:block;width:44px;height:44px;pointer-events:none}
+body.rd-app .rd-sync[data-sync-tone] .sync-cloud-outline{position:absolute;inset:0;display:block;background:currentColor;-webkit-mask:url('../../vendor/heroicons-cloud/cloud.svg') center/contain no-repeat;mask:url('../../vendor/heroicons-cloud/cloud.svg') center/contain no-repeat}
+body.rd-app .rd-sync[data-sync-tone] .sync-badge-icon{position:absolute;left:12px;top:14px;display:block;width:20px;height:20px;font-size:20px;line-height:1;-webkit-text-stroke:.35px currentColor;transform-origin:center}
+body.rd-app .rd-sync[data-sync-tone] .sync-badge-dot{position:absolute;right:0;top:3px;width:8px;height:8px;border:2px solid #fff;border-radius:50%;background:var(--sync-dot);box-sizing:content-box;transition:background-color .2s ease}
+body.rd-app .rd-sync[data-sync-tone] .sync-badge-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0}
+body.rd-app .rd-sync[data-sync-tone=saved]{--sync-dot:#65bf9a}
+body.rd-app .rd-sync[data-sync-tone=saving]{--sync-dot:#79c7ed}
+body.rd-app .rd-sync[data-sync-tone=warning]{--sync-dot:#f7b245;--sync-rotation:2.8s}
+body.rd-app .rd-sync[data-sync-tone=error]{--sync-dot:#df7894}
+body.rd-app .rd-sync[data-sync-tone=offline]{--sync-dot:#98a3b5}
+body.rd-app .rd-sync[data-sync-motion=spin] .sync-badge-icon{animation:sync-turn var(--sync-rotation) linear infinite}
+body.rd-app .rd-sync[data-sync-motion=spin] .sync-badge-dot{animation:sync-status-pulse 2.4s ease-in-out infinite}
 body.rd-app .sync-panel{
   --sync-ink:#101b39;--sync-muted:#566780;--sync-line:#dbe3ed;
   width:min(1024px,calc(100vw - 56px));max-width:none;height:min(800px,calc(100dvh - 64px));
@@ -116,6 +125,7 @@ body.rd-app .sync-panel button:disabled{opacity:.5;cursor:not-allowed}
 .sync-comment-form label,.sync-content>label{font-weight:700}
 .sync-note-presence{font-size:12px;color:#0066e9}
 @keyframes sync-turn{to{transform:rotate(360deg)}}
+@keyframes sync-status-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.62;transform:scale(.86)}}
 /* Keep the app-wide yellow hover / expanded styles out of this surface. */
 #triplogSyncStatus details[open]>summary{background:transparent;color:inherit}
 #triplogSyncStatus summary:hover{background:#f7faff}
@@ -125,7 +135,7 @@ body.rd-app .sync-panel button:disabled{opacity:.5;cursor:not-allowed}
 #triplogSyncStatus :is(button,summary):active:not(:disabled){transform:none;box-shadow:none}
 #triplogSyncStatus :is(button,select,input,textarea,summary):focus-visible{outline:3px solid #1672ee;outline-offset:3px;box-shadow:none}
 #triplogSyncStatus :is(button,input,select,textarea){font-family:'TripLOG Collaboration','Pretendard',sans-serif}
-@media(prefers-reduced-motion:reduce){body.rd-app .rd-sync[data-sync-tone=saving] .sync-badge-icon{animation:none}.sync-review-summary>.ph{transition:none}}
+@media(prefers-reduced-motion:reduce){body.rd-app .rd-sync[data-sync-tone],body.rd-app .rd-sync[data-sync-tone] .sync-badge-dot{transition:none}body.rd-app .rd-sync[data-sync-motion] :is(.sync-badge-icon,.sync-badge-dot){animation:none}body.rd-app .rd-sync[data-sync-tone]:is(:hover,:active){transform:none}.sync-review-summary>.ph{transition:none}}
 @media(max-width:760px){
   body.rd-app .sync-panel{width:100%;height:calc(100dvh - 82px);max-height:calc(100dvh - 82px);margin:auto 0 0;border:0;border-radius:22px 22px 0 0}
   .sync-panel-header{margin:0;padding:34px 18px 15px;border:0}
@@ -175,7 +185,6 @@ body.rd-app .sync-panel button:disabled{opacity:.5;cursor:not-allowed}
   .sync-panel :is(input,select,textarea){font-size:16px}
 }
 @media(max-width:380px){
-  body.rd-app .rd-sync[data-sync-tone]{max-width:155px;min-height:30px;padding:4px 8px;font-size:11px}
   .sync-review-meta{width:calc(100% - 40px);margin:0 0 0 33px;order:1}
   .sync-comparison{gap:5px;grid-template-columns:minmax(0,1fr) 14px minmax(0,1fr)}
   .sync-comparison-side{padding:10px 8px}

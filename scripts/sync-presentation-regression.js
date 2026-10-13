@@ -14,6 +14,12 @@ assert.equal(preview.shared.rows.find(r=>r.label==='종료 시간').value,'11:00
 assert.equal(P.date('2026-09-26'),'9월 26일 (토)');
 assert.equal(P.badge({tone:'warning'},record).label,'확인 1건');
 assert.equal(P.badge({tone:'error'},record).label,'저장 확인','A storage failure takes precedence over a conflict badge');
+assert.equal(P.badge({tone:'saving',label:'저장 중'},null).motion,'spin');
+assert.equal(P.badge({tone:'warning',label:'연결 재시도 중',retryable:false},null).motion,'spin','Automatic reconnection remains active even when a manual retry is unavailable');
+for(const status of [{tone:'saved',label:'모두 저장됨'},{tone:'local',label:'기기에 보관됨'},{tone:'offline',label:'오프라인'},{tone:'warning',label:'오프라인 · 변경 1건 보관 중'},{tone:'warning',label:'다시 로그인 필요'},{tone:'warning',label:'여행 접근 권한 확인 필요',retryable:true},{tone:'error',label:'기기에 저장하지 못함'}]) {
+  assert.equal(P.badge(status,null).motion,'idle',`${status.label} must not suggest an active transfer`);
+}
+assert.equal(P.badge({tone:'warning',label:'변경 내용 확인 필요'},record).motion,'idle','Conflicts need user review, not a spinning progress indicator');
 assert.equal(P.comparison(record,conflict,{...patch,fields:{'g:schedule':null}}).local.headline,'시간 미정');
 const deleted=M.clone(remote);deleted[M.key('itinerary','item')].deleted=true;
 assert.equal(P.comparison({...record,base:deleted},conflict,patch).shared.headline,'삭제된 항목');
