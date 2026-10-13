@@ -96,7 +96,7 @@
   const period = formatTripPeriod;
   const duration = formatTripDuration;
   function members() { const list = window.TripLog.features.collaboration.tripCollaboration.getTripMembers(); return list.length ? list : [{name:'나'}, ...(state.companions || [])]; }
-  const heading = (title, subtitle = '', { tripContext = false } = {}) => `<div class="rd-heading${tripContext ? ' trip-context-heading' : ''}"><h1>${title}</h1>${tripContext ? '<div data-trip-context></div>' : `<p ${subtitle ? '' : 'data-rd-trip'}>${subtitle || ''}</p>`}</div>`;
+  const heading = (title, subtitle = '', { tripContext = false } = {}) => `<div class="rd-heading${tripContext ? ' trip-context-heading tl-page-heading' : ''}"><h1>${title}</h1>${tripContext ? '<div data-trip-context></div>' : `<p ${subtitle ? '' : 'data-rd-trip'}>${subtitle || ''}</p>`}</div>`;
   function addView(page, markup) {
     const view = document.createElement('div');
     view.className = `rd-content rd-${page}`;
@@ -314,7 +314,7 @@
     const headerActions = document.createElement('div'); headerActions.className = 'rd-header-actions';
     $('.rd-header').appendChild(headerActions); headerActions.append(sync, $('#rdMenuButton'));
     $('#appShell').insertAdjacentHTML('beforeend',`<nav class="rd-nav" aria-label="주 메뉴">${[['overview','house','개요'],['itinerary','calendar-blank','일정'],['budget','wallet','지출'],['report','chart-bar','리포트'],['more','dots-three','더보기']].map(([page,name,label])=>`<button type="button" data-rd-nav="${page}">${icon(name)}<span>${label}</span></button>`).join('')}</nav>`);
-    addView('overview',`<div class="rd-heading"><div class="rd-overview-heading"><h1>여행 개요</h1>${button(`${icon('plus')} 새 여행`,'new-trip','rd-overview-new','aria-label="새 여행 만들기"')}</div></div><div id="rdOverview"></div>`);
+    addView('overview',`<div class="rd-heading tl-page-heading"><div class="rd-overview-heading"><h1>여행 개요</h1>${button(`${icon('plus')} 새 여행`,'new-trip','rd-overview-new','aria-label="새 여행 만들기"')}</div></div><div id="rdOverview"></div>`);
     addView('start',window.TripLog.features.home.tripLibrary.markup()+`<section class="rd-trip-edit" hidden><div class="rd-section-head"><h2>여행 수정</h2>${button('취소','trip-cancel','rd-text-button')}</div><p>내용을 바꾼 뒤 아래 여행 수정 버튼을 눌러 저장해 주세요.</p><div id="rdTripEditMount" class="rd-form-grid"></div></section><div class="rd-page-footer" id="rdTripEditFooter" hidden>${button('여행 수정','trip-save','rd-primary','id="rdTripSave" hidden')}</div>`);
     ['#tripNameInput','#startDateInput','#endDateInput'].forEach(s=>move($(s).closest('label'),'#rdTripEditMount'));els.tripNameInput.closest('label').hidden=false;
     addView('budget', '');

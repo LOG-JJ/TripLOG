@@ -1,0 +1,43 @@
+/* Desktop page headings share the overview's title row and content baseline.
+ * Loaded after feature styles so page-specific spacing cannot move the title.
+ * Mobile layouts retain their existing spacing and action placement.
+ */
+@media screen and (min-width: 850px) {
+  body.rd-app {
+    --tl-page-title-row: 44px;
+    --tl-page-heading-inset: 3px;
+    --tl-page-context-gap: 10px;
+    --tl-page-section-gap: 16px;
+    --tl-page-heading-font: var(--font);
+  }
+  body.rd-app #budgetPage .ex-ledger { padding-top: 0; }
+  body.rd-app :is(#overviewPage, #itineraryPage, #budgetPage, #reportPage) .tl-page-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: minmax(var(--tl-page-title-row), auto);
+    align-items: center;
+    gap: 0 12px;
+    margin: 0 0 var(--tl-page-section-gap);
+    padding: var(--tl-page-heading-inset) 0 0;
+    font-family: var(--tl-page-heading-font);
+  }
+  body.rd-app #overviewPage .tl-page-heading { --tl-page-section-gap: 12px; }
+  body.rd-app :is(#overviewPage, #itineraryPage, #budgetPage, #reportPage) .tl-page-heading h1 {
+    margin: 0;
+    font-family: var(--tl-page-heading-font);
+    font-size: var(--tl-text-title) !important;
+    font-weight: var(--tl-weight-title);
+    line-height: 1.25;
+    letter-spacing: -.8px;
+  }
+  body.rd-app :is(#overviewPage, #itineraryPage) .tl-page-heading > :is(.rd-overview-heading, .itinerary-title-row) {
+    grid-column: 1 / -1;
+    min-height: var(--tl-page-title-row);
+  }
+  body.rd-app #reportPage .tl-page-heading > h1 { grid-column: 1 / -1; }
+  body.rd-app .tl-page-heading > [data-trip-context] {
+    grid-column: 1 / -1;
+    margin-top: var(--tl-page-context-gap);
+  }
+  body.rd-app #itineraryPage .tl-page-heading + .itinerary-view-switch { margin-top: 0; }
+}

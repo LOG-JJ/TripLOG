@@ -23,7 +23,7 @@
     const sort = els.expenseSortSelect.closest('.custom-select') || els.expenseSortSelect;
     view.classList.add('ex-ledger');
     view.innerHTML = `
-      <div class="ex-heading trip-context-heading"><h1>지출 기록</h1>
+      <div class="ex-heading trip-context-heading tl-page-heading"><h1>지출 기록</h1>
         <div class="ex-heading-actions"><button type="button" class="ex-button ex-secondary" data-rd-action="receipt-start">${icon('receipt')} 영수증</button><button type="button" class="ex-button ex-primary ex-desktop-add" data-rd-action="expense-new">${icon('plus')} 지출 추가</button></div>
         <div data-trip-context></div></div>
       <section id="rdBudgetSummary" class="cost-summary-host" aria-label="여행 경비 요약"></section>
