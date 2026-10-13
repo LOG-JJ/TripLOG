@@ -12,7 +12,10 @@
     dialog.addEventListener('close', () => {
       onClose?.(dialog);
       const target = dialog.returnFocus?.isConnected ? dialog.returnFocus : fallbackFocus?.();
-      target?.focus({ preventScroll: true });
+      const focused = document.activeElement;
+      // Native close restores focus immediately, but its event is queued. Do
+      // not steal focus from a newer action or a dialog opened in the meantime.
+      if (!dialog.open && (!focused || focused === document.body || dialog.contains(focused))) target?.focus({ preventScroll: true });
     });
     if (dismissOutside) dialog.addEventListener('click', event => {
       if (event.target !== dialog) return;

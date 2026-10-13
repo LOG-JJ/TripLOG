@@ -65,6 +65,16 @@ async function main() {
     await page.getByRole('button', { name: '제주도 7박 8일 여행 열기', exact: true }).waitFor();
     await page.locator('.tl-library-profile').click(); await page.locator('#rdProfile').waitFor({ state: 'visible' });
     await page.locator('#rdProfile [data-rd-action="close"]').click();
+    await page.waitForFunction(() => document.activeElement.matches('.tl-library-profile'));
+    await page.locator('.tl-library-profile').click();
+    assert(await page.evaluate(async () => {
+      const dialog = document.querySelector('#rdProfile'), card = document.querySelector('[data-library-trip="library-jeju"]');
+      const closed = new Promise(resolve => dialog.addEventListener('close', resolve, { once: true }));
+      dialog.close();
+      card.focus();
+      await closed;
+      return document.activeElement === card;
+    }), 'A delayed dialog close event must preserve focus moved to the next action');
     await page.locator('[data-library-trip="library-jeju"]').press('Enter');
     await page.waitForFunction(() => activePage === 'overview' && state.id === 'library-jeju');
     assert.equal(new URL(page.url()).searchParams.get('trip'), 'library-jeju');
