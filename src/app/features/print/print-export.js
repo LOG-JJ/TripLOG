@@ -265,7 +265,6 @@ function buildItineraryPrintSections() { return window.TripLog.features.print.re
             ledger(body, overviewRows, 'itinerary', undefined, true);
           } else {
             body.appendChild(node(scheduleMarkup(layout, options)));
-            body.appendChild(node(`<p class="ex-timetable-note">${options.transit === false ? '장소와 메모' : '이동 정보와 장소 메모'}는 뒤쪽 상세 일정에서 확인할 수 있어요.</p>`));
           }
           index += group.length;
         }

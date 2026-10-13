@@ -14,7 +14,7 @@
       <div class="ex-workbench"><section class="ex-controls"><nav class="ex-type-tabs" aria-label="내보낼 내용"><button type="button" data-ex-type="itinerary">${icon('calendar-blank')}일정</button><button type="button" data-ex-type="expense">${icon('chart-bar')}지출</button><button type="button" data-ex-type="full">${icon('book-open')}전체</button></nav>
       <h1 id="exTitle" tabindex="-1"></h1><p id="exSubtitle" class="ex-studio-subtitle"></p><div id="exTripSummary"></div><div id="exOptions"></div><div id="exMobileItinerary" class="ex-mini-days"></div><div class="ex-included" id="exIncluded"></div><p id="exError" role="alert" hidden></p></section>
       <section class="ex-preview-area" aria-labelledby="exPreviewTitle"><div class="ex-preview-toolbar"><h2 id="exPreviewTitle">PDF 미리보기</h2><span class="ex-paper-size">A4 · 세로</span><button type="button" data-ex-action="zoom" aria-pressed="false">${icon('magnifying-glass-plus')}크게 보기</button></div><div id="exPreviewScroll" class="ex-preview-scroll"><div id="exPreviewViewport" class="ex-preview-viewport"><div id="exPreview" class="ex-preview-pages" aria-label="내보낼 PDF 페이지"></div></div></div><div class="ex-preview-pagination"><button type="button" data-ex-action="previous" aria-label="이전 페이지">${icon('caret-left')}</button><span id="exPageNumber" aria-live="polite"></span><button type="button" data-ex-action="next" aria-label="다음 페이지">${icon('caret-right')}</button></div></section></div>
-      <footer class="ex-studio-footer"><div><strong id="exStatus" role="status">리포트를 준비하고 있어요.</strong><small>인쇄 창에서 ‘PDF로 저장’을 선택해 주세요.</small></div><button type="button" data-ex-action="preview">${icon('eye')}미리보기</button><button type="button" id="exSave" data-ex-action="save">${icon('download-simple')}PDF 저장</button></footer>`
+      <footer class="ex-studio-footer"><strong id="exStatus" role="status">리포트를 준비하고 있어요.</strong><button type="button" data-ex-action="preview">${icon('eye')}미리보기</button><button type="button" id="exSave" data-ex-action="save">${icon('download-simple')}PDF 저장</button></footer>`
     });
     dialog.addEventListener('click', event => {
       const target = event.target.closest('button');
@@ -120,8 +120,8 @@
       $('#exPreview').innerHTML = result.markup;
       renderMobileItinerary(result.data);
       const count = type === 'itinerary' ? `일정 ${result.data.itemCount}개` : type === 'expense' ? `지출 ${result.data.entries.length}건 전체 포함` : `일정 ${result.data.itemCount}개 · 지출 ${result.data.entries.length}건 전체 포함`;
-      $('#exIncluded').innerHTML = `${icon('check-circle')}<span><strong>${count}</strong><small>${type === 'itinerary' ? '시간표 뒤에 상세 일정이 이어져요.' : '내역이 길면 다음 페이지로 이어져요.'}</small></span>`;
-      $('#exStatus').textContent = `${result.pages}페이지 · ${count}`;
+      $('#exIncluded').innerHTML = `${icon('check-circle')}<span><strong>${count}</strong>${type === 'itinerary' ? '' : '<small>내역이 길면 다음 페이지로 이어져요.</small>'}</span>`;
+      $('#exStatus').textContent = '';
       $('#exPreview').setAttribute('aria-busy', 'false');
       $('#exSave').disabled = false; showPage(pageIndex); return result;
     } catch (error) {
@@ -155,7 +155,7 @@
       window.print();
     } finally {
       printing = false;
-      if (dialog.open && result && $('#exPreview').getAttribute('aria-busy') !== 'true') { $('#exSave').disabled = false; $('#exStatus').textContent = `${result.pages}페이지 준비 완료`; }
+      if (dialog.open && result && $('#exPreview').getAttribute('aria-busy') !== 'true') { $('#exSave').disabled = false; $('#exStatus').textContent = ''; }
     }
   }
   function open(requestedType = 'expense') {
