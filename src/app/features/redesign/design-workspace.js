@@ -96,7 +96,7 @@
   const period = formatTripPeriod;
   const duration = formatTripDuration;
   function members() { const list = window.TripLog.features.collaboration.tripCollaboration.getTripMembers(); return list.length ? list : [{name:'나'}, ...(state.companions || [])]; }
-  const heading = (title, subtitle = '') => `<div class="rd-heading"><h1>${title}</h1><p ${subtitle ? '' : 'data-rd-trip'}>${subtitle || ''}</p></div>`;
+  const heading = (title, subtitle = '', { tripContext = false } = {}) => `<div class="rd-heading${tripContext ? ' trip-context-heading' : ''}"><h1>${title}</h1>${tripContext ? '<div data-trip-context></div>' : `<p ${subtitle ? '' : 'data-rd-trip'}>${subtitle || ''}</p>`}</div>`;
   function addView(page, markup) {
     const view = document.createElement('div');
     view.className = `rd-content rd-${page}`;
@@ -319,7 +319,7 @@
     ['#tripNameInput','#startDateInput','#endDateInput'].forEach(s=>move($(s).closest('label'),'#rdTripEditMount'));els.tripNameInput.closest('label').hidden=false;
     addView('budget', '');
     addView('settlement',heading('경비 정산')+'<div id="rdSettlement"></div>');
-    addView('report',heading('여행 리포트')+`<section id="rdReportSummary" class="cost-summary-host" aria-label="여행 경비 요약"></section><div class="rd-tabs">${button('지출 분석','report-expenses','active','id="rdReportExpenseTab"')}${button('일정 분석','report-itinerary','','id="rdReportItineraryTab"')}</div><div id="rdReportExpenses"></div><div id="rdReportItinerary" hidden></div><div class="rd-page-footer">${button(`${icon('file-pdf')} 리포트 PDF 저장`,'pdf-full','rd-secondary')}</div>`);
+    addView('report',heading('여행 리포트', '', { tripContext: true })+`<section id="rdReportSummary" class="cost-summary-host" aria-label="여행 경비 요약"></section><div class="rd-tabs">${button('지출 분석','report-expenses','active','id="rdReportExpenseTab"')}${button('일정 분석','report-itinerary','','id="rdReportItineraryTab"')}</div><div id="rdReportExpenses"></div><div id="rdReportItinerary" hidden></div><div class="rd-page-footer">${button(`${icon('file-pdf')} 리포트 PDF 저장`,'pdf-full','rd-secondary')}</div>`);
     $('#rdReportItinerary').innerHTML = '<div id="rdPlanAnalytics"></div>';
     addView('settings',heading('설정','여행을 내 방식대로')+`<div id="rdProfileSummary"></div><section class="rd-setting-group"><h2>여행 설정</h2><div id="rdSettingsTrip"></div></section><section class="rd-setting-group"><h2>공유 설정</h2><div id="rdPrivacyMount"></div></section><section class="rd-setting-group"><h2>기록 관리</h2>${row('저장 기록','bookmark-simple','history')}${row('백업·불러오기','download-simple','backup')}${row('PDF 저장','file-text','pdf')}</section>${row('고급 연결 설정','gear','advanced')}<button class="rd-logout" data-rd-action="logout" type="button">로그아웃</button>`);
     setupForms();setupSettings();setupExistingDialogs();setupAuth();setupTripChooser();
@@ -355,6 +355,7 @@
     if(!ready)return;
     if(lastTrip!==state.id){closeAll();lastTrip=state.id;expenseTab='all';els.expenseSearchInput.value='';editingTripId='';}
     $$('[data-rd-trip]').forEach(el=>el.textContent=state.tripName||'새로운 여행');
+    window.TripLog.ui.tripContext.update(state);
     $$('.rd-nav [data-rd-nav]').forEach(el=>{const active=el.dataset.rdNav===activePage||el.dataset.rdNav==='more'&&['start','settings','settlement'].includes(activePage);el.classList.toggle('active',active);if(active)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');});
     if (!window.TripLog.features.home.tripLibrary.reconcileInitialTrip()) {
       if (activePage === 'overview') $('#rdOverview').innerHTML = '<p class="rd-empty" role="status">여행을 불러오는 중이에요.</p>';

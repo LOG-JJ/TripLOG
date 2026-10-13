@@ -151,12 +151,12 @@ async function main() {
     assert.equal(await page.locator('#rdExpenseList tr').first().getAttribute('data-id'),'expense-hotel');
     await page.locator('#expenseSortSelectButton').click();
     await page.locator('#expenseSortSelectMenu [data-value="default"]').click();
-    const recordedCosts = await page.locator('.ex-cost-summary').innerText();
+    const recordedCosts = await page.locator('#rdBudgetSummary').innerText();
     for (const legacyBudget of [100, 0, 999999999]) {
       await page.evaluate(value => { state.totalBudget = value; render(); }, legacyBudget);
-      assert.equal(await page.locator('.ex-cost-summary').innerText(), recordedCosts, 'Legacy planned budget never changes actual spending');
+      assert.equal(await page.locator('#rdBudgetSummary').innerText(), recordedCosts, 'Legacy planned budget never changes actual spending');
     }
-    assert.equal(await page.locator('.ex-cost-summary progress, .ex-cost-summary [data-rd-action="budget-edit"]').count(), 0);
+    assert.equal(await page.locator('#rdBudgetSummary progress, #rdBudgetSummary [data-rd-action="budget-edit"]').count(), 0);
     assert.doesNotMatch(recordedCosts, /예산|남은|초과 지출/);
     await page.evaluate(()=>{state.entries[0].description='아주 긴 여행 지출 이름 '.repeat(12);state.entries[0].note='기록한 메모 전체 내용 '.repeat(30);state.entries[0].amount=123456789012;render();});
     await page.setViewportSize({width:320,height:740});
@@ -165,9 +165,9 @@ async function main() {
     await page.screenshot({path:path.join(output,'ledger-long-320.png')});
     await page.evaluate(()=>{state.entries=[];render();});
     assert.equal(await page.locator('#exExpenseEmpty').isVisible(),true);
-    assert.match(await page.locator('.ex-budget-values').innerText(),/0원/);
+    assert.match(await page.locator('#rdBudgetSummary').innerText(),/0원/);
     assert.equal(await page.locator('#rdExpenseTabs [data-count="all"]').innerText(),'0');
-    const styles=await page.evaluate(()=>Object.fromEntries(['.ex-heading h1','.ex-budget-values > div:first-child strong','.ex-budget-values > div:nth-child(2) strong','.ex-entry-title','.ex-row-amount strong','#rdExpenseEditorTitle','#foreignAmountInput','#rdExpenseEditor label','#rdExpenseEditor .ex-category-choices button','#exConversionSummary'].map(selector=>{const node=document.querySelector(selector),s=node&&getComputedStyle(node);return [selector,node?{font:s.fontSize,weight:s.fontWeight,lineHeight:s.lineHeight,text:node.textContent?.trim().slice(0,180)}:null]})));
+    const styles=await page.evaluate(()=>Object.fromEntries(['.ex-heading h1','#rdBudgetSummary .cost-summary-primary strong','#rdBudgetSummary .cost-summary-fact:first-child strong','.ex-entry-title','.ex-row-amount strong','#rdExpenseEditorTitle','#foreignAmountInput','#rdExpenseEditor label','#rdExpenseEditor .ex-category-choices button','#exConversionSummary'].map(selector=>{const node=document.querySelector(selector),s=node&&getComputedStyle(node);return [selector,node?{font:s.fontSize,weight:s.fontWeight,lineHeight:s.lineHeight,text:node.textContent?.trim().slice(0,180)}:null]})));
     fs.writeFileSync(path.join(output,'audit-after.json'),JSON.stringify({styles,errors},null,2));
     assert.deepEqual(errors,[]);
     console.log('PASS expense conversion, rate validation, save/edit/reload, lodging allocation and dates, save-and-continue, category state, search/filter/tabs, accumulated costs independent of legacy budget, empty state and 320px layout. '+output);

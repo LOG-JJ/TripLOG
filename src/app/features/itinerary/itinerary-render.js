@@ -100,9 +100,6 @@ function setupItineraryDragDrop() {
 function renderItineraryPage() {
   const days = getTripDays();
   if (state.selectedItineraryDate !== "all" && !days.some(day => day.date === state.selectedItineraryDate)) state.selectedItineraryDate = days[0]?.date || state.startDate;
-  els.itineraryTripName.textContent = state.tripName || getDefaultTripName();
-  els.itineraryDateRange.textContent = days.length
-    ? `${days[0].shortDate} ${days[0].weekday} – ${days.at(-1).shortDate} ${days.at(-1).weekday} · ${days.length > 1 ? `${days.length - 1}박 ${days.length}일` : "당일치기"}` : "여행 기간을 설정해 주세요";
   const day = days.find(entry => entry.date === state.selectedItineraryDate);
   document.querySelector("#itinerarySelectedDayTitle").textContent = day
     ? `${Number(day.date.slice(5, 7))}월 ${Number(day.date.slice(8, 10))}일 (${day.weekday})` : "전체 일정";

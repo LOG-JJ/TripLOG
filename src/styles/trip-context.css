@@ -1,0 +1,24 @@
+/* Shared travel identity beneath itinerary, expense and report page titles. */
+body.rd-app .trip-context-heading { margin-bottom: 18px; }
+body.rd-app .trip-context-heading [data-trip-context] { margin-top: 10px; min-width: 0; }
+body.rd-app .trip-context { display: flex; align-items: center; gap: 12px; min-width: 0; color: var(--text); font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+body.rd-app .trip-context-art { display: block; flex: 0 0 56px; width: 56px; height: 44px; object-fit: contain; }
+body.rd-app .trip-context-copy { min-width: 0; }
+body.rd-app .trip-context-name { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin: 0 0 4px; color: var(--text); font-size: 18px; font-weight: 750; line-height: 1.4; letter-spacing: -.35px; word-break: keep-all; overflow-wrap: anywhere; }
+body.rd-app .trip-context-meta { margin: 0; color: #555e6b; font-size: 13px; font-weight: 500; line-height: 1.8; letter-spacing: -.15px; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+body.rd-app .trip-context-meta time { white-space: nowrap; }
+body.rd-app .trip-context-range-end { display: inline-block; white-space: nowrap; }
+body.rd-app .trip-context-separator { margin-inline: 1px; }
+body.rd-app .trip-context-duration { display: inline-block; margin-left: 4px; padding: 2px 8px; border-radius: 7px; background: #cceafa; color: var(--text); font-size: 12px; font-weight: 650; line-height: 1.5; vertical-align: baseline; }
+body.rd-app .trip-context-date-note { display: inline-block; margin-left: 7px; font-size: 12px; }
+body.rd-app .ex-heading.trip-context-heading { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 0 12px; }
+body.rd-app .ex-heading.trip-context-heading > [data-trip-context] { grid-column: 1 / -1; }
+body.rd-app .ex-heading.trip-context-heading h1 { margin: 0; }
+body.rd-app .ex-heading.trip-context-heading .ex-heading-actions { padding-top: 0; }
+@media (max-width: 359px) {
+  body.rd-app .trip-context { gap: 9px; }
+  body.rd-app .trip-context-art { flex-basis: 44px; width: 44px; height: 38px; }
+  body.rd-app .trip-context-name { font-size: 17px; }
+  body.rd-app .trip-context-meta { font-size: 12px; letter-spacing: -.2px; }
+  body.rd-app .trip-context-duration { margin-left: 2px; padding-inline: 6px; font-size: 11px; }
+}

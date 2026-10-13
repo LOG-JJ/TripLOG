@@ -98,6 +98,7 @@
     "features/redesign/design-model.js",
     "features/overview/travel-cost-card.js",
     "ui/markup.js",
+    "ui/trip-context.js",
     "features/overview/overview-workspace.js",
     "features/settlement/settlement-workspace.js",
     "features/reports/report-workspace.js",

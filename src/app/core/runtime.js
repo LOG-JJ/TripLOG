@@ -139,8 +139,6 @@ const els = {
   historyEmpty: document.querySelector("#historyEmpty"),
   expenseSearchInput: document.querySelector("#expenseSearchInput"),
   expenseSortSelect: document.querySelector("#expenseSortSelect"),
-  itineraryTripName: document.querySelector("#itineraryTripName"),
-  itineraryDateRange: document.querySelector("#itineraryDateRange"),
   itineraryViewAllButton: document.querySelector("#itineraryViewAllButton"),
   itineraryDaySummary: document.querySelector("#itineraryDaySummary"),
   itineraryCount: document.querySelector("#itineraryCount"),
