@@ -1,0 +1,41 @@
+/* One frame and heading for every overview card. Content owns its own layout. */
+body.rd-app #overviewPage {
+  --ov-card-border: 1.5px solid var(--text);
+  --ov-card-radius: 10px;
+  --ov-card-surface: #fff;
+  --ov-card-padding: 12px;
+}
+body.rd-app #overviewPage .ov-card {
+  --font: 'TripLOG Collaboration', 'Pretendard', sans-serif;
+  --font-heading: var(--font);
+  min-width: 0; margin: 0; border: var(--ov-card-border); border-radius: var(--ov-card-radius);
+  background: var(--ov-card-surface); color: var(--text); box-shadow: none;
+  font-family: var(--font);
+}
+body.rd-app #overviewPage .ov-card--content { padding: var(--ov-card-padding); }
+body.rd-app #overviewPage .ov-card-header {
+  display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap; gap: 8px; min-width: 0; min-height: 24px; margin: 0 0 4px;
+}
+body.rd-app #overviewPage .ov-card-header h2 {
+  display: inline-flex; align-items: center; gap: 7px; margin: 0; min-width: 0;
+  color: var(--text); font-family: var(--font); font-size: 15px; font-weight: 750;
+  line-height: 1.3; letter-spacing: -.35px; white-space: nowrap;
+}
+body.rd-app #overviewPage .ov-card-header h2 .ph { font-size: 21px; }
+body.rd-app #overviewPage .ov-card-meta { margin-left: auto; color: var(--muted); font-size: 12px; font-weight: 500; white-space: nowrap; }
+body.rd-app #overviewPage .ov-card-link {
+  display: inline-flex; align-items: center; justify-content: flex-end; gap: 3px; min-height: 32px;
+  margin: 0 0 0 auto; padding: 4px 0; border: 0; border-radius: 4px; background: transparent;
+  color: var(--muted); box-shadow: none; font-size: 12px; font-weight: 600; line-height: 1.3; white-space: nowrap;
+}
+body.rd-app #overviewPage .ov-card-meta + .ov-card-link { margin-left: 0; }
+body.rd-app #overviewPage .ov-card-link .ph { font-size: 14px; }
+body.rd-app #overviewPage .ov-card--reservations .ov-card-header { margin-bottom: 0; }
+body.rd-app #overviewPage .ov-card--action { border: var(--ov-card-border); border-radius: var(--ov-card-radius); }
+@media (max-width: 359px) {
+  body.rd-app #overviewPage { --ov-card-padding: 11px 12px; }
+  body.rd-app #overviewPage .ov-card-header { gap: 6px; }
+  body.rd-app #overviewPage .ov-card-header h2 { gap: 5px; font-size: 14px; }
+  body.rd-app #overviewPage .ov-card-header h2 .ph { font-size: 18px; }
+}
+@media (hover: hover) { body.rd-app #overviewPage .ov-card-link:hover { color: var(--text); } }

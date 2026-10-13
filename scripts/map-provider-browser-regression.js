@@ -1,18 +1,15 @@
+const { launchBrowser, fixtureToken, startServer, stopServer } = require('./helpers/browser-fixture');
 // Isolated Edge fixtures: no real trip or account is changed. External map
 // navigation is intercepted; live Naver entry URLs are checked separately.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { chromium } = require('playwright');
-const { createServer } = require('./serve-test');
 
 async function main() {
-  const server = createServer({ pagesRedirects: true });
-  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
-  const origin = process.env.TRIPLOG_TEST_URL || `http://127.0.0.1:${server.address().port}`;
+  const { server, origin } = await startServer();
   const output = path.join(require('node:os').tmpdir(), 'TripLOG-Map-Provider-QA');
   fs.mkdirSync(output, { recursive: true });
-  const browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined), headless: true });
+  const browser = await launchBrowser();
   try {
     for (const mobile of [false, true]) {
       const context = await browser.newContext({ serviceWorkers: 'block', hasTouch: mobile,
@@ -20,7 +17,7 @@ async function main() {
       context.setDefaultTimeout(12000);
       const user = { id: '00000000-0000-4000-8000-000000000099', email: 'maps@example.test', user_metadata: { display_name: '지도 시험' } };
       const expiry = Math.floor(Date.now() / 1000) + 3600;
-      const token = [Buffer.from(JSON.stringify({ alg: 'HS256', typ: 'JWT' })).toString('base64url'), Buffer.from(JSON.stringify({ sub: user.id, exp: expiry, role: 'authenticated' })).toString('base64url'), 'fixture'].join('.');
+      const token = fixtureToken(user, expiry);
       const seed = { id: 'map-provider-fixture', tripName: '서울 여행', travelMode: 'domestic', city: '서울', country: '대한민국', countryCode: 'KR', startDate: '2026-09-25', endDate: '2026-09-25', entries: [], companions: [], packingList: [], itineraryItems: [
         { id: 'a', date: '2026-09-25', place: '서울역', location: '서울 중구', time: '09:00', endTime: '09:30', theme: 'sightseeing', createdAt: 1, mapQuery: '37.5547,126.9706' },
         { id: 'b', date: '2026-09-25', place: '경복궁', location: '서울 종로구 사직로 161', time: '10:00', endTime: '11:00', theme: 'sightseeing', createdAt: 2, mapQuery: '37.5796,126.9769', voucherName: '경복궁 입장권', voucherCode: 'TEST' },
@@ -117,6 +114,6 @@ async function main() {
       console.log(`PASS ${mobile ? 'mobile' : 'desktop'} maps: domestic Naver, overseas Google, route modes, missing coordinates, full-day segments, today/wallet and draft preservation.`);
     }
     console.log(`Map QA screenshots: ${output}`);
-  } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }
+  } finally { await browser.close(); await stopServer(server); }
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

@@ -264,7 +264,6 @@ function setupMoneyNumberInputs() {
   if (typeof setupCommaNumberInput !== "function") return;
 
   setupCommaNumberInputs([
-    els.budgetInput,
     els.amountInput,
     els.pretripFlightAmountInput,
     els.pretripHotelAmountInput,
@@ -286,17 +285,10 @@ function init() {
   els.endDateInput.value = state.endDate;
   setupMoneyNumberInputs();
   setupPaymentMethodToggle();
-  setCommaNumberInputValue(els.budgetInput, state.totalBudget || "");
 
   els.tripNameInput.addEventListener("input", () => {
     if (window.TripLog.features.redesign?.workspace?.isTripEditing?.()) return;
     state.tripName = els.tripNameInput.value;
-    saveAndRender();
-  });
-
-  els.budgetInput.addEventListener("input", () => {
-    if (window.TripLog.features.redesign?.workspace?.isTripEditing?.()) return;
-    state.totalBudget = parseFormattedNumber(els.budgetInput.value);
     saveAndRender();
   });
 
@@ -325,50 +317,6 @@ function init() {
       addPackingItem();
     }
   });
-
-  // Drag and drop event listeners for Suitcase Area
-  const suitcaseArea = document.querySelector("#suitcaseBackpackArea");
-  if (suitcaseArea) {
-    suitcaseArea.addEventListener("dragover", (e) => {
-      e.preventDefault();
-      suitcaseArea.classList.add("drag-over");
-    });
-
-    suitcaseArea.addEventListener("dragleave", () => {
-      suitcaseArea.classList.remove("drag-over");
-    });
-
-    suitcaseArea.addEventListener("drop", (e) => {
-      e.preventDefault();
-      suitcaseArea.classList.remove("drag-over");
-      const id = e.dataTransfer.getData("text/plain");
-      if (id) {
-        setPackingItemChecked(id, true);
-      }
-    });
-  }
-
-  // Drag and drop event listeners for Shelf Area
-  const shelfArea = document.querySelector(".packing-shelf");
-  if (shelfArea) {
-    shelfArea.addEventListener("dragover", (e) => {
-      e.preventDefault();
-      shelfArea.classList.add("drag-over");
-    });
-
-    shelfArea.addEventListener("dragleave", () => {
-      shelfArea.classList.remove("drag-over");
-    });
-
-    shelfArea.addEventListener("drop", (e) => {
-      e.preventDefault();
-      shelfArea.classList.remove("drag-over");
-      const id = e.dataTransfer.getData("text/plain");
-      if (id) {
-        setPackingItemChecked(id, false);
-      }
-    });
-  }
 
   els.startDateInput.addEventListener("change", () => {
     if (!window.TripLog.features.redesign?.workspace?.isTripEditing?.()) updateTripDate("startDate", els.startDateInput.value);
@@ -438,7 +386,6 @@ function init() {
   }
   els.expenseForm.addEventListener("submit", handleExpenseSubmit);
   window.TripLog.features.expenses.receiptInput.setup();
-  els.cancelEditButton.addEventListener("click", clearEditMode);
   els.saveStateButton.addEventListener("click", saveCurrentSnapshot);
   els.historyButton.addEventListener("click", openHistoryModal);
   els.settingsExportJsonButton?.addEventListener("click", exportHistoryJson);
@@ -516,12 +463,6 @@ function init() {
   });
   els.sampleButton.addEventListener("click", loadSampleData);
   els.resetButton.addEventListener("click", resetAll);
-  els.pdfButton.addEventListener("click", exportExpensePdf);
-  els.itineraryPdfButton?.addEventListener("click", exportItineraryPdf);
-  els.fullPdfButton?.addEventListener("click", exportFullPdf);
-  els.categoryDonut.addEventListener("click", handleDonutClick);
-  els.categoryDonut.addEventListener("mousemove", handleDonutMove);
-  els.categoryDonut.addEventListener("mouseleave", () => highlightCategory(activeFilter === "전체" ? null : activeFilter));
   [els.newTripDomesticButton, els.newTripOverseasButton].forEach((button) => {
     button?.addEventListener("click", () => setNewTripMode(button.dataset.mode));
   });
@@ -542,51 +483,12 @@ function init() {
   document.addEventListener("click", (event) => {
     if (!event.target.closest("#newTripCountryCombobox")) closeNewTripCountryList();
   });
-  els.themeBrutalistButton.addEventListener("click", () => window.TripLog.features.settings.themeToggle.setTheme("brutalist"));
-  els.themeTossButton.addEventListener("click", () => window.TripLog.features.settings.themeToggle.setTheme("toss"));
-  setupDayStripDrag(els.dayStrip);
   setupDayStripDrag(els.itineraryDayStrip);
-
-  // Multi-Trip Event Listeners
-  if (els.headerTripSelect) {
-    els.headerTripSelect.addEventListener("change", () => {
-      const tripId = els.headerTripSelect.value;
-      if (tripId) {
-        window.TripLog.persistence.stateStorage.switchTrip(tripId);
-      }
-    });
-  }
-
-  if (els.overviewTripSelect) {
-    els.overviewTripSelect.addEventListener("change", () => {
-      const tripId = els.overviewTripSelect.value;
-      if (tripId) {
-        window.TripLog.persistence.stateStorage.switchTrip(tripId);
-      }
-    });
-  }
-
-  if (els.createNewTripButton) {
-    els.createNewTripButton.addEventListener("click", openNewTripModal);
-  }
-
-  if (els.headerCreateTripButton) {
-    els.headerCreateTripButton.addEventListener("click", openNewTripModal);
-  }
 
   if (els.newTripCloseButton) {
     els.newTripCloseButton.addEventListener("click", () => {
       closeNewTripCountryList();
       els.newTripModal.hidden = true;
-    });
-  }
-
-  if (els.deleteCurrentTripButton) {
-    els.deleteCurrentTripButton.addEventListener("click", () => {
-      const activeId = window.TripLog.persistence.stateStorage.getActiveTripId();
-      if (activeId) {
-        window.TripLog.persistence.stateStorage.deleteTrip(activeId);
-      }
     });
   }
 
@@ -724,8 +626,6 @@ function init() {
   setupCustomSelect(els.itineraryDaySelect);
   setupCustomSelect(els.itineraryTransSelect);
   setupCustomSelect(els.itineraryThemeSelect);
-  setupCustomSelect(els.headerTripSelect);
-  setupCustomSelect(els.overviewTripSelect);
   setupCustomSelect(document.querySelector("#settlementExpenseSourceSelect"));
   setupCustomTimePicker(els.itineraryTimeInput);
   setupCustomTimePicker(els.itineraryEndTimeInput);

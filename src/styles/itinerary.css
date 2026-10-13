@@ -12,8 +12,6 @@ html:has(body[data-page="itinerary"]) { background: #fff; scrollbar-gutter: auto
 html:has(body[data-page="itinerary"])::-webkit-scrollbar { width: 0; height: 0; }
 body[data-page="itinerary"] { background: #fff; background-image: none; }
 body[data-page="itinerary"] .app-shell { padding: 0; width: 100%; max-width: none; }
-body[data-page="itinerary"] .app-shell > .topbar,
-body[data-page="itinerary"] .app-shell > .app-navbar { display: none !important; }
 body[data-page="itinerary"] .page-stage { margin: 0; padding: 0; overflow: visible; perspective: none; transform-style: flat; }
 .itinerary-page :where(button, input, select, summary, textarea) { font-family: var(--font); -webkit-tap-highlight-color: transparent; }
 .itinerary-page :where(button, a, summary, input, select):focus-visible { outline: 3px solid #166ab0; outline-offset: 4px; }

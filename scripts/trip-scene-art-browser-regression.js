@@ -1,10 +1,10 @@
+const { launchBrowser, blockExternalRequests } = require('./helpers/browser-fixture');
 // Render every dedicated city in the real header, using an isolated fixture.
 // These are visual/asset checks; the existing header suite owns live UI flows.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
-const { chromium } = require('playwright');
 const { createTripHeaderPreview } = require('./preview-trip-header');
 const data = require('../src/app/data/destination-scenes');
 const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(os.tmpdir(), 'TripLOG-City-Scene-Review-20261004');
@@ -18,11 +18,11 @@ async function main() {
   const server = createTripHeaderPreview();
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const origin = 'http://127.0.0.1:' + server.address().port;
-  const browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined), headless: true });
+  const browser = await launchBrowser();
   const results = [];
   try {
     const context = await browser.newContext({ serviceWorkers: 'block', viewport: { width: 390, height: 844 }, timezoneId: 'Asia/Seoul', deviceScaleFactor: 1 });
-    await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
+    await blockExternalRequests(context, origin);
     const page = await context.newPage(), errors = [];
     page.on('pageerror', error => errors.push(error.message));
     await page.goto(origin + '/Travel?page=overview&trip=trip-header-suncheon');

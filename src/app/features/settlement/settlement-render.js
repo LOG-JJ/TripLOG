@@ -36,20 +36,12 @@ function getSettlementEntryStatus(entry, sourceState) {
   };
 }
 
-function renderSettlementPage(totals) {
+function renderSettlementEditors(totals) {
   const membersListWrap = document.querySelector("#settlementMembersList");
   const individualInputsWrap = document.querySelector("#settlementIndividualSpentInputs");
   const sourceSelect = document.querySelector("#settlementExpenseSourceSelect");
   const sourceSummary = document.querySelector("#settlementSourceSummary");
-  const expenseSplitSummary = document.querySelector("#settlementExpenseSplitSummary");
   const expenseSplitList = document.querySelector("#settlementExpenseSplitList");
-  const settlementLoadedTripName = document.querySelector("#settlementLoadedTripName");
-  const settlementLoadedExpenseCount = document.querySelector("#settlementLoadedExpenseCount");
-  const settlementTotalAmount = document.querySelector("#settlementTotalAmount");
-  const settlementMemberCount = document.querySelector("#settlementMemberCount");
-  const settlementPerPersonAmount = document.querySelector("#settlementPerPersonAmount");
-  const settlementMemberBreakdown = document.querySelector("#settlementMemberBreakdown");
-  const settlementGuideList = document.querySelector("#settlementGuideList");
 
   if (!membersListWrap || !individualInputsWrap || !expenseSplitList) return;
 
@@ -80,31 +72,9 @@ function renderSettlementPage(totals) {
     sourceSummary.textContent = `${prefix}에서 ${entryRows.length}건의 지출을 불러왔습니다.`;
   }
 
-  if (settlementLoadedTripName) settlementLoadedTripName.textContent = selectedSource.name;
-  if (settlementLoadedExpenseCount) settlementLoadedExpenseCount.textContent = `${entryRows.length.toLocaleString("ko-KR")}건`;
-  if (settlementTotalAmount) settlementTotalAmount.textContent = formatSettlementCurrency(totalTripSpent, sourceState);
-  if (expenseSplitSummary) {
-    const customCount = entryRows.filter((row) => row.mode === "custom").length;
-    const invalidText = invalidEntries.length > 0 ? ` · 확인 필요 ${invalidEntries.length}건` : "";
-    expenseSplitSummary.textContent = `${entryRows.length}건 · 직접 편집 ${customCount}건${invalidText}`;
-  }
-
   renderSettlementMemberChips(membersListWrap, companions);
   renderCompanionSpentInputs(individualInputsWrap, companions);
   renderSettlementExpenseLedger(expenseSplitList, entryRows, members, sourceState, expandedEntryKey);
-  renderSettlementSummary({
-    settlementMemberCount,
-    settlementPerPersonAmount,
-    settlementMemberBreakdown,
-    settlementGuideList,
-    companions,
-    members,
-    memberSummaries,
-    invalidEntries,
-    transactions,
-    entryRows,
-    sourceState,
-  });
 }
 
 function renderSettlementMemberChips(membersListWrap, companions) {
@@ -303,74 +273,9 @@ function createSettlementSplitEditorRow(entry, members, sourceState) {
   return row;
 }
 
-function renderSettlementSummary({
-  settlementMemberCount,
-  settlementPerPersonAmount,
-  settlementMemberBreakdown,
-  settlementGuideList,
-  companions,
-  members,
-  memberSummaries,
-  invalidEntries,
-  transactions,
-  entryRows,
-  sourceState,
-}) {
-  const memberLabel = companions.length > 0 ? `방장 + ${companions.map((companion) => companion.name).join(", ")}` : "나홀로";
-  if (settlementMemberCount) settlementMemberCount.textContent = `${members.length}명 (${memberLabel})`;
-  if (settlementPerPersonAmount) {
-    settlementPerPersonAmount.textContent = invalidEntries.length > 0
-      ? `${invalidEntries.length}건 금액 확인 필요`
-      : `${entryRows.length}건 할당 완료`;
-  }
-
-  if (settlementMemberBreakdown) {
-    settlementMemberBreakdown.replaceChildren();
-    memberSummaries.forEach((member, index) => {
-      const row = document.createElement("div");
-      row.className = "settlement-member-total-row";
-      row.innerHTML = `
-        <div>
-          <strong>${getSettlementMemberEmoji(member, index)} ${escapeHtml(member.name)}</strong>
-          <span>낸 돈 ${formatSettlementCurrency(member.paid, sourceState)} · 부담 ${formatSettlementCurrency(member.owed, sourceState)}</span>
-        </div>
-        <em class="${member.balance >= 0 ? "receive" : "pay"}">${member.balance >= 0 ? "+" : "-"}${formatSettlementCurrency(Math.abs(member.balance), sourceState)}</em>
-      `;
-      settlementMemberBreakdown.appendChild(row);
-    });
-  }
-
-  if (!settlementGuideList) return;
-  settlementGuideList.replaceChildren();
-
-  if (companions.length === 0) {
-    settlementGuideList.innerHTML = `<div class="settlement-guide-empty">정산 인원을 추가하면 송금 가이드가 활성화됩니다.</div>`;
-    return;
-  }
-
-  if (invalidEntries.length > 0) {
-    settlementGuideList.innerHTML = `<div class="settlement-guide-warning">${invalidEntries.length}건의 결제자 또는 분담 금액을 확인해 주세요. 결제자가 현재 멤버에 포함되고 멤버별 합계가 지출 금액과 맞아야 송금 가이드를 계산할 수 있습니다.</div>`;
-    return;
-  }
-
-  if (transactions.length === 0) {
-    settlementGuideList.innerHTML = `<div class="settlement-guide-success">모두 정확히 분담 완료했습니다. 주고받을 돈이 없습니다.</div>`;
-    return;
-  }
-
-  transactions.forEach((transaction) => {
-    const guideRow = document.createElement("div");
-    guideRow.className = "settlement-guide-row";
-    guideRow.innerHTML = `
-      <span><strong>${escapeHtml(transaction.from)}</strong> 👉 <strong>${escapeHtml(transaction.to)}</strong></span>
-      <strong>${formatSettlementCurrency(transaction.amount, sourceState)} 송금</strong>
-    `;
-    settlementGuideList.appendChild(guideRow);
-  });
-}
 
 window.TripLog.register("features.settlement.render", {
-  renderSettlementPage,
+  renderSettlementEditors,
   renderSettlementMemberChips,
   renderCompanionSpentInputs,
   renderSettlementExpenseLedger,

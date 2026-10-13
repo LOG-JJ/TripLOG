@@ -1,10 +1,9 @@
+const { launchBrowser, startServer, stopServer } = require('./helpers/browser-fixture');
 // Browser plugin not available: isolated Playwright/Edge fixtures use the shipped
 // Supabase SDK. Every external request is mocked; no real credentials are used.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { chromium } = require('playwright');
-const { createServer } = require('./serve-test');
 const authKey = 'sb-iehdziiplzgvxcrbizgv-auth-token';
 const user = { id: '00000000-0000-4000-8000-000000000088', email: 'auth@example.test', user_metadata: { display_name: '로그인 검증' } };
 function session(expiresAt = Math.floor(Date.now() / 1000) + 3600) {
@@ -12,10 +11,8 @@ function session(expiresAt = Math.floor(Date.now() / 1000) + 3600) {
   return { access_token: token, refresh_token: 'fixture-refresh', token_type: 'bearer', expires_at: expiresAt, expires_in: 3600, user };
 }
 async function main() {
-  const server = createServer({ pagesRedirects: true });
-  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
-  const origin = `http://127.0.0.1:${server.address().port}`;
-  const browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined), headless: true });
+  const { server, origin } = await startServer();
+  const browser = await launchBrowser();
   const sdk = fs.readFileSync(path.join(__dirname, '../vendor/supabase-js-2.107.0.min.js'), 'utf8');
   try {
     const context = await browser.newContext({ serviceWorkers: 'block', viewport: { width: 390, height: 844 } });
@@ -202,7 +199,7 @@ async function main() {
     await context.close();
   } finally {
     await browser.close();
-    await new Promise(resolve => server.close(resolve));
+    await stopServer(server);
   }
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

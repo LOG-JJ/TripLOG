@@ -5,9 +5,10 @@
   const safe = value => escapeHtml(String(value ?? ''));
   const won = value => `${Math.round(Number(value) || 0).toLocaleString('ko-KR')}원`;
   const model = () => window.TripLog.features.redesign.model;
-  const categories = ['식비', '교통', '숙소', '관광', '쇼핑', '기타'];
-  const categoryIcons = { 식비: 'fork-knife', 교통: 'train', 숙소: 'bed', 관광: 'camera', 쇼핑: 'shopping-bag', 기타: 'dots-three' };
-  const categoryColors = { 식비: '#f7afc7', 교통: '#fff05a', 숙소: '#bce6fb', 관광: '#e4e5e9', 쇼핑: '#bdddcf', 기타: '#d5caed' };
+  const categoryData = window.TripLog.data.expenseCategories;
+  const categories = categoryData.ledgerOrder;
+  const categoryIcons = Object.fromEntries(categories.map(name => [name, categoryData.get(name, 'ledger').icon]));
+  const categoryColors = Object.fromEntries(categories.map(name => [name, categoryData.get(name, 'ledger').color]));
   let ready = false, ui = {}, currentTab = 'all', lastTrip = '', submitIntent = null, tripPreferences = null;
 
   function shortDate(date) {
@@ -24,7 +25,7 @@
     view.innerHTML = `
       <div class="ex-heading"><div><h1>지출 기록</h1><div class="ex-trip-line">${icon('airplane-tilt')}<div><p data-rd-trip></p><small id="exTripPeriod"></small></div></div></div>
         <div class="ex-heading-actions"><button type="button" class="ex-button ex-secondary" data-rd-action="receipt-start">${icon('receipt')} 영수증</button><button type="button" class="ex-button ex-primary ex-desktop-add" data-rd-action="expense-new">${icon('plus')} 지출 추가</button></div></div>
-      <section id="rdBudgetSummary" class="ex-budget-summary" aria-label="여행 예산 요약"></section>
+      <section id="rdBudgetSummary" class="ex-budget-summary ex-cost-summary" aria-label="여행 경비 요약"></section>
       <div class="ex-toolbar"><div class="ex-search">${icon('magnifying-glass')}<span id="rdSearchMount"></span><button type="button" id="exSearchClear" aria-label="검색어 지우기" hidden>${icon('x')}</button></div>
         <button type="button" id="exFilterToggle" aria-expanded="false" aria-controls="exFilterControls">${icon('sliders-horizontal')}<span>필터</span></button>
         <div id="exFilterControls" class="ex-filter-controls"><label class="ex-filter"><span class="ex-sr-only">카테고리 필터</span><select id="exCategoryFilter" aria-label="카테고리 필터"><option value="전체">전체 카테고리</option>${categories.map(c => `<option value="${c}">${c}</option>`).join('')}</select></label>
@@ -55,15 +56,13 @@
     $('#exFilterReset').addEventListener('click', () => { search.value = ''; activeFilter = '전체'; });
   }
 
-  function renderLedger(total = calculateTotals().total, tab = currentTab) {
+  function renderLedger(tab = currentTab) {
     if (!ready) return;
     currentTab = tab;
     if (lastTrip !== state.id) { lastTrip = state.id; activeFilter = '전체'; }
-    const budget = Number(state.totalBudget) || 0;
-    const percent = budget ? Math.round(total / budget * 100) : 0;
-    const over = budget > 0 && total > budget;
+    const cost = window.TripLog.shared.travelCosts.summarize(state, { members: window.TripLog.features.collaboration.tripCollaboration.getTripMembers().length });
     $('#exTripPeriod').textContent = state.startDate && state.endDate ? `${state.startDate.replaceAll('-', '. ')} – ${state.endDate.slice(5).replace('-', '. ')} · ${getTripDays().length}일` : '여행 기간 미정';
-    $('#rdBudgetSummary').innerHTML = `<div class="ex-budget-values"><div><span>총 지출</span><strong>${won(total)}</strong></div><div class="${over ? 'is-over' : 'ex-remaining'}"><span>${over ? '초과 지출' : '남은 예산'}</span><strong>${budget ? won(Math.abs(budget - total)) : '예산 미설정'}</strong></div><div class="ex-budget-meta">${icon('coins')}<button type="button" class="rd-budget-edit" data-rd-action="budget-edit" aria-label="여행 예산 수정"${window.TripLog.features.redesign.workspace.canEditTripSettings() ? '' : ' disabled'}><span>예산</span><strong>${budget ? won(budget) : '미설정'}</strong>${icon('pencil-simple')}</button></div></div><div class="ex-progress-row${over ? ' is-over' : ''}"><progress max="100" value="${Math.min(100, percent)}" aria-label="예산 사용률" aria-valuetext="${budget ? `${percent}% 사용` : '예산 미설정'}"></progress><b>${budget ? `${percent}%` : '—'}</b></div>`;
+    $('#rdBudgetSummary').innerHTML = window.TripLog.ui.costSummary.render(cost, 'ledger');
     const filtered = getFilteredEntries();
     const rows = filtered.filter(entry => tab === 'all' || (tab === 'pretrip') === isPreTripExpenseDate(entry.date));
     const counts = { all: filtered.length, pretrip: filtered.filter(e => isPreTripExpenseDate(e.date)).length, during: filtered.filter(e => !isPreTripExpenseDate(e.date)).length };

@@ -1,0 +1,43 @@
+/* Actual spending only. The legacy budget field is never an input to these views. */
+body.rd-app #overviewPage .tc-main { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 3px 9px; margin: 6px 0 8px; }
+body.rd-app #overviewPage .tc-main-caption { color: var(--muted); font-size: 11px; font-weight: 500; line-height: 1.4; }
+body.rd-app #overviewPage .tc-total { display: block; margin: 0; font-size: 28px; font-weight: 800; line-height: 1.2; letter-spacing: -.8px; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+body.rd-app #overviewPage .tc-total.is-long { font-size: 22px; letter-spacing: -.5px; }
+body.rd-app #overviewPage .tc-card-facts { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; margin: 0 0 10px; }
+body.rd-app #overviewPage .tc-card-facts > div { display: inline-flex; align-items: baseline; gap: 5px; min-width: 0; }
+body.rd-app #overviewPage .tc-card-facts dt { margin: 0; color: var(--muted); font-size: 12px; font-weight: 500; line-height: 1.4; }
+body.rd-app #overviewPage .tc-card-facts dd { margin: 0; color: var(--text); font-size: 13px; font-weight: 750; line-height: 1.4; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+body.rd-app #overviewPage .tc-breakdown { padding-top: 9px; border-top: 1px solid var(--rd-divider); }
+body.rd-app #overviewPage .tc-breakdown h3 { margin: 0 0 6px; font-size: 12px; font-weight: 700; line-height: 1.4; }
+body.rd-app #overviewPage .tc-composition { display: flex; width: 100%; height: 10px; overflow: hidden; border-radius: 4px; margin: 0 0 2px; }
+body.rd-app #overviewPage .tc-composition > span { flex-basis: 0; min-width: 0; background: var(--tc-color); }
+body.rd-app #overviewPage .tc-category-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 8px; list-style: none; padding: 0; margin: 0; }
+body.rd-app #overviewPage .tc-category-list li { min-width: 0; }
+body.rd-app #overviewPage .tc-category { display: flex; align-items: center; justify-content: space-between; gap: 4px; width: 100%; min-height: 44px; padding: 5px 0; border: 0; border-radius: 5px; box-shadow: none; background: transparent; color: var(--text); text-align: left; font-size: 12px; font-weight: 550; line-height: 1.4; }
+body.rd-app #overviewPage .tc-category-name { display: flex; align-items: center; gap: 5px; min-width: 0; }
+body.rd-app #overviewPage .tc-category-name > span:last-child { min-width: 0; overflow-wrap: anywhere; }
+body.rd-app #overviewPage .tc-color-dot { flex: 0 0 8px; height: 8px; border-radius: 50%; background: var(--tc-color); }
+body.rd-app #overviewPage .tc-category-percent { color: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+body.rd-app #overviewPage .tc-empty { padding: 2px 0; }
+body.rd-app #overviewPage .tc-empty p, body.rd-app #overviewPage .tc-refund-note { margin: 7px 0 0; padding: 0; border: 0; color: var(--muted); font-size: 11px; font-weight: 500; line-height: 1.5; overflow-wrap: anywhere; }
+body.rd-app #overviewPage .tc-empty .rd-empty-add { margin-top: 8px; }
+@media (hover: hover) {
+  body.rd-app #overviewPage .tc-category:hover { background: #f2f6fb; }
+}
+body.rd-app .ex-cost-summary { background: #f5fbff; }
+body.rd-app .ex-cost-summary .ex-budget-values > div:first-child strong { font-weight: 800; }
+.ex-cost-summary .ex-budget-meta small { font-size: 11px; color: #687082; }
+.ex-document .ex-cost-facts { display: flex; flex-direction: column; justify-content: center; gap: 14px; padding-left: 24px; border-left: 1px solid #dce0e6; }
+.ex-document .ex-cost-facts > div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 13px; }
+.ex-document .ex-cost-facts b, .ex-document .ex-cost-facts strong { font-size: 20px; font-weight: 800; white-space: nowrap; }
+.ex-document .ex-cost-facts small { color: #687082; font-size: 11px; }
+.pp-cost-strip > .ph:last-child { font-size: 16px; }
+@media (max-width: 359px) {
+  body.rd-app #overviewPage .tc-total { font-size: 27px; }
+  body.rd-app #overviewPage .tc-total.is-long { font-size: 22px; }
+  body.rd-app #overviewPage .tc-card-facts { gap: 4px 12px; }
+  body.rd-app #overviewPage .tc-card-facts dt { font-size: 11px; }
+  body.rd-app #overviewPage .tc-card-facts dd { font-size: 12px; }
+  body.rd-app #overviewPage .tc-category-list { column-gap: 6px; }
+  body.rd-app #overviewPage .tc-category { font-size: 11px; }
+}

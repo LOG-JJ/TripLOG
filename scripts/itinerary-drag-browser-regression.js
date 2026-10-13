@@ -1,3 +1,4 @@
+const { launchBrowser } = require('./helpers/browser-fixture');
 // Browser plugin not available. Real mouse DnD in isolated Playwright/Edge.
 const assert=require('node:assert/strict'),path=require('node:path'),fs=require('node:fs');
 const root=path.resolve(__dirname,'..');
@@ -8,7 +9,7 @@ async function main(){
  fs.mkdirSync(output,{recursive:true});
  const server=createServer({pagesRedirects:true});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
  const origin=process.env.TRIPLOG_TEST_URL||`http://127.0.0.1:${server.address().port}`;
- const browser=await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL||(process.platform==='win32'?'msedge':undefined),headless:true});
+ const browser=await launchBrowser();
  let activePage;
  try{
   const context=await browser.newContext({serviceWorkers:'block',reducedMotion:'no-preference',viewport:{width:1440,height:1200}});context.setDefaultTimeout(15000);

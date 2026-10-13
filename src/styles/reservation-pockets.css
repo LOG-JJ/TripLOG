@@ -1,21 +1,14 @@
 /* Compact two-column summary from the selected TripLOG editorial mockup. */
 body.rd-app #overviewPage .rd-trip-hero { grid-column: 1 / -1; }
 body.rd-app #overviewPage .rs-reservations {
-  --font: 'TripLOG Collaboration', 'Pretendard', sans-serif;
-  --font-heading: var(--font);
   grid-column: 1 / -1; width: 100%; justify-self: stretch;
-  margin: 0 0 8px; padding: 8px 12px 9px; border: 1.5px solid #0b1020; border-radius: 10px;
-  background: #fff; color: #0b1020; font-family: var(--font); font-size: 14px; line-height: 1.4;
+  padding: 8px 12px 9px; font-size: 14px; line-height: 1.4;
 }
 .rs-summary-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .rs-summary-column { display: grid; grid-template-rows: auto minmax(64px, 1fr) auto; row-gap: 6px; min-width: 0; }
 .rs-summary-column:first-child { padding-right: 12px; }
 .rs-summary-column + .rs-summary-column { padding-left: 12px; border-left: 1px solid #e4e5e9; }
 .rs-summary-heading { display: flex; align-items: center; gap: 7px; min-width: 0; }
-body.rd-app #overviewPage .rs-summary-heading h2 {
-  margin: 0; font-family: var(--font); font-size: clamp(13px, 3.6vw, 17px); line-height: 1.25;
-  font-weight: 800; letter-spacing: -.45px; white-space: nowrap;
-}
 .rs-summary-count { flex-shrink: 0; display: inline-flex; align-items: baseline; gap: 1px; padding: 1px 6px; border: 1.5px solid #0b1020; border-radius: 7px; background: #fff05a; font-size: 13px; line-height: 1.3; font-weight: 850; font-variant-numeric: tabular-nums; white-space: nowrap; }
 body.rd-app #overviewPage .rs-summary-count small { font-size: 11px; font-weight: 750; }
 .rs-summary-body { min-width: 0; display: flex; align-items: center; }

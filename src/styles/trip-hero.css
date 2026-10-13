@@ -1,11 +1,7 @@
 /* A shared postcard header; only the destination illustration changes. */
 body.rd-app #overviewPage .th-trip-hero {
-  --font: 'TripLOG Collaboration', 'Pretendard', sans-serif;
-  --font-heading: var(--font);
   position: relative; display: block; grid-column: 1 / -1; isolation: isolate; container-type: inline-size;
   min-height: clamp(190px, 22vw, 232px); padding: 22px 24px 18px; margin: 0 0 8px; overflow: hidden;
-  border: 1.5px solid #0b1020; border-radius: 11px; background: #fff; color: #0b1020;
-  font-family: var(--font);
 }
 body.rd-app #overviewPage .th-hero-copy { position: relative; z-index: 1; width: 58%; min-width: 0; }
 body.rd-app #overviewPage .th-countdown {

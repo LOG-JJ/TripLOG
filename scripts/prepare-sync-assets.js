@@ -2,7 +2,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const esbuild = require('esbuild');
 const crypto = require('node:crypto');
-const root = path.resolve(__dirname, '..');
+const assets = require('./app-assets');
+const root = assets.root;
 fs.mkdirSync(path.join(root, 'supabase/functions/_shared'), { recursive: true });
 fs.copyFileSync(path.join(root, 'src/app/sync/model.js'), path.join(root, 'supabase/functions/_shared/sync-model.js'));
 fs.copyFileSync(path.join(root, 'src/app/sync/settlement-model.js'), path.join(root, 'supabase/functions/_shared/settlement-model.js'));
@@ -20,11 +21,10 @@ for (const icon of manifest.icons || []) {
   if (/^\/icons\/triplog-icon-\d+\.png(?:\?.*)?$/.test(icon.src)) icon.src = `${icon.src.split('?')[0]}?v=${iconVersion}`;
 }
 fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
-function walk(dir) { return fs.readdirSync(path.join(root,dir),{withFileTypes:true}).flatMap(entry=>entry.isDirectory()?walk(`${dir}/${entry.name}`):[`${dir}/${entry.name}`]); }
-const files = ['Travel.html','index.html','app.js','styles.css','site.webmanifest','favicon-32.png','apple-touch-icon.png',...walk('src'),...walk('vendor'),...walk('icons')].sort();
+const files = assets.versionedFiles();
 // City illustrations are optional content. Installing a new app shell must not
 // download the whole destination catalog or depend on every city image loading.
-const shellFiles = files.filter(file => !file.startsWith('src/assets/trip-scenes/cities/'));
+const shellFiles = assets.shellFiles(files);
 // A content-derived build ID replaces hand-maintained release labels. Normalize
 // our own generated values before hashing so repeated builds are byte-stable.
 const versionedAsset = /((?:href|src)="(?:\.\/)?(?:app\.js|styles\.css|(?:src|vendor)\/[^"?]+\.(?:css|js))\?v=)[^"]*(")/g;

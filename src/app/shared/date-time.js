@@ -59,6 +59,18 @@ function formatWeekday(date) {
   return new Intl.DateTimeFormat("ko-KR", { weekday: "short" }).format(date);
 }
 
+function formatTripShortDate(value) {
+  const date = new Date(`${value}T12:00:00`);
+  return Number.isFinite(date.getTime()) ? `${date.getMonth() + 1}.${date.getDate()} ${'일월화수목금토'[date.getDay()]}` : '날짜 미정';
+}
+
+function formatTripPeriod(trip) { return `${formatTripShortDate(trip.startDate)} – ${formatTripShortDate(trip.endDate)}`; }
+
+function formatTripDuration(trip) {
+  const days = getTripDaysForRange(trip.startDate, trip.endDate).length;
+  return days > 1 ? `${days - 1}박 ${days}일` : days ? '당일치기' : '기간 미정';
+}
+
 window.TripLog.register("shared.dateTime", {
   parseDate,
   parseTimeValue,
@@ -70,4 +82,7 @@ window.TripLog.register("shared.dateTime", {
   formatHistoryTimestamp,
   formatHistoryDateRange,
   formatWeekday,
+  formatTripShortDate,
+  formatTripPeriod,
+  formatTripDuration,
 });

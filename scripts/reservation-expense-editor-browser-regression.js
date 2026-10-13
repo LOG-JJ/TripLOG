@@ -1,9 +1,8 @@
+const { launchBrowser, fixtureToken, blockExternalRequests, startServer, stopServer } = require('./helpers/browser-fixture');
 // Isolated fixtures only. Browser plugin not available; use the established Playwright/Edge regression workflow.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { chromium } = require('playwright');
-const { createServer } = require('./serve-test');
 const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Reservation-Editor-20260922');
 const hotel = { id: 'old-hotel', date: '__pretrip__', paymentDate: '2026-09-03', category: '숙소', description: '숙소 예약 · 호텔 몬돈스 교토 고조', amount: 401711, foreignAmount: 401711, currency: 'KRW', currencyUnit: '원', currencySymbol: '₩', exchangeRate: 1, exchangeBase: 1, mode: 'overseas', paymentMethod: 'card', payerKey: 'leader', pretripType: 'hotel', hotelName: '호텔 몬돈스 교토 고조', hotelCheckIn: '2026-09-26', hotelCheckOut: '2026-09-28', hotelRoomType: '특실 트윈', hotelGuests: 5, hotelAddress: '교토 고조', bookingCode: 'HOTEL-123', pretripMemo: '늦은 체크인 요청', note: '체크인 2026-09-26 · 체크아웃 2026-09-28 · 2박 · 객실 특실 트윈 · 5명 · 예약번호 HOTEL-123 · 늦은 체크인 요청', createdAt: 1, providerData: { preserved: true } };
 const flight = { id: 'old-flight', date: '__pretrip__', paymentDate: '2026-09-04', category: '교통', description: '항공권 · 대한항공 KE721 · 인천 → 간사이', amount: 280000, foreignAmount: 280000, currency: 'KRW', exchangeRate: 1, exchangeBase: 1, mode: 'overseas', paymentMethod: 'cash', pretripType: 'flight', flightAirline: '대한항공', flightNumber: 'KE721', flightFrom: '인천', flightTo: '간사이', flightDepartDate: '2026-09-25', flightDepartTime: '08:30', flightReturnDate: '2026-09-28', flightReturnDepartTime: '19:20', bookingCode: '', pretripMemo: '수하물 23kg', note: '출발 2026-09-25 08:30 · 복귀 출발 2026-09-28 19:20 · 수하물 23kg', createdAt: 2 };
@@ -11,20 +10,19 @@ const fixture = { id: 'reservation-editor-fixture', tripName: '오사카·교토
 
 async function main() {
   fs.mkdirSync(output, { recursive: true });
-  const server = createServer({ pagesRedirects: true }); await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
-  const origin = process.env.TRIPLOG_TEST_URL || `http://127.0.0.1:${server.address().port}`;
-  const browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined), headless: true });
+  const { server, origin } = await startServer();
+  const browser = await launchBrowser();
   const context = await browser.newContext({ serviceWorkers: 'block', viewport: { width: 390, height: 844 } }); context.setDefaultTimeout(12000);
   const user = { id: '00000000-0000-4000-8000-000000000099', email: 'reservation@example.test', user_metadata: { display_name: '회귀 검증' } };
   const expiry = Math.floor(Date.now() / 1000) + 3600;
-  const token = [Buffer.from(JSON.stringify({ alg: 'HS256', typ: 'JWT' })).toString('base64url'), Buffer.from(JSON.stringify({ sub: user.id, exp: expiry, role: 'authenticated' })).toString('base64url'), 'fixture'].join('.');
+  const token = fixtureToken(user, expiry);
   await context.addInitScript(({ origin, fixture, user, expiry, token }) => {
     if (location.origin !== origin || localStorage.getItem('reservation-editor-seed')) return;
     localStorage.setItem('reservation-editor-seed', '1');
     localStorage.setItem('sb-iehdziiplzgvxcrbizgv-auth-token', JSON.stringify({ access_token: token, refresh_token: 'fixture', expires_at: expiry, expires_in: 3600, token_type: 'bearer', user }));
     localStorage.setItem('domesticTravelExpensePlanner.trips.v2', JSON.stringify([fixture])); localStorage.setItem('domesticTravelExpensePlanner.activeTripId.v2', fixture.id);
   }, { origin, fixture, user, expiry, token });
-  await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
+  await blockExternalRequests(context, origin);
   const page = await context.newPage(), errors = []; page.on('pageerror', error => errors.push(error.message));
   const ready = () => page.waitForFunction(() => document.documentElement.dataset.appReady === 'true' && document.documentElement.dataset.auth === 'signed-in');
   const dialog = page.locator('#rdExpenseEditor');
@@ -110,6 +108,6 @@ async function main() {
   } catch (error) {
     console.error(JSON.stringify({ errors, url: page.url(), state: await page.evaluate(() => ({ ready: document.documentElement.dataset, ids: typeof state === 'undefined' ? [] : state.entries.map(entry => entry.id), rows: document.querySelector('#rdExpenseList')?.innerText, status: document.querySelector('#exExpenseError')?.textContent })) }));
     await page.screenshot({ path: path.join(output, 'failure.png'), animations: 'disabled' }); throw error;
-  } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }
+  } finally { await browser.close(); await stopServer(server); }
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

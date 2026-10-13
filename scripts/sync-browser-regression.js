@@ -1,3 +1,4 @@
+const { launchBrowser } = require('./helpers/browser-fixture');
 // Browser plugin is not installed in this workspace. Use Playwright's installed Edge browser.
 // All accounts, trips and network responses in this test are isolated fixtures.
 const assert = require('node:assert/strict');
@@ -41,7 +42,7 @@ async function main() {
   let memberRoster = initialRoster, membersUnavailable = true;
   const tid = await rpc('triplog_create_sync',[actors[0],seed.id,seed,Object.values(M.encode(seed))]);
   await db.query("insert into public.triplog_trip_members(trip_id,user_id,role,status) values($1,$2,'editor','accepted')",[tid,actors[1]]);
-  const browser = await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined),headless:true});
+  const browser = await launchBrowser();
   const pages=[], contexts=[], errors=[]; let offline = false;
   try {
     for (const [index, actor] of actors.slice(0,2).entries()) {

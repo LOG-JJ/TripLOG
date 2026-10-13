@@ -1,3 +1,15 @@
+function getTransitColor(trans) {
+  switch (trans) {
+    case "walk": return "#d1fae5"; // emerald light
+    case "car": return "#fee2e2";  // rose light
+    case "train": return "#ede9fe"; // violet light
+    case "bus": return "#fef3c7";  // amber light
+    case "flight": return "#e0f2fe"; // sky light
+    case "etc": return "#e0f2fe";  // sky light
+    default: return "#f3f4f6";     // gray light
+  }
+}
+
 function initLeafletMap() {
   const container = document.querySelector("#leafletMap");
   if (!container || !window.L) return;
@@ -336,6 +348,7 @@ async function renderLeafletRoute(items) {
 
 window.TripLog.register("services.maps.leafletMap", {
   initLeafletMap,
+  getTransitColor,
   getRouteGeocodeAnchor,
   shouldRefreshCachedRouteCoords,
   isRouteCoordinateAcceptable,

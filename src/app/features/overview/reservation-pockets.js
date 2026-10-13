@@ -56,16 +56,14 @@
   function column(type, rows) {
     const title = type === 'transport' ? '교통 예약' : '숙소 예약';
     return `<section class="rs-summary-column rs-summary-${type}${rows.length ? '' : ' is-empty'}" aria-labelledby="rs-${type}-heading">
-      <header class="rs-summary-heading"><h2 id="rs-${type}-heading">${title}</h2><span class="rs-summary-count">${rows.length}<small>건</small></span></header>
+      ${window.TripLog.features.overview.card.header({ title, titleId: `rs-${type}-heading`, className: 'rs-summary-heading', badge: `<span class="rs-summary-count">${rows.length}<small>건</small></span>` })}
       <div class="rs-summary-body" id="rs-${type}-content">${type === 'transport' ? transportBody(rows) : stayBody(rows)}</div>
       <button type="button" class="rs-summary-action rd-reservation-${type}" data-rd-action="companion-${type}${rows.length ? '' : '-new'}" aria-label="${title} ${rows.length}건, ${rows.length ? '예약 지갑 열기' : '예약 추가하기'}"><span>${rows.length ? '전체 보기' : '예약 추가'}</span>${icon('caret-right')}</button>
     </section>`;
   }
   function render(bookings) {
     const rows = Array.isArray(bookings) ? bookings : [];
-    return `<section class="rs-reservations" aria-label="예약 요약">
-      <div class="rs-summary-columns">${column('transport', rows.filter(row => row.type === 'transport'))}${column('stay', rows.filter(row => row.type === 'stay'))}</div>
-    </section>`;
+    return window.TripLog.features.overview.card.render({ className: 'rs-reservations', variant: 'reservations', label: '예약 요약', content: `<div class="rs-summary-columns">${column('transport', rows.filter(row => row.type === 'transport'))}${column('stay', rows.filter(row => row.type === 'stay'))}</div>` });
   }
   window.TripLog.register('features.overview.reservationPockets', { render });
 })();

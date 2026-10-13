@@ -1,14 +1,21 @@
-const {spawn}=require('node:child_process');
-const {createServer}=require('./serve-test');
-async function main(){
-  const server=createServer({pagesRedirects:true});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
-  try{
-    for(const file of ['trip-library-browser-regression.js','trip-header-browser-regression.js','trip-scene-art-browser-regression.js','trip-scene-cache-browser-regression.js','reservation-pockets-browser-regression.js','transport-reservations-browser-regression.js','stay-copy-browser-regression.js','scroll-lock-browser-regression.js','settlement-name-browser-regression.js','budget-edit-browser-regression.js','auth-session-browser-regression.js','sync-browser-regression.js','sync-offline-browser-regression.js','sync-navigation-recovery-regression.js','sync-auto-update-browser-regression.js','trip-chooser-browser-regression.js','itinerary-drag-browser-regression.js','itinerary-touch-drag-browser-regression.js','controls-browser-regression.js','time-wheel-browser-regression.js','reservation-time-browser-regression.js','itinerary-controls-browser-regression.js','transit-journey-browser-regression.js','companion-passport-browser-regression.js','wallet-passbook-browser-regression.js','map-provider-browser-regression.js','domestic-route-browser-regression.js','expense-ui-browser-regression.js','reservation-expense-editor-browser-regression.js','expense-filter-browser-regression.js','receipt-json-browser-regression.js']){
-      await new Promise((resolve,reject)=>{
-        const child=spawn(process.execPath,[require('node:path').join(__dirname,file)],{stdio:'inherit',env:{...process.env,TRIPLOG_TEST_URL:`http://127.0.0.1:${server.address().port}`}});
-        child.on('error',reject);child.on('exit',code=>code===0?resolve():reject(new Error(`${file} failed (${code})`)));
+const { spawn } = require('node:child_process');
+const path = require('node:path');
+const { createServer } = require('./serve-test');
+const { startServer, stopServer } = require('./helpers/browser-fixture');
+const suites = require('./browser-suites');
+
+async function main() {
+  const { server, origin } = await startServer(() => createServer({ pagesRedirects: true }));
+  try {
+    for (const file of suites) {
+      await new Promise((resolve, reject) => {
+        const child = spawn(process.execPath, [path.join(__dirname, file)], {
+          stdio: 'inherit', env: { ...process.env, TRIPLOG_TEST_URL: origin },
+        });
+        child.on('error', reject);
+        child.on('exit', code => code === 0 ? resolve() : reject(new Error(`${file} failed (${code})`)));
       });
     }
-  }finally{await new Promise(resolve=>server.close(resolve));}
+  } finally { await stopServer(server); }
 }
-main().catch(error=>{console.error(error);process.exitCode=1;});
+main().catch(error => { console.error(error); process.exitCode = 1; });

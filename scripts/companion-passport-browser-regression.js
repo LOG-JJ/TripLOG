@@ -1,22 +1,19 @@
+const { launchBrowser, fixtureToken, blockExternalRequests, startServer, stopServer } = require('./helpers/browser-fixture');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { chromium } = require('playwright');
-const { createServer } = require('./serve-test');
 const fixture = require('./fixtures/companion-passport');
 const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Passport-20260922');
 
 async function main() {
   fs.mkdirSync(output, { recursive: true });
-  const server = createServer({ pagesRedirects: true });
-  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
-  const origin = process.env.TRIPLOG_TEST_URL || `http://127.0.0.1:${server.address().port}`;
-  const browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined), headless: true });
+  const { server, origin } = await startServer();
+  const browser = await launchBrowser();
   const context = await browser.newContext({ serviceWorkers: 'block', viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, acceptDownloads: true });
   context.setDefaultTimeout(10000);
   const user = { id: '00000000-0000-4000-8000-000000000099', email: 'passport@example.test', user_metadata: { display_name: '디자인 확인' } };
   const expiry = Math.floor(Date.now() / 1000) + 3600;
-  const token = [Buffer.from(JSON.stringify({ alg: 'HS256', typ: 'JWT' })).toString('base64url'), Buffer.from(JSON.stringify({ sub: user.id, exp: expiry, role: 'authenticated' })).toString('base64url'), 'fixture'].join('.');
+  const token = fixtureToken(user, expiry);
   await context.addInitScript(({ origin, fixture, user, expiry, token }) => {
     if (location.origin !== origin || localStorage.getItem('passport-seed')) return;
     localStorage.setItem('passport-seed', '1');
@@ -24,7 +21,7 @@ async function main() {
     localStorage.setItem('domesticTravelExpensePlanner.trips.v2', JSON.stringify([fixture]));
     localStorage.setItem('domesticTravelExpensePlanner.activeTripId.v2', fixture.id);
   }, { origin, fixture, user, expiry, token });
-  await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
+  await blockExternalRequests(context, origin);
   const page = await context.newPage(), errors = [];
   page.on('pageerror', error => errors.push(error.message));
   const ready = () => page.waitForFunction(() => document.documentElement.dataset.triplogInitialized === 'true' && document.documentElement.dataset.auth === 'signed-in' && document.querySelector('#ttCompanion'));
@@ -45,6 +42,11 @@ async function main() {
     await page.goto(`${origin}/Travel?page=overview&trip=${fixture.id}`); await ready(); await open('today');
     // Inspect the fixture's populated day even when the real calendar has advanced.
     await dialog.locator(`[data-date="${fixture.startDate}"]`).click();
+    assert.deepEqual(await dialog.evaluate(node => ({ left: node.scrollLeft, top: node.querySelector('.tt-scroll').scrollTop })), { left: 0, top: 0 }, 'Selecting a visible day keeps the complete header and dialog position');
+    await dialog.locator('.tt-scroll').evaluate(node => { node.scrollTop = 35; });
+    await page.evaluate(() => window.TripLog.features.travelCompanion.workspace.render());
+    assert.equal(await dialog.locator('.tt-scroll').evaluate(node => node.scrollTop), 35, 'Rerender preserves the reader position');
+    await dialog.locator('.tt-scroll').evaluate(node => { node.scrollTop = 0; });
     assert.equal(await dialog.locator('.pp-place-title').innerText(), '경복궁');
     assert.equal(await dialog.locator('.pp-pass-caption b').innerText(), '03 / 06');
     assert.equal(new URL(await dialog.locator('#ttPrimary a').getAttribute('href')).hostname, 'map.naver.com');
@@ -98,13 +100,13 @@ async function main() {
       assert.equal(await dialog.locator('[data-tt-packing="p4"]').isChecked(), false);
     } finally { await page.evaluate(() => { saveAndRender = window.passportRealSave; delete window.passportRealSave; }); }
     await dialog.locator('[data-tt-option="references"]').uncheck();
-    await dialog.locator('[data-tt-option="budget"]').check();
+    await dialog.locator('[data-tt-option="costs"]').check();
     await tab('today'); await tab('tools');
     assert.equal(await dialog.locator('[data-tt-option="references"]').isChecked(), false);
     const pocketPromise = page.waitForEvent('download');
     await dialog.locator('[data-tt-action="pocket"]').click();
     const pocket = await pocketPromise, html = fs.readFileSync(await pocket.path(), 'utf8');
-    assert.match(html, /경복궁/); assert.match(html, /여행 예산/); assert.doesNotMatch(html, /REF-PRIVATE-123/);
+    assert.match(html, /경복궁/); assert.match(html, /여행 경비/); assert.doesNotMatch(html, /여행 예산|REF-PRIVATE-123/);
     const calendarPromise = page.waitForEvent('download');
     await dialog.locator('[data-tt-action="calendar"]').click();
     const calendar = await calendarPromise, ics = fs.readFileSync(await calendar.path(), 'utf8');
@@ -119,7 +121,7 @@ async function main() {
     await dialog.locator('#ttTimeZone').selectOption('Asia/Seoul');
     await page.waitForFunction(() => state.travelCompanion.timeZone === 'Asia/Seoul');
     await dialog.locator('[data-tt-option="references"]').check();
-    await dialog.locator('[data-tt-option="budget"]').uncheck();
+    await dialog.locator('[data-tt-option="costs"]').uncheck();
     // Wait for the live status toast to clear before visual baselines.
     await page.locator('.toss-toast.show').waitFor({ state: 'hidden' });
     await tab('today');
@@ -137,10 +139,11 @@ async function main() {
     }
     await page.setViewportSize({ width: 390, height: 900 });
     for (const key of ['today', 'review', 'tools']) { await tab(key); await fits(); await capture(`${key}-reference`); }
-    // Missing times, large names, empty packing and an overspent budget all use real render paths.
+    // Missing times, large names, empty packing and a legacy budget use real render paths.
     await page.evaluate(() => { state.itineraryItems.find(row => row.id === 'palace').place = '매우 긴 장소 이름 '.repeat(12); state.itineraryItems.find(row => row.id === 'palace').time = ''; state.totalBudget = 3000; state.packingList = []; window.TripLog.features.travelCompanion.workspace.render(); });
     await page.setViewportSize({ width: 320, height: 680 }); await tab('today'); await fits();
-    assert.match(await dialog.locator('.pp-budget-strip').innerText(), /하루 예산 초과/);
+    assert.match(await dialog.locator('.pp-cost-strip').innerText(), /이날 여행 경비/);
+    assert.doesNotMatch(await dialog.locator('.pp-cost-strip').innerText(), /예산|초과/);
     await tab('review'); await fits();
     assert.match(await dialog.locator('.pp-review-status').innerText(), /먼저 확인/);
     await dialog.getByRole('button', { name: '조정안 확인' }).click();
@@ -149,6 +152,6 @@ async function main() {
     await tab('tools'); await fits(); assert.match(await dialog.locator('.pp-packing').innerText(), /준비물 추가/);
     assert.deepEqual(errors, [], 'No uncaught browser exceptions');
     console.log(`Companion passport browser regression passed. Screenshots: ${output}`);
-  } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }
+  } finally { await browser.close(); await stopServer(server); }
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

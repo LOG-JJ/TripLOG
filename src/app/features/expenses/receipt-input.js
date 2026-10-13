@@ -256,7 +256,6 @@
   }
   function setup() {
     if (setupDone) return; setupDone = true;
-    els.receiptOpenButton.addEventListener('click', open);
     ui.ParseJson.addEventListener('click', parseJson);
     ui.JsonText.addEventListener('input', () => { resetReview(); ui.JsonStatus.textContent = ''; });
     ui.CopyPrompt.addEventListener('click', async () => {
@@ -315,5 +314,5 @@
       if (pendingReceipt && pendingReceipt.tripId !== state.id) reset();
     });
   }
-  window.TripLog.register('features.expenses.receiptInput', { setup, reset, metadata, beforeSubmit });
+  window.TripLog.register('features.expenses.receiptInput', { setup, open, reset, metadata, beforeSubmit });
 })();

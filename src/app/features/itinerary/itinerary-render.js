@@ -129,9 +129,6 @@ function renderItineraryPage() {
   summary?.render();
   syncNaverMapsLink();
   window.TripLog.features.itinerary.workspace?.render?.(days);
-  if (document.querySelector("#itineraryToolsDialog")?.open) {
-    renderTimeBlockGrid(getFilteredItineraryItems()); renderTravelTimeChart(getFilteredItineraryItems()); renderPackingBag();
-  }
 }
 
 function renderItineraryDaySelect(days) {

@@ -1,21 +1,19 @@
+const { launchBrowser, fixtureToken, blockExternalRequests, startServer, stopServer } = require('./helpers/browser-fixture');
 // Browser plugin not available; use the established isolated Playwright/Edge workflow.
 // All non-app requests are blocked; fixtures and clipboard are isolated from real accounts/data.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { chromium } = require('playwright');
-const { createServer } = require('./serve-test');
 const fixture = require('./fixtures/wallet-passbook');
 const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Wallet-Passbook-20260923');
 async function main() {
   fs.mkdirSync(output, { recursive: true });
-  const server = createServer({ pagesRedirects: true }); await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
-  const origin = process.env.TRIPLOG_TEST_URL || `http://127.0.0.1:${server.address().port}`;
-  const browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined), headless: true });
+  const { server, origin } = await startServer();
+  const browser = await launchBrowser();
   try {
     const context = await browser.newContext({ serviceWorkers: 'block', viewport: { width: 390, height: 844 }, deviceScaleFactor: 1 }); context.setDefaultTimeout(12000);
     const user = { id: '00000000-0000-4000-8000-000000000099', email: 'wallet@example.test' }, expiry = Math.floor(Date.now() / 1000) + 3600;
-    const token = [Buffer.from(JSON.stringify({ alg: 'HS256', typ: 'JWT' })).toString('base64url'), Buffer.from(JSON.stringify({ sub: user.id, exp: expiry, role: 'authenticated' })).toString('base64url'), 'fixture'].join('.');
+    const token = fixtureToken(user, expiry);
     await context.addInitScript(({ origin, fixture, user, expiry, token }) => {
       if (location.origin !== origin) return;
       Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: async text => { window.walletCopiedText = text; } } });
@@ -23,7 +21,7 @@ async function main() {
       localStorage.setItem('wallet-passbook-seeded', '1'); localStorage.setItem('sb-iehdziiplzgvxcrbizgv-auth-token', JSON.stringify({ access_token: token, refresh_token: 'fixture', expires_at: expiry, expires_in: 3600, token_type: 'bearer', user }));
       localStorage.setItem('domesticTravelExpensePlanner.trips.v2', JSON.stringify([fixture])); localStorage.setItem('domesticTravelExpensePlanner.activeTripId.v2', fixture.id);
     }, { origin, fixture, user, expiry, token });
-    await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
+    await blockExternalRequests(context, origin);
     const page = await context.newPage(), errors = []; page.on('pageerror', error => errors.push(error.message));
     const ready = () => page.waitForFunction(() => document.documentElement.dataset.triplogInitialized === 'true' && document.documentElement.dataset.auth === 'signed-in' && document.documentElement.dataset.appReady === 'true');
     const wallet = page.locator('#ttCompanion');
@@ -88,6 +86,6 @@ async function main() {
     await open(); assert.match(await wallet.locator('.pw-ticket-heading').innerText(), /날짜 미정/); assert.equal(await wallet.locator('.pw-ticket-band .ph-train').count(), 1); await fit();
     await page.evaluate(() => { state.travelCompanion.reservations = []; render(); }); assert.match(await wallet.locator('#ttWalletList').innerText(), /첫 예약/);
     assert.deepEqual(errors, []); console.log('PASS Ticket Passbook: 320/390/768/1440 layout, flight/stay/generic tickets, counts, search/filter/sort, details, original booking edit/save, copy, manual create/edit/reload, tabs, long/unknown/empty states. ' + output);
-  } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }
+  } finally { await browser.close(); await stopServer(server); }
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

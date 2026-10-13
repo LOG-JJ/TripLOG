@@ -1,9 +1,9 @@
+const { launchBrowser, blockExternalRequests } = require('./helpers/browser-fixture');
 // Browser plugin unavailable: isolated Playwright/Edge fixtures, no production
 // requests. Compare the wallet with the shared picker in the itinerary editor.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { chromium } = require('playwright');
 const { createReservationPocketPreview } = require('./preview-reservation-pockets');
 const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.resolve(__dirname, '../.test-output/reservation-time');
 
@@ -11,12 +11,12 @@ async function main() {
   fs.mkdirSync(output, { recursive: true });
   const server = createReservationPocketPreview(); await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const origin = `http://127.0.0.1:${server.address().port}`;
-  const browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined), headless: true });
+  const browser = await launchBrowser();
   try {
     for (const width of [1440, 390, 320]) {
       const context = await browser.newContext({ serviceWorkers: 'block', viewport: { width, height: width > 600 ? 1000 : 844 }, hasTouch: width < 600, timezoneId: 'Asia/Seoul' });
       context.setDefaultTimeout(12000);
-      await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
+      await blockExternalRequests(context, origin);
       const page = await context.newPage(), errors = [];
       page.on('pageerror', error => errors.push(error.message));
       const ready = () => page.waitForFunction(() => document.documentElement.dataset.appReady === 'true' && document.documentElement.dataset.auth === 'signed-in' && state.collaboration?.ownerId);

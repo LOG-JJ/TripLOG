@@ -1,19 +1,19 @@
+const { launchBrowser, blockExternalRequests } = require('./helpers/browser-fixture');
 // Browser plugin unavailable; use the existing isolated Playwright/Edge workflow.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { chromium } = require('playwright');
 const { createTripHeaderPreview } = require('./preview-trip-header');
 const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Trip-Header-20261004');
 async function main() {
   fs.mkdirSync(output, { recursive: true });
   const server = createTripHeaderPreview(); await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const origin = `http://127.0.0.1:${server.address().port}`;
-  const browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined), headless: true });
+  const browser = await launchBrowser();
   try {
     const context = await browser.newContext({ serviceWorkers: 'block', viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1, timezoneId: 'Asia/Seoul' });
     context.setDefaultTimeout(15000);
-    await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
+    await blockExternalRequests(context, origin);
     const page = await context.newPage(), errors = [];
     page.on('pageerror', error => errors.push(error.message));
     const ready = () => page.waitForFunction(() => document.documentElement.dataset.triplogInitialized === 'true' && document.documentElement.dataset.appReady === 'true' && document.documentElement.dataset.auth === 'signed-in' && Boolean(state.collaboration?.ownerId));

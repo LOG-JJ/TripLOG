@@ -30,7 +30,6 @@ function startEdit(entry, options = {}) {
   syncCustomSelect(els.categorySelect);
   syncCustomSelect(els.currencySelect);
   els.submitButton.querySelector("span").textContent = "저장";
-  els.cancelEditButton.hidden = false;
   els.descriptionInput.focus();
   window.TripLog.features.redesign.workspace.openExpenseEditor(entry, options);
 }
@@ -52,7 +51,6 @@ function clearEditMode() {
   syncCustomSelect(els.categorySelect);
   syncCustomSelect(els.currencySelect);
   els.submitButton.querySelector("span").textContent = "추가";
-  els.cancelEditButton.hidden = true;
 }
 
 function deleteEntry(id) {
@@ -104,27 +102,7 @@ function getFilteredEntries() {
   return result;
 }
 
-function calculateTotals() {
-  const byCategory = Object.fromEntries(categories.map((category) => [category.name, 0]));
-
-  state.entries.forEach((entry) => {
-    byCategory[entry.category] = (byCategory[entry.category] || 0) + Number(entry.amount || 0);
-  });
-
-  const total = Object.values(byCategory).reduce((sum, amount) => sum + amount, 0);
-  const topCategory = categories
-    .map((category) => ({ ...category, amount: byCategory[category.name] || 0 }))
-    .sort((a, b) => b.amount - a.amount)[0];
-  const maxEntry = [...state.entries]
-    .sort((a, b) => Number(b.amount || 0) - Number(a.amount || 0))[0] || null;
-
-  return {
-    total,
-    byCategory,
-    topCategory: topCategory?.amount ? topCategory : null,
-    maxEntry,
-  };
-}
+function calculateTotals() { return window.TripLog.shared.travelCosts.summarize(state); }
 
 
 window.TripLog.register("features.expenses.entryActions", {

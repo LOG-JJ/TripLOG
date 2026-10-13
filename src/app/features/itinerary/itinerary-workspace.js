@@ -247,11 +247,10 @@
       if (event.target.closest("[data-close-itinerary-menu]")) menu.close();
       if (event.target.closest("[data-itinerary-sync-status]")) { menu.close(); els.itineraryPageButton.click(); }
       if (event.target.closest("[data-itinerary-tools]")) {
-        menu.close(); toolsDialog.showModal(); renderItineraryPage();
+        menu.close(); toolsDialog.showModal(); window.TripLog.features.packing.workspace.render();
       }
     });
     query("#itineraryMenuButton").addEventListener("click", openMenu);
-    query("#itineraryToolsClose").addEventListener("click", () => toolsDialog.close());
     query("#itineraryMapButton").addEventListener("click", () => show());
     els.itineraryViewAllButton.addEventListener("click", () => {
       const mode = state.selectedItineraryDate === "all" ? "edit" : "overview";

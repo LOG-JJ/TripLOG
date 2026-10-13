@@ -1,6 +1,5 @@
 (function createTripCollaborationModule() {
   const ACCOUNT_STORAGE_KEY = "domesticTravelExpensePlanner.account.v1";
-  const INVITES_STORAGE_KEY = "domesticTravelExpensePlanner.invites.v1";
   const SUPABASE_CONFIG_STORAGE_KEY = "domesticTravelExpensePlanner.supabaseConfig.v1";
   const AUTH_PENDING_EMAIL_KEY = "domesticTravelExpensePlanner.authPendingEmail.v1";
   const SUPABASE_CDN_URL = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.107.0/dist/umd/supabase.min.js";
@@ -9,7 +8,6 @@
     publishableKey: "sb_publishable_b5CwF1zyb5bzNHUT50xNsg_pSon5Glc",
   };
   const INVITE_PARAM = "invite";
-  const INVITE_EXPIRES_DAYS = 14;
   const AUTH_PASSWORD_MIN_LENGTH = 8;
   const MEMBER_SYNC_INTERVAL_MS = 15000;
 
@@ -229,15 +227,6 @@
       displayName: typeof account.displayName === "string" ? account.displayName : "",
       provider: typeof account.provider === "string" ? account.provider : "local",
     };
-  }
-
-  function isSupabaseAuthRequiredError(error) {
-    const message = String(error?.message || "").toLowerCase();
-    const code = String(error?.code || "");
-    return code === "42501"
-      || message.includes("permission denied")
-      || message.includes("row-level security")
-      || message.includes("jwt");
   }
 
   function getEmailDisplayFallback(email) {
@@ -570,14 +559,6 @@
     memberSyncIntervalId = null;
   }
 
-  function getTripStateSignature(snapshot) {
-    try {
-      return JSON.stringify(snapshot || {});
-    } catch {
-      return "";
-    }
-  }
-
   function delay(ms = 0) {
     return new Promise((resolve) => window.setTimeout(resolve, ms));
   }
@@ -592,22 +573,6 @@
       snapshot.travelCompanion = normalizeTravelCompanion(localTrip?.travelCompanion, snapshot.itineraryItems || []);
     }
     return snapshot;
-  }
-
-  function getRemoteTripSnapshot(row = {}) {
-    const remoteState = row.travel_state && typeof row.travel_state === "object" ? row.travel_state : {};
-    const fallbackId = typeof row.app_trip_id === "string" && row.app_trip_id ? row.app_trip_id : `trip_remote_${row.id || Date.now()}`;
-    return {
-      ...remoteState,
-      id: typeof remoteState.id === "string" && remoteState.id ? remoteState.id : fallbackId,
-      tripName: remoteState.tripName || row.trip_name || "현재 여행",
-      startDate: remoteState.startDate || row.start_date || "",
-      endDate: remoteState.endDate || row.end_date || "",
-    };
-  }
-
-  function getRemoteTripSnapshotId(row = {}) {
-    return getRemoteTripSnapshot(row).id;
   }
 
   async function syncSupabaseTripList({ quiet = true } = {}) {
@@ -627,30 +592,6 @@
       if (!quiet) throw error;
       return false;
     }
-  }
-
-  async function upsertSupabaseOwnerMember() {
-    // Membership changes are authorized by the server command API.
-    return false;
-  }
-
-  function isSupabaseTripOwner(tripRow, account) {
-    return Boolean(tripRow?.owner_id && account?.id && tripRow.owner_id === account.id);
-  }
-
-  function canCreateSupabaseTripRow(account) {
-    const collaboration = getCollaboration();
-    return !collaboration.ownerId
-      || collaboration.ownerId === account?.id
-      || collaboration.ownerId.startsWith("local_")
-      || (collaboration.ownerEmail && collaboration.ownerEmail === account?.email);
-  }
-
-  async function ensureSupabaseTripRow() {
-    await window.TripLog.sync.controller.engine.pump();
-    const record = window.TripLogSyncRepository.cached(state.id);
-    if (!record?.serverId) throw new Error("여행의 서버 연결이 아직 완료되지 않았습니다.");
-    return { id: record.serverId };
   }
 
   async function uploadSupabaseTripState() {
@@ -698,11 +639,6 @@
   function handleTripStateSaved() {
     window.TripLog.sync.controller.engine.wake();
     updateHeaderSyncButton();
-  }
-
-  function getMemberInitial(member) {
-    const source = String(member.name || member.email || "?").trim();
-    return source.slice(0, 2).toUpperCase();
   }
 
   function setText(element, value) {
@@ -1143,26 +1079,6 @@
     syncSupabaseSession();
   }
 
-  function renderHeaderMembers() {
-    if (!els.headerTripMembers) return;
-    const members = getTripMembers();
-    const showEmail = getCollaboration().privacy.showMemberEmail;
-    els.headerTripMemberAvatars?.replaceChildren();
-    members.slice(0, 4).forEach((member, index) => {
-      const avatar = document.createElement("span");
-      avatar.textContent = getMemberInitial(member);
-      avatar.title = member.name;
-      avatar.style.setProperty("--member-index", String(index));
-      els.headerTripMemberAvatars.appendChild(avatar);
-    });
-    const names = members
-      .map((member) => showEmail && member.email ? `${member.name} (${member.email})` : member.name)
-      .join(", ");
-    setText(els.headerTripMemberCount, `${members.length}명`);
-    setText(els.headerTripMemberNames, names || "나");
-    els.headerTripMembers.title = names || "현재 여행 인원";
-  }
-
   function renderAccountSettings() {
     const account = getCurrentAccount();
     const config = getSupabaseConfig();
@@ -1233,22 +1149,10 @@
 
   function renderTripCollaboration() {
     renderAuthGate();
-    renderHeaderMembers();
     renderAccountSettings();
     renderInviteModal();
     renderAcceptInviteModal();
     window.TripLog.features.redesign?.workspace?.renderMembers?.();
-  }
-
-  function createInviteToken() {
-    if (typeof crypto !== "undefined" && crypto.randomUUID) return crypto.randomUUID();
-    return `invite_${Date.now()}_${Math.random().toString(16).slice(2)}`;
-  }
-
-  function getInviteExpiry() {
-    const expiresAt = new Date();
-    expiresAt.setDate(expiresAt.getDate() + INVITE_EXPIRES_DAYS);
-    return expiresAt.toISOString();
   }
 
   function buildInviteUrl(token) {
@@ -1280,17 +1184,6 @@
     if (!url.searchParams.has(INVITE_PARAM)) url.searchParams.set("page", "overview");
     url.hash = "";
     return url.toString();
-  }
-
-  function getLocalInvites() {
-    const invites = readJsonStorage(INVITES_STORAGE_KEY, []);
-    return Array.isArray(invites) ? invites : [];
-  }
-
-  function saveLocalInvite(invite) {
-    const invites = getLocalInvites().filter((item) => item.token !== invite.token);
-    invites.unshift(invite);
-    writeJsonStorage(INVITES_STORAGE_KEY, invites.slice(0, 50));
   }
 
   function buildSharedTripSnapshot(sourceState = state) {
@@ -1541,28 +1434,6 @@
     if (els.tripInviteAcceptModal) els.tripInviteAcceptModal.hidden = true;
   }
 
-  function addAcceptedMemberToState(account) {
-    const collaboration = getCollaboration();
-    const member = {
-      id: account.id || `local_member_${Date.now()}`,
-      name: account.displayName || account.email?.split("@")[0] || "여행 멤버",
-      email: account.email || "",
-      role: "member",
-      status: "accepted",
-      joinedAt: new Date().toISOString(),
-    };
-    const members = Array.isArray(collaboration.members) ? collaboration.members : [];
-    const key = getMemberKey(member);
-    if (!members.some((existing) => getMemberKey(existing) === key)) {
-      members.push(member);
-      collaboration.members = members;
-    }
-    state.companions = Array.isArray(state.companions) ? state.companions : [];
-    if (!state.companions.some((companion) => companion.name === member.name)) {
-      state.companions.push({ name: member.name, individualSpent: 0, email: member.email });
-    }
-  }
-
   async function acceptSupabaseInvite(account) {
     if (!getSessionAccount()) throw new Error("먼저 로그인한 뒤 초대를 수락해 주세요.");
     const remote = await window.TripLog.sync.controller.engine.request({ action: "accept", token: pendingInviteRecord.token });
@@ -1647,7 +1518,6 @@
     if (setupComplete) return;
     setupComplete = true;
 
-    els.headerTripInviteButton?.addEventListener("click", openTripInviteModal);
     els.tripInviteCloseButton?.addEventListener("click", closeTripInviteModal);
     els.tripInviteModal?.addEventListener("click", (event) => {
       if (event.target === els.tripInviteModal) closeTripInviteModal();
@@ -1708,6 +1578,7 @@
     getCurrentAccount,
     getTripMembers,
     createTripInvite,
+    openTripInviteModal,
     syncSupabaseSession,
     isTripListReady: () => initialTripListSyncComplete,
     syncSupabaseTripList,

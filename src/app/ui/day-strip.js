@@ -1,35 +1,4 @@
-function renderDayStrip(days) {
-  els.dayStrip.replaceChildren();
-  const options = getExpenseDayOptions(days);
 
-  options.forEach((day) => {
-    const total = sumEntries(state.entries.filter((entry) => entry.date === day.date));
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = `day-chip${day.isPreTrip ? " pretrip" : ""}${day.date === state.selectedDate ? " active" : ""}`;
-    button.innerHTML = `
-      <div class="day-chip-head">
-        <strong>${formatExpenseDayChipLabel(day)}</strong>
-        <em>${formatWon(total)}</em>
-      </div>
-      <span>${day.shortDate}${day.weekday ? ` ${day.weekday}` : ""}</span>
-    `;
-    button.addEventListener("click", () => {
-      const scrollIntent = captureDayStripScrollIntent(els.dayStrip, button);
-      state.selectedDate = day.date;
-      els.daySelect.value = day.date;
-      saveAndRender();
-      applyDayStripScrollIntent(els.dayStrip, scrollIntent);
-    });
-    els.dayStrip.appendChild(button);
-  });
-}
-
-function formatExpenseDayChipLabel(day) {
-  if (day.isPreTrip) return day.label;
-  const dayNumber = day.index || String(day.label || "").replace(/[^0-9]/g, "");
-  return `Day ${dayNumber}`;
-}
 
 function setupDayStripDrag(strip) {
   if (!strip) return;
@@ -170,7 +139,6 @@ function animateDayStripScroll(strip, delta, duration) {
 }
 
 window.TripLog.register("ui.dayStrip", {
-  renderDayStrip,
   setupDayStripDrag,
   suppressNextDayStripClick,
   captureDayStripScrollIntent,

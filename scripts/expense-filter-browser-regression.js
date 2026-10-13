@@ -1,9 +1,8 @@
+const { launchBrowser, fixtureToken, blockExternalRequests, startServer, stopServer } = require('./helpers/browser-fixture');
 // Browser plugin unavailable: isolated Playwright/Edge fixtures; external requests blocked.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { chromium } = require('playwright');
-const { createServer } = require('./serve-test');
 const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Expense-Filters-20260922');
 const common = { mode: 'domestic', currency: 'KRW', paymentMethod: 'card', paymentDate: '2026-09-25', date: '2026-09-25' };
 const fixture = { id: 'expense-filter-fixture', tripName: '서울 검증 여행', country: '대한민국', countryCode: 'KR', city: '서울', travelMode: 'domestic', startDate: '2026-09-25', endDate: '2026-09-28', totalBudget: 1000000, entries: [
@@ -14,20 +13,19 @@ const fixture = { id: 'expense-filter-fixture', tripName: '서울 검증 여행'
 
 async function main() {
   fs.mkdirSync(output, { recursive: true });
-  const server = createServer({ pagesRedirects: true }); await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
-  const origin = process.env.TRIPLOG_TEST_URL || `http://127.0.0.1:${server.address().port}`;
-  const browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined), headless: true });
+  const { server, origin } = await startServer();
+  const browser = await launchBrowser();
   try {
     const context = await browser.newContext({ serviceWorkers: 'block', viewport: { width: 1440, height: 1000 } }); context.setDefaultTimeout(12000);
     const user = { id: '00000000-0000-4000-8000-000000000099', email: 'filter@example.test' }, expiry = Math.floor(Date.now() / 1000) + 3600;
-    const token = [Buffer.from(JSON.stringify({ alg: 'HS256', typ: 'JWT' })).toString('base64url'), Buffer.from(JSON.stringify({ sub: user.id, exp: expiry, role: 'authenticated' })).toString('base64url'), 'fixture'].join('.');
+    const token = fixtureToken(user, expiry);
     await context.addInitScript(({ origin, fixture, user, expiry, token }) => {
       if (location.origin !== origin || localStorage.getItem('filter-fixture-seeded')) return;
       localStorage.setItem('filter-fixture-seeded', '1');
       localStorage.setItem('sb-iehdziiplzgvxcrbizgv-auth-token', JSON.stringify({ access_token: token, refresh_token: 'fixture', expires_at: expiry, expires_in: 3600, token_type: 'bearer', user }));
       localStorage.setItem('domesticTravelExpensePlanner.trips.v2', JSON.stringify([fixture])); localStorage.setItem('domesticTravelExpensePlanner.activeTripId.v2', fixture.id);
     }, { origin, fixture, user, expiry, token });
-    await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
+    await blockExternalRequests(context, origin);
     const page = await context.newPage(), errors = []; page.on('pageerror', error => errors.push(error.message));
     await page.goto(`${origin}/Travel?page=budget`);
     await page.waitForFunction(() => document.documentElement.dataset.triplogInitialized === 'true' && document.documentElement.dataset.appReady === 'true' && document.documentElement.dataset.auth === 'signed-in');
@@ -99,6 +97,6 @@ async function main() {
     assert.equal(await page.locator('#exCategoryFilterMenu').isVisible(), false, 'Outside click dismisses the menu');
     assert.deepEqual(errors, []); fs.writeFileSync(path.join(output, 'verification.json'), JSON.stringify({ measurements, errors }, null, 2));
     console.log('PASS expense row/badge/old-reservation edit and save preserve filters; pre-purchase open/save preserve search, sort and tabs; explicit filtering/sort/keyboard/dismissal; compact dropdowns fit 320/390/1440px. ' + output);
-  } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }
+  } finally { await browser.close(); await stopServer(server); }
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

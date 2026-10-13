@@ -37,7 +37,6 @@ async function restoreSnapshot(snapshot) {
   state.selectedDate = nextState.selectedDate;
   state.selectedItineraryDate = nextState.selectedItineraryDate;
   state.selectedItineraryId = nextState.selectedItineraryId;
-  setCommaNumberInputValue(els.budgetInput, state.totalBudget || "");
   if (!await saveStateSilently()) return false;
   document.querySelectorAll(".segmented button").forEach((button) => {
     button.classList.toggle("active", button.dataset.filter === activeFilter);

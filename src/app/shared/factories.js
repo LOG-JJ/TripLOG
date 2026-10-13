@@ -1,3 +1,8 @@
+function createId() {
+  if (crypto.randomUUID) return crypto.randomUUID();
+  return `entry-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+}
+
 function createEntry(date, category, description, amount, note) {
   return {
     id: createId(),
@@ -11,19 +16,8 @@ function createEntry(date, category, description, amount, note) {
   };
 }
 
-function createItineraryItem(date, time, place, location, memo) {
-  return {
-    id: createId(),
-    date,
-    time,
-    place,
-    location,
-    memo,
-    createdAt: Date.now() + Math.floor(Math.random() * 1000),
-  };
-}
 
 window.TripLog.register("shared.factories", {
   createEntry,
-  createItineraryItem,
+  createId,
 });

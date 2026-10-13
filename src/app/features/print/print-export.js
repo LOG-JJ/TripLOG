@@ -1,231 +1,283 @@
-function exportPdf(type = "expense") {
-  buildPrintReport(type);
-  requestAnimationFrame(() => window.print());
+// Public entry points are shared by the settings, itinerary and expense pages.
+// Export opens the preview; the explicit save action opens the print dialog.
+function exportPdf(type = 'expense') {
+  return window.TripLog.features.print.studio.open(type);
 }
-
-function exportExpensePdf() {
-  exportPdf("expense");
-}
-
-function exportItineraryPdf() {
-  exportPdf("itinerary");
-}
-
-function exportFullPdf() {
-  exportPdf("full");
-}
-
-function buildPrintReport(type = "expense") {
-  const reportType = ["expense", "itinerary", "full"].includes(type) ? type : "expense";
-  const safeTripName = escapeHtml(state.tripName || getDefaultTripName());
-  const titleMap = {
-    expense: `${safeTripName} 지출 보고서`,
-    itinerary: `${safeTripName} 일정 보고서`,
-    full: `${safeTripName} 전체 여행 보고서`,
-  };
-  const sections = {
-    expense: buildExpensePrintSections(),
-    itinerary: buildItineraryPrintSections(),
-    full: `${buildTripSummaryPrintSections()}${buildItineraryPrintSections()}${buildExpensePrintSections()}`,
-  };
-
-  els.printReport.dataset.reportType = reportType;
-  els.printReport.innerHTML = `
-    ${buildPrintHeader(titleMap[reportType])}
-    ${sections[reportType]}
-  `;
-}
-
-function buildPrintHeader(title) {
-  const dateRange = `${formatReadableDate(state.startDate)} - ${formatReadableDate(state.endDate)}`;
-  return `
-    <h1>${title}</h1>
-    <p class="print-meta">${dateRange} · 생성 ${getPrintGeneratedAt()}</p>
-  `;
-}
-
-function getPrintGeneratedAt() {
-  return new Intl.DateTimeFormat("ko-KR", {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-  }).format(new Date());
-}
-
-function buildTripSummaryPrintSections() {
-  const days = getTripDays();
-  const totals = calculateTotals();
-  const destination = [state.country, state.city].filter(Boolean).join(" · ") || "-";
-  const itineraryCount = Number(state.itineraryItems?.length || 0);
-  const expenseCount = Number(state.entries?.length || 0);
-
-  return `
-    <div class="print-grid">
-      <div class="print-card"><span>여행지</span><strong>${escapeHtml(destination)}</strong></div>
-      <div class="print-card"><span>여행 기간</span><strong>${days.length}일</strong></div>
-      <div class="print-card"><span>일정 수</span><strong>${itineraryCount.toLocaleString("ko-KR")}개</strong></div>
-      <div class="print-card"><span>총 지출</span><strong>${formatWon(totals.total)}</strong></div>
-    </div>
-  `;
-}
-
-function buildExpensePrintSections() {
-  const days = getTripDays();
-  const totals = calculateTotals();
-  const tripDayTotal = getTripDayEntryTotal(days);
-
-  const categoryRows = categories
-    .map((category) => {
-      const amount = totals.byCategory[category.name] || 0;
-      const ratio = totals.total ? Math.round((amount / totals.total) * 100) : 0;
-      return `<tr><td>${category.name}</td><td class="number">${formatWon(amount)}</td><td class="number">${ratio}%</td></tr>`;
-    })
-    .join("");
-
-  const expenseRows = getFilteredEntriesForPrint()
-    .map((entry) => {
-      const day = getExpenseDayMeta(entry.date, days);
-      return `
-        <tr>
-          <td>${escapeHtml(day.label)}</td>
-          <td>${escapeHtml(day.shortDate)}</td>
-          <td>${escapeHtml(entry.category)}</td>
-          <td>${escapeHtml(entry.description)}</td>
-          <td class="number">${escapeHtml(formatEntryAmountText(entry))}</td>
-          <td>${entry.note ? escapeHtml(entry.note) : "-"}</td>
-        </tr>
-      `;
-    })
-    .join("");
-
-  return `
-    <div class="print-grid">
-      <div class="print-card"><span>총 지출</span><strong>${formatWon(totals.total)}</strong></div>
-      <div class="print-card"><span>여행 기간</span><strong>${days.length}일</strong></div>
-      <div class="print-card"><span>기록 수</span><strong>${state.entries.length}건</strong></div>
-      <div class="print-card"><span>일차 평균</span><strong>${formatWon(days.length ? Math.round(tripDayTotal / days.length) : 0)}</strong></div>
-    </div>
-    <h2 class="print-section-title">항목별 합계</h2>
-    <table>
-      <thead><tr><th>항목</th><th class="number">금액</th><th class="number">비율</th></tr></thead>
-      <tbody>${categoryRows}</tbody>
-    </table>
-    <h2 class="print-section-title">지출 내역</h2>
-    <table>
-      <thead><tr><th>구분</th><th>날짜</th><th>항목</th><th>내용</th><th class="number">금액</th><th>비고</th></tr></thead>
-      <tbody>${expenseRows || '<tr><td colspan="6">기록된 경비가 없습니다.</td></tr>'}</tbody>
-    </table>
-  `;
-}
-
-function buildItineraryPrintSections() {
-  const days = getTripDays();
-  const items = getSortedItineraryItemsForPrint();
-  const dayRows = days
-    .map((day) => {
-      const count = items.filter((item) => item.date === day.date).length;
-      return `<tr><td>${escapeHtml(day.label)}</td><td>${escapeHtml(day.shortDate)} ${escapeHtml(day.weekday)}</td><td class="number">${count.toLocaleString("ko-KR")}개</td></tr>`;
-    })
-    .join("");
-  const itineraryRows = items
-    .map((item) => {
-      const day = getExpenseDayMeta(item.date, days);
-      return `
-        <tr>
-          <td>${escapeHtml(day.label)}</td>
-          <td>${escapeHtml(day.shortDate)}</td>
-          <td>${escapeHtml(formatPrintTimeRange(item))}</td>
-          <td>${escapeHtml(item.place || "-")}</td>
-          <td>${escapeHtml(item.location || "-")}</td>
-          <td>${escapeHtml(formatPrintTransitSummary(item))}</td>
-          <td>${item.memo ? escapeHtml(item.memo) : "-"}</td>
-        </tr>
-      `;
-    })
-    .join("");
-
-  return `
-    <div class="print-grid">
-      <div class="print-card"><span>여행 기간</span><strong>${days.length}일</strong></div>
-      <div class="print-card"><span>전체 일정</span><strong>${items.length.toLocaleString("ko-KR")}개</strong></div>
-      <div class="print-card"><span>시작일</span><strong>${escapeHtml(formatReadableDate(state.startDate))}</strong></div>
-      <div class="print-card"><span>종료일</span><strong>${escapeHtml(formatReadableDate(state.endDate))}</strong></div>
-    </div>
-    <h2 class="print-section-title">일자별 일정 수</h2>
-    <table>
-      <thead><tr><th>구분</th><th>날짜</th><th class="number">일정</th></tr></thead>
-      <tbody>${dayRows || '<tr><td colspan="3">여행 기간이 설정되지 않았습니다.</td></tr>'}</tbody>
-    </table>
-    <h2 class="print-section-title">일정 내역</h2>
-    <table>
-      <thead><tr><th>구분</th><th>날짜</th><th>시간</th><th>장소</th><th>주소</th><th>이동</th><th>메모</th></tr></thead>
-      <tbody>${itineraryRows || '<tr><td colspan="7">등록된 일정이 없습니다.</td></tr>'}</tbody>
-    </table>
-  `;
-}
-
+function exportExpensePdf() { return exportPdf('expense'); }
+function exportItineraryPdf() { return exportPdf('itinerary'); }
+function exportFullPdf() { return exportPdf('full'); }
 function getFilteredEntriesForPrint() {
-  return [...state.entries].sort((a, b) => {
-    const dateDiff = compareExpenseEntryDates(a, b);
-    return dateDiff || a.createdAt - b.createdAt;
-  });
+  return window.TripLog.features.print.model.sortedEntries(state.entries);
 }
-
-function getSortedItineraryItemsForPrint() {
-  return sortItineraryItems(state.itineraryItems || []);
-}
-
+function getSortedItineraryItemsForPrint() { return sortItineraryItems(state.itineraryItems || []); }
 function formatPrintTimeRange(item) {
-  const start = item?.time || "";
-  const end = item?.theme === 'lodging' ? '' : item?.endTime || "";
-  if (start && end) return `${start} - ${end}`;
-  return start || end || "-";
+  const range = window.TripLog.features.print.model.timeRange(item);
+  if (range.start === null) return item.endTime ? `종료 ${item.endTime}` : '시간 미정';
+  if (range.end === null) return item.time;
+  const days = Math.floor(range.end / 1440);
+  return `${item.time} – ${days ? `${days === 1 ? '다음날' : days + '일 후'} ` : ''}${item.endTime}`;
 }
-
-function formatPrintTransitSummary(item) {
-  const segments = Array.isArray(item?.transits) && item.transits.length
-    ? item.transits
-    : [{ trans: item?.trans || "none", duration: item?.duration || 0, cost: item?.cost || 0, memo: "" }];
-  const text = segments
-    .map(formatPrintTransitSegment)
-    .filter(Boolean)
-    .join(" / ");
-  return text || "-";
-}
-
-function formatPrintTransitSegment(segment) {
-  const label = getPrintTransitLabel(segment?.trans);
-  const parts = [
-    label,
-    segment?.duration ? `${Number(segment.duration).toLocaleString("ko-KR")}분` : "",
-    segment?.cost ? formatWon(segment.cost) : "",
-    segment?.memo || "",
-  ].filter(Boolean);
-  return parts.join(" · ");
-}
-
 function getPrintTransitLabel(trans) {
-  switch (trans) {
-    case "walk": return "도보";
-    case "car": return "차량";
-    case "train": return "기차";
-    case "bus": return "버스";
-    case "flight":
-    case "etc": return "비행";
-    default: return "";
-  }
+  return window.TripLog.features.print.model.transitMode(trans).label;
 }
+function getPrintTransitSegments(item) {
+  const source = Array.isArray(item?.transits) && item.transits.length ? item.transits : [{ trans: item?.trans, duration: item?.duration, cost: item?.cost }];
+  return source.filter(segment => segment && typeof segment === 'object' && (
+    (segment.trans && segment.trans !== 'none') || Number(segment.duration) > 0 || Number(segment.cost) || segment.memo || segment.fromPlace
+  ));
+}
+function formatPrintTransitSegment(segment, emoji = false) {
+  const model = window.TripLog.features.print.model, mode = model.transitMode(segment?.trans);
+  const duration = model.number(segment?.duration), cost = model.number(segment?.cost);
+  const minutes = duration > 0 ? `${duration.toLocaleString('ko-KR')}분` : '';
+  const lead = emoji ? `${mode.emoji} ${minutes || mode.label}` : [mode.label, minutes].filter(Boolean).join(' · ');
+  return [segment?.fromPlace || '', lead, cost ? formatWon(cost) : '', segment?.memo || ''].filter(Boolean).join(' · ');
+}
+function formatPrintTransitSummary(item, emoji = false) {
+  return getPrintTransitSegments(item).map(segment => formatPrintTransitSegment(segment, emoji)).join(' / ');
+}
+function formatPrintTransitHint(item) {
+  const model = window.TripLog.features.print.model;
+  return getPrintTransitSegments(item).map(segment => {
+    const mode = model.transitMode(segment.trans), duration = model.number(segment.duration);
+    return `${mode.emoji} ${duration > 0 ? `${duration.toLocaleString('ko-KR')}분` : mode.label}`;
+  }).join(' · ');
+}
+function buildPrintReport(type = 'expense', options = {}) {
+  const result = window.TripLog.features.print.renderer.build(type, options);
+  els.printReport.dataset.reportType = type;
+  els.printReport.innerHTML = result.markup;
+  return result;
+}
+function buildExpensePrintSections() { return window.TripLog.features.print.renderer.build('expense').markup; }
+function buildItineraryPrintSections() { return window.TripLog.features.print.renderer.build('itinerary').markup; }
 
-window.TripLog.register("features.print.export", {
-  exportPdf,
-  exportExpensePdf,
-  exportItineraryPdf,
-  exportFullPdf,
-  buildPrintReport,
-  buildExpensePrintSections,
-  buildItineraryPrintSections,
-  getFilteredEntriesForPrint,
-  getSortedItineraryItemsForPrint,
+(() => {
+  'use strict';
+  const M = () => window.TripLog.features.print.model;
+  const text = value => escapeHtml(String(value ?? ''));
+  const icon = name => `<i class="ph ph-${name}" aria-hidden="true"></i>`;
+  const eventColors = { transport: '#f9d6e2', sightseeing: '#d9effb', food: '#d9effb', lodging: '#fff5b5', shopping: '#f9d6e2', etc: '#eae3f5' };
+  document.addEventListener('error', event => {
+    const image = event.target;
+    if (!(image instanceof HTMLImageElement) || !image.hasAttribute('data-export-art')) return;
+    for (const key of ['artFallback', 'artUniversal']) {
+      const fallback = image.dataset[key]; delete image.dataset[key];
+      if (fallback && fallback !== image.getAttribute('src')) { image.src = fallback; return; }
+    }
+    image.hidden = true;
+  }, true);
+  function eventArt(item, className = 'ex-event-art') {
+    const art = window.TripLog.shared.itineraryArt.resolve(item, state);
+    return `<img class="${className}" src="${text(art.src)}" data-illustration-type="${art.id}" data-art-fallback="${text(art.fallbackSrc)}" data-art-universal="${text(art.universalSrc)}" width="360" height="210" alt="" data-export-art decoding="async">`;
+  }
+  const won = value => text(formatWon(Math.round(M().number(value))));
+  const node = markup => { const template = document.createElement('template'); template.innerHTML = markup.trim(); return template.content.firstElementChild; };
+  const chunks = (value, length) => {
+    const result = [];
+    let part = '', used = 0;
+    // A line break consumes paper height even when a note contains few
+    // characters. Keep multiline notes within a page without losing bytes.
+    for (const char of String(value || '')) {
+      const weight = char === '\n' || char === '\r' ? 40 : char === '\t' ? 4 : 1;
+      if (part && used + weight > length) { result.push(part); part = ''; used = 0; }
+      part += char; used += weight;
+    }
+    if (part) result.push(part);
+    return result.length ? result : [''];
+  };
+  function memberCount() {
+    const members = window.TripLog.features.collaboration?.tripCollaboration?.getTripMembers?.();
+    return members?.length || (state.companions?.length || 0) + 1;
+  }
+  function data(options = {}) {
+    return M().create({ ...state, itineraryItems: getSortedItineraryItemsForPrint() }, { ...options, memberCount: memberCount() });
+  }
+  function sceneMarkup(source, className = 'ex-report-art') {
+    const scene = window.TripLog.shared.destinationScenes.resolve(source);
+    return `<img class="${className}" src="${text(scene.src)}" data-trip-scene data-scene-fallback="${text(scene.fallbackSrc)}" data-scene-universal="${text(scene.universalSrc)}" width="800" height="480" alt="" decoding="async">`;
+  }
+  function periodLabel(report) {
+    const start = M().dateValue(report.source.startDate), end = M().dateValue(report.source.endDate);
+    return start === null || end === null ? '날짜 미정' : `${M().dateLabel(report.source.startDate, true)} – ${M().dateLabel(report.source.endDate)}`;
+  }
+  function header(report, kind, compact = false) {
+    if (compact === 'details') return `<header class="ex-detail-report-header"><div class="ex-detail-report-brand"><img src="src/assets/triplog-wordmark.png" width="96" height="28" alt="TripLOG"></div><div class="ex-detail-report-titles"><div><h1>${text(report.source.tripName || getDefaultTripName())}</h1><p>${text(periodLabel(report))} · ${report.members}명</p></div><h2>상세 일정</h2></div></header>`;
+    const title = kind === 'itinerary' ? '시간으로 보는 여행' : '여행의 쓰임을 한눈에';
+    return `<header class="ex-report-header ${compact ? 'is-compact' : ''}"><div class="ex-report-heading">
+      <div class="ex-report-brand"><img src="src/assets/triplog-wordmark.png" width="96" height="28" alt="TripLOG"><span>${kind === 'itinerary' ? 'TRAVEL ITINERARY' : 'EXPENSE REPORT'}</span></div>
+      <h1>${text(report.source.tripName || getDefaultTripName())}</h1>${compact ? '' : `<p class="ex-report-subtitle">${title}</p>`}
+      <div class="ex-report-meta"><span>${icon('calendar-blank')}${text(periodLabel(report))}</span><span>${icon('users')}${report.members}명</span>${report.source.city ? `<span>${icon('map-pin')}${text(report.source.city)}</span>` : ''}</div>
+    </div>${compact ? '' : sceneMarkup(report.source)}</header>`;
+  }
+  function sectionTitle(title, sub = '') { return `<div class="ex-section-heading"><h2>${title}</h2>${sub ? `<span>${sub}</span>` : ''}</div>`; }
+  function expenseSummary(report) {
+    const filtered = report.expensePeriod !== 'all';
+    return `<section class="ex-expense-hero"><div><span class="ex-overline">${filtered ? '선택한 기간의 여행 경비' : '여행 경비'}</span><strong class="ex-total">${won(report.total)}</strong><span class="ex-per-person">${filtered ? '선택한 기간' : '전체 기록'}의 누적 지출${report.adjustments ? ' · 환불 반영' : ''}</span></div>
+      <div class="ex-cost-facts"><div><span>기록한 지출</span><b>${report.entries.length}건</b></div><div><span>1인 평균 <small>· ${report.members}명</small></span><strong>${won(report.perPerson)}</strong></div></div></section>`;
+  }
+  function categoryChart(report) {
+    const boxes = M().treemap(report.categories);
+    const tiles = boxes.map(box => {
+      const small = box.width < 88 || box.height < 68;
+      const compactLabel = box.width >= 48 && box.height >= 52 ? `<span>${text(box.name)}</span><small>${box.percent}%</small>` : '';
+      return `<div class="ex-treemap-tile ${small ? 'is-small' : ''}" style="left:${box.x / 4.2}%;top:${box.y / 2.32}%;width:${box.width / 4.2}%;height:${box.height / 2.32}%;--ex-category:${box.color}" aria-hidden="true">${small ? compactLabel : `${icon(box.icon)}<span>${text(box.name)}</span><b>${won(box.amount)}</b><small>${box.percent}%</small>`}</div>`;
+    }).join('');
+    return `<section class="ex-category-chart">${sectionTitle('항목별 지출 비중', report.adjustments ? '환불·조정 전 기준' : '')}${boxes.length ? `<div class="ex-treemap" role="img" aria-label="항목별 지출 비중. 상세 금액은 아래 범례에 표시됩니다.">${tiles}</div><ul class="ex-chart-legend">${report.categories.map(row => `<li><span class="ex-color-dot" style="--ex-category:${row.color}"></span><span>${text(row.name)}</span><b>${won(row.amount)}</b><small>${row.percent}%</small></li>`).join('')}</ul>` : '<div class="ex-chart-empty">아직 시각화할 지출이 없어요.</div>'}</section>`;
+  }
+  function dailyChart(report) {
+    const chart = M().dailyShares(report), buckets = chart.rows;
+    const grouped = buckets.some(row => row.count > 1);
+    const pretrip = report.entries.filter(entry => entry.date === '__pretrip__').reduce((sum, entry) => sum + M().number(entry.amount), 0);
+    const colors = ['#a3dbf8', '#f7afc7', '#fff05a'];
+    const bars = report.entries.length ? buckets.map((row, index) => {
+      const day = report.calendar.indexOf(row.date) + 1;
+      const tag = row.count > 1 ? `${row.count}일 합산` : day ? `DAY ${day}` : '';
+      const color = row.amount < 0 ? '#b74770' : colors[(day ? day - 1 : index) % colors.length];
+      const rounded = row.percent === null ? null : Number(row.percent.toFixed(1));
+      const share = rounded === null ? '—' : row.percent && Math.abs(row.percent) < .05 ? `${row.percent < 0 ? '-' : ''}<0.1%` : `${rounded.toFixed(1)}%`;
+      return `<li class="ex-daily-item${row.amount < 0 ? ' is-negative' : ''}" data-daily-date="${text(row.date)}" style="--ex-daily-color:${color}"><div class="ex-daily-label"><span class="ex-daily-date">${text(row.label)}</span>${tag ? `<small class="ex-daily-day">${tag}</small>` : ''}</div><b class="ex-daily-amount">${won(row.amount)}</b><div class="ex-daily-track" aria-hidden="true"><span style="left:${row.barStart}%;width:${row.barWidth}%"></span></div><strong class="ex-daily-share"${share === '—' ? ' aria-label="비중 계산 불가"' : ''}>${text(share)}</strong></li>`;
+    }).join('') : '';
+    const basis = report.expensePeriod === 'all' ? '전체 지출 대비 비중' : '선택한 기간의 지출 대비 비중';
+    return `<section class="ex-daily-chart${chart.hasNegative ? ' has-negative' : ''}" style="--ex-daily-zero:${chart.zero}%">${sectionTitle(grouped ? '기간별 지출 현황' : '일자별 지출 현황')}<p class="ex-daily-caption">${basis}${report.adjustments ? ' · 환불 반영' : ''}</p>${bars ? `<ol class="ex-daily-bars${buckets.length > 3 ? ' is-dense' : ''}" aria-label="날짜별 지출 금액과 비중">${bars}</ol>` : '<p class="ex-chart-empty">지출을 기록하면 표시돼요.</p>'}${bars && !chart.hasPercent ? '<p class="ex-chart-note">합계가 0원 이하이면 비중을 계산하지 않아요.</p>' : ''}${chart.hasNegative ? '<p class="ex-chart-note">0선 왼쪽은 환불, 오른쪽은 지출이에요.</p>' : ''}${grouped ? '<p class="ex-chart-note">긴 여행은 연속된 날짜를 묶어 합산했어요.</p>' : ''}${pretrip ? `<p class="ex-chart-note">사전구매 ${won(pretrip)} 포함</p>` : ''}${report.adjustments ? `<p class="ex-chart-note">환불·조정 ${won(report.adjustments)} 포함</p>` : ''}</section>`;
+  }
+  function amountMarkup(entry) {
+    const foreign = typeof isForeignEntry === 'function' && isForeignEntry(entry) && entry.currency !== 'KRW';
+    return `<b>${won(entry.amount)}</b>${foreign ? `<small>${text(formatForeignAmount(entry))}</small>` : ''}`;
+  }
+  function expenseHighlights(report) {
+    const value = M().expenseHighlights(report), peak = value.peak;
+    const averageNote = value.days ? `${report.expensePeriod === 'all' ? '전체 합계 ÷ 여행' : '선택한 날짜 ·'} ${value.days}일` : '날짜가 정해진 기간에서 계산해요';
+    const peakTitle = peak && M().dateValue(peak.date) === null ? '가장 큰 지출 묶음' : '가장 많이 쓴 날';
+    return `<section class="ex-expense-highlights" aria-label="여행 지출 포인트"><div class="ex-highlight-grid"><div class="ex-spend-highlight"><span class="ex-highlight-icon" aria-hidden="true">${icon('sun')}</span><div><span class="ex-highlight-label">하루 평균 지출</span><strong data-expense-average>${value.average === null ? '—' : won(value.average)}</strong><small>${averageNote}</small></div></div><div class="ex-spend-highlight"><span class="ex-highlight-icon is-pink" aria-hidden="true">${icon('crown-simple')}</span><div><span class="ex-highlight-label">${peakTitle}</span><strong data-expense-peak>${peak ? won(peak.amount) : '—'}</strong><small>${peak ? text(peak.label) : '0원을 초과한 지출 합계가 없어요'}</small></div></div></div></section>`;
+  }
+  function fitExpenseOverview(body) {
+    if ([...body.querySelectorAll('.ex-category-chart, .ex-daily-chart')].some(region => region.scrollHeight > region.clientHeight + 1)) body.parentElement.classList.add('is-dense-overview');
+    // Tile areas remain proportional. Fit only their labels; every exact
+    // category amount is also listed in the full-width legend below.
+    body.querySelectorAll('.ex-treemap-tile b').forEach(amount => {
+      let size = parseFloat(getComputedStyle(amount).fontSize);
+      while (size > 12 && amount.scrollWidth > amount.clientWidth + .5) amount.style.fontSize = `${--size}px`;
+      if (amount.scrollWidth > amount.clientWidth + .5) amount.hidden = true;
+    });
+  }
+  function expenseRows(report, options) {
+    return report.entries.flatMap((entry, index) => {
+      const description = chunks(entry.description || '내용 없음', 300);
+      const notes = chunks(options.notes === false ? '' : entry.note, 700);
+      const count = Math.max(description.length, notes.length);
+      return Array.from({ length: count }, (_, part) => `<tr ${part ? 'data-entry-continuation' : 'data-entry-id'}="${text(entry.id || index)}"><td>${part ? '<span class="ex-continued">계속</span>' : text(M().dateLabel(entry.date))}${!part && entry.date === '__pretrip__' && entry.paymentDate ? `<small>결제 ${text(M().dateLabel(entry.paymentDate))}</small>` : ''}</td><td><span class="ex-table-category"><span class="ex-color-dot" style="--ex-category:${window.TripLog.data.expenseCategories.get(entry.category, 'print').color}"></span>${text(entry.category || '기타')}</span></td><td>${description[part] ? `<strong>${text(description[part])}</strong>` : ''}${notes[part] ? `<span class="ex-entry-note">${text(notes[part])}</span>` : ''}</td><td class="ex-table-amount">${part ? '' : amountMarkup(entry)}</td></tr>`);
+    });
+  }
+  function scheduleMarkup(layout, options) {
+    const hours = [];
+    for (let minute = layout.start; minute <= layout.end; minute += 60) hours.push(minute);
+    const clock = minute => `${minute >= 1440 ? '+' + Math.floor(minute / 1440) + '일 ' : ''}${String(Math.floor(minute / 60) % 24).padStart(2, '0')}:00`;
+    const grid = hours.map(minute => `<span class="ex-time-rule" style="top:${(minute - layout.start) * layout.scale}px"><time>${clock(minute)}</time></span>`).join('');
+    const colors = ['#f9d6e2', '#d9effb', '#fff5b5'];
+    const columns = layout.columns.map((day, column) => `<div class="ex-time-column" style="--ex-day:${colors[column % colors.length]}"><div class="ex-time-day"><b>${day.index ? `DAY ${day.index}` : '별도 일정'}</b><span>${text(day.label)}</span></div><div class="ex-time-events" style="height:${layout.height}px">${day.timed.map(row => {
+      const theme = typeof itineraryThemes === 'object' ? itineraryThemes[row.item.theme] || itineraryThemes.etc : { icon: 'map-pin' };
+      const transit = options.transit === false ? '' : formatPrintTransitSummary(row.item);
+      const compact = row.compact || row.height < 44;
+      const tall = !compact && row.height >= 160;
+      const shallow = !compact && row.height < 76;
+      const narrow = row.lanes * layout.columns.length >= 4;
+      const art = !compact && row.lanes === 1;
+      const showHint = transit && !compact && row.height >= (narrow || row.end >= 1440 ? 114 : 96);
+      const hint = showHint ? `<small class="ex-time-transit">${text(formatPrintTransitHint(row.item))}</small>` : '';
+      const density = compact ? 'is-compact-event' : tall ? 'is-tall-event' : shallow ? 'is-shallow-event' : 'is-medium-event';
+      return `<div class="ex-time-event ${density}${narrow ? ' is-narrow-event' : ''}${art ? ' has-export-art' : ''}" data-schedule-event="${text(row.item.id || row.index)}" style="--ex-event:${eventColors[row.item.theme] || eventColors.etc};top:${row.top}px;height:${row.height}px;left:calc(${row.lane / row.lanes * 100}% + 3px);width:calc(${100 / row.lanes}% - 6px)" title="${text([formatPrintTimeRange(row.item), row.item.place, transit].filter(Boolean).join(' · '))}"><div class="ex-time-copy"><time class="ex-time-range">${text(formatPrintTimeRange(row.item))}</time><strong class="ex-time-place">${icon(theme.icon)}<span class="ex-time-name">${text(row.item.place || '장소 미정')}</span></strong>${tall ? '' : hint}</div>${tall ? hint : ''}${art ? eventArt(row.item) : ''}</div>`;
+    }).join('')}${!day.timed.length ? '<span class="ex-time-quiet">시간이 정해진 일정이 없어요</span>' : ''}</div><div class="ex-untimed">${day.untimed.length ? `${icon('clock')}시간 미정 ${day.untimed.length}건 · 상세 일정 참고` : ''}</div></div>`).join('');
+    return `<section class="ex-time-grid" style="--ex-days:${layout.columns.length}"><div class="ex-time-axis">시간</div><div class="ex-time-rules" style="height:${layout.height}px">${grid}</div>${columns}</section>`;
+  }
+  function build(type = 'expense', options = {}) {
+    const report = data(options), kind = ['expense', 'itinerary', 'full'].includes(type) ? type : 'expense';
+    const measure = document.createElement('div'); measure.className = 'ex-document ex-measure'; measure.setAttribute('aria-hidden', 'true'); document.body.appendChild(measure);
+    const pages = [];
+    const generated = new Intl.DateTimeFormat('ko-KR', { year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+    function page(pageKind, compact = false) {
+      const expenseClass = pageKind === 'expense' ? compact ? ' ex-expense-detail-paper' : ' ex-expense-overview-paper' : '';
+      const paper = node(`<article class="ex-paper${compact === 'details' ? ' ex-itinerary-detail-paper' : ''}${expenseClass}" data-report-kind="${pageKind}"><div class="ex-paper-body">${header(report, pageKind, compact)}</div><footer class="ex-paper-footer"><b>TripLOG</b><span>${text(generated)} · ${pageKind === 'itinerary' ? '여행 일정' : '지출 리포트'}</span><span data-page-number></span></footer></article>`);
+      measure.appendChild(paper); pages.push(paper); return paper.querySelector('.ex-paper-body');
+    }
+    const fits = body => body.lastElementChild.getBoundingClientRect().bottom <= body.getBoundingClientRect().bottom + 0.5;
+    function ledger(initialBody, rows, tableKind, total, overview = false) {
+      let body = initialBody, table, tbody, heading;
+      const isExpense = tableKind === 'expense';
+      const columns = isExpense ? '<col style="width:17%"><col style="width:13%"><col style="width:48%"><col style="width:22%">' : '<col style="width:18%"><col style="width:23%"><col style="width:59%">';
+      const tableHeader = isExpense ? '<th>날짜</th><th>항목</th><th>내용</th><th class="ex-table-amount">금액 (원)</th>' : '<th>날짜</th><th>시간</th><th>장소 · 상세 정보</th>';
+      function startTable(continued) {
+        heading = node(sectionTitle(isExpense ? '상세 지출 내역' : overview ? '시간순 일정' : '상세 일정', continued ? '이어보기' : isExpense ? `${report.expensePeriod === 'all' ? '전체' : '선택 기간'} ${report.entries.length}건` : `${report.itemCount}개 일정`));
+        body.appendChild(heading);
+        table = node(`<table class="ex-ledger ${isExpense ? '' : 'ex-itinerary-ledger'}"><colgroup>${columns}</colgroup><thead><tr>${tableHeader}</tr></thead><tbody></tbody></table>`);
+        body.appendChild(table); tbody = table.tBodies[0];
+      }
+      startTable(false);
+      const list = rows.length ? rows : [`<tr><td class="ex-table-empty" colspan="${isExpense ? 4 : 3}">${isExpense ? '기록된 지출이 없습니다.' : '등록된 일정이 없습니다.'}</td></tr>`];
+      for (const markup of list) {
+        const row = node(`<table><tbody>${markup}</tbody></table>`).tBodies[0].firstElementChild;
+        tbody.appendChild(row);
+        if (!fits(body)) {
+          row.remove();
+          if (!tbody.children.length) { table.remove(); heading.remove(); }
+          body = page(tableKind, true); startTable(true); tbody.appendChild(row);
+        }
+      }
+      if (isExpense) {
+        const summary = node(`<div class="ex-ledger-total"><span>총 ${report.entries.length}건 합계</span><strong>${won(total)}</strong></div>`);
+        body.appendChild(summary);
+        if (!fits(body)) { summary.remove(); body = page(tableKind, true); body.appendChild(summary); }
+      }
+      return body;
+    }
+    try {
+      if (kind === 'itinerary' || kind === 'full') {
+        if (!report.days.length) {
+          const body = page('itinerary'); body.appendChild(node('<div class="ex-report-empty"><h2>아직 일정이 없어요</h2><p>여행 날짜와 일정을 추가하면 시간표로 정리해 드려요.</p></div>'));
+        }
+        for (let index = 0; index < report.days.length;) {
+          let group = report.days.slice(index, index + 3);
+          const body = page('itinerary');
+          const heading = node(sectionTitle('한눈에 보는 시간표', `${group.reduce((sum, day) => sum + day.items.length, 0)}개 일정`));
+          body.appendChild(heading);
+          const available = body.getBoundingClientRect().bottom - body.lastElementChild.getBoundingClientRect().bottom;
+          const height = Math.min(680, Math.max(320, available - 154));
+          let layout = M().schedule(group, height);
+          // Keep a readable text column when events overlap. This changes page
+          // grouping only; the recorded times and time-proportional positions stay intact.
+          while (group.length > 1 && layout.columns.some(day => day.maxLanes * group.length > 4)) {
+            group = group.slice(0, -1); layout = M().schedule(group, height);
+          }
+          heading.querySelector('span').textContent = `${group.reduce((sum, day) => sum + day.items.length, 0)}개 일정`;
+          if (layout.columns.some(day => day.maxLanes > 4)) {
+            body.appendChild(node('<p class="ex-chart-note">동시에 겹치는 일정이 많아 상세 시간표로 정리했어요.</p>'));
+            const overviewRows = group.flatMap(day => day.items.slice().sort((a, b) => (M().timeMinutes(a.time) ?? 2000) - (M().timeMinutes(b.time) ?? 2000)).map((item, index) => `<tr data-schedule-event="${text(item.id || index)}"><td>${text(day.label)}</td><td class="ex-detail-time">${text(formatPrintTimeRange(item))}</td><td>${text(item.place || '장소 미정')}</td></tr>`));
+            ledger(body, overviewRows, 'itinerary', undefined, true);
+          } else {
+            body.appendChild(node(scheduleMarkup(layout, options)));
+            body.appendChild(node(`<p class="ex-timetable-note">${options.transit === false ? '장소와 메모' : '이동 정보와 장소 메모'}는 뒤쪽 상세 일정에서 확인할 수 있어요.</p>`));
+          }
+          index += group.length;
+        }
+        if (report.itemCount) window.TripLog.features.print.itineraryTable.append(report, options, () => page('itinerary', 'details'), fits);
+      }
+      if (kind === 'expense' || kind === 'full') {
+        const body = page('expense'); body.appendChild(node(expenseSummary(report)));
+        if (options.charts !== false) body.appendChild(node(`<div class="ex-expense-charts">${categoryChart(report)}${dailyChart(report)}</div>`));
+        body.appendChild(node(expenseHighlights(report)));
+        fitExpenseOverview(body);
+        // The overview is a complete analysis page. Detail rows always begin
+        // on a fresh sheet, including filtered, chart-free and combined reports.
+        ledger(page('expense', true), expenseRows(report, options), 'expense', report.total);
+      }
+      pages.forEach((paper, index) => { paper.querySelector('[data-page-number]').textContent = `${index + 1} / ${pages.length}`; });
+      return { markup: `<div class="ex-document">${pages.map(paper => paper.outerHTML).join('')}</div>`, pages: pages.length, data: report };
+    } finally { measure.remove(); }
+  }
+  window.TripLog.register('features.print.renderer', { build, data, header, sceneMarkup, periodLabel, expenseSummary, categoryChart, dailyChart, eventArt, eventColors });
+})();
+
+window.TripLog.register('features.print.export', {
+  exportPdf, exportExpensePdf, exportItineraryPdf, exportFullPdf, buildPrintReport,
+  buildExpensePrintSections, buildItineraryPrintSections, getFilteredEntriesForPrint, getSortedItineraryItemsForPrint,
 });

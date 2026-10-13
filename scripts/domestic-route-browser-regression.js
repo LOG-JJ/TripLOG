@@ -1,11 +1,10 @@
+const { launchBrowser, startServer, stopServer } = require('./helpers/browser-fixture');
 // Browser plugin not available: isolated Playwright/Edge app regression.
 // Flow: name-only Udo -> Seongsan itinerary -> transit dialog -> populated
 // Naver origin/destination, without changing any saved itinerary fields.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { chromium } = require('playwright');
-const { createServer } = require('./serve-test');
 const live = process.argv.includes('--live');
 const places = {
   '우도': { name: '우도', lat: '33.5072572', lon: '126.9550015', display_name: '우도, 우도면, 제주시, 제주특별자치도, 대한민국', address: { country_code: 'kr', state: '제주특별자치도' }, namedetails: { name: '우도' } },
@@ -13,10 +12,8 @@ const places = {
 };
 
 async function main() {
-  const server = createServer({ pagesRedirects: true });
-  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
-  const origin = process.env.TRIPLOG_TEST_URL || `http://127.0.0.1:${server.address().port}`;
-  const browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined), headless: true });
+  const { server, origin } = await startServer();
+  const browser = await launchBrowser();
   const output = path.join(require('node:os').tmpdir(), 'TripLOG-Domestic-Route-QA'); fs.mkdirSync(output, { recursive: true });
   try {
     for (const mobile of live ? [true] : [false, true]) {
@@ -174,6 +171,6 @@ async function main() {
       await context.close();
     }
     console.log(`Route screenshots: ${output}`);
-  } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }
+  } finally { await browser.close(); await stopServer(server); }
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

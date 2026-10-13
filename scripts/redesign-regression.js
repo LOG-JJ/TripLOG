@@ -10,6 +10,8 @@ const sandbox = {
   compareExpenseEntryDates: (a,b) => a.date.localeCompare(b.date),
   isPreTripExpenseDate: date => date === '__pretrip__',
 };
+sandbox.window.TripLog.shared = { travelCosts: require('../src/app/shared/travel-costs') };
+sandbox.window.TripLog.data = { expenseCategories: require('../src/app/data/expense-categories') };
 vm.createContext(sandbox);
 for (const file of ['src/app/shared/totals.js','src/app/features/expenses/lodging.js','src/app/features/settlement/settlement-sources.js','src/app/features/settlement/settlement-model.js','src/app/features/redesign/design-model.js']) {
   vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),sandbox,{filename:file});

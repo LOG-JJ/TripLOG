@@ -1,9 +1,9 @@
+const { launchBrowser } = require('./helpers/browser-fixture');
 // Real service workers and IndexedDB in an isolated Edge profile. The server
 // changes its build while two tabs remain open; no user refresh/update action.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const http = require('node:http');
-const { chromium } = require('playwright');
 const { createServer } = require('./serve-test');
 const builds = ['a'.repeat(20), 'b'.repeat(20), 'c'.repeat(20)];
 const actor = '00000000-0000-4000-8000-000000000001';
@@ -42,7 +42,7 @@ async function main() {
   });
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
   const origin = 'http://127.0.0.1:'+server.address().port;
-  const browser = await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL || (process.platform==='win32'?'msedge':undefined),headless:true});
+  const browser = await launchBrowser();
   const errors=[], pages=[];
   try {
     const context=await browser.newContext({viewport:{width:1280,height:900}});context.setDefaultTimeout(20000);

@@ -9,35 +9,31 @@
   const logo = '<img class="tt-logo" src="src/assets/triplog-wordmark.png" alt="TripLOG">';
   const tabs = [['today', '오늘', 'house'], ['review', '점검', 'clipboard-text'], ['wallet', '예약', 'calendar-blank'], ['tools', '도구', 'suitcase']];
   const titles = { today: '오늘의 여행', review: '일정 점검', wallet: '예약 지갑', tools: '여행 도구' };
-  let ready = false, activeTab = 'today', selectedDay = '', walletFilter = 'all', openedTrip = '', activePlan = null, editor = null, detailId = '';
+  let ready = false, activeTab = 'today', selectedDay = '', walletFilter = 'all', openedTrip = '', activePlan = null, editor = null;
   let walletQuery = '', walletSort = 'date';
   let packingBusy = false, reservationSaving = false;
   const foldStates = new Map();
   const walletFilters = [['all', '전체'], ['transport', '교통'], ['stay', '숙소'], ['activity', '입장권'], ['other', '기타']];
-  let pocketOptions = { itinerary: true, references: true, budget: false };
+  let pocketOptions = { itinerary: true, references: true, costs: false };
   const dateLabel = value => M().validDate(value) ? `${Number(value.slice(5, 7))}.${Number(value.slice(8))} (${'일월화수목금토'[new Date(`${value}T12:00:00Z`).getUTCDay()]})` : '날짜 미정';
   const period = () => `${dateLabel(state.startDate)} – ${dateLabel(state.endDate)}`;
   const notice = (content, kind = 'blue') => `<div class="tt-notice ${kind}" role="status">${icon(kind === 'pink' ? 'warning-circle' : 'info')}<span>${content}</span></div>`;
   const empty = (title, description, action = 'itinerary-new', label = '일정 추가') => `<div class="tt-empty">${icon(action === 'reservation-new' ? 'ticket' : 'calendar-blank')}<h2>${title}</h2><p>${description}</p>${action ? button(label, action, 'tt-primary') : ''}</div>`;
   function createDialog(id, body) {
-    const dialog = document.createElement('dialog'); dialog.id = id; dialog.className = 'rd-dialog tt-dialog';
-    if (['ttReservationEditor', 'ttReservationDetail', 'ttCopy'].includes(id)) dialog.classList.add('tt-wallet-ui');
-    if (['ttAdjustment', 'ttBudgetInfo'].includes(id)) dialog.classList.add('tt-passport-detail');
-    dialog.setAttribute('aria-labelledby', `${id}Title`);
-    dialog.innerHTML = `<header class="tt-header">${logo}${button(icon('x'), 'close', 'tt-icon', 'aria-label="닫기"')}</header>${body}`;
-    document.body.appendChild(dialog);
-    dialog.addEventListener('close', () => {
-      if (dialog === $('#ttReservationEditor')) editor = null;
-      const target = dialog.returnFocus?.isConnected ? dialog.returnFocus : $('#ttCompanion')?.open ? $('#ttCompanionTitle') : $('[data-rd-action="companion"]');
-      target?.focus({ preventScroll: true });
+    const dialog = window.TripLog.ui.dialog.create({
+      id, className: 'rd-dialog tt-dialog',
+      markup: `<header class="tt-header">${logo}${button(icon('x'), 'close', 'tt-icon', 'aria-label="닫기"')}</header>${body}`,
+      fallbackFocus: () => $('#ttCompanion')?.open ? $('#ttCompanionTitle') : $('[data-rd-action="companion"]'),
+      onClose: element => { if (element.id === 'ttReservationEditor') editor = null; },
     });
+    if (['ttReservationEditor', 'ttReservationDetail', 'ttCopy'].includes(id)) dialog.classList.add('tt-wallet-ui');
+    if (['ttAdjustment', 'ttCostInfo'].includes(id)) dialog.classList.add('tt-passport-detail');
     return dialog;
   }
   function openDialog(id) {
     const dialog = $(`#${id}`);
-    dialog.returnFocus = document.activeElement; dialog.tripId = state.id;
-    if (!dialog.open) dialog.showModal();
-    $(`#${id}Title`)?.focus({ preventScroll: true });
+    dialog.tripId = state.id;
+    window.TripLog.ui.dialog.open(dialog);
   }
   function closeAll() { $$('.tt-dialog[open]').reverse().forEach(dialog => dialog.close()); }
   async function commit(patch) {
@@ -71,19 +67,8 @@
     const dates = M().days(state);
     return dates.length ? `<div class="tt-days" aria-label="여행 일자">${dates.map((date, index) => button(`<b>${dateLabel(date)}</b><span>${index + 1}일차</span>`, 'day', date === selectedDay ? 'active' : '', `data-date="${date}" aria-pressed="${date === selectedDay}"`)).join('')}</div>` : notice('여행 정보에서 시작일과 종료일을 설정해 주세요.', 'pink');
   }
-  function itineraryRows(items, review = false) {
-    const status = M().flags(state), next = items.find(item => !status.completed.has(item.id));
-    return `<div class="tt-itinerary">${items.map((item, index) => {
-      const done = status.completed.has(item.id), locked = status.locked.has(item.id), highlighted = review ? index === 0 : item.id === next?.id;
-      let action;
-      if (review) action = button(`${icon(locked ? 'lock-key' : 'lock-key-open')}<span>${locked ? '잠금됨' : '잠금'}</span>`, 'lock', locked ? 'tt-locked' : '', `data-id="${text(item.id)}" aria-label="${text(item.place)} ${locked ? '잠금 해제' : '시간 잠금'}" aria-pressed="${locked}"`);
-      else if (done || highlighted) action = button(`${icon(done ? 'check-circle' : 'circle')}<span>${done ? '완료' : '완료하기'}</span>`, 'complete', done ? 'tt-completed' : '', `data-id="${text(item.id)}" aria-label="${text(item.place)} ${done ? '완료 취소' : '완료하기'}" aria-pressed="${done}"`);
-      else action = button(`${icon(item.trans === 'walk' ? 'person-simple-walk' : 'bus')}<span>${item.trans === 'walk' ? '도보' : '이동'} ${M().transitMinutes(item, 0) || '미정'}${M().transitMinutes(item, 0) ? '분' : ''}</span>`, 'complete', '', `data-id="${text(item.id)}" aria-label="${text(item.place)} 완료하기" aria-pressed="false"`);
-      return `<article class="tt-stop ${highlighted ? 'is-next' : ''} ${done ? 'is-done' : ''}">${!review && highlighted ? '<span class="tt-next-badge">다음 장소</span>' : ''}<button type="button" class="tt-stop-main" data-tt-action="itinerary-edit" data-id="${text(item.id)}" aria-label="${text(item.place)} 일정 상세"><span class="tt-time"><b>${text(item.time || '미정')}</b><span>${item.theme === 'lodging' ? '숙소 도착' : item.endTime ? '– ' + text(item.endTime) : '종료 미정'}</span></span><span class="tt-place"><strong>${text(item.place || '여행 일정')}</strong><small>${icon('map-pin')} ${text(item.location || state.city || '장소 미정')}</small></span></button>${action}</article>`;
-    }).join('')}</div>`;
-  }
   function todayContent() {
-    const data = M().today(state, selectedDay), budget = M().dailyBudget(state, selectedDay);
+    const data = M().today(state, selectedDay), cost = M().dailySpending(state, selectedDay);
     const completed = M().flags(state).completed;
     const finished = data.items.filter(item => completed.has(item.id));
     const remaining = data.items.filter(item => !completed.has(item.id) && item.id !== data.next?.id);
@@ -94,8 +79,8 @@
       <div class="pp-pass-place"><div><time>${text(next.time || '시각 미정')}</time>${button(`<strong>${text(next.place || '장소 미정')}</strong>`, 'itinerary-edit', `pp-place-title${(next.place || '').length > 16 ? ' is-long' : (next.place || '').length > 8 ? ' is-medium' : ''}`, `data-id="${text(next.id)}" aria-label="${text(next.place || '다음 장소')} 일정 상세"`)}<p>${icon('map-pin')}<span>${text(next.location || [state.city, state.country].filter(Boolean).join(' · ') || '장소를 입력해 주세요')}</span></p></div><img class="pp-pass-sketch" src="src/assets/companion-passport-sketch.png" alt="" width="135" height="110"></div>
       <div id="ttPassportPrimarySlot"></div><div class="pp-pass-bottom"><span>${data.completed} / ${data.items.length}개 완료</span>${button(`${icon('check-circle')} 방문 완료`, 'complete', 'pp-complete-next', `data-id="${text(next.id)}" aria-label="${text(next.place)} 완료하기" aria-pressed="false"`)}</div>
     </section>` : data.items.length ? `<section class="pp-day-complete">${icon('check-circle')}<h2>오늘의 여정을 모두 마쳤어요</h2><p>${data.items.length}개의 장소를 다녀왔어요.</p><div id="ttPassportPrimarySlot"></div></section>` : empty('아직 일정이 없어요', '이날 가고 싶은 장소를 추가해 보세요.', '');
-    const budgetLine = `<button type="button" class="pp-budget-strip${budget.remaining < 0 ? ' is-over' : ''}" data-tt-action="${budget.configured ? 'budget-info' : 'budget-settings'}" aria-label="하루 가용 예산 ${budget.configured ? money(budget.remaining) + ', 자세히 보기' : '설정하기'}">${icon('wallet')}<span>${budget.remaining < 0 ? '하루 예산 초과' : '오늘 남은 예산'}</span><div>${budget.configured ? `<strong>${money(Math.abs(budget.remaining))}</strong><small> / ${money(budget.allowance)}</small><progress max="100" value="${budget.percent}" aria-label="하루 가용 예산 잔여율"></progress>` : `<strong>예산 설정 ${icon('caret-right')}</strong>`}</div></button>`;
-    return `${hero()}${dayStrip()}${ticket}${finished.length ? passportStopList(finished, '완료한 일정', 'completed', data.items) : ''}${remaining.length ? passportStopList(remaining, '남은 일정', 'remaining', data.items) : ''}${budgetLine}`;
+    const costLine = `<button type="button" class="pp-budget-strip pp-cost-strip" data-tt-action="cost-info" aria-label="이날 여행 경비 ${money(cost.dayTotal)}, 자세히 보기">${icon('wallet')}<span>이날 여행 경비</span><div><strong>${money(cost.dayTotal)}</strong><small> · ${cost.dayCount}건</small></div>${icon('caret-right')}</button>`;
+    return `${hero()}${dayStrip()}${ticket}${finished.length ? passportStopList(finished, '완료한 일정', 'completed', data.items) : ''}${remaining.length ? passportStopList(remaining, '남은 일정', 'remaining', data.items) : ''}${costLine}`;
   }
   function passportStopList(items, title, key, all) {
     const done = key === 'completed';
@@ -212,7 +197,7 @@
     const packing = state.packingList || [];
     return `<figure class="pp-note-cover"><img src="src/assets/companion-passport-cover.png" alt="TripLOG 오프라인 포켓노트 — 리넨 표지와 분홍색 책갈피" width="1717" height="916"></figure>
       <section class="pp-pocket-panel"><div class="pp-tool-heading">${icon('suitcase')}<div><h2>오프라인 포켓노트</h2><p>인터넷 없이도 일정과 예약을 확인해요.</p></div></div>
-        <div class="pp-note-options">${[['itinerary', '일정 포함'], ['references', '예약번호 포함'], ['budget', '예산 포함']].map(([key, label]) => `<label><input type="checkbox" data-tt-option="${key}" ${pocketOptions[key] ? 'checked' : ''}><span>${label}</span></label>`).join('')}</div><div id="ttPassportPrimarySlot"></div>
+        <div class="pp-note-options">${[['itinerary', '일정 포함'], ['references', '예약번호 포함'], ['costs', '경비 포함']].map(([key, label]) => `<label><input type="checkbox" data-tt-option="${key}" ${pocketOptions[key] ? 'checked' : ''}><span>${label}</span></label>`).join('')}</div><div id="ttPassportPrimarySlot"></div>
       </section>
       <section class="pp-calendar-panel">${button(`${icon('calendar-check')}<span><strong>캘린더에 일정 추가</strong><small>여행 일정을 휴대폰 캘린더로 · ${state.itineraryItems.length}개</small></span>${icon('arrow-down')}`, 'calendar', 'pp-calendar-action', state.itineraryItems.length ? '' : 'disabled')}<p id="ttExportHelp" class="tt-export-help" role="status" hidden>다운로드한 ICS 파일을 캘린더로 가져오세요. iPhone에서는 Mail 첨부파일로 열어 추가할 수 있어요. <a href="https://support.apple.com/guide/iphone/ipha0d932e96/ios" target="_blank" rel="noopener noreferrer">가져오기 안내</a></p></section>
       <details class="pp-packing" data-pp-fold="packing"${foldStates.get('packing') === false ? '' : ' open'}><summary>${icon('suitcase')}<strong>준비물 체크리스트</strong><span>${packing.filter(item => item.checked).length} / ${packing.length} 완료</span>${icon('caret-up')}</summary>
@@ -243,7 +228,14 @@
     primary.innerHTML = activeTab === 'today' ? data.next ? `<a class="tt-button tt-primary" href="${text(M().directions(data.next, state))}" target="_blank" rel="noopener noreferrer">${icon('navigation-arrow')} 길찾기 ${icon('caret-right')}</a>` : button(`${data.items.length ? '오늘 일정 완료 · 일정 보기' : '첫 일정 추가'} ${icon('caret-right')}`, data.items.length ? 'itinerary-day' : 'itinerary-new', 'tt-primary') : activeTab === 'review' ? button(`조정안 확인 ${icon('caret-right')}`, 'adjustment', 'tt-primary', M().dayItems(state, selectedDay).length ? '' : 'disabled') : activeTab === 'wallet' ? button(`${icon('plus')} 예약 추가`, 'reservation-new', 'tt-primary') : button(`${icon('download-simple')}<span>저장</span>`, 'pocket', 'pp-pocket-save', 'aria-label="포켓노트 저장" title="포켓노트 저장"');
     $('#ttNav').innerHTML = tabs.map(([key, label, glyph]) => button(`${icon(glyph)}<span>${label}</span>`, 'tab', key === activeTab ? 'active' : '', `data-tab="${key}" ${key === activeTab ? 'aria-current="page"' : ''}`)).join('');
     scroll.scrollTop = previousScroll;
-    $('.tt-days .active', panel)?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+    // Reveal the selected date only inside its horizontal strip. Scrolling all
+    // ancestors can pan the dialog itself and cut off the travel header.
+    const strip = $('.tt-days', panel), selected = $('.tt-days .active', panel);
+    if (strip && selected) {
+      const bounds = strip.getBoundingClientRect(), item = selected.getBoundingClientRect();
+      if (item.left < bounds.left) strip.scrollLeft -= bounds.left - item.left;
+      else if (item.right > bounds.right) strip.scrollLeft += item.right - bounds.right;
+    }
   }
   function render() {
     if (!ready) return;
@@ -341,7 +333,6 @@
   }
   function showReservationDetail(id, openModal = true) {
     const row = M().reservations(state).find(item => item.id === id); if (!row) return;
-    detailId = id;
     const type = walletType(row), link = M().safeUrl(row.url);
     const mapLink = row.location ? buildTripPlaceSearchUrl(row.location) : '';
     const mapTarget = matchMedia('(any-pointer: coarse)').matches ? '_self' : '_blank';
@@ -427,8 +418,7 @@
         }
         case 'itinerary-new': closeAll(); state.selectedItineraryDate = selectedDay || state.startDate; window.TripLog.features.redesign.workspace.navigate('itinerary'); window.TripLog.features.itinerary.workspace.show(); break;
         case 'itinerary-day': case 'itinerary-all': closeAll(); state.selectedItineraryDate = action === 'itinerary-all' ? 'all' : selectedDay; window.TripLog.features.redesign.workspace.navigate('itinerary'); saveAndRender(); break;
-        case 'budget-settings': closeAll(); window.TripLog.features.redesign.workspace.open('rdBudgetEditor'); break;
-        case 'budget-info': { const data = M().dailyBudget(state, selectedDay); $('#ttBudgetInfoBody').innerHTML = `<p>오늘 이전에 기록한 지출과 사전구매를 전체 예산에서 뺀 뒤, 남은 ${data.remainingDays}일로 나눠 계산해요.</p><dl class="tt-detail-list"><dt>오늘 배정액</dt><dd>${money(data.allowance)}</dd><dt>오늘 기록한 지출</dt><dd>${money(data.used)}</dd><dt>오늘 남은 금액</dt><dd>${money(data.remaining)}</dd></dl><p class="tt-muted">지출을 기록할수록 가용 금액이 바뀝니다. 다른 멤버의 별도 지출은 포함하지 않아요.</p>`; openDialog('ttBudgetInfo'); break; }
+        case 'cost-info': { const data = M().dailySpending(state, selectedDay); $('#ttCostInfoBody').innerHTML = `<p>기록한 지출을 합산한 금액입니다. 환불은 합계에서 차감해요.</p><dl class="tt-detail-list"><dt>이날 여행 경비</dt><dd>${money(data.dayTotal)} · ${data.dayCount}건</dd><dt>전체 누적 경비</dt><dd>${money(data.total)} · ${data.count}건</dd><dt>사전구매 경비</dt><dd>${money(data.pretrip)}</dd></dl><p class="tt-muted">전체 누적 경비에는 사전구매와 날짜 미정 기록도 포함합니다.</p>`; openDialog('ttCostInfo'); break; }
         case 'adjustment': showAdjustment(); break;
         case 'delay': $('#ttDelay').value = target.dataset.delay; updateAdjustment(); break;
         case 'apply': await commit(M().applyAdjustment(state, activePlan)); $('#ttAdjustment').close(); showToast('일정 시간을 조정했어요. 점검 화면에서 되돌릴 수 있어요.'); break;
@@ -484,7 +474,7 @@
         <p class="tt-muted">${icon('info')} 지출 기록은 별도로 추가해 주세요.</p><p id="ttReservationError" role="alert"></p>
       </form></div><footer class="tt-sub-footer"><div>${button('취소', 'close')}<button type="submit" form="ttReservationForm" class="tt-button tt-primary">예약 저장</button></div></footer>`);
     createDialog('ttReservationDetail', '<div class="tt-scroll"><div class="tt-heading"><h1 id="ttReservationDetailTitle" tabindex="-1"></h1></div><div id="ttReservationDetailBody"></div></div><footer class="tt-sub-footer" id="ttReservationDetailFooter"></footer>');
-    createDialog('ttBudgetInfo', `<div class="tt-scroll"><div class="tt-heading"><h1 id="ttBudgetInfoTitle" tabindex="-1">하루 예산 계산</h1></div><div id="ttBudgetInfoBody"></div></div><footer class="tt-sub-footer">${button('확인', 'close', 'tt-primary')}</footer>`);
+    createDialog('ttCostInfo', `<div class="tt-scroll"><div class="tt-heading"><h1 id="ttCostInfoTitle" tabindex="-1">여행 경비 상세</h1></div><div id="ttCostInfoBody"></div></div><footer class="tt-sub-footer">${button('확인', 'close', 'tt-primary')}</footer>`);
     createDialog('ttCopy', `<div class="tt-scroll"><div class="tt-heading"><h1 id="ttCopyTitle" tabindex="-1">예약번호 복사</h1><p>선택한 예약번호를 길게 눌러 복사하거나 Ctrl+C를 누르세요.</p></div><input id="ttCopyValue" class="tt-copy-value" readonly aria-label="복사할 예약번호"></div><footer class="tt-sub-footer">${button('완료', 'close', 'tt-primary')}</footer>`);
     $('#ttReservationForm').addEventListener('submit', saveReservation);
     $('#ttReservationForm').addEventListener('invalid', event => { const extra = event.target.closest('details'); if (extra) extra.open = true; }, true);

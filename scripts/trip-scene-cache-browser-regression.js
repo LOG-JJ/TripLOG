@@ -1,8 +1,8 @@
+const { launchBrowser, blockExternalRequests } = require('./helpers/browser-fixture');
 // Real service-worker checks in an isolated browser/account; no production writes.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const http = require('node:http');
-const { chromium } = require('playwright');
 const { createTripHeaderPreview } = require('./preview-trip-header');
 const cityRoot = '/src/assets/trip-scenes/cities/v99/';
 const sceneData = require('../src/app/data/destination-scenes');
@@ -30,11 +30,11 @@ async function main() {
   });
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const origin = `http://127.0.0.1:${server.address().port}`;
-  const browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined), headless: true });
+  const browser = await launchBrowser();
   try {
     const context = await browser.newContext({ viewport: { width: 390, height: 844 }, timezoneId: 'Asia/Seoul' });
     context.setDefaultTimeout(30000);
-    await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
+    await blockExternalRequests(context, origin);
     const page = await context.newPage(), errors = [];
     page.on('pageerror', error => errors.push(error.message));
     const ready = () => page.waitForFunction(() => document.documentElement.dataset.triplogInitialized === 'true' && document.documentElement.dataset.auth === 'signed-in' && Boolean(navigator.serviceWorker.controller));

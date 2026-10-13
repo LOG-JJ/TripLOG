@@ -1,25 +1,22 @@
+const { launchBrowser, fixtureToken, blockExternalRequests, seedTrip, startServer, stopServer } = require('./helpers/browser-fixture');
 // Isolated Playwright/Edge fixture for structured expense import.
 // External requests are blocked. No real account, trip, or server data is edited.
 const assert = require('node:assert/strict');
 const path = require('node:path');
 const fs = require('node:fs');
-const { chromium } = require('playwright');
-const { createServer } = require('./serve-test');
 const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Expense-Polish-20260921');
 
 async function main() {
   fs.mkdirSync(output, { recursive: true });
-  const server = createServer({ pagesRedirects: true });
-  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
-  const origin = process.env.TRIPLOG_TEST_URL || `http://127.0.0.1:${server.address().port}`;
-  const browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined), headless: true });
+  const { server, origin } = await startServer();
+  const browser = await launchBrowser();
   let page;
   try {
     const context = await browser.newContext({ serviceWorkers: 'block', viewport: { width: 1440, height: 1100 } });
     context.setDefaultTimeout(12000);
     const user = { id: '00000000-0000-4000-8000-000000000099', email: 'controls@example.test', user_metadata: { display_name: '컨트롤 시험' } };
     const expiry = Math.floor(Date.now() / 1000) + 3600;
-    const token = [Buffer.from(JSON.stringify({ alg: 'HS256', typ: 'JWT' })).toString('base64url'), Buffer.from(JSON.stringify({ sub: user.id, exp: expiry, role: 'authenticated' })).toString('base64url'), 'fixture'].join('.');
+    const token = fixtureToken(user, expiry);
     const seed = { id: 'controls-fixture', tripName: '교토 여행', city: '교토', country: '일본', travelMode: 'overseas', startDate: '2026-09-25', endDate: '2026-09-28', totalBudget: 1000000, currencyCode: 'JPY', exchangeRate: 900, entries: [
       {id:'expense-hotel',date:'__pretrip__',paymentDate:'2026-09-20',category:'숙소',description:'교토 호텔 · 2박',amount:162000,foreignAmount:18000,currency:'JPY',exchangeRate:900,exchangeBase:100,paymentMethod:'card',note:'체크인 15:00 · 조식 포함',createdAt:1},
       {id:'expense-flight',date:'__pretrip__',paymentDate:'2026-09-20',category:'교통',description:'오사카 왕복 항공권',amount:280000,currency:'KRW',paymentMethod:'card',note:'위탁 수하물 15kg 포함',createdAt:2},
@@ -28,14 +25,8 @@ async function main() {
       {id:'expense-temple',date:'2026-09-26',paymentDate:'2026-09-26',category:'관광',description:'텐류지 입장권',amount:4500,foreignAmount:500,currency:'JPY',exchangeRate:900,exchangeBase:100,paymentMethod:'cash',note:'정원 입장',createdAt:5},
       {id:'expense-shop',date:'2026-09-26',paymentDate:'2026-09-26',category:'쇼핑',description:'교토 기념품',amount:16200,foreignAmount:1800,currency:'JPY',exchangeRate:900,exchangeBase:100,paymentMethod:'card',note:'말차 과자',createdAt:6}
     ], companions: [], packingList: [], itineraryItems: [] };
-    await context.addInitScript(({ origin, user, expiry, token, seed }) => {
-      if (location.origin !== origin || localStorage.getItem('controls-seed')) return;
-      localStorage.setItem('controls-seed', '1');
-      localStorage.setItem('sb-iehdziiplzgvxcrbizgv-auth-token', JSON.stringify({ access_token: token, refresh_token: 'fixture', token_type: 'bearer', expires_at: expiry, expires_in: 3600, user }));
-      localStorage.setItem('domesticTravelExpensePlanner.trips.v2', JSON.stringify([seed]));
-      localStorage.setItem('domesticTravelExpensePlanner.activeTripId.v2', seed.id);
-    }, { origin, user, expiry, token, seed });
-    await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
+    await seedTrip(context, { origin, user, expiry, token, seed });
+    await blockExternalRequests(context, origin);
     page = await context.newPage();
     const errors = []; page.on('pageerror', error => errors.push(error.message));
     async function ready() {
@@ -97,6 +88,6 @@ async function main() {
     assert.equal(await page.evaluate(()=>state.entries.length),9);
     assert.deepEqual(errors,[]);
     console.log('PASS: JSON errors, prompt, pretrip, JPY conversion, payment metadata, save/reload, lodging split and mobile layout');
-  } finally { await browser.close(); await new Promise(resolve=>server.close(resolve)); }
+  } finally { await browser.close(); await stopServer(server); }
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

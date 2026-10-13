@@ -6,7 +6,7 @@
   function render({ trip, countdown, period, duration, memberCount, expanded = false }) {
     const scene = scenes().resolve(trip), title = String(trip.tripName || '새로운 여행');
     const members = Math.max(0, Math.floor(Number(memberCount) || 0));
-    return `<section class="rd-trip-hero rd-outline th-trip-hero" aria-label="여행 정보" data-destination-id="${text(scene.destinationId)}" data-destination-match="${text(scene.match)}" data-scene="${text(scene.artworkId)}">
+    return window.TripLog.features.overview.card.render({ className: 'rd-trip-hero th-trip-hero', variant: 'hero', label: '여행 정보', attributes: { 'data-destination-id': scene.destinationId, 'data-destination-match': scene.match, 'data-scene': scene.artworkId }, content: `
       <div class="th-hero-copy">
         <span class="rd-badge th-countdown">${text(countdown)}</span>
         <h2><button type="button" class="rd-trip-name th-trip-name" id="rdOverviewTripButton" data-rd-action="trip-choose" aria-haspopup="dialog" aria-controls="rdTripChooser" aria-expanded="${Boolean(expanded)}" aria-label="여행 바꾸기: ${text(title)}" title="${text(title)}"><span>${text(title)}</span>${icon('caret-down')}</button></h2>
@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="th-hero-scene" aria-hidden="true"><picture>${scene.mobileSrc ? `<source media="(max-width: 767px)" srcset="${text(scene.mobileSrc)}" data-trip-scene-mobile>` : ''}<img src="${text(scene.src)}" data-trip-scene data-scene-fallback="${text(scene.fallbackSrc)}" data-scene-universal="${text(scene.universalSrc)}" width="800" height="480" alt="" decoding="async"></picture></div>
-    </section>`;
+    ` });
   }
   // Missing artwork must never leave a broken-image icon over the trip controls.
   function fallbackScene(image) {

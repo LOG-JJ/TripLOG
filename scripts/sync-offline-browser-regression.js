@@ -1,8 +1,9 @@
+const { launchBrowser } = require('./helpers/browser-fixture');
 const assert = require('node:assert/strict');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const origin = process.env.TRIPLOG_TEST_URL || 'http://127.0.0.1:18080';
 async function main() {
-  const browser = await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined),headless:true});
+  const browser = await launchBrowser();
   try {
     const context = await browser.newContext(); context.setDefaultTimeout(20000);
     // A synthetic local session permits the offline screen. Every external request is blocked.

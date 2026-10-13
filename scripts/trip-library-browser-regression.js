@@ -1,23 +1,21 @@
+const { launchBrowser, fixtureToken, blockExternalRequests, startServer, stopServer } = require('./helpers/browser-fixture');
 // Browser plugin unavailable: repository Playwright/Edge fixtures; every external
 // request is blocked. Live visual QA is additionally performed in the in-app browser.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { chromium } = require('playwright');
-const { createServer } = require('./serve-test');
 const fixtures = require('./fixtures/trip-library');
 const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Home-Passport-20261003');
 const fixedDate = new Date('2026-10-03T09:00:00+09:00');
 async function main() {
   fs.mkdirSync(output, { recursive: true });
-  const server = createServer({ pagesRedirects: true }); await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
-  const origin = `http://127.0.0.1:${server.address().port}`;
-  const browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined), headless: true });
+  const { server, origin } = await startServer();
+  const browser = await launchBrowser();
   try {
     const context = await browser.newContext({ serviceWorkers: 'block', viewport: { width: 390, height: 844 }, timezoneId: 'Asia/Seoul' }); context.setDefaultTimeout(15000);
     const user = { id: '00000000-0000-4000-8000-000000000098', email: 'library@example.test', user_metadata: { display_name: '여행 보관함 시험' } };
     const expiry = Math.floor(fixedDate.getTime() / 1000) + 86400;
-    const token = [Buffer.from(JSON.stringify({ alg: 'HS256', typ: 'JWT' })).toString('base64url'), Buffer.from(JSON.stringify({ sub: user.id, exp: expiry, role: 'authenticated' })).toString('base64url'), 'fixture'].join('.');
+    const token = fixtureToken(user, expiry);
     await context.addInitScript(({ origin, fixtures, user, expiry, token }) => {
       if (location.origin !== origin || localStorage.getItem('trip-library-fixture')) return;
       localStorage.setItem('trip-library-fixture', '1');
@@ -25,7 +23,7 @@ async function main() {
       localStorage.setItem('domesticTravelExpensePlanner.trips.v2', JSON.stringify(fixtures));
       localStorage.setItem('domesticTravelExpensePlanner.activeTripId.v2', 'library-osaka');
     }, { origin, fixtures, user, expiry, token });
-    await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
+    await blockExternalRequests(context, origin);
     const page = await context.newPage(), errors = []; page.on('pageerror', error => errors.push(error.message));
     await page.clock.setFixedTime(fixedDate);
     const ready = () => page.waitForFunction(() => document.documentElement.dataset.triplogInitialized === 'true' && document.documentElement.dataset.appReady === 'true' && document.documentElement.dataset.auth === 'signed-in');
@@ -145,6 +143,6 @@ async function main() {
     await page.screenshot({ path: path.join(output, 'home-empty-320.png'), fullPage: true });
     assert.deepEqual(errors, []);
     console.log('PASS library: missing-trip links, explicit expense links and a fresh app entry resolve correctly without runtime errors');
-  } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }
+  } finally { await browser.close(); await stopServer(server); }
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

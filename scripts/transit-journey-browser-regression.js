@@ -1,10 +1,9 @@
+const { launchBrowser, fixtureToken, startServer, stopServer } = require('./helpers/browser-fixture');
 // Isolated browser fixtures: route imagery is not fetched by automated tests.
 // The visible local preview verifies real provider maps separately.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { chromium } = require('playwright');
-const { createServer } = require('./serve-test');
 const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Journey-20260922');
 const fixture = {
   id: 'transit-journey-fixture', tripName: '교토 여행 · 디자인 확인', travelMode: 'overseas', city: '교토', country: '일본', countryCode: 'JP',
@@ -23,15 +22,13 @@ const fixture = {
 
 async function main() {
   fs.mkdirSync(output, { recursive: true });
-  const server = createServer({ pagesRedirects: true });
-  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
-  const origin = process.env.TRIPLOG_TEST_URL || `http://127.0.0.1:${server.address().port}`;
-  const browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined), headless: true });
+  const { server, origin } = await startServer();
+  const browser = await launchBrowser();
   const context = await browser.newContext({ serviceWorkers: 'block', viewport: { width: 1536, height: 1050 }, deviceScaleFactor: 1 });
   context.setDefaultTimeout(12000);
   const user = { id: '00000000-0000-4000-8000-000000000099', email: 'journey@example.test', user_metadata: { display_name: '디자인 확인' } };
   const expiry = Math.floor(Date.now() / 1000) + 3600;
-  const token = [Buffer.from(JSON.stringify({ alg: 'HS256', typ: 'JWT' })).toString('base64url'), Buffer.from(JSON.stringify({ sub: user.id, exp: expiry, role: 'authenticated' })).toString('base64url'), 'fixture'].join('.');
+  const token = fixtureToken(user, expiry);
   await context.addInitScript(({ origin, fixture, user, expiry, token }) => {
     if (location.origin !== origin || localStorage.getItem('journey-seed')) return;
     localStorage.setItem('journey-seed', '1');
@@ -191,7 +188,7 @@ async function main() {
     assert.deepEqual(errors, []);
     console.log(`PASS compact journey: generic train, color edit/save/reload/cancel, full-width map with internal controls and 192/160px height, intact transit/walking directions, cumulative times, transfer/line fields, tab continuity, edit shortcuts, unknown-field preservation, invalid/overnight/missing times, 1536/768/390/320 layout. Screenshots: ${output}`);
   } catch (error) { await page.screenshot({ path: path.join(output, 'failure.png') }).catch(() => {}); throw error; }
-  finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }
+  finally { await browser.close(); await stopServer(server); }
 }
 module.exports = { fixture };
 if (require.main === module) main().catch(error => { console.error(error); process.exitCode = 1; });

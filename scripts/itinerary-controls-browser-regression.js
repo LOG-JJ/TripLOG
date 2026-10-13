@@ -1,34 +1,25 @@
+const { launchBrowser, fixtureToken, blockExternalRequests, seedTrip, startServer, stopServer } = require('./helpers/browser-fixture');
 // Browser plugin unavailable: use the repository's isolated Playwright/Edge workflow.
 // External requests are blocked. No real account, trip, or server data is edited.
 const assert = require('node:assert/strict');
 const path = require('node:path');
 const fs = require('node:fs');
-const { chromium } = require('playwright');
-const { createServer } = require('./serve-test');
 const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Compact-Controls-20260920');
 
 async function main() {
   fs.mkdirSync(output, { recursive: true });
-  const server = createServer({ pagesRedirects: true });
-  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
-  const origin = process.env.TRIPLOG_TEST_URL || `http://127.0.0.1:${server.address().port}`;
-  const browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined), headless: true });
+  const { server, origin } = await startServer();
+  const browser = await launchBrowser();
   let page;
   try {
     const context = await browser.newContext({ serviceWorkers: 'block', viewport: { width: 1440, height: 1100 } });
     context.setDefaultTimeout(12000);
     const user = { id: '00000000-0000-4000-8000-000000000099', email: 'controls@example.test', user_metadata: { display_name: '컨트롤 시험' } };
     const expiry = Math.floor(Date.now() / 1000) + 3600;
-    const token = [Buffer.from(JSON.stringify({ alg: 'HS256', typ: 'JWT' })).toString('base64url'), Buffer.from(JSON.stringify({ sub: user.id, exp: expiry, role: 'authenticated' })).toString('base64url'), 'fixture'].join('.');
+    const token = fixtureToken(user, expiry);
     const seed = { id: 'controls-fixture', tripName: '교토 여행', city: '교토', country: '일본', travelMode: 'overseas', startDate: '2026-09-25', endDate: '2026-09-28', entries: [], companions: [], packingList: [], itineraryItems: [{id:'stop-a',date:'2026-09-25',place:'교토역',theme:'sightseeing',time:'09:00',endTime:'09:30',createdAt:1},{id:'stop-b',date:'2026-09-25',place:'텐류지',theme:'sightseeing',time:'10:00',endTime:'11:00',createdAt:2}] };
-    await context.addInitScript(({ origin, user, expiry, token, seed }) => {
-      if (location.origin !== origin || localStorage.getItem('controls-seed')) return;
-      localStorage.setItem('controls-seed', '1');
-      localStorage.setItem('sb-iehdziiplzgvxcrbizgv-auth-token', JSON.stringify({ access_token: token, refresh_token: 'fixture', token_type: 'bearer', expires_at: expiry, expires_in: 3600, user }));
-      localStorage.setItem('domesticTravelExpensePlanner.trips.v2', JSON.stringify([seed]));
-      localStorage.setItem('domesticTravelExpensePlanner.activeTripId.v2', seed.id);
-    }, { origin, user, expiry, token, seed });
-    await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
+    await seedTrip(context, { origin, user, expiry, token, seed });
+    await blockExternalRequests(context, origin);
     page = await context.newPage();
     const errors = []; page.on('pageerror', error => errors.push(error.message));
     async function ready() {
@@ -133,6 +124,6 @@ async function main() {
   } catch(error) {
     if(page) await page.screenshot({path:path.join(output,'failure.png')}).catch(()=>{});
     throw error;
-  } finally {await browser.close();await new Promise(resolve=>server.close(resolve));}
+  } finally {await browser.close();await stopServer(server);}
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

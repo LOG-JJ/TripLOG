@@ -1,8 +1,8 @@
+const { launchBrowser } = require('./helpers/browser-fixture');
 // Browser plugin unavailable: isolated Playwright/Edge fixtures; external requests blocked.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { chromium } = require('playwright');
 const { createServer } = require('./serve-test');
 const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Trip-Chooser-20260923');
 const user = { id:'00000000-0000-4000-8000-000000000099', email:'chooser@example.test' };
@@ -24,7 +24,7 @@ async function main() {
   fs.mkdirSync(output,{recursive:true});
   const server=createServer({pagesRedirects:true});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
   const origin=process.env.TRIPLOG_TEST_URL || `http://127.0.0.1:${server.address().port}`;
-  const browser=await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL || (process.platform==='win32'?'msedge':undefined),headless:true});
+  const browser=await launchBrowser();
   try {
     const context=await browser.newContext({serviceWorkers:'block',viewport:{width:1440,height:1000}});context.setDefaultTimeout(12000);
     const expiry=Math.floor(Date.now()/1000)+3600;

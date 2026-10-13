@@ -1,3 +1,4 @@
+const { launchBrowser } = require('./helpers/browser-fixture');
 const assert = require('node:assert/strict');
 const http = require('node:http');
 const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
@@ -17,7 +18,7 @@ async function main(){
   });
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
   const origin=`http://127.0.0.1:${server.address().port}`;
-  const browser=await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL||(process.platform==='win32'?'msedge':undefined),headless:true});
+  const browser=await launchBrowser();
   try{
     const context=await browser.newContext();context.setDefaultTimeout(20000);
     await context.route('**/*',route=>new URL(route.request().url()).origin===origin?route.continue():route.abort());

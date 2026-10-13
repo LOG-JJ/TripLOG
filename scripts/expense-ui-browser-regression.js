@@ -1,25 +1,22 @@
+const { launchBrowser, fixtureToken, blockExternalRequests, seedTrip, startServer, stopServer } = require('./helpers/browser-fixture');
 // Browser plugin unavailable: use the repository's isolated Playwright/Edge workflow.
 // External requests are blocked. No real account, trip, or server data is edited.
 const assert = require('node:assert/strict');
 const path = require('node:path');
 const fs = require('node:fs');
-const { chromium } = require('playwright');
-const { createServer } = require('./serve-test');
 const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Expense-Polish-20260921');
 
 async function main() {
   fs.mkdirSync(output, { recursive: true });
-  const server = createServer({ pagesRedirects: true });
-  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
-  const origin = process.env.TRIPLOG_TEST_URL || `http://127.0.0.1:${server.address().port}`;
-  const browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_CHANNEL || (process.platform === 'win32' ? 'msedge' : undefined), headless: true });
+  const { server, origin } = await startServer();
+  const browser = await launchBrowser();
   let page;
   try {
     const context = await browser.newContext({ serviceWorkers: 'block', viewport: { width: 1440, height: 1100 } });
     context.setDefaultTimeout(12000);
     const user = { id: '00000000-0000-4000-8000-000000000099', email: 'controls@example.test', user_metadata: { display_name: '컨트롤 시험' } };
     const expiry = Math.floor(Date.now() / 1000) + 3600;
-    const token = [Buffer.from(JSON.stringify({ alg: 'HS256', typ: 'JWT' })).toString('base64url'), Buffer.from(JSON.stringify({ sub: user.id, exp: expiry, role: 'authenticated' })).toString('base64url'), 'fixture'].join('.');
+    const token = fixtureToken(user, expiry);
     const seed = { id: 'controls-fixture', tripName: '교토 여행', city: '교토', country: '일본', travelMode: 'overseas', startDate: '2026-09-25', endDate: '2026-09-28', totalBudget: 1000000, currencyCode: 'JPY', exchangeRate: 900, entries: [
       {id:'expense-hotel',date:'__pretrip__',paymentDate:'2026-09-20',category:'숙소',description:'교토 호텔 · 2박',amount:162000,foreignAmount:18000,currency:'JPY',exchangeRate:900,exchangeBase:100,paymentMethod:'card',note:'체크인 15:00 · 조식 포함',createdAt:1},
       {id:'expense-flight',date:'__pretrip__',paymentDate:'2026-09-20',category:'교통',description:'오사카 왕복 항공권',amount:280000,currency:'KRW',paymentMethod:'card',note:'위탁 수하물 15kg 포함',createdAt:2},
@@ -28,14 +25,8 @@ async function main() {
       {id:'expense-temple',date:'2026-09-26',paymentDate:'2026-09-26',category:'관광',description:'텐류지 입장권',amount:4500,foreignAmount:500,currency:'JPY',exchangeRate:900,exchangeBase:100,paymentMethod:'cash',note:'정원 입장',createdAt:5},
       {id:'expense-shop',date:'2026-09-26',paymentDate:'2026-09-26',category:'쇼핑',description:'교토 기념품',amount:16200,foreignAmount:1800,currency:'JPY',exchangeRate:900,exchangeBase:100,paymentMethod:'card',note:'말차 과자',createdAt:6}
     ], companions: [], packingList: [], itineraryItems: [] };
-    await context.addInitScript(({ origin, user, expiry, token, seed }) => {
-      if (location.origin !== origin || localStorage.getItem('controls-seed')) return;
-      localStorage.setItem('controls-seed', '1');
-      localStorage.setItem('sb-iehdziiplzgvxcrbizgv-auth-token', JSON.stringify({ access_token: token, refresh_token: 'fixture', token_type: 'bearer', expires_at: expiry, expires_in: 3600, user }));
-      localStorage.setItem('domesticTravelExpensePlanner.trips.v2', JSON.stringify([seed]));
-      localStorage.setItem('domesticTravelExpensePlanner.activeTripId.v2', seed.id);
-    }, { origin, user, expiry, token, seed });
-    await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
+    await seedTrip(context, { origin, user, expiry, token, seed });
+    await blockExternalRequests(context, origin);
     page = await context.newPage();
     const errors = []; page.on('pageerror', error => errors.push(error.message));
     async function ready() {
@@ -160,11 +151,13 @@ async function main() {
     assert.equal(await page.locator('#rdExpenseList tr').first().getAttribute('data-id'),'expense-hotel');
     await page.locator('#expenseSortSelectButton').click();
     await page.locator('#expenseSortSelectMenu [data-value="default"]').click();
-    await page.evaluate(()=>{state.totalBudget=100;render();});
-    assert.match(await page.locator('.ex-budget-values .is-over').innerText(),/초과 지출/);
-    assert.equal(await page.locator('.ex-progress-row progress').getAttribute('value'),'100');
-    await page.evaluate(()=>{state.totalBudget=0;render();});
-    assert.match(await page.locator('.ex-remaining').innerText(),/예산 미설정/);
+    const recordedCosts = await page.locator('.ex-cost-summary').innerText();
+    for (const legacyBudget of [100, 0, 999999999]) {
+      await page.evaluate(value => { state.totalBudget = value; render(); }, legacyBudget);
+      assert.equal(await page.locator('.ex-cost-summary').innerText(), recordedCosts, 'Legacy planned budget never changes actual spending');
+    }
+    assert.equal(await page.locator('.ex-cost-summary progress, .ex-cost-summary [data-rd-action="budget-edit"]').count(), 0);
+    assert.doesNotMatch(recordedCosts, /예산|남은|초과 지출/);
     await page.evaluate(()=>{state.entries[0].description='아주 긴 여행 지출 이름 '.repeat(12);state.entries[0].note='기록한 메모 전체 내용 '.repeat(30);state.entries[0].amount=123456789012;render();});
     await page.setViewportSize({width:320,height:740});
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=320),'long titles and amounts fit at 320px');
@@ -177,7 +170,7 @@ async function main() {
     const styles=await page.evaluate(()=>Object.fromEntries(['.ex-heading h1','.ex-budget-values > div:first-child strong','.ex-budget-values > div:nth-child(2) strong','.ex-entry-title','.ex-row-amount strong','#rdExpenseEditorTitle','#foreignAmountInput','#rdExpenseEditor label','#rdExpenseEditor .ex-category-choices button','#exConversionSummary'].map(selector=>{const node=document.querySelector(selector),s=node&&getComputedStyle(node);return [selector,node?{font:s.fontSize,weight:s.fontWeight,lineHeight:s.lineHeight,text:node.textContent?.trim().slice(0,180)}:null]})));
     fs.writeFileSync(path.join(output,'audit-after.json'),JSON.stringify({styles,errors},null,2));
     assert.deepEqual(errors,[]);
-    console.log('PASS expense conversion, rate validation, save/edit/reload, lodging allocation and dates, save-and-continue, category state, search/filter/tabs, budget extremes, empty state and 320px layout. '+output);
-  } finally { await browser.close(); await new Promise(resolve=>server.close(resolve)); }
+    console.log('PASS expense conversion, rate validation, save/edit/reload, lodging allocation and dates, save-and-continue, category state, search/filter/tabs, accumulated costs independent of legacy budget, empty state and 320px layout. '+output);
+  } finally { await browser.close(); await stopServer(server); }
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

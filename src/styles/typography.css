@@ -162,14 +162,6 @@ body.rd-app {
     .ex-row-copy small, .ex-row-meta, .ex-trip-line small) {
     font-size: var(--tl-text-meta); font-weight: 500; line-height: 1.5;
   }
-
-  /* Trip cards, settings rows and sheets retain proportion at the new scale. */
-  body.rd-app .rd-trip-card { padding: 12px; margin-bottom: 12px; border-width: 1.5px; }
-  body.rd-app .rd-trip-card .rd-section-head { align-items: flex-start; gap: 8px; }
-  body.rd-app .rd-trip-card .rd-section-head h2 { margin: 7px 0 4px; min-width: 0; }
-  body.rd-app .rd-trip-card .rd-icon-button { flex-shrink: 0; }
-  body.rd-app .rd-trip-card p { gap: 6px; margin: 4px 0; }
-  body.rd-app .rd-trip-card .rd-badge.pink { font-size: var(--tl-text-meta); }
   body.rd-app .rd-trip-open { min-height: 44px; margin-top: 10px; padding: 9px 0 0; }
   body.rd-app #rdOtherTrips { margin-top: 18px; padding-top: 14px; }
   body.rd-app .rd-trip-edit { margin-top: 18px; }
@@ -253,8 +245,6 @@ body.rd-app {
   body.rd-app :is(.tt-place small, .tt-time > span, .tt-issue small,
     .tt-adjust-row small, .tt-hero figcaption) { font-size: var(--tl-text-meta); line-height: 1.5; }
   body.rd-app .tt-time { font-size: var(--tl-text-label); width: 52px; }
-  body.rd-app .tt-stop { min-height: 64px; }
-  body.rd-app .tt-stop > .tt-button { font-size: var(--tl-text-meta); min-height: 44px; }
   body.rd-app :is(.tt-issue strong, .tt-zone .custom-select-button) { font-size: var(--tl-text-body); }
   body.rd-app .tt-notice strong { font-size: var(--tl-text-body); font-weight: 600; }
   body.rd-app .tt-dialog .tt-form label, body.rd-app .tt-number-fields label { font-size: var(--tl-text-label); font-weight: 600; }
@@ -316,6 +306,5 @@ body.rd-app {
   @media (max-width: 599px) {
     body.rd-app .rd-setting-row { flex-wrap: wrap; }
     body.rd-app .rd-setting-row > span { flex: 1; }
-    body.rd-app .rd-trip-card h2 { text-wrap: pretty; }
   }
 }

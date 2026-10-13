@@ -29,20 +29,6 @@ function parseTypedTime(val) {
   return "";
 }
 
-function getPrecedingItineraryItem() {
-  const dayItems = getFilteredItineraryItems();
-  if (dayItems.length === 0) return null;
-  
-  if (editingItineraryId) {
-    const index = dayItems.findIndex(item => item.id === editingItineraryId);
-    if (index > 0) {
-      return dayItems[index - 1];
-    }
-  } else {
-    return dayItems[dayItems.length - 1];
-  }
-  return null;
-}
 
 function addMinutesToTime(timeStr, mins) {
   if (!timeStr) return "";
@@ -67,7 +53,6 @@ function getMinutesBetweenTimes(startTimeStr, endTimeStr) {
 
 window.TripLog.register("shared.timeUtils", {
   parseTypedTime,
-  getPrecedingItineraryItem,
   addMinutesToTime,
   getMinutesBetweenTimes,
 });

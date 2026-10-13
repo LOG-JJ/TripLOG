@@ -77,12 +77,6 @@ function ensureExpenseExchangeDefaults() {
 function renderModeControls() {
   const isOverseas = state.travelMode === "overseas";
   const isLodging = isLodgingSplitMode();
-  updateBrandText();
-  els.modeToggle?.setAttribute("data-mode", isOverseas ? "overseas" : "domestic");
-  els.domesticModeButton?.classList.toggle("active", !isOverseas);
-  els.overseasModeButton?.classList.toggle("active", isOverseas);
-  els.domesticModeButton?.setAttribute("aria-current", String(!isOverseas));
-  els.overseasModeButton?.setAttribute("aria-current", String(isOverseas));
 
   if (!isOverseas) {
     const currency = setPreferredCurrency("KRW");
