@@ -181,7 +181,7 @@ function buildItineraryTransit(item, previous) {
   button.setAttribute('aria-haspopup', 'dialog'); button.setAttribute('aria-controls', 'itineraryTransitDialog'); button.setAttribute('aria-expanded', 'false');
   const routeLabel = isDomesticMapTrip() ? '지도 · 길찾기' : 'Google 경로';
   button.setAttribute('aria-label', `${itineraryPlaceLabel(previous)}에서 ${itineraryPlaceLabel(item)}까지, ${description}, ${routeLabel} 확인 및 이동 정보 편집`);
-  button.innerHTML = `<span aria-hidden="true"></span><span class="timeline-transit-axis" aria-hidden="true"></span><span class="timeline-transit-summary">${itineraryIcon(meaningful.length ? modeFor(meaningful[0]).icon : 'path')}<span class="timeline-transit-copy"><strong>${escapeHtml(description)}</strong><small>${escapeHtml(itineraryPlaceLabel(item))}까지 · ${routeLabel}${meaningful.length > 1 ? ` · ${meaningful.length}개 구간` : ''}</small></span>${itineraryIcon('caret-right')}</span>`;
+  button.innerHTML = `<span aria-hidden="true"></span><span class="timeline-transit-axis" aria-hidden="true"></span><span class="timeline-transit-summary">${itineraryIcon(meaningful.length ? modeFor(meaningful[0]).icon : 'path')}<span class="timeline-transit-copy"><strong>${escapeHtml(description)}</strong></span>${itineraryIcon('caret-right')}</span>`;
   button.addEventListener('click', () => window.TripLog.features.itinerary.transitEditor.open(item.id, previous.id));
   group.appendChild(button); return group;
 }

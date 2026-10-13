@@ -15,7 +15,6 @@ body.rd-app #itineraryPage .timeline-transit-button {
 #itineraryPage .has-transit .timeline-transit-summary { background: #fffbed; border: 1px solid #e1d996; }
 #itineraryPage .timeline-transit-copy { display: grid; gap: 1px; min-width: 0; flex: 1; }
 #itineraryPage .timeline-transit-copy strong { font-size: var(--tl-text-label); font-weight: 650; line-height: 1.45; overflow-wrap: anywhere; }
-#itineraryPage .timeline-transit-copy small { font-size: var(--tl-text-meta); font-weight: 400; line-height: 1.4; color: var(--muted); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 #itineraryPage .timeline-transit-summary > .ph { font-size: 18px; flex-shrink: 0; }
 #itineraryPage .timeline-transit-summary > .ph:last-child { font-size: 16px; color: #596171; }
 #itineraryPage .timeline-transit-button:active .timeline-transit-summary,
