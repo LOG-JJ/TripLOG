@@ -113,7 +113,7 @@ function buildItineraryPrintSections() { return window.TripLog.features.print.re
   function sectionTitle(title, sub = '') { return `<div class="ex-section-heading"><h2>${title}</h2>${sub ? `<span>${sub}</span>` : ''}</div>`; }
   function expenseSummary(report) {
     const filtered = report.expensePeriod !== 'all';
-    return `<section class="ex-expense-hero"><div><span class="ex-overline">${filtered ? '선택한 기간의 여행 경비' : '여행 경비'}</span><strong class="ex-total">${won(report.total)}</strong><span class="ex-per-person">${filtered ? '선택한 기간' : '전체 기록'}의 누적 지출${report.adjustments ? ' · 환불 반영' : ''}</span></div>
+    return `<section class="ex-expense-hero"><div><span class="ex-overline">${filtered ? '선택한 기간의 여행 경비' : '여행 경비'}</span><strong class="ex-total">${won(report.total)}</strong></div>
       <div class="ex-cost-facts"><div><span>기록한 지출</span><b>${report.entries.length}건</b></div><div><span>1인 평균 <small>· ${report.members}명</small></span><strong>${won(report.perPerson)}</strong></div></div></section>`;
   }
   function categoryChart(report) {
@@ -137,8 +137,7 @@ function buildItineraryPrintSections() { return window.TripLog.features.print.re
       const share = window.TripLog.shared.travelCosts.formatShare(row.percent);
       return `<li class="ex-daily-item${row.amount < 0 ? ' is-negative' : ''}" data-daily-date="${text(row.date)}" style="--ex-daily-color:${color}"><div class="ex-daily-label"><span class="ex-daily-date">${text(row.label)}</span>${tag ? `<small class="ex-daily-day">${tag}</small>` : ''}</div><b class="ex-daily-amount">${won(row.amount)}</b><div class="ex-daily-track" aria-hidden="true"><span style="left:${row.barStart}%;width:${row.barWidth}%"></span></div><strong class="ex-daily-share"${share === '—' ? ' aria-label="비중 계산 불가"' : ''}>${text(share)}</strong></li>`;
     }).join('') : '';
-    const basis = report.expensePeriod === 'all' ? '전체 지출 대비 비중' : '선택한 기간의 지출 대비 비중';
-    return `<section class="ex-daily-chart${chart.hasNegative ? ' has-negative' : ''}" style="--ex-daily-zero:${chart.zero}%">${sectionTitle(grouped ? '기간별 지출 현황' : '일자별 지출 현황')}<p class="ex-daily-caption">${basis}${report.adjustments ? ' · 환불 반영' : ''}</p>${bars ? `<ol class="ex-daily-bars${buckets.length > 3 ? ' is-dense' : ''}" aria-label="날짜별 지출 금액과 비중">${bars}</ol>` : '<p class="ex-chart-empty">지출을 기록하면 표시돼요.</p>'}${bars && !chart.hasPercent ? '<p class="ex-chart-note">합계가 0원 이하이면 비중을 계산하지 않아요.</p>' : ''}${chart.hasNegative ? '<p class="ex-chart-note">0선 왼쪽은 환불, 오른쪽은 지출이에요.</p>' : ''}${grouped ? '<p class="ex-chart-note">긴 여행은 연속된 날짜를 묶어 합산했어요.</p>' : ''}${pretrip ? `<p class="ex-chart-note">사전구매 ${won(pretrip)} 포함</p>` : ''}${report.adjustments ? `<p class="ex-chart-note">환불·조정 ${won(report.adjustments)} 포함</p>` : ''}</section>`;
+    return `<section class="ex-daily-chart${chart.hasNegative ? ' has-negative' : ''}" style="--ex-daily-zero:${chart.zero}%">${sectionTitle(grouped ? '기간별 지출 현황' : '일자별 지출 현황')}${bars ? `<ol class="ex-daily-bars${buckets.length > 3 ? ' is-dense' : ''}" aria-label="날짜별 지출 금액과 비중">${bars}</ol>` : '<p class="ex-chart-empty">지출을 기록하면 표시돼요.</p>'}${bars && !chart.hasPercent ? '<p class="ex-chart-note">합계가 0원 이하이면 비중을 계산하지 않아요.</p>' : ''}${chart.hasNegative ? '<p class="ex-chart-note">0선 왼쪽은 환불, 오른쪽은 지출이에요.</p>' : ''}${grouped ? '<p class="ex-chart-note">긴 여행은 연속된 날짜를 묶어 합산했어요.</p>' : ''}${pretrip ? `<p class="ex-chart-note">사전구매 ${won(pretrip)} 포함</p>` : ''}${report.adjustments ? `<p class="ex-chart-note">환불·조정 ${won(report.adjustments)} 포함</p>` : ''}</section>`;
   }
   function amountMarkup(entry) {
     const foreign = typeof isForeignEntry === 'function' && isForeignEntry(entry) && entry.currency !== 'KRW';

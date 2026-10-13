@@ -118,7 +118,6 @@ body.rd-app :is(#exPreview, #printReport, .ex-measure) .ex-section-heading h2 { 
 .ex-chart-legend small { font-size: 9px; color: #687082; }
 .ex-document .ex-color-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--ex-category); flex-shrink: 0; }
 .ex-document .ex-daily-chart .ex-section-heading { margin-bottom: 4px; }
-.ex-document .ex-daily-caption { margin: 0 0 8px; font-size: 10.5px; line-height: 1.5; color: #56677c; }
 .ex-document .ex-daily-bars { display: grid; grid-template-columns: minmax(0, 1fr) max-content; column-gap: 13px; list-style: none; padding: 0; margin: 0; }
 .ex-daily-item { display: grid; grid-column: 1 / -1; grid-template-columns: subgrid; grid-template-areas: 'date amount' 'bar share'; column-gap: inherit; row-gap: 8px; align-items: center; min-width: 0; padding: 13px 0; border-bottom: 1px solid #e7edf3; }
 .ex-daily-label { grid-area: date; display: flex; align-items: center; gap: 6px; min-width: 0; flex-wrap: wrap; }
@@ -142,7 +141,7 @@ body.rd-app :is(#exPreview, #printReport, .ex-measure) .ex-section-heading h2 { 
 .ex-expense-overview-paper .ex-expense-hero { padding-bottom: 22px; margin-bottom: 23px; }
 .ex-document .ex-expense-overview-paper .ex-expense-charts { flex: 1; min-height: 0; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); padding-bottom: 0; margin-bottom: 23px; border-bottom: 0; }
 .ex-expense-overview-paper :is(.ex-category-chart, .ex-daily-chart) { display: flex; flex-direction: column; min-height: 0; }
-.ex-expense-overview-paper :is(.ex-section-heading, .ex-daily-caption, .ex-chart-note, .ex-chart-legend) { flex-shrink: 0; }
+.ex-expense-overview-paper :is(.ex-section-heading, .ex-chart-note, .ex-chart-legend) { flex-shrink: 0; }
 .ex-expense-overview-paper .ex-treemap { flex: 1; height: auto; min-height: 220px; }
 .ex-expense-overview-paper .ex-treemap-tile b { font-size: 19px; }
 .ex-expense-overview-paper .ex-treemap-tile span { font-size: 13px; }

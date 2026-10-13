@@ -31,8 +31,7 @@
       </div>`;
     }).join('');
     return `<section class="rd-trend"><h2>결제일별 지출</h2>
-      <p class="rd-trend-basis">전체 지출 대비 비중${cost.refunds < 0 ? ' · 환불 반영' : ''}</p>
-      ${bars ? `<div class="rd-chart-scroll"><div class="rd-bars${signed ? ' rd-bars-signed' : ''}" role="list" aria-label="결제일별 지출 금액과 전체 지출 대비 비중" style="--bars:${trend.length}">${bars}</div></div>` : '<p class="rd-empty">지출을 기록하면 날짜별 비중을 볼 수 있어요.</p>'}
+      ${bars ? `<div class="rd-chart-scroll"><div class="rd-bars${signed ? ' rd-bars-signed' : ''}" role="list" aria-label="결제일별 지출 금액과 비중" style="--bars:${trend.length}">${bars}</div></div>` : '<p class="rd-empty">지출을 기록하면 날짜별 비중을 볼 수 있어요.</p>'}
       ${bars && cost.total <= 0 ? '<p class="rd-trend-note">총 지출이 0원 이하이면 비중을 계산하지 않아요.</p>' : ''}
       <p>${cost.count}건의 지출 기록 · 결제일 기준${signed ? ' · 0선 아래는 환불' : ''}</p>
     </section>`;

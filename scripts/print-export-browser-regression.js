@@ -277,7 +277,6 @@ async function main() {
     assert.equal(await page.locator('#printReport .ex-paper').nth(1).locator('[data-entry-id]').count(), 5);
     assert.equal(await page.locator('#printReport [data-expense-average]').innerText(), '174,000 KRW');
     assert.equal(await page.locator('#printReport .ex-spend-highlight small').first().innerText(), 'Selected day');
-    assert.match(await page.locator('#printReport .ex-daily-caption').innerText(), /선택한 기간/);
     assert.equal(await page.evaluate(() => JSON.stringify({ entries: state.entries, itineraryItems: state.itineraryItems, companions: state.companions, totalBudget: state.totalBudget })), before, 'Preview controls never change saved records');
     await page.evaluate(() => { window.exportPrintCalls = 0; window.print = () => { window.exportPrintCalls++; window.dispatchEvent(new Event('afterprint')); }; });
     await page.locator('#exSave').click();

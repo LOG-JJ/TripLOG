@@ -70,7 +70,6 @@ async function main() {
     assert.deepEqual(await shares(), ['68.2%', '16.5%', '15.3%']);
     assert.deepEqual(await page.locator('.rd-bar-amount').allTextContents(), ['195,600원', '47,200원', '44,000원']);
     assert.match(await page.locator('.rd-trend').innerText(), /9건의 지출 기록/);
-    assert.match(await page.locator('.rd-trend-basis').innerText(), /전체 지출 대비 비중/);
     for (const width of [320, 390, 768, 1440]) {
       await page.setViewportSize({ width, height: width >= 768 ? 1000 : 844 });
       await page.locator('.rd-trend').evaluate(node => window.scrollTo({ top: scrollY + node.getBoundingClientRect().top - 72, behavior: 'instant' }));
