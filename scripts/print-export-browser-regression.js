@@ -137,8 +137,13 @@ async function main() {
     assert.deepEqual(await page.locator('#printReport .ex-daily-share').allTextContents(), ['38.3%', '35.8%', '25.9%']);
     assert.equal(await page.locator('#printReport .ex-paper').nth(0).locator('table').count(), 0, 'The overview never contains the detail ledger');
     assert.equal(await page.locator('#printReport .ex-paper').nth(1).locator('[data-entry-id]').count(), 14, 'All sample transactions start on the next page');
-    assert.equal(await page.locator('#printReport [data-expense-average]').innerText(), '162,000원');
-    assert.equal(await page.locator('#printReport [data-expense-peak]').innerText(), '186,000원');
+    assert.equal(await page.locator('#printReport [data-expense-average]').innerText(), '162,000 KRW');
+    assert.equal(await page.locator('#printReport [data-expense-peak]').innerText(), '186,000 KRW');
+    assert.deepEqual(await page.locator('#printReport .ex-highlight-label').allTextContents(), ['Daily average', 'Peak spending']);
+    assert.deepEqual(await page.locator('#printReport .ex-spend-highlight small').allTextContents(), ['Total ÷ 3 days', 'Fri, Oct 9']);
+    assert.equal(await page.locator('#printReport .ex-expense-highlights').getAttribute('lang'), 'en');
+    assert.equal(await page.locator('#printReport .ex-highlight-icon').count(), 0);
+    assert.doesNotMatch(await page.locator('#printReport .ex-expense-highlights').innerText(), /[가-힣]/);
     await artworkReady();
     await page.screenshot({ path: path.join(output, 'expense-desktop.png') });
     await page.locator('#exPreview .ex-paper:not([hidden])').screenshot({ path: path.join(output, 'expense-paper-preview.png') });
@@ -270,7 +275,8 @@ async function main() {
     assert.deepEqual(await page.locator('#printReport .ex-daily-share').allTextContents(), ['100.0%']);
     assert.equal(await page.locator('#printReport .ex-paper').nth(0).locator('[data-entry-id]').count(), 0);
     assert.equal(await page.locator('#printReport .ex-paper').nth(1).locator('[data-entry-id]').count(), 5);
-    assert.equal(await page.locator('#printReport [data-expense-average]').innerText(), '174,000원');
+    assert.equal(await page.locator('#printReport [data-expense-average]').innerText(), '174,000 KRW');
+    assert.equal(await page.locator('#printReport .ex-spend-highlight small').first().innerText(), 'Selected day');
     assert.match(await page.locator('#printReport .ex-daily-caption').innerText(), /선택한 기간/);
     assert.equal(await page.evaluate(() => JSON.stringify({ entries: state.entries, itineraryItems: state.itineraryItems, companions: state.companions, totalBudget: state.totalBudget })), before, 'Preview controls never change saved records');
     await page.evaluate(() => { window.exportPrintCalls = 0; window.print = () => { window.exportPrintCalls++; window.dispatchEvent(new Event('afterprint')); }; });
@@ -394,7 +400,37 @@ async function main() {
     assert.equal(await page.locator('#printReport [data-itinerary-detail]').count(), 13);
     assert(await page.locator('#printReport .is-narrow-event').count() > 0);
     await page.pdf({ path: path.join(output, 'timetable-overlap.pdf'), preferCSSPageSize: true, printBackground: true });
+    await open();
+    await page.evaluate(() => {
+      state.startDate = '2026-10-10'; state.endDate = '2026-10-11';
+      state.entries = [
+        { id: 'summary-pretrip', date: '__pretrip__', paymentDate: '2026-10-01', amount: 195600, category: '교통' },
+        { id: 'summary-day-one', date: '2026-10-10', amount: 47200, category: '식비' },
+        { id: 'summary-day-two', date: '2026-10-11', amount: 44000, category: '관광' },
+      ];
+    });
+    await type('expense');
+    assert.equal(await page.locator('#printReport [data-expense-average]').innerText(), '143,400 KRW');
+    assert.equal(await page.locator('#printReport [data-expense-peak]').innerText(), '195,600 KRW');
+    assert.deepEqual(await page.locator('#printReport .ex-spend-highlight small').allTextContents(), ['Total ÷ 2 days', 'Pre-trip purchases']);
+    for (const width of [1440, 390, 320]) {
+      await page.setViewportSize({ width, height: width < 760 ? 844 : 1050 });
+      await assertGeometry(`English summary at ${width}px`);
+      await page.locator('#exPreview .ex-expense-highlights').screenshot({ path: path.join(output, `summary-english-${width}.png`), animations: 'disabled' });
+    }
+    await page.pdf({ path: path.join(output, 'summary-english.pdf'), preferCSSPageSize: true, printBackground: true });
+    await page.evaluate(() => { state.entries = [{ id: 'summary-undated', date: '', amount: 98765432100, category: '기타' }]; });
+    await type('expense'); await assertGeometry('large English summary amounts');
+    assert.equal(await page.locator('#printReport [data-expense-peak]').innerText(), '98,765,432,100 KRW');
+    assert.equal(await page.locator('#printReport .ex-spend-highlight small').last().innerText(), 'Undated expenses');
+    await page.evaluate(() => { state.startDate = state.endDate = '2026-10-10'; state.entries = [{ id: 'summary-single-day', date: '2026-10-10', amount: 9000, category: '기타' }]; });
+    await type('expense');
+    assert.equal(await page.locator('#printReport .ex-spend-highlight small').first().innerText(), 'Total ÷ 1 day');
     await open('export-empty'); await assertGeometry('empty expense');
+    assert.equal(await page.locator('#printReport [data-expense-average]').innerText(), '—');
+    assert.equal(await page.locator('#printReport [data-expense-peak]').innerText(), '—');
+    assert.deepEqual(await page.locator('#printReport .ex-spend-highlight small').allTextContents(), ['Available for dated periods', 'No positive spending']);
+    assert.doesNotMatch(await page.locator('#printReport .ex-expense-highlights').innerText(), /[가-힣]/);
     await type('itinerary'); await assertGeometry('empty itinerary');
     assert.match(await page.locator('#printReport').innerText(), /아직 일정이 없어요/);
     // Block the specific type and then its category fallback on a fresh document.

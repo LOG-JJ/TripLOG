@@ -146,9 +146,16 @@ function buildItineraryPrintSections() { return window.TripLog.features.print.re
   }
   function expenseHighlights(report) {
     const value = M().expenseHighlights(report), peak = value.peak;
-    const averageNote = value.days ? `${report.expensePeriod === 'all' ? '전체 합계 ÷ 여행' : '선택한 날짜 ·'} ${value.days}일` : '날짜가 정해진 기간에서 계산해요';
-    const peakTitle = peak && M().dateValue(peak.date) === null ? '가장 큰 지출 묶음' : '가장 많이 쓴 날';
-    return `<section class="ex-expense-highlights" aria-label="여행 지출 포인트"><div class="ex-highlight-grid"><div class="ex-spend-highlight"><span class="ex-highlight-icon" aria-hidden="true">${icon('sun')}</span><div><span class="ex-highlight-label">하루 평균 지출</span><strong data-expense-average>${value.average === null ? '—' : won(value.average)}</strong><small>${averageNote}</small></div></div><div class="ex-spend-highlight"><span class="ex-highlight-icon is-pink" aria-hidden="true">${icon('crown-simple')}</span><div><span class="ex-highlight-label">${peakTitle}</span><strong data-expense-peak>${peak ? won(peak.amount) : '—'}</strong><small>${peak ? text(peak.label) : '0원을 초과한 지출 합계가 없어요'}</small></div></div></div></section>`;
+    const averageNote = !value.days ? 'Available for dated periods' : report.expensePeriod === 'all'
+      ? `Total ÷ ${value.days} ${value.days === 1 ? 'day' : 'days'}` : 'Selected day';
+    const peakDate = M().dateValue(peak?.date);
+    const peakNote = !peak ? 'No positive spending' : peak.date === '__pretrip__' ? 'Pre-trip purchases' : peakDate === null ? 'Undated expenses'
+      : new Intl.DateTimeFormat('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC' }).format(peakDate);
+    const amount = number => number === null ? '—' : `${text(Math.round(number).toLocaleString('en-US'))}<span class="ex-highlight-unit"> KRW</span>`;
+    return `<section class="ex-expense-highlights" aria-label="Spending highlights" lang="en"><div class="ex-highlight-grid">
+      <div class="ex-spend-highlight"><span class="ex-highlight-label">Daily average</span><strong data-expense-average>${amount(value.average)}</strong><small>${text(averageNote)}</small></div>
+      <div class="ex-spend-highlight"><span class="ex-highlight-label">Peak spending</span><strong data-expense-peak>${amount(peak?.amount ?? null)}</strong><small>${text(peakNote)}</small></div>
+    </div></section>`;
   }
   function fitExpenseOverview(body) {
     if ([...body.querySelectorAll('.ex-category-chart, .ex-daily-chart')].some(region => region.scrollHeight > region.clientHeight + 1)) body.parentElement.classList.add('is-dense-overview');
@@ -158,6 +165,10 @@ function buildItineraryPrintSections() { return window.TripLog.features.print.re
       let size = parseFloat(getComputedStyle(amount).fontSize);
       while (size > 12 && amount.scrollWidth > amount.clientWidth + .5) amount.style.fontSize = `${--size}px`;
       if (amount.scrollWidth > amount.clientWidth + .5) amount.hidden = true;
+    });
+    body.querySelectorAll('.ex-spend-highlight strong').forEach(amount => {
+      let size = parseFloat(getComputedStyle(amount).fontSize);
+      while (size > 24 && amount.scrollWidth > amount.clientWidth + .5) amount.style.fontSize = `${--size}px`;
     });
   }
   function expenseRows(report, options) {
