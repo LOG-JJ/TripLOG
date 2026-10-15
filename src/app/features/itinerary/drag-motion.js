@@ -19,7 +19,7 @@ function animateItineraryDrop(list, previousRects, landedId = '') {
     ], { duration: 180, easing: 'cubic-bezier(.2,.8,.25,1)' });
     if (node.classList.contains('timeline-stop') && node.dataset.id === landedId) {
       const body = node.querySelector('.timeline-stop-body');
-      body?.animate([{ boxShadow: '0 0 0 2px #bce6fb' }, { boxShadow: '0 0 0 0 transparent' }], { duration: 240, easing: 'ease-out' });
+      body?.animate([{ boxShadow: '0 0 0 2px #ffe28a' }, { boxShadow: '0 0 0 0 transparent' }], { duration: 240, easing: 'ease-out' });
     }
   }
 }
