@@ -18,83 +18,12 @@ function getItineraryTransits(item) {
   return item.transits?.length ? item.transits : [{ trans: item.trans || "none", duration: item.duration || 0, cost: item.cost || 0, memo: "" }];
 }
 
-let itineraryDragSession = null;
-let itineraryDragDropReady = false;
+let itineraryDragController = null;
 let cancelItineraryDragSession = () => {};
 function setupItineraryDragDrop() {
-  if (itineraryDragDropReady) return;
-  itineraryDragDropReady = true;
-  const list = els.itineraryList;
-  const clearIndicator = () => list.querySelectorAll('.is-drop-before, .is-drop-after').forEach(row => row.classList.remove('is-drop-before', 'is-drop-after'));
-  const finish = ({ animate = false } = {}) => {
-    const previousRects = animate ? itineraryDragSession?.preview?.capture() : null;
-    itineraryDragSession?.preview?.finish();
-    clearIndicator();
-    list.querySelectorAll('.is-dragging').forEach(row => row.classList.remove('is-dragging'));
-    itineraryDragSession = null;
-    if (previousRects) animateItineraryDrop(list, previousRects);
-  };
-  const pointerDrag = setupItineraryPointerDrag(list, finish);
-  cancelItineraryDragSession = options => { pointerDrag.cancel(options); finish(options); };
-  const targetAt = event => {
-    const drag = itineraryDragSession;
-    if (!drag || itineraryReorderPending || drag.tripId !== state.id || drag.date !== state.selectedItineraryDate
-      || findItineraryItem(drag.id)?.date !== drag.date) return null;
-    const target = drag.preview?.targetAt(event.clientY);
-    return target && findItineraryItem(target.row.dataset.id)?.date === drag.date ? target : null;
-  };
-  list.addEventListener('dragstart', event => {
-    const row = event.target.closest('.timeline-stop');
-    const item = row && findItineraryItem(row.dataset.id);
-    if (!row || !item || pointerDrag.active || itineraryReorderPending || state.selectedItineraryDate === 'all' || event.target.closest('button, input, a')) {
-      event.preventDefault(); return;
-    }
-    finish();
-    itineraryDragSession = { id: item.id, tripId: state.id, date: item.date };
-    event.dataTransfer.setData('application/x-triplog-itinerary', item.id);
-    event.dataTransfer.setData('text/plain', item.id);
-    event.dataTransfer.effectAllowed = 'move';
-    itineraryDragSession.preview = createItineraryDragPreview(list, row, event);
-    row.classList.add('is-dragging');
-  });
-  list.addEventListener('dragover', event => {
-    const target = targetAt(event); clearIndicator();
-    if (!target) return;
-    event.preventDefault(); event.dataTransfer.dropEffect = 'move';
-    target.row.classList.add(`is-drop-${target.placement}`);
-    itineraryDragSession.preview?.update(target);
-  });
-  list.addEventListener('dragleave', event => {
-    const rect = list.getBoundingClientRect();
-    if (event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom) return;
-    clearIndicator(); itineraryDragSession?.preview?.reset();
-  });
-  list.addEventListener('dragend', () => finish({ animate: true }));
-  list.addEventListener('drop', event => {
-    const target = targetAt(event), draggedId = itineraryDragSession?.id;
-    const previousRects = itineraryDragSession?.preview?.capture();
-    event.preventDefault(); finish();
-    if (target && event.dataTransfer.getData('application/x-triplog-itinerary') === draggedId) {
-      void moveItineraryItem(draggedId, target.row.dataset.id, target.placement);
-      animateItineraryDrop(list, previousRects, draggedId);
-    }
-  });
-  document.addEventListener('keydown', event => { if (event.key === 'Escape') finish({ animate: true }); }, true);
-  window.addEventListener('resize', () => finish());
-  window.addEventListener('pagehide', () => finish());
-  document.addEventListener('visibilitychange', () => { if (document.hidden) finish(); });
-  list.addEventListener('keydown', event => {
-    const row = event.target.closest('.timeline-stop');
-    if (!row || (event.target !== row && !event.target.closest('.timeline-drag-handle')) || !event.altKey || !['ArrowUp', 'ArrowDown'].includes(event.key)) return;
-    event.preventDefault();
-    const items = getFilteredItineraryItems(), index = items.findIndex(item => item.id === row.dataset.id);
-    const target = items[index + (event.key === 'ArrowUp' ? -1 : 1)];
-    if (!target || target.date !== items[index]?.date) return;
-    const id = row.dataset.id;
-    void moveItineraryItem(id, target.id, event.key === 'ArrowUp' ? 'before' : 'after').then(() => {
-      [...list.querySelectorAll('.timeline-stop')].find(item => item.dataset.id === id)?.focus({ preventScroll: true });
-    });
-  });
+  if (itineraryDragController) return;
+  itineraryDragController = setupItineraryDndDrag(els.itineraryList);
+  cancelItineraryDragSession = options => itineraryDragController.cancel(options);
 }
 
 function renderItineraryPage() {
@@ -193,18 +122,28 @@ function renderItineraryList(days) {
   els.itineraryList.replaceChildren(); els.itineraryEmpty.hidden = items.length > 0;
   document.querySelector(".itinerary-inline-add").hidden = !items.length;
   const selectedId = items.some(item => item.id === state.selectedItineraryId) ? state.selectedItineraryId : items[0]?.id;
+  const canReorder = state.selectedItineraryDate !== 'all';
   let previous = null;
   for (const item of items) {
     if (state.selectedItineraryDate === "all" && previous?.date !== item.date) {
       const day = dayMap.get(item.date); const heading = document.createElement("h3"); heading.className = "timeline-day-heading";
       heading.textContent = day ? `${day.label} · ${day.shortDate} (${day.weekday})` : item.date; els.itineraryList.append(heading);
     }
-    if (previous?.date === item.date) els.itineraryList.append(buildItineraryTransit(item, previous));
+    let container = els.itineraryList;
+    if (canReorder) {
+      container = document.createElement('div'); container.className = 'timeline-sortable-item'; container.dataset.id = item.id;
+      if (previous) container.append(buildItineraryTransit(item, previous));
+      else {
+        const gap = document.createElement('div'); gap.className = 'timeline-sortable-gap'; gap.hidden = true; gap.setAttribute('aria-hidden', 'true');
+        gap.innerHTML = `<span></span><span class="timeline-transit-axis"></span><span class="timeline-transit-summary">${itineraryIcon('path')}<span>이동 기록</span></span>`;
+        container.append(gap);
+      }
+      els.itineraryList.append(container);
+    } else if (previous?.date === item.date) container.append(buildItineraryTransit(item, previous));
     const theme = itineraryThemes[item.theme] || itineraryThemes.sightseeing;
     const article = document.createElement("article"); article.className = `timeline-stop${selectedId === item.id ? " is-selected" : ""}`;
     article.dataset.theme = item.theme || "sightseeing";
-    const canReorder = state.selectedItineraryDate !== 'all';
-    article.dataset.id = item.id; article.draggable = canReorder && !matchMedia('(pointer: coarse)').matches;
+    article.dataset.id = item.id; article.draggable = false;
     if (canReorder) {
       article.tabIndex = 0;
       article.setAttribute('aria-label', `${itineraryPlaceLabel(item)}, 드래그하여 순서 이동. 키보드는 Alt와 위아래 방향키`);
@@ -217,8 +156,9 @@ function renderItineraryList(days) {
         <div class="timeline-stop-detail"><span class="timeline-theme">${theme.label}</span>${item.memo ? `<p class="timeline-memo">${escapeHtml(item.memo)}</p>` : ""}</div>
         ${item.voucherName || item.voucherCode || item.voucherFileName ? `<button class="timeline-ticket" type="button" data-itinerary-action="${item.voucherFile ? "ticket" : "edit"}" data-id="${escapeHtml(item.id)}">${itineraryIcon("ticket")}<span>${escapeHtml(item.voucherName || item.voucherFileName || "예약 정보")}${item.voucherCode ? ` · ${escapeHtml(item.voucherCode)}` : ""}</span>${itineraryIcon("arrow-up-right")}</button>` : ""}
       </div>`;
-    els.itineraryList.append(article); previous = item;
+    container.append(article); previous = item;
   }
+  itineraryDragController.refresh();
 }
 
 function showToast(message) {

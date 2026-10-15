@@ -9,6 +9,14 @@ fs.copyFileSync(path.join(root, 'src/app/sync/model.js'), path.join(root, 'supab
 fs.copyFileSync(path.join(root, 'src/app/sync/settlement-model.js'), path.join(root, 'supabase/functions/_shared/settlement-model.js'));
 esbuild.buildSync({ stdin: { contents: 'export * from "yjs";', resolveDir: root }, bundle: true, minify: true, format: 'iife', globalName: 'TripLogY', outfile: path.join(root, 'vendor/yjs-13.6.32.min.js'), legalComments: 'eof' });
 fs.copyFileSync(path.join(root,'node_modules/yjs/LICENSE'),path.join(root,'vendor/yjs-LICENSE.txt'));
+// Pin and ship the drag engine with the offline app shell, without a runtime CDN.
+esbuild.buildSync({ stdin: { contents: 'export {DragDropManager, PointerSensor, PointerActivationConstraints, Feedback, AutoScroller, Accessibility} from "@dnd-kit/dom"; export {Sortable} from "@dnd-kit/dom/sortable"; export {pointerIntersection} from "@dnd-kit/collision";', resolveDir: root }, bundle: true, minify: true, format: 'iife', globalName: 'TripLogDnd', outfile: path.join(root, 'vendor/dnd-kit-dom-0.5.1.min.js'), legalComments: 'eof' });
+const dragLicenses = ['@dnd-kit/dom', '@dnd-kit/abstract', '@dnd-kit/state', '@dnd-kit/geometry', '@dnd-kit/collision', '@preact/signals-core', 'tslib'].map(name => {
+  const directory = path.join(root, 'node_modules', name);
+  const license = fs.readdirSync(directory).find(file => /^licen[sc]e(?:[._-]|$)/i.test(file));
+  return `${name}\n${fs.readFileSync(path.join(directory, license), 'utf8')}`;
+});
+fs.writeFileSync(path.join(root, 'vendor/dnd-kit-LICENSES.txt'), dragLicenses.join('\n\n---\n\n'));
 // Icon URLs follow the actual artwork so manifest/favicon caches update without
 // another hand-maintained release label when the app image changes.
 const iconFiles = ['favicon-32.png', 'apple-touch-icon.png', ...fs.readdirSync(path.join(root, 'icons')).filter(file => file.endsWith('.png')).map(file => `icons/${file}`)].sort();

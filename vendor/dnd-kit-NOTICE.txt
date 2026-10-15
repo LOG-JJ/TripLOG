@@ -1,0 +1,6 @@
+dnd-kit DOM 0.5.1
+https://github.com/clauderic/dnd-kit
+
+Built from the pinned npm dependency using scripts/prepare-sync-assets.js.
+The original card is promoted to the browser top layer while dragging.
+Third-party licenses are collected in dnd-kit-LICENSES.txt.

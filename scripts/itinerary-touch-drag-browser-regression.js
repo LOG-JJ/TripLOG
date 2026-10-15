@@ -2,7 +2,7 @@ const { launchBrowser } = require('./helpers/browser-fixture');
 // Browser plugin not available. Isolated Edge/Chrome touch context; all external
 // requests are blocked so production verification never edits a real trip.
 const assert=require('node:assert/strict'),path=require('node:path'),fs=require('node:fs');
-const {chromium}=require('playwright'),{createServer}=require('./serve-test');
+const {createServer}=require('./serve-test');
 const output=process.env.TRIPLOG_UI_SNAPSHOT_DIR||path.join(require('node:os').tmpdir(),'TripLOG-Touch-Drag-20260920');
 async function main(){
  fs.mkdirSync(output,{recursive:true});const server=createServer({pagesRedirects:true});
@@ -28,9 +28,9 @@ async function main(){
   const cdp=await context.newCDPSession(page);
   const touch=(type,points=[])=>cdp.send('Input.dispatchTouchEvent',{type,touchPoints:points.map(([x,y])=>({x,y}))});
   const frame=()=>page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
-  const row=id=>page.locator(`#itineraryList > .timeline-stop[data-id="${id}"]`);
+  const row=id=>page.locator(`#itineraryList > .timeline-sortable-item:not([data-dnd-placeholder]) > .timeline-stop[data-id="${id}"]`);
   const handle=id=>row(id).locator('.timeline-drag-handle');
-  const order=()=>page.locator('#itineraryList > .timeline-stop').evaluateAll(nodes=>nodes.map(node=>node.dataset.id));
+  const order=()=>page.locator('#itineraryList > .timeline-sortable-item:not([data-dnd-placeholder]) > .timeline-stop').evaluateAll(nodes=>nodes.map(node=>node.dataset.id));
   const revision=()=>page.evaluate(()=>window.TripLogSyncRepository.cached(state.id).localRevision);
   async function ready(){
    await page.waitForFunction(()=>document.documentElement.dataset.triplogInitialized==='true'&&document.documentElement.dataset.appReady==='true'&&document.documentElement.dataset.auth==='signed-in');
@@ -38,6 +38,7 @@ async function main(){
    await page.waitForFunction(()=>{const handle=document.querySelector('#itineraryList .timeline-drag-handle');return handle&&getComputedStyle(handle).touchAction==='none';});
   }
   await page.goto(origin+'/Travel?page=itinerary');await ready();
+  assert.equal(await page.locator('#itineraryList').getAttribute('data-reorder-engine'),'dnd-kit-dom-0.5.1');
   await page.evaluate(()=>{
    window.__pickupMs=[];
    document.querySelector('#itineraryList').addEventListener('pointerdown',event=>{
@@ -57,16 +58,20 @@ async function main(){
   for(let i=1;i<=7;i++){await touch('touchMove',[[body.x+35,body.y+10-i*16]]);await frame();}
   await touch('touchEnd');await frame();
   assert(await page.evaluate(()=>scrollY)>30,'Dragging card text keeps native page scroll');
-  assert.equal(await page.locator('.itinerary-touch-ghost').count(),0);
+  assert.equal(await page.locator('[data-dnd-dragging]').count(),0);
   await page.evaluate(()=>scrollTo(0,0));await frame();
   }
   let pickupRect;
   async function pickup(id){
    await handle(id).scrollIntoViewIfNeeded();await frame();const box=await handle(id).boundingBox();
+   const original=await row(id).boundingBox();
    const point=[box.x+box.width/2,box.y+box.height/2];
    await touch('touchStart',[point]);
-   assert.equal(await page.locator('.itinerary-touch-ghost').count(),1,'Pickup is synchronous, with no hold timer');
-   pickupRect=await page.locator('.itinerary-touch-ghost').boundingBox();
+   assert.equal(await handle(id).getAttribute('aria-pressed'),'true','Pickup is immediate, with no hold timer');
+   await page.locator('[data-dnd-dragging]').waitFor({state:'visible'});
+   const picked=await row(id).boundingBox();
+   for(const key of ['x','y','width','height'])assert(Math.abs(original[key]-picked[key])<.5,`Touch pickup must preserve ${key}`);
+   pickupRect=await page.locator('[data-dnd-dragging]').boundingBox();
    return point;
   }
   if(record)await page.waitForTimeout(600);
@@ -78,7 +83,7 @@ async function main(){
   for(let i=1;i<=steps;i++){await touch('touchMove',[[start[0],start[1]+(end[1]-start[1])*i/steps]]);await frame();if(record)await page.waitForTimeout(22);}
   await page.waitForFunction(()=>document.querySelector('#itineraryList').dataset.dragPreviewOrder==='A,C,B,D');
   assert.equal(await revision(),before,'Preview must not save or sync before release');
-  const following=await page.locator('.itinerary-touch-ghost').boundingBox();
+  const following=await page.locator('[data-dnd-dragging]').boundingBox();
   assert(Math.abs(following.y-pickupRect.y-(end[1]-start[1]))<2,'Card follows the finger without an easing delay');
   const pickupSamples=await page.evaluate(()=>window.__pickupMs);
   assert(pickupSamples.every(sample=>sample.picked&&sample.delay<100),JSON.stringify(pickupSamples));
@@ -88,7 +93,7 @@ async function main(){
   if(record)await page.waitForTimeout(250);
   await touch('touchEnd');
   await page.waitForFunction(()=>!itineraryReorderPending&&getFilteredItineraryItems().map(item=>item.id).join('')==='ACBD');
-  assert.equal(await page.locator('.itinerary-touch-ghost,.timeline-drag-placeholder,.timeline-drag-capture').count(),0);
+  assert.equal(await page.locator('[data-dnd-dragging],[data-dnd-placeholder],.timeline-drag-capture').count(),0);
   assert.deepEqual(await page.evaluate(()=>state.itineraryItems.map(({_syncPosition,itineraryOrder,...item})=>item)),initial);
   await page.screenshot({path:path.join(output,'mobile-drag-dropped.png'),animations:'disabled'});
   if(record){await page.waitForTimeout(900);console.log('Recorded real touch reorder demo.');return;}
@@ -97,11 +102,11 @@ async function main(){
   await pickup('B');await touch('touchCancel');await frame();assert.deepEqual(await order(),['A','C','B','D']);
   await pickup('B');await page.keyboard.press('Escape');await touch('touchEnd');await frame();assert.deepEqual(await order(),['A','C','B','D']);
   await pickup('B');await page.evaluate(()=>renderItineraryPage());await touch('touchEnd');await frame();
-  assert.equal(await page.locator('.itinerary-touch-ghost,.timeline-drag-placeholder').count(),0);assert.equal(await revision(),cancelRevision);
+  assert.equal(await page.locator('[data-dnd-dragging],[data-dnd-placeholder]').count(),0);assert.equal(await revision(),cancelRevision);
   await pickup('B');await page.setViewportSize({width:390,height:800});await frame();
-  assert.equal(await page.locator('.itinerary-touch-ghost').count(),1,'Height-only viewport changes must not cancel the touch');
+  assert.equal(await page.locator('[data-dnd-dragging]').count(),1,'Height-only viewport changes must not cancel the touch');
   await page.setViewportSize({width:400,height:800});await frame();
-  assert.equal(await page.locator('.itinerary-touch-ghost').count(),0,'Width changes invalidate the measured slots');
+  assert.equal(await page.locator('[data-dnd-dragging]').count(),0,'Width changes invalidate the measured slots');
   await touch('touchEnd');await page.setViewportSize({width:390,height:844});
   await page.evaluate(()=>scrollTo(0,0));await frame();const edgeStart=await pickup('A');
   const scrollBefore=await page.evaluate(()=>scrollY);
@@ -109,7 +114,7 @@ async function main(){
   await page.waitForFunction(previous=>scrollY>previous+35,scrollBefore);
   await touch('touchCancel');await frame();assert.equal(await revision(),cancelRevision);
   await page.emulateMedia({reducedMotion:'reduce'});await pickup('B');
-  assert.equal(await page.locator('.itinerary-touch-ghost').evaluate(node=>node.getAnimations({subtree:true}).some(animation=>animation.playState==='running')),false);
+  assert.equal(await page.locator('[data-dnd-dragging]').evaluate(node=>node.getAnimations({subtree:true}).some(animation=>animation.playState==='running')),false);
   await touch('touchCancel');await page.emulateMedia({reducedMotion:'no-preference'});
   await handle('B').focus();await page.keyboard.press('Alt+ArrowUp');
   await page.waitForFunction(()=>!itineraryReorderPending&&getFilteredItineraryItems().map(item=>item.id).join('')==='ABCD');
