@@ -46,8 +46,16 @@ async function main() {
   }
   function helpers(page) {
     const confirm = page.locator('#rdConfirm');
-    const cancel = async () => { await page.locator('#rdConfirmCancel').click(); await confirm.waitFor({ state: 'hidden' }); };
-    const accept = async () => { await page.locator('#rdConfirmAccept').click(); await confirm.waitFor({ state: 'hidden' }); await page.evaluate(() => window.TripLog.persistence.stateStorage.whenSaved()); };
+    async function dismiss(action) {
+      // close() removes [open] before its queued close event resolves the user's
+      // confirmation. Wait for that event's continuations before reading saves.
+      const closed = page.evaluate(() => new Promise(resolve => {
+        document.querySelector('#rdConfirm').addEventListener('close', () => queueMicrotask(resolve), { once: true });
+      }));
+      await action(); await closed; await confirm.waitFor({ state: 'hidden' });
+    }
+    const cancel = () => dismiss(() => page.locator('#rdConfirmCancel').click());
+    const accept = async () => { await dismiss(() => page.locator('#rdConfirmAccept').click()); await page.evaluate(() => window.TripLog.persistence.stateStorage.whenSaved()); };
     const closes = () => page.evaluate(async () => {
       const closed = [...document.querySelectorAll('dialog[open]')].map(node => new Promise(resolve => { node.addEventListener('close', resolve, { once: true }); node.close(); }));
       closeHistoryModal(); await Promise.all(closed);
@@ -55,11 +63,11 @@ async function main() {
     const show = id => page.evaluate(id => window.TripLog.features.redesign.workspace.open(id), id);
     const editItinerary = async id => { await page.evaluate(id => startItineraryEdit(findItineraryItem(id)), id); await page.evaluate(() => window.TripLog.persistence.stateStorage.whenSaved()); };
     const askKind = async kind => { await confirm.waitFor(); assert.equal(await confirm.getAttribute('data-kind'), kind); };
-    return { confirm, cancel, accept, closes, show, editItinerary, askKind };
+    return { confirm, cancel, accept, dismiss, closes, show, editItinerary, askKind };
   }
   try {
     const { page, context } = await fixture();
-    const { confirm, cancel, accept, closes, show, editItinerary, askKind } = helpers(page);
+    const { confirm, cancel, accept, dismiss, closes, show, editItinerary, askKind } = helpers(page);
     for (const width of [320, 390, 599, 600, 768, 1440]) {
       await page.setViewportSize({ width, height: width >= 600 ? 1000 : 844 });
       for (const concept of concepts) {
@@ -86,12 +94,12 @@ async function main() {
     await editItinerary('castle'); await page.locator('#itineraryDeleteButton').click(); await askKind('itinerary');
     await page.screenshot({ path: path.join(output, 'itinerary-active-editor-390.png'), animations: 'disabled' });
     await page.keyboard.press('Tab'); assert.equal(await page.evaluate(() => document.activeElement.id), 'rdConfirmAccept');
-    await page.keyboard.press('Shift+Tab'); await page.keyboard.press('Enter'); await confirm.waitFor({ state: 'hidden' });
+    await page.keyboard.press('Shift+Tab'); await dismiss(() => page.keyboard.press('Enter'));
     assert(await page.locator('#itineraryEditor').isVisible()); assert(await page.evaluate(() => !!findItineraryItem('castle')));
-    await page.locator('#itineraryDeleteButton').click(); await page.keyboard.press('Escape'); await confirm.waitFor({ state: 'hidden' });
+    await page.locator('#itineraryDeleteButton').click(); await dismiss(() => page.keyboard.press('Escape'));
     assert(await page.locator('#itineraryEditor').isVisible(), 'Escape dismisses only the nested confirmation');
     assert.equal(await page.evaluate(() => document.activeElement.id), 'itineraryDeleteButton', 'Focus returns to delete control');
-    await page.locator('#itineraryDeleteButton').click(); await page.mouse.click(5, 5); await confirm.waitFor({ state: 'hidden' });
+    await page.locator('#itineraryDeleteButton').click(); await dismiss(() => page.mouse.click(5, 5));
     assert(await page.evaluate(() => !!findItineraryItem('castle')));
     flows.push('Nested cancel, Enter on default cancel, Escape, backdrop and focus restoration');
 
@@ -191,7 +199,7 @@ async function main() {
     await closes(); await page.evaluate(() => saveCurrentSnapshot());
     await page.waitForFunction(async () => (await loadArchiveRecords()).length > 0); await page.evaluate(() => openHistoryModal());
     await page.locator('[data-history-action="delete"]').first().click(); await askKind('history');
-    await page.keyboard.press('Escape'); await confirm.waitFor({ state: 'hidden' });
+    await dismiss(() => page.keyboard.press('Escape'));
     assert(await page.locator('#historyModal').isVisible(), 'Escape must not close the underlying legacy overlay');
     await page.locator('[data-history-action="delete"]').first().click(); await accept();
     await page.waitForFunction(() => historyRecords.length === 0);
