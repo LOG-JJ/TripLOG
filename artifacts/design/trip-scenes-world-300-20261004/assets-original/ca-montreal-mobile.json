@@ -1,0 +1,21 @@
+{
+  "jobId": "ca-montreal-mobile",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-cf95016d-b628-4dc8-bf86-189c9d9bf550.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-world-300-20261004/assets-original/ca-montreal-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Montreal: the twin towers of Notre-Dame Basilica, old stone facades and the waterfront of the Old Port. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a portrait 4:5 composition intended for a 480 × 600 mobile asset displayed in a narrow right-side header slot. Compose the main landmarks directly for this portrait frame so they remain recognizable at small size. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png"
+  ],
+  "sourceSha256": "18665ca0ab421f9d2cb34c9b3e278b8f36f569c8b4ab47795401bc339b58fc87",
+  "savedSha256": "18665ca0ab421f9d2cb34c9b3e278b8f36f569c8b4ab47795401bc339b58fc87",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T11:41:19.027Z",
+  "savedAt": "2026-10-04T11:41:59.708716+00:00"
+}

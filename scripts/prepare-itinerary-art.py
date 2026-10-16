@@ -6,7 +6,7 @@ import json
 from PIL import Image
 
 root = Path(__file__).resolve().parents[1]
-archive = root / 'docs/itinerary-art-world-20261012'
+archive = root / 'artifacts/design/itinerary-art-world-20261012'
 source_dir = archive / 'assets-original'
 target_dir = root / 'src/assets/itinerary-art/v1'
 parser = argparse.ArgumentParser()
@@ -28,7 +28,9 @@ missing = []
 sha = lambda file: hashlib.sha256(file.read_bytes()).hexdigest()
 for name in sorted(expected):
     is_new = name in generated
-    source = source_dir / f'{name}.png' if is_new else root / 'src/assets' / reused[name]
+    source = (source_dir / f'{name}.png' if is_new else
+              archive / 'assets-reused' / Path(reused[name]).name if reused[name].startswith('export-art/') else
+              root / 'src/assets' / reused[name])
     prompt_file = source_dir / f'{name}.prompt.json'
     if not source.exists() or (is_new and not prompt_file.exists()):
         missing.append(name)

@@ -21,10 +21,10 @@ jobs:
       - uses: denoland/setup-deno@v2
         with:
           deno-version: v2.9.6
-      - run: deno test --node-modules-dir=auto --no-lock --allow-env supabase/functions/triplog-sync/handler_test.ts
+      - run: npm run test:edge
       - run: npm run build
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: browser-verification
-          path: .test-output/
+          path: artifacts/tmp/

@@ -1,0 +1,21 @@
+{
+  "jobId": "th-sukhothai-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-3c377609-57d3-4337-860b-9192b8516bfb.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-world-300-20261004/assets-original/th-sukhothai-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Sukhothai: the lotus-bud tower and seated Buddha of Wat Mahathat, ancient brick ruins and a reflecting pond. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "690f429f4ebdeeccd96e3a5725aac6240579db1593834b2f20b8389ebdd01737",
+  "savedSha256": "690f429f4ebdeeccd96e3a5725aac6240579db1593834b2f20b8389ebdd01737",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T08:43:26.992Z",
+  "savedAt": "2026-10-04T08:43:50.629735+00:00"
+}

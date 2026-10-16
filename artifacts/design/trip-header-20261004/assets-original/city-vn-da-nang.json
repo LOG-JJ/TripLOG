@@ -1,0 +1,23 @@
+{
+  "id": "vn-da-nang",
+  "kind": "city",
+  "mode": "built-in image_gen, text-to-image",
+  "imageInputsSent": [],
+  "prompt": "Create a standalone landscape travel illustration of Da Nang, featuring the recognizable golden Dragon Bridge crossing the Han River, modest city buildings, and a distant beach and headland. Do not include Hoi An lantern streets. Use a logical 800 x 480 canvas for a header illustration displayed at about 300 x 180 CSS pixels. Draw crisp, delicate ink outlines in #0b1020 with soft, flat, watercolor-like fills in pale blue #bce6fb, sage #b8d2bc, and warm sand #f4d9a4, plus restrained pink and yellow accents. Place the focal scene toward the center-right and bottom, filling most of the canvas, with organic open edges toward the left and top and a clean transparent exterior. No UI, text, readable signs, logos, or frame.\n",
+  "source": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-5e20-7f81-812c-b8a5c49d0800\\exec-27f4b44a-6af1-45bd-97c0-33ed59a5bdea.png",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "original": "artifacts/design/trip-header-20261004/assets-original/city-vn-da-nang.png",
+  "sourceSha256": "be3eca81a771d55fdcca54f556741f25aab625800e5b10f78f578e62b69d37bd",
+  "originalMatchesSource": true,
+  "asset": "src/assets/trip-scenes/cities/v1/vn-da-nang.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "bytes": 122898,
+  "assetSha256": "f508d6e7b4fbf25c32e895f8b2551f3730b9d40fea17796dd5847a8d9d1c5c79",
+  "overwritten": false
+}

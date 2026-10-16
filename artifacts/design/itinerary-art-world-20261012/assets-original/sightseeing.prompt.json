@@ -1,0 +1,23 @@
+{
+  "asset": "sightseeing",
+  "generation_mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "generation_started_epoch": 1791810987.714,
+  "prompt": "Small travel binoculars with a folded map, a directional signpost, and low grass, representing general sightseeing when the type of attraction is unspecified. Delicate navy pen outlines with restrained sky-blue, pink, and pale-yellow watercolor touches. Horizontal composition, clear at 120 × 70 CSS pixels, with a transparent background. No real architecture, specific city, or text.",
+  "inputs": [],
+  "transparent_background": true,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13018-4519-72d3-84a5-ae7ca84ec1ba\\exec-e747cc8f-e1dd-4562-a0a7-1a34318514c5.png",
+  "destination_path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/sightseeing.png",
+  "sha256": "2efa3b9f89f0f067ef315003c41f515aca114b1600c491acf752c483b145be39",
+  "original_sha256": "2efa3b9f89f0f067ef315003c41f515aca114b1600c491acf752c483b145be39",
+  "width": 1643,
+  "height": 957,
+  "bytes": 1437925,
+  "image_mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "overwritten": false,
+  "unmodified_original": true
+}

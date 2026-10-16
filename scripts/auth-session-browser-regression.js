@@ -1,3 +1,4 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser, startServer, stopServer } = require('./helpers/browser-fixture');
 // Browser plugin not available: isolated Playwright/Edge fixtures use the shipped
 // Supabase SDK. Every external request is mocked; no real credentials are used.
@@ -193,7 +194,7 @@ async function main() {
     await page.evaluate(() => window.TripLog.features.collaboration.tripCollaboration.syncSupabaseSession());
     assert.equal(await page.locator('#authGateEmailInput').inputValue(), 'another@example.test', 'Background checks must not replace typed credentials with the previous account');
     await page.locator('#authGatePasswordInput').fill('');
-    const output = path.join(require('node:os').tmpdir(), 'TripLOG-auth-session-fixed-20260927.png');
+    const output = path.join(artifactDirectory('auth-session'), 'auth-session.png');
     await page.screenshot({ path: output });
     assert.deepEqual(errors, []);
     await context.close();

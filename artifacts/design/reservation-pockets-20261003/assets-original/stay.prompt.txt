@@ -1,0 +1,10 @@
+Generation mode: built-in image_gen
+Overwrite: none
+Input image: C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/triplog-reservation-passport-pockets-refined-20261003.png
+Output image: C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/reservation-pockets-20261003/assets-original/stay.png
+
+Exact prompt:
+Create one standalone raster background asset for the pink accommodation passport pocket on the right of the selected mockup. Faithfully preserve its pocket material, stitching, small Osaka Castle illustration at the lower right, layered paper behind the top edge, and yellow count tab on the right. Remove all text, numbers, UI icons, and reservation content; leave the yellow tab blank. Keep a blank paper reading area spanning approximately x 8–91% and y 12–78% of the asset. Concentrate the small decorative elements along the bottom. Use an upright, straight-on composition with minimal transparent outer padding, approximately 660 × 600 pixels, suitable for a reservation summary card displayed at 330 pixels wide and 286–315 pixels high.
+
+Input images:
+- triplog-reservation-passport-pockets-refined-20261003.png: selected final mockup to follow faithfully.

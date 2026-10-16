@@ -1,0 +1,17 @@
+{
+  "jobId": "at-vienna-landscape",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-5e20-7f81-812c-b8a5c49d0800\\exec-126470b1-7502-4492-aa4e-d74dad34b667.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-expansion-20261004/assets-original/at-vienna-landscape.png",
+  "actualDimensions": [
+    1619,
+    972
+  ],
+  "generationMode": "built-in image_gen, reference-guided image generation",
+  "prompt": "Create one standalone destination illustration of Vienna: St Stephen's Cathedral with its patterned tiled roof and tall spire, elegant Viennese facades and a small red tram. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset, with the focal scene toward the center-right and bottom. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "b892e35a9dac10f873e1be5c140934156251b2ff5fa4c3ec8b986051e7368bd6",
+  "savedSha256": "b892e35a9dac10f873e1be5c140934156251b2ff5fa4c3ec8b986051e7368bd6",
+  "generationStartedAt": "2026-10-04T06:41:43.882Z"
+}

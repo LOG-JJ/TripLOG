@@ -5,6 +5,7 @@ const vm = require('node:vm');
 const esbuild = require('esbuild');
 const suites = require('./browser-suites');
 const assets = require('./app-assets');
+const { inspectArtifactLayout } = require('./artifacts-check');
 
 const loader = fs.readFileSync(path.join(assets.root, 'app.js'), 'utf8');
 const modules = [...loader.matchAll(/^\s+"([^"\n]+\.js)",/gm)].map(match => `src/app/${match[1]}`);
@@ -23,6 +24,8 @@ for (const file of available) assert(suites.includes(file), `${file} is missing 
 for (const file of suites) assert(fs.existsSync(path.join(__dirname, file)), `Missing browser suite: ${file}`);
 assert.equal(new Set(suites).size, suites.length, 'No duplicate browser suites');
 const deployed = new Set(assets.deploymentFiles());
+assert.deepEqual(inspectArtifactLayout(), [], 'Generated outputs belong under artifacts/');
+assert([...deployed].every(file => !file.startsWith('artifacts/')), 'Development artifacts must never enter the deployed app');
 const sceneData = require('../src/app/data/destination-scenes');
 for (const scene of [...sceneData.catalog, ...Object.values(sceneData.themes)]) {
   assert(deployed.has(scene.src)); assert(deployed.has(scene.mobileSrc));

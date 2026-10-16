@@ -1,0 +1,10 @@
+{
+  "prompt": "Refine the lodging-expense portion of TripLOG's compact mobile expense editor. Match the provided white, dark-outline, yellow, and pale-blue UI, with 13 px field labels, 16 px editable values, and comfortable 44 px controls at actual UI scale. Keep the rest of the existing form consistent. Select the \"숙소\" category. Display compact check-in and check-out fields side by side, labeled \"체크인\" and \"체크아웃\", with dates \"09.26 (토)\" and \"09.28 (월)\". Replace the long allocation paragraph with a quiet pale blue summary block: a moon icon badge \"2박\", the label \"1박당\" and emphasized \"81,000원\", and a small calendar row \"9.26–9.27\" with a subtle \"체크아웃 제외\" chip. Show total amount \"162,000\" in KRW and description \"교토 호텔\". All monetary meaning must remain understandable without a large explanatory paragraph. Keep compact category buttons, payment controls, optional notes row, and the bottom save actions, maintaining the existing application's proportions rather than oversizing the new summary. Render a finished mobile product screen.\n\nInput images:\n- lodging-mobile-before.png: Current lodging expense form and long allocation explanation to improve.\n- triplog-expense-editor-mockup-20260921.png: Design reference for compact expense editor styling.",
+  "inputImages": [
+    "C:/Users/tbdk5/AppData/Local/Temp/TripLOG-Expense-Polish-20260920/lodging-mobile-before.png",
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20260921/triplog-expense-editor-mockup-20260921.png"
+  ],
+  "mode": "edit",
+  "overwrite": false,
+  "output": "artifacts/design/20260921/triplog-expense-lodging-mockup-20260921.png"
+}

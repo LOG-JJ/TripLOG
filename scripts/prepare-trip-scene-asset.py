@@ -27,7 +27,7 @@ def main() -> None:
     root = Path(__file__).resolve().parent.parent
     source = Path(args.source).resolve(strict=True)
     prompt = Path(args.prompt_file).resolve(strict=True).read_text(encoding="utf-8-sig")
-    original_dir = root / "docs/trip-header-20261004/assets-original"
+    original_dir = root / "artifacts/design/trip-header-20261004/assets-original"
     output_dir = root / "src/assets/trip-scenes" / ("cities" if args.kind == "city" else "themes") / "v1"
     stem = f"{args.kind}-{args.id}"
     original = original_dir / f"{stem}.png"

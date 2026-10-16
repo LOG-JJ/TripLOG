@@ -1,0 +1,24 @@
+{
+  "id": "mosque",
+  "prompt": "Create a small hand-drawn travel illustration representing a mosque visit, showing a small domed prayer hall and a minaret. Use delicate navy pen contours with restrained pastel watercolor touches. Keep a compact landscape composition that remains legible in a 120 × 70 CSS-pixel card, with a transparent background. Do not depict a real place or a specific country. No text.",
+  "inputs": [],
+  "mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "transparent_background": true,
+  "generation_started_epoch": 1791810650.53,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13017-b3cf-7fb1-900d-61dcc9aee86c\\exec-f970d17f-3c8b-4890-9082-3f4e6d30ced5.png",
+  "destination": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/mosque.png",
+  "sha256": "391ec02bb4d100d19a91b25a87b79a5ca39ccfe65f0199ef8a5fb852c2ffb469",
+  "original_sha256": "391ec02bb4d100d19a91b25a87b79a5ca39ccfe65f0199ef8a5fb852c2ffb469",
+  "dimensions": [
+    1642,
+    958
+  ],
+  "file_size_bytes": 1188075,
+  "image_mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "overwritten": false
+}

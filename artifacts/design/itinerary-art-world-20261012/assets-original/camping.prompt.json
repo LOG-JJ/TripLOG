@@ -1,0 +1,27 @@
+{
+  "id": "camping",
+  "generation_mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "generation_started_at_utc": "2026-10-12T13:09:09.404000+00:00",
+  "prompt": "Create a small camping scene with a tent, a folding chair, and low grass. Use delicate hand-drawn navy pen outlines with restrained sky blue, pink, and pale yellow watercolor touches. Keep the composition horizontal, simple, and legible in a 120 × 70 CSS-pixel itinerary card, with a travel-journal feeling consistent with TripLOG. Make the surrounding background transparent. Do not include a specific place, brands, or text.",
+  "input_images": [],
+  "transparent_background_requested": true,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13017-ef22-7373-affc-cfc60dbf9faf\\exec-69709c5f-c08d-4c7a-beef-540a19cde0c5.png",
+  "destination_path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/camping.png",
+  "sha256": "fa033dc98ab0572cb9f8151ba4a62bda64681b690f9351491b2b5fba9e4327ce",
+  "original_sha256": "fa033dc98ab0572cb9f8151ba4a62bda64681b690f9351491b2b5fba9e4327ce",
+  "destination_sha256": "fa033dc98ab0572cb9f8151ba4a62bda64681b690f9351491b2b5fba9e4327ce",
+  "sha256_matches": true,
+  "original_unmodified": true,
+  "overwrote_existing_file": false,
+  "dimensions": [
+    1642,
+    958
+  ],
+  "size_bytes": 1215710,
+  "mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ]
+}

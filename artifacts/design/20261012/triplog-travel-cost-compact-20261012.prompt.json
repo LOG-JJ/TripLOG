@@ -1,0 +1,14 @@
+{
+  "id": "triplog-travel-cost-compact-20261012",
+  "prompt": "Create a compact TripLOG overview mockup with a mobile 354px-wide travel-cost card and a desktop pair of 449px-wide cards. Keep each desktop card approximately 260px tall. Follow the established white surface, navy text, pale outline, rounded corners and pastel yellow, blue, pink, mint and lavender palette. The travel-cost card contains “여행 경비”, “지출 기록 보기”, a prominent “486,000원”, and one compact line for “기록한 지출 14건” and “1인 평균 243,000원”. Below, use a thin proportional spending-composition bar and a compact two-row legend: 숙소 37%, 식비 26%, 교통 19%, 관광 11%, 기타 7%. Remove the tall itemized amount list and large gaps. The adjacent “첫날 일정” card contains five compact schedule rows: 10:30 순천역, 11:00 순천만국가정원, 16:15 동천 산책, 17:10 저녁 식사, 18:00 순천 호텔, with “10.9 금” and “전체 보기”. Align the two desktop cards in height. Keep Korean text readable and the mobile card compact. Show actual accumulated spending without budgets or remaining allowances.",
+  "mode": "T2I",
+  "inputs": [],
+  "generation_path": "built-in image_gen",
+  "transparent_background": false,
+  "generation_started_epoch": 1791813145.66,
+  "original_path": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-e7a061ab-2307-4f10-9cf9-c28f47bbc71d.png",
+  "destination": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261012/triplog-travel-cost-compact-20261012.png",
+  "overwritten": false,
+  "original_sha256": "DB34056B57BE877C16539DCC53D9CA6D90BC57022713ACFC04ABE04A9432D690",
+  "sha256": "DB34056B57BE877C16539DCC53D9CA6D90BC57022713ACFC04ABE04A9432D690"
+}

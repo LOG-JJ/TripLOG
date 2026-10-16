@@ -1,3 +1,4 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser, blockExternalRequests } = require('./helpers/browser-fixture');
 // Browser plugin unavailable. Isolated Playwright/Edge fixtures block all
 // external requests; no production reservations or itinerary are touched.
@@ -5,7 +6,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { createReservationPocketPreview } = require('./preview-reservation-pockets');
-const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.resolve(__dirname, '../.test-output/stay-copy');
+const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || artifactDirectory('stay-copy');
 
 async function main() {
   fs.mkdirSync(output, { recursive: true });

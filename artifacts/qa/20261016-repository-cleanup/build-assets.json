@@ -1,0 +1,19 @@
+{
+  "before": {
+    "deployedFiles": 924,
+    "deployedBytes": 93815652,
+    "shellFiles": 290,
+    "shellBytes": 37538474
+  },
+  "after": {
+    "deployedFiles": 911,
+    "deployedBytes": 89049333,
+    "shellFiles": 277,
+    "shellBytes": 32772675
+  },
+  "savedDeploymentBytes": 4766319,
+  "savedShellBytes": 4765799,
+  "shellReductionPercent": 12.695771810010179,
+  "exactBuildCopy": true,
+  "retiredAssetsExcluded": true
+}

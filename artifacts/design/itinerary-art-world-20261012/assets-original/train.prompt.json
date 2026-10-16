@@ -1,0 +1,23 @@
+{
+  "asset": "train",
+  "generation_mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "generation_started_epoch": 1791809912.877,
+  "prompt": "A small front section of a train with railway tracks and a simple platform clock. Delicate navy pen outlines with restrained sky-blue, pink, and pale-yellow watercolor touches. Horizontal composition, clear at 120 × 70 CSS pixels, with a transparent background. No specific country, company, brand, or text.",
+  "inputs": [],
+  "transparent_background": true,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13018-4519-72d3-84a5-ae7ca84ec1ba\\exec-13e5918e-f673-4a32-bc8b-51fe0c86edb9.png",
+  "destination_path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/train.png",
+  "sha256": "b0874448e450ececd05652e7e5b9e69f900f85a32888bc29500d38fd86e9e533",
+  "original_sha256": "b0874448e450ececd05652e7e5b9e69f900f85a32888bc29500d38fd86e9e533",
+  "width": 1643,
+  "height": 957,
+  "bytes": 1623881,
+  "image_mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "overwritten": false,
+  "unmodified_original": true
+}

@@ -405,7 +405,6 @@ function saveStateSilently() {
   }
   try {
     let trips = JSON.parse(localStorage.getItem(TRIPS_KEY)) || [];
-    const activeTripId = localStorage.getItem(ACTIVE_TRIP_ID_KEY);
     const theme = normalizeThemeName(state.theme);
     state.theme = theme;
     state.collaboration = normalizeCollaborationSettings(state.collaboration);
@@ -721,7 +720,7 @@ function resetPersistedTravelData(nextState = {}) {
 async function initializeRepository() {
   if (storageReadyPromise) return storageReadyPromise;
   storageReadyPromise = (async () => {
-    const R = window.TripLogSyncRepository, M = window.TripLogSyncModel;
+    const R = window.TripLogSyncRepository;
     if (!R) return;
     const legacy = getTrips();
     if (!legacy.length) legacy.push(window.TripLogSyncModel.clone(state));

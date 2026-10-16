@@ -1,0 +1,24 @@
+{
+  "id": "castle",
+  "prompt": "Create a small hand-drawn travel illustration representing a visit to a historic castle: a small stone castle with a castle wall and simple surrounding terrain. Use delicate navy pen contours with restrained pastel watercolor touches. Keep a compact landscape composition that remains legible in a 120 × 70 CSS-pixel card, with a transparent background. Use a generic design without depicting a real castle or a specific country. No text.",
+  "inputs": [],
+  "mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "transparent_background": true,
+  "generation_started_epoch": 1791810153.078,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13017-b3cf-7fb1-900d-61dcc9aee86c\\exec-9dbafac6-16ed-4141-9c40-71c9489b0c0a.png",
+  "destination": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/castle.png",
+  "sha256": "38ea2f936c99c8ee982dedb21ce95a718303df71cc8278b047e7872faa89783c",
+  "original_sha256": "38ea2f936c99c8ee982dedb21ce95a718303df71cc8278b047e7872faa89783c",
+  "dimensions": [
+    1643,
+    957
+  ],
+  "file_size_bytes": 1879270,
+  "image_mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "overwritten": false
+}

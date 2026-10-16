@@ -1,0 +1,23 @@
+{
+  "asset": "bicycle",
+  "generation_mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "generation_started_epoch": 1791810350.52,
+  "prompt": "A small touring bicycle with a simple bag and a little roadside grass. Delicate navy pen outlines with restrained sky-blue, pink, and pale-yellow watercolor touches. Horizontal composition, clear at 120 × 70 CSS pixels, with a transparent background. No brand, specific country, or text.",
+  "inputs": [],
+  "transparent_background": true,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13018-4519-72d3-84a5-ae7ca84ec1ba\\exec-f1cc2468-e27c-456e-ae94-a0523c45ae2d.png",
+  "destination_path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/bicycle.png",
+  "sha256": "95e2435a9f0a522cb7d375bffe97f521f8c993e2e32762e8b4bc319de35242d3",
+  "original_sha256": "95e2435a9f0a522cb7d375bffe97f521f8c993e2e32762e8b4bc319de35242d3",
+  "width": 1643,
+  "height": 957,
+  "bytes": 1739303,
+  "image_mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "overwritten": false,
+  "unmodified_original": true
+}

@@ -1,0 +1,21 @@
+{
+  "jobId": "au-melbourne-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-4f967c53-db78-4e9a-a9d6-3a6f1425ab88.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-world-300-20261004/assets-original/au-melbourne-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Melbourne: the yellow Flinders Street Station facade, a green tram and the Yarra river with modern city towers. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "9c0733294e40a783eff3178bf47c013a300ad1032c08b1a1a433473545475ae4",
+  "savedSha256": "9c0733294e40a783eff3178bf47c013a300ad1032c08b1a1a433473545475ae4",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T12:27:59.931Z",
+  "savedAt": "2026-10-04T12:28:34.686146+00:00"
+}

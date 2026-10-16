@@ -1,0 +1,21 @@
+{
+  "jobId": "jp-niigata-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104c1-35a4-74c3-916e-ab6a0794b3ea/exec-1ed5a3aa-03f3-427a-baf7-4009b8df4774.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-world-300-20261004/assets-original/jp-niigata-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Niigata: the stone arches of Bandai Bridge across the Shinano River, waterfront buildings and a small river boat. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "bd86f829041ee7b915e71aa7cb27f3c633d692fcb06fa8cd93b1da5ab0ce04f1",
+  "savedSha256": "bd86f829041ee7b915e71aa7cb27f3c633d692fcb06fa8cd93b1da5ab0ce04f1",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T08:06:10.206Z",
+  "savedAt": "2026-10-04T08:06:55.714949+00:00"
+}

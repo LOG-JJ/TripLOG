@@ -1,0 +1,17 @@
+{
+  "jobId": "th-bangkok-mobile",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-5e20-7f81-812c-b8a5c49d0800\\exec-8b386c74-588a-4c89-8bf3-3bc63a8aa756.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-redraw-20261004/assets-original/th-bangkok-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "generationMode": "built-in image_gen, reference-guided image generation",
+  "prompt": "Create one standalone destination illustration of Bangkok: a Wat Arun-inspired temple silhouette beside the Chao Phraya River, a modest long-tail boat, and a few city buildings. Match the user's selected current Suncheon illustration style in the reference. Preserve the same visual language and drawing character while depicting this destination's own subjects. Use a portrait 4:5 composition, intended for a 480 × 600 mobile asset displayed in a narrow right-side header slot. Compose the city directly for this portrait frame so its recognizable landmarks and natural irregular left silhouette remain readable at small size. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame, with quiet transparent space along the upper-left. The illustrated scenery must reach the right and bottom canvas edges without empty padding. Keep the destination's main features comfortably inside the frame. Artwork only, with no text, UI, labels, logos or border.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png"
+  ],
+  "sourceSha256": "6579d9c5f0aac57d7d2f3e4e936c7c2b0357b4f94b71c97590daa7d38c5f6f52",
+  "savedSha256": "6579d9c5f0aac57d7d2f3e4e936c7c2b0357b4f94b71c97590daa7d38c5f6f52",
+  "generationStartedAt": "2026-10-04T04:19:03.896Z"
+}

@@ -1,0 +1,16 @@
+{
+  "jobId": "jp-osaka-landscape",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-5e20-7f81-812c-b8a5c49d0800\\exec-b94af056-2727-4765-97e2-249fb7a296a8.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-redraw-20261004/assets-original/jp-osaka-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, reference-guided image generation",
+  "prompt": "Create one standalone destination illustration of Osaka: Dotonbori canal, a small pedestrian bridge, and compact lively commercial building silhouettes reflected in the water, without readable signs or logos. Match the user's selected current Suncheon illustration style in the reference. Preserve the same visual language and drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition, intended for an 800 × 480 desktop header asset displayed on the right of a white postcard panel. Compose the focal scene toward the center-right and bottom. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame, with quiet transparent space along the upper-left. The illustrated scenery must reach the right and bottom canvas edges without empty padding. Keep the destination's main features comfortably inside the frame. Artwork only, with no text, UI, labels, logos or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "f29e8a4745bfd86335938b76f93e5eb796cf4bc646fbee969dea24a521d6b830",
+  "savedSha256": "f29e8a4745bfd86335938b76f93e5eb796cf4bc646fbee969dea24a521d6b830"
+}

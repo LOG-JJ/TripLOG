@@ -1,0 +1,23 @@
+{
+  "asset": "car",
+  "generation_mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "generation_started_epoch": 1791810252.464,
+  "prompt": "A small passenger car with a travel suitcase, representing travel by car, taxi, or rental car. Delicate navy pen outlines with restrained sky-blue, pink, and pale-yellow watercolor touches. Horizontal composition, clear at 120 × 70 CSS pixels, with a transparent background. No real brand, specific country, or text.",
+  "inputs": [],
+  "transparent_background": true,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13018-4519-72d3-84a5-ae7ca84ec1ba\\exec-8b061af7-285d-4fa2-8248-68f1749bd0c4.png",
+  "destination_path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/car.png",
+  "sha256": "5ee347d354c259abcf91fd906bf04934768c6271c3dcd0de32a1be3b07fdb796",
+  "original_sha256": "5ee347d354c259abcf91fd906bf04934768c6271c3dcd0de32a1be3b07fdb796",
+  "width": 1643,
+  "height": 957,
+  "bytes": 1342672,
+  "image_mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "overwritten": false,
+  "unmodified_original": true
+}

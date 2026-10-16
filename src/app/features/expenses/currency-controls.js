@@ -79,7 +79,7 @@ function renderModeControls() {
   const isLodging = isLodgingSplitMode();
 
   if (!isOverseas) {
-    const currency = setPreferredCurrency("KRW");
+    setPreferredCurrency("KRW");
     state.exchangeRate = 1;
     state.exchangeRateSource = "국내 원화";
     state.currencyAutoMatchedCountryCode = "KR";

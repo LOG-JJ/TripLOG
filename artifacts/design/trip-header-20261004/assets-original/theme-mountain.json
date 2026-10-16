@@ -1,0 +1,23 @@
+{
+  "id": "mountain",
+  "kind": "theme",
+  "mode": "built-in image_gen, text-to-image",
+  "imageInputsSent": [],
+  "prompt": "Create a standalone mountain travel illustration on an 800 × 480 landscape canvas for a compact website header. Show a neutral layered mountain range, green foothills, a winding footpath, and a tiny simple cable car. Do not depict a recognizable city, a named peak, or a season dominated by snow. Use crisp, delicate ink outlines in #0b1020 and soft, flat watercolor-like fills: pale blue #bce6fb, sage #b8d2bc, warm sand #f4d9a4, with restrained yellow and pink accents. Arrange the focal cluster toward the center-right and bottom, filling most of the canvas while retaining organic open edges at the left and top. Keep the exterior fully transparent. No UI, text, frame, or logos.\n",
+  "source": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-35a4-74c3-916e-ab6a0794b3ea\\exec-8fc81117-3bca-4601-9b84-a3d9b7d24c98.png",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "original": "artifacts/design/trip-header-20261004/assets-original/theme-mountain.png",
+  "sourceSha256": "967c0057d53bad48830c4e5cd307b089cc7932b227e5c737954f1e26c4ca17b9",
+  "originalMatchesSource": true,
+  "asset": "src/assets/trip-scenes/themes/v1/mountain.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "bytes": 126746,
+  "assetSha256": "278fdce1bb196d71ea85bd1c9bc506b0e07d4c1113cf410e2dee56f4413a372b",
+  "overwritten": false
+}

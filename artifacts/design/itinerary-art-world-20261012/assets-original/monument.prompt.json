@@ -1,0 +1,24 @@
+{
+  "id": "monument",
+  "prompt": "Create a small hand-drawn travel illustration representing a historic ruin or monument, with a simple old stone column and the ruins of a low stone arch. Use delicate navy pen contours with restrained pastel watercolor touches. Keep a compact landscape composition that remains legible in a 120 × 70 CSS-pixel card, with a transparent background. Do not depict a real historic site or a specific country. No text or lettering.",
+  "inputs": [],
+  "mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "transparent_background": true,
+  "generation_started_epoch": 1791810873.542,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13017-b3cf-7fb1-900d-61dcc9aee86c\\exec-ad31ee6b-e07b-471a-9037-b1875f008e01.png",
+  "destination": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/monument.png",
+  "sha256": "1ee2aa1e1e578cbbd0ec077a83b1830840d65319d1d1533222385bf0bedd1c7b",
+  "original_sha256": "1ee2aa1e1e578cbbd0ec077a83b1830840d65319d1d1533222385bf0bedd1c7b",
+  "dimensions": [
+    1642,
+    958
+  ],
+  "file_size_bytes": 1643344,
+  "image_mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "overwritten": false
+}

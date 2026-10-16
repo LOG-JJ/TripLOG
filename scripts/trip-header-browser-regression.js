@@ -1,10 +1,11 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser, blockExternalRequests } = require('./helpers/browser-fixture');
 // Browser plugin unavailable; use the existing isolated Playwright/Edge workflow.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { createTripHeaderPreview } = require('./preview-trip-header');
-const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Trip-Header-20261004');
+const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || artifactDirectory('trip-header');
 async function main() {
   fs.mkdirSync(output, { recursive: true });
   const server = createTripHeaderPreview(); await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));

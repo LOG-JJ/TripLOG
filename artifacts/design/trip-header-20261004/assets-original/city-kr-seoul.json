@@ -1,0 +1,23 @@
+{
+  "id": "kr-seoul",
+  "kind": "city",
+  "mode": "built-in image_gen, text-to-image",
+  "imageInputsSent": [],
+  "prompt": "Standalone 800×480 landscape illustration of Seoul: N Seoul Tower on a low green hill, the Han River in front, restrained modern city silhouettes, and one river bridge. TripLOG postcard art direction with crisp delicate #0b1020 ink outlines, soft flat watercolor-like fills, pale blue #bce6fb, sage #b8d2bc, warm sand #f4d9a4, and restrained yellow and pink accents. Focal scene sits center-right and bottom, filling most of the canvas, with landscape contours opening organically at the left and top. Clean transparent exterior. Readable in a right-aligned 300×180 travel-header slot. No UI, text, frame, or logos.\n",
+  "source": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c0-feb5-7982-8f1c-72fc299c4bcf\\exec-2d6e3107-9ad5-4336-aa22-10879859dd94.png",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "original": "artifacts/design/trip-header-20261004/assets-original/city-kr-seoul.png",
+  "sourceSha256": "ed410c1e9398a56c783aed28c3ee6ac52420b33a692a84992fc23932ac6d08b7",
+  "originalMatchesSource": true,
+  "asset": "src/assets/trip-scenes/cities/v1/kr-seoul.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "bytes": 122276,
+  "assetSha256": "f5027d4172cc12ea41d7da6127f30052dcfc242311ae657cf573795cfc96557d",
+  "overwritten": false
+}

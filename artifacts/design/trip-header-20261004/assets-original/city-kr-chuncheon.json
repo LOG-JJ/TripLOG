@@ -1,0 +1,23 @@
+{
+  "id": "kr-chuncheon",
+  "kind": "city",
+  "mode": "built-in image_gen, text-to-image",
+  "imageInputsSent": [],
+  "prompt": "Standalone 800×480 landscape illustration of Chuncheon: calm lake and river waters, green island trees, a modest bridge, one small boat, and gentle surrounding hills. TripLOG postcard art direction with crisp delicate #0b1020 ink outlines, soft flat watercolor-like fills, pale blue #bce6fb, sage #b8d2bc, warm sand #f4d9a4, and restrained yellow and pink accents. Focal scene sits center-right and bottom, filling most of the canvas, with landscape contours opening organically at the left and top. Clean transparent exterior. Readable in a right-aligned 300×180 travel-header slot. No UI, text, frame, or logos.\n",
+  "source": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c0-feb5-7982-8f1c-72fc299c4bcf\\exec-d25df82a-785f-4360-8580-07b4ad8b2446.png",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "original": "artifacts/design/trip-header-20261004/assets-original/city-kr-chuncheon.png",
+  "sourceSha256": "eaf8a6dacacc4ad5debf4ab42b505edf9dab55f706ccadb8fcccc59f077520dc",
+  "originalMatchesSource": true,
+  "asset": "src/assets/trip-scenes/cities/v1/kr-chuncheon.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "bytes": 136852,
+  "assetSha256": "c5898ca69838e2e542dba766633b18297fa6088d4c71e4ecacd4bb45c121f2ec",
+  "overwritten": false
+}

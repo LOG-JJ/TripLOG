@@ -1,0 +1,17 @@
+{
+  "jobId": "th-chiang-mai-landscape",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-5e20-7f81-812c-b8a5c49d0800\\exec-43cbbb81-e303-4433-8a82-d7239a5073cd.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-redraw-20261004/assets-original/th-chiang-mai-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, reference-guided image generation",
+  "prompt": "Create one standalone destination illustration of Chiang Mai: modest northern Thai temple roofs and a small golden stupa among lush green trees, with mountain ridges behind. Match the user's selected current Suncheon illustration style in the reference. Preserve the same visual language and drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition, intended for an 800 × 480 desktop header asset displayed on the right of a white postcard panel. Compose the focal scene toward the center-right and bottom. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame, with quiet transparent space along the upper-left. The illustrated scenery must reach the right and bottom canvas edges without empty padding. Keep the destination's main features comfortably inside the frame. Artwork only, with no text, UI, labels, logos or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "d581cdb1b0cdc1f004a05b3dcf3c5c84c5d067c909355ff986c5c94fadbe5684",
+  "savedSha256": "d581cdb1b0cdc1f004a05b3dcf3c5c84c5d067c909355ff986c5c94fadbe5684",
+  "generationStartedAt": "2026-10-04T04:21:09.752Z"
+}

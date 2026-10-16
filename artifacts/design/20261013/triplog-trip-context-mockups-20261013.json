@@ -1,0 +1,116 @@
+{
+  "title": "TripLOG shared trip-context component concepts",
+  "date": "2026-10-13",
+  "request": "각 페이지 이름 아래의 여행 정보를 공통 컴포넌트로 통일하고 개선한 목업을 기준으로 구현",
+  "status": "User selected displayed option 1, requested duration next to the date, and implementation passed visual QA across itinerary, expense and report pages. See triplog-trip-context-selected-20261013.prompt.json for the exact refinement prompt and image provenance.",
+  "targetPages": [
+    "itinerary",
+    "budget",
+    "report"
+  ],
+  "sourceAttachments": [
+    "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-9b1dca52-5c5b-4905-a2c6-c77475da8dd3.png",
+    "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-95f98698-5b20-4287-a137-ea4f3c230a39.png",
+    "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-34a20dec-902c-4295-aad7-9d01b7ee2f8f.png"
+  ],
+  "capturedContext": "C:/Users/tbdk5/AppData/Local/Temp/TripLOG-Trip-Context-20261013/before.json",
+  "content": {
+    "tripName": "순천의 사흘",
+    "period": "2026.10.09 금 – 10.11 일",
+    "duration": "2박 3일",
+    "pageHeadingShownForContext": "일정 계획"
+  },
+  "hierarchy": [
+    "page heading",
+    "trip name",
+    "date range and duration"
+  ],
+  "generationPolicy": "Built-in image_gen; three independent T2I calls with no image inputs, following user AGENTS.md over generic reference-attachment skill rules. Existing screenshots inspected only as task context.",
+  "requestedCssSize": {
+    "width": 390,
+    "height": 136,
+    "presentationScaleApprox": 3
+  },
+  "outputs": [
+    {
+      "prompt": "Design a compact shared trip-context component for the existing TripLOG Korean travel planner, shown beneath a page heading. Create one focused mobile header crop representing a 390 × 136 CSS px area, presented at approximately 3× scale. Use a clean white page surface with natural margins and no device frame.\n\nRender exactly: page heading “일정 계획”; trip name “순천의 사흘”; date range “2026.10.09 금 – 10.11 일”; duration “2박 3일”. Current date is 2026-10-13, and these supplied travel dates are intentional.\n\nDirection: a small travel line icon with a yellow accent beside a clear two-line information group. Make the trip name the primary context, dates secondary, and duration a small pale-blue badge beside the name. Keep the information group around 56 CSS px tall and avoid a surrounding card.\n\nMatch TripLOG: near-black #0b1020, sunny yellow #fff05a, pale blue #bce6fb, crisp restrained outlines, softly rounded details, Pretendard-style Korean sans-serif. Page heading about 22 CSS px, trip name 17–18 px, dates 14 px, duration 12–13 px. Preserve strong alignment and readable spacing. This same component will appear beneath itinerary, expense and report page headings. Show only this header example, with no additional information or controls.",
+      "mode": "built-in T2I",
+      "inputImages": [],
+      "startedAt": "2026-10-13T12:37:25.105Z",
+      "startEpoch": 1791895045.105,
+      "source": "C:/Users/tbdk5/.codex/generated_images/01a13376-7f99-7e50-a150-a88282253a0f/exec-4a3448c7-49a9-42a4-a722-5f4acafa15d0.png",
+      "saved": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261013/triplog-trip-context-label-20261013.png",
+      "displayOrder": 1,
+      "actualImagePx": {
+        "width": 2119,
+        "height": 742
+      },
+      "sha256": "1E570B6E87C4584F3876FC7E14CB98BD36370EF5BBE62617656E3832E6A44900",
+      "sourceAndSavedHashesMatched": true,
+      "overwritten": false
+    },
+    {
+      "prompt": "Design a compact shared trip-context component for the existing TripLOG Korean travel planner, beneath a page heading. Show one focused mobile header crop representing 390 × 136 CSS px, presented at approximately 3× scale, on a clean white page without a device frame.\n\nRender exactly: page heading “일정 계획”; trip name “순천의 사흘”; date range “2026.10.09 금 – 10.11 일”; duration “2박 3일”. Current date is 2026-10-13; preserve these intentional travel dates.\n\nDirection: a slim pale-blue information strip, about 350 CSS px wide and 60–68 px high, with a restrained near-black outline and gently rounded corners. Group the trip name and date clearly, use one small line travel/calendar icon, and separate the duration with a quiet yellow accent. Keep the component compact and avoid nested containers. The trip name must read before the supporting dates.\n\nUse TripLOG’s near-black #0b1020, pale blue #bce6fb and sunny yellow #fff05a with Pretendard-style Korean typography. Page heading around 22 CSS px, trip name 17–18 px, date text 14 px, duration 12–13 px. The strip should work as the same reusable component under itinerary, expense and report headings. Show only this header, with no extra information or controls.",
+      "mode": "built-in T2I",
+      "inputImages": [],
+      "startedAt": "2026-10-13T12:38:41.743Z",
+      "startEpoch": 1791895121.743,
+      "source": "C:/Users/tbdk5/.codex/generated_images/01a13376-7f99-7e50-a150-a88282253a0f/exec-4e5b84fa-b496-416f-a196-e8301ea9e8e6.png",
+      "saved": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261013/triplog-trip-context-strip-20261013.png",
+      "displayOrder": 2,
+      "actualImagePx": {
+        "width": 2125,
+        "height": 740
+      },
+      "sha256": "A3F24142DBF49664D05AB22831C7FAD53654C5325E05C2566A6D19B2DB5166A3",
+      "sourceAndSavedHashesMatched": true,
+      "overwritten": false
+    },
+    {
+      "prompt": "Design a compact shared trip-context component for the existing TripLOG Korean travel planner, positioned beneath a page heading. Show a single mobile header crop representing 390 × 136 CSS px, at approximately 3× presentation scale, on a clean white page without device framing.\n\nRender exactly: page heading “일정 계획”; trip name “순천의 사흘”; date range “2026.10.09 금 – 10.11 일”; duration “2박 3일”. Current date is 2026-10-13; keep the supplied trip dates.\n\nDirection: typography-led travel context with precise left alignment. Place the bold trip name on the first information line, with a small outlined duration tag beside it; put the date range beneath with one small calendar line icon. Use a restrained yellow highlight or short yellow accent to identify the trip name. Avoid a large illustration or enclosing card. Keep the information area approximately 48–56 CSS px high, with enough separation from the page heading to remain readable.\n\nUse TripLOG’s white surface, near-black #0b1020 ink, sunny yellow #fff05a and minimal pale-blue #bce6fb accents. Use Pretendard-style Korean sans-serif: page heading about 22 CSS px, trip name 17–18 px, date 14 px, duration 12–13 px. This is the same reusable information component for itinerary, expense and report pages. Include no additional content or controls.",
+      "mode": "built-in T2I",
+      "inputImages": [],
+      "startedAt": "2026-10-13T12:39:48.266Z",
+      "startEpoch": 1791895188.266,
+      "source": "C:/Users/tbdk5/.codex/generated_images/01a13376-7f99-7e50-a150-a88282253a0f/exec-4b1c9f63-95b5-447b-9833-7c266c448675.png",
+      "saved": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261013/triplog-trip-context-type-20261013.png",
+      "displayOrder": 3,
+      "actualImagePx": {
+        "width": 2122,
+        "height": 741
+      },
+      "sha256": "143DAD3A33F0471EA8C17A9064400FBF0B0BACBAB9A91C089F33E19F3ADDD18D",
+      "sourceAndSavedHashesMatched": true,
+      "overwritten": false
+    }
+  ],
+  "implementationLocations": {
+    "itinerary": [
+      "Travel.html:.itinerary-heading",
+      "../../../src/app/features/itinerary/itinerary-render.js",
+      "../../../src/app/core/runtime.js"
+    ],
+    "expenses": [
+      "src/app/features/expenses/expense-workspace.js:.ex-trip-line and #exTripPeriod"
+    ],
+    "report": [
+      "src/app/features/redesign/design-workspace.js:heading() and render()"
+    ],
+    "sharedDateHelpers": "src/app/shared/date-time.js:formatTripPeriod/formatTripDuration",
+    "existingTokens": "src/styles/typography.css and src/styles/redesign.css"
+  },
+  "implementationConstraints": [
+    "Reuse one component for travel context while keeping each page's heading and actions.",
+    "Expense header actions must remain usable when the shared context is displayed at mobile width.",
+    "Unify date/duration formatting and update correctly when switching trips or changing dates.",
+    "Handle long names, missing dates, day trips and cross-year ranges without clipping or misleading metadata.",
+    "Keep the overview destination-illustration header and previously completed compact cost summary outside this change."
+  ],
+  "changes": {
+    "applicationCode": false,
+    "tests": false,
+    "commit": false,
+    "push": false,
+    "deploy": false
+  }
+}

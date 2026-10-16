@@ -1,0 +1,53 @@
+[
+  {
+    "name": "sightseeing",
+    "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/export-reports-20261012/assets-original/sightseeing.png",
+    "originalSha256": "37e3f7a344b14882da25a36908c8f9093a74cfaf6eaea4bb81d6f4bcf30c93c7",
+    "originalDimensions": [
+      1640,
+      959
+    ],
+    "asset": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-reused/sightseeing.webp",
+    "dimensions": [
+      360,
+      211
+    ],
+    "bytes": 37828,
+    "sha256": "a3481b8b10e6f21dd3e488a5f73a02d60ac3e96134f2265fd84170d18e66a17e",
+    "processing": "Proportional downsample and WebP encoding only; RGBA preserved"
+  },
+  {
+    "name": "food",
+    "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/export-reports-20261012/assets-original/food.png",
+    "originalSha256": "f734e32afc1b6eabbfa257e4f95a9a0b330357096c0f4c326232715472b76bc9",
+    "originalDimensions": [
+      1643,
+      957
+    ],
+    "asset": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-reused/food.webp",
+    "dimensions": [
+      360,
+      210
+    ],
+    "bytes": 24034,
+    "sha256": "a4de70c052815e26458b949f2a535e34a7c14a11060611aa535f238bf6fad622",
+    "processing": "Proportional downsample and WebP encoding only; RGBA preserved"
+  },
+  {
+    "name": "lodging",
+    "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/export-reports-20261012/assets-original/lodging.png",
+    "originalSha256": "0612fc2b90f819621c1217899105b7dc317b58a61eacd98274111c544737131b",
+    "originalDimensions": [
+      1643,
+      957
+    ],
+    "asset": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-reused/lodging.webp",
+    "dimensions": [
+      360,
+      210
+    ],
+    "bytes": 28028,
+    "sha256": "0919f01370b0eb3312886f090b44e8edaa724182b6703a29bfe944f64c30e5ed",
+    "processing": "Proportional downsample and WebP encoding only; RGBA preserved"
+  }
+]

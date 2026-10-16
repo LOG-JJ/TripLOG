@@ -1,0 +1,30 @@
+{
+  "request": "이렇게말고 그냥 표로구성하는데 가독성좋게 하라는거임",
+  "target": "TripLOG PDF report detailed itinerary, readable table mockup",
+  "requirements": "Keep a normal table. Improve columns, typography, padding and day grouping. Previous timeline/card direction rejected.",
+  "implementationStatus": "Mockup only; application source not changed.",
+  "generationMode": "built-in image_gen / text-to-image",
+  "generationStartedAt": "2026-10-12T14:18:46.242Z",
+  "generationCalls": 1,
+  "imageInputs": [],
+  "finalPrompt": "Create a readable Korean TripLOG “상세 일정” report mockup using a straightforward table. Show one complete A4 portrait page, 210 × 297 mm, equivalent to approximately 794 × 1123 CSS pixels. Retain the existing white paper, dark navy text, subtle pale blue accents and Korean typography.\n\nUse a compact header with “TripLOG”, “순천의 사흘”, “2026.10.09 – 10.11 · 2명” and “상세 일정”.\n\nThe main content must be one continuous four-column table with these exact headings: “날짜”, “시간”, “장소·이동”, “메모”. Allocate approximately 12%, 17%, 42% and 29% of the table width. Use a lightly shaded header, fine horizontal and vertical grid lines, comfortable cell padding and a slightly stronger divider between days. Merge the date cells across the three rows of each day. Keep all four columns consistently aligned throughout the table.\n\nUse one row per stop. Make the place name bold and larger than its address. Place the address beneath it in smaller, quieter text, followed by a compact plain-text travel line where provided. Give the memo its own ordinary table cell. Display time ranges clearly in the time column. Target 15px place names, 14px times and 13px supporting text at the reference page size. Fit all nine rows legibly on one page. This is a simple report table: no timeline, connected dots, cards, illustrations, oversized icons, decorative slogans or memo callout boxes.\n\nTable data:\n\nDAY 1 · 10.09 (금)\n- 10:30–10:50 | 순천역 / 전남 순천시 팔마로 135 | 기차에서 내려 여행 시작\n- 11:00–16:00 | 순천만국가정원 / 전남 순천시 국가정원1호길 47 / 이동 · 차량 15분 | 입장권과 편한 신발 챙기기\n- 18:00 | 순천 호텔 / 순천 시내 / 이동 · 차량 15분 | 체크인 후 저녁 산책\n\nDAY 2 · 10.10 (토)\n- 09:30–11:30 | 낙안읍성 / 전남 순천시 낙안면 충민길 30 / 이동 · 차량 15분 | 성곽길 천천히 걷기\n- 12:30–14:00 | 감성 카페 / 낙안면 / 이동 · 차량 15분 | 커피와 함께 쉬어 가기\n- 16:00–18:00 | 순천만습지 / 전남 순천시 순천만길 513-25 / 이동 · 차량 15분 | 갈대길 걷기와 해질녘 풍경\n\nDAY 3 · 10.11 (일)\n- 09:30–10:30 | 중앙시장 / 순천 중앙시장 / 이동 · 차량 15분 | 아침과 작은 선물\n- 11:30–13:00 | 죽도봉 / 순천 죽도봉공원 / 이동 · 차량 15분 | 순천 시내를 한눈에\n- 14:00–14:30 | 순천역 / 전남 순천시 팔마로 135 / 이동 · 차량 15분 | 돌아가는 기차\n\nUse a restrained report footer with “TripLOG” and “2 / 3”.",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a0c429-1920-7d20-a95f-bb0950d8831b\\exec-d482a133-4d45-40e8-a587-1d9e36a8e50a.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261012/triplog-report-detail-table-mockup-20261012.png",
+  "sourceAndSavedSHA256": "AFE8293B7512EF532F82A1C35EF3FFEB4492870A88A1E96453FF799031BEABAA",
+  "sourceMatchVerified": true,
+  "overwritten": false,
+  "sampleContentSource": "scripts/fixtures/export-reports.js, original export-suncheon fixture, all nine stops",
+  "targetGeometry": {
+    "paper": "A4 portrait",
+    "widthMm": 210,
+    "heightMm": 297,
+    "referenceCssWidth": 794,
+    "referenceCssHeight": 1123
+  },
+  "columns": [
+    "날짜",
+    "시간",
+    "장소·이동",
+    "메모"
+  ]
+}

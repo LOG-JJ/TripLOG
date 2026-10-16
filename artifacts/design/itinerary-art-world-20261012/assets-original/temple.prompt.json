@@ -1,0 +1,24 @@
+{
+  "id": "temple",
+  "prompt": "Create a small hand-drawn travel illustration of a Buddhist temple visit, showing the eaves of a small Buddhist temple and a stone lantern. Use delicate navy pen contours with restrained pastel watercolor touches. Keep a compact landscape composition that remains legible in a 120 × 70 CSS-pixel card, with a transparent background. Use a generic design without depicting a real temple or a specific country. No text.",
+  "inputs": [],
+  "mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "transparent_background": true,
+  "generation_started_epoch": 1791810263.534,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13017-b3cf-7fb1-900d-61dcc9aee86c\\exec-3e8c73ca-9205-4bb5-a9c7-f0fe496eba27.png",
+  "destination": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/temple.png",
+  "sha256": "202934c44eb42128cb4a4389ef24d52cd308a52b5f3d77c467a83410c86d4816",
+  "original_sha256": "202934c44eb42128cb4a4389ef24d52cd308a52b5f3d77c467a83410c86d4816",
+  "dimensions": [
+    1642,
+    958
+  ],
+  "file_size_bytes": 1837808,
+  "image_mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "overwritten": false
+}

@@ -1,0 +1,13 @@
+{
+  "build": "4d617d35402242cdd073",
+  "checkedFiles": 59,
+  "runtimeArtworkCount": 50,
+  "sourceMatchesDist": true,
+  "allArtworkInAppShell": true,
+  "tests": [
+    "npm test",
+    "npm run test:browser",
+    "npm run test:print"
+  ],
+  "deployment": "not requested; no commit or push"
+}

@@ -1,13 +1,14 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser, blockExternalRequests } = require('./helpers/browser-fixture');
 // Render every dedicated city in the real header, using an isolated fixture.
 // These are visual/asset checks; the existing header suite owns live UI flows.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
-const os = require('node:os');
+
 const path = require('node:path');
 const { createTripHeaderPreview } = require('./preview-trip-header');
 const data = require('../src/app/data/destination-scenes');
-const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(os.tmpdir(), 'TripLOG-City-Scene-Review-20261004');
+const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || artifactDirectory('trip-scene-art');
 const requestedIds = new Set((process.env.TRIPLOG_SCENE_REVIEW_IDS || '').split(',').map(id => id.trim()).filter(Boolean));
 const cities = data.catalog.filter(entry => entry.dedicated && (!requestedIds.size || requestedIds.has(entry.id)));
 for (const id of requestedIds) assert(cities.some(city => city.id === id), 'Unknown dedicated city requested for review: ' + id);

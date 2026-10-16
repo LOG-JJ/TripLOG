@@ -1,9 +1,0 @@
-{
-  "prompt": "Refine the TripLOG time picker mockup to match the current application's design tone, with noticeably smaller, restrained typography. Use the current time-picker image as the component to improve and the theme selector as the surrounding design-tone reference. Show a compact open time picker in a Korean travel itinerary form, with the field above reading \"09:30\", two five-row hour and minute wheels, small labels \"시\" and \"분\", a yellow central selection row, and bottom actions \"시간 없음\" and \"확인\". At actual interface scale use approximately 13 px labels, 16 px neighboring numbers, 18 px selected numbers, and 14 px button text. Keep the existing brand styling and a clear hierarchy without oversized numerals. The resting selected time is 09:30; show hour values 07, 08, 09, 10, 11 and minute values 28, 29, 30, 31, 32. Depict the finished usable component, with the wheel rows visually suggesting continuous scrolling and smoothly fading away from the selected row.\n\nInput images:\n- 01-time.png: Current time picker to improve.\n- 02-theme.png: Current application design-tone reference.",
-  "inputImages": [
-    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/controls-ui/01-time.png",
-    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/docs/controls-ui/02-theme.png"
-  ],
-  "generationMode": "built-in image_gen",
-  "overwritten": false
-}

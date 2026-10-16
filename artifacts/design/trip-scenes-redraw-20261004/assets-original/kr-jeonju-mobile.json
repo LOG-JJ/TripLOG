@@ -1,0 +1,27 @@
+{
+  "jobId": "kr-jeonju-mobile",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104e7-e587-7d23-8d34-8e0712636c97/exec-4744cf12-7e2b-4dd6-9785-b74d0f3b3a40.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-redraw-20261004/assets-original/kr-jeonju-mobile.png",
+  "generationMode": "built-in image_gen; single I2I using user-approved canonical Suncheon style reference",
+  "prompt": "Create one standalone destination illustration of Jeonju Hanok Village: graceful tiled hanok rooftops, a quiet winding lane, and a few green trees. Match the user's selected current Suncheon illustration style in the reference. Preserve the same visual language and drawing character while depicting this destination's own subjects. Use a portrait 4:5 composition, intended for a 480 × 600 mobile asset displayed in a narrow right-side header slot. Compose the city directly for this portrait frame so its recognizable landmarks and natural irregular left silhouette remain readable at small size. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame, with quiet transparent space along the upper-left. The illustrated scenery must reach the right and bottom canvas edges without empty padding. Keep the destination's main features comfortably inside the frame. Artwork only, with no text, UI, labels, logos or border.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png"
+  ],
+  "generatedCityInputs": [],
+  "generationCount": 1,
+  "transparentBackground": true,
+  "overwrite": false,
+  "startedAt": "2026-10-04T04:06:23.125Z",
+  "startedEpoch": 1791086783.125,
+  "finishedAt": "2026-10-04T04:07:07.321Z",
+  "sourceSha256": "b6c53f41301222570c069f5cba8324683f60891e6c5b3ea4dbf35819537761ad",
+  "savedSha256": "b6c53f41301222570c069f5cba8324683f60891e6c5b3ea4dbf35819537761ad",
+  "sha256Match": true,
+  "referenceSha256": "9ee5b5e49a9fcc42f6ce7f1fdb9e4e740e6e4837ff51bad6394554bfa86c9dd6",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "pngColorType": 6,
+  "bytes": 1540042
+}

@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-10-13T10:28:00.073Z",
+  "sha": "7587b56e8930b0a3a86adfbcc365c6a1c2e2a810",
+  "checkedFiles": 7,
+  "byteExact": 5,
+  "contentMatches": 7,
+  "htmlBuildId": "c6be3facbf61e5ce8574",
+  "workerBuildId": "c6be3facbf61e5ce8574",
+  "matchingBuildIds": true,
+  "mismatches": [],
+  "files": [
+    {
+      "file": "app.js",
+      "status": 200,
+      "byteExact": true,
+      "contentMatches": true,
+      "sha256": "a6a7465cfd7fc9fa92baa9c930c5ed08f67e4caafece9f5dd6629195938b2706"
+    },
+    {
+      "file": "site.webmanifest",
+      "status": 200,
+      "byteExact": true,
+      "contentMatches": true,
+      "sha256": "379bd7e17955b93fd192420ab324846466e97fd6d730fa89919cb6622bef3542"
+    },
+    {
+      "file": "src/app/features/print/print-export.js",
+      "status": 200,
+      "byteExact": true,
+      "contentMatches": true,
+      "sha256": "e444ef87505935deb9ed3d42dc69d209627bb84dbdfb2d3d19fe89710effb8bc"
+    },
+    {
+      "file": "src/styles/print-export.css",
+      "status": 200,
+      "byteExact": true,
+      "contentMatches": true,
+      "sha256": "897f1cd9a2d07b1ea8af1fd72b4cf303de7ecd04e0e49b14b98284fdcb155a5e"
+    },
+    {
+      "file": "styles.css",
+      "status": 200,
+      "byteExact": true,
+      "contentMatches": true,
+      "sha256": "6d017698108ae3a7de7aa28d5fd47cc645fad6df84f82e973fa69f9052d7e436"
+    },
+    {
+      "file": "sw.js",
+      "status": 200,
+      "byteExact": false,
+      "contentMatches": true,
+      "buildId": "c6be3facbf61e5ce8574",
+      "sha256": "29ea4d85c0e63e08b269b2ce70d4be40e6ed98524c39ff3c97bafb39b3b2d5ab"
+    },
+    {
+      "file": "Travel.html",
+      "status": 200,
+      "byteExact": false,
+      "contentMatches": true,
+      "buildId": "c6be3facbf61e5ce8574",
+      "sha256": "019e55b759f7e3fa082156b21662f178d4ba1bc2b762ac88763323a0313e6a44"
+    }
+  ]
+}

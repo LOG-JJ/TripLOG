@@ -1,3 +1,4 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser, blockExternalRequests } = require('./helpers/browser-fixture');
 // Disposable browser fixture. Interactive visual QA also uses the in-app browser.
 // No production services or trip data are changed.
@@ -5,7 +6,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { createExportPreview } = require('./preview-export-reports');
-const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Travel-Cost-Visual-20261012');
+const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || artifactDirectory('travel-costs');
 
 async function main() {
   fs.mkdirSync(output, { recursive: true });

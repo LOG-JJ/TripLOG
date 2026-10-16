@@ -559,10 +559,6 @@
     memberSyncIntervalId = null;
   }
 
-  function delay(ms = 0) {
-    return new Promise((resolve) => window.setTimeout(resolve, ms));
-  }
-
   function getRemoteSafeSnapshot(remoteSnapshot = {}) {
     const snapshot = remoteSnapshot && typeof remoteSnapshot === "object" ? { ...remoteSnapshot } : {};
     const privacy = snapshot.collaboration?.privacy || getCollaboration().privacy || {};

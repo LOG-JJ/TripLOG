@@ -16,12 +16,9 @@ let selectedPlaceCandidate = null;
 const customSelects = new Map();
 const customDatePickers = new Map();
 const customTimePickers = new Map();
-const timeListScrollAnimations = new WeakMap();
+
 const dayStripScrollAnimations = new WeakMap();
 
-let leafletMapInstance = null;
-let leafletMarkersGroup = null;
-let leafletRouteLine = null;
 let leafletRenderToken = 0;
 let lastNominatimRequestAt = 0;
 const geocodeResultCache = new Map();
@@ -245,7 +242,6 @@ window.TripLog.register("core.runtime", {
   customSelects,
   customDatePickers,
   customTimePickers,
-  timeListScrollAnimations,
   dayStripScrollAnimations,
   geocodeResultCache,
   get activeFilter() { return activeFilter; },
@@ -266,12 +262,6 @@ window.TripLog.register("core.runtime", {
   set editingItineraryId(value) { editingItineraryId = value; },
   get selectedPlaceCandidate() { return selectedPlaceCandidate; },
   set selectedPlaceCandidate(value) { selectedPlaceCandidate = value; },
-  get leafletMapInstance() { return leafletMapInstance; },
-  set leafletMapInstance(value) { leafletMapInstance = value; },
-  get leafletMarkersGroup() { return leafletMarkersGroup; },
-  set leafletMarkersGroup(value) { leafletMarkersGroup = value; },
-  get leafletRouteLine() { return leafletRouteLine; },
-  set leafletRouteLine(value) { leafletRouteLine = value; },
   get leafletRenderToken() { return leafletRenderToken; },
   set leafletRenderToken(value) { leafletRenderToken = value; },
   get lastNominatimRequestAt() { return lastNominatimRequestAt; },

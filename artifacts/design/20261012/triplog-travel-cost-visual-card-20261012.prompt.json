@@ -1,0 +1,14 @@
+{
+  "id": "triplog-travel-cost-visual-card-20261012",
+  "prompt": "Design an implementation-ready mockup of the TripLOG “여행 경비” overview card, showing a 354px-wide mobile card and a 448px-wide desktop card side by side. Follow the existing TripLOG design system: white surfaces, dark navy text and thin outlines, rounded corners, and restrained yellow, sky-blue, pink, mint and lavender accents. Prioritize the accumulated total “486,000원”, with “지출 기록 보기” as the navigation action, “기록한 지출 14건”, and “1인 평균 243,000원”. Visualize recorded spending composition with a compact proportional segmented bar and readable category labels, amounts and shares: 숙소 180,000원 37%, 식비 126,000원 26%, 교통 90,000원 19%, 관광 54,000원 11%, 기타 36,000원 7%. Make the hierarchy, spacing and colors cohesive with a Korean travel planner, compact and readable on mobile. These are actual accumulated expenses; include no planned budget, spending limit, remaining allowance or budget progress indicator. Render the complete cards with practical HTML/CSS structure.",
+  "mode": "T2I",
+  "inputs": [],
+  "generation_path": "built-in image_gen",
+  "transparent_background": false,
+  "generation_started_epoch": 1791812326.943,
+  "original_path": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-e2bef6e4-a214-4f3b-91f3-58e47894ccd5.png",
+  "destination": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261012/triplog-travel-cost-visual-card-20261012.png",
+  "overwritten": false,
+  "original_sha256": "1D43B610740627D03D49C08701D7B43E811D46E61D22941BC3049A4973062A7D",
+  "sha256": "1D43B610740627D03D49C08701D7B43E811D46E61D22941BC3049A4973062A7D"
+}

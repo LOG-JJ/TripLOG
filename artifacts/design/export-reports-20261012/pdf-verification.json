@@ -1,0 +1,23 @@
+[
+  {
+    "file": "sample-expense.pdf",
+    "pages": 2,
+    "a4": true,
+    "textSelectable": true,
+    "contentVerified": true
+  },
+  {
+    "file": "sample-itinerary.pdf",
+    "pages": 2,
+    "a4": true,
+    "textSelectable": true,
+    "contentVerified": true
+  },
+  {
+    "file": "all-137-expenses.pdf",
+    "pages": 9,
+    "a4": true,
+    "textSelectable": true,
+    "contentVerified": true
+  }
+]

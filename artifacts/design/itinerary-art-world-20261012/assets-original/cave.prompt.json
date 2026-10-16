@@ -1,0 +1,23 @@
+{
+  "asset": "cave",
+  "generation_mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "generation_started_epoch": 1791811155.416,
+  "prompt": "A small rocky cave entrance with a few visible stalactites and low grass around it. Delicate navy pen outlines with restrained sky-blue, pink, and pale-yellow watercolor touches. Horizontal composition, clear at 120 × 70 CSS pixels, with a transparent background. No real location, specific country, brand, or text.",
+  "inputs": [],
+  "transparent_background": true,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13018-4519-72d3-84a5-ae7ca84ec1ba\\exec-7e0ee8e4-58f8-4fe6-abde-adfcb1e4e168.png",
+  "destination_path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/cave.png",
+  "sha256": "cad87adab984e19c5be3681e2807e384d420c4e3155606405be81ea0578d98e9",
+  "original_sha256": "cad87adab984e19c5be3681e2807e384d420c4e3155606405be81ea0578d98e9",
+  "width": 1643,
+  "height": 957,
+  "bytes": 1754966,
+  "image_mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "overwritten": false,
+  "unmodified_original": true
+}

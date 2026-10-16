@@ -1,0 +1,131 @@
+{
+  "title": "TripLOG itinerary timeline design mockups",
+  "date": "2026-10-15",
+  "request": "일정 타임라인 부분의 디자인 개선 목업을 이미지 생성으로 탐색",
+  "status": "Three independent image mockups delivered. Application source was not changed; implementation was not requested in this turn.",
+  "sourceAttachment": {
+    "path": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-19297550-1dd7-4238-a577-320ff2cc8dde.png",
+    "dimensions": {
+      "width": 1483,
+      "height": 1233
+    },
+    "use": "Inspected directly as user-supplied task context; not attached as an image input."
+  },
+  "generationPolicy": "User AGENTS.md requires independent T2I for new design exploration; it overrides the generic Product Design image-attachment guideline.",
+  "referenceCode": [
+    "../../../src/styles/redesign.css",
+    "../../../src/styles/planning.css",
+    "../../../src/styles/transit-editor.css",
+    "../../../src/app/features/itinerary/itinerary-render.js"
+  ],
+  "sourceFacts": {
+    "heading": "전체 일정",
+    "summary": "일정 11개 · 이동 2시간 50분",
+    "day": "1일차 · 10/10 (토)",
+    "year": 2026,
+    "stops": [
+      {
+        "time": "06:43–09:43",
+        "name": "KTX",
+        "category": "이동",
+        "ticket": "KTX"
+      },
+      {
+        "time": "09:43–09:50",
+        "name": "순천역",
+        "category": "명소"
+      },
+      {
+        "time": "11:10–13:00",
+        "name": "순천 드라마 촬영장",
+        "category": "명소"
+      },
+      {
+        "time": "13:10–14:00",
+        "name": "남다른감자탕 순천 조례점",
+        "category": "맛집"
+      },
+      {
+        "time": "15:00",
+        "name": "순천 벨라지오",
+        "category": "숙소"
+      }
+    ],
+    "recordedConnector": "기차 · 2시간 50분"
+  },
+  "futureScope": [
+    "The requested scope is the itinerary body; any generated outer app chrome does not authorize a navigation redesign.",
+    "Use actual trip records during implementation. Generated addresses, descriptive copy or additional facts are not verified data.",
+    "The KTX ticket action represents existing reservation information, not a new ticket-purchase feature.",
+    "Preserve the previously removed destination/map helper caption removal and existing route/edit/copy behavior.",
+    "Normalize original image dimensions to actual CSS viewport before any later implementation comparison."
+  ],
+  "options": [
+    {
+      "name": "라인 타임라인",
+      "prompt": "Design a TripLOG desktop itinerary timeline section on a 1483 × 1233 pixel canvas. Current date: 2026-10-15; preserve the historical itinerary date “1일차 · 10/10 (토)”. Use the existing product palette: white, near-black #0b1020, yellow #fff05a, pale blue #bce6fb, and restrained pink #f7afc7, with readable Pretendard-style Korean typography and simple outlined icons.\n\nExplore a clean, continuous timeline on one white surface. Align start and end times in a narrow left column, connect small category-colored markers with a fine vertical line, and emphasize place names. Use generous separation between stops, subtle dividers, and a compact pale-yellow selection treatment for KTX. Put category labels quietly beside names. Keep ticket information as a small inline “KTX” ticket link. Place edit and copy actions at a consistent right edge.\n\nHeader: “전체 일정”, supporting text “일정 11개 · 이동 2시간 50분”, and a pale-blue “지도 보기” button. Show these five stops in order: “06:43–09:43 / KTX / 이동”, “09:43–09:50 / 순천역 / 명소”, “11:10–13:00 / 순천 드라마 촬영장 / 명소”, “13:10–14:00 / 남다른감자탕 순천 조례점 / 맛집”, and “15:00 / 순천 벨라지오 / 숙소”. Between KTX and 순천역, show a compact connector reading “기차 · 2시간 50분”. For the other gaps, show a quiet “이동 기록” action. Transit connectors should occupy much less space than the stops. Keep all five stops readable within the frame. This is one focused UI concept, with clear hierarchy and natural proportions.",
+      "mode": "built-in T2I",
+      "inputImages": [],
+      "requestedDimensions": {
+        "width": 1483,
+        "height": 1233
+      },
+      "startedAt": "2026-10-15T11:55:46.573Z",
+      "startEpoch": 1792065346.574,
+      "source": "C:/Users/tbdk5/.codex/generated_images/01a13376-7f99-7e50-a150-a88282253a0f/exec-8ea1225a-817b-456c-816b-18dab6a7eecb.png",
+      "saved": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261015/triplog-itinerary-line-20261015.png",
+      "displayedOption": 1,
+      "actualDimensions": {
+        "width": 1376,
+        "height": 1143
+      },
+      "sha256": "C51708A57CADF575E1A3D00B3C4E29A5F507CD3A337538A1FE21B109C295585B",
+      "sourceAndSavedHashesMatch": true,
+      "overwritten": false
+    },
+    {
+      "name": "하루 일정 시트",
+      "prompt": "Design a TripLOG desktop itinerary section on a 1483 × 1233 pixel canvas. Current date: 2026-10-15. Show the historical date “1일차 · 10/10 (토)”. Keep the existing white, near-black #0b1020, yellow #fff05a, pale-blue #bce6fb, and restrained pink #f7afc7 palette, readable Pretendard-style Korean typography, and outlined icons.\n\nExplore a day-agenda sheet: one clearly grouped daily list with a compact yellow day marker, a bold date heading, a consistent time column, a wide place column, and a narrow actions column. Use aligned rows and light separators. Place category labels beside the place names. Integrate transit actions as short, quieter rows belonging to the same day. Highlight the selected KTX row with a soft yellow tint. Show one edit icon and one secondary-actions menu at the right of each stop. Keep the existing KTX ticket link compact within its row.\n\nHeader: “전체 일정”, “일정 11개 · 이동 2시간 50분”, and “지도 보기”. Use only these itinerary details: “06:43–09:43 / KTX / 이동”, ticket “KTX”; “09:43–09:50 / 순천역 / 명소”; “11:10–13:00 / 순천 드라마 촬영장 / 명소”; “13:10–14:00 / 남다른감자탕 순천 조례점 / 맛집”; “15:00 / 순천 벨라지오 / 숙소”. The first connector reads “기차 · 2시간 50분”; the remaining connectors read “이동 기록”. Make all five stops comfortably visible, with place names more prominent than categories or connectors. Produce one focused UI concept with clear hierarchy and natural proportions.",
+      "mode": "built-in T2I",
+      "inputImages": [],
+      "requestedDimensions": {
+        "width": 1483,
+        "height": 1233
+      },
+      "startedAt": "2026-10-15T11:57:22.652Z",
+      "startEpoch": 1792065442.652,
+      "source": "C:/Users/tbdk5/.codex/generated_images/01a13376-7f99-7e50-a150-a88282253a0f/exec-4d760d4d-8996-4aed-918d-2d0bdc864d55.png",
+      "saved": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261015/triplog-itinerary-sheet-20261015.png",
+      "displayedOption": 2,
+      "actualDimensions": {
+        "width": 1376,
+        "height": 1143
+      },
+      "sha256": "7BD88D256157E0808F46E3F6CEFCA50A02498852F9D9248F685C933EDF40BC92",
+      "sourceAndSavedHashesMatch": true,
+      "overwritten": false
+    },
+    {
+      "name": "목록·선택 상세 분리형",
+      "prompt": "Design a TripLOG desktop itinerary section on a 1483 × 1233 pixel canvas. The image is a crop of the itinerary section itself; the whole canvas belongs to this section. Current date: 2026-10-15. Preserve “1일차 · 10/10 (토)”. Use the existing white, near-black #0b1020, yellow #fff05a, pale-blue #bce6fb, and restrained pink #f7afc7 palette, readable Pretendard-style Korean typography, and simple outlined icons.\n\nExplore a two-column master-detail composition. The wider left area contains a calm chronological list with aligned times, place names, small category labels, light separators, and compact transit connectors. The narrower right area presents the currently selected KTX stop. Selecting a stop is represented by a pale-yellow highlight in the list. Concentrate the existing edit and copy actions in the selected-stop panel to reduce repeated controls in the list. The panel shows only “선택한 일정”, “KTX”, “이동”, “06:43–09:43”, a “KTX” ticket link, “수정”, and “복사”. Align the panel with the first stop.\n\nSection header: “전체 일정”, “일정 11개 · 이동 2시간 50분”, and “지도 보기”. The left list shows exactly these five stops: “06:43–09:43 / KTX / 이동”, “09:43–09:50 / 순천역 / 명소”, “11:10–13:00 / 순천 드라마 촬영장 / 명소”, “13:10–14:00 / 남다른감자탕 순천 조례점 / 맛집”, and “15:00 / 순천 벨라지오 / 숙소”. Show “기차 · 2시간 50분” between the first two stops and a quiet “이동 기록” action in the remaining gaps. Keep itinerary content limited to these facts. Make time, place, selection, and available actions immediately distinguishable. Produce one focused UI concept with all five stops visible and natural proportions.",
+      "mode": "built-in T2I",
+      "inputImages": [],
+      "requestedDimensions": {
+        "width": 1483,
+        "height": 1233
+      },
+      "startedAt": "2026-10-15T11:59:22.383Z",
+      "startEpoch": 1792065562.383,
+      "source": "C:/Users/tbdk5/.codex/generated_images/01a13376-7f99-7e50-a150-a88282253a0f/exec-736d48c5-5773-486c-8ab4-879c36cd4abe.png",
+      "saved": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261015/triplog-itinerary-detail-20261015.png",
+      "displayedOption": 3,
+      "actualDimensions": {
+        "width": 1376,
+        "height": 1143
+      },
+      "sha256": "3D0AFEE8230D0B9E52CCD5DDB06D7BDFD80A18C56A071C1B1504B71E9E7C7BF5",
+      "sourceAndSavedHashesMatch": true,
+      "overwritten": false
+    }
+  ]
+}

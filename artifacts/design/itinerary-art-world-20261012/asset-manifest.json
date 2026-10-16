@@ -1,0 +1,706 @@
+{
+  "expectedTypes": 50,
+  "missing": [],
+  "assets": [
+    {
+      "id": "airport",
+      "src": "src/assets/itinerary-art/v1/airport.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/airport.png",
+      "sourceSha256": "10a7a19fe1c868558b543b341e3f5f1d672597caaa429f03474cb0c78bb22263",
+      "sha256": "5675f4f46996c3709f516612c21139e96232a0e6b9f4c902a5cdf050ebc0fb67",
+      "bytes": 22580,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "aquarium",
+      "src": "src/assets/itinerary-art/v1/aquarium.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/aquarium.png",
+      "sourceSha256": "08b4dad4830f20952d9dd8e734579f1dbcfd893eb07a3300c3258724a2c8fc2b",
+      "sha256": "b2a415344f20c1aed90a6b715c7d27f0175321b1bd6a58a45e0eb7e3c302fc42",
+      "bytes": 34934,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "bakery",
+      "src": "src/assets/itinerary-art/v1/bakery.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/bakery.png",
+      "sourceSha256": "7ea76a095a671261f063892b7c865ce16570a7fd367fd916d2b62b13afa066c3",
+      "sha256": "c6e6a8ae47a67aae862c3fefaf6584d12f02077dc274e091ddc058a29082af2e",
+      "bytes": 32298,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "bar",
+      "src": "src/assets/itinerary-art/v1/bar.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/bar.png",
+      "sourceSha256": "7f7f5acfeb435b2b38fb3f371dd733ea1d34745b8e1b8f4680576b162c47cdf0",
+      "sha256": "071620e6647c3b8471c5dd76867d8350c19ef203248c8754835e6d6fc7761734",
+      "bytes": 32160,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "beach",
+      "src": "src/assets/itinerary-art/v1/beach.webp",
+      "source": "src/assets/trip-scenes/themes/v2/coast.webp",
+      "sourceSha256": "3dac9829d7a2e5c108af7af9da58d2ad16da913c08e995377d343ceaf9cfd570",
+      "sha256": "3c4db0379edcec38009e6d393e1ad1901f5ea7c11f14f5ff7ab265d59f13a585",
+      "bytes": 24834,
+      "dimensions": [
+        360,
+        216
+      ],
+      "origin": "Existing approved TripLOG asset",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "bicycle",
+      "src": "src/assets/itinerary-art/v1/bicycle.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/bicycle.png",
+      "sourceSha256": "95e2435a9f0a522cb7d375bffe97f521f8c993e2e32762e8b4bc319de35242d3",
+      "sha256": "bf7c31b5e0ea8c74dab20c149301721ea2347744882d5c776d5637dd14ce6a02",
+      "bytes": 45594,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "bus",
+      "src": "src/assets/itinerary-art/v1/bus.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/bus.png",
+      "sourceSha256": "ac46eb8c818c1b08732eaed9ca3ea96a1a79ed6ec37353191c9bf807c555a11e",
+      "sha256": "bc6c1c222da864d7db8a971b3f3b626af51f9dd743c4d8e954e0a171939debef",
+      "bytes": 25912,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "cafe",
+      "src": "src/assets/itinerary-art/v1/cafe.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-reused/food.webp",
+      "sourceSha256": "a4de70c052815e26458b949f2a535e34a7c14a11060611aa535f238bf6fad622",
+      "sha256": "379fa66c5867589ae6885bd6ac712bed5d04bfe6def1670a05896782f0551521",
+      "bytes": 23270,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "Existing approved TripLOG asset",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "camping",
+      "src": "src/assets/itinerary-art/v1/camping.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/camping.png",
+      "sourceSha256": "fa033dc98ab0572cb9f8151ba4a62bda64681b690f9351491b2b5fba9e4327ce",
+      "sha256": "9d10636cb398d39d7c1e7decec8488f57c66e1989d7fb4757e2ac7a64c8637c4",
+      "bytes": 23188,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "car",
+      "src": "src/assets/itinerary-art/v1/car.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/car.png",
+      "sourceSha256": "5ee347d354c259abcf91fd906bf04934768c6271c3dcd0de32a1be3b07fdb796",
+      "sha256": "b13ae808ac99c0ef3b009c752db04577293fc9cd93671e57363ad178d91f92ff",
+      "bytes": 21464,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "castle",
+      "src": "src/assets/itinerary-art/v1/castle.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/castle.png",
+      "sourceSha256": "38ea2f936c99c8ee982dedb21ce95a718303df71cc8278b047e7872faa89783c",
+      "sha256": "678db695883d16cd4e920a8dd658e8ac7486ab9b589e07a0b4453102225723ee",
+      "bytes": 30914,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "cave",
+      "src": "src/assets/itinerary-art/v1/cave.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/cave.png",
+      "sourceSha256": "cad87adab984e19c5be3681e2807e384d420c4e3155606405be81ea0578d98e9",
+      "sha256": "ca1f77b6abe52aa4b101c4f33bb09f91960c41dd9b1ec2f61b878efe433691ee",
+      "bytes": 26478,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "church",
+      "src": "src/assets/itinerary-art/v1/church.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/church.png",
+      "sourceSha256": "f58728bb42986a56b4950fde4094e914642ee84255062287c7c9b8b5bc1f4864",
+      "sha256": "0eacc7719bfa59a2c27da7a6c3fcd813f0bd8ff3067e881ca2693c5e0e0d03af",
+      "bytes": 30728,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "desert",
+      "src": "src/assets/itinerary-art/v1/desert.webp",
+      "source": "src/assets/trip-scenes/themes/v2/desert.webp",
+      "sourceSha256": "f353a875f2c6efe0cb3b971899f3c4de1b75e5a6665cfbd2e2a77c4e0357a4be",
+      "sha256": "3929fda423682dbc3feccf37bc0e053752996b56f6e8bbe28b14c90b891b37f2",
+      "bytes": 23046,
+      "dimensions": [
+        360,
+        216
+      ],
+      "origin": "Existing approved TripLOG asset",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "ferry",
+      "src": "src/assets/itinerary-art/v1/ferry.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/ferry.png",
+      "sourceSha256": "1c17c160c17d0658ad0fef505a8bdb09d6679b7b38aa9eb4c2e45faa834da2d7",
+      "sha256": "6b1aabf74ea755270d595da8974d791bf4d039270b2f7aae8e3a44aaf69df1f9",
+      "bytes": 22742,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "forest",
+      "src": "src/assets/itinerary-art/v1/forest.webp",
+      "source": "src/assets/trip-scenes/themes/v2/forest.webp",
+      "sourceSha256": "05141e5b25c23fcb63f206ae19af52522f2e887ffa41a99a24b0535c06c3d6fb",
+      "sha256": "c76a20e8f5fb1c594a06c501e7cac7e2372a9a63b28e5c75af14c0ae737da855",
+      "bytes": 29430,
+      "dimensions": [
+        360,
+        216
+      ],
+      "origin": "Existing approved TripLOG asset",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "gallery",
+      "src": "src/assets/itinerary-art/v1/gallery.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/gallery.png",
+      "sourceSha256": "ebb3ea6cff05a78ee8373aab948f8b757fe83650b0a075add597974e5149120e",
+      "sha256": "8fc3e01c7b3816b9a35c4b6a3f737186e5d3e29c3f344b1034f2022b323340d9",
+      "bytes": 25256,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "garden",
+      "src": "src/assets/itinerary-art/v1/garden.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-reused/sightseeing.webp",
+      "sourceSha256": "a3481b8b10e6f21dd3e488a5f73a02d60ac3e96134f2265fd84170d18e66a17e",
+      "sha256": "56b1268b5b78884c02de4af01de79a27c491b31f03f92b02348c35bb62c9f114",
+      "bytes": 37126,
+      "dimensions": [
+        360,
+        211
+      ],
+      "origin": "Existing approved TripLOG asset",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "hiking",
+      "src": "src/assets/itinerary-art/v1/hiking.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/hiking.png",
+      "sourceSha256": "c0327033d2c3eefce62f3e42373fdcd6a6c756342a4f354834b7901f3a1a3df3",
+      "sha256": "b4596477ab57e8e3d1eb0ae72ec2d6f57aa3c89c6b02c478aaa047a82bd6662e",
+      "bytes": 34512,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "hostel",
+      "src": "src/assets/itinerary-art/v1/hostel.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/hostel.png",
+      "sourceSha256": "e6892ab2e032be9d292e6d64581a77b27d0268209f232f346b11bb7aebf727fc",
+      "sha256": "2fc2fe0aa6d62b8048cf3bbbdac3a12f6ed7c8de479219b5d387fd91903cd52b",
+      "bytes": 28234,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "hotel",
+      "src": "src/assets/itinerary-art/v1/hotel.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-reused/lodging.webp",
+      "sourceSha256": "0919f01370b0eb3312886f090b44e8edaa724182b6703a29bfe944f64c30e5ed",
+      "sha256": "903c52f2643f8ba5ec106b96cf38e493fea7cb0b0490957ddf2b6142b59df358",
+      "bytes": 27472,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "Existing approved TripLOG asset",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "island",
+      "src": "src/assets/itinerary-art/v1/island.webp",
+      "source": "src/assets/trip-scenes/themes/v2/island.webp",
+      "sourceSha256": "d074fdb155e8ea6f1a1e25ca29bc57be5ccdff35319edb22e656d3ff0d9f6401",
+      "sha256": "ccee0a58fe7c905e75b0c58065a5949521fada3adcbb3ca76618a9853eb73f25",
+      "bytes": 29312,
+      "dimensions": [
+        360,
+        216
+      ],
+      "origin": "Existing approved TripLOG asset",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "lake",
+      "src": "src/assets/itinerary-art/v1/lake.webp",
+      "source": "src/assets/trip-scenes/themes/v2/lake.webp",
+      "sourceSha256": "63014dbd1bc81577b29d03cd4564b04b2a8e6eb30b5a460a5ec4a4d2dbecf378",
+      "sha256": "a48e697ef63fbba64b88d10f44293d830c4b081176234a31a4c82983781be0c9",
+      "bytes": 29738,
+      "dimensions": [
+        360,
+        216
+      ],
+      "origin": "Existing approved TripLOG asset",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "mall",
+      "src": "src/assets/itinerary-art/v1/mall.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/mall.png",
+      "sourceSha256": "78f4941386d7b0be5f574556a3fd2184258b8505db84de721fea5ce8dadd3cd5",
+      "sha256": "6655df998f050546b560285cc1d5b52958cb41486245626843658deeef63d1a8",
+      "bytes": 22874,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "market",
+      "src": "src/assets/itinerary-art/v1/market.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/market.png",
+      "sourceSha256": "8fd198fdcbe66a9d8fe20a8e6e99d379b4042fa36446973a669bb098510d536f",
+      "sha256": "006c83885bb422ccf385a57480f27d2a4b63eeeae3221f083d42089e93de8652",
+      "bytes": 35436,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "monument",
+      "src": "src/assets/itinerary-art/v1/monument.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/monument.png",
+      "sourceSha256": "1ee2aa1e1e578cbbd0ec077a83b1830840d65319d1d1533222385bf0bedd1c7b",
+      "sha256": "9b522b480678a7c3bd8b9e5e7337570896893bbc3060ac5a02fdcc4b137f9c2e",
+      "bytes": 29356,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "mosque",
+      "src": "src/assets/itinerary-art/v1/mosque.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/mosque.png",
+      "sourceSha256": "391ec02bb4d100d19a91b25a87b79a5ca39ccfe65f0199ef8a5fb852c2ffb469",
+      "sha256": "7b34376fadef105ccd7fd6ad20b4909fe4bc210e21cd433dec8672ac7b6f314c",
+      "bytes": 22790,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "mountain",
+      "src": "src/assets/itinerary-art/v1/mountain.webp",
+      "source": "src/assets/trip-scenes/themes/v2/mountain.webp",
+      "sourceSha256": "86c13acff583dd2e2f00c1570956e94ddffaf2056015ec6e4b84bc6e363fe1ac",
+      "sha256": "0e97a1547ef450b36ec9d3338e7be7bc02cf062cf135e3db8f27d76929aff5e3",
+      "bytes": 28108,
+      "dimensions": [
+        360,
+        216
+      ],
+      "origin": "Existing approved TripLOG asset",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "museum",
+      "src": "src/assets/itinerary-art/v1/museum.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/museum.png",
+      "sourceSha256": "634b6b6944304b3852494828a3b727e5d3ebe51080f1e2d10effe580982d9dd1",
+      "sha256": "a26ca92c1662a6d529a85ee8502e5eaa8eb9931490c478dd13fc21a746086143",
+      "bytes": 24114,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "oldtown",
+      "src": "src/assets/itinerary-art/v1/oldtown.webp",
+      "source": "src/assets/trip-scenes/themes/v2/traditional.webp",
+      "sourceSha256": "0ee69fc7bb32c05381560b8dbbb1d261e0dfc0a6858dd9ce13de9a5bd0af21ef",
+      "sha256": "e28647c9014ca8bbb42150846172979d75192a6f871404c8a7de05ba05a38a6a",
+      "bytes": 26278,
+      "dimensions": [
+        360,
+        216
+      ],
+      "origin": "Existing approved TripLOG asset",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "resort",
+      "src": "src/assets/itinerary-art/v1/resort.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/resort.png",
+      "sourceSha256": "77d7de868151668fd0a4c81f70ab53e434ab69503b19eca248f7a84c56e4b54b",
+      "sha256": "5524ab88dfb6261cd8b3a6a2f844544b33c5d22b11c1d94c71c3f12458ebec0d",
+      "bytes": 36398,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "restaurant",
+      "src": "src/assets/itinerary-art/v1/restaurant.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/restaurant.png",
+      "sourceSha256": "9bf60dc167f8d25025fa5f5a71aaa3605933f3794856b75113d8818969c1305d",
+      "sha256": "69a1ecdbf46f8b5140e1695846c7ba03cdeec2f8e65ace2d71225793c7684dfe",
+      "bytes": 28676,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "shopping",
+      "src": "src/assets/itinerary-art/v1/shopping.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/shopping.png",
+      "sourceSha256": "52feab89d752d00920eb636c341d97847a9878910b86de41d931ecc13a692a49",
+      "sha256": "f1c1802056ca5532f9c894fe33b6a1321f62a199b6053d3de2751f952836369b",
+      "bytes": 23148,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "shrine",
+      "src": "src/assets/itinerary-art/v1/shrine.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/shrine.png",
+      "sourceSha256": "8f2fcb4db4a82eb673a31987fb04f24f81443247993fa0c5f7fa720b76630b3c",
+      "sha256": "9e78455691699419751961275b7c9fad649d09505ee1e764a506ef8e71c2cf29",
+      "bytes": 40748,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "sightseeing",
+      "src": "src/assets/itinerary-art/v1/sightseeing.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/sightseeing.png",
+      "sourceSha256": "2efa3b9f89f0f067ef315003c41f515aca114b1600c491acf752c483b145be39",
+      "sha256": "edcc94122cdc9da738fedf585bfafe79c60240dbf36591fd717787f16c380e6c",
+      "bytes": 28508,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "snow",
+      "src": "src/assets/itinerary-art/v1/snow.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/snow.png",
+      "sourceSha256": "4a00411398fad265d1514e3f09d66a2ed593190518638795790f93bf12ec1864",
+      "sha256": "756d37dc92b50eed7a55b156a7384eaacf395e3a7e9c17f050c905d1c16c565b",
+      "bytes": 32774,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "stadium",
+      "src": "src/assets/itinerary-art/v1/stadium.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/stadium.png",
+      "sourceSha256": "fd2e888715b8e7eaf58081ae8545e863c6b6387a64235e55995598d54da330f0",
+      "sha256": "907b07490e101c82a867ccd995e54e674218bd98e87655af1d13d1e0389ce8d1",
+      "bytes": 33504,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "temple",
+      "src": "src/assets/itinerary-art/v1/temple.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/temple.png",
+      "sourceSha256": "202934c44eb42128cb4a4389ef24d52cd308a52b5f3d77c467a83410c86d4816",
+      "sha256": "f5ec85a52bd8cff38281726140d056963da3be2a9fbcd7cdc7a0d0368020fce8",
+      "bytes": 34516,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "theater",
+      "src": "src/assets/itinerary-art/v1/theater.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/theater.png",
+      "sourceSha256": "6e0a0f8b4c2221579b1365eed5ec33f7e6b4a913a1f47eb93b216892ad7309b3",
+      "sha256": "a0a67ae62de05fb112a5c4c551a72cfed6b4c466fae09744d316306830288883",
+      "bytes": 23642,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "theme-park",
+      "src": "src/assets/itinerary-art/v1/theme-park.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/theme-park.png",
+      "sourceSha256": "e59ed9739e33381967a1c613e038ae6abe816b838d4cee1840db0006de239f44",
+      "sha256": "8fd6dbfd262c3acfefee4d63eaa9bfbbfd108e0f15f107af9d78cf157a9a3301",
+      "bytes": 41422,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "tower",
+      "src": "src/assets/itinerary-art/v1/tower.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/tower.png",
+      "sourceSha256": "20797f89a5ad895e067a30b393d65c36a14005cc7ea34702edcaf31832559e76",
+      "sha256": "d9758b0365c7163533750fe51d2e39a2c6a961e51e1f6361ad12549443f2111b",
+      "bytes": 19386,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "train",
+      "src": "src/assets/itinerary-art/v1/train.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/train.png",
+      "sourceSha256": "b0874448e450ececd05652e7e5b9e69f900f85a32888bc29500d38fd86e9e533",
+      "sha256": "083c8b75e9472edcf1c0ae21d6fd6b8a26eb35115f7bc09750b0cb9fc16fa820",
+      "bytes": 28116,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "transport",
+      "src": "src/assets/itinerary-art/v1/transport.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/transport.png",
+      "sourceSha256": "c6e4ddc44684f521eeac3d81531330f354c25c84d32e4d324ebea3264cf71db3",
+      "sha256": "a012023981ad81b1bcfd914d9ef1f682d7af2b346ce0b2a9554d6c46d5aa2176",
+      "bytes": 25996,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "travel",
+      "src": "src/assets/itinerary-art/v1/travel.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/travel.png",
+      "sourceSha256": "4f0bf28d84e7e7cb3b54f18bf4f538032604a891f0461ecfb8c791671dcd4bc5",
+      "sha256": "75c91a727f259eba9c06631673eb8d36df9d55101b1c6948c47b933af4e025d5",
+      "bytes": 26018,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "urban",
+      "src": "src/assets/itinerary-art/v1/urban.webp",
+      "source": "src/assets/trip-scenes/themes/v2/urban.webp",
+      "sourceSha256": "e45c13db59caaffed63041db1732bc77dbe6b02c1424cda03fe2cfcfe77bec82",
+      "sha256": "e18adea624a9afaf450f3a77c87e517f05ebf78a846d8f8ca2223070a15fbe13",
+      "bytes": 29140,
+      "dimensions": [
+        360,
+        216
+      ],
+      "origin": "Existing approved TripLOG asset",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "walk",
+      "src": "src/assets/itinerary-art/v1/walk.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/walk.png",
+      "sourceSha256": "7dc086dd9627c9dcf7082b984011b87c4dbe4192f3172c401a1539d206daab49",
+      "sha256": "eda939f32eccf25dc11624561cdea3f6e9bf33ec6867a99df389521bb6d33807",
+      "bytes": 34520,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "waterfall",
+      "src": "src/assets/itinerary-art/v1/waterfall.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/waterfall.png",
+      "sourceSha256": "09951b9aee3f4d4a4907337587784d6a9e39d75054684c432cb4aaa89314c9f8",
+      "sha256": "02e9975e8877edf5dd8b23bdf8887f3c6aff14a274a4f11e8d043fd503422ff4",
+      "bytes": 48314,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "wellness",
+      "src": "src/assets/itinerary-art/v1/wellness.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/wellness.png",
+      "sourceSha256": "e4e22128bc49b56b725744b39a6760bde17e01d29888ebb13159ab67c1dbc659",
+      "sha256": "ae283afd2f54e5a9648331fabe385fb8d5365552ebced825a2ef0faa81e0dd44",
+      "bytes": 28932,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "wetland",
+      "src": "src/assets/itinerary-art/v1/wetland.webp",
+      "source": "src/assets/trip-scenes/themes/v2/wetland.webp",
+      "sourceSha256": "f80752f7fbe149cb3dd40d50f7e7245568e459d6cc1e7fcd9277012a27dc507a",
+      "sha256": "e5da857afe931a46de54505605fe4f72d53e1dead78b7ca2e9fa16e53b958c26",
+      "bytes": 31158,
+      "dimensions": [
+        360,
+        216
+      ],
+      "origin": "Existing approved TripLOG asset",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    },
+    {
+      "id": "zoo",
+      "src": "src/assets/itinerary-art/v1/zoo.webp",
+      "source": "artifacts/design/itinerary-art-world-20261012/assets-original/zoo.png",
+      "sourceSha256": "1186bf5e9c76994da4e8c18632106d373124a495bcc68c0fc08e1c27775e91b2",
+      "sha256": "8279a8a564973a14616b2f80241fac4b2fecde10b26daf1f5fc494dec5cd5f7d",
+      "bytes": 39482,
+      "dimensions": [
+        360,
+        210
+      ],
+      "origin": "ImageGen T2I",
+      "processing": "Proportional resize and WebP encoding only; alpha preserved"
+    }
+  ]
+}

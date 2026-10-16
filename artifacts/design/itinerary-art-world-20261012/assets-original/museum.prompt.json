@@ -1,0 +1,24 @@
+{
+  "id": "museum",
+  "prompt": "Create a small hand-drawn travel illustration of a modest museum building and one small exhibition artifact. Use a generic museum design that does not depict a real museum. Draw delicate navy pen contours with restrained sky-blue, pink, and pale-yellow watercolor touches. Keep a compact landscape composition that remains legible in a 120 × 70 CSS-pixel card, with a transparent background. Do not include country-specific imagery, brands, or text.",
+  "inputs": [],
+  "mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "transparent_background": true,
+  "generation_started_epoch": 1791809925.984,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13017-b3cf-7fb1-900d-61dcc9aee86c\\exec-80283d59-ab9d-4d1d-82b9-3cac2ae46c00.png",
+  "destination": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/museum.png",
+  "sha256": "634b6b6944304b3852494828a3b727e5d3ebe51080f1e2d10effe580982d9dd1",
+  "original_sha256": "634b6b6944304b3852494828a3b727e5d3ebe51080f1e2d10effe580982d9dd1",
+  "dimensions": [
+    1642,
+    958
+  ],
+  "file_size_bytes": 1337587,
+  "image_mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "overwritten": false
+}

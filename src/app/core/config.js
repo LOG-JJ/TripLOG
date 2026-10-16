@@ -1,14 +1,11 @@
 const STORAGE_KEY = "domesticTravelExpensePlanner.v1";
 const HISTORY_STORAGE_KEY = "domesticTravelExpensePlanner.history.v1";
 const GOOGLE_GEOCODING_API_KEY_STORAGE_KEY = "domesticTravelExpensePlanner.googleGeocodingApiKey.v1";
-const PAGE_TRANSITION_MS = 800;
-const TIME_EDGE_SCROLL_DURATION = 560;
-const TIME_WHEEL_SCROLL_DURATION = 180;
-const TIME_WHEEL_SCROLL_FACTOR = 0.38;
+
 const DAY_STRIP_EDGE_SCROLL_DURATION = 460;
 const DAY_STRIP_DRAG_THRESHOLD = 12;
 const GEOCODE_TIMEOUT_MS = 4500;
-const ROUTE_SEGMENT_TIMEOUT_MS = 6500;
+
 const PRE_TRIP_EXPENSE_DATE = "__pretrip__";
 const PRE_TRIP_EXPENSE_LABEL = "사전구매";
 const PRE_TRIP_EXPENSE_SHORT_DATE = "여행 전";
@@ -19,7 +16,6 @@ const categories = window.TripLog.data.expenseCategories.list('legacy');
 function getCategory(name) {
   return categories.find((category) => category.name === name) || categories.at(-1);
 }
-
 
 const currencies = [
   { code: "JPY", symbol: "¥", unit: "엔", label: "엔화", rateBase: 100 },
@@ -37,14 +33,9 @@ window.TripLog.register("core.config", {
   STORAGE_KEY,
   HISTORY_STORAGE_KEY,
   GOOGLE_GEOCODING_API_KEY_STORAGE_KEY,
-  PAGE_TRANSITION_MS,
-  TIME_EDGE_SCROLL_DURATION,
-  TIME_WHEEL_SCROLL_DURATION,
-  TIME_WHEEL_SCROLL_FACTOR,
   DAY_STRIP_EDGE_SCROLL_DURATION,
   DAY_STRIP_DRAG_THRESHOLD,
   GEOCODE_TIMEOUT_MS,
-  ROUTE_SEGMENT_TIMEOUT_MS,
   PRE_TRIP_EXPENSE_DATE,
   PRE_TRIP_EXPENSE_LABEL,
   PRE_TRIP_EXPENSE_SHORT_DATE,

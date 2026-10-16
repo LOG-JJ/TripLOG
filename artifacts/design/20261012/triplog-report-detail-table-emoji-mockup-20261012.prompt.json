@@ -1,0 +1,23 @@
+{
+  "request": "이동부분은 이모지쓰도록해봐 숫자조합해서",
+  "target": "TripLOG detailed itinerary table mockup; emoji and numeric duration",
+  "implementationStatus": "Mockup only; application source not changed.",
+  "generationMode": "built-in image_gen / image-to-image edit",
+  "generationStartedAt": "2026-10-12T14:22:44.736Z",
+  "generationCalls": 1,
+  "imageInputs": [
+    {
+      "path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261012/triplog-report-detail-table-mockup-20261012.png",
+      "role": "table mockup to edit",
+      "authorization": "User explicitly requested changing the transport portion of the displayed table mockup to emoji plus numbers.",
+      "sha256": "AFE8293B7512EF532F82A1C35EF3FFEB4492870A88A1E96453FF799031BEABAA"
+    }
+  ],
+  "finalPrompt": "Edit the transport information in the provided TripLOG table mockup. Replace every “이동 · 차량 15분” with exactly “🚗 15분”, using the car emoji followed by the numeric duration. Keep rows without transport information unchanged. Preserve all other text, table structure, typography, colors, spacing, header and footer.\n\nInput images:\n- triplog-report-detail-table-mockup-20261012.png: the table mockup to edit.",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a0c429-1920-7d20-a95f-bb0950d8831b\\exec-1e72a1d1-a7f5-47c8-9746-a1f9a13829ba.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261012/triplog-report-detail-table-emoji-mockup-20261012.png",
+  "sourceAndSavedSHA256": "FECC6E39F0D889656415C8EB5C997CCA4C35BE2A470AF9218A8BE6A62AF51680",
+  "sourceMatchVerified": true,
+  "overwritten": false,
+  "requestedTransportLabel": "🚗 15분"
+}

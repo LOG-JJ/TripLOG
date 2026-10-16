@@ -1,0 +1,17 @@
+{
+  "jobId": "theme-wetland-landscape",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-5e20-7f81-812c-b8a5c49d0800\\exec-d546e7b8-e3c0-42cf-849f-e88aa6b6f800.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-redraw-20261004/assets-original/theme-wetland-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, reference-guided image generation",
+  "prompt": "Create one standalone travel illustration showing a neutral wetland and open field with reeds, a gentle winding stream, low grassy hills, and a short simple boardwalk, without identifiable landmarks. Match the user's selected current Suncheon illustration style in the reference. Preserve the same visual language and drawing character while depicting this theme's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset, with the focal scene toward the center-right and bottom. Use a transparent background. Leave quiet transparent space along the upper-left and a natural irregular left silhouette visibly inside the frame. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no text, UI, labels, logos or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "e9072bf9b7978b5ef5d5d7b74e8c03f5f2e087511b404dc9a4e62ede41f428b5",
+  "savedSha256": "e9072bf9b7978b5ef5d5d7b74e8c03f5f2e087511b404dc9a4e62ede41f428b5",
+  "generationStartedAt": "2026-10-04T04:30:12.001Z"
+}

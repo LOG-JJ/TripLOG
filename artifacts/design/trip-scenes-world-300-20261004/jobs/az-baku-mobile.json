@@ -1,0 +1,19 @@
+{
+  "id": "az-baku-mobile",
+  "cityId": "az-baku",
+  "cityName": "바쿠",
+  "kind": "city",
+  "group": "caucasus-central-asia",
+  "variant": "mobile",
+  "reference": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png",
+  "prompt": "Create one standalone destination illustration of Baku: the stone Maiden Tower, the curved Flame Towers skyline and the blue Caspian waterfront. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a portrait 4:5 composition intended for a 480 × 600 mobile asset displayed in a narrow right-side header slot. Compose the main landmarks directly for this portrait frame so they remain recognizable at small size. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-world-300-20261004/assets-original/az-baku-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-world-300-20261004/assets-original/az-baku-mobile.json",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-world-300-20261004/assets-original/az-baku-mobile.prompt.txt",
+  "asset": "src/assets/trip-scenes/cities/v4/az-baku-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "status": "queued"
+}

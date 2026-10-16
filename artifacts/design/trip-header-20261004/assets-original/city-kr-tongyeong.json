@@ -1,0 +1,23 @@
+{
+  "id": "kr-tongyeong",
+  "kind": "city",
+  "mode": "built-in image_gen, text-to-image",
+  "imageInputsSent": [],
+  "prompt": "Standalone 800×480 landscape illustration of Tongyeong: many small green coastal islands, a compact harbor, colorful hillside houses, and one modest fishing boat. TripLOG postcard art direction with crisp delicate #0b1020 ink outlines, soft flat watercolor-like fills, pale blue #bce6fb, sage #b8d2bc, warm sand #f4d9a4, and restrained yellow and pink accents. Focal scene sits center-right and bottom, filling most of the canvas, with landscape contours opening organically at the left and top. Clean transparent exterior. Readable in a right-aligned 300×180 travel-header slot. No UI, text, frame, or logos.\n",
+  "source": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c0-feb5-7982-8f1c-72fc299c4bcf\\exec-2f99431e-7342-4869-a226-9dc2e83b467c.png",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "original": "artifacts/design/trip-header-20261004/assets-original/city-kr-tongyeong.png",
+  "sourceSha256": "9c66cfdc62d9ed58ac931d59158920f942aeeb81089b6afd834fcf7d869444cd",
+  "originalMatchesSource": true,
+  "asset": "src/assets/trip-scenes/cities/v1/kr-tongyeong.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "bytes": 144870,
+  "assetSha256": "fe44867006c4f7107e9d74e21bb0d655aeb81842fe437a3ad997c21e81570af0",
+  "overwritten": false
+}

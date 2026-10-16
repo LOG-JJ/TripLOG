@@ -1,0 +1,19 @@
+{
+  "id": "au-brisbane-landscape",
+  "cityId": "au-brisbane",
+  "cityName": "브리즈번",
+  "kind": "city",
+  "group": "oceania",
+  "variant": "landscape",
+  "reference": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon.png",
+  "prompt": "Create one standalone destination illustration of Brisbane: the steel Story Bridge over the curving Brisbane River, city towers and subtropical greenery. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-world-300-20261004/assets-original/au-brisbane-landscape.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-world-300-20261004/assets-original/au-brisbane-landscape.json",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-world-300-20261004/assets-original/au-brisbane-landscape.prompt.txt",
+  "asset": "src/assets/trip-scenes/cities/v4/au-brisbane.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "status": "queued"
+}

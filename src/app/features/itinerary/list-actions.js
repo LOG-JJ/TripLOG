@@ -19,126 +19,6 @@ async function moveItineraryItem(draggedId, targetId, placement = 'before') {
   } finally { itineraryReorderPending = false; }
 }
 
-function updateInlineItineraryField(id, field, value) {
-  const item = findItineraryItem(id);
-  if (!item) return;
-
-  if (field === 'endTime' && item.theme === 'lodging') return;
-
-  if (item[field] === value) return;
-  item[field] = value;
-
-  // Keep transit duration as the fixed value between adjacent places.
-  if (field === "time") {
-    const dayItems = getFilteredItineraryItems();
-    const idx = dayItems.findIndex(x => x.id === id);
-    if (idx > 0) {
-      const prevItem = dayItems[idx - 1];
-      const transitDuration = getTransitDurationMinutes(item);
-      const calculatedEndTime = addMinutesToTime(value, -transitDuration);
-      if (calculatedEndTime && prevItem.theme !== 'lodging') {
-        prevItem.endTime = calculatedEndTime;
-      }
-    }
-  }
-
-  if (field === "endTime") {
-    const dayItems = getFilteredItineraryItems();
-    const idx = dayItems.findIndex(x => x.id === id);
-    if (idx < dayItems.length - 1) {
-      const nextItem = dayItems[idx + 1];
-      const transitDuration = getTransitDurationMinutes(nextItem);
-      const calculatedStartTime = addMinutesToTime(value, transitDuration);
-      if (calculatedStartTime) {
-        nextItem.time = calculatedStartTime;
-      }
-    }
-  }
-
-  if (field === "duration") {
-    const dayItems = getFilteredItineraryItems();
-    const idx = dayItems.findIndex(x => x.id === id);
-    if (idx > 0) {
-      const prevItem = dayItems[idx - 1];
-      const baseTime = (prevItem.theme === 'lodging' ? '' : prevItem.endTime) || prevItem.time;
-      if (baseTime) {
-        const calculatedTime = addMinutesToTime(baseTime, Number(value) || 0);
-        if (calculatedTime) {
-          item.time = calculatedTime;
-        }
-      }
-    }
-  }
-
-  // Synchronize travel expenses in main ledger
-  syncSegmentExpense(item);
-
-  saveAndRender();
-}
-
-function addTravelSegment(id) {
-  const item = findItineraryItem(id);
-  if (!item) return;
-
-  if (!item.transits) {
-    item.transits = [{ trans: item.trans || "none", duration: item.duration || 0, cost: item.cost || 0, memo: "" }];
-  }
-  item.transits.push({ trans: "walk", duration: 0, cost: 0, memo: "" });
-
-  syncTransitTotals(item);
-
-  saveAndRender();
-}
-
-function deleteTravelSegment(id, index) {
-  const item = findItineraryItem(id);
-  if (!item || !item.transits || item.transits.length <= index) return;
-
-  item.transits.splice(index, 1);
-
-  syncTransitTotals(item);
-  syncSegmentExpense(item);
-
-  saveAndRender();
-}
-
-function updateTravelSegmentField(id, index, field, value) {
-  const item = findItineraryItem(id);
-  if (!item) return;
-
-  if (!item.transits) {
-    item.transits = [{ trans: item.trans || "none", duration: item.duration || 0, cost: item.cost || 0, memo: "" }];
-  }
-  if (item.transits.length <= index) return;
-
-  if (item.transits[index][field] === value) return;
-  item.transits[index][field] = value;
-
-  // Recalculate totals
-  syncTransitTotals(item);
-
-  // If travel duration changed, auto-update current start time from preceding item
-  if (field === "duration") {
-    const dayItems = getFilteredItineraryItems();
-    const idx = dayItems.findIndex(x => x.id === id);
-    if (idx > 0) {
-      const prevItem = dayItems[idx - 1];
-      const baseTime = (prevItem.theme === 'lodging' ? '' : prevItem.endTime) || prevItem.time;
-      if (baseTime) {
-        const calculatedTime = addMinutesToTime(baseTime, item.duration);
-        if (calculatedTime) {
-          item.time = calculatedTime;
-        }
-      }
-    }
-  }
-
-  // Sync expenses
-  syncSegmentExpense(item);
-
-  saveAndRender();
-}
-
 function syncTransitTotals(item) {
   if (!item.transits || item.transits.length === 0) {
     item.transits = [{ trans: item.trans || "none", duration: item.duration || 0, cost: item.cost || 0, memo: "" }];
@@ -148,18 +28,12 @@ function syncTransitTotals(item) {
   item.trans = item.transits[0]?.trans || "none";
 }
 
-function getTransitDurationMinutes(item) {
-  if (!item) return 0;
-  syncTransitTotals(item);
-  return Math.max(0, Number(item.duration) || 0);
-}
-
 function syncSegmentExpense(item) {
   if (item.syncExpense && item.cost > 0) {
     const transLabels = { walk: "도보", car: "차량", train: "기차", bus: "버스", flight: "비행", etc: "비행", none: "이동" };
     const segmentsDesc = item.transits.map(x => transLabels[x.trans] || "이동").filter(Boolean).join("+");
     const desc = `${item.place} 이동 경비 (${segmentsDesc})`;
-    
+
     if (item.expenseId) {
       state.entries = state.entries.map(entry => {
         if (entry.id === item.expenseId) {
@@ -206,11 +80,6 @@ function handleItineraryListAction(event) {
 
 window.TripLog.register("features.itinerary.listActions", {
   moveItineraryItem,
-  updateInlineItineraryField,
   handleItineraryListAction,
-  addTravelSegment,
-  deleteTravelSegment,
-  updateTravelSegmentField,
   syncTransitTotals,
-  getTransitDurationMinutes,
 });

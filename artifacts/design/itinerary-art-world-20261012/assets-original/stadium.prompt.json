@@ -1,0 +1,24 @@
+{
+  "id": "stadium",
+  "prompt": "Create a small hand-drawn travel illustration of an oval sports stadium with a grassy playing field. Use delicate navy pen contours with restrained pastel watercolor touches. Keep a compact landscape composition that remains legible in a 120 × 70 CSS-pixel card, with a transparent background. Do not depict a real stadium or identify a country or team. No text.",
+  "inputs": [],
+  "mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "transparent_background": true,
+  "generation_started_epoch": 1791811085.122,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13017-b3cf-7fb1-900d-61dcc9aee86c\\exec-a0c40fa7-fb37-4b78-83da-dd825a60c910.png",
+  "destination": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/stadium.png",
+  "sha256": "fd2e888715b8e7eaf58081ae8545e863c6b6387a64235e55995598d54da330f0",
+  "original_sha256": "fd2e888715b8e7eaf58081ae8545e863c6b6387a64235e55995598d54da330f0",
+  "dimensions": [
+    1642,
+    958
+  ],
+  "file_size_bytes": 2123812,
+  "image_mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "overwritten": false
+}

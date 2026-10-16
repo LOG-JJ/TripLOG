@@ -1,3 +1,4 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser, fixtureToken, blockExternalRequests, startServer, stopServer } = require('./helpers/browser-fixture');
 // Browser plugin unavailable: repository Playwright/Edge fixtures; every external
 // request is blocked. Live visual QA is additionally performed in the in-app browser.
@@ -5,7 +6,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const fixtures = require('./fixtures/trip-library');
-const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Home-Passport-20261003');
+const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || artifactDirectory('trip-library');
 const fixedDate = new Date('2026-10-03T09:00:00+09:00');
 async function main() {
   fs.mkdirSync(output, { recursive: true });

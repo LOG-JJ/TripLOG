@@ -86,19 +86,6 @@ function compareExpenseEntryDates(a, b) {
   return getExpenseDateSortKey(a?.date).localeCompare(getExpenseDateSortKey(b?.date));
 }
 
-function getTripDayEntryTotal(days = getTripDays(), entries = state.entries) {
-  const dayDates = new Set((Array.isArray(days) ? days : []).map((day) => day.date));
-  return (Array.isArray(entries) ? entries : []).reduce((sum, entry) => (
-    dayDates.has(entry.date) ? sum + Number(entry.amount || 0) : sum
-  ), 0);
-}
-
-function getPreTripEntryTotal(entries = state.entries) {
-  return (Array.isArray(entries) ? entries : []).reduce((sum, entry) => (
-    isPreTripExpenseDate(entry.date) ? sum + Number(entry.amount || 0) : sum
-  ), 0);
-}
-
 window.TripLog.register("navigation.tripDates", {
   updateTripDate,
   getTripDays,
@@ -109,6 +96,4 @@ window.TripLog.register("navigation.tripDates", {
   getExpenseDayMeta,
   getExpenseDateSortKey,
   compareExpenseEntryDates,
-  getTripDayEntryTotal,
-  getPreTripEntryTotal,
 });

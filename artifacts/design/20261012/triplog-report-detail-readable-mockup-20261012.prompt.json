@@ -1,0 +1,24 @@
+{
+  "request": "리포트 상세일정 가독성 높힌 목업좀ㄱㄱ 지금 너무 텍스트나열임그쪽은",
+  "artifactType": "design-mockup",
+  "target": "TripLOG PDF report detailed itinerary page",
+  "implementationStatus": "Mockup only; application source not changed by this request.",
+  "generationMode": "built-in image_gen / text-to-image",
+  "generationStartedAt": "2026-10-12T14:14:40.049Z",
+  "imageInputs": [],
+  "generationCalls": 1,
+  "finalPrompt": "Create a Korean TripLOG report mockup for the “상세 일정” page. Show one complete A4 portrait page, 210 × 297 mm, designed at approximately 794 × 1123 CSS pixels. Use the existing TripLOG design language: white paper, dark navy text and fine outlines, restrained pastel pink, pale blue and pale yellow accents, friendly Korean typography with a clear size hierarchy.\n\nPreserve a compact report header: “TripLOG”, “순천의 사흘”, “2026.10.09 – 10.11 · 2명”, and the page title “상세 일정”. This page is an example showing the first two days of the three-day trip.\n\nImprove scanning through day-level grouping, a narrow left time column and a wider right content area. Display each date once in a distinct day heading. Make place names the strongest text within each stop, with a small category icon or label. Place the address underneath in quieter text. Give each memo its own lightly tinted area labelled “메모”. Show incoming travel information between stops as a compact connector with a vehicle icon and “차량 · 15분”. Keep time ranges clearly separated from the place details. Use generous line spacing while fitting six stops comfortably on this page. Place names should read at about 16px and supporting text at about 13px at the stated design size.\n\nUse this existing sample content:\n\n“DAY 1 · 10.09 (금)”\n“10:30–10:50” / “순천역” / “전남 순천시 팔마로 135” / “기차에서 내려 여행 시작”.\n“11:00–16:00” / “순천만국가정원” / “전남 순천시 국가정원1호길 47” / “입장권과 편한 신발 챙기기”.\n“18:00” / “순천 호텔” / “순천 시내” / “체크인 후 저녁 산책”.\n\n“DAY 2 · 10.10 (토)”\n“09:30–11:30” / “낙안읍성” / “전남 순천시 낙안면 충민길 30” / “성곽길 천천히 걷기”.\n“12:30–14:00” / “감성 카페” / “낙안면” / “커피와 함께 쉬어 가기”.\n“16:00–18:00” / “순천만습지” / “전남 순천시 순천만길 513-25” / “갈대길 걷기와 해질녘 풍경”.\n\nFinish with a small TripLOG report footer and page number “2 / 3”.",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a0c429-1920-7d20-a95f-bb0950d8831b\\exec-058d6334-8163-41f3-a15c-e8055c7bbb4c.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261012/triplog-report-detail-readable-mockup-20261012.png",
+  "sourceAndSavedSHA256": "661AFE3FB967A8E51FBA1C11EC09C4ADDC920BDB952B18DBB203FD9BE4DAC23E",
+  "sourceMatchVerified": true,
+  "overwritten": false,
+  "sampleContentSource": "scripts/fixtures/export-reports.js, original export-suncheon fixture; DAY 1 and DAY 2 excerpt.",
+  "targetGeometry": {
+    "paper": "A4 portrait",
+    "widthMm": 210,
+    "heightMm": 297,
+    "referenceCssWidth": 794,
+    "referenceCssHeight": 1123
+  }
+}

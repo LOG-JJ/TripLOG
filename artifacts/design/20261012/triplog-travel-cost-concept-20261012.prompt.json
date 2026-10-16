@@ -1,0 +1,12 @@
+{
+  "mode": "T2I",
+  "inputs": [],
+  "prompt": "Create a focused UI reference for the existing Korean TripLOG app, showing a 390-pixel-wide mobile travel-cost summary on the left and the matching expense PDF summary on the right. Preserve TripLOG’s white background, dark navy typography, yellow actions, pale sky-blue and pink accents, readable Korean sans-serif text, and delicate hand-drawn travel illustration style. The feature records actual accumulated spending. Use the exact labels “여행 경비”, “486,000원”, “기록한 지출 14건”, “1인 평균 243,000원”, and “지출 기록 보기”. Give the cumulative amount the strongest hierarchy, with the record count and per-person average as smaller supporting information. Keep the travel information on the left and a small travel illustration on the right. The PDF summary should pair the total amount with the record count and per-person average, followed by category spending proportions and the full expense table. Do not include a planned budget, remaining allowance, spending-limit progress bar, or budget-edit control.",
+  "started": {
+    "current_time": "2026-10-12 12:57:09 UTC"
+  },
+  "original": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-de513a9c-1aee-4f93-8487-e5d83e9d7e47.png",
+  "saved": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261012/triplog-travel-cost-concept-20261012.png",
+  "sha256Matches": true,
+  "overwritten": false
+}

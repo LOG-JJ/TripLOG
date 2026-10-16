@@ -1,0 +1,21 @@
+{
+  "jobId": "au-cairns-mobile",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104c1-5e20-7f81-812c-b8a5c49d0800/exec-e4bf4456-8dc2-4c84-84a6-605cf128e7a4.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-world-300-20261004/assets-original/au-cairns-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Cairns: the palm-lined Cairns Esplanade, its blue swimming lagoon and a small marina against green tropical hills. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a portrait 4:5 composition intended for a 480 × 600 mobile asset displayed in a narrow right-side header slot. Compose the main landmarks directly for this portrait frame so they remain recognizable at small size. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png"
+  ],
+  "sourceSha256": "6dbf70e7f7c484fad1c541a44a8f7ba67a5cee8f94df2c464e9afc383e531b7a",
+  "savedSha256": "6dbf70e7f7c484fad1c541a44a8f7ba67a5cee8f94df2c464e9afc383e531b7a",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T12:31:17.032Z",
+  "savedAt": "2026-10-04T12:32:15.720013+00:00"
+}

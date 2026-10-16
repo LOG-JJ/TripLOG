@@ -1,0 +1,27 @@
+{
+  "id": "zoo",
+  "generation_mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "generation_started_at_utc": "2026-10-12T13:16:26.670000+00:00",
+  "prompt": "Create a small scene representing a zoo visit or wildlife observation, with a giraffe, a bird, low grass, and a tree. Draw the animals with natural proportions. Use delicate hand-drawn navy pen outlines with restrained sky blue, pink, and pale yellow watercolor touches. Keep the composition horizontal, simple, and legible in a 120 × 70 CSS-pixel itinerary card, with a travel-journal feeling consistent with TripLOG. Make the surrounding background transparent. Do not include a specific park, brands, or text.",
+  "input_images": [],
+  "transparent_background_requested": true,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13017-ef22-7373-affc-cfc60dbf9faf\\exec-ab2f6614-cbdd-41c9-85a3-beff2ca3c952.png",
+  "destination_path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/zoo.png",
+  "sha256": "1186bf5e9c76994da4e8c18632106d373124a495bcc68c0fc08e1c27775e91b2",
+  "original_sha256": "1186bf5e9c76994da4e8c18632106d373124a495bcc68c0fc08e1c27775e91b2",
+  "destination_sha256": "1186bf5e9c76994da4e8c18632106d373124a495bcc68c0fc08e1c27775e91b2",
+  "sha256_matches": true,
+  "original_unmodified": true,
+  "overwrote_existing_file": false,
+  "dimensions": [
+    1643,
+    957
+  ],
+  "size_bytes": 1783013,
+  "mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ]
+}

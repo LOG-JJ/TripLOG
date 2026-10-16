@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "prepare:sync": "node scripts/prepare-sync-assets.js",
+    "artifacts:check": "node scripts/artifacts-check.js",
     "preview": "node scripts/serve-test.js",
     "build": "npm run prepare:sync && node scripts/build.js",
     "test:sync": "node scripts/sync-database-regression.js && node scripts/sync-client-regression.js && node scripts/sync-service-regression.js && node scripts/sync-presentation-regression.js",
     "test:browser": "npm run prepare:sync && node scripts/run-browser-regressions.js",
     "test:offline": "node scripts/sync-offline-browser-regression.js",
+    "test:edge": "node scripts/run-edge-regressions.js",
     "test:maps": "node scripts/coordinate-cache-regression.js && node scripts/place-selection-regression.js",
     "test:order": "node scripts/itinerary-order-regression.js",
     "test:print": "node scripts/print-report-regression.js && node scripts/print-export-browser-regression.js",

@@ -1,0 +1,10 @@
+{
+  "createdAt": "2026-10-12T16:20:02.806Z",
+  "mode": "built-in image_gen / T2I",
+  "prompt": "Design the complete first page of TripLOG’s Korean expense PDF on an A4 portrait canvas, 794 × 1123 pixels. Fill the usable page with expense summaries, readable charts, and two spending highlights. Detailed expense transactions must begin on the following page; do not include a transaction table on this page. Use the project’s white paper, dark navy typography, pastel blue, pink, and yellow accents. Keep trip information on the left and a hand-drawn destination illustration on the right. Trip: “순천의 사흘”, “2026.10.09–10.11”, “2명”. Total: “486,000원”; “기록한 지출 14건”; “1인 평균 243,000원”. Include a prominent “항목별 지출 비중” chart: 숙소 180,000원 37%, 식비 126,000원 26%, 교통 90,000원 19%, 관광 54,000원 11%, 기타 36,000원 7%. Include “일자별 지출 현황” with dates, amounts, horizontal share bars, and clear percentages: 10.09 (금) 186,000원 38.3%; 10.10 (토) 174,000원 35.8%; 10.11 (일) 126,000원 25.9%. Replace the lower transaction table with “하루 평균 지출 162,000원” and “가장 많이 쓴 날 10.09 (금) · 186,000원”. Balance the chart sizes, typography, spacing, and lower highlights so this reads as one complete report page.",
+  "inputImages": [],
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-d4ed7ce1-6997-4ddc-b02e-b2afe1465c5e.png",
+  "savedPath": "artifacts/design/20261013/triplog-expense-overview-20261013.png",
+  "overwritten": false,
+  "sha256": "EEEE68EE7EF2D4C365B538DBD04DD935713F50312A5BEC64E22593EE2980234B"
+}

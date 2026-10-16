@@ -1,3 +1,4 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser, blockExternalRequests } = require('./helpers/browser-fixture');
 // Browser plugin unavailable; run the repository's isolated Playwright/Edge checks.
 // Synthetic preview only. Production services are blocked.
@@ -6,7 +7,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { createReservationPocketPreview } = require('./preview-reservation-pockets');
 const fixture = require('./fixtures/reservation-pockets');
-const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Reservation-Summary-20261004');
+const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || artifactDirectory('reservation-pockets');
 async function main() {
   fs.mkdirSync(output, { recursive: true });
   const server = createReservationPocketPreview(); await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));

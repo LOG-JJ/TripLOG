@@ -1,0 +1,24 @@
+{
+  "id": "gallery",
+  "prompt": "Create a small hand-drawn travel illustration of an exhibition-room entrance, an easel holding an abstract painting, and a small sculpture pedestal. Use delicate navy pen contours with restrained pastel watercolor touches. Keep a compact landscape composition that remains legible in a 120 × 70 CSS-pixel card, with a transparent background. Do not depict real artworks or real places, and do not include brands or text.",
+  "inputs": [],
+  "mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "transparent_background": true,
+  "generation_started_epoch": 1791810016.307,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13017-b3cf-7fb1-900d-61dcc9aee86c\\exec-6e280ac8-6d7c-473f-93be-ea83f15c7f68.png",
+  "destination": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/gallery.png",
+  "sha256": "ebb3ea6cff05a78ee8373aab948f8b757fe83650b0a075add597974e5149120e",
+  "original_sha256": "ebb3ea6cff05a78ee8373aab948f8b757fe83650b0a075add597974e5149120e",
+  "dimensions": [
+    1642,
+    958
+  ],
+  "file_size_bytes": 1431533,
+  "image_mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "overwritten": false
+}

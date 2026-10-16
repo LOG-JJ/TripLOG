@@ -1,0 +1,23 @@
+{
+  "id": "forest",
+  "kind": "theme",
+  "mode": "built-in image_gen, text-to-image",
+  "imageInputsSent": [],
+  "prompt": "Create a standalone forest travel illustration on an 800 × 480 landscape canvas for a compact website header. Show a green mixed forest with a gentle wooded hill, a quiet walking path, and one tiny simple cabin. Do not include identifiable landmarks. Use crisp, delicate ink outlines in #0b1020 and soft, flat watercolor-like fills: pale blue #bce6fb, sage #b8d2bc, warm sand #f4d9a4, with restrained yellow and pink accents. Arrange the focal cluster toward the center-right and bottom, filling most of the canvas while retaining organic open edges at the left and top. Keep the exterior fully transparent. No UI, text, frame, or logos.\n",
+  "source": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-35a4-74c3-916e-ab6a0794b3ea\\exec-74d63fc9-dd58-4d56-b2e9-f3f80d3de388.png",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "original": "artifacts/design/trip-header-20261004/assets-original/theme-forest.png",
+  "sourceSha256": "47ee0be6f39c6523d93ffe7a98d5a4abd5291018269b73de821886a55ebe0711",
+  "originalMatchesSource": true,
+  "asset": "src/assets/trip-scenes/themes/v1/forest.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "bytes": 191654,
+  "assetSha256": "a23965ba6768c561ad72c31169605b0352c03511ccd2b61fbe00dd8d1d38a11d",
+  "overwritten": false
+}

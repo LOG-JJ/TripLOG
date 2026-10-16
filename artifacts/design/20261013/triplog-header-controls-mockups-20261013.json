@@ -1,0 +1,73 @@
+{
+  "createdOn": "2026-10-13",
+  "task": "TripLOG connection-status and menu header controls",
+  "userReference": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-4e4821e2-dab0-495c-a638-142b07a384e8.png",
+  "referenceUse": "Inspected to identify the improvement target; not attached to any generation.",
+  "generationPath": "Built-in image_gen; three independent T2I calls; no image inputs or chained generations.",
+  "requestedComponentSize": {
+    "width": 286,
+    "height": 88,
+    "unit": "CSS px"
+  },
+  "numbering": "Actual displayed order of the three generated image results, excluding the existing-app screenshot.",
+  "implementationStatus": "Mockups only; awaiting selection.",
+  "variants": [
+    {
+      "prompt": "Create a refined TripLOG header-controls UI mockup. Show only two separate icon buttons in a horizontal row, designed for a 286 × 88 px component area and rendered at high resolution. Each button has a 48 × 48 px touch area, rounded corners, a precise dark ink outline (#0b1020), and a restrained 2 px offset shadow. The connection-status button has a pale yellow surface and a cloud with circular-arrow icon, with a small amber status dot indicating reconnection. The menu button has a white surface and a clear three-line menu icon. Keep icon strokes consistent, spacing balanced, and the overall white surface clean. Match TripLOG's friendly flat interface with dark outlines and soft pastel accents. Use icons only, with no visible words or labels. Show one finished component design.",
+      "mode": "T2I",
+      "inputImages": [],
+      "name": "분리형 아이콘 버튼",
+      "startedAt": 1791888938.196,
+      "result": {
+        "source": "C:/Users/tbdk5/.codex/generated_images/01a13376-7f99-7e50-a150-a88282253a0f/exec-6092ee5d-7ee7-4af8-855e-764fd536f045.png",
+        "saved": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261013/triplog-header-controls-separated-20261013.png",
+        "sha256": "46F00EB591AE688ADEE5011EB9D91A2B67B95EE8B551CFD6DCB0C510622A71DC",
+        "matched": true,
+        "overwritten": false
+      },
+      "displayOrder": 1,
+      "actualPixels": {
+        "width": 2098,
+        "height": 749
+      }
+    },
+    {
+      "name": "연결형 컨트롤 캡슐",
+      "mode": "T2I",
+      "inputImages": [],
+      "startedAt": 1791889027.807,
+      "prompt": "Create a refined TripLOG header-controls UI mockup using one compact horizontal capsule with two distinct touch zones. Design it for a 286 × 88 px component area, rendered at high resolution. The capsule is 120 × 48 px, with a white surface, rounded ends, a precise dark ink outline (#0b1020), and a subtle vertical divider. The left zone contains a cloud with circular-arrow icon on a soft pastel-blue inset surface (#bce6fb), plus a small amber status dot for reconnection. The right zone contains a clear three-line menu icon. Use consistent icon strokes, careful optical alignment, and generous space around the capsule. Match TripLOG's friendly flat interface with dark outlines and soft pastel accents. Use icons only, with no visible words or labels. Show one finished component design on white.",
+      "result": {
+        "source": "C:/Users/tbdk5/.codex/generated_images/01a13376-7f99-7e50-a150-a88282253a0f/exec-9c467ff0-c2d3-4f55-ad5e-32a47e19d325.png",
+        "saved": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261013/triplog-header-controls-capsule-20261013.png",
+        "sha256": "912DC223B8E6F9D42859EA626FF1E70D6BCBCB37CC912914F9BE0C1CE9852C28",
+        "matched": true,
+        "overwritten": false
+      },
+      "displayOrder": 2,
+      "actualPixels": {
+        "width": 1789,
+        "height": 879
+      }
+    },
+    {
+      "name": "메뉴 강조형",
+      "mode": "T2I",
+      "inputImages": [],
+      "startedAt": 1791889095.672,
+      "prompt": "Create a refined TripLOG header-controls UI mockup with a prominent menu button and a quieter connection-status control. Design for a 286 × 88 px component area, rendered at high resolution. Arrange the two controls horizontally with balanced spacing. On the left, place a dark ink cloud-with-circular-arrow icon within a 44 × 44 px touch area, without a visible button frame. Add one small amber status dot to indicate reconnection. On the right, use a 48 × 48 px rounded-square menu button filled with TripLOG yellow (#fff05a), outlined in dark ink (#0b1020), with a restrained 2 px offset shadow and a clear three-line menu icon. Keep the icon strokes consistent and the white background spacious. Match TripLOG's friendly flat interface and pastel color language. Use icons only, with no visible words or labels. Show one finished component design.",
+      "result": {
+        "source": "C:/Users/tbdk5/.codex/generated_images/01a13376-7f99-7e50-a150-a88282253a0f/exec-73fc076c-13c2-4efd-99a6-8847a23bd78d.png",
+        "saved": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261013/triplog-header-controls-menu-20261013.png",
+        "sha256": "4CFCACF73452B7CDB06AFB2558C89F6CBCCC88C3194409173E0FD443A8A3BB97",
+        "matched": true,
+        "overwritten": false
+      },
+      "displayOrder": 3,
+      "actualPixels": {
+        "width": 2095,
+        "height": 750
+      }
+    }
+  ]
+}

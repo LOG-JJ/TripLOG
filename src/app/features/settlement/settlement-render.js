@@ -51,7 +51,7 @@ function renderSettlementEditors(totals) {
   const companions = state.companions || [];
   const settings = getSettlementSettings();
   const settlementModel = buildSettlementModel(selectedSource);
-  const { members, entryRows, totalTripSpent, memberSummaries, invalidEntries, transactions } = settlementModel;
+  const { members, entryRows } = settlementModel;
   const expandedEntryKey = entryRows.some((row) => row.key === settings.expandedEntryKey) ? settings.expandedEntryKey : "";
   if (settings.expandedEntryKey && !expandedEntryKey) settings.expandedEntryKey = "";
 

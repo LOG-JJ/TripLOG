@@ -108,7 +108,6 @@ body.rd-app {
     font-size: var(--tl-text-body); font-weight: var(--tl-weight-control); line-height: 1.4;
   }
   body.rd-app .calendar-title { font-size: var(--tl-text-section); }
-  body.rd-app .time-dropdown-trigger .time-dropdown-input { font-size: var(--tl-text-input); }
   body.rd-app :is(#rdCurrency, #rdBackup, #rdAdvanced) h3 {
     font-size: var(--tl-text-section) !important; font-weight: 700 !important;
   }
@@ -130,8 +129,6 @@ body.rd-app {
     line-height: 1.3; letter-spacing: -.025em; font-variant-numeric: tabular-nums;
     overflow-wrap: anywhere;
   }
-  body.rd-app .ex-budget-values strong { font-size: var(--tl-text-feature); font-weight: 700; }
-  body.rd-app .ex-budget-values > div:first-child strong { font-size: var(--tl-text-amount); }
   body.rd-app :is(#rdExpenseEditor .ex-payment-amount input, #rdReservation .pp-amount-row input) {
     font-size: var(--tl-text-amount); font-weight: 700; line-height: 1.3;
   }

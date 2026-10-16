@@ -1,0 +1,75 @@
+{
+  "checkedAt": "2026-10-16T00:43:43.926817+00:00",
+  "scope": "Local working tree verification before Git push; production deployment is checked separately.",
+  "browser": {
+    "availability": "Browser plugin not available; repository Playwright with installed Edge",
+    "flow": "Isolated trip opens, pages render, itinerary/expenses/reservations/controls/maps/sync/offline actions persist correctly.",
+    "suites": 34,
+    "passed": true,
+    "cityViewportChecks": 1260,
+    "visualComparison": {
+      "pages": [
+        "overview",
+        "budget",
+        "itinerary",
+        "report",
+        "settings"
+      ],
+      "widths": [
+        320,
+        390,
+        1440
+      ],
+      "identicalScreens": 15,
+      "allImagesLoaded": true,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true
+    }
+  },
+  "commands": [
+    {
+      "command": "npm test",
+      "result": "passed"
+    },
+    {
+      "command": "npm run test:browser",
+      "result": "passed; all 34 registered suites"
+    },
+    {
+      "command": "npm run test:edge",
+      "result": "passed; Deno 2.9.6, 1 server-boundary test, package.json discovery isolated and default dependency-age policy retained"
+    },
+    {
+      "command": "npm run build",
+      "result": "passed"
+    },
+    {
+      "command": "npm run test:source",
+      "result": "passed; 105 app modules, 27 stylesheets, 34 browser suites"
+    },
+    {
+      "command": "npm run artifacts:check",
+      "result": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed"
+    },
+    {
+      "command": "TripLOG skill quick_validate.py",
+      "result": "passed"
+    }
+  ],
+  "artifactIntegrity": {
+    "localMarkdownLinksChecked": 798,
+    "brokenLocalLinks": 0,
+    "itineraryIllustrationSourcesAndOutputsVerified": 50,
+    "unchangedGenerationPromptValues": 1459,
+    "movedImageAndVideoHashesVerified": 2813
+  },
+  "notes": [
+    "No production trip or account data was used in tests.",
+    "No Supabase schema or function deployment was performed.",
+    "Windows Edge validation and CSS-size checks do not constitute a physical iOS Safari test."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "prompt": "Create one standalone Suncheon destination illustration in a landscape 5:3 composition, intended for an 800 × 480 asset. Preserve the original reference's illustrated visual language. Show wetlands with reeds, winding pale blue water, hills, an outlined sun and cloud, a boardwalk, and a heron. Use crisp hand-drawn dark outlines, pale flat blue, green, and yellow colors, and modest paper-pencil detail. Keep it an illustration, not a photo or a painterly realistic scene.\n\nUse a transparent background. The illustrated landscape must reach the right and bottom canvas edges without transparent padding along those edges. Give the left edge a natural irregular silhouette and leave the upper-left quiet and transparent. Put the heron, boardwalk, and recognizable river details in the right half so they remain meaningful when the artwork is cropped narrowly from the right at mobile size. Artwork only: no text, UI, or border.\n\nInput images:\n- codex-clipboard-45b82e80-c258-4aa5-bbde-bed5bfd786f5.png: Original user-selected reference and exact style authority.",
+  "startedAt": "2026-10-04T03:15:07.814Z",
+  "startedEpoch": 1791083707.814,
+  "input": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-45b82e80-c258-4aa5-bbde-bed5bfd786f5.png",
+  "finishedAt": "2026-10-04T03:16:04.983Z",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104e7-e587-7d23-8d34-8e0712636c97/exec-1fc89017-404e-4530-a319-e66b81e24d20.png",
+  "destinationPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon.png",
+  "generationMode": "built-in image_gen; single I2I using original user-selected reference",
+  "transparentBackground": true,
+  "referenceRole": "Original user-selected reference and exact style authority",
+  "requestedAspectRatio": "5:3",
+  "intendedDisplayAssetSize": [
+    800,
+    480
+  ],
+  "imageInputs": [
+    "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-45b82e80-c258-4aa5-bbde-bed5bfd786f5.png"
+  ],
+  "generatedImageInputs": [],
+  "generationCount": 1,
+  "overwrite": false,
+  "sourceSha256": "8be62382845e53791e695e49b20a1c631e3e621d40fee07935c0f4c9832af822",
+  "savedSha256": "8be62382845e53791e695e49b20a1c631e3e621d40fee07935c0f4c9832af822",
+  "sha256Match": true,
+  "referenceSha256": "afe5d59804562aed7b1aafd6b9f40d17d454708da1c29602289dd818bd64b7c8",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "pngColorType": 6,
+  "bytes": 1700675
+}

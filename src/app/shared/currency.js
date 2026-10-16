@@ -140,12 +140,6 @@ function formatForeignAmount(entry) {
   return `${formatForeignNumber(entry.foreignAmount)}${currency.unit}`;
 }
 
-function formatEntryAmountText(entry) {
-  if (!isForeignEntry(entry)) return formatWon(entry.amount);
-  if (isWonCurrency(entry.currency)) return formatWon(entry.amount);
-  return `${formatForeignAmount(entry)} (${formatWon(entry.amount)})`;
-}
-
 function formatEntryAmountHtml(entry) {
   if (!isForeignEntry(entry)) return escapeHtml(formatWon(entry.amount));
   if (isWonCurrency(entry.currency)) return escapeHtml(formatWon(entry.amount));
@@ -175,6 +169,5 @@ window.TripLog.register("shared.currency", {
   formatRateBase,
   formatForeignNumber,
   formatForeignAmount,
-  formatEntryAmountText,
   formatEntryAmountHtml,
 });

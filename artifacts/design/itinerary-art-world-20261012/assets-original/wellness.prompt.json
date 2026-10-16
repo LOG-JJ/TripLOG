@@ -1,0 +1,27 @@
+{
+  "id": "wellness",
+  "generation_mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "generation_started_at_utc": "2026-10-12T13:12:24.856000+00:00",
+  "prompt": "Create a small scene representing a hot spring, spa, and relaxation, with a small bathing pool, rounded stones, a folded towel, and gentle wisps of steam. Use delicate hand-drawn navy pen outlines with restrained sky blue, pink, and pale yellow watercolor touches. Keep the composition horizontal, simple, and legible in a 120 × 70 CSS-pixel itinerary card, with a travel-journal feeling consistent with TripLOG. Make the surrounding background transparent. Do not include architecture specific to a region, brands, text, or people.",
+  "input_images": [],
+  "transparent_background_requested": true,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13017-ef22-7373-affc-cfc60dbf9faf\\exec-81db4854-3401-4918-88a3-c176c64e0dbf.png",
+  "destination_path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/wellness.png",
+  "sha256": "e4e22128bc49b56b725744b39a6760bde17e01d29888ebb13159ab67c1dbc659",
+  "original_sha256": "e4e22128bc49b56b725744b39a6760bde17e01d29888ebb13159ab67c1dbc659",
+  "destination_sha256": "e4e22128bc49b56b725744b39a6760bde17e01d29888ebb13159ab67c1dbc659",
+  "sha256_matches": true,
+  "original_unmodified": true,
+  "overwrote_existing_file": false,
+  "dimensions": [
+    1643,
+    957
+  ],
+  "size_bytes": 1552526,
+  "mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ]
+}

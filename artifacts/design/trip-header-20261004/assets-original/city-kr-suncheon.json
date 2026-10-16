@@ -1,0 +1,23 @@
+{
+  "id": "kr-suncheon",
+  "kind": "city",
+  "mode": "built-in image_gen, text-to-image",
+  "imageInputsSent": [],
+  "prompt": "Standalone 800×480 landscape illustration of Suncheon wetland: golden reeds frame calm blue water, low green hills, a small wooden boardwalk on the right, and one white heron. TripLOG postcard art direction with crisp delicate #0b1020 ink outlines, soft flat watercolor-like fills, pale blue #bce6fb, sage #b8d2bc, warm sand #f4d9a4, and restrained yellow and pink accents. Focal scene sits center-right and bottom, filling most of the canvas, with landscape contours opening organically at the left and top. Clean transparent exterior. Readable in a right-aligned 300×180 travel-header slot. No UI, text, frame, or logos.\n",
+  "source": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c0-feb5-7982-8f1c-72fc299c4bcf\\exec-14518516-ba5a-4d3f-9daf-d7a5a94f61bd.png",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "original": "artifacts/design/trip-header-20261004/assets-original/city-kr-suncheon.png",
+  "sourceSha256": "74a60c47d8f5f8ece8e34d53dec66cad79c14710ab2735942638a91bef98dd3a",
+  "originalMatchesSource": true,
+  "asset": "src/assets/trip-scenes/cities/v1/kr-suncheon.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "bytes": 147470,
+  "assetSha256": "fd5743f8a9ca67519411db4a9b3e6eca4276f05552a97df037756e45d412d8f2",
+  "overwritten": false
+}

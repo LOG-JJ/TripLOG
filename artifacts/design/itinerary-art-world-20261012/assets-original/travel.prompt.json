@@ -1,0 +1,23 @@
+{
+  "asset": "travel",
+  "generation_mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "generation_started_epoch": 1791810640.748,
+  "prompt": "A still life of a travel notebook, a folded map, and a small compass, suitable for general travel plans or an undecided destination. Delicate navy pen outlines with restrained sky-blue, pink, and pale-yellow watercolor touches. Horizontal composition, clear at 120 × 70 CSS pixels, with a transparent background. No real buildings, landmarks, vehicles, text, or brands.",
+  "inputs": [],
+  "transparent_background": true,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13018-4519-72d3-84a5-ae7ca84ec1ba\\exec-ea0a098b-cacd-4f19-bd50-8221848cbb57.png",
+  "destination_path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/travel.png",
+  "sha256": "4f0bf28d84e7e7cb3b54f18bf4f538032604a891f0461ecfb8c791671dcd4bc5",
+  "original_sha256": "4f0bf28d84e7e7cb3b54f18bf4f538032604a891f0461ecfb8c791671dcd4bc5",
+  "width": 1643,
+  "height": 957,
+  "bytes": 1912330,
+  "image_mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "overwritten": false,
+  "unmodified_original": true
+}

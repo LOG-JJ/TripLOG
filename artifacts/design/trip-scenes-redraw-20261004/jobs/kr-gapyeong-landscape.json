@@ -1,0 +1,17 @@
+{
+  "id": "kr-gapyeong-landscape",
+  "cityId": "kr-gapyeong",
+  "cityName": "가평",
+  "variant": "landscape",
+  "reference": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon.png",
+  "prompt": "Create one standalone destination illustration of Gapyeong: wooded riverside hills, a calm river bend, a small camping tent, and a simple wooden cabin. Do not substitute Nami Island landmarks. Match the user's selected current Suncheon illustration style in the reference. Preserve the same visual language and drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition, intended for an 800 × 480 desktop header asset displayed on the right of a white postcard panel. Compose the focal scene toward the center-right and bottom. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame, with quiet transparent space along the upper-left. The illustrated scenery must reach the right and bottom canvas edges without empty padding. Keep the destination's main features comfortably inside the frame. Artwork only, with no text, UI, labels, logos or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-redraw-20261004/assets-original/kr-gapyeong-landscape.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-redraw-20261004/assets-original/kr-gapyeong-landscape.json",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-redraw-20261004/assets-original/kr-gapyeong-landscape.prompt.txt",
+  "asset": "src/assets/trip-scenes/cities/v2/kr-gapyeong.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "status": "prepared"
+}

@@ -1,0 +1,26 @@
+{
+  "asset": "lodging",
+  "generation_mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "generation_started_epoch": 1791808282.65,
+  "prompt": "A compact, welcoming two-story guesthouse with a blue door, a few warm yellow windows, and one small tree. Delicate hand-drawn navy pen lines with subtle pastel pink and sky-blue watercolor touches. Horizontal composition for a small calendar illustration displayed at 120 × 70 CSS pixels. Transparent surrounding space. Warm travel-journal tone, clean and understated, legible at thumbnail size. No text, no brand, no named real place, and no border.",
+  "inputs": [],
+  "transparent_background": true,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13018-4519-72d3-84a5-ae7ca84ec1ba\\exec-ef865b54-a1f4-4c84-8891-4976f1ebfb4a.png",
+  "destination_path": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\src\\assets\\export-art\\lodging.png",
+  "sha256": "0612fc2b90f819621c1217899105b7dc317b58a61eacd98274111c544737131b",
+  "original_sha256": "0612fc2b90f819621c1217899105b7dc317b58a61eacd98274111c544737131b",
+  "width": 1643,
+  "height": 957,
+  "bytes": 1627294,
+  "image_mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "overwritten": false,
+  "unmodified_original": true,
+  "archived_path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/export-reports-20261012/assets-original/lodging.png",
+  "runtime_asset_path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-reused/lodging.webp",
+  "archived_sha256": "0612fc2b90f819621c1217899105b7dc317b58a61eacd98274111c544737131b"
+}

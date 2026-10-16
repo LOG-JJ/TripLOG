@@ -1,3 +1,4 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser } = require('./helpers/browser-fixture');
 // Browser plugin is not installed in this workspace. Use Playwright's installed Edge browser.
 // All accounts, trips and network responses in this test are isolated fixtures.
@@ -125,7 +126,7 @@ async function main() {
       await page.locator('#rdMenuButton').click();
       await page.locator('#rdMore [data-rd-action="invite"]').click();
       assert.deepEqual(await page.locator('#rdInviteMembers .rd-invite-member > b').allTextContents(),['JJ','JH'],'The open invite sheet must reflect the current roster');
-      const output=process.env.TRIPLOG_TEST_OUTPUT || path.join(process.cwd(),'.test-output');fs.mkdirSync(output,{recursive:true});
+      const output=process.env.TRIPLOG_TEST_OUTPUT || artifactDirectory('sync');fs.mkdirSync(output,{recursive:true});
       await page.screenshot({path:path.join(output,page===a?'members-desktop.png':'members-mobile.png'),animations:'disabled'});
       await page.locator('#tripInviteCloseButton').click();
     }
@@ -256,7 +257,7 @@ async function main() {
     await b.getByRole('button',{name:'공동 메모',exact:true}).click();
     await a.getByRole('button',{name:'복구 기록',exact:true}).click();
     await a.locator('#triplogSyncStatus .sync-conflict').first().waitFor();
-    const output=process.env.TRIPLOG_TEST_OUTPUT || path.join(process.cwd(),'.test-output');fs.mkdirSync(output,{recursive:true});
+    const output=process.env.TRIPLOG_TEST_OUTPUT || artifactDirectory('sync');fs.mkdirSync(output,{recursive:true});
     await a.screenshot({path:path.join(output,'sync-recovery-desktop.png')});
     await b.screenshot({path:path.join(output,'sync-notes-mobile.png')});
     await a.getByRole('button',{name:'닫기',exact:true}).last().click();

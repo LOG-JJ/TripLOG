@@ -1,10 +1,11 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser } = require('./helpers/browser-fixture');
 // Browser plugin unavailable: isolated Playwright/Edge fixtures; external requests blocked.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { createServer } = require('./serve-test');
-const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Trip-Chooser-20260923');
+const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || artifactDirectory('trip-chooser');
 const user = { id:'00000000-0000-4000-8000-000000000099', email:'chooser@example.test' };
 const fixtures = [
   ['current','오사카&교토 추석 가족여행','오사카','일본','JP','overseas','2026-09-25','2026-09-28'],

@@ -1,0 +1,16 @@
+{
+  "createdOn": "2026-10-03",
+  "selectedOriginalOption": 3,
+  "inputImage": "artifacts/design/20261003/triplog-reservation-passport-pockets-20261003.png",
+  "outputImage": "artifacts/design/20261003/triplog-reservation-passport-pockets-refined-20261003.png",
+  "generationMode": "built-in image_gen",
+  "existingFilesOverwritten": false,
+  "scope": "Refine the selected mockup before implementation: remove repeated text and show more reservation information clearly.",
+  "contentSource": "Existing TripLOG reservation wallet, read through the UI. No reservation records were edited.",
+  "logicalViewport": {
+    "width": 682,
+    "height": 320
+  },
+  "generationStartedAt": "2026-10-03T14:34:00.023Z",
+  "prompt": "Refine the selected TripLOG “Passport Pockets” reservation UI before implementation. Show more useful information with clear hierarchy and no duplicated category headings, reservation summaries, or decorative wording. Preserve the selected visual identity. Use a natural 682 × 320 component viewport with two adjacent pockets. Each pocket has one readable paper content surface; any paper behind it is purely decorative and carries no repeated text. Keep the pocket lip shallow, illustrations small and confined to the edges, and the main information unobscured.\n\nRender “교통 예약” once with one “3건” count tab. Show the common route “서울 ↔ 오사카” and carrier “제주항공” once, followed by a compact three-row table. Use column headings “가는 편 · 9.25 (금)” and “오는 편 · 9.28 (월)”. The numbered rows are “01 | 09:05 | 13:35”, “02 | 09:05 | 13:35”, and “03 | 10:40 | 16:30”. These represent three existing reservations; matching times do not make them the same reservation.\n\nRender “숙소 예약” once with one “2건” count tab. Show two distinct entries: “02 그룹 스테이 클라세 뉴 호스텔 인 난바” with “9.25 (금) → 9.26 (토) · 1박”, and “호텔 몬돈스 교토 고조” with “9.26 (토) → 9.28 (월) · 2박”. Let long hotel names wrap naturally over two lines. Separate the entries with spacing and a fine divider.\n\nUse compact Pretendard-like Korean typography, 14–16 px main text and clearly readable supporting text at the logical viewport size. Align dates and times consistently. Retain warm paper #fffdf7, ink #202730, blue #bce6fb, pink #f7afc7, restrained yellow #ffeb50 count tabs, subtle stitching and texture. Each pocket has one small opening chevron. Remove barcodes and oversized ornamental areas so the content has room. Render this single revised component as app UI. The reservation dates are in 2026; the current date anchor is 2026-10-03.\n\nInput images:\n- Attached image: The user-selected third mockup to refine, retaining its design direction while removing duplicated text and improving information visibility."
+}

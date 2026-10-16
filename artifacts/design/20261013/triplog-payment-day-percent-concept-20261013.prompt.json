@@ -1,0 +1,13 @@
+{
+  "mode": "I2I",
+  "generationPath": "built-in image_gen",
+  "prompt": "Improve the referenced TripLOG payment-day expense chart by adding clear percentage labels: “68.2%”, “16.5%”, and “15.3%”, from left to right. Place each percentage on its own line above the corresponding amount, with readable spacing. Preserve the existing chart and add the explanatory text “전체 지출 대비 비중”.\n\nInput images:\n- Image 1: the chart section the user wants to improve.",
+  "inputImages": [
+    "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-b4a5c78f-8bd8-46b0-b145-c2c24fbc4cf4.png"
+  ],
+  "sourceImage": "C:/Users/tbdk5/.codex/generated_images/01a13376-7f99-7e50-a150-a88282253a0f/exec-a318c193-e063-475e-876e-be5577cd104f.png",
+  "savedImage": "artifacts/design/20261013/triplog-payment-day-percent-concept-20261013.png",
+  "overwritten": false,
+  "sourceSha256": "2fbac0a4ce9e0f779ac7d96ac9c762e39c6b03947db3e7aaefcd92387bad6c61",
+  "savedSha256": "2fbac0a4ce9e0f779ac7d96ac9c762e39c6b03947db3e7aaefcd92387bad6c61"
+}

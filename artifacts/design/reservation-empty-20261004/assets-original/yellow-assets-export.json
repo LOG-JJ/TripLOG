@@ -1,0 +1,76 @@
+[
+  {
+    "source": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/reservation-empty-20261004/assets-original/count-badge.png",
+    "source_dimensions": [
+      1611,
+      976
+    ],
+    "source_alpha_bbox": [
+      0,
+      20,
+      1519,
+      976
+    ],
+    "export_crop_alpha_gt_1": [
+      95,
+      226,
+      1518,
+      774
+    ],
+    "destination": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\src\\assets\\reservation-count-badge.webp",
+    "dimensions": [
+      384,
+      232
+    ],
+    "alpha_bbox": [
+      4,
+      2,
+      380,
+      230
+    ],
+    "padding": [
+      4,
+      2
+    ],
+    "format": "WebP lossless",
+    "bytes": 88894,
+    "export_operation": "Trim to alpha > 1 bounds, resize to requested dimensions with 1% transparent padding; originals unchanged."
+  },
+  {
+    "source": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/reservation-empty-20261004/assets-original/action-button.png",
+    "source_dimensions": [
+      2103,
+      748
+    ],
+    "source_alpha_bbox": [
+      15,
+      32,
+      2086,
+      673
+    ],
+    "export_crop_alpha_gt_1": [
+      18,
+      202,
+      2084,
+      534
+    ],
+    "destination": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\src\\assets\\reservation-add-button.webp",
+    "dimensions": [
+      1024,
+      152
+    ],
+    "alpha_bbox": [
+      10,
+      2,
+      1014,
+      150
+    ],
+    "padding": [
+      10,
+      2
+    ],
+    "format": "WebP lossless",
+    "bytes": 159700,
+    "export_operation": "Trim to alpha > 1 bounds, resize to requested dimensions with 1% transparent padding; originals unchanged."
+  }
+]

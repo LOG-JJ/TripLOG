@@ -1,0 +1,27 @@
+{
+  "id": "hostel",
+  "generation_mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "generation_started_at_utc": "2026-10-12T13:10:38.830000+00:00",
+  "prompt": "Create a small lodging building with a backpack and a plant by a window, representing a hostel or guesthouse. Use delicate hand-drawn navy pen outlines with restrained sky blue, pink, and pale yellow watercolor touches. Keep the composition horizontal, simple, and legible in a 120 × 70 CSS-pixel itinerary card, with a travel-journal feeling consistent with TripLOG. Make the surrounding background transparent. Do not include references to a specific country, brands, or text.",
+  "input_images": [],
+  "transparent_background_requested": true,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13017-ef22-7373-affc-cfc60dbf9faf\\exec-9236de0d-6ed4-430b-ba41-2a323b9797a3.png",
+  "destination_path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/hostel.png",
+  "sha256": "e6892ab2e032be9d292e6d64581a77b27d0268209f232f346b11bb7aebf727fc",
+  "original_sha256": "e6892ab2e032be9d292e6d64581a77b27d0268209f232f346b11bb7aebf727fc",
+  "destination_sha256": "e6892ab2e032be9d292e6d64581a77b27d0268209f232f346b11bb7aebf727fc",
+  "sha256_matches": true,
+  "original_unmodified": true,
+  "overwrote_existing_file": false,
+  "dimensions": [
+    1642,
+    958
+  ],
+  "size_bytes": 1588864,
+  "mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ]
+}

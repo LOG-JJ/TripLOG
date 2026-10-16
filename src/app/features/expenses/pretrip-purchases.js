@@ -64,9 +64,6 @@ function renderPretripPurchasePanel() {
   setPretripPurchaseMode(activePretripPurchaseMode, { skipFocus: true });
 }
 
-function setPretripOptionsExpanded(isExpanded, { skipFocus = true } = {}) {
-  isPretripOptionsExpanded = Boolean(isExpanded); syncPretripOptionsVisibility({ skipFocus });
-}
 function syncPretripOptionsVisibility({ skipFocus = true } = {}) {
   const flight = activePretripPurchaseMode === "flight";
   els.pretripFlightForm.hidden = !isPretripOptionsExpanded || !flight;
@@ -311,6 +308,6 @@ function getPretripHotelNights(checkIn, checkOut) {
 }
 window.TripLog.register("features.expenses.pretripPurchases", {
   setupPretripPurchaseForms, renderPretripPurchasePanel, setPretripPurchaseMode,
-  setPretripOptionsExpanded, openPretripPurchaseMenu, syncPretripPurchaseDateBounds,
+  openPretripPurchaseMenu, syncPretripPurchaseDateBounds,
   connectDialog: connectPretripPurchaseDialog,
 });

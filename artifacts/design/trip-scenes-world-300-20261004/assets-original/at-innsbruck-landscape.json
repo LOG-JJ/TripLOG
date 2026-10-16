@@ -1,0 +1,21 @@
+{
+  "jobId": "at-innsbruck-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104c1-5e20-7f81-812c-b8a5c49d0800/exec-a958446a-d52c-456b-98af-e5692aff159a.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-world-300-20261004/assets-original/at-innsbruck-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Innsbruck: the Golden Roof among colorful old-town facades with the Nordkette Alps rising behind. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "7ca622aaaffed365ba0bde6debc8d02db1d8ac13d4022fa64846341698960f74",
+  "savedSha256": "7ca622aaaffed365ba0bde6debc8d02db1d8ac13d4022fa64846341698960f74",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T10:13:58.779Z",
+  "savedAt": "2026-10-04T10:15:03.823034+00:00"
+}

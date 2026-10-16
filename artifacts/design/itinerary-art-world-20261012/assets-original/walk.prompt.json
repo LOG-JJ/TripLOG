@@ -1,0 +1,23 @@
+{
+  "asset": "walk",
+  "generation_mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "generation_started_epoch": 1791810743.054,
+  "prompt": "A pair of comfortable walking sneakers beside a short path and small roadside plants, suggesting an everyday walk. Delicate navy pen outlines with restrained sky-blue, pink, and pale-yellow watercolor touches. Horizontal composition, clear at 120 × 70 CSS pixels, with a transparent background. No mountaineering equipment, people, text, or brands.",
+  "inputs": [],
+  "transparent_background": true,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13018-4519-72d3-84a5-ae7ca84ec1ba\\exec-166a5f8b-8980-483c-835d-57c89a587f81.png",
+  "destination_path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/walk.png",
+  "sha256": "7dc086dd9627c9dcf7082b984011b87c4dbe4192f3172c401a1539d206daab49",
+  "original_sha256": "7dc086dd9627c9dcf7082b984011b87c4dbe4192f3172c401a1539d206daab49",
+  "width": 1643,
+  "height": 957,
+  "bytes": 1791231,
+  "image_mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "overwritten": false,
+  "unmodified_original": true
+}

@@ -14,7 +14,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
-DOCS = ROOT / "docs/trip-scenes-redraw-20261004"
+DOCS = ROOT / "artifacts/design/trip-scenes-redraw-20261004"
 MANIFEST = DOCS / "prepared.json"
 
 def sha(path):

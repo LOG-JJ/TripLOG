@@ -1,3 +1,4 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser, fixtureToken, startServer, stopServer } = require('./helpers/browser-fixture');
 // Isolated Edge fixtures: no real trip or account is changed. External map
 // navigation is intercepted; live Naver entry URLs are checked separately.
@@ -7,7 +8,7 @@ const path = require('node:path');
 
 async function main() {
   const { server, origin } = await startServer();
-  const output = path.join(require('node:os').tmpdir(), 'TripLOG-Map-Provider-QA');
+  const output = artifactDirectory('map-provider');
   fs.mkdirSync(output, { recursive: true });
   const browser = await launchBrowser();
   try {

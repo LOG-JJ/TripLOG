@@ -1,3 +1,4 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser, blockExternalRequests } = require('./helpers/browser-fixture');
 // Purpose-built isolated regression runner; interactive visual QA also uses the
 // Codex in-app browser. No production credentials or trip data are touched.
@@ -5,7 +6,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { createExportPreview } = require('./preview-export-reports');
-const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Export-Reports-20261012');
+const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || artifactDirectory('print-export');
 async function main() {
   fs.mkdirSync(output, { recursive: true });
   const server = createExportPreview(); await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));

@@ -370,7 +370,7 @@ function renderPlaceSearchResults(results, query, { previewedResultId = "", goog
     button.setAttribute("role", "option");
     button.setAttribute("aria-selected", String(result.id === previewedResultId));
     button.classList.toggle("is-previewed", result.id === previewedResultId);
-    
+
     const sourceLabel = getPlaceSearchSourceLabel(result);
     button.innerHTML = `
       <strong>
@@ -458,10 +458,6 @@ function revealMapPreview() {
   if (isMostlyVisible) return;
 
   mapSection.scrollIntoView({ behavior: "smooth", block: "start" });
-}
-
-function applyGoogleMapSearch(query, { revealMap = false } = {}) {
-  previewGoogleMapSearch(query, { revealMap });
 }
 
 function previewGoogleMapSearch(query, { revealMap = false } = {}) {
@@ -582,7 +578,6 @@ window.TripLog.register("features.itinerary.placeSearch", {
   applyPlaceSearchResult,
   markPreviewedPlaceSearchResult,
   revealMapPreview,
-  applyGoogleMapSearch,
   previewGoogleMapSearch,
   toggleManualAddressPanel,
   openManualAddressPanel,

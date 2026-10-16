@@ -1,0 +1,33 @@
+{
+  "title": "TripLOG selected trip-context refinement",
+  "date": "2026-10-13",
+  "selectedDisplayedOption": 1,
+  "userRefinement": "2박 3일 배지를 여행명 옆에서 날짜 옆으로 이동",
+  "prompt": "Edit the selected TripLOG trip-context mockup. Preserve its existing visual language, text, page heading, illustration, hierarchy, and compact scale. Move the “2박 3일” badge from beside the trip name to immediately after the date range on the second information line. Keep the trip name on its own first information line, with the date range and duration adjacent beneath it. Retain comfortable spacing and the existing badge treatment.\n\nInput images:\n- triplog-trip-context-label-20261013.png: The user's selected first mockup, to be edited only to move the duration badge beside the date.",
+  "mode": "built-in I2I",
+  "inputImages": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261013/triplog-trip-context-label-20261013.png"
+  ],
+  "startedAt": "2026-10-13T12:54:21.596Z",
+  "startEpoch": 1791896061.596,
+  "source": "C:/Users/tbdk5/.codex/generated_images/01a13376-7f99-7e50-a150-a88282253a0f/exec-85010b4e-16a9-496f-a24f-efe8b134e0bb.png",
+  "saved": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261013/triplog-trip-context-selected-20261013.png",
+  "sha256": "8B8416C28B20CA8670BC03123626CF4CA0AA529A3638F9B169B88C7BCBA4E22C",
+  "originalDimensions": {
+    "width": 2119,
+    "height": 742
+  },
+  "verification": "The saved file SHA256 matches the exact original path returned by the image call.",
+  "implementation": {
+    "pages": [
+      "itinerary",
+      "budget",
+      "report"
+    ],
+    "module": "../../../src/app/ui/trip-context.js",
+    "stylesheet": "../../../src/styles/trip-context.css",
+    "asset": "../../../src/assets/trip-context-landscape.png",
+    "assetProvenance": "C:/Users/tbdk5/AppData/Local/Temp/TripLOG-Trip-Context-20261013/trip-context-landscape-provenance.json",
+    "qaComparison": "C:/Users/tbdk5/AppData/Local/Temp/TripLOG-Trip-Context-20261013/comparison-final.png"
+  }
+}

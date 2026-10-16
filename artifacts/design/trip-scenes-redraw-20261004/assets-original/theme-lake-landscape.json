@@ -1,0 +1,19 @@
+{
+  "jobId": "theme-lake-landscape",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-35a4-74c3-916e-ab6a0794b3ea\\exec-ab56e6fc-6ebd-4f7c-b8da-da97aaad0aaa.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-redraw-20261004/assets-original/theme-lake-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone travel illustration showing a calm generic lake with a small arched footbridge, low green hills, and a single simple rowboat, without recognizable landmarks. Match the user's selected current Suncheon illustration style in the reference. Preserve the same visual language and drawing character while depicting this theme's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset, with the focal scene toward the center-right and bottom. Use a transparent background. Leave quiet transparent space along the upper-left and a natural irregular left silhouette visibly inside the frame. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no text, UI, labels, logos or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "9e1546392e1a6c74a77d1480d49eb8d09b194d2fb8368e9df933155fd623fa86",
+  "savedSha256": "9e1546392e1a6c74a77d1480d49eb8d09b194d2fb8368e9df933155fd623fa86",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false
+}

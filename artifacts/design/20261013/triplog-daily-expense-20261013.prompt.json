@@ -1,0 +1,10 @@
+{
+  "createdAt": "2026-10-12T16:04:35.429Z",
+  "mode": "built-in image_gen / T2I",
+  "prompt": "Redesign the “일자별 지출 현황” section of TripLOG’s Korean travel expense PDF. The section sits beside a category chart on a white A4 portrait page, with about 260 pixels of usable width and 320 pixels of height at native browser scale. Make dates, amounts, and percentages easy to compare with refined Korean typography and clear spacing, harmonious with the report’s dark navy text and pastel blue, pink, and yellow accents. Use these sample records: “10.09 (금)” — “186,000원” — “38.3%”; “10.10 (토)” — “174,000원” — “35.8%”; “10.11 (일)” — “126,000원” — “25.9%”. Explain the percentage basis with “전체 지출 대비 비중”. Preserve the information “빠짐없이 담은 기록” and “14건”. Show the complete section as a readable interface design concept that can also accommodate up to seven date groups.",
+  "inputImages": [],
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-2f5a9cec-57ef-4802-a6ef-ad5a9879010c.png",
+  "savedPath": "artifacts/design/20261013/triplog-daily-expense-20261013.png",
+  "overwritten": false,
+  "sha256": "EEE1A2CBD52866AE0AAAE37D2E15837104CF77BC8493576082E0A02426BE0E8F"
+}

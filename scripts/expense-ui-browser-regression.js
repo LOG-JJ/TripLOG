@@ -1,10 +1,11 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser, fixtureToken, blockExternalRequests, seedTrip, startServer, stopServer } = require('./helpers/browser-fixture');
 // Browser plugin unavailable: use the repository's isolated Playwright/Edge workflow.
 // External requests are blocked. No real account, trip, or server data is edited.
 const assert = require('node:assert/strict');
 const path = require('node:path');
 const fs = require('node:fs');
-const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Expense-Polish-20260921');
+const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || artifactDirectory('expense-ui');
 
 async function main() {
   fs.mkdirSync(output, { recursive: true });

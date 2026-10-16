@@ -327,37 +327,10 @@ function buildGoogleCandidateId(query) {
   return `google-query:${query}`;
 }
 
-function renderSingleLeafletMarker(item, lat, lon) {
-  if (!leafletMapInstance) return;
-  const parsedLat = parseFloat(lat);
-  const parsedLon = parseFloat(lon);
-  if (!isValidLatLng(parsedLat, parsedLon)) return;
-
-  const pinIcon = L.divIcon({
-    className: 'itinerary-numbered-pin active',
-    html: '<span aria-hidden="true"></span>',
-    iconSize: [34, 42],
-    iconAnchor: [17, 42]
-  });
-
-  const marker = L.marker([parsedLat, parsedLon], { icon: pinIcon, title: item.place || "선택된 위치" })
-    .bindPopup(`
-      <div class="map-popup-card">
-        <strong class="popup-place">${escapeHtml(item.place || "선택된 위치")}</strong>
-        <p class="popup-location">${escapeHtml(item.location || "")}</p>
-      </div>
-    `)
-    .addTo(leafletMarkersGroup);
-
-  leafletMapInstance.setView([parsedLat, parsedLon], 14);
-  marker.openPopup();
-}
-
 function buildMapQuery(item) {
   const query = Array.from(new Set([item.place, item.location].filter(Boolean))).join(" ").trim();
   return appendTripDestinationContext(query) || "대한민국";
 }
-
 
 window.TripLog.register("features.itinerary.mapPreview", {
   updateMapPreview,
@@ -376,6 +349,5 @@ window.TripLog.register("features.itinerary.mapPreview", {
   buildNaverMapsSearchUrl,
   buildNaverMapsSearchQuery,
   buildNaverMapsRouteSearchQuery,
-  renderSingleLeafletMarker,
   buildMapQuery,
 });

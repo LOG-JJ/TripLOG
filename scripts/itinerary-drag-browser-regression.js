@@ -1,9 +1,10 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser } = require('./helpers/browser-fixture');
 // Browser plugin not available. Real mouse DnD in isolated Playwright/Edge.
 const assert=require('node:assert/strict'),path=require('node:path'),fs=require('node:fs');
 const root=path.resolve(__dirname,'..');
 const {createServer}=require(path.join(root,'scripts/serve-test'));
-const output=process.env.TRIPLOG_UI_SNAPSHOT_DIR||path.join(require('node:os').tmpdir(),'TripLOG-Drag-Preview');
+const output=process.env.TRIPLOG_UI_SNAPSHOT_DIR||artifactDirectory('itinerary-drag');
 async function main(){
  fs.mkdirSync(output,{recursive:true});
  const server=createServer({pagesRedirects:true});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));

@@ -1,0 +1,19 @@
+{
+  "id": "jp-kobe-mobile",
+  "cityId": "jp-kobe",
+  "cityName": "고베",
+  "kind": "city",
+  "group": "east-asia",
+  "variant": "mobile",
+  "reference": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png",
+  "prompt": "Create one standalone destination illustration of Kobe: the red lattice Kobe Port Tower, the white roof of the Maritime Museum and a small boat on the harbor. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a portrait 4:5 composition intended for a 480 × 600 mobile asset displayed in a narrow right-side header slot. Compose the main landmarks directly for this portrait frame so they remain recognizable at small size. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon-mobile.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-world-300-20261004/assets-original/jp-kobe-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-world-300-20261004/assets-original/jp-kobe-mobile.json",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-world-300-20261004/assets-original/jp-kobe-mobile.prompt.txt",
+  "asset": "src/assets/trip-scenes/cities/v4/jp-kobe-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "status": "queued"
+}

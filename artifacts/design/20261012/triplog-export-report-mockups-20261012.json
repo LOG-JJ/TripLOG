@@ -1,0 +1,119 @@
+{
+  "title": "TripLOG PDF export and report design directions",
+  "request": "여행 PDF 리포트, 지출, 일정 내보내기 UX와 실제 출력 리포트의 시각화·감도·가독성을 개선하기 위한 사전 목업 5개",
+  "status": "Concept images only; no application implementation or deployment",
+  "date": "2026-10-12",
+  "mode": "built-in T2I",
+  "imageInputs": [],
+  "viewport": "390 × 844 mobile export UI plus A4 portrait report, shown side by side within a 1440 × 1080 comparison frame",
+  "sample": {
+    "trip": "순천의 사흘",
+    "dates": "2026.10.09–10.11",
+    "people": 2,
+    "days": 3,
+    "budget": 600000,
+    "total": 486000,
+    "perPerson": 243000,
+    "dailyAverage": 162000,
+    "categories": {
+      "숙박": 180000,
+      "식비": 126000,
+      "교통": 90000,
+      "관광": 54000,
+      "기타": 36000
+    },
+    "dailyTotals": [
+      186000,
+      174000,
+      126000
+    ]
+  },
+  "constraints": [
+    "Existing TripLOG brand tone",
+    "Readable mobile controls and printed charts",
+    "Independent concepts; no image references",
+    "Export UI plus actual report layout",
+    "Concept images only, prior to implementation"
+  ],
+  "sourceInspection": {
+    "livePage": "https://triplog-5qs.pages.dev/Travel?page=settings",
+    "sourceFile": "../../../src/app/features/print/print-export.js",
+    "currentFlow": "Choose one of three buttons, build print HTML, open browser print dialog",
+    "currentReport": "Metric cards and tables",
+    "designTokensFile": "../../../src/styles/redesign.css",
+    "screenshotsUsedAsImageInputs": false
+  },
+  "variants": [
+    {
+      "displayedOption": 1,
+      "name": "Travel Folio",
+      "koreanName": "여행 매거진",
+      "mode": "T2I",
+      "imageInputs": [],
+      "generationStartedAt": "2026-10-12T10:57:54.118Z",
+      "prompt": "Design one coherent TripLOG export experience called Travel Folio, pairing a 390 × 844 mobile export screen with its actual A4 portrait PDF page, side by side in a 1440 × 1080 composition. Give the report most of the space. Current date is 2026-10-12. Use fictional sample trip “순천의 사흘”, 2026.10.09–10.11, 2 people, 3 days.\nKeep TripLOG’s white surface, dark navy #0b1020 text and fine outlines, yellow #fff05a primary action, sky blue #bce6fb and pink #f7afc7 accents, restrained hand-drawn travel illustration, and clean Pretendard-style Korean type. Mobile body text 15–16px; generous readable print typography. In the report header, information is left and a small destination drawing is right.\nExplore an editorial travel-magazine hierarchy with purposeful whitespace. Mobile: title “여행을 한 권으로”, three choices “전체 리포트 / 지출 / 일정”, a clear selected full-report state, an illustrated page thumbnail, simple inclusion rows, and one “PDF 저장” action. PDF: expressive trip heading, a small route illustration, a dominant total “486,000원”, “1인 243,000원”, a directly labeled spending ribbon for 숙박 180,000 / 식비 126,000 / 교통 90,000 / 관광 54,000 / 기타 36,000, and a concise three-day journey timeline. Present the printed page itself with readable information, charts and page footer. This is one design direction with its matching output; focus on visual hierarchy and usable export choices.",
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-9a0bb60c-1f84-4c9b-ac74-8eced7ea78f5.png",
+      "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261012/triplog-export-travel-folio-20261012.png",
+      "sha256": "5B36C732F7D8828957A8F91C6997FB14158C02AE6092A94011DAF0F1A605206C",
+      "overwritten": false
+    },
+    {
+      "displayedOption": 2,
+      "name": "Spend Atlas",
+      "koreanName": "지출 인포그래픽",
+      "mode": "T2I",
+      "imageInputs": [],
+      "generationStartedAt": "2026-10-12T10:59:07.622Z",
+      "prompt": "Design one coherent TripLOG export experience called Spend Atlas, pairing a 390 × 844 mobile expense-export screen and its actual A4 portrait expense-report PDF, side by side in a 1440 × 1080 composition. Give the report most of the space. Current date is 2026-10-12; fictional trip “순천의 사흘”, 2026.10.09–10.11, 2 people, 3 days.\nUse the existing TripLOG language: white surface, dark navy #0b1020 text and fine outlines, yellow #fff05a primary action, sky blue #bce6fb and pink #f7afc7 accents, a small hand-drawn travel motif and readable Pretendard-style Korean typography. Mobile body 15–16px; generous readable print labels.\nExplore an information-rich financial infographic with disciplined alignment. Mobile title “지출을 한눈에”, three choices “전체 리포트 / 지출 / 일정” with 지출 selected, clear range “전체 기간”, include-details and include-charts controls, preview and one “PDF 저장” action. PDF title “어디에 얼마나 썼을까”, strong total 486,000원, a budget rail showing 600,000원 budget and 81% used. Make a proportional labeled expense treemap the hero: 숙박 180,000, 식비 126,000, 교통 90,000, 관광 54,000, 기타 36,000. Add a three-bar daily chart labeled 10.09 186,000 / 10.10 174,000 / 10.11 126,000, then a few aligned expense-detail rows and “1인 243,000원”. Print the values directly beside marks. Prioritize immediate numerical understanding and comfortable reading with breathing room.",
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-45138b2f-e206-4185-9dfe-ee3e7509469b.png",
+      "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261012/triplog-export-spend-atlas-20261012.png",
+      "sha256": "42EAC3DBB80CE82935A835C28A0AB805DDB673C9624CE65F6A99F93FF1A81870",
+      "overwritten": false
+    },
+    {
+      "displayedOption": 3,
+      "name": "Journey Ribbon",
+      "koreanName": "동선 지도",
+      "mode": "T2I",
+      "imageInputs": [],
+      "generationStartedAt": "2026-10-12T11:00:08.265Z",
+      "prompt": "Design one coherent TripLOG export experience called Journey Ribbon, pairing a 390 × 844 mobile itinerary-export screen with its actual A4 portrait itinerary PDF, side by side in a 1440 × 1080 composition. Give the output most of the space. Current date 2026-10-12. Fictional sample “순천의 사흘”, 2026.10.09–10.11, 2 people, 3 days.\nStay within TripLOG: white, dark navy #0b1020 fine outlines and text, yellow #fff05a primary action, sky blue #bce6fb and pink #f7afc7 accents, restrained hand-drawn destination illustration and readable Pretendard-style Korean type. Keep report-header information left and destination illustration right. Mobile body type 15–16px; generously readable PDF type.\nExplore a route-first itinerary field guide. Mobile: heading “일정을 들고 떠나요”, three choices “전체 리포트 / 지출 / 일정” with 일정 selected, date chips “전체 / DAY 1 / DAY 2 / DAY 3”, visible controls “이동 정보” and “메모 포함”, an itinerary preview and one “PDF 저장” action. The report hero is a clear schematic travel route with numbered stops and three directly labeled day colors. Beneath it, give each day a tidy vertical timeline: DAY 1 순천역 → 국가정원 → 숙소; DAY 2 낙안읍성 → 카페 → 순천만; DAY 3 중앙시장 → 죽도봉 → 순천역. Display times, place names and short transfer labels with distinct hierarchy. Keep essential route and itinerary information readable on the printed page; include a discrete page footer.",
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-2848b198-280f-4776-bca2-75fc7ed824a2.png",
+      "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261012/triplog-export-journey-ribbon-20261012.png",
+      "sha256": "391269A3CB69B0D1F248DD8C538BC82DB9C535A3BE9FBC2C3E030C1F712AC106",
+      "overwritten": false
+    },
+    {
+      "displayedOption": 4,
+      "name": "Daily Chapters",
+      "koreanName": "하루별 여행 기록",
+      "mode": "T2I",
+      "imageInputs": [],
+      "generationStartedAt": "2026-10-12T11:01:25.373Z",
+      "prompt": "Design one coherent TripLOG export experience called Daily Chapters, pairing a 390 × 844 mobile export screen with its actual A4 portrait travel-report page, side by side in a 1440 × 1080 composition. Give the report most of the space. Current date is 2026-10-12; fictional trip “순천의 사흘”, 2026.10.09–10.11, 2 people, 3 days.\nUse TripLOG’s white surface, dark navy #0b1020 type and fine outlines, yellow #fff05a action, sky blue #bce6fb and pink #f7afc7 highlights, clean Pretendard-style Korean typography and small hand-drawn destination sketches. Mobile body 15–16px; comfortable print text. In the trip header place information left and illustration right.\nExplore a day-by-day editorial journal where the itinerary and spending connect naturally. Mobile title “하루씩 꺼내 보는 여행”, three choices “전체 리포트 / 지출 / 일정” with 전체 리포트 selected, simple “날짜별” organization control, chapter preview thumbnails and one “PDF 저장” action. The printed report uses three generous horizontal chapter bands with oversized DAY 1, DAY 2, DAY 3 markers. Each band combines three stops, short timeline marks and a visually clear daily-spend bar: 10.09 186,000원 순천역·국가정원·숙소; 10.10 174,000원 낙안읍성·카페·순천만; 10.11 126,000원 중앙시장·죽도봉·순천역. Finish with a concise total 486,000원 and per-person 243,000원. Distinguish chapter rhythm through spacing and typography. Make this an elegant record worth keeping, with charts carrying information and illustrations as small accents.",
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-63d780e4-1ce3-4539-ba89-c20a5bf46742.png",
+      "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261012/triplog-export-daily-chapters-20261012.png",
+      "sha256": "9A2E2C78C165EC95EA84E9EC919339C01EBC68A30004464541D3EF4DC15DABBD",
+      "overwritten": false
+    },
+    {
+      "displayedOption": 5,
+      "name": "Report Composer",
+      "koreanName": "맞춤 리포트 편집기",
+      "mode": "T2I",
+      "imageInputs": [],
+      "generationStartedAt": "2026-10-12T11:02:36.259Z",
+      "prompt": "Design one coherent TripLOG export experience called Report Composer, pairing a 390 × 844 mobile report-composition screen with its actual A4 portrait PDF preview, side by side in a 1440 × 1080 composition. Give the printed output most of the space. Current date is 2026-10-12. Fictional sample “순천의 사흘”, 2026.10.09–10.11, 2 people, 3 days.\nUse TripLOG’s white surface, dark navy #0b1020 readable type and fine outlines, yellow #fff05a primary action, sky blue #bce6fb and pink #f7afc7 accents, clean Pretendard-style Korean type, and restrained hand-drawn travel illustration. Body text 15–16px on mobile and generously readable print labels. Header information stays left with illustration right.\nExplore a preview-led custom publishing workflow. Mobile heading “내가 고르는 여행 기록”, three choices “전체 리포트 / 지출 / 일정”, selected full report, a compact reorderable list “여행 요약 / 지출 분석 / 여행 동선 / 상세 내역” with clear include checkmarks and drag handles, simple page-count feedback and one “PDF 저장” action. The large actual PDF page is an airy visual executive summary: trip identity, a bold 486,000원 total and 243,000원 per person, a directly labeled 81% budget rail with 114,000원 remaining from 600,000원, a crisp category bar chart 숙박 180,000 / 식비 126,000 / 교통 90,000 / 관광 54,000 / 기타 36,000, and a compact three-day route strip. Use an intentional asymmetric editorial grid and precise alignment. Let the selected sections visibly correspond to the report. Deliver a focused usable composition experience and a report readable when printed.",
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-f640d235-26c1-43af-96c4-fbb937e86d25.png",
+      "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261012/triplog-export-report-composer-20261012.png",
+      "sha256": "97B9D632C5B8D3B95845B6EF6F6715B8A30E141206480DC7C32D45AB3E95C131",
+      "overwritten": false
+    }
+  ],
+  "verification": {
+    "sourcePath": "Exact output path from each ImageGen response",
+    "savedCopies": "SHA256 matched source for every image",
+    "overwrittenFiles": 0,
+    "displayOrder": "Images were generated and displayed sequentially; option numbers follow visible generated-image order"
+  }
+}

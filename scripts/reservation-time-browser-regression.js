@@ -1,3 +1,4 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser, blockExternalRequests } = require('./helpers/browser-fixture');
 // Browser plugin unavailable: isolated Playwright/Edge fixtures, no production
 // requests. Compare the wallet with the shared picker in the itinerary editor.
@@ -5,7 +6,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { createReservationPocketPreview } = require('./preview-reservation-pockets');
-const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.resolve(__dirname, '../.test-output/reservation-time');
+const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || artifactDirectory('reservation-time');
 
 async function main() {
   fs.mkdirSync(output, { recursive: true });

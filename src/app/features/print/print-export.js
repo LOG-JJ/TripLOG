@@ -6,9 +6,7 @@ function exportPdf(type = 'expense') {
 function exportExpensePdf() { return exportPdf('expense'); }
 function exportItineraryPdf() { return exportPdf('itinerary'); }
 function exportFullPdf() { return exportPdf('full'); }
-function getFilteredEntriesForPrint() {
-  return window.TripLog.features.print.model.sortedEntries(state.entries);
-}
+
 function getSortedItineraryItemsForPrint() { return sortItineraryItems(state.itineraryItems || []); }
 function formatPrintTimeRange(item) {
   const range = window.TripLog.features.print.model.timeRange(item);
@@ -49,8 +47,6 @@ function buildPrintReport(type = 'expense', options = {}) {
   els.printReport.innerHTML = result.markup;
   return result;
 }
-function buildExpensePrintSections() { return window.TripLog.features.print.renderer.build('expense').markup; }
-function buildItineraryPrintSections() { return window.TripLog.features.print.renderer.build('itinerary').markup; }
 
 (() => {
   'use strict';
@@ -287,5 +283,5 @@ function buildItineraryPrintSections() { return window.TripLog.features.print.re
 
 window.TripLog.register('features.print.export', {
   exportPdf, exportExpensePdf, exportItineraryPdf, exportFullPdf, buildPrintReport,
-  buildExpensePrintSections, buildItineraryPrintSections, getFilteredEntriesForPrint, getSortedItineraryItemsForPrint,
+  getSortedItineraryItemsForPrint,
 });

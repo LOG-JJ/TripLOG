@@ -3,4 +3,6 @@ dist/
 *.log
 node_modules/
 .test-output/
+artifacts/tmp/
+.playwright-cli/
 supabase/.temp/

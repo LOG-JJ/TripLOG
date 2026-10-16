@@ -1,0 +1,24 @@
+{
+  "id": "shrine",
+  "prompt": "Create a small hand-drawn travel illustration representing a Japanese shrine visit, with a small torii gate, a stone path, and a green tree. Use delicate navy pen contours with restrained pastel watercolor touches. Keep a compact landscape composition that remains legible in a 120 × 70 CSS-pixel card, with a transparent background. Do not depict a real shrine. No text or people.",
+  "inputs": [],
+  "mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "transparent_background": true,
+  "generation_started_epoch": 1791810366.981,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13017-b3cf-7fb1-900d-61dcc9aee86c\\exec-f3e0de31-7652-4610-b9a4-9d9ecd31f2f3.png",
+  "destination": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/shrine.png",
+  "sha256": "8f2fcb4db4a82eb673a31987fb04f24f81443247993fa0c5f7fa720b76630b3c",
+  "original_sha256": "8f2fcb4db4a82eb673a31987fb04f24f81443247993fa0c5f7fa720b76630b3c",
+  "dimensions": [
+    1642,
+    958
+  ],
+  "file_size_bytes": 2106766,
+  "image_mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "overwritten": false
+}

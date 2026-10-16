@@ -1,9 +1,10 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser } = require('./helpers/browser-fixture');
 // Browser plugin not available. Isolated Edge/Chrome touch context; all external
 // requests are blocked so production verification never edits a real trip.
 const assert=require('node:assert/strict'),path=require('node:path'),fs=require('node:fs');
 const {createServer}=require('./serve-test');
-const output=process.env.TRIPLOG_UI_SNAPSHOT_DIR||path.join(require('node:os').tmpdir(),'TripLOG-Touch-Drag-20260920');
+const output=process.env.TRIPLOG_UI_SNAPSHOT_DIR||artifactDirectory('itinerary-touch-drag');
 async function main(){
  fs.mkdirSync(output,{recursive:true});const server=createServer({pagesRedirects:true});
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));

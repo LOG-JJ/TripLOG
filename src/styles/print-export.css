@@ -96,13 +96,6 @@ body.rd-app :is(#exPreview, #printReport, .ex-measure) .ex-section-heading h2 { 
 .ex-document .ex-total { display: block; font-size: 43px; font-weight: 850; letter-spacing: -1.7px; line-height: 1.2; white-space: nowrap; }
 .ex-document .ex-per-person { display: block; font-size: 12px; margin-top: 7px; }
 .ex-document .ex-per-person b { font-weight: 750; }
-.ex-document .ex-budget-block { display: flex; flex-direction: column; justify-content: center; gap: 9px; padding-left: 24px; border-left: 1px solid #e4e5e9; font-size: 12px; }
-.ex-budget-block > div:not(.ex-budget-rail) { display: flex; align-items: baseline; flex-wrap: wrap; gap: 7px; }
-.ex-budget-block b { margin-left: auto; font-size: 16px; }
-.ex-budget-block strong { color: #a53662; font-size: 17px; margin-left: auto; }
-.ex-budget-block small { color: #687082; font-size: 11px; }
-.ex-document .ex-budget-rail { height: 17px; width: 100%; border-radius: 8px; background: #edf0f4; overflow: hidden; }
-.ex-budget-rail > span { display: block; height: 100%; background: #91d4f7; border-radius: inherit; }
 .ex-document .ex-expense-charts { display: grid; grid-template-columns: minmax(0, 1.42fr) minmax(0, 1fr); gap: 24px; padding-bottom: 22px; margin-bottom: 21px; border-bottom: 1px solid #cbd1db; }
 .ex-document .ex-category-chart, .ex-document .ex-daily-chart { min-width: 0; }
 .ex-document .ex-daily-chart { border-left: 1px solid #e4e5e9; padding-left: 22px; }

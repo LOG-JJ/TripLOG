@@ -1,0 +1,17 @@
+{
+  "jobId": "it-rome-landscape",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-5e20-7f81-812c-b8a5c49d0800\\exec-1855d544-fb6f-4d74-9845-deb3808359d3.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-expansion-20261004/assets-original/it-rome-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, reference-guided image generation",
+  "prompt": "Create one standalone destination illustration of Rome: the recognizable Colosseum, a few Roman Forum columns, warm stone paving and umbrella pine trees. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset, with the focal scene toward the center-right and bottom. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "dc5f00272c5da3a1dd14cf2cd3622670dff9fd7c0219827cd5d3e6d492f6042b",
+  "savedSha256": "dc5f00272c5da3a1dd14cf2cd3622670dff9fd7c0219827cd5d3e6d492f6042b",
+  "generationStartedAt": "2026-10-04T05:21:38.365Z"
+}

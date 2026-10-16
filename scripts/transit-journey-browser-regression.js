@@ -1,10 +1,11 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser, fixtureToken, startServer, stopServer } = require('./helpers/browser-fixture');
 // Isolated browser fixtures: route imagery is not fetched by automated tests.
 // The visible local preview verifies real provider maps separately.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Journey-20260922');
+const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || artifactDirectory('transit-journey');
 const fixture = {
   id: 'transit-journey-fixture', tripName: '교토 여행 · 디자인 확인', travelMode: 'overseas', city: '교토', country: '일본', countryCode: 'JP',
   startDate: '2026-09-25', endDate: '2026-09-25', entries: [], companions: [], packingList: [],

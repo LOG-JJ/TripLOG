@@ -6,7 +6,6 @@ window.TripLogTimeWheel = (() => {
 
   function create(list, { count, isOpen, onSelect, onEdit, onInteract }) {
     const rows = [...list.children];
-    const frame = list.parentElement;
     const abort = new AbortController();
     const listen = (node, event, callback, options = {}) => node.addEventListener(event, callback, { ...options, signal: abort.signal });
     const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');

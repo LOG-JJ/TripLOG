@@ -1,3 +1,4 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser, startServer, stopServer } = require('./helpers/browser-fixture');
 // Browser plugin not available: isolated Playwright/Edge app regression.
 // Flow: name-only Udo -> Seongsan itinerary -> transit dialog -> populated
@@ -14,7 +15,7 @@ const places = {
 async function main() {
   const { server, origin } = await startServer();
   const browser = await launchBrowser();
-  const output = path.join(require('node:os').tmpdir(), 'TripLOG-Domestic-Route-QA'); fs.mkdirSync(output, { recursive: true });
+  const output = artifactDirectory('domestic-route'); fs.mkdirSync(output, { recursive: true });
   try {
     for (const mobile of live ? [true] : [false, true]) {
       const context = await browser.newContext({ serviceWorkers: 'block', hasTouch: mobile, viewport: { width: mobile ? 390 : 1440, height: 900 } });

@@ -1,0 +1,122 @@
+[
+  {
+    "file": "all-137-expenses.pdf",
+    "bytes": 1851693,
+    "sha256": "b1ae55d3d2762cb81ef41ce5582ce35e3b8766ca4b7f30c6eb0c35b2eecb4015"
+  },
+  {
+    "file": "asset-manifest.json",
+    "bytes": 2010,
+    "sha256": "6b7478a6c85990167324fa28b21b363c9ae7abaa494909d63e5487cad87cdb09"
+  },
+  {
+    "file": "artifacts/design/design-qa.md",
+    "bytes": 9021,
+    "sha256": "3e6a29f18374f11ef694f5863de74de55eae7ef450c17bbd6ca7231e15736669"
+  },
+  {
+    "file": "expense-390.png",
+    "bytes": 74184,
+    "sha256": "6f116a7401ccd301b4980bb2002414249733aa64d1a46c20ddb64b6c9d90698e"
+  },
+  {
+    "file": "expense-comparison.png",
+    "bytes": 537310,
+    "sha256": "087f35d2360269f3b2bb5aed5a634d445a7154d7b7928df041eca6affe50f6ae"
+  },
+  {
+    "file": "expense-desktop.png",
+    "bytes": 195818,
+    "sha256": "be7850528d196b637777c6885df4719dc9a973532ec6ae9c3cc886838a9f711c"
+  },
+  {
+    "file": "expense-detail-comparison.png",
+    "bytes": 165506,
+    "sha256": "3f97aaa846f9db001eff919ccc01c4950814684d2aacec0791d08aca6c977d59"
+  },
+  {
+    "file": "expense-mobile-comparison.png",
+    "bytes": 449448,
+    "sha256": "916f6cadc7332813848fef6a99e4574415b65d83de3b56d759624e60871b5afa"
+  },
+  {
+    "file": "expense-print-1.png",
+    "bytes": 149144,
+    "sha256": "36f638490c3245633b6da05055b29525933c997f8a891cd2cd62f8c7285e9a30"
+  },
+  {
+    "file": "expense-print-2.png",
+    "bytes": 57632,
+    "sha256": "d0ec666067c351c72a73a0e38d1de6b95e904e99d5eb5176e0ea6590243ce536"
+  },
+  {
+    "file": "itinerary-1440.png",
+    "bytes": 201542,
+    "sha256": "dd865b7ad6cf6301bd3cc5d2cb6d3745992b91cd5b2f667535c2a933843586d9"
+  },
+  {
+    "file": "itinerary-320.png",
+    "bytes": 72685,
+    "sha256": "e883007f531fd04bd7c9b72bccf1263385de50401831c11e308a72039f36b045"
+  },
+  {
+    "file": "itinerary-390-expanded.png",
+    "bytes": 71008,
+    "sha256": "1dcb4878ecfacb4dd4d73c79177930afb197b11386d3d580837c9cb9e2aaacd4"
+  },
+  {
+    "file": "itinerary-390.png",
+    "bytes": 73187,
+    "sha256": "b8663cb2b613db74917e7a0efd7fd2b5d18996cf54554770b3ca1bbdb6506514"
+  },
+  {
+    "file": "itinerary-comparison.png",
+    "bytes": 632817,
+    "sha256": "d1ed5fc32bea8ec2eef4040833dab47c9332fb2895d63adad34a92e3162207af"
+  },
+  {
+    "file": "itinerary-desktop.png",
+    "bytes": 201262,
+    "sha256": "1f888fab520c827ca6ac0ad84447e806e614b855b9381063eb8c0d33f44dffe3"
+  },
+  {
+    "file": "itinerary-detail-comparison.png",
+    "bytes": 354183,
+    "sha256": "ef1746892f1f26adf56fb1166142228104f16389d64725345422cbc3a42ca5e3"
+  },
+  {
+    "file": "itinerary-mobile-comparison.png",
+    "bytes": 489248,
+    "sha256": "081ddc47298fd36f680bcc9e145150e80e841efbf674e1f7a2c2c60b1b390910"
+  },
+  {
+    "file": "itinerary-print-1.png",
+    "bytes": 174095,
+    "sha256": "2adb6f73976075cea46e33d831d35e778e5a6a98398f35793effd0ea63c9ab29"
+  },
+  {
+    "file": "itinerary-print-2.png",
+    "bytes": 90414,
+    "sha256": "d1626eb2a60a94c11a1502dca5c26682c5b10b06f059494c181c2c8a279fd81e"
+  },
+  {
+    "file": "pdf-verification.json",
+    "bytes": 421,
+    "sha256": "28cbfc7f5b0cdcc2d1a925f02351930c08fccf75942a11bd7f104f2283d326b2"
+  },
+  {
+    "file": "report-preview.png",
+    "bytes": 267458,
+    "sha256": "d765d5251a82ab30d77a8ef6eb73df415186b0a27594ed9fd3577013ecc2c484"
+  },
+  {
+    "file": "sample-expense.pdf",
+    "bytes": 1739990,
+    "sha256": "dba8abe8ac488dbca5f7d0192f25b81cb1b08074351b82565df82188c8cd0a11"
+  },
+  {
+    "file": "sample-itinerary.pdf",
+    "bytes": 2032133,
+    "sha256": "f7937057f1074bb81d0c98ba030ad1071d6b98154082d3934625c27a7c3e28f1"
+  }
+]

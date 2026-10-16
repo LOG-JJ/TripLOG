@@ -1,0 +1,101 @@
+{
+  "title": "TripLOG expense summary concepts",
+  "date": "2026-10-13",
+  "request": "이 부분디자인톤안맞는데 디자인톤 맞게 뛰어난 Ui,UX로 목업 만든후 개선",
+  "status": "Three independent concepts generated; awaiting user visual selection before implementation.",
+  "component": "Expense ledger cumulative cost summary",
+  "currentImplementation": {
+    "markup": "../../../src/app/ui/cost-summary.js",
+    "variant": "ledger",
+    "mount": "#rdBudgetSummary",
+    "styles": [
+      "../../../src/styles/expenses.css",
+      "../../../src/styles/expense-polish.css",
+      "../../../src/styles/travel-costs.css",
+      "../../../src/styles/typography.css"
+    ]
+  },
+  "evidence": {
+    "userAttachment": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-6e6c4e08-0bbb-4aa1-b1c4-7bc4bf3d24e5.png",
+    "currentCapture": "C:/Users/tbdk5/AppData/Local/Temp/TripLOG-Cost-Summary-20261013/01-expense-before.png",
+    "currentComponentCssPx": {
+      "width": 912,
+      "height": 112.66667175292967
+    },
+    "observations": [
+      "Current light-blue box places the total and per-person amount in similarly sized columns.",
+      "The surrounding expense UI uses yellow and pale-blue accents with crisp dark borders.",
+      "The new summary should keep total spending first, average second, and record count/supporting scope text third."
+    ],
+    "scope": "Single summary component, with adjacent page context captured. No full accessibility audit was performed."
+  },
+  "generationPolicy": "Independent built-in T2I calls; no screenshot or previous generated image supplied to any generation. User AGENTS.md T2I instruction takes precedence over generic attach-reference skill instructions.",
+  "requestedPresentation": {
+    "canvasPx": {
+      "width": 1440,
+      "height": 680
+    },
+    "desktopComponentWidthCssPx": 912,
+    "mobileComponentWidthCssPx": 358
+  },
+  "outputs": [
+    {
+      "prompt": "Create a production-quality responsive expense-summary UI concept for the existing TripLOG Korean travel planner. Use one concept shown at two responsive sizes on a clean white 1440 × 680 presentation canvas: a desktop component 912 CSS px wide near the top, and its mobile adaptation 358 CSS px wide below. These are two sizes of the same design, not different options. Keep realistic UI scale and readable Korean typography; do not stretch either rendering.\n\nThe component helps travelers read their cumulative spending first, then the per-person average and number of recorded expenses. Render this exact content: “여행 경비”, “486,000원”, “1인 평균”, “243,000원”, “기록한 지출 14건”, and the small supporting line “사전구매·환불 포함 · 누적 금액”. The data represents actual spending, not a budget target.\n\nDirection: a confident total-first summary. Give total spending a bold yellow emphasis and let the supporting facts feel lighter and neatly grouped. Explore a compact composition with a clear visual reading order and purposeful whitespace.\n\nMatch TripLOG’s existing visual language: white surface, near-black #0b1020 ink and crisp outlines, sunny yellow #fff05a, pale blue #bce6fb as a restrained supporting accent, rounded corners, minimal hard offset shadow, Pretendard-style Korean sans-serif, and clean line icons. Use approximately 14–16 CSS px labels, a 30–34 px primary amount and a 22–24 px secondary amount; preserve readable sizes on mobile. Use icons only where they help identify the information.\n\nDesign only this focused summary. No additional metrics, charts, budget progress, controls, navigation, device frames, browser chrome, decorative scenery, or explanatory design-board text. Keep the total visibly more prominent than the average. Avoid nested cards and excessive empty space. Current date is 2026-10-13; no dates need to appear in this component.",
+      "mode": "built-in T2I",
+      "inputImages": [],
+      "startedAt": "2026-10-13T11:44:36.178Z",
+      "startEpoch": 1791891876.178,
+      "source": "C:/Users/tbdk5/.codex/generated_images/01a13376-7f99-7e50-a150-a88282253a0f/exec-3fd12317-889f-47a9-96c4-12c529155aef.png",
+      "saved": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261013/triplog-cost-summary-total-first-20261013.png",
+      "displayOrder": 1,
+      "actualImagePx": {
+        "width": 1492,
+        "height": 1054
+      },
+      "sha256": "76B0C672AF492B3EBB34EC6EE8044D9F4D0958A5EC5E04FAFF8A89B2ADA6B028",
+      "sourceAndSavedHashesMatched": true,
+      "overwritten": false
+    },
+    {
+      "prompt": "Create a production-quality responsive expense-summary UI concept for the existing TripLOG Korean travel planner. Show one concept at two responsive sizes on a clean white 1440 × 680 presentation canvas: a desktop component 912 CSS px wide near the top and its mobile adaptation 358 CSS px wide below. Show the same design at both sizes. Keep realistic UI scale and readable Korean typography.\n\nHelp travelers read cumulative spending first, then the per-person average and recorded-expense count. Render this exact content: “여행 경비”, “486,000원”, “1인 평균”, “243,000원”, “기록한 지출 14건”, and the quiet supporting line “사전구매·환불 포함 · 누적 금액”. These are actual expenses, not a spending target.\n\nDirection: a light, compact summary rail. Explore an open, horizontally aligned desktop layout using strong typography, small useful line icons, clean dividers, and restrained color marks instead of a large colored panel. Make the total the clear anchor. On mobile, preserve the hierarchy in a short, practical arrangement with the supporting facts grouped beneath or beside it. Avoid turning the three facts into three separate cards.\n\nUse TripLOG’s existing palette and character: white, near-black #0b1020, sunny yellow #fff05a, pale blue #bce6fb, a small pink #f7afc7 accent if useful, crisp outlines, gently rounded details, Pretendard-style Korean sans-serif. Labels should read at approximately 14–16 CSS px, the primary amount at 30–34 px, and the secondary amount at 22–24 px. Use spacing and alignment before adding containers or shadows.\n\nDesign only this summary. No new metrics, charts, budget progress, controls, navigation, device frames, browser chrome, decorative scenery, or explanatory design-board text. No large empty sections or tiny grey body text. Current date is 2026-10-13; no dates need to appear.",
+      "mode": "built-in T2I",
+      "inputImages": [],
+      "startedAt": "2026-10-13T11:45:54.167Z",
+      "startEpoch": 1791891954.167,
+      "source": "C:/Users/tbdk5/.codex/generated_images/01a13376-7f99-7e50-a150-a88282253a0f/exec-0ffcfd73-be9d-4e02-b09a-71d5e67a51c8.png",
+      "saved": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261013/triplog-cost-summary-rail-20261013.png",
+      "displayOrder": 2,
+      "actualImagePx": {
+        "width": 1825,
+        "height": 862
+      },
+      "sha256": "41F0089ABCAFB0F4F350D08614E8BB629B2A666A1EAC8D39C106FB58156C53BC",
+      "sourceAndSavedHashesMatched": true,
+      "overwritten": false
+    },
+    {
+      "prompt": "Create a production-quality responsive expense-summary UI concept for the existing TripLOG Korean travel planner. Use a clean white 1440 × 680 presentation canvas with one desktop summary 912 CSS px wide near the top and its mobile adaptation 358 CSS px wide below. Both renderings must show the same design direction, with realistic UI proportions and readable Korean text.\n\nThe summary helps travelers understand actual cumulative spending, the per-person average, and recorded-expense count. Render this exact content: “여행 경비”, “486,000원”, “1인 평균”, “243,000원”, “기록한 지출 14건”, and “사전구매·환불 포함 · 누적 금액”. Keep the total the strongest element and the explanatory line quiet but legible.\n\nDirection: a compact receipt-inspired summary. Use a single crisp white surface with a confident dark outline, a small yellow title accent, and a considered receipt-like divider to organize the total and its supporting facts. Explore a refined arrangement that feels friendly and useful, with a small line receipt icon rather than a large illustration. Make the mobile version short and easy to scan, with the total above a concise pair of supporting facts.\n\nMatch TripLOG’s visual language: near-black #0b1020 ink, sunny yellow #fff05a, restrained pale blue #bce6fb accents, rounded corners, a minimal hard offset shadow, and Pretendard-style Korean sans-serif. Use approximately 14–16 CSS px labels, a 30–34 px primary amount, and a 22–24 px secondary amount. Keep alignment precise and color purposeful.\n\nThis is a real UI summary, not a paper illustration. No paper texture, torn edges, ornamental stamps, device frames, browser chrome, navigation, extra controls, charts, budget targets, new metrics, or explanatory design-board text. Do not nest cards. Current date is 2026-10-13; do not show dates.",
+      "mode": "built-in T2I",
+      "inputImages": [],
+      "startedAt": "2026-10-13T11:47:01.828Z",
+      "startEpoch": 1791892021.828,
+      "source": "C:/Users/tbdk5/.codex/generated_images/01a13376-7f99-7e50-a150-a88282253a0f/exec-14fe1a4b-e87d-49d3-a86d-e5309eda04f2.png",
+      "saved": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261013/triplog-cost-summary-receipt-20261013.png",
+      "displayOrder": 3,
+      "actualImagePx": {
+        "width": 1825,
+        "height": 862
+      },
+      "sha256": "BFA17A7ECF9C4A0E4A82C6E8C253930776D9DF014253E6FE70DACC6669E0F900",
+      "sourceAndSavedHashesMatched": true,
+      "overwritten": false
+    }
+  ],
+  "changes": {
+    "applicationCode": false,
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  },
+  "nextStep": "Resolve selection against displayed generated-image order, then use the selected target to implement and verify at native mobile/desktop sizes. Retain existing spending calculation semantics."
+}

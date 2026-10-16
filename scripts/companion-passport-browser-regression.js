@@ -1,9 +1,10 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser, fixtureToken, blockExternalRequests, startServer, stopServer } = require('./helpers/browser-fixture');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const fixture = require('./fixtures/companion-passport');
-const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Passport-20260922');
+const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || artifactDirectory('companion-passport');
 
 async function main() {
   fs.mkdirSync(output, { recursive: true });

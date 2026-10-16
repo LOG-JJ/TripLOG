@@ -1,0 +1,24 @@
+{
+  "id": "church",
+  "prompt": "Create a small hand-drawn travel illustration representing a church or cathedral visit, showing a modest cathedral building with a bell tower. Use delicate navy pen contours with restrained pastel watercolor touches. Keep a compact landscape composition that remains legible in a 120 × 70 CSS-pixel card, with a transparent background. Do not depict a real cathedral or a specific city. No brands or text.",
+  "inputs": [],
+  "mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "transparent_background": true,
+  "generation_started_epoch": 1791810558.428,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13017-b3cf-7fb1-900d-61dcc9aee86c\\exec-47dc0562-f2da-4d8d-99ff-a87a53e95ae9.png",
+  "destination": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/church.png",
+  "sha256": "f58728bb42986a56b4950fde4094e914642ee84255062287c7c9b8b5bc1f4864",
+  "original_sha256": "f58728bb42986a56b4950fde4094e914642ee84255062287c7c9b8b5bc1f4864",
+  "dimensions": [
+    1642,
+    958
+  ],
+  "file_size_bytes": 1748073,
+  "image_mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "overwritten": false
+}

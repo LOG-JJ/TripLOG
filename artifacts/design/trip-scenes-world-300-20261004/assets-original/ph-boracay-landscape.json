@@ -1,0 +1,21 @@
+{
+  "jobId": "ph-boracay-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-f741e145-41e8-415d-89ac-77611384ef66.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-world-300-20261004/assets-original/ph-boracay-landscape.png",
+  "actualDimensions": [
+    1619,
+    972
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Boracay: White Beach, the recognizable small rocky outcrop of Willy’s Rock, coconut palms and a white-sailed paraw boat on turquoise water. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "f5e4d9098867f4131ab79cfc598420a7d27709ef2b3a065f231ecba309fc382d",
+  "savedSha256": "f5e4d9098867f4131ab79cfc598420a7d27709ef2b3a065f231ecba309fc382d",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T07:51:55.880Z",
+  "savedAt": "2026-10-04T07:52:42.457149+00:00"
+}

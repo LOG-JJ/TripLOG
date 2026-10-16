@@ -1,0 +1,27 @@
+{
+  "id": "market",
+  "generation_mode": "T2I",
+  "generation_path": "built-in image_gen",
+  "generation_started_at_utc": "2026-10-12T13:02:16.061000+00:00",
+  "prompt": "Create a small outdoor market stall that can represent a market anywhere in the world, with fruit crates and a small awning. Use delicate hand-drawn navy pen outlines with restrained sky blue, pink, and pale yellow watercolor touches. Keep the composition horizontal, simple, and legible in a 120 × 70 CSS-pixel itinerary card, with a travel-journal feeling consistent with TripLOG. Make the surrounding background transparent. Do not include text, brands, or references to a specific country.",
+  "input_images": [],
+  "transparent_background_requested": true,
+  "original_path": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a13017-ef22-7373-affc-cfc60dbf9faf\\exec-4a60da1a-7acd-4b9b-b86a-62d1bf925d4a.png",
+  "destination_path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/itinerary-art-world-20261012/assets-original/market.png",
+  "sha256": "8fd198fdcbe66a9d8fe20a8e6e99d379b4042fa36446973a669bb098510d536f",
+  "original_sha256": "8fd198fdcbe66a9d8fe20a8e6e99d379b4042fa36446973a669bb098510d536f",
+  "destination_sha256": "8fd198fdcbe66a9d8fe20a8e6e99d379b4042fa36446973a669bb098510d536f",
+  "sha256_matches": true,
+  "original_unmodified": true,
+  "overwrote_existing_file": false,
+  "dimensions": [
+    1641,
+    959
+  ],
+  "size_bytes": 1903660,
+  "mode": "RGBA",
+  "alpha_extrema": [
+    0,
+    255
+  ]
+}

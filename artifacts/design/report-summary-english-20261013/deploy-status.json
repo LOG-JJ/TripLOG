@@ -1,0 +1,108 @@
+{
+  "checkedAt": "2026-10-13T10:27:38.139Z",
+  "sha": "7587b56e8930b0a3a86adfbcc365c6a1c2e2a810",
+  "combinedState": "pending",
+  "statuses": [],
+  "checks": [
+    {
+      "name": "Cloudflare Pages",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://dash.cloudflare.com/?to=/48d71d239f4bda82ec1b5b1028a5a9c8/pages/view/triplog/1595968a-8382-48ab-8f50-6b881392d030"
+    },
+    {
+      "name": "regression",
+      "status": "in_progress",
+      "conclusion": null,
+      "details_url": "https://github.com/LOG-JJ/TripLOG/actions/runs/38383286465/job/115248746005"
+    }
+  ],
+  "workflows": [
+    {
+      "id": 38383286465,
+      "status": "in_progress",
+      "conclusion": null,
+      "url": "https://github.com/LOG-JJ/TripLOG/actions/runs/38383286465",
+      "jobs": [
+        {
+          "id": 115248746005,
+          "name": "regression",
+          "status": "in_progress",
+          "conclusion": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm ci",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm test",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npx playwright install --with-deps chromium",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run npm run test:browser",
+              "status": "in_progress",
+              "conclusion": null
+            },
+            {
+              "name": "Run denoland/setup-deno@v2",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Run deno test --node-modules-dir=auto --no-lock --allow-env supabase/functions/triplog-sync/handler_test.ts",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Run npm run build",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "pending",
+              "conclusion": null
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "pending",
+              "conclusion": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "deployments": [],
+  "live": {
+    "status": 200,
+    "buildId": "c6be3facbf61e5ce8574"
+  }
+}

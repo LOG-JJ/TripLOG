@@ -1,0 +1,10 @@
+{
+  "mode": "built-in image_gen",
+  "inputImages": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20260915/triplog-itinerary-summary-20260915.png",
+    "C:/Users/tbdk5/.codex/visualizations/2026/09/15/triplog-transit-qa/final-timeline-mobile.png"
+  ],
+  "overwritten": false,
+  "prompt": "Revise the previous TripLOG mockup so the existing itinerary page switches in place between editing and summary views. Show two mobile screens side by side: editing on the left, summary on the right. Keep the TripLOG header, visible sync button, travel information, page width, and bottom navigation in the same positions. Preserve the existing design tone, yellow accent, compact typography, and consistent text hierarchy.\n\nOn both screens, place a compact two-segment switch labeled “일정 편집” and “일정 요약” below the trip information. Select “일정 편집” in yellow on the left and “일정 요약” in yellow on the right. The left screen retains the horizontal DAY selector, editable timeline, pencil actions, and “일정 추가” button.\n\nOn the right, replace the main timeline area with the itinerary summary directly inside the page. Include a compact “9개 일정 · 기록된 이동 2시간 35분” row and a small “요약 복사” action. Preserve the three example day sections and routes from the previous mockup, with DAY 1 expanded into aligned time-and-place rows and DAY 2 and DAY 3 collapsed into concise route summaries. Label the day action “이 날짜 편집”. Use “9.24–9.26 · 3일” for the trip period. Keep the normal bottom navigation visible, with “일정” selected. Switch back using the same “일정 편집” segment. Do not show a popup, bottom sheet, dimmed overlay, separate summary window, close icon, or modal footer.\n\nInput images:\n- triplog-itinerary-summary-20260915.png: Previous mockup to revise according to the requested in-place view change.\n- final-timeline-mobile.png: Existing TripLOG itinerary UI reference.",
+  "stage": "revised mockup only; inline editor/summary mode switch"
+}

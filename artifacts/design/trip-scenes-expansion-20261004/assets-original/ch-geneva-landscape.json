@@ -1,0 +1,21 @@
+{
+  "jobId": "ch-geneva-landscape",
+  "sourcePath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-35a4-74c3-916e-ab6a0794b3ea\\exec-758ba66f-e607-433f-89e0-e53f44d6d012.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-expansion-20261004/assets-original/ch-geneva-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Geneva: the tall Jet d'Eau fountain on Lake Geneva, a lakeside promenade and compact historic city rooftops. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset, with the focal scene toward the center-right and bottom. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "4c0a6e1950da1465a5a342d92a004c529dbd32cc4afec70c6674a0825f4b0d24",
+  "savedSha256": "4c0a6e1950da1465a5a342d92a004c529dbd32cc4afec70c6674a0825f4b0d24",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T06:38:57.317Z",
+  "savedAt": "2026-10-04T06:39:56.017980+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "jobId": "kr-jeju-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104e7-e587-7d23-8d34-8e0712636c97/exec-c5f03da0-8aba-4877-a01e-506a5bf3303f.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-redraw-20261004/assets-original/kr-jeju-landscape.png",
+  "generationMode": "built-in image_gen; single I2I using user-approved canonical Suncheon style reference",
+  "prompt": "Create one standalone destination illustration of Jeju: Seongsan Ilchulbong's volcanic coastal silhouette, a dark basalt stone wall, blue sea, and a few simple grasses. Match the user's selected current Suncheon illustration style in the reference. Preserve the same visual language and drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition, intended for an 800 × 480 desktop header asset displayed on the right of a white postcard panel. Compose the focal scene toward the center-right and bottom. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame, with quiet transparent space along the upper-left. The illustrated scenery must reach the right and bottom canvas edges without empty padding. Keep the destination's main features comfortably inside the frame. Artwork only, with no text, UI, labels, logos or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "generatedCityInputs": [],
+  "generationCount": 1,
+  "transparentBackground": true,
+  "overwrite": false,
+  "startedAt": "2026-10-04T04:13:12.668Z",
+  "startedEpoch": 1791087192.668,
+  "finishedAt": "2026-10-04T04:13:52.602Z",
+  "sourceSha256": "969f73c1951e6d3c2a8f49a97d3b9fa4cb8a4ffa676b01d833d83485032e6e5a",
+  "savedSha256": "969f73c1951e6d3c2a8f49a97d3b9fa4cb8a4ffa676b01d833d83485032e6e5a",
+  "sha256Match": true,
+  "referenceSha256": "8be62382845e53791e695e49b20a1c631e3e621d40fee07935c0f4c9832af822",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "pngColorType": 6,
+  "bytes": 1535010
+}

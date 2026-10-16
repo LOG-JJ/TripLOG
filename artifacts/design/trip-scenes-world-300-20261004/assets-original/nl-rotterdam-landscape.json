@@ -1,0 +1,21 @@
+{
+  "jobId": "nl-rotterdam-landscape",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a104c1-35a4-74c3-916e-ab6a0794b3ea/exec-6ef3905d-0f7f-486a-ac8e-59ad3378a358.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-scenes-world-300-20261004/assets-original/nl-rotterdam-landscape.png",
+  "actualDimensions": [
+    1619,
+    972
+  ],
+  "generationMode": "built-in image_gen, image-to-image",
+  "prompt": "Create one standalone destination illustration of Rotterdam: the white Erasmus Bridge over the Nieuwe Maas, the yellow Cube Houses and a modern waterfront. Match the user's approved current Suncheon illustration style in the reference. Preserve that same drawing character while depicting this destination's own subjects. Use a landscape 5:3 composition intended for an 800 × 480 desktop asset displayed on the right side of a travel header. Use a transparent background. Keep a natural irregular left silhouette visibly inside the frame and quiet transparent space along the upper-left. The illustrated scene must reach the right and bottom canvas edges without empty padding. Keep the main subjects comfortably inside the frame. Artwork only, with no UI, caption or border.\n\nInput images:\n- kr-suncheon.png: The user's approved current Suncheon illustration; authoritative style reference.",
+  "imageInputs": [
+    "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon.png"
+  ],
+  "sourceSha256": "2c27f05bf95da9bfd52cf2811415b75888674a07b210ef2c5b4123fda7dff225",
+  "savedSha256": "2c27f05bf95da9bfd52cf2811415b75888674a07b210ef2c5b4123fda7dff225",
+  "equality": true,
+  "transparentBackground": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-04T10:08:41.820Z",
+  "savedAt": "2026-10-04T10:09:41.966158+00:00"
+}

@@ -1,9 +1,10 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser, fixtureToken, blockExternalRequests, startServer, stopServer } = require('./helpers/browser-fixture');
 // Browser plugin unavailable: isolated Playwright/Edge fixtures; external requests blocked.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.join(require('node:os').tmpdir(), 'TripLOG-Expense-Filters-20260922');
+const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || artifactDirectory('expense-filter');
 const common = { mode: 'domestic', currency: 'KRW', paymentMethod: 'card', paymentDate: '2026-09-25', date: '2026-09-25' };
 const fixture = { id: 'expense-filter-fixture', tripName: '서울 검증 여행', country: '대한민국', countryCode: 'KR', city: '서울', travelMode: 'domestic', startDate: '2026-09-25', endDate: '2026-09-28', totalBudget: 1000000, entries: [
   { ...common, id: 'train', category: '교통', description: '검증 기차표', amount: 25000, createdAt: 1 },

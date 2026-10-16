@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-04",
+  "generationMode": "built-in image_gen",
+  "overwritten": false,
+  "request": "Compact populated reservation mockups, then refined by the user into a mobile two-column summary.",
+  "latestVisualTarget": "artifacts/design/20261004/triplog-reservation-mobile-two-column-20261004.png",
+  "note": "Two stacked concepts were generated first. The user then requested a simpler mobile two-column structure; the planned third stacked concept was replaced by the two-column refinement. No application implementation was requested in this mockup step.",
+  "generations": [
+    {
+      "displayOrder": 1,
+      "name": "Compact Reservation Ledger",
+      "file": "artifacts/design/20261004/triplog-reservation-compact-ledger-20261004.png",
+      "source": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-e92fe751-e83f-4f01-91aa-3b94fa7e86db.png",
+      "inputs": [
+        "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-11d1b8f6-3356-42de-918f-eb8a0886ec2a.png",
+        "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261004/triplog-reservation-empty-refined-20261004.png"
+      ],
+      "prompt": "Create a refined TripLOG mobile reservation component using a compact ledger layout. Target 390 × 480 logical pixels for the complete component: three transport reservations above two accommodation reservations, all visible. This redesign must use much less vertical space than the current populated implementation while keeping readable information and stable text alignment.\n\nKeep the established cream paper, pale blue transport, pale pink accommodation, yellow count badges and dark ink. Turn the passport pockets into shallow, restrained frames. Reserve at most 16 pixels of height for decorative pocket edges; use only a small corner illustration. Prioritize information over decoration. Use Korean Pretendard-style typography: category headings 18 pixels, primary content 14–15 pixels, supporting dates 12–13 pixels. Align type optically and use consistent spacing.\n\nTransport: one header \"교통 예약\" with \"3건\" and a view-details chevron. Show \"서울 출발 · 제주항공\" once. Below it, use one compact comparison table with column headings \"도착지\", \"가는 편 · 9.25 (금)\", \"오는 편 · 9.28 (월)\". Preserve these three separate rows:\n오사카 | 09:05 | 13:35\n오사카(간사이) | 09:05 | 13:35\n오사카(간사이) | 10:40 | 16:30\nEach row should take roughly 34–38 pixels. Do not repeat airline, dates or a \"1건\" label in every row.\n\nAccommodation: one header \"숙소 예약\" with \"2건\" and a view-details chevron. Show two compact rows with full names and supporting dates:\n02 그룹 스테이 클라세 뉴 호스텔 인 난바\n9.25 (금) → 9.26 (토) · 1박\n호텔 몬돈스 교토 고조\n9.26 (토) → 9.28 (월) · 2박\nWrap the first hotel name naturally into two lines. Use subtle row dividers and avoid nested cards.\n\nCurrent date is 2026-10-04; retain these source reservation dates from September 2026. Output only the component, with no phone or browser chrome and no explanatory annotations.\n\nInput images:\n- Image 1: the user's current populated reservation screenshot to improve.\n- Image 2: the latest passport-pocket mockup, providing the established design direction.",
+      "status": "superseded by requested mobile two-column direction"
+    },
+    {
+      "displayOrder": 2,
+      "name": "Grouped Route Wallet",
+      "file": "artifacts/design/20261004/triplog-reservation-route-groups-20261004.png",
+      "source": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-c885b775-c80b-4595-8d7f-cef8fe49ad24.png",
+      "inputs": [
+        "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-11d1b8f6-3356-42de-918f-eb8a0886ec2a.png",
+        "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261004/triplog-reservation-empty-refined-20261004.png"
+      ],
+      "prompt": "Create a compact TripLOG mobile reservation mockup called Grouped Route Wallet. Target 390 × 480 logical pixels for the entire transport-and-accommodation component. The hierarchy should be route groups and shared schedules, with all three transport records and both hotels visible at readable size.\n\nKeep the established cream paper, blue transport, pink accommodation, yellow count badges and dark ink. Use very shallow passport-pocket edges and subtle material texture, with corner artwork taking no more than a thin bottom strip. Use readable Korean Pretendard-style headings at 18 pixels, content at 14–15 pixels and supporting dates at 12–13 pixels. Avoid tall leather backgrounds, deep empty areas and repeated information.\n\nTransport header: \"교통 예약\", \"3건\", one view-details chevron.\nShared line: \"서울 출발 · 제주항공\".\nShared schedule labels: \"가는 편 9.25 (금)\" and \"오는 편 9.28 (월)\".\nOrganize the body into two compact route groups separated by a fine rule:\n- Group label \"오사카\" with a quiet \"1건\"; one aligned outbound/return pair \"09:05\" and \"13:35\".\n- Group label \"오사카(간사이)\" with a quiet \"2건\"; two aligned outbound/return pairs, \"09:05\" with \"13:35\", then \"10:40\" with \"16:30\".\nGive each route label one stable left area shared by its schedule rows, and align the two time columns on the right. The three bookings remain separate; only the repeated destination heading is shared. Do not repeat the carrier and dates for every booking.\n\nAccommodation header: \"숙소 예약\", \"2건\", one view-details chevron. Use a compact connected stay list with names as the primary text, dates immediately below, and night counts aligned consistently:\n02 그룹 스테이 클라세 뉴 호스텔 인 난바\n9.25 (금) → 9.26 (토) · 1박\n호텔 몬돈스 교토 고조\n9.26 (토) → 9.28 (월) · 2박\nPreserve full names with natural wrapping and do not create a separate bulky card for each reservation.\n\nCurrent date is 2026-10-04; preserve the source dates from September 2026. Show only the component without device chrome, browser chrome or explanatory labels.\n\nInput images:\n- Image 1: the user's current populated reservation screenshot to improve.\n- Image 2: the latest passport-pocket mockup, providing the established design direction.",
+      "status": "superseded by requested mobile two-column direction"
+    },
+    {
+      "displayOrder": 3,
+      "name": "Mobile Two-Column Summary",
+      "file": "artifacts/design/20261004/triplog-reservation-mobile-two-column-20261004.png",
+      "source": "C:/Users/tbdk5/.codex/generated_images/01a0c429-1920-7d20-a95f-bb0950d8831b/exec-3a392013-7fcf-4eb8-a8a9-9806fa4b8c6b.png",
+      "inputs": [
+        "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-11d1b8f6-3356-42de-918f-eb8a0886ec2a.png",
+        "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261004/triplog-reservation-route-groups-20261004.png"
+      ],
+      "prompt": "Refine TripLOG's reservation overview into a genuinely compact mobile two-column summary. Produce one UI mockup at 390 × 240 logical pixels: the transport card on the left and the accommodation card on the right in the same row, with equal widths and equal heights. Use 12-pixel outer margins and a 10-pixel gap. Both cards must fit together at normal mobile scale.\n\nKeep the established cream paper, blue transport accent, pink accommodation accent, yellow count badges and dark ink. Use shallow passport-pocket edges and very small corner details. Content and typography should stay upright and aligned. Use readable Korean Pretendard-style type: category headings 15 pixels, main content 13–14 pixels, supporting dates 12 pixels. Do not shrink a full reservation table into these cards; show only concise summaries and a clear route to details.\n\nLeft card, exact visible text:\n교통 예약\n3건\n서울 ↔ 오사카\n제주항공\n9.25 (금) – 9.28 (월)\n전체 보기\n\nRight card, exact visible text:\n숙소 예약\n2건\n02 그룹 스테이…\n9.25–9.26 · 1박\n호텔 몬돈스…\n9.26–9.28 · 2박\n전체 보기\n\nPlace each title, small category icon and count badge in a compact header. In the left card, make the route the main summary, followed by the carrier and travel period. In the right card, use two small text rows with intentional name ellipses and their date/night captions. Place the two \"전체 보기\" actions and chevrons on one shared bottom baseline. Keep full flight schedules and full hotel names behind these detail actions. Avoid a large decorative footer, repeated booking rows, oversized icons and empty padding. The entire pair should read as one compact overview component, not two tall document panels.\n\nCurrent date is 2026-10-04; retain the source reservation dates from September 2026. Output only the two-column component without phone chrome, browser chrome or explanatory annotations.\n\nInput images:\n- Image 1: the user's populated reservation screenshot to improve.\n- Image 2: the latest reservation mockup to simplify into a mobile two-column summary.",
+      "status": "latest requested refinement"
+    }
+  ]
+}

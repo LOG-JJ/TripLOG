@@ -1,3 +1,4 @@
+const { artifactDirectory } = require('./helpers/artifact-output');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
@@ -28,7 +29,7 @@ async function main() {
     assert.deepEqual(await page.locator('.rd-bar-percent').allTextContents(), ['100.0%']);
     assert.match(await page.locator('.rd-category-section').innerText(), /환불 전 금액 기준/);
     assert.equal(await page.locator('.rd-legacy, #triplogFormSources, #reportDailyBarChart, #expenseTableBody').count(), 0);
-    const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || path.resolve('.test-output/refund-report'); fs.mkdirSync(output, { recursive: true });
+    const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || artifactDirectory('report-refund'); fs.mkdirSync(output, { recursive: true });
     await page.screenshot({ path: path.join(output, 'partial-refund-390.png'), fullPage: true });
 
     // A refund on another date is a signed bar below the zero baseline.

@@ -1,0 +1,23 @@
+{
+  "id": "jp-osaka",
+  "kind": "city",
+  "mode": "built-in image_gen, text-to-image",
+  "imageInputsSent": [],
+  "prompt": "Create a standalone landscape travel illustration of Osaka's Dotonbori canal, with a small pedestrian bridge and compact lively commercial building silhouettes reflected in the water. Use a logical 800 × 480 canvas for a header illustration displayed at about 300 × 180 CSS pixels. Draw crisp, delicate ink outlines in #0b1020 with soft, flat, watercolor-like fills in pale blue #bce6fb, sage #b8d2bc, and warm sand #f4d9a4, plus restrained pink and yellow accents. Place the focal scene toward the center-right and bottom, filling most of the canvas, with organic open edges toward the left and top and a clean transparent exterior. No UI, text, readable signs, logos, or frame.\n",
+  "source": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a104c1-5e20-7f81-812c-b8a5c49d0800\\exec-7e45a59d-f058-4c25-8994-5e8fbf4a9a3d.png",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "original": "artifacts/design/trip-header-20261004/assets-original/city-jp-osaka.png",
+  "sourceSha256": "870aec09cc1d64c8404aad108fed899e9505af088f8ac741cd25825e0e6f1f29",
+  "originalMatchesSource": true,
+  "asset": "src/assets/trip-scenes/cities/v1/jp-osaka.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "bytes": 155020,
+  "assetSha256": "c525f631c824244f272acc4d90f66f02f7177028849231616217e3857fae7be3",
+  "overwritten": false
+}
