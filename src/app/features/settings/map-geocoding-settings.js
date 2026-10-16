@@ -16,7 +16,10 @@ function setupMapGeocodingSettings() {
       saved ? "success" : "warning");
   });
 
-  els.settingsGoogleGeocodingKeyClearButton?.addEventListener("click", () => {
+  els.settingsGoogleGeocodingKeyClearButton?.addEventListener("click", async () => {
+    const key = getGoogleGeocodingApiKey();
+    if (!key || !await window.TripLog.ui.confirmation.ask({ kind: 'map-key' })) return;
+    if (key !== getGoogleGeocodingApiKey()) { syncMapGeocodingSettings('키가 변경됐어요. 다시 확인해 주세요.', 'warning'); return; }
     clearGoogleGeocodingApiKey();
     syncMapGeocodingSettings("Google 좌표 검색을 껐습니다.", "neutral");
   });
@@ -26,6 +29,7 @@ function syncMapGeocodingSettings(message = "", tone = "neutral") {
   if (!els.settingsGoogleGeocodingKeyInput) return;
 
   const key = getGoogleGeocodingApiKey();
+  if (els.settingsGoogleGeocodingKeyClearButton) els.settingsGoogleGeocodingKeyClearButton.disabled = !key;
   els.settingsGoogleGeocodingKeyInput.value = "";
   els.settingsGoogleGeocodingKeyInput.placeholder = key ? maskGoogleGeocodingApiKey(key) : "AIza...";
 

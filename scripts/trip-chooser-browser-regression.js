@@ -71,7 +71,7 @@ async function main() {
     await page.locator('#rdTripSearch').fill('새 여행');assert.equal(await page.locator('.rd-trip-choice').count(),2);
     const before=await snapshot('spare-one');
     await remove('spare-one').press('Enter');
-    assert.match(await page.locator('#rdConfirmMessage').textContent(),/“새 여행”/);
+    assert.equal(await page.locator('#rdConfirmSubject').textContent(),'새 여행');
     assert.equal(await page.evaluate(()=>state.id),'current','Trash never selects the trip');
     await page.locator('#rdConfirmCancel').click();
     await remove('spare-one').waitFor({state:'visible'});
@@ -107,7 +107,7 @@ async function main() {
     await page.evaluate(()=>{window.__archiveFailure=false;});await remove('shared').click();await accept();await waitRemoved('shared');
     assert.deepEqual(await page.evaluate(()=>window.__archiveCalls),[{id:'shared',action:'archive'},{id:'shared',action:'archive'}]);
     await page.evaluate(()=>window.TripLogSyncRepository.update('jeju',r=>({...r,serverId:'fixture-member',role:'editor'})));
-    await remove('jeju').click();assert.match(await page.locator('#rdConfirmMessage').textContent(),/이 기기의 여행 목록/);await accept();await waitRemoved('jeju');
+    await remove('jeju').click();assert.match(await page.locator('#rdConfirmMessage').textContent(),/이 기기의 목록/);await accept();await waitRemoved('jeju');
     assert.equal(await page.evaluate(()=>window.__archiveCalls.length),2,'A member hides their own listing without archiving for everyone');
     await remove('current').click();await accept();await waitRemoved('current');
     await page.locator('#rdTripChooser').waitFor({state:'hidden'});

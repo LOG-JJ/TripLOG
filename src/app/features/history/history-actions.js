@@ -6,19 +6,23 @@ async function handleHistoryAction(event) {
   if (!record) return;
 
   if (button.dataset.historyAction === "load") {
-    const ok = await (window.TripLog.features.redesign?.workspace?.confirmAction?.("선택한 기록을 별도 여행으로 복원할까요?") ?? window.confirm("선택한 기록을 별도 여행으로 복원할까요?"));
+    const ok = await window.TripLog.ui.confirmation.ask({ title: '기록을 복원할까요?', subject: record.state?.tripName || '저장 기록', message: '별도 여행으로 복원돼요.', confirmLabel: '복원' });
     if (!ok) return;
     try { if (await restoreSnapshot(record.state)) closeHistoryModal(); }
     catch (error) { showToast(error.message || "복원하지 못했습니다. 기존 기록은 보존됩니다."); }
   }
 
   if (button.dataset.historyAction === "delete") {
-    const ok = await (window.TripLog.features.redesign?.workspace?.confirmAction?.("이 저장 기록을 삭제할까요?") ?? window.confirm("이 저장 기록을 삭제할까요?"));
-    if (!ok) return;
-    historyRecords = historyRecords.filter((item) => item.id !== record.id);
-    saveHistoryRecords();
-    deleteArchiveRecord(record.id).catch((error) => console.warn("Archive delete failed:", error));
-    renderHistoryModal();
+    const tripId = state.id;
+    const ok = await window.TripLog.ui.confirmation.ask({ kind: 'history', subject: `${record.state?.tripName || '저장 기록'} · ${formatHistoryTimestamp(record.timestamp)}` });
+    if (!ok || state.id !== tripId || !historyRecords.some(item => item.id === record.id)) return;
+    button.disabled = true;
+    try {
+      await deleteArchiveRecord(record.id);
+      historyRecords = historyRecords.filter((item) => item.id !== record.id);
+      saveHistoryRecords(); renderHistoryModal(); showToast('저장 기록을 삭제했어요.');
+    } catch (_) { showToast('저장 기록을 삭제하지 못했어요. 다시 시도해 주세요.'); }
+    finally { if (button.isConnected) button.disabled = false; }
   }
 }
 

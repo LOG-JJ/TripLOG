@@ -8,6 +8,7 @@ module.exports = [
   'transport-reservations-browser-regression.js',
   'stay-copy-browser-regression.js',
   'scroll-lock-browser-regression.js',
+  'delete-dialogs-browser-regression.js',
   'settlement-name-browser-regression.js',
   'travel-costs-browser-regression.js',
   'report-refund-browser-regression.js',

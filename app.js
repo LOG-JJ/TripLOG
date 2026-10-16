@@ -42,6 +42,7 @@
     "features/expenses/lodging.js",
     "features/expenses/pretrip-purchases.js",
     "ui/dialog.js",
+    "ui/confirmation.js",
     "ui/cost-summary.js",
     "ui/date-picker.js",
     "ui/time-wheel.js",

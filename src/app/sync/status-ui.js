@@ -195,7 +195,18 @@
         for (const value of Object.values(draft.value.fields)) if (value.value) details.append(element("p", value.value));
         card.append(details);
         if (draft.value.formId === "itineraryForm") card.append(button("새 일정으로 이어서 작성", () => window.TripLog.sync.drafts.resume(draft)));
-        card.append(button("초안 삭제", () => perform(() => window.TripLog.sync.drafts.discard(draft))));
+        card.append(button("초안 삭제", async () => {
+          if (busy) return;
+          const accountId = controller.engine.status().accountId;
+          const subject = draft.value.formId === 'itineraryForm' ? '작성 중인 일정' : '작성 중인 지출';
+          if (!await window.TripLog.ui.confirmation.ask({ kind: 'draft', subject }) || state.id !== tripId || controller.engine.status().accountId !== accountId) return;
+          await perform(async () => {
+            const latest = (await window.TripLog.sync.drafts.list(tripId)).find(row => row.id === draft.id);
+            if (!latest) return;
+            if (latest.savedAt !== draft.savedAt) throw new Error('초안이 변경됐어요. 다시 확인해 주세요.');
+            await window.TripLog.sync.drafts.discard(latest);
+          });
+        }));
         content.append(card);
       }
       const snapshots = await R.snapshots(tripId);
@@ -253,7 +264,7 @@
         card.append(element("strong", `변경 #${entry.sequence}`), element("p", new Date(entry.created_at).toLocaleString("ko-KR")));
         for (const row of entry.changes) card.append(element("p", describe({ kind: row.kind, action: row.deleted_at ? "delete" : "patch" })));
         if ((record.role === "owner" || entry.actor_id === controller.engine.status().accountId) && record.role !== "viewer" && !entry.changes.some(row => row.kind === "note_update")) card.append(button("이 변경 되돌리기", () => perform(async () => {
-          if (!await window.TripLog.features.redesign.workspace.confirmAction("이 변경을 되돌릴까요? 삭제된 기록도 원래 여행에 복원하며 모든 기기에 반영됩니다.")) return;
+          if (!await window.TripLog.ui.confirmation.ask({ title: '변경을 되돌릴까요?', subject: `변경 #${entry.sequence}`, message: '삭제된 기록도 복원돼요.\n모든 기기에 반영돼요.', confirmLabel: '되돌리기' }) || state.id !== tripId) return;
           try { await controller.engine.control(tripId, "restore-change", { sequence: entry.sequence, operationId: M.uuid() }); }
           catch (error) { if ((error.code || error.message) === "HISTORY_CHANGED") throw new Error("이후에 수정된 항목이 있어 최신 내용을 유지했습니다."); throw error; }
           await controller.engine.refresh();
@@ -271,23 +282,27 @@
           for (const [value, label] of [["editor", "편집 가능"], ["viewer", "보기 전용"]]) { const option = element("option", label); option.value = value; select.append(option); }
           select.value = member.role === "viewer" ? "viewer" : "editor";
           card.append(select, button("권한 저장", () => perform(async () => { await controller.engine.control(tripId, "member", { userId: member.user_id, role: select.value }); await controller.engine.refresh(); })));
-          card.append(button("멤버 내보내기", () => perform(async () => {
-            if (!await window.TripLog.features.redesign.workspace.confirmAction("이 멤버의 여행 접근 권한을 해제할까요? 이미 기기에 내려받은 내용은 원격 삭제되지 않습니다.")) return;
-            await controller.engine.control(tripId, "member", { userId: member.user_id, role: "remove" }); await controller.engine.refresh();
-          })), button("소유권 넘기기", () => perform(async () => {
-            if (!await window.TripLog.features.redesign.workspace.confirmAction("이 멤버에게 여행 소유권을 넘길까요? 이후 내 권한은 편집자로 바뀝니다.")) return;
+          card.append(button("멤버 내보내기", async () => {
+            if (busy || !await window.TripLog.ui.confirmation.ask({ kind: 'member', subject: member.display_name || '여행 멤버' }) || state.id !== tripId) return;
+            await perform(async () => {
+              await controller.engine.control(tripId, "member", { userId: member.user_id, role: "remove" }); await controller.engine.refresh();
+            });
+          }), button("소유권 넘기기", () => perform(async () => {
+            if (!await window.TripLog.ui.confirmation.ask({ title: '소유권을 넘길까요?', subject: member.display_name || '여행 멤버', message: '내 권한은 편집자로 바뀌어요.', confirmLabel: '넘기기' }) || state.id !== tripId) return;
             await controller.engine.control(tripId, "transfer-owner", { userId: member.user_id }); await controller.engine.refresh();
           })));
         }
         content.append(card);
       }
-      if (record.role !== "owner") content.append(button("공유 여행 나가기", () => perform(async () => {
-        if (!await window.TripLog.features.redesign.workspace.confirmAction("공유 여행에서 나갈까요? 미전송 내용과 복구 사본은 이 기기에 보관됩니다.")) return;
-        await controller.engine.control(tripId, "leave", {});
-        await R.update(tripId, r => ({ ...r, hidden: true, lastError: { code: "FORBIDDEN", at: Date.now() } }), { snapshot: true, source: "before-trip-hide" });
-        const identity = controller.engine.status();
-        await window.TripLog.persistence.stateStorage.activateAccount(identity.accountId, identity.projectId);
-      })));
+      if (record.role !== "owner") content.append(button("공유 여행 나가기", async () => {
+        if (busy || !await window.TripLog.ui.confirmation.ask({ kind: 'leave', subject: record.snapshot.tripName || '공유 여행' }) || state.id !== tripId) return;
+        await perform(async () => {
+          await controller.engine.control(tripId, "leave", {});
+          await R.update(tripId, r => ({ ...r, hidden: true, lastError: { code: "FORBIDDEN", at: Date.now() } }), { snapshot: true, source: "before-trip-hide" });
+          const identity = controller.engine.status();
+          await window.TripLog.persistence.stateStorage.activateAccount(identity.accountId, identity.projectId);
+        });
+      }));
     }
   }
   function setup() {

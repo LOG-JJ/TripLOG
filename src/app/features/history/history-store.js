@@ -79,9 +79,9 @@ async function handleImportHistoryJson() {
 }
 
 async function clearAllHistoryRecords() {
+  await clearArchiveRecords();
   historyRecords = [];
   saveHistoryRecords();
-  await clearArchiveRecords();
   renderHistoryModal();
   updateStorageNote("저장 기록을 모두 초기화했습니다.");
 }

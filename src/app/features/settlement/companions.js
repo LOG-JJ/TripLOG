@@ -14,24 +14,41 @@ function addCompanion(name) {
   saveAndRender();
 }
 
-function deleteCompanion(index) {
-  if (!state.companions) return;
+async function deleteCompanion(index) {
+  if (!state.companions) return false;
+  const tripId = state.id;
   const member = state.companions[index];
-  if (member && state.entries.some(entry => entry.payerKey === getCompanionSettlementKey(member))) {
-    showToast("이 동행이 결제한 지출이 있어요. 지출의 결제자를 먼저 변경해 주세요."); return;
+  if (!member) return false;
+  const hasPayments = () => state.entries.some(entry => entry.payerKey === getCompanionSettlementKey(member));
+  if (hasPayments()) {
+    showToast("이 동행이 결제한 지출이 있어요. 결제자를 먼저 바꿔 주세요."); return false;
   }
-  const [removed] = state.companions.splice(index, 1);
-  if (removed) window.TripLog.persistence.stateStorage.markDeletedEntity("participant", removed.id);
-  if (removed && state.settlement?.customShares) {
-    delete state.settlement.customShares[getCompanionSettlementKey(removed)];
+  if (!await window.TripLog.ui.confirmation.ask({ kind: 'companion', subject: member.name }) || state.id !== tripId) return false;
+  const current = state.companions.find(item => item.id === member.id);
+  if (!current) return false;
+  if (hasPayments()) { showToast('결제 내역이 바뀌었어요. 결제자를 먼저 확인해 주세요.'); return false; }
+  const previous = { companions: state.companions, settlement: state.settlement };
+  state.companions = state.companions.filter(item => item.id !== current.id);
+  state.settlement = JSON.parse(JSON.stringify(state.settlement || {}));
+  window.TripLog.persistence.stateStorage.markDeletedEntity("participant", current.id);
+  if (state.settlement.customShares) {
+    delete state.settlement.customShares[getCompanionSettlementKey(current)];
   }
-  if (removed && state.settlement?.itemSplits) {
-    const removedKey = getCompanionSettlementKey(removed);
+  if (state.settlement.itemSplits) {
+    const removedKey = getCompanionSettlementKey(current);
     Object.values(state.settlement.itemSplits).forEach((split) => {
       if (split?.shares) delete split.shares[removedKey];
     });
   }
-  saveAndRender();
+  if (!await saveAndRender()) {
+    if (state.id === tripId) { Object.assign(state, previous); render(); }
+    showToast('정산 멤버를 삭제하지 못했어요. 다시 시도해 주세요.'); return false;
+  }
+  if (window.TripLogSyncRepository?.cached(tripId)?.snapshot.companions.some(item => item.id === current.id)) {
+    showToast('다른 변경과 겹쳐 삭제하지 않았어요. 저장 상태를 확인해 주세요.'); return false;
+  }
+  if (state.id === tripId) showToast('정산 멤버를 삭제했어요.');
+  return true;
 }
 
 function updateCompanionSpent(index, amount) {

@@ -118,7 +118,8 @@ body.rd-app #itineraryTransitDialog .transit-memo input { flex: 1; min-width: 0;
 #itineraryTransitDialog .transit-segment-options { position: absolute; width: 240px; right: 0; top: 32px; padding: 12px; border: 1px solid #d6deea; border-radius: 9px; background: #fff; box-shadow: 0 8px 24px #1f32491f; }
 body.rd-app #itineraryTransitDialog .transit-segment-options label { display: block; margin: 0 0 5px; font-size: 12px; font-weight: 500; color: #52617d; }
 body.rd-app #itineraryTransitDialog .transit-segment-options input { width: 100%; min-height: 36px; border: 1px solid #cbd4e2; border-radius: 6px; padding: 7px; font-size: 14px; box-shadow: none; }
-body.rd-app #itineraryTransitDialog .transit-remove { display: flex; align-items: center; gap: 6px; width: 100%; min-height: 38px; padding: 8px 4px 0; margin: 4px 0 0; border: 0; border-top: 1px solid #ecedf1; border-radius: 0; background: #fff; color: #b42b41; font-size: 13px; font-weight: 500; box-shadow: none; }
+body.rd-app #itineraryTransitDialog .transit-remove { display: flex; align-items: center; gap: 6px; width: 100%; min-height: 44px; padding: 8px 4px; margin: 4px 0 0; border: 0; border-top: 1px solid #ecedf1; border-radius: 0; background: #fff; color: #b42b41; font-size: 14px; font-weight: 500; box-shadow: none; }
+#itineraryTransitDialog .transit-removal-note { display: block; margin: 0 4px; color: #687383; font-size: 12px; font-weight: 400; line-height: 1.5; }
 #itineraryTransitDialog .transit-cost { display: flex; align-items: center; gap: 5px; margin: 7px 0 0; color: var(--journey-muted); font-size: 12px; }
 #itineraryTransitDialog .transit-editor-destination { min-height: 44px; padding: 6px 0 8px; }
 #itineraryTransitDialog .transit-destination-pin { display: grid; place-items: center; width: 28px; height: 28px; color: #ef393e; background: #fff; position: relative; }

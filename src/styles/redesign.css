@@ -109,7 +109,21 @@ html:has(body.rd-app){scrollbar-width:none}html:has(body.rd-app)::-webkit-scroll
 
 .rd-other-trip{position:relative;display:flex;flex-direction:column;text-align:left;width:100%;padding:12px 35px 12px 13px;border:1.8px solid var(--text);border-radius:9px;background:#fff;box-shadow:none;margin-bottom:9px}.rd-other-trip strong{font-size:18px}.rd-other-trip span{font-size:12px;color:var(--muted)}.rd-other-trip .ph{position:absolute;right:10px;top:24px;font-size:18px}.rd-trip-management{margin-top:18px;font-size:13px;color:var(--muted)}
 
-.rd-app #rdConfirm{height:auto;max-height:80dvh;width:calc(100% - 40px);max-width:420px;margin:auto;border:2px solid var(--text);border-radius:12px;box-shadow:4px 5px 0 var(--text);padding:18px}.rd-app #rdConfirm .rd-dialog-head,.rd-app #rdConfirm [data-rd-trip]{display:none}.rd-app #rdConfirm h1{font-size:24px!important;margin-bottom:14px}.rd-app #rdConfirm .rd-dialog-footer{position:static;display:flex;gap:10px;padding-bottom:0}.rd-app #rdConfirm .rd-dialog-footer>*{flex:1;font-size:16px}.rd-app #rdConfirmMessage{font-size:16px;color:var(--text);margin:0}
+/* A confirmation sizes to its message, independently of the full form dialogs. */
+body.rd-app #rdConfirm{width:min(342px,calc(100% - 32px));min-width:0;max-width:342px;height:fit-content;min-height:0;max-height:calc(100dvh - 32px);margin:auto;padding:20px;border:1.5px solid #303440;border-radius:14px;background:#fff;color:var(--text);box-shadow:2px 3px 0 #0b102029;overflow:auto;overscroll-behavior:contain}
+body.rd-app #rdConfirm[open]{display:block}
+body.rd-app #rdConfirm::backdrop{background:#10162566}
+body.rd-app #rdConfirm #rdConfirmTitle{margin:0;font-size:1.125rem;font-weight:750;line-height:1.4;letter-spacing:-.025em;word-break:keep-all;overflow-wrap:anywhere}
+body.rd-app #rdConfirmMessage{margin:8px 0 0;font-size:.875rem;line-height:1.5}
+body.rd-app #rdConfirmSubject{margin:0;max-height:min(6em,30dvh);overflow:auto;overflow-wrap:anywhere;font-size:.875rem;font-weight:600;line-height:1.5;white-space:pre-line}
+body.rd-app #rdConfirmDescription{margin:6px 0 0;color:var(--muted);font-size:.875rem;font-weight:400;line-height:1.5;white-space:pre-line;word-break:keep-all;overflow-wrap:anywhere}
+body.rd-app #rdConfirmSubject[hidden]+#rdConfirmDescription{margin-top:0}
+body.rd-app #rdConfirm .tl-confirm-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+body.rd-app #rdConfirm .tl-confirm-actions button{display:flex;align-items:center;justify-content:center;min-width:0;min-height:44px;padding:10px 8px;border:1px solid #aeb3bf;border-radius:8px;background:#fff;box-shadow:none;color:var(--text);font-size:.875rem;font-weight:650;line-height:1.4}
+body.rd-app #rdConfirm #rdConfirmAccept{border-color:#b83b47;background:#bd3f49;color:#fff}
+body.rd-app #rdConfirm[data-tone="neutral"] #rdConfirmAccept{border-color:var(--text);background:var(--rd-yellow);color:var(--text)}
+body.rd-app #rdConfirm :is(button,[tabindex="0"]):focus-visible{outline:2px solid #1264a3;outline-offset:3px}
+@media(hover:hover){body.rd-app #rdConfirm #rdConfirmCancel:hover{background:#f4f5f7}body.rd-app #rdConfirm #rdConfirmAccept:hover{background:#a52f3b}body.rd-app #rdConfirm[data-tone="neutral"] #rdConfirmAccept:hover{background:#f4df38}}
 
 .rd-settle-hero strong{line-height:1.15;font-size:26px}.rd-settle-hero span:not(.rd-badge){line-height:1.3}.rd-settle-hero{margin-bottom:20px}.rd-app .rd-settlement h2{font-size:20px;line-height:1.25;margin-bottom:8px}.rd-balance-row{padding:10px 0}.rd-member-balances{margin-bottom:18px}.rd-transfers{padding:6px 13px}.rd-transfers>div{padding:6px 0;line-height:1.4}.rd-settlement>.rd-heading>p{font-size:14px}
 

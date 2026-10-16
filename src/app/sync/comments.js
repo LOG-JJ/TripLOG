@@ -20,7 +20,7 @@
     const list=el('div');list.setAttribute('aria-live','polite');
     form.append(label,target,textLabel,input,submit,ownerLabel,assignee,assign,message);parent.append(form,list);
     const ctx={tripId,form,members:[],busy:false};current=ctx;
-    async function action(fn){if(ctx.busy)return;ctx.busy=true;try{await fn();message.textContent='기기에 보관했습니다. 자동으로 공유합니다.';}catch(error){message.textContent=error.message;}finally{ctx.busy=false;}}
+    async function action(fn){if(ctx.busy)return;ctx.busy=true;try{if(await fn()!==false)message.textContent='기기에 보관했습니다. 자동으로 공유합니다.';}catch(error){message.textContent=error.message;}finally{ctx.busy=false;}}
     const option=(value,text)=>{const node=el('option',text);node.value=value;return node;};
     function updateAssignee(record){const item=record.snapshot.itineraryItems?.find(i=>i.id===target.value);if(!ctx.assignmentBase)assignee.value=item?.assigneeId||'';assign.disabled=!item||record.role==='viewer'||Boolean(record.archivedAt);}
     async function render(){
@@ -40,9 +40,15 @@
         const item=record.snapshot.itineraryItems?.find(i=>i.id===row.fields['p:targetId']);
         card.append(el('strong',author===C.engine.status().accountId?'나':member?.display_name||'동행'),el('p',row.fields['p:createdAt']?new Date(row.fields['p:createdAt']).toLocaleString('ko-KR'):'서버 확인 대기'),el('p',item?.place||(row.fields['p:targetId']?'보관·삭제된 일정':'여행 전체')),el('p',row.fields['p:body']));
         if(!disabled&&(!author||author===C.engine.status().accountId||record.role==='owner')){
-          const remove=el('button','댓글 삭제');remove.className='rd-button';remove.type='button';
+          const remove=el('button','댓글 삭제');remove.className='rd-button rd-danger';remove.type='button';
           remove.addEventListener('click',()=>action(async()=>{
+            const accountId=C.engine.status().accountId;
+            if(!await window.TripLog.ui.confirmation.ask({kind:'comment',subject:row.fields['p:body']})||current!==ctx||state.id!==tripId||C.engine.status().accountId!==accountId)return false;
             const fresh=await R.read(tripId);const entity=M.apply(fresh.base||{},fresh.queue.flatMap(q=>q.patches)).entities[M.key('comment',row.id)];
+            if(!entity||entity.deleted)return false;
+            if(fresh.role==='viewer'||fresh.archivedAt||fresh.snapshot.collaboration?.privacy?.shareItinerary===false)throw new Error('댓글을 삭제할 권한이 없어요.');
+            if(entity.fields['p:authorId']&&entity.fields['p:authorId']!==accountId&&fresh.role!=='owner')throw new Error('댓글을 삭제할 권한이 바뀌었어요.');
+            if(entity.fields['p:body']!==row.fields['p:body'])throw new Error('댓글이 변경됐어요. 다시 확인해 주세요.');
             await R.enqueue(tripId,[{kind:'comment',id:row.id,action:'delete',before:entity.fields,expectedVersion:entity.version||0}]);
           }));card.append(remove);
         }

@@ -142,6 +142,7 @@ TripLOG의 런타임 상태는 전역 `state` 객체입니다. `await saveAndRen
 - 화면은 해당 기능의 `*-workspace.js`가 소유합니다. 중앙 렌더러는 공통 상태와 현재 페이지를 갱신하고, 정산·준비물 편집은 열린 대화상자를 갱신합니다. 기존 페이지 전체를 숨겨 두고 새 페이지를 덧붙이지 않습니다. `Travel.html`의 `triplogFormSources`는 시작 시 실제 폼을 한 번 옮기는 임시 마운트이며 초기화 후 제거됩니다.
 - 경비 계산은 `shared/travel-costs.js`를 사용합니다. 누적 금액과 날짜별 합계는 환불을 차감하고, 항목별 구성은 환불 전 지출과 그 합계를 사용합니다. 환불이 있으면 화면에 구성 기준을 표시합니다. 화면 리포트는 결제일, PDF의 일별 내역은 저장된 여행 일자를 기준으로 묶습니다.
 - 카테고리 이름·기본 아이콘·화면별 색상은 `data/expense-categories.js`, 다이얼로그 열기·닫기·포커스 복원은 `ui/dialog.js`, 경비 요약 표시는 `ui/cost-summary.js`에서 관리합니다. 화면별 표현 차이는 명시된 옵션으로 유지합니다.
+- 삭제·초기화 확인창은 `ui/confirmation.js`를 사용합니다. `ask({ kind, subject, message })`로 대상과 필요한 영향만 전달하며, 입력 폼의 전체 화면 레이아웃을 재사용하지 않습니다. [18가지 삭제·제거 경로와 목업](artifacts/design/20261017-delete-dialogs/README.md)을 기준으로 만들었고, `node scripts/delete-dialogs-browser-regression.js`로 크기·문구·취소·저장 결과를 검증합니다.
 - 목적지 그림은 `scripts/app-assets.js`가 현재 카탈로그의 파일만 배포 목록에 포함합니다. 도시 그림은 필요할 때 받고 공통 테마만 앱 캐시에 포함합니다. 과거 원본과 목업은 현재 실행 자산으로 추가하지 않습니다.
 - 모듈은 `window.TripLog.register("영역.이름", { ... })`로 등록합니다. DevTools에서 `window.TripLog.registry`와 `document.documentElement.dataset.triplogLastModule`로 로드 상태를 확인할 수 있습니다.
 - DOM 요소를 추가하면 `Travel.html`의 ID, `src/app/core/runtime.js`의 `els`, 이벤트 연결 위치, 렌더 함수 위치를 함께 맞춥니다.

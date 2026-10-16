@@ -267,7 +267,8 @@
     query("#itineraryDeleteButton").addEventListener("click", async () => {
       const item = findItineraryItem(editingItineraryId);
       const tripId=state.id;
-      if (item && await (window.TripLog.features.redesign?.workspace?.confirmAction?.(`'${item.place}' 일정을 삭제할까요?`) ?? window.confirm(`'${item.place}' 일정을 삭제할까요?`)) && state.id===tripId && editingItineraryId===item.id) {
+      if (item && await window.TripLog.ui.confirmation.ask({ kind: item.expenseId ? 'itinerary-linked' : 'itinerary', subject: item.place || '장소 미정' }) && state.id===tripId && editingItineraryId===item.id) {
+        if (findItineraryItem(item.id)?.expenseId !== item.expenseId) { showToast('연결된 지출이 바뀌었어요. 다시 확인해 주세요.'); return; }
         query('#itineraryDeleteButton').disabled=true;els.itinerarySubmitButton.disabled=true;
         try { await deleteItineraryItem(item.id); }
         finally { query('#itineraryDeleteButton').disabled=false;els.itinerarySubmitButton.disabled=false; }

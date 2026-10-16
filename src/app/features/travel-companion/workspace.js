@@ -432,7 +432,7 @@
         case 'reservation-edit': openReservationEditor(M().reservations(state).find(row => row.id === id)); if (target.dataset.field === 'reference') $('#ttReservationReference').focus(); break;
         case 'reservation-delete': {
           const tripId = state.id, row = companion().reservations.find(item => `manual:${item.id}` === id), before = JSON.stringify(row);
-          if (row && await window.TripLog.features.redesign.workspace.confirmAction(`‘${row.title}’ 예약을 삭제할까요? 연결한 일정과 지출은 유지됩니다.`) && tripId === state.id) {
+          if (row && await window.TripLog.ui.confirmation.ask({ kind: 'reservation', subject: row.title || '예약' }) && tripId === state.id) {
             const current = companion(); if (JSON.stringify(current.reservations.find(item => item.id === row.id)) !== before) throw new Error('예약이 변경됐어요. 다시 확인해 주세요.');
             window.TripLog.persistence.stateStorage.markDeletedEntity('reservation', row.id);
             current.reservations = current.reservations.filter(item => item.id !== row.id); await commit({ travelCompanion: current }); $('#ttReservationDetail').close(); showToast('예약을 삭제했어요.');

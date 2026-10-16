@@ -248,7 +248,7 @@
       currency: state.travelMode === 'overseas' ? els.currencySelect.value : 'KRW',
       amount: parseFormattedNumber(state.travelMode === 'overseas' ? els.foreignAmountInput.value : els.amountInput.value),
     }, editingId);
-    return !duplicate || await (window.TripLog.features.redesign?.workspace?.confirmAction?.('같은 영수증 또는 비슷한 지출이 이미 있습니다. 별도 지출로 다시 저장할까요?') ?? window.confirm('같은 영수증 또는 비슷한 지출이 이미 있습니다. 별도 지출로 다시 저장할까요?'));
+    return !duplicate || await window.TripLog.ui.confirmation.ask({ title: '지출을 다시 저장할까요?', message: '같은 영수증이나 비슷한 지출이 있어요.', confirmLabel: '다시 저장' });
   }
   function pointerPosition(event) {
     const rect = ui.Preview.getBoundingClientRect();

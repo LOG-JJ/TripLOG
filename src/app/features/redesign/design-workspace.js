@@ -157,7 +157,7 @@
     renderTripChooser();
     try {
       const removed=await window.TripLog.persistence.stateStorage.deleteTrip(id);
-      if (removed) showToast('여행을 목록에서 삭제했어요. 복구 기록에서 다시 열 수 있어요.');
+      if (removed) showToast('여행을 목록에서 삭제했어요.');
     } finally {
       removingTripId='';
       if (chooser.open) {
@@ -201,9 +201,7 @@
   }
   function expenseMetadata() { return {paymentDate: $('#rdPaymentDate')?.value || '', payerKey: $('#rdPayer')?.value || 'leader'}; }
   function confirmAction(message) {
-    const el=$('#rdConfirm'); if(el.open)return Promise.resolve(false);
-    $('#rdConfirmMessage').textContent=message;
-    return new Promise(resolve=>{el.addEventListener('close',()=>resolve(el.returnValue==='confirm'),{once:true});el.returnValue='';open('rdConfirm');$('#rdConfirmCancel').focus();});
+    return window.TripLog.ui.confirmation.ask(message);
   }
   function showReservation(mode, options = {}) {
     if (options.entry) { closeAll(); startEdit(options.entry, options); return; }
@@ -326,7 +324,7 @@
     $$('.custom-date-button').forEach(el=>{el.insertAdjacentHTML('afterbegin',icon('calendar-blank'));$('.custom-date-icon',el).innerHTML=icon('caret-down');});
     dialog('rdMore','여행 메뉴',`${row('오늘의 여행','compass','companion')}${row('예약 지갑','ticket','companion-wallet')}${row('여행 도구','suitcase','companion-tools')}${row('내 여행','suitcase','nav-start')}${row('여행 정보 수정','pencil-simple','trip-edit-current')}${row('경비 정산','users-three','nav-settlement')}${row('여행 준비물','suitcase-rolling','packing')}${row('멤버·초대','user-plus','invite')}${row('저장 기록','bookmark-simple','history')}${row('설정','gear','nav-settings')}${row('저장 상태·공동 작업','cloud-check','sync-status')}${row('전체 일정 보기','calendar-blank','all-itinerary')}`);
     dialog('rdMemberInfo','멤버 정보','<div id="rdMemberInfoBody"></div>');
-    dialog('rdConfirm','확인해 주세요','<p id="rdConfirmMessage"></p>',`${button('취소','close','','id="rdConfirmCancel"')}${button('확인','confirm-accept','rd-primary')}`).setAttribute('role','alertdialog');
+    window.TripLog.ui.confirmation.setup();
     const tools = move($('#itineraryToolsDialog'),document.body);tools.classList.add('rd-dialog');tools.insertAdjacentHTML('beforeend',`<div class="rd-dialog-head">${logo}${button(icon('x'),'close','rd-icon-button','aria-label="준비물 닫기"')}</div><div class="rd-dialog-body"><h1>여행 준비물</h1><p data-rd-trip></p><div id="rdPacking"></div><label class="rd-packing-add"><span>준비물 추가</span><div id="rdPackingInputMount"></div></label>${button('기본 목록으로 되돌리기','packing-reset','rd-text-button')}<p class="rd-muted">체크한 내용은 자동으로 저장돼요.</p></div><footer class="rd-dialog-footer">${button('완료','close','rd-primary')}</footer>`);move(els.packingInput,'#rdPackingInputMount');move(els.packingAddBtn,'#rdPackingInputMount');els.packingAddBtn.innerHTML=icon('plus');els.packingAddBtn.setAttribute('aria-label','준비물 추가');els.packingInput.placeholder='챙길 물건을 입력하세요';
     document.addEventListener('click',handleClick);
     document.addEventListener('click',event=>{if(event.target.closest('#itineraryMenuButton,[data-itinerary-menu]')){event.preventDefault();event.stopImmediatePropagation();open('rdMore');}},true);
@@ -407,7 +405,6 @@
         if(name&&canEditTripSettings()){$('#rdSettlementName').value=name.slice(0,80);$('#rdSettlementName').focus();}
         break;
       }
-      case 'confirm-accept':$('#rdConfirm').close('confirm');break;
       case 'close': {const parent=el.closest('dialog');if(parent?.id==='rdExpenseEditor'){state.travelMode=expenseReturnMode||state.travelMode;clearEditMode();}parent?.close();break;}
       case 'companion':window.TripLog.features.travelCompanion.workspace.open('today');break;
       case 'companion-transport':window.TripLog.features.travelCompanion.workspace.open('wallet','transport');break;
@@ -418,7 +415,15 @@
       case 'companion-tools':window.TripLog.features.travelCompanion.workspace.open('tools');break;
       case 'expense-new':newExpense();break;
       case 'expense-edit':expenseReturnMode=state.travelMode;startEdit(findEntry(el.dataset.id));break;
-      case 'delete-expense':{const id=editingId,trip=state.id;if(id&&await confirmAction('이 지출 기록을 삭제할까요?')&&trip===state.id){deleteEntry(id);$('#rdExpenseEditor').close();showToast('지출을 삭제했어요.');}break;}
+      case 'delete-expense': {
+        const id = editingId, trip = state.id, entry = findEntry(id);
+        if (!entry) break;
+        const message = state.itineraryItems.some(item => item.expenseId === id) ? '연결된 일정은 유지돼요.' : '';
+        if (await confirmAction({ kind: 'expense', subject: `${entry.description || '지출'} · ${formatWon(entry.amount)}`, message }) && trip === state.id && editingId === id) {
+          if (await deleteEntry(id) && trip === state.id && !editingId) { $('#rdExpenseEditor').close(); showToast('지출을 삭제했어요.'); }
+        }
+        break;
+      }
       case 'receipt-reselect':$('#receiptAlbumButton').click();break;
       case 'receipt-start':newExpense();window.TripLog.features.expenses.receiptInput.open();break;
       case 'receipt':window.TripLog.features.expenses.receiptInput.open();break;
@@ -451,9 +456,9 @@
       case 'hotel':showReservation('hotel');break;
       case 'reservation':showReservation('flight');break;
       case 'packing':closeAll();$('#itineraryToolsDialog').showModal();window.TripLog.features.packing.workspace.render();break;
-      case 'packing-delete':deletePackingItem(el.dataset.id);break;
+      case 'packing-delete':await deletePackingItem(el.dataset.id);break;
       case 'packing-up':{const index=state.packingList.findIndex(i=>i.id===el.dataset.id);if(index>0){[state.packingList[index-1],state.packingList[index]]=[state.packingList[index],state.packingList[index-1]];saveAndRender();}break;}
-      case 'packing-reset':{const trip=state.id;if(await confirmAction('준비물 목록을 기본값으로 되돌릴까요?')&&trip===state.id){state.packingList=getDefaultPackingList();saveAndRender();}break;}
+      case 'packing-reset':await window.TripLog.features.packing.list.resetPackingList();break;
       case 'invite-settings':$('#tripInviteCloseButton').click();navigate('settings');break;
       case 'member-info':{const m=members()[Number(el.dataset.index)];if(m){$('#rdMemberInfoBody').innerHTML=`<div class="rd-member-info">${avatar(m.name,Number(el.dataset.index))}<h2>${text(m.name)}</h2><p>${m.role==='owner'||Number(el.dataset.index)===0?'방장':'여행 멤버'} · ${text(state.tripName)}</p></div>`;open('rdMemberInfo');}break;}
       case 'invite':closeAll();window.TripLog.features.collaboration.tripCollaboration.openTripInviteModal();break;

@@ -182,14 +182,14 @@ async function main() {
     await a.locator('#itineraryExtraDetails > summary').click();
     await a.locator('#itineraryMemoInput').fill('삭제 실패 후에도 남을 입력');
     await a.evaluate(()=>{window.__deleteOriginalSave=window.TripLogSyncRepository.save;window.TripLogSyncRepository.save=async()=>{throw new Error('QuotaExceededError delete fixture');};});
-    await a.locator('#itineraryDeleteButton').click();await a.locator('#rdConfirm').getByRole('button',{name:'확인',exact:true}).click();
+    await a.locator('#itineraryDeleteButton').click();await a.locator('#rdConfirmAccept').click();
     await a.getByText('삭제를 저장하지 못했어요. 일정은 유지됩니다. 다시 시도해 주세요.',{exact:true}).waitFor();
     await a.waitForFunction(()=>!document.querySelector('#itineraryDeleteButton').disabled);
     assert(await a.locator('#itineraryEditor').isVisible());assert.equal(await a.locator('#itineraryMemoInput').inputValue(),'삭제 실패 후에도 남을 입력');
     assert(await a.evaluate(()=>state.itineraryItems.some(item=>item.id==='legacy-delete')&&state.entries.some(entry=>entry.id==='legacy-fare')),'Failed delete restores the linked records');
     await a.evaluate(()=>{window.TripLogSyncRepository.save=window.__deleteOriginalSave;});
     await a.locator('#itineraryDeleteButton').click();
-    await a.locator('#rdConfirm').getByRole('button',{name:'확인',exact:true}).click();
+    await a.locator('#rdConfirmAccept').click();
     await b.waitForFunction(()=>!state.itineraryItems.some(item=>item.id==='legacy-delete'),null,{timeout:8000});
     assert.equal(await a.evaluate(()=>window.TripLogSyncRepository.cached(state.id).conflicts.length),0,'Normalization must not manufacture delete conflicts');
     assert.equal(await b.evaluate(()=>state.entries.some(entry=>entry.id==='legacy-fare')),false,'Linked fare is removed in the same command');
@@ -198,7 +198,7 @@ async function main() {
     console.log('PASS browser: legacy-coordinate deletion removes exactly the itinerary, linked fare and progress on both devices');
     offline=true;
     await b.evaluate(()=>startItineraryEdit(state.itineraryItems.find(item=>item.id==='legacy-offline')));
-    await b.locator('#itineraryDeleteButton').click();await b.locator('#rdConfirm').getByRole('button',{name:'확인',exact:true}).click();
+    await b.locator('#itineraryDeleteButton').click();await b.locator('#rdConfirmAccept').click();
     await b.waitForFunction(()=>!state.itineraryItems.some(item=>item.id==='legacy-offline'));
     // The optimistic array updates before the IndexedDB write. Reload only
     // after the editor closes, which is the user-visible save completion.
@@ -335,11 +335,11 @@ async function main() {
     await a.locator('.sync-close').click();
     await a.evaluate(()=>{setActivePage('itinerary');startItineraryEdit(state.itineraryItems.find(i=>i.id==='offline28'));});
     await a.locator('#itineraryDeleteButton').click();
-    await a.locator('#rdConfirm').getByRole('button',{name:'확인',exact:true}).click();
+    await a.locator('#rdConfirmAccept').click();
     await b.waitForFunction(()=>!state.itineraryItems.some(i=>i.id==='offline28'));
     await a.locator('#itineraryPageButton').click();await a.getByRole('button',{name:'변경 기록',exact:true}).click();
     await a.getByRole('button',{name:'이 변경 되돌리기',exact:true}).first().click();
-    await a.locator('#rdConfirm').getByRole('button',{name:'확인',exact:true}).click();
+    await a.locator('#rdConfirmAccept').click();
     await b.waitForFunction(()=>state.itineraryItems.some(i=>i.id==='offline28'));
     await a.waitForFunction(()=>state.itineraryItems.some(i=>i.id==='offline28'));
     console.log('PASS browser: real delete control syncs, native history undo restores the same record on both devices without files');

@@ -544,11 +544,8 @@ async function deleteTrip(tripId) {
   }
 
   const record = window.TripLogSyncRepository?.cached(tripId);
-  const scope = record?.serverId && record.role === "owner"
-    ? "공유 여행은 모든 멤버에게 읽기 전용으로 전환됩니다."
-    : "이 기기의 여행 목록에서만 삭제됩니다.";
-  const message = `“${trip.tripName || '새로운 여행'}” 여행을 목록에서 삭제할까요?\n${scope} 복구 기록에서 다시 열 수 있어요.`;
-  if (!await (window.TripLog.features.redesign?.workspace?.confirmAction?.(message) ?? window.confirm(message))) {
+  const kind = record?.serverId && record.role === "owner" ? "shared-trip" : "trip";
+  if (!await window.TripLog.ui.confirmation.ask({ kind, subject: trip.tripName || '새로운 여행' })) {
     return false;
   }
 

@@ -26,7 +26,7 @@ body.rd-app {
   /* Page and dialog titles include headings moved out of their original page. */
   body.rd-app :is(.rd-heading h1, .ex-heading h1, .itinerary-heading h1,
     .rd-dialog h1, .tt-dialog h1, .auth-brand-panel h1,
-    #rdReservation h1, #rdConfirm h1, .rd-sheet .modal-head h2,
+    #rdReservation h1, .rd-sheet .modal-head h2,
     #newTripModalTitle, #historyModalTitle, #tripInviteTitle,
     #tripInviteAcceptTitle, #receiptDialogTitle) {
     font-size: var(--tl-text-title) !important;
@@ -88,7 +88,7 @@ body.rd-app {
   }
   body.rd-app :is(.rd-setting-row, .rd-switch-row, .rd-pack-row) { min-height: 44px; }
   body.rd-app :is(.rd-setting-row > span, .rd-switch-row > span,
-    .rd-pack-row label, .tt-checks label, .rd-transfers p, #rdConfirmMessage) {
+    .rd-pack-row label, .tt-checks label, .rd-transfers p) {
     font-size: var(--tl-text-body); font-weight: 500; line-height: 1.5;
   }
   body.rd-app :is(.rd-setting-row small, .rd-nav button > span, .rd-badge,

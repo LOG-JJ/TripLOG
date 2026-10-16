@@ -53,12 +53,27 @@ function clearEditMode() {
   els.submitButton.querySelector("span").textContent = "추가";
 }
 
-function deleteEntry(id) {
-  window.TripLog.persistence.stateStorage.markDeletedEntity("expense", id);
-  state.entries = state.entries.filter((entry) => entry.id !== id);
-  state.itineraryItems = state.itineraryItems.map(item => item.expenseId === id ? { ...item, expenseId: null, syncExpense: false } : item);
-  if (editingId === id) clearEditMode();
-  saveAndRender();
+const expenseDeletionsPending = new Set();
+async function deleteEntry(id) {
+  const tripId = state.id, operation = `${tripId}:${id}`;
+  if (!findEntry(id) || expenseDeletionsPending.has(operation)) return false;
+  expenseDeletionsPending.add(operation);
+  const previous = { entries: state.entries, items: state.itineraryItems };
+  try {
+    window.TripLog.persistence.stateStorage.markDeletedEntity("expense", id);
+    state.entries = state.entries.filter((entry) => entry.id !== id);
+    state.itineraryItems = state.itineraryItems.map(item => item.expenseId === id ? { ...item, expenseId: null, syncExpense: false } : item);
+    if (!await saveAndRender()) {
+      if (state.id === tripId) { state.entries = previous.entries; state.itineraryItems = previous.items; render(); }
+      showToast('지출을 삭제하지 못했어요. 다시 시도해 주세요.'); return false;
+    }
+    if (window.TripLogSyncRepository?.cached(tripId)?.snapshot.entries.some(entry => entry.id === id)) {
+      showToast('다른 변경과 겹쳐 삭제하지 않았어요. 저장 상태를 확인해 주세요.'); return false;
+    }
+    await window.TripLog.sync.drafts?.clear('expenseForm', tripId, id);
+    if (state.id === tripId && editingId === id) clearEditMode();
+    return true;
+  } finally { expenseDeletionsPending.delete(operation); }
 }
 
 function findEntry(id) {

@@ -94,7 +94,7 @@ function renderSettlementMemberChips(membersListWrap, companions) {
     chip.innerHTML = `
       <span class="settlement-member-avatar">${getCompanionEmoji(index)}</span>
       <span>${escapeHtml(companion.name)}</span>
-      <button type="button" class="companion-delete-btn" data-index="${index}" title="멤버 삭제">&times;</button>
+      <button type="button" class="companion-delete-btn" data-index="${index}" title="정산 멤버 삭제" aria-label="${escapeHtml(companion.name)} 정산 멤버 삭제">&times;</button>
     `;
     chip.querySelector(".companion-delete-btn").addEventListener("click", () => {
       deleteCompanion(index);

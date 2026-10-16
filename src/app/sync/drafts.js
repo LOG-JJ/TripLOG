@@ -54,6 +54,9 @@
     document.addEventListener("input", capture);
     document.addEventListener("change", capture);
   }
-  async function discard(row) { memory.delete(row.id); await R.draft(row.id, null); }
+  async function discard(row) {
+    await R.draft(row.id, null);
+    if (memory.get(row.id)?.savedAt === row.savedAt) memory.delete(row.id);
+  }
   window.TripLog.register("sync.drafts", { setup, clear, list, resume, inMemory, discard });
 })();

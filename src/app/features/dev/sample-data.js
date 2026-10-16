@@ -564,8 +564,12 @@ function loadSampleData() {
 }
 
 async function resetAll() {
-  const ok = await (window.TripLog.features.redesign?.workspace?.confirmAction?.("현재 여행, 지출, 정산, 저장된 백업 기록을 모두 초기화할까요?") ?? window.confirm("현재 여행, 지출, 정산, 저장된 백업 기록을 모두 초기화할까요?"));
-  if (!ok) return;
+  const tripId = state.id;
+  const ok = await window.TripLog.ui.confirmation.ask({ kind: 'reset', ...(!repositoryReady ? { message: '여행과 저장 기록을 모두 삭제하고 새로 시작해요.' } : {}) });
+  if (!ok || state.id !== tripId) return;
+  try { await clearAllHistoryRecords(); }
+  catch (_) { showToast('저장 기록을 초기화하지 못했어요. 다시 시도해 주세요.'); return false; }
+  if (state.id !== tripId) return false;
 
   const resetState = window.TripLog.persistence.stateStorage.resetPersistedTravelData({
     tripName: "새 여행",
@@ -587,10 +591,12 @@ async function resetAll() {
   });
   Object.keys(state).forEach((key) => delete state[key]);
   Object.assign(state, resetState);
-  await clearAllHistoryRecords();
   clearEditMode();
   clearItineraryEditMode(false);
-  saveAndRender();
+  if (!await saveAndRender()) { showToast('새 여행을 저장하지 못했어요. 저장 상태를 확인해 주세요.'); return false; }
+  await window.TripLog.persistence.stateStorage.switchTrip(resetState.id);
+  showToast('저장 기록을 초기화했어요.');
+  return true;
 }
 
 window.TripLog.register("features.dev.sampleData", {
