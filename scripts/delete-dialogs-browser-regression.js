@@ -29,6 +29,7 @@ async function main() {
   fs.mkdirSync(output, { recursive: true });
   const { server, origin } = await startServer(), browser = await launchBrowser();
   const errors = [], consoleIssues = [], dimensions = [], flows = [];
+  const recordFlow = name => { flows.push(name); console.log(`PASS deletion flow: ${name}`); };
   async function fixture() {
     const context = await browser.newContext({ serviceWorkers: 'block', viewport: { width: 390, height: 844 }, timezoneId: 'Asia/Seoul', reducedMotion: 'reduce' });
     context.setDefaultTimeout(12000);
@@ -46,20 +47,47 @@ async function main() {
   }
   function helpers(page) {
     const confirm = page.locator('#rdConfirm');
-    async function dismiss(action) {
+    async function afterClose(id, action) {
       // close() removes [open] before its queued close event resolves the user's
-      // confirmation. Wait for that event's continuations before reading saves.
-      const closed = page.evaluate(() => new Promise(resolve => {
-        document.querySelector('#rdConfirm').addEventListener('close', () => queueMicrotask(resolve), { once: true });
-      }));
-      await action(); await closed; await confirm.waitFor({ state: 'hidden' });
+      // confirmation. Register the listener before sending input, then use a
+      // bounded wait for that event's continuations before reading saves.
+      const target = page.locator(`#${id}`);
+      await target.waitFor();
+      await page.evaluate(id => {
+        window.__deleteDialogClosed ||= {};
+        window.__deleteDialogClosed[id] = false;
+        document.getElementById(id).addEventListener('close', () => {
+          queueMicrotask(() => { window.__deleteDialogClosed[id] = true; });
+        }, { once: true });
+      }, id);
+      await action();
+      await page.waitForFunction(id => window.__deleteDialogClosed[id], id, { timeout: 12000 });
+      await target.waitFor({ state: 'hidden' });
     }
+    const dismiss = action => afterClose('rdConfirm', action);
     const cancel = () => dismiss(() => page.locator('#rdConfirmCancel').click());
-    const accept = async () => { await dismiss(() => page.locator('#rdConfirmAccept').click()); await page.evaluate(() => window.TripLog.persistence.stateStorage.whenSaved()); };
-    const closes = () => page.evaluate(async () => {
-      const closed = [...document.querySelectorAll('dialog[open]')].map(node => new Promise(resolve => { node.addEventListener('close', resolve, { once: true }); node.close(); }));
-      closeHistoryModal(); await Promise.all(closed);
-    });
+    const accept = async closingEditor => {
+      const commit = async () => {
+        await dismiss(() => page.locator('#rdConfirmAccept').click());
+        await page.evaluate(() => window.TripLog.persistence.stateStorage.whenSaved());
+      };
+      if (closingEditor) await afterClose(closingEditor, commit);
+      else await commit();
+    };
+    const closes = async () => {
+      await page.evaluate(() => {
+        const dialogs = [...document.querySelectorAll('dialog[open]')];
+        window.__deleteDialogsClosing = dialogs.map(node => node.id);
+        for (const node of dialogs) {
+          node.addEventListener('close', () => {
+            window.__deleteDialogsClosing = window.__deleteDialogsClosing.filter(id => id !== node.id);
+          }, { once: true });
+          node.close();
+        }
+        closeHistoryModal();
+      });
+      await page.waitForFunction(() => window.__deleteDialogsClosing.length === 0, null, { timeout: 12000 });
+    };
     const show = id => page.evaluate(id => window.TripLog.features.redesign.workspace.open(id), id);
     const editItinerary = async id => { await page.evaluate(id => startItineraryEdit(findItineraryItem(id)), id); await page.evaluate(() => window.TripLog.persistence.stateStorage.whenSaved()); };
     const askKind = async kind => { await confirm.waitFor(); assert.equal(await confirm.getAttribute('data-kind'), kind); };
@@ -101,7 +129,7 @@ async function main() {
     assert.equal(await page.evaluate(() => document.activeElement.id), 'itineraryDeleteButton', 'Focus returns to delete control');
     await page.locator('#itineraryDeleteButton').click(); await dismiss(() => page.mouse.click(5, 5));
     assert(await page.evaluate(() => !!findItineraryItem('castle')));
-    flows.push('Nested cancel, Enter on default cancel, Escape, backdrop and focus restoration');
+    recordFlow('Nested cancel, Enter on default cancel, Escape, backdrop and focus restoration');
 
     // Long, untrusted names are text, remain accessible, and do not hide the actions.
     await closes();
@@ -119,7 +147,7 @@ async function main() {
     assert.equal(await page.evaluate(() => window.__confirmResult), false);
     await page.evaluate(() => { document.documentElement.style.fontSize = ''; });
     await page.setViewportSize({ width: 390, height: 844 });
-    flows.push('Long names, safe text, duplicate opens and 200% text at 320px');
+    recordFlow('Long names, safe text, duplicate opens and 200% text at 320px');
 
     // Draft-only removals do not change saved records until the editor is saved.
     await editItinerary('castle');
@@ -141,16 +169,16 @@ async function main() {
     assert.equal(await confirm.isVisible(), false);
     assert.equal(await page.locator('.transit-segment').count(), 1);
     assert.equal(await page.evaluate(() => findItineraryItem('airport').transits.length), 2);
-    await closes(); flows.push('Attachment and transit removal stay in the unsaved editor');
+    await closes(); recordFlow('Attachment and transit removal stay in the unsaved editor');
 
-    await editItinerary('castle'); await page.locator('#itineraryDeleteButton').click(); await accept();
+    await editItinerary('castle'); await page.locator('#itineraryDeleteButton').click(); await accept('itineraryEditor');
     await page.locator('#itineraryEditor').waitFor({ state: 'hidden' }); assert.equal(await page.evaluate(() => !!findItineraryItem('castle')), false);
     await editItinerary('airport'); await page.locator('#itineraryDeleteButton').click(); await askKind('itinerary-linked');
     assert.match(await page.locator('#rdConfirmDescription').innerText(), /지출도 함께/); await cancel();
     assert(await page.evaluate(() => !!findEntry('fare')));
-    await page.locator('#itineraryDeleteButton').click(); await accept(); await page.locator('#itineraryEditor').waitFor({ state: 'hidden' });
+    await page.locator('#itineraryDeleteButton').click(); await accept('itineraryEditor');
     assert.equal(await page.evaluate(() => !!findItineraryItem('airport') || !!findEntry('fare')), false);
-    flows.push('Itinerary deletion and its linked expense are accurately disclosed and persisted');
+    recordFlow('Itinerary deletion and its linked expense are accurately disclosed and persisted');
 
     async function editExpense(id) {
       await page.evaluate(id => { window.TripLog.features.redesign.workspace.navigate('budget'); startEdit(findEntry(id)); }, id);
@@ -160,7 +188,7 @@ async function main() {
     assert.match(await page.locator('#rdConfirmSubject').innerText(), /저녁 식사 · 38,000원/);
     assert.equal(await page.locator('#rdConfirmDescription').innerText(), '연결된 일정은 유지돼요.'); await cancel();
     assert(await page.evaluate(() => !!findEntry('dinner')));
-    await page.locator('#rdDeleteExpense').click(); await accept(); await page.locator('#rdExpenseEditor').waitFor({ state: 'hidden' });
+    await page.locator('#rdDeleteExpense').click(); await accept('rdExpenseEditor');
     assert(await page.evaluate(() => !!findItineraryItem('restaurant') && !findItineraryItem('restaurant').expenseId));
     await editExpense('failure');
     await page.evaluate(() => { window.__originalSave = window.TripLogSyncRepository.save; window.TripLogSyncRepository.save = async () => { throw new Error('QuotaExceededError deletion fixture'); }; });
@@ -168,8 +196,8 @@ async function main() {
     await page.getByText('지출을 삭제하지 못했어요. 다시 시도해 주세요.', { exact: true }).waitFor();
     assert(await page.locator('#rdExpenseEditor').isVisible()); assert(await page.evaluate(() => !!findEntry('failure')));
     await page.evaluate(() => { window.TripLogSyncRepository.save = window.__originalSave; });
-    await page.locator('#rdDeleteExpense').click(); await accept(); await page.locator('#rdExpenseEditor').waitFor({ state: 'hidden' });
-    flows.push('Expense deletion keeps its itinerary; failed persistence retains the record/editor and retry succeeds');
+    await page.locator('#rdDeleteExpense').click(); await accept('rdExpenseEditor');
+    recordFlow('Expense deletion keeps its itinerary; failed persistence retains the record/editor and retry succeeds');
 
     await closes(); await show('rdMore'); await page.locator('#rdMore [data-rd-action="packing"]').click();
     const removePacking = page.locator('[data-rd-action="packing-delete"][data-id="custom-packing"]');
@@ -184,17 +212,17 @@ async function main() {
     assert.equal(await page.evaluate(() => state.companions.length), 1);
     await page.locator('.companion-delete-btn').click(); await accept();
     assert.equal(await page.evaluate(() => state.companions.length), 0);
-    flows.push('Preparation item, default list reset and settlement companion cancel/commit');
+    recordFlow('Preparation item, default list reset and settlement companion cancel/commit');
 
     await closes(); await page.evaluate(() => window.TripLog.features.travelCompanion.workspace.open('wallet'));
     await page.locator('[data-tt-action="reservation-detail"][data-id="manual:manual-hotel"]').click();
     await page.locator('[data-tt-action="reservation-delete"]').click(); await askKind('reservation'); await cancel();
     assert(await page.locator('#ttReservationDetail').isVisible());
-    await page.locator('[data-tt-action="reservation-delete"]').click(); await accept();
+    await page.locator('[data-tt-action="reservation-delete"]').click(); await accept('ttReservationDetail');
     await page.locator('#ttReservationDetail').waitFor({ state: 'hidden' });
     assert.equal(await page.evaluate(() => state.travelCompanion.reservations.length), 0);
     assert(await page.evaluate(() => !!findItineraryItem('restaurant')));
-    flows.push('Manual reservation deletion keeps its source itinerary and expenses');
+    recordFlow('Manual reservation deletion keeps its source itinerary and expenses');
 
     await closes(); await page.evaluate(() => saveCurrentSnapshot());
     await page.waitForFunction(async () => (await loadArchiveRecords()).length > 0); await page.evaluate(() => openHistoryModal());
@@ -205,7 +233,7 @@ async function main() {
     await page.waitForFunction(() => historyRecords.length === 0);
     assert.equal(await page.evaluate(async () => (await loadArchiveRecords()).length), 0);
     assert(await page.evaluate(() => !!findItineraryItem('restaurant')));
-    flows.push('Saved snapshot delete, persistence and nested legacy-overlay Escape');
+    recordFlow('Saved snapshot delete, persistence and nested legacy-overlay Escape');
 
     await closes(); await page.evaluate(() => { setActivePage('itinerary'); window.TripLog.features.itinerary.workspace.show({ previewMap: false }); });
     await page.locator('#itineraryPlaceInput').fill('작성 중인 새 장소');
@@ -216,7 +244,7 @@ async function main() {
     await draft.getByRole('button', { name: '초안 삭제', exact: true }).click(); await askKind('draft'); await cancel();
     await draft.getByRole('button', { name: '초안 삭제', exact: true }).click(); await accept(); await draft.waitFor({ state: 'detached' });
     assert.equal(await page.evaluate(async () => (await window.TripLog.sync.drafts.list(state.id)).some(row => row.value.fields.itineraryPlaceInput?.value === '작성 중인 새 장소')), false);
-    flows.push('Draft confirmation and persistent discard');
+    recordFlow('Draft confirmation and persistent discard');
 
     await closes(); await show('rdAdvanced');
     await page.evaluate(() => { saveGoogleGeocodingApiKey('fixture-map-key'); syncMapGeocodingSettings(); });
@@ -225,12 +253,12 @@ async function main() {
     await page.locator('#settingsGoogleGeocodingKeyClearButton').click(); await accept();
     assert.equal(await page.evaluate(() => hasGoogleGeocodingApiKey()), false);
     assert(await page.locator('#settingsGoogleGeocodingKeyClearButton').isDisabled());
-    flows.push('Map key removal exposes no credential and requires confirmation');
+    recordFlow('Map key removal exposes no credential and requires confirmation');
     await closes(); await page.reload(); await waitForApp(page);
     assert.equal(await page.evaluate(() => state.entries.length), 0);
     assert.equal(await page.evaluate(() => state.itineraryItems.length), 1);
     assert.equal(await page.evaluate(() => state.packingList.length), 6);
-    flows.push('Committed record deletions and packing reset survive reload');
+    recordFlow('Committed record deletions and packing reset survive reload');
 
     // The existing reset starts a new trip and deletes saved snapshots, not existing trips.
     await page.evaluate(() => saveCurrentSnapshot()); await page.waitForFunction(async () => (await loadArchiveRecords()).length > 0);
@@ -240,7 +268,7 @@ async function main() {
     await page.waitForFunction(() => state.id !== 'delete-dialogs' && historyRecords.length === 0);
     assert(await page.evaluate(() => window.TripLog.persistence.stateStorage.getTrips().some(trip => trip.id === 'delete-dialogs')));
     assert.equal(await page.evaluate(async () => (await loadArchiveRecords()).length), 0);
-    flows.push('Reset copy matches new-trip creation, retained trips and deleted saved snapshots');
+    recordFlow('Reset copy matches new-trip creation, retained trips and deleted saved snapshots');
     await context.close();
 
     // Exercise shared UI against the command boundary, with synthetic roles and data.
@@ -273,10 +301,10 @@ async function main() {
     await p.getByRole('button', { name: '공유 여행 나가기', exact: true }).click(); await h.accept();
     await p.waitForFunction(() => window.__controls.some(row => row.action === 'leave'));
     await p.waitForFunction(() => window.TripLogSyncRepository.cached('delete-dialogs').hidden);
-    flows.push('Shared comment, member removal and leave: cancel is inert and accept sends the intended operation');
+    recordFlow('Shared comment, member removal and leave: cancel is inert and accept sends the intended operation');
     await shared.context.close();
     assert.deepEqual(errors, []); assert.deepEqual(consoleIssues, []);
-    fs.writeFileSync(path.join(output, 'verification.json'), JSON.stringify({ environment: { origin, browser: 'Playwright/Edge', reason: 'Browser plugin not available', isolated: true }, dimensions, flows, errors, consoleIssues }, null, 2));
+    fs.writeFileSync(path.join(output, 'verification.json'), JSON.stringify({ environment: { origin, browser: 'Playwright/Chromium', version: browser.version(), reason: 'Browser plugin not available', isolated: true }, dimensions, flows, errors, consoleIssues }, null, 2));
     console.log(`PASS deletion dialogs: ${dimensions.length} compact state/viewport checks; ${flows.length} interaction groups; no app errors. ${output}`);
   } catch (error) {
     let index = 0;
