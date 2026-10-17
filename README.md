@@ -22,6 +22,8 @@ TripLOG는 여행 일정, 지출, 정산, 저장 기록, 리포트를 관리하�
 
 ## 배포 절차
 
+iPhone·iPad의 홈 화면 아이콘은 기존 승인 이미지를 그대로 사용하며, 이미지 내용의 해시가 포함된 `/icons/apple-touch-icon-크기-해시.png` 주소로 제공합니다. 루트 주소와 여행 화면의 설치 정보가 동일하며, 기본 `apple-touch-icon.png`도 유지합니다. `npm run prepare:sync`가 파일과 링크를 생성하고, `scripts/app-icons-regression.js` 및 `scripts/app-icon-browser-regression.js`가 크기·원본 일치·실제 응답을 검증합니다. 이미 추가된 홈 화면 아이콘은 iOS에서 따로 보관할 수 있으므로 새로 추가한 아이콘을 확인한 뒤 기존 아이콘을 정리합니다.
+
 2026-09-29 사용자 확인 기준으로 **Git 커밋·푸시 → 연결된 자동 배포**를 사용합니다. 사용자는 Supabase 연동을 사용한다고 확인했습니다. 작업 절차는 [AGENTS.md](AGENTS.md)를 따릅니다.
 
 원격 `main`의 변경을 반영하고 관련 테스트와 `npm run build`를 완료한 뒤 변경을 커밋·푸시합니다. 과거 문서의 Cloudflare Pages·Wrangler 직접 업로드는 이력이며 현재 기본 절차가 아닙니다. Git 푸시 성공과 자동 배포 완료는 별도로 확인·보고합니다.

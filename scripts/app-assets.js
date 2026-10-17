@@ -1,8 +1,10 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const scenes = require('../src/app/data/destination-scenes');
+const { appleIcons } = require('./helpers/app-icons');
 
 const root = path.resolve(__dirname, '..');
+const currentAppleIcons = new Set(appleIcons(root).map(icon => icon.file));
 const sceneFiles = new Set([
   ...scenes.catalog.flatMap(scene => [scene.src, scene.mobileSrc]),
   ...Object.values(scenes.themes).flatMap(scene => [scene.src, scene.mobileSrc]),
@@ -18,6 +20,7 @@ function walk(directory) {
 }
 
 function isCurrentAsset(file) {
+  if (/^icons\/apple-touch-icon-\d+-[a-f0-9]{12}\.png$/.test(file)) return currentAppleIcons.has(file);
   return !file.startsWith('src/assets/trip-scenes/') || sceneFiles.has(file);
 }
 

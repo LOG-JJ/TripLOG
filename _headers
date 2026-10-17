@@ -7,6 +7,12 @@
 /sw.js
   Cache-Control: no-cache
 
+/
+  Cache-Control: no-cache
+
+/index.html
+  Cache-Control: no-cache
+
 /Travel*
   Cache-Control: no-cache
 
@@ -14,4 +20,10 @@
   Cache-Control: no-cache
 
 /repair*
+  Cache-Control: no-cache
+
+/site.webmanifest
+  Cache-Control: no-cache
+
+/apple-touch-icon.png
   Cache-Control: no-cache

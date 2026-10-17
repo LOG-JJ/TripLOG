@@ -1,0 +1,86 @@
+{
+  "browser": "isolated Edge; metadata/resource verification, not a physical iPhone installation",
+  "checks": [
+    {
+      "route": "/",
+      "links": [
+        {
+          "href": "http://127.0.0.1:13853/icons/apple-touch-icon-180-76ffa94052a4.png",
+          "sizes": "180x180"
+        },
+        {
+          "href": "http://127.0.0.1:13853/icons/apple-touch-icon-120-ffe3822b855d.png",
+          "sizes": "120x120"
+        },
+        {
+          "href": "http://127.0.0.1:13853/icons/apple-touch-icon-152-f638d0b8522d.png",
+          "sizes": "152x152"
+        },
+        {
+          "href": "http://127.0.0.1:13853/icons/apple-touch-icon-167-b9945ddee33d.png",
+          "sizes": "167x167"
+        },
+        {
+          "href": "http://127.0.0.1:13853/icons/apple-touch-icon-180-76ffa94052a4.png",
+          "sizes": "180x180"
+        }
+      ],
+      "title": "TripLOG",
+      "status": "passed"
+    },
+    {
+      "route": "/Travel?page=start",
+      "links": [
+        {
+          "href": "http://127.0.0.1:13853/icons/apple-touch-icon-180-76ffa94052a4.png",
+          "sizes": "180x180"
+        },
+        {
+          "href": "http://127.0.0.1:13853/icons/apple-touch-icon-120-ffe3822b855d.png",
+          "sizes": "120x120"
+        },
+        {
+          "href": "http://127.0.0.1:13853/icons/apple-touch-icon-152-f638d0b8522d.png",
+          "sizes": "152x152"
+        },
+        {
+          "href": "http://127.0.0.1:13853/icons/apple-touch-icon-167-b9945ddee33d.png",
+          "sizes": "167x167"
+        },
+        {
+          "href": "http://127.0.0.1:13853/icons/apple-touch-icon-180-76ffa94052a4.png",
+          "sizes": "180x180"
+        }
+      ],
+      "title": "TripLOG",
+      "status": "passed"
+    },
+    {
+      "route": "/Travel?page=itinerary",
+      "links": [
+        {
+          "href": "http://127.0.0.1:13853/icons/apple-touch-icon-180-76ffa94052a4.png",
+          "sizes": "180x180"
+        },
+        {
+          "href": "http://127.0.0.1:13853/icons/apple-touch-icon-120-ffe3822b855d.png",
+          "sizes": "120x120"
+        },
+        {
+          "href": "http://127.0.0.1:13853/icons/apple-touch-icon-152-f638d0b8522d.png",
+          "sizes": "152x152"
+        },
+        {
+          "href": "http://127.0.0.1:13853/icons/apple-touch-icon-167-b9945ddee33d.png",
+          "sizes": "167x167"
+        },
+        {
+          "href": "http://127.0.0.1:13853/icons/apple-touch-icon-180-76ffa94052a4.png",
+          "sizes": "180x180"
+        }
+      ],
+      "title": "TripLOG",
+      "status": "passed"
+    }
+  ]
+}

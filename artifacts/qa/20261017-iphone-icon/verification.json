@@ -1,0 +1,40 @@
+{
+  "scope": "iPhone Home Screen icon metadata and content-versioned image paths",
+  "approvedArtworkPreserved": true,
+  "icons": [
+    {
+      "file": "icons/apple-touch-icon-120-ffe3822b855d.png",
+      "sha256": "ffe3822b855da7d75472ca3898a4d6c35ec6cfb3b81352909db7459653289e1d",
+      "size": 120
+    },
+    {
+      "file": "icons/apple-touch-icon-152-f638d0b8522d.png",
+      "sha256": "f638d0b8522d3ce5fe4b86568e5e2612495baec3a6dfa5305021ceaf0406022e",
+      "size": 152
+    },
+    {
+      "file": "icons/apple-touch-icon-167-b9945ddee33d.png",
+      "sha256": "b9945ddee33d3ce9e490165487068bf9ee974dcb33126fb70217e9776f83ac23",
+      "size": 167
+    },
+    {
+      "file": "icons/apple-touch-icon-180-76ffa94052a4.png",
+      "sha256": "76ffa94052a4bb98c066401832d699c6edff444c04d2c20c56f21865d7c71045",
+      "size": 180
+    }
+  ],
+  "entryPages": [
+    "index.html",
+    "Travel.html"
+  ],
+  "validation": {
+    "sourceIntegrity": "passed",
+    "npm test": "passed",
+    "appIconBrowser": "passed",
+    "build": "passed",
+    "repeatBuildStable": true
+  },
+  "localBuild": "a25653a6417610c16550",
+  "physicalIPhoneHomeScreen": "Requires user confirmation; not remotely inspectable",
+  "dataStorageChanges": false
+}

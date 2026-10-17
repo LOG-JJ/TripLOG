@@ -3,6 +3,7 @@ const path = require('node:path');
 const esbuild = require('esbuild');
 const crypto = require('node:crypto');
 const assets = require('./app-assets');
+const { prepareAppleIcons, applyAppleIconLinks } = require('./helpers/app-icons');
 const root = assets.root;
 fs.mkdirSync(path.join(root, 'supabase/functions/_shared'), { recursive: true });
 fs.copyFileSync(path.join(root, 'src/app/sync/model.js'), path.join(root, 'supabase/functions/_shared/sync-model.js'));
@@ -27,10 +28,17 @@ const motionLicenses = ['motion', 'framer-motion', 'motion-dom', 'motion-utils',
 fs.writeFileSync(path.join(root, 'vendor/motion-LICENSES.txt'), motionLicenses.join('\n\n---\n\n'));
 // Icon URLs follow the actual artwork so manifest/favicon caches update without
 // another hand-maintained release label when the app image changes.
-const iconFiles = ['favicon-32.png', 'apple-touch-icon.png', ...fs.readdirSync(path.join(root, 'icons')).filter(file => file.endsWith('.png')).map(file => `icons/${file}`)].sort();
+const iconFiles = ['favicon-32.png', 'apple-touch-icon.png', ...fs.readdirSync(path.join(root, 'icons')).filter(file => file.endsWith('.png') && !file.startsWith('apple-touch-icon-')).map(file => `icons/${file}`)].sort();
 const iconDigest = crypto.createHash('sha256');
 for (const file of iconFiles) { iconDigest.update(file); iconDigest.update(fs.readFileSync(path.join(root, file))); }
 const iconVersion = iconDigest.digest('hex').slice(0, 12);
+// Home Screen metadata uses a new pathname for each artwork revision, rather
+// than relying on a query string to refresh a previously saved iOS icon.
+const appleIcons = prepareAppleIcons(root);
+const updateIconLinks = html => applyAppleIconLinks(html, appleIcons)
+  .replace(/(href="\/(?:site\.webmanifest|favicon-32\.png|apple-touch-icon\.png|icons\/triplog-icon-\d+\.png))(?:\?[^"]*)?(")/g, (_, prefix, suffix) => `${prefix}?v=${iconVersion}${suffix}`);
+const indexPath = path.join(root, 'index.html');
+fs.writeFileSync(indexPath, updateIconLinks(fs.readFileSync(indexPath, 'utf8')));
 const manifestPath = path.join(root, 'site.webmanifest');
 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 for (const icon of manifest.icons || []) {
@@ -44,8 +52,7 @@ const shellFiles = assets.shellFiles(files);
 // A content-derived build ID replaces hand-maintained release labels. Normalize
 // our own generated values before hashing so repeated builds are byte-stable.
 const versionedAsset = /((?:href|src)="(?:\.\/)?(?:app\.js|styles\.css|(?:src|vendor)\/[^"?]+\.(?:css|js))\?v=)[^"]*(")/g;
-const htmlTemplate = fs.readFileSync(path.join(root,'Travel.html'),'utf8')
-  .replace(/(href="\/(?:site\.webmanifest|favicon-32\.png|apple-touch-icon\.png|icons\/triplog-icon-\d+\.png))(?:\?[^"]*)?(")/g, (_, prefix, suffix) => `${prefix}?v=${iconVersion}${suffix}`)
+const htmlTemplate = updateIconLinks(fs.readFileSync(path.join(root,'Travel.html'),'utf8'))
   .replace(/(<meta name="triplog-build" content=")[^"]*("\s*\/>)/, '$1development$2')
   .replace(versionedAsset, '$1development$2');
 const digest = crypto.createHash('sha256');

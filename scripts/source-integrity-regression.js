@@ -6,6 +6,7 @@ const esbuild = require('esbuild');
 const suites = require('./browser-suites');
 const assets = require('./app-assets');
 const { inspectArtifactLayout } = require('./artifacts-check');
+require('./app-icons-regression');
 
 const loader = fs.readFileSync(path.join(assets.root, 'app.js'), 'utf8');
 const modules = [...loader.matchAll(/^\s+"([^"\n]+\.js)",/gm)].map(match => `src/app/${match[1]}`);
