@@ -5,7 +5,13 @@
   const text = value => escapeHtml(String(value ?? ''));
   const normalize = value => String(value || '').normalize('NFKC').toLocaleLowerCase('ko-KR').replace(/\s+/g, '');
   const R = () => window.TripLogSyncRepository;
+  const VIEW_STORAGE_KEY = 'triplog.tripLibraryView.v1';
+  function readViewPreference() {
+    try { return localStorage.getItem(VIEW_STORAGE_KEY) === 'list' ? 'list' : 'passport'; }
+    catch (_) { return 'passport'; }
+  }
   let filter = 'all', opening = '', removing = '', ready = false;
+  let viewMode = readViewPreference(), viewAnimation = null;
   let pendingInitialTrip = new URLSearchParams(location.search).get('trip') || '';
   const today = () => window.TripLog.features.redesign.model.localDate();
   const statusLabels = { upcoming: 'UP NEXT', ongoing: 'ON THE GO', past: 'MEMORIES', undated: 'PLANNING' };
@@ -53,11 +59,17 @@
     return window.TripLog.persistence.stateStorage.getTrips().filter(trip => { const record = R()?.cached(trip.id); return !record?.placeholder && !record?.hidden; });
   }
   function markup() {
-    return `<section class="tl-library" aria-labelledby="tripLibraryTitle">
+    return `<section class="tl-library" data-view="${viewMode}" aria-labelledby="tripLibraryTitle">
       <div class="tl-library-heading"><h1 id="tripLibraryTitle">내 여행</h1><p>떠날 여행도, 다녀온 순간도</p></div>
       <div class="tl-library-search" role="search">${icon('magnifying-glass')}<input id="tripLibrarySearch" type="search" placeholder="여행 이름이나 여행지 검색" aria-label="여행 이름이나 여행지 검색" autocomplete="off"><button id="tripLibrarySearchClear" type="button" aria-label="여행 검색 지우기" hidden>${icon('x')}</button></div>
       <div class="tl-library-filters" id="rdTripTabs" role="group" aria-label="여행 기간 필터">${[['all', 'ALL'], ['upcoming', statusLabels.upcoming], ['ongoing', statusLabels.ongoing], ['past', statusLabels.past]].map(([key, label]) => `<button type="button" data-library-filter="${key}" aria-pressed="${key === 'all'}" ${key === 'ongoing' ? 'hidden' : ''}>${label}<span>0</span></button>`).join('')}</div>
-      <p class="tl-library-announcement" id="tripLibraryResult" role="status" aria-live="polite"></p>
+      <div class="tl-library-toolbar">
+        <p class="tl-library-count" id="tripLibraryResult" role="status" aria-live="polite"></p>
+        <div class="tl-library-view-switch" role="group" aria-label="여행 보기 방식">
+          <button type="button" data-library-view="passport" aria-pressed="${viewMode === 'passport'}" aria-controls="rdTripList">${icon('squares-four')}<span>여권</span></button>
+          <button type="button" data-library-view="list" aria-pressed="${viewMode === 'list'}" aria-controls="rdTripList">${icon('list-dashes')}<span>목록</span></button>
+        </div>
+      </div>
       <div class="tl-library-empty" id="tripLibraryEmpty" hidden></div>
       <div class="tl-library-grid" id="rdTripList"><div id="tripLibraryItems"></div>
         <button type="button" id="rdTripCreate" class="tl-passport tl-passport-new" data-rd-action="new-trip" aria-label="새 여행 만들기">
@@ -76,11 +88,52 @@
       <span class="tl-passport-foot"><span><b>${text(city)}</b><small>${text(country)}</small></span>${icon('identification-card')}</span>
     </button><button type="button" class="tl-passport-remove" data-library-remove="${text(trip.id)}" aria-label="${text(name)} 여행 제거" title="${canRemove ? '여행 제거' : '마지막 여행은 삭제할 수 없어요'}" ${opening || removing || !canRemove ? 'disabled' : ''}>${icon(removing === trip.id ? 'hourglass' : 'x')}</button></div>`;
   }
+  function listCard(trip, date, canRemove) {
+    const group = status(trip, date), name = trip.tripName || '새로운 여행';
+    const place = [trip.city, trip.country].filter(Boolean).join(' · ') || '목적지 미정';
+    const label = group === 'upcoming' ? badge(trip, date).replace(`${statusLabels.upcoming} · `, '')
+      : { ongoing: '여행 중', past: '지난 여행', undated: '계획 중' }[group];
+    return `<div class="tl-passport-entry tl-trip-list-entry">
+      <button type="button" class="tl-trip-row cover-${cover(trip)}" data-library-trip="${text(trip.id)}" aria-label="${text(name)} 여행 열기" ${opening || removing ? 'disabled' : ''}>
+        <span class="tl-trip-row-art" aria-hidden="true"><img src="src/assets/home-passport-${cover(trip)}.webp" alt="" width="174" height="268" loading="lazy" decoding="async"></span>
+        <span class="tl-trip-row-copy"><strong>${text(name)}</strong><span class="tl-trip-row-destination">${icon('map-pin')}<span>${text(place)}</span></span><span class="tl-trip-row-dates">${icon('calendar-blank')}<span>${text(dates(trip))}</span></span></span>
+        <span class="tl-trip-row-status is-${group}">${opening === trip.id ? '여는 중' : text(label)}</span>
+      </button>
+      <button type="button" class="tl-trip-row-remove" data-library-remove="${text(trip.id)}" aria-label="${text(name)} 여행 제거" title="${canRemove ? '여행 제거' : '마지막 여행은 삭제할 수 없어요'}" ${opening || removing || !canRemove ? 'disabled' : ''}>${icon(removing === trip.id ? 'hourglass' : 'trash')}</button>
+    </div>`;
+  }
+  function setViewMode(value) {
+    if (!['passport', 'list'].includes(value) || value === viewMode) return;
+    viewMode = value;
+    // A device display preference, never a trip mutation or a sync command.
+    try { localStorage.setItem(VIEW_STORAGE_KEY, value); } catch (_) { /* Keep this session usable when storage is unavailable. */ }
+    if (viewAnimation) { viewAnimation.stop(); viewAnimation = null; }
+    const grid = $('#rdTripList');
+    grid.style.removeProperty('opacity'); grid.style.removeProperty('transform');
+    render();
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches || !window.TripLogMotion?.animate) return;
+    try {
+      const control = window.TripLogMotion.animate(grid,
+        { opacity: [.65, 1], transform: ['translateY(6px)', 'translateY(0px)'] },
+        { duration: .2, ease: [.22, 1, .36, 1] });
+      viewAnimation = control;
+      const finishAnimation = () => {
+        if (viewAnimation !== control) return;
+        viewAnimation = null;
+        grid.style.removeProperty('opacity'); grid.style.removeProperty('transform');
+      };
+      Promise.resolve(control).then(finishAnimation, finishAnimation);
+    } catch (_) {
+      grid.style.removeProperty('opacity'); grid.style.removeProperty('transform');
+    }
+  }
   function render() {
     if (!ready) return;
     const editing = window.TripLog.features.redesign.workspace.isTripEditing();
     $('.tl-library').hidden = editing;
     if (editing) return;
+    $('.tl-library').dataset.view = viewMode;
+    document.querySelectorAll('[data-library-view]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.libraryView === viewMode)));
     const all = trips(), date = today(), query = normalize($('#tripLibrarySearch').value);
     const loading = !all.length && !window.TripLog.features.collaboration.tripCollaboration.isTripListReady();
     const counts = { all: all.length, upcoming: 0, ongoing: 0, past: 0 };
@@ -96,7 +149,8 @@
       .sort((a, b) => order[status(a, date)] - order[status(b, date)] || (status(a, date) === 'past' ? String(b.startDate).localeCompare(String(a.startDate)) : String(a.startDate).localeCompare(String(b.startDate))) || String(a.id).localeCompare(String(b.id)));
     $('#tripLibrarySearchClear').hidden = !$('#tripLibrarySearch').value;
     $('#tripLibraryResult').textContent = loading ? '여행을 불러오는 중' : `${visible.length}개의 여행`;
-    const list = $('#tripLibraryItems'), html = visible.map(trip => card(trip, date, all.length > 1)).join('');
+    const renderTrip = viewMode === 'list' ? listCard : card;
+    const list = $('#tripLibraryItems'), html = visible.map(trip => renderTrip(trip, date, all.length > 1)).join('');
     if (list.innerHTML !== html) {
       const focused = document.activeElement?.dataset.libraryTrip;
       const focusedRemove = document.activeElement?.dataset.libraryRemove;
@@ -108,7 +162,7 @@
     $('#rdTripCreate').disabled = Boolean(opening || removing) || loading;
     const empty = $('#tripLibraryEmpty');
     empty.hidden = Boolean(visible.length);
-    empty.innerHTML = loading ? '<strong>여행을 불러오고 있어요</strong><p>저장된 여행을 확인하고 있어요.</p>' : !all.length ? `<strong>첫 여행의 여권을 만들어볼까요?</strong><p>여행을 만들면 일정과 지출을 함께 기록할 수 있어요.</p>`
+    empty.innerHTML = loading ? '<strong>여행을 불러오고 있어요</strong><p>저장된 여행을 확인하고 있어요.</p>' : !all.length ? `<strong>${viewMode === 'list' ? '첫 여행을 만들어볼까요?' : '첫 여행의 여권을 만들어볼까요?'}</strong><p>여행을 만들면 일정과 지출을 함께 기록할 수 있어요.</p>`
       : `<strong>${query ? '검색 결과가 없어요' : '이 기간의 여행이 없어요'}</strong><p>${query ? '다른 여행 이름이나 여행지를 찾아보세요.' : '다른 기간을 선택하거나 새 여행을 만들어보세요.'}</p><button type="button" data-library-reset>전체 여행 보기</button>`;
   }
   async function openTrip(id) {
@@ -142,6 +196,8 @@
     $('#tripLibrarySearch').addEventListener('keydown', event => { if (event.key === 'Escape') { event.target.value = ''; render(); } });
     $('#tripLibrarySearchClear').addEventListener('click', () => { $('#tripLibrarySearch').value = ''; render(); $('#tripLibrarySearch').focus(); });
     $('.tl-library').addEventListener('click', event => {
+      const view = event.target.closest('[data-library-view]');
+      if (view) { setViewMode(view.dataset.libraryView); return; }
       const period = event.target.closest('[data-library-filter]');
       if (period) { filter = period.dataset.libraryFilter; render(); return; }
       if (event.target.closest('[data-library-reset]')) { filter = 'all'; $('#tripLibrarySearch').value = ''; render(); return; }
@@ -149,6 +205,15 @@
       if (remove) { removeTrip(remove.dataset.libraryRemove).catch(() => showToast('여행을 제거하지 못했어요. 다시 시도해 주세요.')); return; }
       const trip = event.target.closest('[data-library-trip]');
       if (trip) openTrip(trip.dataset.libraryTrip).catch(() => showToast('여행을 열지 못했어요. 다시 시도해 주세요.'));
+    });
+    $('.tl-library-view-switch').addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      const focusedView = event.target.closest('[data-library-view]');
+      if (!focusedView) return;
+      event.preventDefault();
+      const next = event.key === 'Home' ? 'passport' : event.key === 'End' ? 'list' : focusedView.dataset.libraryView === 'list' ? 'passport' : 'list';
+      setViewMode(next);
+      $(`[data-library-view="${next}"]`).focus({ preventScroll: true });
     });
     let renderFrame;
     const requestRender = () => {

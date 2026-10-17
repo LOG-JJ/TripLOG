@@ -1,5 +1,5 @@
 const { artifactDirectory } = require('./helpers/artifact-output');
-const { launchBrowser, fixtureToken, blockExternalRequests, startServer, stopServer } = require('./helpers/browser-fixture');
+const { launchBrowser, fixtureToken, blockExternalRequests, startServer, stopServer, waitForApp } = require('./helpers/browser-fixture');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
@@ -27,7 +27,7 @@ async function main() {
   page.on('pageerror', error => errors.push(error.message));
   const ready = () => page.waitForFunction(() => document.documentElement.dataset.triplogInitialized === 'true' && document.documentElement.dataset.auth === 'signed-in' && document.querySelector('#ttCompanion'));
   const dialog = page.locator('#ttCompanion');
-  const open = async tab => { await page.evaluate(tab => window.TripLog.features.travelCompanion.workspace.open(tab), tab); await dialog.waitFor({ state: 'visible' }); };
+  const open = async tab => { await page.evaluate(tab => window.TripLog.features.travelCompanion.workspace.open(tab), tab); await dialog.waitFor({ state: 'visible' }); await dialog.evaluate(node => Promise.all(node.getAnimations().map(animation => animation.finished.catch(() => {})))); };
   const tab = key => dialog.locator(`#ttNav [data-tab="${key}"]`).click();
   const saved = () => page.evaluate(() => JSON.parse(JSON.stringify(state)));
   const capture = name => dialog.screenshot({ path: path.join(output, name + '.png'), animations: 'disabled' });
@@ -40,7 +40,7 @@ async function main() {
     assert(sizes.bottom <= sizes.viewport + 1, 'Bottom navigation remains reachable');
   };
   try {
-    await page.goto(`${origin}/Travel?page=overview&trip=${fixture.id}`); await ready(); await open('today');
+    await page.goto(`${origin}/Travel?page=overview&trip=${fixture.id}`); await waitForApp(page); await ready(); await open('today');
     // Inspect the fixture's populated day even when the real calendar has advanced.
     await dialog.locator(`[data-date="${fixture.startDate}"]`).click();
     assert.deepEqual(await dialog.evaluate(node => ({ left: node.scrollLeft, top: node.querySelector('.tt-scroll').scrollTop })), { left: 0, top: 0 }, 'Selecting a visible day keeps the complete header and dialog position');

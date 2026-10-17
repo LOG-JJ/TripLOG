@@ -142,7 +142,7 @@ async function main() {
         const img = document.querySelector('.th-hero-scene img');
         return img?.complete && img.naturalWidth > 0 && img.currentSrc.endsWith(suffix) && !img.parentElement.querySelector('source[data-trip-scene-mobile]');
       }, failDesktopToo ? '/wetland.webp' : '/kr-suncheon.webp');
-      assert.equal(await fallbackPage.locator('source[data-trip-scene-mobile]').count(), 0);
+      assert.equal(await fallbackPage.locator('.th-hero-scene source[data-trip-scene-mobile]').count(), 0);
       await fallbackContext.close();
     }
     assert.deepEqual(errors, []);

@@ -2,6 +2,8 @@
 module.exports = [
   'entry-splash-browser-regression.js',
   'trip-library-browser-regression.js',
+  'trip-library-views-browser-regression.js',
+  'trip-navigation-browser-regression.js',
   'trip-header-browser-regression.js',
   'trip-scene-art-browser-regression.js',
   'trip-scene-cache-browser-regression.js',

@@ -54,7 +54,7 @@ async function main() {
     assert.match(await page.locator('#rdDonut').getAttribute('aria-label'), /100%/);
     await page.locator('#rdReportItineraryTab').click();
     await page.locator('#rdReportExpenseTab').click();
-    await page.locator('.rd-nav [data-rd-nav="overview"]').click();
+    await page.locator('.rd-nav [data-trip-nav="overview"]').click();
     assert.match(await page.locator('.tc-total').innerText(), /^0원$/);
 
     await page.evaluate(() => {
@@ -65,7 +65,9 @@ async function main() {
       })));
       render();
     });
-    await page.locator('.rd-nav [data-rd-nav="report"]').click();
+    await page.locator('.rd-nav [data-trip-nav="report"]').click();
+    await page.locator('#tripNavigationMenu [data-nav-item="report-expenses"]').click();
+    await page.locator('#tripNavigationMenu').waitFor({ state: 'hidden' });
     await page.evaluate(() => document.fonts.ready);
     const shares = () => page.locator('.rd-bar-percent').allTextContents();
     assert.deepEqual(await shares(), ['68.2%', '16.5%', '15.3%']);

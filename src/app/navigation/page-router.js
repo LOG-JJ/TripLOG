@@ -1,7 +1,7 @@
 function pageUrl(page) {
   const url = new URL(location.href);
   url.searchParams.set('page', page);
-  if (['overview', 'itinerary', 'budget', 'settlement', 'report'].includes(page) && typeof state !== 'undefined' && state.id) url.searchParams.set('trip', state.id);
+  if (['overview', 'itinerary', 'budget', 'settlement', 'report', 'settings'].includes(page) && typeof state !== 'undefined' && state.id) url.searchParams.set('trip', state.id);
   else url.searchParams.delete('trip');
   return url;
 }

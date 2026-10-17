@@ -1,0 +1,65 @@
+{
+  "status": "local implementation verified",
+  "viewports": [
+    "320×568",
+    "320×740",
+    "390×844",
+    "844×390",
+    "1280×900"
+  ],
+  "checks": [
+    "responsive menus",
+    "unchanged dock geometry",
+    "all destinations",
+    "rapid switching",
+    "all dismissals",
+    "route and scroll",
+    "editor draft",
+    "settings",
+    "history interruption",
+    "external native close",
+    "Motion library animation",
+    "reduced motion",
+    "data preservation"
+  ],
+  "screenshots": [
+    "itinerary-390x844.png",
+    "budget-390x844.png",
+    "report-390x844.png",
+    "itinerary-320x568.png",
+    "itinerary-844x390.png",
+    "report-1280x900.png"
+  ],
+  "browser": "Playwright/Edge isolated fixture (Browser plugin not available)",
+  "appErrors": [],
+  "consoleIssues": [],
+  "dockGeometryComparisons": 38,
+  "maxDockChangePx": 0.0625,
+  "maxDockChangeDuringAnimationPx": 0.0625,
+  "motionLibrary": "bundled Motion 14.3.0",
+  "motionLocalSample": {
+    "frames": 82,
+    "medianMs": 6.900000000001455,
+    "p95Ms": 7.099999999998545,
+    "maxMs": 7.100000000005821,
+    "scope": "Local Edge diagnostic, not an iOS/Android device benchmark"
+  },
+  "validation": {
+    "npm test": "passed",
+    "browserSuites": {
+      "total": 38,
+      "result": "All passed across full run and targeted reruns",
+      "rerunFixes": [
+        "Header image fallback assertion scoped to the hero instead of hidden library art",
+        "Report and sync tests use the new navigation paths",
+        "Companion test waits for app and entry animation before asserting scroll position"
+      ]
+    },
+    "build": {
+      "result": "passed",
+      "fingerprint": "d7e757f0ad658ea4341d",
+      "distMatchesSource": true
+    }
+  },
+  "deployment": "Not requested; local changes only"
+}

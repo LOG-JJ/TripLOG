@@ -199,7 +199,7 @@ async function main() {
     await page.locator('#rdDeleteExpense').click(); await accept('rdExpenseEditor');
     recordFlow('Expense deletion keeps its itinerary; failed persistence retains the record/editor and retry succeeds');
 
-    await closes(); await show('rdMore'); await page.locator('#rdMore [data-rd-action="packing"]').click();
+    await closes(); await page.evaluate(() => window.TripLog.features.redesign.workspace.navigate('overview')); await page.locator('#rdOverview [data-rd-action="packing"]').click();
     const removePacking = page.locator('[data-rd-action="packing-delete"][data-id="custom-packing"]');
     await removePacking.click(); await askKind('packing'); await cancel(); assert.equal(await removePacking.count(), 1);
     await removePacking.click(); await accept(); await removePacking.waitFor({ state: 'detached' });

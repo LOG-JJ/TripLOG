@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-17",
+  "result": "passed",
+  "build_fingerprint": "66352e45ce9613b60da3",
+  "selected_concept": "../../design/20261017-trip-library-views/passport-list-toggle.png",
+  "scope": "Local implementation of passport/list view switch in the trip library; no commit, push, or deployment in this task.",
+  "files": [
+    "src/app/features/home/trip-library.js",
+    "src/styles/trip-library.css",
+    "src/app/bootstrap/entry-splash.js",
+    "scripts/trip-library-views-browser-regression.js",
+    "scripts/browser-suites.js",
+    "README.md",
+    "Travel.html",
+    "sw.js"
+  ],
+  "behavior": [
+    "여권 보기가 기본이며 목록 보기를 선택할 수 있음",
+    "보기 선택을 triplog.tripLibraryView.v1에 저장하고 재접속 시 복원",
+    "검색어·기간 필터·정렬·여행 ID 유지",
+    "여행명·여행지·날짜·상태와 작은 목적지 그림을 1열 목록으로 표시",
+    "여행 열기·새 여행·제거의 기존 동작 재사용",
+    "목록 새 여행 버튼은 간결한 가로 버튼",
+    "키보드 Enter·방향키·Home·End와 명확한 선택/초점 상태",
+    "0.2초 전환 효과와 동작 줄이기 지원"
+  ],
+  "persistence": "Only a device view preference is written. No trip state mutation or sync command is created by toggling. Invalid preference defaults to passport; unavailable preference storage retains the selected mode in memory.",
+  "checks": {
+    "npm test": "passed",
+    "node scripts/trip-library-views-browser-regression.js": "passed after keyboard focus review fix — 7 interaction groups, 8 mode/viewport layouts",
+    "node scripts/trip-library-browser-regression.js": "passed",
+    "node scripts/entry-splash-browser-regression.js": "passed",
+    "npm run test:source": "passed — 107 modules, 28 stylesheets, 37 registered suites",
+    "npm run build": "passed",
+    "npm run artifacts:check": "passed",
+    "git diff --check": "passed"
+  },
+  "validation": {
+    "environment": "Fresh isolated Playwright/Edge context with a random local server origin; all external requests blocked and synthetic fixtures only.",
+    "viewports": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "checks": [
+      "single-column compact list / existing passport columns",
+      "no horizontal overflow or text/status overlap",
+      "retained query/filter while toggling",
+      "keyboard focus on inactive controls",
+      "rapid toggle cleanup with real Motion",
+      "reload and overview return preference",
+      "creation cancel/save and removal cancel/confirm",
+      "long escaped title/destination and undated records",
+      "empty/search-empty states",
+      "invalid or denied/quota-limited preference storage",
+      "normal/reduced-motion splash with stored list"
+    ],
+    "runtime_errors": 0,
+    "unexpected_console_errors": 0
+  },
+  "browser_limitation": "CUA could not acquire the user's existing localhost:18086 tab because its URL policy rejected the action. No retry or alternate access to that tab was attempted. Independent fixture testing was already underway and does not use the user's tab or state.",
+  "comparison": {
+    "matched": [
+      "visible count and labeled segmented view switch",
+      "yellow selected state",
+      "small pastel destination thumbnails",
+      "thin divider rows and readable metadata",
+      "separate remove target",
+      "compact yellow create button"
+    ],
+    "intentional_differences": [
+      "Preserved the existing wordmark, filters, passport layout and data-driven order rather than restyling the existing passport view.",
+      "Reused deployed passport illustrations as thumbnail sources.",
+      "At 320px, status moves below dates to keep text readable."
+    ]
+  },
+  "evidence": [
+    "list-390.png",
+    "list-320.png",
+    "list-1440.png",
+    "passport-390.png",
+    "list-long-undated-320.png",
+    "browser-evidence.json"
+  ],
+  "remaining_limits": [
+    "No physical iOS/Safari or Android device verification.",
+    "Production is unchanged until a separate deployment request."
+  ]
+}

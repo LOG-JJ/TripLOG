@@ -1,0 +1,405 @@
+/* Shared navigation and the approved itinerary / expenses / report sheets.
+ * Entry, exit and panel resizing use the bundled Motion library.
+ * Keep layout transitions off the sheet so interrupted gestures stay smooth.
+ */
+body.rd-app {
+  --tl-nav-dock-height: calc(66px + env(safe-area-inset-bottom, 0px));
+  --tl-nav-sheet: #fffdf8;
+  --tl-nav-ease: cubic-bezier(.2, .75, .2, 1);
+}
+
+.rd-app .tl-bottom-nav {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  height: var(--tl-nav-dock-height);
+  padding-top: 5px;
+  padding-bottom: calc(4px + env(safe-area-inset-bottom, 0px));
+  border-top: 1px solid #e9e6df;
+  background: #fffdf9;
+  isolation: isolate;
+}
+
+/* A modal owns the interactive dock. Hide the background copy on wide screens
+ * as well, where the sheet is narrower than the original navigation. */
+body.rd-app:has(#tripNavigationMenu[open]) :is(.rd-nav, .itinerary-bottom-nav) { visibility: hidden; }
+
+.rd-app .tl-bottom-nav button[data-trip-nav] {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  min-width: 0;
+  min-height: 52px;
+  padding: 3px 2px 7px;
+  margin: 0;
+  border: 0;
+  border-radius: 15px;
+  box-shadow: none;
+  background: transparent;
+  color: #62656d;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: color 220ms var(--tl-nav-ease), transform 220ms var(--tl-nav-ease);
+}
+
+.rd-app .tl-bottom-nav button[data-trip-nav]::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: min(60px, calc(100% - 6px));
+  border-radius: 17px;
+  background: #ffe17c;
+  opacity: 0;
+  transform: translateX(-50%) scale(.9);
+  transition: opacity 260ms var(--tl-nav-ease), transform 380ms var(--tl-nav-ease), background-color 220ms ease;
+}
+
+.rd-app .tl-bottom-nav button[data-trip-nav]::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 10px);
+  right: auto;
+  top: auto;
+  bottom: 1px;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: #20252f;
+  opacity: 0;
+  transform: scaleX(.65);
+  transition: opacity 220ms var(--tl-nav-ease), transform 300ms var(--tl-nav-ease);
+}
+
+.rd-app .tl-bottom-nav button[data-trip-nav] .ph {
+  flex: none;
+  margin: 0;
+  border-radius: 0;
+  background: transparent;
+  font-size: 24px;
+  line-height: 1;
+  animation: none;
+  transition: transform 320ms var(--tl-nav-ease);
+}
+
+.rd-app .tl-bottom-nav button[data-trip-nav] > span:not(.tl-nav-expand) {
+  display: block;
+  max-width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.rd-app .tl-bottom-nav button[data-trip-nav][aria-current="page"] {
+  color: #171b24;
+  font-weight: 750;
+}
+
+.rd-app .tl-bottom-nav button[data-trip-nav][aria-current="page"]::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.rd-app .tl-bottom-nav button[data-trip-nav][aria-expanded="true"] { color: #141923; }
+.rd-app .tl-bottom-nav button[data-trip-nav][aria-expanded="true"]::before {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+.rd-app .tl-bottom-nav button[data-trip-nav] .tl-nav-expand {
+  position: absolute;
+  top: 3px;
+  left: calc(50% + 16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+  color: currentColor;
+  font-size: 9px;
+  line-height: 1;
+  opacity: .55;
+  transition: opacity 220ms ease, transform 320ms var(--tl-nav-ease);
+}
+
+.rd-app .tl-bottom-nav button[data-trip-nav] .tl-nav-expand .ph { font-size: 9px; }
+.rd-app .tl-bottom-nav button[data-trip-nav][aria-expanded="true"] .tl-nav-expand {
+  opacity: 1;
+  transform: rotate(180deg);
+}
+
+.rd-app .tl-bottom-nav button[data-trip-nav]:active:not(:disabled) {
+  transform: scale(.95);
+  box-shadow: none;
+}
+
+.rd-app .tl-bottom-nav button[data-trip-nav]:focus-visible {
+  outline: 2px solid #345da1;
+  outline-offset: -3px;
+}
+
+/* Keep the existing main-dock and itinerary-editor positioning. Only the
+ * dialog's duplicate dock lives in normal flow below its sheet. */
+body.rd-app #tripNavigationMenu.tl-nav-menu {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+  background: transparent;
+  color: var(--text);
+  box-shadow: none;
+  font-family: var(--font);
+  overscroll-behavior: contain;
+}
+
+#tripNavigationMenu:not([open]) { display: none; }
+body.rd-app #tripNavigationMenu::backdrop { background: transparent; animation: none; }
+
+body.rd-app #tripNavigationMenu .tl-nav-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: rgb(22 24 28 / .4);
+  box-shadow: none;
+  cursor: default;
+  transform: none;
+  transition: none;
+  touch-action: none;
+}
+
+body.rd-app #tripNavigationMenu .tl-nav-surface {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 560px;
+  min-width: 0;
+  transform: translateX(-50%);
+  isolation: isolate;
+}
+
+body.rd-app #tripNavigationMenu .tl-nav-panel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 0;
+  max-height: calc(100dvh - var(--tl-nav-dock-height) - 12px);
+  padding: 10px 18px 12px;
+  border: 1px solid rgb(255 255 255 / .7);
+  border-bottom: 0;
+  border-radius: 22px 22px 0 0;
+  overflow: hidden;
+  background: var(--tl-nav-sheet);
+  box-shadow: 0 -12px 42px rgb(17 23 32 / .12);
+  transform-origin: center bottom;
+  will-change: transform, opacity;
+  transition: none;
+}
+
+#tripNavigationMenu .tl-nav-handle {
+  flex: none;
+  width: 44px;
+  height: 4px;
+  margin: 0 auto 6px;
+  border-radius: 4px;
+  background: #d8d5ce;
+}
+
+#tripNavigationMenu .tl-nav-heading {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+  min-height: 44px;
+  margin: 0 0 8px;
+}
+
+#tripNavigationMenu .tl-nav-heading-icon .ph { font-size: 24px; }
+body.rd-app #tripNavigationMenu .tl-nav-heading h2 {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  color: #171b24;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -.025em;
+}
+
+body.rd-app #tripNavigationMenu .tl-nav-close {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  min-height: 44px;
+  margin: 0 -5px 0 auto;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #f2f0eb;
+  color: #343842;
+  box-shadow: none;
+  transition: background-color 200ms ease, transform 220ms var(--tl-nav-ease);
+}
+
+#tripNavigationMenu .tl-nav-close .ph { font-size: 21px; }
+
+#tripNavigationMenu .tl-nav-content {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  padding: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #d2cfc5 transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+body.rd-app #tripNavigationMenu .tl-nav-item {
+  display: grid;
+  flex: none;
+  grid-template-columns: 38px minmax(0, 1fr) 17px;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+  min-height: 56px;
+  margin: 0;
+  padding: 9px 12px;
+  border: 1px solid #e7e4de;
+  border-radius: 12px;
+  background: #fffdf9;
+  color: #171b24;
+  box-shadow: none;
+  text-align: left;
+  touch-action: manipulation;
+  transition: background-color 220ms ease, border-color 220ms ease, transform 260ms var(--tl-nav-ease);
+}
+
+body.rd-app #tripNavigationMenu .tl-nav-item.is-primary {
+  min-height: 68px;
+  border-color: #efc952;
+  background: #fff0b5;
+}
+
+#tripNavigationMenu .tl-nav-item-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  color: #272e37;
+}
+
+#tripNavigationMenu .tl-nav-item-icon .ph { font-size: 29px; }
+#tripNavigationMenu .tl-nav-item[data-tone="pink"] .tl-nav-item-icon { color: #e76d8c; }
+#tripNavigationMenu .tl-nav-item[data-tone="mint"] .tl-nav-item-icon { color: #489c76; }
+#tripNavigationMenu .tl-nav-item[data-tone="blue"] .tl-nav-item-icon { color: #4b83dc; }
+#tripNavigationMenu .tl-nav-item[data-tone="yellow"] .tl-nav-item-icon { color: #ac8124; }
+#tripNavigationMenu .tl-nav-item.is-primary .tl-nav-item-icon { color: #171b24; }
+#tripNavigationMenu .tl-nav-item-copy { display: grid; gap: 1px; min-width: 0; }
+
+#tripNavigationMenu .tl-nav-item-copy strong {
+  display: block;
+  color: #171b24;
+  font-size: 16px;
+  font-weight: 750;
+  line-height: 1.4;
+  letter-spacing: -.02em;
+  overflow-wrap: anywhere;
+}
+
+#tripNavigationMenu .tl-nav-item-copy small {
+  display: block;
+  color: #676970;
+  font-size: 13px;
+  font-weight: 450;
+  line-height: 1.4;
+  letter-spacing: -.01em;
+  overflow-wrap: anywhere;
+}
+
+#tripNavigationMenu .tl-nav-item > .ph { color: #62656c; font-size: 17px; }
+
+body.rd-app #tripNavigationMenu .tl-nav-dock {
+  position: absolute;
+  z-index: 1;
+  inset: auto;
+  display: grid;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-right: 4px;
+  padding-left: 4px;
+  transform: none;
+}
+
+body.rd-app #tripNavigationMenu :is(.tl-nav-close, .tl-nav-item):active:not(:disabled) {
+  transform: scale(.98);
+  box-shadow: none;
+}
+
+body.rd-app #tripNavigationMenu :is(.tl-nav-close, .tl-nav-item):focus-visible {
+  outline: 2px solid #345da1;
+  outline-offset: -3px;
+}
+
+@media (hover: hover) {
+  .rd-app :is(.rd-nav, .itinerary-bottom-nav, .tl-nav-dock).tl-bottom-nav button[data-trip-nav]:hover:not(:disabled) { background: transparent; }
+  .rd-app .tl-bottom-nav button[data-trip-nav]:hover::before { opacity: .35; transform: translateX(-50%) scale(1); }
+  .rd-app .tl-bottom-nav button[data-trip-nav][aria-expanded="true"]:hover::before { opacity: 1; }
+  body.rd-app #tripNavigationMenu .tl-nav-backdrop:hover { background: rgb(22 24 28 / .4); }
+  body.rd-app #tripNavigationMenu .tl-nav-close:hover { background: #e9e6de; }
+  body.rd-app #tripNavigationMenu .tl-nav-item:hover { border-color: #d9d3c5; background: #f5f1e8; }
+  body.rd-app #tripNavigationMenu .tl-nav-item.is-primary:hover { border-color: #deb83b; background: #ffeba0; }
+}
+
+@media (max-width: 359px) {
+  body.rd-app #tripNavigationMenu .tl-nav-panel { padding-right: 12px; padding-left: 12px; }
+  body.rd-app #tripNavigationMenu .tl-nav-item { grid-template-columns: 32px minmax(0, 1fr) 15px; gap: 9px; padding-right: 10px; padding-left: 10px; }
+  #tripNavigationMenu .tl-nav-item-icon { width: 32px; }
+}
+
+@media (min-width: 600px) {
+  body.rd-app #tripNavigationMenu .tl-nav-panel { border-radius: 24px 24px 0 0; padding-right: 22px; padding-left: 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rd-app .tl-bottom-nav button[data-trip-nav],
+  .rd-app .tl-bottom-nav button[data-trip-nav]::before,
+  .rd-app .tl-bottom-nav button[data-trip-nav]::after,
+  .rd-app .tl-bottom-nav button[data-trip-nav] *,
+  body.rd-app #tripNavigationMenu * { animation: none !important; transition: none !important; }
+  body.rd-app #tripNavigationMenu .tl-nav-panel { will-change: auto; }
+}
+
+@media print {
+  body.rd-app .tl-bottom-nav, body.rd-app #tripNavigationMenu { display: none !important; }
+}

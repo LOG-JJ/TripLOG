@@ -124,11 +124,14 @@ async function main() {
       assert.deepEqual(await memberNames(page),['JJ','JH'],'The authoritative roster removes stale local memberships');
       assert.deepEqual(await page.evaluate(()=>state.collaboration.members.map(m=>[m.role,m.source,m.email])),[['editor','supabase','']]);
       await page.locator('#rdMenuButton').click();
-      await page.locator('#rdMore [data-rd-action="invite"]').click();
+      await page.locator('#settingsPage [data-rd-action="invite"]').click();
       assert.deepEqual(await page.locator('#rdInviteMembers .rd-invite-member > b').allTextContents(),['JJ','JH'],'The open invite sheet must reflect the current roster');
       const output=process.env.TRIPLOG_TEST_OUTPUT || artifactDirectory('sync');fs.mkdirSync(output,{recursive:true});
       await page.screenshot({path:path.join(output,page===a?'members-desktop.png':'members-mobile.png'),animations:'disabled'});
       await page.locator('#tripInviteCloseButton').click();
+      await page.locator('.rd-nav [data-trip-nav="itinerary"]').click();
+      await page.locator('#tripNavigationMenu [data-nav-item="itinerary"]').click();
+      await page.locator('#tripNavigationMenu').waitFor({ state: 'hidden' });
     }
     const stableRoster = await a.evaluate(()=>JSON.stringify(state.collaboration));
     await refreshMembers(a);

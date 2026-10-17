@@ -16,6 +16,10 @@ TripLOG는 여행 일정, 지출, 정산, 저장 기록, 리포트를 관리하�
 
 일반 앱 진입에는 [선택한 스플래시 목업](artifacts/design/20261017-main-splash/triplog-splash-to-trip-selection-v2-brand.png)을 바탕으로 로고·여권 등장과 내 여행 전환이 이어집니다. Motion 14.3.0을 앱 내부에 고정 버전으로 포함해 외부 CDN 없이 재생하며, 기존 로고와 여권 자산을 재사용합니다. 준비된 화면은 보통 약 3초 안에 열리고, 동작 줄이기 설정에서는 장식 애니메이션과 최소 대기를 생략합니다. 로그인이 필요하면 로그인 화면을 표시하고, 여행 직접 링크·초대·비밀번호 복구·브라우저 뒤로가기는 원래 목적지를 유지합니다. 메뉴 이동으로는 재생하지 않습니다. 로딩이 길면 이동 버튼을 제공하며 최대 8초 후에는 스플래시를 해제합니다. 격리 검증은 `node scripts/entry-splash-browser-regression.js`, 대표 근거는 `artifacts/qa/20261017-main-splash/`에 보관합니다.
 
+검색·기간 필터 아래의 **여권 / 목록** 버튼으로 보기 방식을 바꿀 수 있습니다. 목록은 작은 목적지 그림과 여행명·여행지·날짜·상태를 간결하게 표시하고, 여행 열기·제거·새 여행 만들기는 두 보기에서 동일하게 동작합니다. 보기 전환 중에도 검색어와 필터가 유지되며, 마지막 선택은 기기의 `triplog.tripLibraryView.v1` 설정으로 기억합니다. 이 설정은 여행 데이터나 동기화 명령을 변경하지 않습니다. [목업](artifacts/design/20261017-trip-library-views/passport-list-toggle.png), [검증 자료](artifacts/qa/20261017-trip-library-views/)를 보관하며, `node scripts/trip-library-views-browser-regression.js`로 전환·설정 복원·목록 동작·접근성·반응형을 검증합니다.
+
+하단 탐색은 **개요 / 일정 / 지출 / 리포트 / 설정**입니다. 일정·지출·리포트는 [승인한 목업](artifacts/design/20261017-bottom-navigation-plan/submenu-mockup.png)의 펼침 메뉴를 열며, 현재 본문과 스크롤은 항목을 선택할 때까지 유지합니다. 일정에는 일정표·오늘·점검·예약·여행 도구, 지출에는 내역·추가·영수증·정산, 리포트에는 두 분석 화면·PDF를 연결합니다. 개요와 설정은 바로 이동하며, 설정에서 여행 정보·공유·저장 상태를 관리합니다. 일반 화면과 일정 편집창이 같은 탐색 정의를 사용합니다. 하단 다섯 버튼의 좌표·크기는 메뉴를 열기 전후와 전환 중에 동일하게 유지합니다. 메뉴 이동·높이 전환·순차 등장은 내장 Motion 14.3.0으로 처리하며, 빠른 전환·뒤로가기·동작 줄이기를 지원합니다. 검증은 `node scripts/trip-navigation-browser-regression.js`, 대표 캡처와 결과는 `artifacts/qa/20261017-bottom-navigation/`에 보관합니다.
+
 ## 배포 절차
 
 2026-09-29 사용자 확인 기준으로 **Git 커밋·푸시 → 연결된 자동 배포**를 사용합니다. 사용자는 Supabase 연동을 사용한다고 확인했습니다. 작업 절차는 [AGENTS.md](AGENTS.md)를 따릅니다.

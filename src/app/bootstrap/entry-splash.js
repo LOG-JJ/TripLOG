@@ -111,7 +111,7 @@
       const exits = [animate(transition, { defaultTransition: { ease: [.22, 1, .36, 1] } })];
       // Reveal actual mounted content, keeping its original styles after the entrance.
       const candidates = document.querySelector('#appShell:not([hidden])')
-        ? document.querySelectorAll('.tl-library-search, .tl-library-filters, .tl-passport-entry, #rdTripCreate')
+        ? document.querySelectorAll('.tl-library-search, .tl-library-filters, .tl-library-toolbar, .tl-passport-entry, #rdTripCreate')
         : document.querySelectorAll('#authGate .auth-brand-panel > p, #authGate .rd-login-art, #authGate .auth-panel');
       const targets = [...candidates].filter(node => node.getClientRects().length).slice(0, 10);
       if (targets.length) {

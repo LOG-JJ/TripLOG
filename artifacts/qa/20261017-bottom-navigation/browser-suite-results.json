@@ -1,0 +1,192 @@
+{
+  "total": 38,
+  "execution": "Full run continued after header assertion correction; changed test paths and timing rechecked individually. Navigation rerun after final Motion/dock correction.",
+  "suites": [
+    {
+      "suite": "entry-splash-browser-regression.js",
+      "result": "passed"
+    },
+    {
+      "suite": "trip-library-browser-regression.js",
+      "result": "passed"
+    },
+    {
+      "suite": "trip-library-views-browser-regression.js",
+      "result": "passed"
+    },
+    {
+      "suite": "trip-navigation-browser-regression.js",
+      "result": "passed"
+    },
+    {
+      "suite": "trip-header-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "trip-scene-art-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "trip-scene-cache-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "reservation-pockets-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "transport-reservations-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "stay-copy-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "scroll-lock-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "delete-dialogs-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "settlement-name-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "travel-costs-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "report-refund-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": true
+    },
+    {
+      "suite": "print-export-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "auth-session-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "sync-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": true
+    },
+    {
+      "suite": "sync-offline-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "sync-navigation-recovery-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "sync-auto-update-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "trip-chooser-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "itinerary-drag-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "itinerary-touch-drag-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "controls-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "time-wheel-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "reservation-time-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "itinerary-controls-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "transit-journey-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "companion-passport-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": true
+    },
+    {
+      "suite": "wallet-passbook-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "map-provider-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "domestic-route-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "expense-ui-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "manual-exchange-rate-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "reservation-expense-editor-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "expense-filter-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    },
+    {
+      "suite": "receipt-json-browser-regression.js",
+      "result": "passed",
+      "targetedRerun": false
+    }
+  ]
+}

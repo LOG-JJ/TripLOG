@@ -1,0 +1,88 @@
+{
+  "status": "concept-and-plan-only",
+  "createdAt": "2026-10-17T12:52:03.150Z",
+  "generationMode": "built-in image_gen; text-to-image (T2I)",
+  "inputImages": [],
+  "finalPrompt": "Create one UI mockup board showing three mobile states of the Korean TripLOG travel planner side by side. Each mobile viewport is 390 × 844 px. The states show the 일정, 지출, and 리포트 submenu panels opened above the persistent bottom navigation. Use TripLOG’s established ivory background, dark text, yellow selected states, and restrained pink, mint, and blue accents. Prioritize readable Korean labels and clear menu hierarchy.\n\nAll three screens have the same five bottom navigation labels, in this order: “개요”, “일정”, “지출”, “리포트”, “설정”. Add a small expand indicator to 일정, 지출, and 리포트. Keep the entire bottom navigation visible beneath the open panel. The existing trip screen remains visible behind a subdued backdrop. Each panel has a title and close control, one prominent primary destination, then compact secondary menu rows with icons and short descriptions.\n\nLeft screen: panel title “일정”. Primary destination “일정표 보기”, description “날짜별 일정과 전체 동선”. Secondary rows: “오늘의 여행” / “지금 필요한 일정”, “일정 점검” / “겹치는 시간과 이동 확인”, “예약 지갑” / “교통·숙소 예약 모아보기”, “여행 도구” / “준비물·캘린더·포켓노트”.\n\nMiddle screen: panel title “지출”. Primary destination “지출 내역”, description “여행 경비를 한눈에”. Secondary rows: “지출 추가” / “새 지출 기록하기”, “영수증 가져오기” / “사진이나 텍스트로 입력”, “경비 정산” / “함께 쓴 돈 나누기”.\n\nRight screen: panel title “리포트”. Primary destination “지출 분석”, description “어디에 얼마나 썼는지”. Secondary rows: “일정 분석” / “여행 일정 돌아보기”, “PDF 내보내기” / “여행 리포트 저장하기”.\n\nSize each panel to its contents. Make the opened navigation trigger visibly expanded while keeping the current page indicator distinct. Present actual app screens, without explanatory diagrams or device frames.",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a14913-9507-7a83-8611-89197656a742/exec-de4d11c5-82e6-4cb7-a863-2079567e562d.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-bottom-navigation-plan/submenu-mockup.png",
+  "sha256": "FB89DB54F6D748E736E8320B2451E722AB87F29B67D8399214D6070788076632",
+  "sourceAndSavedHashMatch": true,
+  "overwritten": false,
+  "implementationScope": "Bottom navigation and associated submenu panels. Trip header retains its existing left-aligned information and right-aligned hand-drawn destination illustration.",
+  "plan": {
+    "tabs": [
+      {
+        "label": "개요",
+        "interaction": "Navigate directly to trip overview",
+        "items": []
+      },
+      {
+        "label": "일정",
+        "interaction": "Open submenu panel",
+        "items": [
+          "일정표 보기",
+          "오늘의 여행",
+          "일정 점검",
+          "예약 지갑",
+          "여행 도구"
+        ]
+      },
+      {
+        "label": "지출",
+        "interaction": "Open submenu panel",
+        "items": [
+          "지출 내역",
+          "지출 추가",
+          "영수증 가져오기",
+          "경비 정산"
+        ]
+      },
+      {
+        "label": "리포트",
+        "interaction": "Open submenu panel",
+        "items": [
+          "지출 분석",
+          "일정 분석",
+          "PDF 내보내기"
+        ]
+      },
+      {
+        "label": "설정",
+        "interaction": "Navigate directly to settings",
+        "groups": [
+          "계정·프로필",
+          "여행 정보·통화",
+          "멤버·공유",
+          "저장 기록·백업",
+          "저장 상태·연결 설정"
+        ]
+      }
+    ],
+    "interactionRules": [
+      "Opening a submenu preserves the current page and its scroll position.",
+      "Tapping another expandable tab swaps the panel without stacking overlays; tapping the same tab again closes it.",
+      "Overview and Settings close any open panel and navigate directly.",
+      "Selecting a destination closes the panel and opens the matching page or existing tool.",
+      "The page indicator and expanded-menu indication are separate states.",
+      "Settlement belongs to Expenses; Today, Review, Wallet and Tools belong to Itinerary.",
+      "Close control, backdrop, Escape and browser Back dismiss the panel first and restore focus.",
+      "Navigation dock remains usable while the panel is open; use an accessible overlay architecture that includes the dock within the active interaction area."
+    ],
+    "implementationSteps": [
+      "Create one shared navigation/feature definition for the main screen, itinerary screen and itinerary editor navigation.",
+      "Implement the responsive submenu panel and its routing/state/focus/history behavior against the mockup.",
+      "Connect existing handlers for itinerary companion, expense editor, receipt importer, settlement, report analyses and PDF export.",
+      "Replace More with Settings, redistribute existing More entries and update settings groups.",
+      "Verify mobile widths 320/390 and desktop; test submenu switching, routing, history, focus, editor dismissal and existing exports."
+    ],
+    "validationCommands": [
+      "npm run artifacts:check",
+      "npm run test:source",
+      "affected browser regression suites",
+      "npm test",
+      "npm run build"
+    ],
+    "deferred": "Application implementation, build changes, commit, push and deployment are outside this planning-only step."
+  }
+}
