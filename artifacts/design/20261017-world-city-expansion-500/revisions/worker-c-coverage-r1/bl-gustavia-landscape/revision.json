@@ -1,0 +1,39 @@
+{
+  "jobId": "bl-gustavia-landscape",
+  "reason": "Remove the unverified domed stone sentry tower; retain only the low ruins and cannon supported by the tourism authority text.",
+  "archivedFiles": [
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/bl-gustavia-landscape.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/bl-gustavia-landscape/bl-gustavia-landscape.json",
+      "sha256": "7b160708b145666c9534b0df8169fcaa2e392f07674d7f3cc53929c279c7047a"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/bl-gustavia-landscape.prompt.txt",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/bl-gustavia-landscape/bl-gustavia-landscape.prompt.txt",
+      "sha256": "b191d77392f775b0dc3de8de0c37886b55b2c2f6510ea20c03d6166bab168004"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/bl-gustavia-landscape.png",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/bl-gustavia-landscape/bl-gustavia-landscape.png",
+      "sha256": "ad146e3b3efd08dcd31149bc768fb937b935082b7955f080671e436f42c14b59"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/bl-gustavia-landscape.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/bl-gustavia-landscape/bl-gustavia-landscape.json",
+      "sha256": "2d6810ad34ce420b05f61959205b1ffa8e8a3c12b58e58c82bd77c621e6d034a"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/bl-gustavia-landscape.asset.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/bl-gustavia-landscape/bl-gustavia-landscape.asset.json",
+      "sha256": "f9e00781b8df576879739e410d8f026a0b17664283bc55d4ec8cc9394636fe19"
+    },
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v6/bl-gustavia.webp",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/bl-gustavia-landscape/bl-gustavia.webp",
+      "sha256": "43eb7c7975bc0b0fee09c8ae00f040ce4519b482dc73c3c3479a906c499a0f4a"
+    }
+  ],
+  "newPromptSha256": "dbc1576efa212641e094598a50d42212ccc6433f37197afc46ac466931810a34",
+  "generationMode": "independent T2I",
+  "imageInputs": []
+}

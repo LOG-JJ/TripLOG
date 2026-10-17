@@ -1,0 +1,52 @@
+{
+  "id": "st-sao-tome-mobile",
+  "cityId": "st-sao-tome",
+  "name": "상투메시",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/st-sao-tome-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/st-sao-tome-mobile.json",
+  "originalSha256": "dd9c6472e2b9292c4ef65aeae1beec3c37f384124627ececf32281efb1c6e4c9",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/st-sao-tome-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 120550,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "a9578d5dc87fff2caa53d0e35ccc4c82334ce3d9bb55c7cb493011f0da41c947",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

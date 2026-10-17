@@ -1,0 +1,52 @@
+{
+  "id": "bo-sucre-mobile",
+  "cityId": "bo-sucre",
+  "name": "수크레",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bo-sucre-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bo-sucre-mobile.json",
+  "originalSha256": "761bf9ec4843b8fe841385f899459793a4051ad639172d03f754b3e23b9bae49",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    39,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bo-sucre-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 96356,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "a73ad05376509e1b1b2d4f209171947166df92ad27859123a7295e48096d80a8",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

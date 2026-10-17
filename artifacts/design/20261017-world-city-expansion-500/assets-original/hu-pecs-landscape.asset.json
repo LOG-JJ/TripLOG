@@ -1,0 +1,52 @@
+{
+  "id": "hu-pecs-landscape",
+  "cityId": "hu-pecs",
+  "name": "페치",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/hu-pecs-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/hu-pecs-landscape.json",
+  "originalSha256": "c6a1b236e5c59ce526714b424cbd47a82659e56b4087b44c9ee69a398ed80fca",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    39,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/hu-pecs.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 103554,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e45a00b338d7d886c68e43c5dfef0f5d0ca241db5f07fc1c2912385ae4dfabf7",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

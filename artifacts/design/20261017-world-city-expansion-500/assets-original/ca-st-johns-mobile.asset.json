@@ -1,0 +1,52 @@
+{
+  "id": "ca-st-johns-mobile",
+  "cityId": "ca-st-johns",
+  "name": "세인트존스(캐나다)",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ca-st-johns-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ca-st-johns-mobile.json",
+  "originalSha256": "1bd31441da989c33ff5d6666e599ab888eaea98cbccf648589c8332a1e116f51",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    29,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ca-st-johns-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 96328,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "d1263672b8738045b80902b1ca16d30b1973e4b503344d214de7ba4046cb8396",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

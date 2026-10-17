@@ -1,0 +1,526 @@
+{
+  "schemaVersion": 1,
+  "verifiedOn": "2026-10-17",
+  "scope": "현행 법정 시 단위 전수: 광역시급 8 + 기초시 75 + 제주 행정시 2. 종전 광주광역시 도시권과 군·섬·제주도 전체 여행권역은 이 명부에 포함하지 않음.",
+  "nameConvention": "여행 카탈로그 대조를 위해 서울·부산 등 광역 도시와 기초시는 통용 약칭을 사용한다. 제주시·서귀포시는 제주도 전체 권역과 구분하기 위해 시 접미사를 유지한다. 경기 그룹의 광주는 경기도 광주시다.",
+  "sources": [
+    {
+      "id": "mois-2026-admin-roster",
+      "title": "2026년 지방자치단체 행정구역 및 인구 현황(2025.12.31.기준)",
+      "publisher": "행정안전부",
+      "referenceDate": "2025-12-31",
+      "publishedOn": "2026-07-24",
+      "verifiedOn": "2026-10-17",
+      "url": "https://mois.go.kr/frt/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000055&nttId=128138",
+      "documentUrl": "https://mois.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_001474525FYYt_S&fileSn=0",
+      "verifiedPages": {
+        "physical": [
+          3,
+          12,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "printed": [
+          "일러두기",
+          "4",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14"
+        ]
+      },
+      "note": "원문 PDF를 직접 추출하여 총괄과 전국 시 명단을 확인했다. 통계는 2025.12.31. 기준이다. 일러두기는 전남광주통합특별시가 2026.7.1. 출범했으며 1~2장에 해당 통합을 반영해 기존 광주광역시·전라남도 자료를 합산했다고 명시한다."
+    },
+    {
+      "id": "jeonnam-gwangju-establishment",
+      "title": "전남광주통합특별시 설치를 위한 특별법",
+      "publisher": "국가법령정보센터",
+      "promulgatedOn": "2026-03-05",
+      "effectiveOn": "2026-07-01",
+      "integrationEffectiveOn": "2026-07-01",
+      "lawNumber": "제21446호",
+      "verifiedOn": "2026-10-17",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?efYd=20260701&lsiSeq=284111",
+      "note": "제정 법률의 시행일과 행정안전부 책자의 출범 사실을 함께 확인했다. 종전 광주광역시는 별도 현행 법정 시 레코드로 중복 계수하지 않는다."
+    },
+    {
+      "id": "jeonnam-gwangju-current-ordinance",
+      "title": "전남광주통합특별시 시세 조례",
+      "publisher": "국가법령정보센터",
+      "publishedOn": "2026-07-01",
+      "effectiveOn": "2026-07-01",
+      "verifiedOn": "2026-10-17",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?gubun=ELIS&ordinSeq=2137637",
+      "note": "통합특별시의 2026.7.1. 시행 조례 본문을 확인하여 출범 계획과 실제 시행을 구분했다."
+    },
+    {
+      "id": "gyeongbuk-integration-status",
+      "title": "경북도, 서영교 법사위원장에 대구경북 행정통합 건의",
+      "publisher": "경상북도",
+      "publishedOn": "2026-09-09",
+      "verifiedOn": "2026-10-17",
+      "url": "https://www.gb.go.kr/Main/open_contents/section/exam_info/page.do?BD_CODE=bbs_bodo&B_LEVEL=0&B_NUM=514957401&B_STEP=514957400&Start=30&V_NUM=14854&bdName=&cmd=2&dept_code=&dept_name=&key=4&mnu_uid=6792&p1=0&p2=0&tbbscode1=bbs_bodo&word=",
+      "note": "이 공식 발표는 대구경북 특별법의 법사위 계류 및 2028년 출범 목표를 설명하고, 대전·충남 행정통합도 추진 과제로 기술한다. 해당 계획을 현행 행정구역 통합으로 반영하지 않는다."
+    }
+  ],
+  "counts": {
+    "total": 85,
+    "byGroup": {
+      "광역시급": 8,
+      "경기": 28,
+      "강원": 7,
+      "충북": 3,
+      "충남": 8,
+      "전북": 6,
+      "전남권": 5,
+      "경북": 10,
+      "경남": 8,
+      "제주": 2
+    },
+    "byAdministrativeClass": {
+      "특별시": 1,
+      "통합특별시": 1,
+      "광역시": 5,
+      "특별자치시": 1,
+      "기초시": 75,
+      "행정시": 2
+    }
+  },
+  "records": [
+    {
+      "group": "광역시급",
+      "name": "서울",
+      "administrativeClass": "특별시"
+    },
+    {
+      "group": "광역시급",
+      "name": "부산",
+      "administrativeClass": "광역시"
+    },
+    {
+      "group": "광역시급",
+      "name": "대구",
+      "administrativeClass": "광역시"
+    },
+    {
+      "group": "광역시급",
+      "name": "인천",
+      "administrativeClass": "광역시"
+    },
+    {
+      "group": "광역시급",
+      "name": "대전",
+      "administrativeClass": "광역시"
+    },
+    {
+      "group": "광역시급",
+      "name": "울산",
+      "administrativeClass": "광역시"
+    },
+    {
+      "group": "광역시급",
+      "name": "세종",
+      "administrativeClass": "특별자치시"
+    },
+    {
+      "group": "광역시급",
+      "name": "전남광주통합특별시",
+      "administrativeClass": "통합특별시"
+    },
+    {
+      "group": "경기",
+      "name": "수원",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "고양",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "용인",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "성남",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "부천",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "화성",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "안산",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "남양주",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "안양",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "평택",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "시흥",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "파주",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "의정부",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "김포",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "광주",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "광명",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "군포",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "하남",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "오산",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "양주",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "이천",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "구리",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "안성",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "포천",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "의왕",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "여주",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "동두천",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경기",
+      "name": "과천",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "강원",
+      "name": "춘천",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "강원",
+      "name": "원주",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "강원",
+      "name": "강릉",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "강원",
+      "name": "동해",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "강원",
+      "name": "태백",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "강원",
+      "name": "속초",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "강원",
+      "name": "삼척",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "충북",
+      "name": "청주",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "충북",
+      "name": "충주",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "충북",
+      "name": "제천",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "충남",
+      "name": "천안",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "충남",
+      "name": "공주",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "충남",
+      "name": "보령",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "충남",
+      "name": "아산",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "충남",
+      "name": "서산",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "충남",
+      "name": "논산",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "충남",
+      "name": "계룡",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "충남",
+      "name": "당진",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "전북",
+      "name": "전주",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "전북",
+      "name": "군산",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "전북",
+      "name": "익산",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "전북",
+      "name": "정읍",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "전북",
+      "name": "남원",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "전북",
+      "name": "김제",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "전남권",
+      "name": "목포",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "전남권",
+      "name": "여수",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "전남권",
+      "name": "순천",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "전남권",
+      "name": "나주",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "전남권",
+      "name": "광양",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경북",
+      "name": "포항",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경북",
+      "name": "경주",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경북",
+      "name": "김천",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경북",
+      "name": "안동",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경북",
+      "name": "구미",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경북",
+      "name": "영주",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경북",
+      "name": "영천",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경북",
+      "name": "상주",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경북",
+      "name": "문경",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경북",
+      "name": "경산",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경남",
+      "name": "창원",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경남",
+      "name": "진주",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경남",
+      "name": "통영",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경남",
+      "name": "사천",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경남",
+      "name": "김해",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경남",
+      "name": "밀양",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경남",
+      "name": "거제",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "경남",
+      "name": "양산",
+      "administrativeClass": "기초시"
+    },
+    {
+      "group": "제주",
+      "name": "제주시",
+      "administrativeClass": "행정시"
+    },
+    {
+      "group": "제주",
+      "name": "서귀포시",
+      "administrativeClass": "행정시"
+    }
+  ]
+}

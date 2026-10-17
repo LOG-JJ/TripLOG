@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-miryang-landscape",
+  "cityId": "kr-miryang",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Miryang, South Korea: Yeongnamnu Pavilion, its expansive traditional tiled roof and raised wooden hall above the riverbank. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "f3f3816b23587a00ebf84a15fe2975bda01d836405ee15353d4aeffad79081ae",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-miryang-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-14c94e73-7ecb-4422-a279-3e3bb3c96bd1.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-14c94e73-7ecb-4422-a279-3e3bb3c96bd1.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-miryang-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "bac4e7b1086a385a46bd219507a4f5c528d46af9387824ef93195292327a7ea1",
+  "savedSha256": "bac4e7b1086a385a46bd219507a4f5c528d46af9387824ef93195292327a7ea1",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:29:31.767Z",
+  "toolCallId": "exec-14c94e73-7ecb-4422-a279-3e3bb3c96bd1",
+  "savedAt": "2026-10-17T05:31:39.297201+00:00"
+}

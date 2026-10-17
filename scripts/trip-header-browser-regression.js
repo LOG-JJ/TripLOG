@@ -80,7 +80,12 @@ async function main() {
     assert.match(await hero.locator('img').getAttribute('src'), /jp-osaka\.webp$/);
     await page.reload(); await ready(); await readyImage();
     assert.equal(await hero.getAttribute('data-destination-id'), 'jp-osaka');
-    for (const [id, expected] of [['trip-header-unknown', 'theme-travel'], ['trip-header-region', 'kr-jeju'], ['trip-header-generic', 'theme-mountain'], ['trip-header-suncheon', 'kr-suncheon']]) {
+    for (const [id, expected] of [
+      ['trip-header-unknown', 'theme-travel'], ['trip-header-region', 'kr-jeju'], ['trip-header-generic', 'theme-forest'],
+      ['trip-header-pyeongchang', 'kr-pyeongchang'], ['trip-header-jeju-city', 'kr-jeju-city'], ['trip-header-seogwipo', 'kr-seogwipo'],
+      ['trip-header-gwangju-gyeonggi', 'kr-gwangju-gyeonggi'], ['trip-header-gwangju-area', 'kr-gwangju'],
+      ['trip-header-jeonnam-gwangju', 'kr-jeonnam-gwangju'], ['trip-header-suncheon', 'kr-suncheon'],
+    ]) {
       await page.locator('#rdOverviewTripButton').click();
       await page.locator('#rdTripSearch').fill('');
       await chooser.locator(`[data-rd-action="trip-select"][data-id="${id}"]`).click();
@@ -109,6 +114,7 @@ async function main() {
     assert.equal(await hero.locator('.th-trip-name').getAttribute('title'), '가족과 함께 떠나는 아주 길고 긴 이름의 가을 여행 기록');
     for (const width of [320, 390, 768, 1440]) {
       await page.setViewportSize({ width, height: 1000 }); await layout(`long ${width}`, 390);
+      await hero.screenshot({ path: path.join(output, `long-${width}.png`), animations: 'disabled' });
     }
     await page.setViewportSize({ width: 320, height: 844 });
     await hero.screenshot({ path: path.join(output, 'long-320.png'), animations: 'disabled' });

@@ -1,0 +1,52 @@
+{
+  "id": "ad-andorra-la-vella-mobile",
+  "cityId": "ad-andorra-la-vella",
+  "name": "안도라라베야",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ad-andorra-la-vella-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ad-andorra-la-vella-mobile.json",
+  "originalSha256": "dbba5329156b72244b93ee9111017fe1afde7f035279ce04a13967f8f92aba63",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ad-andorra-la-vella-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 121208,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e10a9beb313fc22172ec679576be2b011935c0001d5132b44841a40c7356eaf6",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

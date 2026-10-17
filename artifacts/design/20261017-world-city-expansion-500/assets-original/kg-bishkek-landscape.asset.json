@@ -1,0 +1,52 @@
+{
+  "id": "kg-bishkek-landscape",
+  "cityId": "kg-bishkek",
+  "name": "비슈케크",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/kg-bishkek-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/kg-bishkek-landscape.json",
+  "originalSha256": "f605fc4a97360a547d23ef4fe23916460e79815c80e19a898e341df1ea649200",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/kg-bishkek.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 92674,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "b645f0966dc5d9b0ebee9b8dd6034abef2cd168d47f4304d069e7293955f3ddf",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

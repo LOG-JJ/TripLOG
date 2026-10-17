@@ -1,0 +1,38 @@
+{
+  "id": "kr-gimcheon-mobile",
+  "cityId": "kr-gimcheon",
+  "cityName": "김천",
+  "englishName": "Gimcheon",
+  "kind": "city",
+  "group": "경북",
+  "variant": "mobile",
+  "phase": "expansion",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Gimcheon, South Korea: Jikjisa Temple's traditional tiled roofs among trees at the green foot of Hwangaksan Mountain. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "557b054b09828b9734864d09070f016527baea8d7f57bebc8ccac05fb0fb366a",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimcheon-mobile.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gimcheon-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gimcheon-mobile.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gimcheon-mobile.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gimcheon-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "motif": "Jikjisa Temple's traditional tiled roofs among trees at the green foot of Hwangaksan Mountain",
+  "proposedMotif": "직지사·황악산 자락",
+  "motifSource": {
+    "title": "김천시 관광안내지도",
+    "url": "https://www.gc.go.kr/design/culture/file/tourMap_2024.pdf",
+    "evidence": "직지사·사명대사공원 소재 확인"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone hand-drawn destination illustration of Gimcheon, South Korea: Jikjisa Temple's traditional tiled roofs among trees at the green foot of Hwangaksan Mountain. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+    "transparent_background": true
+  },
+  "provenanceRule": "The --source argument must be the exact local original path returned by this job's image_gen call. Never search for a latest file.",
+  "promptRevision": "pilot-subject-qa-20261017"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "kr-jeonnam-gwangju-landscape",
+  "cityId": "kr-jeonnam-gwangju",
+  "cityName": "전남광주통합특별시",
+  "englishName": "Jeonnam-Gwangju Integrated Special City",
+  "kind": "city",
+  "group": "광역시급",
+  "variant": "landscape",
+  "phase": "expansion",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Jeonnam-Gwangju Integrated Special City, South Korea: a regional composite of Namdo's softly layered mountains, a winding river and a sheltered coastal shoreline, representing the whole integrated region rather than a single city landmark. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "5bb77aa9b35e80aa7c1cd2bbb7ffdb583abed1fa8438d1c91a1cd2f36710c63c",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/jobs/kr-jeonnam-gwangju-landscape.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jeonnam-gwangju-landscape.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jeonnam-gwangju-landscape.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jeonnam-gwangju-landscape.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "motif": "a regional composite of Namdo's softly layered mountains, a winding river and a sheltered coastal shoreline, representing the whole integrated region rather than a single city landmark",
+  "proposedMotif": "남도의 산·강·해안을 조합한 광역 풍경",
+  "motifSource": {
+    "title": "행안부 2026 행정구역 현황",
+    "url": "https://mois.go.kr/frt/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000055&nttId=128138",
+    "evidence": "통합특별시 범위 확인; 광역 풍경의 구도는 제작 제안"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone hand-drawn destination illustration of Jeonnam-Gwangju Integrated Special City, South Korea: a regional composite of Namdo's softly layered mountains, a winding river and a sheltered coastal shoreline, representing the whole integrated region rather than a single city landmark. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+    "transparent_background": true
+  },
+  "provenanceRule": "The --source argument must be the exact local original path returned by this job's image_gen call. Never search for a latest file.",
+  "promptRevision": "pilot-subject-qa-20261017"
+}

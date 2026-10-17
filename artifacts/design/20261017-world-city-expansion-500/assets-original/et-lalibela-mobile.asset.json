@@ -1,0 +1,52 @@
+{
+  "id": "et-lalibela-mobile",
+  "cityId": "et-lalibela",
+  "name": "랄리벨라",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/et-lalibela-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/et-lalibela-mobile.json",
+  "originalSha256": "065a8fe835529ec267b822c06be917da7dbf401937aa39e16e53e9d18b4d35dd",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    69,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/et-lalibela-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 112714,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "265097bc4180453e8909e3f928de2a68b834d0fda5df1cbef1a1eb2753b79da1",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

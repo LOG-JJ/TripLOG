@@ -1,0 +1,52 @@
+{
+  "id": "gn-conakry-mobile",
+  "cityId": "gn-conakry",
+  "name": "코나크리",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gn-conakry-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gn-conakry-mobile.json",
+  "originalSha256": "144d75d7b520f3850912f0ecc89988ea4f20ffa198520374b0dbd067a286ea32",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gn-conakry-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 102776,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "900d09c87b4d1fb7d4511d8b502712fd1fc1d8ad957cf0770776b093e80fc1e1",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

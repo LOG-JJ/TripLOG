@@ -1,0 +1,52 @@
+{
+  "id": "nr-yaren-landscape",
+  "cityId": "nr-yaren",
+  "name": "야렌",
+  "kind": "region",
+  "variant": "landscape",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/nr-yaren-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/nr-yaren-landscape.json",
+  "originalSha256": "2e134048df1b4aa39a26feeb5a6b7513ba6b927e3ae653281892ded77b9e0790",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    37,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/nr-yaren.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 108388,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "f5417f14c9940e8ebd95144c4169d427517e5b264ab5d2d88cfe0259e1ada9b5",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

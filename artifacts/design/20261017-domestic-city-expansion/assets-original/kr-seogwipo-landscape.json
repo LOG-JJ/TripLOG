@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-seogwipo-landscape",
+  "cityId": "kr-seogwipo",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Seogwipo City, South Korea: Jeongbang Waterfall dropping directly from a dark coastal cliff to the sea, with white falling water and green vegetation above. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "476a683e4cb792b31e011d2dededbcfd8a9e4eac43cb25db771651061327c226",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-seogwipo-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-11e9b903-1af8-483a-a935-e2598cb0b447.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-11e9b903-1af8-483a-a935-e2598cb0b447.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-seogwipo-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "da870b1dc060bd9fa5d90c95ccad6136c740e18ef2c6917e4f1e54b1a7a49bdd",
+  "savedSha256": "da870b1dc060bd9fa5d90c95ccad6136c740e18ef2c6917e4f1e54b1a7a49bdd",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:29:55Z",
+  "toolCallId": "exec-11e9b903-1af8-483a-a935-e2598cb0b447",
+  "savedAt": "2026-10-17T05:30:19.878102+00:00"
+}

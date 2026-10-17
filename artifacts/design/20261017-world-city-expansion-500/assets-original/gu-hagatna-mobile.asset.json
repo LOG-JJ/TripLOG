@@ -1,0 +1,52 @@
+{
+  "id": "gu-hagatna-mobile",
+  "cityId": "gu-hagatna",
+  "name": "하갓냐",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "오세아니아",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gu-hagatna-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gu-hagatna-mobile.json",
+  "originalSha256": "08a1990632b325382acee5bd1064c55fcf2425e8cd0abf537a52cc847befb8a9",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    69,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gu-hagatna-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 89042,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "79ebe375840093b435b0ae15d506042a838b9926452f49c1be5271148b731479",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

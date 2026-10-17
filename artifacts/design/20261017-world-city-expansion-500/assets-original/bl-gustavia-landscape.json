@@ -1,0 +1,26 @@
+{
+  "jobId": "bl-gustavia-landscape",
+  "cityId": "bl-gustavia",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Gustavia, St. Barthelemy: a single historic cannon on a low simple stone platform at Fort Gustav III, with ONLY low unroofed rough-stone ruined enclosure walls, overlooking Gustavia's sheltered blue yacht harbour and compact red-roofed waterfront houses. The foreground cannon and low battery ruins are the subject; the bay and town sit below the viewpoint. Do not include any guard tower, sentry box, turret, dome, roofed lookout, tall fort building or cylindrical stone structure. The surviving ruins must be low open fragments rather than a reconstructed complete fort. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "dbc1576efa212641e094598a50d42212ccc6433f37197afc46ac466931810a34",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bl-gustavia-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-09ccacb2-b211-4c6b-819b-ccefd839ad81.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-09ccacb2-b211-4c6b-819b-ccefd839ad81.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/bl-gustavia-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "ba29707b8f8bfd72b7d0e1919fbdbb39063432d772becb64802c33c848d29bfc",
+  "savedSha256": "ba29707b8f8bfd72b7d0e1919fbdbb39063432d772becb64802c33c848d29bfc",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:54:25Z",
+  "toolCallId": "exec-09ccacb2-b211-4c6b-819b-ccefd839ad81",
+  "savedAt": "2026-10-17T07:56:15.181063+00:00"
+}

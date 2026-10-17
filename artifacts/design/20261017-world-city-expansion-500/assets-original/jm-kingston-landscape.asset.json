@@ -1,0 +1,52 @@
+{
+  "id": "jm-kingston-landscape",
+  "cityId": "jm-kingston",
+  "name": "킹스턴",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/jm-kingston-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/jm-kingston-landscape.json",
+  "originalSha256": "c8351ee41866ffe2115df894d38a5f6e1ea98be7f0eea1e4458d079fab48a723",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/jm-kingston.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 156468,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "89dda1eca004bf757f9e1837c650cfcee3dcb7fcb918cf90478e2515fc39155c",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

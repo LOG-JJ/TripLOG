@@ -1,0 +1,52 @@
+{
+  "id": "ie-cork-mobile",
+  "cityId": "ie-cork",
+  "name": "코크",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ie-cork-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ie-cork-mobile.json",
+  "originalSha256": "175e96f3071b078d0bf0579db9088e9f5bfed48629171a725e84a2d68c1ed424",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    31,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ie-cork-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 79410,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "795bacc4f19c88e380b270a6297b154747622cc46fc4bcccb42fb22722438381",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

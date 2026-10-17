@@ -1,0 +1,26 @@
+{
+  "jobId": "pk-lahore-landscape",
+  "cityId": "pk-lahore",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Lahore, Pakistan: the monumental Alamgiri Gate of Lahore Fort, with its paired rounded bastions and a small area of formal Mughal garden. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "4ff875f3a651109cb946d83970b99f28a177f2a2961484f209986fae664c338a",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pk-lahore-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-7be67ac1-2ac5-44cd-9718-fbd6bfbddf1a.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-7be67ac1-2ac5-44cd-9718-fbd6bfbddf1a.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/pk-lahore-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "02ec1861f0d56514b7e2ec08eec635bd0a830ead602d0d9755feab2533b1bffb",
+  "savedSha256": "02ec1861f0d56514b7e2ec08eec635bd0a830ead602d0d9755feab2533b1bffb",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:35:04.360Z",
+  "toolCallId": "exec-7be67ac1-2ac5-44cd-9718-fbd6bfbddf1a",
+  "savedAt": "2026-10-17T06:39:19.981097+00:00"
+}

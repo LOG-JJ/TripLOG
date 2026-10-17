@@ -1,0 +1,51 @@
+{
+  "id": "kr-seosan-landscape",
+  "cityId": "kr-seosan",
+  "name": "서산",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "충남",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-seosan-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-seosan-landscape.json",
+  "originalSha256": "4b4b8fda89882324acc6b3a22739caf71bdf9f7a11e277c2e018c80a340bba8a",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    24,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-seosan.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 94476,
+  "assetSha256": "af4d463c4145b4e5e9870acbea8678f1b0640603fbdf6daf68d53369e5960d4d",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

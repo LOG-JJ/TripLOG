@@ -1,0 +1,52 @@
+{
+  "id": "do-santo-domingo-mobile",
+  "cityId": "do-santo-domingo",
+  "name": "산토도밍고",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/do-santo-domingo-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/do-santo-domingo-mobile.json",
+  "originalSha256": "5faa2b85b4b21f8fb47fbae164b1b7dccd24f2483f9ab801e56895bedd42d5e6",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    33,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/do-santo-domingo-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 101908,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "191cfdc0e4728fcf06a1466ffbd560bf2a71f95e1c577772803e62021e151fd6",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-incheon-landscape",
+  "cityId": "kr-incheon",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Incheon, South Korea: Songdo Central Park's broad winding waterway, landscaped green banks, and a group of tall contemporary buildings rising behind the park. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted ground, water or foliage must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "b96c1eac646015fc6021ad60377598431f9dc4a4a365303215cc890a27dc7db7",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-incheon-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-99cd7b7b-63de-400c-b942-dcc4a336637f.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-99cd7b7b-63de-400c-b942-dcc4a336637f.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-incheon-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "14e31b8b4ec15ffc78654be35907b6f3fd3c755b48b5d76f443b4de4a22b06b9",
+  "savedSha256": "14e31b8b4ec15ffc78654be35907b6f3fd3c755b48b5d76f443b4de4a22b06b9",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:00:19.359Z",
+  "toolCallId": "exec-99cd7b7b-63de-400c-b942-dcc4a336637f",
+  "savedAt": "2026-10-17T05:02:07.288858+00:00"
+}

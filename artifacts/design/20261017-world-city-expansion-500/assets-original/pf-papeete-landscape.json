@@ -1,0 +1,26 @@
+{
+  "jobId": "pf-papeete-landscape",
+  "cityId": "pf-papeete",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Papeete, French Polynesia: the covered Marche de Papeete market hall with its broad roof, with tropical flower and fruit stalls. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "d98a680bc8e0b6b11c592868de4bb1a95667e2a6a04b5fedecc59e36aac1a6a2",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pf-papeete-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-7223c9e0-63a6-4a2c-8ba1-b9320d10d55e.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-7223c9e0-63a6-4a2c-8ba1-b9320d10d55e.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/pf-papeete-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "b0c838764f7022a3a7d0764215a37175b396c76255589d0de98f7c20cebdbd99",
+  "savedSha256": "b0c838764f7022a3a7d0764215a37175b396c76255589d0de98f7c20cebdbd99",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:30:55.399Z",
+  "toolCallId": "exec-7223c9e0-63a6-4a2c-8ba1-b9320d10d55e",
+  "savedAt": "2026-10-17T07:35:08.002229+00:00"
+}

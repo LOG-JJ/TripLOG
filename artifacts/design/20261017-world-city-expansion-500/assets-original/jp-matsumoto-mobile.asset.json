@@ -1,0 +1,52 @@
+{
+  "id": "jp-matsumoto-mobile",
+  "cityId": "jp-matsumoto",
+  "name": "마쓰모토",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/jp-matsumoto-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/jp-matsumoto-mobile.json",
+  "originalSha256": "d9b97814b903f580818eb47da98626e93f82aeb9dc3b33688243d97e7e16a13c",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    49,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/jp-matsumoto-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 102770,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "001e21b26179a75d6e0898c3ca1b2ef893cc6d3e14e3cc23d91148e94975f16a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

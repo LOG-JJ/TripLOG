@@ -1,0 +1,51 @@
+{
+  "id": "kr-dangjin-landscape",
+  "cityId": "kr-dangjin",
+  "name": "당진",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "충남",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-landscape.json",
+  "originalSha256": "1ffdba5e85d003fe1049be0a44461b2720d295c3347b65af3a92a6ebbe5126cf",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-dangjin.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 89884,
+  "assetSha256": "590516ac9aa865cd15ed32903e4d5621f5e1ea12b469be4561c5b152c56637c1",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,38 @@
+{
+  "jobId": "bl-gustavia-mobile",
+  "reason": "Alpha>=8 revealed a 6-pixel right/bottom gap in the converted coverage image. Refit from the unchanged tool-returned PNG with right/bottom anchoring; no artwork was painted or extended.",
+  "archivedFiles": [
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v6/bl-gustavia-mobile.webp",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-visible-edge/bl-gustavia-mobile/bl-gustavia-mobile.webp",
+      "sha256": "d31189945517bce6bf409c302131a867569a4420a85ca60446f53009645f60ac"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/bl-gustavia-mobile.asset.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-visible-edge/bl-gustavia-mobile/bl-gustavia-mobile.asset.json",
+      "sha256": "8f0e766a348360de4136ae66a81208211bf0c1c3e16a26e7680be6019d3c1982"
+    }
+  ],
+  "originalSha256Unchanged": "d527446071ea8a62cc366bad102c69a849b1e07d72d02c997d67dfb715f6d8eb",
+  "steps": [
+    {
+      "threshold": 8,
+      "rightBottomGapsBeforeRefit": [
+        6,
+        7
+      ],
+      "crop": [
+        0,
+        0,
+        474,
+        593
+      ]
+    }
+  ],
+  "finalVisibleAlpha8Gaps": [
+    0,
+    0
+  ],
+  "newAssetSha256": "b14b6464da4d5e8b45351b5c193885900630e9e35c9aa8aea399cf8d14ea019e",
+  "bytes": 110774
+}

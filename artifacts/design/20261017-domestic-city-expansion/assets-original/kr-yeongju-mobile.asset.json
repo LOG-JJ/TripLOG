@@ -1,0 +1,51 @@
+{
+  "id": "kr-yeongju-mobile",
+  "cityId": "kr-yeongju",
+  "name": "영주",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경북",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongju-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongju-mobile.json",
+  "originalSha256": "992e7e095e702b49e82276dcdd2bffe9a4a53eea721fe5867389b2ee93962d77",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    8,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-yeongju-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 103474,
+  "assetSha256": "6850070d4c6bade8437f06b4dc32f300df10c46cc252be36668ea7c1dde5d579",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "cx-flying-fish-cove-landscape",
+  "cityId": "cx-flying-fish-cove",
+  "name": "플라잉 피시 코브",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "인도양",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cx-flying-fish-cove-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cx-flying-fish-cove-landscape.json",
+  "originalSha256": "48fa9d6d379e1823f14141c906c4041d47638e8c6ac6cd6b94671196d9914ec6",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cx-flying-fish-cove.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 124576,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "1741fa7e91408c3ec3ad7f83c409aa26355b3d9cb1e3c5fcef1d333fd3fc1318",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "bb-bridgetown-landscape",
+  "cityId": "bb-bridgetown",
+  "name": "브리지타운",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bb-bridgetown-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bb-bridgetown-landscape.json",
+  "originalSha256": "871bc11ace196cb6eb762329ee2863f0ed1fc0df0e87ad5f48baa0f0c3ac70b7",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    19,
+    21,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bb-bridgetown.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 120816,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c9eb3a207dc337b8637ce166449434061e58490aa01bc2aacc74e64c98a52c9f",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

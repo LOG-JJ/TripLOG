@@ -1,0 +1,52 @@
+{
+  "id": "si-piran-mobile",
+  "cityId": "si-piran",
+  "name": "피란",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/si-piran-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/si-piran-mobile.json",
+  "originalSha256": "666e56a519b6f1f0f18b376b25092d6558235d76a178db9bd5d9040f5ede4ea8",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    62,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/si-piran-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 88248,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "9b30bec8084b4583742d235d085fa01721de3575984856cc5de1b0f26a611d71",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "md-chisinau-mobile",
+  "cityId": "md-chisinau",
+  "name": "키시너우",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/md-chisinau-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/md-chisinau-mobile.json",
+  "originalSha256": "9a725f4fdc806f262c74b87cd24a15f3430201933541b6da6af087b793bbd8e0",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    73,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/md-chisinau-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 106284,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "ce63895501c023dde5ac4ace085a7c41545cd1427befc8ba9e3971a1d4aac37a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

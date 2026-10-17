@@ -1,0 +1,52 @@
+{
+  "id": "sm-san-marino-landscape",
+  "cityId": "sm-san-marino",
+  "name": "산마리노시",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sm-san-marino-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sm-san-marino-landscape.json",
+  "originalSha256": "11759ee3b10a97329b9ee82560ac6f27e7d0fd3a249578ae8c5b160e0ead3a52",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    28,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sm-san-marino.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 119144,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c6e14e22d5f3e5c919d7a5a273852d3b61296eae211eab05a5758466622cd21c",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

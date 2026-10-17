@@ -1,0 +1,77 @@
+{
+  "id": "xk-prizren-mobile",
+  "cityId": "xk-prizren",
+  "name": "프리즈렌",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "남유럽",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/xk-prizren-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/xk-prizren-mobile.json",
+  "originalSha256": "8f54f721a71a597d55cf15496aee4650dcdc41ca87a67bd1ea3ae517548c93e2",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    45,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/xk-prizren-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 98452,
+  "technicalEmptyEdgeRefits": [
+    [
+      0,
+      4
+    ]
+  ],
+  "assetSha256": "7fa28e3e4b9a45f9aa5047527192424be2b7490b26ec8e4c068a11608b0a8b57",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa",
+  "technicalFaintEdgeRefit": {
+    "checkedAt": "2026-10-17T07:53:09.351649+00:00",
+    "alphaThreshold": 8,
+    "beforeGaps": [
+      2,
+      3
+    ],
+    "afterGaps": [
+      0,
+      0
+    ],
+    "refits": [
+      [
+        2,
+        7
+      ]
+    ],
+    "source": "original PNG preserved",
+    "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\root-coverage-alpha8"
+  }
+}

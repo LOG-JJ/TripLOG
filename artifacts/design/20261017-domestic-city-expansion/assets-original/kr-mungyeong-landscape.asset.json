@@ -1,0 +1,51 @@
+{
+  "id": "kr-mungyeong-landscape",
+  "cityId": "kr-mungyeong",
+  "name": "문경",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경북",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-mungyeong-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-mungyeong-landscape.json",
+  "originalSha256": "64a889a319c8f712201ae4ab98d18131e332b9834aec37843c8844e077d9831f",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    16,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-mungyeong.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 96974,
+  "assetSha256": "3db61b56f9b967d4947f5160b41ebcda77df98bce7ad8b3050a34e3a922acc98",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,26 @@
+{
+  "jobId": "ci-grand-bassam-mobile",
+  "cityId": "ci-grand-bassam",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Grand-Bassam, Côte d’Ivoire: the low colonial-era buildings of the historic France quarter with galleries and verandas, with the lagoon and tropical greenery. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "4e37fc7eec77b52da89b82a622902adae041b7137e98a8cc752f027836794ef4",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ci-grand-bassam-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-5e5c5ce6-e521-4f21-930b-5b6ebf7cd9ec.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-5e5c5ce6-e521-4f21-930b-5b6ebf7cd9ec.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/ci-grand-bassam-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "e3bc27ef4702d2d642dc65def70f160e5fd939cc375b28c0e3d1a2ae8ab840c8",
+  "savedSha256": "e3bc27ef4702d2d642dc65def70f160e5fd939cc375b28c0e3d1a2ae8ab840c8",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:50:23Z",
+  "toolCallId": "exec-5e5c5ce6-e521-4f21-930b-5b6ebf7cd9ec",
+  "savedAt": "2026-10-17T06:54:12.533636+00:00"
+}

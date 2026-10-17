@@ -1,0 +1,52 @@
+{
+  "id": "sh-jamestown-mobile",
+  "cityId": "sh-jamestown",
+  "name": "제임스타운",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "남대서양",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sh-jamestown-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sh-jamestown-mobile.json",
+  "originalSha256": "875d205bda408cd5b665734ee9e715013dd31805588166462ad2c3c591a1c998",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    64,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sh-jamestown-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 107794,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "64681b0e166cbf67b98a5a1e66e28064bd4cd054bacd72bbed51a68ddea9268d",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

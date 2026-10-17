@@ -1,0 +1,52 @@
+{
+  "id": "kz-almaty-mobile",
+  "cityId": "kz-almaty",
+  "name": "알마티",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/kz-almaty-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/kz-almaty-mobile.json",
+  "originalSha256": "a77c9606a270a942f15ebab8dc231013297f9b14682cb4228843019631a52c29",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    81,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/kz-almaty-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 111392,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "69a4abf4f372b454c824a0d043865cd5a4bbb50bf97cf7a83231b55114042225",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

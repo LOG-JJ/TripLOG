@@ -1,0 +1,52 @@
+{
+  "id": "mf-marigot-mobile",
+  "cityId": "mf-marigot",
+  "name": "마리고",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mf-marigot-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mf-marigot-mobile.json",
+  "originalSha256": "25ebc06490526c49bcd5dc3608122b3480ac3de942e3fcb5d858fcbd57eb038b",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    3,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mf-marigot-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 107248,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "f4d273b4a9f06257d0de0bbf67667c3d1059e205089680893268e1636cb612df",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

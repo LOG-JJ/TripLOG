@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-icheon-landscape",
+  "cityId": "kr-icheon",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Icheon, South Korea: Yes Park ceramic art village, with small pottery studios and a few clearly drawn ceramic jars and bowls in the foreground. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "a1dbdf6488137234bd695afd47a2196dbde3ab82e141a6f018d9bd2cb5581ef6",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-icheon-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-cc00fee9-b271-440c-8c95-e4dfe1f67ae9.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-cc00fee9-b271-440c-8c95-e4dfe1f67ae9.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-icheon-landscape.png",
+  "actualDimensions": [
+    1619,
+    972
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "a39ce1104f601a963c5d8c45f23feda5aa6dec90c573d421d7cb1c50d59abd31",
+  "savedSha256": "a39ce1104f601a963c5d8c45f23feda5aa6dec90c573d421d7cb1c50d59abd31",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:16:58.417Z",
+  "toolCallId": "exec-cc00fee9-b271-440c-8c95-e4dfe1f67ae9",
+  "savedAt": "2026-10-17T05:19:06.260163+00:00"
+}

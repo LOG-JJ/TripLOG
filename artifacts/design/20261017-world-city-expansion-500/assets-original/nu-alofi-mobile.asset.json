@@ -1,0 +1,52 @@
+{
+  "id": "nu-alofi-mobile",
+  "cityId": "nu-alofi",
+  "name": "알로피",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/nu-alofi-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/nu-alofi-mobile.json",
+  "originalSha256": "d5825d2088b1feb8b455c33b9c9875225b3cfb5d7de0339e5437c6afec7944ea",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/nu-alofi-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 119710,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "4343322bb4fd641382198b915a1bf04706ac0822ebe57832158bce369a38ed6a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

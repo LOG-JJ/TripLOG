@@ -1,0 +1,52 @@
+{
+  "id": "kg-bishkek-mobile",
+  "cityId": "kg-bishkek",
+  "name": "비슈케크",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/kg-bishkek-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/kg-bishkek-mobile.json",
+  "originalSha256": "ed90b0445961d935600169b37c90f245019a2c115ce59017858ad01d2d1d9385",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    22,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/kg-bishkek-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 73534,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "a1ddcac7d70f1b11ffa78fcc3344e07340dfefd4869619467ac751a00f4bcc34",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

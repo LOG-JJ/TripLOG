@@ -1,0 +1,52 @@
+{
+  "id": "be-antwerp-landscape",
+  "cityId": "be-antwerp",
+  "name": "안트베르펜",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/be-antwerp-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/be-antwerp-landscape.json",
+  "originalSha256": "e59d3041018ceb0b0dfd46412484c3da65450b4ca757b0c773b8e9d583d5643c",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    18,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/be-antwerp.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 95956,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "ea7fa01e2b3b817342399bce59dc1de623bee2944482f7a5d1f7f36ab7b89444",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

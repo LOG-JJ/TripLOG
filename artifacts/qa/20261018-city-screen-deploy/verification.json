@@ -1,0 +1,124 @@
+{
+  "passed": true,
+  "environment": {
+    "origin": "http://127.0.0.1:9134",
+    "browser": "Playwright/Chromium",
+    "version": "155.0.4283.62",
+    "reason": "Browser plugin not available",
+    "isolated": true
+  },
+  "artwork": {
+    "generatedAssets": 640,
+    "exactSourceHashes": 640,
+    "domesticDestinations": 95,
+    "overseasDestinations": 540,
+    "activeAssets": 1290
+  },
+  "header": {
+    "combinations": 2540,
+    "widths": [
+      320,
+      390,
+      599,
+      1440
+    ],
+    "additionalCombinations": 72,
+    "additionalWidths": [
+      320,
+      390,
+      599,
+      600,
+      613,
+      767,
+      768,
+      1000,
+      1440
+    ],
+    "maxBottomGap": 1.9109374999999886,
+    "maxRightGap": 1.4098958333333371,
+    "tripDataPreserved": true
+  },
+  "confirmation": {
+    "states": 16,
+    "viewports": [
+      320,
+      390,
+      599,
+      600,
+      768,
+      1440
+    ],
+    "renderedChecks": 96,
+    "flows": [
+      "Nested cancel, Enter on default cancel, Escape, backdrop and focus restoration",
+      "Long names, safe text, duplicate opens and 200% text at 320px",
+      "Attachment and transit removal stay in the unsaved editor",
+      "Itinerary deletion and its linked expense are accurately disclosed and persisted",
+      "Expense deletion keeps its itinerary; failed persistence retains the record/editor and retry succeeds",
+      "Preparation item, default list reset and settlement companion cancel/commit",
+      "Manual reservation deletion keeps its source itinerary and expenses",
+      "Saved snapshot delete, persistence and nested legacy-overlay Escape",
+      "Draft confirmation and persistent discard",
+      "Map key removal exposes no credential and requires confirmation",
+      "Committed record deletions and packing reset survive reload",
+      "Reset copy matches new-trip creation, retained trips and deleted saved snapshots",
+      "Shared comment, member removal and leave: cancel is inert and accept sends the intended operation"
+    ],
+    "errors": [],
+    "consoleIssues": []
+  },
+  "manualReview": {
+    "inspected": [
+      "kr-incheon-390",
+      "al-tirana-390",
+      "ad-andorra-la-vella-1440",
+      "kr-jeonnam-gwangju-320",
+      "long-320",
+      "itinerary-context-390",
+      "itinerary-context-1440",
+      "shared-trip-390",
+      "voucher-removal-390",
+      "transit-removal-390"
+    ],
+    "result": "Readable title/date/member labels, left information and right artwork, complete artwork contained against the lower/right border, compact confirmations, visible focus, attachment/transit buttons; no remaining visual defect found."
+  },
+  "captures": [
+    {
+      "file": "domestic-390.png",
+      "sha256": "5e76b1d0960e36f1e855f3b3dc130e1d473e707321c754c932009c1074d7da18"
+    },
+    {
+      "file": "overseas-390.png",
+      "sha256": "e266343aebf23794e4e30e9126e4959d7a5132e344227b148bc2836388c82f02"
+    },
+    {
+      "file": "overseas-1440.png",
+      "sha256": "dde4871c37cab8aa05254fe8026e77efdb8489c684a3068776ac38e78e8b8487"
+    },
+    {
+      "file": "long-title-320.png",
+      "sha256": "76e4e1790e1e8cdad2123fc477a30e4fac01c51198dd81df03c3886be1412b75"
+    },
+    {
+      "file": "confirmation-mobile-390.png",
+      "sha256": "f254ec6ec850cd4adf921f1af6d58a6f92aa8ff56344651d1bffbfccffc31acb"
+    },
+    {
+      "file": "confirmation-desktop-1440.png",
+      "sha256": "34851ee746242eeaa1472d848735729068d7faab12d9fe23fed6cb713b345083"
+    },
+    {
+      "file": "shared-archive.png",
+      "sha256": "f0e3d19097b1625874acda80bc176b333177078a2639bd3a22fb1bec52d30ae6"
+    },
+    {
+      "file": "attachment-removal.png",
+      "sha256": "28d9b473153c329aa53c0899b072dc12c4be6519b0e8bedf890bbc5e6015baec"
+    },
+    {
+      "file": "transit-removal.png",
+      "sha256": "061bd540756bc3ebbffb692554ea165622662d421dcbe7d80494e76bb5febd0a"
+    }
+  ],
+  "checkedAt": "2026-10-17T18:53:04.401Z"
+}

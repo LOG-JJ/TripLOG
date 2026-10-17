@@ -1,0 +1,26 @@
+{
+  "jobId": "mv-male-landscape",
+  "cityId": "mv-male",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Male, Maldives: Hukuru Miskiy with its low coral-stone mosque under a broad tiered sloping gray roof, and its short broad stepped cylindrical white Munnaaru minaret with dark horizontal bands and a flat circular top, with a few tropical trees; preserve the distinctive drum-like minaret and low roof, without a golden dome or a slender spired minaret. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "320d7d2d98296887335c285c67b6098aa70f30c0c834a0541e45772b1e36a6f1",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mv-male-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-f9bf58b9-190b-4336-b9c9-9f7c6af1ce3c.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-f9bf58b9-190b-4336-b9c9-9f7c6af1ce3c.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/mv-male-landscape.png",
+  "actualDimensions": [
+    1619,
+    972
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "8b035444051b82d282806abcd358cf05d5f0552abeb6684fae6998886c5c1200",
+  "savedSha256": "8b035444051b82d282806abcd358cf05d5f0552abeb6684fae6998886c5c1200",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:44:45Z",
+  "toolCallId": "exec-f9bf58b9-190b-4336-b9c9-9f7c6af1ce3c",
+  "savedAt": "2026-10-17T06:49:06.067297+00:00"
+}

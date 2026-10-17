@@ -1,0 +1,175 @@
+{
+  "count": 10,
+  "records": [
+    {
+      "id": "th-kanchanaburi-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/th-kanchanaburi.webp",
+      "sourceSha256": "943626264fadc9afab0f7659c9b84fe235de01b20fa99b876af3cfe0929145fc",
+      "assetSha256": "c456a7e1d2859bab9ab4d2d56695403fd9dbe24b6bb539d98cb056b9347e017d",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        12,
+        67,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "th-kanchanaburi-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/th-kanchanaburi-mobile.webp",
+      "sourceSha256": "e769c04cba9a146eaefb6d7c2a61866a2483b642a6688fde6b9c52d568620555",
+      "assetSha256": "ec48c58fecf1bb01dfcbfc7812ecb4bc23fe9e0a898f8141530aba36a7e333a1",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        12,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "ph-vigan-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ph-vigan.webp",
+      "sourceSha256": "28ddc4c10d004d0b5c999718d2fe08ecaf6ec5a15454db1aee0d75dac6f8816c",
+      "assetSha256": "e2704ae2bf3877ef2a0ad4768fc3de7ea16cf321f62d2385f6fc176e5c315168",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        24,
+        19,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "ph-vigan-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ph-vigan-mobile.webp",
+      "sourceSha256": "de6ecb437344651948e26dc2dcc25ce6cfeb0aae0b6c43a07389a9c622baa00c",
+      "assetSha256": "1d74fddb4cdca5d4dce0a904ab9061a26d1f9781ad4dc9c7430c06b8549b2064",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        29,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "uz-bukhara-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/uz-bukhara.webp",
+      "sourceSha256": "66995d8cd51b52369eda4b70ea56aebe3fe25d847b7356ed8e00b9a48da54e32",
+      "assetSha256": "ef99e6e071076687a094859a30f06b15960ea38060344dd7ac11e8bd6f4b1dbe",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        29,
+        9,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "uz-bukhara-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/uz-bukhara-mobile.webp",
+      "sourceSha256": "45189b0ec8315b19a1a81bc5243ca6d27e6b4ff3e9c46a047191d0d713be4010",
+      "assetSha256": "a57349f2ffb2f784cffaf0bce10d09560d8a4300aa001be73675e945082cafaf",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "dz-algiers-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/dz-algiers.webp",
+      "sourceSha256": "a93df0007c8d50ac9124a2830da7ef58eb073fa12157e2437321718d518c7ed6",
+      "assetSha256": "744790fb25a46c54b51b8fb1a0a7f7f8efb969d90412c0fa7a7b9f5a3df0685d",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        53,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "dz-algiers-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/dz-algiers-mobile.webp",
+      "sourceSha256": "018615ed16fa07c42b572171c54ce051f558cb3ae33c46f50c297ce44f4ce214",
+      "assetSha256": "e35e73660467ff4b4aa2bc820c82eb8d81d66ccc9024f0c2d795a1ff2508addd",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        50,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "bf-bobo-dioulasso-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/bf-bobo-dioulasso.webp",
+      "sourceSha256": "a6877922ec06670acc0591aafea20cb32bc38fda2210ac8b52f9fb8d2df95082",
+      "assetSha256": "929a53308c60ae6bdc429b49a306037f96c1e3f9467004fe76e7cf134b71812b",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        24,
+        26,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "bf-bobo-dioulasso-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/bf-bobo-dioulasso-mobile.webp",
+      "sourceSha256": "5bc415cbf455ed1e7aae9a8d442076fa72e4831120ac7ac53394f5d10e4ae2fd",
+      "assetSha256": "e70c43fb23416317e77c9dc07b42b4a73182e697d157bc446b16919326ddb653",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        24,
+        480,
+        600
+      ],
+      "originalEquality": true
+    }
+  ]
+}

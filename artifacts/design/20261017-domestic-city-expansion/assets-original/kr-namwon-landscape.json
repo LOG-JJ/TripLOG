@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-namwon-landscape",
+  "cityId": "kr-namwon",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Namwon, South Korea: Gwanghallu Pavilion beside the pond and the stone Ojaggyo bridge with its rounded arches reflected in the water. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "2f9f28eecbc2e4e5dfc092692904bcdeb2c058e17b53ec8f51c7b487b518898d",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-namwon-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-ca8a38e8-1b0a-40a3-ad43-24c83f2452bc.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-ca8a38e8-1b0a-40a3-ad43-24c83f2452bc.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-namwon-landscape.png",
+  "actualDimensions": [
+    1619,
+    972
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "7b5e031b9c9c407bdebab52dabdc15d4064474c3418a54bdc9689168f08c5f9c",
+  "savedSha256": "7b5e031b9c9c407bdebab52dabdc15d4064474c3418a54bdc9689168f08c5f9c",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:22:24Z",
+  "toolCallId": "exec-ca8a38e8-1b0a-40a3-ad43-24c83f2452bc",
+  "savedAt": "2026-10-17T05:23:21.540365+00:00"
+}

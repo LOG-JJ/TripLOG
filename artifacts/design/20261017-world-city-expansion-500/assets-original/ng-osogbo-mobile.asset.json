@@ -1,0 +1,52 @@
+{
+  "id": "ng-osogbo-mobile",
+  "cityId": "ng-osogbo",
+  "name": "오쇼그보",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ng-osogbo-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ng-osogbo-mobile.json",
+  "originalSha256": "fe5f6f8a0daad7d50af5b1a4094376b2744f85b0f99ed22a108422ac4dc0f336",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    25,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ng-osogbo-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 122042,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "240016a2e6e7b87a8206b3ddccc9411b93a8e628bb31b264cb921967fa6b0946",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

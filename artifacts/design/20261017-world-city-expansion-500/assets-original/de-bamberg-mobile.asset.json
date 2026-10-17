@@ -1,0 +1,52 @@
+{
+  "id": "de-bamberg-mobile",
+  "cityId": "de-bamberg",
+  "name": "밤베르크",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/de-bamberg-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/de-bamberg-mobile.json",
+  "originalSha256": "443e8aec091c1a3fa035216ef54c06241eabdf1ed0c7a4ab4e1e5e6506fe2664",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/de-bamberg-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 96326,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "05f5c1e0a0ae65dab555b6e888ef589b44c3336f1c170bf793a0647dbc05c07c",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

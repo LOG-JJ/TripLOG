@@ -1,0 +1,52 @@
+{
+  "id": "eg-aswan-landscape",
+  "cityId": "eg-aswan",
+  "name": "아스완",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/eg-aswan-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/eg-aswan-landscape.json",
+  "originalSha256": "27236dea5531ef6da69eeb47d255632e36d69b8ce07473e60274a9a4b8c9c65a",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    7,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/eg-aswan.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 113090,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "1ff0fb258c11b99693da9da1920ed4a0048c4bdb2c94ed609ddb76be6cfdc5d6",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

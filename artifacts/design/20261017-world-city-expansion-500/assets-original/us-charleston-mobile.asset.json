@@ -1,0 +1,52 @@
+{
+  "id": "us-charleston-mobile",
+  "cityId": "us-charleston",
+  "name": "찰스턴",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/us-charleston-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/us-charleston-mobile.json",
+  "originalSha256": "2c877f79f00aed79338fd34e403dc3715593655c6b3af5f545338c54970f7bbc",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    43,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/us-charleston-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 92388,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "6492a28605a78c3dee9ad2bc46115868a256980fa7c4d59d21edad58b1d09fe9",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "cw-willemstad-mobile",
+  "cityId": "cw-willemstad",
+  "name": "빌렘스타트",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cw-willemstad-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cw-willemstad-mobile.json",
+  "originalSha256": "abc6379f7a447e0a058e340e45ff7e43a13fff34bd44dd1346927360660722c6",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    29,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cw-willemstad-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 81162,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "cc2b3842be59f6493707c55251909a5321c381b1c7155c5edde837d7d74e4f21",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

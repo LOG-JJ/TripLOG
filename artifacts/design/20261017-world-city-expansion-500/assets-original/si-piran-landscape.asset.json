@@ -1,0 +1,52 @@
+{
+  "id": "si-piran-landscape",
+  "cityId": "si-piran",
+  "name": "피란",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/si-piran-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/si-piran-landscape.json",
+  "originalSha256": "6edf7e914af1f85d1460afc9a541b4e541018f6a08a2e693d9cac5dd02ea83b1",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    49,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/si-piran.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 105722,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "8957f74e1d3ed73dab2560995b5d42495bfd58197c73e8015a730821b6f24293",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

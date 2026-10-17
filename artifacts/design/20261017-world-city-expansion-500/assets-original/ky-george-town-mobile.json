@@ -1,0 +1,26 @@
+{
+  "jobId": "ky-george-town-mobile",
+  "cityId": "ky-george-town",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of George Town, Cayman Islands: the historic Cayman Islands National Museum building in George Town, with its wooden veranda and a small harbour-front palm. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette. Landmark appearance: The museum is a modest two-level white wooden colonial building with a vivid red hipped metal roof, dark green shutters, a raised veranda reached by an exterior staircase, and a low white picket fence. Keep the entire building compact and inside the frame.",
+  "promptSha256": "965bbec6d59a364eb4dcfafac5572180112c70ac161dcbfa9c0414ae30295934",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ky-george-town-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-750fe911-7084-4400-b57a-ae5794bdbf17.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-750fe911-7084-4400-b57a-ae5794bdbf17.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/ky-george-town-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "5db34ff90a9c7ba97b308a135b9f52705e24d7fc0abbbfe24001c69d37cc6521",
+  "savedSha256": "5db34ff90a9c7ba97b308a135b9f52705e24d7fc0abbbfe24001c69d37cc6521",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:40:49.965Z",
+  "toolCallId": "exec-750fe911-7084-4400-b57a-ae5794bdbf17",
+  "savedAt": "2026-10-17T07:41:51.736105+00:00"
+}

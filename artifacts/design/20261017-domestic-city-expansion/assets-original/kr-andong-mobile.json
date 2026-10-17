@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-andong-mobile",
+  "cityId": "kr-andong",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Andong, South Korea: Hahoe Village's clustered traditional houses, with the river bending around the village and green fields beside the water. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "83c0449539617b767827be8050735df0dd5214e4b7c8ca7faee4a221046b0134",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-andong-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-99cb9e2b-cfd9-4c56-b4d5-bb7c5a0ca8a7.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-99cb9e2b-cfd9-4c56-b4d5-bb7c5a0ca8a7.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-andong-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "cad2c30ea4862b9e59c73d6b9ca03219941c20fe4ee47d21270ea98a29003acc",
+  "savedSha256": "cad2c30ea4862b9e59c73d6b9ca03219941c20fe4ee47d21270ea98a29003acc",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:27:08.680Z",
+  "toolCallId": "exec-99cb9e2b-cfd9-4c56-b4d5-bb7c5a0ca8a7",
+  "savedAt": "2026-10-17T05:27:58.503761+00:00"
+}

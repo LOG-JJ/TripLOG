@@ -1,0 +1,39 @@
+{
+  "id": "cd-kinshasa-landscape",
+  "cityId": "cd-kinshasa",
+  "cityName": "킨샤사",
+  "englishName": "Kinshasa",
+  "countryCode": "CD",
+  "kind": "city",
+  "group": "africa",
+  "variant": "landscape",
+  "phase": "core-500",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone destination illustration of Kinshasa, Democratic Republic of the Congo: the actual new MNRDC National Museum completed in 2019 by Junglim Architecture and KOICA. Depict a LOW TWO-STOREY contemporary complex of broad horizontal red-brown brick rectangular volumes, large geometric perforated brick and screen-block patterns, open shaded ground-floor galleries and white concrete supports, flat roofs with raised rectangular skylights, and a planted lawn and paved entrance path. The red-brick horizontal architecture must dominate. Do not depict a tall monumental concrete temple, giant slanted fins, classical columns or enormous carved human panels. Keep the whole main building block and roof ends visible with side margins. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "b1c6ada8d668f3f2353a3b78a0f9316dc10226778288630c723c25fdaf595f36",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/jobs/cd-kinshasa-landscape.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/cd-kinshasa-landscape.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/cd-kinshasa-landscape.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/cd-kinshasa-landscape.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v6/cd-kinshasa.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "source": {
+    "title": "Institut des Musées Nationaux du Congo — Musée National de la RDC",
+    "url": "https://imnc.cd/mnrdc"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone destination illustration of Kinshasa, Democratic Republic of the Congo: the actual new MNRDC National Museum completed in 2019 by Junglim Architecture and KOICA. Depict a LOW TWO-STOREY contemporary complex of broad horizontal red-brown brick rectangular volumes, large geometric perforated brick and screen-block patterns, open shaded ground-floor galleries and white concrete supports, flat roofs with raised rectangular skylights, and a planted lawn and paved entrance path. The red-brick horizontal architecture must dominate. Do not depict a tall monumental concrete temple, giant slanted fins, classical columns or enormous carved human panels. Keep the whole main building block and roof ends visible with side margins. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+    "transparent_background": true
+  },
+  "revision": {
+    "number": 2,
+    "reason": "The initial images show a generic tall pale concrete institution; the actual new MNRDC is a low brick and screen-block complex.",
+    "previousFiles": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-5/cd-kinshasa-landscape"
+  }
+}

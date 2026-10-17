@@ -1,0 +1,52 @@
+{
+  "id": "ph-vigan-landscape",
+  "cityId": "ph-vigan",
+  "name": "비간",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ph-vigan-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ph-vigan-landscape.json",
+  "originalSha256": "28ddc4c10d004d0b5c999718d2fe08ecaf6ec5a15454db1aee0d75dac6f8816c",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ph-vigan.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 114204,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e2704ae2bf3877ef2a0ad4768fc3de7ea16cf321f62d2385f6fc176e5c315168",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

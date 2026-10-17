@@ -1,0 +1,52 @@
+{
+  "id": "re-saint-denis-mobile",
+  "cityId": "re-saint-denis",
+  "name": "생드니(레위니옹)",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "인도양",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/re-saint-denis-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/re-saint-denis-mobile.json",
+  "originalSha256": "b9efe22c93053bc751ac87474fe0494c61d58d9f4deacfa272ba4151152e9bf0",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/re-saint-denis-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 116546,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "1d22c2702ad3b607097bfad8b991d0986e30a12046e20bc0a5a970ffcd1887ef",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

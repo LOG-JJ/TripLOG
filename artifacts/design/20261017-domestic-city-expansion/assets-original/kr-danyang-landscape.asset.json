@@ -1,0 +1,51 @@
+{
+  "id": "kr-danyang-landscape",
+  "cityId": "kr-danyang",
+  "name": "단양",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "기존 군과 섬 보존",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-danyang-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-danyang-landscape.json",
+  "originalSha256": "0be8d320dd0826f760ef1f19c7d646f74c6ce97cd60b61baa2d66a35fa8cfce6",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    37,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-danyang.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 74758,
+  "assetSha256": "bb0991f2a7bba14c1fa524cc7e402e5cd4c3c6e354e73729bf1eebd12c1007f0",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

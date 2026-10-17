@@ -1,0 +1,52 @@
+{
+  "id": "in-amritsar-landscape",
+  "cityId": "in-amritsar",
+  "name": "암리차르",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/in-amritsar-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/in-amritsar-landscape.json",
+  "originalSha256": "69548e1db76a6cd4212342d0952e50ec327c015dd56663a788749e19ba638649",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    59,
+    9,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/in-amritsar.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 114032,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2020aef4dccfa5fd3e23050702718b3e4bc0402bb67d13cb0051e5fad4ee0972",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

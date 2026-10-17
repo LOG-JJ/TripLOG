@@ -1,0 +1,52 @@
+{
+  "id": "ve-coro-mobile",
+  "cityId": "ve-coro",
+  "name": "코로",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ve-coro-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ve-coro-mobile.json",
+  "originalSha256": "1d3502688f77ff49854858428ca62768c055de0822d2756acbe2d0cf2041b844",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ve-coro-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 93500,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "35ef8446d8a3971d7fd73e4064f34d560411083290436362e727acee5eebe8e4",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

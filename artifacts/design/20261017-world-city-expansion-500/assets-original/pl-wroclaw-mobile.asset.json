@@ -1,0 +1,52 @@
+{
+  "id": "pl-wroclaw-mobile",
+  "cityId": "pl-wroclaw",
+  "name": "브로츠와프",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/pl-wroclaw-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/pl-wroclaw-mobile.json",
+  "originalSha256": "d0709029c3bdbc8c4255dabc24818c039aaba2bdc216383bb225281268cb2ff8",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    45,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/pl-wroclaw-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 75216,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2f912969321626edea846d0c501ccf43552281fb23bea0d3bc3a00590b853bba",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

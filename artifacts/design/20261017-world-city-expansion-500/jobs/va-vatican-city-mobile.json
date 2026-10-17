@@ -1,0 +1,36 @@
+{
+  "id": "va-vatican-city-mobile",
+  "cityId": "va-vatican-city",
+  "cityName": "바티칸시국",
+  "englishName": "Vatican City",
+  "countryCode": "VA",
+  "kind": "city",
+  "group": "Europe",
+  "variant": "mobile",
+  "phase": "core-500",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone destination illustration of Vatican City, Vatican City: the dome of Saint Peter's Basilica, with the curved colonnades of Saint Peter's Square. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Composition correction: Use a distant view that fits the WHOLE Saint Peters Basilica facade and dome into the portrait canvas. The top cross must be at least 12 percent below the upper edge, and the complete right facade must end before 85 percent of canvas width. The square and foreground shrubs may reach the lower and right edges. Do not crop or hide the right basilica wing.",
+  "promptSha256": "3eef750e5c42171e9d21ced4896a9add5f72abd7ef89dbe802fe9ce13897450b",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/jobs/va-vatican-city-mobile.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-mobile.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-mobile.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v6/va-vatican-city-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "source": {
+    "title": "UNESCO World Heritage Centre — Vatican City",
+    "url": "https://whc.unesco.org/en/list/286/"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone destination illustration of Vatican City, Vatican City: the dome of Saint Peter's Basilica, with the curved colonnades of Saint Peter's Square. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Composition correction: Use a distant view that fits the WHOLE Saint Peters Basilica facade and dome into the portrait canvas. The top cross must be at least 12 percent below the upper edge, and the complete right facade must end before 85 percent of canvas width. The square and foreground shrubs may reach the lower and right edges. Do not crop or hide the right basilica wing.",
+    "transparent_background": true
+  },
+  "revision": "worker-c-visual-r1",
+  "revisionReason": "The main basilica right wing was clipped."
+}

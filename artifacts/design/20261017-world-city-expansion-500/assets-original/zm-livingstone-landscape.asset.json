@@ -1,0 +1,52 @@
+{
+  "id": "zm-livingstone-landscape",
+  "cityId": "zm-livingstone",
+  "name": "리빙스턴",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/zm-livingstone-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/zm-livingstone-landscape.json",
+  "originalSha256": "61203bb7c0ba941f69f51b6f9eb3a1af7e9a35141e0d86367ff1aed8b69c9dd4",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/zm-livingstone.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 131004,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "eebb7f8f08eb09b7da2544b255aac0e8d434ffc7d36c80bf0220da68671ea567",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "kr-gimcheon-mobile",
+  "cityId": "kr-gimcheon",
+  "name": "김천",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경북",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gimcheon-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gimcheon-mobile.json",
+  "originalSha256": "61e6b9bafc836f318026b738314178f01e9db24dab5921df039dd183a62f5926",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    37,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gimcheon-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 101794,
+  "assetSha256": "e6bc62ac9f072db70e269ea5bdd51fd39a0d8ec2f040d1423d4626e45dcf0177",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -9,6 +9,13 @@ function setVoucherFile(base64, name) {
 }
 function setVoucherLoading(promise) { voucherReadPromise = promise.catch(() => false); }
 
+function syncVoucherFileUi() {
+  const name = currentVoucherFileName || '선택된 파일 없음';
+  els.ticketFileNameDisplay.textContent = name;
+  els.ticketFileNameDisplay.closest('.ticket-file-row').classList.toggle('is-long-filename', Array.from(name).length > 24);
+  els.ticketFileResetBtn.style.display = currentVoucherFileName ? 'inline-flex' : 'none';
+}
+
 let itinerarySubmissionPending = false;
 const itineraryDeletionsPending = new Set();
 let initialPlaceCandidate = null;
@@ -212,13 +219,7 @@ function startItineraryEdit(item, { copy = false } = {}) {
   currentVoucherFile = item.voucherFile || null;
   currentVoucherFileName = item.voucherFileName || null;
   voucherReadPromise = Promise.resolve(true);
-  if (currentVoucherFileName) {
-    els.ticketFileNameDisplay.textContent = currentVoucherFileName;
-    els.ticketFileResetBtn.style.display = "inline-flex";
-  } else {
-    els.ticketFileNameDisplay.textContent = "선택된 파일 없음";
-    els.ticketFileResetBtn.style.display = "none";
-  }
+  syncVoucherFileUi();
 
   const hasVoucher = !!(item.voucherName || item.voucherCode || item.voucherFileName);
   els.itineraryTicketSection.hidden = !hasVoucher;
@@ -256,11 +257,10 @@ function clearItineraryEditMode(shouldRender = true) {
   els.itineraryVoucherName.value = "";
   els.itineraryVoucherCode.value = "";
   els.itineraryVoucherFile.value = "";
-  els.ticketFileNameDisplay.textContent = "선택된 파일 없음";
-  els.ticketFileResetBtn.style.display = "none";
   currentVoucherFile = null;
   currentVoucherFileName = null;
   voucherReadPromise = Promise.resolve(true);
+  syncVoucherFileUi();
   
   if (els.itineraryTicketSection) {
     els.itineraryTicketSection.hidden = true;
@@ -351,4 +351,5 @@ window.TripLog.register("features.itinerary.form", {
   getFilteredItineraryItems,
   setVoucherFile,
   setVoucherLoading,
+  syncVoucherFileUi,
 });

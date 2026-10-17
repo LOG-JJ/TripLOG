@@ -1,0 +1,52 @@
+{
+  "id": "ir-isfahan-landscape",
+  "cityId": "ir-isfahan",
+  "name": "이스파한",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ir-isfahan-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ir-isfahan-landscape.json",
+  "originalSha256": "b8217f003e5737bd2bc82c77a34ce0eba6b1b7a2b2135bdd86645215231c9b1c",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    71,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ir-isfahan.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 101950,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "167a02bdd5892244c2856c1dac61fcbd20e867107f771aa86721d3c4c5aed637",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

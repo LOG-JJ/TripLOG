@@ -1,0 +1,52 @@
+{
+  "id": "tj-dushanbe-landscape",
+  "cityId": "tj-dushanbe",
+  "name": "두샨베",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/tj-dushanbe-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/tj-dushanbe-landscape.json",
+  "originalSha256": "ba187a5490e2a4ed2448a63801b413a73962f9a840435493a49a01886a5def53",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/tj-dushanbe.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 106188,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "815e44f207927b466336d0b40350151871c1908d91816cbb6e2c0547a2a17289",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

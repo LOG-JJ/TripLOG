@@ -1,0 +1,26 @@
+{
+  "jobId": "it-matera-landscape",
+  "cityId": "it-matera",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Matera, Italy: the Sassi cave dwellings of Matera, with the layered stone lanes. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "321704ff11f4595e5f77ae718738ffea46c29ed323818be84b6daa4ac879be59",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/it-matera-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-dd5980aa-b3ea-45d6-88c1-8acebd52b79c.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-dd5980aa-b3ea-45d6-88c1-8acebd52b79c.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/it-matera-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "09a42fa41b251dae3f5a89cf78a90b9084878fc7ec4aa0f1614bd9fb76716d45",
+  "savedSha256": "09a42fa41b251dae3f5a89cf78a90b9084878fc7ec4aa0f1614bd9fb76716d45",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:10:31.110Z",
+  "toolCallId": "exec-dd5980aa-b3ea-45d6-88c1-8acebd52b79c",
+  "savedAt": "2026-10-17T06:14:22.903436+00:00"
+}

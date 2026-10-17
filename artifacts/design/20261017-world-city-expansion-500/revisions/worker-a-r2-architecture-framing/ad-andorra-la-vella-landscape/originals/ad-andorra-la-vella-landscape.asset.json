@@ -1,0 +1,52 @@
+{
+  "id": "ad-andorra-la-vella-landscape",
+  "cityId": "ad-andorra-la-vella",
+  "name": "안도라라베야",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ad-andorra-la-vella-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ad-andorra-la-vella-landscape.json",
+  "originalSha256": "a3e2d2403557b5758d596e54761310605febf1b1ab973c9154885e9108447d9c",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ad-andorra-la-vella.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 159584,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "22df64f2b8060083d6ce65ce438010f9d682129531cd5a16570cdcde8d2d7483",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-goyang-landscape",
+  "cityId": "kr-goyang",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Goyang, South Korea: Ilsan Lake Park, its broad calm lake, curved waterfront paths and colorful flower beds. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "cc798c4af39f8178a5b187078f2ed69d3c0eab5059717adccb32020b15b8d5a4",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-goyang-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-4180e295-cc11-4489-bf1e-345fa5b67a50.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-4180e295-cc11-4489-bf1e-345fa5b67a50.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-goyang-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "4c2b0eed710141d022070ba93b79573379af0b7036e214ddabf7bc19966f4d4c",
+  "savedSha256": "4c2b0eed710141d022070ba93b79573379af0b7036e214ddabf7bc19966f4d4c",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:12:06.038Z",
+  "toolCallId": "exec-4180e295-cc11-4489-bf1e-345fa5b67a50",
+  "savedAt": "2026-10-17T05:13:00.582735+00:00"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "gb-belfast-landscape",
+  "cityId": "gb-belfast",
+  "name": "벨파스트",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-belfast-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-belfast-landscape.json",
+  "originalSha256": "dadc124848e0b6d5ef6207f398f8cbe0d6d77b4b01a7cfa38dab8a534c580922",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    56,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gb-belfast.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 133252,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "00e4de9bd4e6fa03e9f5db67b565198904cbe18ca0bd70a595c41f435b478451",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

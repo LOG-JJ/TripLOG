@@ -1,0 +1,52 @@
+{
+  "id": "pl-wroclaw-landscape",
+  "cityId": "pl-wroclaw",
+  "name": "브로츠와프",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/pl-wroclaw-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/pl-wroclaw-landscape.json",
+  "originalSha256": "f017dd091348bdeec48f54a0d940445b49c43c6c39d98b23e1e87f9ebd486d11",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    58,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/pl-wroclaw.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 87056,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "f32eecd9e7414a885930e0489322f576b14f77cbc09b3f3d91ce6ec7a29dac5a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

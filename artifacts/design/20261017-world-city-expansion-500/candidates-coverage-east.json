@@ -1,0 +1,267 @@
+[
+  {
+    "id": "cc-west-island",
+    "name": "웨스트 아일랜드",
+    "englishName": "West Island",
+    "countryCode": "CC",
+    "kind": "town",
+    "theme": "coast",
+    "aliases": [
+      "West Island",
+      "West Island Settlement",
+      "웨스트아일랜드"
+    ],
+    "canonicalInput": "웨스트 아일랜드",
+    "motif": "the West Island settlement beside a pale coral-sand beach and clear shallow lagoon, with low island houses and coconut palms",
+    "motifSource": {
+      "title": "Cocos Keeling Islands Tourism — West Island",
+      "url": "https://cocoskeelingislands.com.au/about/the-islands/west-island/"
+    },
+    "region": "인도양",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "cx-flying-fish-cove",
+    "name": "플라잉 피시 코브",
+    "englishName": "Flying Fish Cove",
+    "countryCode": "CX",
+    "kind": "town",
+    "theme": "coast",
+    "aliases": [
+      "Flying Fish Cove",
+      "Flying-Fish Cove",
+      "더 세틀먼트",
+      "The Settlement"
+    ],
+    "canonicalInput": "플라잉 피시 코브",
+    "motif": "Flying Fish Cove's curved beach below a lush green hillside, with the waterfront settlement and a simple harbour jetty",
+    "motifSource": {
+      "title": "Christmas Island Tourism — Beaches / Flying Fish Cove",
+      "url": "https://www.christmas.net.au/beaches"
+    },
+    "region": "인도양",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "nf-kingston",
+    "name": "킹스턴(노퍽)",
+    "englishName": "Kingston",
+    "countryCode": "NF",
+    "kind": "town",
+    "theme": "traditional",
+    "aliases": [
+      "Kingston",
+      "Kingston, Norfolk Island",
+      "노퍽 킹스턴",
+      "킹스턴"
+    ],
+    "canonicalInput": "킹스턴(노퍽)",
+    "motif": "Kingston's historic Georgian stone buildings on open green lawns near the coast, with tall distinctive Norfolk Island pines",
+    "motifSource": {
+      "title": "Norfolk Island Government — Kingston and Arthur’s Vale Historic Area",
+      "url": "https://kingston.norfolkisland.gov.au/"
+    },
+    "region": "오세아니아",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "pn-adamstown",
+    "name": "애덤스타운",
+    "englishName": "Adamstown",
+    "countryCode": "PN",
+    "kind": "town",
+    "theme": "island",
+    "aliases": [
+      "Adamstown",
+      "아담스타운"
+    ],
+    "canonicalInput": "애덤스타운",
+    "motif": "Adamstown's small island houses scattered on steep lush green slopes above the blue Pacific, with a narrow village path",
+    "motifSource": {
+      "title": "Pitcairn Islands Tourism — Local services and activities in Adamstown",
+      "url": "https://www.visitpitcairn.pn/local-services-activities"
+    },
+    "region": "오세아니아",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "tk-nukunonu-village",
+    "name": "누쿠노누 마을",
+    "englishName": "Nukunonu Village",
+    "countryCode": "TK",
+    "kind": "town",
+    "theme": "island",
+    "aliases": [
+      "Nukunonu Village",
+      "Nukunonu",
+      "Fale, Nukunonu",
+      "Nukunonu Fale",
+      "누쿠노누"
+    ],
+    "canonicalInput": "누쿠노누 마을",
+    "motif": "Nukunonu's Fale village of low homes and coconut palms beside the turquoise lagoon, with the short low concrete bridge linking the two settlement islets",
+    "motifSource": {
+      "title": "Tokelau Government — Villages",
+      "url": "https://www.tokelau.org.nz/About%2BUs/Villages.html"
+    },
+    "region": "오세아니아",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "wf-mata-utu",
+    "name": "마타우투",
+    "englishName": "Mata Utu",
+    "countryCode": "WF",
+    "kind": "town",
+    "theme": "traditional",
+    "aliases": [
+      "Mata Utu",
+      "Mata-Utu",
+      "Matā-Utu",
+      "Matautu",
+      "마타 우투"
+    ],
+    "canonicalInput": "마타우투",
+    "motif": "Mata-Utu's Cathedral of Our Lady of the Assumption, a substantial volcanic-stone church beside the open seaside square, with palms and blue lagoon beyond",
+    "motifSource": {
+      "title": "Atout France — Wallis and Futuna / Mata Utu cathedral",
+      "url": "https://www.france.fr/fr/destination/iles-de-wallis-et-futuna/"
+    },
+    "region": "오세아니아",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "gu-hagatna",
+    "name": "하갓냐",
+    "englishName": "Hagåtña",
+    "countryCode": "GU",
+    "kind": "city",
+    "theme": "traditional",
+    "aliases": [
+      "Hagåtña",
+      "Hagatna",
+      "Agana",
+      "아가냐",
+      "하가트나",
+      "하갓나"
+    ],
+    "canonicalInput": "하갓냐",
+    "motif": "Hagatna's Dulce Nombre de Maria Cathedral-Basilica, its pale facade and tiled roof beside a palm-shaded civic plaza",
+    "motifSource": {
+      "title": "Guam Visitors Bureau — Hagatna",
+      "url": "https://www.visitguam.com/about-guam/villages/hagatna/"
+    },
+    "region": "오세아니아",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "mp-garapan",
+    "name": "가라판",
+    "englishName": "Garapan",
+    "countryCode": "MP",
+    "kind": "town",
+    "theme": "coast",
+    "aliases": [
+      "Garapan",
+      "Garapan, Saipan",
+      "사이판 가라판"
+    ],
+    "canonicalInput": "가라판",
+    "motif": "Garapan's American Memorial Park, showing the open carillon bell tower surrounded by tropical park lawns and palms, with the coast in the distance",
+    "motifSource": {
+      "title": "US National Park Service — American Memorial Park places to go",
+      "url": "https://www.nps.gov/amme/planyourvisit/placestogo.htm"
+    },
+    "region": "오세아니아",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "pf-papeete",
+    "name": "파페에테",
+    "englishName": "Papeete",
+    "countryCode": "PF",
+    "kind": "city",
+    "theme": "traditional",
+    "aliases": [
+      "Papeete",
+      "Papeʻete",
+      "Papeete, Tahiti",
+      "파페테"
+    ],
+    "canonicalInput": "파페에테",
+    "motif": "Papeete's covered municipal market with its broad roof and colorful stalls of tropical fruit and flowers, framed by palms",
+    "motifSource": {
+      "title": "Tahiti Tourisme — Papeete market",
+      "url": "https://tahititourisme.pf/en-pf/activities/so-much-to-do/papeete-market-papeete-en-en-pf-4764557/"
+    },
+    "region": "오세아니아",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "re-saint-denis",
+    "name": "생드니(레위니옹)",
+    "englishName": "Saint-Denis",
+    "countryCode": "RE",
+    "kind": "city",
+    "theme": "coast",
+    "aliases": [
+      "Saint-Denis",
+      "Saint Denis",
+      "Saint-Denis, Reunion",
+      "Saint-Denis, Réunion",
+      "생드니",
+      "레위니옹 생드니"
+    ],
+    "canonicalInput": "생드니(레위니옹)",
+    "motif": "Saint-Denis's Barachois seafront promenade, a row of old dark iron cannons facing the Indian Ocean from a low stone sea wall, with palms",
+    "motifSource": {
+      "title": "Réunion Tourism — Saint-Denis and Le Barachois",
+      "url": "https://www.reunion.fr/organisez/vos-activites/le-tour-de-l-ile-de-la-reunion/les-etapes-incontournables/saint-denis/"
+    },
+    "region": "인도양",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "yt-mamoudzou",
+    "name": "마무주",
+    "englishName": "Mamoudzou",
+    "countryCode": "YT",
+    "kind": "city",
+    "theme": "coast",
+    "aliases": [
+      "Mamoudzou",
+      "마무드주"
+    ],
+    "canonicalInput": "마무주",
+    "motif": "Mamoudzou's waterfront facing the Mayotte lagoon, a local passenger ferry on blue water and low town buildings on the green hillside behind",
+    "motifSource": {
+      "title": "Mayotte Tourism — Mamoudzou visitor infrastructure",
+      "url": "https://www.mayotte-tourisme.com/newsletter/croisieres-une-reprise-dynamique-a-mayotte-pour-la-saison-2025-2026/"
+    },
+    "region": "인도양",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "eh-dakhla",
+    "name": "다클라",
+    "englishName": "Dakhla",
+    "countryCode": "EH",
+    "kind": "city",
+    "theme": "coast",
+    "aliases": [
+      "Dakhla",
+      "Ad-Dakhla",
+      "Ad Dakhla",
+      "Villa Cisneros",
+      "다흘라"
+    ],
+    "canonicalInput": "다클라",
+    "motif": "Dakhla's low coastal town on a sandy peninsula beside a broad turquoise lagoon, with small fishing boats and pale sand",
+    "motifSource": {
+      "title": "Moroccan National Tourist Office — Dakhla",
+      "url": "https://www.visitmorocco.com/en/destinations/dakhla"
+    },
+    "region": "아프리카",
+    "stage": "country-coverage"
+  }
+]

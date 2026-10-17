@@ -1,0 +1,52 @@
+{
+  "id": "mg-antananarivo-landscape",
+  "cityId": "mg-antananarivo",
+  "name": "안타나나리보",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mg-antananarivo-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mg-antananarivo-landscape.json",
+  "originalSha256": "4768b37d647dc19a23a8035c442612299f3101f7e3ac1441f20ca2ee9580a494",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    25,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mg-antananarivo.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 121280,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "f22078d298a4dd66e18810efeb0fbf928585a8857aca2d5bde1beb79046f6c15",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

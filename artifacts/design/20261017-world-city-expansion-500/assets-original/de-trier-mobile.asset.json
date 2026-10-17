@@ -1,0 +1,52 @@
+{
+  "id": "de-trier-mobile",
+  "cityId": "de-trier",
+  "name": "트리어",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/de-trier-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/de-trier-mobile.json",
+  "originalSha256": "5281ef5bc7f9ca391852057dbb00a8edfaa2aa5eb83c634d76a7b02fc3b671e8",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    86,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/de-trier-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 103610,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2614ab8637815f02b4494d392517a11346511c082bb409af0b1b3bf5c5270dbe",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

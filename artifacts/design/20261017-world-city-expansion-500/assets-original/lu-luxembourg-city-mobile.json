@@ -1,0 +1,26 @@
+{
+  "jobId": "lu-luxembourg-city-mobile",
+  "cityId": "lu-luxembourg-city",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Luxembourg City, Luxembourg: the old Luxembourg fortifications above the Grund, with the Alzette valley. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "d4eb4b92f8eb3678835e8fbf009fdb468e1acf24637ae33a09873b012a2c1664",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/lu-luxembourg-city-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-24cd7c19-b5e3-4679-bb0c-ba0eeee038ff.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-24cd7c19-b5e3-4679-bb0c-ba0eeee038ff.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/lu-luxembourg-city-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "0bfb5f7e9a49b653ed5e174d1c39814ea191a54c0cb972ddf390547a719a1d1d",
+  "savedSha256": "0bfb5f7e9a49b653ed5e174d1c39814ea191a54c0cb972ddf390547a719a1d1d",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:05:29.798Z",
+  "toolCallId": "exec-24cd7c19-b5e3-4679-bb0c-ba0eeee038ff",
+  "savedAt": "2026-10-17T06:09:45.295999+00:00"
+}

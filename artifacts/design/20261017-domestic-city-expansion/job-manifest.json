@@ -1,0 +1,2127 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-17",
+  "status": "generated-integrated-and-locally-verified",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "sourcePlan": "artifacts/design/20261017-domestic-city-expansion/city-plan.json",
+  "sourcePlanSha256": "c1613d3c5fdfb7d9be3331cf020174fb346f3600d11740b32eb4d005f28e1d14",
+  "expectedDestinations": 80,
+  "expectedJobs": 160,
+  "pilotCityIds": [
+    "kr-incheon",
+    "kr-suwon",
+    "kr-boseong",
+    "kr-ulleung"
+  ],
+  "pilotJobIds": [
+    "kr-incheon-landscape",
+    "kr-incheon-mobile",
+    "kr-suwon-landscape",
+    "kr-suwon-mobile",
+    "kr-boseong-landscape",
+    "kr-boseong-mobile",
+    "kr-ulleung-landscape",
+    "kr-ulleung-mobile"
+  ],
+  "countsByPhase": {
+    "pilot": 8,
+    "expansion": 152
+  },
+  "countsByVariant": {
+    "landscape": 80,
+    "mobile": 80
+  },
+  "assetVersion": "v5",
+  "saveHelper": "artifacts/tmp/20261017-domestic-city-expansion/save-exact-city-image.py",
+  "savePolicy": "One explicit tool-returned path per job. SHA256-identical original copy, per-job immutable provenance, no image-input references, no latest-file discovery.",
+  "transformPolicy": "Preserve raw original bytes. Remove only wholly transparent right/bottom padding, retain left/top transparency, then aspect-preserving right/bottom anchored fit to exact assetSize and alpha-preserving WebP.",
+  "dispatchPolicy": "Pilot first. Call image_gen independently once per job using callArguments. Keep per-job result paths and timestamps; no shared mutable progress file.",
+  "jobs": [
+    {
+      "id": "kr-incheon-landscape",
+      "cityId": "kr-incheon",
+      "variant": "landscape",
+      "phase": "pilot",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-incheon-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-incheon-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-incheon.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-incheon-mobile",
+      "cityId": "kr-incheon",
+      "variant": "mobile",
+      "phase": "pilot",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-incheon-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-incheon-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-incheon-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-suwon-landscape",
+      "cityId": "kr-suwon",
+      "variant": "landscape",
+      "phase": "pilot",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-suwon-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-suwon-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-suwon.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-suwon-mobile",
+      "cityId": "kr-suwon",
+      "variant": "mobile",
+      "phase": "pilot",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-suwon-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-suwon-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-suwon-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-boseong-landscape",
+      "cityId": "kr-boseong",
+      "variant": "landscape",
+      "phase": "pilot",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-boseong-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-boseong-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-boseong.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-boseong-mobile",
+      "cityId": "kr-boseong",
+      "variant": "mobile",
+      "phase": "pilot",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-boseong-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-boseong-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-boseong-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-ulleung-landscape",
+      "cityId": "kr-ulleung",
+      "variant": "landscape",
+      "phase": "pilot",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-ulleung-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-ulleung-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-ulleung.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-ulleung-mobile",
+      "cityId": "kr-ulleung",
+      "variant": "mobile",
+      "phase": "pilot",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-ulleung-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-ulleung-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-ulleung-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-daegu-landscape",
+      "cityId": "kr-daegu",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-daegu-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-daegu-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-daegu.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-daegu-mobile",
+      "cityId": "kr-daegu",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-daegu-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-daegu-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-daegu-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-daejeon-landscape",
+      "cityId": "kr-daejeon",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-daejeon-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-daejeon-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-daejeon.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-daejeon-mobile",
+      "cityId": "kr-daejeon",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-daejeon-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-daejeon-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-daejeon-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-ulsan-landscape",
+      "cityId": "kr-ulsan",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-ulsan-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-ulsan-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-ulsan.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-ulsan-mobile",
+      "cityId": "kr-ulsan",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-ulsan-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-ulsan-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-ulsan-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-sejong-landscape",
+      "cityId": "kr-sejong",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-sejong-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-sejong-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-sejong.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-sejong-mobile",
+      "cityId": "kr-sejong",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-sejong-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-sejong-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-sejong-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-jeonnam-gwangju-landscape",
+      "cityId": "kr-jeonnam-gwangju",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jeonnam-gwangju-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jeonnam-gwangju-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-jeonnam-gwangju-mobile",
+      "cityId": "kr-jeonnam-gwangju",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jeonnam-gwangju-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jeonnam-gwangju-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-seongnam-landscape",
+      "cityId": "kr-seongnam",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-seongnam-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-seongnam-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-seongnam.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-seongnam-mobile",
+      "cityId": "kr-seongnam",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-seongnam-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-seongnam-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-seongnam-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-uijeongbu-landscape",
+      "cityId": "kr-uijeongbu",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-uijeongbu-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-uijeongbu-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-uijeongbu.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-uijeongbu-mobile",
+      "cityId": "kr-uijeongbu",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-uijeongbu-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-uijeongbu-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-uijeongbu-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-anyang-landscape",
+      "cityId": "kr-anyang",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-anyang-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-anyang-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-anyang.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-anyang-mobile",
+      "cityId": "kr-anyang",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-anyang-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-anyang-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-anyang-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-bucheon-landscape",
+      "cityId": "kr-bucheon",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-bucheon-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-bucheon-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-bucheon.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-bucheon-mobile",
+      "cityId": "kr-bucheon",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-bucheon-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-bucheon-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-bucheon-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-gwangmyeong-landscape",
+      "cityId": "kr-gwangmyeong",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwangmyeong-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwangmyeong-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwangmyeong.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-gwangmyeong-mobile",
+      "cityId": "kr-gwangmyeong",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwangmyeong-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwangmyeong-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwangmyeong-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-pyeongtaek-landscape",
+      "cityId": "kr-pyeongtaek",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-pyeongtaek-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-pyeongtaek-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-pyeongtaek.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-pyeongtaek-mobile",
+      "cityId": "kr-pyeongtaek",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-pyeongtaek-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-pyeongtaek-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-pyeongtaek-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-dongducheon-landscape",
+      "cityId": "kr-dongducheon",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-dongducheon-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-dongducheon-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-dongducheon.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-dongducheon-mobile",
+      "cityId": "kr-dongducheon",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-dongducheon-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-dongducheon-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-dongducheon-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-ansan-landscape",
+      "cityId": "kr-ansan",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-ansan-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-ansan-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-ansan.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-ansan-mobile",
+      "cityId": "kr-ansan",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-ansan-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-ansan-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-ansan-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-goyang-landscape",
+      "cityId": "kr-goyang",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-goyang-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-goyang-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-goyang.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-goyang-mobile",
+      "cityId": "kr-goyang",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-goyang-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-goyang-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-goyang-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-gwacheon-landscape",
+      "cityId": "kr-gwacheon",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwacheon-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwacheon-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwacheon.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-gwacheon-mobile",
+      "cityId": "kr-gwacheon",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwacheon-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwacheon-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwacheon-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-guri-landscape",
+      "cityId": "kr-guri",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-guri-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-guri-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-guri.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-guri-mobile",
+      "cityId": "kr-guri",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-guri-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-guri-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-guri-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-namyangju-landscape",
+      "cityId": "kr-namyangju",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-namyangju-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-namyangju-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-namyangju.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-namyangju-mobile",
+      "cityId": "kr-namyangju",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-namyangju-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-namyangju-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-namyangju-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-osan-landscape",
+      "cityId": "kr-osan",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-osan-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-osan-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-osan.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-osan-mobile",
+      "cityId": "kr-osan",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-osan-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-osan-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-osan-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-siheung-landscape",
+      "cityId": "kr-siheung",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-siheung-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-siheung-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-siheung.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-siheung-mobile",
+      "cityId": "kr-siheung",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-siheung-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-siheung-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-siheung-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-gunpo-landscape",
+      "cityId": "kr-gunpo",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gunpo-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gunpo-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gunpo.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-gunpo-mobile",
+      "cityId": "kr-gunpo",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gunpo-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gunpo-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gunpo-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-uiwang-landscape",
+      "cityId": "kr-uiwang",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-uiwang-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-uiwang-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-uiwang.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-uiwang-mobile",
+      "cityId": "kr-uiwang",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-uiwang-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-uiwang-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-uiwang-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-hanam-landscape",
+      "cityId": "kr-hanam",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-hanam-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-hanam-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-hanam.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-hanam-mobile",
+      "cityId": "kr-hanam",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-hanam-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-hanam-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-hanam-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-yongin-landscape",
+      "cityId": "kr-yongin",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yongin-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yongin-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yongin.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-yongin-mobile",
+      "cityId": "kr-yongin",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yongin-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yongin-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yongin-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-paju-landscape",
+      "cityId": "kr-paju",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-paju-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-paju-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-paju.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-paju-mobile",
+      "cityId": "kr-paju",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-paju-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-paju-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-paju-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-icheon-landscape",
+      "cityId": "kr-icheon",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-icheon-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-icheon-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-icheon.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-icheon-mobile",
+      "cityId": "kr-icheon",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-icheon-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-icheon-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-icheon-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-anseong-landscape",
+      "cityId": "kr-anseong",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-anseong-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-anseong-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-anseong.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-anseong-mobile",
+      "cityId": "kr-anseong",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-anseong-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-anseong-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-anseong-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-gimpo-landscape",
+      "cityId": "kr-gimpo",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimpo-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimpo-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gimpo.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-gimpo-mobile",
+      "cityId": "kr-gimpo",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimpo-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimpo-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gimpo-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-hwaseong-landscape",
+      "cityId": "kr-hwaseong",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-hwaseong-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-hwaseong-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-hwaseong.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-hwaseong-mobile",
+      "cityId": "kr-hwaseong",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-hwaseong-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-hwaseong-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-hwaseong-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-gwangju-gyeonggi-landscape",
+      "cityId": "kr-gwangju-gyeonggi",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwangju-gyeonggi-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwangju-gyeonggi-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-gwangju-gyeonggi-mobile",
+      "cityId": "kr-gwangju-gyeonggi",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwangju-gyeonggi-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwangju-gyeonggi-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-yangju-landscape",
+      "cityId": "kr-yangju",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yangju-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yangju-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yangju.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-yangju-mobile",
+      "cityId": "kr-yangju",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yangju-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yangju-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yangju-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-pocheon-landscape",
+      "cityId": "kr-pocheon",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-pocheon-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-pocheon-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-pocheon.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-pocheon-mobile",
+      "cityId": "kr-pocheon",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-pocheon-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-pocheon-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-pocheon-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-yeoju-landscape",
+      "cityId": "kr-yeoju",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeoju-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeoju-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yeoju.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-yeoju-mobile",
+      "cityId": "kr-yeoju",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeoju-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeoju-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yeoju-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-wonju-landscape",
+      "cityId": "kr-wonju",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-wonju-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-wonju-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-wonju.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-wonju-mobile",
+      "cityId": "kr-wonju",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-wonju-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-wonju-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-wonju-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-donghae-landscape",
+      "cityId": "kr-donghae",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-donghae-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-donghae-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-donghae.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-donghae-mobile",
+      "cityId": "kr-donghae",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-donghae-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-donghae-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-donghae-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-taebaek-landscape",
+      "cityId": "kr-taebaek",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-taebaek-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-taebaek-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-taebaek.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-taebaek-mobile",
+      "cityId": "kr-taebaek",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-taebaek-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-taebaek-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-taebaek-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-samcheok-landscape",
+      "cityId": "kr-samcheok",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-samcheok-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-samcheok-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-samcheok.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-samcheok-mobile",
+      "cityId": "kr-samcheok",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-samcheok-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-samcheok-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-samcheok-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-cheongju-landscape",
+      "cityId": "kr-cheongju",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-cheongju-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-cheongju-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-cheongju.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-cheongju-mobile",
+      "cityId": "kr-cheongju",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-cheongju-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-cheongju-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-cheongju-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-chungju-landscape",
+      "cityId": "kr-chungju",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-chungju-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-chungju-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-chungju.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-chungju-mobile",
+      "cityId": "kr-chungju",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-chungju-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-chungju-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-chungju-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-jecheon-landscape",
+      "cityId": "kr-jecheon",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jecheon-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jecheon-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jecheon.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-jecheon-mobile",
+      "cityId": "kr-jecheon",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jecheon-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jecheon-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jecheon-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-cheonan-landscape",
+      "cityId": "kr-cheonan",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-cheonan-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-cheonan-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-cheonan.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-cheonan-mobile",
+      "cityId": "kr-cheonan",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-cheonan-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-cheonan-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-cheonan-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-gongju-landscape",
+      "cityId": "kr-gongju",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gongju-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gongju-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gongju.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-gongju-mobile",
+      "cityId": "kr-gongju",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gongju-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gongju-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gongju-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-boryeong-landscape",
+      "cityId": "kr-boryeong",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-boryeong-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-boryeong-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-boryeong.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-boryeong-mobile",
+      "cityId": "kr-boryeong",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-boryeong-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-boryeong-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-boryeong-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-asan-landscape",
+      "cityId": "kr-asan",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-asan-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-asan-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-asan.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-asan-mobile",
+      "cityId": "kr-asan",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-asan-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-asan-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-asan-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-seosan-landscape",
+      "cityId": "kr-seosan",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-seosan-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-seosan-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-seosan.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-seosan-mobile",
+      "cityId": "kr-seosan",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-seosan-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-seosan-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-seosan-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-nonsan-landscape",
+      "cityId": "kr-nonsan",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-nonsan-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-nonsan-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-nonsan.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-nonsan-mobile",
+      "cityId": "kr-nonsan",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-nonsan-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-nonsan-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-nonsan-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-gyeryong-landscape",
+      "cityId": "kr-gyeryong",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gyeryong-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gyeryong-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gyeryong.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-gyeryong-mobile",
+      "cityId": "kr-gyeryong",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gyeryong-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gyeryong-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gyeryong-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-dangjin-landscape",
+      "cityId": "kr-dangjin",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-dangjin-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-dangjin-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-dangjin.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-dangjin-mobile",
+      "cityId": "kr-dangjin",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-dangjin-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-dangjin-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-dangjin-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-gunsan-landscape",
+      "cityId": "kr-gunsan",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gunsan-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gunsan-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gunsan.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-gunsan-mobile",
+      "cityId": "kr-gunsan",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gunsan-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gunsan-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gunsan-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-iksan-landscape",
+      "cityId": "kr-iksan",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-iksan-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-iksan-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-iksan.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-iksan-mobile",
+      "cityId": "kr-iksan",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-iksan-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-iksan-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-iksan-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-jeongeup-landscape",
+      "cityId": "kr-jeongeup",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jeongeup-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jeongeup-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jeongeup.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-jeongeup-mobile",
+      "cityId": "kr-jeongeup",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jeongeup-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jeongeup-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jeongeup-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-namwon-landscape",
+      "cityId": "kr-namwon",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-namwon-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-namwon-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-namwon.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-namwon-mobile",
+      "cityId": "kr-namwon",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-namwon-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-namwon-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-namwon-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-gimje-landscape",
+      "cityId": "kr-gimje",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimje-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimje-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gimje.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-gimje-mobile",
+      "cityId": "kr-gimje",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimje-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimje-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gimje-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-mokpo-landscape",
+      "cityId": "kr-mokpo",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-mokpo-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-mokpo-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-mokpo.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-mokpo-mobile",
+      "cityId": "kr-mokpo",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-mokpo-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-mokpo-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-mokpo-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-naju-landscape",
+      "cityId": "kr-naju",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-naju-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-naju-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-naju.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-naju-mobile",
+      "cityId": "kr-naju",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-naju-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-naju-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-naju-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-gwangyang-landscape",
+      "cityId": "kr-gwangyang",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwangyang-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwangyang-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwangyang.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-gwangyang-mobile",
+      "cityId": "kr-gwangyang",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwangyang-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwangyang-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwangyang-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-pohang-landscape",
+      "cityId": "kr-pohang",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-pohang-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-pohang-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-pohang.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-pohang-mobile",
+      "cityId": "kr-pohang",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-pohang-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-pohang-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-pohang-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-gimcheon-landscape",
+      "cityId": "kr-gimcheon",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimcheon-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimcheon-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gimcheon.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-gimcheon-mobile",
+      "cityId": "kr-gimcheon",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimcheon-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimcheon-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gimcheon-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-andong-landscape",
+      "cityId": "kr-andong",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-andong-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-andong-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-andong.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-andong-mobile",
+      "cityId": "kr-andong",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-andong-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-andong-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-andong-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-gumi-landscape",
+      "cityId": "kr-gumi",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gumi-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gumi-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gumi.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-gumi-mobile",
+      "cityId": "kr-gumi",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gumi-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gumi-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gumi-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-yeongju-landscape",
+      "cityId": "kr-yeongju",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeongju-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeongju-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yeongju.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-yeongju-mobile",
+      "cityId": "kr-yeongju",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeongju-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeongju-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yeongju-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-yeongcheon-landscape",
+      "cityId": "kr-yeongcheon",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeongcheon-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeongcheon-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yeongcheon.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-yeongcheon-mobile",
+      "cityId": "kr-yeongcheon",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeongcheon-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeongcheon-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yeongcheon-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-sangju-landscape",
+      "cityId": "kr-sangju",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-sangju-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-sangju-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-sangju.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-sangju-mobile",
+      "cityId": "kr-sangju",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-sangju-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-sangju-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-sangju-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-mungyeong-landscape",
+      "cityId": "kr-mungyeong",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-mungyeong-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-mungyeong-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-mungyeong.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-mungyeong-mobile",
+      "cityId": "kr-mungyeong",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-mungyeong-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-mungyeong-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-mungyeong-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-gyeongsan-landscape",
+      "cityId": "kr-gyeongsan",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gyeongsan-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gyeongsan-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gyeongsan.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-gyeongsan-mobile",
+      "cityId": "kr-gyeongsan",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gyeongsan-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gyeongsan-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gyeongsan-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-changwon-landscape",
+      "cityId": "kr-changwon",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-changwon-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-changwon-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-changwon.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-changwon-mobile",
+      "cityId": "kr-changwon",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-changwon-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-changwon-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-changwon-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-jinju-landscape",
+      "cityId": "kr-jinju",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jinju-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jinju-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jinju.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-jinju-mobile",
+      "cityId": "kr-jinju",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jinju-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jinju-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jinju-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-sacheon-landscape",
+      "cityId": "kr-sacheon",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-sacheon-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-sacheon-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-sacheon.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-sacheon-mobile",
+      "cityId": "kr-sacheon",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-sacheon-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-sacheon-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-sacheon-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-gimhae-landscape",
+      "cityId": "kr-gimhae",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimhae-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimhae-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gimhae.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-gimhae-mobile",
+      "cityId": "kr-gimhae",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimhae-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimhae-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gimhae-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-miryang-landscape",
+      "cityId": "kr-miryang",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-miryang-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-miryang-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-miryang.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-miryang-mobile",
+      "cityId": "kr-miryang",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-miryang-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-miryang-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-miryang-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-yangsan-landscape",
+      "cityId": "kr-yangsan",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yangsan-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yangsan-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yangsan.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-yangsan-mobile",
+      "cityId": "kr-yangsan",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yangsan-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yangsan-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yangsan-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-jeju-city-landscape",
+      "cityId": "kr-jeju-city",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jeju-city-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jeju-city-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jeju-city.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-jeju-city-mobile",
+      "cityId": "kr-jeju-city",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jeju-city-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jeju-city-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jeju-city-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-seogwipo-landscape",
+      "cityId": "kr-seogwipo",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-seogwipo-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-seogwipo-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-seogwipo.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-seogwipo-mobile",
+      "cityId": "kr-seogwipo",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-seogwipo-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-seogwipo-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-seogwipo-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-gwangju-landscape",
+      "cityId": "kr-gwangju",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwangju-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwangju-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwangju.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-gwangju-mobile",
+      "cityId": "kr-gwangju",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwangju-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwangju-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwangju-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-pyeongchang-landscape",
+      "cityId": "kr-pyeongchang",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-pyeongchang-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-pyeongchang-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-pyeongchang.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-pyeongchang-mobile",
+      "cityId": "kr-pyeongchang",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-pyeongchang-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-pyeongchang-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-pyeongchang-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-danyang-landscape",
+      "cityId": "kr-danyang",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-danyang-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-danyang-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-danyang.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-danyang-mobile",
+      "cityId": "kr-danyang",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-danyang-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-danyang-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-danyang-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    },
+    {
+      "id": "kr-damyang-landscape",
+      "cityId": "kr-damyang",
+      "variant": "landscape",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-damyang-landscape.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-damyang-landscape.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-damyang.webp",
+      "assetSize": [
+        800,
+        480
+      ]
+    },
+    {
+      "id": "kr-damyang-mobile",
+      "cityId": "kr-damyang",
+      "variant": "mobile",
+      "phase": "expansion",
+      "jobFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-damyang-mobile.json",
+      "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-damyang-mobile.prompt.txt",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-damyang-mobile.webp",
+      "assetSize": [
+        480,
+        600
+      ]
+    }
+  ],
+  "planningSnapshot": "artifacts/design/20261017-domestic-city-expansion/planning-snapshot.json",
+  "planningSnapshotSha256": "4ec2df592893a530444b7937735515c6a4774f680c234b5141a54a18ee88e2a5",
+  "completedJobs": 160,
+  "newAssetBytes": 15401632,
+  "qaReport": "artifacts/qa/20261017-domestic-city-expansion/README.md"
+}

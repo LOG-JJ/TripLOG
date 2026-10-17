@@ -1,0 +1,52 @@
+{
+  "id": "it-lucca-mobile",
+  "cityId": "it-lucca",
+  "name": "루카",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-lucca-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-lucca-mobile.json",
+  "originalSha256": "45bd7e282d46d9926920e478cc5d6d597579fe5484cd06f7adb9767d19a33049",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/it-lucca-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 96730,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "639e12b960d87b45f30ba62a277e08ad1b893bcdca33815dd7a6ea0d6708a4f3",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

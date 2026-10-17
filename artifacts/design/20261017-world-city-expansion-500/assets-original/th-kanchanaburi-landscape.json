@@ -1,0 +1,26 @@
+{
+  "jobId": "th-kanchanaburi-landscape",
+  "cityId": "th-kanchanaburi",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Kanchanaburi, Thailand: the complete Bridge over the River Kwai seen from a slightly elevated distant three-quarter viewpoint. Show the recognizable black steel truss sequence with SEVERAL rounded arch-top truss spans and the straight rectangular replacement trusses near the middle, supported by concrete piers, as one compact whole crossing the calm river between TWO clearly visible green riverbanks. Both ends of the bridge must visibly land on solid ground well inside the image. Keep the complete bridge, including both abutments and the last railings, between 15 and 85 percent of the canvas width. Show open supporting river water and foliage to its right; no bridge or railing may continue outside the frame. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "5d7342ab1b9dbdb98b01f7155beb839c0b5c69470fb521c1db9befb0ba201e35",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/th-kanchanaburi-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-26cc7260-a5ce-45a7-bdf6-6659c53712f9.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-26cc7260-a5ce-45a7-bdf6-6659c53712f9.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/th-kanchanaburi-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "943626264fadc9afab0f7659c9b84fe235de01b20fa99b876af3cfe0929145fc",
+  "savedSha256": "943626264fadc9afab0f7659c9b84fe235de01b20fa99b876af3cfe0929145fc",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:12:43Z",
+  "toolCallId": "exec-26cc7260-a5ce-45a7-bdf6-6659c53712f9",
+  "savedAt": "2026-10-17T07:16:02.958556+00:00"
+}

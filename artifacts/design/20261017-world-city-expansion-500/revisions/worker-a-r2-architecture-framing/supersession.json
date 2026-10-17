@@ -1,0 +1,398 @@
+[
+  {
+    "jobId": "ad-andorra-la-vella-landscape",
+    "reason": "Remove an unrequested stream/bridge and make both variants depict the compact stone manor with attached small corner turrets.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ad-andorra-la-vella-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/ad-andorra-la-vella-landscape/jobs/ad-andorra-la-vella-landscape.json",
+        "sha256": "1fe0dd7d5a0c584a961ec8122af2eb5f9bdfdc4b285fb5a7b0563d04d816b419"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ad-andorra-la-vella-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/ad-andorra-la-vella-landscape/jobs/ad-andorra-la-vella-landscape.prompt.txt",
+        "sha256": "470d0cf2bc9e17e64dde6466c9a280133d047986b02863032405789e6601546d"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ad-andorra-la-vella-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/ad-andorra-la-vella-landscape/originals/ad-andorra-la-vella-landscape.png",
+        "sha256": "a3e2d2403557b5758d596e54761310605febf1b1ab973c9154885e9108447d9c"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ad-andorra-la-vella-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/ad-andorra-la-vella-landscape/originals/ad-andorra-la-vella-landscape.json",
+        "sha256": "b4c8109cde2140d7f96d75f34337f072f110bd767cc354003d8f79bfcd8a0aa1"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ad-andorra-la-vella-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/ad-andorra-la-vella-landscape/originals/ad-andorra-la-vella-landscape.asset.json",
+        "sha256": "26ff6108775ae618bd37f13a573ad91466bc311108d16d8d48d3f8196d00df6f"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/ad-andorra-la-vella.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/ad-andorra-la-vella-landscape/runtime/ad-andorra-la-vella.webp",
+        "sha256": "22df64f2b8060083d6ce65ce438010f9d682129531cd5a16570cdcde8d2d7483"
+      }
+    ]
+  },
+  {
+    "jobId": "ad-andorra-la-vella-mobile",
+    "reason": "Remove an unrequested stream/bridge and make both variants depict the compact stone manor with attached small corner turrets.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ad-andorra-la-vella-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/ad-andorra-la-vella-mobile/jobs/ad-andorra-la-vella-mobile.json",
+        "sha256": "4e59c5228a9440211c2c6af25fbd23498010b4089bed1427c4259b4a95993d98"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ad-andorra-la-vella-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/ad-andorra-la-vella-mobile/jobs/ad-andorra-la-vella-mobile.prompt.txt",
+        "sha256": "bc4028d00eeb7072993b7597056c3741d5bab362d89fee3750198408de2f2477"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ad-andorra-la-vella-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/ad-andorra-la-vella-mobile/originals/ad-andorra-la-vella-mobile.png",
+        "sha256": "dbba5329156b72244b93ee9111017fe1afde7f035279ce04a13967f8f92aba63"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ad-andorra-la-vella-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/ad-andorra-la-vella-mobile/originals/ad-andorra-la-vella-mobile.json",
+        "sha256": "eed6f43ca81a215b4db8dbea5ab9e6b7198bdfb1e1b512989f28d16337988de9"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ad-andorra-la-vella-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/ad-andorra-la-vella-mobile/originals/ad-andorra-la-vella-mobile.asset.json",
+        "sha256": "6395432dd37558b0f72dce536384b9f47772431b91b7d8ff15ac26d64b7ab682"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/ad-andorra-la-vella-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/ad-andorra-la-vella-mobile/runtime/ad-andorra-la-vella-mobile.webp",
+        "sha256": "e10a9beb313fc22172ec679576be2b011935c0001d5132b44841a40c7356eaf6"
+      }
+    ]
+  },
+  {
+    "jobId": "dm-roseau-landscape",
+    "reason": "Both variants need the actual museum facade: ochre-peach walls, red shutters, white balcony and clock pediment, replacing inconsistent generic stone mansions.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/dm-roseau-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/dm-roseau-landscape/jobs/dm-roseau-landscape.json",
+        "sha256": "8ff263a510e8856d29d3f18a9f7b3e44c111dec63614157f19b1744c75747ae8"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/dm-roseau-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/dm-roseau-landscape/jobs/dm-roseau-landscape.prompt.txt",
+        "sha256": "2bdd749efb8eded3d472d03661928aec54cb77e37a335527f5eb3a0638eb419f"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/dm-roseau-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/dm-roseau-landscape/originals/dm-roseau-landscape.png",
+        "sha256": "353e3f5bee5ce42fbb91b420650247a64f3e508467f2c983f211adace14fbea6"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/dm-roseau-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/dm-roseau-landscape/originals/dm-roseau-landscape.json",
+        "sha256": "35e51c09023796e14bd56d74273d1888224dde1423f09c4413a8101b0f485fea"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/dm-roseau-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/dm-roseau-landscape/originals/dm-roseau-landscape.asset.json",
+        "sha256": "04c5c1d633b85424bc1a4ea70a9390c4efa065cf15f9309a69d0504c6a0066e1"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/dm-roseau.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/dm-roseau-landscape/runtime/dm-roseau.webp",
+        "sha256": "b70736f69de3593f2233ea2056593528f08bb1dc817f05051d5a3d68266075a1"
+      }
+    ]
+  },
+  {
+    "jobId": "dm-roseau-mobile",
+    "reason": "Both variants need the actual museum facade: ochre-peach walls, red shutters, white balcony and clock pediment, replacing inconsistent generic stone mansions.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/dm-roseau-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/dm-roseau-mobile/jobs/dm-roseau-mobile.json",
+        "sha256": "9f8dd4459ee99d8734805da28b258ae4d367cf5512f5f94833a5f1746d97287d"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/dm-roseau-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/dm-roseau-mobile/jobs/dm-roseau-mobile.prompt.txt",
+        "sha256": "1739e018f0e281b454e11cdd064186703ddcf8c9f616ca257ef56cd343ef5824"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/dm-roseau-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/dm-roseau-mobile/originals/dm-roseau-mobile.png",
+        "sha256": "82f5da2042569721e6887b4b458865f771fa443998d4f77859687b7534255508"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/dm-roseau-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/dm-roseau-mobile/originals/dm-roseau-mobile.json",
+        "sha256": "6da33fc583f3c3beebee75989f765cba42ce53df0490f4e02e1fd171b107fb48"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/dm-roseau-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/dm-roseau-mobile/originals/dm-roseau-mobile.asset.json",
+        "sha256": "aa671ab26cc9e5da56d284b554fd4dcfee01e06d114838cfdb440b79ba635cef"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/dm-roseau-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/dm-roseau-mobile/runtime/dm-roseau-mobile.webp",
+        "sha256": "b07bdf531cc0fd122a748197bc45f2d20d9241e2f59452655da195ebc650daf3"
+      }
+    ]
+  },
+  {
+    "jobId": "cg-brazzaville-landscape",
+    "reason": "Replace the generic Gothic church with the basilica's distinctive steep curved green roof, massive pointed arches and modern folded spire.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cg-brazzaville-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/cg-brazzaville-landscape/jobs/cg-brazzaville-landscape.json",
+        "sha256": "c86486b69fc7e24ee2e480f34a13364c1a7cc0289ed27161350d7b3a44435651"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cg-brazzaville-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/cg-brazzaville-landscape/jobs/cg-brazzaville-landscape.prompt.txt",
+        "sha256": "0c88c0b6561998219fd7d50fe136ab9194380120a918f04352c0b88fa1340d0e"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cg-brazzaville-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/cg-brazzaville-landscape/originals/cg-brazzaville-landscape.png",
+        "sha256": "39b510f2f9c96450db6c2b48bc5ef1c42bf081ef9a5eea388637b50eb814bedf"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cg-brazzaville-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/cg-brazzaville-landscape/originals/cg-brazzaville-landscape.json",
+        "sha256": "1ae06dbd3aed5e8024cc8ae33e2d4bf48eda31e8aef6b628a4c27df0d50f17a1"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cg-brazzaville-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/cg-brazzaville-landscape/originals/cg-brazzaville-landscape.asset.json",
+        "sha256": "1be71145bf6759aa95af8c21e53785ce74cee00086f3a37f65fe3da01966a249"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/cg-brazzaville.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/cg-brazzaville-landscape/runtime/cg-brazzaville.webp",
+        "sha256": "4d52e21743cb4b049bb4517ab29ec0cb0e71170ceaf1efbb163e3b239e9f8c29"
+      }
+    ]
+  },
+  {
+    "jobId": "cg-brazzaville-mobile",
+    "reason": "Replace the generic Gothic church with the basilica's distinctive steep curved green roof, massive pointed arches and modern folded spire.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cg-brazzaville-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/cg-brazzaville-mobile/jobs/cg-brazzaville-mobile.json",
+        "sha256": "29b95aa176a8689dce7c5fce08b4fad0e9f06bb9fee3b66a0582bc51b8aa9e12"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cg-brazzaville-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/cg-brazzaville-mobile/jobs/cg-brazzaville-mobile.prompt.txt",
+        "sha256": "357d4aef1ce4c74e381496740659c9343544e4dfdc26b0c3a84dbc1167bd7b8a"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cg-brazzaville-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/cg-brazzaville-mobile/originals/cg-brazzaville-mobile.png",
+        "sha256": "99cddeb0bbf66c59490dffa6b562e2077180e7cbb70a5889372c52f41e6a260a"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cg-brazzaville-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/cg-brazzaville-mobile/originals/cg-brazzaville-mobile.json",
+        "sha256": "e40dc1034e734dcbbe31005c0b80270d12e2bb84222ffb613a0a297c2d8a10c3"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cg-brazzaville-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/cg-brazzaville-mobile/originals/cg-brazzaville-mobile.asset.json",
+        "sha256": "b11ef8ac9c0d05ee0dcba83d1518372298ee510c98d86d04dc2922edd03deb23"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/cg-brazzaville-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/cg-brazzaville-mobile/runtime/cg-brazzaville-mobile.webp",
+        "sha256": "769749885542bb3dd3bef665a2cd328af59a89e8b05651224b47c3e2cfd7b4dd"
+      }
+    ]
+  },
+  {
+    "jobId": "it-palermo-landscape",
+    "reason": "The identifying outline is too close to or cut by the frame; add explicit clearance around its complete silhouette.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/it-palermo-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/it-palermo-landscape/jobs/it-palermo-landscape.json",
+        "sha256": "86f84f676fae8f895cbbaaf1390cf04954816951d740e9f6d7b4153893073979"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/it-palermo-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/it-palermo-landscape/jobs/it-palermo-landscape.prompt.txt",
+        "sha256": "e06e778e1c23ac7d268045db30affbeecff3c33b2446ee622c56296892393f9e"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-palermo-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/it-palermo-landscape/originals/it-palermo-landscape.png",
+        "sha256": "33a26a250c44b294fcb0db83bcaa99db1a65747e0843b5436e9a9315837a47a3"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-palermo-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/it-palermo-landscape/originals/it-palermo-landscape.json",
+        "sha256": "ac2ef4005c8e737529b091884c72a2c5cf54c70be05ea2b740e0314aa4ed2fd2"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-palermo-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/it-palermo-landscape/originals/it-palermo-landscape.asset.json",
+        "sha256": "9caf49ff644f16eb79218ef6c76e6d19d4d1178df9383d624b7210f8297745da"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/it-palermo.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/it-palermo-landscape/runtime/it-palermo.webp",
+        "sha256": "d7a8fa0ee258e490e8b4eacaef4dfa710397045df6f04830f3cfcebaffdcc652"
+      }
+    ]
+  },
+  {
+    "jobId": "de-bamberg-landscape",
+    "reason": "The identifying outline is too close to or cut by the frame; add explicit clearance around its complete silhouette.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/de-bamberg-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/de-bamberg-landscape/jobs/de-bamberg-landscape.json",
+        "sha256": "fb3547bfdce6b57325c7bf6bd7cff930135d031d72a3afecb1354c18f9975388"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/de-bamberg-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/de-bamberg-landscape/jobs/de-bamberg-landscape.prompt.txt",
+        "sha256": "ff869c1e48675ff217f9bce65423c18794faf21900cf8d140be20687478e69d3"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/de-bamberg-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/de-bamberg-landscape/originals/de-bamberg-landscape.png",
+        "sha256": "f33b112a7373d838cd67dea03ad716cefb90fdf87f4061a7c39031dd93466c62"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/de-bamberg-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/de-bamberg-landscape/originals/de-bamberg-landscape.json",
+        "sha256": "c7e6cc3db9930f1cbbf9a1be52737ca680feca4aae16c37df06617bef7b03742"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/de-bamberg-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/de-bamberg-landscape/originals/de-bamberg-landscape.asset.json",
+        "sha256": "259432dda1fc1fd55215206561c19412c2ca95651643ae5c06b2b86ca249fc52"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/de-bamberg.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/de-bamberg-landscape/runtime/de-bamberg.webp",
+        "sha256": "3340a1622d1fc82fa76af920285a3fae867fa986957f95d08c8ca56c1addb314"
+      }
+    ]
+  },
+  {
+    "jobId": "es-segovia-landscape",
+    "reason": "The identifying outline is too close to or cut by the frame; add explicit clearance around its complete silhouette.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/es-segovia-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/es-segovia-landscape/jobs/es-segovia-landscape.json",
+        "sha256": "99eb1ce6081e736c47f055b4c20a0efcffc9972e8c85492a4d247a1392983f3e"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/es-segovia-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/es-segovia-landscape/jobs/es-segovia-landscape.prompt.txt",
+        "sha256": "a4d70d0f8873f1af83aeb759886776099c68d6f3cf4a019d0630a911b414eb49"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-segovia-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/es-segovia-landscape/originals/es-segovia-landscape.png",
+        "sha256": "305934f40bce318c9f1e89c1f76bdff4bcc4eb4f25e8bb1c6999aaab27a759a3"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-segovia-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/es-segovia-landscape/originals/es-segovia-landscape.json",
+        "sha256": "49e90c0658fed537ce15754f57fe2a0e0924181d152b3a69a0d1eb215737d09c"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-segovia-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/es-segovia-landscape/originals/es-segovia-landscape.asset.json",
+        "sha256": "681fcbd96f97a746fc47e16e9486063e60dc1956e84f9c07ce0308aff7027356"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/es-segovia.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/es-segovia-landscape/runtime/es-segovia.webp",
+        "sha256": "b7676d0fabd452187e3153ab282f2ef848e132bc57b129d6e4f98c226da32848"
+      }
+    ]
+  },
+  {
+    "jobId": "es-segovia-mobile",
+    "reason": "The identifying outline is too close to or cut by the frame; add explicit clearance around its complete silhouette.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/es-segovia-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/es-segovia-mobile/jobs/es-segovia-mobile.json",
+        "sha256": "76adbad1092f2b7dd6c1541b2768b21a1cbe515c6910e169a81dfef21c8ef3b4"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/es-segovia-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/es-segovia-mobile/jobs/es-segovia-mobile.prompt.txt",
+        "sha256": "490d5d1e9390376faa3f9a362125ed3c95a3fe8ad405b6a9c8265aac84e2d306"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-segovia-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/es-segovia-mobile/originals/es-segovia-mobile.png",
+        "sha256": "37f52b6509f16f03e2dcd09e69a70fb8670ceec891732dd1c68019ca2811dde7"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-segovia-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/es-segovia-mobile/originals/es-segovia-mobile.json",
+        "sha256": "50372ccd52e30be37c2595cf07461918d970c64eed2e0982b2efec5a4c547059"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-segovia-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/es-segovia-mobile/originals/es-segovia-mobile.asset.json",
+        "sha256": "56f0770f81223c4be389c378da491ebbbbb5fc2cb86f63d7ddb1ec72f2e61e97"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/es-segovia-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/es-segovia-mobile/runtime/es-segovia-mobile.webp",
+        "sha256": "eeb403b8f797bfbcfd4b7a83b8e8e0d8d7d4ba59ac14f140c8bfc013eb62cccb"
+      }
+    ]
+  },
+  {
+    "jobId": "jp-himeji-mobile",
+    "reason": "The identifying outline is too close to or cut by the frame; add explicit clearance around its complete silhouette.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/jp-himeji-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/jp-himeji-mobile/jobs/jp-himeji-mobile.json",
+        "sha256": "ad9c9fdf38aa61c3e6b5b68976e874985bcf6015490414f7d70867b589e1e5fd"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/jp-himeji-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/jp-himeji-mobile/jobs/jp-himeji-mobile.prompt.txt",
+        "sha256": "2d65f7748066c483991a95e5b497b3d18173e125e66b44d7ab4a9cec08bff12b"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/jp-himeji-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/jp-himeji-mobile/originals/jp-himeji-mobile.png",
+        "sha256": "e539bbccce4df9d08085d6789601b788985afda6bfafcf2d3207250bcb648604"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/jp-himeji-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/jp-himeji-mobile/originals/jp-himeji-mobile.json",
+        "sha256": "7c4e49d0ab65a9742eaf75c54e669e1af5cde93308ffcf0990ab60df59dbd91f"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/jp-himeji-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/jp-himeji-mobile/originals/jp-himeji-mobile.asset.json",
+        "sha256": "89e2aea069cb253128753f424a5b8dcca0eef9fa5c325b1a3dd94364c6c1b378"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/jp-himeji-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/jp-himeji-mobile/runtime/jp-himeji-mobile.webp",
+        "sha256": "786d9617e10b327e9722eff1fe8d30701ae64d73e62bd1c8c38c313822c6c23d"
+      }
+    ]
+  }
+]

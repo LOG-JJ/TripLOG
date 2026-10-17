@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-jeju-city-landscape",
+  "cityId": "kr-jeju-city",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Jeju City, South Korea: Yongyeon Gorge's dark volcanic rock banks and the short narrow Yongyeon pedestrian suspension bridge spanning the blue-green inlet, with slender suspension cables and trees along the rocky banks. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. Keep the bridge at the modest scale of a short pedestrian crossing over the gorge, not a large highway bridge.",
+  "promptSha256": "6e6a1c3c504655d3586b7c4a5ff710614198f32cba34fdce302be49d530d442f",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jeju-city-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-f8b4e0a3-6419-40d1-905b-98435c650adf.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-f8b4e0a3-6419-40d1-905b-98435c650adf.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jeju-city-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "1b9e6aa4e796f85238dc13f3f1c32b44b7251bce4202483906f6186462b0d6f3",
+  "savedSha256": "1b9e6aa4e796f85238dc13f3f1c32b44b7251bce4202483906f6186462b0d6f3",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:28:26Z",
+  "toolCallId": "exec-f8b4e0a3-6419-40d1-905b-98435c650adf",
+  "savedAt": "2026-10-17T05:29:19.543579+00:00"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "kr-uiwang-landscape",
+  "cityId": "kr-uiwang",
+  "name": "의왕",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-uiwang-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-uiwang-landscape.json",
+  "originalSha256": "a87f4a8fa6e3726fb06d880f0597f6fe6ec2494e5559a5329504897f401d9267",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-uiwang.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 116996,
+  "assetSha256": "2d84ab2b562739e53910663809140f06ba22b7f38d05595d768ee0aa5b172a77",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,29 @@
+{
+  "reason": "Technical crop/refit of nearly transparent right/bottom padding exposed by rendered-header QA; original PNG and prompt unchanged.",
+  "records": [
+    {
+      "id": "gf-cayenne-mobile",
+      "beforeGaps": [
+        0,
+        6
+      ],
+      "afterGaps": [
+        0,
+        0
+      ],
+      "assetSha256": "aa1061212c6877c538da59ba4230e34cfa07b15a96b05f6a3a4cc85c959bb2ba",
+      "archived": [
+        {
+          "original": "src\\assets\\trip-scenes\\cities\\v6\\gf-cayenne-mobile.webp",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r2\\gf-cayenne-mobile.webp",
+          "sha256": "8ce372a95c8e2b680dc60452a5cd9b3447d0a204ad21d2d4191c39f20e7c57c7"
+        },
+        {
+          "original": "artifacts\\design\\20261017-world-city-expansion-500\\assets-original\\gf-cayenne-mobile.asset.json",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r2\\gf-cayenne-mobile.asset.json",
+          "sha256": "5c1665cbef82b703bc671dad1c36d634234ade30029596b70540f38d9efde61e"
+        }
+      ]
+    }
+  ]
+}

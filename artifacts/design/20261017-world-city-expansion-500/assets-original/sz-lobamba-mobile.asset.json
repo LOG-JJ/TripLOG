@@ -1,0 +1,52 @@
+{
+  "id": "sz-lobamba-mobile",
+  "cityId": "sz-lobamba",
+  "name": "로밤바",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sz-lobamba-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sz-lobamba-mobile.json",
+  "originalSha256": "9c7f2f739c6b24697c01f6066af6463a72aa2d8d534900e543f3e09286f0d427",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sz-lobamba-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 104622,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "35b56aa302b7809e894b607dc984e79dacd2610f8fce70ce0c72028f40c691cc",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

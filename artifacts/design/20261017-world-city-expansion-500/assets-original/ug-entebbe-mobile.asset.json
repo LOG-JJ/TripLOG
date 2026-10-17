@@ -1,0 +1,52 @@
+{
+  "id": "ug-entebbe-mobile",
+  "cityId": "ug-entebbe",
+  "name": "엔테베",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ug-entebbe-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ug-entebbe-mobile.json",
+  "originalSha256": "ddf7ad65768d6a5e200fa7895883a24d4d08dbc691219a01561c22b18968e3b4",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    30,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ug-entebbe-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 126996,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "30d51d205423d1a650e3023fc40fae0542e66244aad6059faa59be0bddbd6d6d",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,3444 @@
+{
+  "passed": true,
+  "primaryCases": 380,
+  "additionalCases": 108,
+  "totalCases": 488,
+  "allDomesticDestinations": 95,
+  "primaryWidths": [
+    320,
+    390,
+    599,
+    1440
+  ],
+  "additionalWidths": [
+    320,
+    390,
+    599,
+    600,
+    613,
+    767,
+    768,
+    1000,
+    1440
+  ],
+  "maxPaintedBottomGap": 1.4098958333333371,
+  "maxPaintedRightGap": 1.4098958333333371,
+  "cases": [
+    {
+      "city": "kr-seoul",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v2/kr-seoul-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-busan",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v2/kr-busan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-daegu",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-daegu-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-incheon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-incheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-daejeon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-daejeon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-ulsan",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-ulsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sejong",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sejong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeonnam-gwangju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-suwon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-suwon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seongnam",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seongnam-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-uijeongbu",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-uijeongbu-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-anyang",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-anyang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-bucheon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-bucheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangmyeong",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangmyeong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-pyeongtaek",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-pyeongtaek-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-dongducheon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-dongducheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-ansan",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-ansan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-goyang",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-goyang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwacheon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwacheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-guri",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-guri-mobile.webp",
+      "paintedBottomGap": 0.2537434895833144,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-namyangju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-namyangju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-osan",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-osan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-siheung",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-siheung-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gunpo",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gunpo-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-uiwang",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-uiwang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-hanam",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-hanam-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yongin",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yongin-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-paju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-paju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-icheon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-icheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-anseong",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-anseong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gimpo",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gimpo-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-hwaseong",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-hwaseong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangju-gyeonggi",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yangju-mobile.webp",
+      "paintedBottomGap": 1.2687174479166856,
+      "paintedRightGap": 1.2687174479166856
+    },
+    {
+      "city": "kr-pocheon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-pocheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yeoju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yeoju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-chuncheon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v2/kr-chuncheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-wonju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-wonju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gangneung",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v2/kr-gangneung-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-donghae",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-donghae-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-taebaek",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-taebaek-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sokcho",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v2/kr-sokcho-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-samcheok",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-samcheok-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-cheongju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-cheongju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-chungju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-chungju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jecheon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jecheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-cheonan",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-cheonan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gongju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gongju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-boryeong",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-boryeong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-asan",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-asan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seosan",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seosan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-nonsan",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-nonsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gyeryong",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gyeryong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-dangjin",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-dangjin-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeonju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v2/kr-jeonju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gunsan",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gunsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-iksan",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-iksan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeongeup",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeongeup-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-namwon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-namwon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gimje",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gimje-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-mokpo",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-mokpo-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yeosu",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v2/kr-yeosu-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-suncheon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v2/kr-suncheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-naju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-naju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangyang",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangyang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-pohang",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-pohang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gyeongju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v2/kr-gyeongju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gimcheon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gimcheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-andong",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-andong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gumi",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gumi-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yeongju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yeongju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yeongcheon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yeongcheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sangju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sangju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-mungyeong",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-mungyeong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gyeongsan",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gyeongsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-changwon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-changwon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jinju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jinju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-tongyeong",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v2/kr-tongyeong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sacheon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sacheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gimhae",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gimhae-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-miryang",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-miryang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-geoje",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v2/kr-geoje-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangsan",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yangsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeju-city",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeju-city-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seogwipo",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seogwipo-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gapyeong",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v2/kr-gapyeong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangyang",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v2/kr-yangyang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-namhae",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v2/kr-namhae-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v2/kr-jeju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-pyeongchang",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-pyeongchang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-danyang",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-danyang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-damyang",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-damyang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-boseong",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-boseong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-ulleung",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-ulleung-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seoul",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v2/kr-seoul-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-busan",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v2/kr-busan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-daegu",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-daegu-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-incheon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-incheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-daejeon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-daejeon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-ulsan",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-ulsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sejong",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sejong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeonnam-gwangju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-suwon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-suwon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seongnam",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seongnam-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-uijeongbu",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-uijeongbu-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-anyang",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-anyang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-bucheon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-bucheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangmyeong",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangmyeong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-pyeongtaek",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-pyeongtaek-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-dongducheon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-dongducheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-ansan",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-ansan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-goyang",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-goyang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwacheon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwacheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-guri",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-guri-mobile.webp",
+      "paintedBottomGap": 0.2819791666666447,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-namyangju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-namyangju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-osan",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-osan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-siheung",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-siheung-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gunpo",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gunpo-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-uiwang",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-uiwang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-hanam",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-hanam-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yongin",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yongin-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-paju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-paju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-icheon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-icheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-anseong",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-anseong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gimpo",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gimpo-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-hwaseong",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-hwaseong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangju-gyeonggi",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yangju-mobile.webp",
+      "paintedBottomGap": 1.4098958333333371,
+      "paintedRightGap": 1.4098958333333371
+    },
+    {
+      "city": "kr-pocheon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-pocheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yeoju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yeoju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-chuncheon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v2/kr-chuncheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-wonju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-wonju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gangneung",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v2/kr-gangneung-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-donghae",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-donghae-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-taebaek",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-taebaek-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sokcho",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v2/kr-sokcho-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-samcheok",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-samcheok-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-cheongju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-cheongju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-chungju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-chungju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jecheon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jecheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-cheonan",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-cheonan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gongju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gongju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-boryeong",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-boryeong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-asan",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-asan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seosan",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seosan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-nonsan",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-nonsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gyeryong",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gyeryong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-dangjin",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-dangjin-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeonju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v2/kr-jeonju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gunsan",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gunsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-iksan",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-iksan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeongeup",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeongeup-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-namwon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-namwon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gimje",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gimje-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-mokpo",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-mokpo-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yeosu",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v2/kr-yeosu-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-suncheon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v2/kr-suncheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-naju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-naju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangyang",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangyang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-pohang",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-pohang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gyeongju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v2/kr-gyeongju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gimcheon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gimcheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-andong",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-andong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gumi",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gumi-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yeongju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yeongju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yeongcheon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yeongcheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sangju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sangju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-mungyeong",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-mungyeong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gyeongsan",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gyeongsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-changwon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-changwon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jinju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jinju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-tongyeong",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v2/kr-tongyeong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sacheon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sacheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gimhae",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gimhae-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-miryang",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-miryang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-geoje",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v2/kr-geoje-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangsan",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yangsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeju-city",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeju-city-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seogwipo",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seogwipo-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gapyeong",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v2/kr-gapyeong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangyang",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v2/kr-yangyang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-namhae",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v2/kr-namhae-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v2/kr-jeju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-pyeongchang",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-pyeongchang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-danyang",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-danyang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-damyang",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-damyang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-boseong",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-boseong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-ulleung",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-ulleung-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seoul",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v2/kr-seoul-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-busan",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v2/kr-busan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-daegu",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-daegu-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-incheon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-incheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-daejeon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-daejeon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-ulsan",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-ulsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sejong",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sejong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeonnam-gwangju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-suwon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-suwon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seongnam",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seongnam-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-uijeongbu",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-uijeongbu-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-anyang",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-anyang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-bucheon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-bucheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangmyeong",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangmyeong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-pyeongtaek",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-pyeongtaek-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-dongducheon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-dongducheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-ansan",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-ansan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-goyang",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-goyang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwacheon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwacheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-guri",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-guri-mobile.webp",
+      "paintedBottomGap": 0.2819791666666447,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-namyangju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-namyangju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-osan",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-osan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-siheung",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-siheung-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gunpo",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gunpo-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-uiwang",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-uiwang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-hanam",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-hanam-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yongin",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yongin-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-paju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-paju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-icheon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-icheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-anseong",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-anseong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gimpo",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gimpo-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-hwaseong",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-hwaseong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangju-gyeonggi",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yangju-mobile.webp",
+      "paintedBottomGap": 1.4098958333333371,
+      "paintedRightGap": 1.4098958333332803
+    },
+    {
+      "city": "kr-pocheon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-pocheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yeoju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yeoju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-chuncheon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v2/kr-chuncheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-wonju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-wonju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gangneung",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v2/kr-gangneung-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-donghae",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-donghae-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-taebaek",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-taebaek-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sokcho",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v2/kr-sokcho-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-samcheok",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-samcheok-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-cheongju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-cheongju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-chungju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-chungju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jecheon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jecheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-cheonan",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-cheonan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gongju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gongju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-boryeong",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-boryeong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-asan",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-asan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seosan",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seosan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-nonsan",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-nonsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gyeryong",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gyeryong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-dangjin",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-dangjin-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeonju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v2/kr-jeonju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gunsan",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gunsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-iksan",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-iksan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeongeup",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeongeup-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-namwon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-namwon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gimje",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gimje-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-mokpo",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-mokpo-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yeosu",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v2/kr-yeosu-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-suncheon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v2/kr-suncheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-naju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-naju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangyang",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangyang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-pohang",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-pohang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gyeongju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v2/kr-gyeongju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gimcheon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gimcheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-andong",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-andong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gumi",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gumi-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yeongju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yeongju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yeongcheon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yeongcheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sangju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sangju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-mungyeong",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-mungyeong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gyeongsan",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gyeongsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-changwon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-changwon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jinju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jinju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-tongyeong",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v2/kr-tongyeong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sacheon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sacheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gimhae",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gimhae-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-miryang",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-miryang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-geoje",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v2/kr-geoje-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangsan",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yangsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeju-city",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeju-city-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seogwipo",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seogwipo-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gapyeong",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v2/kr-gapyeong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangyang",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v2/kr-yangyang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-namhae",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v2/kr-namhae-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v2/kr-jeju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-pyeongchang",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-pyeongchang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-danyang",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-danyang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-damyang",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-damyang-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-boseong",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-boseong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-ulleung",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-ulleung-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seoul",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v2/kr-seoul.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-busan",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v2/kr-busan.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-daegu",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-daegu.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-incheon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-incheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-daejeon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-daejeon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-ulsan",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-ulsan.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sejong",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sejong.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeonnam-gwangju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-suwon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-suwon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seongnam",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seongnam.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-uijeongbu",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-uijeongbu.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-anyang",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-anyang.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-bucheon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-bucheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangmyeong",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangmyeong.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-pyeongtaek",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-pyeongtaek.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-dongducheon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-dongducheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-ansan",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-ansan.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-goyang",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-goyang.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwacheon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwacheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-guri",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-guri.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-namyangju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-namyangju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-osan",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-osan.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-siheung",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-siheung.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gunpo",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gunpo.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-uiwang",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-uiwang.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-hanam",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-hanam.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yongin",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yongin.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-paju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-paju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-icheon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-icheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-anseong",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-anseong.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gimpo",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gimpo.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-hwaseong",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-hwaseong.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangju-gyeonggi",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yangju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-pocheon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-pocheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yeoju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yeoju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-chuncheon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v2/kr-chuncheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-wonju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-wonju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gangneung",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v2/kr-gangneung.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-donghae",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-donghae.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-taebaek",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-taebaek.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sokcho",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v2/kr-sokcho.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-samcheok",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-samcheok.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-cheongju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-cheongju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-chungju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-chungju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jecheon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jecheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-cheonan",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-cheonan.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gongju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gongju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-boryeong",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-boryeong.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-asan",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-asan.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seosan",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seosan.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-nonsan",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-nonsan.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gyeryong",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gyeryong.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-dangjin",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-dangjin.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeonju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v2/kr-jeonju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gunsan",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gunsan.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-iksan",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-iksan.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeongeup",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeongeup.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-namwon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-namwon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gimje",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gimje.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-mokpo",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-mokpo.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yeosu",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v2/kr-yeosu.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-suncheon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v2/kr-suncheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-naju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-naju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangyang",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangyang.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-pohang",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-pohang.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gyeongju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v2/kr-gyeongju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gimcheon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gimcheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-andong",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-andong.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gumi",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gumi.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yeongju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yeongju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yeongcheon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yeongcheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sangju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sangju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-mungyeong",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-mungyeong.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gyeongsan",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gyeongsan.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-changwon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-changwon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jinju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jinju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-tongyeong",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v2/kr-tongyeong.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sacheon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sacheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gimhae",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gimhae.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-miryang",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-miryang.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-geoje",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v2/kr-geoje.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangsan",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yangsan.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeju-city",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeju-city.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seogwipo",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seogwipo.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gapyeong",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v2/kr-gapyeong.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangyang",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v2/kr-yangyang.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-namhae",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v2/kr-namhae.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v2/kr-jeju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-pyeongchang",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-pyeongchang.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-danyang",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-danyang.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-damyang",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-damyang.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-boseong",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-boseong.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-ulleung",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-ulleung.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-incheon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-incheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sejong",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sejong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeonnam-gwangju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwacheon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwacheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-icheon",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-icheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangju-gyeonggi",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-wonju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-wonju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-dangjin",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-dangjin-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-naju",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-naju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangsan",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yangsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeju-city",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeju-city-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seogwipo",
+      "width": 320,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seogwipo-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-incheon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-incheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sejong",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sejong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeonnam-gwangju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwacheon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwacheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-icheon",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-icheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangju-gyeonggi",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-wonju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-wonju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-dangjin",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-dangjin-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-naju",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-naju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangsan",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yangsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeju-city",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeju-city-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seogwipo",
+      "width": 390,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seogwipo-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-incheon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-incheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sejong",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sejong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeonnam-gwangju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwacheon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwacheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-icheon",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-icheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangju-gyeonggi",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-wonju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-wonju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-dangjin",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-dangjin-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-naju",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-naju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangsan",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yangsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeju-city",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeju-city-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seogwipo",
+      "width": 599,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seogwipo-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-incheon",
+      "width": 600,
+      "src": "src/assets/trip-scenes/cities/v5/kr-incheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sejong",
+      "width": 600,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sejong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeonnam-gwangju",
+      "width": 600,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwacheon",
+      "width": 600,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwacheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-icheon",
+      "width": 600,
+      "src": "src/assets/trip-scenes/cities/v5/kr-icheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangju-gyeonggi",
+      "width": 600,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-wonju",
+      "width": 600,
+      "src": "src/assets/trip-scenes/cities/v5/kr-wonju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-dangjin",
+      "width": 600,
+      "src": "src/assets/trip-scenes/cities/v5/kr-dangjin-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-naju",
+      "width": 600,
+      "src": "src/assets/trip-scenes/cities/v5/kr-naju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangsan",
+      "width": 600,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yangsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeju-city",
+      "width": 600,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeju-city-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seogwipo",
+      "width": 600,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seogwipo-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-incheon",
+      "width": 613,
+      "src": "src/assets/trip-scenes/cities/v5/kr-incheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sejong",
+      "width": 613,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sejong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeonnam-gwangju",
+      "width": 613,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwacheon",
+      "width": 613,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwacheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-icheon",
+      "width": 613,
+      "src": "src/assets/trip-scenes/cities/v5/kr-icheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangju-gyeonggi",
+      "width": 613,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-wonju",
+      "width": 613,
+      "src": "src/assets/trip-scenes/cities/v5/kr-wonju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-dangjin",
+      "width": 613,
+      "src": "src/assets/trip-scenes/cities/v5/kr-dangjin-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-naju",
+      "width": 613,
+      "src": "src/assets/trip-scenes/cities/v5/kr-naju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangsan",
+      "width": 613,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yangsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeju-city",
+      "width": 613,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeju-city-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seogwipo",
+      "width": 613,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seogwipo-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-incheon",
+      "width": 767,
+      "src": "src/assets/trip-scenes/cities/v5/kr-incheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sejong",
+      "width": 767,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sejong-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeonnam-gwangju",
+      "width": 767,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwacheon",
+      "width": 767,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwacheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-icheon",
+      "width": 767,
+      "src": "src/assets/trip-scenes/cities/v5/kr-icheon-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangju-gyeonggi",
+      "width": 767,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-wonju",
+      "width": 767,
+      "src": "src/assets/trip-scenes/cities/v5/kr-wonju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-dangjin",
+      "width": 767,
+      "src": "src/assets/trip-scenes/cities/v5/kr-dangjin-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-naju",
+      "width": 767,
+      "src": "src/assets/trip-scenes/cities/v5/kr-naju-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangsan",
+      "width": 767,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yangsan-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeju-city",
+      "width": 767,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeju-city-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seogwipo",
+      "width": 767,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seogwipo-mobile.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-incheon",
+      "width": 768,
+      "src": "src/assets/trip-scenes/cities/v5/kr-incheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sejong",
+      "width": 768,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sejong.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeonnam-gwangju",
+      "width": 768,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwacheon",
+      "width": 768,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwacheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-icheon",
+      "width": 768,
+      "src": "src/assets/trip-scenes/cities/v5/kr-icheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangju-gyeonggi",
+      "width": 768,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-wonju",
+      "width": 768,
+      "src": "src/assets/trip-scenes/cities/v5/kr-wonju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-dangjin",
+      "width": 768,
+      "src": "src/assets/trip-scenes/cities/v5/kr-dangjin.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-naju",
+      "width": 768,
+      "src": "src/assets/trip-scenes/cities/v5/kr-naju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangsan",
+      "width": 768,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yangsan.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeju-city",
+      "width": 768,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeju-city.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seogwipo",
+      "width": 768,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seogwipo.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-incheon",
+      "width": 1000,
+      "src": "src/assets/trip-scenes/cities/v5/kr-incheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sejong",
+      "width": 1000,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sejong.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeonnam-gwangju",
+      "width": 1000,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwacheon",
+      "width": 1000,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwacheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-icheon",
+      "width": 1000,
+      "src": "src/assets/trip-scenes/cities/v5/kr-icheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangju-gyeonggi",
+      "width": 1000,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-wonju",
+      "width": 1000,
+      "src": "src/assets/trip-scenes/cities/v5/kr-wonju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-dangjin",
+      "width": 1000,
+      "src": "src/assets/trip-scenes/cities/v5/kr-dangjin.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-naju",
+      "width": 1000,
+      "src": "src/assets/trip-scenes/cities/v5/kr-naju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangsan",
+      "width": 1000,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yangsan.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeju-city",
+      "width": 1000,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeju-city.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seogwipo",
+      "width": 1000,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seogwipo.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-incheon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-incheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-sejong",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-sejong.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeonnam-gwangju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwacheon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwacheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-icheon",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-icheon.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-gwangju-gyeonggi",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-wonju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-wonju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-dangjin",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-dangjin.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-naju",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-naju.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-yangsan",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-yangsan.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-jeju-city",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-jeju-city.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    },
+    {
+      "city": "kr-seogwipo",
+      "width": 1440,
+      "src": "src/assets/trip-scenes/cities/v5/kr-seogwipo.webp",
+      "paintedBottomGap": 0,
+      "paintedRightGap": 0
+    }
+  ]
+}

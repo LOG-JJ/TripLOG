@@ -1,0 +1,26 @@
+{
+  "jobId": "mk-ohrid-landscape",
+  "cityId": "mk-ohrid",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Ohrid, North Macedonia: the cliffside Church of Saint John at Kaneo, with Lake Ohrid. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "3dcb5ab216ffacf06cf88cb511e0863a3b76af401228adddff89f656a0c7bd1c",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mk-ohrid-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-abb0f772-27b0-4eae-b544-40dc35a6d166.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-abb0f772-27b0-4eae-b544-40dc35a6d166.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/mk-ohrid-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "24d802c7876aa8f05e0d265de02cffb6f9ba513ed7156c23c70e166033880270",
+  "savedSha256": "24d802c7876aa8f05e0d265de02cffb6f9ba513ed7156c23c70e166033880270",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:06:10.439Z",
+  "toolCallId": "exec-abb0f772-27b0-4eae-b544-40dc35a6d166",
+  "savedAt": "2026-10-17T06:07:29.175015+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "jobId": "af-bamiyan-landscape",
+  "cityId": "af-bamiyan",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Bamiyan, Afghanistan: the tall empty Buddha niches in the Bamiyan cliff, with the dry valley and low earthen buildings; show the surviving niches, not reconstructed standing statues. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "82fa5fb8dc56efa1721ffd967a55c4b67eda1741e7f2324ac4d337fbd43e9ae0",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/af-bamiyan-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-790dbfa8-55a6-4348-9e0d-e9381cc0ba86.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-790dbfa8-55a6-4348-9e0d-e9381cc0ba86.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/af-bamiyan-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "3c99139705cc2dfe779ca1fab6a9472c787b4352be7c8ee8508499c786dccb5b",
+  "savedSha256": "3c99139705cc2dfe779ca1fab6a9472c787b4352be7c8ee8508499c786dccb5b",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:33:59.359Z",
+  "toolCallId": "exec-790dbfa8-55a6-4348-9e0d-e9381cc0ba86",
+  "savedAt": "2026-10-17T06:38:01.485875+00:00"
+}

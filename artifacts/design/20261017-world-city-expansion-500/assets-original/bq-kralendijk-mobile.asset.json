@@ -1,0 +1,52 @@
+{
+  "id": "bq-kralendijk-mobile",
+  "cityId": "bq-kralendijk",
+  "name": "크랄렌데이크",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bq-kralendijk-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bq-kralendijk-mobile.json",
+  "originalSha256": "992c9cf97970f9004c9f8bf341061bae6d55235d07182acbf495961a8918fc95",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    20,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bq-kralendijk-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 84784,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "7df44db568614efd6944ee7242feb30d87b12271466d54c16678019e067f2598",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

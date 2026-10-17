@@ -1,0 +1,52 @@
+{
+  "id": "ci-grand-bassam-mobile",
+  "cityId": "ci-grand-bassam",
+  "name": "그랑바삼",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ci-grand-bassam-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ci-grand-bassam-mobile.json",
+  "originalSha256": "e3bc27ef4702d2d642dc65def70f160e5fd939cc375b28c0e3d1a2ae8ab840c8",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ci-grand-bassam-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 117632,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "60189d6d176460f56b2306e1ae7ddddfe251a3944e5f75b0397479b599e90271",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

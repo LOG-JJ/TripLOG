@@ -1,0 +1,146 @@
+[
+  {
+    "jobId": "pr-san-juan-landscape",
+    "reason": "The fortress wall is cut at the right edge; pull back to retain the whole visible fort silhouette and all sentry boxes.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/pr-san-juan-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/pr-san-juan-landscape/jobs/pr-san-juan-landscape.json",
+        "sha256": "336f5762dd755e101f4a41c12eae7e86770380818abecbf0dd96098201f73b87"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/pr-san-juan-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/pr-san-juan-landscape/jobs/pr-san-juan-landscape.prompt.txt",
+        "sha256": "77e984297fd6c37bff798e5c7795008385cb757a9a2f0d2b4b6023ac643e5ce5"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/pr-san-juan-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/pr-san-juan-landscape/originals/pr-san-juan-landscape.png",
+        "sha256": "c23a0b6ad4e6f5a9726d3d813e4725f3df2973510613d0d26c92a08a9c8478d7"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/pr-san-juan-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/pr-san-juan-landscape/originals/pr-san-juan-landscape.json",
+        "sha256": "9dec5fa40b2d0526ab604085653c295173e396d3efae13eda56d1e61ada76725"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/pr-san-juan-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/pr-san-juan-landscape/originals/pr-san-juan-landscape.asset.json",
+        "sha256": "8b134a189226fa1468840116329d18513a8c4eb94c04338614b57a4af7b78227"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/pr-san-juan.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/pr-san-juan-landscape/runtime/pr-san-juan.webp",
+        "sha256": "2d49b46933ed735beeca4c1b70b59b0137f5b56510142281e2b37f9c894acc30"
+      }
+    ]
+  },
+  {
+    "jobId": "pr-san-juan-mobile",
+    "reason": "The fortress wall is cut at the right edge; pull back to retain the whole visible fort silhouette and all sentry boxes.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/pr-san-juan-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/pr-san-juan-mobile/jobs/pr-san-juan-mobile.json",
+        "sha256": "47e11cb9418d3e34da4f8edd0426c3fdb7e71573d69208137a83423718540f06"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/pr-san-juan-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/pr-san-juan-mobile/jobs/pr-san-juan-mobile.prompt.txt",
+        "sha256": "fa848c17e985d9c1917428c0ad4b0f35600c4ae5a6ab863abba723923c99f5e3"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/pr-san-juan-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/pr-san-juan-mobile/originals/pr-san-juan-mobile.png",
+        "sha256": "4a8ba5e568d76a2e6e3a034f789069c44fe588a4bfa0cfc1df9cbdf2eac55739"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/pr-san-juan-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/pr-san-juan-mobile/originals/pr-san-juan-mobile.json",
+        "sha256": "e9383e655f30a6ab54a385c74bf9307bf775ba2223a42232d84fdaf3d0fcea85"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/pr-san-juan-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/pr-san-juan-mobile/originals/pr-san-juan-mobile.asset.json",
+        "sha256": "841c2de9d1fb8ce9c375df8963d4ed19fc32cfd0a882dcdd22e8010a51101f6f"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/pr-san-juan-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/pr-san-juan-mobile/runtime/pr-san-juan-mobile.webp",
+        "sha256": "6b17a72095874d75f276fded11ea775333d7fdbe532637c01da2a8ce17e0e4a0"
+      }
+    ]
+  },
+  {
+    "jobId": "tc-cockburn-town-landscape",
+    "reason": "Make both variants match the actual museum: compact white walls, red metal hipped roof without dormers, green shutters and shaded wraparound veranda beside Front Street.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/tc-cockburn-town-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/tc-cockburn-town-landscape/jobs/tc-cockburn-town-landscape.json",
+        "sha256": "3b66fcd1cfdcc20ca4cccccd8aecc0886241d9d0311e34347787572e42713447"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/tc-cockburn-town-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/tc-cockburn-town-landscape/jobs/tc-cockburn-town-landscape.prompt.txt",
+        "sha256": "862eb1ab70e8c44b6f0ac1694e43296565fc97d167bd8d4f7efcd1bce61e915e"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/tc-cockburn-town-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/tc-cockburn-town-landscape/originals/tc-cockburn-town-landscape.png",
+        "sha256": "c29f2e51d5e958134dfd276e5761f78bd9cd0d74062535fac49fe3ead671fffa"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/tc-cockburn-town-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/tc-cockburn-town-landscape/originals/tc-cockburn-town-landscape.json",
+        "sha256": "d053eb22d47d21d2e1d89645f437fc3ff804b6c7e67767c74abf92efc7622351"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/tc-cockburn-town-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/tc-cockburn-town-landscape/originals/tc-cockburn-town-landscape.asset.json",
+        "sha256": "4a9e592f74447e5f57b141515e5b12c4ad6eee04ae6c39f63026978508df3fce"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/tc-cockburn-town.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/tc-cockburn-town-landscape/runtime/tc-cockburn-town.webp",
+        "sha256": "69770ef6fba8797e4b0b289abc1c63b9ff58135dc40d35225680f5e882aa5b77"
+      }
+    ]
+  },
+  {
+    "jobId": "tc-cockburn-town-mobile",
+    "reason": "Make both variants match the actual museum: compact white walls, red metal hipped roof without dormers, green shutters and shaded wraparound veranda beside Front Street.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/tc-cockburn-town-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/tc-cockburn-town-mobile/jobs/tc-cockburn-town-mobile.json",
+        "sha256": "7b960da4ecf0162b01dbe38aff3a022168872019ab2e4950bc710bee273b30b8"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/tc-cockburn-town-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/tc-cockburn-town-mobile/jobs/tc-cockburn-town-mobile.prompt.txt",
+        "sha256": "c66e709ade0731145873a3a4829b9bb5e5432ce1eac453ebc2bc9b3b8612e616"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/tc-cockburn-town-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/tc-cockburn-town-mobile/originals/tc-cockburn-town-mobile.png",
+        "sha256": "edc03f80795b875d4fab1e4c5aa01605a91b978bee80dee36a3ea3fd542bf438"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/tc-cockburn-town-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/tc-cockburn-town-mobile/originals/tc-cockburn-town-mobile.json",
+        "sha256": "96dbfd0b0834371c1e2934db9e1f89e9e594b12510ab9849543aa4ec0d121472"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/tc-cockburn-town-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/tc-cockburn-town-mobile/originals/tc-cockburn-town-mobile.asset.json",
+        "sha256": "f40cb34eb64c48b0606bef81cf8c25d0fd7543636e931192a49917af2efe32cb"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/tc-cockburn-town-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-coverage-r2-framing-and-museum/tc-cockburn-town-mobile/runtime/tc-cockburn-town-mobile.webp",
+        "sha256": "10a44bc7db33f3a2862582ab7243049f743d25b4d9fddbbbb716baf3ac9e84b3"
+      }
+    ]
+  }
+]

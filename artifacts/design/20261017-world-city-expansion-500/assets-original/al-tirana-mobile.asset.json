@@ -1,0 +1,52 @@
+{
+  "id": "al-tirana-mobile",
+  "cityId": "al-tirana",
+  "name": "티라나",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/al-tirana-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/al-tirana-mobile.json",
+  "originalSha256": "e77a15d6e8bfea66093e546effb63d8c6f38f49d34efaf043663c7e705e57092",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    48,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/al-tirana-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 111088,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "d282eaee843ae4e7c4a5a3ce5e083961e26a4b8aed55dca8404aefaac64f4a39",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

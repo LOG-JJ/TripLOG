@@ -1,0 +1,51 @@
+{
+  "id": "kr-boseong-landscape",
+  "cityId": "kr-boseong",
+  "name": "보성",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "기존 군과 섬 보존",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-boseong-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-boseong-landscape.json",
+  "originalSha256": "2d9188f7198bdc39bf3a15b542201efcd0c9bb742245b77eacd3d5365ac8d4d0",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-boseong.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 110218,
+  "assetSha256": "f60f779b7a7f4b31776b497d6430c37dc1c3d2d967587f8086d8efbee31256ec",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "fr-reims-mobile",
+  "cityId": "fr-reims",
+  "cityName": "랭스",
+  "englishName": "Reims",
+  "countryCode": "FR",
+  "kind": "city",
+  "group": "Europe",
+  "variant": "mobile",
+  "phase": "core-500",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone destination illustration of Reims, France: Reims Cathedral's twin Gothic facade towers, with the cathedral forecourt. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "9d668b6ca11b5a30ab98c38e71494e656ced46edc8a421a0177a942f7ced321f",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/jobs/fr-reims-mobile.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/fr-reims-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/fr-reims-mobile.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/fr-reims-mobile.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v6/fr-reims-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "source": {
+    "title": "UNESCO World Heritage Centre — Reims",
+    "url": "https://whc.unesco.org/en/list/601/"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone destination illustration of Reims, France: Reims Cathedral's twin Gothic facade towers, with the cathedral forecourt. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+    "transparent_background": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "kr-gimhae-landscape",
+  "cityId": "kr-gimhae",
+  "name": "김해",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경남",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gimhae-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gimhae-landscape.json",
+  "originalSha256": "b7a910714fb1ccdf4d53d1cfeac8d0972d21a624b8f4d5c98f689dfa4f8b6f7f",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gimhae.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 97820,
+  "assetSha256": "5233d7cbe21dde48380e279dc4f6cc7849e2781fcf9ca44bf6bb632e030e3720",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

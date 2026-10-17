@@ -1,0 +1,52 @@
+{
+  "id": "et-lalibela-landscape",
+  "cityId": "et-lalibela",
+  "name": "랄리벨라",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/et-lalibela-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/et-lalibela-landscape.json",
+  "originalSha256": "34d089a14e100f6855215a6576b20bd9c47f51b2168373b8430732e1dc497ff8",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/et-lalibela.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 135212,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "7c136c93b154b31d6fe10912ec9cf50664f8f6833ec24b69dc42f36b9150a664",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

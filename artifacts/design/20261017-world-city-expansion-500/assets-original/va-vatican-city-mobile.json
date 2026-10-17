@@ -1,0 +1,26 @@
+{
+  "jobId": "va-vatican-city-mobile",
+  "cityId": "va-vatican-city",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Vatican City, Vatican City: the dome of Saint Peter's Basilica, with the curved colonnades of Saint Peter's Square. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Composition correction: Use a distant view that fits the WHOLE Saint Peters Basilica facade and dome into the portrait canvas. The top cross must be at least 12 percent below the upper edge, and the complete right facade must end before 85 percent of canvas width. The square and foreground shrubs may reach the lower and right edges. Do not crop or hide the right basilica wing.",
+  "promptSha256": "3eef750e5c42171e9d21ced4896a9add5f72abd7ef89dbe802fe9ce13897450b",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/va-vatican-city-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-f252dd23-792a-45e8-b523-682392434bbc.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-f252dd23-792a-45e8-b523-682392434bbc.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "4b1c47421567cd45f623ef23b8128984264a2b3e3b7e059ee1d6f577bdef0a33",
+  "savedSha256": "4b1c47421567cd45f623ef23b8128984264a2b3e3b7e059ee1d6f577bdef0a33",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:21:04Z",
+  "toolCallId": "exec-f252dd23-792a-45e8-b523-682392434bbc",
+  "savedAt": "2026-10-17T07:24:33.516107+00:00"
+}

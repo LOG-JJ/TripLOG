@@ -1,0 +1,39 @@
+{
+  "id": "fr-arles-landscape",
+  "cityId": "fr-arles",
+  "cityName": "아를",
+  "englishName": "Arles",
+  "countryCode": "FR",
+  "kind": "city",
+  "group": "Europe",
+  "variant": "landscape",
+  "phase": "core-500",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone destination illustration of Arles, France: the oval Roman amphitheatre of Arles, with its tiers of stone arches. Use a slightly elevated distant view showing the whole compact oval amphitheatre as a closed ellipse, including its far-right curve and entire left and right perimeter. Its building must end at least 8 percent of canvas width before the right edge. Keep the arena surrounded by visible stone paving. Only shrubs and the ground may touch the frame. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "89e2530c6ea7d79bef46c923fc688cb65b16acdb125fdb680390655a1cff3337",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/jobs/fr-arles-landscape.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/fr-arles-landscape.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/fr-arles-landscape.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/fr-arles-landscape.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v6/fr-arles.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "source": {
+    "title": "UNESCO World Heritage Centre — Arles",
+    "url": "https://whc.unesco.org/en/list/164/"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone destination illustration of Arles, France: the oval Roman amphitheatre of Arles, with its tiers of stone arches. Use a slightly elevated distant view showing the whole compact oval amphitheatre as a closed ellipse, including its far-right curve and entire left and right perimeter. Its building must end at least 8 percent of canvas width before the right edge. Keep the arena surrounded by visible stone paving. Only shrubs and the ground may touch the frame. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+    "transparent_background": true
+  },
+  "revision": {
+    "number": 2,
+    "reason": "The amphitheatre right end is clipped.",
+    "previousFiles": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/fr-arles-landscape"
+  }
+}

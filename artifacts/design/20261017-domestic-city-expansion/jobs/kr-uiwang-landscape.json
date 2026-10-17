@@ -1,0 +1,39 @@
+{
+  "id": "kr-uiwang-landscape",
+  "cityId": "kr-uiwang",
+  "cityName": "의왕",
+  "englishName": "Uiwang",
+  "kind": "city",
+  "group": "경기",
+  "variant": "landscape",
+  "phase": "expansion",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Uiwang, South Korea: Wangsong Lake and a small pedal-powered rail-bike on the lakeside track, with reeds and low green banks. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "b27fb5641359353e11c0f191868488833fc268a09d3102478bfc4cbc003c35b5",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/jobs/kr-uiwang-landscape.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-uiwang-landscape.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-uiwang-landscape.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-uiwang-landscape.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v5/kr-uiwang.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "motif": "Wangsong Lake and a small pedal-powered rail-bike on the lakeside track, with reeds and low green banks",
+  "proposedMotif": "왕송호수·레일바이크",
+  "motifSource": {
+    "title": "경기관광공사 2025 관광 가이드북",
+    "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+    "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+    "pages": "54–55"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone hand-drawn destination illustration of Uiwang, South Korea: Wangsong Lake and a small pedal-powered rail-bike on the lakeside track, with reeds and low green banks. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+    "transparent_background": true
+  },
+  "provenanceRule": "The --source argument must be the exact local original path returned by this job's image_gen call. Never search for a latest file.",
+  "promptRevision": "pilot-subject-qa-20261017"
+}

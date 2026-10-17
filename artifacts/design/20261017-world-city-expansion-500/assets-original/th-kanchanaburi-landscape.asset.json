@@ -1,0 +1,52 @@
+{
+  "id": "th-kanchanaburi-landscape",
+  "cityId": "th-kanchanaburi",
+  "name": "칸차나부리",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/th-kanchanaburi-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/th-kanchanaburi-landscape.json",
+  "originalSha256": "943626264fadc9afab0f7659c9b84fe235de01b20fa99b876af3cfe0929145fc",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    82,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/th-kanchanaburi.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 107314,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c456a7e1d2859bab9ab4d2d56695403fd9dbe24b6bb539d98cb056b9347e017d",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

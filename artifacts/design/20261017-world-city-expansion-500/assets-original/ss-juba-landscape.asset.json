@@ -1,0 +1,52 @@
+{
+  "id": "ss-juba-landscape",
+  "cityId": "ss-juba",
+  "name": "주바",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ss-juba-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ss-juba-landscape.json",
+  "originalSha256": "0e2c56499ff0b3d897fe1b2bd96a0db6c43d7ddb982c83aaf5c913d8afdb0267",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ss-juba.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 92120,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "5c417ae7182106b1119a013a94d4f074c8f725c1e458136b6af30ad4d191c57c",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

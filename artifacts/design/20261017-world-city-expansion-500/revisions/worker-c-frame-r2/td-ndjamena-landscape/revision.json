@@ -1,0 +1,39 @@
+{
+  "jobId": "td-ndjamena-landscape",
+  "archivedFiles": [
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/td-ndjamena-landscape.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-landscape/td-ndjamena-landscape.json",
+      "sha256": "c6a061f8b0bfa7a3643da8d6aa435acb83919c1732d69225074ed0c6d826f419"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/td-ndjamena-landscape.prompt.txt",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-landscape/td-ndjamena-landscape.prompt.txt",
+      "sha256": "db2cf7916032f68584106e2290d656eeee944dd932c1054f9d6a8a5c6ba2147d"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-landscape.png",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-landscape/td-ndjamena-landscape.png",
+      "sha256": "3cb9ee5873df2a81d6c5f597c7f3e4e4450db2d20e6662516a38c978a94475cf"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-landscape.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-landscape/td-ndjamena-landscape.json",
+      "sha256": "6406c9425f21360beadad783847527db58d70cf7de24479cc3ab59a7db2c62ff"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-landscape.asset.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-landscape/td-ndjamena-landscape.asset.json",
+      "sha256": "fc0f4ecc1ec4794cbe9c4a13f17d65e61c81c434c6d356a8be164c151cc8b2a4"
+    },
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v6/td-ndjamena.webp",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-landscape/td-ndjamena.webp",
+      "sha256": "a69e59812d342f641948bb5f034ee3a601d50d378f49b22b075e4f011aa5753f"
+    }
+  ],
+  "reason": "Second framing correction to include the complete bridge or museum outline.",
+  "newPromptSha256": "38f80ba42f452c5d48096d73a06905bd532128ea74c3fb1e26bf2f54f4278dd1",
+  "generationMode": "independent T2I",
+  "imageInputs": []
+}

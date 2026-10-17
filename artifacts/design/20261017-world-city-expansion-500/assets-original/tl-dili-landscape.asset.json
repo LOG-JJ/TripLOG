@@ -1,0 +1,52 @@
+{
+  "id": "tl-dili-landscape",
+  "cityId": "tl-dili",
+  "name": "딜리",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/tl-dili-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/tl-dili-landscape.json",
+  "originalSha256": "bc553f3d907d86c93a6e4755a3f39f14228b47dba917712ee886afeeccb390eb",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/tl-dili.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 89442,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "98906beb04e42c672be17af0d739e7ba3d269dd11b16045da96e8a0f6a89bf5a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

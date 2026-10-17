@@ -1,0 +1,52 @@
+{
+  "id": "ch-lugano-mobile",
+  "cityId": "ch-lugano",
+  "name": "루가노",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ch-lugano-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ch-lugano-mobile.json",
+  "originalSha256": "b0c6b9b82605996c2b2f792df8fc30daf46227b6009291c60c874c0d0a089d05",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    110,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ch-lugano-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 96732,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "4fc2670ee38d556c50ea0d249801115b2cea5176449b1f0c5e8631553f84d1c3",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

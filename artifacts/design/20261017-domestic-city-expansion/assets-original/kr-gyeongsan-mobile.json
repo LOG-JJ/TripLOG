@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-gyeongsan-mobile",
+  "cityId": "kr-gyeongsan",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Gyeongsan, South Korea: Bangokji Reservoir and its large old willow trees, with broad rounded crowns reflected in the water. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "d8795509cc869df0c9f140e75e668a1cd511a6340ee2179093e9d128c99fabc5",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gyeongsan-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-9288a320-3fb5-42c2-a849-7a51a73ed67e.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-9288a320-3fb5-42c2-a849-7a51a73ed67e.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gyeongsan-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "328b1fad3fe3e9419d858c4e73e3cbcf74938a1bae7bc22c40be95daac899ec6",
+  "savedSha256": "328b1fad3fe3e9419d858c4e73e3cbcf74938a1bae7bc22c40be95daac899ec6",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:27:29Z",
+  "toolCallId": "exec-9288a320-3fb5-42c2-a849-7a51a73ed67e",
+  "savedAt": "2026-10-17T05:27:55.676495+00:00"
+}

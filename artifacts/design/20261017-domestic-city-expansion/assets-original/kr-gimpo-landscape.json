@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-gimpo-landscape",
+  "cityId": "kr-gimpo",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Gimpo, South Korea: the La Veniche canal, its waterside buildings and a small crescent-shaped moon boat on the water. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "2cf3b55a55619afce247ada1c1d57504812fa3370c30eb937296caba000f43f4",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimpo-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-d1fc736b-7c42-4088-b18d-af1631668985.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-d1fc736b-7c42-4088-b18d-af1631668985.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gimpo-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "309112be7d50fea5f977a962c7b2a0a82e69cea9846d5ac549d8e9d14df4a111",
+  "savedSha256": "309112be7d50fea5f977a962c7b2a0a82e69cea9846d5ac549d8e9d14df4a111",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:14:31Z",
+  "toolCallId": "exec-d1fc736b-7c42-4088-b18d-af1631668985",
+  "savedAt": "2026-10-17T05:15:37.267018+00:00"
+}

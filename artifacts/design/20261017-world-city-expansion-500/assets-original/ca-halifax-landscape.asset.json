@@ -1,0 +1,52 @@
+{
+  "id": "ca-halifax-landscape",
+  "cityId": "ca-halifax",
+  "name": "핼리팩스",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ca-halifax-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ca-halifax-landscape.json",
+  "originalSha256": "216a03fc471e2d65fd12d9d88b587121ff05fd70ed7988a2b864ba3c09a6ca40",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    56,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ca-halifax.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 95504,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "576792492dae495836c96b646bbcba5eec0acca45dfb0c028c9ac0dfd1be231b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

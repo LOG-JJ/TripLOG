@@ -1,0 +1,52 @@
+{
+  "id": "ec-cuenca-mobile",
+  "cityId": "ec-cuenca",
+  "name": "쿠엥카(에콰도르)",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ec-cuenca-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ec-cuenca-mobile.json",
+  "originalSha256": "7c053f38b95b8ceb83338bc6ed140157dc26f07206c4df192c5f88882b5687ac",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ec-cuenca-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 103986,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "396cdabad168ae8078c2ea649369d43ac31ffac685e0872679067003f11ff384",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

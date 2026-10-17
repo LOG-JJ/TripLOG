@@ -1,0 +1,52 @@
+{
+  "id": "st-sao-tome-landscape",
+  "cityId": "st-sao-tome",
+  "name": "상투메시",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/st-sao-tome-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/st-sao-tome-landscape.json",
+  "originalSha256": "421f3cd7cb995fa41422d51e6564c6db8aca84646ed5450d9d481a42a779866a",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    97,
+    9,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/st-sao-tome.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 113040,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "48bc54131a9ae8e7ab660208f3dbeca20a982ab2fff5a3f4e13bec74c2676ef4",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "tt-port-of-spain-mobile",
+  "cityId": "tt-port-of-spain",
+  "name": "포트오브스페인",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/tt-port-of-spain-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/tt-port-of-spain-mobile.json",
+  "originalSha256": "be2e75f6ec31942c9a3ff0bbf064aade3958cdc89617d3ab6efc81cf88ef4701",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    37,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/tt-port-of-spain-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 100558,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2bf9038d5f97e30522595166e85bb8249aeda0f5682a2c413f2e136572280c9b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

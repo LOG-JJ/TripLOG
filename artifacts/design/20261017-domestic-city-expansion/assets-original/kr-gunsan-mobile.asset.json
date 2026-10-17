@@ -1,0 +1,51 @@
+{
+  "id": "kr-gunsan-mobile",
+  "cityId": "kr-gunsan",
+  "name": "군산",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "전북",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gunsan-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gunsan-mobile.json",
+  "originalSha256": "2b5e5a8c90cb2e09a31d390ceb29e7296cdba7130fe5224852c2d77066bebe86",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    132,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gunsan-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 87966,
+  "assetSha256": "64f48d3a8ce8b58105c8e2b5d700c04ccd476f6692dba05d2aacb20013233ed0",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ki-bairiki-landscape",
+  "cityId": "ki-bairiki",
+  "name": "바이리키",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ki-bairiki-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ki-bairiki-landscape.json",
+  "originalSha256": "29192ba27687eef5f9b1e04d186f5b3407aff7c1e8e4d575cc91564f84fc03fc",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    45,
+    54,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ki-bairiki.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 116830,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "83239698dacbf587baa096e810668bffeeacf9ba0cbfdf64202fc3efd93f8f1e",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

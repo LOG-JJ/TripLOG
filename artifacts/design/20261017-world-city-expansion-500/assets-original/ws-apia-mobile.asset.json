@@ -1,0 +1,52 @@
+{
+  "id": "ws-apia-mobile",
+  "cityId": "ws-apia",
+  "name": "아피아",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ws-apia-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ws-apia-mobile.json",
+  "originalSha256": "09e5a4bb2b9095d8dd0d8b06e278accb660641a716fcfd7989913cf8653d327a",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ws-apia-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 108060,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c0cf25c475c0defe494d1cda95fb6afef550d1328b9bdcd94dad2a963c6bfdf8",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

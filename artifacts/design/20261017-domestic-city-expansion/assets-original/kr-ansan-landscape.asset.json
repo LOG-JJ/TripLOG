@@ -1,0 +1,51 @@
+{
+  "id": "kr-ansan-landscape",
+  "cityId": "kr-ansan",
+  "name": "안산",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-ansan-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-ansan-landscape.json",
+  "originalSha256": "9db4882b0288be90bdcf3f37a5905e352062d2d157474ab4d40a4318ba5cc21d",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-ansan.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 81148,
+  "assetSha256": "4c7c94a3980a5e3f4f8bbca7224537e7bb69ffe96369033d048ace6a66470fe8",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

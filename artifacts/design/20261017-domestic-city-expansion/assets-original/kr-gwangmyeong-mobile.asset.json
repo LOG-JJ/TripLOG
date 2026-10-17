@@ -1,0 +1,51 @@
+{
+  "id": "kr-gwangmyeong-mobile",
+  "cityId": "kr-gwangmyeong",
+  "name": "광명",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwangmyeong-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwangmyeong-mobile.json",
+  "originalSha256": "3e0fe552412e2bef4bef9d47ca52c98567bda168a76bbbc326225a1d7e26d527",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gwangmyeong-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 94170,
+  "assetSha256": "643ed518ea72f28e804d71f4cfbef1427b9b82c5d0592f89f972ec5afa65c1da",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

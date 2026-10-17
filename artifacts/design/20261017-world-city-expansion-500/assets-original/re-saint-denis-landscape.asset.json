@@ -1,0 +1,52 @@
+{
+  "id": "re-saint-denis-landscape",
+  "cityId": "re-saint-denis",
+  "name": "생드니(레위니옹)",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "인도양",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/re-saint-denis-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/re-saint-denis-landscape.json",
+  "originalSha256": "5c9e7c3953da77a4cfaf28bd7b60d5f8c3eaa555bb5577ee9c79c2d06c1ef565",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/re-saint-denis.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 115786,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "b996f44efada6252a0d51bce4e2aadfe793171d2d0aa90e711cc018d04bde661",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

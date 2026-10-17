@@ -1,0 +1,52 @@
+{
+  "id": "ao-luanda-landscape",
+  "cityId": "ao-luanda",
+  "name": "루안다",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ao-luanda-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ao-luanda-landscape.json",
+  "originalSha256": "bbbf20c98327eb6de6187898c4acf4728dc98921125c9c6b32d9db86a889fe33",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    11,
+    54,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ao-luanda.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 115248,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "ca2eb5b08067c324b4ab4f2038a24bfd9e6b094df94440ab483318eb59e4f48b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

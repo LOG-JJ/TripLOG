@@ -1,0 +1,52 @@
+{
+  "id": "bi-bujumbura-landscape",
+  "cityId": "bi-bujumbura",
+  "name": "부줌부라",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bi-bujumbura-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bi-bujumbura-landscape.json",
+  "originalSha256": "30e0f98a85deb02c94400cfca742edfe6460919b6bc28f28464acd13457541c3",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    37,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bi-bujumbura.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 90554,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "422a05b2dbab36ce94ac7c6012326552b2879e9f249ecc333413258e75f63e57",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

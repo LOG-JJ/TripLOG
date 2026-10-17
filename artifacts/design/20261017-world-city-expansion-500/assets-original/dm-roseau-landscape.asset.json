@@ -1,0 +1,52 @@
+{
+  "id": "dm-roseau-landscape",
+  "cityId": "dm-roseau",
+  "name": "로조",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/dm-roseau-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/dm-roseau-landscape.json",
+  "originalSha256": "e1872787f0b92ead9770e2caae9fd102f24fdfdf6b98ee6be439657f05740cef",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/dm-roseau.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 127212,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e11cdfc4e901ba422016d41982fa1c4ee1f8cb481b7e5815e412401595790af8",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

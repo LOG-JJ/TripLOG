@@ -1,0 +1,52 @@
+{
+  "id": "fk-stanley-landscape",
+  "cityId": "fk-stanley",
+  "name": "스탠리",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "남대서양",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/fk-stanley-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/fk-stanley-landscape.json",
+  "originalSha256": "9c8ade9d89ae09d39bd3e42c9af0c841853a9f8cdae7f0940cbd021742430d37",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    13,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/fk-stanley.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 112236,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "97bec7dc36860443fef700421d703fe8a114c6db3c8b551d2a816117703cfd8b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

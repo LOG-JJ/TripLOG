@@ -1,0 +1,52 @@
+{
+  "id": "ml-djenne-landscape",
+  "cityId": "ml-djenne",
+  "name": "젠네",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ml-djenne-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ml-djenne-landscape.json",
+  "originalSha256": "1e9b25539b4c89f92303870e88636477384640c07f273dd81da19c3aab828c63",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    31,
+    21,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ml-djenne.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 90892,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e9bbd429f5c9c492bb8a00c54d1f41e53195033044bc5224a49d29962b862f81",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

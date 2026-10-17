@@ -1,0 +1,51 @@
+{
+  "id": "kr-gwangju-gyeonggi-landscape",
+  "cityId": "kr-gwangju-gyeonggi",
+  "name": "광주",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwangju-gyeonggi-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwangju-gyeonggi-landscape.json",
+  "originalSha256": "3c13cb279f7bd6f033edea25c84992b259cf3a91e813c51ebb05be97919ee371",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    29,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 102354,
+  "assetSha256": "7ac6d6669b83fdaef63282832b81c0dd2f88db40547b4e64a7387499662942cf",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

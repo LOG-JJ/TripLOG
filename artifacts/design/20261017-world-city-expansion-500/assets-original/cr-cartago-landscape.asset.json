@@ -1,0 +1,52 @@
+{
+  "id": "cr-cartago-landscape",
+  "cityId": "cr-cartago",
+  "name": "카르타고",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cr-cartago-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cr-cartago-landscape.json",
+  "originalSha256": "5f5bbd200e74903c35576f2de4f040d71f2a5bea1a5393688e0ff0e36b56bbf6",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    84,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cr-cartago.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 115142,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "54def015ef4a3e80bde37e26611fdd4e167a8fc027da9f4cd6fe48698df8f04f",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

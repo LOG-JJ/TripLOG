@@ -1,0 +1,52 @@
+{
+  "id": "ua-lviv-mobile",
+  "cityId": "ua-lviv",
+  "name": "리비우",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ua-lviv-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ua-lviv-mobile.json",
+  "originalSha256": "fe524f1542c8a14fe00d263ec4dc0b1898349b37907437df0da6044133609d9f",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    33,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ua-lviv-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 104766,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "ef94aa4f5b6771bc4cd241b5c52742578cbc1f5fa74072fb4fec71064ed6892a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

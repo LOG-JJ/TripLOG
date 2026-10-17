@@ -1,0 +1,52 @@
+{
+  "id": "cv-mindelo-mobile",
+  "cityId": "cv-mindelo",
+  "name": "민델루",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cv-mindelo-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cv-mindelo-mobile.json",
+  "originalSha256": "4741d282fe6f2699982ac047b4d0050d08521dc6a699e28d344501759142bb21",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    158,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cv-mindelo-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 85588,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "a5cfb4b3314b34e813d00dc470c2fd080acd23fca4db901ee60fa0503c863631",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

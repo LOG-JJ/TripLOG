@@ -1,0 +1,52 @@
+{
+  "id": "jp-himeji-mobile",
+  "cityId": "jp-himeji",
+  "name": "히메지",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/jp-himeji-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/jp-himeji-mobile.json",
+  "originalSha256": "e539bbccce4df9d08085d6789601b788985afda6bfafcf2d3207250bcb648604",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/jp-himeji-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 116102,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "786d9617e10b327e9722eff1fe8d30701ae64d73e62bd1c8c38c313822c6c23d",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

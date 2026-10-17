@@ -1,0 +1,52 @@
+{
+  "id": "tt-port-of-spain-landscape",
+  "cityId": "tt-port-of-spain",
+  "name": "포트오브스페인",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/tt-port-of-spain-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/tt-port-of-spain-landscape.json",
+  "originalSha256": "8f5db75dcfd939811e4f1711ff91276c7409fdffd6ed935df52b9f92dba75caf",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    22,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/tt-port-of-spain.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 122430,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e33bb5d95f8375c2addab2b2826bf8df490b04fb4770afe147d1eefe936377a5",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

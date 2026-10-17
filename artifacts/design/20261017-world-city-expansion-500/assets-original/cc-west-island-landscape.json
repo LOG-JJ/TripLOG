@@ -1,0 +1,26 @@
+{
+  "jobId": "cc-west-island-landscape",
+  "cityId": "cc-west-island",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of West Island, Cocos (Keeling) Islands: the West Island settlement beside a pale coral-sand beach and clear shallow lagoon, with low island houses and coconut palms. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "fc5d67667b7f1b0ff3462259a6ca9fdd8dcb3e8bd75b9f9497a8a8773dcd4fc0",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cc-west-island-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-256ae299-ae0e-4ccc-b4bf-c5c2155af65e.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-256ae299-ae0e-4ccc-b4bf-c5c2155af65e.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/cc-west-island-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "8133bd0618f868f6f681cd869eeb6ddb195b42d4783ae4013607230527917ce0",
+  "savedSha256": "8133bd0618f868f6f681cd869eeb6ddb195b42d4783ae4013607230527917ce0",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:53:26.137Z",
+  "toolCallId": "exec-256ae299-ae0e-4ccc-b4bf-c5c2155af65e",
+  "savedAt": "2026-10-17T07:56:39.971457+00:00"
+}

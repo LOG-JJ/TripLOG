@@ -1,0 +1,52 @@
+{
+  "id": "fi-turku-landscape",
+  "cityId": "fi-turku",
+  "name": "투르쿠",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/fi-turku-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/fi-turku-landscape.json",
+  "originalSha256": "ef70ea1878d84bf80a3e97065f27e2070aa6423a513e38845c26a1ff9c1f8953",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/fi-turku.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 87160,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "7925163c9b0ddfde549f632cf3780866f02a81223324e5d8f4f014949aef65f8",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

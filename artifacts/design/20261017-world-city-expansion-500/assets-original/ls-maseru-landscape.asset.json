@@ -1,0 +1,52 @@
+{
+  "id": "ls-maseru-landscape",
+  "cityId": "ls-maseru",
+  "name": "마세루",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ls-maseru-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ls-maseru-landscape.json",
+  "originalSha256": "383f2d876025bcbc1df11acb06ccdcc34a414a68f28f5e00dc422972cfd3ba8e",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    37,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ls-maseru.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 96476,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "656005066a95a1fa8a8d35e15933982fc5d0274dcba266f23f11b756df8d0ec4",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

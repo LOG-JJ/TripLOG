@@ -1,0 +1,52 @@
+{
+  "id": "it-matera-landscape",
+  "cityId": "it-matera",
+  "name": "마테라",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-matera-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-matera-landscape.json",
+  "originalSha256": "09a42fa41b251dae3f5a89cf78a90b9084878fc7ec4aa0f1614bd9fb76716d45",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    11,
+    19,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/it-matera.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 139660,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "b676090b0836681d4a94b1eb3088aaf250c7fcb99a958f34fcc862bbca37fe7b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

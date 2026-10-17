@@ -1,0 +1,192 @@
+[
+  {
+    "id": "kr-seosan-landscape",
+    "reason": "First landscape showed a rectangular timber entrance instead of the verified stone arch of Jinnammun.",
+    "oldPromptSha256": "b39ed871b31d4324995c40310cbe7caeb5a7bc571fa7fa2a509d4bca4b7b5463",
+    "newPromptSha256": "9e50f13d934fd27476da6bdfe0b799d495e897e3afb2ba08f56553822c11765e",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-seosan-landscape.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/jobs/kr-seosan-landscape.json",
+        "sha256": "7031d933af99513038b8d642b5138541a51e2e98938f10f43de6f9e0ec8a7974"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-seosan-landscape.prompt.txt",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/jobs/kr-seosan-landscape.prompt.txt",
+        "sha256": "20f22c8f447d16de50ce52a2eb218e5f33744bf6d8edefad1f43507c18d92aea"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-seosan-landscape.png",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-seosan-landscape.png",
+        "sha256": "0380581e23a0cf99eee666e340c76bcd8f58d456addad1eb958077ce393f45ce"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-seosan-landscape.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-seosan-landscape.json",
+        "sha256": "dcc728d8c9c701b6d63728ff0d6ec0ccea886bd74e5cfba1a8ef7b5ee4549bb2"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-seosan-landscape.asset.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-seosan-landscape.asset.json",
+        "sha256": "4a4c8aa1af1cb326afadf850826614f71e8210f3cdd45dc87212bcf729fb0d53"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v5/kr-seosan.webp",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/src/assets/trip-scenes/cities/v5/kr-seosan.webp",
+        "sha256": "c81987adeded9f479376f600eb4c1ff432136885ecf1b3f2b7a867b4bf9f3493"
+      }
+    ]
+  },
+  {
+    "id": "kr-yeongju-landscape",
+    "reason": "The first image clipped the right tip and edge of the main temple hall.",
+    "oldPromptSha256": "a61cafac6b5c8592bc050b2273c60f0ec17a6855db7cb4e1d0eb7057f3195d38",
+    "newPromptSha256": "772659102779743aa6c51e3f703b6364b242671cc063f75c7405e1aee3fb1048",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeongju-landscape.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeongju-landscape.json",
+        "sha256": "a9ed97ee8265cd66f1c2fbd6441a89f8130be5bd22b0533cf7c6221b61cb6a4e"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeongju-landscape.prompt.txt",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeongju-landscape.prompt.txt",
+        "sha256": "308daf549237679a8dd2e97e2cb9433f461382e338d12f53cbf1ba9bf7fa0e6d"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongju-landscape.png",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongju-landscape.png",
+        "sha256": "d44a8e9f86e6228278dfbefcf910c168f18ddd98c86f7a05f7d82e15223efb1a"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongju-landscape.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongju-landscape.json",
+        "sha256": "71e48c3d8f138db139b650d61147dec19f5edc2470ddf9d79de15933d42dc63e"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongju-landscape.asset.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongju-landscape.asset.json",
+        "sha256": "2aa11b3d409248228de4ef1eac7d63185994d7dc50ae7126ef8c6bc504db25c3"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v5/kr-yeongju.webp",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/src/assets/trip-scenes/cities/v5/kr-yeongju.webp",
+        "sha256": "ec1e70927b1dcc913606729671726d06750515ca2bd292fce5d80a01e8962659"
+      }
+    ]
+  },
+  {
+    "id": "kr-yeongju-mobile",
+    "reason": "The first image clipped the right tip and edge of the main temple hall.",
+    "oldPromptSha256": "98f515bba6109e6936ca22c4eac067efd747137e9532c8c0d65dcec1f9b2c360",
+    "newPromptSha256": "66ebe10d00d41f38e1b1997bbe11a45f28bd97767683805e825128012657270a",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeongju-mobile.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeongju-mobile.json",
+        "sha256": "3579139e89e7f5c126b569028ae09cbaf303bf765503c1abcbafa085a9b8815a"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeongju-mobile.prompt.txt",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeongju-mobile.prompt.txt",
+        "sha256": "60a88dcc3fc36b25c5ef091fe346057b7ef426c80dd1b6f37f5c856e83f8912a"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongju-mobile.png",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongju-mobile.png",
+        "sha256": "8de3029b764f235d25edde0cdc77f10eb41d7c14d8a5a297501f5d8ea2cac377"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongju-mobile.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongju-mobile.json",
+        "sha256": "b3cd51814274b49f5c3aea843acc72254afc7e1fb19f94909e342f5c181ee6df"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongju-mobile.asset.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongju-mobile.asset.json",
+        "sha256": "7dd55a1a54579105bd3a4fc18bef6d2d99cb6fdee2921615149ed223415d00b7"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v5/kr-yeongju-mobile.webp",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/src/assets/trip-scenes/cities/v5/kr-yeongju-mobile.webp",
+        "sha256": "5b0f60ec97ede7e2f60274e79a26ee83aed835fd0ed30bdc107b7b722af19054"
+      }
+    ]
+  },
+  {
+    "id": "kr-sejong-landscape",
+    "reason": "The outer end of the conservatory glass wing touched or crossed the right canvas edge in the final contact sheet.",
+    "oldPromptSha256": "4df0e328b8d8bfd794976f09d28708784397eefc796a3ca313223f147f386185",
+    "newPromptSha256": "f308fe54ec06879b661a1ed7fc13f697a18b278ca92a230377a8906d8e655812",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-sejong-landscape.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/jobs/kr-sejong-landscape.json",
+        "sha256": "ad77924b484a10f54af13165e6602cc1d20a56acb59517a90fdd1e8f4fdda595"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-sejong-landscape.prompt.txt",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/jobs/kr-sejong-landscape.prompt.txt",
+        "sha256": "c1711b799684f35a6e9a00c4c39544629452bc1aa6f7e00239ba557fbf7b5371"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-landscape.png",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-landscape.png",
+        "sha256": "2a057090dd7057e2527fbdd3c707d987920ab36773204032fbf09ba91fc94363"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-landscape.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-landscape.json",
+        "sha256": "e42198911d8842df65cbb0bb5f0de5b693d1eb900eece5e83e1c6de09ebba876"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-landscape.asset.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-landscape.asset.json",
+        "sha256": "ac9f578fbdd12331838e67466f18353633acf58030d6c0c008e868b0853ccb74"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v5/kr-sejong.webp",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/src/assets/trip-scenes/cities/v5/kr-sejong.webp",
+        "sha256": "49c3ccc20d88ea5d6248ddee9774e385f437d41373f97b513d4c9ab88eb05d1b"
+      }
+    ]
+  },
+  {
+    "id": "kr-sejong-mobile",
+    "reason": "The outer end of the conservatory glass wing touched or crossed the right canvas edge in the final contact sheet.",
+    "oldPromptSha256": "cec59cc60391a5497251861ec5bffdaa3741a72dc44a73a8c880b5ec289dab05",
+    "newPromptSha256": "f46e658abdf88526117af22c63945a253e49ee9388dfc0e9dd43e5e5ea79a5f8",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-sejong-mobile.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/jobs/kr-sejong-mobile.json",
+        "sha256": "3d06e9edd081883584f0757feac4073ad8100251beb5232cc9b89f3d4ba07b46"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-sejong-mobile.prompt.txt",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/jobs/kr-sejong-mobile.prompt.txt",
+        "sha256": "672f449ef33cb4f92efbb813dba9f511062f911f38b7c0d4af3bbe8cb87a86ee"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-mobile.png",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-mobile.png",
+        "sha256": "9fa467d78f31df97334a09d925d970cd7443b3220b10484a8fd9e8e8f75aacaf"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-mobile.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-mobile.json",
+        "sha256": "bde4dbcd215d11491596965f7cf26b51ce529520b24373b2c1a1a33b57f7b961"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-mobile.asset.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-mobile.asset.json",
+        "sha256": "1a6855ebcbe747c881df57b007eb2d3a3bbcceda0a27d25614034ba8cf513275"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v5/kr-sejong-mobile.webp",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-c-r1/src/assets/trip-scenes/cities/v5/kr-sejong-mobile.webp",
+        "sha256": "c8af4dd2469beb9fe9b3646f1b001eb588a65d3cb38b56715631e38681e6096e"
+      }
+    ]
+  }
+]

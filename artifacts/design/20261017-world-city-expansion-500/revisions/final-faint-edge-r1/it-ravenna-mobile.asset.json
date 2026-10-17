@@ -1,0 +1,52 @@
+{
+  "id": "it-ravenna-mobile",
+  "cityId": "it-ravenna",
+  "name": "라벤나",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-ravenna-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-ravenna-mobile.json",
+  "originalSha256": "69c60b7c8d62969a914cb25b3bf5ec7f5ef7bf4d3316e331b5432da95616749b",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    31,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/it-ravenna-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 110228,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "9c81af19124f3636c36c7a01a3e9a0f963e53c42331223b8b8c1b88148b134cd",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

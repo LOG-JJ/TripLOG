@@ -1,0 +1,26 @@
+{
+  "jobId": "sc-victoria-seychelles-mobile",
+  "cityId": "sc-victoria-seychelles",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Victoria, Seychelles, Seychelles: the small silver Victoria Clock Tower with its ornate clock faces, with tropical trees and low colorful streets. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "3f004967b745afec216910f99e191a14f98ab43590d0da5875657f2dfcc8a4c7",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sc-victoria-seychelles-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-8345137e-34db-436f-a203-9386ff38b968.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-8345137e-34db-436f-a203-9386ff38b968.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/sc-victoria-seychelles-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "1fe645d82948db69a7e83986e75877b227277584dd2372a31ec4c6aa9ebea99c",
+  "savedSha256": "1fe645d82948db69a7e83986e75877b227277584dd2372a31ec4c6aa9ebea99c",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:50:04.826Z",
+  "toolCallId": "exec-8345137e-34db-436f-a203-9386ff38b968",
+  "savedAt": "2026-10-17T06:53:02.225693+00:00"
+}

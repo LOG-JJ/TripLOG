@@ -1,0 +1,40 @@
+{
+  "id": "je-saint-helier-mobile",
+  "cityId": "je-saint-helier",
+  "cityName": "세인트헬리어",
+  "englishName": "Saint Helier",
+  "countryCode": "JE",
+  "kind": "town",
+  "group": "서유럽",
+  "variant": "mobile",
+  "phase": "country-coverage",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone destination illustration of Saint Helier, Jersey: Elizabeth Castle, a broad low grey-stone fortress with thick rounded and angular ramparts on a rocky tidal islet in Saint Aubins Bay. Show the exposed narrow low-tide causeway across wet sand, with shallow blue seawater beside it. Keep the battlements and whole rocky islet inside the frame. Use low weathered military walls, not tall fanciful palace towers, conical turret roofs or a Gothic castle. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "38c6e6017060463966aa9637238a5ab1d52b57613854cca3813904301e7e3b2b",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/jobs/je-saint-helier-mobile.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/je-saint-helier-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/je-saint-helier-mobile.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/je-saint-helier-mobile.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v6/je-saint-helier-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "source": {
+    "title": "Visit Jersey — Elizabeth Castle",
+    "url": "https://www.jersey.com/things-to-do/attractions/listings/elizabeth-castle/"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone destination illustration of Saint Helier, Jersey: Elizabeth Castle, a broad low grey-stone fortress with thick rounded and angular ramparts on a rocky tidal islet in Saint Aubins Bay. Show the exposed narrow low-tide causeway across wet sand, with shallow blue seawater beside it. Keep the battlements and whole rocky islet inside the frame. Use low weathered military walls, not tall fanciful palace towers, conical turret roofs or a Gothic castle. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+    "transparent_background": true
+  },
+  "preflightResearch": {
+    "note": "Official Visit Jersey photograph inspected: thick low stone sea-facing ramparts and rocky shore; text confirms causeway visible at low tide.",
+    "url": "https://www.jersey.com/things-to-do/attractions/listings/elizabeth-castle/",
+    "imageInputs": []
+  },
+  "revision": "worker-c-coverage-preflight"
+}

@@ -1,0 +1,26 @@
+{
+  "jobId": "gb-canterbury-mobile",
+  "cityId": "gb-canterbury",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Canterbury, United Kingdom: Canterbury Cathedral's central tower, with the historic cathedral precinct. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "009cdc1eba46fb89d821633503df34d2e886ab4a54c029bc1165c8b054cf9a47",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-canterbury-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-ccf21c97-a7a3-46a6-9be7-1640ca5f4f7f.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-ccf21c97-a7a3-46a6-9be7-1640ca5f4f7f.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/gb-canterbury-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "8cbfc45b2d3860ff617ed9e74593c364da37f776371f0c22757b594bcfc59cf8",
+  "savedSha256": "8cbfc45b2d3860ff617ed9e74593c364da37f776371f0c22757b594bcfc59cf8",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:09:17Z",
+  "toolCallId": "exec-ccf21c97-a7a3-46a6-9be7-1640ca5f4f7f",
+  "savedAt": "2026-10-17T06:11:35.471268+00:00"
+}

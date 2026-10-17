@@ -1,0 +1,52 @@
+{
+  "id": "gp-pointe-a-pitre-landscape",
+  "cityId": "gp-pointe-a-pitre",
+  "name": "푸앵타피트르",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gp-pointe-a-pitre-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gp-pointe-a-pitre-landscape.json",
+  "originalSha256": "40437ec35f15ad33aa85449097adab3ed041482b6bd8a0966ca5d2f235aba6e1",
+  "sourceSize": [
+    1619,
+    972
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    33,
+    23,
+    1619,
+    972
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gp-pointe-a-pitre.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 97592,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "a35c02dd8ee7fe7a77f239fc2c2e5da433d433a47c56b614982b58b316ecf4a2",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

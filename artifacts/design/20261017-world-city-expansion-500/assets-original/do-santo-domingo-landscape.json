@@ -1,0 +1,26 @@
+{
+  "jobId": "do-santo-domingo-landscape",
+  "cityId": "do-santo-domingo",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Santo Domingo, Dominican Republic: the low broad west facade of the Cathedral of Santa Maria la Menor, also called Catedral Primada de America. Show its warm pale coral-stone facade with a simple triangular pediment, one small upper arched window, carved columns and statue niches, and the distinctive TWO adjoining round-arched wooden entrance doors beneath the ornate central portal. Keep the entire compact front elevation and its broad stone steps visible, with the colonial paved plaza and a few palm trees. This facade has no tall bell tower, no twin towers and no large dome; preserve its low horizontal silhouette. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "31cde550454c1bf7be15f1f5d1751f21afd5805e8a173b2d53e235538b721db9",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/do-santo-domingo-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-e39b41a0-ec1b-4223-b0cb-55dfb70a7b75.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-e39b41a0-ec1b-4223-b0cb-55dfb70a7b75.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/do-santo-domingo-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "5bf1651d9dbed5f1ee2ffd77b8e85e4d0f9bd3acba7032107d0561c36c065600",
+  "savedSha256": "5bf1651d9dbed5f1ee2ffd77b8e85e4d0f9bd3acba7032107d0561c36c065600",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:38:13Z",
+  "toolCallId": "exec-e39b41a0-ec1b-4223-b0cb-55dfb70a7b75",
+  "savedAt": "2026-10-17T06:39:40.970266+00:00"
+}

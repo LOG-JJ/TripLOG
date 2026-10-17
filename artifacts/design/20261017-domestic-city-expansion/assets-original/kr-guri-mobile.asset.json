@@ -1,0 +1,51 @@
+{
+  "id": "kr-guri-mobile",
+  "cityId": "kr-guri",
+  "name": "구리",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-guri-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-guri-mobile.json",
+  "originalSha256": "55bb52c9e7c99592cfa40b4357ca7ecf82deea3fe92b0b06ab8af4b97472f5b3",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    11,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-guri-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 105136,
+  "assetSha256": "9f1a847e12007d1d45096b64dd66c8de3f7f9b94c2ce71333079daa4e40feb91",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

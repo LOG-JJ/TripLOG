@@ -1,0 +1,52 @@
+{
+  "id": "ch-lugano-landscape",
+  "cityId": "ch-lugano",
+  "name": "루가노",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ch-lugano-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ch-lugano-landscape.json",
+  "originalSha256": "2ad75aad103404042d3a50b2435c017ef25409c261046eb84f3ba0f0aa1b3f7a",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    27,
+    19,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ch-lugano.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 109776,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "ff2f693043c12609ebe416fd5b83f1aaa721f8e1447fea84a78c39726a025849",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

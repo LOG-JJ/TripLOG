@@ -1,0 +1,52 @@
+{
+  "id": "jp-himeji-landscape",
+  "cityId": "jp-himeji",
+  "name": "히메지",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/jp-himeji-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/jp-himeji-landscape.json",
+  "originalSha256": "cd5a42e4cdbd053b28934d9a246cadd41a160b7fcf35d4d1ed70bf7e5244360a",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/jp-himeji.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 124642,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "bdce11c8c1f40d86eb9bacdbde995c9b96d1b401803d70182b0491d6a0612e11",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

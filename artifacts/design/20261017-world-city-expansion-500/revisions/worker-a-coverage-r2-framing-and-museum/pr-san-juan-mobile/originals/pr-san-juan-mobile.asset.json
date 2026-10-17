@@ -1,0 +1,52 @@
+{
+  "id": "pr-san-juan-mobile",
+  "cityId": "pr-san-juan",
+  "name": "산후안",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/pr-san-juan-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/pr-san-juan-mobile.json",
+  "originalSha256": "4a8ba5e568d76a2e6e3a034f789069c44fe588a4bfa0cfc1df9cbdf2eac55739",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    3,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/pr-san-juan-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 96604,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "6b17a72095874d75f276fded11ea775333d7fdbe532637c01da2a8ce17e0e4a0",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

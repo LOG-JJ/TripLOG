@@ -1,0 +1,52 @@
+{
+  "id": "ba-mostar-landscape",
+  "cityId": "ba-mostar",
+  "name": "모스타르",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ba-mostar-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ba-mostar-landscape.json",
+  "originalSha256": "a0c130cc9691a233b5bed0de00b9b2f4d0cbc6840a689bb252cda52608553b5b",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ba-mostar.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 121724,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "b6aac9de5280d1655d9d56638c19e1f5bb7b0c68707bc2a9bbf126cd7844c555",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

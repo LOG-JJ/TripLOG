@@ -1,0 +1,52 @@
+{
+  "id": "sr-paramaribo-mobile",
+  "cityId": "sr-paramaribo",
+  "name": "파라마리보",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sr-paramaribo-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sr-paramaribo-mobile.json",
+  "originalSha256": "4d1cef730c2f1386e5b4e9501fa3a950fddacbe031d97e94b2c3b65f739785fd",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sr-paramaribo-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 93726,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "31e7599ad07c116b0fd60985114960023a8fa6eb64e803415ae3f192b9515461",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

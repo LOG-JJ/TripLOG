@@ -1,0 +1,26 @@
+{
+  "jobId": "ad-andorra-la-vella-landscape",
+  "cityId": "ad-andorra-la-vella",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Andorra la Vella, Andorra: the stone Casa de la Vall, with the surrounding Pyrenean slopes. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "317c22b4c379b99664292ca88ebd53d029960bb22178d2abedffcf43499867b1",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ad-andorra-la-vella-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-ea7ae306-aac4-4b80-8e31-7f312759ee3b.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-ea7ae306-aac4-4b80-8e31-7f312759ee3b.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/ad-andorra-la-vella-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "a3e2d2403557b5758d596e54761310605febf1b1ab973c9154885e9108447d9c",
+  "savedSha256": "a3e2d2403557b5758d596e54761310605febf1b1ab973c9154885e9108447d9c",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:05:29.798Z",
+  "toolCallId": "exec-ea7ae306-aac4-4b80-8e31-7f312759ee3b",
+  "savedAt": "2026-10-17T06:09:45.272982+00:00"
+}

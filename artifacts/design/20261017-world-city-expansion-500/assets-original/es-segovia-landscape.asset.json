@@ -1,0 +1,72 @@
+{
+  "id": "es-segovia-landscape",
+  "cityId": "es-segovia",
+  "name": "세고비아",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-segovia-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-segovia-landscape.json",
+  "originalSha256": "2e5b5d44eb2d249145d752c91afae6dadc2ed6430c0a4d565416a91481e0674d",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    25,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/es-segovia.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 153546,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "866944421c97f02b0d71c6a6981f9073af518725d67e343c442c2298e92dc6bd",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa",
+  "technicalFaintEdgeRefit": {
+    "checkedAt": "2026-10-17T07:38:22.578309+00:00",
+    "alphaThreshold": 8,
+    "beforeGaps": [
+      6,
+      0
+    ],
+    "afterGaps": [
+      0,
+      0
+    ],
+    "refits": [
+      [
+        6,
+        0
+      ]
+    ],
+    "source": "original PNG preserved",
+    "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ai-the-valley-landscape",
+  "cityId": "ai-the-valley",
+  "name": "더밸리",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ai-the-valley-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ai-the-valley-landscape.json",
+  "originalSha256": "c4ffba1cbd7a22f2d0f1b7bcac8f7907c0eefe8af2e95184695e5df052317b0e",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    47,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ai-the-valley.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 150026,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "7071e17156905be0aeab999f2b68ed9923059e41bc56c587dcefc069a1e2e735",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

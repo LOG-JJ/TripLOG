@@ -1,0 +1,52 @@
+{
+  "id": "id-ubud-mobile",
+  "cityId": "id-ubud",
+  "name": "우붓",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/id-ubud-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/id-ubud-mobile.json",
+  "originalSha256": "f383b2167284ecfe7a1b08c77c885d437922ce39c8995800957993f0d9f5074e",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/id-ubud-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 135932,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "ac2b1189d0f8df1d38dacae95ae3fb6a6649427b1e7340e4a0502eda427ccbb5",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

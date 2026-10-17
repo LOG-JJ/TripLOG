@@ -1,0 +1,26 @@
+{
+  "jobId": "be-antwerp-landscape",
+  "cityId": "be-antwerp",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Antwerp, Belgium: the Cathedral of Our Lady's slender Gothic spire, with the stepped-gable houses around the Grote Markt. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "b1e898517383a13051f2ba8d9d474522c7381e57c32eac0649a6cd0dbd9271b4",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/be-antwerp-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-ea5d2304-a3ad-4d42-b36c-7d9009ab611b.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-ea5d2304-a3ad-4d42-b36c-7d9009ab611b.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/be-antwerp-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "e59d3041018ceb0b0dfd46412484c3da65450b4ca757b0c773b8e9d583d5643c",
+  "savedSha256": "e59d3041018ceb0b0dfd46412484c3da65450b4ca757b0c773b8e9d583d5643c",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:16:30.493Z",
+  "toolCallId": "exec-ea5d2304-a3ad-4d42-b36c-7d9009ab611b",
+  "savedAt": "2026-10-17T06:20:36.991598+00:00"
+}

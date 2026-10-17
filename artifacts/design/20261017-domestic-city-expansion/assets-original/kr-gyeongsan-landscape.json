@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-gyeongsan-landscape",
+  "cityId": "kr-gyeongsan",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Gyeongsan, South Korea: Bangokji Reservoir and its large old willow trees, with broad rounded crowns reflected in the water. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "c8dd810ed57b1f0a5e2a6065b83d3770d47910957bf2c6b54019271ed5f15670",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gyeongsan-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-78bdeaea-59e5-48df-bf8b-482db87f9ec2.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-78bdeaea-59e5-48df-bf8b-482db87f9ec2.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gyeongsan-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "7b25e6df8451f651563c8f809738ad2e53f2cfcecbbdcc8741f20e1a18ff4381",
+  "savedSha256": "7b25e6df8451f651563c8f809738ad2e53f2cfcecbbdcc8741f20e1a18ff4381",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:27:55Z",
+  "toolCallId": "exec-78bdeaea-59e5-48df-bf8b-482db87f9ec2",
+  "savedAt": "2026-10-17T05:28:36.488760+00:00"
+}

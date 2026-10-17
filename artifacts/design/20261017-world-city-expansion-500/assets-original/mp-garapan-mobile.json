@@ -1,0 +1,26 @@
+{
+  "jobId": "mp-garapan-mobile",
+  "cityId": "mp-garapan",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Garapan, Northern Mariana Islands: Garapan's American Memorial Park with the red Carillon Bell Tower: a slender flat-topped rectangular tower whose LOWER THREE QUARTERS are a PLAIN SOLID brick-red rectangular shaft, with NO holes, slits, legs or exposed framework in that lower shaft. Only the UPPER QUARTER has a short open rectangular bell chamber showing one small bronze bell; directly above that chamber is a small square gray louver below the flat roof. Beside the tower show a much shorter rose-granite memorial pillar and a short curved red wall on a low round paved base. Surround with open tropical park lawn and palms, and a distant small glimpse of blue coast. Keep the whole tower and base inside the frame, with generous top space. Do not make a lattice tower, multi-bell ladder, four-legged arch or a church spire. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "fe3ba805f003e327cff7530520fb8448e8e645fca831013d57faf4b680d6d664",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mp-garapan-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-3ab13a43-4571-497d-8ded-cbba09ad4f71.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-3ab13a43-4571-497d-8ded-cbba09ad4f71.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/mp-garapan-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "337bcf0f9091658704a7f4a4e286341e4c9f45f87f81169382007ebe46801a6e",
+  "savedSha256": "337bcf0f9091658704a7f4a4e286341e4c9f45f87f81169382007ebe46801a6e",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:49:19.033Z",
+  "toolCallId": "exec-3ab13a43-4571-497d-8ded-cbba09ad4f71",
+  "savedAt": "2026-10-17T07:50:23.520082+00:00"
+}

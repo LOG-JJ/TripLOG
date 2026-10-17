@@ -1,0 +1,52 @@
+{
+  "id": "eh-dakhla-landscape",
+  "cityId": "eh-dakhla",
+  "name": "다클라",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "아프리카",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/eh-dakhla-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/eh-dakhla-landscape.json",
+  "originalSha256": "cca2abc48e984e73d1299382bc4cdf185424e11e458ff5c146187138ae508102",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    41,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/eh-dakhla.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 95972,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "815ccec109a1c608ec791baac1159772977c8e2b817250112d064ab8f6b54615",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

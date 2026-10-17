@@ -1,0 +1,26 @@
+{
+  "jobId": "br-brasilia-mobile",
+  "cityId": "br-brasilia",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Brasilia, Brazil: the crown-like Cathedral of Brasilia, with the reflecting pool at its base. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "1aba97aadf4c9718cc0b4734acc646370d704c60c00c48db1be59cbd8d4bbe36",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/br-brasilia-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-8b6878c6-bf5b-4c5b-8d37-01820de0c8ac.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-8b6878c6-bf5b-4c5b-8d37-01820de0c8ac.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/br-brasilia-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "96ef08003a67783fe963027caab5d2ca16e9a544e84cb24393ba032ad0f6e3d1",
+  "savedSha256": "96ef08003a67783fe963027caab5d2ca16e9a544e84cb24393ba032ad0f6e3d1",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:30:22.152Z",
+  "toolCallId": "exec-8b6878c6-bf5b-4c5b-8d37-01820de0c8ac",
+  "savedAt": "2026-10-17T06:34:22.983177+00:00"
+}

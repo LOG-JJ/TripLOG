@@ -1,0 +1,52 @@
+{
+  "id": "mk-ohrid-mobile",
+  "cityId": "mk-ohrid",
+  "name": "오흐리드",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mk-ohrid-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mk-ohrid-mobile.json",
+  "originalSha256": "7c5b6fc86365a5059099f8796eba075ab37dd00c32b556a54350f3b25721642f",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    33,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mk-ohrid-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 106538,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "19b14cdc4089af0946d271f27887a1e40c36db30bed7293c3341742b95ee1393",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

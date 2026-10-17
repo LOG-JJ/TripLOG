@@ -1,0 +1,52 @@
+{
+  "id": "mx-guanajuato-landscape",
+  "cityId": "mx-guanajuato",
+  "name": "과나후아토",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mx-guanajuato-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mx-guanajuato-landscape.json",
+  "originalSha256": "368f515b6946616c2754a98341c68b41f4358a7682f738a4b39147ca870cc349",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mx-guanajuato.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 95424,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c7feb3cac2ad8d3ccbebe45dfd7db09e703980a588c8e3de0f33d0d25a264993",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "bg-nesebar-landscape",
+  "cityId": "bg-nesebar",
+  "name": "네세버르",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bg-nesebar-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bg-nesebar-landscape.json",
+  "originalSha256": "d3d9603b91f4a7b2df80697730b6cc9fab691194b9c779fb53e07fe382a8ef90",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bg-nesebar.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 153196,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "b0545a9ed52622d605fc1cf7fae9b0ce394a669a6d95f00ff0a638dd8a3ea96f",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa",
+  "technicalFaintEdgeRefit": {
+    "checkedAt": "2026-10-17T07:38:12.723736+00:00",
+    "alphaThreshold": 8,
+    "beforeGaps": [
+      0,
+      5
+    ],
+    "afterGaps": [
+      0,
+      0
+    ],
+    "refits": [
+      [
+        0,
+        5
+      ]
+    ],
+    "source": "original PNG preserved",
+    "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1"
+  }
+}

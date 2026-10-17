@@ -1,0 +1,38 @@
+{
+  "id": "kr-cheonan-landscape",
+  "cityId": "kr-cheonan",
+  "cityName": "천안",
+  "englishName": "Cheonan",
+  "kind": "city",
+  "group": "충남",
+  "variant": "landscape",
+  "phase": "expansion",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Cheonan, South Korea: the Independence Hall of Korea, with the House of the People as a broad monumental hall under one long gray Korean gabled tiled roof, a row of pale columns and an open paved approach, accompanied by the distant Monument to the Nation formed by two tall slim pale stone uprights. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "65e00d848f39791a2625c5017f9b188e3844ecd8578816aaacb89cdc73e1c5f9",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/jobs/kr-cheonan-landscape.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-cheonan-landscape.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-cheonan-landscape.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-cheonan-landscape.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v5/kr-cheonan.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "motif": "the Independence Hall of Korea, with the House of the People as a broad monumental hall under one long gray Korean gabled tiled roof, a row of pale columns and an open paved approach, accompanied by the distant Monument to the Nation formed by two tall slim pale stone uprights",
+  "proposedMotif": "독립기념관",
+  "motifSource": {
+    "title": "Official subject photographs reviewed before generation",
+    "url": "https://i815.or.kr/2018/tour/facility.do#box2-4",
+    "evidence": "Official House of the People and Monument to the Nation photographs visually inspected; gabled roof, columned facade and split stone monument confirmed"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone hand-drawn destination illustration of Cheonan, South Korea: the Independence Hall of Korea, with the House of the People as a broad monumental hall under one long gray Korean gabled tiled roof, a row of pale columns and an open paved approach, accompanied by the distant Monument to the Nation formed by two tall slim pale stone uprights. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+    "transparent_background": true
+  },
+  "provenanceRule": "The --source argument must be the exact local original path returned by this job's image_gen call. Never search for a latest file.",
+  "promptRevision": "pilot-subject-qa-20261017"
+}

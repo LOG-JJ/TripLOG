@@ -1,0 +1,44 @@
+{
+  "jobId": "gb-cardiff-landscape",
+  "reason": "The first version invented the lower gatehouse that was removed in the eighteenth century.",
+  "archivedFiles": [
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-cardiff-landscape.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/gb-cardiff-landscape/gb-cardiff-landscape.json",
+      "sha256": "b14a755c2515e3fd6d9de8935786c5c45fdf3fbb088c773314abcef0d36ef1e2"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-cardiff-landscape.prompt.txt",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/gb-cardiff-landscape/gb-cardiff-landscape.prompt.txt",
+      "sha256": "196c3c8c41be4958f25987608a03d5d074f510a0972f58dd80a2648ff484e323"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-cardiff-landscape.png",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/gb-cardiff-landscape/gb-cardiff-landscape.png",
+      "sha256": "fd645a779a023397d377449f8345881feb1aa18770f1a2687a64f6c3b6b90368"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-cardiff-landscape.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/gb-cardiff-landscape/gb-cardiff-landscape.json",
+      "sha256": "46615e8c308ad799bcc973fa3b483cc72b3dd9f7c75feda1473f4fbbaf5935ec"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-cardiff-landscape.asset.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/gb-cardiff-landscape/gb-cardiff-landscape.asset.json",
+      "sha256": "32b01de1ab5b128c3d0085e753c6bf9feb07d3df8e4feced7a09322ec4e4f6c2"
+    },
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v6/gb-cardiff.webp",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/gb-cardiff-landscape/gb-cardiff.webp",
+      "sha256": "29ad7fef1a016d38432e292b1f2c3cf122c1dc18d16464883b40252ac037c9df"
+    }
+  ],
+  "newPromptSha256": "85686be47320313c696e6b9a6eea27c2fb8e65f1684edf3d796d32dfd2b2d1f9",
+  "generationMode": "independent T2I",
+  "imageInputs": [],
+  "source": {
+    "title": "Cardiff Castle — Norman Keep (current structure and removed gatehouse)",
+    "url": "https://www.cardiffcastle.com/visit/see-do/norman-keep/"
+  },
+  "photoInspected": "https://www.cardiffcastle.com/app/uploads/2022/05/Norman-Keep-850x480-1.jpg"
+}

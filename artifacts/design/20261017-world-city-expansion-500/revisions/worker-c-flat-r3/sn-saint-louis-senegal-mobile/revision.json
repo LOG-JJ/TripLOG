@@ -1,0 +1,39 @@
+{
+  "jobId": "sn-saint-louis-senegal-mobile",
+  "reason": "Remove generated soft sky haze and restore fully opaque flat painted shapes; previous source alpha peaked at 254.",
+  "archivedFiles": [
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sn-saint-louis-senegal-mobile.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-flat-r3/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.json",
+      "sha256": "2fc323ac9914e51ce4ce1a20f51392ae502c2c969766889d52811e0f8a955897"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sn-saint-louis-senegal-mobile.prompt.txt",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-flat-r3/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.prompt.txt",
+      "sha256": "4b5c610cdc07cd9f3053ea28aed3f67a267dba0a1e74b8e28f6d42200f25dd87"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-mobile.png",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-flat-r3/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.png",
+      "sha256": "cd2cd4fbd8f2fdb5d77cdfd0c7a339bb786606700d3b44d2dfed800330912e4c"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-mobile.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-flat-r3/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.json",
+      "sha256": "2ecee9da511233485125144d7683adb9aad7036268ff1c18f5d3a9ffbbdf08e0"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-mobile.asset.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-flat-r3/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.asset.json",
+      "sha256": "6c1ecb73fe8404e157f75c3ea6a604d64b0c24e35dd877a902c857bb04c30e2b"
+    },
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v6/sn-saint-louis-senegal-mobile.webp",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-flat-r3/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.webp",
+      "sha256": "6168e06a1b795b9a9ab2a85f974a5b03b8297ab301e9a27e1cc10458d9f37cde"
+    }
+  ],
+  "newPromptSha256": "c58f324d9a3cc2643c5d6bcc2e043bebda4d47bf6882db77cb512ff51f412c30",
+  "generationMode": "independent T2I",
+  "imageInputs": []
+}

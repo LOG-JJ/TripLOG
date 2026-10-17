@@ -1,0 +1,52 @@
+{
+  "id": "sv-san-salvador-landscape",
+  "cityId": "sv-san-salvador",
+  "name": "산살바도르",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sv-san-salvador-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sv-san-salvador-landscape.json",
+  "originalSha256": "61633585d1f319444d013de124afbd60c19d2666e2bcf1d6d6c4f81473acc2a4",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    20,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sv-san-salvador.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 125198,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "4b5868adf048c6dc34fe75345d5ceb984be74bf20707347c5c45663b5d9041e3",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

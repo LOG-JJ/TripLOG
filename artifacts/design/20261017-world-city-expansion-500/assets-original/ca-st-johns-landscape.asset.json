@@ -1,0 +1,52 @@
+{
+  "id": "ca-st-johns-landscape",
+  "cityId": "ca-st-johns",
+  "name": "세인트존스(캐나다)",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ca-st-johns-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ca-st-johns-landscape.json",
+  "originalSha256": "eff16d2a35c691e6789364ab4aea0e9cdb5fd45f7ab8478e34211d4f8008d24b",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    31,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ca-st-johns.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 105514,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "a8f1ee4404a3c4a411e8b162ed91a4c8450524b07f1c43b36ed950a8e3e49190",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

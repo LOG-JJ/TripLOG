@@ -1,0 +1,52 @@
+{
+  "id": "us-st-augustine-landscape",
+  "cityId": "us-st-augustine",
+  "name": "세인트오거스틴",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/us-st-augustine-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/us-st-augustine-landscape.json",
+  "originalSha256": "0a014459296f907aa67d19e2e4372388f37727ec4480b858ab5b8b75cd8a2e83",
+  "sourceSize": [
+    1619,
+    972
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    56,
+    1619,
+    972
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/us-st-augustine.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 99338,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "d4aff0b78e7e50068d21548ecec9922d2d610b0aa6bc7a9adfe1d2a78cd27575",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

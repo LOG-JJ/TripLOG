@@ -1,0 +1,52 @@
+{
+  "id": "ag-st-johns-landscape",
+  "cityId": "ag-st-johns",
+  "name": "세인트존스(앤티가)",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ag-st-johns-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ag-st-johns-landscape.json",
+  "originalSha256": "d771436e360901962910ad09fa1a06e63c340b05eb03026ea08844960673b4dc",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    70,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ag-st-johns.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 108842,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "1d81f70768032a6648bf27bed21291aa1eff86149a58608472b40991a5cbaa78",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

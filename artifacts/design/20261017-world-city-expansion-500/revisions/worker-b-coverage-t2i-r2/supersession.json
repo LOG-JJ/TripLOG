@@ -1,0 +1,38 @@
+[
+  {
+    "jobId": "wf-mata-utu-mobile",
+    "reason": "Second oblique view still extended rear nave to right edge; request compact strict front elevation with no side wall",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/wf-mata-utu-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-t2i-r2/wf-mata-utu-mobile/jobs/wf-mata-utu-mobile.json",
+        "sha256": "5b1ceb7c32c669ffe4ada31ef1a9e721138031503b4e7cbc1efb522856486aab"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/wf-mata-utu-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-t2i-r2/wf-mata-utu-mobile/jobs/wf-mata-utu-mobile.prompt.txt",
+        "sha256": "69c84aa783f3ba664653e774703879dc2479aac1a999dc5afc4792882e14c903"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/wf-mata-utu-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-t2i-r2/wf-mata-utu-mobile/originals/wf-mata-utu-mobile.png",
+        "sha256": "41361ec03b0d81f8f19f97fc3067d999986e8e675ef76223586f5a5234084885"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/wf-mata-utu-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-t2i-r2/wf-mata-utu-mobile/originals/wf-mata-utu-mobile.json",
+        "sha256": "260c94c409443c0d6d59ed99bebeb752d2bf60eefd555cb4e8d89740daf2778c"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/wf-mata-utu-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-t2i-r2/wf-mata-utu-mobile/originals/wf-mata-utu-mobile.asset.json",
+        "sha256": "ec08723f592c1288a07aa9cc6316298b4547eed82b0b62177eeac4a116a11da1"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/wf-mata-utu-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-t2i-r2/wf-mata-utu-mobile/runtime/wf-mata-utu-mobile.webp",
+        "sha256": "5b19d20cbaa912fa51a2add664e409c52cdd2fb7cd63f6386fde5ff76657ba71"
+      }
+    ]
+  }
+]

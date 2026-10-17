@@ -1,0 +1,52 @@
+{
+  "id": "mx-puebla-landscape",
+  "cityId": "mx-puebla",
+  "name": "푸에블라",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mx-puebla-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mx-puebla-landscape.json",
+  "originalSha256": "cb797c5e32be0c7629c22522fecd3afd0a06248e3fa44bb1edd295f1c53ee428",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mx-puebla.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 125614,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e842117686ef0c1135e09d5f07063b8ceb5ad1774de1df0754ce8614e6792b78",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

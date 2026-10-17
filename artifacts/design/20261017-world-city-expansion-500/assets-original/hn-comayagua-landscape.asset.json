@@ -1,0 +1,52 @@
+{
+  "id": "hn-comayagua-landscape",
+  "cityId": "hn-comayagua",
+  "name": "코마야과",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/hn-comayagua-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/hn-comayagua-landscape.json",
+  "originalSha256": "1fce6ed38486a4fff1686bb3325be296b7be79fe6e296487771c90c1fe73d42c",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    54,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/hn-comayagua.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 110122,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c569efb4e351a8964d82613d8655836547f71ccf3c842147b9d277748d457699",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

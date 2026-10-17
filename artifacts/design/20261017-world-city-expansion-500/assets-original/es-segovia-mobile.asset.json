@@ -1,0 +1,52 @@
+{
+  "id": "es-segovia-mobile",
+  "cityId": "es-segovia",
+  "name": "세고비아",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-segovia-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-segovia-mobile.json",
+  "originalSha256": "c48bcf0f7963620cfdbaa09034dcd092f54c1a60448ee4f817d99abdc82e2001",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    35,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/es-segovia-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 117092,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2585f418173a9b97c113bdf5275364024a0599e69911114c14e6a5b05079674f",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,26 @@
+{
+  "jobId": "km-moroni-landscape",
+  "cityId": "km-moroni",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Moroni, Comoros: the white Old Friday Mosque and its tall minaret beside Moroni harbor, with the dark volcanic shore and small boats. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "15027034df34124815aedc4a58e8752cf29703502a50c9d6b9a624764e21a53e",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/km-moroni-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-14a22fa8-29cb-426a-a594-d980f6b473f8.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-14a22fa8-29cb-426a-a594-d980f6b473f8.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/km-moroni-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "a144e1b9a1e7fde4affc6bed25c0457d997a8600a50f59c2753bcb5a4cd8e5e4",
+  "savedSha256": "a144e1b9a1e7fde4affc6bed25c0457d997a8600a50f59c2753bcb5a4cd8e5e4",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:41:52.859Z",
+  "toolCallId": "exec-14a22fa8-29cb-426a-a594-d980f6b473f8",
+  "savedAt": "2026-10-17T06:45:19.513271+00:00"
+}

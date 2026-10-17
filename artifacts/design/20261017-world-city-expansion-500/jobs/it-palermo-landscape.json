@@ -1,0 +1,39 @@
+{
+  "id": "it-palermo-landscape",
+  "cityId": "it-palermo",
+  "cityName": "팔레르모",
+  "englishName": "Palermo",
+  "countryCode": "IT",
+  "kind": "city",
+  "group": "Europe",
+  "variant": "landscape",
+  "phase": "core-500",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone destination illustration of Palermo, Italy: Palermo Cathedral's arcaded facade and towers, with the palm-lined forecourt. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Recompose Palermo Cathedral smaller so the complete central dome, its lantern and cross all sit below y=16% of the canvas and the entire main roof silhouette stays inside x=12% to x=84%. Keep a clearly visible transparent gap above the cross and beside the rightmost tower. The forecourt and low shrubs continue to the bottom and right edges.",
+  "promptSha256": "ecb2cdcf98ce4f991b3f72e5a32290c71115422682ea2c67608e2e1f109ba611",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/jobs/it-palermo-landscape.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/it-palermo-landscape.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/it-palermo-landscape.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/it-palermo-landscape.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v6/it-palermo.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "source": {
+    "title": "UNESCO World Heritage Centre — Palermo",
+    "url": "https://whc.unesco.org/en/list/1487/"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone destination illustration of Palermo, Italy: Palermo Cathedral's arcaded facade and towers, with the palm-lined forecourt. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Recompose Palermo Cathedral smaller so the complete central dome, its lantern and cross all sit below y=16% of the canvas and the entire main roof silhouette stays inside x=12% to x=84%. Keep a clearly visible transparent gap above the cross and beside the rightmost tower. The forecourt and low shrubs continue to the bottom and right edges.",
+    "transparent_background": true
+  },
+  "revision": {
+    "number": 2,
+    "reason": "The identifying outline is too close to or cut by the frame; add explicit clearance around its complete silhouette.",
+    "previousFiles": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/it-palermo-landscape"
+  }
+}

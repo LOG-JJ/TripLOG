@@ -1,0 +1,52 @@
+{
+  "id": "my-kuching-landscape",
+  "cityId": "my-kuching",
+  "name": "쿠칭",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/my-kuching-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/my-kuching-landscape.json",
+  "originalSha256": "e1ca9ae8ee2a6acdcc63fbab0dfe04159e2d53f9672c4f7de06bdfb4f427bdbd",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/my-kuching.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 114158,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2192e682006aa9c51c5c0c8ff4bc99c4263afba55fb74ac4085b635eaaea7ffa",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

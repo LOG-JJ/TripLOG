@@ -1,0 +1,51 @@
+{
+  "id": "kr-yeongju-landscape",
+  "cityId": "kr-yeongju",
+  "name": "영주",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경북",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongju-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongju-landscape.json",
+  "originalSha256": "8868f93d021061aaaf74f9478492f038bb1516b6d0cf12411227a2064b17c9c3",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    30,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-yeongju.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 120548,
+  "assetSha256": "8743294b0ed88e73958f8640b2b99f97a4458cf22a4909d45c804baf9db05e37",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

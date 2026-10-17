@@ -1,0 +1,52 @@
+{
+  "id": "lt-kaunas-landscape",
+  "cityId": "lt-kaunas",
+  "name": "카우나스",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/lt-kaunas-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/lt-kaunas-landscape.json",
+  "originalSha256": "5a818d15672fe3e0c27abf3ec49b3ffb12f523f78aa406ab5947bc46b707f6c7",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/lt-kaunas.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 73220,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "83807f74ff5e980cddd578a7d8c281cc9355815644636975cc44dd40bd865e58",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

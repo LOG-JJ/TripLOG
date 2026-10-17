@@ -1,0 +1,52 @@
+{
+  "id": "fm-kolonia-mobile",
+  "cityId": "fm-kolonia",
+  "name": "콜로니아",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/fm-kolonia-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/fm-kolonia-mobile.json",
+  "originalSha256": "d4f008c8baee7e40715c76254b85bede683ad3c58eb30abdc41c8842ae3de84f",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    25,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/fm-kolonia-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 125204,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "91137d381f704448571bab67b15f385499296eda3bac315c0d13cf4ebde73dca",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

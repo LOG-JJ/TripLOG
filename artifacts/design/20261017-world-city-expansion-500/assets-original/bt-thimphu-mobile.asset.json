@@ -1,0 +1,52 @@
+{
+  "id": "bt-thimphu-mobile",
+  "cityId": "bt-thimphu",
+  "name": "팀푸",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bt-thimphu-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bt-thimphu-mobile.json",
+  "originalSha256": "d3fe7829068851ffdd34dccd0092b467b8e95e1fb2a7afe345e0221b86a1ef1a",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    39,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bt-thimphu-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 99672,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "f17dde35a68ac8df9c70d2d1e71118defb547255ce48ed29217f0cee42abebe4",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

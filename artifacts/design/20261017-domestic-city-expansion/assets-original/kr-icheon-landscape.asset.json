@@ -1,0 +1,51 @@
+{
+  "id": "kr-icheon-landscape",
+  "cityId": "kr-icheon",
+  "name": "이천",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-icheon-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-icheon-landscape.json",
+  "originalSha256": "a39ce1104f601a963c5d8c45f23feda5aa6dec90c573d421d7cb1c50d59abd31",
+  "sourceSize": [
+    1619,
+    972
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    8,
+    1619,
+    972
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-icheon.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 118670,
+  "assetSha256": "bc042270986d68482dcea3e1dd14bb106178e6bc91ee0c4a47321bae990c4a5b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "ax-mariehamn-mobile",
+  "cityId": "ax-mariehamn",
+  "name": "마리에함",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "북유럽",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ax-mariehamn-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ax-mariehamn-mobile.json",
+  "originalSha256": "e8effbac7faf357d788e5df6f4c58ef625d6cd50d4ea151993b81d611008126a",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ax-mariehamn-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 144904,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "80dc442dda303b89b977a5c0f997aaf7970d0cfaae18ef991b89deaa449c7fe8",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa",
+  "technicalAlpha8EdgeCorrection": {
+    "jobId": "ax-mariehamn-mobile",
+    "changed": true,
+    "reason": "Remove sub-visible right/bottom fringe so alpha>=8 reaches the header edge",
+    "threshold": 8,
+    "beforeGaps": [
+      2,
+      0
+    ],
+    "afterGaps": [
+      0,
+      0
+    ],
+    "sourceAlpha8Bounds": [
+      6,
+      180,
+      1116,
+      1401
+    ],
+    "sourceOriginalSha256": "e8effbac7faf357d788e5df6f4c58ef625d6cd50d4ea151993b81d611008126a",
+    "previousAssetSha256": "c617b865f1ccb0147fd3d37d3ebbf184411ef211fe73e8e888b53f3bab6af4d7",
+    "newAssetSha256": "80dc442dda303b89b977a5c0f997aaf7970d0cfaae18ef991b89deaa449c7fe8",
+    "technicalRefits": [],
+    "preservedFiles": [
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/ax-mariehamn-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-alpha8-r1/ax-mariehamn-mobile/ax-mariehamn-mobile.webp",
+        "sha256": "c617b865f1ccb0147fd3d37d3ebbf184411ef211fe73e8e888b53f3bab6af4d7"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ax-mariehamn-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-alpha8-r1/ax-mariehamn-mobile/ax-mariehamn-mobile.asset.json",
+        "sha256": "0c8f436ec6da1fec7a5dbbccdffd4672ef64f8eafd063e5921916db0fa91c0ab"
+      }
+    ],
+    "correctedAt": "2026-10-17T07:42:06.179939+00:00"
+  }
+}

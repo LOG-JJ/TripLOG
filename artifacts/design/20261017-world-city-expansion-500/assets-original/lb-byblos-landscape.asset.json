@@ -1,0 +1,52 @@
+{
+  "id": "lb-byblos-landscape",
+  "cityId": "lb-byblos",
+  "name": "비블로스",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/lb-byblos-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/lb-byblos-landscape.json",
+  "originalSha256": "86852e459f82b55f8b6ed130966074e3abb13d1231e2e44329728a6447c11f4a",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/lb-byblos.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 127960,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "23e9d2e096c454c7eba02ac6ebb42a5e33caf368f41fc69e373df5631628d93a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

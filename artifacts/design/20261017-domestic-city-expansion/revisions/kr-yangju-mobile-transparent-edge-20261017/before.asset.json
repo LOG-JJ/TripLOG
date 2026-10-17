@@ -1,0 +1,51 @@
+{
+  "id": "kr-yangju-mobile",
+  "cityId": "kr-yangju",
+  "name": "양주",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yangju-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yangju-mobile.json",
+  "originalSha256": "f9f3d4fa1db0f869eac7ee9307a430b6dfda54e5391d13d8ace4d49c2f94aab3",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-yangju-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 83136,
+  "assetSha256": "a5c280a50473d410d57b6763f06059c540ac1fe7674c82d2bbeeeddebb95e388",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

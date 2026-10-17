@@ -1,0 +1,52 @@
+{
+  "id": "fr-carcassonne-mobile",
+  "cityId": "fr-carcassonne",
+  "name": "카르카손",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/fr-carcassonne-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/fr-carcassonne-mobile.json",
+  "originalSha256": "361bf9efb5dfc5c67bd0ccb06eba29444ceba1f6e05eb8f51326f3ab06a0752b",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/fr-carcassonne-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 93186,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "36e5a091a9e0c7b861858bed91850b33c76cb952001181868704a09cd8ac199b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

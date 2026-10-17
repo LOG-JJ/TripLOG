@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-17",
+  "reason": "Pre-generation text clarification using landmark source photographs; no image inputs.",
+  "jobs": [
+    {
+      "id": "ai-the-valley-landscape",
+      "previousPromptSha256": "dd960967efa550a890545f4e4c944c490b6663550914de09963bab17d56cafb1",
+      "promptSha256": "72d07fb8af21fe046b31a95b2559157f66978d13d044b8e34f779a2b8d18065f",
+      "imageInputs": []
+    },
+    {
+      "id": "ai-the-valley-mobile",
+      "previousPromptSha256": "cc7a24836fe2b0b6825f7185f7d3e7c80060511eef0e4fbbcd43cbc888b47d5e",
+      "promptSha256": "7a1d93a7eff94460cc9a27d39f21622d7e8d612547ad947a64bb83f6c1c3de83",
+      "imageInputs": []
+    },
+    {
+      "id": "gl-nuuk-landscape",
+      "previousPromptSha256": "08b16c6f34ea9bb60bc831964d055f738b4f5b80c198f719ee47bb2cc7c4c7c5",
+      "promptSha256": "55500e58f2ad861f719679eb68d6c5b907fa31d6cbad5f79009c3a17444f77a1",
+      "imageInputs": []
+    },
+    {
+      "id": "gl-nuuk-mobile",
+      "previousPromptSha256": "7e30ee57f57dab629e923325405a779abde0cca0115b32d580e9a0c8c7e58c28",
+      "promptSha256": "eb4ce24533d3729a6f4130ab5eec6ffd29838cf78371c67f4179a79266a8e2d9",
+      "imageInputs": []
+    },
+    {
+      "id": "ky-george-town-landscape",
+      "previousPromptSha256": "81f174923e4c02a76781bad4169c56a3f48b5991e9f463f78920425682ded273",
+      "promptSha256": "2139dee53ec8b570aef8bfba19ead26cd43e53ce57762ed438fdd287639b6344",
+      "imageInputs": []
+    },
+    {
+      "id": "ky-george-town-mobile",
+      "previousPromptSha256": "dde35c873c4db215ddfd2f1fdaa3119bb255b0dacc145afa934b872c3dfc92c4",
+      "promptSha256": "965bbec6d59a364eb4dcfafac5572180112c70ac161dcbfa9c0414ae30295934",
+      "imageInputs": []
+    },
+    {
+      "id": "mp-garapan-landscape",
+      "previousPromptSha256": "5f012ce0ce42e451a331dc16547700ba6a39b650cf9d128dd59efd3e44b27707",
+      "promptSha256": "19e06aa16de18cc2f2ca2e025f168b6e5284a9c6aa0009c3703c17faf82c9481",
+      "imageInputs": []
+    },
+    {
+      "id": "mp-garapan-mobile",
+      "previousPromptSha256": "56090641060e647828cfd78e5b00db2b11d444cf0d163a9b083a5d5ee9d507ca",
+      "promptSha256": "78c0e3112ae6bf4296793ef3e7565d241e9d38f4e17f389b2aeae415b3fcd62e",
+      "imageInputs": []
+    }
+  ]
+}

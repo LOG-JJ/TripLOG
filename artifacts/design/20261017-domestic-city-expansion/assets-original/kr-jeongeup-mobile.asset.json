@@ -1,0 +1,51 @@
+{
+  "id": "kr-jeongeup-mobile",
+  "cityId": "kr-jeongeup",
+  "name": "정읍",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "전북",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jeongeup-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jeongeup-mobile.json",
+  "originalSha256": "2390bd48459cdc31ed4dc08c3b4829c82d90d3f3ab7ef7db31d983e5590bdb03",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    77,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-jeongeup-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 97068,
+  "assetSha256": "eb9550af1cd538f1f2deb88fd53a5cbef5c8e971dc78a59b9583b52b9391639f",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

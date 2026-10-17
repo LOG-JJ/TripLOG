@@ -1,0 +1,52 @@
+{
+  "id": "vu-port-vila-landscape",
+  "cityId": "vu-port-vila",
+  "name": "포트빌라",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/vu-port-vila-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/vu-port-vila-landscape.json",
+  "originalSha256": "374deae7b112c53aa27195c49b023a56d8d8b5448b894d6c4fd7d500b2cbbeb9",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    16,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/vu-port-vila.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 141924,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "50e551624057e1fad2a4d7011778a189438f0ce42f3ba6d0e4dbee3d0130d8d5",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

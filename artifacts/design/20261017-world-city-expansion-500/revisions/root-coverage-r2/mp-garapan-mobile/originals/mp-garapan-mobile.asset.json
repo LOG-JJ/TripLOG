@@ -1,0 +1,52 @@
+{
+  "id": "mp-garapan-mobile",
+  "cityId": "mp-garapan",
+  "name": "가라판",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "오세아니아",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mp-garapan-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mp-garapan-mobile.json",
+  "originalSha256": "5ebc1cdcb3352f5d3460e1848e43785d2c4496f5a63ce89380eaf62ceee65090",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    75,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mp-garapan-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 102138,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "d43d84b55062bba3770d263183bb91a0b8c83985ffb420644ce5e2442a6a9a37",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

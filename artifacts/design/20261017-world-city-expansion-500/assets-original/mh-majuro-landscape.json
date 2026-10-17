@@ -1,0 +1,26 @@
+{
+  "jobId": "mh-majuro-landscape",
+  "cityId": "mh-majuro",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Majuro, Marshall Islands: the Alele Museum and Public Library in Majuro, a modest pale cream rectangular two-storey building with a very shallow plain sloping roof, a raised upper floor on square concrete posts, open shade beneath the upper floor, simple rectangular windows and an exposed straight exterior staircase along one side. Its architecture is a simple tropical civic building with no circular rotunda, no tiered roof and no tall pointed pavilion roof. A traditional Marshallese outrigger canoe lies on the grass in front with a large shade tree and a few palms. Keep the complete building including both roof ends inside the frame. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette. Keep the complete subject within a generous transparent top margin and a clear right-side margin, using only supporting foreground to reach the right and bottom edges. This is independent text-to-image generation without reference images.",
+  "promptSha256": "331313d0e79c314c89c461c8d036999ed392c19577608c417603228938220dcc",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mh-majuro-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-e5bfc570-687e-4949-8967-8b4eaab62f72.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-e5bfc570-687e-4949-8967-8b4eaab62f72.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/mh-majuro-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "8d077903da872a1284e08db95526d49a168550bf730d04e93ab1742e588d46e3",
+  "savedSha256": "8d077903da872a1284e08db95526d49a168550bf730d04e93ab1742e588d46e3",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:10:15.808Z",
+  "toolCallId": "exec-e5bfc570-687e-4949-8967-8b4eaab62f72",
+  "savedAt": "2026-10-17T07:13:07.778286+00:00"
+}

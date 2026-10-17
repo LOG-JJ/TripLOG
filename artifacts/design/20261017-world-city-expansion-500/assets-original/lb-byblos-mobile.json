@@ -1,0 +1,26 @@
+{
+  "jobId": "lb-byblos-mobile",
+  "cityId": "lb-byblos",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Byblos, Lebanon: the square stone keep of Byblos Castle, with the old Mediterranean harbor and small fishing boats. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "df8a1414d53fd8aac17db26d01720f18bd15d18249a51cb8abf09ce15b7fed79",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/lb-byblos-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-864b405f-3237-409a-b9b0-3af6b0114e57.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-864b405f-3237-409a-b9b0-3af6b0114e57.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/lb-byblos-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "67262c50319ad43d7d3172a6a59e116bf9d902aa18048d44237f55056a53574d",
+  "savedSha256": "67262c50319ad43d7d3172a6a59e116bf9d902aa18048d44237f55056a53574d",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:33:59.359Z",
+  "toolCallId": "exec-864b405f-3237-409a-b9b0-3af6b0114e57",
+  "savedAt": "2026-10-17T06:38:01.482375+00:00"
+}

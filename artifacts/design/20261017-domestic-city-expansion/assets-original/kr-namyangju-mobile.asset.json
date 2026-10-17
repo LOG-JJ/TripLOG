@@ -1,0 +1,51 @@
+{
+  "id": "kr-namyangju-mobile",
+  "cityId": "kr-namyangju",
+  "name": "남양주",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-namyangju-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-namyangju-mobile.json",
+  "originalSha256": "c843927a735a4ff5562614cebb5a9158530234c7c3a51aa88b8c4ddd2fec5586",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-namyangju-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 88422,
+  "assetSha256": "1c42a2aa9495f24cfdc04833ef1618773b21059b9faf83ed6ba1d552ed8626c3",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

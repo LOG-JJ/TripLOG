@@ -1,0 +1,51 @@
+{
+  "id": "kr-samcheok-landscape",
+  "cityId": "kr-samcheok",
+  "name": "삼척",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "강원",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-samcheok-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-samcheok-landscape.json",
+  "originalSha256": "10b72cb586c755d115794d18325b7b5e9e55f36ab3424e0d498f42a71a2a3284",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    25,
+    23,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-samcheok.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 115808,
+  "assetSha256": "f70d5414c57119256e00b32a499a2a0c2f98b57bbf15618ec2ed1802a811a96a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

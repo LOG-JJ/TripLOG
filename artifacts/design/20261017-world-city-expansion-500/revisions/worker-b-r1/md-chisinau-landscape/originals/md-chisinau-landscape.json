@@ -1,0 +1,26 @@
+{
+  "jobId": "md-chisinau-landscape",
+  "cityId": "md-chisinau",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Chisinau, Moldova: the Triumphal Arch, with the cathedral park. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "a28d7dee0b314ff64b4fff39c362d49365a2aa80bdb220e890b4003791510f70",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/md-chisinau-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-b9295b31-fa05-44f6-af4c-beb47556f448.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-b9295b31-fa05-44f6-af4c-beb47556f448.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/md-chisinau-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "aa2d8a67d8e4a8e57086f6aa46a906a265bf5cee065b47b6feef827bfbac56b0",
+  "savedSha256": "aa2d8a67d8e4a8e57086f6aa46a906a265bf5cee065b47b6feef827bfbac56b0",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:04:35Z",
+  "toolCallId": "exec-b9295b31-fa05-44f6-af4c-beb47556f448",
+  "savedAt": "2026-10-17T06:08:48.364868+00:00"
+}

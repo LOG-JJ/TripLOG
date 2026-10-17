@@ -1,0 +1,52 @@
+{
+  "id": "sy-damascus-landscape",
+  "cityId": "sy-damascus",
+  "name": "다마스쿠스",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sy-damascus-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sy-damascus-landscape.json",
+  "originalSha256": "726fe2bbdf65d2c5c393c307b910e0d2b91d45f91a6cb577b465968a97f35cdf",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    73,
+    58,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sy-damascus.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 106194,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "0f12c841880ca27b54be88d8a8f4a5e0f5da77a17cb625a6ef31703964507619",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

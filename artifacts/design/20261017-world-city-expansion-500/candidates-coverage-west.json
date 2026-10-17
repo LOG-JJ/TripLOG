@@ -1,0 +1,623 @@
+[
+  {
+    "id": "ai-the-valley",
+    "name": "더밸리",
+    "englishName": "The Valley",
+    "countryCode": "AI",
+    "kind": "town",
+    "theme": "traditional",
+    "aliases": [
+      "The Valley",
+      "더 밸리",
+      "The Valley Anguilla"
+    ],
+    "canonicalInput": "더밸리",
+    "motif": "Wallblake House, the surviving historic plantation house in The Valley, with its shaded veranda and a small tropical garden",
+    "motifSource": {
+      "title": "Anguilla Tourist Board — Explore our Island / The Valley",
+      "url": "https://ivisitanguilla.com/explore-our-island/"
+    },
+    "region": "카리브해",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "aw-oranjestad",
+    "name": "오라녜스타트",
+    "englishName": "Oranjestad",
+    "countryCode": "AW",
+    "kind": "city",
+    "theme": "traditional",
+    "aliases": [
+      "Oranjestad",
+      "오란예스타트",
+      "오라녜스타드"
+    ],
+    "canonicalInput": "오라녜스타트",
+    "motif": "Fort Zoutman and its adjoining Willem III clock-and-lighthouse tower, with one low Dutch-Caribbean facade beside the fort",
+    "motifSource": {
+      "title": "Aruba Tourism Authority — Fort Zoutman Historical Museum",
+      "url": "https://www.aruba.com/us/explore/fort-zoutman-historical-museum"
+    },
+    "region": "카리브해",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "ax-mariehamn",
+    "name": "마리에함",
+    "englishName": "Mariehamn",
+    "countryCode": "AX",
+    "kind": "city",
+    "theme": "coast",
+    "aliases": [
+      "Mariehamn",
+      "마리에하믄",
+      "Maarianhamina"
+    ],
+    "canonicalInput": "마리에함",
+    "motif": "the four-masted museum sailing ship Pommern in Mariehamn's western harbour, with a small wooden waterfront pavilion",
+    "motifSource": {
+      "title": "Visit Åland — A Stroll Around Mariehamn",
+      "url": "https://visitaland.com/en/experience/sights-excursions/mariehamn/"
+    },
+    "region": "북유럽",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "bl-gustavia",
+    "name": "구스타비아",
+    "englishName": "Gustavia",
+    "countryCode": "BL",
+    "kind": "town",
+    "theme": "coast",
+    "aliases": [
+      "Gustavia"
+    ],
+    "canonicalInput": "구스타비아",
+    "motif": "Fort Gustav's surviving stone battery and a single cannon above Gustavia's sheltered yacht harbour",
+    "motifSource": {
+      "title": "Saint Barthélemy Tourism Committee — Swedish battery of Fort Gustav III",
+      "url": "https://www.saintbarth-tourisme.com/en/fort-gustav-iii-2/"
+    },
+    "region": "카리브해",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "bm-hamilton",
+    "name": "해밀턴(버뮤다)",
+    "englishName": "Hamilton",
+    "countryCode": "BM",
+    "kind": "city",
+    "theme": "traditional",
+    "aliases": [
+      "Hamilton",
+      "해밀턴",
+      "버뮤다 해밀턴",
+      "Hamilton Bermuda",
+      "Hamilton, Bermuda"
+    ],
+    "canonicalInput": "해밀턴(버뮤다)",
+    "motif": "Hamilton's Cathedral of the Most Holy Trinity with its Gothic arches and tall square tower, accompanied by one pastel Front Street facade",
+    "motifSource": {
+      "title": "Bermuda Tourism Authority — City of Hamilton Walking Tour",
+      "url": "https://www.gotobermuda.com/plan/inspiration/article/city-of-hamilton-walking-tour"
+    },
+    "region": "북대서양",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "bq-kralendijk",
+    "name": "크랄렌데이크",
+    "englishName": "Kralendijk",
+    "countryCode": "BQ",
+    "kind": "town",
+    "theme": "coast",
+    "aliases": [
+      "Kralendijk",
+      "크랄렌디크",
+      "크랄렌다이크"
+    ],
+    "canonicalInput": "크랄렌데이크",
+    "motif": "Fort Oranje's low coastal fort walls and square stone lighthouse, with a small sailing boat on Kralendijk's waterfront",
+    "motifSource": {
+      "title": "Cultural Heritage Agency of the Netherlands — Kralendijk Roadstead",
+      "url": "https://mass.cultureelerfgoed.nl/kralendijk-roadstead"
+    },
+    "region": "카리브해",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "cw-willemstad",
+    "name": "빌렘스타트",
+    "englishName": "Willemstad",
+    "countryCode": "CW",
+    "kind": "city",
+    "theme": "coast",
+    "aliases": [
+      "Willemstad",
+      "빌렘스타드"
+    ],
+    "canonicalInput": "빌렘스타트",
+    "motif": "Willemstad's Handelskade row of colourful Dutch-gabled waterfront houses, with a short section of the floating Queen Emma pontoon bridge",
+    "motifSource": {
+      "title": "Curaçao Tourist Board — District Punda",
+      "url": "https://www.curacao.com/en/activity/district-punda?cat=sights-and-landmarks"
+    },
+    "region": "카리브해",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "fk-stanley",
+    "name": "스탠리",
+    "englishName": "Stanley",
+    "countryCode": "FK",
+    "kind": "city",
+    "theme": "coast",
+    "aliases": [
+      "Stanley",
+      "포트스탠리",
+      "Port Stanley"
+    ],
+    "canonicalInput": "스탠리",
+    "motif": "Stanley's Christ Church Cathedral with its square bell tower, accompanied by the adjacent Whalebone Arch on the seafront",
+    "motifSource": {
+      "title": "Falkland Islands Tourist Board — History and Heritage",
+      "url": "https://www.falklandislands.com/about/history-and-heritage?p=2"
+    },
+    "region": "남대서양",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "fo-torshavn",
+    "name": "토르스하운",
+    "englishName": "Tórshavn",
+    "countryCode": "FO",
+    "kind": "city",
+    "theme": "traditional",
+    "aliases": [
+      "Tórshavn",
+      "Torshavn",
+      "토르스하븐",
+      "토르샤븐"
+    ],
+    "canonicalInput": "토르스하운",
+    "motif": "Tinganes' red wooden government houses with green turf roofs on the low rocky harbour peninsula, with one small fishing boat",
+    "motifSource": {
+      "title": "Visit Faroe Islands — The Capital Tórshavn",
+      "url": "https://visitfaroeislands.com/en/see-do/inspiration-guides/popular-guides/regional-guides/the-capital-torshavn"
+    },
+    "region": "북유럽",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "gf-cayenne",
+    "name": "카옌",
+    "englishName": "Cayenne",
+    "countryCode": "GF",
+    "kind": "city",
+    "theme": "urban",
+    "aliases": [
+      "Cayenne"
+    ],
+    "canonicalInput": "카옌",
+    "motif": "Cayenne's Place des Palmistes with its tall royal palms around the Republic column, with one low Creole veranda facade at the edge",
+    "motifSource": {
+      "title": "French Ministry of Culture — Place de l'Esplanade dite Place des Palmistes",
+      "url": "https://pop.culture.gouv.fr/notice/merimee/IA97300282"
+    },
+    "region": "남미",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "gg-saint-peter-port",
+    "name": "세인트피터포트",
+    "englishName": "Saint Peter Port",
+    "countryCode": "GG",
+    "kind": "town",
+    "theme": "coast",
+    "aliases": [
+      "Saint Peter Port",
+      "세인트 피터 포트",
+      "St Peter Port",
+      "St. Peter Port"
+    ],
+    "canonicalInput": "세인트피터포트",
+    "motif": "Castle Cornet's layered stone ramparts at the mouth of Saint Peter Port harbour, with a small cluster of marina sailboat masts",
+    "motifSource": {
+      "title": "Visit Guernsey — Castle Cornet & Its Museums",
+      "url": "https://www.visitguernsey.com/experiences/activities/castle-cornet-its-museums/"
+    },
+    "region": "서유럽",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "gi-gibraltar",
+    "name": "지브롤터",
+    "englishName": "Gibraltar",
+    "countryCode": "GI",
+    "kind": "city",
+    "theme": "coast",
+    "aliases": [
+      "Gibraltar",
+      "Gibraltar City"
+    ],
+    "canonicalInput": "지브롤터",
+    "motif": "the Rock of Gibraltar's steep pale limestone profile rising above compact waterfront town buildings",
+    "motifSource": {
+      "title": "Gibraltar Tourist Board — Gibraltar Nature Reserve Upper Rock",
+      "url": "https://www.visitgibraltar.gi/uploads/Leaflets/GNR_NatureReserve_8pp_NEW.pdf"
+    },
+    "region": "남유럽",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "gl-nuuk",
+    "name": "누크",
+    "englishName": "Nuuk",
+    "countryCode": "GL",
+    "kind": "city",
+    "theme": "coast",
+    "aliases": [
+      "Nuuk",
+      "Godthåb",
+      "Godthab"
+    ],
+    "canonicalInput": "누크",
+    "motif": "Nuuk's Katuaq Cultural Centre with its broad rippling wooden facade, with a simple rocky Greenlandic mountain silhouette behind it",
+    "motifSource": {
+      "title": "Visit Greenland — Discover Nuuk",
+      "url": "https://visitgreenland.com/destinations/nuuk/"
+    },
+    "region": "북극",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "gp-pointe-a-pitre",
+    "name": "푸앵타피트르",
+    "englishName": "Pointe-à-Pitre",
+    "countryCode": "GP",
+    "kind": "city",
+    "theme": "traditional",
+    "aliases": [
+      "Pointe-à-Pitre",
+      "Pointe a Pitre",
+      "Pointe-a-Pitre",
+      "푸앵트아피트르",
+      "푸앵트아피트"
+    ],
+    "canonicalInput": "푸앵타피트르",
+    "motif": "the neoclassical front of Saint-Pierre-et-Saint-Paul Church in Pointe-à-Pitre, with its triangular pediment and a single royal palm beside it",
+    "motifSource": {
+      "title": "Guadeloupe Islands Tourism Board — Cathédrale Saint-Pierre-et-Saint-Paul de Pointe-à-Pitre",
+      "url": "https://www.lesilesdeguadeloupe.com/patrimoine-culturel/cathedrale-saint-pierre-et-saint-paul-de-pointe-a-pitre/"
+    },
+    "region": "카리브해",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "im-douglas",
+    "name": "더글러스",
+    "englishName": "Douglas",
+    "countryCode": "IM",
+    "kind": "city",
+    "theme": "coast",
+    "aliases": [
+      "Douglas",
+      "더글라스",
+      "Douglas Isle of Man",
+      "Douglas, Isle of Man"
+    ],
+    "canonicalInput": "더글러스",
+    "motif": "the Tower of Refuge's small stone battlements on its tidal rock in Douglas Bay, with a short sweep of the seaside promenade",
+    "motifSource": {
+      "title": "Visit Isle of Man — Tower of Refuge",
+      "url": "https://www.visitisleofman.com/experience/tower-of-refuge-p1295741"
+    },
+    "region": "서유럽",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "je-saint-helier",
+    "name": "세인트헬리어",
+    "englishName": "Saint Helier",
+    "countryCode": "JE",
+    "kind": "town",
+    "theme": "coast",
+    "aliases": [
+      "Saint Helier",
+      "세인트 헬리어",
+      "St Helier",
+      "St. Helier",
+      "Saint-Hélier"
+    ],
+    "canonicalInput": "세인트헬리어",
+    "motif": "Elizabeth Castle's stone ramparts on a rocky tidal islet off Saint Helier, with its exposed low-tide causeway",
+    "motifSource": {
+      "title": "Visit Jersey — Elizabeth Castle",
+      "url": "https://www.jersey.com/things-to-do/attractions/listings/elizabeth-castle/"
+    },
+    "region": "서유럽",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "ky-george-town",
+    "name": "조지타운(케이맨)",
+    "englishName": "George Town",
+    "countryCode": "KY",
+    "kind": "city",
+    "theme": "traditional",
+    "aliases": [
+      "George Town",
+      "조지타운",
+      "케이맨 조지타운",
+      "George Town Cayman",
+      "George Town, Cayman Islands"
+    ],
+    "canonicalInput": "조지타운(케이맨)",
+    "motif": "the historic Cayman Islands National Museum building in George Town, with its wooden veranda and a small harbour-front palm",
+    "motifSource": {
+      "title": "Cayman Islands Department of Tourism — Museums",
+      "url": "https://www.visitcaymanislands.com/en-gb/things-to-do/popular-attractions/museums"
+    },
+    "region": "카리브해",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "mf-marigot",
+    "name": "마리고",
+    "englishName": "Marigot",
+    "countryCode": "MF",
+    "kind": "town",
+    "theme": "coast",
+    "aliases": [
+      "Marigot"
+    ],
+    "canonicalInput": "마리고",
+    "motif": "Fort Louis' low stone ramparts on the rocky hill above Marigot, with the sheltered marina and a few yacht masts below",
+    "motifSource": {
+      "title": "Saint-Martin Tourism Office — Marigot, la capitale créole",
+      "url": "https://www.st-martin.org/decouvrir/culture-et-patrimoine/marigot-la-capitale-creole/"
+    },
+    "region": "카리브해",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "mq-fort-de-france",
+    "name": "포르드프랑스",
+    "englishName": "Fort-de-France",
+    "countryCode": "MQ",
+    "kind": "city",
+    "theme": "traditional",
+    "aliases": [
+      "Fort-de-France",
+      "포르 드 프랑스",
+      "Fort de France"
+    ],
+    "canonicalInput": "포르드프랑스",
+    "motif": "Fort-de-France's Schœlcher Library with its ornate arched facade and domed roof, with palms from the adjoining Place de la Savane",
+    "motifSource": {
+      "title": "Martinique Tourism Authority — Bibliothèque Schœlcher",
+      "url": "https://www.martinique.org/en/bibliotheque-schoelcher"
+    },
+    "region": "카리브해",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "ms-little-bay",
+    "name": "리틀베이",
+    "englishName": "Little Bay",
+    "countryCode": "MS",
+    "kind": "town",
+    "theme": "coast",
+    "aliases": [
+      "Little Bay",
+      "리틀 베이",
+      "Little Bay Montserrat",
+      "Little Bay, Montserrat"
+    ],
+    "canonicalInput": "리틀베이",
+    "motif": "the National Museum of Montserrat building at Little Bay, with the nearby curved dark-sand beach and green headland",
+    "motifSource": {
+      "title": "Montserrat Tourism Authority — A One-Day Escape to Montserrat",
+      "url": "https://www.visitmontserrat.com/a-one-day-escape-to-montserrat/"
+    },
+    "region": "카리브해",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "pm-saint-pierre",
+    "name": "생피에르",
+    "englishName": "Saint-Pierre",
+    "countryCode": "PM",
+    "kind": "town",
+    "theme": "coast",
+    "aliases": [
+      "Saint-Pierre",
+      "Saint Pierre",
+      "Saint-Pierre, Saint-Pierre-et-Miquelon"
+    ],
+    "canonicalInput": "생피에르",
+    "motif": "the Pointe aux Canons lighthouse at Saint-Pierre's harbour entrance, with a few colourful wooden waterfront houses",
+    "motifSource": {
+      "title": "Saint-Pierre and Miquelon Tourism — Saint-Pierre between land and sea",
+      "url": "https://en.spm-tourisme.fr/saint-pierre-between-land-and-sea/"
+    },
+    "region": "북대서양",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "pr-san-juan",
+    "name": "산후안",
+    "englishName": "San Juan",
+    "countryCode": "PR",
+    "kind": "city",
+    "theme": "coast",
+    "aliases": [
+      "San Juan",
+      "산 후안",
+      "San Juan Puerto Rico",
+      "San Juan, Puerto Rico"
+    ],
+    "canonicalInput": "산후안",
+    "motif": "Castillo San Felipe del Morro's thick stepped stone walls and small domed sentry box above San Juan Bay, with a broad grassy approach",
+    "motifSource": {
+      "title": "U.S. National Park Service — Castillo San Felipe del Morro",
+      "url": "https://www.nps.gov/saju/learn/historyculture/el-morro.htm"
+    },
+    "region": "카리브해",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "sh-jamestown",
+    "name": "제임스타운",
+    "englishName": "Jamestown",
+    "countryCode": "SH",
+    "kind": "town",
+    "theme": "traditional",
+    "aliases": [
+      "Jamestown",
+      "제임스 타운",
+      "Jamestown Saint Helena",
+      "Jamestown, Saint Helena"
+    ],
+    "canonicalInput": "제임스타운",
+    "motif": "Jacob's Ladder as a long straight staircase climbing the steep rocky valley side above Jamestown, with a short row of Georgian town facades at its foot",
+    "motifSource": {
+      "title": "St Helena Tourism — History and Heritage",
+      "url": "https://sthelenatourism.com/history-and-heritage/"
+    },
+    "region": "남대서양",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "sj-longyearbyen",
+    "name": "롱위에아르뷔엔",
+    "englishName": "Longyearbyen",
+    "countryCode": "SJ",
+    "kind": "town",
+    "theme": "mountain",
+    "aliases": [
+      "Longyearbyen",
+      "롱위에아르비엔",
+      "롱이어비엔",
+      "Longyearbyen Svalbard"
+    ],
+    "canonicalInput": "롱위에아르뷔엔",
+    "motif": "the wooden Svalbard Church in Longyearbyen with its small bell tower, with a broad snow-dusted Arctic ridge behind it",
+    "motifSource": {
+      "title": "Visit Svalbard — Svalbard kirke",
+      "url": "https://www.visitsvalbard.com/se-og-gjore/svalbard-kirke-p3500473"
+    },
+    "region": "북극",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "sx-philipsburg",
+    "name": "필립스뷔르흐",
+    "englishName": "Philipsburg",
+    "countryCode": "SX",
+    "kind": "town",
+    "theme": "traditional",
+    "aliases": [
+      "Philipsburg",
+      "필립스버그",
+      "필립스뷔르그",
+      "Philipsburg Sint Maarten"
+    ],
+    "canonicalInput": "필립스뷔르흐",
+    "motif": "Philipsburg's white wooden Courthouse with its central clock cupola, with a short colourful Old Street facade beside it",
+    "motifSource": {
+      "title": "St. Maarten Tourist Bureau — Things To Do in Philipsburg",
+      "url": "https://www.vacationstmaarten.com/our-island/philipsburg/things-to-do/?bounds=false&sort=qualityScore&view=list"
+    },
+    "region": "카리브해",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "tc-cockburn-town",
+    "name": "코크번타운",
+    "englishName": "Cockburn Town",
+    "countryCode": "TC",
+    "kind": "town",
+    "theme": "coast",
+    "aliases": [
+      "Cockburn Town",
+      "코크번 타운",
+      "콕번타운",
+      "코번타운",
+      "Cockburn Town Grand Turk"
+    ],
+    "canonicalInput": "코크번타운",
+    "motif": "the Turks and Caicos National Museum at Guinep House on Cockburn Town's Front Street, with its traditional veranda and a strip of turquoise shoreline",
+    "motifSource": {
+      "title": "Experience Turks and Caicos — Grand Turk / Cockburn Town and National Museum",
+      "url": "https://www.visitturksandcaicos.com/turks-caicos-islands/grand-turk"
+    },
+    "region": "카리브해",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "vg-road-town",
+    "name": "로드타운",
+    "englishName": "Road Town",
+    "countryCode": "VG",
+    "kind": "town",
+    "theme": "forest",
+    "aliases": [
+      "Road Town",
+      "로드 타운",
+      "Road Town Tortola",
+      "Road Town, Tortola"
+    ],
+    "canonicalInput": "로드타운",
+    "motif": "the royal-palm avenue and central fountain of J.R. O'Neal Botanic Gardens in Road Town, with a small flowering pergola",
+    "motifSource": {
+      "title": "National Parks Trust of the Virgin Islands — J.R. O'Neal Botanic Gardens",
+      "url": "https://www.bvinationalparkstrust.org/events/joseph-reynold-oneal-botanic-garden"
+    },
+    "region": "카리브해",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "vi-charlotte-amalie",
+    "name": "샬럿아말리에",
+    "englishName": "Charlotte Amalie",
+    "countryCode": "VI",
+    "kind": "city",
+    "theme": "traditional",
+    "aliases": [
+      "Charlotte Amalie",
+      "샬럿 아말리에",
+      "샬럿아말리",
+      "Charlotte Amalie St Thomas",
+      "Charlotte Amalie, St. Thomas"
+    ],
+    "canonicalInput": "샬럿아말리에",
+    "motif": "Fort Christian's red bastions and central Victorian clock tower in Charlotte Amalie, with a single shade tree from the neighbouring Emancipation Garden",
+    "motifSource": {
+      "title": "U.S. Virgin Islands Department of Tourism — Must-See Historic Sites",
+      "url": "https://www.visitusvi.com/experience/must-see-historic-sites/"
+    },
+    "region": "카리브해",
+    "stage": "country-coverage"
+  },
+  {
+    "id": "xk-prizren",
+    "name": "프리즈렌",
+    "englishName": "Prizren",
+    "countryCode": "XK",
+    "kind": "city",
+    "theme": "traditional",
+    "aliases": [
+      "Prizren",
+      "Prizreni"
+    ],
+    "canonicalInput": "프리즈렌",
+    "motif": "Prizren's Sinan Pasha Mosque with its single broad dome and slender minaret, with the nearby three-arched Stone Bridge across the Lumbardhi River",
+    "motifSource": {
+      "title": "Visit Prizren — Tourist landmarks / Sinan Pasha Mosque and Stone Bridge",
+      "url": "https://visit-prizren.com/en/"
+    },
+    "region": "남유럽",
+    "stage": "country-coverage"
+  }
+]

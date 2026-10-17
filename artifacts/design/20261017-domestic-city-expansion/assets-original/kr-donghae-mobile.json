@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-donghae-mobile",
+  "cityId": "kr-donghae",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Donghae City, South Korea: Dojjaebigol Sky Valley's pale elevated walkway and round viewing decks carried on tall pale concrete piers above a green coastal hillside, with the separate lower Haerang sea platform below: a pink curved loop shaped like a goblin's club on slim blue posts projecting into the blue sea. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "1acd9be7f6b79411638cfb3f013b2195a7f418e228ce321fde6500fbaf4b4ec3",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-donghae-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-a612978b-6aa4-4923-94bc-38563f9bdc7a.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-a612978b-6aa4-4923-94bc-38563f9bdc7a.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-donghae-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "cbfe552b8b77b7b0d591d89dbb1aa606d8c07f442acb40c6cb8e705fac0f9540",
+  "savedSha256": "cbfe552b8b77b7b0d591d89dbb1aa606d8c07f442acb40c6cb8e705fac0f9540",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:17:48.272Z",
+  "toolCallId": "exec-a612978b-6aa4-4923-94bc-38563f9bdc7a",
+  "savedAt": "2026-10-17T05:18:58.874033+00:00"
+}

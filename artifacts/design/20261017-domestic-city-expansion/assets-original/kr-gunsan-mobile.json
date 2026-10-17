@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-gunsan-mobile",
+  "cityId": "kr-gunsan",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Gunsan, South Korea: the former Gunsan Customs building, a low single-storey symmetrical red-brick building with gray pitched roofs, gabled end bays, pale blue window frames, tall arched windows and a small pale-stone central entrance. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "00b6328a902dac349b68418ad75fc9440f3f145dd0b6c52e5205d6c934200c10",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gunsan-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-c1d8fb4e-5848-4823-b667-f5cda4f1f9ec.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-c1d8fb4e-5848-4823-b667-f5cda4f1f9ec.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gunsan-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "2b5e5a8c90cb2e09a31d390ceb29e7296cdba7130fe5224852c2d77066bebe86",
+  "savedSha256": "2b5e5a8c90cb2e09a31d390ceb29e7296cdba7130fe5224852c2d77066bebe86",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:22:49Z",
+  "toolCallId": "exec-c1d8fb4e-5848-4823-b667-f5cda4f1f9ec",
+  "savedAt": "2026-10-17T05:23:15.912813+00:00"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "sh-jamestown-landscape",
+  "cityId": "sh-jamestown",
+  "name": "제임스타운",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "남대서양",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sh-jamestown-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sh-jamestown-landscape.json",
+  "originalSha256": "259d5564cd889df29b2ff7f03e5e88feb8b75b46fb6723278fecbef655df3048",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    13,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sh-jamestown.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 130704,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "07441a0306cc6aad92aa42958dc79aa426d4bbd8accc0a2c13240d1dcf12d120",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

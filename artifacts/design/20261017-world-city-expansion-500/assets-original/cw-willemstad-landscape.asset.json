@@ -1,0 +1,52 @@
+{
+  "id": "cw-willemstad-landscape",
+  "cityId": "cw-willemstad",
+  "name": "빌렘스타트",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cw-willemstad-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cw-willemstad-landscape.json",
+  "originalSha256": "76184bc5aea16498e9989145c73711effd0a4451f8482b4a076605db65bc1daf",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cw-willemstad.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 112464,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "42e6c7707e1dc0ed6e2d939e16a6a00e43e2880f06d3a3dcef16a4ce32657e7b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

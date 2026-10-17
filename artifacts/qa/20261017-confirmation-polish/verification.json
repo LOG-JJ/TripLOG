@@ -1,0 +1,1074 @@
+{
+  "date": "2026-10-17",
+  "scope": "TripLOG compact confirmation and inline removal styling",
+  "deployment": "Local implementation only; no commit or push requested",
+  "browserAvailability": {
+    "classification": "Absent",
+    "reason": "Browser plugin not available",
+    "method": "Existing isolated Playwright fixtures with Edge and Chromium headless shell; external services blocked"
+  },
+  "sourceIsolation": {
+    "base": "b146d47b72cb3ee617cec7d310a7b0741db74deb",
+    "applied": "Eight UI source files",
+    "matchesPrimarySource": true,
+    "reason": "Concurrent domestic-city catalog additions referenced 160 images not yet present in the shared working directory",
+    "untouched": [
+      "src/app/data/destination-scenes.js",
+      "artifacts/design/20261017-domestic-city-expansion/",
+      "scripts/fixtures/destination-scenes-domestic.js"
+    ]
+  },
+  "summary": {
+    "stateViewportChecks": 96,
+    "interactionGroups": 13,
+    "supplementalChromiumChecks": 12,
+    "beforeStandardHeight": 160.1875,
+    "afterStandardHeight": 166.1875,
+    "maxStandardStateHeight": 258.1875,
+    "minActionHeight": 48,
+    "minActionTextContrast": 10.738815786807484,
+    "minDescriptionTextContrast": 5.318394392629977
+  },
+  "dimensions": [
+    {
+      "kind": "itinerary",
+      "viewport": 320,
+      "width": 288,
+      "height": 166.1875
+    },
+    {
+      "kind": "itinerary-linked",
+      "viewport": 320,
+      "width": 288,
+      "height": 195.1875
+    },
+    {
+      "kind": "expense",
+      "viewport": 320,
+      "width": 288,
+      "height": 195.1875
+    },
+    {
+      "kind": "reservation",
+      "viewport": 320,
+      "width": 288,
+      "height": 195.1875
+    },
+    {
+      "kind": "trip",
+      "viewport": 320,
+      "width": 288,
+      "height": 237.1875
+    },
+    {
+      "kind": "shared-trip",
+      "viewport": 320,
+      "width": 288,
+      "height": 258.1875
+    },
+    {
+      "kind": "history",
+      "viewport": 320,
+      "width": 288,
+      "height": 195.1875
+    },
+    {
+      "kind": "draft",
+      "viewport": 320,
+      "width": 288,
+      "height": 216.1875
+    },
+    {
+      "kind": "packing",
+      "viewport": 320,
+      "width": 288,
+      "height": 166.1875
+    },
+    {
+      "kind": "packing-reset",
+      "viewport": 320,
+      "width": 288,
+      "height": 187.1875
+    },
+    {
+      "kind": "comment",
+      "viewport": 320,
+      "width": 288,
+      "height": 195.1875
+    },
+    {
+      "kind": "companion",
+      "viewport": 320,
+      "width": 288,
+      "height": 216.1875
+    },
+    {
+      "kind": "member",
+      "viewport": 320,
+      "width": 288,
+      "height": 216.1875
+    },
+    {
+      "kind": "leave",
+      "viewport": 320,
+      "width": 288,
+      "height": 216.1875
+    },
+    {
+      "kind": "map-key",
+      "viewport": 320,
+      "width": 288,
+      "height": 220.375
+    },
+    {
+      "kind": "reset",
+      "viewport": 320,
+      "width": 288,
+      "height": 233.375
+    },
+    {
+      "kind": "itinerary",
+      "viewport": 390,
+      "width": 342,
+      "height": 166.1875
+    },
+    {
+      "kind": "itinerary-linked",
+      "viewport": 390,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "expense",
+      "viewport": 390,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "reservation",
+      "viewport": 390,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "trip",
+      "viewport": 390,
+      "width": 342,
+      "height": 216.1875
+    },
+    {
+      "kind": "shared-trip",
+      "viewport": 390,
+      "width": 342,
+      "height": 216.1875
+    },
+    {
+      "kind": "history",
+      "viewport": 390,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "draft",
+      "viewport": 390,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "packing",
+      "viewport": 390,
+      "width": 342,
+      "height": 166.1875
+    },
+    {
+      "kind": "packing-reset",
+      "viewport": 390,
+      "width": 342,
+      "height": 166.1875
+    },
+    {
+      "kind": "comment",
+      "viewport": 390,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "companion",
+      "viewport": 390,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "member",
+      "viewport": 390,
+      "width": 342,
+      "height": 216.1875
+    },
+    {
+      "kind": "leave",
+      "viewport": 390,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "map-key",
+      "viewport": 390,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "reset",
+      "viewport": 390,
+      "width": 342,
+      "height": 187.1875
+    },
+    {
+      "kind": "itinerary",
+      "viewport": 599,
+      "width": 342,
+      "height": 166.1875
+    },
+    {
+      "kind": "itinerary-linked",
+      "viewport": 599,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "expense",
+      "viewport": 599,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "reservation",
+      "viewport": 599,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "trip",
+      "viewport": 599,
+      "width": 342,
+      "height": 216.1875
+    },
+    {
+      "kind": "shared-trip",
+      "viewport": 599,
+      "width": 342,
+      "height": 216.1875
+    },
+    {
+      "kind": "history",
+      "viewport": 599,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "draft",
+      "viewport": 599,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "packing",
+      "viewport": 599,
+      "width": 342,
+      "height": 166.1875
+    },
+    {
+      "kind": "packing-reset",
+      "viewport": 599,
+      "width": 342,
+      "height": 166.1875
+    },
+    {
+      "kind": "comment",
+      "viewport": 599,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "companion",
+      "viewport": 599,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "member",
+      "viewport": 599,
+      "width": 342,
+      "height": 216.1875
+    },
+    {
+      "kind": "leave",
+      "viewport": 599,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "map-key",
+      "viewport": 599,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "reset",
+      "viewport": 599,
+      "width": 342,
+      "height": 187.1875
+    },
+    {
+      "kind": "itinerary",
+      "viewport": 600,
+      "width": 342,
+      "height": 166.1875
+    },
+    {
+      "kind": "itinerary-linked",
+      "viewport": 600,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "expense",
+      "viewport": 600,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "reservation",
+      "viewport": 600,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "trip",
+      "viewport": 600,
+      "width": 342,
+      "height": 216.1875
+    },
+    {
+      "kind": "shared-trip",
+      "viewport": 600,
+      "width": 342,
+      "height": 216.1875
+    },
+    {
+      "kind": "history",
+      "viewport": 600,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "draft",
+      "viewport": 600,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "packing",
+      "viewport": 600,
+      "width": 342,
+      "height": 166.1875
+    },
+    {
+      "kind": "packing-reset",
+      "viewport": 600,
+      "width": 342,
+      "height": 166.1875
+    },
+    {
+      "kind": "comment",
+      "viewport": 600,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "companion",
+      "viewport": 600,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "member",
+      "viewport": 600,
+      "width": 342,
+      "height": 216.1875
+    },
+    {
+      "kind": "leave",
+      "viewport": 600,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "map-key",
+      "viewport": 600,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "reset",
+      "viewport": 600,
+      "width": 342,
+      "height": 187.1875
+    },
+    {
+      "kind": "itinerary",
+      "viewport": 768,
+      "width": 342,
+      "height": 166.1875
+    },
+    {
+      "kind": "itinerary-linked",
+      "viewport": 768,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "expense",
+      "viewport": 768,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "reservation",
+      "viewport": 768,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "trip",
+      "viewport": 768,
+      "width": 342,
+      "height": 216.1875
+    },
+    {
+      "kind": "shared-trip",
+      "viewport": 768,
+      "width": 342,
+      "height": 216.1875
+    },
+    {
+      "kind": "history",
+      "viewport": 768,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "draft",
+      "viewport": 768,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "packing",
+      "viewport": 768,
+      "width": 342,
+      "height": 166.1875
+    },
+    {
+      "kind": "packing-reset",
+      "viewport": 768,
+      "width": 342,
+      "height": 166.1875
+    },
+    {
+      "kind": "comment",
+      "viewport": 768,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "companion",
+      "viewport": 768,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "member",
+      "viewport": 768,
+      "width": 342,
+      "height": 216.1875
+    },
+    {
+      "kind": "leave",
+      "viewport": 768,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "map-key",
+      "viewport": 768,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "reset",
+      "viewport": 768,
+      "width": 342,
+      "height": 187.1875
+    },
+    {
+      "kind": "itinerary",
+      "viewport": 1440,
+      "width": 342,
+      "height": 166.1875
+    },
+    {
+      "kind": "itinerary-linked",
+      "viewport": 1440,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "expense",
+      "viewport": 1440,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "reservation",
+      "viewport": 1440,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "trip",
+      "viewport": 1440,
+      "width": 342,
+      "height": 216.1875
+    },
+    {
+      "kind": "shared-trip",
+      "viewport": 1440,
+      "width": 342,
+      "height": 216.1875
+    },
+    {
+      "kind": "history",
+      "viewport": 1440,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "draft",
+      "viewport": 1440,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "packing",
+      "viewport": 1440,
+      "width": 342,
+      "height": 166.1875
+    },
+    {
+      "kind": "packing-reset",
+      "viewport": 1440,
+      "width": 342,
+      "height": 166.1875
+    },
+    {
+      "kind": "comment",
+      "viewport": 1440,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "companion",
+      "viewport": 1440,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "member",
+      "viewport": 1440,
+      "width": 342,
+      "height": 216.1875
+    },
+    {
+      "kind": "leave",
+      "viewport": 1440,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "map-key",
+      "viewport": 1440,
+      "width": 342,
+      "height": 195.1875
+    },
+    {
+      "kind": "reset",
+      "viewport": 1440,
+      "width": 342,
+      "height": 187.1875
+    }
+  ],
+  "flows": [
+    "Nested cancel, Enter on default cancel, Escape, backdrop and focus restoration",
+    "Long names, safe text, duplicate opens and 200% text at 320px",
+    "Attachment and transit removal stay in the unsaved editor",
+    "Itinerary deletion and its linked expense are accurately disclosed and persisted",
+    "Expense deletion keeps its itinerary; failed persistence retains the record/editor and retry succeeds",
+    "Preparation item, default list reset and settlement companion cancel/commit",
+    "Manual reservation deletion keeps its source itinerary and expenses",
+    "Saved snapshot delete, persistence and nested legacy-overlay Escape",
+    "Draft confirmation and persistent discard",
+    "Map key removal exposes no credential and requires confirmation",
+    "Committed record deletions and packing reset survive reload",
+    "Reset copy matches new-trip creation, retained trips and deleted saved snapshots",
+    "Shared comment, member removal and leave: cancel is inert and accept sends the intended operation"
+  ],
+  "supplemental": {
+    "browser": "Chromium headless shell",
+    "version": "151.0.7922.34",
+    "url": "http://127.0.0.1:9677",
+    "isolated": true,
+    "cases": [
+      {
+        "viewport": 320,
+        "kind": "itinerary",
+        "width": 288,
+        "height": 166.1875,
+        "overflow": false,
+        "radius": "16px",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(11, 16, 32)",
+        "actionBackground": "rgb(247, 175, 199)",
+        "actionColor": "rgb(11, 16, 32)",
+        "descriptionColor": "rgb(104, 107, 117)",
+        "iconHidden": "true",
+        "animation": "none",
+        "actionHeight": 48,
+        "titleSize": "18px",
+        "actionContrast": 10.738815786807484,
+        "descriptionContrast": 5.318394392629977
+      },
+      {
+        "viewport": 320,
+        "kind": "itinerary-linked",
+        "width": 288,
+        "height": 195.1875,
+        "overflow": false,
+        "radius": "16px",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(11, 16, 32)",
+        "actionBackground": "rgb(247, 175, 199)",
+        "actionColor": "rgb(11, 16, 32)",
+        "descriptionColor": "rgb(104, 107, 117)",
+        "iconHidden": "true",
+        "animation": "none",
+        "actionHeight": 48,
+        "titleSize": "18px",
+        "actionContrast": 10.738815786807484,
+        "descriptionContrast": 5.318394392629977
+      },
+      {
+        "viewport": 320,
+        "kind": "shared-trip",
+        "width": 288,
+        "height": 258.1875,
+        "overflow": false,
+        "radius": "16px",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(11, 16, 32)",
+        "actionBackground": "rgb(255, 240, 90)",
+        "actionColor": "rgb(11, 16, 32)",
+        "descriptionColor": "rgb(104, 107, 117)",
+        "iconHidden": "true",
+        "animation": "none",
+        "actionHeight": 48,
+        "titleSize": "18px",
+        "actionContrast": 16.104965128119215,
+        "descriptionContrast": 5.318394392629977
+      },
+      {
+        "viewport": 320,
+        "kind": "reset",
+        "width": 288,
+        "height": 233.375,
+        "overflow": false,
+        "radius": "16px",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(11, 16, 32)",
+        "actionBackground": "rgb(247, 175, 199)",
+        "actionColor": "rgb(11, 16, 32)",
+        "descriptionColor": "rgb(104, 107, 117)",
+        "iconHidden": "true",
+        "animation": "none",
+        "actionHeight": 48,
+        "titleSize": "18px",
+        "actionContrast": 10.738815786807484,
+        "descriptionContrast": 5.318394392629977
+      },
+      {
+        "viewport": 390,
+        "kind": "itinerary",
+        "width": 342,
+        "height": 166.1875,
+        "overflow": false,
+        "radius": "16px",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(11, 16, 32)",
+        "actionBackground": "rgb(247, 175, 199)",
+        "actionColor": "rgb(11, 16, 32)",
+        "descriptionColor": "rgb(104, 107, 117)",
+        "iconHidden": "true",
+        "animation": "none",
+        "actionHeight": 48,
+        "titleSize": "18px",
+        "actionContrast": 10.738815786807484,
+        "descriptionContrast": 5.318394392629977
+      },
+      {
+        "viewport": 390,
+        "kind": "itinerary-linked",
+        "width": 342,
+        "height": 195.1875,
+        "overflow": false,
+        "radius": "16px",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(11, 16, 32)",
+        "actionBackground": "rgb(247, 175, 199)",
+        "actionColor": "rgb(11, 16, 32)",
+        "descriptionColor": "rgb(104, 107, 117)",
+        "iconHidden": "true",
+        "animation": "none",
+        "actionHeight": 48,
+        "titleSize": "18px",
+        "actionContrast": 10.738815786807484,
+        "descriptionContrast": 5.318394392629977
+      },
+      {
+        "viewport": 390,
+        "kind": "shared-trip",
+        "width": 342,
+        "height": 216.1875,
+        "overflow": false,
+        "radius": "16px",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(11, 16, 32)",
+        "actionBackground": "rgb(255, 240, 90)",
+        "actionColor": "rgb(11, 16, 32)",
+        "descriptionColor": "rgb(104, 107, 117)",
+        "iconHidden": "true",
+        "animation": "none",
+        "actionHeight": 48,
+        "titleSize": "18px",
+        "actionContrast": 16.104965128119215,
+        "descriptionContrast": 5.318394392629977
+      },
+      {
+        "viewport": 390,
+        "kind": "reset",
+        "width": 342,
+        "height": 187.1875,
+        "overflow": false,
+        "radius": "16px",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(11, 16, 32)",
+        "actionBackground": "rgb(247, 175, 199)",
+        "actionColor": "rgb(11, 16, 32)",
+        "descriptionColor": "rgb(104, 107, 117)",
+        "iconHidden": "true",
+        "animation": "none",
+        "actionHeight": 48,
+        "titleSize": "18px",
+        "actionContrast": 10.738815786807484,
+        "descriptionContrast": 5.318394392629977
+      },
+      {
+        "viewport": 1440,
+        "kind": "itinerary",
+        "width": 342,
+        "height": 166.1875,
+        "overflow": false,
+        "radius": "16px",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(11, 16, 32)",
+        "actionBackground": "rgb(247, 175, 199)",
+        "actionColor": "rgb(11, 16, 32)",
+        "descriptionColor": "rgb(104, 107, 117)",
+        "iconHidden": "true",
+        "animation": "none",
+        "actionHeight": 48,
+        "titleSize": "18px",
+        "actionContrast": 10.738815786807484,
+        "descriptionContrast": 5.318394392629977
+      },
+      {
+        "viewport": 1440,
+        "kind": "itinerary-linked",
+        "width": 342,
+        "height": 195.1875,
+        "overflow": false,
+        "radius": "16px",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(11, 16, 32)",
+        "actionBackground": "rgb(247, 175, 199)",
+        "actionColor": "rgb(11, 16, 32)",
+        "descriptionColor": "rgb(104, 107, 117)",
+        "iconHidden": "true",
+        "animation": "none",
+        "actionHeight": 48,
+        "titleSize": "18px",
+        "actionContrast": 10.738815786807484,
+        "descriptionContrast": 5.318394392629977
+      },
+      {
+        "viewport": 1440,
+        "kind": "shared-trip",
+        "width": 342,
+        "height": 216.1875,
+        "overflow": false,
+        "radius": "16px",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(11, 16, 32)",
+        "actionBackground": "rgb(255, 240, 90)",
+        "actionColor": "rgb(11, 16, 32)",
+        "descriptionColor": "rgb(104, 107, 117)",
+        "iconHidden": "true",
+        "animation": "none",
+        "actionHeight": 48,
+        "titleSize": "18px",
+        "actionContrast": 16.104965128119215,
+        "descriptionContrast": 5.318394392629977
+      },
+      {
+        "viewport": 1440,
+        "kind": "reset",
+        "width": 342,
+        "height": 187.1875,
+        "overflow": false,
+        "radius": "16px",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(11, 16, 32)",
+        "actionBackground": "rgb(247, 175, 199)",
+        "actionColor": "rgb(11, 16, 32)",
+        "descriptionColor": "rgb(104, 107, 117)",
+        "iconHidden": "true",
+        "animation": "none",
+        "actionHeight": 48,
+        "titleSize": "18px",
+        "actionContrast": 10.738815786807484,
+        "descriptionContrast": 5.318394392629977
+      }
+    ],
+    "largeTextShortViewport": "pass",
+    "neutralMotion": "pass",
+    "longFilename": "pass",
+    "uploadReplaceAndRemove": "pass",
+    "errors": []
+  },
+  "build": {
+    "checkedAt": "2026-10-17T05:03:11.758Z",
+    "base": "b146d47b72cb3ee617cec7d310a7b0741db74deb",
+    "isolated": true,
+    "includesConcurrentCityExpansion": false,
+    "files": 912,
+    "mismatches": [],
+    "build": "1b2d90c16b5b947efda2",
+    "shellBuild": "1b2d90c16b5b947efda2",
+    "artifactsExcluded": true,
+    "confirmationCached": true,
+    "scopedComparison": [
+      {
+        "file": "Travel.html",
+        "matches": true,
+        "sha256": "adf8f5fde97d5859c14dc337bbc953131d2b4d8b28da7781395ad6b1b1438d28"
+      },
+      {
+        "file": "src/app/bootstrap/init.js",
+        "matches": true,
+        "sha256": "b191e46bd1208d006294aa59492447dfd453db1fda5f26fdb0cc4387e419f690"
+      },
+      {
+        "file": "src/app/features/itinerary/itinerary-form.js",
+        "matches": true,
+        "sha256": "b471a0d3be7fc077d7ca0f24deeea4bec569696a3e7aad32633c91f36436d856"
+      },
+      {
+        "file": "src/app/features/itinerary/itinerary-workspace.js",
+        "matches": true,
+        "sha256": "17dc0f8b8eb7cbd35d0532e501e58b3227bf6a5e24bed714e0330304b64363b5"
+      },
+      {
+        "file": "src/app/ui/confirmation.js",
+        "matches": true,
+        "sha256": "af1d00cf5d0d9258d43196f5e28f673eeba0c517fa1c8eaee802823132b3beb4"
+      },
+      {
+        "file": "src/styles/itinerary.css",
+        "matches": true,
+        "sha256": "c679a829f9f19825291d155147969914ce8babd7776bd4ba8454a9320f52b1aa"
+      },
+      {
+        "file": "src/styles/redesign.css",
+        "matches": true,
+        "sha256": "c9ba90ce98f38a62724cfa30e6a44658f9c789a7246d86a44e984a04c0b9fb88"
+      },
+      {
+        "file": "src/styles/transit-editor.css",
+        "matches": true,
+        "sha256": "e0d15dba601fbb265585f8fcf27549f11e90081fb10bfca2660a4cb0f8d69be0"
+      }
+    ]
+  },
+  "commands": [
+    {
+      "command": "npm test",
+      "environment": "Isolated base plus UI patch",
+      "result": "pass"
+    },
+    {
+      "command": "node scripts/delete-dialogs-browser-regression.js",
+      "environment": "Isolated base plus UI patch",
+      "result": "pass"
+    },
+    {
+      "command": "node scripts/scroll-lock-browser-regression.js",
+      "environment": "Isolated base plus UI patch",
+      "result": "pass"
+    },
+    {
+      "command": "node scripts/trip-chooser-browser-regression.js",
+      "environment": "Primary working directory; unchanged dialog styles after this check",
+      "result": "pass"
+    },
+    {
+      "command": "node scripts/transit-journey-browser-regression.js",
+      "environment": "Primary working directory; unchanged transit styles after this check",
+      "result": "pass"
+    },
+    {
+      "command": "node artifacts/tmp/20261017-confirmation-polish/visual-qa.cjs",
+      "environment": "Isolated base plus UI patch",
+      "result": "pass"
+    },
+    {
+      "command": "npm run build",
+      "environment": "Isolated base plus UI patch",
+      "result": "pass"
+    }
+  ],
+  "fidelity": [
+    {
+      "point": "Palette",
+      "concept": "White, navy ink, soft pink, lemon yellow and sky blue",
+      "rendered": "Existing app tokens reused; pink destructive and yellow archive/general confirmation actions",
+      "result": "match"
+    },
+    {
+      "point": "Geometry",
+      "concept": "Compact 342px dialog, 16px corners, 20px padding, icon plus text column",
+      "rendered": "342px wide at 390px viewport; standard height 166.1875px; 54px icon tile",
+      "result": "match"
+    },
+    {
+      "point": "Typography",
+      "concept": "18px question, 14px body/actions, Pretendard-style Korean sans",
+      "rendered": "Existing Pretendard with exact roles; helper 12px",
+      "result": "match"
+    },
+    {
+      "point": "Actions",
+      "concept": "Equal outlined cancel/action pair with small shadows",
+      "rendered": "Equal pair at 48px height; pointer press feedback and default cancel",
+      "result": "match"
+    },
+    {
+      "point": "Icons",
+      "concept": "Outlined trash, archive and reset metaphors",
+      "rendered": "Existing Phosphor regular family; decorative icon excluded from accessibility name",
+      "result": "match"
+    },
+    {
+      "point": "Copy",
+      "concept": "Existing concise questions, targets and effects",
+      "rendered": "All 16 state copy contracts pass; omitted model-added redundant sentence in simple delete state",
+      "result": "intentional omission"
+    },
+    {
+      "point": "Inline controls",
+      "concept": "Blue picker, pink removal, readable filename and save-related helper",
+      "rendered": "Same native editor rows and popover, styled controls",
+      "result": "match"
+    },
+    {
+      "point": "Long filenames",
+      "concept": "Readable filename on narrow screens",
+      "rendered": "Fixed narrow-column word stacking by using a full-width filename row on narrow screens or long names; complete text retained",
+      "result": "responsive extension"
+    },
+    {
+      "point": "Keyboard and motion",
+      "concept": "Static component reference",
+      "rendered": "Visible focus ring, default cancel, Escape/backdrop/focus restoration; 160ms entrance disabled for reduced motion",
+      "result": "accessible extension"
+    },
+    {
+      "point": "App shell",
+      "concept": "Illustrative phone hardware and generic app shell around inline details",
+      "rendered": "Original TripLOG brand, navigation and editor placement retained",
+      "result": "intentional scope boundary"
+    }
+  ],
+  "limitations": [
+    "Physical iOS/Android hardware not tested",
+    "Shared actions exercised with synthetic roles and command mocks",
+    "Shared working directory full build was not claimed complete while concurrent city images were missing"
+  ],
+  "captures": [
+    {
+      "file": "before-mobile-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261017-confirmation-polish\\before\\itinerary-context-390.png",
+      "sha256": "5c14565daf6a51e6a4d3febd048adb36779beda9e37e7656a0e1f028fecf3f86"
+    },
+    {
+      "file": "after-mobile-390.png",
+      "source": "C:\\Users\\tbdk5\\.codex\\worktrees\\confirmation-polish\\TripLOG\\artifacts\\tmp\\20261017-confirmation-polish\\after\\itinerary-context-390.png",
+      "sha256": "d67c9b57cf0b769f98c70bb6d4c65d58fdd302abf8dee6f72a87d3b2ab15095e"
+    },
+    {
+      "file": "after-desktop-1440.png",
+      "source": "C:\\Users\\tbdk5\\.codex\\worktrees\\confirmation-polish\\TripLOG\\artifacts\\tmp\\20261017-confirmation-polish\\after\\itinerary-context-1440.png",
+      "sha256": "250fcc552b93f32d6b9177d79e194827ebfe09e77a62eca8c2857cddba67391e"
+    },
+    {
+      "file": "itinerary-dialog.png",
+      "source": "C:\\Users\\tbdk5\\.codex\\worktrees\\confirmation-polish\\TripLOG\\artifacts\\tmp\\20261017-confirmation-polish\\after\\itinerary-390.png",
+      "sha256": "5ead67ef2a34abc0ccb9a5d4ed47e9e2a325fafceffa4c6dc8f83e6a3d6d5810"
+    },
+    {
+      "file": "archive-dialog.png",
+      "source": "C:\\Users\\tbdk5\\.codex\\worktrees\\confirmation-polish\\TripLOG\\artifacts\\tmp\\20261017-confirmation-polish\\after\\shared-trip-390.png",
+      "sha256": "f0e3d19097b1625874acda80bc176b333177078a2639bd3a22fb1bec52d30ae6"
+    },
+    {
+      "file": "voucher-removal.png",
+      "source": "C:\\Users\\tbdk5\\.codex\\worktrees\\confirmation-polish\\TripLOG\\artifacts\\tmp\\20261017-confirmation-polish\\after\\voucher-removal-390.png",
+      "sha256": "28d9b473153c329aa53c0899b072dc12c4be6519b0e8bedf890bbc5e6015baec"
+    },
+    {
+      "file": "transit-removal.png",
+      "source": "C:\\Users\\tbdk5\\.codex\\worktrees\\confirmation-polish\\TripLOG\\artifacts\\tmp\\20261017-confirmation-polish\\after\\transit-removal-390.png",
+      "sha256": "061bd540756bc3ebbffb692554ea165622662d421dcbe7d80494e76bb5febd0a"
+    },
+    {
+      "file": "long-filename-320.png",
+      "source": "C:\\Users\\tbdk5\\.codex\\worktrees\\confirmation-polish\\TripLOG\\artifacts\\tmp\\20261017-confirmation-polish\\visual\\long-filename-320.png",
+      "sha256": "af8622ec5dd1ddc914f9696c4f319eee7dd3086f7d6ac6da6b0aeaec69c2d9fb"
+    }
+  ],
+  "cleanup": {
+    "reason": "blocked by policy",
+    "temporaryDirectory": "artifacts/tmp/20261017-confirmation-polish/",
+    "isolatedWorktree": "archived",
+    "status": "retained because automatic approval review rejected native PowerShell removal",
+    "temporaryBytes": 2912699,
+    "temporaryFiles": 93
+  }
+}

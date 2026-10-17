@@ -1,0 +1,52 @@
+{
+  "id": "sk-kosice-mobile",
+  "cityId": "sk-kosice",
+  "name": "코시체",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sk-kosice-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sk-kosice-mobile.json",
+  "originalSha256": "561244272a63fe2a9b1c779f099b010999265225a64365d65bd9b1d76afabb42",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sk-kosice-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 107688,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "a0f26134959340f7064d29ebff9d8044cb4dc87ecaaf9094bdd1ed2a6d682810",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

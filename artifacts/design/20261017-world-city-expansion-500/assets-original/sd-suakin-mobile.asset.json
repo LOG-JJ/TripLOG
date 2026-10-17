@@ -1,0 +1,52 @@
+{
+  "id": "sd-suakin-mobile",
+  "cityId": "sd-suakin",
+  "name": "수아킨",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sd-suakin-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sd-suakin-mobile.json",
+  "originalSha256": "42132a837bc92a31b465cf71afdb23da84e565dd40890fa08d33ae47a1c39e98",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sd-suakin-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 93660,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "f3782d9942b066f21ffc75461a0446bc4b4659491147dc07f35681eb91272b89",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

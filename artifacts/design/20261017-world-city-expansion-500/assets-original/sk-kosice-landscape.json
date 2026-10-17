@@ -1,0 +1,26 @@
+{
+  "jobId": "sk-kosice-landscape",
+  "cityId": "sk-kosice",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Kosice, Slovakia: Saint Elisabeth Cathedral's Gothic silhouette, with the old-town pedestrian avenue. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "b990a30fa960dfce99ed89ade36a428c1e9578f29dc123f3fbc0d6137cfc5b34",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sk-kosice-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-406c6ca6-f833-4269-8457-5fa8b34bc3e2.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-406c6ca6-f833-4269-8457-5fa8b34bc3e2.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/sk-kosice-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "d2d6051c99692d938c8bef187bf5fd11e55ba6843de9bfc8ece7b531db4e0580",
+  "savedSha256": "d2d6051c99692d938c8bef187bf5fd11e55ba6843de9bfc8ece7b531db4e0580",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:21:01.495Z",
+  "toolCallId": "exec-406c6ca6-f833-4269-8457-5fa8b34bc3e2",
+  "savedAt": "2026-10-17T06:24:50.989710+00:00"
+}

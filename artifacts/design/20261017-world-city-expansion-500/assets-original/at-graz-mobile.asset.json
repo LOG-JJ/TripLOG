@@ -1,0 +1,52 @@
+{
+  "id": "at-graz-mobile",
+  "cityId": "at-graz",
+  "name": "그라츠",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/at-graz-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/at-graz-mobile.json",
+  "originalSha256": "03b046f2827b92a735e1080522cdec3fa499ba833af77e1938b52fa508d88651",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    33,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/at-graz-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 87098,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "616739599fb71ff44b0023fcc3bf7924bd2cce44a34f6e7a2e9bd3215b56b66b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

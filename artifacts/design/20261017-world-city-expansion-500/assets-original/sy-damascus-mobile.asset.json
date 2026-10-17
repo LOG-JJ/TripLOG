@@ -1,0 +1,52 @@
+{
+  "id": "sy-damascus-mobile",
+  "cityId": "sy-damascus",
+  "name": "다마스쿠스",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sy-damascus-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sy-damascus-mobile.json",
+  "originalSha256": "e9855064f4a17262e880ae570b928a48948e6e458a932756f348e766374c5a86",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sy-damascus-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 106740,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "9cfc5245c5db6716373b9dfa42e405b081d36b3c89b58376815414691c941633",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

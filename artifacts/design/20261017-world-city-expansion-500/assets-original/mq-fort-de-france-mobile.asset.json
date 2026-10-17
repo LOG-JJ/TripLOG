@@ -1,0 +1,52 @@
+{
+  "id": "mq-fort-de-france-mobile",
+  "cityId": "mq-fort-de-france",
+  "name": "포르드프랑스",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mq-fort-de-france-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mq-fort-de-france-mobile.json",
+  "originalSha256": "cd4118a57d3aac21118e37411a67e5e781c14ca1c13c4045e2b463b7835abf20",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mq-fort-de-france-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 140312,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "07ff2a12880e7655d8e459676ac1b59d2a31d76628946cc394abe93ef9fa1d23",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

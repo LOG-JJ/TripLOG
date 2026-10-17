@@ -1,0 +1,44 @@
+{
+  "jobId": "nl-the-hague-mobile",
+  "reason": "Clock-tower finial touched the top edge and the right wing was clipped.",
+  "archivedFiles": [
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/nl-the-hague-mobile.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/nl-the-hague-mobile/nl-the-hague-mobile.json",
+      "sha256": "0f00842363f44accf117c0a1bec612483da349e38a7158a8841500f41a2a9ae0"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/nl-the-hague-mobile.prompt.txt",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/nl-the-hague-mobile/nl-the-hague-mobile.prompt.txt",
+      "sha256": "01917d45d55793e36a5515c26dd36c3ce43fbad42f5908ea5b4219d1e13d68fc"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/nl-the-hague-mobile.png",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/nl-the-hague-mobile/nl-the-hague-mobile.png",
+      "sha256": "f12d662c62d84e2db3610a2fb9f2417159729a6f7bc39690a6b52cba8557c305"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/nl-the-hague-mobile.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/nl-the-hague-mobile/nl-the-hague-mobile.json",
+      "sha256": "5e7eeda40c3672ba718a6af8befb26f3ac2659385b9c114c4ee4b70f0af9a286"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/nl-the-hague-mobile.asset.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/nl-the-hague-mobile/nl-the-hague-mobile.asset.json",
+      "sha256": "579fdb2cabe4972e76632abf8db81f0cc613a46dac3fa32f3e1d7f48c9a4b950"
+    },
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v6/nl-the-hague-mobile.webp",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/nl-the-hague-mobile/nl-the-hague-mobile.webp",
+      "sha256": "ed4e7765f7f57ab7cd93ab899f25102ce4b515c7989361d93c0405316f3009fb"
+    }
+  ],
+  "newPromptSha256": "a70483f1f1033b2cb5bdbc0753ff91ad694b38bad15177f9303947e00df40cd9",
+  "generationMode": "independent T2I",
+  "imageInputs": [],
+  "source": {
+    "title": "The Hague and Partners — Peace Palace",
+    "url": "https://denhaag.com/en/peace-palace"
+  },
+  "photoInspected": null
+}

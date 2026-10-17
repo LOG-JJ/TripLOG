@@ -1,0 +1,52 @@
+{
+  "id": "fr-reims-mobile",
+  "cityId": "fr-reims",
+  "name": "랭스",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/fr-reims-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/fr-reims-mobile.json",
+  "originalSha256": "6dccfc8171d51d334152588a4ad0b4ef64cfb8b0a72f7d3cd51f853205fd83e2",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/fr-reims-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 128394,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "4f0f23661fdda3593426a04ba13d8eb660864bab70433244bb51be90253486c7",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "mm-yangon-landscape",
+  "cityId": "mm-yangon",
+  "name": "양곤",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mm-yangon-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mm-yangon-landscape.json",
+  "originalSha256": "b18152b68812c6478d8215a5af99ec224a0d0adbd3affc8764b240bf47d713c0",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mm-yangon.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 96082,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "41f7ba6df1f0448ba6e11df5c88522011f1befb012b88f499369b36d7c018537",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

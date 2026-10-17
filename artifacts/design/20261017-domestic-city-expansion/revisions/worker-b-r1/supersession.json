@@ -1,0 +1,116 @@
+[
+  {
+    "id": "kr-gwacheon-landscape",
+    "reason": "roof tip clipped in final crop",
+    "oldPromptSha256": "bc7a1fd6274729ec11716ab96c14be7c6bb7fbfc359f8b976214947bb9bc4fe9",
+    "newPromptSha256": "ce24274246e0641ad7ab04f6771b7823ec4f3b0e3e439e99a99786d7b0dd17a8",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwacheon-landscape.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-b-r1/artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwacheon-landscape.json",
+        "sha256": "8e43bd728d25270dc8d5760b01e50230fd2c8793dd1f9bcda4ca52b7f379f4cd"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwacheon-landscape.prompt.txt",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-b-r1/artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwacheon-landscape.prompt.txt",
+        "sha256": "9a5f4876df1bd533c8486d2a287169ea37a901478a98c1a0f7ee8b15cdf40eb6"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwacheon-landscape.png",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-b-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwacheon-landscape.png",
+        "sha256": "10cdddc012862a01ac45ebeeef3fd12c608543745f166ce9b7b57b0f1a4111f7"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwacheon-landscape.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-b-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwacheon-landscape.json",
+        "sha256": "7970981c43713599421e5c399875404a9f2ceec5fc0d017fda4142359e642e23"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwacheon-landscape.asset.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-b-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwacheon-landscape.asset.json",
+        "sha256": "1a32e90c3d444ecb57636f7ba2fd2295d957803b86f8b72941f51e1eec336e07"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v5/kr-gwacheon.webp",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-b-r1/src/assets/trip-scenes/cities/v5/kr-gwacheon.webp",
+        "sha256": "2cfd2c0fcfe03f90369b2e72bb4d18eab346c9eb1d08949c204da51bd51d6157"
+      }
+    ]
+  },
+  {
+    "id": "kr-dangjin-landscape",
+    "reason": "unsupported observation tower; confirmed waterfront Ferris wheel replaces it",
+    "oldPromptSha256": "d6f847c105851211d0533587ec2467ada3206b9065f8d0923c08ac12464ed1d9",
+    "newPromptSha256": "74a8ced1595375ba62780ba06e5d0b9742f334e267092891302db61457dd8d70",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-dangjin-landscape.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-b-r1/artifacts/design/20261017-domestic-city-expansion/jobs/kr-dangjin-landscape.json",
+        "sha256": "5ddde7ee9eeb2420c65abcb6b90ae0e148ac6a25d1cf2591b569554695f9b72d"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-dangjin-landscape.prompt.txt",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-b-r1/artifacts/design/20261017-domestic-city-expansion/jobs/kr-dangjin-landscape.prompt.txt",
+        "sha256": "1f81d1ebfce2e1ea823ec61936b23e7bc9bde30090a797bb012bcbf4185f0a07"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-landscape.png",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-b-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-landscape.png",
+        "sha256": "1ffdba5e85d003fe1049be0a44461b2720d295c3347b65af3a92a6ebbe5126cf"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-landscape.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-b-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-landscape.json",
+        "sha256": "7f40466a0ce98fde189057808423208c67029face13b3b6e3548188ca50d0d4f"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-landscape.asset.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-b-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-landscape.asset.json",
+        "sha256": "3a1605ed20b6ac6f1b3dec2223b5455845b6df938fd3a9fb89b3f5f19f9a75f9"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v5/kr-dangjin.webp",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-b-r1/src/assets/trip-scenes/cities/v5/kr-dangjin.webp",
+        "sha256": "590516ac9aa865cd15ed32903e4d5621f5e1ea12b469be4561c5b152c56637c1"
+      }
+    ]
+  },
+  {
+    "id": "kr-dangjin-mobile",
+    "reason": "unsupported observation tower; confirmed waterfront Ferris wheel replaces it",
+    "oldPromptSha256": "0d5c86597d7a8cd06ded3b72060a105c3455b4dae4ff2ead5b352a16a61b09b5",
+    "newPromptSha256": "d486ff808376b7c05e42fbffe5f5b51164b01c870db39bf99562721d18536277",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-dangjin-mobile.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-b-r1/artifacts/design/20261017-domestic-city-expansion/jobs/kr-dangjin-mobile.json",
+        "sha256": "1cdee09f0eab8f94de1d3b5b63693dfc98c4761b80da09351a905e9926ad3350"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-dangjin-mobile.prompt.txt",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-b-r1/artifacts/design/20261017-domestic-city-expansion/jobs/kr-dangjin-mobile.prompt.txt",
+        "sha256": "a0fc8dde61122dcef6c30cc6152dd71cc5d7e346e44e5a19d736efa850ecfb91"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-mobile.png",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-b-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-mobile.png",
+        "sha256": "e0306804e79248e9d7bb6198e2e1b3011898a00dcd5075a55f6ed6f99c0c837e"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-mobile.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-b-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-mobile.json",
+        "sha256": "ffc180f231017ee0a72a572dea10ebcdcf5461ccd71629dbf28f391b1a16ba8a"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-mobile.asset.json",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-b-r1/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-mobile.asset.json",
+        "sha256": "7afc36d2ad9bb7309c40c6f236026d3493b21deec7f976bfa7466a63af402537"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v5/kr-dangjin-mobile.webp",
+        "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/worker-b-r1/src/assets/trip-scenes/cities/v5/kr-dangjin-mobile.webp",
+        "sha256": "5fdd3c851aad0fc095d5788764109164cb388182a8d40a153f51e23924d9cea4"
+      }
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "jobId": "mc-monaco-mobile",
+  "cityId": "mc-monaco",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Monaco, Monaco: the Prince's Palace on the Rock of Monaco, with the Mediterranean harbour. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "e2f73e47617293c673f0751a024817774d0517a8282d376c18120a48a7060aa5",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mc-monaco-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-b8385f51-4538-43bb-b22c-a3ee875fa522.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-b8385f51-4538-43bb-b22c-a3ee875fa522.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/mc-monaco-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "51563b62c5aa3294309e5f6eb86edf901d25f51407a0de99fec0686156fbff6d",
+  "savedSha256": "51563b62c5aa3294309e5f6eb86edf901d25f51407a0de99fec0686156fbff6d",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:05:24Z",
+  "toolCallId": "exec-b8385f51-4538-43bb-b22c-a3ee875fa522",
+  "savedAt": "2026-10-17T06:08:59.040009+00:00"
+}

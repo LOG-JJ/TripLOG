@@ -1,0 +1,52 @@
+{
+  "id": "md-chisinau-landscape",
+  "cityId": "md-chisinau",
+  "name": "키시너우",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/md-chisinau-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/md-chisinau-landscape.json",
+  "originalSha256": "3832c1345fa9093286057c86731435e01b7d1b4366b2b5e77a3f987414fcd0a1",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    32,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/md-chisinau.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 110528,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "d3a3dadbfd3651e86549488edb8137f0ea653e283e3e89c5db145cb4471eb45f",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

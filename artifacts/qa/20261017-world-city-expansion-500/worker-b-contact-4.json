@@ -1,0 +1,175 @@
+{
+  "count": 10,
+  "records": [
+    {
+      "id": "do-santo-domingo-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/do-santo-domingo.webp",
+      "sourceSha256": "5bf1651d9dbed5f1ee2ffd77b8e85e4d0f9bd3acba7032107d0561c36c065600",
+      "assetSha256": "b5d9df165cdff5cb9cec68992daf966262c070155b47a915f428b4be2413cfb8",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        86,
+        45,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "do-santo-domingo-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/do-santo-domingo-mobile.webp",
+      "sourceSha256": "5faa2b85b4b21f8fb47fbae164b1b7dccd24f2483f9ab801e56895bedd42d5e6",
+      "assetSha256": "191cfdc0e4728fcf06a1466ffbd560bf2a71f95e1c577772803e62021e151fd6",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        75,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "hn-comayagua-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/hn-comayagua.webp",
+      "sourceSha256": "1fce6ed38486a4fff1686bb3325be296b7be79fe6e296487771c90c1fe73d42c",
+      "assetSha256": "c569efb4e351a8964d82613d8655836547f71ccf3c842147b9d277748d457699",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        58,
+        29,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "hn-comayagua-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/hn-comayagua-mobile.webp",
+      "sourceSha256": "9af4b5cdff6fa25956506de415b780c39ec48cead2d0216aa24ff5059b712741",
+      "assetSha256": "1b7a9f9f2fa0d8b103de24fc648927be8952f288232cd097c187304d13232c7c",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        18,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "lc-castries-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/lc-castries.webp",
+      "sourceSha256": "a8916082fb0a3f7dc03b94ba2c898dcf2e51a0951eb6ab7dc3c65c112c05c206",
+      "assetSha256": "e3207caf61f8ab7b75ae26a2f1c0cc58937391663c439b66562de4448f59de85",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        23,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "lc-castries-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/lc-castries-mobile.webp",
+      "sourceSha256": "dd0095966c329fca16ac7d6ba7482a93b142e73e8bda79ba7b56667deab82f5c",
+      "assetSha256": "8cd7fff357f7332d73e96bc2e33bc928af647731c01ab3009cfa49020928e2ba",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        112,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "sv-san-salvador-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/sv-san-salvador.webp",
+      "sourceSha256": "da01e3aa6356ec44833068d6e4735cd5bf0638b1fa8ca401d297e485be210bfe",
+      "assetSha256": "26e6f3e98d449080cf36c6282b7bb4b0b0b2330b8f1b635384b537b34c5c3ea3",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        150,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "sv-san-salvador-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/sv-san-salvador-mobile.webp",
+      "sourceSha256": "369d3e2c653158ee2190177c6bbe20b8d7fa6247debaca776d7f1c50b072ae76",
+      "assetSha256": "358dd67f9047e32ebc4287599eb4342ad9142b50f7f577961c4fe5e25ad073f1",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        45,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "ve-coro-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ve-coro.webp",
+      "sourceSha256": "4384f18b18641859ae990ec1fc283b5d8f0f922f5e0fd22e433198adddaacd35",
+      "assetSha256": "7dbae1ab41546a87afa5fcb5ebfb14f1b4cc88243181c550d0e93c4e110a9cbf",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        31,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "ve-coro-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ve-coro-mobile.webp",
+      "sourceSha256": "40371013ac6579afc239c5421c5fdbd37c686dd0190cc8bfc393f6e38064492d",
+      "assetSha256": "fb2b914fb81ca67e4ccde47dce414eba56676f8bf5c74efe2a5c7e7941b6e2fb",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        23,
+        480,
+        600
+      ],
+      "originalEquality": true
+    }
+  ]
+}

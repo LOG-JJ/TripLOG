@@ -1,0 +1,74 @@
+[
+  {
+    "jobId": "so-mogadishu-landscape",
+    "reason": "Replace the invented monumental four-minaret cliffside mosque with the documented modest white compound and conical tower.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/so-mogadishu-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r3/so-mogadishu-landscape/jobs/so-mogadishu-landscape.json",
+        "sha256": "91a0c7057af55f1abc1512373d13411062d60f5a7004f1bf04cc0475d36effb1"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/so-mogadishu-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r3/so-mogadishu-landscape/jobs/so-mogadishu-landscape.prompt.txt",
+        "sha256": "267219894b8d5219e515807b2a3feb50f0a36f314a80c68d5353edfd4e57edd3"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/so-mogadishu-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r3/so-mogadishu-landscape/originals/so-mogadishu-landscape.png",
+        "sha256": "56e02313ecbe41aa148533de9de30e5be72daf64b3095790a7d716be1ded428a"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/so-mogadishu-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r3/so-mogadishu-landscape/originals/so-mogadishu-landscape.json",
+        "sha256": "b74dced39c12c35196fa13d28780d828a86082d0baddb19025ac6f4f9ee7b13d"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/so-mogadishu-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r3/so-mogadishu-landscape/originals/so-mogadishu-landscape.asset.json",
+        "sha256": "3590a3eedf4ab94ade69af8842d06efb3b529ce9052a01d4d057c23df49b1cc1"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/so-mogadishu.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r3/so-mogadishu-landscape/runtime/so-mogadishu.webp",
+        "sha256": "037f01230361242ab1bd90e214bd167e9e3715ce02deb461c8169d25cdfc0a26"
+      }
+    ]
+  },
+  {
+    "jobId": "so-mogadishu-mobile",
+    "reason": "Replace the invented monumental four-minaret cliffside mosque with the documented modest white compound and conical tower.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/so-mogadishu-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r3/so-mogadishu-mobile/jobs/so-mogadishu-mobile.json",
+        "sha256": "c433c3aaa0302a965013825c3fe8378a747dd56edc6dd04bfe1a9ab6f66d96c7"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/so-mogadishu-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r3/so-mogadishu-mobile/jobs/so-mogadishu-mobile.prompt.txt",
+        "sha256": "e0f8cb58157cf6502337c5088bce4856956effa905e0753a122cc5e149184e30"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/so-mogadishu-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r3/so-mogadishu-mobile/originals/so-mogadishu-mobile.png",
+        "sha256": "b3a54ae7b35920c92454c0e669bb85dd1d355e1b9159c609560010f49de5a768"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/so-mogadishu-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r3/so-mogadishu-mobile/originals/so-mogadishu-mobile.json",
+        "sha256": "fcb4100f0928c8a8e8776905ea831b4f7c6c101528e8822116de225b4c33a204"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/so-mogadishu-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r3/so-mogadishu-mobile/originals/so-mogadishu-mobile.asset.json",
+        "sha256": "1cf881bcce32a3b572219d1cfd29f408477f442c9ab7cb7d7de2570e77b6a21d"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/so-mogadishu-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r3/so-mogadishu-mobile/runtime/so-mogadishu-mobile.webp",
+        "sha256": "0e0a48d2373b903c45cdf8381c2e24ba47263bfc70898239685a4ff7613b7af6"
+      }
+    ]
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "id": "mq-fort-de-france-landscape",
+  "cityId": "mq-fort-de-france",
+  "name": "포르드프랑스",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mq-fort-de-france-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mq-fort-de-france-landscape.json",
+  "originalSha256": "abb3a0fa24171404cf290b9492e762f01ea4b5f7eeaf3327acb25354669d1614",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mq-fort-de-france.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 157106,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "60976dc1a2a681366144baf2f4fb220cb288341b592c0dfe2a00ac8f9681f37f",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

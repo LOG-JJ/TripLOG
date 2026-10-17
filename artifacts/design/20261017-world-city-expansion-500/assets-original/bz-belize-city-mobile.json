@@ -1,0 +1,26 @@
+{
+  "jobId": "bz-belize-city-mobile",
+  "cityId": "bz-belize-city",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Belize City, Belize: the actual Saint John Anglican Cathedral, a modest colonial church built of plain warm red-brown brick, a long low nave, stepped brick gables, round-arched windows fitted with white louvered shutters, and ONE squat square entrance tower with a flat crenellated top. Surround it with lawn, flowering hedges and a few tropical palms. The building has no domes, no pointed spires, no twin towers and no large rose window. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "d1e6905997c3bbdfc2179b797e88941ec0a0f78c2e56c8d73411ac0600e1ccf3",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bz-belize-city-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-da515d41-2b65-4239-9917-a661ddd04553.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-da515d41-2b65-4239-9917-a661ddd04553.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/bz-belize-city-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "072bf550d2cc1883ba4498d479bd0d665555728de7ffd9683c923346abaa50c4",
+  "savedSha256": "072bf550d2cc1883ba4498d479bd0d665555728de7ffd9683c923346abaa50c4",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:38:13Z",
+  "toolCallId": "exec-da515d41-2b65-4239-9917-a661ddd04553",
+  "savedAt": "2026-10-17T06:39:15.882588+00:00"
+}

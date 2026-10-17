@@ -1,0 +1,44 @@
+{
+  "jobId": "sn-saint-louis-senegal-mobile",
+  "reason": "The river beneath the bridge was missing, leaving the piers floating on transparency.",
+  "archivedFiles": [
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sn-saint-louis-senegal-mobile.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.json",
+      "sha256": "2f615a190fb8ee58edb5644d00507c579e12270293202044c507650481bcd993"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sn-saint-louis-senegal-mobile.prompt.txt",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.prompt.txt",
+      "sha256": "d9345db537f3869f8080976edabe4ffed39e26a107de533853f043ea77e794f7"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-mobile.png",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.png",
+      "sha256": "0afcd30cb3d874b0ca14774755a7fa26c0a120eb1ead675c6d9924b1e89d7b26"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-mobile.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.json",
+      "sha256": "c6aeb14f9b4053f3c45fc89482cf1de2fdd51b9f84f62ef29ff2e208c3a9c575"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-mobile.asset.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.asset.json",
+      "sha256": "c9c40d16a8dd9302e142a52604afd7cd49e76e245437f19c87f6f250949d98ef"
+    },
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v6/sn-saint-louis-senegal-mobile.webp",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.webp",
+      "sha256": "d1a191d168b82cf0c5954d78b0c4cb9ef462e64b66bec9b4a39ab50386ed85ff"
+    }
+  ],
+  "newPromptSha256": "724adc40bd534c7c1d8f79416b9dd06a02c2ae25cf925938acc6811d2aa93f2c",
+  "generationMode": "independent T2I",
+  "imageInputs": [],
+  "source": {
+    "title": "UNESCO — Island of Saint-Louis",
+    "url": "https://whc.unesco.org/en/list/956/"
+  },
+  "photoInspected": null
+}

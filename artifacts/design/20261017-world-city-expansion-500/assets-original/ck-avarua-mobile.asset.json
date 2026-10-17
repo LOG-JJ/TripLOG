@@ -1,0 +1,52 @@
+{
+  "id": "ck-avarua-mobile",
+  "cityId": "ck-avarua",
+  "name": "아바루아",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ck-avarua-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ck-avarua-mobile.json",
+  "originalSha256": "8b9e900abf8d9137f0b7e57e43a340607f29099db706ef8ea2c542971f74c0d1",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    17,
+    29,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ck-avarua-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 106972,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "0f0318dbe3bebd14681ba108f120699a3a45e014a91da120d17e3b82565be216",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

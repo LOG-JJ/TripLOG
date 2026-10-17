@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-17",
+  "startedAt": "2026-10-17 04:49:07 UTC",
+  "mode": "T2I",
+  "inputImages": [],
+  "engine": "built-in image_gen",
+  "overwritten": false,
+  "outputs": [
+    {
+      "id": "01-confirmation-system",
+      "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a13376-7f99-7e50-a150-a88282253a0f/exec-8457fabf-cbb5-404c-9506-57f7f44ba8f1.png",
+      "savedPath": "01-confirmation-system.png",
+      "sha256": "00629e162f2299aeafc4739c8dab88ef5df414005f37c92734379b3328e1c577",
+      "selected": true
+    },
+    {
+      "id": "02-inline-removal",
+      "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a13376-7f99-7e50-a150-a88282253a0f/exec-42aacb18-5696-40e8-9b42-662b84ded0b3.png",
+      "savedPath": "02-inline-removal.png",
+      "sha256": "5470ff9e8160e268f359b27466d8bd6647fa2592e990afa72fcd5faa40b2fb18",
+      "selected": true
+    }
+  ],
+  "promptRecord": "brief.json",
+  "contract": {
+    "surface": "#ffffff",
+    "ink": "#0b1020",
+    "danger": "#f7afc7",
+    "archive": "#fff05a",
+    "filePicker": "#bce6fb",
+    "width": 342,
+    "padding": 20,
+    "radius": 16,
+    "titlePx": 18,
+    "bodyPx": 14,
+    "actionMinHeight": 48,
+    "inlineActionMinHeight": 44,
+    "iconTilePx": 54,
+    "iconPx": 32
+  },
+  "intentionalDifferences": [
+    "Keep existing concise copy; omit the unrequested extra sentence in concept state 1.",
+    "Apply the inline details to existing editors; retain the real app logo, navigation and popover placement rather than the concept's illustrative phone framing.",
+    "Keep visible keyboard focus and reduced-motion behavior.",
+    "Use a full-width filename row for long filenames or viewports up to 359px, while retaining the compact row for ordinary filenames."
+  ]
+}

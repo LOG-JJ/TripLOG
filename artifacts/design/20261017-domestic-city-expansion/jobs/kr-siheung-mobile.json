@@ -1,0 +1,39 @@
+{
+  "id": "kr-siheung-mobile",
+  "cityId": "kr-siheung",
+  "cityName": "시흥",
+  "englishName": "Siheung",
+  "kind": "city",
+  "group": "경기",
+  "variant": "mobile",
+  "phase": "expansion",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Siheung, South Korea: Oido's distinctive red lighthouse standing beside a low coastal promenade and the pale blue sea. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "63b067b4afdae60a433b55a17f81a323c7c97b5ffd7e22eea6ce435935f0679a",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/jobs/kr-siheung-mobile.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-siheung-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-siheung-mobile.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-siheung-mobile.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v5/kr-siheung-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "motif": "Oido's distinctive red lighthouse standing beside a low coastal promenade and the pale blue sea",
+  "proposedMotif": "오이도 빨강등대",
+  "motifSource": {
+    "title": "경기관광공사 2025 관광 가이드북",
+    "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+    "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+    "pages": "46–47"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone hand-drawn destination illustration of Siheung, South Korea: Oido's distinctive red lighthouse standing beside a low coastal promenade and the pale blue sea. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+    "transparent_background": true
+  },
+  "provenanceRule": "The --source argument must be the exact local original path returned by this job's image_gen call. Never search for a latest file.",
+  "promptRevision": "pilot-subject-qa-20261017"
+}

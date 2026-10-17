@@ -1,0 +1,39 @@
+{
+  "id": "pl-wroclaw-mobile",
+  "cityId": "pl-wroclaw",
+  "cityName": "브로츠와프",
+  "englishName": "Wroclaw",
+  "countryCode": "PL",
+  "kind": "city",
+  "group": "Europe",
+  "variant": "mobile",
+  "phase": "core-500",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone destination illustration of Wroclaw, Poland: the Centennial Hall's broad ribbed dome, with its landscaped grounds. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the complete main landmark compact and readable in the middle. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette. Composition correction: Show the entire Centennial Hall as a compact complete circular building viewed from farther away. Keep the full dome, all tiers and both side wings inside the middle 70 percent of picture width. Ground-level garden shrubs should fill the lower right edge, with transparent sky beside the upper building outline. Preserve the same simple pastel hand-drawn style and transparent background. No image reference is supplied.",
+  "promptSha256": "3b29617d4f0e70e34e1efb73127d7ab79e6b3a8975a358ad11551cb48d610cfb",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/jobs/pl-wroclaw-mobile.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/pl-wroclaw-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/pl-wroclaw-mobile.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/pl-wroclaw-mobile.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v6/pl-wroclaw-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "source": {
+    "title": "UNESCO World Heritage Centre — Wroclaw",
+    "url": "https://whc.unesco.org/en/list/1165/"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone destination illustration of Wroclaw, Poland: the Centennial Hall's broad ribbed dome, with its landscaped grounds. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the complete main landmark compact and readable in the middle. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette. Composition correction: Show the entire Centennial Hall as a compact complete circular building viewed from farther away. Keep the full dome, all tiers and both side wings inside the middle 70 percent of picture width. Ground-level garden shrubs should fill the lower right edge, with transparent sky beside the upper building outline. Preserve the same simple pastel hand-drawn style and transparent background. No image reference is supplied.",
+    "transparent_background": true
+  },
+  "revision": {
+    "number": 2,
+    "reason": "Centennial Hall side wing continues beyond the right frame.",
+    "previousFiles": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/pl-wroclaw-mobile"
+  }
+}

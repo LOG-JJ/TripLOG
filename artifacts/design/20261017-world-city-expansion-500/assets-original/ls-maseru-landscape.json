@@ -1,0 +1,26 @@
+{
+  "jobId": "ls-maseru-landscape",
+  "cityId": "ls-maseru",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Maseru, Lesotho: the conical Basotho Hat building in Maseru, with the low green foothills and a simple town street. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "7939eccfaed701469d7f07c7685dd457da24f5ee3b94f8f08b98f75846a93f31",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ls-maseru-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-4dd1151b-e061-4e5b-9ce9-60b183ce0209.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-4dd1151b-e061-4e5b-9ce9-60b183ce0209.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/ls-maseru-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "383f2d876025bcbc1df11acb06ccdcc34a414a68f28f5e00dc422972cfd3ba8e",
+  "savedSha256": "383f2d876025bcbc1df11acb06ccdcc34a414a68f28f5e00dc422972cfd3ba8e",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:21:26Z",
+  "toolCallId": "exec-4dd1151b-e061-4e5b-9ce9-60b183ce0209",
+  "savedAt": "2026-10-17T07:24:50.691919+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-anyang-landscape",
+  "cityId": "kr-anyang",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Anyang, South Korea: Anyang Art Park's wooded park landscape and shallow stream, with a small contemporary public-art element set among the trees. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "9330aed77ec2ae73bf525dedde96b9dcef00703ba96ea5c6098e6b548d5d34c6",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-anyang-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-b921959f-d6a3-4eaa-a02e-565be3d85d7f.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-b921959f-d6a3-4eaa-a02e-565be3d85d7f.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-anyang-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "f3d877c578a9de1817d40f3551566e44cdc3fbfbb2039ec653f85b476128f2ad",
+  "savedSha256": "f3d877c578a9de1817d40f3551566e44cdc3fbfbb2039ec653f85b476128f2ad",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:10:46Z",
+  "toolCallId": "exec-b921959f-d6a3-4eaa-a02e-565be3d85d7f",
+  "savedAt": "2026-10-17T05:11:08.529405+00:00"
+}

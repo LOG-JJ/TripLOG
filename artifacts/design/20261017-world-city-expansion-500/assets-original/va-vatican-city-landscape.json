@@ -1,0 +1,26 @@
+{
+  "jobId": "va-vatican-city-landscape",
+  "cityId": "va-vatican-city",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Vatican City, Vatican City: the dome of Saint Peter's Basilica, with the curved colonnades of Saint Peter's Square. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Composition correction: Use a slightly more distant view of the COMPLETE Saint Peters Basilica. The cross at the highest point of the dome must sit below 12 percent of the image height. Both facade ends must be visible within the canvas; keep the rightmost basilica wall before 85 percent of canvas width. The square and foreground shrubs may reach the lower and right canvas edges.",
+  "promptSha256": "8bd132597cbcd1a7631a3864f8921a0cdb604f17b8071a5282746e7db3798b6f",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/va-vatican-city-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-7498c073-ac5e-44bb-86dd-b44dec39b148.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-7498c073-ac5e-44bb-86dd-b44dec39b148.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "dc0d4d5dbe22631515ffaa0a5021ef0e1971acc16c26ddf9c66ef9564cb70133",
+  "savedSha256": "dc0d4d5dbe22631515ffaa0a5021ef0e1971acc16c26ddf9c66ef9564cb70133",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:21:04Z",
+  "toolCallId": "exec-7498c073-ac5e-44bb-86dd-b44dec39b148",
+  "savedAt": "2026-10-17T07:24:33.516607+00:00"
+}

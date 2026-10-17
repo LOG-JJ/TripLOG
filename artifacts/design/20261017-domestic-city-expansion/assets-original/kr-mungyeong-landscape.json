@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-mungyeong-landscape",
+  "cityId": "kr-mungyeong",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Mungyeong, South Korea: Mungyeong Saejae's traditional tiled-roof gateway and thick stone wall standing between green mountain slopes. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "9f513ce133225e8ff707618fe07d1ec7092b3c5695446686d2ea67fa0a06bd9c",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-mungyeong-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-46fc460a-8b08-494d-a999-caf79456e37e.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-46fc460a-8b08-494d-a999-caf79456e37e.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-mungyeong-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "64a889a319c8f712201ae4ab98d18131e332b9834aec37843c8844e077d9831f",
+  "savedSha256": "64a889a319c8f712201ae4ab98d18131e332b9834aec37843c8844e077d9831f",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:25:59Z",
+  "toolCallId": "exec-46fc460a-8b08-494d-a999-caf79456e37e",
+  "savedAt": "2026-10-17T05:27:06.859185+00:00"
+}

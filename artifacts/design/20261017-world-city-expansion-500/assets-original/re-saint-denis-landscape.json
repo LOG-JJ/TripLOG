@@ -1,0 +1,26 @@
+{
+  "jobId": "re-saint-denis-landscape",
+  "cityId": "re-saint-denis",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Saint-Denis, Réunion: Saint-Denis's Barachois seafront promenade, a row of old dark iron cannons facing the Indian Ocean from a low stone sea wall, with palms. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "cf7c9ffc9420d7208e3a8708607f636e486921feeef2f687982fd34c1d8e65a5",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/re-saint-denis-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-4c48a6a8-1356-440e-884e-d67704805636.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-4c48a6a8-1356-440e-884e-d67704805636.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/re-saint-denis-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "5c9e7c3953da77a4cfaf28bd7b60d5f8c3eaa555bb5577ee9c79c2d06c1ef565",
+  "savedSha256": "5c9e7c3953da77a4cfaf28bd7b60d5f8c3eaa555bb5577ee9c79c2d06c1ef565",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:53:26.137Z",
+  "toolCallId": "exec-4c48a6a8-1356-440e-884e-d67704805636",
+  "savedAt": "2026-10-17T07:56:16.548156+00:00"
+}

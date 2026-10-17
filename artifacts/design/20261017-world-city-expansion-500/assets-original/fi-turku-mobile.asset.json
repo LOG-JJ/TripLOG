@@ -1,0 +1,52 @@
+{
+  "id": "fi-turku-mobile",
+  "cityId": "fi-turku",
+  "name": "투르쿠",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/fi-turku-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/fi-turku-mobile.json",
+  "originalSha256": "869b818edde2d5237719577f9c51f9a9352b75cb69f94c4e0f0fd62bc5a47b52",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    47,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/fi-turku-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 77992,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "fb54d4ebc12d16aec6b35f9fe9cb12d0096fbdb282eb6ce97fa4ba665f6d912f",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,1307 @@
+{
+  "asOf": "2026-10-17",
+  "timezone": "Asia/Seoul",
+  "scope": "Local repository inventory; not a live-site or user-trip diagnosis",
+  "head": "b146d47b72cb3ee617cec7d310a7b0741db74deb",
+  "sourceHashes": {
+    "src/app/data/destination-scenes.js": "437810f9c323baa5659245bac0ce7fc32ea8cf3ff01da974f8855e8de2233ae7",
+    "src/app/shared/destination-scenes.js": "ccc8e3cc91fadc4aa5a1451ddd3789a69174cc3b063d7315deec9c045a893795"
+  },
+  "counts": {
+    "catalog": 330,
+    "domestic": 30,
+    "overseas": 300,
+    "domesticDedicated": 15,
+    "domesticThemeOnly": 15,
+    "activeFiles": 650,
+    "missingActiveFiles": [],
+    "domesticDedicatedBytes": 2469588
+  },
+  "domestic": [
+    {
+      "id": "kr-seoul",
+      "name": "서울",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "서울",
+        "서울시",
+        "서울특별시",
+        "Seoul"
+      ],
+      "dedicated": true,
+      "src": "src/assets/trip-scenes/cities/v2/kr-seoul.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-seoul-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-seoul.webp",
+          "exists": true,
+          "bytes": 64310,
+          "sha256": "3f8d5a937a7243eccdb14461b0ef342a92f8d2aaf6932647dd36dd1d0a6be1d4"
+        },
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-seoul-mobile.webp",
+          "exists": true,
+          "bytes": 61854,
+          "sha256": "9c1ccf7423ea524cf8e6c520ad67c1af6cb5ba41cf6f1f9d857359026c0f9fb3"
+        }
+      ]
+    },
+    {
+      "id": "kr-incheon",
+      "name": "인천",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "인천",
+        "인천시",
+        "인천광역시",
+        "Incheon"
+      ],
+      "dedicated": false,
+      "src": "src/assets/trip-scenes/themes/v2/coast.webp",
+      "mobileSrc": "src/assets/trip-scenes/themes/v2/coast-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/themes/v2/coast.webp",
+          "exists": true,
+          "bytes": 72340,
+          "sha256": "3dac9829d7a2e5c108af7af9da58d2ad16da913c08e995377d343ceaf9cfd570"
+        },
+        {
+          "path": "src/assets/trip-scenes/themes/v2/coast-mobile.webp",
+          "exists": true,
+          "bytes": 65962,
+          "sha256": "4edee7eb645e8c1e12ed5b6fdf884718c155a75bf4f5f4e67c1f15a715c717e6"
+        }
+      ]
+    },
+    {
+      "id": "kr-suwon",
+      "name": "수원",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "수원",
+        "수원시",
+        "Suwon"
+      ],
+      "dedicated": false,
+      "src": "src/assets/trip-scenes/themes/v2/traditional.webp",
+      "mobileSrc": "src/assets/trip-scenes/themes/v2/traditional-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/themes/v2/traditional.webp",
+          "exists": true,
+          "bytes": 78956,
+          "sha256": "0ee69fc7bb32c05381560b8dbbb1d261e0dfc0a6858dd9ce13de9a5bd0af21ef"
+        },
+        {
+          "path": "src/assets/trip-scenes/themes/v2/traditional-mobile.webp",
+          "exists": true,
+          "bytes": 72160,
+          "sha256": "8633c36509d06977af036e69a0b085befd74048542da03be07ac9dcaab79543e"
+        }
+      ]
+    },
+    {
+      "id": "kr-gapyeong",
+      "name": "가평",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "region",
+      "theme": "forest",
+      "aliases": [
+        "가평",
+        "가평군",
+        "Gapyeong"
+      ],
+      "dedicated": true,
+      "src": "src/assets/trip-scenes/cities/v2/kr-gapyeong.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-gapyeong-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-gapyeong.webp",
+          "exists": true,
+          "bytes": 79484,
+          "sha256": "7ecbf38d3c25490b05402f17b4d67e4c829f1026c86feb0809871d61bdf1f114"
+        },
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-gapyeong-mobile.webp",
+          "exists": true,
+          "bytes": 78176,
+          "sha256": "b152843c7570f587ffecf47b0bbc51855f6cfcd9a10fb23e8912282201cc1fc2"
+        }
+      ]
+    },
+    {
+      "id": "kr-gangneung",
+      "name": "강릉",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "강릉",
+        "강릉시",
+        "Gangneung"
+      ],
+      "dedicated": true,
+      "src": "src/assets/trip-scenes/cities/v2/kr-gangneung.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-gangneung-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-gangneung.webp",
+          "exists": true,
+          "bytes": 95916,
+          "sha256": "f6828bd31e763c95921892a94d81329ff816e588033094dded8d61cf6bc2d55e"
+        },
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-gangneung-mobile.webp",
+          "exists": true,
+          "bytes": 88010,
+          "sha256": "036696c3226dc0afb144911cfe955003a0e686ebf4f7d667e7d5728b63586d2b"
+        }
+      ]
+    },
+    {
+      "id": "kr-sokcho",
+      "name": "속초",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "mountain",
+      "aliases": [
+        "속초",
+        "속초시",
+        "Sokcho"
+      ],
+      "dedicated": true,
+      "src": "src/assets/trip-scenes/cities/v2/kr-sokcho.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-sokcho-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-sokcho.webp",
+          "exists": true,
+          "bytes": 89730,
+          "sha256": "499b97f14b8c14eeb080463014335e8acf108b3d35ac1b87358cd733b1bb85d4"
+        },
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-sokcho-mobile.webp",
+          "exists": true,
+          "bytes": 85324,
+          "sha256": "a54ffb2454c3d97b1e790332ba25323066aa121d12910c76fd43a187cc558574"
+        }
+      ]
+    },
+    {
+      "id": "kr-yangyang",
+      "name": "양양",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "region",
+      "theme": "coast",
+      "aliases": [
+        "양양",
+        "양양군",
+        "Yangyang"
+      ],
+      "dedicated": true,
+      "src": "src/assets/trip-scenes/cities/v2/kr-yangyang.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-yangyang-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-yangyang.webp",
+          "exists": true,
+          "bytes": 80826,
+          "sha256": "c84068a62e50af4e6d03abc63dc9c22eb5a8e751b50239656d376357c680dece"
+        },
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-yangyang-mobile.webp",
+          "exists": true,
+          "bytes": 87820,
+          "sha256": "1412975d0a1b6580f8beee114eacc1435a771a7755cdda5738f1f30ad031c226"
+        }
+      ]
+    },
+    {
+      "id": "kr-chuncheon",
+      "name": "춘천",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "lake",
+      "aliases": [
+        "춘천",
+        "춘천시",
+        "Chuncheon"
+      ],
+      "dedicated": true,
+      "src": "src/assets/trip-scenes/cities/v2/kr-chuncheon.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-chuncheon-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-chuncheon.webp",
+          "exists": true,
+          "bytes": 61222,
+          "sha256": "bb12f694b09e26504895c36c95c333c67c1a86cd25556f845c4cd2a6c26c443a"
+        },
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-chuncheon-mobile.webp",
+          "exists": true,
+          "bytes": 73992,
+          "sha256": "7adddeaa61a19e11910f957fb3cb47f55defb7e43ecf04d7ff344382ad109bd7"
+        }
+      ]
+    },
+    {
+      "id": "kr-pyeongchang",
+      "name": "평창",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "region",
+      "theme": "mountain",
+      "aliases": [
+        "평창",
+        "평창군",
+        "Pyeongchang",
+        "Pyeong-chang"
+      ],
+      "dedicated": false,
+      "src": "src/assets/trip-scenes/themes/v2/mountain.webp",
+      "mobileSrc": "src/assets/trip-scenes/themes/v2/mountain-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/themes/v2/mountain.webp",
+          "exists": true,
+          "bytes": 84426,
+          "sha256": "86c13acff583dd2e2f00c1570956e94ddffaf2056015ec6e4b84bc6e363fe1ac"
+        },
+        {
+          "path": "src/assets/trip-scenes/themes/v2/mountain-mobile.webp",
+          "exists": true,
+          "bytes": 82388,
+          "sha256": "53747566e4217e43c26a50e1f76cc181ee9bac5c337d5f9ac34724fb42d65b33"
+        }
+      ]
+    },
+    {
+      "id": "kr-daejeon",
+      "name": "대전",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "대전",
+        "대전시",
+        "대전광역시",
+        "Daejeon"
+      ],
+      "dedicated": false,
+      "src": "src/assets/trip-scenes/themes/v2/urban.webp",
+      "mobileSrc": "src/assets/trip-scenes/themes/v2/urban-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/themes/v2/urban.webp",
+          "exists": true,
+          "bytes": 83366,
+          "sha256": "e45c13db59caaffed63041db1732bc77dbe6b02c1424cda03fe2cfcfe77bec82"
+        },
+        {
+          "path": "src/assets/trip-scenes/themes/v2/urban-mobile.webp",
+          "exists": true,
+          "bytes": 67654,
+          "sha256": "99860b36fd566d4392dc538782965bb18b563eeb53d3e9e5975f2a61f164a9d2"
+        }
+      ]
+    },
+    {
+      "id": "kr-danyang",
+      "name": "단양",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "region",
+      "theme": "mountain",
+      "aliases": [
+        "단양",
+        "단양군",
+        "Danyang"
+      ],
+      "dedicated": false,
+      "src": "src/assets/trip-scenes/themes/v2/mountain.webp",
+      "mobileSrc": "src/assets/trip-scenes/themes/v2/mountain-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/themes/v2/mountain.webp",
+          "exists": true,
+          "bytes": 84426,
+          "sha256": "86c13acff583dd2e2f00c1570956e94ddffaf2056015ec6e4b84bc6e363fe1ac"
+        },
+        {
+          "path": "src/assets/trip-scenes/themes/v2/mountain-mobile.webp",
+          "exists": true,
+          "bytes": 82388,
+          "sha256": "53747566e4217e43c26a50e1f76cc181ee9bac5c337d5f9ac34724fb42d65b33"
+        }
+      ]
+    },
+    {
+      "id": "kr-jeonju",
+      "name": "전주",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "전주",
+        "전주시",
+        "Jeonju"
+      ],
+      "dedicated": true,
+      "src": "src/assets/trip-scenes/cities/v2/kr-jeonju.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-jeonju-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-jeonju.webp",
+          "exists": true,
+          "bytes": 85798,
+          "sha256": "41851951cd96f91c2f825e00a9645d0efd603ac6f2f9c297db38ceaacfc2c958"
+        },
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-jeonju-mobile.webp",
+          "exists": true,
+          "bytes": 76520,
+          "sha256": "355eb5415ef8a80afb20e582b6c130569ae594fffeacbe55b9291e7f97453f0f"
+        }
+      ]
+    },
+    {
+      "id": "kr-yeosu",
+      "name": "여수",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "여수",
+        "여수시",
+        "Yeosu"
+      ],
+      "dedicated": true,
+      "src": "src/assets/trip-scenes/cities/v2/kr-yeosu.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-yeosu-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-yeosu.webp",
+          "exists": true,
+          "bytes": 88728,
+          "sha256": "9aef450eec362c8d622cb2544b0010497c07cdca36b120f914daab74ca9f9f8f"
+        },
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-yeosu-mobile.webp",
+          "exists": true,
+          "bytes": 78598,
+          "sha256": "a9e6ab2620c9ef6901c95a3de947c98e7b77ccec55139d4d8beca008647655dc"
+        }
+      ]
+    },
+    {
+      "id": "kr-suncheon",
+      "name": "순천",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "wetland",
+      "aliases": [
+        "순천",
+        "순천시",
+        "Suncheon",
+        "전남 순천",
+        "전라남도 순천",
+        "전라남도 순천시"
+      ],
+      "dedicated": true,
+      "src": "src/assets/trip-scenes/cities/v2/kr-suncheon.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-suncheon-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-suncheon.webp",
+          "exists": true,
+          "bytes": 106394,
+          "sha256": "ca605371314a142dc84bdfecad899e80f5383095465d65b6dbd0e8f875b381d5"
+        },
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-suncheon-mobile.webp",
+          "exists": true,
+          "bytes": 86500,
+          "sha256": "7affdfcf8b498632ec58ea540f37d7725b5b9c88fc1c8c6b5b80d8879b92de4c"
+        }
+      ]
+    },
+    {
+      "id": "kr-mokpo",
+      "name": "목포",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "목포",
+        "목포시",
+        "Mokpo"
+      ],
+      "dedicated": false,
+      "src": "src/assets/trip-scenes/themes/v2/coast.webp",
+      "mobileSrc": "src/assets/trip-scenes/themes/v2/coast-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/themes/v2/coast.webp",
+          "exists": true,
+          "bytes": 72340,
+          "sha256": "3dac9829d7a2e5c108af7af9da58d2ad16da913c08e995377d343ceaf9cfd570"
+        },
+        {
+          "path": "src/assets/trip-scenes/themes/v2/coast-mobile.webp",
+          "exists": true,
+          "bytes": 65962,
+          "sha256": "4edee7eb645e8c1e12ed5b6fdf884718c155a75bf4f5f4e67c1f15a715c717e6"
+        }
+      ]
+    },
+    {
+      "id": "kr-gunsan",
+      "name": "군산",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "군산",
+        "군산시",
+        "Gunsan"
+      ],
+      "dedicated": false,
+      "src": "src/assets/trip-scenes/themes/v2/traditional.webp",
+      "mobileSrc": "src/assets/trip-scenes/themes/v2/traditional-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/themes/v2/traditional.webp",
+          "exists": true,
+          "bytes": 78956,
+          "sha256": "0ee69fc7bb32c05381560b8dbbb1d261e0dfc0a6858dd9ce13de9a5bd0af21ef"
+        },
+        {
+          "path": "src/assets/trip-scenes/themes/v2/traditional-mobile.webp",
+          "exists": true,
+          "bytes": 72160,
+          "sha256": "8633c36509d06977af036e69a0b085befd74048542da03be07ac9dcaab79543e"
+        }
+      ]
+    },
+    {
+      "id": "kr-damyang",
+      "name": "담양",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "region",
+      "theme": "forest",
+      "aliases": [
+        "담양",
+        "담양군",
+        "Damyang"
+      ],
+      "dedicated": false,
+      "src": "src/assets/trip-scenes/themes/v2/forest.webp",
+      "mobileSrc": "src/assets/trip-scenes/themes/v2/forest-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/themes/v2/forest.webp",
+          "exists": true,
+          "bytes": 87116,
+          "sha256": "05141e5b25c23fcb63f206ae19af52522f2e887ffa41a99a24b0535c06c3d6fb"
+        },
+        {
+          "path": "src/assets/trip-scenes/themes/v2/forest-mobile.webp",
+          "exists": true,
+          "bytes": 83676,
+          "sha256": "3fdac5696954f4d9137871cef529fd7597f13e36d847686290726b69e0141a00"
+        }
+      ]
+    },
+    {
+      "id": "kr-boseong",
+      "name": "보성",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "region",
+      "theme": "forest",
+      "aliases": [
+        "보성",
+        "보성군",
+        "Boseong"
+      ],
+      "dedicated": false,
+      "src": "src/assets/trip-scenes/themes/v2/forest.webp",
+      "mobileSrc": "src/assets/trip-scenes/themes/v2/forest-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/themes/v2/forest.webp",
+          "exists": true,
+          "bytes": 87116,
+          "sha256": "05141e5b25c23fcb63f206ae19af52522f2e887ffa41a99a24b0535c06c3d6fb"
+        },
+        {
+          "path": "src/assets/trip-scenes/themes/v2/forest-mobile.webp",
+          "exists": true,
+          "bytes": 83676,
+          "sha256": "3fdac5696954f4d9137871cef529fd7597f13e36d847686290726b69e0141a00"
+        }
+      ]
+    },
+    {
+      "id": "kr-gwangju",
+      "name": "광주",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "광주",
+        "광주광역시",
+        "Gwangju Metropolitan City"
+      ],
+      "dedicated": false,
+      "src": "src/assets/trip-scenes/themes/v2/urban.webp",
+      "mobileSrc": "src/assets/trip-scenes/themes/v2/urban-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/themes/v2/urban.webp",
+          "exists": true,
+          "bytes": 83366,
+          "sha256": "e45c13db59caaffed63041db1732bc77dbe6b02c1424cda03fe2cfcfe77bec82"
+        },
+        {
+          "path": "src/assets/trip-scenes/themes/v2/urban-mobile.webp",
+          "exists": true,
+          "bytes": 67654,
+          "sha256": "99860b36fd566d4392dc538782965bb18b563eeb53d3e9e5975f2a61f164a9d2"
+        }
+      ]
+    },
+    {
+      "id": "kr-daegu",
+      "name": "대구",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "대구",
+        "대구시",
+        "대구광역시",
+        "Daegu"
+      ],
+      "dedicated": false,
+      "src": "src/assets/trip-scenes/themes/v2/urban.webp",
+      "mobileSrc": "src/assets/trip-scenes/themes/v2/urban-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/themes/v2/urban.webp",
+          "exists": true,
+          "bytes": 83366,
+          "sha256": "e45c13db59caaffed63041db1732bc77dbe6b02c1424cda03fe2cfcfe77bec82"
+        },
+        {
+          "path": "src/assets/trip-scenes/themes/v2/urban-mobile.webp",
+          "exists": true,
+          "bytes": 67654,
+          "sha256": "99860b36fd566d4392dc538782965bb18b563eeb53d3e9e5975f2a61f164a9d2"
+        }
+      ]
+    },
+    {
+      "id": "kr-gyeongju",
+      "name": "경주",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "경주",
+        "경주시",
+        "Gyeongju"
+      ],
+      "dedicated": true,
+      "src": "src/assets/trip-scenes/cities/v2/kr-gyeongju.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-gyeongju-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-gyeongju.webp",
+          "exists": true,
+          "bytes": 94346,
+          "sha256": "f96990cdec5d52c24034da35031a3910255fbed231a0f8ad266c60ba73cf77c7"
+        },
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-gyeongju-mobile.webp",
+          "exists": true,
+          "bytes": 93402,
+          "sha256": "bf68ecdff07d3046917e072fc9a2f6f8fa28659bea3fb17505bdefe4020281ab"
+        }
+      ]
+    },
+    {
+      "id": "kr-andong",
+      "name": "안동",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "안동",
+        "안동시",
+        "Andong"
+      ],
+      "dedicated": false,
+      "src": "src/assets/trip-scenes/themes/v2/traditional.webp",
+      "mobileSrc": "src/assets/trip-scenes/themes/v2/traditional-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/themes/v2/traditional.webp",
+          "exists": true,
+          "bytes": 78956,
+          "sha256": "0ee69fc7bb32c05381560b8dbbb1d261e0dfc0a6858dd9ce13de9a5bd0af21ef"
+        },
+        {
+          "path": "src/assets/trip-scenes/themes/v2/traditional-mobile.webp",
+          "exists": true,
+          "bytes": 72160,
+          "sha256": "8633c36509d06977af036e69a0b085befd74048542da03be07ac9dcaab79543e"
+        }
+      ]
+    },
+    {
+      "id": "kr-pohang",
+      "name": "포항",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "포항",
+        "포항시",
+        "Pohang"
+      ],
+      "dedicated": false,
+      "src": "src/assets/trip-scenes/themes/v2/coast.webp",
+      "mobileSrc": "src/assets/trip-scenes/themes/v2/coast-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/themes/v2/coast.webp",
+          "exists": true,
+          "bytes": 72340,
+          "sha256": "3dac9829d7a2e5c108af7af9da58d2ad16da913c08e995377d343ceaf9cfd570"
+        },
+        {
+          "path": "src/assets/trip-scenes/themes/v2/coast-mobile.webp",
+          "exists": true,
+          "bytes": 65962,
+          "sha256": "4edee7eb645e8c1e12ed5b6fdf884718c155a75bf4f5f4e67c1f15a715c717e6"
+        }
+      ]
+    },
+    {
+      "id": "kr-ulleung",
+      "name": "울릉도",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "island",
+      "theme": "coast",
+      "aliases": [
+        "울릉도",
+        "울릉",
+        "울릉군",
+        "Ulleung",
+        "Ulleungdo",
+        "Ulleung Island"
+      ],
+      "dedicated": false,
+      "src": "src/assets/trip-scenes/themes/v2/coast.webp",
+      "mobileSrc": "src/assets/trip-scenes/themes/v2/coast-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/themes/v2/coast.webp",
+          "exists": true,
+          "bytes": 72340,
+          "sha256": "3dac9829d7a2e5c108af7af9da58d2ad16da913c08e995377d343ceaf9cfd570"
+        },
+        {
+          "path": "src/assets/trip-scenes/themes/v2/coast-mobile.webp",
+          "exists": true,
+          "bytes": 65962,
+          "sha256": "4edee7eb645e8c1e12ed5b6fdf884718c155a75bf4f5f4e67c1f15a715c717e6"
+        }
+      ]
+    },
+    {
+      "id": "kr-busan",
+      "name": "부산",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "부산",
+        "부산시",
+        "부산광역시",
+        "Busan",
+        "Pusan"
+      ],
+      "dedicated": true,
+      "src": "src/assets/trip-scenes/cities/v2/kr-busan.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-busan-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-busan.webp",
+          "exists": true,
+          "bytes": 68846,
+          "sha256": "bfe05518c1be7d18b06aa1bf9541f402c6545781843681611b7d0bc398237a59"
+        },
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-busan-mobile.webp",
+          "exists": true,
+          "bytes": 65904,
+          "sha256": "526697e25795adde9e9e6a7465db8ae26ba5439942f343bb75b79c7f10aa9902"
+        }
+      ]
+    },
+    {
+      "id": "kr-ulsan",
+      "name": "울산",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "울산",
+        "울산시",
+        "울산광역시",
+        "Ulsan"
+      ],
+      "dedicated": false,
+      "src": "src/assets/trip-scenes/themes/v2/coast.webp",
+      "mobileSrc": "src/assets/trip-scenes/themes/v2/coast-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/themes/v2/coast.webp",
+          "exists": true,
+          "bytes": 72340,
+          "sha256": "3dac9829d7a2e5c108af7af9da58d2ad16da913c08e995377d343ceaf9cfd570"
+        },
+        {
+          "path": "src/assets/trip-scenes/themes/v2/coast-mobile.webp",
+          "exists": true,
+          "bytes": 65962,
+          "sha256": "4edee7eb645e8c1e12ed5b6fdf884718c155a75bf4f5f4e67c1f15a715c717e6"
+        }
+      ]
+    },
+    {
+      "id": "kr-tongyeong",
+      "name": "통영",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "통영",
+        "통영시",
+        "Tongyeong"
+      ],
+      "dedicated": true,
+      "src": "src/assets/trip-scenes/cities/v2/kr-tongyeong.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-tongyeong-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-tongyeong.webp",
+          "exists": true,
+          "bytes": 70258,
+          "sha256": "a7146e6af8fbd6311339aa2b84c833da990479051211f5d4c847e2ff554fdc69"
+        },
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-tongyeong-mobile.webp",
+          "exists": true,
+          "bytes": 75618,
+          "sha256": "110fc35ca13016ba9f6976d15d22c9aab5240df4a7931cbb85c7fe3351991d50"
+        }
+      ]
+    },
+    {
+      "id": "kr-geoje",
+      "name": "거제",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "거제",
+        "거제시",
+        "거제도",
+        "Geoje"
+      ],
+      "dedicated": true,
+      "src": "src/assets/trip-scenes/cities/v2/kr-geoje.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-geoje-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-geoje.webp",
+          "exists": true,
+          "bytes": 87512,
+          "sha256": "d36b4b29da0da30ff1cc6174dd54d5f4e74d74787de218be4386059c811e162d"
+        },
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-geoje-mobile.webp",
+          "exists": true,
+          "bytes": 90140,
+          "sha256": "2362283261a4443571cd92ef6e74ea9b635fbb3c6c24d15a30c9ed092621cd9d"
+        }
+      ]
+    },
+    {
+      "id": "kr-namhae",
+      "name": "남해",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "region",
+      "theme": "coast",
+      "aliases": [
+        "남해",
+        "남해군",
+        "Namhae"
+      ],
+      "dedicated": true,
+      "src": "src/assets/trip-scenes/cities/v2/kr-namhae.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-namhae-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-namhae.webp",
+          "exists": true,
+          "bytes": 95476,
+          "sha256": "95fbb8e7341f389d1886aa4858fbd76dc5348ef93b93ee707ed487d4e8e02721"
+        },
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-namhae-mobile.webp",
+          "exists": true,
+          "bytes": 87090,
+          "sha256": "37d81c6c4bb0de6307b6c9f245af8c5edf1da6a3e3e34ad0d686c11f65c16713"
+        }
+      ]
+    },
+    {
+      "id": "kr-jeju",
+      "name": "제주도",
+      "countryCodes": [
+        "KR"
+      ],
+      "kind": "region",
+      "theme": "coast",
+      "aliases": [
+        "제주도",
+        "제주",
+        "제주특별자치도",
+        "Jeju",
+        "Jeju-do",
+        "Jeju Island"
+      ],
+      "dedicated": true,
+      "src": "src/assets/trip-scenes/cities/v2/kr-jeju.webp",
+      "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-jeju-mobile.webp",
+      "files": [
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-jeju.webp",
+          "exists": true,
+          "bytes": 85124,
+          "sha256": "bce80e727cf4fccaa250118ba6349d0f9027441b3f110ace0a6f04bd4154d61e"
+        },
+        {
+          "path": "src/assets/trip-scenes/cities/v2/kr-jeju-mobile.webp",
+          "exists": true,
+          "bytes": 86670,
+          "sha256": "b0320c874c9565d148ddde8a578f854811e3ec7f99ad75635205cab962c310d6"
+        }
+      ]
+    }
+  ],
+  "matchingExamples": [
+    {
+      "input": {
+        "travelMode": "domestic",
+        "city": "강릉"
+      },
+      "result": {
+        "destinationId": "kr-gangneung",
+        "destinationName": "강릉",
+        "destinationKind": "city",
+        "match": "exact",
+        "themeId": "coast",
+        "dedicated": true,
+        "artworkId": "kr-gangneung",
+        "src": "src/assets/trip-scenes/cities/v2/kr-gangneung.webp",
+        "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-gangneung-mobile.webp",
+        "fallbackSrc": "src/assets/trip-scenes/themes/v2/coast.webp",
+        "universalSrc": "src/assets/trip-scenes/themes/v2/travel.webp"
+      }
+    },
+    {
+      "input": {
+        "travelMode": "domestic",
+        "city": "강릉시"
+      },
+      "result": {
+        "destinationId": "kr-gangneung",
+        "destinationName": "강릉",
+        "destinationKind": "city",
+        "match": "exact",
+        "themeId": "coast",
+        "dedicated": true,
+        "artworkId": "kr-gangneung",
+        "src": "src/assets/trip-scenes/cities/v2/kr-gangneung.webp",
+        "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-gangneung-mobile.webp",
+        "fallbackSrc": "src/assets/trip-scenes/themes/v2/coast.webp",
+        "universalSrc": "src/assets/trip-scenes/themes/v2/travel.webp"
+      }
+    },
+    {
+      "input": {
+        "travelMode": "domestic",
+        "city": "강원도 강릉시"
+      },
+      "result": {
+        "destinationId": "",
+        "destinationName": "",
+        "destinationKind": "",
+        "match": "unknown",
+        "themeId": "travel",
+        "dedicated": false,
+        "artworkId": "theme-travel",
+        "src": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "mobileSrc": "src/assets/trip-scenes/themes/v2/travel-mobile.webp",
+        "fallbackSrc": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "universalSrc": "src/assets/trip-scenes/themes/v2/travel.webp"
+      }
+    },
+    {
+      "input": {
+        "travelMode": "domestic",
+        "city": "강원특별자치도 강릉시"
+      },
+      "result": {
+        "destinationId": "",
+        "destinationName": "",
+        "destinationKind": "",
+        "match": "unknown",
+        "themeId": "travel",
+        "dedicated": false,
+        "artworkId": "theme-travel",
+        "src": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "mobileSrc": "src/assets/trip-scenes/themes/v2/travel-mobile.webp",
+        "fallbackSrc": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "universalSrc": "src/assets/trip-scenes/themes/v2/travel.webp"
+      }
+    },
+    {
+      "input": {
+        "travelMode": "domestic",
+        "city": "여수"
+      },
+      "result": {
+        "destinationId": "kr-yeosu",
+        "destinationName": "여수",
+        "destinationKind": "city",
+        "match": "exact",
+        "themeId": "coast",
+        "dedicated": true,
+        "artworkId": "kr-yeosu",
+        "src": "src/assets/trip-scenes/cities/v2/kr-yeosu.webp",
+        "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-yeosu-mobile.webp",
+        "fallbackSrc": "src/assets/trip-scenes/themes/v2/coast.webp",
+        "universalSrc": "src/assets/trip-scenes/themes/v2/travel.webp"
+      }
+    },
+    {
+      "input": {
+        "travelMode": "domestic",
+        "city": "전남 여수"
+      },
+      "result": {
+        "destinationId": "",
+        "destinationName": "",
+        "destinationKind": "",
+        "match": "unknown",
+        "themeId": "travel",
+        "dedicated": false,
+        "artworkId": "theme-travel",
+        "src": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "mobileSrc": "src/assets/trip-scenes/themes/v2/travel-mobile.webp",
+        "fallbackSrc": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "universalSrc": "src/assets/trip-scenes/themes/v2/travel.webp"
+      }
+    },
+    {
+      "input": {
+        "travelMode": "domestic",
+        "city": "전라남도 여수시"
+      },
+      "result": {
+        "destinationId": "",
+        "destinationName": "",
+        "destinationKind": "",
+        "match": "unknown",
+        "themeId": "travel",
+        "dedicated": false,
+        "artworkId": "theme-travel",
+        "src": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "mobileSrc": "src/assets/trip-scenes/themes/v2/travel-mobile.webp",
+        "fallbackSrc": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "universalSrc": "src/assets/trip-scenes/themes/v2/travel.webp"
+      }
+    },
+    {
+      "input": {
+        "travelMode": "domestic",
+        "city": "전라남도 순천시"
+      },
+      "result": {
+        "destinationId": "kr-suncheon",
+        "destinationName": "순천",
+        "destinationKind": "city",
+        "match": "exact",
+        "themeId": "wetland",
+        "dedicated": true,
+        "artworkId": "kr-suncheon",
+        "src": "src/assets/trip-scenes/cities/v2/kr-suncheon.webp",
+        "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-suncheon-mobile.webp",
+        "fallbackSrc": "src/assets/trip-scenes/themes/v2/wetland.webp",
+        "universalSrc": "src/assets/trip-scenes/themes/v2/travel.webp"
+      }
+    },
+    {
+      "input": {
+        "travelMode": "domestic",
+        "city": "광주"
+      },
+      "result": {
+        "destinationId": "",
+        "destinationName": "",
+        "destinationKind": "",
+        "match": "ambiguous",
+        "themeId": "urban",
+        "dedicated": false,
+        "artworkId": "theme-urban",
+        "src": "src/assets/trip-scenes/themes/v2/urban.webp",
+        "mobileSrc": "src/assets/trip-scenes/themes/v2/urban-mobile.webp",
+        "fallbackSrc": "src/assets/trip-scenes/themes/v2/urban.webp",
+        "universalSrc": "src/assets/trip-scenes/themes/v2/travel.webp"
+      }
+    },
+    {
+      "input": {
+        "travelMode": "domestic",
+        "city": "광주광역시"
+      },
+      "result": {
+        "destinationId": "kr-gwangju",
+        "destinationName": "광주",
+        "destinationKind": "city",
+        "match": "exact",
+        "themeId": "urban",
+        "dedicated": false,
+        "artworkId": "theme-urban",
+        "src": "src/assets/trip-scenes/themes/v2/urban.webp",
+        "mobileSrc": "src/assets/trip-scenes/themes/v2/urban-mobile.webp",
+        "fallbackSrc": "src/assets/trip-scenes/themes/v2/urban.webp",
+        "universalSrc": "src/assets/trip-scenes/themes/v2/travel.webp"
+      }
+    },
+    {
+      "input": {
+        "travelMode": "domestic",
+        "city": "경기도 광주시"
+      },
+      "result": {
+        "destinationId": "",
+        "destinationName": "",
+        "destinationKind": "",
+        "match": "unknown",
+        "themeId": "travel",
+        "dedicated": false,
+        "artworkId": "theme-travel",
+        "src": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "mobileSrc": "src/assets/trip-scenes/themes/v2/travel-mobile.webp",
+        "fallbackSrc": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "universalSrc": "src/assets/trip-scenes/themes/v2/travel.webp"
+      }
+    },
+    {
+      "input": {
+        "travelMode": "domestic",
+        "city": "고성"
+      },
+      "result": {
+        "destinationId": "",
+        "destinationName": "",
+        "destinationKind": "",
+        "match": "unknown",
+        "themeId": "travel",
+        "dedicated": false,
+        "artworkId": "theme-travel",
+        "src": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "mobileSrc": "src/assets/trip-scenes/themes/v2/travel-mobile.webp",
+        "fallbackSrc": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "universalSrc": "src/assets/trip-scenes/themes/v2/travel.webp"
+      }
+    },
+    {
+      "input": {
+        "travelMode": "domestic",
+        "city": "서귀포"
+      },
+      "result": {
+        "destinationId": "kr-jeju",
+        "destinationName": "제주도",
+        "destinationKind": "region",
+        "match": "regional",
+        "themeId": "coast",
+        "dedicated": true,
+        "artworkId": "kr-jeju",
+        "src": "src/assets/trip-scenes/cities/v2/kr-jeju.webp",
+        "mobileSrc": "src/assets/trip-scenes/cities/v2/kr-jeju-mobile.webp",
+        "fallbackSrc": "src/assets/trip-scenes/themes/v2/coast.webp",
+        "universalSrc": "src/assets/trip-scenes/themes/v2/travel.webp"
+      }
+    },
+    {
+      "input": {
+        "travelMode": "domestic",
+        "city": "제주 제주시"
+      },
+      "result": {
+        "destinationId": "",
+        "destinationName": "",
+        "destinationKind": "",
+        "match": "unknown",
+        "themeId": "travel",
+        "dedicated": false,
+        "artworkId": "theme-travel",
+        "src": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "mobileSrc": "src/assets/trip-scenes/themes/v2/travel-mobile.webp",
+        "fallbackSrc": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "universalSrc": "src/assets/trip-scenes/themes/v2/travel.webp"
+      }
+    },
+    {
+      "input": {
+        "travelMode": "domestic",
+        "city": "공주"
+      },
+      "result": {
+        "destinationId": "",
+        "destinationName": "",
+        "destinationKind": "",
+        "match": "unknown",
+        "themeId": "travel",
+        "dedicated": false,
+        "artworkId": "theme-travel",
+        "src": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "mobileSrc": "src/assets/trip-scenes/themes/v2/travel-mobile.webp",
+        "fallbackSrc": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "universalSrc": "src/assets/trip-scenes/themes/v2/travel.webp"
+      }
+    },
+    {
+      "input": {
+        "travelMode": "domestic",
+        "city": "태안"
+      },
+      "result": {
+        "destinationId": "",
+        "destinationName": "",
+        "destinationKind": "",
+        "match": "unknown",
+        "themeId": "travel",
+        "dedicated": false,
+        "artworkId": "theme-travel",
+        "src": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "mobileSrc": "src/assets/trip-scenes/themes/v2/travel-mobile.webp",
+        "fallbackSrc": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "universalSrc": "src/assets/trip-scenes/themes/v2/travel.webp"
+      }
+    },
+    {
+      "input": {
+        "travelMode": "domestic",
+        "city": "세종"
+      },
+      "result": {
+        "destinationId": "",
+        "destinationName": "",
+        "destinationKind": "",
+        "match": "unknown",
+        "themeId": "travel",
+        "dedicated": false,
+        "artworkId": "theme-travel",
+        "src": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "mobileSrc": "src/assets/trip-scenes/themes/v2/travel-mobile.webp",
+        "fallbackSrc": "src/assets/trip-scenes/themes/v2/travel.webp",
+        "universalSrc": "src/assets/trip-scenes/themes/v2/travel.webp"
+      }
+    }
+  ],
+  "visualBaseline": [
+    {
+      "path": "artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon.png",
+      "sha256": "8be62382845e53791e695e49b20a1c631e3e621d40fee07935c0f4c9832af822",
+      "usage": "human visual comparison only; no image generation was performed"
+    },
+    {
+      "path": "artifacts/design/trip-header-mobile-20261004/assets-original/kr-suncheon-mobile.png",
+      "sha256": "9ee5b5e49a9fcc42f6ce7f1fdb9e4e740e6e4837ff51bad6394554bfa86c9dd6",
+      "usage": "human visual comparison only; no image generation was performed"
+    }
+  ]
+}

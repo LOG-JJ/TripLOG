@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-17",
+  "scope": "55 core expansion cities / 110 desktop and mobile images",
+  "reviewed": true,
+  "method": "Inspect generated originals, final asset contact sheets and actual rendered header samples; compare questionable landmark forms against the source research notes.",
+  "corrections": {
+    "root-r1": ["gb-belfast-mobile", "nl-utrecht-landscape", "pt-evora-mobile", "pl-wroclaw-mobile", "cz-karlovy-vary-landscape", "cz-karlovy-vary-mobile"],
+    "root-r2": ["tm-ashgabat-mobile", "ps-bethlehem-landscape", "ps-bethlehem-mobile", "id-bandung-mobile", "ss-juba-mobile", "mh-majuro-landscape", "mh-majuro-mobile", "vu-port-vila-landscape", "vu-port-vila-mobile"],
+    "root-r3": ["so-mogadishu-landscape", "so-mogadishu-mobile"]
+  },
+  "outcome": "The reviewed final images retain identifying landmark forms, transparent backgrounds and the left-information/right-illustration header composition. Important landmark tips are inside the final frame. Foreground ground, foliage, water or boundary walls may continue to the canvas edges.",
+  "styleObservation": "The shared dark outlines and pastel travel-illustration palette are consistent. Detail density varies by landmark; these are stylized destination illustrations rather than documentary architectural reconstructions.",
+  "provenance": "All outputs use text-only generation with no image inputs. Superseded attempts and their prompts/source hashes are preserved in design/revisions."
+}

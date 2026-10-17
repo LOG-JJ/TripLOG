@@ -1,0 +1,51 @@
+{
+  "id": "kr-osan-landscape",
+  "cityId": "kr-osan",
+  "name": "오산",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-osan-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-osan-landscape.json",
+  "originalSha256": "6daf28644c2e68d8eeef64211d544824552e5913662b255e2b74ee25cb02fcc6",
+  "sourceSize": [
+    1619,
+    972
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    35,
+    1619,
+    972
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-osan.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 102270,
+  "assetSha256": "c24001820cb00362fb27d7af5a3930ed6eb4cbac6252a85d28fed5e764677f13",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

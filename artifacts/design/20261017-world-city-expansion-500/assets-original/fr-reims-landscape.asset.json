@@ -1,0 +1,52 @@
+{
+  "id": "fr-reims-landscape",
+  "cityId": "fr-reims",
+  "name": "랭스",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/fr-reims-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/fr-reims-landscape.json",
+  "originalSha256": "58e91c62b98442f94c84cfe9a3d8f2fd41eedcc8d0746e68378672dcdfa0d26b",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    39,
+    18,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/fr-reims.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 125804,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "6d0cedefbce403343ab5d5290272644c3224db29f6cf120317f126fc3aa37459",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

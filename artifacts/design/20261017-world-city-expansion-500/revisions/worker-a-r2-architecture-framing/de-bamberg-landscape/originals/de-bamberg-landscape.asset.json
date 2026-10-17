@@ -1,0 +1,52 @@
+{
+  "id": "de-bamberg-landscape",
+  "cityId": "de-bamberg",
+  "name": "밤베르크",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/de-bamberg-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/de-bamberg-landscape.json",
+  "originalSha256": "f33b112a7373d838cd67dea03ad716cefb90fdf87f4061a7c39031dd93466c62",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/de-bamberg.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 110522,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "3340a1622d1fc82fa76af920285a3fae867fa986957f95d08c8ca56c1addb314",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

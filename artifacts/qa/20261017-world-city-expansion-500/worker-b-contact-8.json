@@ -1,0 +1,175 @@
+{
+  "count": 10,
+  "records": [
+    {
+      "id": "cf-bangui-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/cf-bangui.webp",
+      "sourceSha256": "eaf472782cfc695988a56a6f942246a5e8bae0f029dd9448d0a6a4a65f910574",
+      "assetSha256": "e2cbac78c0e2ed826ce2e04a59e9973f77c5ad5ae41700af7f35d203f792f0dd",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        20,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "cf-bangui-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/cf-bangui-mobile.webp",
+      "sourceSha256": "70bdb45a0475cacfd45368383ddfc62c6b3350f63b221961d54dd48634ae7197",
+      "assetSha256": "ef96f5e17e5f86d7a9670599023c1ebe485d77e82652253263dc37ba70d4008b",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        35,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "cd-kinshasa-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/cd-kinshasa.webp",
+      "sourceSha256": "fbc997f3ee00abcaf0066df7e0eb34080e408b18bbb7cd89179c6a9d366ff71b",
+      "assetSha256": "aebce0775cc43cc76242b052940bda22cd96a1946d84a5aa2582eb7f174a4f62",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        12,
+        24,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "cd-kinshasa-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/cd-kinshasa-mobile.webp",
+      "sourceSha256": "3bd5e6137dbf6c913ea564e3d965962311289b79f8d3cba7a8d58cefbf147899",
+      "assetSha256": "7dbef4889d61234f342b0add0f440f7b926b16eb6e26c9c1d918f53f4a917d74",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        122,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "er-asmara-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/er-asmara.webp",
+      "sourceSha256": "00317265b1b6ca07f38a7856bc0665443a67e1da656347c03249c15ea22d5237",
+      "assetSha256": "f0bfabad6db9046408030e42f13a4395344d966fdb76405a7ccfb08c21d371bc",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        12,
+        20,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "er-asmara-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/er-asmara-mobile.webp",
+      "sourceSha256": "17f34e57ddebb8feecdbac37d67bafcd27b5b4c79ff58de1f315464378b7138f",
+      "assetSha256": "b3e3e31f69ac0919889dd9372fdaf43f9a0cc680891a75efdf5ed9c2d9787a84",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        91,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "gm-banjul-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/gm-banjul.webp",
+      "sourceSha256": "d21921114178d720f99862d8ade84b8751dc9994b04a6f35f2ebd9538bb77924",
+      "assetSha256": "0fdcfae09066f31ddb5dac1222aadaebeb44a8c8d9b944896d24935de1a4f1fd",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        20,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "gm-banjul-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/gm-banjul-mobile.webp",
+      "sourceSha256": "58a0d2e7482e90cf4ad238a1fee0112bcb3e38ecb7c5e577b224337b6eaea14a",
+      "assetSha256": "3d810d7f622ebadf6c54aa6f25cc4086acab15a7165ed410d5ed735fe950a2b0",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        15,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "ls-maseru-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ls-maseru.webp",
+      "sourceSha256": "383f2d876025bcbc1df11acb06ccdcc34a414a68f28f5e00dc422972cfd3ba8e",
+      "assetSha256": "656005066a95a1fa8a8d35e15933982fc5d0274dcba266f23f11b756df8d0ec4",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        18,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "ls-maseru-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ls-maseru-mobile.webp",
+      "sourceSha256": "b8a6ded9690c6d41330e9660a1edb4f7854b38e42a13cd5075cfb28fb73201ce",
+      "assetSha256": "c0fd7f8d4439bacb0e227e211169c1f7f9299443932967968aa2d6150c59454d",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        50,
+        480,
+        600
+      ],
+      "originalEquality": true
+    }
+  ]
+}

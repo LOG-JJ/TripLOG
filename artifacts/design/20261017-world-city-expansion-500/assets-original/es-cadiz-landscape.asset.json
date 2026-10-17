@@ -1,0 +1,52 @@
+{
+  "id": "es-cadiz-landscape",
+  "cityId": "es-cadiz",
+  "name": "카디스",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-cadiz-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-cadiz-landscape.json",
+  "originalSha256": "aaf87f91def21b238094880bf587a1d80fea0ff840747531b23c6b8fb0ff3350",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    29,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/es-cadiz.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 121876,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "410b260da3dfebd7b9fdea1095ed01cbb32f48ef5ff81c84cc44557cefee80fb",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

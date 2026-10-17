@@ -1,0 +1,44 @@
+{
+  "jobId": "td-ndjamena-mobile",
+  "reason": "The first version invented a dome and columned portico; the institutional fieldwork photograph shows a flat rectangular modern facade.",
+  "archivedFiles": [
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/td-ndjamena-mobile.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/td-ndjamena-mobile/td-ndjamena-mobile.json",
+      "sha256": "1a515dca5a81dd5ef87aeaaa1bb008a5a486b646d31b79fff34fca091375dd66"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/td-ndjamena-mobile.prompt.txt",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/td-ndjamena-mobile/td-ndjamena-mobile.prompt.txt",
+      "sha256": "666edc9402ced53b2b5c031ac8118877b663beb23e41cd01d7457a0e9fe1292b"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-mobile.png",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/td-ndjamena-mobile/td-ndjamena-mobile.png",
+      "sha256": "88f00c3420ffc8889ee6b8da6f7a876b9f279cdef948de0fe7a7152c5e4abbe2"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-mobile.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/td-ndjamena-mobile/td-ndjamena-mobile.json",
+      "sha256": "7b97356d6710b47b9905d3a584d68ffc41c66e5677795493f375056d78c7bdbf"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-mobile.asset.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/td-ndjamena-mobile/td-ndjamena-mobile.asset.json",
+      "sha256": "8d8797bdf5663dc90cd55ce6f189e0a4a36e0b04e9fa9b2fb4bc0f96182a6d7e"
+    },
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v6/td-ndjamena-mobile.webp",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/td-ndjamena-mobile/td-ndjamena-mobile.webp",
+      "sha256": "417a2828a489d2a273042766214a870881fae4d085a1730bed610b221e081136"
+    }
+  ],
+  "newPromptSha256": "997f980ab44b55a8d88123ee27499a97ed49fcb315d8d2447a0e2e26de9f59c5",
+  "generationMode": "independent T2I",
+  "imageInputs": [],
+  "source": {
+    "title": "German Archaeological Institute — Entangled Africa: National Museum of Chad fieldwork report",
+    "url": "https://www.dainst.blog/entangled-africa/bericht_2022_11/"
+  },
+  "photoInspected": "https://www.dainst.blog/wp-content/uploads/2022/11/IMG_20220628_094338690_HDR-scaled-2.jpg"
+}

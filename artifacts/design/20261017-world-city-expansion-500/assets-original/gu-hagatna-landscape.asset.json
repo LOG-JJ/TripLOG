@@ -1,0 +1,52 @@
+{
+  "id": "gu-hagatna-landscape",
+  "cityId": "gu-hagatna",
+  "name": "하갓냐",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "오세아니아",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gu-hagatna-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gu-hagatna-landscape.json",
+  "originalSha256": "7b93457600ea87504726a9d176a893448cbde3ea7789e1b39550f59c896c9c37",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    86,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gu-hagatna.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 99556,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "8179ffa479233de56f97ad07434ec4820b2623969d1ed818269601599b91b70a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

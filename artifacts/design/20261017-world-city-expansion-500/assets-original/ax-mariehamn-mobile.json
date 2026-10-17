@@ -1,0 +1,26 @@
+{
+  "jobId": "ax-mariehamn-mobile",
+  "cityId": "ax-mariehamn",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Mariehamn, Åland Islands: the four-masted museum sailing ship Pommern in Mariehamn's western harbour, with a small wooden waterfront pavilion. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette. Local form guard: Pommern is a long, slender steel barque with exactly four masts; the first three carry horizontal yards and the fourth is the aft mast. Show the ship moored as a museum vessel, with furled sails and readable sparse rigging, rather than broad billowing sail sheets. Keep the entire bow, bowsprit, stern, all four mast tips and the low pavilion inside the image. In the portrait version use an oblique harbour view and a smaller ship scale instead of shortening the hull or dropping masts.",
+  "promptSha256": "144074ae5da06982ccf66c606ffa72488bbc89dbb4f8c6a786f517f6eb93bb60",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ax-mariehamn-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-b6eb801a-2027-401b-91ad-b03729568d97.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-b6eb801a-2027-401b-91ad-b03729568d97.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/ax-mariehamn-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "e8effbac7faf357d788e5df6f4c58ef625d6cd50d4ea151993b81d611008126a",
+  "savedSha256": "e8effbac7faf357d788e5df6f4c58ef625d6cd50d4ea151993b81d611008126a",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:36:31Z",
+  "toolCallId": "exec-b6eb801a-2027-401b-91ad-b03729568d97",
+  "savedAt": "2026-10-17T07:37:37.090925+00:00"
+}

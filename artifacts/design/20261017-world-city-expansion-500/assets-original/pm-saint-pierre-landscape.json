@@ -1,0 +1,26 @@
+{
+  "jobId": "pm-saint-pierre-landscape",
+  "cityId": "pm-saint-pierre",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Saint-Pierre, St. Pierre & Miquelon: the Pointe aux Canons lighthouse at Saint-Pierre harbour as a slender tapering octagonal white tower with one broad horizontal RED BAND around the middle of its shaft, a red lantern room and red gallery railings, standing alone at the outer tip of a long narrow low rock breakwater. Show the thin level concrete walking path along the breakwater to its small door, blue harbour water on both sides, and a few tiny colourful wooden town houses far across the water. The white-red-white horizontal pattern of the tower is essential. The tower has flat tapering sides, not a bulky round stone castle. No attached keeper house, no rocky hill under the lighthouse, no large adjacent houses, no tall cliffs. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "18831779e0fa370fea8855739d0467768e386b172fd4fd6c143d4787ee266cbe",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pm-saint-pierre-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-d2a84cbb-2a34-4c5f-a924-d31b5e91eebd.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-d2a84cbb-2a34-4c5f-a924-d31b5e91eebd.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/pm-saint-pierre-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "64f0f91725f0fd9316416d6aefbf44e939d96cb4f22cd06d8c02240f80cded8f",
+  "savedSha256": "64f0f91725f0fd9316416d6aefbf44e939d96cb4f22cd06d8c02240f80cded8f",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:47:32.166Z",
+  "toolCallId": "exec-d2a84cbb-2a34-4c5f-a924-d31b5e91eebd",
+  "savedAt": "2026-10-17T07:48:19.646133+00:00"
+}

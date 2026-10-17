@@ -1,0 +1,51 @@
+{
+  "id": "kr-damyang-mobile",
+  "cityId": "kr-damyang",
+  "name": "담양",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "기존 군과 섬 보존",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-damyang-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-damyang-mobile.json",
+  "originalSha256": "ca278ef8deb05b84b4722db5577db8f340cb5e214e17d844e978047078bc0d2a",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    36,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-damyang-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 88058,
+  "assetSha256": "4a81e7d0155172a97a1f3c4d79a1424ee3f8cc3d78700308cab4a5ade7071cac",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

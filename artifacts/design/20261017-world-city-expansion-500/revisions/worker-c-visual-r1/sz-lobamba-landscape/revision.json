@@ -1,0 +1,44 @@
+{
+  "jobId": "sz-lobamba-landscape",
+  "reason": "The first version invented a tall closed domed building and grand stairs, rather than the modest open memorial pavilion.",
+  "archivedFiles": [
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sz-lobamba-landscape.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sz-lobamba-landscape/sz-lobamba-landscape.json",
+      "sha256": "9467abe8516b395d37364dc28331597a3bb9a49fc58fb902e6b8049037e6b34d"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sz-lobamba-landscape.prompt.txt",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sz-lobamba-landscape/sz-lobamba-landscape.prompt.txt",
+      "sha256": "4fb26c54f9d877c4adbfd6894848c2a774192fecbec7c4a973d54f22f02a6a5e"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sz-lobamba-landscape.png",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sz-lobamba-landscape/sz-lobamba-landscape.png",
+      "sha256": "571ab72436feab995451344ff1c6668f7b3f596b8f7019ac7c58f4fa017a5c5f"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sz-lobamba-landscape.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sz-lobamba-landscape/sz-lobamba-landscape.json",
+      "sha256": "1769ad85aa6e102a5cadb7fd19bde873b27a297d04695f8ddda4713531dbb999"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sz-lobamba-landscape.asset.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sz-lobamba-landscape/sz-lobamba-landscape.asset.json",
+      "sha256": "3121c6886b34d96321cde66308a9065ad78d74d5c945ed1835cbf6c96cdd6396"
+    },
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v6/sz-lobamba.webp",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sz-lobamba-landscape/sz-lobamba.webp",
+      "sha256": "5656842aafbfc8e4db1d36eea52c5c943eac6b00edeab3fe68734f229334f828"
+    }
+  ],
+  "newPromptSha256": "15b5aa2e9e7814dc74a3e83efea9799b9917fb1d2901e4c70e0f06c0ff591c51",
+  "generationMode": "independent T2I",
+  "imageInputs": [],
+  "source": {
+    "title": "Eswatini Tourism Authority — Lobamba and King Sobhuza II Memorial Park",
+    "url": "https://www.thekingdomofeswatini.com/central-eswatini/lobamba/"
+  },
+  "photoInspected": "https://www.thekingdomofeswatini.com/wp-content/uploads/2018/02/1aaSwaziland-Jonathan-Ramael-Royal-Museum.jpg"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "li-vaduz-mobile",
+  "cityId": "li-vaduz",
+  "name": "파두츠",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/li-vaduz-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/li-vaduz-mobile.json",
+  "originalSha256": "e07f03ff0f912252b2bbd1c85c051f368d58e11eaacdae10ddc5605b5ff7f52d",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    41,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/li-vaduz-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 102036,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "eddd90fa30b6497940ac01e2ee1c1e9d9794eb21de641d1cfddba44b1ca17a20",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

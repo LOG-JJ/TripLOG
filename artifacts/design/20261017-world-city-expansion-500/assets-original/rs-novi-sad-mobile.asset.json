@@ -1,0 +1,52 @@
+{
+  "id": "rs-novi-sad-mobile",
+  "cityId": "rs-novi-sad",
+  "name": "노비사드",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/rs-novi-sad-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/rs-novi-sad-mobile.json",
+  "originalSha256": "c5c1501ecfc2682831a09c81d92f799d657d8690571954a3dbbc17aa941afcbc",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/rs-novi-sad-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 77174,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "7bb38cff2d481bbc0293b886511cd2345d7caa369c5038425129c7ee0b657874",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

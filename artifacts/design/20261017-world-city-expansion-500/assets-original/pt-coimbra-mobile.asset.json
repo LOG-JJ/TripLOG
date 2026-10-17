@@ -1,0 +1,52 @@
+{
+  "id": "pt-coimbra-mobile",
+  "cityId": "pt-coimbra",
+  "name": "코임브라",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/pt-coimbra-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/pt-coimbra-mobile.json",
+  "originalSha256": "0e5e7775b9970e789db455f5455f7dba1152a27a5661a66a1a03aa5eb40148fc",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    32,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/pt-coimbra-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 95996,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c1b369a9ac98ffa2643f286923ab0dd78311baf1eb758f1ad52cc6be59d88758",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

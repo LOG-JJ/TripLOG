@@ -1,0 +1,51 @@
+{
+  "id": "kr-yeoju-mobile",
+  "cityId": "kr-yeoju",
+  "name": "여주",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeoju-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeoju-mobile.json",
+  "originalSha256": "b986639fce81c4cf81df78fd68126c8a669e63b642f9a978438bae054a55bfd7",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-yeoju-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 85166,
+  "assetSha256": "7a0191c1468cb35a3974ba532c6127e8536682c538900190cfcdcedd3c53c6fd",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

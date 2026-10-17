@@ -1,0 +1,52 @@
+{
+  "id": "by-nesvizh-landscape",
+  "cityId": "by-nesvizh",
+  "name": "네스비시",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/by-nesvizh-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/by-nesvizh-landscape.json",
+  "originalSha256": "add2ceb8c9420c63d6f8972e92cb1ada0437fef904296c09ab42ac140fda62ac",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    20,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/by-nesvizh.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 129740,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "dfa46f15cae2b9bfa6d838a590257a43c9fc8d1681dfd8455906a1065b4f62d0",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

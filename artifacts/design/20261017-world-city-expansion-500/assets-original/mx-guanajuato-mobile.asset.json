@@ -1,0 +1,52 @@
+{
+  "id": "mx-guanajuato-mobile",
+  "cityId": "mx-guanajuato",
+  "name": "과나후아토",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mx-guanajuato-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mx-guanajuato-mobile.json",
+  "originalSha256": "d2176d68f975dddc4d588bef71700e438b8ea6704d5ea1ecc5e51aa69392d646",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    41,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mx-guanajuato-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 100188,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "f8714e085a1e06523ff1adbd1ecfb73cc65c17d19135fe8109560f632a566506",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

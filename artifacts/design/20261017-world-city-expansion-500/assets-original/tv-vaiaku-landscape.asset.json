@@ -1,0 +1,52 @@
+{
+  "id": "tv-vaiaku-landscape",
+  "cityId": "tv-vaiaku",
+  "name": "바이아쿠",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/tv-vaiaku-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/tv-vaiaku-landscape.json",
+  "originalSha256": "fe4002ee5ff197b7062624513e76aaa23914a882b582a094dcc67a1eba45adf0",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/tv-vaiaku.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 119224,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "67c2d08c6d441c21bff09a20ae967455779b10911827838660885e3340120b1e",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

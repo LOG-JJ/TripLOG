@@ -1,0 +1,52 @@
+{
+  "id": "pg-port-moresby-landscape",
+  "cityId": "pg-port-moresby",
+  "name": "포트모르즈비",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/pg-port-moresby-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/pg-port-moresby-landscape.json",
+  "originalSha256": "1f12eef8cf9d2da01b29a28e5917ff8008e6d8166dde693b5bf3657894ac28b2",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    25,
+    39,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/pg-port-moresby.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 109704,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2f6f3df57c6175259418e6e01e2d7475ee723f305e4e1fff30f0fe0e2bf5f6d9",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

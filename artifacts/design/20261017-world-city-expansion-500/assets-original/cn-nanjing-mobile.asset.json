@@ -1,0 +1,52 @@
+{
+  "id": "cn-nanjing-mobile",
+  "cityId": "cn-nanjing",
+  "name": "난징",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cn-nanjing-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cn-nanjing-mobile.json",
+  "originalSha256": "d7a5a721c8cfd753ad8abe4f888f8fd2c7d6487c3ab1a3df7d86a7bf41856ec4",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    36,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cn-nanjing-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 79970,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "f3e18386572af6fac38f97e6ed2f2990303266325b67989ae8a535714e218688",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

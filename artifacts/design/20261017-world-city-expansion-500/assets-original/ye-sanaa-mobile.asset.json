@@ -1,0 +1,52 @@
+{
+  "id": "ye-sanaa-mobile",
+  "cityId": "ye-sanaa",
+  "name": "사나",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ye-sanaa-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ye-sanaa-mobile.json",
+  "originalSha256": "04a760a7d955cf11a27dbb78f35384bf7d83df65bc024013cf82430f6478e148",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    93,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ye-sanaa-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 106198,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "aa185fdaccd642ef58326a1eeea0c9b6a158068cea17bdf20b163a08f31c48b7",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

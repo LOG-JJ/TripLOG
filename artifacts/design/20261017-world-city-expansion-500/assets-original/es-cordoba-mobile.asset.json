@@ -1,0 +1,52 @@
+{
+  "id": "es-cordoba-mobile",
+  "cityId": "es-cordoba",
+  "name": "코르도바",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-cordoba-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-cordoba-mobile.json",
+  "originalSha256": "d711745af4d82c7571ce6f5d4ca3fb559c464e0805153d1e19266ea66148f7b9",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    37,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/es-cordoba-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 93758,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "cb5208a6eeda27e46cd94bd29b49f540a6aa7a1ba1a216616624a9fdcff99f6e",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

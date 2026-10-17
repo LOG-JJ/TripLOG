@@ -1,0 +1,52 @@
+{
+  "id": "iq-erbil-landscape",
+  "cityId": "iq-erbil",
+  "name": "아르빌",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/iq-erbil-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/iq-erbil-landscape.json",
+  "originalSha256": "c7487285057c0901e676a00ec525b3eb227904ba7ff18ae7a24e79f2ea505a16",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    25,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/iq-erbil.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 118298,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "f1c4a892607aceacc57dcf194e181721d4d59265d0410c9b04a616148cc4c885",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

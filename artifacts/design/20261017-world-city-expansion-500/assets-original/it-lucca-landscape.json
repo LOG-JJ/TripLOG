@@ -1,0 +1,26 @@
+{
+  "jobId": "it-lucca-landscape",
+  "cityId": "it-lucca",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Lucca, Italy: the tree-topped Guinigi Tower, with the terracotta roofs of the old town. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "27289c5f6ec28c32b6fe784ae5ef7c7094a780041eebb078cff7f44cf9c396c9",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/it-lucca-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-66c9589e-e37c-497c-b699-bdc07c961ee4.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-66c9589e-e37c-497c-b699-bdc07c961ee4.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/it-lucca-landscape.png",
+  "actualDimensions": [
+    1619,
+    972
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "45da7dfc9c2566e0fa39104ba2252fd3a25fbbb4b8995c5800e3919a666877e4",
+  "savedSha256": "45da7dfc9c2566e0fa39104ba2252fd3a25fbbb4b8995c5800e3919a666877e4",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:09:27Z",
+  "toolCallId": "exec-66c9589e-e37c-497c-b699-bdc07c961ee4",
+  "savedAt": "2026-10-17T06:13:02.359864+00:00"
+}

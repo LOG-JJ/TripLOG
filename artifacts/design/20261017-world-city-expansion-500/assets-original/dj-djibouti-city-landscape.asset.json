@@ -1,0 +1,52 @@
+{
+  "id": "dj-djibouti-city-landscape",
+  "cityId": "dj-djibouti-city",
+  "name": "지부티시",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/dj-djibouti-city-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/dj-djibouti-city-landscape.json",
+  "originalSha256": "4a98caad8409c7cfbf5af90a8a195dbcd955263fd6a9522bbb8fb246cf433198",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    28,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/dj-djibouti-city.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 95120,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "8eff8e0900f94d53e83de6b0c6ccf83eecb826199523c2a4055d2e8e7062dbd8",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "hr-trogir-landscape",
+  "cityId": "hr-trogir",
+  "name": "트로기르",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/hr-trogir-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/hr-trogir-landscape.json",
+  "originalSha256": "24375770479517f6c3d11abe5fb5f993e006fbd7fbdc7affd7237acc2227a7f8",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/hr-trogir.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 109182,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2c6a89a0d3f274a572f5f426d005588612db53a0c55c7ef04dff5fed84845bde",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

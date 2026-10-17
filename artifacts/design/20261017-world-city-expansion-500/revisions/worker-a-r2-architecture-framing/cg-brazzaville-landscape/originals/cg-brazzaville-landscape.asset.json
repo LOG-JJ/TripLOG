@@ -1,0 +1,52 @@
+{
+  "id": "cg-brazzaville-landscape",
+  "cityId": "cg-brazzaville",
+  "name": "브라자빌",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cg-brazzaville-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cg-brazzaville-landscape.json",
+  "originalSha256": "39b510f2f9c96450db6c2b48bc5ef1c42bf081ef9a5eea388637b50eb814bedf",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    31,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cg-brazzaville.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 100728,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "4d52e21743cb4b049bb4517ab29ec0cb0e71170ceaf1efbb163e3b239e9f8c29",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

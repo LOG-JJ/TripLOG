@@ -1,0 +1,26 @@
+{
+  "jobId": "vg-road-town-mobile",
+  "cityId": "vg-road-town",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Road Town, British Virgin Islands: the royal-palm avenue and central fountain of J.R. O'Neal Botanic Gardens in Road Town, with a small flowering pergola. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette. Local form guard: form a modest tropical botanical-garden scene with a straight avenue of tall royal palms leading toward a small garden fountain, plus one small flowering pergola. Keep the fountain much smaller than the palms. Use garden paths and planting beds as the supporting foreground; do not invent a palace, huge monument, oceanfront, waterfall or large lake. Preserve the palm crowns rather than cutting them at the top edge.",
+  "promptSha256": "605a1caa3e00a3afd3f025e18a7709ad42b076fe3e4a9d9b11150e64912785c8",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/vg-road-town-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-ffdeb2f1-f6f7-44d0-8621-1c8707e24a72.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-ffdeb2f1-f6f7-44d0-8621-1c8707e24a72.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/vg-road-town-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "1df3c929717aaee83701fded124e7a70e7b692c88fee3202a1b8a5ff85ff3680",
+  "savedSha256": "1df3c929717aaee83701fded124e7a70e7b692c88fee3202a1b8a5ff85ff3680",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:40:27Z",
+  "toolCallId": "exec-ffdeb2f1-f6f7-44d0-8621-1c8707e24a72",
+  "savedAt": "2026-10-17T07:43:04.183994+00:00"
+}

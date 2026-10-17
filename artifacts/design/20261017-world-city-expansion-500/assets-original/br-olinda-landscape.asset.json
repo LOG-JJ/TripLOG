@@ -1,0 +1,52 @@
+{
+  "id": "br-olinda-landscape",
+  "cityId": "br-olinda",
+  "name": "올린다",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/br-olinda-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/br-olinda-landscape.json",
+  "originalSha256": "374b540cf344afa142278954f98667b889af5a2d1ad3c2434734b427156b6f06",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    29,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/br-olinda.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 146578,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "dd9d2dbdf8823b708bbd60c0fa3e04d8cd34309897f5c4be7cb98143ce7d18c8",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

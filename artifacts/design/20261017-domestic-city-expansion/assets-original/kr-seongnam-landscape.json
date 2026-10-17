@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-seongnam-landscape",
+  "cityId": "kr-seongnam",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Seongnam, South Korea: Yuldong Park's lake, wooded shoreline and calm green waterside park setting. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "6c7afa75fc0f868bc732835bd3425e8bb05b44f247ab117c1aabc8ea3ea172a1",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-seongnam-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-87fc485a-db52-4db7-a9f9-0e7e936411e8.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-87fc485a-db52-4db7-a9f9-0e7e936411e8.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-seongnam-landscape.png",
+  "actualDimensions": [
+    1608,
+    978
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "86b93e4a016cc21a5ba2e139a1754871d3d66e23a091f17413d1a3161a422667",
+  "savedSha256": "86b93e4a016cc21a5ba2e139a1754871d3d66e23a091f17413d1a3161a422667",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:09:34.709Z",
+  "toolCallId": "exec-87fc485a-db52-4db7-a9f9-0e7e936411e8",
+  "savedAt": "2026-10-17T05:10:36.213494+00:00"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "gl-nuuk-mobile",
+  "cityId": "gl-nuuk",
+  "name": "누크",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "북극",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gl-nuuk-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gl-nuuk-mobile.json",
+  "originalSha256": "d3a5a8bba765f7c938dfaa668f01c85154ee409427b06fed5261c617bbe06622",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    81,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gl-nuuk-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 74128,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "41090ab46ce0ac851f97b2a6d35d02eeb7bdc49e1ec8c0102b95137ba945738a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

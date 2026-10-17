@@ -1,0 +1,52 @@
+{
+  "id": "ng-osogbo-landscape",
+  "cityId": "ng-osogbo",
+  "name": "오쇼그보",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ng-osogbo-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ng-osogbo-landscape.json",
+  "originalSha256": "a20f8dc8a3ef05211e1884e8552ddb6a84c336ac8116473a1f8a5ee14ac4190a",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    33,
+    37,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ng-osogbo.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 129980,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "943fa0fa5c987edca9c8b4874d98150850499ad8faaba4a48b484271558c1407",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

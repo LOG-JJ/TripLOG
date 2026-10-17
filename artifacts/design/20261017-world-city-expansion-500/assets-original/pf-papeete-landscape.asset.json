@@ -1,0 +1,52 @@
+{
+  "id": "pf-papeete-landscape",
+  "cityId": "pf-papeete",
+  "name": "파페에테",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/pf-papeete-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/pf-papeete-landscape.json",
+  "originalSha256": "b0c838764f7022a3a7d0764215a37175b396c76255589d0de98f7c20cebdbd99",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    21,
+    33,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/pf-papeete.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 152326,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "a77efffe7685c112e191291f237d8716489c40c579c0beebed895c95d10402ed",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

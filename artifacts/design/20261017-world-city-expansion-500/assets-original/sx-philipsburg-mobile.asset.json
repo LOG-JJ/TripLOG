@@ -1,0 +1,52 @@
+{
+  "id": "sx-philipsburg-mobile",
+  "cityId": "sx-philipsburg",
+  "name": "필립스뷔르흐",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sx-philipsburg-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sx-philipsburg-mobile.json",
+  "originalSha256": "632475146030873b92af1f0beb58a4b26a7a9e41fac93130d04435bcaaa5d581",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    35,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sx-philipsburg-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 114222,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "34282a55f89450b8890314f732b96cebe4d3f5eb0ec7025f8ed509a6c48f722d",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

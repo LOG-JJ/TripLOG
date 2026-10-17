@@ -1,0 +1,52 @@
+{
+  "id": "sa-alula-landscape",
+  "cityId": "sa-alula",
+  "name": "알울라",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sa-alula-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sa-alula-landscape.json",
+  "originalSha256": "4576ff952d168d4176b87254a359ba1689b487ccf12820c3e3abcba57001324f",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    39,
+    33,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sa-alula.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 96072,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "4545de436fa3ccd3060338ff6b3aee223547e642d3658d4238747a4c9226dc69",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

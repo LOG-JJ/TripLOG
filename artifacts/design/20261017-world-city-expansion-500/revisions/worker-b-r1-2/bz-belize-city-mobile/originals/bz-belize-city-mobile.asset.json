@@ -1,0 +1,52 @@
+{
+  "id": "bz-belize-city-mobile",
+  "cityId": "bz-belize-city",
+  "name": "벨리즈시티",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bz-belize-city-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bz-belize-city-mobile.json",
+  "originalSha256": "d192be8f11038493c509f9714b4e2634c27b4e503b12da0d60154f58c0063d12",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1121,
+    1390
+  ],
+  "trimmedEmptyRightBottom": [
+    1,
+    12
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bz-belize-city-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 123482,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "91143a2a1935e6a1257eafe5f0b07b88c58d895688d43370e03c9f424862bff6",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

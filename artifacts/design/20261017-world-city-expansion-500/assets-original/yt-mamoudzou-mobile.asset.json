@@ -1,0 +1,52 @@
+{
+  "id": "yt-mamoudzou-mobile",
+  "cityId": "yt-mamoudzou",
+  "name": "마무주",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "인도양",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/yt-mamoudzou-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/yt-mamoudzou-mobile.json",
+  "originalSha256": "ef71400da34d24f6620e0f5798b00598d97a71a56a2da6022330487a02ae4461",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    29,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/yt-mamoudzou-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 83134,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "8c2d14def06dc48318c10013c6c43ee140d3916097b713e5b5341000367c216a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

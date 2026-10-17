@@ -1,0 +1,52 @@
+{
+  "id": "fo-torshavn-mobile",
+  "cityId": "fo-torshavn",
+  "name": "토르스하운",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "북유럽",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/fo-torshavn-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/fo-torshavn-mobile.json",
+  "originalSha256": "d824da6c7c43e24c82ee4a8960cfc591d50867c9f2c1aad0af1a9c0c9a8ff300",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    33,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/fo-torshavn-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 91436,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2c8f5d18accbb09b9b1509269ec8f5454bf48c36d07eeb9fca0ccf8172d7800a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

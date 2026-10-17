@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-sacheon-landscape",
+  "cityId": "kr-sacheon",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Sacheon, South Korea: the Sacheon marine cable car, with small cabins suspended above the blue sea and low green islands. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "9685303ee388af8e466e64bd98f8f3c2cc63f5838e44c616dd09c812976e6ada",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-sacheon-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-9182de96-9c75-4432-89bd-8f1bac0ea0ad.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-9182de96-9c75-4432-89bd-8f1bac0ea0ad.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sacheon-landscape.png",
+  "actualDimensions": [
+    1619,
+    972
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "6781a626aa05aa17921601ca08bacdca158851b2c6a3bbda3c4480f681309092",
+  "savedSha256": "6781a626aa05aa17921601ca08bacdca158851b2c6a3bbda3c4480f681309092",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:27:14Z",
+  "toolCallId": "exec-9182de96-9c75-4432-89bd-8f1bac0ea0ad",
+  "savedAt": "2026-10-17T05:28:18.374302+00:00"
+}

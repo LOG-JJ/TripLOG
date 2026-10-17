@@ -1,0 +1,1148 @@
+{
+  "sourcePlan": "artifacts/design/20261017-domestic-city-expansion/city-plan.json",
+  "sourcePlanSha256": "4ec2df592893a530444b7937735515c6a4774f680c234b5141a54a18ee88e2a5",
+  "translationPolicy": "English rendering of the approved proposedMotif; image inputs are empty.",
+  "items": [
+    {
+      "cityId": "kr-incheon",
+      "cityName": "인천",
+      "group": "광역시급",
+      "proposedMotif": "송도 센트럴파크 수로·고층 건물",
+      "englishName": "Incheon",
+      "scene": "Songdo Central Park's broad winding waterway, landscaped green banks, and a group of tall contemporary buildings rising behind the park",
+      "motifSource": {
+        "title": "한국관광공사 송도 센트럴파크",
+        "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=b36a08ff-6f60-4799-a2d5-391aa570f66d",
+        "evidence": "해수로와 고층 건물 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-suwon",
+      "cityName": "수원",
+      "group": "경기",
+      "proposedMotif": "수원화성 성문·성곽",
+      "englishName": "Suwon",
+      "scene": "a prominent tiled-roof gate of Suwon Hwaseong Fortress, its arched stone entrance and crenellated fortress walls curving away to either side",
+      "motifSource": {
+        "title": "수원문화재단 수원화성",
+        "url": "https://www.swcf.or.kr/?p=58",
+        "evidence": "성곽·성문 소재 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-boseong",
+      "cityName": "보성",
+      "group": "기존 군과 섬 보존",
+      "proposedMotif": "능선을 따라 굽이치는 차밭",
+      "englishName": "Boseong",
+      "scene": "orderly curved rows of tea bushes sweeping across rounded hillside ridges, their alternating green bands following the contours of the tea fields",
+      "motifSource": {
+        "title": "농촌진흥청 보성 녹차밭",
+        "url": "https://www.rda.go.kr/webzine/2024/05/sub2-2.html",
+        "evidence": "곡선 능선의 차밭 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-ulleung",
+      "cityName": "울릉도",
+      "group": "기존 군과 섬 보존",
+      "proposedMotif": "행남해안산책로·화산암 절벽",
+      "englishName": "Ulleungdo Island",
+      "scene": "the Haengnam coastal walking path winding closely around rugged volcanic sea cliffs, with green vegetation above and clear cyan seawater below",
+      "motifSource": {
+        "title": "한국관광공사 해안 테마길",
+        "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=7b6b7d8b-87d5-4c68-a85a-272454e19c2e",
+        "evidence": "행남해안산책로·화산암 지형 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-daegu",
+      "cityName": "대구",
+      "group": "광역시급",
+      "proposedMotif": "수성못·오리배·산세",
+      "englishName": "Daegu",
+      "scene": "Suseongmot Lake, small duck-shaped pedal boats on the water, and the low green mountain backdrop",
+      "motifSource": {
+        "title": "수성문화관광 수성못",
+        "url": "https://www.suseong.kr/tour/index.do?menu_id=00000994",
+        "evidence": "호수·산세·오리배 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-daejeon",
+      "cityName": "대전",
+      "group": "광역시급",
+      "proposedMotif": "한빛탑·엑스포 일대",
+      "englishName": "Daejeon",
+      "scene": "Hanbit Tower as the central landmark of the Expo area, its slender shaft and broad circular upper section surrounded by the open landscaped grounds",
+      "motifSource": {
+        "title": "대전관광공사 엑스포과학공원",
+        "url": "https://www.djto.kr/kor/page.do?menuIdx=652",
+        "evidence": "검색 반환 본문에서 한빛탑 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-ulsan",
+      "cityName": "울산",
+      "group": "광역시급",
+      "proposedMotif": "대왕암·대왕교·해송",
+      "englishName": "Ulsan",
+      "scene": "Daewangam's rugged offshore rock formations, the Daewanggyo footbridge crossing to the rocks, and coastal pine trees",
+      "motifSource": {
+        "title": "한국관광공사 대왕암공원",
+        "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=3a402a2b-0784-4804-84f4-21d4dd7218c2",
+        "evidence": "대왕암·대왕교·해송 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-sejong",
+      "cityName": "세종",
+      "group": "광역시급",
+      "proposedMotif": "국립세종수목원",
+      "englishName": "Sejong",
+      "scene": "the National Sejong Arboretum, with planted garden borders, trees and paths arranged as a compact arboretum scene",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-jeonnam-gwangju",
+      "cityName": "전남광주통합특별시",
+      "group": "광역시급",
+      "proposedMotif": "남도의 산·강·해안을 조합한 광역 풍경",
+      "englishName": "Jeonnam-Gwangju Integrated Special City",
+      "scene": "a regional composite of Namdo's softly layered mountains, a winding river and a sheltered coastal shoreline, representing the whole integrated region rather than a single city landmark",
+      "motifSource": {
+        "title": "행안부 2026 행정구역 현황",
+        "url": "https://mois.go.kr/frt/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000055&nttId=128138",
+        "evidence": "통합특별시 범위 확인; 광역 풍경의 구도는 제작 제안"
+      },
+      "motifValidation": "광역 행정범위 확인; 대표 풍경과 구도는 제작 전 확정"
+    },
+    {
+      "cityId": "kr-seongnam",
+      "cityName": "성남",
+      "group": "경기",
+      "proposedMotif": "율동공원 호수·수변 숲",
+      "englishName": "Seongnam",
+      "scene": "Yuldong Park's lake, wooded shoreline and calm green waterside park setting",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "22–23"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-uijeongbu",
+      "cityName": "의정부",
+      "group": "경기",
+      "proposedMotif": "의정부 경전철·고가선로",
+      "englishName": "Uijeongbu",
+      "scene": "a compact Uijeongbu light-rail train traveling along a raised concrete guideway, with the elevated track forming the main sweeping line of the scene",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "72–73"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-anyang",
+      "cityName": "안양",
+      "group": "경기",
+      "proposedMotif": "안양예술공원·숲과 하천",
+      "englishName": "Anyang",
+      "scene": "Anyang Art Park's wooded park landscape and shallow stream, with a small contemporary public-art element set among the trees",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "50–51"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-bucheon",
+      "cityName": "부천",
+      "group": "경기",
+      "proposedMotif": "상동호수공원 수피아 온실",
+      "englishName": "Bucheon",
+      "scene": "Supia Conservatory in Sangdong Lake Park, its glass greenhouse structure beside green planting and the park's lake",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "44–45"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-gwangmyeong",
+      "cityName": "광명",
+      "group": "경기",
+      "proposedMotif": "광명동굴",
+      "englishName": "Gwangmyeong",
+      "scene": "Gwangmyeong Cave, a recognizable rock-walled cavern and visitor passage shown as a compact open-edged illustrated scene",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-pyeongtaek",
+      "cityName": "평택",
+      "group": "경기",
+      "proposedMotif": "평택항·서해대교",
+      "englishName": "Pyeongtaek",
+      "scene": "Pyeongtaek Port and the long cable-stayed Seohae Bridge crossing the open water, with the bridge towers and cable lines clearly readable",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "56–57"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-dongducheon",
+      "cityName": "동두천",
+      "group": "경기",
+      "proposedMotif": "소요산 바위 능선·숲",
+      "englishName": "Dongducheon",
+      "scene": "Soyosan Mountain's rocky ridgeline rising above dense green woodland",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "66–67"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-ansan",
+      "cityName": "안산",
+      "group": "경기",
+      "proposedMotif": "시화나래 달전망대·바다",
+      "englishName": "Ansan",
+      "scene": "the Sihwa Narae Moon Observatory tower beside the sea, with its elevated observation deck and the open coastal horizon",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "48–49"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-goyang",
+      "cityName": "고양",
+      "group": "경기",
+      "proposedMotif": "일산호수공원·꽃과 수변",
+      "englishName": "Goyang",
+      "scene": "Ilsan Lake Park, its broad calm lake, curved waterfront paths and colorful flower beds",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "62–63"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-gwacheon",
+      "cityName": "과천",
+      "group": "경기",
+      "proposedMotif": "국립과천과학관·서울대공원",
+      "englishName": "Gwacheon",
+      "scene": "the Gwacheon National Science Museum and the green park landscape of Seoul Grand Park, arranged as a compact local destination scene",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-guri",
+      "cityName": "구리",
+      "group": "경기",
+      "proposedMotif": "동구릉 봉분·소나무숲",
+      "englishName": "Guri",
+      "scene": "Donggureung's rounded grass-covered royal burial mounds set among tall pine trees",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "10–11"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-namyangju",
+      "cityName": "남양주",
+      "group": "경기",
+      "proposedMotif": "정약용유적지 여유당",
+      "englishName": "Namyangju",
+      "scene": "Yeoyudang at the Jeong Yak-yong historic site, a modest traditional Korean tiled-roof residence and its courtyard",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "12–13"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-osan",
+      "cityName": "오산",
+      "group": "경기",
+      "proposedMotif": "독산성·세마대",
+      "englishName": "Osan",
+      "scene": "Doksanseong Fortress's stone walls along a wooded hill, with the small tiled-roof Semadae pavilion above them",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "52–53"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-siheung",
+      "cityName": "시흥",
+      "group": "경기",
+      "proposedMotif": "오이도 빨강등대",
+      "englishName": "Siheung",
+      "scene": "Oido's distinctive red lighthouse standing beside a low coastal promenade and the pale blue sea",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "46–47"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-gunpo",
+      "cityName": "군포",
+      "group": "경기",
+      "proposedMotif": "철쭉동산",
+      "englishName": "Gunpo",
+      "scene": "Gunpo's royal azalea hill, with low rounded masses of pink azalea blossoms following the slope",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "42–43"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-uiwang",
+      "cityName": "의왕",
+      "group": "경기",
+      "proposedMotif": "왕송호수·레일바이크",
+      "englishName": "Uiwang",
+      "scene": "Wangsong Lake and a small pedal-powered rail-bike on the lakeside track, with reeds and low green banks",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "54–55"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-hanam",
+      "cityName": "하남",
+      "group": "경기",
+      "proposedMotif": "유니온파크·유니온타워",
+      "englishName": "Hanam",
+      "scene": "Union Tower rising above Union Park, with its tall narrow form, observation level and surrounding park planting",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "34–35"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-yongin",
+      "cityName": "용인",
+      "group": "경기",
+      "proposedMotif": "한국민속촌",
+      "englishName": "Yongin",
+      "scene": "the Korean Folk Village, a small grouping of traditional tiled and thatched Korean houses, low stone walls and a village path",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-paju",
+      "cityName": "파주",
+      "group": "경기",
+      "proposedMotif": "헤이리 예술마을",
+      "englishName": "Paju",
+      "scene": "Heyri Art Village, a few distinctive low-rise contemporary gallery buildings among trees and quiet pedestrian lanes",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-icheon",
+      "cityName": "이천",
+      "group": "경기",
+      "proposedMotif": "예스파크 도자예술마을·도자기",
+      "englishName": "Icheon",
+      "scene": "Yes Park ceramic art village, with small pottery studios and a few clearly drawn ceramic jars and bowls in the foreground",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "32–33"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-anseong",
+      "cityName": "안성",
+      "group": "경기",
+      "proposedMotif": "안성팜랜드 들판·목장 동물",
+      "englishName": "Anseong",
+      "scene": "Anseong Farmland's open rolling pastures, simple pasture fencing and a small group of grazing farm animals",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "26–27"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-gimpo",
+      "cityName": "김포",
+      "group": "경기",
+      "proposedMotif": "라베니체 수로·문보트",
+      "englishName": "Gimpo",
+      "scene": "the La Veniche canal, its waterside buildings and a small crescent-shaped moon boat on the water",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "64–65"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-hwaseong",
+      "cityName": "화성",
+      "group": "경기",
+      "proposedMotif": "제부도·해상케이블카",
+      "englishName": "Hwaseong City",
+      "scene": "Jebudo Island and small cable-car cabins crossing over the sea, with the island's low coastal silhouette",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-gwangju-gyeonggi",
+      "cityName": "광주",
+      "group": "경기",
+      "proposedMotif": "남한산성의 산능선 성곽",
+      "englishName": "Gwangju City in Gyeonggi Province",
+      "scene": "Namhansanseong Fortress's stone wall following a green mountain ridgeline, with a small tiled-roof gate along the wall",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "20–21"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-yangju",
+      "cityName": "양주",
+      "group": "경기",
+      "proposedMotif": "장욱진미술관",
+      "englishName": "Yangju",
+      "scene": "the Jang Ucchin Museum's distinctive white angular building volumes set among the surrounding green landscape",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "68–69"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-pocheon",
+      "cityName": "포천",
+      "group": "경기",
+      "proposedMotif": "천주호·채석장 절벽",
+      "englishName": "Pocheon",
+      "scene": "Cheonjuho Lake at Pocheon Art Valley, enclosed by tall pale granite quarry cliffs with green trees along the upper rim",
+      "motifSource": {
+        "title": "포천시 문화재 및 관광지",
+        "url": "https://www.pocheon.go.kr/www/contents.do?key=3805",
+        "evidence": "검색 반환 본문에서 천주호·채석장 절벽 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-yeoju",
+      "cityName": "여주",
+      "group": "경기",
+      "proposedMotif": "신륵사·강변 전탑",
+      "englishName": "Yeoju",
+      "scene": "Silleuksa Temple beside the river, emphasizing its riverside brick pagoda and a small traditional tiled-roof building",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "28–29"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-wonju",
+      "cityName": "원주",
+      "group": "강원",
+      "proposedMotif": "소금산그랜드밸리 교량·절벽",
+      "englishName": "Wonju",
+      "scene": "Sogeumsan Grand Valley's long pedestrian suspension bridge spanning between steep wooded cliffs",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-donghae",
+      "cityName": "동해",
+      "group": "강원",
+      "proposedMotif": "도째비골 스카이밸리·해랑전망대",
+      "englishName": "Donghae City",
+      "scene": "Dojjaebigol Sky Valley's elevated coastal walkway and the nearby Haerang sea observation platform, with the coastline extending below",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-taebaek",
+      "cityName": "태백",
+      "group": "강원",
+      "proposedMotif": "태백산하늘전망대·산능선",
+      "englishName": "Taebaek",
+      "scene": "the Taebaeksan sky observation structure rising above layered green mountain ridges",
+      "motifSource": {
+        "title": "한국관광공사 태백 여행",
+        "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=0b0bf610-ead2-45b9-8b36-95374735f2a1",
+        "evidence": "태백산하늘전망대와 산능선 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-samcheok",
+      "cityName": "삼척",
+      "group": "강원",
+      "proposedMotif": "장호항·해안절벽",
+      "englishName": "Samcheok",
+      "scene": "Jangho Port's sheltered blue inlet, low harbor edge and rugged green-topped coastal cliffs",
+      "motifSource": {
+        "title": "삼척시 장호어촌체험마을",
+        "url": "https://www.samcheok.go.kr/tour/01458/01499/02263.web?cpage=2",
+        "evidence": "검색 반환 본문에서 장호항 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-cheongju",
+      "cityName": "청주",
+      "group": "충북",
+      "proposedMotif": "청남대",
+      "englishName": "Cheongju",
+      "scene": "Cheongnamdae's main residence, broad lawn and quiet lakefront setting framed by trees",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-chungju",
+      "cityName": "충주",
+      "group": "충북",
+      "proposedMotif": "탄금대·강·소나무",
+      "englishName": "Chungju",
+      "scene": "Tangeumdae's rocky riverbank, the wide river curving past it and tall pine trees above the bank",
+      "motifSource": {
+        "title": "충북나드리 충주 탄금대",
+        "url": "https://tour.chungbuk.go.kr/www/selectTourCntnts.do?key=60&searchMainSe=ATTR&tourNo=620",
+        "evidence": "강·기암절벽·소나무숲 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-jecheon",
+      "cityName": "제천",
+      "group": "충북",
+      "proposedMotif": "청풍호",
+      "englishName": "Jecheon",
+      "scene": "Cheongpungho Lake, broad blue water weaving between wooded green hills and distant ridgelines",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-cheonan",
+      "cityName": "천안",
+      "group": "충남",
+      "proposedMotif": "독립기념관",
+      "englishName": "Cheonan",
+      "scene": "the Independence Hall of Korea, emphasizing its grand traditional-roofed hall, broad approach and the tall split monument",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-gongju",
+      "cityName": "공주",
+      "group": "충남",
+      "proposedMotif": "공산성·금강",
+      "englishName": "Gongju",
+      "scene": "Gongsanseong Fortress's stone walls following a wooded hill above the Geum River",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-boryeong",
+      "cityName": "보령",
+      "group": "충남",
+      "proposedMotif": "대천해수욕장",
+      "englishName": "Boryeong",
+      "scene": "Daecheon Beach, a broad sweep of pale sandy shore meeting gentle blue waves and the open sea",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-asan",
+      "cityName": "아산",
+      "group": "충남",
+      "proposedMotif": "현충사",
+      "englishName": "Asan",
+      "scene": "Hyeonchungsa Shrine, its traditional Korean tiled-roof shrine buildings, approach path and carefully tended green grounds",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-seosan",
+      "cityName": "서산",
+      "group": "충남",
+      "proposedMotif": "해미읍성",
+      "englishName": "Seosan",
+      "scene": "Haemieupseong Fortress, its low stone ramparts, tiled-roof gateway and open grassy interior",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-nonsan",
+      "cityName": "논산",
+      "group": "충남",
+      "proposedMotif": "관촉사 은진미륵",
+      "englishName": "Nonsan",
+      "scene": "the tall Eunjin Mireuk stone standing Buddha at Gwanchoksa Temple, with its distinctive broad stone canopy and simple temple-ground setting",
+      "motifSource": {
+        "title": "충남관광 공식 관광지",
+        "url": "https://tour.chungnam.go.kr/",
+        "evidence": "논산 관촉사·당진 삽교호 목록 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-gyeryong",
+      "cityName": "계룡",
+      "group": "충남",
+      "proposedMotif": "사계고택·정원",
+      "englishName": "Gyeryong",
+      "scene": "Sagye Gotaek, a traditional Korean tiled-roof residence with a quiet courtyard and garden",
+      "motifSource": {
+        "title": "계룡시 사계고택",
+        "url": "https://life.gyeryong.go.kr/tour/html/sub02/0204.html",
+        "evidence": "고택·정원·연못 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-dangjin",
+      "cityName": "당진",
+      "group": "충남",
+      "proposedMotif": "삽교호 관광지·호수",
+      "englishName": "Dangjin",
+      "scene": "the Sapgyoho tourist waterfront, its broad lake water and open shoreline leisure setting",
+      "motifSource": {
+        "title": "충남관광 공식 관광지",
+        "url": "https://tour.chungnam.go.kr/",
+        "evidence": "논산 관촉사·당진 삽교호 목록 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-gunsan",
+      "cityName": "군산",
+      "group": "전북",
+      "proposedMotif": "구 군산세관 적벽돌·아치창",
+      "englishName": "Gunsan",
+      "scene": "the former Gunsan Customs building, emphasizing its red-brick facade, arched windows and low historic roofline",
+      "motifSource": {
+        "title": "군산시 구 군산세관 본관",
+        "url": "https://www.gunsan.go.kr/tour/m2079/view/321795",
+        "evidence": "적벽돌·아치창·대칭정면 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-iksan",
+      "cityName": "익산",
+      "group": "전북",
+      "proposedMotif": "미륵사지 석탑",
+      "englishName": "Iksan",
+      "scene": "the Mireuksaji stone pagoda, with its layered stone stories and broad stone base on the open historic site",
+      "motifSource": {
+        "title": "익산시 문화관광",
+        "url": "https://www.iksan.go.kr/tour",
+        "evidence": "미륵사지 소재 확인; 석탑 외형은 생성 전 대조"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-jeongeup",
+      "cityName": "정읍",
+      "group": "전북",
+      "proposedMotif": "내장산 단풍·산능선",
+      "englishName": "Jeongeup",
+      "scene": "Naejangsan's layered mountain ridges and broad masses of autumn maple foliage",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-namwon",
+      "cityName": "남원",
+      "group": "전북",
+      "proposedMotif": "광한루·오작교·연못",
+      "englishName": "Namwon",
+      "scene": "Gwanghallu Pavilion beside the pond and the stone Ojaggyo bridge with its rounded arches reflected in the water",
+      "motifSource": {
+        "title": "한국관광공사 광한루원",
+        "url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=fb901b63-eaae-4a7f-bd5e-37c6a72299b8",
+        "evidence": "광한루·연못·오작교 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-gimje",
+      "cityName": "김제",
+      "group": "전북",
+      "proposedMotif": "벽골제 수리시설·농경 풍경",
+      "englishName": "Gimje",
+      "scene": "Byeokgolje's historic irrigation structures and low embankment, surrounded by broad agricultural fields",
+      "motifSource": {
+        "title": "김제시 벽골제",
+        "url": "https://www.gimje.go.kr/byeokgolje/index.gimje?menuCd=DOM_000002001002000000",
+        "evidence": "농경문화와 고대 수리시설 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-mokpo",
+      "cityName": "목포",
+      "group": "전남권",
+      "proposedMotif": "유달산·해상케이블카",
+      "englishName": "Mokpo",
+      "scene": "Yudalsan Mountain's rocky slopes and small marine cable-car cabins traveling above the coastal water",
+      "motifSource": {
+        "title": "목포문화관광 해상케이블카",
+        "url": "https://www.mokpo.go.kr/tour/attraction/area?idx=83802&mode=view",
+        "evidence": "검색 반환 본문에서 유달산·고하도 연결 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-naju",
+      "cityName": "나주",
+      "group": "전남권",
+      "proposedMotif": "금성관",
+      "englishName": "Naju",
+      "scene": "Geumseonggwan, its broad traditional Korean tiled-roof hall and open courtyard",
+      "motifSource": {
+        "title": "나주시 관광 10선",
+        "url": "https://www.naju.go.kr/www/administration/reporting/coverage?idx=95334&mode=view&page=3",
+        "evidence": "금성관·영산강 등대·황포돛배 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-gwangyang",
+      "cityName": "광양",
+      "group": "전남권",
+      "proposedMotif": "매화마을·흰 매화",
+      "englishName": "Gwangyang",
+      "scene": "Maehwa Village's hillside orchards, with clusters of white plum blossoms following the green slopes",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-pohang",
+      "cityName": "포항",
+      "group": "경북",
+      "proposedMotif": "호미곶 상생의 손·해안",
+      "englishName": "Pohang",
+      "scene": "Homigot's monumental Hand of Harmony rising from the coastal water, with the five fingers clearly silhouetted above the sea",
+      "motifSource": {
+        "title": "포항시 특별한 포항",
+        "url": "https://pohang.go.kr/phtour/html.do?menu_idx=116",
+        "evidence": "호미곶 상생의 손과 등대 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-gimcheon",
+      "cityName": "김천",
+      "group": "경북",
+      "proposedMotif": "직지사·황악산 자락",
+      "englishName": "Gimcheon",
+      "scene": "Jikjisa Temple's traditional tiled roofs among trees at the green foot of Hwangaksan Mountain",
+      "motifSource": {
+        "title": "김천시 관광안내지도",
+        "url": "https://www.gc.go.kr/design/culture/file/tourMap_2024.pdf",
+        "evidence": "직지사·사명대사공원 소재 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-andong",
+      "cityName": "안동",
+      "group": "경북",
+      "proposedMotif": "하회마을·마을을 감싸는 강",
+      "englishName": "Andong",
+      "scene": "Hahoe Village's clustered traditional houses, with the river bending around the village and green fields beside the water",
+      "motifSource": {
+        "title": "안동관광 하회마을",
+        "url": "https://www.tourandong.com/public/",
+        "evidence": "마을을 감싸는 낙동강 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-gumi",
+      "cityName": "구미",
+      "group": "경북",
+      "proposedMotif": "금오산·금오지",
+      "englishName": "Gumi",
+      "scene": "Geumosan Mountain rising behind Geumoji Lake, with rocky upper slopes, wooded foothills and calm water",
+      "motifSource": {
+        "title": "구미시 금오산 소개",
+        "url": "https://www.gumi.go.kr/park/contents.do?mid=0201010000",
+        "evidence": "금오산·금오지·케이블카 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-yeongju",
+      "cityName": "영주",
+      "group": "경북",
+      "proposedMotif": "부석사 무량수전·석등",
+      "englishName": "Yeongju",
+      "scene": "Buseoksa Temple's Muryangsujeon hall and the stone lantern standing in front of it, set on a mountain terrace",
+      "motifSource": {
+        "title": "영주시 부석면 문화재",
+        "url": "https://www.yeongju.go.kr/open_content/village/buseok/page.do?mnu_uid=868",
+        "evidence": "검색 반환 본문에서 무량수전·석등 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-yeongcheon",
+      "cityName": "영천",
+      "group": "경북",
+      "proposedMotif": "임고서원 문루·강당",
+      "englishName": "Yeongcheon",
+      "scene": "Imgo Seowon Confucian academy, emphasizing the tiled-roof gate pavilion, lecture hall and open courtyard",
+      "motifSource": {
+        "title": "영천시 임고서원",
+        "url": "https://www.yc.go.kr/toursub/imgo/contents.do?mId=0200000000",
+        "evidence": "서원 문루와 강당 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-sangju",
+      "cityName": "상주",
+      "group": "경북",
+      "proposedMotif": "경천대·낙동강·노송",
+      "englishName": "Sangju",
+      "scene": "Gyeongcheondae's rocky overlook above the Nakdong River, with old pine trees and the river bending below",
+      "motifSource": {
+        "title": "상주시 경천대",
+        "url": "https://www.sangju.go.kr/tour/page/15164/11600.tc",
+        "evidence": "낙동강·기암절벽·노송·정자 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-mungyeong",
+      "cityName": "문경",
+      "group": "경북",
+      "proposedMotif": "문경새재 성문·성벽",
+      "englishName": "Mungyeong",
+      "scene": "Mungyeong Saejae's traditional tiled-roof gateway and thick stone wall standing between green mountain slopes",
+      "motifSource": {
+        "title": "정책브리핑 문경새재",
+        "url": "https://www.korea.kr/multi/policyPhotoView.do?bbsKey=25289",
+        "evidence": "문경새재 소재 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-gyeongsan",
+      "cityName": "경산",
+      "group": "경북",
+      "proposedMotif": "반곡지 왕버드나무·저수지",
+      "englishName": "Gyeongsan",
+      "scene": "Bangokji Reservoir and its large old willow trees, with broad rounded crowns reflected in the water",
+      "motifSource": {
+        "title": "한국관광공사 경산 반곡지",
+        "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=4224f11f-1cb3-48e2-8c8e-5522583c8dd2",
+        "evidence": "왕버드나무와 저수지 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-changwon",
+      "cityName": "창원",
+      "group": "경남",
+      "proposedMotif": "진해 여좌천·벚꽃·다리",
+      "englishName": "Changwon",
+      "scene": "Yeojwacheon Stream in Jinhae, a small bridge across the water and rows of pale pink cherry blossoms lining both banks",
+      "motifSource": {
+        "title": "한국관광공사 여좌천",
+        "url": "https://access.visitkorea.or.kr/opentour/detail.do?cotId=67ceefb2-2519-4513-aeed-e084b650457f",
+        "evidence": "창원시 진해구 소재·벚꽃·로망스다리 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-jinju",
+      "cityName": "진주",
+      "group": "경남",
+      "proposedMotif": "진주성",
+      "englishName": "Jinju",
+      "scene": "Jinjuseong Fortress, its stone walls and traditional roofed pavilion overlooking the riverbank",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-sacheon",
+      "cityName": "사천",
+      "group": "경남",
+      "proposedMotif": "사천바다케이블카",
+      "englishName": "Sacheon",
+      "scene": "the Sacheon marine cable car, with small cabins suspended above the blue sea and low green islands",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-gimhae",
+      "cityName": "김해",
+      "group": "경남",
+      "proposedMotif": "수로왕릉 봉분·능역",
+      "englishName": "Gimhae",
+      "scene": "the rounded grass-covered burial mound of King Suro and the traditional gate and walls of the surrounding royal tomb grounds",
+      "motifSource": {
+        "title": "한국관광공사 김해 여행",
+        "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=17e9e104-5514-4a73-a5b4-8261e2aa832e",
+        "evidence": "수로왕릉의 원형 봉토와 왕릉공원 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-miryang",
+      "cityName": "밀양",
+      "group": "경남",
+      "proposedMotif": "영남루",
+      "englishName": "Miryang",
+      "scene": "Yeongnamnu Pavilion, its expansive traditional tiled roof and raised wooden hall above the riverbank",
+      "motifSource": {
+        "title": "밀양시 영남루",
+        "url": "https://www.miryang.go.kr/market/Sub/sb4010100.php",
+        "evidence": "목조 누각과 대표 관광지 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-yangsan",
+      "cityName": "양산",
+      "group": "경남",
+      "proposedMotif": "통도사",
+      "englishName": "Yangsan",
+      "scene": "Tongdosa Temple's traditional tiled-roof halls and quiet courtyards framed by mature green trees",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-jeju-city",
+      "cityName": "제주시",
+      "group": "제주",
+      "proposedMotif": "용연계곡·용연구름다리",
+      "englishName": "Jeju City",
+      "scene": "Yongyeon Gorge's dark volcanic rock banks and the Yongyeon suspension footbridge crossing the blue-green inlet",
+      "motifSource": {
+        "title": "제주관광공사 용연계곡",
+        "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500472",
+        "evidence": "제주시 용담동·용연구름다리·수변 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-seogwipo",
+      "cityName": "서귀포시",
+      "group": "제주",
+      "proposedMotif": "정방폭포·해안절벽",
+      "englishName": "Seogwipo City",
+      "scene": "Jeongbang Waterfall dropping directly from a dark coastal cliff to the sea, with white falling water and green vegetation above",
+      "motifSource": {
+        "title": "한국관광공사 정방폭포",
+        "url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=342fbe58-b003-4b39-9212-f1a5617f9d4c",
+        "evidence": "서귀포시·바다로 떨어지는 폭포 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-gwangju",
+      "cityName": "광주 도시권",
+      "group": "기존 도시권 보존",
+      "proposedMotif": "무등산 입석대·서석대",
+      "englishName": "the historic Gwangju urban area",
+      "scene": "Mudeungsan Mountain's Ipseokdae and Seoseokdae columnar rock formations, standing above grassy green mountain slopes",
+      "motifSource": {
+        "title": "무등산권지질공원",
+        "url": "https://geopark.gwangju.go.kr/contents.do?M=020101010000&S=S01",
+        "evidence": "입석대·서석대 주상절리 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-pyeongchang",
+      "cityName": "평창",
+      "group": "기존 군과 섬 보존",
+      "proposedMotif": "대관령 초원·양떼·목책",
+      "englishName": "Pyeongchang",
+      "scene": "Daegwallyeong's rolling green pastures, a few grazing sheep and simple wooden pasture fences",
+      "motifSource": {
+        "title": "평창문화관광 대관령목장",
+        "url": "https://tour.pc.go.kr/Home/H20000/H20100/H20102/html",
+        "evidence": "초원·목장·양떼 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-danyang",
+      "cityName": "단양",
+      "group": "기존 군과 섬 보존",
+      "proposedMotif": "도담삼봉",
+      "englishName": "Danyang",
+      "scene": "Dodamsambong's three distinct rocky peaks rising from the river, with a small traditional pavilion on the central formation",
+      "motifSource": {
+        "title": "단양관광 도담삼봉",
+        "url": "https://www.danyang.go.kr/tour/1909",
+        "evidence": "물 위 세 바위 봉우리 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    },
+    {
+      "cityId": "kr-damyang",
+      "cityName": "담양",
+      "group": "기존 군과 섬 보존",
+      "proposedMotif": "죽녹원 대나무숲·산책길",
+      "englishName": "Damyang",
+      "scene": "Juknokwon's tall slender bamboo grove and a winding walking path beneath the green bamboo canopy",
+      "motifSource": {
+        "title": "한국관광공사 죽녹원",
+        "url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?menuSn=351&vcontsId=93987",
+        "evidence": "대나무숲 소재 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조"
+    }
+  ]
+}

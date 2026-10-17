@@ -1,0 +1,52 @@
+{
+  "id": "ag-st-johns-mobile",
+  "cityId": "ag-st-johns",
+  "name": "세인트존스(앤티가)",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ag-st-johns-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ag-st-johns-mobile.json",
+  "originalSha256": "98e648574beb825ffa1fb5142654a5915937c5b3b8e1ce95558fc71a43b71566",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    35,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ag-st-johns-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 97728,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e2efedbb68653d7c2488f00a3bb8d8b937435b145f7165594bc1e1b2ffc4660b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

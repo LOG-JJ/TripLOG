@@ -1,0 +1,52 @@
+{
+  "id": "uy-colonia-del-sacramento-mobile",
+  "cityId": "uy-colonia-del-sacramento",
+  "name": "콜로니아델사크라멘토",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/uy-colonia-del-sacramento-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/uy-colonia-del-sacramento-mobile.json",
+  "originalSha256": "34fb9b40e869fb6c47f73eaee55406c22aabed666225a6ea985cc19f1543009b",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    3,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/uy-colonia-del-sacramento-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 105354,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "50dbfae122885bdfd2c28ed1d88d1f1f88a57e5b0573d8b84a2b9ac4891036d0",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

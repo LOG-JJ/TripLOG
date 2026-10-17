@@ -1,0 +1,51 @@
+{
+  "id": "kr-dangjin-mobile",
+  "cityId": "kr-dangjin",
+  "name": "당진",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "충남",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-mobile.json",
+  "originalSha256": "e0306804e79248e9d7bb6198e2e1b3011898a00dcd5075a55f6ed6f99c0c837e",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    49,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-dangjin-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 72664,
+  "assetSha256": "5fdd3c851aad0fc095d5788764109164cb388182a8d40a153f51e23924d9cea4",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

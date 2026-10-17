@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-gwangyang-mobile",
+  "cityId": "kr-gwangyang",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Gwangyang, South Korea: Maehwa Village's hillside orchards, with clusters of white plum blossoms following the green slopes. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "74f546252ba527befb9a2bb3aa48ac552f2f58257e43ccdb68464b6b88ae2504",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwangyang-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-fbf1bc08-59a3-496b-b114-bce07c5aae08.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-fbf1bc08-59a3-496b-b114-bce07c5aae08.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwangyang-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "a4c99be97dc6d6dee541d74b20ba219e3f6ac7e592dfe9406ac47c03154917c4",
+  "savedSha256": "a4c99be97dc6d6dee541d74b20ba219e3f6ac7e592dfe9406ac47c03154917c4",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:23:29Z",
+  "toolCallId": "exec-fbf1bc08-59a3-496b-b114-bce07c5aae08",
+  "savedAt": "2026-10-17T05:24:27.228408+00:00"
+}

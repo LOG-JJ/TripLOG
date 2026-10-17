@@ -1,0 +1,52 @@
+{
+  "id": "gb-liverpool-landscape",
+  "cityId": "gb-liverpool",
+  "name": "리버풀",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-liverpool-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-liverpool-landscape.json",
+  "originalSha256": "04b85f1c3dbd16b406315cfd48dacb26645dbb4bc629898c5a75720a5c87e95b",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    45,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gb-liverpool.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 102230,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "f9d1e19aeb0a8e09a866c1937b04bc465488d60d2dc41ef895c9033f0dfd8199",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "lr-monrovia-mobile",
+  "cityId": "lr-monrovia",
+  "name": "몬로비아",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/lr-monrovia-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/lr-monrovia-mobile.json",
+  "originalSha256": "7c326a836b6215243c8e1cab9d5bd4c83a5afaac7ab834e2d3a7246f22c022c9",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    13,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/lr-monrovia-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 124030,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "0f5ad8ba6884f65e359f185dda905b6dc5fc347f8cae130c2c207146fdbefcb2",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

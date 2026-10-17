@@ -1,0 +1,43 @@
+{
+  "id": "kr-iksan-landscape",
+  "cityId": "kr-iksan",
+  "cityName": "익산",
+  "englishName": "Iksan",
+  "kind": "city",
+  "group": "전북",
+  "variant": "landscape",
+  "phase": "expansion",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Iksan, South Korea: the restored western stone pagoda at Mireuksaji, a pale gray Baekje stone structure with a broad square base, an open dark doorway, six surviving tiers with wide flat stone eaves, and an intentionally incomplete asymmetrical stepped upper-right silhouette; preserve its partly surviving form rather than inventing a complete symmetrical nine-storey pagoda. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "c477ddffb79f3e42388d4e57deff819853adcea125828c1c55f11f0e1264c0c5",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/jobs/kr-iksan-landscape.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-iksan-landscape.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-iksan-landscape.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-iksan-landscape.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v5/kr-iksan.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "motif": "the restored western stone pagoda at Mireuksaji, a pale gray Baekje stone structure with a broad square base, an open dark doorway, six surviving tiers with wide flat stone eaves, and an intentionally incomplete asymmetrical stepped upper-right silhouette; preserve its partly surviving form rather than inventing a complete symmetrical nine-storey pagoda",
+  "proposedMotif": "미륵사지 석탑",
+  "motifSource": {
+    "title": "익산시 문화관광",
+    "url": "https://www.iksan.go.kr/tour",
+    "evidence": "미륵사지 소재 확인; 석탑 외형은 생성 전 대조"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone hand-drawn destination illustration of Iksan, South Korea: the restored western stone pagoda at Mireuksaji, a pale gray Baekje stone structure with a broad square base, an open dark doorway, six surviving tiers with wide flat stone eaves, and an intentionally incomplete asymmetrical stepped upper-right silhouette; preserve its partly surviving form rather than inventing a complete symmetrical nine-storey pagoda. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+    "transparent_background": true
+  },
+  "provenanceRule": "The --source argument must be the exact local original path returned by this job's image_gen call. Never search for a latest file.",
+  "promptRevision": "pilot-subject-qa-20261017",
+  "subjectReview": {
+    "source": "https://img0.yna.co.kr/etc/inner/KR/2019/04/29/AKR20190429169900005_01_i_P4.jpg",
+    "reviewedOn": "2026-10-17",
+    "imageInput": false
+  }
+}

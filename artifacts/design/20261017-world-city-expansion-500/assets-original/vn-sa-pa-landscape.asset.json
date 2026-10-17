@@ -1,0 +1,52 @@
+{
+  "id": "vn-sa-pa-landscape",
+  "cityId": "vn-sa-pa",
+  "name": "사파",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/vn-sa-pa-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/vn-sa-pa-landscape.json",
+  "originalSha256": "4e6f0292b0ff2074dfcd21bf004d916c600928bbdcda0fac4a6f59617ecf8b3a",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    42,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/vn-sa-pa.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 115670,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "f0ae9505f44dda9ce0bd78157022026e5e128bb68b1aad87c6af00c30e809b04",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,26 @@
+{
+  "jobId": "sm-san-marino-mobile",
+  "cityId": "sm-san-marino",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of City of San Marino, San Marino: the Guaita fortress tower on Mount Titano, with the stone defensive walls. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "947b46efb6f476f7564fe7fdc1349f77631cae7417fb23056f6c6fe0c24a082d",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sm-san-marino-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-20d0d888-2f66-43a0-be67-3654474a0e75.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-20d0d888-2f66-43a0-be67-3654474a0e75.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/sm-san-marino-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "45862b978cd2b302397e3d36ed3d6c3d982439fc699d3bfa61621e54b39b41f0",
+  "savedSha256": "45862b978cd2b302397e3d36ed3d6c3d982439fc699d3bfa61621e54b39b41f0",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:05:29.798Z",
+  "toolCallId": "exec-20d0d888-2f66-43a0-be67-3654474a0e75",
+  "savedAt": "2026-10-17T06:09:45.298500+00:00"
+}

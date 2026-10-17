@@ -1,0 +1,57 @@
+{
+  "id": "im-douglas-mobile",
+  "cityId": "im-douglas",
+  "name": "더글러스",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "서유럽",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/im-douglas-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/im-douglas-mobile.json",
+  "originalSha256": "3f433abb069d0b8adbafd52fca1a348818dbc5cad732646b0d2e436134b9e0fa",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    33,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/im-douglas-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 89114,
+  "technicalEmptyEdgeRefits": [
+    [
+      0,
+      6
+    ]
+  ],
+  "assetSha256": "cbd9c03dc3db452ea490461dfa22f961cced353bb9cbf75950350b34e2916bd7",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

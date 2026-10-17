@@ -1,0 +1,51 @@
+{
+  "id": "kr-cheonan-landscape",
+  "cityId": "kr-cheonan",
+  "name": "천안",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "충남",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-cheonan-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-cheonan-landscape.json",
+  "originalSha256": "4b1dc6b6a96fb9552becfac7273218c84b4bc08abbea46cd1c1d7563e772a58c",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    25,
+    49,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-cheonan.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 75004,
+  "assetSha256": "6af5c15a193efc3d6f89df231de690d34a218d1a82179cceab54ed78faf1099d",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

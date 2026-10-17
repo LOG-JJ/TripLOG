@@ -1,0 +1,52 @@
+{
+  "id": "cy-paphos-mobile",
+  "cityId": "cy-paphos",
+  "name": "파포스",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cy-paphos-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cy-paphos-mobile.json",
+  "originalSha256": "c27d15f2902b289cadf2db8d65ec3c7396a52c683365b381f724e3006fd65e35",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cy-paphos-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 114788,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "29ddf1ff05e2b757a57e9820d4f8d7b3e5699d3bf0874001146c638ac535ce7d",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

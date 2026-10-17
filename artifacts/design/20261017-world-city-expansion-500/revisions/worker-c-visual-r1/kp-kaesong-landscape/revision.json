@@ -1,0 +1,44 @@
+{
+  "jobId": "kp-kaesong-landscape",
+  "reason": "The first landscape depicted a two-storey pavilion; the documented gate has a single-storey wooden upper pavilion.",
+  "archivedFiles": [
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/kp-kaesong-landscape.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/kp-kaesong-landscape/kp-kaesong-landscape.json",
+      "sha256": "5bc9486c296ec57ba4420b4e40d94935463345a95e619b3fb8a913a455ed7224"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/kp-kaesong-landscape.prompt.txt",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/kp-kaesong-landscape/kp-kaesong-landscape.prompt.txt",
+      "sha256": "5a1a870ddae6b17f1d06145bcd12f0abf0f6b024cfc56ad923e880caaadcf03d"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/kp-kaesong-landscape.png",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/kp-kaesong-landscape/kp-kaesong-landscape.png",
+      "sha256": "1b7e6e758b89b74b54af589b8206f416657201ca55372a72f481971c42848eb0"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/kp-kaesong-landscape.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/kp-kaesong-landscape/kp-kaesong-landscape.json",
+      "sha256": "97e9574abf9ee6b40893821e0d0c155e71bb1e7b78401425758dcb0140e4cea9"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/kp-kaesong-landscape.asset.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/kp-kaesong-landscape/kp-kaesong-landscape.asset.json",
+      "sha256": "3bd46a109d9ac915d9027cb928f0759decfd8c7bc0d0a08db2355003eef867c8"
+    },
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v6/kp-kaesong.webp",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/kp-kaesong-landscape/kp-kaesong.webp",
+      "sha256": "e2aafbcd4790fb5b5cbe0aa9b4d98ccb5950efc4de82c138cd4b35d6652ddbcd"
+    }
+  ],
+  "newPromptSha256": "2359d5f6a17d6a8740b77752ea3ec502854c975138af821014d6c12dc66bf09a",
+  "generationMode": "independent T2I",
+  "imageInputs": [],
+  "source": {
+    "title": "UNESCO ICOMOS — Historic Monuments and Sites in Kaesong evaluation (Nam Gate)",
+    "url": "https://whc.unesco.org/document/122862"
+  },
+  "photoInspected": null
+}

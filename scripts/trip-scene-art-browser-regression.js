@@ -10,6 +10,9 @@ const { createTripHeaderPreview } = require('./preview-trip-header');
 const data = require('../src/app/data/destination-scenes');
 const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || artifactDirectory('trip-scene-art');
 const requestedIds = new Set((process.env.TRIPLOG_SCENE_REVIEW_IDS || '').split(',').map(id => id.trim()).filter(Boolean));
+const reviewWidths = process.env.TRIPLOG_SCENE_REVIEW_WIDTHS
+  ? process.env.TRIPLOG_SCENE_REVIEW_WIDTHS.split(',').map(value => Number(value.trim())) : [320, 390, 599, 1440];
+assert(reviewWidths.length && reviewWidths.every(width => Number.isInteger(width) && width >= 320 && width <= 2560), 'Review widths must be CSS pixels between 320 and 2560');
 const cities = data.catalog.filter(entry => entry.dedicated && (!requestedIds.size || requestedIds.has(entry.id)));
 for (const id of requestedIds) assert(cities.some(city => city.id === id), 'Unknown dedicated city requested for review: ' + id);
 assert(cities.length, 'At least one dedicated city must be reviewed');
@@ -30,12 +33,12 @@ async function main() {
     await page.waitForFunction(() => document.documentElement.dataset.triplogInitialized === 'true' && document.documentElement.dataset.auth === 'signed-in' && Boolean(state.collaboration?.ownerId));
     await page.evaluate(() => document.fonts.ready);
     const originalTrip = await page.evaluate(() => ({ id: state.id, name: state.tripName, city: state.city }));
-    for (const width of [320, 390, 599, 1440]) {
+    for (const width of reviewWidths) {
       await page.setViewportSize({ width, height: width < 600 ? 844 : 1000 });
       for (const city of cities) {
         await page.evaluate(city => {
           document.querySelector('.th-trip-hero').outerHTML = window.TripLog.features.overview.tripHero.render({
-            trip: { countryCode: city.countryCodes[0], city: city.name, tripName: city.name + ' 여행' },
+            trip: { countryCode: city.countryCodes[0], city: city.canonicalInput, tripName: city.name + ' 여행' },
             countdown: 'D-6', period: '10.10 토 – 10.11 일', duration: '1박 2일', memberCount: 2,
           });
         }, city);

@@ -1,0 +1,52 @@
+{
+  "id": "cc-west-island-landscape",
+  "cityId": "cc-west-island",
+  "name": "웨스트 아일랜드",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "인도양",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cc-west-island-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cc-west-island-landscape.json",
+  "originalSha256": "8133bd0618f868f6f681cd869eeb6ddb195b42d4783ae4013607230527917ce0",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    39,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cc-west-island.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 127052,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "4c3626076d7310a4a3df8d7f57ae3e9d2f4a9b1b0f0d8fcb7b022a151a121373",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

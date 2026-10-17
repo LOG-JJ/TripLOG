@@ -1,0 +1,26 @@
+{
+  "jobId": "fr-carcassonne-landscape",
+  "cityId": "fr-carcassonne",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Carcassonne, France: the double fortified walls of the Cite de Carcassonne, with its conical-roof defensive towers. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "5b9f64173c0b5ae37c70fa91a144aebd03a8a1cf05944dd8cbbbcd8be0ec8a0a",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fr-carcassonne-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-6fc3c7cd-e939-4c32-bc25-a77c2448b4f8.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-6fc3c7cd-e939-4c32-bc25-a77c2448b4f8.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/fr-carcassonne-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "33468537f073a8220319d715cdf156f543f63cd7fd574586e98ae7839c3b948e",
+  "savedSha256": "33468537f073a8220319d715cdf156f543f63cd7fd574586e98ae7839c3b948e",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:10:03.848Z",
+  "toolCallId": "exec-6fc3c7cd-e939-4c32-bc25-a77c2448b4f8",
+  "savedAt": "2026-10-17T06:13:33.170431+00:00"
+}

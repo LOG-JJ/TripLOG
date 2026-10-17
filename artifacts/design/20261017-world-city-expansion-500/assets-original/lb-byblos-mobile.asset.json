@@ -1,0 +1,52 @@
+{
+  "id": "lb-byblos-mobile",
+  "cityId": "lb-byblos",
+  "name": "비블로스",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/lb-byblos-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/lb-byblos-mobile.json",
+  "originalSha256": "67262c50319ad43d7d3172a6a59e116bf9d902aa18048d44237f55056a53574d",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    57,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/lb-byblos-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 110312,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e351228cd004fbec34ef7431368b4e3ffc28f87adf869cc30d3164b96c8bb907",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "tk-nukunonu-village-mobile",
+  "cityId": "tk-nukunonu-village",
+  "name": "누쿠노누 마을",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "오세아니아",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/tk-nukunonu-village-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/tk-nukunonu-village-mobile.json",
+  "originalSha256": "8e7daafce8c814fe3ed62810028a8111a9830782540de825a804e69997d1268f",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/tk-nukunonu-village-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 121780,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "3a2c821a3fbd8fdc48846862e215df8ee8ae58543748da8ffeaa155a0ee1510b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

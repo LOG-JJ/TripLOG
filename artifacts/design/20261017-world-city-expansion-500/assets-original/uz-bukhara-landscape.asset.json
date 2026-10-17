@@ -1,0 +1,52 @@
+{
+  "id": "uz-bukhara-landscape",
+  "cityId": "uz-bukhara",
+  "name": "부하라",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/uz-bukhara-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/uz-bukhara-landscape.json",
+  "originalSha256": "66995d8cd51b52369eda4b70ea56aebe3fe25d847b7356ed8e00b9a48da54e32",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    43,
+    17,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/uz-bukhara.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 79282,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "ef99e6e071076687a094859a30f06b15960ea38060344dd7ac11e8bd6f4b1dbe",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

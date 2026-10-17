@@ -1,0 +1,52 @@
+{
+  "id": "sx-philipsburg-landscape",
+  "cityId": "sx-philipsburg",
+  "name": "필립스뷔르흐",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sx-philipsburg-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sx-philipsburg-landscape.json",
+  "originalSha256": "676968e9a12d9d7d93836a986e2ac2a46b61e9d39d9c28f38b9880aabffde85b",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    28,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sx-philipsburg.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 135706,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c5a781923ac802e0449d430682d77dac1ad5e43e8e890ffe6963a9d68dd9c021",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

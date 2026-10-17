@@ -1,0 +1,52 @@
+{
+  "id": "ca-niagara-falls-mobile",
+  "cityId": "ca-niagara-falls",
+  "name": "나이아가라폴스(캐나다)",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ca-niagara-falls-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ca-niagara-falls-mobile.json",
+  "originalSha256": "71a10e1fbefcd2bacc622690630a8f41fc6c5707f021dba6a40a8489d25a8edc",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    86,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ca-niagara-falls-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 83406,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2cb4dd4763e882343ece0985041178cf2b785faee9aea6d098353225fa51f255",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

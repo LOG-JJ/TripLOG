@@ -1,0 +1,51 @@
+{
+  "id": "kr-changwon-mobile",
+  "cityId": "kr-changwon",
+  "name": "창원",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경남",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-changwon-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-changwon-mobile.json",
+  "originalSha256": "8ccaed8c1395da686f983045cd91856451faf7b076422b4fd4fdb47a9e0a206b",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    6,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-changwon-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 117678,
+  "assetSha256": "b72ff78c7ce4424237bde372d3b856880905e69a690b504fcf0e365a7499c870",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

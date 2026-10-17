@@ -1,0 +1,52 @@
+{
+  "id": "td-ndjamena-landscape",
+  "cityId": "td-ndjamena",
+  "name": "은자메나",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-landscape.json",
+  "originalSha256": "3cb9ee5873df2a81d6c5f597c7f3e4e4450db2d20e6662516a38c978a94475cf",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    49,
+    45,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/td-ndjamena.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 84338,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "a69e59812d342f641948bb5f034ee3a601d50d378f49b22b075e4f011aa5753f",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

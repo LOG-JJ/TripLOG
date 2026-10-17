@@ -1,0 +1,26 @@
+{
+  "jobId": "gb-canterbury-landscape",
+  "cityId": "gb-canterbury",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Canterbury, United Kingdom: Canterbury Cathedral's central tower, with the historic cathedral precinct. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "4dc06df12f4d0e2e83a6375fa03287fe66cae588bb18b73a6886b63ddd58bfa1",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-canterbury-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-699a529b-a2ec-447d-ba71-c9c7a6da063c.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-699a529b-a2ec-447d-ba71-c9c7a6da063c.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/gb-canterbury-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "994f6e882d8458787a2ff67f434e011a979f2e88692af0d236d9cb8d7cfd883a",
+  "savedSha256": "994f6e882d8458787a2ff67f434e011a979f2e88692af0d236d9cb8d7cfd883a",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:09:17Z",
+  "toolCallId": "exec-699a529b-a2ec-447d-ba71-c9c7a6da063c",
+  "savedAt": "2026-10-17T06:11:31.785258+00:00"
+}

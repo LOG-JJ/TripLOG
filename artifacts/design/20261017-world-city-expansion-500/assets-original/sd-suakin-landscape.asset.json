@@ -1,0 +1,52 @@
+{
+  "id": "sd-suakin-landscape",
+  "cityId": "sd-suakin",
+  "name": "수아킨",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sd-suakin-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sd-suakin-landscape.json",
+  "originalSha256": "487626ba88a527ca882ac9ecb076d47562d240db3b8adab05b57c7b91d4ee663",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    29,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sd-suakin.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 116204,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "1d6a14ad1bf0a75a614fb8405d16328d16d61fdbaf5e733678b67e61488587ac",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

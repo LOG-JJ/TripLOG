@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-17",
+  "scope": "13 coverage cities / 26 final desktop and mobile images, including 3 cities transferred from worker-a before generation",
+  "passed": true,
+  "imageInputs": [],
+  "review": "Final images reviewed as desktop/mobile pairs, including the independent read-only review of the initial 10 cities. West Island and Nukunonu retain low settlement houses and palms, Nukunonu includes the whole low concrete bridge, and Saint-Denis uses the Barachois cannon promenade. The newly generated scenes use the common dark outlines and pastel travel-illustration palette. Foreground terrain, supporting buildings and foliage may extend to the edge; the identifying landmarks are visible.",
+  "correctedIdentities": ["Pointe aux Canons lighthouse: red middle band and low breakwater", "Garapan carillon: mostly solid red shaft and short upper bell chamber"],
+  "limitations": "Stylized destination illustrations, not precise architectural reconstructions; foreground detail and perspective vary between desktop and mobile compositions.",
+  "finalTechnicalEvidence": "asset-audit.json and header-verification.json"
+}

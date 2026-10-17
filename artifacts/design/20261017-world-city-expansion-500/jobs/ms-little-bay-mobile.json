@@ -1,0 +1,40 @@
+{
+  "id": "ms-little-bay-mobile",
+  "cityId": "ms-little-bay",
+  "cityName": "리틀베이",
+  "englishName": "Little Bay",
+  "countryCode": "MS",
+  "kind": "town",
+  "group": "카리브해",
+  "variant": "mobile",
+  "phase": "country-coverage",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone destination illustration of Little Bay, Montserrat: the National Museum of Montserrat, a modest LOW PINK rectangular building with a broad pale white-grey hipped roof, simple shaded front entrance and lawn with a few palms. Show the nearby curved dark-sand beach, blue Caribbean bay water and a green headland as supporting scenery. This is a small modern single-storey museum, not a grand colonial palace, domed building, castle or church. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "adfc79acd6314d1e0c37ca35ef0a22489a1d513cbade2e92d3f268f2346cbfe1",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/jobs/ms-little-bay-mobile.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/ms-little-bay-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/ms-little-bay-mobile.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/ms-little-bay-mobile.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v6/ms-little-bay-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "source": {
+    "title": "Montserrat Tourism Authority — A One-Day Escape to Montserrat",
+    "url": "https://www.visitmontserrat.com/a-one-day-escape-to-montserrat/"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone destination illustration of Little Bay, Montserrat: the National Museum of Montserrat, a modest LOW PINK rectangular building with a broad pale white-grey hipped roof, simple shaded front entrance and lawn with a few palms. Show the nearby curved dark-sand beach, blue Caribbean bay water and a green headland as supporting scenery. This is a small modern single-storey museum, not a grand colonial palace, domed building, castle or church. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+    "transparent_background": true
+  },
+  "preflightResearch": {
+    "note": "Government heritage booklet describes and photographs a low pinkish-brown museum with white roof; the current museum operator also specifies its pink Little Bay building. The PDF screenshot could not be fetched, so its embedded image description was used alongside operator text.",
+    "url": "https://www.gov.ms/wp-content/uploads/2020/07/Historic-Cultural-Sights.pdf",
+    "imageInputs": []
+  },
+  "revision": "worker-c-coverage-preflight"
+}

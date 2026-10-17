@@ -1,0 +1,52 @@
+{
+  "id": "gf-cayenne-landscape",
+  "cityId": "gf-cayenne",
+  "name": "카옌",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "남미",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gf-cayenne-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gf-cayenne-landscape.json",
+  "originalSha256": "7200709ac8ac5230e4dc4aae10ee81ec6c259ca4f9a5f5ccb04b5201c5fd5cca",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gf-cayenne.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 150712,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "710ca2e222940cea27260cf003f0ac03720ba95a0fe6d485f066fad206409b2e",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

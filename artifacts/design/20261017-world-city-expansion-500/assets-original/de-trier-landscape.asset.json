@@ -1,0 +1,52 @@
+{
+  "id": "de-trier-landscape",
+  "cityId": "de-trier",
+  "name": "트리어",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/de-trier-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/de-trier-landscape.json",
+  "originalSha256": "fb28267caa6fac4d734e6f47daac984c0d722d8b22b209e196c26a856a065417",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    83,
+    72,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/de-trier.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 119756,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "8df2bcc48a734448d3816d2ee110d9cd15319b5e8d2a6ddfade483f00340c965",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

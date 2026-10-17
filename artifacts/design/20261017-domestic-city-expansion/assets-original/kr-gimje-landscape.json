@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-gimje-landscape",
+  "cityId": "kr-gimje",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Gimje, South Korea: Byeokgolje's historic irrigation structures and low embankment, surrounded by broad agricultural fields. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "937c1d85d48a06564c95da082052cfea916392d7e11b30874836dd8ab402202c",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimje-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-526d94d7-2e82-4dbb-a961-1176ee1f9f5c.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-526d94d7-2e82-4dbb-a961-1176ee1f9f5c.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gimje-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "43ccf19ad2d1ab370a8868e9d1454bc8d5f9b5da8be104272bc63a4ef812eede",
+  "savedSha256": "43ccf19ad2d1ab370a8868e9d1454bc8d5f9b5da8be104272bc63a4ef812eede",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:24:32Z",
+  "toolCallId": "exec-526d94d7-2e82-4dbb-a961-1176ee1f9f5c",
+  "savedAt": "2026-10-17T05:24:57.740677+00:00"
+}

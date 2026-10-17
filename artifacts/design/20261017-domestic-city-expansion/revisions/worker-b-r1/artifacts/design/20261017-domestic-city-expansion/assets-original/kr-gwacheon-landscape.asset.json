@@ -1,0 +1,51 @@
+{
+  "id": "kr-gwacheon-landscape",
+  "cityId": "kr-gwacheon",
+  "name": "과천",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwacheon-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwacheon-landscape.json",
+  "originalSha256": "10cdddc012862a01ac45ebeeef3fd12c608543745f166ce9b7b57b0f1a4111f7",
+  "sourceSize": [
+    2045,
+    769
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    71,
+    2045,
+    769
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gwacheon.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 85244,
+  "assetSha256": "2cfd2c0fcfe03f90369b2e72bb4d18eab346c9eb1d08949c204da51bd51d6157",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

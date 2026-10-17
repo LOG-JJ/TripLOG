@@ -1,0 +1,26 @@
+{
+  "jobId": "li-vaduz-mobile",
+  "cityId": "li-vaduz",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Vaduz, Liechtenstein: Vaduz Castle on its wooded hillside, with the Rhine valley slopes. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "b41f079c4636796ad8023257a03036398fd5f2dc190e3f12a89899ac1e4dc7c4",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/li-vaduz-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-96c79db5-6ac8-4011-8885-4079f983cc06.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-96c79db5-6ac8-4011-8885-4079f983cc06.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/li-vaduz-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "e07f03ff0f912252b2bbd1c85c051f368d58e11eaacdae10ddc5605b5ff7f52d",
+  "savedSha256": "e07f03ff0f912252b2bbd1c85c051f368d58e11eaacdae10ddc5605b5ff7f52d",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:06:10.439Z",
+  "toolCallId": "exec-96c79db5-6ac8-4011-8885-4079f983cc06",
+  "savedAt": "2026-10-17T06:09:37.763876+00:00"
+}

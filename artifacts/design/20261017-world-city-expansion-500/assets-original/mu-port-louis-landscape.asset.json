@@ -1,0 +1,52 @@
+{
+  "id": "mu-port-louis-landscape",
+  "cityId": "mu-port-louis",
+  "name": "포트루이스",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mu-port-louis-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mu-port-louis-landscape.json",
+  "originalSha256": "d5fa555fb85207c2f3683d5fb20fed6df4d52ad622fc1c642ab28a13d9e40bc7",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mu-port-louis.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 126972,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c91c57f8e9cd265778ac26c8ac3c9a2788659e5969b3b1ee51fafbfe69a86795",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "kr-boseong-mobile",
+  "cityId": "kr-boseong",
+  "name": "보성",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "기존 군과 섬 보존",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-boseong-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-boseong-mobile.json",
+  "originalSha256": "3e184b4b26abe341be68d7a39cde18c916f3f812816ef5fca06bba1b89e5ac68",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    126,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-boseong-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 98718,
+  "assetSha256": "8619298b3518ad4bc85648266beaad9efa2c38b9761031c77a50cd42501fa27d",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

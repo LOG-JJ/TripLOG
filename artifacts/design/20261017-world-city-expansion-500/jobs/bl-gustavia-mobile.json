@@ -1,0 +1,41 @@
+{
+  "id": "bl-gustavia-mobile",
+  "cityId": "bl-gustavia",
+  "cityName": "구스타비아",
+  "englishName": "Gustavia",
+  "countryCode": "BL",
+  "kind": "town",
+  "group": "카리브해",
+  "variant": "mobile",
+  "phase": "country-coverage",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone destination illustration of Gustavia, St. Barthelemy: a single historic cannon on a low simple stone platform at Fort Gustav III, with ONLY low unroofed rough-stone ruined enclosure walls, overlooking Gustavia's sheltered blue yacht harbour and compact red-roofed waterfront houses. The foreground cannon and low battery ruins are the subject; the bay and town sit below the viewpoint. Do not include any guard tower, sentry box, turret, dome, roofed lookout, tall fort building or cylindrical stone structure. The surviving ruins must be low open fragments rather than a reconstructed complete fort. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "0428ee09888642e489605401db9ea058d67d825aed6f45c8fdedf3d6050b3b3f",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/jobs/bl-gustavia-mobile.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/bl-gustavia-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/bl-gustavia-mobile.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/bl-gustavia-mobile.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v6/bl-gustavia-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "source": {
+    "title": "Saint Barthélemy Tourism Committee — Swedish battery of Fort Gustav III",
+    "url": "https://www.saintbarth-tourisme.com/en/fort-gustav-iii-2/"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone destination illustration of Gustavia, St. Barthelemy: a single historic cannon on a low simple stone platform at Fort Gustav III, with ONLY low unroofed rough-stone ruined enclosure walls, overlooking Gustavia's sheltered blue yacht harbour and compact red-roofed waterfront houses. The foreground cannon and low battery ruins are the subject; the bay and town sit below the viewpoint. Do not include any guard tower, sentry box, turret, dome, roofed lookout, tall fort building or cylindrical stone structure. The surviving ruins must be low open fragments rather than a reconstructed complete fort. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+    "transparent_background": true
+  },
+  "preflightResearch": {
+    "note": "The tourism authority describes surviving stone guardhouse and cisterns, with replica cannon; do not invent an intact fortress.",
+    "url": "https://www.saintbarth-tourisme.com/en/fort-gustav-iii-2/",
+    "imageInputs": []
+  },
+  "revision": "worker-c-coverage-r1",
+  "revisionReason": "Remove the unverified domed stone sentry tower; retain only the low ruins and cannon supported by the tourism authority text."
+}

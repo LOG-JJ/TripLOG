@@ -1,0 +1,52 @@
+{
+  "id": "pr-san-juan-landscape",
+  "cityId": "pr-san-juan",
+  "name": "산후안",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/pr-san-juan-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/pr-san-juan-landscape.json",
+  "originalSha256": "c23a0b6ad4e6f5a9726d3d813e4725f3df2973510613d0d26c92a08a9c8478d7",
+  "sourceSize": [
+    1619,
+    972
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    15,
+    1619,
+    972
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/pr-san-juan.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 95294,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2d49b46933ed735beeca4c1b70b59b0137f5b56510142281e2b37f9c894acc30",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

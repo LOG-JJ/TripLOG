@@ -1,0 +1,52 @@
+{
+  "id": "pt-evora-mobile",
+  "cityId": "pt-evora",
+  "name": "에보라",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/pt-evora-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/pt-evora-mobile.json",
+  "originalSha256": "ea526dde2bac817059c362363b863ea873e163638beafba180cd34093becb3cf",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    79,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/pt-evora-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 114562,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2c6c122bfaa6ac71757e4349347679150665b9140a0207fec03c7d277c5b4376",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

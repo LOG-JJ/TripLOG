@@ -1,0 +1,26 @@
+{
+  "jobId": "gt-antigua-guatemala-landscape",
+  "cityId": "gt-antigua-guatemala",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Antigua Guatemala, Guatemala: the Santa Catalina Arch, with the cone of Agua volcano behind the colonial street. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "c142f68331c8918d80f5b570911b27d365d7692059c1393c9342110d71c66f53",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gt-antigua-guatemala-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-699142f1-3a33-4be8-8bd7-f33de167fe11.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-699142f1-3a33-4be8-8bd7-f33de167fe11.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/gt-antigua-guatemala-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "3bdee727d61be8d4bdb07857ef180fd44247e6d6950dfe28a31996984e808b48",
+  "savedSha256": "3bdee727d61be8d4bdb07857ef180fd44247e6d6950dfe28a31996984e808b48",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:20:53.838Z",
+  "toolCallId": "exec-699142f1-3a33-4be8-8bd7-f33de167fe11",
+  "savedAt": "2026-10-17T06:24:17.483063+00:00"
+}

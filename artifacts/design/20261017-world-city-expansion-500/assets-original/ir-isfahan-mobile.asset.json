@@ -1,0 +1,52 @@
+{
+  "id": "ir-isfahan-mobile",
+  "cityId": "ir-isfahan",
+  "name": "이스파한",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ir-isfahan-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ir-isfahan-mobile.json",
+  "originalSha256": "55aefea4aee09675b0f5b755130947605363fdf144bdc0fce42e92337e21ad85",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    41,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ir-isfahan-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 100652,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "fa236bb22021b70b3f879e60460535d6f78f9d97a4c22c42494715a5c3711e05",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

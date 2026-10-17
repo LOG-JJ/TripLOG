@@ -1,0 +1,51 @@
+{
+  "id": "kr-pohang-landscape",
+  "cityId": "kr-pohang",
+  "name": "포항",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경북",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-pohang-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-pohang-landscape.json",
+  "originalSha256": "283832df2c12ed434cf34d56126e79f756a7c3e49c18ac4be4368ddf88cc51b8",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    147,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-pohang.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 81384,
+  "assetSha256": "a1acf55071ccd9787b2d3e8592769561a5963637e4ed99626701d80f815c9a52",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

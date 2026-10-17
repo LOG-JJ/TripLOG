@@ -1,0 +1,26 @@
+{
+  "jobId": "ag-st-johns-mobile",
+  "cityId": "ag-st-johns",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of St John's, Antigua & Barbuda: Saint John's Cathedral's twin towers, with the colourful harbour town roofs. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "410ae9f85787fc15948fa9a21bb806ab64cbb326cf26dbcc0bb4b97f0a5a99ff",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ag-st-johns-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-6863c442-1a81-4937-a757-6977c9be5296.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-6863c442-1a81-4937-a757-6977c9be5296.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/ag-st-johns-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "98e648574beb825ffa1fb5142654a5915937c5b3b8e1ce95558fc71a43b71566",
+  "savedSha256": "98e648574beb825ffa1fb5142654a5915937c5b3b8e1ce95558fc71a43b71566",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:20:53.838Z",
+  "toolCallId": "exec-6863c442-1a81-4937-a757-6977c9be5296",
+  "savedAt": "2026-10-17T06:22:49.329077+00:00"
+}

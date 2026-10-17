@@ -1,0 +1,52 @@
+{
+  "id": "sj-longyearbyen-mobile",
+  "cityId": "sj-longyearbyen",
+  "name": "롱위에아르뷔엔",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "북극",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sj-longyearbyen-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sj-longyearbyen-mobile.json",
+  "originalSha256": "742226ec1b2b87666d7114e177ddfe3ace1094a5e94647b7e6d7d56674d0e519",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    38,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sj-longyearbyen-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 90560,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "d4e5e85ad31f6d1fabad8249ed48a6d1dc8a821ab5d5e6452987eee0fc0857d4",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

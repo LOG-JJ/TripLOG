@@ -1,0 +1,52 @@
+{
+  "id": "ht-cap-haitien-mobile",
+  "cityId": "ht-cap-haitien",
+  "name": "카프아이시앵",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ht-cap-haitien-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ht-cap-haitien-mobile.json",
+  "originalSha256": "69f9bf9dc7d260beac07ff813f7477e7ea1dc53196b67dbe6f5cb69be57511a1",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    31,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ht-cap-haitien-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 108936,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "9172b28d71328dbe4a53a0ead706ec0a334011cadd992c0e53b31da1562491a4",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

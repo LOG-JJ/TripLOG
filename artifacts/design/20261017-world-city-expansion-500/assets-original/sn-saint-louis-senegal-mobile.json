@@ -1,0 +1,26 @@
+{
+  "jobId": "sn-saint-louis-senegal-mobile",
+  "cityId": "sn-saint-louis-senegal",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Saint-Louis, Senegal. Show the recognizable Faidherbe Bridge, with repeating rounded grey steel bowstring truss spans on pale stone piers, fully spanning blue Senegal River water. From a medium-distance diagonal view include the complete left and right stone abutments inside the canvas. Ochre low-rise island facades and a few palms stand beyond the river. Use a portrait 4:5 canvas for a 480 x 600 mobile header illustration. Place the whole bridge across the middle-lower area, with the near right abutment at about 80 percent of the canvas width, leaving visible river and bank to its right. Blue water surrounds every pier and continues to the lower and right edges. Keep every bridge endpoint inside the image. Use simple hand-drawn travel illustration: nearly uniform bold dark navy outlines, broad flat pale blue, soft green and sandy yellow shapes, sparse pencil accents, minimal shading, readable at small header size. The sky and exterior are completely TRANSPARENT with a clean irregular silhouette around the distant buildings and palms, without any sky fill, mist, fog, gradient glow or soft vignette. Painted bridge, building, land and water areas must be fully opaque inside their shapes; transparency belongs only outside the artwork. Keep generous clear transparent space above the skyline. No photorealism, 3D effects, watercolor washes, dense hatching, text, signs, labels, logos, interface or border. Supporting foreground water and shore plants may touch the lower and right edges; the bridge and identifying buildings may not be clipped.",
+  "promptSha256": "c58f324d9a3cc2643c5d6bcc2e043bebda4d47bf6882db77cb512ff51f412c30",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sn-saint-louis-senegal-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-455be204-5618-4cc9-92c9-9f4d337388e5.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-455be204-5618-4cc9-92c9-9f4d337388e5.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "2e8ada21146a65d126b3fce3639591528657e3c49afdee35c20fdc8ded65a173",
+  "savedSha256": "2e8ada21146a65d126b3fce3639591528657e3c49afdee35c20fdc8ded65a173",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:31:41Z",
+  "toolCallId": "exec-455be204-5618-4cc9-92c9-9f4d337388e5",
+  "savedAt": "2026-10-17T07:32:18.879928+00:00"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "kr-seosan-landscape",
+  "cityId": "kr-seosan",
+  "cityName": "서산",
+  "englishName": "Seosan",
+  "kind": "city",
+  "group": "충남",
+  "variant": "landscape",
+  "phase": "expansion",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Seosan, South Korea: Jinnammun, the south gate of Haemieupseong Fortress: a single low arched stone passage through a broad gray-brown masonry rampart, with one single-storey wooden pavilion and a wide dark-gray Korean hipped-and-gabled tiled roof above the stone arch, low adjoining stone walls and open flat grassland. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat. The entrance arch is cut through the thick stone wall, with wedge-shaped arch stones clearly visible; the wooden pavilion stands entirely above the masonry wall. Keep the fortress on flat ground with one continuous low wall, not multiple terraces.",
+  "promptSha256": "9e50f13d934fd27476da6bdfe0b799d495e897e3afb2ba08f56553822c11765e",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/jobs/kr-seosan-landscape.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-seosan-landscape.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-seosan-landscape.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-seosan-landscape.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v5/kr-seosan.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "motif": "Jinnammun, the south gate of Haemieupseong Fortress: a single low arched stone passage through a broad gray-brown masonry rampart, with one single-storey wooden pavilion and a wide dark-gray Korean hipped-and-gabled tiled roof above the stone arch, low adjoining stone walls and open flat grassland",
+  "proposedMotif": "해미읍성",
+  "motifSource": {
+    "title": "국가유산청 국가유산 디지털 서비스 - 서산 해미읍성",
+    "url": "https://digital.khs.go.kr/heri/heriDetail.do?ctptUid=13898859674489300737",
+    "evidence": "2026-10-17 진남문(남문) 공식 사진 2/7과 본문 홍예문 설명 육안 확인; 단층 문루 아래 석조 아치 통로와 낮은 평지 성벽 확인"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone hand-drawn destination illustration of Seosan, South Korea: Jinnammun, the south gate of Haemieupseong Fortress: a single low arched stone passage through a broad gray-brown masonry rampart, with one single-storey wooden pavilion and a wide dark-gray Korean hipped-and-gabled tiled roof above the stone arch, low adjoining stone walls and open flat grassland. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat. The entrance arch is cut through the thick stone wall, with wedge-shaped arch stones clearly visible; the wooden pavilion stands entirely above the masonry wall. Keep the fortress on flat ground with one continuous low wall, not multiple terraces.",
+    "transparent_background": true
+  },
+  "provenanceRule": "The --source argument must be the exact local original path returned by this job's image_gen call. Never search for a latest file.",
+  "promptRevision": "worker-c-visual-qa-r2-20261017"
+}

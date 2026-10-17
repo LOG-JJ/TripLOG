@@ -1,0 +1,51 @@
+{
+  "id": "kr-damyang-landscape",
+  "cityId": "kr-damyang",
+  "name": "담양",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "기존 군과 섬 보존",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-damyang-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-damyang-landscape.json",
+  "originalSha256": "15b90f8d410c2b08c2f1b5037128c80dc5e6686dd3c15be3dd1cbba7c1844f48",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    1,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-damyang.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 129490,
+  "assetSha256": "bb8a0baba20ee593fb3167d5add086f61bdeb0041641d78c0f482df299c2a749",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ye-sanaa-landscape",
+  "cityId": "ye-sanaa",
+  "name": "사나",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ye-sanaa-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ye-sanaa-landscape.json",
+  "originalSha256": "ca15e1a2f5e218be8129db144be018849be33f053c867ad3604f3fd466d783df",
+  "sourceSize": [
+    1619,
+    972
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1619,
+    972
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ye-sanaa.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 134302,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "100a5252a6516b3acefd2c29ac8f35dc60948ea357a0075176c11ca02c5ead0f",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

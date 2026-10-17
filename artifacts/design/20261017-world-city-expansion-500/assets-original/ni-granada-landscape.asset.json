@@ -1,0 +1,52 @@
+{
+  "id": "ni-granada-landscape",
+  "cityId": "ni-granada",
+  "name": "그라나다(니카라과)",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ni-granada-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ni-granada-landscape.json",
+  "originalSha256": "62ee90f6beca0699e2fb8a0aea731c3059d15444f84e438e5142426e89c89370",
+  "sourceSize": [
+    1629,
+    965
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    31,
+    1629,
+    965
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ni-granada.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 103086,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "dc2224ee2a4fe47983e28799681c0eac4258bee3d72a1e6960e7705c90c59a07",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

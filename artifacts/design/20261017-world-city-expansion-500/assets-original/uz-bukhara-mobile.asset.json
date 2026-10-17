@@ -1,0 +1,52 @@
+{
+  "id": "uz-bukhara-mobile",
+  "cityId": "uz-bukhara",
+  "name": "부하라",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/uz-bukhara-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/uz-bukhara-mobile.json",
+  "originalSha256": "45189b0ec8315b19a1a81bc5243ca6d27e6b4ff3e9c46a047191d0d713be4010",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    39,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/uz-bukhara-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 77640,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "a57349f2ffb2f784cffaf0bce10d09560d8a4300aa001be73675e945082cafaf",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

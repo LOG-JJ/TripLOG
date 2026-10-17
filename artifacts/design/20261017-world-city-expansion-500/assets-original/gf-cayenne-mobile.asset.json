@@ -1,0 +1,72 @@
+{
+  "id": "gf-cayenne-mobile",
+  "cityId": "gf-cayenne",
+  "name": "카옌",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "남미",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gf-cayenne-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gf-cayenne-mobile.json",
+  "originalSha256": "840a9726c9866f77cef7472b1df71adbec94572da4179ea1f4109ea90a2b9dd1",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gf-cayenne-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 134938,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "aa1061212c6877c538da59ba4230e34cfa07b15a96b05f6a3a4cc85c959bb2ba",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa",
+  "technicalFaintEdgeRefit": {
+    "checkedAt": "2026-10-17T07:59:04.683365+00:00",
+    "alphaThreshold": 8,
+    "beforeGaps": [
+      0,
+      6
+    ],
+    "afterGaps": [
+      0,
+      0
+    ],
+    "refits": [
+      [
+        0,
+        6
+      ]
+    ],
+    "source": "original PNG preserved",
+    "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r2"
+  }
+}

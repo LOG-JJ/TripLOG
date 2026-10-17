@@ -1,0 +1,52 @@
+{
+  "id": "sl-freetown-mobile",
+  "cityId": "sl-freetown",
+  "name": "프리타운",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sl-freetown-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sl-freetown-mobile.json",
+  "originalSha256": "b2854244676ea55a31040bc684ae39df812006e4d87db3af853f33a05df02422",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    25,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sl-freetown-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 103828,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "4e9a86ccfcb5c327d74c2c83ccc8ebda6f38b8160b628b7001fc9f7862e07f00",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

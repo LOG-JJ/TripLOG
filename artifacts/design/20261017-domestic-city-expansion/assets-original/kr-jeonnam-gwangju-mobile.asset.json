@@ -1,0 +1,51 @@
+{
+  "id": "kr-jeonnam-gwangju-mobile",
+  "cityId": "kr-jeonnam-gwangju",
+  "name": "전남광주통합특별시",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "광역시급",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jeonnam-gwangju-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jeonnam-gwangju-mobile.json",
+  "originalSha256": "8cf0924912193ed0b9d5f9c1d99cd6dfa8006a9fbf8b59cfffbda6c5181c4467",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 113898,
+  "assetSha256": "a2d3668cff61cef3aeea35e64181e90a8933ba835532440582be93e27d520831",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

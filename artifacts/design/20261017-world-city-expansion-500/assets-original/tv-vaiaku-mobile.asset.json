@@ -1,0 +1,52 @@
+{
+  "id": "tv-vaiaku-mobile",
+  "cityId": "tv-vaiaku",
+  "name": "바이아쿠",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/tv-vaiaku-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/tv-vaiaku-mobile.json",
+  "originalSha256": "038719d16c85576d61bf0655d8309df63b4a25a92399d4738ae9839aa2a5246f",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    25,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/tv-vaiaku-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 97414,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "82b4c18e72b8edce1bbbe55889a27c685efb0e88e3117d3da148d2810a28391f",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

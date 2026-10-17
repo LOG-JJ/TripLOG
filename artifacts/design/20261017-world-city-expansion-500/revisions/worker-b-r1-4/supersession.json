@@ -1,0 +1,110 @@
+[
+  {
+    "jobId": "th-kanchanaburi-landscape",
+    "reason": "Right bridge approach and railing continued beyond the frame; both bank-to-bank endpoints must be visible.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/th-kanchanaburi-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-4/th-kanchanaburi-landscape/jobs/th-kanchanaburi-landscape.json",
+        "sha256": "a79c17b91b595299d624904287e8ae6c0b53e73573383e3f73657d43aaf083d4"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/th-kanchanaburi-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-4/th-kanchanaburi-landscape/jobs/th-kanchanaburi-landscape.prompt.txt",
+        "sha256": "796b399bb703e5a82f385045af3db5d45b9a48e946c5f7048e4899e69f9198fa"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/th-kanchanaburi-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-4/th-kanchanaburi-landscape/originals/th-kanchanaburi-landscape.png",
+        "sha256": "c07d14e13d131bdc6e06acc3dd8c485ce59272be66fd51b6b2f2eaa85bf04243"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/th-kanchanaburi-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-4/th-kanchanaburi-landscape/originals/th-kanchanaburi-landscape.json",
+        "sha256": "a9b6ca7664884a43dfc1180d3fa77173331fbf9c1c7a64c2b53e9929bd2dea93"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/th-kanchanaburi-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-4/th-kanchanaburi-landscape/originals/th-kanchanaburi-landscape.asset.json",
+        "sha256": "5188210b124322309b90158828aa56632ed5e9cf168c3f908bf58e63799cbe73"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/th-kanchanaburi.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-4/th-kanchanaburi-landscape/runtime/th-kanchanaburi.webp",
+        "sha256": "6397aa77b9933aa6f82d55acf50928048adef8484a1e3877f311d6a9ceb6d006"
+      }
+    ]
+  },
+  {
+    "jobId": "th-kanchanaburi-mobile",
+    "reason": "Right bridge approach and railing continued beyond the frame; both bank-to-bank endpoints must be visible.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/th-kanchanaburi-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-4/th-kanchanaburi-mobile/jobs/th-kanchanaburi-mobile.json",
+        "sha256": "0a52c71362d32a8f984d1c685cdfb0a6cb1f18a11a0883673390505c984f11d6"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/th-kanchanaburi-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-4/th-kanchanaburi-mobile/jobs/th-kanchanaburi-mobile.prompt.txt",
+        "sha256": "c128a4ca066e56ba9b8eeb7e6ea6ad14b901484858327fa6a27269816e74c910"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/th-kanchanaburi-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-4/th-kanchanaburi-mobile/originals/th-kanchanaburi-mobile.png",
+        "sha256": "c595977a9806867a3afe1b94d7283674f629c946213a2d4275f09e96a8259faf"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/th-kanchanaburi-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-4/th-kanchanaburi-mobile/originals/th-kanchanaburi-mobile.json",
+        "sha256": "91435d1b7a908f253697c8c4de1784a9424e19ce1697969333c2ac94fca17d4b"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/th-kanchanaburi-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-4/th-kanchanaburi-mobile/originals/th-kanchanaburi-mobile.asset.json",
+        "sha256": "fe24494d2e69955c22cd8989be202d74089643475051fd3335e863c4d59ae3db"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/th-kanchanaburi-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-4/th-kanchanaburi-mobile/runtime/th-kanchanaburi-mobile.webp",
+        "sha256": "d3e97f40b9af7b33d416dbd69a83f336486024174f38ed649b09d49a6829bf06"
+      }
+    ]
+  },
+  {
+    "jobId": "ph-vigan-landscape",
+    "reason": "An unrelated large church was added at the end of a street whose requested motif is heritage houses and one carriage.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ph-vigan-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-4/ph-vigan-landscape/jobs/ph-vigan-landscape.json",
+        "sha256": "06caf99ae47266d562c99a5a1455624d9da4bd139c849135b0e60f85142b0f43"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ph-vigan-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-4/ph-vigan-landscape/jobs/ph-vigan-landscape.prompt.txt",
+        "sha256": "1c5a2610d546c6839f769802c654e7cb571ba9937a153d3748c5072ba8c039ef"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ph-vigan-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-4/ph-vigan-landscape/originals/ph-vigan-landscape.png",
+        "sha256": "eb1edeb5e3f84a35caf6c5f45dec1b24ef8317000b86afe7fbd2892706b8ef98"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ph-vigan-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-4/ph-vigan-landscape/originals/ph-vigan-landscape.json",
+        "sha256": "697ae919929fed934cc5a0ddc4389343c739baa3ab02d317f588834b634157f2"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ph-vigan-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-4/ph-vigan-landscape/originals/ph-vigan-landscape.asset.json",
+        "sha256": "b18f05a6b6c31b0202006f776589e3a5046aa779864187f110feb175338f402c"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/ph-vigan.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-4/ph-vigan-landscape/runtime/ph-vigan.webp",
+        "sha256": "08b764deec90e8acdf29ebd1a78239c017aaa91befd0f03a76c98a4c5df84905"
+      }
+    ]
+  }
+]

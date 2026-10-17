@@ -1,0 +1,175 @@
+{
+  "count": 10,
+  "records": [
+    {
+      "id": "bd-dhaka-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/bd-dhaka.webp",
+      "sourceSha256": "e1112de57d85eb64e51317d34fbccff382ab24f83ba04e1a5f362668de045fe6",
+      "assetSha256": "9b83c25abc9108188aa5d401de74cf7550fb93e9a765041bce15cdf20d1981b7",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        16,
+        0,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "bd-dhaka-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/bd-dhaka-mobile.webp",
+      "sourceSha256": "1f6c919a0fb25222f8eb679fe91714ea0ba2bcb5beea33356e6661dab432b76c",
+      "assetSha256": "6fd164727ab72d2a83fb6a8eae0e7506cba37b32f02405a2ff2302c653233aeb",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        110,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "kg-bishkek-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/kg-bishkek.webp",
+      "sourceSha256": "f605fc4a97360a547d23ef4fe23916460e79815c80e19a898e341df1ea649200",
+      "assetSha256": "b645f0966dc5d9b0ebee9b8dd6034abef2cd168d47f4304d069e7293955f3ddf",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        5,
+        55,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "kg-bishkek-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/kg-bishkek-mobile.webp",
+      "sourceSha256": "ed90b0445961d935600169b37c90f245019a2c115ce59017858ad01d2d1d9385",
+      "assetSha256": "a1ddcac7d70f1b11ffa78fcc3344e07340dfefd4869619467ac751a00f4bcc34",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        50,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "ir-isfahan-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ir-isfahan.webp",
+      "sourceSha256": "b8217f003e5737bd2bc82c77a34ce0eba6b1b7a2b2135bdd86645215231c9b1c",
+      "assetSha256": "167a02bdd5892244c2856c1dac61fcbd20e867107f771aa86721d3c4c5aed637",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        42,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "ir-isfahan-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ir-isfahan-mobile.webp",
+      "sourceSha256": "55aefea4aee09675b0f5b755130947605363fdf144bdc0fce42e92337e21ad85",
+      "assetSha256": "fa236bb22021b70b3f879e60460535d6f78f9d97a4c22c42494715a5c3711e05",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        30,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "ye-sanaa-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ye-sanaa.webp",
+      "sourceSha256": "ca15e1a2f5e218be8129db144be018849be33f053c867ad3604f3fd466d783df",
+      "assetSha256": "100a5252a6516b3acefd2c29ac8f35dc60948ea357a0075176c11ca02c5ead0f",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        12,
+        34,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "ye-sanaa-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ye-sanaa-mobile.webp",
+      "sourceSha256": "04a760a7d955cf11a27dbb78f35384bf7d83df65bc024013cf82430f6478e148",
+      "assetSha256": "aa185fdaccd642ef58326a1eeea0c9b6a158068cea17bdf20b163a08f31c48b7",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        4,
+        39,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "jp-matsumoto-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/jp-matsumoto.webp",
+      "sourceSha256": "20989c4249b646a711ad1c8aae4536fb1075978536f36a14793b5d93fef69a9f",
+      "assetSha256": "f3cc0a6e45d2709f48b9f61945912def7e119670654e814b8813891797c18677",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "jp-matsumoto-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/jp-matsumoto-mobile.webp",
+      "sourceSha256": "d9b97814b903f580818eb47da98626e93f82aeb9dc3b33688243d97e7e16a13c",
+      "assetSha256": "001e21b26179a75d6e0898c3ca1b2ef893cc6d3e14e3cc23d91148e94975f16a",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        34,
+        480,
+        600
+      ],
+      "originalEquality": true
+    }
+  ]
+}

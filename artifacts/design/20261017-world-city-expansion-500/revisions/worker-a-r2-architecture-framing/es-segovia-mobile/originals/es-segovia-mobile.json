@@ -1,0 +1,26 @@
+{
+  "jobId": "es-segovia-mobile",
+  "cityId": "es-segovia",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Segovia, Spain: the towering two-tier Roman aqueduct, with the open square beneath its arches. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "21e0f6bb6b8b38a65073ebe4b9b2793e4461e9b0e2430b677f3b74e2daa1c01b",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/es-segovia-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-082a5b5c-ef7e-437a-8728-1edb19662004.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-082a5b5c-ef7e-437a-8728-1edb19662004.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/es-segovia-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "37f52b6509f16f03e2dcd09e69a70fb8670ceec891732dd1c68019ca2811dde7",
+  "savedSha256": "37f52b6509f16f03e2dcd09e69a70fb8670ceec891732dd1c68019ca2811dde7",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:10:03.848Z",
+  "toolCallId": "exec-082a5b5c-ef7e-437a-8728-1edb19662004",
+  "savedAt": "2026-10-17T06:13:33.183446+00:00"
+}

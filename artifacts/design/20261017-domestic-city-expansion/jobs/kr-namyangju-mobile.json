@@ -1,0 +1,39 @@
+{
+  "id": "kr-namyangju-mobile",
+  "cityId": "kr-namyangju",
+  "cityName": "남양주",
+  "englishName": "Namyangju",
+  "kind": "city",
+  "group": "경기",
+  "variant": "mobile",
+  "phase": "expansion",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Namyangju, South Korea: Yeoyudang at the Jeong Yak-yong historic site, a modest traditional Korean tiled-roof residence and its courtyard. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "3fbee1b140e4c2b2094e6e70d14906a3d3c3f250bdf9ab6b6d2a1da31ae3bfc4",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/jobs/kr-namyangju-mobile.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-namyangju-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-namyangju-mobile.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-namyangju-mobile.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v5/kr-namyangju-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "motif": "Yeoyudang at the Jeong Yak-yong historic site, a modest traditional Korean tiled-roof residence and its courtyard",
+  "proposedMotif": "정약용유적지 여유당",
+  "motifSource": {
+    "title": "경기관광공사 2025 관광 가이드북",
+    "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+    "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+    "pages": "12–13"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone hand-drawn destination illustration of Namyangju, South Korea: Yeoyudang at the Jeong Yak-yong historic site, a modest traditional Korean tiled-roof residence and its courtyard. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+    "transparent_background": true
+  },
+  "provenanceRule": "The --source argument must be the exact local original path returned by this job's image_gen call. Never search for a latest file.",
+  "promptRevision": "pilot-subject-qa-20261017"
+}

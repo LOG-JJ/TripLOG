@@ -1,0 +1,52 @@
+{
+  "id": "fo-torshavn-landscape",
+  "cityId": "fo-torshavn",
+  "name": "토르스하운",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "북유럽",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/fo-torshavn-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/fo-torshavn-landscape.json",
+  "originalSha256": "728f553372464fa85441c954cff28d7dcea9889fbdcc4f8735a7fa50170508fd",
+  "sourceSize": [
+    1619,
+    972
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1619,
+    972
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/fo-torshavn.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 103274,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "102e58526643d5cde1366390d032b861f09f18f0b0b90668b41de9a7738d235f",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

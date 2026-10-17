@@ -1,0 +1,51 @@
+{
+  "id": "kr-gunsan-landscape",
+  "cityId": "kr-gunsan",
+  "name": "군산",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "전북",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gunsan-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gunsan-landscape.json",
+  "originalSha256": "4b1bba1d11e6a03b43ecaafe31238e3863dcfecf8e10dce7e2c5bf0ce4cba8d5",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    31,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gunsan.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 92680,
+  "assetSha256": "0c960101f120edbdfc1c3d99488b967ea4b72542a3fcaf26f7412afc50ab339b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

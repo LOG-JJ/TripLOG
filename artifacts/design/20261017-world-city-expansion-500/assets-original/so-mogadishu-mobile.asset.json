@@ -1,0 +1,52 @@
+{
+  "id": "so-mogadishu-mobile",
+  "cityId": "so-mogadishu",
+  "name": "모가디슈",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/so-mogadishu-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/so-mogadishu-mobile.json",
+  "originalSha256": "20a4e3b7cf67b1d84ac03761c0beb91e9b8aa497328024fe8dd0045683d328b2",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    36,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/so-mogadishu-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 72450,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "7e14add32939e72ccc330cacd8123020db62e70cde323e77ebb2d7051d9de843",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

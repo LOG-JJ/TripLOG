@@ -1,0 +1,52 @@
+{
+  "id": "gw-bissau-landscape",
+  "cityId": "gw-bissau",
+  "name": "비사우",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gw-bissau-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gw-bissau-landscape.json",
+  "originalSha256": "ab8515992df82e4f21a773f5f218bff727d8dd9f359e66d3987e3d84c562e306",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    39,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gw-bissau.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 122232,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2a1b53e4c5a504542b77997be32cf957df248fc0bbd34bec13511aa082b915d7",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

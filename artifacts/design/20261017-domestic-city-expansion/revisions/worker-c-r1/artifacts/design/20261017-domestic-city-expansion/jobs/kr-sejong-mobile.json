@@ -1,0 +1,38 @@
+{
+  "id": "kr-sejong-mobile",
+  "cityId": "kr-sejong",
+  "cityName": "세종",
+  "englishName": "Sejong",
+  "kind": "city",
+  "group": "광역시급",
+  "variant": "mobile",
+  "phase": "expansion",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Sejong, South Korea: the Four Seasons Conservatory of the National Sejong Arboretum, with two broad pale-glass wings whose curved rooflines dip toward a low central entrance and rise toward rounded outer ends, a simple light metal grid, low planted borders and a wide garden path. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "cec59cc60391a5497251861ec5bffdaa3741a72dc44a73a8c880b5ec289dab05",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/jobs/kr-sejong-mobile.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-mobile.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-mobile.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v5/kr-sejong-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "motif": "the Four Seasons Conservatory of the National Sejong Arboretum, with two broad pale-glass wings whose curved rooflines dip toward a low central entrance and rise toward rounded outer ends, a simple light metal grid, low planted borders and a wide garden path",
+  "proposedMotif": "국립세종수목원",
+  "motifSource": {
+    "title": "Official subject photographs reviewed before generation",
+    "url": "https://sjna.koagi.or.kr/sjna/recomdCourse/BD_selectRecomdCourse.do",
+    "evidence": "Official conservatory photograph visually inspected; asymmetric curved glass wings and central entrance confirmed"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone hand-drawn destination illustration of Sejong, South Korea: the Four Seasons Conservatory of the National Sejong Arboretum, with two broad pale-glass wings whose curved rooflines dip toward a low central entrance and rise toward rounded outer ends, a simple light metal grid, low planted borders and a wide garden path. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+    "transparent_background": true
+  },
+  "provenanceRule": "The --source argument must be the exact local original path returned by this job's image_gen call. Never search for a latest file.",
+  "promptRevision": "pilot-subject-qa-20261017"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "de-lubeck-mobile",
+  "cityId": "de-lubeck",
+  "name": "뤼베크",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/de-lubeck-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/de-lubeck-mobile.json",
+  "originalSha256": "2fbb9adf50d2fe2d6694ace5824712812008a0b0f4ad256cec37f39a7d12003d",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/de-lubeck-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 95026,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "07cd7f69a8ee621bf0477d82a0c8b8bbc12b5ebe91b2983748581659be944ce5",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

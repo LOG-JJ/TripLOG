@@ -1,0 +1,52 @@
+{
+  "id": "jp-matsumoto-landscape",
+  "cityId": "jp-matsumoto",
+  "name": "마쓰모토",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/jp-matsumoto-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/jp-matsumoto-landscape.json",
+  "originalSha256": "20989c4249b646a711ad1c8aae4536fb1075978536f36a14793b5d93fef69a9f",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    12,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/jp-matsumoto.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 114120,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "f3cc0a6e45d2709f48b9f61945912def7e119670654e814b8813891797c18677",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

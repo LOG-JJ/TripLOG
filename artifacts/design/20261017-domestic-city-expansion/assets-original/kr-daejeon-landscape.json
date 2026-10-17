@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-daejeon-landscape",
+  "cityId": "kr-daejeon",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Daejeon, South Korea: Hanbit Tower in Daejeon Expo Science Park: a pale stone lower shaft tapering upward, a broad dark-glazed circular observation ring around its shoulder, and a long thin pointed spire rising above that ring, standing on a paved plaza with low landscaped planting. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "761296067dbf62a33b1638ac3e193aefa0bc0ed54eb67280da7b153555c23e8c",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-daejeon-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-2b3c4f8d-d9c6-42f8-8bd6-a4e299218ca9.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-2b3c4f8d-d9c6-42f8-8bd6-a4e299218ca9.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-daejeon-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "d3b11345ad4a98582f7e169d18641a1f986f9f80268ca4daefe8b8b5e70eb9fd",
+  "savedSha256": "d3b11345ad4a98582f7e169d18641a1f986f9f80268ca4daefe8b8b5e70eb9fd",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:06:55.008Z",
+  "toolCallId": "exec-2b3c4f8d-d9c6-42f8-8bd6-a4e299218ca9",
+  "savedAt": "2026-10-17T05:08:03.958851+00:00"
+}

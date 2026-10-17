@@ -1,0 +1,52 @@
+{
+  "id": "ar-ushuaia-landscape",
+  "cityId": "ar-ushuaia",
+  "name": "우수아이아",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ar-ushuaia-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ar-ushuaia-landscape.json",
+  "originalSha256": "ac4ae325e062f7aba08f334b9c565d164b68bcc1a69fbba6c65291adc43a4082",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    31,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ar-ushuaia.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 91502,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "26b173bd1ab5ef69c35baa9c340a8392e0c15685262a48fce8161b40822fcfce",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

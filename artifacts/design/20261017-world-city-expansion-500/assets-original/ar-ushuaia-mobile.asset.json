@@ -1,0 +1,52 @@
+{
+  "id": "ar-ushuaia-mobile",
+  "cityId": "ar-ushuaia",
+  "name": "우수아이아",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ar-ushuaia-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ar-ushuaia-mobile.json",
+  "originalSha256": "a14c6481db5ab8c6cda78644c1c3b22c517e9a3090f205166513b49d2977b85a",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    37,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ar-ushuaia-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 68158,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "15fd8aaaaf59794868b442a92559ef80ce6dafe4736c25e089e75c330da22720",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "kr-naju-landscape",
+  "cityId": "kr-naju",
+  "name": "나주",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "전남권",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-naju-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-naju-landscape.json",
+  "originalSha256": "78594d949b7b7131fc0c039fc5ad1b02a81b2a3e79ef614e4097753480f21685",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    25,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-naju.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 118726,
+  "assetSha256": "2f9ba909ab88028eb0767cc531f43632c14a1ec048f1aaf1ac399192b0a56917",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

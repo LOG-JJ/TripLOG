@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-paju-landscape",
+  "cityId": "kr-paju",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Paju, South Korea: Heyri Art Village, a few distinctive low-rise contemporary gallery buildings among trees and quiet pedestrian lanes. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "69bcf780b0d99a8631d1ecce6650d891b22805c0dbbd83e38980061ea5a37b94",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-paju-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-45de2eee-26fa-483a-a709-5bce283d8110.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-45de2eee-26fa-483a-a709-5bce283d8110.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-paju-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "1d5a563075799441d0f5c0da274c74a2fb74a062924bb8dc20e81c61a6e96625",
+  "savedSha256": "1d5a563075799441d0f5c0da274c74a2fb74a062924bb8dc20e81c61a6e96625",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:15:42Z",
+  "toolCallId": "exec-45de2eee-26fa-483a-a709-5bce283d8110",
+  "savedAt": "2026-10-17T05:16:08.566141+00:00"
+}

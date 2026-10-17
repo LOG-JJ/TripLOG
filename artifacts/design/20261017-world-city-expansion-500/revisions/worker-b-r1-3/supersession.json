@@ -1,0 +1,74 @@
+[
+  {
+    "jobId": "ve-coro-landscape",
+    "reason": "An unrelated large cathedral was added although the motif specifies earthen houses and cobbled streets.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ve-coro-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-3/ve-coro-landscape/jobs/ve-coro-landscape.json",
+        "sha256": "a0aba56ff79cb07c1814ff3598b40d4e87a4deb098854bcfc148017e31c4eb81"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ve-coro-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-3/ve-coro-landscape/jobs/ve-coro-landscape.prompt.txt",
+        "sha256": "58bd43e6d36e19e26a946e808570fa2ca682c226f53c9793889531c5a45c9399"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ve-coro-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-3/ve-coro-landscape/originals/ve-coro-landscape.png",
+        "sha256": "6bf531c40e41517bb72520b3159512e09996b5c7ad18f4973cba92d3ab44d523"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ve-coro-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-3/ve-coro-landscape/originals/ve-coro-landscape.json",
+        "sha256": "2706857928b827d62558aff5e52718a80469b44dc9d5d42ac26092d578ab9f80"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ve-coro-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-3/ve-coro-landscape/originals/ve-coro-landscape.asset.json",
+        "sha256": "fe2505aa394fec2e4922d8371a6ebe02be1677e7c3aed461f3834ed1cb917c8a"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/ve-coro.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-3/ve-coro-landscape/runtime/ve-coro.webp",
+        "sha256": "c3c08285a887d4c15400e6eb2a7f04e4abd208b1eabb6705dca0fe08d7f202c5"
+      }
+    ]
+  },
+  {
+    "jobId": "ve-coro-mobile",
+    "reason": "An unrelated large cathedral was added although the motif specifies earthen houses and cobbled streets.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ve-coro-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-3/ve-coro-mobile/jobs/ve-coro-mobile.json",
+        "sha256": "f37afe385791278cb374c6e11cc78e54f2fa0dbf98c9c9310372c889117430f4"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ve-coro-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-3/ve-coro-mobile/jobs/ve-coro-mobile.prompt.txt",
+        "sha256": "718d950b6c31417a543ad1dfc12646cce7707186ed2383f084dab281925fefa8"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ve-coro-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-3/ve-coro-mobile/originals/ve-coro-mobile.png",
+        "sha256": "1d3502688f77ff49854858428ca62768c055de0822d2756acbe2d0cf2041b844"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ve-coro-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-3/ve-coro-mobile/originals/ve-coro-mobile.json",
+        "sha256": "baa971e76f0f90f4161bda442fd0e85b853a7318da9eee8063ced53a19a8c707"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ve-coro-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-3/ve-coro-mobile/originals/ve-coro-mobile.asset.json",
+        "sha256": "10f7f427578a0811521af28090e63a3b6a0ea784859ad148bd35aa8b65595911"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/ve-coro-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-3/ve-coro-mobile/runtime/ve-coro-mobile.webp",
+        "sha256": "35ef8446d8a3971d7fd73e4064f34d560411083290436362e727acee5eebe8e4"
+      }
+    ]
+  }
+]

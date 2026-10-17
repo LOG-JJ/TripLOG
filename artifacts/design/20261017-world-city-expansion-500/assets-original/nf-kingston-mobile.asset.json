@@ -1,0 +1,52 @@
+{
+  "id": "nf-kingston-mobile",
+  "cityId": "nf-kingston",
+  "name": "킹스턴(노퍽)",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "오세아니아",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/nf-kingston-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/nf-kingston-mobile.json",
+  "originalSha256": "d1eb58eb0f1f0b7ebe4e1430e41df1cc3ad9c764719bdb7a2ddb5597913044ad",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    4,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/nf-kingston-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 117628,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "839ce9ee2452a4d77e28764bce119ac8e549fd05a02f9174669eb4132c2114bb",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

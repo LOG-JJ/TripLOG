@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-boseong-mobile",
+  "reason": "Unexpected open water next to inland tea fields; retain original and request dry hillside composition",
+  "files": [
+    {
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\assets-original\\kr-boseong-mobile.png",
+      "destination": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\pilot-attempts\\kr-boseong-mobile-01\\kr-boseong-mobile.png",
+      "sha256": "c9a8f87dbe8ce5d9d92c98607779802ff3b545ff8b81b904ed2d66ea62ad473b"
+    },
+    {
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\assets-original\\kr-boseong-mobile.json",
+      "destination": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\pilot-attempts\\kr-boseong-mobile-01\\kr-boseong-mobile.json",
+      "sha256": "fa3c58ffeda17626df33fe3a190b9baaa40b8e918931f4f5deeb5130fe23c428"
+    },
+    {
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\assets-original\\kr-boseong-mobile.asset.json",
+      "destination": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\pilot-attempts\\kr-boseong-mobile-01\\kr-boseong-mobile.asset.json",
+      "sha256": "98c1d3af38d5731419c5534c0451233ffe622124b1d34715a699dcf437e7658c"
+    },
+    {
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\src\\assets\\trip-scenes\\cities\\v5\\kr-boseong-mobile.webp",
+      "destination": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\pilot-attempts\\kr-boseong-mobile-01\\kr-boseong-mobile.webp",
+      "sha256": "046a8b4ed46d4553825785e0e1741d582b346dc9bd2c45e7ea8f73f1fb6e7084"
+    }
+  ]
+}

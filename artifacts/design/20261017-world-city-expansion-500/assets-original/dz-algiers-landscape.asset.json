@@ -1,0 +1,52 @@
+{
+  "id": "dz-algiers-landscape",
+  "cityId": "dz-algiers",
+  "name": "알제",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/dz-algiers-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/dz-algiers-landscape.json",
+  "originalSha256": "a93df0007c8d50ac9124a2830da7ef58eb073fa12157e2437321718d518c7ed6",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/dz-algiers.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 105728,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "744790fb25a46c54b51b8fb1a0a7f7f8efb969d90412c0fa7a7b9f5a3df0685d",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

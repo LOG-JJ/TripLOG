@@ -1,0 +1,39 @@
+{
+  "id": "kr-uijeongbu-landscape",
+  "cityId": "kr-uijeongbu",
+  "cityName": "의정부",
+  "englishName": "Uijeongbu",
+  "kind": "city",
+  "group": "경기",
+  "variant": "landscape",
+  "phase": "expansion",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Uijeongbu, South Korea: a compact Uijeongbu light-rail train traveling along a raised concrete guideway, with the elevated track forming the main sweeping line of the scene. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "87487b555882e9cf04422d64d443d201ef1c5cfb918199ebcb8473dfa1574b8e",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/jobs/kr-uijeongbu-landscape.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-uijeongbu-landscape.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-uijeongbu-landscape.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-uijeongbu-landscape.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v5/kr-uijeongbu.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "motif": "a compact Uijeongbu light-rail train traveling along a raised concrete guideway, with the elevated track forming the main sweeping line of the scene",
+  "proposedMotif": "의정부 경전철·고가선로",
+  "motifSource": {
+    "title": "경기관광공사 2025 관광 가이드북",
+    "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+    "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+    "pages": "72–73"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone hand-drawn destination illustration of Uijeongbu, South Korea: a compact Uijeongbu light-rail train traveling along a raised concrete guideway, with the elevated track forming the main sweeping line of the scene. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+    "transparent_background": true
+  },
+  "provenanceRule": "The --source argument must be the exact local original path returned by this job's image_gen call. Never search for a latest file.",
+  "promptRevision": "pilot-subject-qa-20261017"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "kr-andong-mobile",
+  "cityId": "kr-andong",
+  "name": "안동",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경북",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-andong-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-andong-mobile.json",
+  "originalSha256": "cad2c30ea4862b9e59c73d6b9ca03219941c20fe4ee47d21270ea98a29003acc",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    65,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-andong-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 84252,
+  "assetSha256": "6da2b5c9cac40899a060bcd07ea32736bbbe70dd725bd0db6f83856bed96afc3",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "gl-nuuk-landscape",
+  "cityId": "gl-nuuk",
+  "name": "누크",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "북극",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gl-nuuk-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gl-nuuk-landscape.json",
+  "originalSha256": "e23143445b3c197081f6da64ac4b5a4200ad3646828334d9efc3c2b70f13be46",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gl-nuuk.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 113654,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "8b48c848259e0871ec10ee6cefc983fb37637f7b4dd2bee7b6e7b60b357b236e",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

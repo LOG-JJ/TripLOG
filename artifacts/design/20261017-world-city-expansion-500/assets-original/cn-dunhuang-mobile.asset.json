@@ -1,0 +1,52 @@
+{
+  "id": "cn-dunhuang-mobile",
+  "cityId": "cn-dunhuang",
+  "name": "둔황",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cn-dunhuang-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cn-dunhuang-mobile.json",
+  "originalSha256": "65af9c4d1d5385d67c3ac0d70fd20bd17e5968b040ed784f23926f9bca3df5db",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    116,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cn-dunhuang-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 98818,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "0fc2be243e647681b8cd9c6db7505446786c76edc31a29620c9a83f6a4f3d24e",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

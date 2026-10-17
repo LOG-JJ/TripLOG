@@ -1,0 +1,26 @@
+{
+  "jobId": "gb-liverpool-mobile",
+  "cityId": "gb-liverpool",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Liverpool, United Kingdom: the Royal Liver Building's twin clock towers, with the River Mersey waterfront. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "5d8ca5ef5aa654eabcdd6f7acf2a1adcd8afcb075afb4ae30c74957995de62d3",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-liverpool-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-b184a345-e5a7-4dc4-8bf3-56310085b232.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-b184a345-e5a7-4dc4-8bf3-56310085b232.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/gb-liverpool-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "7f8f09716a5d2abbe2bbc5bd61569ef4370ea7166e1013502220fd70533fcdb7",
+  "savedSha256": "7f8f09716a5d2abbe2bbc5bd61569ef4370ea7166e1013502220fd70533fcdb7",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:05:29.798Z",
+  "toolCallId": "exec-b184a345-e5a7-4dc4-8bf3-56310085b232",
+  "savedAt": "2026-10-17T06:09:45.311021+00:00"
+}

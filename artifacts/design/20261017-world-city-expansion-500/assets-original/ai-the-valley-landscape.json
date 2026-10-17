@@ -1,0 +1,26 @@
+{
+  "jobId": "ai-the-valley-landscape",
+  "cityId": "ai-the-valley",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of The Valley, Anguilla: Wallblake House, the surviving historic plantation house in The Valley, with its shaded veranda and a small tropical garden. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette. Landmark appearance: For Wallblake House, show one modest white or pale warm wooden upper floor raised on a rough stone foundation, a steep dark hipped shingle roof, shuttered windows and an exterior stair to a shaded veranda. Do not turn it into a grand mansion with tall columns or multiple full upper floors.",
+  "promptSha256": "72d07fb8af21fe046b31a95b2559157f66978d13d044b8e34f779a2b8d18065f",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ai-the-valley-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-9a6f4769-5a93-44a1-827a-cd295e427d01.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-9a6f4769-5a93-44a1-827a-cd295e427d01.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/ai-the-valley-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "c4ffba1cbd7a22f2d0f1b7bcac8f7907c0eefe8af2e95184695e5df052317b0e",
+  "savedSha256": "c4ffba1cbd7a22f2d0f1b7bcac8f7907c0eefe8af2e95184695e5df052317b0e",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:36:28.167Z",
+  "toolCallId": "exec-9a6f4769-5a93-44a1-827a-cd295e427d01",
+  "savedAt": "2026-10-17T07:40:46.256167+00:00"
+}

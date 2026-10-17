@@ -1,0 +1,26 @@
+{
+  "jobId": "de-bamberg-landscape",
+  "cityId": "de-bamberg",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Bamberg, Germany: the Old Town Hall on its river island, with the bridges over the Regnitz. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Recompose Bamberg Old Town Hall smaller: the highest tip of its tower finial must sit below y=16% and the complete town-hall building must fit inside x=22% to x=78%. Keep both bridge abutments visible before the riverbanks, with unbroken complete arches. Water and low bank foliage continue to the right and bottom edges.",
+  "promptSha256": "ba86a031be8526e7794a98e178519fbfada286ff6d2064dd21772ab9b8010290",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/de-bamberg-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-66e62c3f-0180-4d7b-b406-13f097dfc32b.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-66e62c3f-0180-4d7b-b406-13f097dfc32b.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/de-bamberg-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "7214c54f2b9dd9056dba96b293f36feb4ca55d4a0cdbb47e48e359db6594cddf",
+  "savedSha256": "7214c54f2b9dd9056dba96b293f36feb4ca55d4a0cdbb47e48e359db6594cddf",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:21:01.089Z",
+  "toolCallId": "exec-66e62c3f-0180-4d7b-b406-13f097dfc32b",
+  "savedAt": "2026-10-17T07:24:58.476070+00:00"
+}

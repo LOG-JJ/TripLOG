@@ -1,0 +1,52 @@
+{
+  "id": "lc-castries-landscape",
+  "cityId": "lc-castries",
+  "name": "캐스트리스",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/lc-castries-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/lc-castries-landscape.json",
+  "originalSha256": "a8916082fb0a3f7dc03b94ba2c898dcf2e51a0951eb6ab7dc3c65c112c05c206",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    39,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/lc-castries.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 134000,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e3207caf61f8ab7b75ae26a2f1c0cc58937391663c439b66562de4448f59de85",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

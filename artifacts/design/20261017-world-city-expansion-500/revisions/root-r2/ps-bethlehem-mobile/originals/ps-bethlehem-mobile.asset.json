@@ -1,0 +1,52 @@
+{
+  "id": "ps-bethlehem-mobile",
+  "cityId": "ps-bethlehem",
+  "name": "베들레헴",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ps-bethlehem-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ps-bethlehem-mobile.json",
+  "originalSha256": "448a15909a9e0c53e0b2e6544ceec6d554df9a9b236ba7018fede919d143df06",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ps-bethlehem-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 84646,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "eb5ee40d7449d6398d4a5c30419b1697fe26b9dd56ab8ff802de63d5a5442879",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

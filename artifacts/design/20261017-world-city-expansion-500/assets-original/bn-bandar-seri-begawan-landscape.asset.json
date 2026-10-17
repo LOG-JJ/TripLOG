@@ -1,0 +1,52 @@
+{
+  "id": "bn-bandar-seri-begawan-landscape",
+  "cityId": "bn-bandar-seri-begawan",
+  "name": "반다르스리브가완",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bn-bandar-seri-begawan-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bn-bandar-seri-begawan-landscape.json",
+  "originalSha256": "ebc7ed70d48e8daf001db25de66ab604dce151faedd429275896817c7d03f966",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bn-bandar-seri-begawan.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 107188,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "fd55c86d35f679c2a18d8264da1db7c65134b89036c3182a86b852dd739d0b18",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

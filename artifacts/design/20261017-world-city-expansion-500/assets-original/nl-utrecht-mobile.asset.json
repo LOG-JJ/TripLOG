@@ -1,0 +1,52 @@
+{
+  "id": "nl-utrecht-mobile",
+  "cityId": "nl-utrecht",
+  "name": "위트레흐트",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/nl-utrecht-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/nl-utrecht-mobile.json",
+  "originalSha256": "4bf0d2587fea17dec6e5067645370334458df4f7ba3d7c11eb4e103b784cd4b3",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/nl-utrecht-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 93918,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e51188cf38b0829f59e20bb608678fc90af7c95d950e129675b7394bcc7bb1f1",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

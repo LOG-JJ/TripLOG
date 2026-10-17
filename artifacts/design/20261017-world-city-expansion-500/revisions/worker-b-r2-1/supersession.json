@@ -1,0 +1,100 @@
+[
+  {
+    "jobId": "do-santo-domingo-mobile",
+    "reason": "Source aspect 1159x1358 exceeded 4.5 percent guard and right facade was clipped.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/do-santo-domingo-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-1/do-santo-domingo-mobile/jobs/do-santo-domingo-mobile.json",
+        "sha256": "cf1f9c3385069dff05e5bd3d77790ae3161c6fe33f25c9372666af9184bc5905"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/do-santo-domingo-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-1/do-santo-domingo-mobile/jobs/do-santo-domingo-mobile.prompt.txt",
+        "sha256": "11db22bdc6c37c29c7b15f279e452be0adbd5c14c7678cef5c714320a5b443e0"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/do-santo-domingo-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-1/do-santo-domingo-mobile/originals/do-santo-domingo-mobile.png",
+        "sha256": "8a26a2546399d91955e9f8ee50293aa4990d97a290d68418413580f1e340445e"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/do-santo-domingo-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-1/do-santo-domingo-mobile/originals/do-santo-domingo-mobile.json",
+        "sha256": "4e9b6d9b04ca265275c8bee497d79bbcb09c6417c52dc0193cb6d36d314977bc"
+      }
+    ]
+  },
+  {
+    "jobId": "sv-san-salvador-landscape",
+    "reason": "Invented palace domes; actual National Palace has a columned triangular central pediment and flat balustrade.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sv-san-salvador-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-1/sv-san-salvador-landscape/jobs/sv-san-salvador-landscape.json",
+        "sha256": "0c0f4fe5f9afce35d54112e8c7ea7ba3548327e30285edffc2df8a008e01feeb"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sv-san-salvador-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-1/sv-san-salvador-landscape/jobs/sv-san-salvador-landscape.prompt.txt",
+        "sha256": "8d0714b0b2e251a83d0308e389d25fe5f43209ed834cf34d02e8bee52341710c"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sv-san-salvador-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-1/sv-san-salvador-landscape/originals/sv-san-salvador-landscape.png",
+        "sha256": "61633585d1f319444d013de124afbd60c19d2666e2bcf1d6d6c4f81473acc2a4"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sv-san-salvador-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-1/sv-san-salvador-landscape/originals/sv-san-salvador-landscape.json",
+        "sha256": "311fe1abc3d3599ccfddb06460bcffb37346896cb039ee946d8df44753f8ae73"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sv-san-salvador-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-1/sv-san-salvador-landscape/originals/sv-san-salvador-landscape.asset.json",
+        "sha256": "6c51f2593f9cde0730d64c61e43243da66ccfd087d300bf37f9f54b0cd9aff15"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/sv-san-salvador.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-1/sv-san-salvador-landscape/runtime/sv-san-salvador.webp",
+        "sha256": "4b5868adf048c6dc34fe75345d5ceb984be74bf20707347c5c45663b5d9041e3"
+      }
+    ]
+  },
+  {
+    "jobId": "sv-san-salvador-mobile",
+    "reason": "Invented palace domes; actual National Palace has a columned triangular central pediment and flat balustrade.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sv-san-salvador-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-1/sv-san-salvador-mobile/jobs/sv-san-salvador-mobile.json",
+        "sha256": "1e79e9e60f52db00b6d49ae06e52a268c9f897799e73fd541188d3ffecadfe6b"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sv-san-salvador-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-1/sv-san-salvador-mobile/jobs/sv-san-salvador-mobile.prompt.txt",
+        "sha256": "9f8962b8385079baf46e15427a07465392b5d1d0f278e1c407dd55271e0b0ad3"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sv-san-salvador-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-1/sv-san-salvador-mobile/originals/sv-san-salvador-mobile.png",
+        "sha256": "e8cb99615c8e09a69d69da2cd5e2a749845d218127c2cfad2577df427fd772ce"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sv-san-salvador-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-1/sv-san-salvador-mobile/originals/sv-san-salvador-mobile.json",
+        "sha256": "49a7370bce491116d1723c8cf8b8ea5d06b4cfa9517b8beacb168bbe51368d20"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sv-san-salvador-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-1/sv-san-salvador-mobile/originals/sv-san-salvador-mobile.asset.json",
+        "sha256": "bb0ffe1ca9ca5df5ee8e78b13cbce28810f71ba80cb312014c0c15321b98bb8e"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/sv-san-salvador-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-1/sv-san-salvador-mobile/runtime/sv-san-salvador-mobile.webp",
+        "sha256": "f7ff6c01189a5c0da7b497f0e06b0e9daf32ce3746fdd33d244d62c1e668521e"
+      }
+    ]
+  }
+]

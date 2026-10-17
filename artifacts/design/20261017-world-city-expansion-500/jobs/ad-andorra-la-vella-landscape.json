@@ -1,0 +1,39 @@
+{
+  "id": "ad-andorra-la-vella-landscape",
+  "cityId": "ad-andorra-la-vella",
+  "cityName": "안도라라베야",
+  "englishName": "Andorra la Vella",
+  "countryCode": "AD",
+  "kind": "city",
+  "group": "Europe",
+  "variant": "landscape",
+  "phase": "core-500",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone destination illustration of Casa de la Vall in Andorra la Vella, Andorra. Show the compact, broad three-storey grey local-stone manor house, its dark slate pitched roof and small rounded corner watch-turrets attached to the building. Set it on a dry paved terrace above the valley with Pyrenean slopes behind it. The house has a restrained rectangular facade, small shuttered windows and a simple arched entrance. There is no river, stream, bridge, moat or tall detached castle tower in this scene. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the local supporting dry ground or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Draw the entire principal building at a deliberately modest size, fully between x=16% and x=82% of the canvas, with its highest point below y=16%. Leave transparent space around its identifying outer silhouette. The supporting terrain and plants continue to the right and bottom edges. Do not crop any part of the main landmark. ",
+  "promptSha256": "a554ea3452f4b7930d26a3b23b8620d2a4099de385b74e7ee357e8e161b9af22",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/jobs/ad-andorra-la-vella-landscape.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/ad-andorra-la-vella-landscape.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/ad-andorra-la-vella-landscape.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/ad-andorra-la-vella-landscape.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v6/ad-andorra-la-vella.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "source": {
+    "title": "Visit Andorra — Must-visit spots in Andorra la Vella",
+    "url": "https://visitandorra.com/en/culture/must-visit-spots-in-andorra-la-vella/"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone destination illustration of Casa de la Vall in Andorra la Vella, Andorra. Show the compact, broad three-storey grey local-stone manor house, its dark slate pitched roof and small rounded corner watch-turrets attached to the building. Set it on a dry paved terrace above the valley with Pyrenean slopes behind it. The house has a restrained rectangular facade, small shuttered windows and a simple arched entrance. There is no river, stream, bridge, moat or tall detached castle tower in this scene. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the local supporting dry ground or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Draw the entire principal building at a deliberately modest size, fully between x=16% and x=82% of the canvas, with its highest point below y=16%. Leave transparent space around its identifying outer silhouette. The supporting terrain and plants continue to the right and bottom edges. Do not crop any part of the main landmark. ",
+    "transparent_background": true
+  },
+  "revision": {
+    "number": 2,
+    "reason": "Remove an unrequested stream/bridge and make both variants depict the compact stone manor with attached small corner turrets.",
+    "previousFiles": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r2-architecture-framing/ad-andorra-la-vella-landscape"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ug-entebbe-landscape",
+  "cityId": "ug-entebbe",
+  "name": "엔테베",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ug-entebbe-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ug-entebbe-landscape.json",
+  "originalSha256": "659c488008a7dd05660851c10033b14cc91e14795513d7db7e3d4a2395b61027",
+  "sourceSize": [
+    1619,
+    972
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1619,
+    972
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ug-entebbe.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 135546,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "bcc9e3094fc2e6cbcab99fbd7b4e76558b724ae1feb054e2f01e02ea6525742b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "wf-mata-utu-mobile",
+  "cityId": "wf-mata-utu",
+  "cityName": "마타우투",
+  "englishName": "Mata Utu",
+  "countryCode": "WF",
+  "kind": "town",
+  "group": "오세아니아",
+  "variant": "mobile",
+  "phase": "country-coverage",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone destination illustration of Mata Utu, Wallis & Futuna: Mata-Utu's Cathedral of Our Lady of the Assumption, a substantial volcanic-stone church beside the open seaside square, with palms and blue lagoon beyond. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Use a deliberately compact complete cathedral front in the middle-right, with visible space around all of the building contours. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette. Exact view and architecture: draw a straight-on FRONT ELEVATION of Mata-Utu Cathedral, not a three-quarter or side view. Show no long side wall, no rear nave extension and no roof wing projecting sideways. The entire front consists of two stout square towers with low parapets, a central gable topped by a small Mary statue, and three principal arched entrance openings. Use dark volcanic-stone blocks with pale mortar and pale trim; suggest the muted red pitched roof only as a small patch behind the center gable. The whole church, from its leftmost to rightmost wall, occupies no more than 55 percent of the canvas width and ends before the 86-percent horizontal position. This smaller scale is mandatory. The two towers and statue must be completely visible. Put clear transparent space immediately beside the entire right church outline, with only low garden plants and the seaside square reaching the right and bottom edges. Keep palms smaller and secondary beside the building, with no object overlapping its outer right silhouette.",
+  "promptSha256": "eec0b35099937bfb86a3a166d0f53f9d11b9b7acef32fb767b58165236bd38c5",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/jobs/wf-mata-utu-mobile.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/wf-mata-utu-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/wf-mata-utu-mobile.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/wf-mata-utu-mobile.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v6/wf-mata-utu-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "source": {
+    "title": "Atout France — Wallis and Futuna / Mata Utu cathedral",
+    "url": "https://www.france.fr/fr/destination/iles-de-wallis-et-futuna/"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone destination illustration of Mata Utu, Wallis & Futuna: Mata-Utu's Cathedral of Our Lady of the Assumption, a substantial volcanic-stone church beside the open seaside square, with palms and blue lagoon beyond. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Use a deliberately compact complete cathedral front in the middle-right, with visible space around all of the building contours. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette. Exact view and architecture: draw a straight-on FRONT ELEVATION of Mata-Utu Cathedral, not a three-quarter or side view. Show no long side wall, no rear nave extension and no roof wing projecting sideways. The entire front consists of two stout square towers with low parapets, a central gable topped by a small Mary statue, and three principal arched entrance openings. Use dark volcanic-stone blocks with pale mortar and pale trim; suggest the muted red pitched roof only as a small patch behind the center gable. The whole church, from its leftmost to rightmost wall, occupies no more than 55 percent of the canvas width and ends before the 86-percent horizontal position. This smaller scale is mandatory. The two towers and statue must be completely visible. Put clear transparent space immediately beside the entire right church outline, with only low garden plants and the seaside square reaching the right and bottom edges. Keep palms smaller and secondary beside the building, with no object overlapping its outer right silhouette.",
+    "transparent_background": true
+  },
+  "preflightRevision": "worker-b-coverage-preflight-r1",
+  "preflightSources": [
+    "https://www.france.fr/fr/destination/iles-de-wallis-et-futuna/",
+    "https://www.wallis-et-futuna.wf/voyager"
+  ],
+  "revision": {
+    "number": 3,
+    "reason": "Second oblique view still extended rear nave to right edge; request compact strict front elevation with no side wall",
+    "previousFiles": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-t2i-r2/wf-mata-utu-mobile"
+  }
+}

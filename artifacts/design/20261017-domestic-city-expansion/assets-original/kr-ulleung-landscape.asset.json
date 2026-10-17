@@ -1,0 +1,51 @@
+{
+  "id": "kr-ulleung-landscape",
+  "cityId": "kr-ulleung",
+  "name": "울릉도",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "기존 군과 섬 보존",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-ulleung-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-ulleung-landscape.json",
+  "originalSha256": "6943fdeaf586d6e9af976f3b18eb9548bda13aacd31404dc0d719526e183d874",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-ulleung.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 118640,
+  "assetSha256": "f67b15b4c780ae94a06ddc52864aeb48a99c5f67f74d8c993ac33c26d7ebb3d4",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

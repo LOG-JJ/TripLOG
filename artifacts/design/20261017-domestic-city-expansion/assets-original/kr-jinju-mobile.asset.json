@@ -1,0 +1,51 @@
+{
+  "id": "kr-jinju-mobile",
+  "cityId": "kr-jinju",
+  "name": "진주",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경남",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jinju-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jinju-mobile.json",
+  "originalSha256": "b4487ed25f131908557a3adb8b26ffaf1dbffe2da9043634b1cc0aa57261cbb9",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    67,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-jinju-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 88258,
+  "assetSha256": "5ee402918fd707faedd89a94161af7c1ba711ca05af19cfa36c7bb7a4cfcd299",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

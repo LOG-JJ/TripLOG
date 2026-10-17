@@ -1,0 +1,52 @@
+{
+  "id": "my-kuching-mobile",
+  "cityId": "my-kuching",
+  "name": "쿠칭",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/my-kuching-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/my-kuching-mobile.json",
+  "originalSha256": "75eebb7d4ae685a4d406a88cf5e96db43ab54e50a9a818d3c27e5f4a4f0711db",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    31,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/my-kuching-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 95282,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "df076684a90490665ecbaa2faca803cb582ed62a23a22df6dba4ad66e9274ed2",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

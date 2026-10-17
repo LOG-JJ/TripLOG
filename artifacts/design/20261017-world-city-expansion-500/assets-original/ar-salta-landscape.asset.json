@@ -1,0 +1,52 @@
+{
+  "id": "ar-salta-landscape",
+  "cityId": "ar-salta",
+  "name": "살타",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ar-salta-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ar-salta-landscape.json",
+  "originalSha256": "569fe296ac8d5787417e30b2ccb7a7b440567c4538588d296e62f84ea4901b0f",
+  "sourceSize": [
+    1619,
+    972
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    27,
+    1619,
+    972
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ar-salta.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 127030,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "12faa226a3f2863cd809cea85d909d298538708f0d89fee01c7baefe5097934e",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

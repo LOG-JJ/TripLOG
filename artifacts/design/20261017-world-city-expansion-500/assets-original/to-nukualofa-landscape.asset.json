@@ -1,0 +1,52 @@
+{
+  "id": "to-nukualofa-landscape",
+  "cityId": "to-nukualofa",
+  "name": "누쿠알로파",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/to-nukualofa-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/to-nukualofa-landscape.json",
+  "originalSha256": "2e433c6f3fb283f4f9cd1364b573dcb5698380a810e0e427520b8a69191c46f3",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/to-nukualofa.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 142318,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "0d19cc25b334458875c0e75279154f8c47c74d0526f148c8492056795693dbea",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

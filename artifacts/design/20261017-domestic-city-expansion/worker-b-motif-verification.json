@@ -1,0 +1,69 @@
+{
+  "verifiedOn": "2026-10-17",
+  "imageInputs": [],
+  "mode": "T2I; source documents used only for factual text, never supplied as image inputs",
+  "revisions": [
+    {
+      "id": "kr-gwacheon-landscape",
+      "beforePromptSha256": "74ab533d7cf6b72ef09a332babfc738a0dd42bd4dfdec7a51a9a56121e976587",
+      "afterPromptSha256": "bc7a1fd6274729ec11716ab96c14be7c6bb7fbfc359f8b976214947bb9bc4fe9",
+      "source": {
+        "title": "AURI AURUM - 국립과천과학관",
+        "url": "https://www.aurum.re.kr/Bits/BuildingDoc.aspx?mm=4&num=6354&ss=1",
+        "evidence": "건축공간연구원 아카이브에서 과천 소재·설계사·비행체에서 착안한 건축 개념을 확인. 과학관 단독 주제로 축소."
+      }
+    },
+    {
+      "id": "kr-gwacheon-mobile",
+      "beforePromptSha256": "f909e9c6c08ab481253b40b204255ffe742e644e2860d3d0245f64eebe1bd9c0",
+      "afterPromptSha256": "6f04cb1d28a199c455b07cf91e6c1232cd7f2d8240f1a5fe1cb657740e848a18",
+      "source": {
+        "title": "AURI AURUM - 국립과천과학관",
+        "url": "https://www.aurum.re.kr/Bits/BuildingDoc.aspx?mm=4&num=6354&ss=1",
+        "evidence": "건축공간연구원 아카이브에서 과천 소재·설계사·비행체에서 착안한 건축 개념을 확인. 과학관 단독 주제로 축소."
+      }
+    },
+    {
+      "id": "kr-taebaek-landscape",
+      "beforePromptSha256": "814dc2651fe46c914ff05a556d632b44ba063915fe46037e26e36f600ffebb8e",
+      "afterPromptSha256": "ab7a5b12efb5361ce96ffc951337438cd19815314dd6bef18520c913b713c509",
+      "source": {
+        "title": "한국관광공사 태백 여행",
+        "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=0b0bf610-ead2-45b9-8b36-95374735f2a1",
+        "evidence": "본문에서 빙글빙글 데크길·33m 전망대·산능선 조망을 확인. 태백관광 2026 안내에서도 33m와 하늘길을 교차 확인.",
+        "additionalUrl": "https://tour.taebaek.go.kr/page/tour/files/2026_tourmap.pdf"
+      }
+    },
+    {
+      "id": "kr-taebaek-mobile",
+      "beforePromptSha256": "92b1566d4a701a0ba435fa142adc13c08da8a40da44c6091876e3a3a87ebe393",
+      "afterPromptSha256": "8cb6914856e6b28b5fa1073e10a51604d91faf4a9b2e88ddd59e071193a07b3d",
+      "source": {
+        "title": "한국관광공사 태백 여행",
+        "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=0b0bf610-ead2-45b9-8b36-95374735f2a1",
+        "evidence": "본문에서 빙글빙글 데크길·33m 전망대·산능선 조망을 확인. 태백관광 2026 안내에서도 33m와 하늘길을 교차 확인.",
+        "additionalUrl": "https://tour.taebaek.go.kr/page/tour/files/2026_tourmap.pdf"
+      }
+    },
+    {
+      "id": "kr-jeju-city-landscape",
+      "beforePromptSha256": "ef0be9dd2ee9ebc96538e700277e5695d1acb64261b6eb8d837c4f6f617054ad",
+      "afterPromptSha256": "6e6a1c3c504655d3586b7c4a5ff710614198f32cba34fdce302be49d530d442f",
+      "source": {
+        "title": "제주관광공사 용연구름다리",
+        "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012854&menuId=DOM_000001718002000000",
+        "evidence": "제주시 용담동·기암절벽 사이의 현수교 형태·너비2.2m 길이42m·바다로 연결되는 계곡 확인."
+      }
+    },
+    {
+      "id": "kr-jeju-city-mobile",
+      "beforePromptSha256": "8574516d664959f8963f9f0b221dd68f81e89a79ef53651452db9fe333c4bd00",
+      "afterPromptSha256": "972a6bf27113df7bb81f6b47fcea474c76107b7dea875b63890f2b1584b79602",
+      "source": {
+        "title": "제주관광공사 용연구름다리",
+        "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_300000000012854&menuId=DOM_000001718002000000",
+        "evidence": "제주시 용담동·기암절벽 사이의 현수교 형태·너비2.2m 길이42m·바다로 연결되는 계곡 확인."
+      }
+    }
+  ]
+}

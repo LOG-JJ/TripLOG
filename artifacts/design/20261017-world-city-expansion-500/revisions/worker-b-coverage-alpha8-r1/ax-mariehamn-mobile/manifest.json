@@ -1,0 +1,37 @@
+{
+  "jobId": "ax-mariehamn-mobile",
+  "changed": true,
+  "reason": "Remove sub-visible right/bottom fringe so alpha>=8 reaches the header edge",
+  "threshold": 8,
+  "beforeGaps": [
+    2,
+    0
+  ],
+  "afterGaps": [
+    0,
+    0
+  ],
+  "sourceAlpha8Bounds": [
+    6,
+    180,
+    1116,
+    1401
+  ],
+  "sourceOriginalSha256": "e8effbac7faf357d788e5df6f4c58ef625d6cd50d4ea151993b81d611008126a",
+  "previousAssetSha256": "c617b865f1ccb0147fd3d37d3ebbf184411ef211fe73e8e888b53f3bab6af4d7",
+  "newAssetSha256": "80dc442dda303b89b977a5c0f997aaf7970d0cfaae18ef991b89deaa449c7fe8",
+  "technicalRefits": [],
+  "preservedFiles": [
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v6/ax-mariehamn-mobile.webp",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-alpha8-r1/ax-mariehamn-mobile/ax-mariehamn-mobile.webp",
+      "sha256": "c617b865f1ccb0147fd3d37d3ebbf184411ef211fe73e8e888b53f3bab6af4d7"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ax-mariehamn-mobile.asset.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-alpha8-r1/ax-mariehamn-mobile/ax-mariehamn-mobile.asset.json",
+      "sha256": "0c8f436ec6da1fec7a5dbbccdffd4672ef64f8eafd063e5921916db0fa91c0ab"
+    }
+  ],
+  "correctedAt": "2026-10-17T07:42:06.179939+00:00"
+}

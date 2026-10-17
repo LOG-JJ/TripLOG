@@ -1,0 +1,52 @@
+{
+  "id": "mm-yangon-mobile",
+  "cityId": "mm-yangon",
+  "name": "양곤",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mm-yangon-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mm-yangon-mobile.json",
+  "originalSha256": "b91f12cdc3330dddacf2b5b94f6ed4fda01ded3974c77bf9cd642ea885234139",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    40,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mm-yangon-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 92012,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "1bc14d62d1695b24b16e1b928c7060b80fb0bdf84067fe0e4865957c89090f24",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

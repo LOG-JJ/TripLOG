@@ -1,0 +1,26 @@
+{
+  "jobId": "li-vaduz-landscape",
+  "cityId": "li-vaduz",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Vaduz, Liechtenstein: Vaduz Castle on its wooded hillside, with the Rhine valley slopes. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "4a9aac55d94020e9f254798c5d3ae1a5f1a2cbc03ee4b7cacece840b457bd0ad",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/li-vaduz-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-8084babd-3a94-4ace-85d1-e2a4be925afd.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-8084babd-3a94-4ace-85d1-e2a4be925afd.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/li-vaduz-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "e9639b8581b16b13b3d9183e85c9ff3d187297387330a5bc5a6b77649d25628c",
+  "savedSha256": "e9639b8581b16b13b3d9183e85c9ff3d187297387330a5bc5a6b77649d25628c",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:06:10.439Z",
+  "toolCallId": "exec-8084babd-3a94-4ace-85d1-e2a4be925afd",
+  "savedAt": "2026-10-17T06:09:37.763876+00:00"
+}

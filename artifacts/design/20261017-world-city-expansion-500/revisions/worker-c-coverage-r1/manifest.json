@@ -1,0 +1,161 @@
+{
+  "count": 4,
+  "records": [
+    {
+      "jobId": "bl-gustavia-landscape",
+      "reason": "Remove the unverified domed stone sentry tower; retain only the low ruins and cannon supported by the tourism authority text.",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/bl-gustavia-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/bl-gustavia-landscape/bl-gustavia-landscape.json",
+          "sha256": "7b160708b145666c9534b0df8169fcaa2e392f07674d7f3cc53929c279c7047a"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/bl-gustavia-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/bl-gustavia-landscape/bl-gustavia-landscape.prompt.txt",
+          "sha256": "b191d77392f775b0dc3de8de0c37886b55b2c2f6510ea20c03d6166bab168004"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/bl-gustavia-landscape.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/bl-gustavia-landscape/bl-gustavia-landscape.png",
+          "sha256": "ad146e3b3efd08dcd31149bc768fb937b935082b7955f080671e436f42c14b59"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/bl-gustavia-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/bl-gustavia-landscape/bl-gustavia-landscape.json",
+          "sha256": "2d6810ad34ce420b05f61959205b1ffa8e8a3c12b58e58c82bd77c621e6d034a"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/bl-gustavia-landscape.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/bl-gustavia-landscape/bl-gustavia-landscape.asset.json",
+          "sha256": "f9e00781b8df576879739e410d8f026a0b17664283bc55d4ec8cc9394636fe19"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/bl-gustavia.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/bl-gustavia-landscape/bl-gustavia.webp",
+          "sha256": "43eb7c7975bc0b0fee09c8ae00f040ce4519b482dc73c3c3479a906c499a0f4a"
+        }
+      ],
+      "newPromptSha256": "dbc1576efa212641e094598a50d42212ccc6433f37197afc46ac466931810a34",
+      "generationMode": "independent T2I",
+      "imageInputs": []
+    },
+    {
+      "jobId": "bl-gustavia-mobile",
+      "reason": "Remove the unverified domed stone sentry tower; retain only the low ruins and cannon supported by the tourism authority text.",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/bl-gustavia-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/bl-gustavia-mobile/bl-gustavia-mobile.json",
+          "sha256": "c71ba16a353b62900b4a471e85105dcd5b375ba44b659c04ddb9545e83650500"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/bl-gustavia-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/bl-gustavia-mobile/bl-gustavia-mobile.prompt.txt",
+          "sha256": "ca73705fc022f26318ff9f6a7da246c4dd864850252217235d3f4aec2399e30d"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/bl-gustavia-mobile.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/bl-gustavia-mobile/bl-gustavia-mobile.png",
+          "sha256": "194754db484220503f6270659496f09ba87b51922a9d61a66a7267094c5f9516"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/bl-gustavia-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/bl-gustavia-mobile/bl-gustavia-mobile.json",
+          "sha256": "d8c222c11fbfaed8fff92c3d1facf0125b7f50ed650e731a71b74785ddba3b89"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/bl-gustavia-mobile.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/bl-gustavia-mobile/bl-gustavia-mobile.asset.json",
+          "sha256": "f2547c4206499cba88705819afe9093e45dc734cbd66a7c4e3d596c3fa9f1ec2"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/bl-gustavia-mobile.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/bl-gustavia-mobile/bl-gustavia-mobile.webp",
+          "sha256": "7fae054294d008530c5254f1a4d91168304387535a9a009625017b1b11a3f4c2"
+        }
+      ],
+      "newPromptSha256": "0428ee09888642e489605401db9ea058d67d825aed6f45c8fdedf3d6050b3b3f",
+      "generationMode": "independent T2I",
+      "imageInputs": []
+    },
+    {
+      "jobId": "eh-dakhla-landscape",
+      "reason": "Remove the unrequested dominant tall tower and keep the named low coastal town, sandy lagoon and fishing boats.",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/eh-dakhla-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/eh-dakhla-landscape/eh-dakhla-landscape.json",
+          "sha256": "4542e4b52e0a92d7c1fddef8ecf5768a77d45bb7ea1174c996bdee777ca7189c"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/eh-dakhla-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/eh-dakhla-landscape/eh-dakhla-landscape.prompt.txt",
+          "sha256": "61759ea7fa69a11059f91c4873050ae46bb13e97dd0bfeb9637ef1546ae7df31"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/eh-dakhla-landscape.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/eh-dakhla-landscape/eh-dakhla-landscape.png",
+          "sha256": "cca2abc48e984e73d1299382bc4cdf185424e11e458ff5c146187138ae508102"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/eh-dakhla-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/eh-dakhla-landscape/eh-dakhla-landscape.json",
+          "sha256": "584f1d832f2441aa8026b8e43cb1481815b2bac78e318bc6dd33847960f796f8"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/eh-dakhla-landscape.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/eh-dakhla-landscape/eh-dakhla-landscape.asset.json",
+          "sha256": "1dbcfa648f62565314acab7514e676b56ba1225cb391b79efa61cfb46767e248"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/eh-dakhla.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/eh-dakhla-landscape/eh-dakhla.webp",
+          "sha256": "815ccec109a1c608ec791baac1159772977c8e2b817250112d064ab8f6b54615"
+        }
+      ],
+      "newPromptSha256": "8a989d6fc80f555296f5839ad9936e791639f5af43b9d35e30a32050419eb011",
+      "generationMode": "independent T2I",
+      "imageInputs": []
+    },
+    {
+      "jobId": "eh-dakhla-mobile",
+      "reason": "Remove the unrequested dominant tall tower and keep the named low coastal town, sandy lagoon and fishing boats.",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/eh-dakhla-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/eh-dakhla-mobile/eh-dakhla-mobile.json",
+          "sha256": "d4319e2e5b74a22359c72b1f5c6b23244511985113df184f10e82516e90cf91a"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/eh-dakhla-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/eh-dakhla-mobile/eh-dakhla-mobile.prompt.txt",
+          "sha256": "3cf98028c69af9f611cb3b60754fd7ab20bb8e8e94bb1d29ff446c47740fce1c"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/eh-dakhla-mobile.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/eh-dakhla-mobile/eh-dakhla-mobile.png",
+          "sha256": "c20764bef06362966dc60e0626eca24cd13a65e256e0db8e4f8e7e43fd2136e3"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/eh-dakhla-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/eh-dakhla-mobile/eh-dakhla-mobile.json",
+          "sha256": "0ca80e23580fbebdcc531d63f31f5e3f316fea2e715f82dc1cc23bc15244ad15"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/eh-dakhla-mobile.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/eh-dakhla-mobile/eh-dakhla-mobile.asset.json",
+          "sha256": "f215d20b081f04d6ec1e4fcfbb4eee139feb0d1ff0331d75fce0eac61a8e57f1"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/eh-dakhla-mobile.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/eh-dakhla-mobile/eh-dakhla-mobile.webp",
+          "sha256": "82769c77fe2b77841e199b2700868c77fe03863fc752a46b56ea8433595fdec0"
+        }
+      ],
+      "newPromptSha256": "65f15e7e66a25ff79fa56d0ff2638cdacf87eaa7cf94f8da41aafe9b57cc52b7",
+      "generationMode": "independent T2I",
+      "imageInputs": []
+    }
+  ]
+}

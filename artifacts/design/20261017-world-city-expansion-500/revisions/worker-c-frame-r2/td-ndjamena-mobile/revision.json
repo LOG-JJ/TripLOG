@@ -1,0 +1,39 @@
+{
+  "jobId": "td-ndjamena-mobile",
+  "archivedFiles": [
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/td-ndjamena-mobile.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-mobile/td-ndjamena-mobile.json",
+      "sha256": "9e41e197f47b1a787d8e81cb3a95b162f1441884d7fb83e4ec555e628614c577"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/td-ndjamena-mobile.prompt.txt",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-mobile/td-ndjamena-mobile.prompt.txt",
+      "sha256": "b92a580f4f4c36516b75dc8167a65061bc288c75b23e95edf2f04dc33488a7ac"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-mobile.png",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-mobile/td-ndjamena-mobile.png",
+      "sha256": "0af72380d1fecd1455720a762e64797fa0f576084cd8c33d1523cec614118a6e"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-mobile.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-mobile/td-ndjamena-mobile.json",
+      "sha256": "32014f598d2d1c73cc5a11785b85ab0c479b77ea6babda0cb167708b93fbe377"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-mobile.asset.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-mobile/td-ndjamena-mobile.asset.json",
+      "sha256": "db3c72fab823946a308175c7d103028a2bbaef4769f215f0ffc4e8dcf0ce225f"
+    },
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v6/td-ndjamena-mobile.webp",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-mobile/td-ndjamena-mobile.webp",
+      "sha256": "e2144bb6b355dc881e6058045c20c8fcd1efdf4732b998058e3e7ed35639735c"
+    }
+  ],
+  "reason": "Second framing correction to include the complete bridge or museum outline.",
+  "newPromptSha256": "08c8fbc7424f2a225428e38a0559b8091b02e79c5eb1f1f4ac0b84474c3c1e34",
+  "generationMode": "independent T2I",
+  "imageInputs": []
+}

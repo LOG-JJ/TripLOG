@@ -1,0 +1,52 @@
+{
+  "id": "by-nesvizh-mobile",
+  "cityId": "by-nesvizh",
+  "name": "네스비시",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/by-nesvizh-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/by-nesvizh-mobile.json",
+  "originalSha256": "09179c7a24eb57285eeb63fe34e779df43aa1c3dc9d023adf06884673369f589",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    14,
+    25,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/by-nesvizh-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 88430,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c75b664792a685106d06c2f4279074cea364da6839fe1369018253b6453bd0fb",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

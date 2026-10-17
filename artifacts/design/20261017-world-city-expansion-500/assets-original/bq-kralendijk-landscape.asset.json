@@ -1,0 +1,52 @@
+{
+  "id": "bq-kralendijk-landscape",
+  "cityId": "bq-kralendijk",
+  "name": "크랄렌데이크",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bq-kralendijk-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bq-kralendijk-landscape.json",
+  "originalSha256": "dcf025ce268fb2000b15930df39ab2abd05600ad522de2795736302a4bcdb32e",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bq-kralendijk.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 97324,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "bf8d2504a87b0099951599d0d0fc2dd0912aa7b6503754e8e81c3afd01f3031c",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

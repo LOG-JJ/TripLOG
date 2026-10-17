@@ -1,0 +1,52 @@
+{
+  "id": "cz-karlovy-vary-landscape",
+  "cityId": "cz-karlovy-vary",
+  "name": "카를로비바리",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cz-karlovy-vary-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cz-karlovy-vary-landscape.json",
+  "originalSha256": "f78d372b4ce008354e2d67a8bed988b6fd17dd51176c8b904c7bd4e1d9646050",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cz-karlovy-vary.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 123690,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "603831f9f68cc09f6dbd4aa09f033ed22a8cc8cfe386dea6bb0f78b0b4f6c197",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

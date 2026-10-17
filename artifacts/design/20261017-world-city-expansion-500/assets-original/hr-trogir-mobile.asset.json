@@ -1,0 +1,52 @@
+{
+  "id": "hr-trogir-mobile",
+  "cityId": "hr-trogir",
+  "name": "트로기르",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/hr-trogir-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/hr-trogir-mobile.json",
+  "originalSha256": "b98eae34469e1fce7d0d80c5cd03082ec417e811ea7f952249368487bc37ef9f",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/hr-trogir-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 86058,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e4275d7719e85cd6b2f5dccecede87fedf3343a7122ef1954f938e6fd605313a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

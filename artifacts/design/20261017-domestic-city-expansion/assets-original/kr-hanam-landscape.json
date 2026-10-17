@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-hanam-landscape",
+  "cityId": "kr-hanam",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Hanam, South Korea: Union Tower above Union Park: a tall narrow pale mint tower shaft with a gently curving dark-blue vertical stripe, topped by a compact flat-topped glass observation room with a boxy profile, above low curved green-roof park buildings, lawns and paths. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "6e0a4da7117d8f72b270485689c94f77e06c6caf0f0ba6355ae5665a9aeaa7a2",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-hanam-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-c100d82a-f201-4923-82b6-dcc7699a5720.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-c100d82a-f201-4923-82b6-dcc7699a5720.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-hanam-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "15f7ee3e8b6199f3d8b793f8adf5a43f0880fffccf86646ac2c68395c216d34f",
+  "savedSha256": "15f7ee3e8b6199f3d8b793f8adf5a43f0880fffccf86646ac2c68395c216d34f",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:14:25.295Z",
+  "toolCallId": "exec-c100d82a-f201-4923-82b6-dcc7699a5720",
+  "savedAt": "2026-10-17T05:15:12.463647+00:00"
+}

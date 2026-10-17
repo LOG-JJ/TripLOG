@@ -1,0 +1,52 @@
+{
+  "id": "in-amritsar-mobile",
+  "cityId": "in-amritsar",
+  "name": "암리차르",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/in-amritsar-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/in-amritsar-mobile.json",
+  "originalSha256": "560a12a069e6090be039556b1b17cbffcb20524be26e4d978d0aa506ef5e5d1f",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    2,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/in-amritsar-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 93748,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "4bbf1aecfddfc78da80d2e65e26efad13c4db1395c55848e89dbbb11cfe4803c",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

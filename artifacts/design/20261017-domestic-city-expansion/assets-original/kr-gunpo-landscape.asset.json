@@ -1,0 +1,51 @@
+{
+  "id": "kr-gunpo-landscape",
+  "cityId": "kr-gunpo",
+  "name": "군포",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gunpo-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gunpo-landscape.json",
+  "originalSha256": "7ff302eaf51659bb09718570aaa3e1629b4d4346f92e043be83dcaf65af892c0",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    25,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gunpo.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 101488,
+  "assetSha256": "944b58682d23aeda182123bc5b7b4fb6d76d1fe0be28833474b8444d173574bb",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

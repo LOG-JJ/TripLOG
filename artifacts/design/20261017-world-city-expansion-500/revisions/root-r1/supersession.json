@@ -1,0 +1,218 @@
+[
+  {
+    "jobId": "gb-belfast-mobile",
+    "reason": "Unrequested large liner competes with the Titanic Belfast building.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-belfast-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/gb-belfast-mobile/jobs/gb-belfast-mobile.json",
+        "sha256": "fbbecf273584e3e97f6bbe222389188dc065dce8f04d74d0fcf95d30bfcb0144"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-belfast-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/gb-belfast-mobile/jobs/gb-belfast-mobile.prompt.txt",
+        "sha256": "0e709c6299c84ffa0ade3f2ee2c710fb7597bb96de2c16347f848b577cda4a3d"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-belfast-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/gb-belfast-mobile/originals/gb-belfast-mobile.png",
+        "sha256": "458f86537315502be7292383110c60f50df863d80fe89af6fcbf4f90dbeb8e93"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-belfast-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/gb-belfast-mobile/originals/gb-belfast-mobile.json",
+        "sha256": "909c95de5c87e4257d8a9d23b0150207cb6d879bf5d46dce9653506b0b16d58c"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-belfast-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/gb-belfast-mobile/originals/gb-belfast-mobile.asset.json",
+        "sha256": "01ec40adeb91a98827a5e15461342b903338920c4a9c5609bbcdb8a67e9e0c18"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/gb-belfast-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/gb-belfast-mobile/runtime/gb-belfast-mobile.webp",
+        "sha256": "d8f51e87afc0c6e9b3c11070a79df14a908aed6cb27382872d5fd3507a408967"
+      }
+    ]
+  },
+  {
+    "jobId": "nl-utrecht-landscape",
+    "reason": "Dom Tower finial meets the top frame.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/nl-utrecht-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/nl-utrecht-landscape/jobs/nl-utrecht-landscape.json",
+        "sha256": "a9da9fea2a1fff728c73e4a02b046479a98a143ac2f24149107ec86f1e0fc395"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/nl-utrecht-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/nl-utrecht-landscape/jobs/nl-utrecht-landscape.prompt.txt",
+        "sha256": "69767a6633a91fcdc7e03075c994f911467a4ed05cefc999bd980a8f76463529"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/nl-utrecht-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/nl-utrecht-landscape/originals/nl-utrecht-landscape.png",
+        "sha256": "65ba8c5c471bc8934ff42a924e75301228a448bfaa5d7bc9841bfbeaf504edad"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/nl-utrecht-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/nl-utrecht-landscape/originals/nl-utrecht-landscape.json",
+        "sha256": "49e78611bfe96885c2405698967a79bd712b15d186da04a108f7f855eee300aa"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/nl-utrecht-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/nl-utrecht-landscape/originals/nl-utrecht-landscape.asset.json",
+        "sha256": "f2541b65b56bbf054ccc34da252a750ad8f161096c46d3b02be59dc11511127c"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/nl-utrecht.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/nl-utrecht-landscape/runtime/nl-utrecht.webp",
+        "sha256": "2fb561666bdc8f58bb7c49677eb4d77fb1d611b5b1dfce7b09b4c800fb80b005"
+      }
+    ]
+  },
+  {
+    "jobId": "pt-evora-mobile",
+    "reason": "Roman temple outer columns crowd the right edge.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/pt-evora-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/pt-evora-mobile/jobs/pt-evora-mobile.json",
+        "sha256": "b36bb18e2009d267563fbab45c4aa86a9c611a6a69e7a07be4a1c65e02fa6645"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/pt-evora-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/pt-evora-mobile/jobs/pt-evora-mobile.prompt.txt",
+        "sha256": "0d671cb3905ddba4f893abdd270e8f916f48c014a237d7240cb024966864d413"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/pt-evora-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/pt-evora-mobile/originals/pt-evora-mobile.png",
+        "sha256": "a57177b7145691ed3eb4f53fd10488543345e20b0b88ec013f03ac967e338470"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/pt-evora-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/pt-evora-mobile/originals/pt-evora-mobile.json",
+        "sha256": "ade2ba54e9dcc34f06ca0e9ecdbdd1ee44e231afd9304e99520ddf43016dfdbd"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/pt-evora-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/pt-evora-mobile/originals/pt-evora-mobile.asset.json",
+        "sha256": "f2bc3be9f7cb62885c45d7f6ab75b810b90bfe2c48dbb593219ac98480fe6d32"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/pt-evora-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/pt-evora-mobile/runtime/pt-evora-mobile.webp",
+        "sha256": "40f1ab4e9555e4556bfcab9b5be028e6864c1ee3a5528cd72b5d0827e54cc1af"
+      }
+    ]
+  },
+  {
+    "jobId": "pl-wroclaw-mobile",
+    "reason": "Centennial Hall side wing continues beyond the right frame.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/pl-wroclaw-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/pl-wroclaw-mobile/jobs/pl-wroclaw-mobile.json",
+        "sha256": "74aea4c31797d18c2072a363725b4a99227ec8ec023b1b585d5768ae3887ba07"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/pl-wroclaw-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/pl-wroclaw-mobile/jobs/pl-wroclaw-mobile.prompt.txt",
+        "sha256": "299d51903e0636aacb77b95b2fa17477b8eb7c889896234e26e77a1eaa05bf18"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/pl-wroclaw-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/pl-wroclaw-mobile/originals/pl-wroclaw-mobile.png",
+        "sha256": "5ceb301ecafa198e0dba5d49acb764677984dc550c5fcc12e54c0ac3bda4738b"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/pl-wroclaw-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/pl-wroclaw-mobile/originals/pl-wroclaw-mobile.json",
+        "sha256": "3a3a217bfd800cd777b252ff9f3d6b0ac55952f2e53e0c5cb75e58bf8a69863c"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/pl-wroclaw-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/pl-wroclaw-mobile/originals/pl-wroclaw-mobile.asset.json",
+        "sha256": "d4d4bb54de2eb81c1e91eb869509e96dc4b941014d7cfedcb5561c17899ed484"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/pl-wroclaw-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/pl-wroclaw-mobile/runtime/pl-wroclaw-mobile.webp",
+        "sha256": "e2a8ce9b136d1217f74e33ad0a4ab7ebf626926c08a0d8cd69440570e1b78cb0"
+      }
+    ]
+  },
+  {
+    "jobId": "cz-karlovy-vary-landscape",
+    "reason": "Mill Colonnade right end is outside the picture.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cz-karlovy-vary-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/cz-karlovy-vary-landscape/jobs/cz-karlovy-vary-landscape.json",
+        "sha256": "7b38b87727104c5a700a2690f4e74f1b6e1a88f96aa7ca3de93f245286ac9b2d"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cz-karlovy-vary-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/cz-karlovy-vary-landscape/jobs/cz-karlovy-vary-landscape.prompt.txt",
+        "sha256": "7bec9d93e2cf27bbc2dbd224520682c93c405f52b0c45013ee4b0cc36ca277c8"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cz-karlovy-vary-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/cz-karlovy-vary-landscape/originals/cz-karlovy-vary-landscape.png",
+        "sha256": "08ccd00d2bfc545e3592597f8b0e402aa73e06a79cb22bf3c284fa4e833ce0ad"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cz-karlovy-vary-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/cz-karlovy-vary-landscape/originals/cz-karlovy-vary-landscape.json",
+        "sha256": "a5590e0fd47842ed2631ae0b57102b77cd8bf8f43f72d8c4781ae9746628f6de"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cz-karlovy-vary-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/cz-karlovy-vary-landscape/originals/cz-karlovy-vary-landscape.asset.json",
+        "sha256": "61d60e3949c88ea09c7bde3f3ab58ef24b64fd8fc4875382ada7098a40cbfd01"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/cz-karlovy-vary.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/cz-karlovy-vary-landscape/runtime/cz-karlovy-vary.webp",
+        "sha256": "8b6da10f741f6750472095e3bfd5104414783a0686df778bd61a8602feed51a9"
+      }
+    ]
+  },
+  {
+    "jobId": "cz-karlovy-vary-mobile",
+    "reason": "Mill Colonnade right end is outside the picture.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cz-karlovy-vary-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/cz-karlovy-vary-mobile/jobs/cz-karlovy-vary-mobile.json",
+        "sha256": "bcf95770868ca9f6003fce7587b3c102f90867b89556551f7171188e7f8ff3d6"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cz-karlovy-vary-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/cz-karlovy-vary-mobile/jobs/cz-karlovy-vary-mobile.prompt.txt",
+        "sha256": "867442b879244806b02131d3c07d1808765c4c32fc3a5dff109860fd6a211d8a"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cz-karlovy-vary-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/cz-karlovy-vary-mobile/originals/cz-karlovy-vary-mobile.png",
+        "sha256": "d00cf1b316b4b60088b494ac1364ba62121b72166f1833740d3b6ad0a207fb2d"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cz-karlovy-vary-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/cz-karlovy-vary-mobile/originals/cz-karlovy-vary-mobile.json",
+        "sha256": "081feee9782871c44fa68a99dc53b159df57cf15a507387bfc5cfb1a8306c2f0"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cz-karlovy-vary-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/cz-karlovy-vary-mobile/originals/cz-karlovy-vary-mobile.asset.json",
+        "sha256": "64a21cbc8fbecd558ba302c6ebbbc003f49b5e466b037b31b822acabcb072cf3"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/cz-karlovy-vary-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/cz-karlovy-vary-mobile/runtime/cz-karlovy-vary-mobile.webp",
+        "sha256": "54450b36bd76b492799464aa339aa47ac9452fda3f4517046848ae7b020f5af7"
+      }
+    ]
+  }
+]

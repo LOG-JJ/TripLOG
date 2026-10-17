@@ -1,0 +1,26 @@
+{
+  "jobId": "de-lubeck-landscape",
+  "cityId": "de-lubeck",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Lubeck, Germany: the twin round brick towers of the Holstentor, with the old-town roofline. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "31c6c438197cf2e72542e5fef04bc4fe488390d4d9900fbd8747ee209a9b1733",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/de-lubeck-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-582da0a1-2418-4c2c-afba-42a2028ffc82.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-582da0a1-2418-4c2c-afba-42a2028ffc82.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/de-lubeck-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "7345d1a31f5abd3b5b0e3fda2477a5e34feea078a0ff5da608d0b53922fc155c",
+  "savedSha256": "7345d1a31f5abd3b5b0e3fda2477a5e34feea078a0ff5da608d0b53922fc155c",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:10:31.110Z",
+  "toolCallId": "exec-582da0a1-2418-4c2c-afba-42a2028ffc82",
+  "savedAt": "2026-10-17T06:13:02.691756+00:00"
+}

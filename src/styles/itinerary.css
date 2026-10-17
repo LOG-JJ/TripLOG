@@ -194,11 +194,19 @@ body[data-page="itinerary"] .page-stage { margin: 0; padding: 0; overflow: visib
 .itinerary-form .ticket-toggle-chevron { font-size: 0; margin-left: auto; }
 .itinerary-form .ticket-toggle-chevron::before { font-size: 18px; }
 .itinerary-form .ticket-input-grid { display: grid; gap: 12px; grid-template-columns: 1fr; padding: 0; }
-.itinerary-form .ticket-file-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 14px; }
-.itinerary-form .ticket-file-row button { border: 1px solid var(--it-rule); border-radius: 8px; padding: 8px; background: #fff; font-size: 14px; min-height: 44px; }
-.itinerary-form .ticket-file-row #ticketFileResetBtn { min-height: 44px; padding: 8px; border: 0; color: #b42336; font-size: 14px; box-shadow: none; }
-.itinerary-form #ticketFileNameDisplay { min-width: 0; overflow-wrap: anywhere; }
-.itinerary-form .itinerary-removal-note { color: var(--muted); font-size: 12px; font-weight: 400; line-height: 1.5; }
+.itinerary-form .ticket-file-row { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 8px; padding: 8px; border: 1px solid var(--text); border-radius: 12px; background: #fff; font-size: 14px; }
+.itinerary-form .ticket-file-row button { display: inline-flex; align-items: center; justify-content: center; gap: 4px; min-height: 44px; padding: 8px 10px; border: 1px solid var(--text); border-radius: 10px; background: var(--rd-blue); color: var(--text); font-size: 14px; font-weight: 600; line-height: 1.4; white-space: nowrap; box-shadow: 0 2px 0 #0b102014; }
+.itinerary-form .ticket-file-row #ticketFileNameDisplay { min-width: 0; overflow-wrap: anywhere; font-size: 14px; line-height: 1.5; }
+.itinerary-form .ticket-file-row #ticketFileResetBtn { background: var(--rd-pink); }
+.itinerary-form .ticket-file-row #ticketFileResetBtn .ph { font-size: 18px; line-height: 1; }
+.itinerary-form .ticket-file-row button:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+.itinerary-form .ticket-file-row.is-long-filename { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+.itinerary-form .ticket-file-row.is-long-filename #ticketFileNameDisplay { grid-column: 1 / -1; grid-row: 1; }
+@media (max-width: 359px) {
+  .itinerary-form .ticket-file-row { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+  .itinerary-form .ticket-file-row #ticketFileNameDisplay { grid-column: 1 / -1; grid-row: 1; }
+}
+.itinerary-form .itinerary-removal-note { display: block; margin-top: 6px; color: var(--muted); font-size: 12px; font-weight: 400; line-height: 1.5; }
 .itinerary-editor-actions { padding: 12px 16px 8px; flex-shrink: 0; background: #fff; }
 .itinerary-page .itinerary-editor-actions .itinerary-primary { min-height: 46px; font-size: 18px; }
 #cancelItineraryEditButton { display: none; }

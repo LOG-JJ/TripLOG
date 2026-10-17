@@ -1,0 +1,51 @@
+{
+  "id": "kr-osan-mobile",
+  "cityId": "kr-osan",
+  "name": "오산",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-osan-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-osan-mobile.json",
+  "originalSha256": "3bae1d5e0df1a0d1ee17b899b384a7f869ded0980d3f6fb14bdd7aafbacbb562",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    86,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-osan-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 87410,
+  "assetSha256": "0d32d26d67b999fb49feecb31b991cd8af44c23a4a683336d57ff076ce0f3857",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

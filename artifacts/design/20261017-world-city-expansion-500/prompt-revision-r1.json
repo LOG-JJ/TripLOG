@@ -1,0 +1,2139 @@
+{
+  "revision": "r1",
+  "revisedAt": "2026-10-17T06:16:04.458Z",
+  "reason": "Avoid invented water and preserve the entire landmark silhouette with deliberate top/right margins.",
+  "appliedOnlyToJobsWithoutCanonicalMetadata": true,
+  "completedGenerationRecordsUnchanged": true,
+  "changes": [
+    {
+      "id": "ae-sharjah-landscape",
+      "previousPromptSha256": "52bdded866acae1da3488792463713c694e517edd2329eda7cee57c4d79f889a",
+      "finalPromptSha256": "c634865131b814c38ec686d014d1f6eb1c812dcba004ec9226329035fb6cd8af"
+    },
+    {
+      "id": "ae-sharjah-mobile",
+      "previousPromptSha256": "0106d3739777fd9c2289f1817ed46fcf4f38616e7348bd4cefb4bd6a5d45ce96",
+      "finalPromptSha256": "7350d4c5bffef29ab4b57b7f10ad0b68d9e7b35275281c3632f249fc3fabf675"
+    },
+    {
+      "id": "af-bamiyan-landscape",
+      "previousPromptSha256": "3cc2e45c220df3710df9c38b34e0ad6db01b60cebae49c767d043bbc75d5a4ff",
+      "finalPromptSha256": "82fa5fb8dc56efa1721ffd967a55c4b67eda1741e7f2324ac4d337fbd43e9ae0"
+    },
+    {
+      "id": "af-bamiyan-mobile",
+      "previousPromptSha256": "2f3edef5c8a4369a8e0165fa38902a4bf97d5f110555c5ed02c989561f61b224",
+      "finalPromptSha256": "2ec1a1b2a3a3addf9063cb2ae98878c5aed69b6fe91f535961726b13b465c123"
+    },
+    {
+      "id": "ag-st-johns-landscape",
+      "previousPromptSha256": "bcf414c069cd4ceb3872b2bd39c4f9be6bbd25224294ebac966e2bfd98859b93",
+      "finalPromptSha256": "3f175f75e9cf84da0c6b4fa55667e961c7dc3dfa3984df1a92533287517a878f"
+    },
+    {
+      "id": "ag-st-johns-mobile",
+      "previousPromptSha256": "4f701113c361d9d7db929a1a989eb16f523fe27a6f8ebc4c2eaddcf612cad80b",
+      "finalPromptSha256": "410ae9f85787fc15948fa9a21bb806ab64cbb326cf26dbcc0bb4b97f0a5a99ff"
+    },
+    {
+      "id": "ai-the-valley-landscape",
+      "previousPromptSha256": "4145dfd29e56222127ec478bcc7bc617394acd3038df1ab9d17990b874d34996",
+      "finalPromptSha256": "dd960967efa550a890545f4e4c944c490b6663550914de09963bab17d56cafb1"
+    },
+    {
+      "id": "ai-the-valley-mobile",
+      "previousPromptSha256": "f7b4ddf9c10979921257b3e15f4454b52acff252ee09684dbe87860365d6f735",
+      "finalPromptSha256": "cc7a24836fe2b0b6825f7185f7d3e7c80060511eef0e4fbbcd43cbc888b47d5e"
+    },
+    {
+      "id": "am-yerevan-landscape",
+      "previousPromptSha256": "b0af8b0478b29d16e292b14440d0e7d0ad9def9b4b71510fcd9cab31277fd85f",
+      "finalPromptSha256": "7930075468bef065f95b9742f1138606754bdd2af1b321e422c17129a77be2df"
+    },
+    {
+      "id": "am-yerevan-mobile",
+      "previousPromptSha256": "374a8ce444608d93dd77d6a37ec833f347fdb0ea2ecc4c1808f10ac4be7042ef",
+      "finalPromptSha256": "b198f6890773efe34802da0bca1915ad73baa19f1e9b44f1bb20abc19185cddf"
+    },
+    {
+      "id": "ao-luanda-landscape",
+      "previousPromptSha256": "e8ab79d1cb36038d477105d77885cf8af527987776ab4d5c555e08cf81a2e7ec",
+      "finalPromptSha256": "91b82b342fcec0eeb858ff50d55f7736a5ae3441e8480bd7cbd2b9c48a96d5f7"
+    },
+    {
+      "id": "ao-luanda-mobile",
+      "previousPromptSha256": "096925ed1fd5f3c5b755e42baa16002b20242e02a140e793b7a62592be56ab86",
+      "finalPromptSha256": "ec9bd5d1c1737e700974fe6c9ce6ba4ef930e03d1325c553b00bbc8c380cf51b"
+    },
+    {
+      "id": "ar-mendoza-landscape",
+      "previousPromptSha256": "f19ece80d93f07e8dd417a025aa19f1954879057add08b4dd59c7626fbfc56bc",
+      "finalPromptSha256": "0f798adc47c0240d5ed404cd07e10eefd244a492e89b5ab0090a94767e15a523"
+    },
+    {
+      "id": "ar-mendoza-mobile",
+      "previousPromptSha256": "29f706d5c93b0c86ce779fcf3f8235e00e7f38119091295cb9b8237a309353e8",
+      "finalPromptSha256": "37887d4bf97f827bbc61c28cd3305ae547865941fe0b957f152ab44455125311"
+    },
+    {
+      "id": "ar-salta-landscape",
+      "previousPromptSha256": "43e1b6862dd4fe9ccf609d067101771aef763664eafff453b79b4fa57adb2c1a",
+      "finalPromptSha256": "79ecf5c5c7a92008d3eab4d952e0dc75a84b018402352383e82fc55925e5fed0"
+    },
+    {
+      "id": "ar-salta-mobile",
+      "previousPromptSha256": "92144b67163b8fe2ca3df48bc944d4721521976e0a3f276b7e43c042191e7fc0",
+      "finalPromptSha256": "c31c7c6e399db59c8c8c0d212701bfd73077c066fe8ba081cdaeeadf60dc90b7"
+    },
+    {
+      "id": "ar-ushuaia-landscape",
+      "previousPromptSha256": "170c585cffb293c15b9b696e75d9969b286803ab89cec094e2d5fc6da69701d7",
+      "finalPromptSha256": "06da3377efe4a92f923ad63e2e6a38cf250f9bdc96b1bb60c12541f42abfd4f2"
+    },
+    {
+      "id": "ar-ushuaia-mobile",
+      "previousPromptSha256": "d8ee34fd91113cb0cddcf66d62005d6af02609e07edd33093d5480b3de2f2a2a",
+      "finalPromptSha256": "4e5837fb56e5f445d5a27a79901f8afbbb56329326d8d00eaa4b8433e733c877"
+    },
+    {
+      "id": "as-pago-pago-landscape",
+      "previousPromptSha256": "79d5ee0d2ddf6d456e49e568a18bfd9f00a51c4ed81c746bcffa6c16dd390b0e",
+      "finalPromptSha256": "dbea802bde38e463185c736df3400934191ec271f32d25e61ffc2cb234534fd8"
+    },
+    {
+      "id": "as-pago-pago-mobile",
+      "previousPromptSha256": "07973b5f41775af5c67e0d592fa63f4a89d7cf81a424590c21559e8985d1163a",
+      "finalPromptSha256": "b13e09707352c2c06fdf076d44cbaa073d8fdf204c809325202092e595e2e937"
+    },
+    {
+      "id": "at-graz-landscape",
+      "previousPromptSha256": "4f5e2f3427ecf4cb43083a10a0c819c03a6f5c690ec2e4e96bde1cc2ba5e52bb",
+      "finalPromptSha256": "5ef666d1f8b9fd6d9c6a3e74b92ba959f9fba7881315d60b0e8daf1b006f39bd"
+    },
+    {
+      "id": "at-graz-mobile",
+      "previousPromptSha256": "4a0e157506644a7859b7581b0326c32cecaff10fda244a53c5ab58697ce9a844",
+      "finalPromptSha256": "84817c445c335500e90ab620aea342aa438e3541241cc17ac54c5fdb827b24ca"
+    },
+    {
+      "id": "aw-oranjestad-landscape",
+      "previousPromptSha256": "f06d5b73c324d54253199d06ba164419e0f5924f4948262b5a257ffeff3ac2b1",
+      "finalPromptSha256": "e39d10e805abaaa019e287b30c757f690e878a71fafdeaf66fad970c8169ea4f"
+    },
+    {
+      "id": "aw-oranjestad-mobile",
+      "previousPromptSha256": "4d8b378b21080fd7147d57bac197a4ef94cd21306f640eeee1ce734469bcbbc8",
+      "finalPromptSha256": "3cf253d9cb56404f1b5c26c419b4abcc5c4299d7e7da69ddde02021a7005f26b"
+    },
+    {
+      "id": "ax-mariehamn-landscape",
+      "previousPromptSha256": "404812912fdba5c5706cb433b0689bee2b6e3443517da1fed9a69896f500457c",
+      "finalPromptSha256": "ed6f5753df4dc702f799952fb8dd6c0bec3a596036470a6f3b9607551cbf7fca"
+    },
+    {
+      "id": "ax-mariehamn-mobile",
+      "previousPromptSha256": "a0da60937193cd152c860403450cc9ec4edba00b78cc64c7cd52013b1f44a54f",
+      "finalPromptSha256": "00be6ea1387f446a308c1cf82b5a3c806df5f9e38db845f32614bff642d5556b"
+    },
+    {
+      "id": "ba-mostar-landscape",
+      "previousPromptSha256": "9d25089b575c47b36cc3660bd5849dcc48a4d73ca9f1815e5d00ee0cc799e5f8",
+      "finalPromptSha256": "f1032bb2c7b358e969f1670e50461a38a052b887d2882a4f9f9e0865daa183bc"
+    },
+    {
+      "id": "ba-mostar-mobile",
+      "previousPromptSha256": "da12256e2166f0c52a4e5a4c825d618d5ed1317dfc948280fdd762c9a6ad2a95",
+      "finalPromptSha256": "1ed3d8b45dee59daf89d46df84d7d7ade3b06101286d63ee54e1ca05f809e44e"
+    },
+    {
+      "id": "bb-bridgetown-landscape",
+      "previousPromptSha256": "12a42f7cdf15d802956ad0369393c9e96db5be82042a99380957ca508f95ee26",
+      "finalPromptSha256": "0626d7decd6c63978e864b572a83cacdddcb7f4c57d2b0d7465c758597ad7338"
+    },
+    {
+      "id": "bb-bridgetown-mobile",
+      "previousPromptSha256": "fd45115310ca8cee222d96be697ef0a0df659eff33f972534df4d15bd58f77f1",
+      "finalPromptSha256": "86d3f9349f868822890b40903fd4809bbbddd73f36f072462e356878bdebaf40"
+    },
+    {
+      "id": "bd-dhaka-landscape",
+      "previousPromptSha256": "c480a7ea323bf3f2f4d5d7aa4cdc29bbf730e8c2d77a4ed017da776ed5379b0c",
+      "finalPromptSha256": "621f3f0a984af7818ed039f7c5f687ff5d33d12b73a0d00c3ba2676dda40e357"
+    },
+    {
+      "id": "bd-dhaka-mobile",
+      "previousPromptSha256": "59efc16f84cc96fb87a16ef34ab2e1f12f9e567e0e937ab285c44994d690acd3",
+      "finalPromptSha256": "67b451f517a3e9c6c7dea85d9f5d02d59e593f96e2b61353c5bcb9093fd3a694"
+    },
+    {
+      "id": "be-antwerp-landscape",
+      "previousPromptSha256": "9551483e17cbb29282e20547943df7da7c6bac766d94bae9e08b4a35e45bfad3",
+      "finalPromptSha256": "b1e898517383a13051f2ba8d9d474522c7381e57c32eac0649a6cd0dbd9271b4"
+    },
+    {
+      "id": "be-antwerp-mobile",
+      "previousPromptSha256": "6ca306cad76cd369fdec9ad9ad8cc3fcc13b5ab30c1a396b9c714df91572b602",
+      "finalPromptSha256": "df3e00f7d947523a8f0a364a5e0c27104ba658565bd28fbae23916d802a39d91"
+    },
+    {
+      "id": "bf-bobo-dioulasso-landscape",
+      "previousPromptSha256": "7feca67b85bfa1c7fa11e2932bf76849ac9f1f7afec71e082daf097d5a309e05",
+      "finalPromptSha256": "221efd1bd0c763eb5da8010e99dffb79647ef1374023fe59617729ac03bdc7f7"
+    },
+    {
+      "id": "bf-bobo-dioulasso-mobile",
+      "previousPromptSha256": "cc70cd1761a99ee370ed1354f449ab9c0d713d3d56296588da6b0b98955181bf",
+      "finalPromptSha256": "d9585db9522984e5cb302d9812908c5cdf81b12283ec72ab412275a1e1dede52"
+    },
+    {
+      "id": "bg-nesebar-landscape",
+      "previousPromptSha256": "fa79e09a9db11ba9d50c666881ec3c54bcd48dd5462108cd54d0eddd90e7a622",
+      "finalPromptSha256": "7e85d2f25906d34958c5d60c5ceb32dfce2d7b3f2ba7a804b21d4771ad383b84"
+    },
+    {
+      "id": "bg-nesebar-mobile",
+      "previousPromptSha256": "1a02b30d8ec36518f03f42699723047034b9d736df7f163d9cd0ba1f55caacc8",
+      "finalPromptSha256": "c873c40488a62e54484a3b608934689e792141fd327af75c442167e51b91e6df"
+    },
+    {
+      "id": "bi-bujumbura-landscape",
+      "previousPromptSha256": "199a6011a218c71349c498eb4cf028f8218f08087a20efca64445105b881de33",
+      "finalPromptSha256": "35f77cb1748b280628269f57afa0fe68bbe18deb273de45269aa5c8946b61503"
+    },
+    {
+      "id": "bi-bujumbura-mobile",
+      "previousPromptSha256": "b52a3c02bc50e826a73eeab19984f1572a412ad3ee3f56e6a907c4a1175a7a94",
+      "finalPromptSha256": "e87826c142bce65aae5fa80271f01b8fd74e89bdb05fb77ee6e9d1f8d9c7f21c"
+    },
+    {
+      "id": "bj-ouidah-landscape",
+      "previousPromptSha256": "55e5c63e08a8642b34b6f29f59abf109ffb95c6b256c04a2cb4ae2342045d553",
+      "finalPromptSha256": "087df68df7b6ae59072baf45bd9f163ce0e45a59fd3ac46eb78ca2ba8886ecd9"
+    },
+    {
+      "id": "bj-ouidah-mobile",
+      "previousPromptSha256": "785eb9b4b89af3bc4a1a97cce296999a7d3dc09df946269fed3c8f6fb6177f84",
+      "finalPromptSha256": "97f23f16142603139b9031d57a5e4ee0a028d21a93f53fba10b74c4fd0013edf"
+    },
+    {
+      "id": "bl-gustavia-landscape",
+      "previousPromptSha256": "45a64b10259d0b0d450ec9221d80438cb42e2b6e536895666f09839b66cba667",
+      "finalPromptSha256": "e0885b909f8c62d2c33d98c1d354aefcc91b137ed8642e28b2dfba2f912816bc"
+    },
+    {
+      "id": "bl-gustavia-mobile",
+      "previousPromptSha256": "d53fac1c0fb233372f43f6af7b67b3b6534a5f90ffd4b74470daabe27a0f49d0",
+      "finalPromptSha256": "9d0e8123b01d9d89bb19645fde8956051be989844782b02f5ea5e6fd81e8ade4"
+    },
+    {
+      "id": "bm-hamilton-landscape",
+      "previousPromptSha256": "5f8f4afa4f9fd9ff0ed2aeb1ac9ea0300372f4ef6477af7fced235ef0c322283",
+      "finalPromptSha256": "968657ecafa1ffc6552e37e1010a20945750176bc2513b7130acc3a78cac848c"
+    },
+    {
+      "id": "bm-hamilton-mobile",
+      "previousPromptSha256": "b9a19770666da6db5aa0d48ffa0e434b225de14b99f11dad4dae26bbd16cb6aa",
+      "finalPromptSha256": "7de6ec1bdcca195c6034a32861b490904721999f4f28c16dd70a27dda29794ca"
+    },
+    {
+      "id": "bn-bandar-seri-begawan-landscape",
+      "previousPromptSha256": "552ca9af741a2d5106a779e033c84d7045e771fdfe780835e86f03b123a541aa",
+      "finalPromptSha256": "3774db61851c7d5911e43895e56cf9c5eba45612f3a487e99fcab2937e971fa3"
+    },
+    {
+      "id": "bn-bandar-seri-begawan-mobile",
+      "previousPromptSha256": "72bc8dcdd8246bd3b36709cc3ca56113927a2faffe0d267af16c9c0663ed5f00",
+      "finalPromptSha256": "d6a1e296e9bfc6ee60434521121fcfc538b2040f45357aec8d97f83f5641fd5f"
+    },
+    {
+      "id": "bo-sucre-landscape",
+      "previousPromptSha256": "4d5e6b5098920d3a41902a3851a19b53aa2bdfe0eaca5d019ab842d70ba4598e",
+      "finalPromptSha256": "04c3f84aea5ca4655b649cc68e519bd45179fe2c0704b7931dcd9f03df3b4795"
+    },
+    {
+      "id": "bo-sucre-mobile",
+      "previousPromptSha256": "31db679ce87dc93a2d256b50578dc1035a15dd0516507487bd733e01cb039546",
+      "finalPromptSha256": "cfd638ee5048cc04a59f3a8f82b51c95cd87a723ca2fddec38de44f703abf720"
+    },
+    {
+      "id": "bq-kralendijk-landscape",
+      "previousPromptSha256": "61d1d1fffa283cb94ca7f7ebdd186dbcf7a74a74b3fdff2b0022e7af19c13105",
+      "finalPromptSha256": "e131e48a1282f130042d3331b2b34ca4469ecba4dd0ad255ce4b7416b2661f4f"
+    },
+    {
+      "id": "bq-kralendijk-mobile",
+      "previousPromptSha256": "671547091666965a31dcbf35b114b0afb2b360dc131657f0db3015d26ad36cec",
+      "finalPromptSha256": "1538445d55f0eb9f90a495163ccdc0313b613722e7b9b89f7994e2e1cf72d0e9"
+    },
+    {
+      "id": "br-brasilia-landscape",
+      "previousPromptSha256": "d4ddbdea3d023f5d6d93c28771963bd37d298cbf7cac979d02556b1783b6a150",
+      "finalPromptSha256": "05929f425c6e03a4fa85f003268d40f87a649c4563eab4cefc214d35376a642f"
+    },
+    {
+      "id": "br-brasilia-mobile",
+      "previousPromptSha256": "5dcd2544821b247d8d0beb69f0b163bc0d7cca030b1695432fcc1a059b3c4c95",
+      "finalPromptSha256": "1aba97aadf4c9718cc0b4734acc646370d704c60c00c48db1be59cbd8d4bbe36"
+    },
+    {
+      "id": "br-olinda-landscape",
+      "previousPromptSha256": "00f65d077e190b1352399219b4e1240d59da373762eb7afef93cd1fb84f2f628",
+      "finalPromptSha256": "96936a0b5e8a690f1217d29333f47c465584bc52051acca11d8bd6b90c6e9f6a"
+    },
+    {
+      "id": "br-olinda-mobile",
+      "previousPromptSha256": "ce7007e3c6f656816466f1dfbc902a7cb5211c2596ba5dabaa4d7fbb7bbdfc61",
+      "finalPromptSha256": "a19fab091bb0f42695d6a33414cd74af59163af2a45781ea97a51ce128c61657"
+    },
+    {
+      "id": "br-ouro-preto-landscape",
+      "previousPromptSha256": "4c0f4b2702971b27954661d63280e433c400fe17d2b6b0e1b98102f570d365ab",
+      "finalPromptSha256": "6006f39169bfe1f5a6af387d294a0e70612df9b4ae0019445b8a3653fa095e5c"
+    },
+    {
+      "id": "br-ouro-preto-mobile",
+      "previousPromptSha256": "9c2588f5d53ecb9f93fd84c70be4216682b242d1b37add81fdc88c12c5f69653",
+      "finalPromptSha256": "e76cd285f4702b7bd707f05d7d51c7ebf2a54f4bfe9e21ac57b0f652318f48fa"
+    },
+    {
+      "id": "bs-nassau-landscape",
+      "previousPromptSha256": "a5955ed2f47a1ed4ea2cd8592fe9799a4491a211fb4eab0d00669b14bda22015",
+      "finalPromptSha256": "b0fb741c5a7975c511e15a06c196a0008135a4279c540717eb8c607a0823ed51"
+    },
+    {
+      "id": "bs-nassau-mobile",
+      "previousPromptSha256": "0adc409f48c5d7d63ca7a1fbac152cfb87a0a12f6f2eba1286cc828309f520e7",
+      "finalPromptSha256": "f69c908080321af3a1265db433216cb623fab219b477538246ebbf90e9df4f69"
+    },
+    {
+      "id": "bt-thimphu-landscape",
+      "previousPromptSha256": "4797ecc9e0cbe88df7720e090f468665b0380348ee38ee669c46f3767e03f58d",
+      "finalPromptSha256": "f0b9f71d7740c3ed473e65db1f10d3b7cc7f7e74cc13410a4c315f4b8f69640b"
+    },
+    {
+      "id": "bt-thimphu-mobile",
+      "previousPromptSha256": "ea12a2c143c2257d956baccfcfdef2d377c8054a1e8c19d4b60a9f0b6c35b296",
+      "finalPromptSha256": "3d83ba3f5df38d48589699aa50e50249cf75850e70ef9cf10f040e2eadafd4f4"
+    },
+    {
+      "id": "bw-maun-landscape",
+      "previousPromptSha256": "e1ec91729489d658d59009eeb9dbd35d45b428a8b303406c2be20687c466ff18",
+      "finalPromptSha256": "97ae470e98cfae56f596eded30776cbb81910ac4f55b608922c040e24f6700ba"
+    },
+    {
+      "id": "bw-maun-mobile",
+      "previousPromptSha256": "2b7b711c9a5875f2aaf1d13aa96bc664606a6dae5ddc52618063a0630a3bd034",
+      "finalPromptSha256": "64a36824d51926fdb41cf30a01cad23dcdf0202eadf526c84133fc8f37d96117"
+    },
+    {
+      "id": "by-nesvizh-mobile",
+      "previousPromptSha256": "06b00d916fbbf523e8eb646946d6705e08535ff20d0fe836c18881731f90646d",
+      "finalPromptSha256": "d5513bdd8ce79901eb793a3992f16a9147f60d9f0c6670a0eeeef746f9f228df"
+    },
+    {
+      "id": "bz-belize-city-landscape",
+      "previousPromptSha256": "c5e0212c12de2b88ed7da6f6d14621f547744ef706de725514cef807f3d64a1b",
+      "finalPromptSha256": "83e6952265248862fb8df2a87e380a20cd0f91a1c4dbc4ada1cb60d870f04294"
+    },
+    {
+      "id": "bz-belize-city-mobile",
+      "previousPromptSha256": "e01097932661015f2431675c5a5f10d5005b7099411092b524b9e45354dbc33c",
+      "finalPromptSha256": "8fc18074dd00debeee554a9795714dba2f6be14074fd991f5ff737b0858cb77b"
+    },
+    {
+      "id": "ca-halifax-landscape",
+      "previousPromptSha256": "6fc1a06c4ea3d9d6d62b1626e9e48bf74a496e687821ed03bfa07e456d7aa8e6",
+      "finalPromptSha256": "46bb58aa6b9648df24618fdb6ac44d6cdbe62db6c77b0cdbca415124d5deffa0"
+    },
+    {
+      "id": "ca-halifax-mobile",
+      "previousPromptSha256": "cb404071c527853231b85a9eb133919806f76cdd6b0c85c35a82d97587e41fe6",
+      "finalPromptSha256": "e81d7b85044cadcc524c66957f8ed6e656626173c3e5f85014022fc6e88796d1"
+    },
+    {
+      "id": "ca-niagara-falls-landscape",
+      "previousPromptSha256": "d06e5ec6df830584048987704f16992ba3e902896c025af85aa3c3ab4c3ef0e5",
+      "finalPromptSha256": "c8bbc80ad31708a617882f65ac0880e265651bc451ac8e5d15d5221d5df1714c"
+    },
+    {
+      "id": "ca-niagara-falls-mobile",
+      "previousPromptSha256": "87c2398d13ab7214eb6e3238ac8308c484583d7ca920d2d60cea55727b631b61",
+      "finalPromptSha256": "462f0ed4072780d7a88cab9afab1574abc7269b97380bd0d8d51749335a4d87b"
+    },
+    {
+      "id": "ca-st-johns-landscape",
+      "previousPromptSha256": "adca7113d36d47596097fbed48a230ecff69c5fea334a9b0689f23b002a8a943",
+      "finalPromptSha256": "ec14830199a6e78c2edb1a40180a994cdfeb12e7c9cf8c19f41e5fca909bf64a"
+    },
+    {
+      "id": "ca-st-johns-mobile",
+      "previousPromptSha256": "57322b597c20ebca86578361f4d87f209739bcf4ad201c7a6a025e9254f04ebd",
+      "finalPromptSha256": "d85fb2d5d6c7486825e85842bfa24ada460a70bca6179e810ed40769c340529e"
+    },
+    {
+      "id": "cc-west-island-landscape",
+      "previousPromptSha256": "4ee8fe1c7b2fdd64108d55ad68c2009a54caa125c91e1b72bb0f98978aae04ac",
+      "finalPromptSha256": "fc5d67667b7f1b0ff3462259a6ca9fdd8dcb3e8bd75b9f9497a8a8773dcd4fc0"
+    },
+    {
+      "id": "cc-west-island-mobile",
+      "previousPromptSha256": "dc0523e58428dc000d8668932030de42bc17a533361bab8ddceb0e619ec8f6df",
+      "finalPromptSha256": "a5a0f79c818d61d2b78fe3a2f779383787dd10dee7ae8a8d8552c7ff497fb8ce"
+    },
+    {
+      "id": "cd-kinshasa-landscape",
+      "previousPromptSha256": "c5e5a6984776d9e04bcebfa60f18d122977863bfbb575e16baac7bcc6998abcb",
+      "finalPromptSha256": "6a2fe8d91773e5651563bc447cedafc78e611e1d0aea91dbde0bed40b13f396e"
+    },
+    {
+      "id": "cd-kinshasa-mobile",
+      "previousPromptSha256": "7e7b6948d74ce42e9e572b245b64397f50d986746f5eebfdb5186fcb15dbfcb5",
+      "finalPromptSha256": "6f72421bd4c7bb9082bd25d867140a4992efebff11a7c338bb88b45a85a430c7"
+    },
+    {
+      "id": "cf-bangui-landscape",
+      "previousPromptSha256": "89af0e2253bc1aa39dfb14e974fb74754d77993853451108439fb9fdfee14886",
+      "finalPromptSha256": "0403be0ff3dbb2180ee118a6f4b22144d1d903b409525304bce68d15ec644141"
+    },
+    {
+      "id": "cf-bangui-mobile",
+      "previousPromptSha256": "a561f3cc7d42e6565e9f23d2d94231061378842d1d5a2570090b15060e103b15",
+      "finalPromptSha256": "b2cac54e27819346f3fee92638a5888eeffa252b8d2f320907f77b78239c72d6"
+    },
+    {
+      "id": "cg-brazzaville-landscape",
+      "previousPromptSha256": "c770bc5ed25465158e5296b9d9add32c46e6e736048cb4832f4d4dd337643275",
+      "finalPromptSha256": "7b4ef7c6b80b0472d8d494f290a0a2ff02879a3e9f360fdf37b4fb51a01f07bd"
+    },
+    {
+      "id": "cg-brazzaville-mobile",
+      "previousPromptSha256": "2c1bfa66add12dbf8a1ceadada32e8648d32e65f6354d97b84979b9c38362cd8",
+      "finalPromptSha256": "29fbf6cf94255485c9554f0039608617c7018d62f0c95ba8fcdbbcadfd978e89"
+    },
+    {
+      "id": "ch-lugano-landscape",
+      "previousPromptSha256": "0f9e7ef1d7c08c3a6993f7fe072cf22a6cd98dbeae00be3f27bb5ebfa7f49c46",
+      "finalPromptSha256": "f9de301875528518bb07c2b48f85c1df2cc220103f713e2793ca1bd0047e6516"
+    },
+    {
+      "id": "ch-lugano-mobile",
+      "previousPromptSha256": "3deeb5d8323c67df45cd2aac3525fcc6b69f60f8bb3534645ac5e67f5c5075c9",
+      "finalPromptSha256": "21014806869d8c787ead382703160d04d546da7f0d5ad854aefc1172b969fb93"
+    },
+    {
+      "id": "ci-grand-bassam-landscape",
+      "previousPromptSha256": "36b6b05e2cec57a787a119668040bab44b259bd0eb43fccf5e1286f3d0bad03b",
+      "finalPromptSha256": "1f961e20b1d9f505008f3b086d547a73fd9e7b0cfed0a50ca88d9309eff65789"
+    },
+    {
+      "id": "ci-grand-bassam-mobile",
+      "previousPromptSha256": "81952ad156e7474efc4ddd8e656a4c22c7c1bcb395bc49c1a7381facf7fd49fd",
+      "finalPromptSha256": "4e37fc7eec77b52da89b82a622902adae041b7137e98a8cc752f027836794ef4"
+    },
+    {
+      "id": "ck-avarua-landscape",
+      "previousPromptSha256": "d54aa87ecb61af882318553df81f237af3cb548fadd87826da7255da043b26f4",
+      "finalPromptSha256": "72c8595bd37b5cd9ba8b614b53241864b5e3356dbd9347e5404f863833a18039"
+    },
+    {
+      "id": "ck-avarua-mobile",
+      "previousPromptSha256": "b3ca3440c0a0499b7a76d70834e61828d1abb74f2c712c8f1e0af87d7796a680",
+      "finalPromptSha256": "b4261c495eb08b3f28a228a9d4ec8f0517293fb24d56f9845830e485230112b4"
+    },
+    {
+      "id": "cl-valparaiso-landscape",
+      "previousPromptSha256": "1ce89f6727a1e23672d0b8afdd86e9a58a0a76e7d354afceee10468e1f627e56",
+      "finalPromptSha256": "aac8af064144279866a2e450cd94a193a8ba4e7c18ad43e971cc26325887f8a3"
+    },
+    {
+      "id": "cl-valparaiso-mobile",
+      "previousPromptSha256": "ce9071ec0d7adcca0c7a19bb8f6959fdf5c559139e29107b33b3584df8578fb7",
+      "finalPromptSha256": "27ab0d1b2884c1bbf10ae9104999086189ebdd176e156c41a23dd6bd306e23ab"
+    },
+    {
+      "id": "cm-limbe-landscape",
+      "previousPromptSha256": "30b9d5084deeb84f6394d76309bea4e9420bd103442cd73d6468a6abbdcfb231",
+      "finalPromptSha256": "a7b5ac03227c1eaa558c9d63258d5f1b83741ecb189bf61089f8bd6c9ba9ca37"
+    },
+    {
+      "id": "cm-limbe-mobile",
+      "previousPromptSha256": "33e6fd03b188a6bd477eb845b9cd25c8ca2e860b816f66b92408004cf05bc1f6",
+      "finalPromptSha256": "35efda12ff5e00d299556c06d0705ef52880f8c7eaa42b1111041ea6b096a700"
+    },
+    {
+      "id": "cn-dunhuang-landscape",
+      "previousPromptSha256": "91f624e31ff62f4c4daa56af2cf0086a19c2d05256603b3ae365578c59afffa7",
+      "finalPromptSha256": "3c69c56384fdfed9015ff3f73bdcbe2d8722a94c186011234855107199e00c77"
+    },
+    {
+      "id": "cn-dunhuang-mobile",
+      "previousPromptSha256": "c65da135304e89d69c9ef3e6388cff918c596d289cdf7b5e246ef68209e42ead",
+      "finalPromptSha256": "629ae5161879857ee64ef73f510c7b082d408545bb9cb2bc40d4634b51e1e373"
+    },
+    {
+      "id": "cn-nanjing-landscape",
+      "previousPromptSha256": "51a53cb61c1be007ef9f798451be6cd01ba101459ab6b43152a779e966d912f6",
+      "finalPromptSha256": "96db616ce8661684879de7c0f0ee33c8c4121e28b920947b00410ab4d82d6d2f"
+    },
+    {
+      "id": "cn-nanjing-mobile",
+      "previousPromptSha256": "3daf1dca972cf7da4fad013b40999ab0e7567f3cd819f56eeca4232233900e9b",
+      "finalPromptSha256": "6dd92dd1f6234e4a5a712cb1474e6136cd5c477b1625787bce445be56ac47991"
+    },
+    {
+      "id": "co-medellin-landscape",
+      "previousPromptSha256": "72357623e491a1b3d2ce18ec7f2a236e406924e4c17fdbd37b9e62517c9e0d67",
+      "finalPromptSha256": "0c1c1728243bf57be4225e071fc77aa37d20207bc3ea97c5c59022e2ded6bfbc"
+    },
+    {
+      "id": "co-medellin-mobile",
+      "previousPromptSha256": "a751608e91f3fe307b24a67e27508dd873f8350a46d732931df3cb44f3d26516",
+      "finalPromptSha256": "560533e93be9eeea4f8a76884d6e1e294caa0df41dbb42487598a77db62d2c44"
+    },
+    {
+      "id": "cr-cartago-landscape",
+      "previousPromptSha256": "a2d6aa493c259231c4a06a18fbb5c14f113f62879f834c59187f47778f624f73",
+      "finalPromptSha256": "f18e4f62dfd9b19cc6bb0569984a3053525f9f03cc9e9d98f75578e5c8e72438"
+    },
+    {
+      "id": "cr-cartago-mobile",
+      "previousPromptSha256": "cb62825bde611318177fb050498cbc9248022884a6e8b32b1a4a5439829918de",
+      "finalPromptSha256": "c5e0123c78faf9769970890ad1a67657f20da23d7bbe5c667de56bc273fa01cd"
+    },
+    {
+      "id": "cu-trinidad-landscape",
+      "previousPromptSha256": "c62a703309f67d3333fd1cf56c23f32cd6da227bc0ab85867e9e7d5a7df4a8f1",
+      "finalPromptSha256": "adebc2ff6332d99487e890e3c980f727ebe9325f2442bf56ae44f573c53be506"
+    },
+    {
+      "id": "cu-trinidad-mobile",
+      "previousPromptSha256": "62a653ee90f9510d063a1f550531b4c7aab88827c7f13cca6084244dd33e14d0",
+      "finalPromptSha256": "9f39c1920e2882885b868c76e599f18844ab35364aa5e5821767a8289b211210"
+    },
+    {
+      "id": "cv-mindelo-landscape",
+      "previousPromptSha256": "b9c575a429f66c9e12ace2ddf123216420f41ce240deb1279cb00233bb38a271",
+      "finalPromptSha256": "27dd60065fe814a1d89be940357cf55b73d0ab3a5fa0db4a204a6725c0013c83"
+    },
+    {
+      "id": "cv-mindelo-mobile",
+      "previousPromptSha256": "fa958210d545aa444be2bd7596edeadde8bfc9814c6527612cc34a0e0006a17c",
+      "finalPromptSha256": "9c5763fb45d6a36b9df30522fd5007d19d249e6e0b4dc64ffdb79821f3d209d6"
+    },
+    {
+      "id": "cw-willemstad-landscape",
+      "previousPromptSha256": "1b2dd7917946d797b9d377a622d8171b9061563e6425735f1d1841ab09523fcd",
+      "finalPromptSha256": "8531e90252fe9fe48b0fc889192f5272f2eebbe1bc160c713ed332dc7793eb61"
+    },
+    {
+      "id": "cw-willemstad-mobile",
+      "previousPromptSha256": "e6c6fe1e9730fa6055d446c433279143045a2aebe9ee31f89731a69b2b6ad1ff",
+      "finalPromptSha256": "fe36d1922901101e1cf9ba0c01189e788f4ea0fc887fc2128ea20d74333dd049"
+    },
+    {
+      "id": "cx-flying-fish-cove-landscape",
+      "previousPromptSha256": "9365678a6f0bd834e87bc64125ca9cbb087f8cab610dd1a8312b0dc1ebf6d4b8",
+      "finalPromptSha256": "db14e71d4cdb4f8b04c31fd63f625b7ecd9958b8bb4b7f02fedce00c942d7c9d"
+    },
+    {
+      "id": "cx-flying-fish-cove-mobile",
+      "previousPromptSha256": "643d02b797d08fba50f0b8c1519b552c7b5b9de1af5295222ed348db65a35a38",
+      "finalPromptSha256": "5e8e4cb75c23771c584704f809a23c2ad79da613346bbc2d37f045140d2a81ee"
+    },
+    {
+      "id": "cz-karlovy-vary-landscape",
+      "previousPromptSha256": "51396be6deafa6edaadf1232073dd40db4218a2f61ad9b5f87aa11f4579428a2",
+      "finalPromptSha256": "2c3a7dfe658f7fee7c2b61471e653ba4452e34ec3b054a4c2c267142740df350"
+    },
+    {
+      "id": "cz-karlovy-vary-mobile",
+      "previousPromptSha256": "2128efba883107ab5d6695705d18d9c7576ef88603ce857f36e10c628a67bf88",
+      "finalPromptSha256": "cba13ee7d3fd0cfef9ff89a43b0a61f77cf9ca380b67da936a5756a39d284a37"
+    },
+    {
+      "id": "de-trier-landscape",
+      "previousPromptSha256": "382d461b81b7476032444f87da7695ac24c4fe11bb8673f4dcd5ac5c3fb04884",
+      "finalPromptSha256": "8b122c60965e74807f2e4af6ea29dace51d99f60ffc379e07804b4b539aa5df7"
+    },
+    {
+      "id": "de-trier-mobile",
+      "previousPromptSha256": "5aee76d9b10313cac25b6ca5e7afb1df6df0d209a0c5e67af78da9d7b4e7746b",
+      "finalPromptSha256": "8aa42306ae45a726b605f0404f33a4558f3e7dcfb7dd696d58b11c2a5013b3c2"
+    },
+    {
+      "id": "dj-djibouti-city-landscape",
+      "previousPromptSha256": "a214c9b51b7bd9d149bdcbf0b558a5942322ad5519eb288e96cf165ac4b6e517",
+      "finalPromptSha256": "da3ad2cd2751c30d47f4479f6b349da98eee1c668c58af598e8577573c48424c"
+    },
+    {
+      "id": "dj-djibouti-city-mobile",
+      "previousPromptSha256": "19b70ac60da9fb43535ccf80a506e6e55403e0dd5de156c25615887f76ffdd60",
+      "finalPromptSha256": "8fb9ac1af42adee0fda24c9ebeae9b68ae5716e30c9a39d04e6606134338dc9e"
+    },
+    {
+      "id": "dk-aarhus-landscape",
+      "previousPromptSha256": "cbbc078b3921eba4b33af8ccbee802599ab2619b04532af322010c56e5f4dd3b",
+      "finalPromptSha256": "e1d707f55581055a49b20913ea007ca15ffc9dffcbdd779c9430f0e5edfb45fc"
+    },
+    {
+      "id": "dk-aarhus-mobile",
+      "previousPromptSha256": "b5e6adf16043d5c82c36fb4c5b1b57fa8561de38f7347a0a546a94b4bec2bc8d",
+      "finalPromptSha256": "6af70d5eeca8e605738a4146b6026f2c27cf61cc05360331e0c9afbdc4e6a228"
+    },
+    {
+      "id": "dm-roseau-landscape",
+      "previousPromptSha256": "8d019be4a48a1777fc613a6358d5169d7a3aa5a6362b24b297126f5386f5b4d5",
+      "finalPromptSha256": "4d738f5ce115a5f6eb1b6fdfe1389ed82cc44cb7c604f7b2f5367126f82a749b"
+    },
+    {
+      "id": "dm-roseau-mobile",
+      "previousPromptSha256": "89397f7e17e08ea51b424c495139765a998c8a289f3208a5f541106ce7011182",
+      "finalPromptSha256": "8fa95ee761e1f9bb2362ff8ae222a14462c7ce95e4fd69f3654aeb7572b27fc4"
+    },
+    {
+      "id": "do-santo-domingo-landscape",
+      "previousPromptSha256": "34402541c6ca226b714d7cfaa0fedac3642674be506d5fc27a64b9512e353781",
+      "finalPromptSha256": "53802476d9f1737f6869862bec5cf60067e24dff869ea6a179021e33d4fcb80b"
+    },
+    {
+      "id": "do-santo-domingo-mobile",
+      "previousPromptSha256": "7c8d347f165f0266b333be4f64e87260895469dc2840d7bd8ef774712e4e1134",
+      "finalPromptSha256": "6c95512277e8f415c8c24b39f4abbfc071e60109670472e71a2b8eb735371d37"
+    },
+    {
+      "id": "dz-algiers-landscape",
+      "previousPromptSha256": "a6ac5a112760b9cbc5feb199604979a8853cae04447affc04e716a53cba7f98b",
+      "finalPromptSha256": "20343402b7708cd45fbd5ec29ad0eebe5b0676ce476b24a8589562a15735750b"
+    },
+    {
+      "id": "dz-algiers-mobile",
+      "previousPromptSha256": "81b22ab0730b09cc5bbecc16ba593333dfa1305f943fd45b8d43348f2db9ad5a",
+      "finalPromptSha256": "4fe0f78aa4e48ec84fcc9047328f828214fa8a8de8e07eca4c4cff7fb70fccac"
+    },
+    {
+      "id": "ec-cuenca-landscape",
+      "previousPromptSha256": "f466b96e3a53417df03fe4913cdc88bd28d43713bf9be3dcacafef2d5b746d2a",
+      "finalPromptSha256": "6fb786d50c2095443944ac49e4eea3a3fbc5ecc389ff4fce9fb17ce41d05772e"
+    },
+    {
+      "id": "ec-cuenca-mobile",
+      "previousPromptSha256": "6e31a069702f434485cac222ad165a17646a24cfcee6260040c24f1e51c40c15",
+      "finalPromptSha256": "a486aaf14d448ad11b4a873baa02b0c4a20ec7bc8f0bd27462979af77a56cd1f"
+    },
+    {
+      "id": "eg-aswan-landscape",
+      "previousPromptSha256": "1a334d65a67ca5485465475999932b5d9507b591a0c6fc122e9a63968baed8a3",
+      "finalPromptSha256": "d8888d25fdb89814bfa235e16a6770e7bef1c239279edefc4726c9a34d63a9e3"
+    },
+    {
+      "id": "eg-aswan-mobile",
+      "previousPromptSha256": "08bdee7b0722a535a133a5564bce62f4dfbd6242e42d52b6acf78a5d597751b5",
+      "finalPromptSha256": "8b7d6ed8985a9d9b746a7ad1890d1af2de9877a6b4bdaa91cacd29571290a523"
+    },
+    {
+      "id": "eh-dakhla-landscape",
+      "previousPromptSha256": "3674187d95434658dc7603560cb47ef29c231ee51d8b280a30a9f9f4d8371f1c",
+      "finalPromptSha256": "b77d67c171c81367ea86b8b53505f969bf97864e50f35eb8552497be032a61db"
+    },
+    {
+      "id": "eh-dakhla-mobile",
+      "previousPromptSha256": "760be1ae2ae602456178ff26f4f082731e78acf24a532d9eb3c3d2abce7b18ed",
+      "finalPromptSha256": "7a44988967be3409d81d231c215767afd9a0862596ad42764bf858264e5a0637"
+    },
+    {
+      "id": "er-asmara-landscape",
+      "previousPromptSha256": "92f27b564adee7d5d6ad07503aa33c61ccabb3d4664d8207c431fa3f5670e425",
+      "finalPromptSha256": "9a4d00e7bf03d6aa1a2c8f1105a6bc88c35f9ffb0e573d2cc0eb9b57e7f1e54c"
+    },
+    {
+      "id": "er-asmara-mobile",
+      "previousPromptSha256": "a489f56bdc3b1d67ccbd02ce29c1ab8dff87b2ecf32f425d7bed809a2c1be464",
+      "finalPromptSha256": "9342878c4c6129a2cafa045b9cc150616181c81b832265a57988cfd0f8a362ec"
+    },
+    {
+      "id": "es-salamanca-landscape",
+      "previousPromptSha256": "ec753731f8d4095c8dda1304884df655896f34a399a9e031c22abad03d135861",
+      "finalPromptSha256": "5c04e157d7472d529a85746e5896fd23e1a8270ede74d6b31a0650e33f85336b"
+    },
+    {
+      "id": "es-salamanca-mobile",
+      "previousPromptSha256": "42dca6daff0be001fc1827026aea54f5002aa0ee363942ef8b3574eb459ae4b8",
+      "finalPromptSha256": "200bf2f7a04b95a3bb6d55ce4518ef2a960325304ac42a547e9a576fe8155889"
+    },
+    {
+      "id": "et-lalibela-landscape",
+      "previousPromptSha256": "92ec533d89d62945eec0dffe7b1a921f03b257ac5c07c7a3be86a7f74f90f3a3",
+      "finalPromptSha256": "d989747337a691bb5698b72e1e921f81c19677075f1627ac98337392d240f91d"
+    },
+    {
+      "id": "et-lalibela-mobile",
+      "previousPromptSha256": "e2dc26f8997016ca39a40e29a69f464de3add41328c587d608da0c612b692b9f",
+      "finalPromptSha256": "67628f14e429031e0c554f82c8f524bbe4730b50dfecb366890fce9876d06e66"
+    },
+    {
+      "id": "fi-turku-landscape",
+      "previousPromptSha256": "4ac7dbff504d5b58e3910e192703acee59a43cb2eed3a76162a2c46385360fe9",
+      "finalPromptSha256": "b0397184c4fee2a3f3fc63ed5c467544a0938e22cfe0476b49b3af20c693c29a"
+    },
+    {
+      "id": "fi-turku-mobile",
+      "previousPromptSha256": "bb20e05d58a834de8298d6f106eacf7f9db5160ff12317bb10934f04014d39f7",
+      "finalPromptSha256": "deaf3eaa142df1deb9f7d7711d4d79e8d3098313d053721ad351f0bc356d148d"
+    },
+    {
+      "id": "fj-suva-landscape",
+      "previousPromptSha256": "23ee3d7b5385fea652534042e94a9b72e8ddef0d9ff35592f2211955b11af01d",
+      "finalPromptSha256": "50c52145acc06e1d99acd2973c40b3cc3f5f8efd4b60946f4949700e61d41258"
+    },
+    {
+      "id": "fj-suva-mobile",
+      "previousPromptSha256": "48935a32f043f75ad09ce8e71e922d780842d2e548b4bb461b85975b367f6864",
+      "finalPromptSha256": "a5b5512d10ccfe63237cc031ac8a307563aafc9c86b3eb1a17e9b06a5a1283d3"
+    },
+    {
+      "id": "fk-stanley-landscape",
+      "previousPromptSha256": "cdf32b2cc907076875f2ff7c3533e3d956b9fc6d7551f69ee2ed2619d5e046d1",
+      "finalPromptSha256": "84870b0c46ad62d37b6699fa193a9cea55c2f1e7c3244601022ab48b18121076"
+    },
+    {
+      "id": "fk-stanley-mobile",
+      "previousPromptSha256": "91ef5b93483464868f869e101acd674e83167a316831947bb0d23ab6a1a6cd23",
+      "finalPromptSha256": "b38232fc2eace1cddf71fc60a6c9f0cbdf387d4e6fb29c69211199df29af4f37"
+    },
+    {
+      "id": "fm-kolonia-landscape",
+      "previousPromptSha256": "aec403fafd322e909088c8c071d69667dcdbd7157288828ee0429cfbf89bb5b1",
+      "finalPromptSha256": "b04b9570eecba12a44f09dba99b3cf9f1c953a93c3e0f036e954fee625a60719"
+    },
+    {
+      "id": "fm-kolonia-mobile",
+      "previousPromptSha256": "7666cbb998f90071cfff421da40580202f6d62e816626d7cc58cf33889f8fdda",
+      "finalPromptSha256": "4744f65bd2fa43cc920732452bf721a7d4290ca58087586add293eacaa7f5127"
+    },
+    {
+      "id": "fo-torshavn-landscape",
+      "previousPromptSha256": "bc5953bfa2b8b0b89deb0dd2399e3fa7eca858f9b48a3742c93432727d118981",
+      "finalPromptSha256": "6ae30d182ac0662e166fd8b9c59366378d29e4a1df61a5e7e42d4d91a41d8454"
+    },
+    {
+      "id": "fo-torshavn-mobile",
+      "previousPromptSha256": "f952104d84852574abb49313c7dbff2b6f0a7a4b57342bb308838470f2cb846c",
+      "finalPromptSha256": "f1f292022e6506ac4debba89bb0052009766eb952bbf778e66f7912bf767bc23"
+    },
+    {
+      "id": "fr-arles-landscape",
+      "previousPromptSha256": "4d5959174693962d9eb86a232bac863a8edec54904575f757bde4ee28c38fe20",
+      "finalPromptSha256": "89e2530c6ea7d79bef46c923fc688cb65b16acdb125fdb680390655a1cff3337"
+    },
+    {
+      "id": "fr-arles-mobile",
+      "previousPromptSha256": "29492a35269fa5d8a4b40941ba0da73de63d68c922ff388852b8df43e65e9e3a",
+      "finalPromptSha256": "bb03049f3ec0f19aae7c9d40a1431ba36a44d4644c13567b01642a101429877e"
+    },
+    {
+      "id": "ga-libreville-landscape",
+      "previousPromptSha256": "f197b2a265a0b2a45cefe6696ab0472e73025486e95ffba6988728c2e5757a81",
+      "finalPromptSha256": "54f1734d74cc01474c296a2deb3cc4699397361d9a241a1be0249094c8361a96"
+    },
+    {
+      "id": "ga-libreville-mobile",
+      "previousPromptSha256": "72a5b3c91292a6767f8bc89671c4ae35b3ba5a4eaa0ec0a4319640fdf883f9a6",
+      "finalPromptSha256": "685797715bacee0d10eba33d8c8a736e2014d1e414be4b11a0accf47b308e0da"
+    },
+    {
+      "id": "gb-canterbury-landscape",
+      "previousPromptSha256": "82d7bf55d9f792c78f4a6d823474046a32730b08cb531084113dbca0e75876c5",
+      "finalPromptSha256": "78a1cad5ae78a34423a6dfd48f172ae7e223b4c20315368e035c6924f31327ed"
+    },
+    {
+      "id": "gb-canterbury-mobile",
+      "previousPromptSha256": "f12617eb2bb2086fdc54c0dc38a152fa29842e39f8976baf986bc9eb726896f5",
+      "finalPromptSha256": "3e580680ced2d5d70cfca6f5da9fc9d4b55e84076cdc88eb81855abdd1f9cdc0"
+    },
+    {
+      "id": "gd-st-georges-landscape",
+      "previousPromptSha256": "b30d95f41be09bd4d14eaddb798d8e405f5e53cbad2badeeb459f3d6691712ed",
+      "finalPromptSha256": "616c096924df07850d847ad5bfd1f92f337e7920786edaca4caf4114f8ed17c6"
+    },
+    {
+      "id": "gd-st-georges-mobile",
+      "previousPromptSha256": "a93b7c9e9c55cd73e9a1a40b567c0302f698920f282e0d9bcb462fcaacf82d93",
+      "finalPromptSha256": "1751998641faa597c6dde26d2b57a5b2e37590f18ef03a273fe73322b39ebb40"
+    },
+    {
+      "id": "gf-cayenne-landscape",
+      "previousPromptSha256": "12b7f95b3406e85847083e5997145e6b1af2f2b3fcdf6c7352000307a2902506",
+      "finalPromptSha256": "298eeb53571d24a67a3860caf42eb2063daed5ca4bb93b226a60bbe172801dc1"
+    },
+    {
+      "id": "gf-cayenne-mobile",
+      "previousPromptSha256": "a97098db0c2329ae86e5e3894f040cf1fad26431ba4aa589b6f99b166e014f21",
+      "finalPromptSha256": "8c40cbbc9f5c3f8771bb07f4cb6fb19eda4f2b760fbd74be6553c986b0bc83cb"
+    },
+    {
+      "id": "gg-saint-peter-port-landscape",
+      "previousPromptSha256": "e0f3cb706ceddb422d054db8675493c1b7aaef40165501d1b2b141302319c687",
+      "finalPromptSha256": "a82539c0ad15a254d1fe22fbd306940641e1a98255c1a3257ebd32a005ffc8c1"
+    },
+    {
+      "id": "gg-saint-peter-port-mobile",
+      "previousPromptSha256": "a598e364af010abc54936f2e02dcccdc71ac49ed5d5eff8aa586ab1800f64597",
+      "finalPromptSha256": "8cb92713ac79b8cd6b894e2c231f88915e2d16d687821a77f07b051c5600dc67"
+    },
+    {
+      "id": "gh-cape-coast-landscape",
+      "previousPromptSha256": "fb76ae91b64529c383f1e88c2d34429c9eb44ca774b771ce3d5558495b208b5e",
+      "finalPromptSha256": "e91380cd76e98e8f344153f138f14f4dcee1ad2f4926be1660daaaae7773ad7c"
+    },
+    {
+      "id": "gh-cape-coast-mobile",
+      "previousPromptSha256": "017b82c76ab2cba732559dda49727ecf38cef5d6048ce88ec65a3220914790a6",
+      "finalPromptSha256": "440ac08a5bff42aac801c78113658e5d7ee1f51cb1ee515450d43603f6a307f8"
+    },
+    {
+      "id": "gi-gibraltar-landscape",
+      "previousPromptSha256": "edba99648bb7fc7fa8e10c875ad82030d23920a2d109db413788cd30200e1f8a",
+      "finalPromptSha256": "8957939f153e08073392de3b84b19a7377226d79e96c81ea0403fedcd818059c"
+    },
+    {
+      "id": "gi-gibraltar-mobile",
+      "previousPromptSha256": "9924da301a4511a0b438fb99e85a33daac90c5622750f38e9ffde44a0200f061",
+      "finalPromptSha256": "0ec34f0c221388ecd3ad7474b67c01d2dc334db33a0bdc25ee720e38b0f318cf"
+    },
+    {
+      "id": "gl-nuuk-landscape",
+      "previousPromptSha256": "b95ade76c9f844bfe98a278eabb79562f05f9e2a9b4a458b33d223d15521244d",
+      "finalPromptSha256": "08b16c6f34ea9bb60bc831964d055f738b4f5b80c198f719ee47bb2cc7c4c7c5"
+    },
+    {
+      "id": "gl-nuuk-mobile",
+      "previousPromptSha256": "f1c9364332526095bc2622d23a51b37fb434a627174353382e8365ed298fef08",
+      "finalPromptSha256": "7e30ee57f57dab629e923325405a779abde0cca0115b32d580e9a0c8c7e58c28"
+    },
+    {
+      "id": "gm-banjul-landscape",
+      "previousPromptSha256": "541b5b6c155a09ae8b0c356ae2f79558baddb6e0b6ce4eb4bd3698937f02c3f4",
+      "finalPromptSha256": "217fd98798f8e6738a794aede5f5e3017ed394ea02f3603ac3d2b95455adf11e"
+    },
+    {
+      "id": "gm-banjul-mobile",
+      "previousPromptSha256": "8f8ec10a41bce1af0d90c4b2c366f974e643cb20a0f5582563aebfc03905da7e",
+      "finalPromptSha256": "add619e8570cf4d8b245e12f8db523d329aa5f5e4e985d03aae85969d318528f"
+    },
+    {
+      "id": "gn-conakry-landscape",
+      "previousPromptSha256": "e9dea5b4a0c0acda19705f929427b99b45ad74c3ef2f87d948cfd51f93faaeb5",
+      "finalPromptSha256": "f6aceed46d23513643ea32099c1b7f65c37d9ebd88f8dba50c2dd8b6e4b2ccec"
+    },
+    {
+      "id": "gn-conakry-mobile",
+      "previousPromptSha256": "f25e0a28fd974d3e94825b7b0fbd0265e047c98b2ae5bb4d70eef57b23796c37",
+      "finalPromptSha256": "d399c40991e24291a8f69768963bf902583b9aa703df29ca36d080952e4555b5"
+    },
+    {
+      "id": "gp-pointe-a-pitre-landscape",
+      "previousPromptSha256": "7aca97d9bf1c6d54040e20f141f74f5c3d958dee58a98774f38f2168c81c590b",
+      "finalPromptSha256": "e4816ae48d92b9f412a0b56278638d18de3111818e32ff8896d0e131979ae7f5"
+    },
+    {
+      "id": "gp-pointe-a-pitre-mobile",
+      "previousPromptSha256": "89fa8b34d8aaf959bfb8682c58f3b8e6ece33773005a67be6c99e02d2325de85",
+      "finalPromptSha256": "174fd6220504f382489880b1d2e2e274efb2c5d58071c61f6808447e42929d43"
+    },
+    {
+      "id": "gq-malabo-landscape",
+      "previousPromptSha256": "d918563d3a1a1afe85bd38ff19408caa704e6a996560139c88cb0df33b70185a",
+      "finalPromptSha256": "15ab6e2527bc44f7b38a9c0695ac09ea76f2357432292e65be0629b746886933"
+    },
+    {
+      "id": "gq-malabo-mobile",
+      "previousPromptSha256": "456528b84a340472859e8df7bfac81a11a5260236469dd1f9fd6c406eef11723",
+      "finalPromptSha256": "7a77fbf33977d8ea5177d98724cfa123b4871b64da79c385b19d1bf2c634026c"
+    },
+    {
+      "id": "gr-corfu-town-landscape",
+      "previousPromptSha256": "ad191ee3e8d157cc2e0644d70a803be71141e93b8b716771cc5defa52b3f5313",
+      "finalPromptSha256": "c47822eb110b1cc6e1c75c268f5db1f807ea73a1908cfc7787fa9e12a4f641a4"
+    },
+    {
+      "id": "gr-corfu-town-mobile",
+      "previousPromptSha256": "8c3ad1ee2307c4ece08c876e282993cc5ca032cd22662d848e63e79477a0fcbc",
+      "finalPromptSha256": "ccb0a97aa4dac8a20ef651bbe0a33fcac378e596d53852d61e737b8cc7210765"
+    },
+    {
+      "id": "gr-nafplio-landscape",
+      "previousPromptSha256": "7b9de091f2a9d50228f753dca97279b3020ed067b7dee37cedcf469b8129471e",
+      "finalPromptSha256": "6c3d1863646eb24607d318012c7306d5d89e192c65e02c2c64ca8ce768af01fb"
+    },
+    {
+      "id": "gr-nafplio-mobile",
+      "previousPromptSha256": "224b4526e984a925082193a9e2ab766c49c03f5772b6229a1a609d47c92f0c61",
+      "finalPromptSha256": "e566b751ea8d6c33ea7ffa887c05647465c2520eede8a200217c8c6fcb72a1b8"
+    },
+    {
+      "id": "gt-antigua-guatemala-landscape",
+      "previousPromptSha256": "af571fa8dfbaafc836b2146faa940135a823315180e23907e0eb4134ba9a7bdf",
+      "finalPromptSha256": "c142f68331c8918d80f5b570911b27d365d7692059c1393c9342110d71c66f53"
+    },
+    {
+      "id": "gt-antigua-guatemala-mobile",
+      "previousPromptSha256": "8c8e2e0d844047a981538a44bb896b44fe69ac1fb678cf137d9debb3bbfb81db",
+      "finalPromptSha256": "37f70ed9a213081df2e4c74198412d78746649c471ff2d08510c9e0fd3b9c712"
+    },
+    {
+      "id": "gu-hagatna-landscape",
+      "previousPromptSha256": "88b6d5f9da06ee4347045f12baa77569b353952e5f3c8c588b437c39a22ab945",
+      "finalPromptSha256": "432060f753e10750f601445254dfd414131028b7d95e614e4dc9a058cc6ba980"
+    },
+    {
+      "id": "gu-hagatna-mobile",
+      "previousPromptSha256": "f7021cab44d255fbda38b95443a8f1f2e237ee8b22c803650a88f3736be1c257",
+      "finalPromptSha256": "d4cc9dcd40bf6f0a1e772b4be53dbd3845cbc651f1d89daf8d86d8d997b2b416"
+    },
+    {
+      "id": "gw-bissau-landscape",
+      "previousPromptSha256": "645e987e0bb0bf165e67903c7375d765539135fc981096a75b4599f1e3ed25e9",
+      "finalPromptSha256": "5effb81452a8ba4ee64eaff6ac1fa4677d42b8b31d14489df0301b0abb999d47"
+    },
+    {
+      "id": "gw-bissau-mobile",
+      "previousPromptSha256": "92e76ff36efcc88e6d8eb6e0491aa6be07d831236584ea79ae23118f77d95d53",
+      "finalPromptSha256": "87ca92d52390e6b5a639a3ffec211d663f8f235917f3d597403a7f32bcdf5abd"
+    },
+    {
+      "id": "gy-georgetown-landscape",
+      "previousPromptSha256": "419e8e498f9a96ae640e2032c559ee65b802a9c681468fe049afaeb3025eb519",
+      "finalPromptSha256": "4d07da60c28c4de50bdfd4089550b48b07102d16854b8df22848ad807c65b6bb"
+    },
+    {
+      "id": "gy-georgetown-mobile",
+      "previousPromptSha256": "c620c81b4b61417108f6638e05aadba77c557c37cbde5ba008c1054127ce8b72",
+      "finalPromptSha256": "068c52ccf8b661f9886fedc3d83a6591818542deb2de35ebe15243cbf9c3c739"
+    },
+    {
+      "id": "hn-comayagua-landscape",
+      "previousPromptSha256": "257aadd486843bb1f0c0ce8bf39892574201b454406d0956aeb18fb7997d6c33",
+      "finalPromptSha256": "59c69d2d3753679132dcb99f321c5eac12529833d0702aec49e91ac7f5e85cc1"
+    },
+    {
+      "id": "hn-comayagua-mobile",
+      "previousPromptSha256": "b82f07421d3840ab536ec47b37d67438f612ff666234600ae37cbbc7dbe41a8d",
+      "finalPromptSha256": "bf9e8ea84351357e6715630b7b874edf1a52b1f5b26baf0cbdd7a3251cc873db"
+    },
+    {
+      "id": "hr-trogir-landscape",
+      "previousPromptSha256": "8323b5911caf473fe614b4daed51d88870e8d72387ccb44474a2bf0973c51fa3",
+      "finalPromptSha256": "7b0c7f87f5532b171ba5df82e5be3be358d80c85b90268601d70016ef978ee37"
+    },
+    {
+      "id": "hr-trogir-mobile",
+      "previousPromptSha256": "a108705b3686d14e4ed704be556384634c61dcbfa183aee89c16ea7fabfb5a77",
+      "finalPromptSha256": "11e85a363975fa2e73ef7c4e962bcd990db62eb05c1328505290770e4007098b"
+    },
+    {
+      "id": "ht-cap-haitien-landscape",
+      "previousPromptSha256": "0ab90ba8b848c01ee84009d81e5de5614338455a88b5879cf0b889bc7880c8a8",
+      "finalPromptSha256": "b0582c0a2da811ed8d3341da6de08d01f28f1f8311acc235a0ace56df50ffd75"
+    },
+    {
+      "id": "ht-cap-haitien-mobile",
+      "previousPromptSha256": "29b62e0e97ee2637be097f9c027c4ce142eeccf7a37c38f69cb2f504eccb8772",
+      "finalPromptSha256": "962b2191a280dc64398fd897fd6aa2fcb304ad5ce60a52761b5a7f040a502706"
+    },
+    {
+      "id": "hu-pecs-landscape",
+      "previousPromptSha256": "89774aab2b56264ddadda5e902f838cd4a2ff45584df7e75d7553124b3e5393c",
+      "finalPromptSha256": "b267e5d8b7d9a93d4cfe719fda025431128c02ad38235398a2ca7f1840e6078e"
+    },
+    {
+      "id": "hu-pecs-mobile",
+      "previousPromptSha256": "e55aadff9f62689b710b16b218d021cb62d61f4d7022861e2836617367c5b245",
+      "finalPromptSha256": "f589a9bee707c439b6f8ee2ac4fdea9c8ad7e49d367ae8868f3a7576a21dfc40"
+    },
+    {
+      "id": "id-bandung-landscape",
+      "previousPromptSha256": "d1d85a7947172c6fdfd0c65053190952b5299f565bc6b4dd99244e038913ae10",
+      "finalPromptSha256": "5bbd0dec6e54228c30688994da8b917abf45c2c8f39be67ce89777a94b660a22"
+    },
+    {
+      "id": "id-bandung-mobile",
+      "previousPromptSha256": "1471f50bf5ad71a0d1ff62ab53e82d19989cf84ce2ab38fec79c005a775362c5",
+      "finalPromptSha256": "72f0fc3684eea06dc2de9c64e79774400da373c6bb7c42bf61f6500c56575227"
+    },
+    {
+      "id": "id-ubud-landscape",
+      "previousPromptSha256": "a9cc1fc3a1114a09d463f3647cc1f33bb5c36ab1d66c66dba4586390b838e1d1",
+      "finalPromptSha256": "1d44cbf75ef7cfa6b599ff277b9ba336d6b93277cb1aac989e4d81a6629dc64e"
+    },
+    {
+      "id": "id-ubud-mobile",
+      "previousPromptSha256": "e5c553cda7520050115550326c530b705972f326fb915b7a333cd9cb82132d0f",
+      "finalPromptSha256": "09bc82b5fef564e16a862e58717dbb460b46ecc17aa50c99582f3d7c6b69527e"
+    },
+    {
+      "id": "ie-cork-landscape",
+      "previousPromptSha256": "278fb68d4a2797550d1bbf699b09d90712957c02a5a44dd4c5b33a2111daf4a4",
+      "finalPromptSha256": "e39b2cc96510216e6441962ec08c19ff1e60a3480aa57049353284693a42d8d4"
+    },
+    {
+      "id": "ie-cork-mobile",
+      "previousPromptSha256": "eeec1b973c9181e00e0990060a076fa026b2c5511f7453aa907e27911cc4f36c",
+      "finalPromptSha256": "29f345613be2351361afd69a4454cad253c8f98a9aae98de8bb8e131ce01d8fb"
+    },
+    {
+      "id": "im-douglas-landscape",
+      "previousPromptSha256": "62dcf011889a7feeb9dea607c1b61031f6eff7469dce202de0ba716b4da18cb3",
+      "finalPromptSha256": "9c5c0fce65a3746a022c8a4216055ad6e7b70693516dd2ffb481b9f39516dfe2"
+    },
+    {
+      "id": "im-douglas-mobile",
+      "previousPromptSha256": "7692532a72c2ce9acfad52610255acd6b22f21f73548c1eae8af142b9406d581",
+      "finalPromptSha256": "bc6b2794108b1cff03dbf898034b3878db81c2c03e7d65ef6216e5e89edd4c1c"
+    },
+    {
+      "id": "in-amritsar-landscape",
+      "previousPromptSha256": "66a81623a04e43c0bbd9bcbfc700b9aec7a4618ac06963de2250b0c576b567d1",
+      "finalPromptSha256": "739f1727e192ca25b2571b1bc870acdfd735a149242476da591e2eac8073de93"
+    },
+    {
+      "id": "in-amritsar-mobile",
+      "previousPromptSha256": "b6c0e13d3e46e9f819b9781dbe5b4eec56ee8d6c01e3e1285ffbaefd4ab1a767",
+      "finalPromptSha256": "92d80aa9ea8e056f8499142397386391cd8ec14ca4a260b8f27cb4637b8b9576"
+    },
+    {
+      "id": "iq-erbil-landscape",
+      "previousPromptSha256": "e92c7880a6739e7b7aab9586f66495ee548f78995ec996745c12cf4c95d7700d",
+      "finalPromptSha256": "1f89ab44781779029e506c934fff4f808b3883fba12d9b1c094231e21b2d6e2c"
+    },
+    {
+      "id": "iq-erbil-mobile",
+      "previousPromptSha256": "36215ce73d3caea7cd9115d13f235f198cfc7d51bfec2192fbc819108eade6af",
+      "finalPromptSha256": "dcec0bf7e4c265a3a027fce4824d5a0d2344e43aa32023944ffd885beb0734ec"
+    },
+    {
+      "id": "ir-isfahan-landscape",
+      "previousPromptSha256": "beafbac6c57750bec6ff18c07a1dbc632dfdd0bfb6f183d32c4c8e200115ab6f",
+      "finalPromptSha256": "fe618fdb414b270e880a6b587bc1774f807b3b17c3d86db4ce9decdc69be373e"
+    },
+    {
+      "id": "ir-isfahan-mobile",
+      "previousPromptSha256": "cb3505ee5cc06d5cd6cde13e5a4a90a61f0e7ce0b78a625a5dcaa1e2c1e41ad9",
+      "finalPromptSha256": "e35a982724e63dd5326da820db65dd05b8cf9d85a4fce823faf2990aca21273f"
+    },
+    {
+      "id": "it-ravenna-landscape",
+      "previousPromptSha256": "954f8bc06b5863289833374c3a58dd78c3215aab130b727c4bcceed2a7ac2afe",
+      "finalPromptSha256": "d0b50d9c945bdb5aa676bfaa033a5203481a17b16170b6e07deec89cac9576fe"
+    },
+    {
+      "id": "it-ravenna-mobile",
+      "previousPromptSha256": "3d17e8ea8c8cf1e4b1060ceaefd203aa34d922eb7257d3bf4925c29128e39c12",
+      "finalPromptSha256": "9daefbbb2c3ee6c8d9748691ae54e1f7bb4f644665e07dc7df2f9e5ce0056c3e"
+    },
+    {
+      "id": "je-saint-helier-landscape",
+      "previousPromptSha256": "3d789bf9abda58721661461f47f24fa9edef22394570dccd33fc36455ae22308",
+      "finalPromptSha256": "c592d1e4c473b914740e2c181441b9fe032fd28966e3ef4080520c5009e6a2a5"
+    },
+    {
+      "id": "je-saint-helier-mobile",
+      "previousPromptSha256": "483ca571b8bfc6d4ad50f6e3c6b9479746f0f1cda40f73e35d5bee7984231e6c",
+      "finalPromptSha256": "a4aecf8fcdd05bc1c6c81d8bc54e4626e0156bcc0a0319651cd5f6ea06f5f141"
+    },
+    {
+      "id": "jm-kingston-landscape",
+      "previousPromptSha256": "d5f171d54f3f33fc14011d082d7740566056df34c277812baf9e6604a70243f9",
+      "finalPromptSha256": "4627c184f6c357164bae29ffd09326e50f56543663cb71023953a1f3296eff15"
+    },
+    {
+      "id": "jm-kingston-mobile",
+      "previousPromptSha256": "464a14eaef445607ac78eb8798f0ece80d60dbe4696c196062aa07c295e08d8d",
+      "finalPromptSha256": "63b001cdf81c9472aa33a532cda3e8c445a69e03a12c7046e60ac9f59c9453cc"
+    },
+    {
+      "id": "jp-himeji-landscape",
+      "previousPromptSha256": "49184a05dbc5e4a3f4161094bb89f82aebfc6623fbf3375b9c61d1c100486098",
+      "finalPromptSha256": "1c4a432b9cbda9bd8a94c189c2184a45052d8ebabee0b6a7a6b4c7de5bddfe31"
+    },
+    {
+      "id": "jp-himeji-mobile",
+      "previousPromptSha256": "f16af96581e5567ac26f328a326f5582daa4d6cbb2a089e067058be28c133b0e",
+      "finalPromptSha256": "ca3cdaff9e57e45daf9c9e85b3c5c9d3d0512ed9efb95244a7d130dc2dc8a247"
+    },
+    {
+      "id": "jp-matsumoto-landscape",
+      "previousPromptSha256": "0eaef22124499e3e763b59595f7fa9a93a314de71c71d14a97f9d21753c11381",
+      "finalPromptSha256": "b75e3f03747ffe27b488ee3cb0793e7994203c56587abc653516bc3ab7b74dc0"
+    },
+    {
+      "id": "jp-matsumoto-mobile",
+      "previousPromptSha256": "9541902f9657fa7839774eaa3c7168822fb79220bcf70a3036f67494595c6ab1",
+      "finalPromptSha256": "9a5038fd076478648b947de3359214f2246509a42c249fb88d2cee220eba3392"
+    },
+    {
+      "id": "kg-bishkek-landscape",
+      "previousPromptSha256": "74ba130d275a990fd602564922885b248eea86e8bf18760b1303edb082de3eb3",
+      "finalPromptSha256": "2fcf88a92fdbc0dbcbe89100ef5bf1f54441f9926d3640ec37aacce479741e57"
+    },
+    {
+      "id": "kg-bishkek-mobile",
+      "previousPromptSha256": "f812494a85f0f23132a20eb71e1a7ba89674dac3fee95027d4ce1fd3e1c78869",
+      "finalPromptSha256": "5bc1a6c8bacd0f189782cce4aecbcf0456a53842b0e4637165af7ba0694cc225"
+    },
+    {
+      "id": "ki-bairiki-landscape",
+      "previousPromptSha256": "0fc0735154458016368322e15fda89cf3111b9db9abec651e619a0faf709ad0b",
+      "finalPromptSha256": "af6b4066870d35f3229933153c4403247b566c118f6e5e016e46d4a5ea018bbf"
+    },
+    {
+      "id": "ki-bairiki-mobile",
+      "previousPromptSha256": "11abca196aa93198af8fe4b93a67ff5767e23a2ab25d2533d227eb5ed517c2d4",
+      "finalPromptSha256": "d937db65741b6c9843a52c30fe8cfca8b20f8076295653f0c0acd4517b3ad46e"
+    },
+    {
+      "id": "km-moroni-landscape",
+      "previousPromptSha256": "3bf00c05b4a9a45b0f4c4031bc89493851b0802dd19e142e697f54a22235a025",
+      "finalPromptSha256": "15027034df34124815aedc4a58e8752cf29703502a50c9d6b9a624764e21a53e"
+    },
+    {
+      "id": "km-moroni-mobile",
+      "previousPromptSha256": "4e92c0f341c157fbc4d5f4604636605cf449a200128f7f203a1262796ca4e4c0",
+      "finalPromptSha256": "a6a460161e77d8bbbea3fdcf3fefe0167aff8ba8d5a17e68e22cdbadcfef09c9"
+    },
+    {
+      "id": "kn-basseterre-landscape",
+      "previousPromptSha256": "466d717033a952276d21b8820b42f9fc6683e1955ba7a765f119befda83c6846",
+      "finalPromptSha256": "f12caa12e78061ba08f5906ca1f7d5c7c3826d099a12cbbfb2196da60e694df1"
+    },
+    {
+      "id": "kn-basseterre-mobile",
+      "previousPromptSha256": "601a8d78763c1bd2ed2d40b0d5ad721e87188e70480a7117a76461ad6f1e4225",
+      "finalPromptSha256": "355fad6156200eea2b96207e9a8c3df9d99bc9cbd92c7afef17983cd7449f2d1"
+    },
+    {
+      "id": "kp-kaesong-landscape",
+      "previousPromptSha256": "acb5bea41f5669a2570492c3a8e762a74439e66fe24b3826b94fc38cfbe91dc4",
+      "finalPromptSha256": "7d0853176bef7ae11c74b1cbbff965d6e322703d3a58a9eb4b0c9b1da6170715"
+    },
+    {
+      "id": "kp-kaesong-mobile",
+      "previousPromptSha256": "1c5aa5edadae39fe7b598a46044473f2088b5e2e60b7ab1364ad0a0e60a63a45",
+      "finalPromptSha256": "29dc4c5df57f7f83a963d3e5cd1a6c85344fcde65ec261ac43811ef8840decc0"
+    },
+    {
+      "id": "ky-george-town-landscape",
+      "previousPromptSha256": "36f8826d229153d0610844395395d7f3715bdf98e78cae19ce7b4210490c4522",
+      "finalPromptSha256": "81f174923e4c02a76781bad4169c56a3f48b5991e9f463f78920425682ded273"
+    },
+    {
+      "id": "ky-george-town-mobile",
+      "previousPromptSha256": "6bb2df1e6e759cd69d246d693fe7a906255fe46a450008f7f432707539965359",
+      "finalPromptSha256": "dde35c873c4db215ddfd2f1fdaa3119bb255b0dacc145afa934b872c3dfc92c4"
+    },
+    {
+      "id": "kz-almaty-landscape",
+      "previousPromptSha256": "1ee578846bd9906e7b0d93fd9f398b69b9cd7091606e66f003e3325a3f6f5974",
+      "finalPromptSha256": "c0276aba595e535001a4b187e6c717c8703b8676a9e34d876f2d44875abc20e8"
+    },
+    {
+      "id": "kz-almaty-mobile",
+      "previousPromptSha256": "ddd300b7b63f2663f7c84a6a8b08b6b1ac05fd7407078ba42203ce9f22d92317",
+      "finalPromptSha256": "5835aaf6fb83adcfc0707133515b8b79c22cb479356e21f7ef63c7043785ede1"
+    },
+    {
+      "id": "lb-byblos-landscape",
+      "previousPromptSha256": "68290db84dd3282b18c4147aa9fc403af1f91aef9b305e15e35b6a95f04ed83f",
+      "finalPromptSha256": "2d475c3c88a371dc89fde71e9c92be6db7977baaadb20a5aedba04b0e174a057"
+    },
+    {
+      "id": "lb-byblos-mobile",
+      "previousPromptSha256": "ef1950efb6cb21c35ea394be406d51d0699e0cfcd9e8fd4e9fdca1058acab1ed",
+      "finalPromptSha256": "df8a1414d53fd8aac17db26d01720f18bd15d18249a51cb8abf09ce15b7fed79"
+    },
+    {
+      "id": "lc-castries-landscape",
+      "previousPromptSha256": "cc66cef3519ed87ee09fa18e89c503805775753c4a15d6ab90088a0700b6c14a",
+      "finalPromptSha256": "0242dec31f4098cbafa061878ac07f07dced61e5febbfc83d3b9f7087b839995"
+    },
+    {
+      "id": "lc-castries-mobile",
+      "previousPromptSha256": "b6719f7669fabfcdaed51765a5eecb8bea4d819c8a7b7778df1454136adbda7b",
+      "finalPromptSha256": "a82b126489e6f1f4577253bec958259ca6fdf0cb8989eac11a282bf688d18042"
+    },
+    {
+      "id": "lr-monrovia-landscape",
+      "previousPromptSha256": "cf42029c85cee41ccf5abde5892d96ae6a71b0d4497cad87ef2bd61c53a30a7b",
+      "finalPromptSha256": "bf75f58ec9acfed01d99cda66b6208668c1d4bd29cddfe8abd5d57b80785d472"
+    },
+    {
+      "id": "lr-monrovia-mobile",
+      "previousPromptSha256": "9dc8cec1971618a425b8cd97a2649327ff23d20f93dcd001fd33bf9931530d58",
+      "finalPromptSha256": "05cf306c798305e2b53cd06feb0fce3b715153a09070e25ea3470e22201ba0db"
+    },
+    {
+      "id": "ls-maseru-landscape",
+      "previousPromptSha256": "bd63c9c8cbe8e3f1ade1db2685c60a0fdbd94da00eb30b9472f8b0676a83c2d7",
+      "finalPromptSha256": "7939eccfaed701469d7f07c7685dd457da24f5ee3b94f8f08b98f75846a93f31"
+    },
+    {
+      "id": "ls-maseru-mobile",
+      "previousPromptSha256": "24ae0df052b4bd71a561315f3f4ce514c23f1c14e3fc830473b83a1bad579b44",
+      "finalPromptSha256": "840f30635c345c98cbadad0bc57198559cb9682ba07ce3c981e8e763a2ce2bb9"
+    },
+    {
+      "id": "lt-kaunas-landscape",
+      "previousPromptSha256": "4ffee26c168297685610a1d3146d7daad816d2860eddac7ba0bbe11da8142f4b",
+      "finalPromptSha256": "9f5147bad243a19fc0a9684ce690f98ccac0e28d14edcb7cb621c20282a5e7af"
+    },
+    {
+      "id": "lt-kaunas-mobile",
+      "previousPromptSha256": "1b0a02e2758eb6adaf5e92a7f1c5c5cf8bdcad9bc756e5e374f9b86c6f8e7dec",
+      "finalPromptSha256": "a6e98b610ea6c54f314daa08fcc0e36bfdb6a937713eca7db728a19a5181d8f4"
+    },
+    {
+      "id": "ly-tripoli-libya-landscape",
+      "previousPromptSha256": "0ac4d100f7ebb4da66d38b52fac8cb9882128d436fd872c378a32a2beea21355",
+      "finalPromptSha256": "6b4c3185814d7993e844481e83115a0d2ffca93acf4e4e7083a64a3236e88620"
+    },
+    {
+      "id": "ly-tripoli-libya-mobile",
+      "previousPromptSha256": "e0320764b2f9cc8d1a16d2682bf316967af5924c2fdac0174869338122acc5b4",
+      "finalPromptSha256": "17ea49ab08a04859ba445172ccc8799763a89b358fdc01a2b7a7910557fd388c"
+    },
+    {
+      "id": "ma-chefchaouen-landscape",
+      "previousPromptSha256": "b97b0cae5ef038d40735c85f0d6c675e9cd82373d1808423adbfb2801d3d9b63",
+      "finalPromptSha256": "63865e7d6a366491aefebb81afa1a44bb1fe434b3c1820362c2c65c7bb11bb6d"
+    },
+    {
+      "id": "ma-chefchaouen-mobile",
+      "previousPromptSha256": "ff8e220e3156bf5453d187e8ea2f2cf5efd33b53d499c3fc9844d46d49db94e6",
+      "finalPromptSha256": "047b964a5d5f275a10daedb3f24403bbabac87ff7e94a4b3edbee068249b43a0"
+    },
+    {
+      "id": "md-chisinau-landscape",
+      "previousPromptSha256": "997a20a58bd383969d0859ea152b2091a4ac6b52a60699fdf5a976b465d10eff",
+      "finalPromptSha256": "dc91259fefa3cf5d7cb8d172ccb432c20959cef853b43302e7ee9686f2f3029d"
+    },
+    {
+      "id": "mf-marigot-landscape",
+      "previousPromptSha256": "0d1bf418ba47bd685b51124e3b5ba41b31e92b73ca8059ce50372e8890e81fa2",
+      "finalPromptSha256": "a36cf43c023bd185bfb8ca09a0a45ba32192878d7f926588fb0f10d58c368a2b"
+    },
+    {
+      "id": "mf-marigot-mobile",
+      "previousPromptSha256": "ce05c71a914a1622359aaa901cc61ef8919b24d23ece7df89d0d7fbb6c5a67f5",
+      "finalPromptSha256": "6a8f95616afb4533724b0e2c96fb578783591c93081e096ac9da5c508a74d6ce"
+    },
+    {
+      "id": "mg-antananarivo-landscape",
+      "previousPromptSha256": "b80ed4adc3c5c2bb21f24ad18afcf986f22a4004492b442b2f6d44ad1d61a584",
+      "finalPromptSha256": "b2bcf0cf0233e4f57275ee8b04bf0bc4f7bccd89b48a8ce2d903fb55806faa9a"
+    },
+    {
+      "id": "mg-antananarivo-mobile",
+      "previousPromptSha256": "363d8efdd38c5f4b15423a5d501f72ae63f8ec858b9f377430f44904c514e4e5",
+      "finalPromptSha256": "b4deefada053b26ae79b8ee789ab98a6d77c8a66cd319f57a101c9bf23d94ff5"
+    },
+    {
+      "id": "mh-majuro-landscape",
+      "previousPromptSha256": "c20eb408db8c10a6777e1c3aa16d667d7452a49e3def59819556e6ad6613104e",
+      "finalPromptSha256": "fee6ece4bbf3946519e39e3f2daf058ff24fdd5c4e9ea47e1c837f47f3dd5699"
+    },
+    {
+      "id": "mh-majuro-mobile",
+      "previousPromptSha256": "37295ca7bcb9a1c94bc47cf75a5e5f0eb3bb082842278453aae9efa9afae5813",
+      "finalPromptSha256": "8e1e008525cefb08a387d87175331c6ae490f3de968cd87b0605524f9ff45778"
+    },
+    {
+      "id": "ml-djenne-landscape",
+      "previousPromptSha256": "00fa66a78b7e939945a80cb3194c23ded6ce1345913b82f684c8251402a9a4ce",
+      "finalPromptSha256": "e946253841e99b96e4b87ef13b434889c9bcd010648f98fbaffbb326b663f95b"
+    },
+    {
+      "id": "ml-djenne-mobile",
+      "previousPromptSha256": "c83a87365526a8701d2a408b621663b478e0cb7278f859631cc19cc8ed76a758",
+      "finalPromptSha256": "a3412d46fb208b239260a1b8bbe6e5560d0e1d5985f89e39830e711d8a20faca"
+    },
+    {
+      "id": "mm-yangon-landscape",
+      "previousPromptSha256": "9531c83f17d0b6a7885342210d322cca9fe42bfe8fd651d0cedbfb9dc4edba62",
+      "finalPromptSha256": "6554621d7c6feb9e5ff3d251066252f0810784228a4f50c40ff32f15bb62df19"
+    },
+    {
+      "id": "mm-yangon-mobile",
+      "previousPromptSha256": "15c84ebb1ef744e898b8f4caede2ec9ba2aaf06bd3fdfdaa0dc2a13b826c2642",
+      "finalPromptSha256": "6a8c15e58e58f9abe27029ac90fd5cc74cabc6f91a7681f53ab887944251259e"
+    },
+    {
+      "id": "mp-garapan-landscape",
+      "previousPromptSha256": "2725fbe043ae7b66e287b1db96409ee3453b43d6c9d09b6fc1107ff18e31e462",
+      "finalPromptSha256": "5f012ce0ce42e451a331dc16547700ba6a39b650cf9d128dd59efd3e44b27707"
+    },
+    {
+      "id": "mp-garapan-mobile",
+      "previousPromptSha256": "7bc4414e185816dd28e19166da230470536a52d8bae0e47bc92420be27cc70c5",
+      "finalPromptSha256": "56090641060e647828cfd78e5b00db2b11d444cf0d163a9b083a5d5ee9d507ca"
+    },
+    {
+      "id": "mq-fort-de-france-landscape",
+      "previousPromptSha256": "1cf70f9d1b24b318ea38fb24ad1d32165c5965e6eb9d24e43bb635bdc9902aee",
+      "finalPromptSha256": "cd4a5e0c56c5db59d565c147209add971944a67b05f301b209e7ef88177cd004"
+    },
+    {
+      "id": "mq-fort-de-france-mobile",
+      "previousPromptSha256": "90056ad6534ea9873268d618ddd96aad60ddfa3153786f31a0d051d0ed129175",
+      "finalPromptSha256": "0f9f51b59d07111e91e8d7c8a912aecb99edea6d18ab2b5b9db0629f740b5024"
+    },
+    {
+      "id": "mr-chinguetti-landscape",
+      "previousPromptSha256": "03797c954b0c69966f271efc8db4fec99b2f1c02d7dbce2277f717ab317acc26",
+      "finalPromptSha256": "250b7940ac4cc486048bd99f21f71035bd39a62e072809c32323f9113bddbe00"
+    },
+    {
+      "id": "mr-chinguetti-mobile",
+      "previousPromptSha256": "1ff264f0a2499e3c6b6f778f94119b71da91b81a5bbceb80901c95cadc49d3a0",
+      "finalPromptSha256": "f8cb1807ba0a7db96222e6d08077bdb9f2f60aab2d20f26fb66b3f3a6be8eec0"
+    },
+    {
+      "id": "ms-little-bay-landscape",
+      "previousPromptSha256": "58486b4499a4915db3e26864f4380bdd852db1b5b40899d4b3e311e5b3928089",
+      "finalPromptSha256": "040dcf12cad72c090171f9ae89b295e5a212a8a7a40a2d020e1b697fd7ab3ae8"
+    },
+    {
+      "id": "ms-little-bay-mobile",
+      "previousPromptSha256": "3bd86faaa116dfe2f1cf723aff698d6e5e968d93acee98d94a82bf43073d3938",
+      "finalPromptSha256": "f784837255fefa7f5f43c299176e82cdecbcc2cb668dd792425e210280c62113"
+    },
+    {
+      "id": "mu-port-louis-landscape",
+      "previousPromptSha256": "3e52ad3e2aa4662f79310a07fba0941b4aefa09a3b7880bbffe7b4934bfcafc8",
+      "finalPromptSha256": "4899b10fde66c3f887399c01234d40cd00e0a1bab025275302d93e703267eaa2"
+    },
+    {
+      "id": "mu-port-louis-mobile",
+      "previousPromptSha256": "1c2144efc0bffe7d546fa1370eee3ae52d48e2212b631e20fea85d3ff9502383",
+      "finalPromptSha256": "c61aaaf377dace5d39eb2dc57c89f5bbf53fb0914e0f2a25e8b1802d96d59c9a"
+    },
+    {
+      "id": "mv-male-landscape",
+      "previousPromptSha256": "588222bf3cac76972dd923d96161b275c92c23b3ce61f22fa3ddf381d36cab10",
+      "finalPromptSha256": "9722e2e55de26cdccd1a41d0c84c01cbec3b2c4515657b493ceffa3fc787852a"
+    },
+    {
+      "id": "mv-male-mobile",
+      "previousPromptSha256": "c9fa046e915a05bfb46e6b3cc33125fa0e367234ec699c83da3dbd87f063dddd",
+      "finalPromptSha256": "ffd2f0c253adbf8e1fdac3663b0b1c6deec009a16bd03112c54d2dfa872221cd"
+    },
+    {
+      "id": "mw-zomba-landscape",
+      "previousPromptSha256": "a3b6a3c299d6b1ccb9b53b5e059c1b159291cec69241c29dc3df32cb87dc85a7",
+      "finalPromptSha256": "8c77de5e3d2f6f7cc8579dd822916e574459f0bee85ca42fad24f6c39247dcbe"
+    },
+    {
+      "id": "mw-zomba-mobile",
+      "previousPromptSha256": "fc83360324a817ccbadccc4b0ecfda87e01e1ad0c1f1a5a1c883bf34855a2289",
+      "finalPromptSha256": "591ef4b581d1cf52d1a5dd6a47abfd669db0079ab55e2d52ab02a9ad2376ce3d"
+    },
+    {
+      "id": "mx-guanajuato-landscape",
+      "previousPromptSha256": "4e052966b567f604741817423ec078a33f0cd9a4f24b40ce5c4e289c2e4a0b7d",
+      "finalPromptSha256": "d802689c17fcaad1390313d077941f7fb00b97c89dd4b901c2b7e6196e36232a"
+    },
+    {
+      "id": "mx-guanajuato-mobile",
+      "previousPromptSha256": "41e457642f704cf157afd46c01b059b3ed5546d9b8d78c8815c90ef4ea57a8b8",
+      "finalPromptSha256": "7b460d6ddcd0353ec3e8fab9e84fc60eb6f11020a6559c4799ec152177ecb8cb"
+    },
+    {
+      "id": "mx-merida-landscape",
+      "previousPromptSha256": "8ffbe22629a7b240fbb16e441b8cb380e58ccf6131e8abd9316740c2470a0096",
+      "finalPromptSha256": "039f1d8576303ef22b95f339ce4855ea63b442dab02beb233269541e4a598a47"
+    },
+    {
+      "id": "mx-merida-mobile",
+      "previousPromptSha256": "d26f8dadb5354732d824cd787ae9c4bf074a2593c2432b260fe603b4ea21dda4",
+      "finalPromptSha256": "484e03d1298648daaea4b3afc698d74483d18b7db270cea886232b282c7e5763"
+    },
+    {
+      "id": "mx-puebla-landscape",
+      "previousPromptSha256": "85fa7603ade766aa11973c80ffee6437ca05b3acb6c49b33fa6ab687558e7809",
+      "finalPromptSha256": "1b973ef1a353a89cadffcc8be86aa28ae37624136ca48c13253d29899116d304"
+    },
+    {
+      "id": "mx-puebla-mobile",
+      "previousPromptSha256": "2f41935d55c0ea2164ff707a6339c8280cdf668baa39cbd2a1f2d7c55b5d2ac2",
+      "finalPromptSha256": "12ed94372428d7a86005b74ab3b45fc0a63c355a922807399403c0cd14c8ed50"
+    },
+    {
+      "id": "mx-san-miguel-de-allende-landscape",
+      "previousPromptSha256": "93aca2caff44a3f648f68404cdad4bd7cdb638b1068ad81a6a1611300c184fcd",
+      "finalPromptSha256": "0ff5970f0812133cecbebe0f1268fb067367f843921ff222830503e537330d9f"
+    },
+    {
+      "id": "mx-san-miguel-de-allende-mobile",
+      "previousPromptSha256": "dcc95d75df9cf65827e696a4a105b14f091074328780b53b71742ffb730e6184",
+      "finalPromptSha256": "626c4ec36fd3ecdaac5fbdd449e7b29611612ea123b1971a16b0983531ca2407"
+    },
+    {
+      "id": "my-kuching-landscape",
+      "previousPromptSha256": "046425340d2058540218596724b3d31dc9609fd39d29866961e210de3410278c",
+      "finalPromptSha256": "34aaa04850bccfd2a23cfebbecdd2a2b7ed92d5c2741f8732c30152e4c4ad22c"
+    },
+    {
+      "id": "my-kuching-mobile",
+      "previousPromptSha256": "1178d545f4362a6b3a8722542eeb25699f766861406f64edf0e76eb977907c15",
+      "finalPromptSha256": "1d1e8f24e0a354bfc5bb8c44af015a53cf1fd129580bb9d932da4af2bb475638"
+    },
+    {
+      "id": "mz-ilha-de-mocambique-landscape",
+      "previousPromptSha256": "abaab5a5501600240ca7d935e58f6ef57ff07e52439c59ea6c42bd02391e2e3a",
+      "finalPromptSha256": "3d328859551917cf8204e7cd520271d81b63daa6e4c8ca66287b3864b5d36818"
+    },
+    {
+      "id": "mz-ilha-de-mocambique-mobile",
+      "previousPromptSha256": "be522229825ee20e97eb95696e075d07ee4ac3173bcb884e6645e698fd2e2788",
+      "finalPromptSha256": "91f42cd32b4dc5af116b6f4822126b53bf008ef6efb953cc7334e7e426357c9d"
+    },
+    {
+      "id": "nc-noumea-landscape",
+      "previousPromptSha256": "50c69ae0865ab4477c80f401c783189abedb4914f2fec8ffbe7876019011de9e",
+      "finalPromptSha256": "c5fef212926381e360071f9fcfbe0a9be4e328f531782fe4645238a3f92b58ee"
+    },
+    {
+      "id": "nc-noumea-mobile",
+      "previousPromptSha256": "b53f3ce652a36449ce2d4556fab2849da920869944aa3501e039f55454c150ef",
+      "finalPromptSha256": "2339b4de2dbe2e3ded2047332c20b6d2eb5f8e20a81c01b631d1d076312fcc4f"
+    },
+    {
+      "id": "ne-agadez-landscape",
+      "previousPromptSha256": "80b52ecc8e88baf565c7231b43d0a4787dd6fc067b48c8b8dcd586b9522ba167",
+      "finalPromptSha256": "efcd789ea2d1f13e8366f07548cd7a186a93c51cea58c0be643a15f3b1dc32de"
+    },
+    {
+      "id": "ne-agadez-mobile",
+      "previousPromptSha256": "5346ebeb4cf8ac6c5cc08de845270384dc19b862ed301c004df28e96de94c97b",
+      "finalPromptSha256": "403fac20a737473cc8a56cc9469b26fa686c0a86e4c0361872d22548135d3975"
+    },
+    {
+      "id": "nf-kingston-landscape",
+      "previousPromptSha256": "65d773ca3e79ade1a3090099f20bcf64876fba8e99855864c853e075d676e314",
+      "finalPromptSha256": "117805a285c979e31b56aff5321d88dc6c1ed0f167dc741a529f46bdb26a1f4d"
+    },
+    {
+      "id": "nf-kingston-mobile",
+      "previousPromptSha256": "8806ae713607ed091278d6517e26009ce5c41a2b9164b6871edf41231fad0747",
+      "finalPromptSha256": "a754acea26ef21afef005f9ecf4b1e5c854c786f2f3c7b9bd50d5421789ca09b"
+    },
+    {
+      "id": "ng-osogbo-landscape",
+      "previousPromptSha256": "7215edbe72cab25a64e5f912c385ef21a987ba2dd6e52e5704420a2311408090",
+      "finalPromptSha256": "db80996abf240bb6126712b12ecea95e994a27a78c58bbcb16d2368ff6617b08"
+    },
+    {
+      "id": "ng-osogbo-mobile",
+      "previousPromptSha256": "d18135aa2a8c43758e15ea1cd0038ca061568192e724b24ad549df8e7a2a3f53",
+      "finalPromptSha256": "1362339c16f69464216a247cba439f33b5b86e3d45f2f8596e753e9dc0340ac4"
+    },
+    {
+      "id": "ni-granada-landscape",
+      "previousPromptSha256": "9e83ab0f0a60bb647c770da33bfef7fd8d74b9a53a017be5a3ebba112087550a",
+      "finalPromptSha256": "4475eb68bd62d7e0ec03feeb39754c4274e837133dcc05939b3884090a035d83"
+    },
+    {
+      "id": "ni-granada-mobile",
+      "previousPromptSha256": "cae4321b8cf2cfff0f6c08664b0b8480b866dcd6d49f45d0cdccffce75c4e915",
+      "finalPromptSha256": "94c6147c11d162d34ec393e92c694bfacf368219806f0156d818799c283599d3"
+    },
+    {
+      "id": "no-tromso-landscape",
+      "previousPromptSha256": "96e1319b99ad8a0bbfae2eaf07c33ae2fc277c262319efc132e22a7e3b45b94c",
+      "finalPromptSha256": "b5352b8e030afa4a7153a72b1afdcfe7b492dffb4f5333dd14b5009c7c9fbdec"
+    },
+    {
+      "id": "no-tromso-mobile",
+      "previousPromptSha256": "fcab0270fef4eec2b4c640b850aae8848ef98ff85088565f06b84c02065ccae3",
+      "finalPromptSha256": "15f3394e8a6a531e878cdd899882aabc68df77f6f1856f93324f40ad42410e9f"
+    },
+    {
+      "id": "nr-yaren-landscape",
+      "previousPromptSha256": "8e58b4e69cd0558ad808fd4b2fc829517a473529168d4885c7272c1e6c3149b7",
+      "finalPromptSha256": "28c1f8f088d2c1a4f411d95761536ceb3639f36b939e4fc6308a886c4ac32df5"
+    },
+    {
+      "id": "nr-yaren-mobile",
+      "previousPromptSha256": "e2cbf65c0be1f962e414fbd890fe9051f1e514f5bd0a6c5f3ec244ac4aac3809",
+      "finalPromptSha256": "6ff6aa11fe4656c0779d42b88dc5bd47b5cc739119fd03ade36f6e80c999c6a5"
+    },
+    {
+      "id": "nu-alofi-landscape",
+      "previousPromptSha256": "0bc7cc49ed1246c47e1fe49796eda1246797ed6610ca40adca43f3939ce1b8c8",
+      "finalPromptSha256": "141e5037fa583cd6b4c40a747804a07c74468703feea765141e1bf6004460a21"
+    },
+    {
+      "id": "nu-alofi-mobile",
+      "previousPromptSha256": "59e317f17b0befe1412548fc2a5b92bd1259ab939cba447ec16442a0b65a0d8d",
+      "finalPromptSha256": "125b5b8e6d4da762d73ffa630ce997043f2c12811c0814950a4ac036d27bc973"
+    },
+    {
+      "id": "nz-wellington-landscape",
+      "previousPromptSha256": "ca7ec1af6c025b07677a879913e56e97c23419054a7ebd0412cca1563f216b69",
+      "finalPromptSha256": "835020f5a67e10b7e613f3dbff32c62cd8632cd1943148f4563fec70d35d7e53"
+    },
+    {
+      "id": "nz-wellington-mobile",
+      "previousPromptSha256": "551beec6a3e38be9ed192cd6aae29e6e7a81783ab8ccf6c5356c88fc4eefc18a",
+      "finalPromptSha256": "886e988e213379bd8c3536857514ee914a4adbd6cded37bd9f8f18d3c25d9bbf"
+    },
+    {
+      "id": "pe-arequipa-landscape",
+      "previousPromptSha256": "f3966ea2a0e7ba43cf4ab1b90cf80a4782903fa01d2e7f46f2c76da2c4f69bc0",
+      "finalPromptSha256": "1603c9a475296a607777d594e65e60b7bcccf6d83e4706f930337634a53a844e"
+    },
+    {
+      "id": "pe-arequipa-mobile",
+      "previousPromptSha256": "363c6a138b5226e0b329efb04e5971f92a170bf8adc67a243d1fb02b180f1ced",
+      "finalPromptSha256": "68a5d5b2b3f2bee4edb7794a8f24a48c5d1537aa0af238431844ce79c7658a78"
+    },
+    {
+      "id": "pf-papeete-landscape",
+      "previousPromptSha256": "272e362a742fcf3ee77c28dcd183d2ef67efbd6e29eeffd3938a650eaf2e5dca",
+      "finalPromptSha256": "d98a680bc8e0b6b11c592868de4bb1a95667e2a6a04b5fedecc59e36aac1a6a2"
+    },
+    {
+      "id": "pf-papeete-mobile",
+      "previousPromptSha256": "21f9a0dda756b2ad38baf2f6a2e0459b0f003dcb3331579a8c78bf3e3f366946",
+      "finalPromptSha256": "dea8938dac3300927697474a63c44f99c875dcfdd3ffb089d714801611248e56"
+    },
+    {
+      "id": "pg-port-moresby-landscape",
+      "previousPromptSha256": "a310ea76f7433885790fc4a2d5d5042ed8c8587e06b36c3a0cb402feb4843dae",
+      "finalPromptSha256": "16ec0b77f37fef001abac92b75ebbe2a27ad8754ecaae647f962cefbcf8b20a7"
+    },
+    {
+      "id": "pg-port-moresby-mobile",
+      "previousPromptSha256": "595a38382509f43b3a58aa4d19186e755dffbe5ea288332bc384181e5454008f",
+      "finalPromptSha256": "00d8f4acef59fd97acdaa0b30ee7fbca2ba7c7984084066d9a33a54b9ba96a6f"
+    },
+    {
+      "id": "ph-vigan-landscape",
+      "previousPromptSha256": "d1c99cd6968ca910189c9c355547c7e568a475eb01adbca222e734ef7cb0742a",
+      "finalPromptSha256": "515b24268e63616736f5bec35f65fa600833b2ebfcc416008d32264722916523"
+    },
+    {
+      "id": "ph-vigan-mobile",
+      "previousPromptSha256": "cbde07e6e129c7fea0232f170e3d7435d9b0509eda88fdef60f2d095defb0ca3",
+      "finalPromptSha256": "a6a4417871c83dac4886a7646d9ccb02acfe1ce6e2a34660204b492f2317e552"
+    },
+    {
+      "id": "pk-lahore-landscape",
+      "previousPromptSha256": "ae55c6b71632e4db1f5a14cd4312aa992902c304da2d7ecca4353d7fd93d9fcb",
+      "finalPromptSha256": "4ff875f3a651109cb946d83970b99f28a177f2a2961484f209986fae664c338a"
+    },
+    {
+      "id": "pk-lahore-mobile",
+      "previousPromptSha256": "6aa0dd21bc0c52feb420405ecf8482722473577dd014db75ec443610c107edbd",
+      "finalPromptSha256": "145b656c26e1b9ef27562b4b747468b55dca7be9942893206d83733c8f864a67"
+    },
+    {
+      "id": "pl-wroclaw-landscape",
+      "previousPromptSha256": "4059873e400602c90f69bc5991e91edceb6f99a8dd6e7226ddf5f27ddb9a000a",
+      "finalPromptSha256": "b0a3377885b2ea9a0849280ac8317713c772339bfb759a7d079622c38419a2e9"
+    },
+    {
+      "id": "pl-wroclaw-mobile",
+      "previousPromptSha256": "c898cd166a199a0d6f47503f695f03a71dc6b8cfb4f6743fa6f33ceff8c439e6",
+      "finalPromptSha256": "3e7f78a01af363174ab76ba1fa96a5f4ddef86db4d003502cd67d09788e3fe3c"
+    },
+    {
+      "id": "pm-saint-pierre-landscape",
+      "previousPromptSha256": "f99b14fb5d9c64194fd68acaccf422a41df1a90fa067cfd70dc41bca3abcb207",
+      "finalPromptSha256": "8ff3f96829e98bf3709a27584ef385bb901a21c3a9d918f6169577d02add6132"
+    },
+    {
+      "id": "pm-saint-pierre-mobile",
+      "previousPromptSha256": "3b71a5256838d903919451dc8d0892117c033dadcc470d582580d0c1ad6731ed",
+      "finalPromptSha256": "3013b498f1e568bc2bec5f54106052ae9c393e96fdad4567aa8af3388d794f33"
+    },
+    {
+      "id": "pn-adamstown-landscape",
+      "previousPromptSha256": "df9799c6b0985996f8dc6dbee2e52873e5bc4f5cf6d76249e44d93f54e358dfc",
+      "finalPromptSha256": "24d56c18377e709542c17f9301c19d791ab711ff4adbd7fd8dcab2d1abb06b2c"
+    },
+    {
+      "id": "pn-adamstown-mobile",
+      "previousPromptSha256": "02e0152b11eb8b835d39a7a718a0cd8b9d86bc6de2d36872420ca8f5d8641b76",
+      "finalPromptSha256": "b34fb0e66b132dc93e07ee3442c65aed32020cb422ecee724b296aebe71bac27"
+    },
+    {
+      "id": "pr-san-juan-landscape",
+      "previousPromptSha256": "125474db9c178a238319008db0cedbf0eaf356d6906f92b09bbe7b9a94dd1331",
+      "finalPromptSha256": "5ec780b4d2dc40a683aa99e2626401a4adeb538088a492e0a15480d5d5631b45"
+    },
+    {
+      "id": "pr-san-juan-mobile",
+      "previousPromptSha256": "cae0b7613a0772935d24c7b80624866bca3b1195e79a44051fb7839895f5a2fe",
+      "finalPromptSha256": "a08a6e175fc6d74a7b4c6d7f0be1ae0bc828efb564253f87c942749b2ef322cd"
+    },
+    {
+      "id": "ps-bethlehem-landscape",
+      "previousPromptSha256": "de2e7dfae81ed6acdeaacce79bfd6904e6e8e6dd17db7223df06ec4574e82224",
+      "finalPromptSha256": "c4edbb80db504484d0acd3d85ce1206f5c15fb721d4c6a432252feaafa01ccc8"
+    },
+    {
+      "id": "ps-bethlehem-mobile",
+      "previousPromptSha256": "e46a9fd15f85a65f6540b93bf238cb28941c501a685eee1aac3ec92febc2e511",
+      "finalPromptSha256": "bbabc842d7611b96f867ec0b76d85d2bb4f30c933a2099bc1e9aefc75a1365a4"
+    },
+    {
+      "id": "pt-coimbra-landscape",
+      "previousPromptSha256": "df185277d75eec332035553c12805157c165eb93b64064b55ea78118d86f5395",
+      "finalPromptSha256": "937809561bd0cf9c7420f99a52008314aabb5dde56a3d8eede222819d1cbd5dd"
+    },
+    {
+      "id": "pt-coimbra-mobile",
+      "previousPromptSha256": "04c5dc059f03d67f876fd784af0598f2459e2abe7278386ce1f3973db005bf56",
+      "finalPromptSha256": "df8f89f41246fe93da3f5caa9ed2a82f8be228423217c0ea0994a9c6e7eb740a"
+    },
+    {
+      "id": "pt-evora-landscape",
+      "previousPromptSha256": "f5c7050535f6dc4a19a31b616948ab6d2ab3deafca4aaa910e595cab8b6929c1",
+      "finalPromptSha256": "8cdb591a5a2ea91df1042be2b1f9d32d62ee6f25a08af1c92c8095020c0b3f70"
+    },
+    {
+      "id": "pt-evora-mobile",
+      "previousPromptSha256": "450ed4e5184ab2b9f007872fc08f86ec8cc543401e1ce9df5807b83170a62a3b",
+      "finalPromptSha256": "fb159d033236517ab60e85ca365177a52f79b4b2958ef954d8234642d374f1f0"
+    },
+    {
+      "id": "pw-koror-landscape",
+      "previousPromptSha256": "8212188a95ebc76f63a6c3dffaa9fe56751973f4e96826363bbc8258f933bd2d",
+      "finalPromptSha256": "83c0e2b5fde67d747c567b1fd02aafc893baea20bef2f7c338fa52e8ce08588c"
+    },
+    {
+      "id": "pw-koror-mobile",
+      "previousPromptSha256": "84fcba9323418a33199a66fde929ec0c205e55c4276649bd1e7fef7524c817cf",
+      "finalPromptSha256": "6af10d5bd72f02d77f1e1e7a3985568180e05a461fb79117d245c6d836758545"
+    },
+    {
+      "id": "py-asuncion-landscape",
+      "previousPromptSha256": "efd58d3e5d428518353408e21ce5af0a0861542b0218ad8e1ca7c096d2b74bbe",
+      "finalPromptSha256": "1194653bc9194308e6e80a7553fffb1e27effef00b1ab657905aeb62e1e849fb"
+    },
+    {
+      "id": "py-asuncion-mobile",
+      "previousPromptSha256": "298e64681943bcae8a97d1e9d2c82d0121b30548184e48adf3162744d32e50df",
+      "finalPromptSha256": "86990e52a0710c13634fa6add46ff9a17adf54266f15dcc6cae4e0029054029a"
+    },
+    {
+      "id": "re-saint-denis-landscape",
+      "previousPromptSha256": "770022a92f40771b3acba07396442d941fe15b035de732345f93996ed1bbb6fc",
+      "finalPromptSha256": "cf7c9ffc9420d7208e3a8708607f636e486921feeef2f687982fd34c1d8e65a5"
+    },
+    {
+      "id": "re-saint-denis-mobile",
+      "previousPromptSha256": "13ba9ab7bc231c946ea9264590e4cfe8418dd0ef444fc3aa2ed93014b1700e2a",
+      "finalPromptSha256": "51a157b0964358010ebe9139dd67972bf3bbb82d42182d124b04c225188e4e9c"
+    },
+    {
+      "id": "ro-sighisoara-landscape",
+      "previousPromptSha256": "cb056ad729300d538b56d51f89b75a9a054b089405183daaaa6dba458b5ee32a",
+      "finalPromptSha256": "c1c02df76946b40a9c3686787e310d5a92a9555aac697159e6c8e61364ba43a5"
+    },
+    {
+      "id": "ro-sighisoara-mobile",
+      "previousPromptSha256": "b7c02a6db7665c53f79f30c3ad495d27463fff195d53eea9b04d6a06a2b3a55f",
+      "finalPromptSha256": "a5a40c85a8687f7040c0bd29b1efc1eccc92fc7ff1d233385d96da5fba5e052c"
+    },
+    {
+      "id": "rs-novi-sad-landscape",
+      "previousPromptSha256": "154e75dc58969447b48ca0ea0e092a482b3c6de62319e144d92ddf82ab6a0bd3",
+      "finalPromptSha256": "416be1321a1150e0f10b96263f4792530f566d837fddda43843556344ecd3c67"
+    },
+    {
+      "id": "rs-novi-sad-mobile",
+      "previousPromptSha256": "d39839b1c2f9ebb579c990e61f4e7f22a55b9540248eef032210c2a6f09f9639",
+      "finalPromptSha256": "bac72fce6b290dd79762df2866c6e4855a170bf098f2c5d216233f1c95893d34"
+    },
+    {
+      "id": "rw-kigali-landscape",
+      "previousPromptSha256": "721c40eb4c8350f1b88cf4df9bfbf0c79d86a15cff331001bc43ab2763db3fb5",
+      "finalPromptSha256": "3606e5f59225179d104506373b2dbbfaafb162447bd7c2d25b1e18d2bea8b425"
+    },
+    {
+      "id": "rw-kigali-mobile",
+      "previousPromptSha256": "e04f2b4e400251a9c8c4b3efd16b7a0155d30b510a5b25a93603c37848c6495f",
+      "finalPromptSha256": "4476429fb9aa12be00f0bc6ad116583414f7ffe3d6ae3b57ad5cb0ca05b4dc00"
+    },
+    {
+      "id": "sa-alula-landscape",
+      "previousPromptSha256": "cda4a7c55f6e26021740b611a6a3d68ae1b8695100c20d43435efd8684080e40",
+      "finalPromptSha256": "90aa1e0adc4cabf10d369029e8f320b85484daf12b8b443957ddf8d63c00ac23"
+    },
+    {
+      "id": "sa-alula-mobile",
+      "previousPromptSha256": "e24328f122c56167e2d6031338d763e4f52b8ce62bef0e636c739a2251cbde34",
+      "finalPromptSha256": "6aec70021587dc5f7a05065059d5a9c0ac244b22b89bb8ab1f38def79a4d1b95"
+    },
+    {
+      "id": "sb-honiara-landscape",
+      "previousPromptSha256": "8a0f551c092f7e8e8bb13f71bf979a537a18f1cc8151db18405658ac92251006",
+      "finalPromptSha256": "440cdb2671e0225ffc13c97adc667f3930b145fb3abec346fd5d32c7793a7fed"
+    },
+    {
+      "id": "sb-honiara-mobile",
+      "previousPromptSha256": "f3eed519e86338d306bd7ed73f44323aae112a9bfc231d18f3c384712b0886f5",
+      "finalPromptSha256": "140d3c64d65cba77c447d3349da6137449eea8207c77493e32c722f93d57dbfb"
+    },
+    {
+      "id": "sc-victoria-seychelles-landscape",
+      "previousPromptSha256": "5c9476a0af193cc83cb8b1ef6bdf6dfb6bc1ec30d8341aa693dcacdf9dda3f1f",
+      "finalPromptSha256": "1f132aa05be842ab68fb6b206d7643cbb5f28cf495088132eab7ccf3cf7fe68e"
+    },
+    {
+      "id": "sc-victoria-seychelles-mobile",
+      "previousPromptSha256": "02c33b2817d9638be5cdad7965c617b38611ef1d99cb3487fc79a8ed3a1c5015",
+      "finalPromptSha256": "3f004967b745afec216910f99e191a14f98ab43590d0da5875657f2dfcc8a4c7"
+    },
+    {
+      "id": "sd-suakin-landscape",
+      "previousPromptSha256": "6349e3433499d10b8653762482b91a4850e4ccf638c2242229b263f6ed8a33f8",
+      "finalPromptSha256": "974a7b4b81906b1670f3bd14191a38c0aaf1563d2e62dfca2085ce713685c026"
+    },
+    {
+      "id": "sd-suakin-mobile",
+      "previousPromptSha256": "d0c1313c522b05a397389141e58155c154483267095ba644bcb30ee71c6f4d47",
+      "finalPromptSha256": "f009cfd3bf2727cdac76f2048892bbdfe3c5807d9bc96c052135d0ea70e7e74a"
+    },
+    {
+      "id": "se-gothenburg-landscape",
+      "previousPromptSha256": "53eeb5a5204f78278c8d5d2a4342478406ba944423e561f15ac8f05f1f19dc58",
+      "finalPromptSha256": "ea2fdb87fb4cc25593b8771ffff3e97a8319367c3256a795ef612f4f23df1698"
+    },
+    {
+      "id": "se-gothenburg-mobile",
+      "previousPromptSha256": "ca3c93aede381e2dd6bc3eed61ab60b4f4ba5b78145221bf3624372e0e6bb067",
+      "finalPromptSha256": "58cc3cc610bf5af1b3245d24c677166de0bd87066894e55e26d7c551ea72da10"
+    },
+    {
+      "id": "sh-jamestown-landscape",
+      "previousPromptSha256": "80bfcd7ccddccd58af8b297e0dfc42be9c95282d2895dba232cdbc710f1b6dae",
+      "finalPromptSha256": "75cda4f4c94b4ec06afe5de4f45e8b5adfd0da6b3042143c08536998d09a50e1"
+    },
+    {
+      "id": "sh-jamestown-mobile",
+      "previousPromptSha256": "f64c1209d5d8829d9ae3f8357d74931b7ca738c53b757f05638a5df5723b0011",
+      "finalPromptSha256": "43f82f485fe612ceef2687d89863ebc4a2feece6ed655258efa044614097f3a2"
+    },
+    {
+      "id": "si-piran-landscape",
+      "previousPromptSha256": "343bd09de60952f8f5947f20f70b3102fa414a3827723e6b5823a50364d9945a",
+      "finalPromptSha256": "b6d09d122bcc4b1f7b37227c815a5e507fa0f76243ad1059660e608785229f61"
+    },
+    {
+      "id": "si-piran-mobile",
+      "previousPromptSha256": "24b407edc545680f5072004531d2a9fbe47dcdb5fc139fe3c6b92c6f15a28ae5",
+      "finalPromptSha256": "3d1847db3cafa2e690799eb35cb7c58fdfe409c7f7cf35072610fb84a9f2df4d"
+    },
+    {
+      "id": "sj-longyearbyen-landscape",
+      "previousPromptSha256": "3a392c4cd2928dd08af7fe4a5432933a287b4fc8411bc5edfbbbf428ee95df3a",
+      "finalPromptSha256": "161a549d957b736e912725c1f7e7b719e298f6f981d9edc3dbebc5141fee6b2f"
+    },
+    {
+      "id": "sj-longyearbyen-mobile",
+      "previousPromptSha256": "7c73dab5e5ecbbd615747166112331abb704d8ef31cd664835b0a9ba8d4cebb6",
+      "finalPromptSha256": "2ebd4011a6c1c3d0e04307031e89c0fd5db45bce6424259c7b94f255c7cb8abf"
+    },
+    {
+      "id": "sk-kosice-landscape",
+      "previousPromptSha256": "e08824643298cf611272ae7d150a4ec25e81d72bb4c17f6309b64cf9529ce4bf",
+      "finalPromptSha256": "b990a30fa960dfce99ed89ade36a428c1e9578f29dc123f3fbc0d6137cfc5b34"
+    },
+    {
+      "id": "sk-kosice-mobile",
+      "previousPromptSha256": "413dab5ba36b551a75a887511d3dcb1eb71491b9e1fdba13f1a06480e35963e0",
+      "finalPromptSha256": "2cd98e4d97e2add215235ae8b291541a0e6644cdd93c52329f32f150b2294535"
+    },
+    {
+      "id": "sl-freetown-landscape",
+      "previousPromptSha256": "488c404dcffce0d17c7233d1165d56dc3a3d241ddfc2d1aff2ee45680004f8d6",
+      "finalPromptSha256": "4f1b1d638ec5a15c4ee5faa6b665292d3b071021287d2161541fe941d0715a74"
+    },
+    {
+      "id": "sl-freetown-mobile",
+      "previousPromptSha256": "c64a6dab719f2a7ccbe808208669603f20c1a773d317c3c0e96dc78dbb716c08",
+      "finalPromptSha256": "f8597b8c287f8471ea7dcb64f88b6ab7d6d3b403b8e1c0f1caa79b2a9ec0f4c3"
+    },
+    {
+      "id": "sn-saint-louis-senegal-landscape",
+      "previousPromptSha256": "d13c44add4e367f06dc178889cf433f494550eaf2681b14c4d80182bd848eb7b",
+      "finalPromptSha256": "f9b92dd7782b513947d179ada93d63cca2b53db7ab6198784ff09fdc8735deac"
+    },
+    {
+      "id": "sn-saint-louis-senegal-mobile",
+      "previousPromptSha256": "338ad55e64274efcf6f15e0223fe342d0143c27b4175410d4c67fe38601425b6",
+      "finalPromptSha256": "7ff778ee2ba820d9f8efeaaade9824fcfcb372c7018f2ad2eae38183f4443168"
+    },
+    {
+      "id": "so-mogadishu-landscape",
+      "previousPromptSha256": "37398d91927f7a51e949ad9534c18a19a0add0930a1d572d614c953aaefce413",
+      "finalPromptSha256": "ad8d3b8125fb9d7f80bd4b40b603ee66d5c959a9522162fb3a4e29525034de73"
+    },
+    {
+      "id": "so-mogadishu-mobile",
+      "previousPromptSha256": "f41ddfd56198f50950f365657b4907f805ebac04fa7d1c8659d66819562bf3bf",
+      "finalPromptSha256": "50e0aedfc61c0ee66256b41877fdc259e379a0ab5200cbaab1f4090341b01099"
+    },
+    {
+      "id": "sr-paramaribo-landscape",
+      "previousPromptSha256": "f5964ab841884f87e884fb8172517a05c9996cd9d04e03b8abf38a766fa632fa",
+      "finalPromptSha256": "0f8e7eef2643769b005ef6f87788a1b95f56ec344b1d8fc4e5479a02603213f9"
+    },
+    {
+      "id": "sr-paramaribo-mobile",
+      "previousPromptSha256": "5638c0c526b350c1e0df722616b65c78c0d553d38518ec4ec9abe62bbbb3247b",
+      "finalPromptSha256": "ea111ddcd514ca83f436d600653eb2e028961c7b2fa80d871feb9c756b117b8e"
+    },
+    {
+      "id": "ss-juba-landscape",
+      "previousPromptSha256": "40cdc00b7be474437f782aada5d38270c3d022d1a193897f93724dbaf33ad99c",
+      "finalPromptSha256": "b2ea158b19f62774af64b0fa0028863309340257d364707809ccf123d66f9847"
+    },
+    {
+      "id": "ss-juba-mobile",
+      "previousPromptSha256": "db8a1ee751d3079b2d09cc97a08df4e121f573d5220f8ca17c639ac934e5b93b",
+      "finalPromptSha256": "c178c0ebc9a7a6060abf12aff069bb2e79d06ccaed50a57af3a062d6f362efcd"
+    },
+    {
+      "id": "st-sao-tome-landscape",
+      "previousPromptSha256": "87840e6eb18f65b58626ac74bd388106fc5bdd1f6a1f10821723dd79460b3f37",
+      "finalPromptSha256": "c382c04c1df3e26bf0dd0956cbbbe14577d1edb0951065305b8ac8ef5094c787"
+    },
+    {
+      "id": "st-sao-tome-mobile",
+      "previousPromptSha256": "11ee94b0787d7893c1a7f4a03421a596838678c57f6c0d2e194ee70f8368817c",
+      "finalPromptSha256": "c0353538a8aa4f3e3e7ba9bc3078d4fbcf0defd302beb6b3a722d85ecb9068b1"
+    },
+    {
+      "id": "sv-san-salvador-landscape",
+      "previousPromptSha256": "3728ecd9082f9d55d7fe18ae1f2ea7e82fe789061c713b97ab2069daec0b3641",
+      "finalPromptSha256": "0113d3e98d4f58ac40a58dd009c2edf148cf43d078f94bca4094d55114a77929"
+    },
+    {
+      "id": "sv-san-salvador-mobile",
+      "previousPromptSha256": "15cb741eba48ed390a7ad3812143028d652738e0c92f43764b4b6343e0827bfd",
+      "finalPromptSha256": "a70f6ba6e53b0a88839d40732bb6bd64e0226e9155b6e26b79c27e8236c41a50"
+    },
+    {
+      "id": "sx-philipsburg-landscape",
+      "previousPromptSha256": "565ffe012eadebc51c9a38e7a70d4b4f718a5f1073cf2c41cf900332710e7271",
+      "finalPromptSha256": "ce2ed2a3faf7e94c419b6a3a4ce8aa8560b629fc649096099e3c98c0f80e475d"
+    },
+    {
+      "id": "sx-philipsburg-mobile",
+      "previousPromptSha256": "39dacbdbd2ce5adc890c72224930f53e3f103531d189215851f106948fce2a29",
+      "finalPromptSha256": "a54055cbd3b623959d8c0fe580a30190175c5ffa54db32235d5fb8ca25b7e8a8"
+    },
+    {
+      "id": "sy-damascus-landscape",
+      "previousPromptSha256": "01b5b74518b089d7bbf122050b55047a4f20b4e16f20dda47ed22d5371542669",
+      "finalPromptSha256": "70ff7b01ba06d829f4e1b3ed712072373200b72b6f9004eac4460c19b15ebe53"
+    },
+    {
+      "id": "sy-damascus-mobile",
+      "previousPromptSha256": "2661fb6531f6b93f4ef137075cb954cd0e15d13013d173bd0cb60a27f1ed2870",
+      "finalPromptSha256": "3621f6904fbde4344b827a17ab3c6f125d90c9aad2540f9a4d73dc0d76961186"
+    },
+    {
+      "id": "sz-lobamba-landscape",
+      "previousPromptSha256": "b69e96efe95f1ad8c951ecf76e7d9f41dd72834d85405bac8cfc25a87a487c76",
+      "finalPromptSha256": "b2d6e436d1242eaafb342adf9841f52b6dcac8b806c0c7fb28fe6b92c4b7811f"
+    },
+    {
+      "id": "sz-lobamba-mobile",
+      "previousPromptSha256": "ea8611961a948945d4d631904c7aae1e5cd024d27cf525984bc1bb54d9b84ceb",
+      "finalPromptSha256": "3b9b0940ee43e08028967046b6bce77edbc6a579d183dbe3af44198d12d50819"
+    },
+    {
+      "id": "tc-cockburn-town-landscape",
+      "previousPromptSha256": "393a8d0d331c7f6cbf923eb8a5d7011606db9d71af0edf86da86d30ba96298ad",
+      "finalPromptSha256": "33ea82865e464359b4ffe355bcacda626671873d5d0714bfa9d2adcd76513ada"
+    },
+    {
+      "id": "tc-cockburn-town-mobile",
+      "previousPromptSha256": "9e397f52c5069466513734596ac016621fec008dd56d892468b3e0fae8c9c646",
+      "finalPromptSha256": "5c42b4826fa6de04cc35411402ea89eb743fe763f40df53fad07cd6831696f5e"
+    },
+    {
+      "id": "td-ndjamena-landscape",
+      "previousPromptSha256": "1411d31e2b65314845d281e62333945229689baac6182286a7125a906bd35c07",
+      "finalPromptSha256": "a56f5074eda108773b1f03e672800f6fc5575ce60c244c86a444a4ecc78e6390"
+    },
+    {
+      "id": "td-ndjamena-mobile",
+      "previousPromptSha256": "7c9f5f18b4a96dcec489b5f910f88ef7b3e0e3cbbf0749e4c98da96cf7cd6a2b",
+      "finalPromptSha256": "afff844cd85051592309558c85e971b2821d68f6b675a33bdbc200a35416c60d"
+    },
+    {
+      "id": "tg-lome-landscape",
+      "previousPromptSha256": "aefd7985fb95483de54f240dfbd7e88eb9385061d8ace569f73ba1790b6c2dc7",
+      "finalPromptSha256": "20e0f2d4ef4ac1b0490516dcd0b99161d2cbb9fcd17022b0a0fc328b124cb165"
+    },
+    {
+      "id": "tg-lome-mobile",
+      "previousPromptSha256": "ebaab617f012fa8e74cbbe763330da47cae6ad1d1b30d7c092892d625e8d3985",
+      "finalPromptSha256": "67898cc509bffc31475bf7f64bef47fea2e8de50a5b94654853590877a6698d3"
+    },
+    {
+      "id": "th-kanchanaburi-landscape",
+      "previousPromptSha256": "c6de5330435a01c73f2f58e1f87c104dbf0c8471aa4aa4b8aad9b6cadc441c2f",
+      "finalPromptSha256": "0d88dda99e735b83f83f049c416cb5243acc5f66e3ef1036ffe94e082777b70d"
+    },
+    {
+      "id": "th-kanchanaburi-mobile",
+      "previousPromptSha256": "8a196d6bcf8d42d21d06bf5d5b8904ddbd50d5d904b0e9428c9e1639edb7a11c",
+      "finalPromptSha256": "535f764bb64e13622f97952593c9a18e3defbb0cb40554b5a7c1369689ceab4a"
+    },
+    {
+      "id": "tj-dushanbe-landscape",
+      "previousPromptSha256": "4704bdc927052acd6d06195f227bb3bf9597b11cae3387040c15bb413eb441b4",
+      "finalPromptSha256": "7a1c49f9f2e92c2a2f7f63a2ed707789e8e6f3a4dc5f689a07031015c3aefb22"
+    },
+    {
+      "id": "tj-dushanbe-mobile",
+      "previousPromptSha256": "ccf8461f2135464504f8405eaa2b71665ef823932c00627ef9093f0f1f6833ef",
+      "finalPromptSha256": "68ca51cdd4a3547b2c8c511d00779089cc8e1e11191854956514232a2c16ff57"
+    },
+    {
+      "id": "tk-nukunonu-village-landscape",
+      "previousPromptSha256": "ce28eaae419d1e22f44c22d17e1bdb4ea00f04ce148ec2ea4d9af9e2967672e0",
+      "finalPromptSha256": "877221ff3280082c360be8e19508cb8329c9340600cdd816be4199836549fea8"
+    },
+    {
+      "id": "tk-nukunonu-village-mobile",
+      "previousPromptSha256": "a0519782992971d9f287337aa1dd7d9eb89b313b620f3d9d5ade2d7a268ffa07",
+      "finalPromptSha256": "d66fcea2b999f5c7192d03344e4d56a5209e8d6d8534e9cd1b96c2a9f9b50e33"
+    },
+    {
+      "id": "tl-dili-landscape",
+      "previousPromptSha256": "5db7bf1f482ad0e2bd6d6a6b76434914faad1b8138b8e8f95a52942a41e18dbf",
+      "finalPromptSha256": "ab38db6003a5af3bcc31b25fc97abe11bbfb8c0d4ecbfc7f29e80fb299847ae2"
+    },
+    {
+      "id": "tl-dili-mobile",
+      "previousPromptSha256": "f0e517eccb710caedc042f5b1f7ba6c7963b6ef416c16afd82c2c9d863d37b6f",
+      "finalPromptSha256": "4d426a815d903380c1b768fcbeab697e8f0fb788f89c8cb845635843338c42f9"
+    },
+    {
+      "id": "tm-ashgabat-landscape",
+      "previousPromptSha256": "74bfa227e4ab0d16c6d9ecdad725216a463a7f7b6ea94bf62502a6c361b2c0a6",
+      "finalPromptSha256": "57473dafd8496e71acf4bb68eddd4ae9dc7f4e2b8c2318ea3f201d21175f9c1a"
+    },
+    {
+      "id": "tm-ashgabat-mobile",
+      "previousPromptSha256": "83e2f6537fecd06eebed0f53145937d89eb9dc8f62e14f3d77bc21897b71db57",
+      "finalPromptSha256": "30c8e95c58bec6a3c0882028f90a372343368bd40a50cc8328b65e2e340c8245"
+    },
+    {
+      "id": "to-nukualofa-landscape",
+      "previousPromptSha256": "88009e6172f284535a8dc2f18241aa1f04a8ce0bfd2f0763afac0b74ab886f09",
+      "finalPromptSha256": "55f649622564564317b9079e3c33396a82e0b88c40a47a8f81fd6c71ab922acf"
+    },
+    {
+      "id": "to-nukualofa-mobile",
+      "previousPromptSha256": "711b9815e88e7e223e29c0bbd533b0e17d9e9a691fee7c6d7e0b3e1a6cbf5d36",
+      "finalPromptSha256": "02a98bc9730ef04534db9efa661c7f210369aacc8dd40f38047c7fa5c6f5bfce"
+    },
+    {
+      "id": "tt-port-of-spain-landscape",
+      "previousPromptSha256": "f8cd96a83cfccbc7ae77825b393c99926f7457c56e5a1ae7cf1297c4813c8803",
+      "finalPromptSha256": "b7d22b2c3c41aaf8086e599d73745869241e2633aceac7081db4ffa801986cc0"
+    },
+    {
+      "id": "tt-port-of-spain-mobile",
+      "previousPromptSha256": "6cfbc0d8d419961774690dd900292807e549b60ec5afa8ad2112e33cdfc2c39d",
+      "finalPromptSha256": "a0a83033b8d7d574a0aa27bfd5438f39cf1da8076f93fecc4eaf253bc69f0bfa"
+    },
+    {
+      "id": "tv-vaiaku-landscape",
+      "previousPromptSha256": "c0679800c405c2253c463d5f1947071230addd32eacf29515e8ac10cef6692b8",
+      "finalPromptSha256": "28a8683f5cbc0a50abeb305f20d12c3bf282bb134187c4ff026dc04d47ac07d6"
+    },
+    {
+      "id": "tv-vaiaku-mobile",
+      "previousPromptSha256": "8d9af34b62fd057811100761aaab3f85f2fc8235f304291916ce2d246e918abb",
+      "finalPromptSha256": "0d28213285b71e0d2ddc68ee19d96fe8a986f770e2739bc0249dcd6dd9744059"
+    },
+    {
+      "id": "ug-entebbe-landscape",
+      "previousPromptSha256": "b54d2f7ec2c3b724632a7b0c2b68266de88b027a1c30aad76286b91ce4c5a096",
+      "finalPromptSha256": "5beecc716694aee15fb40fb65b05ba80c7b459337a554231112ce80b04330b3f"
+    },
+    {
+      "id": "ug-entebbe-mobile",
+      "previousPromptSha256": "d0492e8ea11a1da3643a99d86f2a2d059124b2bb882bca609b95cb365b2ef1a0",
+      "finalPromptSha256": "0a820af63f9019ded148e30bddd63f4e6bbccd067d2db41b3f7f477c9fab3e51"
+    },
+    {
+      "id": "us-charleston-landscape",
+      "previousPromptSha256": "04ad33c956fd57cc6b772d0736a0aa66120c88bb2472463004d3025864949505",
+      "finalPromptSha256": "88c361e95510e9ae760331c8bea165a000d13c16c8ea6f35388407b6424f74b1"
+    },
+    {
+      "id": "us-charleston-mobile",
+      "previousPromptSha256": "205fc12cbbaa661b7d2539444302ec5bc3c140b658d714bf5226c38fcba86d10",
+      "finalPromptSha256": "e488109640ee81c0611a93c06b4c79c80777f525f203e1827e9767a13c8ef748"
+    },
+    {
+      "id": "us-st-augustine-landscape",
+      "previousPromptSha256": "2f82681fb1b7a15b556bfb54328b0b80d5470485641637f1e8c42177946c1f2c",
+      "finalPromptSha256": "7fddac46eedeb1ccbdbb2c03c1c523d2bee99b23e3660df1a6bb01d235b706e4"
+    },
+    {
+      "id": "us-st-augustine-mobile",
+      "previousPromptSha256": "fb7519d555f87c7922915b1da200bd4a86fb1834c17e98040fcbc26ee97713b2",
+      "finalPromptSha256": "646236fff179a84997b59acede13a564fa50e2f3ee21d0155ec35bb89b95219a"
+    },
+    {
+      "id": "uy-colonia-del-sacramento-landscape",
+      "previousPromptSha256": "7b74352ab56ab4dadd0f13b672548d508182291d87f5d5052558154d313c752c",
+      "finalPromptSha256": "2d5730286ba7ffdf1e2c6a5d9defe696730e42aa8476346c7f196d01998eaab2"
+    },
+    {
+      "id": "uy-colonia-del-sacramento-mobile",
+      "previousPromptSha256": "2c98a52693f3de89972914b452c8802e62b8b2ac16771e694553966b28d90b19",
+      "finalPromptSha256": "d526e70e6a0c7467a8b9739d5b03e9ec86e71055447b20fcf2804aa56f165948"
+    },
+    {
+      "id": "uz-bukhara-landscape",
+      "previousPromptSha256": "77ef37b05fd5b5dc4fedc97dad24018bd0cc55e1607ee770db7a84925966f31a",
+      "finalPromptSha256": "69a82fe5e5056058bac296eaa87f42a612c95e666e5c3f3b5c2fb8368f18db86"
+    },
+    {
+      "id": "uz-bukhara-mobile",
+      "previousPromptSha256": "6e3aa033c232092d7bc2b52df7403dd6e5ef0b55de37ec1f597e3f24cbafa384",
+      "finalPromptSha256": "788d00d228d69000816868fabdc51c7d01df3bacb333c1b19e7896b7e456a54b"
+    },
+    {
+      "id": "vc-kingstown-landscape",
+      "previousPromptSha256": "e9a03483d01340bfb50945f92a0950bc53545233b72acdac65455ac06bce1259",
+      "finalPromptSha256": "7fd4a0907e0a182554d7f5b6b3c705bf25372aa5cdc3d6c23370ae1b77a60ef9"
+    },
+    {
+      "id": "vc-kingstown-mobile",
+      "previousPromptSha256": "e4618f5c10f05307bcba3d24acc40f1d2bc90cfb3b4f6411f11b4eb9090daf86",
+      "finalPromptSha256": "754f6598d248170a62673c23b20aa021352aa4b82d2c86f82fd93a1f51e67392"
+    },
+    {
+      "id": "ve-coro-landscape",
+      "previousPromptSha256": "cc93918d3ff2aa937d81af9f648deb8ecaed3bf2378ebee8b7217d816985e355",
+      "finalPromptSha256": "863924fc8df894c124fcf290f3176ba4bedc2cc51b660fd51b205f71245efea9"
+    },
+    {
+      "id": "ve-coro-mobile",
+      "previousPromptSha256": "3762ed267dc21cf9a87723186a51db410f2424a8516585f0bb1419b9098366df",
+      "finalPromptSha256": "4610d0acb28d851d5b371c82c8c828b7ae4d64e2a05d47d6eb2f13584d3182a5"
+    },
+    {
+      "id": "vg-road-town-landscape",
+      "previousPromptSha256": "9a557836487a9ae55c0a60381fc61624c31161031717d8ba264a97d28bf5031e",
+      "finalPromptSha256": "8c3cfef7572b2c4fe338ee40a47c3f0a23789071421fbf9167b5a8b9c85f314c"
+    },
+    {
+      "id": "vg-road-town-mobile",
+      "previousPromptSha256": "38cf61d4e863e9047d06c5cb924353e77b5178ee1e69b7350471334a6e727887",
+      "finalPromptSha256": "161cc0d87bc758e1e8284a3995a373626926a9c1f46dfd23c98c78e299deb878"
+    },
+    {
+      "id": "vi-charlotte-amalie-landscape",
+      "previousPromptSha256": "f667fada9953b26e172ada443afbeba87f8d8eb055514a8cbbf8d7728ebf248d",
+      "finalPromptSha256": "8faf68e466e26a8c2ff51ec872c3f1a2001e926d3464f3e36685dc625eab3e67"
+    },
+    {
+      "id": "vi-charlotte-amalie-mobile",
+      "previousPromptSha256": "207a85faa41360d08d2a90c70c31a44e78ecb13b3d91c4834c0e7c7150957477",
+      "finalPromptSha256": "85a90ab474c2518d2071800f2a8b4f6f5b0a6b0b879a2dc3f8c7bb60743cd093"
+    },
+    {
+      "id": "vn-sa-pa-landscape",
+      "previousPromptSha256": "14043e04198428a5478a866dbcbec7cf1e1c6b97f86a0b901f37838e026f6bd8",
+      "finalPromptSha256": "82cf984a3c8255f77f4cde0a68e44a44580071fd1e458215d6e56ee21e60ed05"
+    },
+    {
+      "id": "vn-sa-pa-mobile",
+      "previousPromptSha256": "e39c60555f194300444e1fadfc3dbf97005cb70fe9b6e99f6582c7a17ab99505",
+      "finalPromptSha256": "b7d0c18303fd6c438cdff5d68096cd49b5c51cbc0edb5bc34f29fc30379b509b"
+    },
+    {
+      "id": "vu-port-vila-landscape",
+      "previousPromptSha256": "152abc9718c2f51d62c014ad62f3559359eb7b8ba82b08646e73ba83a4ec574d",
+      "finalPromptSha256": "a9c630228edd637cf0074ab8b6cf6c69f3886d4e683a983355667e6941dda40a"
+    },
+    {
+      "id": "vu-port-vila-mobile",
+      "previousPromptSha256": "238df10a5c77b69998ca968324a58f060a80dcfdecda8c443b2adfa8b49b55ca",
+      "finalPromptSha256": "a3114cb2964492fe79accba41e5136b4087889c1c5500c905732229604349670"
+    },
+    {
+      "id": "wf-mata-utu-landscape",
+      "previousPromptSha256": "0b0a713a75a1bc86d1bd8846b66f719daceb057faedb420c84bf545a6124b1e3",
+      "finalPromptSha256": "e514714ef0d52ddcc83e01773620bbafdb52031f539d6b38209a8f15754029db"
+    },
+    {
+      "id": "wf-mata-utu-mobile",
+      "previousPromptSha256": "6bb16fad9e97bc9a545fffbcd3b57778a6f968504645174af3328f6ccfc57ba0",
+      "finalPromptSha256": "32822288473bfb27a731cbc3b5cfcb0b014e4f5a9d2cbb0f768196970031c738"
+    },
+    {
+      "id": "ws-apia-landscape",
+      "previousPromptSha256": "014b2ef3936a1889bd60372972b5314a734d7c470c5beac320cf26839817d906",
+      "finalPromptSha256": "d72d5de554cc96d3b19377d81126608bcab4a679d91132524a0e8e735c322336"
+    },
+    {
+      "id": "ws-apia-mobile",
+      "previousPromptSha256": "7a934e8ac9dd06f35377a08d7284e1ceefbe89c44eb14c2dbc2ac2b5f0534dae",
+      "finalPromptSha256": "34d3fa6ae9df1a0e24768c71b5bdb354145051400eb15160c64f069e85639e9b"
+    },
+    {
+      "id": "xk-prizren-landscape",
+      "previousPromptSha256": "179986c622cec80517f043472c571b45ef236afc3526c31cc75b2670c5a29845",
+      "finalPromptSha256": "96c08243ccb754afc887b0f615679cf1d01a0b6d61740f607c26f0cfe2bb713d"
+    },
+    {
+      "id": "xk-prizren-mobile",
+      "previousPromptSha256": "8a09a7773c1d6049fb19d92fc3e4ba93c564da3c9aa7471339dc42e028d34519",
+      "finalPromptSha256": "7d3a97610392c977af8cf23789e1940125cb2e0cd56bb1f5b70e5a59763c087a"
+    },
+    {
+      "id": "ye-sanaa-landscape",
+      "previousPromptSha256": "ef0ffa9c7e963cec26a08178b333f6b0e2bfb056c2a9a97022c9a55e2ac11316",
+      "finalPromptSha256": "1f4ba1446be5eb352c5ed3d6d672ba1cd9fd73d144854ab2f4cfff816c11dcc2"
+    },
+    {
+      "id": "ye-sanaa-mobile",
+      "previousPromptSha256": "47431ca9aa5e93794ca4ee39e022c955c0c3c1358c97106cd645f40a148819f0",
+      "finalPromptSha256": "90c65d5348ae36e25922741f9cdada06cef3497c1ba2680401ebef43bc38d4b6"
+    },
+    {
+      "id": "yt-mamoudzou-landscape",
+      "previousPromptSha256": "71133fe0dae52437edb1c0d8f1c59ed88d41bbd5230bf73d92cd01580e75a7c8",
+      "finalPromptSha256": "8f676158bb20b5a3161682c3c2800570311e3b1fd868f607878d9b17a508baad"
+    },
+    {
+      "id": "yt-mamoudzou-mobile",
+      "previousPromptSha256": "573d73202aef99e8943ad413e0acbef8b65d10d6793f98fbf0bff6d3fa080ff3",
+      "finalPromptSha256": "b7978f5f624caaf25c424200b9e7adcb31793c24f3fbfe8cba3b2702c2dbb896"
+    },
+    {
+      "id": "zm-livingstone-landscape",
+      "previousPromptSha256": "14a62cd99d2e2e68b7629a1d9832c03285065f895356bcf610c0a0b08352fa61",
+      "finalPromptSha256": "68662590ff7c49118cb486247e9a3fad6b16568c288ccc00b29d43ad3575dcb6"
+    },
+    {
+      "id": "zm-livingstone-mobile",
+      "previousPromptSha256": "b61947c8ca732393845d8155a2f39eb693566071c604e81c9618f70671b2ad54",
+      "finalPromptSha256": "1d34f1b417b1ce86e07a475d9492d70ba2115af8d2dd11ad4fd9fd383ffbb7ce"
+    }
+  ]
+}

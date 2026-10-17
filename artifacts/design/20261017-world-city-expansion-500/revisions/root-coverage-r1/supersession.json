@@ -1,0 +1,74 @@
+[
+  {
+    "jobId": "pm-saint-pierre-landscape",
+    "reason": "Restore Pointe aux Canons identifying red middle band, slim octagonal tower and low isolated breakwater setting.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/pm-saint-pierre-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r1/pm-saint-pierre-landscape/jobs/pm-saint-pierre-landscape.json",
+        "sha256": "e523d9c0ad8e3b499c6a81b95dd80bd88a63bea042a167d9ac26e92dd370fbf7"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/pm-saint-pierre-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r1/pm-saint-pierre-landscape/jobs/pm-saint-pierre-landscape.prompt.txt",
+        "sha256": "330dc78356ab17e54eda107c342f14f6dd53a164f9531de81c5943cd7a7e11b6"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/pm-saint-pierre-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r1/pm-saint-pierre-landscape/originals/pm-saint-pierre-landscape.png",
+        "sha256": "9566ccf716011519998b8099ca7f028350cde243b389ab38362f4463ebd46953"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/pm-saint-pierre-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r1/pm-saint-pierre-landscape/originals/pm-saint-pierre-landscape.json",
+        "sha256": "e383d3bf1942a7bca0ff30cd1acd5c0bc6c3fb89fe7c89f4e55cb5dbcecb2c29"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/pm-saint-pierre-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r1/pm-saint-pierre-landscape/originals/pm-saint-pierre-landscape.asset.json",
+        "sha256": "bbde4e7df5c74130b281a12328bf4758efd43e09d226d31204c16851760b8f94"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/pm-saint-pierre.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r1/pm-saint-pierre-landscape/runtime/pm-saint-pierre.webp",
+        "sha256": "115fd6e051d088f195d0ba691284fd88393c33558d9eb4b58726d5ea71156368"
+      }
+    ]
+  },
+  {
+    "jobId": "pm-saint-pierre-mobile",
+    "reason": "Restore Pointe aux Canons identifying red middle band, slim octagonal tower and low isolated breakwater setting.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/pm-saint-pierre-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r1/pm-saint-pierre-mobile/jobs/pm-saint-pierre-mobile.json",
+        "sha256": "d9eb868bccbe41580bb2d4cdeafa6313829f866d7cad1bee0284f496ab44321a"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/pm-saint-pierre-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r1/pm-saint-pierre-mobile/jobs/pm-saint-pierre-mobile.prompt.txt",
+        "sha256": "e7f5b369d495f98334e1d09ac48839378a6d6a508286c0ebf65b71c1c786b3bf"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/pm-saint-pierre-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r1/pm-saint-pierre-mobile/originals/pm-saint-pierre-mobile.png",
+        "sha256": "ca41dc0e7762a82485bce70db697c6e57428d6ff0cf165c9e33ae1165e5662bb"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/pm-saint-pierre-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r1/pm-saint-pierre-mobile/originals/pm-saint-pierre-mobile.json",
+        "sha256": "1251b07fba09dd67fbae8c15ec0416db2c6c732dc58213ca2787b9646a1d9007"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/pm-saint-pierre-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r1/pm-saint-pierre-mobile/originals/pm-saint-pierre-mobile.asset.json",
+        "sha256": "e84acbb582db9ba732b36d8b694aa30d71c30f63d5037093642c74332858dd5b"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/pm-saint-pierre-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r1/pm-saint-pierre-mobile/runtime/pm-saint-pierre-mobile.webp",
+        "sha256": "1d0fa85f5535d12405e6e429f8d8ae5ee3649ff7ed8e4471e1a2f7f4bcba1468"
+      }
+    ]
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "id": "gh-cape-coast-mobile",
+  "cityId": "gh-cape-coast",
+  "name": "케이프코스트",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gh-cape-coast-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gh-cape-coast-mobile.json",
+  "originalSha256": "48cddeea2070ffbac0b89f40c492e4c935466454ea313dd0915126e97df15f20",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gh-cape-coast-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 108098,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "0f435a5737bee5da5edaf2fccf5e9072eb2c9084a805b5b2f047145752260ad8",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

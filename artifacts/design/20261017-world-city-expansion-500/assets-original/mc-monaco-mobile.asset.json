@@ -1,0 +1,52 @@
+{
+  "id": "mc-monaco-mobile",
+  "cityId": "mc-monaco",
+  "name": "모나코",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mc-monaco-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mc-monaco-mobile.json",
+  "originalSha256": "83360ed6606d2ce3f83c08d16cb8f72ff5747a13d476f14c87cea997627cc7cd",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    25,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mc-monaco-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 113150,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "f8358dd611e3329976c4d023b75faa9a580a9a7b3b7fbe6661a6cc580be16954",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

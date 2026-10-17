@@ -1,0 +1,26 @@
+{
+  "jobId": "im-douglas-landscape",
+  "cityId": "im-douglas",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Douglas, Isle of Man: the Tower of Refuge's small stone battlements on its tidal rock in Douglas Bay, with a short sweep of the seaside promenade. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette. Local form guard: this is a small, compact castellated stone refuge on a low tidal rock, with a short main tower, smaller corner turrets and crenellated parapets. It is not a tall lighthouse or a sprawling castle. The battlements have no pointed spires. Keep the whole low rocky islet and complete refuge silhouette visible, and show the seaside promenade only as a small distant shore support.",
+  "promptSha256": "2c721f6cfc888e1290ec4af6f58c4b222f92e12719d601de80f09dc28f20346e",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/im-douglas-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-c2f5ed3b-30fe-46be-9130-4060c9393ed2.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-c2f5ed3b-30fe-46be-9130-4060c9393ed2.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/im-douglas-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "b2a1e2a62cdb0ccc9530fea33c8294c026299b74ef4130917e52b35115ab1e81",
+  "savedSha256": "b2a1e2a62cdb0ccc9530fea33c8294c026299b74ef4130917e52b35115ab1e81",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:36:31Z",
+  "toolCallId": "exec-c2f5ed3b-30fe-46be-9130-4060c9393ed2",
+  "savedAt": "2026-10-17T07:39:37.621161+00:00"
+}

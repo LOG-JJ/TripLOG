@@ -1,0 +1,52 @@
+{
+  "id": "mx-san-miguel-de-allende-landscape",
+  "cityId": "mx-san-miguel-de-allende",
+  "name": "산미겔데아옌데",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mx-san-miguel-de-allende-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mx-san-miguel-de-allende-landscape.json",
+  "originalSha256": "6bc82b189e7f359ae772525fdd6a47c05b30820875608f6449a757ab6f6a0b59",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    39,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mx-san-miguel-de-allende.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 107214,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "8bfe3f628cd3889e5ef1a017ee0731a1c6f44c292fcf00012f2c3925fde0981d",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

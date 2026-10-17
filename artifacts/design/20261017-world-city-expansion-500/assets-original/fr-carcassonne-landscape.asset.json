@@ -1,0 +1,52 @@
+{
+  "id": "fr-carcassonne-landscape",
+  "cityId": "fr-carcassonne",
+  "name": "카르카손",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/fr-carcassonne-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/fr-carcassonne-landscape.json",
+  "originalSha256": "33468537f073a8220319d715cdf156f543f63cd7fd574586e98ae7839c3b948e",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/fr-carcassonne.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 145346,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "dcefb2fa80538e9cd2ac700b5755652633511eba2654ea1c4bc7ebc41a6ecd17",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "kr-uijeongbu-landscape",
+  "cityId": "kr-uijeongbu",
+  "name": "의정부",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-uijeongbu-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-uijeongbu-landscape.json",
+  "originalSha256": "982b583df4ec387e4956c2393fb66ec91ee37d189f0bceee931be036c429b5ff",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    52,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-uijeongbu.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 90806,
+  "assetSha256": "d7211012736dcd5950a2c90910fbd6fe644fb0ddc4e5291970bb872d702fbd78",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

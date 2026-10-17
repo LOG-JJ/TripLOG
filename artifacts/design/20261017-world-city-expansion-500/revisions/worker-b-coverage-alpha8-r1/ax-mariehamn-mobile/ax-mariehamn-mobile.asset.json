@@ -1,0 +1,52 @@
+{
+  "id": "ax-mariehamn-mobile",
+  "cityId": "ax-mariehamn",
+  "name": "마리에함",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "북유럽",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ax-mariehamn-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ax-mariehamn-mobile.json",
+  "originalSha256": "e8effbac7faf357d788e5df6f4c58ef625d6cd50d4ea151993b81d611008126a",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ax-mariehamn-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 143546,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c617b865f1ccb0147fd3d37d3ebbf184411ef211fe73e8e888b53f3bab6af4d7",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,545 @@
+{
+  "count": 10,
+  "records": [
+    {
+      "id": "sh-jamestown-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/sh-jamestown.webp",
+      "sourceSha256": "259d5564cd889df29b2ff7f03e5e88feb8b75b46fb6723278fecbef655df3048",
+      "assetSha256": "07441a0306cc6aad92aa42958dc79aa426d4bbd8accc0a2c13240d1dcf12d120",
+      "size": [
+        800,
+        480
+      ],
+      "alphaThresholdEdges": {
+        "1": {
+          "bounds": [
+            0,
+            10,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "8": {
+          "bounds": [
+            0,
+            42,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "32": {
+          "bounds": [
+            0,
+            42,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "128": {
+          "bounds": [
+            0,
+            43,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        }
+      },
+      "originalEquality": true,
+      "promptEquality": true
+    },
+    {
+      "id": "sh-jamestown-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/sh-jamestown-mobile.webp",
+      "sourceSha256": "875d205bda408cd5b665734ee9e715013dd31805588166462ad2c3c591a1c998",
+      "assetSha256": "64681b0e166cbf67b98a5a1e66e28064bd4cd054bacd72bbed51a68ddea9268d",
+      "size": [
+        480,
+        600
+      ],
+      "alphaThresholdEdges": {
+        "1": {
+          "bounds": [
+            0,
+            39,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "8": {
+          "bounds": [
+            0,
+            41,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "32": {
+          "bounds": [
+            0,
+            41,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "128": {
+          "bounds": [
+            0,
+            42,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        }
+      },
+      "originalEquality": true,
+      "promptEquality": true
+    },
+    {
+      "id": "vg-road-town-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/vg-road-town.webp",
+      "sourceSha256": "b755071a97fda4e71f0d44aa42a2446e2eb48eaa400e2ab45dcd3698c8212ca0",
+      "assetSha256": "aecd60d989c78d268850eccee013e70a97d043ebe1d172e7f66440f6289529a1",
+      "size": [
+        800,
+        480
+      ],
+      "alphaThresholdEdges": {
+        "1": {
+          "bounds": [
+            17,
+            14,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "8": {
+          "bounds": [
+            189,
+            48,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "32": {
+          "bounds": [
+            189,
+            48,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "128": {
+          "bounds": [
+            190,
+            49,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        }
+      },
+      "originalEquality": true,
+      "promptEquality": true
+    },
+    {
+      "id": "vg-road-town-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/vg-road-town-mobile.webp",
+      "sourceSha256": "1df3c929717aaee83701fded124e7a70e7b692c88fee3202a1b8a5ff85ff3680",
+      "assetSha256": "2ebe55e80b452ad9912a48018605799cd487c685c44d5d1a65f74ae884fae3e2",
+      "size": [
+        480,
+        600
+      ],
+      "alphaThresholdEdges": {
+        "1": {
+          "bounds": [
+            0,
+            8,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "8": {
+          "bounds": [
+            0,
+            41,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "32": {
+          "bounds": [
+            0,
+            41,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "128": {
+          "bounds": [
+            0,
+            42,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        }
+      },
+      "originalEquality": true,
+      "promptEquality": true
+    },
+    {
+      "id": "cx-flying-fish-cove-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/cx-flying-fish-cove.webp",
+      "sourceSha256": "48fa9d6d379e1823f14141c906c4041d47638e8c6ac6cd6b94671196d9914ec6",
+      "assetSha256": "1741fa7e91408c3ec3ad7f83c409aa26355b3d9cb1e3c5fcef1d333fd3fc1318",
+      "size": [
+        800,
+        480
+      ],
+      "alphaThresholdEdges": {
+        "1": {
+          "bounds": [
+            0,
+            11,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "8": {
+          "bounds": [
+            87,
+            60,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "32": {
+          "bounds": [
+            87,
+            60,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "128": {
+          "bounds": [
+            87,
+            61,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        }
+      },
+      "originalEquality": true,
+      "promptEquality": true
+    },
+    {
+      "id": "cx-flying-fish-cove-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/cx-flying-fish-cove-mobile.webp",
+      "sourceSha256": "dfd6e1705712ec090f08e42f9e705b4e521c5ed97dd5534d697209133b124f50",
+      "assetSha256": "705c4b9d3543f5cc9a0a6cb4bfe934f9977c843e3a304ce7fe7ed7b31ed00813",
+      "size": [
+        480,
+        600
+      ],
+      "alphaThresholdEdges": {
+        "1": {
+          "bounds": [
+            12,
+            16,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "8": {
+          "bounds": [
+            14,
+            73,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "32": {
+          "bounds": [
+            14,
+            74,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "128": {
+          "bounds": [
+            14,
+            74,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        }
+      },
+      "originalEquality": true,
+      "promptEquality": true
+    },
+    {
+      "id": "wf-mata-utu-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/wf-mata-utu.webp",
+      "sourceSha256": "ecf2b4a9cdf98c14a2e7ab68b3b8d6ac5a6b806b3328884d6f845ea81ef32f99",
+      "assetSha256": "75cb50f134007f7bbb4b66093ca6ba2805111faeafe64df27b3a702d8600215a",
+      "size": [
+        800,
+        480
+      ],
+      "alphaThresholdEdges": {
+        "1": {
+          "bounds": [
+            0,
+            0,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "8": {
+          "bounds": [
+            0,
+            69,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "32": {
+          "bounds": [
+            0,
+            69,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "128": {
+          "bounds": [
+            0,
+            69,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        }
+      },
+      "originalEquality": true,
+      "promptEquality": true
+    },
+    {
+      "id": "wf-mata-utu-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/wf-mata-utu-mobile.webp",
+      "sourceSha256": "71262fd5cbf8f6dd4928a51573fb2079d71778e766324b28ad1c028e62b5afd1",
+      "assetSha256": "5cee8f4c1c53c84ed29931849a81f14d312f3d724f6362220eda85265fc3834f",
+      "size": [
+        480,
+        600
+      ],
+      "alphaThresholdEdges": {
+        "1": {
+          "bounds": [
+            0,
+            73,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "8": {
+          "bounds": [
+            0,
+            153,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "32": {
+          "bounds": [
+            0,
+            153,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "128": {
+          "bounds": [
+            0,
+            153,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        }
+      },
+      "originalEquality": true,
+      "promptEquality": true
+    },
+    {
+      "id": "yt-mamoudzou-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/yt-mamoudzou.webp",
+      "sourceSha256": "9c13b7df5a09820587bf5695ea8b38f71f721ed2f577487ad540aac27f589b1f",
+      "assetSha256": "b2d749c7400f24353958b023ec1de5a0a74d9c1d366bfec520ba7a5089722521",
+      "size": [
+        800,
+        480
+      ],
+      "alphaThresholdEdges": {
+        "1": {
+          "bounds": [
+            0,
+            59,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "8": {
+          "bounds": [
+            0,
+            140,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "32": {
+          "bounds": [
+            0,
+            140,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "128": {
+          "bounds": [
+            0,
+            141,
+            800,
+            480
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        }
+      },
+      "originalEquality": true,
+      "promptEquality": true
+    },
+    {
+      "id": "yt-mamoudzou-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/yt-mamoudzou-mobile.webp",
+      "sourceSha256": "ef71400da34d24f6620e0f5798b00598d97a71a56a2da6022330487a02ae4461",
+      "assetSha256": "8c2d14def06dc48318c10013c6c43ee140d3916097b713e5b5341000367c216a",
+      "size": [
+        480,
+        600
+      ],
+      "alphaThresholdEdges": {
+        "1": {
+          "bounds": [
+            0,
+            99,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "8": {
+          "bounds": [
+            2,
+            202,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "32": {
+          "bounds": [
+            2,
+            202,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        },
+        "128": {
+          "bounds": [
+            3,
+            203,
+            480,
+            600
+          ],
+          "rightGap": 0,
+          "bottomGap": 0
+        }
+      },
+      "originalEquality": true,
+      "promptEquality": true
+    }
+  ]
+}

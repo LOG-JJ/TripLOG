@@ -1,0 +1,44 @@
+{
+  "jobId": "va-vatican-city-mobile",
+  "reason": "The main basilica right wing was clipped.",
+  "archivedFiles": [
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/va-vatican-city-mobile.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-mobile/va-vatican-city-mobile.json",
+      "sha256": "110b1b36694e09a2f5086d1edc0485d53f6b40d939e5b9fde557544fb7236666"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/va-vatican-city-mobile.prompt.txt",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-mobile/va-vatican-city-mobile.prompt.txt",
+      "sha256": "14c258ec116985253ccced56940e5b3d49cb65866a4bc8e7585262a64faaad89"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-mobile.png",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-mobile/va-vatican-city-mobile.png",
+      "sha256": "40d10f0f2b91b483ab61f24c677c5ea1a6d220c215bfe87d8255d6546022b853"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-mobile.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-mobile/va-vatican-city-mobile.json",
+      "sha256": "e4c6503e7bae7bc665c0ec9a74b008e691a942c9e9875774ad2a26de105f29cc"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-mobile.asset.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-mobile/va-vatican-city-mobile.asset.json",
+      "sha256": "d202d03aa2e33f193c71423920859cfe40663ecda32d8f63f7cd4db0820f4f2c"
+    },
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v6/va-vatican-city-mobile.webp",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-mobile/va-vatican-city-mobile.webp",
+      "sha256": "fd5b6e1cf45f78054bd11a010844f1ca1308cd0680ad34a0e797e26e8b788537"
+    }
+  ],
+  "newPromptSha256": "3eef750e5c42171e9d21ced4896a9add5f72abd7ef89dbe802fe9ce13897450b",
+  "generationMode": "independent T2I",
+  "imageInputs": [],
+  "source": {
+    "title": "UNESCO World Heritage Centre — Vatican City",
+    "url": "https://whc.unesco.org/en/list/286/"
+  },
+  "photoInspected": null
+}

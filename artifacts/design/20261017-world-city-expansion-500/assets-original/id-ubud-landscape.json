@@ -1,0 +1,26 @@
+{
+  "jobId": "id-ubud-landscape",
+  "cityId": "id-ubud",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Ubud, Indonesia: the ornate red brick and stone entrance of Puri Saren Agung, with lush tropical palace gardens. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "1d44cbf75ef7cfa6b599ff277b9ba336d6b93277cb1aac989e4d81a6629dc64e",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/id-ubud-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-7240bc61-6aa4-4cf0-adfd-e7d6c2ff102c.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-7240bc61-6aa4-4cf0-adfd-e7d6c2ff102c.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/id-ubud-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "59eb8c570f0027be8bcae5177ef640af1d20f8b8e3d17de78df27b9f7e486b1b",
+  "savedSha256": "59eb8c570f0027be8bcae5177ef640af1d20f8b8e3d17de78df27b9f7e486b1b",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:40:06.610Z",
+  "toolCallId": "exec-7240bc61-6aa4-4cf0-adfd-e7d6c2ff102c",
+  "savedAt": "2026-10-17T06:44:33.688726+00:00"
+}

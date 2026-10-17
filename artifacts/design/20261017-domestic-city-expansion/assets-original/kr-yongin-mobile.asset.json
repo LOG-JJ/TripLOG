@@ -1,0 +1,51 @@
+{
+  "id": "kr-yongin-mobile",
+  "cityId": "kr-yongin",
+  "name": "용인",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yongin-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yongin-mobile.json",
+  "originalSha256": "b08179a0c4b8b6bf36c0341b00581ac1c37fc981256101174920ccb9d44cf8c8",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    6,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-yongin-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 96878,
+  "assetSha256": "23b436b94e3343f4bff7b43701f0350dc8f333e7e9441f9ebd26056d52a12417",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

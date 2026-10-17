@@ -1,0 +1,52 @@
+{
+  "id": "sm-san-marino-mobile",
+  "cityId": "sm-san-marino",
+  "name": "산마리노시",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sm-san-marino-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sm-san-marino-mobile.json",
+  "originalSha256": "45862b978cd2b302397e3d36ed3d6c3d982439fc699d3bfa61621e54b39b41f0",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    62,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sm-san-marino-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 108840,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "3fdc5fabd418a4f838e4f17e3883c46e33bd2ba5b76b3cb8fd8f3d658b84829f",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

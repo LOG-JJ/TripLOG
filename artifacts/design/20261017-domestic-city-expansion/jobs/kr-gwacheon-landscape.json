@@ -1,0 +1,38 @@
+{
+  "id": "kr-gwacheon-landscape",
+  "cityId": "kr-gwacheon",
+  "cityName": "과천",
+  "englishName": "Gwacheon",
+  "kind": "city",
+  "group": "경기",
+  "variant": "landscape",
+  "phase": "expansion",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Gwacheon, South Korea: the Gwacheon National Science Museum alone, with its broad low contemporary main building, aircraft-inspired swept roof form, glass entrance and landscaped forecourt. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat. Depict only the science museum and its own grounds; do not combine it with Seoul Grand Park or an amusement park. Keep the complete building compact within the right two-thirds of the 5:3 canvas. Both swept roof tips must remain fully visible with clear transparent clearance around them; only low foreground landscaping may meet the side edges. Do not make an extra-wide panorama.",
+  "promptSha256": "ce24274246e0641ad7ab04f6771b7823ec4f3b0e3e439e99a99786d7b0dd17a8",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwacheon-landscape.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwacheon-landscape.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwacheon-landscape.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwacheon-landscape.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gwacheon.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "motif": "the Gwacheon National Science Museum alone, with its broad low contemporary main building, aircraft-inspired swept roof form, glass entrance and landscaped forecourt",
+  "proposedMotif": "국립과천과학관·서울대공원",
+  "motifSource": {
+    "title": "AURI AURUM - 국립과천과학관",
+    "url": "https://www.aurum.re.kr/Bits/BuildingDoc.aspx?mm=4&num=6354&ss=1",
+    "evidence": "건축공간연구원 아카이브에서 과천 소재·설계사·비행체에서 착안한 건축 개념을 확인. 과학관 단독 주제로 축소."
+  },
+  "callArguments": {
+    "prompt": "Create one standalone hand-drawn destination illustration of Gwacheon, South Korea: the Gwacheon National Science Museum alone, with its broad low contemporary main building, aircraft-inspired swept roof form, glass entrance and landscaped forecourt. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat. Depict only the science museum and its own grounds; do not combine it with Seoul Grand Park or an amusement park. Keep the complete building compact within the right two-thirds of the 5:3 canvas. Both swept roof tips must remain fully visible with clear transparent clearance around them; only low foreground landscaping may meet the side edges. Do not make an extra-wide panorama.",
+    "transparent_background": true
+  },
+  "provenanceRule": "The --source argument must be the exact local original path returned by this job's image_gen call. Never search for a latest file.",
+  "promptRevision": "worker-b-visual-qa-r2-20261017"
+}

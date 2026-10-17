@@ -1,0 +1,52 @@
+{
+  "id": "bm-hamilton-mobile",
+  "cityId": "bm-hamilton",
+  "name": "해밀턴(버뮤다)",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "북대서양",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bm-hamilton-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bm-hamilton-mobile.json",
+  "originalSha256": "0236b5fcfe5b44177f3de88fcfc44562a4797fbe48cd338b88a54fd007f999d0",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    66,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bm-hamilton-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 103760,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "fe26b879169d91d06143749d5c0fe0fbeed7d81b5bbd0b6be30074a30ff3d9e9",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

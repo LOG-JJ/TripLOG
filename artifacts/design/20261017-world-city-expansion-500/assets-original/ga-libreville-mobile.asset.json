@@ -1,0 +1,52 @@
+{
+  "id": "ga-libreville-mobile",
+  "cityId": "ga-libreville",
+  "name": "리브르빌",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ga-libreville-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ga-libreville-mobile.json",
+  "originalSha256": "99dcb298f9c9ababfaa612ec60aa167618888c5ff7731f0dca31052c358205d4",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ga-libreville-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 119870,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "53d0273b32eb1bc89bed1bc01f3b0065c36553e204437a27cc94a8f24c71c02b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

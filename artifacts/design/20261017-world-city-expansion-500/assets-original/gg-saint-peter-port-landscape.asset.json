@@ -1,0 +1,52 @@
+{
+  "id": "gg-saint-peter-port-landscape",
+  "cityId": "gg-saint-peter-port",
+  "name": "세인트피터포트",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "서유럽",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gg-saint-peter-port-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gg-saint-peter-port-landscape.json",
+  "originalSha256": "d76b9ed870889f21447520b6fc318da82e1283aea7293607691fced2e0657fdd",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    35,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gg-saint-peter-port.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 93946,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "d8831531b037763b7d262e9270d73dd124bef3e7a566dfa076aef63415af66e0",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

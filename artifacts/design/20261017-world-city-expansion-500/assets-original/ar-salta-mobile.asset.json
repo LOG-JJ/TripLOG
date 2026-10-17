@@ -1,0 +1,52 @@
+{
+  "id": "ar-salta-mobile",
+  "cityId": "ar-salta",
+  "name": "살타",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ar-salta-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ar-salta-mobile.json",
+  "originalSha256": "90ea7433cccbc51fd339637c2d5007cbc703f6d077c3ae162fefaca3378343ea",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ar-salta-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 127650,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "09825f471766808d51e175d5a8ffcc9594b1b9040d32013f9df23f19d6e22e49",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

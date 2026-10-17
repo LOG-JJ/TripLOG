@@ -1,0 +1,38 @@
+{
+  "id": "kr-daejeon-landscape",
+  "cityId": "kr-daejeon",
+  "cityName": "대전",
+  "englishName": "Daejeon",
+  "kind": "city",
+  "group": "광역시급",
+  "variant": "landscape",
+  "phase": "expansion",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Daejeon, South Korea: Hanbit Tower in Daejeon Expo Science Park: a pale stone lower shaft tapering upward, a broad dark-glazed circular observation ring around its shoulder, and a long thin pointed spire rising above that ring, standing on a paved plaza with low landscaped planting. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "761296067dbf62a33b1638ac3e193aefa0bc0ed54eb67280da7b153555c23e8c",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/jobs/kr-daejeon-landscape.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-daejeon-landscape.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-daejeon-landscape.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-daejeon-landscape.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v5/kr-daejeon.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "motif": "Hanbit Tower in Daejeon Expo Science Park: a pale stone lower shaft tapering upward, a broad dark-glazed circular observation ring around its shoulder, and a long thin pointed spire rising above that ring, standing on a paved plaza with low landscaped planting",
+  "proposedMotif": "한빛탑·엑스포 일대",
+  "motifSource": {
+    "title": "한국관광공사 한빛탑 공식 사진",
+    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=c1e3c24f-69c8-4d46-9b86-20b2bb8fd58e",
+    "evidence": "Chrome에서 공식 사진 1/5를 직접 확인: 좁아지는 석조 기둥·원형 전망 링·그 위 긴 첨탑. 2026-10-17. 이미지 입력 없음."
+  },
+  "callArguments": {
+    "prompt": "Create one standalone hand-drawn destination illustration of Daejeon, South Korea: Hanbit Tower in Daejeon Expo Science Park: a pale stone lower shaft tapering upward, a broad dark-glazed circular observation ring around its shoulder, and a long thin pointed spire rising above that ring, standing on a paved plaza with low landscaped planting. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+    "transparent_background": true
+  },
+  "provenanceRule": "The --source argument must be the exact local original path returned by this job's image_gen call. Never search for a latest file.",
+  "promptRevision": "worker-a-official-photo-20261017"
+}

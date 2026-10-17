@@ -1,0 +1,52 @@
+{
+  "id": "af-bamiyan-landscape",
+  "cityId": "af-bamiyan",
+  "name": "바미얀",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/af-bamiyan-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/af-bamiyan-landscape.json",
+  "originalSha256": "3c99139705cc2dfe779ca1fab6a9472c787b4352be7c8ee8508499c786dccb5b",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    10,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/af-bamiyan.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 118236,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "19007a2d0237a3390fbe4c5eac1ddd84f5234f7e748b1a4b02481c2b5b0170d0",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

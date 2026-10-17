@@ -1,0 +1,52 @@
+{
+  "id": "bg-nesebar-mobile",
+  "cityId": "bg-nesebar",
+  "name": "네세버르",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bg-nesebar-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bg-nesebar-mobile.json",
+  "originalSha256": "5b329b26929092627d3e081bd0a70938b8e5681ea9549920041293e3638a23be",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    24,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bg-nesebar-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 112494,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "71539aed7607b50c221747ea40e7d2e9c23b8975338f3db947e8bac8f0d22efd",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

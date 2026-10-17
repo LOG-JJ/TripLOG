@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-wonju-mobile",
+  "cityId": "kr-wonju",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Wonju, South Korea: the original blue Sogeumsan Chulleongdari pedestrian suspension bridge at Sogeumsan Grand Valley, a slim sky-blue steel walkway with closely spaced blue railing uprights and suspended cables, spanning between wooded rocky hills above a deep green valley. Keep the entire blue bridge span and both endpoints inside the composition. The bridge is a lightweight footbridge with no tall tower pylons, no red paint and no golden bridge; do not combine it with the different yellow Ulleongdari bridge. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "7ee962cdea4dc8af2af6b4678afc6370ee6f0037ec589eebf223d065668d979e",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-wonju-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-89fe6905-60f2-45c0-be04-ad9fad86285c.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-89fe6905-60f2-45c0-be04-ad9fad86285c.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-wonju-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "63645f9b83320ab0478347ea0204f476fc5af5b2d1f535aa04232f664518d6c6",
+  "savedSha256": "63645f9b83320ab0478347ea0204f476fc5af5b2d1f535aa04232f664518d6c6",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:37:18.829Z",
+  "toolCallId": "exec-89fe6905-60f2-45c0-be04-ad9fad86285c",
+  "savedAt": "2026-10-17T05:38:16.758526+00:00"
+}

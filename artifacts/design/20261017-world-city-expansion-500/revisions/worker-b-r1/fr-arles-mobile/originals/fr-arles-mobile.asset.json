@@ -1,0 +1,52 @@
+{
+  "id": "fr-arles-mobile",
+  "cityId": "fr-arles",
+  "name": "아를",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/fr-arles-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/fr-arles-mobile.json",
+  "originalSha256": "1722bc1c7b6470d05759eed67bf4049d9c0f00afcfe3a1db911ade8a4bf0ab3f",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    104,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/fr-arles-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 96574,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2472a6ec544a6b658f15061c3128054dbbd0bc3e30e9bd2442eafc26a5097e73",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

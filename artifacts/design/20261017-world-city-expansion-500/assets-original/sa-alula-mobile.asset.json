@@ -1,0 +1,52 @@
+{
+  "id": "sa-alula-mobile",
+  "cityId": "sa-alula",
+  "name": "알울라",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sa-alula-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sa-alula-mobile.json",
+  "originalSha256": "6d782735b47021689723f8b6c0e7ccffd55b7d80d30a4f41ea777d8541dc86fe",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sa-alula-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 75670,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "8b12c877e97a2b795c836dd98d8cfbd478805cf9ee31df2b3ae983e3fe64fcc3",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

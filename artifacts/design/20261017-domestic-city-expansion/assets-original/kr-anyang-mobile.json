@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-anyang-mobile",
+  "cityId": "kr-anyang",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Anyang, South Korea: Anyang Art Park's wooded park landscape and shallow stream, with a small contemporary public-art element set among the trees. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "c051d8791900a84e0576fa18d77bb36bbee67b648cfdaa73754c3b18190cfea5",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-anyang-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-5e635df1-9841-4a69-a3b3-3fb270ad4c27.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-5e635df1-9841-4a69-a3b3-3fb270ad4c27.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-anyang-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "546f29d61f9c4caf72c1183151177ef81920e403973fa7bd89d71039d0bff04d",
+  "savedSha256": "546f29d61f9c4caf72c1183151177ef81920e403973fa7bd89d71039d0bff04d",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:11:08Z",
+  "toolCallId": "exec-5e635df1-9841-4a69-a3b3-3fb270ad4c27",
+  "savedAt": "2026-10-17T05:11:50.396645+00:00"
+}

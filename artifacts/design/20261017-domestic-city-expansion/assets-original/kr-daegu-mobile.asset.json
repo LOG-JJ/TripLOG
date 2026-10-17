@@ -1,0 +1,51 @@
+{
+  "id": "kr-daegu-mobile",
+  "cityId": "kr-daegu",
+  "name": "대구",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "광역시급",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-daegu-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-daegu-mobile.json",
+  "originalSha256": "b8538cb53a98fc48d1ac05e2b34e7b9c49faa8b801789eafd44a54c58c43c79a",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    71,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-daegu-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 77398,
+  "assetSha256": "dde1b21690c5aa389e492a57703daf0966dd5f8a9439dcf523860bc62f9ff0b8",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

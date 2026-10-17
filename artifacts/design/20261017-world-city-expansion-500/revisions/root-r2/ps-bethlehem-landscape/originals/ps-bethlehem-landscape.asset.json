@@ -1,0 +1,52 @@
+{
+  "id": "ps-bethlehem-landscape",
+  "cityId": "ps-bethlehem",
+  "name": "베들레헴",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ps-bethlehem-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ps-bethlehem-landscape.json",
+  "originalSha256": "5e1748b1291ef33cf7275a5a640045210f8413de94be0a017dbaf5471710e80f",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ps-bethlehem.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 104568,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "01346d56eaec9a536d99d35b1d0ab6700119b33f3ccad22fd050ea375f800304",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

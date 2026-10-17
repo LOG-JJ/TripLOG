@@ -1,0 +1,52 @@
+{
+  "id": "er-asmara-mobile",
+  "cityId": "er-asmara",
+  "name": "아스마라",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/er-asmara-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/er-asmara-mobile.json",
+  "originalSha256": "17f34e57ddebb8feecdbac37d67bafcd27b5b4c79ff58de1f315464378b7138f",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    39,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/er-asmara-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 81494,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "b3e3e31f69ac0919889dd9372fdaf43f9a0cc680891a75efdf5ed9c2d9787a84",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "lc-castries-mobile",
+  "cityId": "lc-castries",
+  "name": "캐스트리스",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/lc-castries-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/lc-castries-mobile.json",
+  "originalSha256": "dd0095966c329fca16ac7d6ba7482a93b142e73e8bda79ba7b56667deab82f5c",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/lc-castries-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 106924,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "8cd7fff357f7332d73e96bc2e33bc928af647731c01ab3009cfa49020928e2ba",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

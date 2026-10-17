@@ -1,0 +1,94 @@
+{
+  "id": "im-douglas-mobile",
+  "cityId": "im-douglas",
+  "name": "더글러스",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "서유럽",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/im-douglas-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/im-douglas-mobile.json",
+  "originalSha256": "3f433abb069d0b8adbafd52fca1a348818dbc5cad732646b0d2e436134b9e0fa",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    33,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/im-douglas-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 89986,
+  "technicalEmptyEdgeRefits": [
+    [
+      0,
+      6
+    ]
+  ],
+  "assetSha256": "3e5081ca886d3f34f8b3bfffb0375ebbebc01706881b8c48cbfa8a3e88e6f284",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa",
+  "technicalAlpha8EdgeCorrection": {
+    "jobId": "im-douglas-mobile",
+    "changed": true,
+    "reason": "Remove sub-visible right/bottom fringe so alpha>=8 reaches the header edge",
+    "threshold": 8,
+    "beforeGaps": [
+      2,
+      5
+    ],
+    "afterGaps": [
+      0,
+      0
+    ],
+    "sourceAlpha8Bounds": [
+      6,
+      446,
+      1117,
+      1375
+    ],
+    "sourceOriginalSha256": "3f433abb069d0b8adbafd52fca1a348818dbc5cad732646b0d2e436134b9e0fa",
+    "previousAssetSha256": "cbd9c03dc3db452ea490461dfa22f961cced353bb9cbf75950350b34e2916bd7",
+    "newAssetSha256": "3e5081ca886d3f34f8b3bfffb0375ebbebc01706881b8c48cbfa8a3e88e6f284",
+    "technicalRefits": [],
+    "preservedFiles": [
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/im-douglas-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-alpha8-r1/im-douglas-mobile/im-douglas-mobile.webp",
+        "sha256": "cbd9c03dc3db452ea490461dfa22f961cced353bb9cbf75950350b34e2916bd7"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/im-douglas-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-alpha8-r1/im-douglas-mobile/im-douglas-mobile.asset.json",
+        "sha256": "6759c5ab5e119e5b0a118bf545426cba6a3eba894d15cab99d8f8c549417b5af"
+      }
+    ],
+    "correctedAt": "2026-10-17T07:45:54.946306+00:00"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ph-vigan-mobile",
+  "cityId": "ph-vigan",
+  "name": "비간",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ph-vigan-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ph-vigan-mobile.json",
+  "originalSha256": "de6ecb437344651948e26dc2dcc25ce6cfeb0aae0b6c43a07389a9c622baa00c",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    69,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ph-vigan-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 123084,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "1d74fddb4cdca5d4dce0a904ab9061a26d1f9781ad4dc9c7430c06b8549b2064",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

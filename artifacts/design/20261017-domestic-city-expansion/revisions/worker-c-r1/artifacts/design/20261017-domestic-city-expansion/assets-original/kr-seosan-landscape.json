@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-seosan-landscape",
+  "cityId": "kr-seosan",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Seosan, South Korea: Haemieupseong Fortress, its low stone ramparts, tiled-roof gateway and open grassy interior. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "b39ed871b31d4324995c40310cbe7caeb5a7bc571fa7fa2a509d4bca4b7b5463",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-seosan-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-cece5236-b0eb-4226-ab76-01b51d485f1a.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-cece5236-b0eb-4226-ab76-01b51d485f1a.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-seosan-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "0380581e23a0cf99eee666e340c76bcd8f58d456addad1eb958077ce393f45ce",
+  "savedSha256": "0380581e23a0cf99eee666e340c76bcd8f58d456addad1eb958077ce393f45ce",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:21:33Z",
+  "toolCallId": "exec-cece5236-b0eb-4226-ab76-01b51d485f1a",
+  "savedAt": "2026-10-17T05:22:04.622358+00:00"
+}

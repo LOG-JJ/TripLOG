@@ -1,0 +1,52 @@
+{
+  "id": "gh-cape-coast-landscape",
+  "cityId": "gh-cape-coast",
+  "name": "케이프코스트",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gh-cape-coast-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gh-cape-coast-landscape.json",
+  "originalSha256": "bb6918b00a39ef1dbe600ebd16610dae8b2703441fc84c0baad256ef227eccc3",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    21,
+    19,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gh-cape-coast.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 113130,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "d16aa79407f5f999ed64908898cdb99dba9918f43af667af1beaeaac2b163c48",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

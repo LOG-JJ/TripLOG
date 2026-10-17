@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-jeonnam-gwangju-landscape",
+  "cityId": "kr-jeonnam-gwangju",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Jeonnam-Gwangju Integrated Special City, South Korea: a regional composite of Namdo's softly layered mountains, a winding river and a sheltered coastal shoreline, representing the whole integrated region rather than a single city landmark. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "5bb77aa9b35e80aa7c1cd2bbb7ffdb583abed1fa8438d1c91a1cd2f36710c63c",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jeonnam-gwangju-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-aa35fa87-e6f8-460c-8f20-d117ed0c02ca.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-aa35fa87-e6f8-460c-8f20-d117ed0c02ca.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jeonnam-gwangju-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "87ec30fd535f5aaebe1bea69d5b0847514023397810b74ed20587cf2015e0ccc",
+  "savedSha256": "87ec30fd535f5aaebe1bea69d5b0847514023397810b74ed20587cf2015e0ccc",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:07:30.133Z",
+  "toolCallId": "exec-aa35fa87-e6f8-460c-8f20-d117ed0c02ca",
+  "savedAt": "2026-10-17T05:09:27.912913+00:00"
+}

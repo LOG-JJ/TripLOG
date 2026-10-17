@@ -1,0 +1,51 @@
+{
+  "id": "kr-gyeryong-landscape",
+  "cityId": "kr-gyeryong",
+  "name": "계룡",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "충남",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gyeryong-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gyeryong-landscape.json",
+  "originalSha256": "7481d1a8a8de5410262bbe0164f23f8f988a895ca0cdbfda4adb29666ed0fb92",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    56,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gyeryong.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 109280,
+  "assetSha256": "aa6dd0766368bf475deba997b8a6be69a3fac237f567b92fe32a363dab88767b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

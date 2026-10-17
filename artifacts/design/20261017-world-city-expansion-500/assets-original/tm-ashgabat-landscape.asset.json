@@ -1,0 +1,52 @@
+{
+  "id": "tm-ashgabat-landscape",
+  "cityId": "tm-ashgabat",
+  "name": "아시가바트",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/tm-ashgabat-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/tm-ashgabat-landscape.json",
+  "originalSha256": "700ab71fc844ca520a223bf741ee4ee05f6b3bc3556ac9e3a464ed20dbd90a82",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    25,
+    23,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/tm-ashgabat.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 71496,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "72203f3a054ab4d82b95b66d9c630a32d985ebdd582bb5eaca1eff5fcaa1195a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

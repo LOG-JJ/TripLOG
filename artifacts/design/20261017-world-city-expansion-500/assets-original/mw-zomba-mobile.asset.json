@@ -1,0 +1,52 @@
+{
+  "id": "mw-zomba-mobile",
+  "cityId": "mw-zomba",
+  "name": "좀바",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mw-zomba-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mw-zomba-mobile.json",
+  "originalSha256": "ebd907d472f3082557f4b2bfc6982c7a74aa913457fba5fd8025e82a20683f36",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    25,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mw-zomba-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 106136,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "02e4c426c84e1849405d0a54429fc5ca9dfbc48d5b0d503b316077915c62ae8b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

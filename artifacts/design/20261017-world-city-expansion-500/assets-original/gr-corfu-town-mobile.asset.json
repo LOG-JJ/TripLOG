@@ -1,0 +1,52 @@
+{
+  "id": "gr-corfu-town-mobile",
+  "cityId": "gr-corfu-town",
+  "name": "코르푸타운",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gr-corfu-town-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gr-corfu-town-mobile.json",
+  "originalSha256": "89b4f272838803f8d2df78369c49321807610a88c9445101845f79911bcdcf8e",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gr-corfu-town-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 91054,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "680ed88b4bb3199e9767fe70c058e86aabb9b9e595010fb5c2d77f3bf3e21a8e",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

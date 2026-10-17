@@ -1,0 +1,5263 @@
+{
+  "asOf": "2026-10-17",
+  "status": "implemented-and-locally-verified",
+  "totals": {
+    "existingOverseas": 300,
+    "coreAdded": 200,
+    "afterCore": 500,
+    "coverageAdded": 40,
+    "finalOverseas": 540,
+    "domestic": 95,
+    "finalCatalog": 635,
+    "newArtworkPairs": 240,
+    "newImageFiles": 480,
+    "activeImageFiles": 1290,
+    "requiredOverseasCountriesAndRegions": 242
+  },
+  "missingAfter500": [
+    "AI",
+    "AW",
+    "AX",
+    "BL",
+    "BM",
+    "BQ",
+    "CC",
+    "CW",
+    "CX",
+    "EH",
+    "FK",
+    "FO",
+    "GF",
+    "GG",
+    "GI",
+    "GL",
+    "GP",
+    "GU",
+    "IM",
+    "JE",
+    "KY",
+    "MF",
+    "MP",
+    "MQ",
+    "MS",
+    "NF",
+    "PM",
+    "PN",
+    "PR",
+    "RE",
+    "SH",
+    "SJ",
+    "SX",
+    "TC",
+    "TK",
+    "VG",
+    "VI",
+    "WF",
+    "XK",
+    "YT"
+  ],
+  "missingFinal": [],
+  "items": [
+    {
+      "id": "al-tirana",
+      "name": "티라나",
+      "englishName": "Tirana",
+      "countryCode": "AL",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "티라나",
+        "Tirana"
+      ],
+      "canonicalInput": "티라나",
+      "motif": "Skanderbeg Square and the equestrian Skanderbeg monument, with the Et'hem Bey Mosque.",
+      "motifSource": {
+        "title": "Albanian National Tourism Agency — Skanderbeg Monument and Square",
+        "url": "https://akt.gov.al/en/skanderbeg-monument-and-square/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "ad-andorra-la-vella",
+      "name": "안도라라베야",
+      "englishName": "Andorra la Vella",
+      "countryCode": "AD",
+      "kind": "city",
+      "theme": "mountain",
+      "aliases": [
+        "안도라라베야",
+        "Andorra la Vella",
+        "안도라 라 베야"
+      ],
+      "canonicalInput": "안도라라베야",
+      "motif": "the stone Casa de la Vall, with the surrounding Pyrenean slopes.",
+      "motifSource": {
+        "title": "Visit Andorra — Must-visit spots in Andorra la Vella",
+        "url": "https://visitandorra.com/en/culture/must-visit-spots-in-andorra-la-vella/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "by-nesvizh",
+      "name": "네스비시",
+      "englishName": "Nesvizh",
+      "countryCode": "BY",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "네스비시",
+        "Nesvizh",
+        "네스비즈",
+        "Niasvizh",
+        "Nyasvizh"
+      ],
+      "canonicalInput": "네스비시",
+      "motif": "the Radziwill palace complex at Nesvizh, with its landscaped parks and ponds.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Nesvizh",
+        "url": "https://whc.unesco.org/en/list/1196/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "cy-paphos",
+      "name": "파포스",
+      "englishName": "Paphos",
+      "countryCode": "CY",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "파포스",
+        "Paphos",
+        "파포스시",
+        "Pafos"
+      ],
+      "canonicalInput": "파포스",
+      "motif": "the rock-cut peristyle courtyards of the Tombs of the Kings, with the low coastal landscape of Paphos.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Paphos",
+        "url": "https://whc.unesco.org/en/list/79/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "li-vaduz",
+      "name": "파두츠",
+      "englishName": "Vaduz",
+      "countryCode": "LI",
+      "kind": "city",
+      "theme": "mountain",
+      "aliases": [
+        "파두츠",
+        "Vaduz"
+      ],
+      "canonicalInput": "파두츠",
+      "motif": "Vaduz Castle on its wooded hillside, with the Rhine valley slopes.",
+      "motifSource": {
+        "title": "Liechtenstein Tourism — Vaduz Castle",
+        "url": "https://en.tourismus.li/map/poi/schloss-vaduz-8fb7e6cf-99b5-4ffb-b600-9e4c66398e1f.html"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "lu-luxembourg-city",
+      "name": "룩셈부르크시",
+      "englishName": "Luxembourg City",
+      "countryCode": "LU",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "룩셈부르크시",
+        "Luxembourg City",
+        "룩셈부르크 시",
+        "Ville de Luxembourg"
+      ],
+      "canonicalInput": "룩셈부르크시",
+      "motif": "the old Luxembourg fortifications above the Grund, with the Alzette valley.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Luxembourg City",
+        "url": "https://whc.unesco.org/en/list/699/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "md-chisinau",
+      "name": "키시너우",
+      "englishName": "Chisinau",
+      "countryCode": "MD",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "키시너우",
+        "Chisinau",
+        "키시나우",
+        "Chișinău",
+        "Chişinău"
+      ],
+      "canonicalInput": "키시너우",
+      "motif": "the Triumphal Arch, with the cathedral park.",
+      "motifSource": {
+        "title": "Moldova Travel — Chisinau City",
+        "url": "https://moldova.travel/en/chisinau-city/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "mc-monaco",
+      "name": "모나코",
+      "englishName": "Monaco",
+      "countryCode": "MC",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "모나코",
+        "Monaco"
+      ],
+      "canonicalInput": "모나코",
+      "motif": "the Prince's Palace on the Rock of Monaco, with the Mediterranean harbour.",
+      "motifSource": {
+        "title": "Visit Monaco — Official tourist map",
+        "url": "https://www.visitmonaco.com/Documents-Site/Plan%20touristique%20Monaco.pdf"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "mk-ohrid",
+      "name": "오흐리드",
+      "englishName": "Ohrid",
+      "countryCode": "MK",
+      "kind": "city",
+      "theme": "lake",
+      "aliases": [
+        "오흐리드",
+        "Ohrid"
+      ],
+      "canonicalInput": "오흐리드",
+      "motif": "the cliffside Church of Saint John at Kaneo, with Lake Ohrid.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Ohrid",
+        "url": "https://whc.unesco.org/en/list/99/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "sm-san-marino",
+      "name": "산마리노시",
+      "englishName": "City of San Marino",
+      "countryCode": "SM",
+      "kind": "city",
+      "theme": "mountain",
+      "aliases": [
+        "산마리노시",
+        "City of San Marino",
+        "산마리노 시",
+        "San Marino City",
+        "Citta di San Marino",
+        "Città di San Marino"
+      ],
+      "canonicalInput": "산마리노시",
+      "motif": "the Guaita fortress tower on Mount Titano, with the stone defensive walls.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — City of San Marino",
+        "url": "https://whc.unesco.org/en/list/1245/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "ua-lviv",
+      "name": "리비우",
+      "englishName": "Lviv",
+      "countryCode": "UA",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "리비우",
+        "Lviv",
+        "르비우",
+        "리비프",
+        "L'viv"
+      ],
+      "canonicalInput": "리비우",
+      "motif": "the tall Town Hall tower in Rynok Square, with the closely set historic townhouses.",
+      "motifSource": {
+        "title": "Lviv Tourism — Rynok Square",
+        "url": "https://lviv.travel/en/places/attractions/ploshcha-rinok"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "va-vatican-city",
+      "name": "바티칸시국",
+      "englishName": "Vatican City",
+      "countryCode": "VA",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "바티칸시국",
+        "Vatican City",
+        "바티칸",
+        "Citta del Vaticano",
+        "Città del Vaticano"
+      ],
+      "canonicalInput": "바티칸시국",
+      "motif": "the dome of Saint Peter's Basilica, with the curved colonnades of Saint Peter's Square.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Vatican City",
+        "url": "https://whc.unesco.org/en/list/286/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "gb-york",
+      "name": "요크",
+      "englishName": "York",
+      "countryCode": "GB",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "요크",
+        "York",
+        "요크시",
+        "York City"
+      ],
+      "canonicalInput": "요크",
+      "motif": "York Minster's Gothic towers, with the narrow medieval streets.",
+      "motifSource": {
+        "title": "York Minster — Visit",
+        "url": "https://yorkminster.org/visit/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "gb-liverpool",
+      "name": "리버풀",
+      "englishName": "Liverpool",
+      "countryCode": "GB",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "리버풀",
+        "Liverpool"
+      ],
+      "canonicalInput": "리버풀",
+      "motif": "the Royal Liver Building's twin clock towers, with the River Mersey waterfront.",
+      "motifSource": {
+        "title": "Visit Liverpool — Pier Head and The Three Graces",
+        "url": "https://www.visitliverpool.com/listing/pier-head-%26-the-three-graces/1774701/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "gb-canterbury",
+      "name": "캔터베리",
+      "englishName": "Canterbury",
+      "countryCode": "GB",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "캔터베리",
+        "Canterbury"
+      ],
+      "canonicalInput": "캔터베리",
+      "motif": "Canterbury Cathedral's central tower, with the historic cathedral precinct.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Canterbury",
+        "url": "https://whc.unesco.org/en/list/496/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "gb-cardiff",
+      "name": "카디프",
+      "englishName": "Cardiff",
+      "countryCode": "GB",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "카디프",
+        "Cardiff"
+      ],
+      "canonicalInput": "카디프",
+      "motif": "Cardiff Castle's Norman keep, with the grassy motte.",
+      "motifSource": {
+        "title": "Visit Cardiff — History and Heritage",
+        "url": "https://www.visitcardiff.com/discover/history-heritage/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "gb-belfast",
+      "name": "벨파스트",
+      "englishName": "Belfast",
+      "countryCode": "GB",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "벨파스트",
+        "Belfast"
+      ],
+      "canonicalInput": "벨파스트",
+      "motif": "Titanic Belfast's angular silver facades, with the historic shipyard waterfront.",
+      "motifSource": {
+        "title": "Visit Belfast — Titanic Belfast",
+        "url": "https://visitbelfast.com/see-do/attractions/titanic-belfast/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "fr-carcassonne",
+      "name": "카르카손",
+      "englishName": "Carcassonne",
+      "countryCode": "FR",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "카르카손",
+        "Carcassonne"
+      ],
+      "canonicalInput": "카르카손",
+      "motif": "the double fortified walls of the Cite de Carcassonne, with its conical-roof defensive towers.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Carcassonne",
+        "url": "https://whc.unesco.org/en/list/345/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "fr-arles",
+      "name": "아를",
+      "englishName": "Arles",
+      "countryCode": "FR",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "아를",
+        "Arles"
+      ],
+      "canonicalInput": "아를",
+      "motif": "the oval Roman amphitheatre of Arles, with its tiers of stone arches.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Arles",
+        "url": "https://whc.unesco.org/en/list/164/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "fr-reims",
+      "name": "랭스",
+      "englishName": "Reims",
+      "countryCode": "FR",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "랭스",
+        "Reims"
+      ],
+      "canonicalInput": "랭스",
+      "motif": "Reims Cathedral's twin Gothic facade towers, with the cathedral forecourt.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Reims",
+        "url": "https://whc.unesco.org/en/list/601/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "it-matera",
+      "name": "마테라",
+      "englishName": "Matera",
+      "countryCode": "IT",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "마테라",
+        "Matera"
+      ],
+      "canonicalInput": "마테라",
+      "motif": "the Sassi cave dwellings of Matera, with the layered stone lanes.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Matera",
+        "url": "https://whc.unesco.org/en/list/670/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "it-palermo",
+      "name": "팔레르모",
+      "englishName": "Palermo",
+      "countryCode": "IT",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "팔레르모",
+        "Palermo"
+      ],
+      "canonicalInput": "팔레르모",
+      "motif": "Palermo Cathedral's arcaded facade and towers, with the palm-lined forecourt.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Palermo",
+        "url": "https://whc.unesco.org/en/list/1487/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "it-ravenna",
+      "name": "라벤나",
+      "englishName": "Ravenna",
+      "countryCode": "IT",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "라벤나",
+        "Ravenna"
+      ],
+      "canonicalInput": "라벤나",
+      "motif": "the octagonal Basilica of San Vitale, with its brick apses and green grounds.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Ravenna",
+        "url": "https://whc.unesco.org/en/list/788/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "it-lucca",
+      "name": "루카",
+      "englishName": "Lucca",
+      "countryCode": "IT",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "루카",
+        "Lucca"
+      ],
+      "canonicalInput": "루카",
+      "motif": "the tree-topped Guinigi Tower, with the terracotta roofs of the old town.",
+      "motifSource": {
+        "title": "Visit Tuscany — Guinigi Tower",
+        "url": "https://www.visittuscany.com/en/attractions/the-guinigi-tower/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "es-cordoba",
+      "name": "코르도바",
+      "englishName": "Cordoba",
+      "countryCode": "ES",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "코르도바",
+        "Cordoba",
+        "Córdoba"
+      ],
+      "canonicalInput": "코르도바",
+      "motif": "the Mosque-Cathedral of Cordoba, with the Roman bridge over the Guadalquivir.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Cordoba",
+        "url": "https://whc.unesco.org/en/list/313/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "es-segovia",
+      "name": "세고비아",
+      "englishName": "Segovia",
+      "countryCode": "ES",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "세고비아",
+        "Segovia"
+      ],
+      "canonicalInput": "세고비아",
+      "motif": "the towering two-tier Roman aqueduct, with the open square beneath its arches.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Segovia",
+        "url": "https://whc.unesco.org/en/list/311/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "es-salamanca",
+      "name": "살라망카",
+      "englishName": "Salamanca",
+      "countryCode": "ES",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "살라망카",
+        "Salamanca"
+      ],
+      "canonicalInput": "살라망카",
+      "motif": "Salamanca's arcaded Plaza Mayor, with its warm sandstone facades.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Salamanca",
+        "url": "https://whc.unesco.org/en/list/381/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "es-cadiz",
+      "name": "카디스",
+      "englishName": "Cadiz",
+      "countryCode": "ES",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "카디스",
+        "Cadiz",
+        "Cádiz"
+      ],
+      "canonicalInput": "카디스",
+      "motif": "Cadiz Cathedral's golden dome, with the Atlantic waterfront.",
+      "motifSource": {
+        "title": "Spain Tourism — Cadiz Cathedral",
+        "url": "https://www.spain.info/en/places-of-interest/cathedral-cadiz/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "de-lubeck",
+      "name": "뤼베크",
+      "englishName": "Lubeck",
+      "countryCode": "DE",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "뤼베크",
+        "Lubeck",
+        "Lübeck",
+        "Luebeck"
+      ],
+      "canonicalInput": "뤼베크",
+      "motif": "the twin round brick towers of the Holstentor, with the old-town roofline.",
+      "motifSource": {
+        "title": "Lubeck Tourism — Historic centre and Holstentor",
+        "url": "https://www.visit-luebeck.com/old-town/poi/tourist-information-at-holstentor"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "de-bamberg",
+      "name": "밤베르크",
+      "englishName": "Bamberg",
+      "countryCode": "DE",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "밤베르크",
+        "Bamberg"
+      ],
+      "canonicalInput": "밤베르크",
+      "motif": "the Old Town Hall on its river island, with the bridges over the Regnitz.",
+      "motifSource": {
+        "title": "Bamberg Tourism — Island District",
+        "url": "https://en.bamberg.info/inselstadt/?addPage=2"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "de-trier",
+      "name": "트리어",
+      "englishName": "Trier",
+      "countryCode": "DE",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "트리어",
+        "Trier"
+      ],
+      "canonicalInput": "트리어",
+      "motif": "the massive Roman Porta Nigra, with the historic town square.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Trier",
+        "url": "https://whc.unesco.org/en/list/367/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "nl-the-hague",
+      "name": "헤이그",
+      "englishName": "The Hague",
+      "countryCode": "NL",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "헤이그",
+        "The Hague",
+        "덴하흐",
+        "Den Haag",
+        "'s-Gravenhage"
+      ],
+      "canonicalInput": "헤이그",
+      "motif": "the Peace Palace's red-brick clock tower, with its formal garden.",
+      "motifSource": {
+        "title": "The Hague and Partners — Peace Palace",
+        "url": "https://denhaag.com/en/peace-palace"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "nl-utrecht",
+      "name": "위트레흐트",
+      "englishName": "Utrecht",
+      "countryCode": "NL",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "위트레흐트",
+        "Utrecht"
+      ],
+      "canonicalInput": "위트레흐트",
+      "motif": "the tall Dom Tower, with the Oudegracht canal and wharves.",
+      "motifSource": {
+        "title": "Utrecht and Partners — Top 10 sights in Utrecht",
+        "url": "https://www.discover-utrecht.com/news/top-10-sights-in-utrecht/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "be-antwerp",
+      "name": "안트베르펜",
+      "englishName": "Antwerp",
+      "countryCode": "BE",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "안트베르펜",
+        "Antwerp",
+        "앤트워프",
+        "Antwerpen",
+        "Anvers"
+      ],
+      "canonicalInput": "안트베르펜",
+      "motif": "the Cathedral of Our Lady's slender Gothic spire, with the stepped-gable houses around the Grote Markt.",
+      "motifSource": {
+        "title": "Visit Antwerpen — A budget-friendly day out in Antwerp",
+        "url": "https://visit.antwerpen.be/en/a-budget-friendly-day-out-in-antwerp"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "ch-lugano",
+      "name": "루가노",
+      "englishName": "Lugano",
+      "countryCode": "CH",
+      "kind": "city",
+      "theme": "lake",
+      "aliases": [
+        "루가노",
+        "Lugano"
+      ],
+      "canonicalInput": "루가노",
+      "motif": "Monte San Salvatore's distinctive rounded mountain profile, with Lake Lugano's palm-lined shore.",
+      "motifSource": {
+        "title": "Lugano Region — Monte San Salvatore",
+        "url": "https://www.luganoregion.com/en/things-to-do/sport-and-nature/nature/scenic-mountains/monte-san-salvatore"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "at-graz",
+      "name": "그라츠",
+      "englishName": "Graz",
+      "countryCode": "AT",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "그라츠",
+        "Graz"
+      ],
+      "canonicalInput": "그라츠",
+      "motif": "the clock tower on the Schlossberg, with the red roofs of Graz below.",
+      "motifSource": {
+        "title": "Graz Tourism — Clock Tower",
+        "url": "https://www.graztourismus.at/en/sightseeing-culture/sights/clock-tower_shg_1488"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "pt-evora",
+      "name": "에보라",
+      "englishName": "Evora",
+      "countryCode": "PT",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "에보라",
+        "Evora",
+        "Évora"
+      ],
+      "canonicalInput": "에보라",
+      "motif": "the Roman Temple of Evora's surviving columns, with the whitewashed historic streets.",
+      "motifSource": {
+        "title": "Visit Portugal — Roman Temple of Evora",
+        "url": "https://www.visitportugal.com/en/content/templo-romano-de-evora"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "pt-coimbra",
+      "name": "코임브라",
+      "englishName": "Coimbra",
+      "countryCode": "PT",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "코임브라",
+        "Coimbra"
+      ],
+      "canonicalInput": "코임브라",
+      "motif": "the University of Coimbra's clock tower and royal palace courtyard, with the hillside old town.",
+      "motifSource": {
+        "title": "Visit Portugal — University of Coimbra Tower",
+        "url": "https://www.visitportugal.com/en/NR/exeres/68EE612D-44E2-4A89-A6E3-0FF98BA427E0"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "gr-corfu-town",
+      "name": "코르푸타운",
+      "englishName": "Corfu Town",
+      "countryCode": "GR",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "코르푸타운",
+        "Corfu Town",
+        "코르푸시",
+        "Kerkyra",
+        "Corfu City"
+      ],
+      "canonicalInput": "코르푸타운",
+      "motif": "the Old Fortress of Corfu, with the surrounding Ionian water.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Corfu Town",
+        "url": "https://whc.unesco.org/en/list/978/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "gr-nafplio",
+      "name": "나플리오",
+      "englishName": "Nafplio",
+      "countryCode": "GR",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "나플리오",
+        "Nafplio",
+        "나프플리오",
+        "Nafplion"
+      ],
+      "canonicalInput": "나플리오",
+      "motif": "the small Bourtzi sea fortress, with the harbour of Nafplio.",
+      "motifSource": {
+        "title": "Greek National Tourism Organisation — Nafplio",
+        "url": "https://www.visitgreece.gr/en/mainland/Peloponnese/Nafplio"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "pl-wroclaw",
+      "name": "브로츠와프",
+      "englishName": "Wroclaw",
+      "countryCode": "PL",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "브로츠와프",
+        "Wroclaw",
+        "Wrocław"
+      ],
+      "canonicalInput": "브로츠와프",
+      "motif": "the Centennial Hall's broad ribbed dome, with its landscaped grounds.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Wroclaw",
+        "url": "https://whc.unesco.org/en/list/1165/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "ro-sighisoara",
+      "name": "시기쇼아라",
+      "englishName": "Sighisoara",
+      "countryCode": "RO",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "시기쇼아라",
+        "Sighisoara",
+        "Sighișoara",
+        "Sighişoara"
+      ],
+      "canonicalInput": "시기쇼아라",
+      "motif": "the medieval Clock Tower, with the colourful citadel houses.",
+      "motifSource": {
+        "title": "Municipality of Sighisoara — Citadel towers",
+        "url": "https://primariasighisoara.ro/portal/mures/sighisoara/portal.nsf/pagini/turnurile%2Bcetatii-00004366"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "bg-nesebar",
+      "name": "네세버르",
+      "englishName": "Nesebar",
+      "countryCode": "BG",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "네세버르",
+        "Nesebar",
+        "네세바르",
+        "Nessebar"
+      ],
+      "canonicalInput": "네세버르",
+      "motif": "the brick-and-stone Church of Christ Pantocrator, with the compact Black Sea old town.",
+      "motifSource": {
+        "title": "Bulgaria Tourism — Cultural heritage guide, Nessebar churches",
+        "url": "https://bulgariatravel.org/wp-content/uploads/2021/04/BG-%D0%9E%D1%82-%D1%81%D0%B2%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F-%D0%9F%D0%B5%D1%80%D0%BF%D0%B5%D1%80%D0%B8%D0%BA%D0%BE%D0%BD-%D0%B4%D0%BE-%D1%86%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%B8%D1%8F-%D0%A2%D1%8A%D1%80%D0%BD%D0%BE%D0%B2%D0%B3%D1%80%D0%B0%D0%B4.pdf"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "hr-trogir",
+      "name": "트로기르",
+      "englishName": "Trogir",
+      "countryCode": "HR",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "트로기르",
+        "Trogir"
+      ],
+      "canonicalInput": "트로기르",
+      "motif": "the Cathedral of Saint Lawrence and its bell tower, with the waterfront old-town roofs.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Trogir",
+        "url": "https://whc.unesco.org/en/list/810/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "si-piran",
+      "name": "피란",
+      "englishName": "Piran",
+      "countryCode": "SI",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "피란",
+        "Piran"
+      ],
+      "canonicalInput": "피란",
+      "motif": "the campanile of Saint George's church, with the oval Tartini Square and coastal roofs.",
+      "motifSource": {
+        "title": "Portoroz and Piran Tourism — Tartini Monument",
+        "url": "https://www.portoroz.si/en/explore-portoroz-piran/explore-piran/culture-and-history/obj/13953-tartini-monument"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "ba-mostar",
+      "name": "모스타르",
+      "englishName": "Mostar",
+      "countryCode": "BA",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "모스타르",
+        "Mostar"
+      ],
+      "canonicalInput": "모스타르",
+      "motif": "the single stone arch of Stari Most, with the Neretva river and stone houses.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Mostar",
+        "url": "https://whc.unesco.org/en/list/946/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "rs-novi-sad",
+      "name": "노비사드",
+      "englishName": "Novi Sad",
+      "countryCode": "RS",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "노비사드",
+        "Novi Sad",
+        "노비 사드"
+      ],
+      "canonicalInput": "노비사드",
+      "motif": "the clock tower of Petrovaradin Fortress, with the Danube below.",
+      "motifSource": {
+        "title": "Novi Sad Tourism Organisation — Clock Tower",
+        "url": "https://novisad.travel/en/atrakcije-na-tvrdjavi/toranj-sa-satom/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "hu-pecs",
+      "name": "페치",
+      "englishName": "Pecs",
+      "countryCode": "HU",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "페치",
+        "Pecs",
+        "Pécs"
+      ],
+      "canonicalInput": "페치",
+      "motif": "Pecs Cathedral's four towers, with the historic cathedral square.",
+      "motifSource": {
+        "title": "City of Pecs — Saint Peter and Saint Paul Cathedral",
+        "url": "https://pecs.hu/en/saint-peter-and-saint-paul-cathedral/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "cz-karlovy-vary",
+      "name": "카를로비바리",
+      "englishName": "Karlovy Vary",
+      "countryCode": "CZ",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "카를로비바리",
+        "Karlovy Vary",
+        "카를로비 바리",
+        "Karlsbad"
+      ],
+      "canonicalInput": "카를로비바리",
+      "motif": "the long Mill Colonnade, with the Tepla river through the spa town.",
+      "motifSource": {
+        "title": "Karlovy Vary Tourism — Mill Colonnade",
+        "url": "https://www.karlovyvary.cz/en/mill-colonnade"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "sk-kosice",
+      "name": "코시체",
+      "englishName": "Kosice",
+      "countryCode": "SK",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "코시체",
+        "Kosice",
+        "Košice"
+      ],
+      "canonicalInput": "코시체",
+      "motif": "Saint Elisabeth Cathedral's Gothic silhouette, with the old-town pedestrian avenue.",
+      "motifSource": {
+        "title": "Visit Kosice — St Elisabeth's Cathedral",
+        "url": "https://visitkosice.org/en/vidiet-a-zazit/st-elisabeths-cathedral"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "se-gothenburg",
+      "name": "예테보리",
+      "englishName": "Gothenburg",
+      "countryCode": "SE",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "예테보리",
+        "Gothenburg",
+        "고텐부르크",
+        "Göteborg",
+        "Goteborg"
+      ],
+      "canonicalInput": "예테보리",
+      "motif": "the Feskekorka fish market's pointed roof, with the adjacent canal.",
+      "motifSource": {
+        "title": "Goteborg and Co — Feskekorka market architecture",
+        "url": "https://www.goteborg.com/platser/astols-rokeri/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "dk-aarhus",
+      "name": "오르후스",
+      "englishName": "Aarhus",
+      "countryCode": "DK",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "오르후스",
+        "Aarhus",
+        "Århus"
+      ],
+      "canonicalInput": "오르후스",
+      "motif": "the half-timbered houses of Den Gamle By, with the cobbled open-air museum lanes.",
+      "motifSource": {
+        "title": "Visit Aarhus — Den Gamle By and its museums",
+        "url": "https://www.visitaarhus.com/areas-and-cities/aarhus/culture/the-museums-in-den-gamle-by"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "no-tromso",
+      "name": "트롬쇠",
+      "englishName": "Tromso",
+      "countryCode": "NO",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "트롬쇠",
+        "Tromso",
+        "Tromsø"
+      ],
+      "canonicalInput": "트롬쇠",
+      "motif": "the white triangular Arctic Cathedral, with the Tromso Sound and mountain backdrop.",
+      "motifSource": {
+        "title": "Visit Tromso — The Arctic Cathedral",
+        "url": "https://www.visittromso.no/arctic-cathedral"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "ie-cork",
+      "name": "코크",
+      "englishName": "Cork",
+      "countryCode": "IE",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "코크",
+        "Cork"
+      ],
+      "canonicalInput": "코크",
+      "motif": "Saint Anne's Shandon clock tower, with the colourful hillside houses.",
+      "motifSource": {
+        "title": "Pure Cork — Shandon Bells and Tower",
+        "url": "https://www.purecork.ie/things-to-do/shandon-bells-tower"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "fi-turku",
+      "name": "투르쿠",
+      "englishName": "Turku",
+      "countryCode": "FI",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "투르쿠",
+        "Turku"
+      ],
+      "canonicalInput": "투르쿠",
+      "motif": "Turku Cathedral's tall brick tower, with the Aura riverbank.",
+      "motifSource": {
+        "title": "Visit Turku — The Aura Riverside",
+        "url": "https://en.visitturku.fi/the-aura-riverside-explore-local"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "lt-kaunas",
+      "name": "카우나스",
+      "englishName": "Kaunas",
+      "countryCode": "LT",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "카우나스",
+        "Kaunas"
+      ],
+      "canonicalInput": "카우나스",
+      "motif": "the stepped modernist facade of Christ's Resurrection Basilica, with the low city roofline.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Kaunas",
+        "url": "https://whc.unesco.org/en/list/1661/"
+      },
+      "region": "Europe",
+      "stage": "core-500"
+    },
+    {
+      "id": "ag-st-johns",
+      "name": "세인트존스(앤티가)",
+      "englishName": "St John's",
+      "countryCode": "AG",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "세인트존스(앤티가)",
+        "St John's",
+        "세인트존스",
+        "St. John's",
+        "Saint John's",
+        "St John's, Antigua",
+        "St John's, Antigua and Barbuda"
+      ],
+      "canonicalInput": "세인트존스(앤티가)",
+      "motif": "Saint John's Cathedral's twin towers, with the colourful harbour town roofs.",
+      "motifSource": {
+        "title": "Antigua and Barbuda Tourism Authority — Official visitor guide, St John's",
+        "url": "https://www.visitantiguabarbuda.com/wp-content/uploads/ANU-2020-ITA-ING.pdf"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "bb-bridgetown",
+      "name": "브리지타운",
+      "englishName": "Bridgetown",
+      "countryCode": "BB",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "브리지타운",
+        "Bridgetown"
+      ],
+      "canonicalInput": "브리지타운",
+      "motif": "the neo-Gothic Parliament Buildings, with the Careenage waterfront.",
+      "motifSource": {
+        "title": "Barbados Tourism Marketing — Key buildings of Bridgetown",
+        "url": "https://www.visitbarbados.org/key-buildings"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "bz-belize-city",
+      "name": "벨리즈시티",
+      "englishName": "Belize City",
+      "countryCode": "BZ",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "벨리즈시티",
+        "Belize City",
+        "벨리즈 시티"
+      ],
+      "canonicalInput": "벨리즈시티",
+      "motif": "the brick Saint John's Cathedral, with the surrounding tropical greenery.",
+      "motifSource": {
+        "title": "Belize Tourism Board — St John's Cathedral",
+        "url": "https://www.travelbelize.org/attraction/st-johns-cathedral/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "bo-sucre",
+      "name": "수크레",
+      "englishName": "Sucre",
+      "countryCode": "BO",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "수크레",
+        "Sucre"
+      ],
+      "canonicalInput": "수크레",
+      "motif": "the white bell tower of Sucre Cathedral, with the arcaded Plaza 25 de Mayo.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Sucre",
+        "url": "https://whc.unesco.org/en/list/566/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "bs-nassau",
+      "name": "나소",
+      "englishName": "Nassau",
+      "countryCode": "BS",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "나소",
+        "Nassau"
+      ],
+      "canonicalInput": "나소",
+      "motif": "the Queen's Staircase cut through limestone, with the surrounding tropical foliage.",
+      "motifSource": {
+        "title": "Bahamas Ministry of Tourism — The Queen's Staircase",
+        "url": "https://www.bahamas.com/plan-your-trip/things-to-do/the-queens-staircase"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "dm-roseau",
+      "name": "로조",
+      "englishName": "Roseau",
+      "countryCode": "DM",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "로조",
+        "Roseau"
+      ],
+      "canonicalInput": "로조",
+      "motif": "the historic colonial building of the Dominica Museum, with the old Roseau waterfront.",
+      "motifSource": {
+        "title": "Discover Dominica — Historic Roseau",
+        "url": "https://legacy.discoverdominica.com/en/places/77/roseau"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "do-santo-domingo",
+      "name": "산토도밍고",
+      "englishName": "Santo Domingo",
+      "countryCode": "DO",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "산토도밍고",
+        "Santo Domingo"
+      ],
+      "canonicalInput": "산토도밍고",
+      "motif": "the Cathedral of Santa Maria la Menor, with the colonial plaza and palm trees.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Santo Domingo",
+        "url": "https://whc.unesco.org/en/list/526/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "gd-st-georges",
+      "name": "세인트조지스",
+      "englishName": "St George's",
+      "countryCode": "GD",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "세인트조지스",
+        "St George's",
+        "세인트 조지스",
+        "St. George's",
+        "Saint George's",
+        "St George's, Grenada"
+      ],
+      "canonicalInput": "세인트조지스",
+      "motif": "Fort George above the town, with the horseshoe-shaped Carenage harbour.",
+      "motifSource": {
+        "title": "Grenada Tourism Authority — Fort George",
+        "url": "https://www.puregrenada.com/fr/fort-george-2/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "gt-antigua-guatemala",
+      "name": "안티과과테말라",
+      "englishName": "Antigua Guatemala",
+      "countryCode": "GT",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "안티과과테말라",
+        "Antigua Guatemala",
+        "안티과 과테말라"
+      ],
+      "canonicalInput": "안티과과테말라",
+      "motif": "the Santa Catalina Arch, with the cone of Agua volcano behind the colonial street.",
+      "motifSource": {
+        "title": "Guatemala Tourism Institute — Sacatepequez tourist guide 2026",
+        "url": "https://inguat.gob.gt/en/descargas-inguat-guatemala/46-guias-turisticas.html?download=1148%3Aguia-turistica-de-sacatepequez-2026&start=20"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "gy-georgetown",
+      "name": "조지타운(가이아나)",
+      "englishName": "Georgetown",
+      "countryCode": "GY",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "조지타운(가이아나)",
+        "Georgetown",
+        "가이아나 조지타운",
+        "Georgetown, Guyana"
+      ],
+      "canonicalInput": "조지타운(가이아나)",
+      "motif": "the white wooden Saint George's Cathedral, with the surrounding garden.",
+      "motifSource": {
+        "title": "Guyana Tourism Authority — Georgetown City Tour",
+        "url": "https://guyanatourism.com/georgetown-city-tour/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "hn-comayagua",
+      "name": "코마야과",
+      "englishName": "Comayagua",
+      "countryCode": "HN",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "코마야과",
+        "Comayagua"
+      ],
+      "canonicalInput": "코마야과",
+      "motif": "Comayagua Cathedral's colonial clock tower, with the central plaza.",
+      "motifSource": {
+        "title": "Honduras Tourism Institute — Comayagua and La Paz visitor guide",
+        "url": "https://visithonduras.iht.hn/wp-content/uploads/Comayagua-La-Paz.pdf"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "ht-cap-haitien",
+      "name": "카프아이시앵",
+      "englishName": "Cap-Haitien",
+      "countryCode": "HT",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "카프아이시앵",
+        "Cap-Haitien",
+        "Cap-Haïtien",
+        "Cap Haitien",
+        "Okap"
+      ],
+      "canonicalInput": "카프아이시앵",
+      "motif": "the Cathedral of Our Lady of the Assumption, with the historic town square.",
+      "motifSource": {
+        "title": "Visit Haiti — Cap-Haitien City Guide",
+        "url": "https://visithaiti.com/destinations/cap-haitien-city-guide/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "jm-kingston",
+      "name": "킹스턴",
+      "englishName": "Kingston",
+      "countryCode": "JM",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "킹스턴",
+        "Kingston"
+      ],
+      "canonicalInput": "킹스턴",
+      "motif": "the historic Devon House mansion, with its broad green lawns and palms.",
+      "motifSource": {
+        "title": "Jamaica Tourist Board — Architecture",
+        "url": "https://www.visitjamaica.com/discover-jamaica/music-culture/architecture/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "kn-basseterre",
+      "name": "바스테르(세인트키츠)",
+      "englishName": "Basseterre",
+      "countryCode": "KN",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "바스테르(세인트키츠)",
+        "Basseterre",
+        "바스테르",
+        "Basseterre, St Kitts",
+        "Basseterre, Saint Kitts and Nevis"
+      ],
+      "canonicalInput": "바스테르(세인트키츠)",
+      "motif": "the green Berkeley Memorial clock, with the Circus roundabout's historic buildings.",
+      "motifSource": {
+        "title": "Saint Kitts and Nevis Department of Culture — Berkeley Memorial",
+        "url": "https://www.culture.gov.kn/wp-content/uploads/2017/06/Replica-of-Basseterre-landmark-to-be-constructed-in-Glasgow.pdf"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "lc-castries",
+      "name": "캐스트리스",
+      "englishName": "Castries",
+      "countryCode": "LC",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "캐스트리스",
+        "Castries"
+      ],
+      "canonicalInput": "캐스트리스",
+      "motif": "the Cathedral of the Immaculate Conception, with Derek Walcott Square.",
+      "motifSource": {
+        "title": "Saint Lucia Tourism Authority — Castries",
+        "url": "https://stlucia.org/en_uk/places-to-visit/castries/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "ni-granada",
+      "name": "그라나다(니카라과)",
+      "englishName": "Granada",
+      "countryCode": "NI",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "그라나다(니카라과)",
+        "Granada",
+        "니카라과 그라나다",
+        "Granada, Nicaragua"
+      ],
+      "canonicalInput": "그라나다(니카라과)",
+      "motif": "the yellow Granada Cathedral, with the colonial central plaza.",
+      "motifSource": {
+        "title": "Nicaragua Tourism Board — Heritage Cities",
+        "url": "https://www.visitanicaragua.com/en/annual/heritage-cities/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "py-asuncion",
+      "name": "아순시온",
+      "englishName": "Asuncion",
+      "countryCode": "PY",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "아순시온",
+        "Asuncion",
+        "Asunción"
+      ],
+      "canonicalInput": "아순시온",
+      "motif": "the Palacio de los Lopez, with the Paraguay River waterfront.",
+      "motifSource": {
+        "title": "Visit Paraguay — Palacio de Gobierno",
+        "url": "https://visitparaguay.travel/places/palacio-de-gobierno"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "sr-paramaribo",
+      "name": "파라마리보",
+      "englishName": "Paramaribo",
+      "countryCode": "SR",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "파라마리보",
+        "Paramaribo"
+      ],
+      "canonicalInput": "파라마리보",
+      "motif": "the wooden Saint Peter and Paul Cathedral, with the historic timber houses.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Paramaribo",
+        "url": "https://whc.unesco.org/en/list/940/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "sv-san-salvador",
+      "name": "산살바도르",
+      "englishName": "San Salvador",
+      "countryCode": "SV",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "산살바도르",
+        "San Salvador",
+        "산 살바도르"
+      ],
+      "canonicalInput": "산살바도르",
+      "motif": "the National Palace, with the open Gerardo Barrios square.",
+      "motifSource": {
+        "title": "El Salvador Tourism — San Salvador",
+        "url": "https://www.elsalvador.travel/destination/san-salvador/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "tt-port-of-spain",
+      "name": "포트오브스페인",
+      "englishName": "Port of Spain",
+      "countryCode": "TT",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "포트오브스페인",
+        "Port of Spain",
+        "포트 오브 스페인"
+      ],
+      "canonicalInput": "포트오브스페인",
+      "motif": "Queen's Royal College's turreted facade, with the greenery of Queen's Park Savannah.",
+      "motifSource": {
+        "title": "Tourism Trinidad — Queen's Royal College",
+        "url": "https://visittrinidad.tt/things-to-do/sites-attractions/queens-royal-college/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "uy-colonia-del-sacramento",
+      "name": "콜로니아델사크라멘토",
+      "englishName": "Colonia del Sacramento",
+      "countryCode": "UY",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "콜로니아델사크라멘토",
+        "Colonia del Sacramento",
+        "콜로니아 델 사크라멘토"
+      ],
+      "canonicalInput": "콜로니아델사크라멘토",
+      "motif": "the white Colonia del Sacramento lighthouse rising from stone ruins, with the cobbled lanes of the historic quarter.",
+      "motifSource": {
+        "title": "Uruguay Ministry of Tourism — Colonia del Sacramento lighthouse and old town",
+        "url": "https://uruguaynatural.com/es/experiences/escapada-entre-tradiciones-buenos-platos-y-playas/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "vc-kingstown",
+      "name": "킹스타운",
+      "englishName": "Kingstown",
+      "countryCode": "VC",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "킹스타운",
+        "Kingstown"
+      ],
+      "canonicalInput": "킹스타운",
+      "motif": "Saint George's Cathedral, with the surrounding Caribbean town houses.",
+      "motifSource": {
+        "title": "Anglican Diocese of the Windward Islands — St George's Cathedral in Kingstown",
+        "url": "https://www.anglicanswi.org/about-st-georges-cathedral/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "ve-coro",
+      "name": "코로",
+      "englishName": "Coro",
+      "countryCode": "VE",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "코로",
+        "Coro"
+      ],
+      "canonicalInput": "코로",
+      "motif": "the earthen colonial houses of Coro, with the cobbled historic streets.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Coro",
+        "url": "https://whc.unesco.org/en/list/658/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "us-charleston",
+      "name": "찰스턴",
+      "englishName": "Charleston",
+      "countryCode": "US",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "찰스턴",
+        "Charleston"
+      ],
+      "canonicalInput": "찰스턴",
+      "motif": "the pastel houses of Rainbow Row, with the historic East Bay Street frontage.",
+      "motifSource": {
+        "title": "Explore Charleston — Iconic portrait spots, Rainbow Row",
+        "url": "https://www.charlestoncvb.com/blog/guide/portrait-spots-in-charleston"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "us-st-augustine",
+      "name": "세인트오거스틴",
+      "englishName": "St Augustine",
+      "countryCode": "US",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "세인트오거스틴",
+        "St Augustine",
+        "세인트 오거스틴",
+        "St. Augustine",
+        "Saint Augustine",
+        "St Augustine, Florida"
+      ],
+      "canonicalInput": "세인트오거스틴",
+      "motif": "the star-shaped Castillo de San Marcos, with the Matanzas Bay waterfront.",
+      "motifSource": {
+        "title": "US National Park Service — Castillo de San Marcos architecture",
+        "url": "https://www.nps.gov/casa/learn/historyculture/construction.htm"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "ca-halifax",
+      "name": "핼리팩스",
+      "englishName": "Halifax",
+      "countryCode": "CA",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "핼리팩스",
+        "Halifax"
+      ],
+      "canonicalInput": "핼리팩스",
+      "motif": "the Old Town Clock below Halifax Citadel, with the grassy Citadel hillside.",
+      "motifSource": {
+        "title": "Parks Canada — Halifax Citadel historic buildings",
+        "url": "https://parks.canada.ca/lhn-nhs/ns/halifax/culture/architecture/batiments-buildings?wbdisable=true"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "ca-st-johns",
+      "name": "세인트존스(캐나다)",
+      "englishName": "St John's",
+      "countryCode": "CA",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "세인트존스(캐나다)",
+        "St John's",
+        "캐나다 세인트존스",
+        "St. John's",
+        "Saint John's",
+        "St John's, Newfoundland",
+        "St John's, Newfoundland and Labrador"
+      ],
+      "canonicalInput": "세인트존스(캐나다)",
+      "motif": "Cabot Tower on Signal Hill, with the rugged Atlantic harbour entrance.",
+      "motifSource": {
+        "title": "Parks Canada — Signal Hill National Historic Site",
+        "url": "https://www.parks.canada.ca/culture/designation/lieu-site/signal-hill"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "ca-niagara-falls",
+      "name": "나이아가라폴스(캐나다)",
+      "englishName": "Niagara Falls",
+      "countryCode": "CA",
+      "kind": "city",
+      "theme": "lake",
+      "aliases": [
+        "나이아가라폴스(캐나다)",
+        "Niagara Falls",
+        "캐나다 나이아가라폴스",
+        "Niagara Falls, Ontario",
+        "Niagara Falls, Canada"
+      ],
+      "canonicalInput": "나이아가라폴스(캐나다)",
+      "motif": "the curved Horseshoe Falls, with the rising mist and Niagara River.",
+      "motifSource": {
+        "title": "Niagara Falls Tourism — Niagara Parks Commission",
+        "url": "https://www.niagarafallstourism.com/play/falls-experiences/niagara-parks-commission/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "mx-guanajuato",
+      "name": "과나후아토",
+      "englishName": "Guanajuato",
+      "countryCode": "MX",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "과나후아토",
+        "Guanajuato"
+      ],
+      "canonicalInput": "과나후아토",
+      "motif": "the yellow Basilica of Our Lady of Guanajuato, with the brightly coloured hillside houses.",
+      "motifSource": {
+        "title": "Guanajuato Tourism — Basilica of Our Lady of Guanajuato",
+        "url": "https://guanajuato.mx/romance/templos/basilica-colegiata-de-nuestra-senora-de-guanajuato/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "mx-san-miguel-de-allende",
+      "name": "산미겔데아옌데",
+      "englishName": "San Miguel de Allende",
+      "countryCode": "MX",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "산미겔데아옌데",
+        "San Miguel de Allende",
+        "산미겔 데 아옌데"
+      ],
+      "canonicalInput": "산미겔데아옌데",
+      "motif": "the pink towers of the Parroquia de San Miguel Arcangel, with the old town's terracotta roofs.",
+      "motifSource": {
+        "title": "Guanajuato Tourism — Parroquia de San Miguel Arcangel",
+        "url": "https://guanajuato.mx/romance/templos/parroquia-de-san-miguel-arcangel/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "mx-puebla",
+      "name": "푸에블라",
+      "englishName": "Puebla",
+      "countryCode": "MX",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "푸에블라",
+        "Puebla"
+      ],
+      "canonicalInput": "푸에블라",
+      "motif": "Puebla Cathedral's twin bell towers, with the tiled colonial facades around the Zocalo.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Puebla",
+        "url": "https://whc.unesco.org/en/list/416/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "mx-merida",
+      "name": "메리다(멕시코)",
+      "englishName": "Merida",
+      "countryCode": "MX",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "메리다(멕시코)",
+        "Merida",
+        "멕시코 메리다",
+        "Mérida",
+        "Merida, Yucatan",
+        "Mérida, Yucatán"
+      ],
+      "canonicalInput": "메리다(멕시코)",
+      "motif": "the Cathedral of San Ildefonso, with the Plaza Grande's palms.",
+      "motifSource": {
+        "title": "Government of Yucatan — Merida attractions",
+        "url": "https://www.yucatan.gob.mx/?lt=&p=merida"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "br-olinda",
+      "name": "올린다",
+      "englishName": "Olinda",
+      "countryCode": "BR",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "올린다",
+        "Olinda"
+      ],
+      "canonicalInput": "올린다",
+      "motif": "the baroque facade of Sao Bento monastery, with the colourful hillside houses.",
+      "motifSource": {
+        "title": "Municipality of Olinda — Tourism",
+        "url": "https://olinda.pe.gov.br/pagina/olinda-turismo"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "br-brasilia",
+      "name": "브라질리아",
+      "englishName": "Brasilia",
+      "countryCode": "BR",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "브라질리아",
+        "Brasilia",
+        "Brasília"
+      ],
+      "canonicalInput": "브라질리아",
+      "motif": "the crown-like Cathedral of Brasilia, with the reflecting pool at its base.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Brasilia",
+        "url": "https://whc.unesco.org/en/list/445/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "br-ouro-preto",
+      "name": "오루프레투",
+      "englishName": "Ouro Preto",
+      "countryCode": "BR",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "오루프레투",
+        "Ouro Preto",
+        "오루 프레투",
+        "오로프레토"
+      ],
+      "canonicalInput": "오루프레투",
+      "motif": "the curving facade of Sao Francisco de Assis church, with the steep colonial street.",
+      "motifSource": {
+        "title": "Visit Brasil — Ouro Preto historic architecture",
+        "url": "https://www.visitbrasil.com/blog/conheca-ouro-preto-a-bordo-de-uma-charmosa-jardineira-dos-anos-1930/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "ar-ushuaia",
+      "name": "우수아이아",
+      "englishName": "Ushuaia",
+      "countryCode": "AR",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "우수아이아",
+        "Ushuaia"
+      ],
+      "canonicalInput": "우수아이아",
+      "motif": "the red-and-white Les Eclaireurs lighthouse, with the Beagle Channel and distant mountains.",
+      "motifSource": {
+        "title": "Ushuaia Tourism Secretariat — Faro Les Eclaireurs",
+        "url": "https://turismoushuaia.com/actividad/faro-les-eclaireurs/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "ar-mendoza",
+      "name": "멘도사",
+      "englishName": "Mendoza",
+      "countryCode": "AR",
+      "kind": "city",
+      "theme": "mountain",
+      "aliases": [
+        "멘도사",
+        "Mendoza",
+        "Mendoza City"
+      ],
+      "canonicalInput": "멘도사",
+      "motif": "the fountain in Plaza Independencia, with the shaded trees of the central plaza.",
+      "motifSource": {
+        "title": "City of Mendoza — Plaza Independencia history",
+        "url": "https://ciudaddemendoza.gob.ar/plaza-independencia-historia/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "ar-salta",
+      "name": "살타",
+      "englishName": "Salta",
+      "countryCode": "AR",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "살타",
+        "Salta"
+      ],
+      "canonicalInput": "살타",
+      "motif": "Salta Cathedral's pink twin-tower facade, with the Plaza 9 de Julio.",
+      "motifSource": {
+        "title": "Official Salta Tourism — Religious architecture",
+        "url": "https://visitsalta.ar/religioso/arquitectura-religiosa/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "pe-arequipa",
+      "name": "아레키파",
+      "englishName": "Arequipa",
+      "countryCode": "PE",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "아레키파",
+        "Arequipa"
+      ],
+      "canonicalInput": "아레키파",
+      "motif": "Arequipa Cathedral's long white sillar facade, with the cone of El Misti in the distance.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Arequipa",
+        "url": "https://whc.unesco.org/en/list/1016/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "co-medellin",
+      "name": "메데인",
+      "englishName": "Medellin",
+      "countryCode": "CO",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "메데인",
+        "Medellin",
+        "메데진",
+        "Medellín"
+      ],
+      "canonicalInput": "메데인",
+      "motif": "the checker-patterned Palace of Culture Rafael Uribe Uribe, with the rounded sculptures in Plaza Botero.",
+      "motifSource": {
+        "title": "Colombia Travel — Rafael Uribe Uribe Palace of Culture",
+        "url": "https://colombia.travel/en/medellin/rafael-uribe-uribe-palace-culture"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "cl-valparaiso",
+      "name": "발파라이소",
+      "englishName": "Valparaiso",
+      "countryCode": "CL",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "발파라이소",
+        "Valparaiso"
+      ],
+      "canonicalInput": "발파라이소",
+      "motif": "Valparaiso's hillside funicular, with the brightly coloured houses above the port.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Valparaiso",
+        "url": "https://whc.unesco.org/en/list/959/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "ec-cuenca",
+      "name": "쿠엥카(에콰도르)",
+      "englishName": "Cuenca",
+      "countryCode": "EC",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "쿠엥카(에콰도르)",
+        "Cuenca",
+        "에콰도르 쿠엥카",
+        "Cuenca, Ecuador"
+      ],
+      "canonicalInput": "쿠엥카(에콰도르)",
+      "motif": "the blue domes of the New Cathedral, with the colonial historic centre.",
+      "motifSource": {
+        "title": "Municipal Tourism Foundation of Cuenca — World heritage city",
+        "url": "https://www.visitcuencaecuador.com.ec/en/cuenca-a-world-heritage-gem/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "cu-trinidad",
+      "name": "트리니다드(쿠바)",
+      "englishName": "Trinidad",
+      "countryCode": "CU",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "트리니다드(쿠바)",
+        "Trinidad",
+        "쿠바 트리니다드",
+        "Trinidad, Cuba"
+      ],
+      "canonicalInput": "트리니다드(쿠바)",
+      "motif": "the yellow bell tower of the former San Francisco convent, with the cobbled colonial lanes.",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Trinidad",
+        "url": "https://whc.unesco.org/en/list/460/"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "cr-cartago",
+      "name": "카르타고",
+      "englishName": "Cartago",
+      "countryCode": "CR",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "카르타고",
+        "Cartago"
+      ],
+      "canonicalInput": "카르타고",
+      "motif": "the Basilica of Our Lady of the Angels, with the broad church forecourt.",
+      "motifSource": {
+        "title": "Costa Rica Tourism Board — Historical walks in Cartago",
+        "url": "https://es.visitcostarica.com/things-to-do/culture/historical-walks/cartago"
+      },
+      "region": "Americas",
+      "stage": "core-500"
+    },
+    {
+      "id": "af-bamiyan",
+      "name": "바미얀",
+      "englishName": "Bamiyan",
+      "countryCode": "AF",
+      "kind": "city",
+      "theme": "mountain",
+      "aliases": [
+        "바미얀",
+        "Bamiyan",
+        "Bamyan",
+        "Bamiyan City",
+        "바미안"
+      ],
+      "canonicalInput": "바미얀",
+      "motif": "the tall empty Buddha niches in the Bamiyan cliff, with the dry valley and low earthen buildings; show the surviving niches, not reconstructed standing statues",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Cultural Landscape and Archaeological Remains of the Bamiyan Valley",
+        "url": "https://whc.unesco.org/en/list/208/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "pk-lahore",
+      "name": "라호르",
+      "englishName": "Lahore",
+      "countryCode": "PK",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "라호르",
+        "Lahore"
+      ],
+      "canonicalInput": "라호르",
+      "motif": "the monumental Alamgiri Gate of Lahore Fort, with its paired rounded bastions and a small area of formal Mughal garden",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Fort and Shalamar Gardens in Lahore",
+        "url": "https://whc.unesco.org/en/list/171/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "bd-dhaka",
+      "name": "다카",
+      "englishName": "Dhaka",
+      "countryCode": "BD",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "다카",
+        "Dhaka",
+        "Dacca"
+      ],
+      "canonicalInput": "다카",
+      "motif": "the domed Mughal tomb of Bibi Pari within Lalbagh Fort, with the fort garden and low red masonry walls",
+      "motifSource": {
+        "title": "Bangladesh Tourism Board — Beautiful Bangladesh Tourist Handbook",
+        "url": "https://tourismboard.gov.bd/sites/default/files/files/tourismboard.portal.gov.bd/page/aa3dacc5_f200_47c7_8445_12aff09f9450/BTB%20Tourist%20Handbook%20%281%29.pdf"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "bn-bandar-seri-begawan",
+      "name": "반다르스리브가완",
+      "englishName": "Bandar Seri Begawan",
+      "countryCode": "BN",
+      "kind": "city",
+      "theme": "lake",
+      "aliases": [
+        "반다르스리브가완",
+        "Bandar Seri Begawan",
+        "반다르 세리 베가완",
+        "반다르스리베가완",
+        "Bandar Seri Begawan City"
+      ],
+      "canonicalInput": "반다르스리브가완",
+      "motif": "Omar Ali Saifuddien Mosque with its large golden dome and white minaret, beside its calm lagoon and ceremonial barge",
+      "motifSource": {
+        "title": "Brunei Tourism — Omar Ali Saifuddien Mosque",
+        "url": "https://www.bruneitourism.com/places/omar-ali-saifuddien-mosque/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "tl-dili",
+      "name": "딜리",
+      "englishName": "Dili",
+      "countryCode": "TL",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "딜리",
+        "Dili",
+        "Díli"
+      ],
+      "canonicalInput": "딜리",
+      "motif": "Cristo Rei standing on a globe at Cape Fatucama, with the curving coast of Dili Bay below",
+      "motifSource": {
+        "title": "Timor-Leste Tourism — Cristo Rei",
+        "url": "https://timorleste.tl/destinations/cristo-rei"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "kz-almaty",
+      "name": "알마티",
+      "englishName": "Almaty",
+      "countryCode": "KZ",
+      "kind": "city",
+      "theme": "mountain",
+      "aliases": [
+        "알마티",
+        "Almaty",
+        "Alma-Ata",
+        "Alma Ata",
+        "알마아타"
+      ],
+      "canonicalInput": "알마티",
+      "motif": "the colorful wooden Ascension Cathedral with its onion domes, with a restrained backdrop of the snowy mountain ridge above Almaty",
+      "motifSource": {
+        "title": "Kazakhstan Travel — Almaty",
+        "url": "https://www.kazakhstan.travel/en/regions/almaty"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "kg-bishkek",
+      "name": "비슈케크",
+      "englishName": "Bishkek",
+      "countryCode": "KG",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "비슈케크",
+        "Bishkek",
+        "Bishkek City"
+      ],
+      "canonicalInput": "비슈케크",
+      "motif": "Ala-Too Square and the broad pale State History Museum facade, with its flagpole and a distant mountain ridge",
+      "motifSource": {
+        "title": "Bishkek City Hall — Reopening of Ala-Too Square",
+        "url": "https://www.bishkek.gov.kg/ru/post/30036"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "tj-dushanbe",
+      "name": "두샨베",
+      "englishName": "Dushanbe",
+      "countryCode": "TJ",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "두샨베",
+        "Dushanbe",
+        "Dushanbe City"
+      ],
+      "canonicalInput": "두샨베",
+      "motif": "the tall golden arch of the Ismoil Somoni monument in Dusti Square, with its formal planted approach",
+      "motifSource": {
+        "title": "Travel Tajikistan — Monument of Ismoil Somoni",
+        "url": "https://traveltajikistan.tj/en/monument-of-ismoil-somoni/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "tm-ashgabat",
+      "name": "아시가바트",
+      "englishName": "Ashgabat",
+      "countryCode": "TM",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "아시가바트",
+        "Ashgabat",
+        "Ashkhabad",
+        "Aşgabat",
+        "아슈하바트"
+      ],
+      "canonicalInput": "아시가바트",
+      "motif": "the white Independence Monument with its slender gold-topped central column and domed base, with the green lawns of Independence Park",
+      "motifSource": {
+        "title": "Government of Turkmenistan — Independence Monument in Ashgabat",
+        "url": "https://turkmenistan.gov.tm/index.php/en/post/66608/president-turkmenistan-took-part-flower-laying-ceremony-independence-monument"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "am-yerevan",
+      "name": "예레반",
+      "englishName": "Yerevan",
+      "countryCode": "AM",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "예레반",
+        "Yerevan",
+        "Erevan"
+      ],
+      "canonicalInput": "예레반",
+      "motif": "the broad limestone stair terraces of the Cascade Complex, with its geometric planted gardens",
+      "motifSource": {
+        "title": "Visit Yerevan — Cascade Complex",
+        "url": "https://www.visityerevan.am/places/details/51/en/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "ir-isfahan",
+      "name": "이스파한",
+      "englishName": "Isfahan",
+      "countryCode": "IR",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "이스파한",
+        "Isfahan",
+        "Esfahan",
+        "에스파한"
+      ],
+      "canonicalInput": "이스파한",
+      "motif": "the turquoise dome and twin minarets of the Shah Mosque on Naqsh-e Jahan Square, with the square arcade and garden",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Meidan Emam, Esfahan",
+        "url": "https://whc.unesco.org/en/list/115/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "iq-erbil",
+      "name": "아르빌",
+      "englishName": "Erbil",
+      "countryCode": "IQ",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "아르빌",
+        "Erbil",
+        "Arbil",
+        "Hewler",
+        "Hewlêr",
+        "에르빌"
+      ],
+      "canonicalInput": "아르빌",
+      "motif": "the continuous ochre walls of Erbil Citadel on its raised mound, with the low historic city streets at its foot",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Erbil Citadel",
+        "url": "https://whc.unesco.org/en/list/1437/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "lb-byblos",
+      "name": "비블로스",
+      "englishName": "Byblos",
+      "countryCode": "LB",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "비블로스",
+        "Byblos",
+        "Jbeil",
+        "Jubayl",
+        "즈베일"
+      ],
+      "canonicalInput": "비블로스",
+      "motif": "the square stone keep of Byblos Castle, with the old Mediterranean harbor and small fishing boats",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Byblos",
+        "url": "https://whc.unesco.org/en/list/295/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "sy-damascus",
+      "name": "다마스쿠스",
+      "englishName": "Damascus",
+      "countryCode": "SY",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "다마스쿠스",
+        "Damascus",
+        "Dimashq"
+      ],
+      "canonicalInput": "다마스쿠스",
+      "motif": "the Umayyad Mosque with its broad arcaded courtyard and distinctive minarets, with a small strip of the old covered souk",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Ancient City of Damascus",
+        "url": "https://whc.unesco.org/en/list/20/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "ye-sanaa",
+      "name": "사나",
+      "englishName": "Sanaa",
+      "countryCode": "YE",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "사나",
+        "Sanaa",
+        "Sana'a",
+        "Sana’a",
+        "사나시"
+      ],
+      "canonicalInput": "사나",
+      "motif": "the tall decorated tower houses of Old Sanaa with white geometric window borders, with the Bab al-Yemen gateway",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Old City of Sana’a",
+        "url": "https://whc.unesco.org/en/list/385/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "kp-kaesong",
+      "name": "개성",
+      "englishName": "Kaesong",
+      "countryCode": "KP",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "개성",
+        "Kaesong",
+        "Kaesŏng",
+        "Gaeseong",
+        "개성시"
+      ],
+      "canonicalInput": "개성",
+      "motif": "Kaesong Namdae Gate with its stone base and traditional tiled gate pavilion, with a restrained strip of the old city wall",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Historic Monuments and Sites in Kaesong",
+        "url": "https://whc.unesco.org/en/list/1278/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "ps-bethlehem",
+      "name": "베들레헴",
+      "englishName": "Bethlehem",
+      "countryCode": "PS",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "베들레헴",
+        "Bethlehem",
+        "Bethlehem Palestine",
+        "베들레헴 팔레스타인"
+      ],
+      "canonicalInput": "베들레헴",
+      "motif": "the pale stone Church of the Nativity and its basilica roofline, with the open paving of Manger Square",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Birthplace of Jesus: Church of the Nativity and the Pilgrimage Route, Bethlehem",
+        "url": "https://whc.unesco.org/en/list/1433/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "jp-himeji",
+      "name": "히메지",
+      "englishName": "Himeji",
+      "countryCode": "JP",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "히메지",
+        "Himeji",
+        "Himeji City",
+        "히메지시"
+      ],
+      "canonicalInput": "히메지",
+      "motif": "Himeji Castle with its complete white keep and layered dark roofs, with the stone foundation and a few cherry trees",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Himeji-jo",
+        "url": "https://whc.unesco.org/en/list/661/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "jp-matsumoto",
+      "name": "마쓰모토",
+      "englishName": "Matsumoto",
+      "countryCode": "JP",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "마쓰모토",
+        "Matsumoto",
+        "마츠모토",
+        "Matsumoto City"
+      ],
+      "canonicalInput": "마쓰모토",
+      "motif": "the black and white keep of Matsumoto Castle, with its wide moat and small vermilion bridge",
+      "motifSource": {
+        "title": "Japan National Tourism Organization — Matsumoto Castle",
+        "url": "https://www.japan.travel/en/spot/1356/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "cn-nanjing",
+      "name": "난징",
+      "englishName": "Nanjing",
+      "countryCode": "CN",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "난징",
+        "Nanjing",
+        "Nanking",
+        "南京",
+        "남경"
+      ],
+      "canonicalInput": "난징",
+      "motif": "the broad gray brick ramparts and crenellations of Nanjing City Wall, with a quiet moat and planted trees",
+      "motifSource": {
+        "title": "Nanjing City Wall — Official Tour Guide",
+        "url": "https://english.njcitywall.cn/?obj=youlan"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "cn-dunhuang",
+      "name": "둔황",
+      "englishName": "Dunhuang",
+      "countryCode": "CN",
+      "kind": "city",
+      "theme": "desert",
+      "aliases": [
+        "둔황",
+        "Dunhuang",
+        "敦煌",
+        "돈황"
+      ],
+      "canonicalInput": "둔황",
+      "motif": "the red multi-storey facade at the Mogao Caves set against the ochre cliff, with low desert slopes",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Mogao Caves",
+        "url": "https://whc.unesco.org/en/list/440/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "vn-sa-pa",
+      "name": "사파",
+      "englishName": "Sa Pa",
+      "countryCode": "VN",
+      "kind": "town",
+      "theme": "mountain",
+      "aliases": [
+        "사파",
+        "Sa Pa",
+        "Sapa",
+        "SaPa",
+        "사 빠"
+      ],
+      "canonicalInput": "사파",
+      "motif": "the Mount Fansipan ridge above Sa Pa, with the curved rice terraces of the valley below",
+      "motifSource": {
+        "title": "Vietnam Tourism — Sa Pa",
+        "url": "https://vietnam.travel/places-to-go/northern-midlands-mountains/sapa"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "th-kanchanaburi",
+      "name": "칸차나부리",
+      "englishName": "Kanchanaburi",
+      "countryCode": "TH",
+      "kind": "city",
+      "theme": "lake",
+      "aliases": [
+        "칸차나부리",
+        "Kanchanaburi",
+        "깐짜나부리",
+        "깐차나부리"
+      ],
+      "canonicalInput": "칸차나부리",
+      "motif": "the dark steel railway spans of the Bridge over the River Kwai, with the calm river and green banks",
+      "motifSource": {
+        "title": "Tourism Authority of Thailand — Bridge Over the River Kwai",
+        "url": "https://www.tourismthailand.org/Attraction/bridge-over-the-river-kwai"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "my-kuching",
+      "name": "쿠칭",
+      "englishName": "Kuching",
+      "countryCode": "MY",
+      "kind": "city",
+      "theme": "lake",
+      "aliases": [
+        "쿠칭",
+        "Kuching",
+        "Kuching City"
+      ],
+      "canonicalInput": "쿠칭",
+      "motif": "the curving Darul Hana pedestrian bridge over the Sarawak River, with Kuching waterfront trees and low historic buildings",
+      "motifSource": {
+        "title": "Sarawak Tourism Board — Kuching Waterfront",
+        "url": "https://www.sarawaktourism.com/web/places-to-visit/town-view/kuching/major-attractions/kuching-waterfront"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "id-bandung",
+      "name": "반둥",
+      "englishName": "Bandung",
+      "countryCode": "ID",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "반둥",
+        "Bandung",
+        "Bandoeng"
+      ],
+      "canonicalInput": "반둥",
+      "motif": "the white Gedung Sate building with its tiered central roof and slender skewer-like finial, with its front garden",
+      "motifSource": {
+        "title": "Wonderful Indonesia — Gedung Sate",
+        "url": "https://www.indonesia.travel/id/id/travel-ideas/heritage/gedung-sate"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "id-ubud",
+      "name": "우붓",
+      "englishName": "Ubud",
+      "countryCode": "ID",
+      "kind": "town",
+      "theme": "traditional",
+      "aliases": [
+        "우붓",
+        "Ubud",
+        "우부드",
+        "우붇",
+        "Ubud Bali"
+      ],
+      "canonicalInput": "우붓",
+      "motif": "the ornate red brick and stone entrance of Puri Saren Agung, with lush tropical palace gardens",
+      "motifSource": {
+        "title": "Wonderful Indonesia — Istana Ubud",
+        "url": "https://www.indonesia.travel/id/en/destination/bali-nusa-tenggara/bali/istana-ubud"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "ph-vigan",
+      "name": "비간",
+      "englishName": "Vigan",
+      "countryCode": "PH",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "비간",
+        "Vigan",
+        "Vigan City"
+      ],
+      "canonicalInput": "비간",
+      "motif": "the cobbled Calle Crisologo lined by low heritage houses with capiz-shell windows and tiled roofs, with one horse carriage",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Historic City of Vigan",
+        "url": "https://whc.unesco.org/en/list/502/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "mm-yangon",
+      "name": "양곤",
+      "englishName": "Yangon",
+      "countryCode": "MM",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "양곤",
+        "Yangon",
+        "Rangoon",
+        "랑군"
+      ],
+      "canonicalInput": "양곤",
+      "motif": "the golden bell-shaped Shwedagon Pagoda and its slender spire, with the surrounding smaller shrine roofs",
+      "motifSource": {
+        "title": "Myanmar Ministry of Hotels and Tourism — Yangon",
+        "url": "https://tourism.gov.mm/en/regions/yangon"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "in-amritsar",
+      "name": "암리차르",
+      "englishName": "Amritsar",
+      "countryCode": "IN",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "암리차르",
+        "Amritsar",
+        "암릿사르",
+        "암리트사르"
+      ],
+      "canonicalInput": "암리차르",
+      "motif": "the Golden Temple of Sri Harmandir Sahib with its gilded dome and low white marble buildings, beside the sacred water tank",
+      "motifSource": {
+        "title": "Incredible India — Sri Harmandir Sahib Golden Temple",
+        "url": "https://www.incredibleindia.gov.in/en/punjab/amritsar/sri-harmandir-sahib-golden-temple"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "bt-thimphu",
+      "name": "팀푸",
+      "englishName": "Thimphu",
+      "countryCode": "BT",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "팀푸",
+        "Thimphu",
+        "Thimpu",
+        "팀부"
+      ],
+      "canonicalInput": "팀푸",
+      "motif": "Tashichho Dzong with broad white fortress walls and red-and-gold tiered roofs, with the green valley slopes of Thimphu",
+      "motifSource": {
+        "title": "Bhutan Tourism Services Portal — Thimphu and Tashichho Dzong setting",
+        "url": "https://services.bhutan.travel/search/hotel/tashi-yoedling"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "uz-bukhara",
+      "name": "부하라",
+      "englishName": "Bukhara",
+      "countryCode": "UZ",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "부하라",
+        "Bukhara",
+        "Buxoro",
+        "Buhara"
+      ],
+      "canonicalInput": "부하라",
+      "motif": "the tall cylindrical brick Kalyan Minaret, with the turquoise-domed roofs of the Poi Kalyan ensemble",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Historic Centre of Bukhara",
+        "url": "https://whc.unesco.org/en/list/602/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "mv-male",
+      "name": "말레",
+      "englishName": "Male",
+      "countryCode": "MV",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "말레",
+        "Male",
+        "Malé",
+        "Male City",
+        "Malé City",
+        "말레시티"
+      ],
+      "canonicalInput": "말레",
+      "motif": "Hukuru Miskiy with its low coral-stone mosque and round white Munnaaru minaret, with a few tropical trees",
+      "motifSource": {
+        "title": "Visit Maldives — Hukuru Miskiy and Munnaaru, Malé City",
+        "url": "https://visitmaldives.com/en/places/hukuru-miskiiy"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "ae-sharjah",
+      "name": "샤르자",
+      "englishName": "Sharjah",
+      "countryCode": "AE",
+      "kind": "city",
+      "theme": "lake",
+      "aliases": [
+        "샤르자",
+        "Sharjah",
+        "샤르쟈",
+        "Ash Shariqah"
+      ],
+      "canonicalInput": "샤르자",
+      "motif": "Al Noor Mosque with its cascading domes and two slender minarets, with the calm water of Khalid Lagoon",
+      "motifSource": {
+        "title": "Visit Sharjah — Al Noor Mosque",
+        "url": "https://www.visitsharjah.com/en/activities/culture/al-noor-mosque/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "sa-alula",
+      "name": "알울라",
+      "englishName": "AlUla",
+      "countryCode": "SA",
+      "kind": "town",
+      "theme": "desert",
+      "aliases": [
+        "알울라",
+        "AlUla",
+        "Al Ula",
+        "Al-Ula",
+        "알 울라"
+      ],
+      "canonicalInput": "알울라",
+      "motif": "one monumental rock-cut tomb facade at Hegra with its stepped crown, with the warm sandstone outcrops of the AlUla oasis landscape",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Hegra Archaeological Site",
+        "url": "https://whc.unesco.org/en/list/1293/"
+      },
+      "region": "asia",
+      "stage": "core-500"
+    },
+    {
+      "id": "dz-algiers",
+      "name": "알제",
+      "englishName": "Algiers",
+      "countryCode": "DZ",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "알제",
+        "Algiers",
+        "Alger",
+        "알제시"
+      ],
+      "canonicalInput": "알제",
+      "motif": "the white stepped houses and narrow lanes of the Kasbah of Algiers, with its Mediterranean bay",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Kasbah of Algiers",
+        "url": "https://whc.unesco.org/en/list/565/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "ao-luanda",
+      "name": "루안다",
+      "englishName": "Luanda",
+      "countryCode": "AO",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "루안다",
+        "Luanda",
+        "Loanda"
+      ],
+      "canonicalInput": "루안다",
+      "motif": "the pale fortress walls of Fortaleza de Sao Miguel above Luanda, with the curving seafront promenade and bay",
+      "motifSource": {
+        "title": "Embassy of Angola — Discover Angola",
+        "url": "https://www.angola.org/en/turismo"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "bj-ouidah",
+      "name": "위다",
+      "englishName": "Ouidah",
+      "countryCode": "BJ",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "위다",
+        "Ouidah",
+        "Whydah",
+        "오위다"
+      ],
+      "canonicalInput": "위다",
+      "motif": "the Gate of No Return memorial facing Ouidah beach, with its broad sculpted entablature and the Atlantic shoreline",
+      "motifSource": {
+        "title": "Ouidah City Hall — La porte du non-retour",
+        "url": "https://ouidah.mairie.bj/site-touristique/la-porte-du-non-retour"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "bw-maun",
+      "name": "마운",
+      "englishName": "Maun",
+      "countryCode": "BW",
+      "kind": "town",
+      "theme": "wetland",
+      "aliases": [
+        "마운",
+        "Maun",
+        "Maun Botswana"
+      ],
+      "canonicalInput": "마운",
+      "motif": "the gently winding Thamalakane River through Maun, with reeds and low riverside vegetation",
+      "motifSource": {
+        "title": "Botswana Tourism Organisation — Maun",
+        "url": "https://botswanatourism.co.bw/explore/maun"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "bf-bobo-dioulasso",
+      "name": "보보디울라소",
+      "englishName": "Bobo-Dioulasso",
+      "countryCode": "BF",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "보보디울라소",
+        "Bobo-Dioulasso",
+        "Bobo Dioulasso",
+        "보보 디울라소"
+      ],
+      "canonicalInput": "보보디울라소",
+      "motif": "the earthen Grand Mosque of Bobo-Dioulasso with its projecting wooden supports, with low houses of the Dioulassoba old quarter",
+      "motifSource": {
+        "title": "Burkina Faso Ministry of Communication — Bobo-Dioulasso tourism sites",
+        "url": "https://www.communication.gov.bf/fileadmin/user_upload/storages/fichier/brochure_programme_snc_2024.pdf"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "bi-bujumbura",
+      "name": "부줌부라",
+      "englishName": "Bujumbura",
+      "countryCode": "BI",
+      "kind": "city",
+      "theme": "lake",
+      "aliases": [
+        "부줌부라",
+        "Bujumbura",
+        "부쥼부라"
+      ],
+      "canonicalInput": "부줌부라",
+      "motif": "the Lake Tanganyika shoreline at Bujumbura, with small fishing boats and green hills in the distance",
+      "motifSource": {
+        "title": "Burundi Tourism — Bujumbura and Lake Tanganyika",
+        "url": "https://tourisme.gov.bi/en/home/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "cm-limbe",
+      "name": "림베",
+      "englishName": "Limbe",
+      "countryCode": "CM",
+      "kind": "city",
+      "theme": "forest",
+      "aliases": [
+        "림베",
+        "Limbe",
+        "Limbé",
+        "Limbe Cameroon",
+        "림베 카메룬"
+      ],
+      "canonicalInput": "림베",
+      "motif": "the historic Limbe Botanic Garden with tall tropical trees and its shaded paths, with a small view toward the coast",
+      "motifSource": {
+        "title": "Cameroon National Institute of Statistics — South West regional yearbook, tourism chapter",
+        "url": "https://ins-cameroun.cm/wp-content/uploads/2025/07/Annuaire-statistique-regional_SW-edit_2023_02.07.24_Revu.pdf"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "cv-mindelo",
+      "name": "민델루",
+      "englishName": "Mindelo",
+      "countryCode": "CV",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "민델루",
+        "Mindelo",
+        "민델로",
+        "Mindelo Cabo Verde"
+      ],
+      "canonicalInput": "민델루",
+      "motif": "the small waterfront Torre de Belem replica in Mindelo, with the boats and hills of Porto Grande Bay",
+      "motifSource": {
+        "title": "Cabo Verde Ministry of Culture — Museu do Mar, Torre de Belém",
+        "url": "https://www.mf.gov.cv/documents/20126/0/TDR%2B-%2BMuseu%2Bdo%2BMAR_EN%2BFINAL.pdf/ae335680-eeac-2b2a-75d6-ec707854571d?t=1725637194539"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "cf-bangui",
+      "name": "방기",
+      "englishName": "Bangui",
+      "countryCode": "CF",
+      "kind": "city",
+      "theme": "lake",
+      "aliases": [
+        "방기",
+        "Bangui",
+        "Bangui City"
+      ],
+      "canonicalInput": "방기",
+      "motif": "the rocky rapids of the Ubangi River at Bangui, with the low riverside city buildings and green hills",
+      "motifSource": {
+        "title": "UNESCO Tentative List — Bangui hills, plain, Ubangi River and built heritage",
+        "url": "https://whc.unesco.org/fr/listesindicatives/4011/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "td-ndjamena",
+      "name": "은자메나",
+      "englishName": "N'Djamena",
+      "countryCode": "TD",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "은자메나",
+        "N'Djamena",
+        "N’Djamena",
+        "Ndjamena",
+        "N'Djaména",
+        "N’Djaména",
+        "응자메나"
+      ],
+      "canonicalInput": "은자메나",
+      "motif": "the National Museum of Chad in N Djamena with its low pale facade and shaded courtyard, with a few acacia trees",
+      "motifSource": {
+        "title": "Embassy of Chad in Côte d’Ivoire — Tourism monuments and sites",
+        "url": "https://www.ambatchad.ci/fr/tourisme"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "km-moroni",
+      "name": "모로니",
+      "englishName": "Moroni",
+      "countryCode": "KM",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "모로니",
+        "Moroni",
+        "Moroni City"
+      ],
+      "canonicalInput": "모로니",
+      "motif": "the white Old Friday Mosque and its tall minaret beside Moroni harbor, with the dark volcanic shore and small boats",
+      "motifSource": {
+        "title": "Comoros National Tourism Office — Ngazidja",
+        "url": "https://comorostourism.com/ile/ngazidja?_locale=fr"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "cg-brazzaville",
+      "name": "브라자빌",
+      "englishName": "Brazzaville",
+      "countryCode": "CG",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "브라자빌",
+        "Brazzaville",
+        "Brazza"
+      ],
+      "canonicalInput": "브라자빌",
+      "motif": "Sainte-Anne du Congo Basilica with its steep green tiled roof and pointed tower, with a modest planted forecourt",
+      "motifSource": {
+        "title": "Embassy of the Republic of Congo — Sites to Visit",
+        "url": "https://www.ambacongo-us.org/fr/le-congo/visitez-le-congo/les-sites-%C3%A0-visiter"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "cd-kinshasa",
+      "name": "킨샤사",
+      "englishName": "Kinshasa",
+      "countryCode": "CD",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "킨샤사",
+        "Kinshasa",
+        "Kinshasa City"
+      ],
+      "canonicalInput": "킨샤사",
+      "motif": "the modern National Museum of the Democratic Republic of the Congo with its broad geometric facade, with its planted entrance grounds",
+      "motifSource": {
+        "title": "Institut des Musées Nationaux du Congo — Musée National de la RDC",
+        "url": "https://imnc.cd/mnrdc"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "ci-grand-bassam",
+      "name": "그랑바삼",
+      "englishName": "Grand-Bassam",
+      "countryCode": "CI",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "그랑바삼",
+        "Grand-Bassam",
+        "Grand Bassam",
+        "그랑 바삼"
+      ],
+      "canonicalInput": "그랑바삼",
+      "motif": "the low colonial-era buildings of the historic France quarter with galleries and verandas, with the lagoon and tropical greenery",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Historic Town of Grand-Bassam",
+        "url": "https://whc.unesco.org/en/list/1322/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "dj-djibouti-city",
+      "name": "지부티시",
+      "englishName": "Djibouti City",
+      "countryCode": "DJ",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "지부티시",
+        "Djibouti City",
+        "지부티 시",
+        "Ville de Djibouti"
+      ],
+      "canonicalInput": "지부티시",
+      "motif": "the Al Hamoudi Mosque in central Djibouti City, with the low arcaded buildings around its market square",
+      "motifSource": {
+        "title": "Djibouti National Tourism Agency — Djibouti City",
+        "url": "https://guide.visitdjibouti.dj/djibouti/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "gq-malabo",
+      "name": "말라보",
+      "englishName": "Malabo",
+      "countryCode": "GQ",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "말라보",
+        "Malabo",
+        "Malabo City"
+      ],
+      "canonicalInput": "말라보",
+      "motif": "the twin spires and pale Gothic facade of the Cathedral of Santa Isabel in Malabo, with its open planted square",
+      "motifSource": {
+        "title": "Government of Equatorial Guinea — Malabo Cathedral restoration",
+        "url": "https://www.guineaecuatorialpress.com/noticias/visita_de_supervision_del_jefe_de_estado_a_la_catedral_metropolitana_de_malabo"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "er-asmara",
+      "name": "아스마라",
+      "englishName": "Asmara",
+      "countryCode": "ER",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "아스마라",
+        "Asmara",
+        "Asmera"
+      ],
+      "canonicalInput": "아스마라",
+      "motif": "the airplane-like Fiat Tagliero building with its wide cantilevered concrete wings, with a simple palm-lined street",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Asmara: A Modernist African City",
+        "url": "https://whc.unesco.org/en/list/1550/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "sz-lobamba",
+      "name": "로밤바",
+      "englishName": "Lobamba",
+      "countryCode": "SZ",
+      "kind": "town",
+      "theme": "traditional",
+      "aliases": [
+        "로밤바",
+        "Lobamba",
+        "Lobamba Eswatini"
+      ],
+      "canonicalInput": "로밤바",
+      "motif": "the domed memorial structure at King Sobhuza II Memorial Park, with the spacious formal gardens of Lobamba",
+      "motifSource": {
+        "title": "Eswatini Tourism Authority — Lobamba",
+        "url": "https://www.thekingdomofeswatini.com/central-eswatini/lobamba/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "et-lalibela",
+      "name": "랄리벨라",
+      "englishName": "Lalibela",
+      "countryCode": "ET",
+      "kind": "town",
+      "theme": "traditional",
+      "aliases": [
+        "랄리벨라",
+        "Lalibela",
+        "Lalibela Town",
+        "라리벨라"
+      ],
+      "canonicalInput": "랄리벨라",
+      "motif": "the cruciform rock-hewn church of Biete Giyorgis seen within its deep excavated stone court, with low red-stone village houses",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Rock-Hewn Churches, Lalibela",
+        "url": "https://whc.unesco.org/en/list/18/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "ga-libreville",
+      "name": "리브르빌",
+      "englishName": "Libreville",
+      "countryCode": "GA",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "리브르빌",
+        "Libreville",
+        "Libreville City"
+      ],
+      "canonicalInput": "리브르빌",
+      "motif": "Saint Michel de Nkembo church with its carved wooden pillars, with a few tropical trees in the church grounds",
+      "motifSource": {
+        "title": "Libreville Léon-Mba International Airport — Stay in Libreville",
+        "url": "https://www.libreville-aeroport.com/en/stay-in-libreville/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "gm-banjul",
+      "name": "반줄",
+      "englishName": "Banjul",
+      "countryCode": "GM",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "반줄",
+        "Banjul",
+        "Banjul City"
+      ],
+      "canonicalInput": "반줄",
+      "motif": "the tall pale Arch 22 gateway spanning Independence Drive, with the low cityscape of Banjul",
+      "motifSource": {
+        "title": "Banjul City Council — 2025 Voluntary Local Review",
+        "url": "https://gold.uclg.org/sites/default/files/uploaded/banjul_2025.pdf"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "gh-cape-coast",
+      "name": "케이프코스트",
+      "englishName": "Cape Coast",
+      "countryCode": "GH",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "케이프코스트",
+        "Cape Coast",
+        "Cape Coast Ghana",
+        "케이프 코스트"
+      ],
+      "canonicalInput": "케이프코스트",
+      "motif": "the white walls and seaward bastions of Cape Coast Castle, with fishing boats along the Atlantic shoreline",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Forts and Castles, Volta, Greater Accra, Central and Western Regions",
+        "url": "https://whc.unesco.org/en/list/34/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "gn-conakry",
+      "name": "코나크리",
+      "englishName": "Conakry",
+      "countryCode": "GN",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "코나크리",
+        "Conakry",
+        "Conakry City"
+      ],
+      "canonicalInput": "코나크리",
+      "motif": "the large domed Grand Mosque Faycal and its slender minarets, with a modest garden and city trees",
+      "motifSource": {
+        "title": "Government of Guinea — Grand Mosque Fayçal of Conakry",
+        "url": "https://gouvernement.gov.gn/la-grande-mosquee-faycal-rouverte-la-proprete-des-lieux-fortement-exigee-par-le-president-de-la-transition/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "gw-bissau",
+      "name": "비사우",
+      "englishName": "Bissau",
+      "countryCode": "GW",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "비사우",
+        "Bissau",
+        "Bissau City"
+      ],
+      "canonicalInput": "비사우",
+      "motif": "the low stone ramparts and entrance of Amura Fortress, with the low buildings of Bissau Velho",
+      "motifSource": {
+        "title": "UCCLA Union of Portuguese-speaking Capital Cities — Bissau",
+        "url": "https://www.uccla.pt/membro/membro-efetivo/bissau"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "ls-maseru",
+      "name": "마세루",
+      "englishName": "Maseru",
+      "countryCode": "LS",
+      "kind": "city",
+      "theme": "mountain",
+      "aliases": [
+        "마세루",
+        "Maseru",
+        "Maseru City"
+      ],
+      "canonicalInput": "마세루",
+      "motif": "the conical Basotho Hat building in Maseru, with the low green foothills and a simple town street",
+      "motifSource": {
+        "title": "Government of Lesotho — Tourism",
+        "url": "https://www.gov.ls/about-lesotho/tourism/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "lr-monrovia",
+      "name": "몬로비아",
+      "englishName": "Monrovia",
+      "countryCode": "LR",
+      "kind": "city",
+      "theme": "lake",
+      "aliases": [
+        "몬로비아",
+        "Monrovia",
+        "Monrovia Liberia"
+      ],
+      "canonicalInput": "몬로비아",
+      "motif": "Providence Island beside the Mesurado River in Monrovia, with the traditional palaver hut and tropical trees",
+      "motifSource": {
+        "title": "Liberia Tourism — Providence Island",
+        "url": "https://enjoyliberia.travel/pages/providence-island/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "ly-tripoli-libya",
+      "name": "트리폴리(리비아)",
+      "englishName": "Tripoli, Libya",
+      "countryCode": "LY",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "트리폴리(리비아)",
+        "Tripoli, Libya",
+        "리비아 트리폴리",
+        "Tripoli Libya",
+        "Tarabulus Libya"
+      ],
+      "canonicalInput": "리비아 트리폴리",
+      "motif": "the red-toned walls of the Red Castle at Tripoli, with the broad paving of Martyrs Square and the old city skyline",
+      "motifSource": {
+        "title": "Libyan National Museum — Red Castle, Tripoli",
+        "url": "https://museum.ly/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "mg-antananarivo",
+      "name": "안타나나리보",
+      "englishName": "Antananarivo",
+      "countryCode": "MG",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "안타나나리보",
+        "Antananarivo",
+        "Tananarive",
+        "Tana"
+      ],
+      "canonicalInput": "안타나나리보",
+      "motif": "the Rova royal palace complex on Antananarivo hill, with the densely layered red-roofed city below",
+      "motifSource": {
+        "title": "ORTANA Regional Tourism Office — Rovan’Antananarivo",
+        "url": "https://tourisme-antananarivo.com/en/activities/rova-antananarivo/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "mw-zomba",
+      "name": "좀바",
+      "englishName": "Zomba",
+      "countryCode": "MW",
+      "kind": "city",
+      "theme": "mountain",
+      "aliases": [
+        "좀바",
+        "Zomba",
+        "Zomba City"
+      ],
+      "canonicalInput": "좀바",
+      "motif": "the broad green Zomba Plateau rising behind Zomba city, with a small strip of the historic town buildings at its foot",
+      "motifSource": {
+        "title": "Malawi Department of Tourism — Zomba",
+        "url": "https://visitmalawi.mw/zomba/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "ml-djenne",
+      "name": "젠네",
+      "englishName": "Djenne",
+      "countryCode": "ML",
+      "kind": "town",
+      "theme": "traditional",
+      "aliases": [
+        "젠네",
+        "Djenne",
+        "Djenné",
+        "제네",
+        "젠네시"
+      ],
+      "canonicalInput": "젠네",
+      "motif": "the earthen Great Mosque of Djenne with its stepped buttresses and projecting timber ends, with low mud-brick houses",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Old Towns of Djenné",
+        "url": "https://whc.unesco.org/en/list/116/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "mr-chinguetti",
+      "name": "칭게티",
+      "englishName": "Chinguetti",
+      "countryCode": "MR",
+      "kind": "town",
+      "theme": "desert",
+      "aliases": [
+        "칭게티",
+        "Chinguetti",
+        "Shinqit",
+        "Chingueti",
+        "칭게티시"
+      ],
+      "canonicalInput": "칭게티",
+      "motif": "the square stone minaret of Chinguetti mosque, with the old stone houses and low Sahara dunes",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Ancient Ksour of Ouadane, Chinguetti, Tichitt and Oualata",
+        "url": "https://whc.unesco.org/en/list/750/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "mu-port-louis",
+      "name": "포트루이스",
+      "englishName": "Port Louis",
+      "countryCode": "MU",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "포트루이스",
+        "Port Louis",
+        "Port-Louis",
+        "포트 루이스"
+      ],
+      "canonicalInput": "포트루이스",
+      "motif": "the stone landing steps and low historic buildings of Aapravasi Ghat, with the water of Trou Fanfaron harbor",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Aapravasi Ghat",
+        "url": "https://whc.unesco.org/en/list/1227/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "mz-ilha-de-mocambique",
+      "name": "모잠비크섬 도시",
+      "englishName": "Ilha de Mocambique",
+      "countryCode": "MZ",
+      "kind": "town",
+      "theme": "coast",
+      "aliases": [
+        "모잠비크섬 도시",
+        "Ilha de Mocambique",
+        "Ilha de Moçambique",
+        "Ilha de Mozambique",
+        "Mozambique Island Town",
+        "일랴드모삼비크"
+      ],
+      "canonicalInput": "모잠비크섬 도시",
+      "motif": "Fort Sao Sebastiao on Ilha de Mocambique with its low massive walls, with the neighboring stone town and blue coastal water",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Island of Mozambique",
+        "url": "https://whc.unesco.org/en/list/599/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "ne-agadez",
+      "name": "아가데즈",
+      "englishName": "Agadez",
+      "countryCode": "NE",
+      "kind": "city",
+      "theme": "desert",
+      "aliases": [
+        "아가데즈",
+        "Agadez",
+        "Agadès",
+        "Agades"
+      ],
+      "canonicalInput": "아가데즈",
+      "motif": "the tall tapering earthen minaret of Agadez Grand Mosque with its protruding wood supports, with the ochre old town roofs",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Historic Centre of Agadez",
+        "url": "https://whc.unesco.org/en/list/1268/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "ng-osogbo",
+      "name": "오쇼그보",
+      "englishName": "Osogbo",
+      "countryCode": "NG",
+      "kind": "city",
+      "theme": "forest",
+      "aliases": [
+        "오쇼그보",
+        "Osogbo",
+        "Oshogbo",
+        "오소그보"
+      ],
+      "canonicalInput": "오쇼그보",
+      "motif": "the sculpted shrine architecture of the Osun Osogbo Sacred Grove, with the forest canopy and quiet Osun River",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Osun-Osogbo Sacred Grove",
+        "url": "https://whc.unesco.org/en/list/1118/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "rw-kigali",
+      "name": "키갈리",
+      "englishName": "Kigali",
+      "countryCode": "RW",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "키갈리",
+        "Kigali",
+        "Kigali City"
+      ],
+      "canonicalInput": "키갈리",
+      "motif": "the ribbed rounded dome of Kigali Convention Centre, with Kigali green hills and planted paths",
+      "motifSource": {
+        "title": "Visit Rwanda — Meet in Rwanda and Kigali Convention Centre",
+        "url": "https://visitrwanda.com/meet-in-rwanda/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "st-sao-tome",
+      "name": "상투메시",
+      "englishName": "Sao Tome City",
+      "countryCode": "ST",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "상투메시",
+        "Sao Tome City",
+        "São Tomé City",
+        "São Tomé",
+        "Sao Tome",
+        "상투메 시"
+      ],
+      "canonicalInput": "상투메시",
+      "motif": "the low yellow Sao Sebastiao Fort and its sea-facing walls, with the palm-lined shore of Sao Tome city",
+      "motifSource": {
+        "title": "São Tomé and Príncipe Tourism — Northern São Tomé",
+        "url": "https://turismo.gov.st/en/northern-sao-tome"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "sn-saint-louis-senegal",
+      "name": "생루이(세네갈)",
+      "englishName": "Saint-Louis, Senegal",
+      "countryCode": "SN",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "생루이(세네갈)",
+        "Saint-Louis, Senegal",
+        "Saint Louis Senegal",
+        "Saint-Louis Senegal",
+        "세네갈 생루이",
+        "생루이 세네갈"
+      ],
+      "canonicalInput": "생루이(세네갈)",
+      "motif": "the repeating metal spans of Faidherbe Bridge, with the low pastel colonial buildings of Saint Louis island",
+      "motifSource": {
+        "title": "UNESCO World Heritage Centre — Island of Saint-Louis",
+        "url": "https://whc.unesco.org/en/list/956/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "sc-victoria-seychelles",
+      "name": "빅토리아(세이셸)",
+      "englishName": "Victoria, Seychelles",
+      "countryCode": "SC",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "빅토리아(세이셸)",
+        "Victoria, Seychelles",
+        "세이셸 빅토리아",
+        "Victoria Seychelles",
+        "빅토리아 세이셸"
+      ],
+      "canonicalInput": "세이셸 빅토리아",
+      "motif": "the small silver Victoria Clock Tower with its ornate clock faces, with tropical trees and low colorful streets",
+      "motifSource": {
+        "title": "Tourism Seychelles — Historical Sites and Heritage Locations",
+        "url": "https://seychelles.com/blog-details/2049/highlights/seychelles-historical-sites-and-heritage-locations"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "sl-freetown",
+      "name": "프리타운",
+      "englishName": "Freetown",
+      "countryCode": "SL",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "프리타운",
+        "Freetown",
+        "Freetown Sierra Leone"
+      ],
+      "canonicalInput": "프리타운",
+      "motif": "the historic Gateway to the Old Kings Yard in Freetown, with a restrained strip of low heritage buildings; do not add the fallen Cotton Tree as an intact tree",
+      "motifSource": {
+        "title": "Sierra Leone Ministry of Tourism — Cultural Heritage",
+        "url": "https://tourism.gov.sl/cultural-heritage/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "so-mogadishu",
+      "name": "모가디슈",
+      "englishName": "Mogadishu",
+      "countryCode": "SO",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "모가디슈",
+        "Mogadishu",
+        "Muqdisho",
+        "Mogadiscio"
+      ],
+      "canonicalInput": "모가디슈",
+      "motif": "the historic Arba Rukun Mosque in Mogadishu, with the pale coastal old-town buildings and Indian Ocean shore",
+      "motifSource": {
+        "title": "Somalia Ministry of Information, Culture and Tourism — Benadir",
+        "url": "https://mail.tourism.gov.so/about"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "sd-suakin",
+      "name": "수아킨",
+      "englishName": "Suakin",
+      "countryCode": "SD",
+      "kind": "town",
+      "theme": "coast",
+      "aliases": [
+        "수아킨",
+        "Suakin",
+        "Sawakin",
+        "Suakin Sudan"
+      ],
+      "canonicalInput": "수아킨",
+      "motif": "the partially preserved coral-stone buildings and mosque of old Suakin, with the shallow Red Sea harbor; retain a visibly ruined historic setting",
+      "motifSource": {
+        "title": "UNESCO Tentative List — Suakin",
+        "url": "https://whc.unesco.org/en/tentativelists/646/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "ss-juba",
+      "name": "주바",
+      "englishName": "Juba",
+      "countryCode": "SS",
+      "kind": "city",
+      "theme": "lake",
+      "aliases": [
+        "주바",
+        "Juba",
+        "Juba South Sudan"
+      ],
+      "canonicalInput": "주바",
+      "motif": "the White Nile at Juba with its broad calm water, low river islands and small river boats",
+      "motifSource": {
+        "title": "South Sudan Ministry of Foreign Affairs — Tourism",
+        "url": "https://mofaic.gov.ss/tourism/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "tg-lome",
+      "name": "로메",
+      "englishName": "Lome",
+      "countryCode": "TG",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "로메",
+        "Lome",
+        "Lomé"
+      ],
+      "canonicalInput": "로메",
+      "motif": "the red and white Gothic facade and twin spires of Lome Sacred Heart Cathedral, with the low market buildings nearby",
+      "motifSource": {
+        "title": "Togo Tourism — La Cathédrale de Lomé",
+        "url": "https://togotourisme.tg/detailsite?slug=la-cathedrale-de-lome&type=site"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "ug-entebbe",
+      "name": "엔테베",
+      "englishName": "Entebbe",
+      "countryCode": "UG",
+      "kind": "city",
+      "theme": "forest",
+      "aliases": [
+        "엔테베",
+        "Entebbe",
+        "Entebbe Uganda"
+      ],
+      "canonicalInput": "엔테베",
+      "motif": "the tall tropical trees and waterfront paths of Entebbe Botanical Gardens, with a glimpse of Lake Victoria",
+      "motifSource": {
+        "title": "Uganda Prime Minister’s Office — Entebbe Botanical Gardens",
+        "url": "https://opm.go.ug/entebbe-botanical-gardens-transferred-to-ministry-of-tourism/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "zm-livingstone",
+      "name": "리빙스턴",
+      "englishName": "Livingstone",
+      "countryCode": "ZM",
+      "kind": "city",
+      "theme": "lake",
+      "aliases": [
+        "리빙스턴",
+        "Livingstone",
+        "Livingstone Zambia",
+        "리빙스톤"
+      ],
+      "canonicalInput": "리빙스턴",
+      "motif": "the broad curtain of Victoria Falls seen from the Zambian side near Livingstone, with the Zambezi River and green gorge edge",
+      "motifSource": {
+        "title": "Livingstone City Council — Tourist Capital of Zambia",
+        "url": "https://www.livingstonecouncil.gov.zm/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "eg-aswan",
+      "name": "아스완",
+      "englishName": "Aswan",
+      "countryCode": "EG",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "아스완",
+        "Aswan",
+        "Assuan"
+      ],
+      "canonicalInput": "아스완",
+      "motif": "the pylons and columns of Philae Temple on Agilkia Island near Aswan, with the surrounding Nile water and one small sailboat",
+      "motifSource": {
+        "title": "Egypt Ministry of Tourism and Antiquities — Philae",
+        "url": "https://egymonuments.gov.eg/en/archaeological-sites/philae/"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "ma-chefchaouen",
+      "name": "셰프샤우엔",
+      "englishName": "Chefchaouen",
+      "countryCode": "MA",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "셰프샤우엔",
+        "Chefchaouen",
+        "쉐프샤우엔",
+        "Chefchaouene",
+        "Chaouen"
+      ],
+      "canonicalInput": "셰프샤우엔",
+      "motif": "the blue-washed alleys and stepped houses of Chefchaouen medina, with its warm stone kasbah and mountain backdrop",
+      "motifSource": {
+        "title": "Moroccan National Tourist Office — Chefchaouen",
+        "url": "https://www.visitmorocco.com/en/travel/chefchaouen"
+      },
+      "region": "africa",
+      "stage": "core-500"
+    },
+    {
+      "id": "fm-kolonia",
+      "name": "콜로니아",
+      "englishName": "Kolonia",
+      "countryCode": "FM",
+      "kind": "town",
+      "theme": "traditional",
+      "aliases": [
+        "콜로니아",
+        "Kolonia",
+        "Kolonia Pohnpei",
+        "콜로니아 폰페이"
+      ],
+      "canonicalInput": "콜로니아",
+      "motif": "the low surviving Spanish Wall in Kolonia with its arched openings, with the park trees around the former fort",
+      "motifSource": {
+        "title": "FSM Office of National Archives, Culture and Historic Preservation — Spanish Wall",
+        "url": "https://nach.gov.fm/spanish-wall-ni-ahlek-kolonia/"
+      },
+      "region": "oceania",
+      "stage": "core-500"
+    },
+    {
+      "id": "ki-bairiki",
+      "name": "바이리키",
+      "englishName": "Bairiki",
+      "countryCode": "KI",
+      "kind": "town",
+      "theme": "coast",
+      "aliases": [
+        "바이리키",
+        "Bairiki",
+        "Bairiki Tarawa",
+        "바이리키 타라와"
+      ],
+      "canonicalInput": "바이리키",
+      "motif": "the turquoise Tarawa Lagoon beside Bairiki, with the narrow palm-lined settlement and small traditional outrigger canoe",
+      "motifSource": {
+        "title": "Kiribati Tourism Authority — Things To Do, Tarawa and maritime landscape",
+        "url": "https://kiribatitourism.gov.ki/things-to-do"
+      },
+      "region": "oceania",
+      "stage": "core-500"
+    },
+    {
+      "id": "mh-majuro",
+      "name": "마주로",
+      "englishName": "Majuro",
+      "countryCode": "MH",
+      "kind": "town",
+      "theme": "coast",
+      "aliases": [
+        "마주로",
+        "Majuro",
+        "Majuro Town",
+        "마주로타운"
+      ],
+      "canonicalInput": "마주로",
+      "motif": "the low Alele Museum in downtown Majuro, with a traditional Marshallese canoe and tropical palms",
+      "motifSource": {
+        "title": "Pacific Tourism Organisation — Alele Museum in Marshall Islands",
+        "url": "https://southpacificislands.travel/alele-museum-in-marshall-islands/"
+      },
+      "region": "oceania",
+      "stage": "core-500"
+    },
+    {
+      "id": "nr-yaren",
+      "name": "야렌",
+      "englishName": "Yaren",
+      "countryCode": "NR",
+      "kind": "region",
+      "theme": "coast",
+      "aliases": [
+        "야렌",
+        "Yaren",
+        "Yaren District",
+        "야렌 지구"
+      ],
+      "canonicalInput": "야렌",
+      "motif": "the low Parliament House of Nauru in Yaren, with coastal palms and the flat blue ocean horizon",
+      "motifSource": {
+        "title": "Government of Nauru — Parliament of Naoero",
+        "url": "https://www.nauru.gov.nr/parliament-of-naoero.aspx"
+      },
+      "region": "oceania",
+      "stage": "core-500"
+    },
+    {
+      "id": "pw-koror",
+      "name": "코로르",
+      "englishName": "Koror",
+      "countryCode": "PW",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "코로르",
+        "Koror",
+        "Koror City"
+      ],
+      "canonicalInput": "코로르",
+      "motif": "the traditional painted bai meeting house at the Belau National Museum in Koror, with its steep thatched roof and tropical garden",
+      "motifSource": {
+        "title": "Belau National Museum — Official Website",
+        "url": "https://palaunationalmuseum.pw/"
+      },
+      "region": "oceania",
+      "stage": "core-500"
+    },
+    {
+      "id": "pg-port-moresby",
+      "name": "포트모르즈비",
+      "englishName": "Port Moresby",
+      "countryCode": "PG",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "포트모르즈비",
+        "Port Moresby",
+        "Port-Moresby",
+        "포트모레스비"
+      ],
+      "canonicalInput": "포트모르즈비",
+      "motif": "the National Parliament House with its tall Sepik haus tambaran inspired roof, with landscaped tropical grounds",
+      "motifSource": {
+        "title": "Papua New Guinea Tourism Promotion Authority — Port Moresby",
+        "url": "https://papuanewguinea.travel/port-moresby-ncd/"
+      },
+      "region": "oceania",
+      "stage": "core-500"
+    },
+    {
+      "id": "ws-apia",
+      "name": "아피아",
+      "englishName": "Apia",
+      "countryCode": "WS",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "아피아",
+        "Apia",
+        "Apia Samoa"
+      ],
+      "canonicalInput": "아피아",
+      "motif": "the pale Immaculate Conception Cathedral with its twin towers in Apia, with the harbor promenade and small outrigger canoes",
+      "motifSource": {
+        "title": "Samoa Tourism Authority — Apia",
+        "url": "https://www.samoa.travel/discover/the-islands-of-samoa/upolu-island/apia/"
+      },
+      "region": "oceania",
+      "stage": "core-500"
+    },
+    {
+      "id": "sb-honiara",
+      "name": "호니아라",
+      "englishName": "Honiara",
+      "countryCode": "SB",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "호니아라",
+        "Honiara",
+        "Honiara City"
+      ],
+      "canonicalInput": "호니아라",
+      "motif": "the pale memorial walls and central monument of Guadalcanal American Memorial on Skyline Drive, with Honiara harbor and green hills below",
+      "motifSource": {
+        "title": "American Battle Monuments Commission — Guadalcanal Memorial",
+        "url": "https://www.abmc.gov/cemeteries-memorials/about-guadalcanal-memorial/"
+      },
+      "region": "oceania",
+      "stage": "core-500"
+    },
+    {
+      "id": "to-nukualofa",
+      "name": "누쿠알로파",
+      "englishName": "Nuku'alofa",
+      "countryCode": "TO",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "누쿠알로파",
+        "Nuku'alofa",
+        "Nukualofa",
+        "Nuku’alofa",
+        "누쿠알로파시"
+      ],
+      "canonicalInput": "누쿠알로파",
+      "motif": "the white Royal Palace with its red roof in Nuku alofa, with its seafront lawns and tall trees",
+      "motifSource": {
+        "title": "Tonga Tourism — Tongatapu and Nuku’alofa",
+        "url": "https://www.tongatourism.travel/our-islands/tongatapu"
+      },
+      "region": "oceania",
+      "stage": "core-500"
+    },
+    {
+      "id": "tv-vaiaku",
+      "name": "바이아쿠",
+      "englishName": "Vaiaku",
+      "countryCode": "TV",
+      "kind": "town",
+      "theme": "coast",
+      "aliases": [
+        "바이아쿠",
+        "Vaiaku",
+        "Vaiaku Funafuti",
+        "바이아쿠 푸나푸티"
+      ],
+      "canonicalInput": "바이아쿠",
+      "motif": "the Vaiaku shoreline on Funafuti Lagoon with its small low civic settlement, with coconut palms and a traditional canoe",
+      "motifSource": {
+        "title": "Tuvalu Government Tourism Department — Vaiaku, Funafuti",
+        "url": "https://tourism.gov.tv/"
+      },
+      "region": "oceania",
+      "stage": "core-500"
+    },
+    {
+      "id": "vu-port-vila",
+      "name": "포트빌라",
+      "englishName": "Port Vila",
+      "countryCode": "VU",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "포트빌라",
+        "Port Vila",
+        "Port-Vila",
+        "포트 빌라"
+      ],
+      "canonicalInput": "포트빌라",
+      "motif": "the steep thatched roof of Vanuatu Cultural Centre and National Museum in Port Vila, with the tropical trees of its grounds",
+      "motifSource": {
+        "title": "Vanuatu Tourism Office — Cultural Centre and National Museum",
+        "url": "https://www.vanuatu.travel/en/things-to-do/culture/vanuatu-cultural-center"
+      },
+      "region": "oceania",
+      "stage": "core-500"
+    },
+    {
+      "id": "fj-suva",
+      "name": "수바",
+      "englishName": "Suva",
+      "countryCode": "FJ",
+      "kind": "city",
+      "theme": "forest",
+      "aliases": [
+        "수바",
+        "Suva",
+        "Suva Fiji"
+      ],
+      "canonicalInput": "수바",
+      "motif": "the low Fiji Museum building within Thurston Gardens, with large palms and lush garden paths",
+      "motifSource": {
+        "title": "Tourism Fiji — A Visit to the Fiji Museum in Suva",
+        "url": "https://www.fiji.travel/places-to-go/suva-and-surrounds/locations/a-visit-to-the-fiji-museum-in-suva"
+      },
+      "region": "oceania",
+      "stage": "core-500"
+    },
+    {
+      "id": "pf-papeete",
+      "name": "파페에테",
+      "englishName": "Papeete",
+      "countryCode": "PF",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "파페에테",
+        "Papeete",
+        "Papeete Tahiti",
+        "파페테"
+      ],
+      "canonicalInput": "파페에테",
+      "motif": "the covered Marche de Papeete market hall with its broad roof, with tropical flower and fruit stalls",
+      "motifSource": {
+        "title": "Tahiti Tourisme — Papeete Market",
+        "url": "https://www.tahititourisme.com/service/papeete-market/"
+      },
+      "region": "oceania",
+      "stage": "core-500"
+    },
+    {
+      "id": "nz-wellington",
+      "name": "웰링턴",
+      "englishName": "Wellington",
+      "countryCode": "NZ",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "웰링턴",
+        "Wellington",
+        "Wellington New Zealand"
+      ],
+      "canonicalInput": "웰링턴",
+      "motif": "the bright red Wellington Cable Car on the Kelburn hillside, with the city harbor and green hills beyond",
+      "motifSource": {
+        "title": "WellingtonNZ — Wellington Cable Car",
+        "url": "https://www.wellingtonnz.com/visit/see-and-do/wellington-cable-car"
+      },
+      "region": "oceania",
+      "stage": "core-500"
+    },
+    {
+      "id": "nc-noumea",
+      "name": "누메아",
+      "englishName": "Noumea",
+      "countryCode": "NC",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "누메아",
+        "Noumea",
+        "Nouméa"
+      ],
+      "canonicalInput": "누메아",
+      "motif": "the tall curved timber-shell structures of the Tjibaou Cultural Centre, with the lagoon and mangrove greenery",
+      "motifSource": {
+        "title": "New Caledonia Tourism — Tjibaou Cultural Centre",
+        "url": "https://www.newcaledonia.travel/destination/noumea/tjibaou-cultural-centre/"
+      },
+      "region": "oceania",
+      "stage": "core-500"
+    },
+    {
+      "id": "ck-avarua",
+      "name": "아바루아",
+      "englishName": "Avarua",
+      "countryCode": "CK",
+      "kind": "town",
+      "theme": "traditional",
+      "aliases": [
+        "아바루아",
+        "Avarua",
+        "Avarua Rarotonga"
+      ],
+      "canonicalInput": "아바루아",
+      "motif": "the white Avarua Cook Islands Christian Church with its simple square tower, with palms and the green Rarotonga hillside",
+      "motifSource": {
+        "title": "Cook Islands Tourism — Avarua CICC",
+        "url": "https://cookislands.travel/avarua-cicc"
+      },
+      "region": "oceania",
+      "stage": "core-500"
+    },
+    {
+      "id": "nu-alofi",
+      "name": "알로피",
+      "englishName": "Alofi",
+      "countryCode": "NU",
+      "kind": "town",
+      "theme": "coast",
+      "aliases": [
+        "알로피",
+        "Alofi",
+        "Alofi Niue"
+      ],
+      "canonicalInput": "알로피",
+      "motif": "the Ekalesia church at Alofi with its simple pale facade, with Niue coral-limestone coast and tropical trees",
+      "motifSource": {
+        "title": "Niue Tourism Office — Niue Island Guide 2024",
+        "url": "https://www.niueisland.com/library/files/niueislandguide2024%281%29.pdf"
+      },
+      "region": "oceania",
+      "stage": "core-500"
+    },
+    {
+      "id": "as-pago-pago",
+      "name": "파고파고",
+      "englishName": "Pago Pago",
+      "countryCode": "AS",
+      "kind": "town",
+      "theme": "coast",
+      "aliases": [
+        "파고파고",
+        "Pago Pago",
+        "Pago-Pago",
+        "PagoPago",
+        "파고 파고"
+      ],
+      "canonicalInput": "파고파고",
+      "motif": "Rainmaker Mountain rising above Pago Pago Harbor, with the deep blue harbor and low waterfront buildings",
+      "motifSource": {
+        "title": "American Samoa Department of Port Administration — Port of Pago Pago",
+        "url": "https://portadministration.as.gov/seaports/port-of-pago-pago"
+      },
+      "region": "oceania",
+      "stage": "core-500"
+    },
+    {
+      "id": "ai-the-valley",
+      "name": "더밸리",
+      "englishName": "The Valley",
+      "countryCode": "AI",
+      "kind": "town",
+      "theme": "traditional",
+      "aliases": [
+        "더밸리",
+        "The Valley",
+        "더 밸리",
+        "The Valley Anguilla"
+      ],
+      "canonicalInput": "더밸리",
+      "motif": "Wallblake House, the surviving historic plantation house in The Valley, with its shaded veranda and a small tropical garden",
+      "motifSource": {
+        "title": "Anguilla Tourist Board — Explore our Island / The Valley",
+        "url": "https://ivisitanguilla.com/explore-our-island/"
+      },
+      "region": "카리브해",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "aw-oranjestad",
+      "name": "오라녜스타트",
+      "englishName": "Oranjestad",
+      "countryCode": "AW",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "오라녜스타트",
+        "Oranjestad",
+        "오란예스타트",
+        "오라녜스타드"
+      ],
+      "canonicalInput": "오라녜스타트",
+      "motif": "Fort Zoutman and its adjoining Willem III clock-and-lighthouse tower, with one low Dutch-Caribbean facade beside the fort",
+      "motifSource": {
+        "title": "Aruba Tourism Authority — Fort Zoutman Historical Museum",
+        "url": "https://www.aruba.com/us/explore/fort-zoutman-historical-museum"
+      },
+      "region": "카리브해",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "ax-mariehamn",
+      "name": "마리에함",
+      "englishName": "Mariehamn",
+      "countryCode": "AX",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "마리에함",
+        "Mariehamn",
+        "마리에하믄",
+        "Maarianhamina"
+      ],
+      "canonicalInput": "마리에함",
+      "motif": "the four-masted museum sailing ship Pommern in Mariehamn's western harbour, with a small wooden waterfront pavilion",
+      "motifSource": {
+        "title": "Visit Åland — A Stroll Around Mariehamn",
+        "url": "https://visitaland.com/en/experience/sights-excursions/mariehamn/"
+      },
+      "region": "북유럽",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "bl-gustavia",
+      "name": "구스타비아",
+      "englishName": "Gustavia",
+      "countryCode": "BL",
+      "kind": "town",
+      "theme": "coast",
+      "aliases": [
+        "구스타비아",
+        "Gustavia"
+      ],
+      "canonicalInput": "구스타비아",
+      "motif": "Fort Gustav's surviving stone battery and a single cannon above Gustavia's sheltered yacht harbour",
+      "motifSource": {
+        "title": "Saint Barthélemy Tourism Committee — Swedish battery of Fort Gustav III",
+        "url": "https://www.saintbarth-tourisme.com/en/fort-gustav-iii-2/"
+      },
+      "region": "카리브해",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "bm-hamilton",
+      "name": "해밀턴(버뮤다)",
+      "englishName": "Hamilton",
+      "countryCode": "BM",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "해밀턴(버뮤다)",
+        "Hamilton",
+        "해밀턴",
+        "버뮤다 해밀턴",
+        "Hamilton Bermuda",
+        "Hamilton, Bermuda"
+      ],
+      "canonicalInput": "해밀턴(버뮤다)",
+      "motif": "Hamilton's Cathedral of the Most Holy Trinity with its Gothic arches and tall square tower, accompanied by one pastel Front Street facade",
+      "motifSource": {
+        "title": "Bermuda Tourism Authority — City of Hamilton Walking Tour",
+        "url": "https://www.gotobermuda.com/plan/inspiration/article/city-of-hamilton-walking-tour"
+      },
+      "region": "북대서양",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "bq-kralendijk",
+      "name": "크랄렌데이크",
+      "englishName": "Kralendijk",
+      "countryCode": "BQ",
+      "kind": "town",
+      "theme": "coast",
+      "aliases": [
+        "크랄렌데이크",
+        "Kralendijk",
+        "크랄렌디크",
+        "크랄렌다이크"
+      ],
+      "canonicalInput": "크랄렌데이크",
+      "motif": "Fort Oranje's low coastal fort walls and square stone lighthouse, with a small sailing boat on Kralendijk's waterfront",
+      "motifSource": {
+        "title": "Cultural Heritage Agency of the Netherlands — Kralendijk Roadstead",
+        "url": "https://mass.cultureelerfgoed.nl/kralendijk-roadstead"
+      },
+      "region": "카리브해",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "cw-willemstad",
+      "name": "빌렘스타트",
+      "englishName": "Willemstad",
+      "countryCode": "CW",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "빌렘스타트",
+        "Willemstad",
+        "빌렘스타드"
+      ],
+      "canonicalInput": "빌렘스타트",
+      "motif": "Willemstad's Handelskade row of colourful Dutch-gabled waterfront houses, with a short section of the floating Queen Emma pontoon bridge",
+      "motifSource": {
+        "title": "Curaçao Tourist Board — District Punda",
+        "url": "https://www.curacao.com/en/activity/district-punda?cat=sights-and-landmarks"
+      },
+      "region": "카리브해",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "fk-stanley",
+      "name": "스탠리",
+      "englishName": "Stanley",
+      "countryCode": "FK",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "스탠리",
+        "Stanley",
+        "포트스탠리",
+        "Port Stanley"
+      ],
+      "canonicalInput": "스탠리",
+      "motif": "Stanley's Christ Church Cathedral with its square bell tower, accompanied by the adjacent Whalebone Arch on the seafront",
+      "motifSource": {
+        "title": "Falkland Islands Tourist Board — History and Heritage",
+        "url": "https://www.falklandislands.com/about/history-and-heritage?p=2"
+      },
+      "region": "남대서양",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "fo-torshavn",
+      "name": "토르스하운",
+      "englishName": "Tórshavn",
+      "countryCode": "FO",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "토르스하운",
+        "Tórshavn",
+        "Torshavn",
+        "토르스하븐",
+        "토르샤븐"
+      ],
+      "canonicalInput": "토르스하운",
+      "motif": "Tinganes' red wooden government houses with green turf roofs on the low rocky harbour peninsula, with one small fishing boat",
+      "motifSource": {
+        "title": "Visit Faroe Islands — The Capital Tórshavn",
+        "url": "https://visitfaroeislands.com/en/see-do/inspiration-guides/popular-guides/regional-guides/the-capital-torshavn"
+      },
+      "region": "북유럽",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "gf-cayenne",
+      "name": "카옌",
+      "englishName": "Cayenne",
+      "countryCode": "GF",
+      "kind": "city",
+      "theme": "urban",
+      "aliases": [
+        "카옌",
+        "Cayenne"
+      ],
+      "canonicalInput": "카옌",
+      "motif": "Cayenne's Place des Palmistes with its tall royal palms around the Republic column, with one low Creole veranda facade at the edge",
+      "motifSource": {
+        "title": "French Ministry of Culture — Place de l'Esplanade dite Place des Palmistes",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/IA97300282"
+      },
+      "region": "남미",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "gg-saint-peter-port",
+      "name": "세인트피터포트",
+      "englishName": "Saint Peter Port",
+      "countryCode": "GG",
+      "kind": "town",
+      "theme": "coast",
+      "aliases": [
+        "세인트피터포트",
+        "Saint Peter Port",
+        "세인트 피터 포트",
+        "St Peter Port",
+        "St. Peter Port"
+      ],
+      "canonicalInput": "세인트피터포트",
+      "motif": "Castle Cornet's layered stone ramparts at the mouth of Saint Peter Port harbour, with a small cluster of marina sailboat masts",
+      "motifSource": {
+        "title": "Visit Guernsey — Castle Cornet & Its Museums",
+        "url": "https://www.visitguernsey.com/experiences/activities/castle-cornet-its-museums/"
+      },
+      "region": "서유럽",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "gi-gibraltar",
+      "name": "지브롤터",
+      "englishName": "Gibraltar",
+      "countryCode": "GI",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "지브롤터",
+        "Gibraltar",
+        "Gibraltar City"
+      ],
+      "canonicalInput": "지브롤터",
+      "motif": "the Rock of Gibraltar's steep pale limestone profile rising above compact waterfront town buildings",
+      "motifSource": {
+        "title": "Gibraltar Tourist Board — Gibraltar Nature Reserve Upper Rock",
+        "url": "https://www.visitgibraltar.gi/uploads/Leaflets/GNR_NatureReserve_8pp_NEW.pdf"
+      },
+      "region": "남유럽",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "gl-nuuk",
+      "name": "누크",
+      "englishName": "Nuuk",
+      "countryCode": "GL",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "누크",
+        "Nuuk",
+        "Godthåb",
+        "Godthab"
+      ],
+      "canonicalInput": "누크",
+      "motif": "Nuuk's Katuaq Cultural Centre with its broad rippling wooden facade, with a simple rocky Greenlandic mountain silhouette behind it",
+      "motifSource": {
+        "title": "Visit Greenland — Discover Nuuk",
+        "url": "https://visitgreenland.com/destinations/nuuk/"
+      },
+      "region": "북극",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "gp-pointe-a-pitre",
+      "name": "푸앵타피트르",
+      "englishName": "Pointe-à-Pitre",
+      "countryCode": "GP",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "푸앵타피트르",
+        "Pointe-à-Pitre",
+        "Pointe a Pitre",
+        "Pointe-a-Pitre",
+        "푸앵트아피트르",
+        "푸앵트아피트"
+      ],
+      "canonicalInput": "푸앵타피트르",
+      "motif": "the neoclassical front of Saint-Pierre-et-Saint-Paul Church in Pointe-à-Pitre, with its triangular pediment and a single royal palm beside it",
+      "motifSource": {
+        "title": "Guadeloupe Islands Tourism Board — Cathédrale Saint-Pierre-et-Saint-Paul de Pointe-à-Pitre",
+        "url": "https://www.lesilesdeguadeloupe.com/patrimoine-culturel/cathedrale-saint-pierre-et-saint-paul-de-pointe-a-pitre/"
+      },
+      "region": "카리브해",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "im-douglas",
+      "name": "더글러스",
+      "englishName": "Douglas",
+      "countryCode": "IM",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "더글러스",
+        "Douglas",
+        "더글라스",
+        "Douglas Isle of Man",
+        "Douglas, Isle of Man"
+      ],
+      "canonicalInput": "더글러스",
+      "motif": "the Tower of Refuge's small stone battlements on its tidal rock in Douglas Bay, with a short sweep of the seaside promenade",
+      "motifSource": {
+        "title": "Visit Isle of Man — Tower of Refuge",
+        "url": "https://www.visitisleofman.com/experience/tower-of-refuge-p1295741"
+      },
+      "region": "서유럽",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "je-saint-helier",
+      "name": "세인트헬리어",
+      "englishName": "Saint Helier",
+      "countryCode": "JE",
+      "kind": "town",
+      "theme": "coast",
+      "aliases": [
+        "세인트헬리어",
+        "Saint Helier",
+        "세인트 헬리어",
+        "St Helier",
+        "St. Helier",
+        "Saint-Hélier"
+      ],
+      "canonicalInput": "세인트헬리어",
+      "motif": "Elizabeth Castle's stone ramparts on a rocky tidal islet off Saint Helier, with its exposed low-tide causeway",
+      "motifSource": {
+        "title": "Visit Jersey — Elizabeth Castle",
+        "url": "https://www.jersey.com/things-to-do/attractions/listings/elizabeth-castle/"
+      },
+      "region": "서유럽",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "ky-george-town",
+      "name": "조지타운(케이맨)",
+      "englishName": "George Town",
+      "countryCode": "KY",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "조지타운(케이맨)",
+        "George Town",
+        "조지타운",
+        "케이맨 조지타운",
+        "George Town Cayman",
+        "George Town, Cayman Islands"
+      ],
+      "canonicalInput": "조지타운(케이맨)",
+      "motif": "the historic Cayman Islands National Museum building in George Town, with its wooden veranda and a small harbour-front palm",
+      "motifSource": {
+        "title": "Cayman Islands Department of Tourism — Museums",
+        "url": "https://www.visitcaymanislands.com/en-gb/things-to-do/popular-attractions/museums"
+      },
+      "region": "카리브해",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "mf-marigot",
+      "name": "마리고",
+      "englishName": "Marigot",
+      "countryCode": "MF",
+      "kind": "town",
+      "theme": "coast",
+      "aliases": [
+        "마리고",
+        "Marigot"
+      ],
+      "canonicalInput": "마리고",
+      "motif": "Fort Louis' low stone ramparts on the rocky hill above Marigot, with the sheltered marina and a few yacht masts below",
+      "motifSource": {
+        "title": "Saint-Martin Tourism Office — Marigot, la capitale créole",
+        "url": "https://www.st-martin.org/decouvrir/culture-et-patrimoine/marigot-la-capitale-creole/"
+      },
+      "region": "카리브해",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "mq-fort-de-france",
+      "name": "포르드프랑스",
+      "englishName": "Fort-de-France",
+      "countryCode": "MQ",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "포르드프랑스",
+        "Fort-de-France",
+        "포르 드 프랑스",
+        "Fort de France"
+      ],
+      "canonicalInput": "포르드프랑스",
+      "motif": "Fort-de-France's Schœlcher Library with its ornate arched facade and domed roof, with palms from the adjoining Place de la Savane",
+      "motifSource": {
+        "title": "Martinique Tourism Authority — Bibliothèque Schœlcher",
+        "url": "https://www.martinique.org/en/bibliotheque-schoelcher"
+      },
+      "region": "카리브해",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "ms-little-bay",
+      "name": "리틀베이",
+      "englishName": "Little Bay",
+      "countryCode": "MS",
+      "kind": "town",
+      "theme": "coast",
+      "aliases": [
+        "리틀베이",
+        "Little Bay",
+        "리틀 베이",
+        "Little Bay Montserrat",
+        "Little Bay, Montserrat"
+      ],
+      "canonicalInput": "리틀베이",
+      "motif": "the National Museum of Montserrat building at Little Bay, with the nearby curved dark-sand beach and green headland",
+      "motifSource": {
+        "title": "Montserrat Tourism Authority — A One-Day Escape to Montserrat",
+        "url": "https://www.visitmontserrat.com/a-one-day-escape-to-montserrat/"
+      },
+      "region": "카리브해",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "pm-saint-pierre",
+      "name": "생피에르",
+      "englishName": "Saint-Pierre",
+      "countryCode": "PM",
+      "kind": "town",
+      "theme": "coast",
+      "aliases": [
+        "생피에르",
+        "Saint-Pierre",
+        "Saint Pierre",
+        "Saint-Pierre, Saint-Pierre-et-Miquelon"
+      ],
+      "canonicalInput": "생피에르",
+      "motif": "the Pointe aux Canons lighthouse at Saint-Pierre's harbour entrance, with a few colourful wooden waterfront houses",
+      "motifSource": {
+        "title": "Saint-Pierre and Miquelon Tourism — Saint-Pierre between land and sea",
+        "url": "https://en.spm-tourisme.fr/saint-pierre-between-land-and-sea/"
+      },
+      "region": "북대서양",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "pr-san-juan",
+      "name": "산후안",
+      "englishName": "San Juan",
+      "countryCode": "PR",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "산후안",
+        "San Juan",
+        "산 후안",
+        "San Juan Puerto Rico",
+        "San Juan, Puerto Rico"
+      ],
+      "canonicalInput": "산후안",
+      "motif": "Castillo San Felipe del Morro's thick stepped stone walls and small domed sentry box above San Juan Bay, with a broad grassy approach",
+      "motifSource": {
+        "title": "U.S. National Park Service — Castillo San Felipe del Morro",
+        "url": "https://www.nps.gov/saju/learn/historyculture/el-morro.htm"
+      },
+      "region": "카리브해",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "sh-jamestown",
+      "name": "제임스타운",
+      "englishName": "Jamestown",
+      "countryCode": "SH",
+      "kind": "town",
+      "theme": "traditional",
+      "aliases": [
+        "제임스타운",
+        "Jamestown",
+        "제임스 타운",
+        "Jamestown Saint Helena",
+        "Jamestown, Saint Helena"
+      ],
+      "canonicalInput": "제임스타운",
+      "motif": "Jacob's Ladder as a long straight staircase climbing the steep rocky valley side above Jamestown, with a short row of Georgian town facades at its foot",
+      "motifSource": {
+        "title": "St Helena Tourism — History and Heritage",
+        "url": "https://sthelenatourism.com/history-and-heritage/"
+      },
+      "region": "남대서양",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "sj-longyearbyen",
+      "name": "롱위에아르뷔엔",
+      "englishName": "Longyearbyen",
+      "countryCode": "SJ",
+      "kind": "town",
+      "theme": "mountain",
+      "aliases": [
+        "롱위에아르뷔엔",
+        "Longyearbyen",
+        "롱위에아르비엔",
+        "롱이어비엔",
+        "Longyearbyen Svalbard"
+      ],
+      "canonicalInput": "롱위에아르뷔엔",
+      "motif": "the wooden Svalbard Church in Longyearbyen with its small bell tower, with a broad snow-dusted Arctic ridge behind it",
+      "motifSource": {
+        "title": "Visit Svalbard — Svalbard kirke",
+        "url": "https://www.visitsvalbard.com/se-og-gjore/svalbard-kirke-p3500473"
+      },
+      "region": "북극",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "sx-philipsburg",
+      "name": "필립스뷔르흐",
+      "englishName": "Philipsburg",
+      "countryCode": "SX",
+      "kind": "town",
+      "theme": "traditional",
+      "aliases": [
+        "필립스뷔르흐",
+        "Philipsburg",
+        "필립스버그",
+        "필립스뷔르그",
+        "Philipsburg Sint Maarten"
+      ],
+      "canonicalInput": "필립스뷔르흐",
+      "motif": "Philipsburg's white wooden Courthouse with its central clock cupola, with a short colourful Old Street facade beside it",
+      "motifSource": {
+        "title": "St. Maarten Tourist Bureau — Things To Do in Philipsburg",
+        "url": "https://www.vacationstmaarten.com/our-island/philipsburg/things-to-do/?bounds=false&sort=qualityScore&view=list"
+      },
+      "region": "카리브해",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "tc-cockburn-town",
+      "name": "코크번타운",
+      "englishName": "Cockburn Town",
+      "countryCode": "TC",
+      "kind": "town",
+      "theme": "coast",
+      "aliases": [
+        "코크번타운",
+        "Cockburn Town",
+        "코크번 타운",
+        "콕번타운",
+        "코번타운",
+        "Cockburn Town Grand Turk"
+      ],
+      "canonicalInput": "코크번타운",
+      "motif": "the Turks and Caicos National Museum at Guinep House on Cockburn Town's Front Street, with its traditional veranda and a strip of turquoise shoreline",
+      "motifSource": {
+        "title": "Experience Turks and Caicos — Grand Turk / Cockburn Town and National Museum",
+        "url": "https://www.visitturksandcaicos.com/turks-caicos-islands/grand-turk"
+      },
+      "region": "카리브해",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "vg-road-town",
+      "name": "로드타운",
+      "englishName": "Road Town",
+      "countryCode": "VG",
+      "kind": "town",
+      "theme": "forest",
+      "aliases": [
+        "로드타운",
+        "Road Town",
+        "로드 타운",
+        "Road Town Tortola",
+        "Road Town, Tortola"
+      ],
+      "canonicalInput": "로드타운",
+      "motif": "the royal-palm avenue and central fountain of J.R. O'Neal Botanic Gardens in Road Town, with a small flowering pergola",
+      "motifSource": {
+        "title": "National Parks Trust of the Virgin Islands — J.R. O'Neal Botanic Gardens",
+        "url": "https://www.bvinationalparkstrust.org/events/joseph-reynold-oneal-botanic-garden"
+      },
+      "region": "카리브해",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "vi-charlotte-amalie",
+      "name": "샬럿아말리에",
+      "englishName": "Charlotte Amalie",
+      "countryCode": "VI",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "샬럿아말리에",
+        "Charlotte Amalie",
+        "샬럿 아말리에",
+        "샬럿아말리",
+        "Charlotte Amalie St Thomas",
+        "Charlotte Amalie, St. Thomas"
+      ],
+      "canonicalInput": "샬럿아말리에",
+      "motif": "Fort Christian's red bastions and central Victorian clock tower in Charlotte Amalie, with a single shade tree from the neighbouring Emancipation Garden",
+      "motifSource": {
+        "title": "U.S. Virgin Islands Department of Tourism — Must-See Historic Sites",
+        "url": "https://www.visitusvi.com/experience/must-see-historic-sites/"
+      },
+      "region": "카리브해",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "xk-prizren",
+      "name": "프리즈렌",
+      "englishName": "Prizren",
+      "countryCode": "XK",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "프리즈렌",
+        "Prizren",
+        "Prizreni"
+      ],
+      "canonicalInput": "프리즈렌",
+      "motif": "Prizren's Sinan Pasha Mosque with its single broad dome and slender minaret, with the nearby three-arched Stone Bridge across the Lumbardhi River",
+      "motifSource": {
+        "title": "Visit Prizren — Tourist landmarks / Sinan Pasha Mosque and Stone Bridge",
+        "url": "https://visit-prizren.com/en/"
+      },
+      "region": "남유럽",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "cc-west-island",
+      "name": "웨스트 아일랜드",
+      "englishName": "West Island",
+      "countryCode": "CC",
+      "kind": "town",
+      "theme": "coast",
+      "aliases": [
+        "웨스트 아일랜드",
+        "West Island",
+        "West Island Settlement",
+        "웨스트아일랜드"
+      ],
+      "canonicalInput": "웨스트 아일랜드",
+      "motif": "the West Island settlement beside a pale coral-sand beach and clear shallow lagoon, with low island houses and coconut palms",
+      "motifSource": {
+        "title": "Cocos Keeling Islands Tourism — West Island",
+        "url": "https://cocoskeelingislands.com.au/about/the-islands/west-island/"
+      },
+      "region": "인도양",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "cx-flying-fish-cove",
+      "name": "플라잉 피시 코브",
+      "englishName": "Flying Fish Cove",
+      "countryCode": "CX",
+      "kind": "town",
+      "theme": "coast",
+      "aliases": [
+        "플라잉 피시 코브",
+        "Flying Fish Cove",
+        "Flying-Fish Cove",
+        "더 세틀먼트",
+        "The Settlement"
+      ],
+      "canonicalInput": "플라잉 피시 코브",
+      "motif": "Flying Fish Cove's curved beach below a lush green hillside, with the waterfront settlement and a simple harbour jetty",
+      "motifSource": {
+        "title": "Christmas Island Tourism — Beaches / Flying Fish Cove",
+        "url": "https://www.christmas.net.au/beaches"
+      },
+      "region": "인도양",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "nf-kingston",
+      "name": "킹스턴(노퍽)",
+      "englishName": "Kingston",
+      "countryCode": "NF",
+      "kind": "town",
+      "theme": "traditional",
+      "aliases": [
+        "킹스턴(노퍽)",
+        "Kingston",
+        "Kingston, Norfolk Island",
+        "노퍽 킹스턴",
+        "킹스턴"
+      ],
+      "canonicalInput": "킹스턴(노퍽)",
+      "motif": "Kingston's historic Georgian stone buildings on open green lawns near the coast, with tall distinctive Norfolk Island pines",
+      "motifSource": {
+        "title": "Norfolk Island Government — Kingston and Arthur’s Vale Historic Area",
+        "url": "https://kingston.norfolkisland.gov.au/"
+      },
+      "region": "오세아니아",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "pn-adamstown",
+      "name": "애덤스타운",
+      "englishName": "Adamstown",
+      "countryCode": "PN",
+      "kind": "town",
+      "theme": "island",
+      "aliases": [
+        "애덤스타운",
+        "Adamstown",
+        "아담스타운"
+      ],
+      "canonicalInput": "애덤스타운",
+      "motif": "Adamstown's small island houses scattered on steep lush green slopes above the blue Pacific, with a narrow village path",
+      "motifSource": {
+        "title": "Pitcairn Islands Tourism — Local services and activities in Adamstown",
+        "url": "https://www.visitpitcairn.pn/local-services-activities"
+      },
+      "region": "오세아니아",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "tk-nukunonu-village",
+      "name": "누쿠노누 마을",
+      "englishName": "Nukunonu Village",
+      "countryCode": "TK",
+      "kind": "town",
+      "theme": "island",
+      "aliases": [
+        "누쿠노누 마을",
+        "Nukunonu Village",
+        "Nukunonu",
+        "Fale, Nukunonu",
+        "Nukunonu Fale",
+        "누쿠노누"
+      ],
+      "canonicalInput": "누쿠노누 마을",
+      "motif": "Nukunonu's Fale village of low homes and coconut palms beside the turquoise lagoon, with the short low concrete bridge linking the two settlement islets",
+      "motifSource": {
+        "title": "Tokelau Government — Villages",
+        "url": "https://www.tokelau.org.nz/About%2BUs/Villages.html"
+      },
+      "region": "오세아니아",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "wf-mata-utu",
+      "name": "마타우투",
+      "englishName": "Mata Utu",
+      "countryCode": "WF",
+      "kind": "town",
+      "theme": "traditional",
+      "aliases": [
+        "마타우투",
+        "Mata Utu",
+        "Mata-Utu",
+        "Matā-Utu",
+        "Matautu",
+        "마타 우투"
+      ],
+      "canonicalInput": "마타우투",
+      "motif": "Mata-Utu's Cathedral of Our Lady of the Assumption, a substantial volcanic-stone church beside the open seaside square, with palms and blue lagoon beyond",
+      "motifSource": {
+        "title": "Atout France — Wallis and Futuna / Mata Utu cathedral",
+        "url": "https://www.france.fr/fr/destination/iles-de-wallis-et-futuna/"
+      },
+      "region": "오세아니아",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "gu-hagatna",
+      "name": "하갓냐",
+      "englishName": "Hagåtña",
+      "countryCode": "GU",
+      "kind": "city",
+      "theme": "traditional",
+      "aliases": [
+        "하갓냐",
+        "Hagåtña",
+        "Hagatna",
+        "Agana",
+        "아가냐",
+        "하가트나",
+        "하갓나"
+      ],
+      "canonicalInput": "하갓냐",
+      "motif": "Hagatna's Dulce Nombre de Maria Cathedral-Basilica, its pale facade and tiled roof beside a palm-shaded civic plaza",
+      "motifSource": {
+        "title": "Guam Visitors Bureau — Hagatna",
+        "url": "https://www.visitguam.com/about-guam/villages/hagatna/"
+      },
+      "region": "오세아니아",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "mp-garapan",
+      "name": "가라판",
+      "englishName": "Garapan",
+      "countryCode": "MP",
+      "kind": "town",
+      "theme": "coast",
+      "aliases": [
+        "가라판",
+        "Garapan",
+        "Garapan, Saipan",
+        "사이판 가라판"
+      ],
+      "canonicalInput": "가라판",
+      "motif": "Garapan's American Memorial Park, showing the open carillon bell tower surrounded by tropical park lawns and palms, with the coast in the distance",
+      "motifSource": {
+        "title": "US National Park Service — American Memorial Park places to go",
+        "url": "https://www.nps.gov/amme/planyourvisit/placestogo.htm"
+      },
+      "region": "오세아니아",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "re-saint-denis",
+      "name": "생드니(레위니옹)",
+      "englishName": "Saint-Denis",
+      "countryCode": "RE",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "생드니(레위니옹)",
+        "Saint-Denis",
+        "Saint Denis",
+        "Saint-Denis, Reunion",
+        "Saint-Denis, Réunion",
+        "생드니",
+        "레위니옹 생드니"
+      ],
+      "canonicalInput": "생드니(레위니옹)",
+      "motif": "Saint-Denis's Barachois seafront promenade, a row of old dark iron cannons facing the Indian Ocean from a low stone sea wall, with palms",
+      "motifSource": {
+        "title": "Réunion Tourism — Saint-Denis and Le Barachois",
+        "url": "https://www.reunion.fr/organisez/vos-activites/le-tour-de-l-ile-de-la-reunion/les-etapes-incontournables/saint-denis/"
+      },
+      "region": "인도양",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "yt-mamoudzou",
+      "name": "마무주",
+      "englishName": "Mamoudzou",
+      "countryCode": "YT",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "마무주",
+        "Mamoudzou",
+        "마무드주"
+      ],
+      "canonicalInput": "마무주",
+      "motif": "Mamoudzou's waterfront facing the Mayotte lagoon, a local passenger ferry on blue water and low town buildings on the green hillside behind",
+      "motifSource": {
+        "title": "Mayotte Tourism — Mamoudzou visitor infrastructure",
+        "url": "https://www.mayotte-tourisme.com/newsletter/croisieres-une-reprise-dynamique-a-mayotte-pour-la-saison-2025-2026/"
+      },
+      "region": "인도양",
+      "stage": "country-coverage"
+    },
+    {
+      "id": "eh-dakhla",
+      "name": "다클라",
+      "englishName": "Dakhla",
+      "countryCode": "EH",
+      "kind": "city",
+      "theme": "coast",
+      "aliases": [
+        "다클라",
+        "Dakhla",
+        "Ad-Dakhla",
+        "Ad Dakhla",
+        "Villa Cisneros",
+        "다흘라"
+      ],
+      "canonicalInput": "다클라",
+      "motif": "Dakhla's low coastal town on a sandy peninsula beside a broad turquoise lagoon, with small fishing boats and pale sand",
+      "motifSource": {
+        "title": "Moroccan National Tourist Office — Dakhla",
+        "url": "https://www.visitmorocco.com/en/destinations/dakhla"
+      },
+      "region": "아프리카",
+      "stage": "country-coverage"
+    }
+  ],
+  "completedAt": "2026-10-17T08:01:47.417Z"
+}

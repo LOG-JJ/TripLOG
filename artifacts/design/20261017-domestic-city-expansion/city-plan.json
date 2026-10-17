@@ -1,0 +1,2704 @@
+{
+  "asOf": "2026-10-17",
+  "status": "implemented-and-locally-verified",
+  "scope": "현행 법정 시 85개 + 종전 광주 도시권 1개 + 기존 군·섬·제주도 권역 9개",
+  "countBasis": "기초시 75 + 제주 행정시 2 + 광역시급 8 = 법정 시 85. 전남광주통합특별시와 종전 광주 도시권은 별도 항목.",
+  "totals": {
+    "officialCityTargets": 85,
+    "legacyCityAreas": 1,
+    "retainedNoncities": 9,
+    "domesticDestinations": 95,
+    "existingDedicated": 15,
+    "existingThemeOnlyToUpgrade": 15,
+    "newCatalogEntries": 65,
+    "newArtworkPairs": 80,
+    "newImageFiles": 160,
+    "finalWorldwideDestinations": 395,
+    "finalActiveImagesIncludingThemes": 810
+  },
+  "sourceScope": "공식 관광자료는 소재 선택 근거이며 인기순위가 아니다. 제작 전 도시별 공식 사진으로 외형을 대조한다.",
+  "items": [
+    {
+      "group": "광역시급",
+      "administrativeClass": "upper_city",
+      "officialCityTarget": true,
+      "name": "서울",
+      "displayName": "서울",
+      "id": "kr-seoul",
+      "canonicalInput": "서울",
+      "catalogAction": "retain",
+      "artworkAction": "reuse",
+      "currentStatus": "전용 유지",
+      "currentDedicated": true,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "현재 서울 그림 유지",
+      "motifSource": {
+        "title": "현재 국내 삽화 비교",
+        "url": "../trip-scenes-redraw-20261004/contact-korea-landscape.png",
+        "evidence": "기존 자산 육안 확인"
+      },
+      "motifValidation": "기존 작품 유지",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v2/kr-seoul.webp",
+        "src/assets/trip-scenes/cities/v2/kr-seoul-mobile.webp"
+      ],
+      "productionStatus": "retained-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "광역시급",
+      "administrativeClass": "upper_city",
+      "officialCityTarget": true,
+      "name": "부산",
+      "displayName": "부산",
+      "id": "kr-busan",
+      "canonicalInput": "부산",
+      "catalogAction": "retain",
+      "artworkAction": "reuse",
+      "currentStatus": "전용 유지",
+      "currentDedicated": true,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "현재 부산 그림 유지",
+      "motifSource": {
+        "title": "현재 국내 삽화 비교",
+        "url": "../trip-scenes-redraw-20261004/contact-korea-landscape.png",
+        "evidence": "기존 자산 육안 확인"
+      },
+      "motifValidation": "기존 작품 유지",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v2/kr-busan.webp",
+        "src/assets/trip-scenes/cities/v2/kr-busan-mobile.webp"
+      ],
+      "productionStatus": "retained-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "광역시급",
+      "administrativeClass": "upper_city",
+      "officialCityTarget": true,
+      "name": "대구",
+      "displayName": "대구",
+      "id": "kr-daegu",
+      "canonicalInput": "대구",
+      "catalogAction": "retain",
+      "artworkAction": "create",
+      "currentStatus": "공통 → 전용",
+      "currentDedicated": false,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "수성못·오리배·산세",
+      "motifSource": {
+        "title": "수성문화관광 수성못",
+        "url": "https://www.suseong.kr/tour/index.do?menu_id=00000994",
+        "evidence": "호수·산세·오리배 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-daegu.webp",
+        "src/assets/trip-scenes/cities/v5/kr-daegu-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "광역시급",
+      "administrativeClass": "upper_city",
+      "officialCityTarget": true,
+      "name": "인천",
+      "displayName": "인천",
+      "id": "kr-incheon",
+      "canonicalInput": "인천",
+      "catalogAction": "retain",
+      "artworkAction": "create",
+      "currentStatus": "공통 → 전용",
+      "currentDedicated": false,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "송도 센트럴파크 수로·고층 건물",
+      "motifSource": {
+        "title": "한국관광공사 송도 센트럴파크",
+        "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=b36a08ff-6f60-4799-a2d5-391aa570f66d",
+        "evidence": "해수로와 고층 건물 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-incheon.webp",
+        "src/assets/trip-scenes/cities/v5/kr-incheon-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "광역시급",
+      "administrativeClass": "upper_city",
+      "officialCityTarget": true,
+      "name": "대전",
+      "displayName": "대전",
+      "id": "kr-daejeon",
+      "canonicalInput": "대전",
+      "catalogAction": "retain",
+      "artworkAction": "create",
+      "currentStatus": "공통 → 전용",
+      "currentDedicated": false,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "한빛탑·엑스포 일대",
+      "motifSource": {
+        "title": "대전관광공사 엑스포과학공원",
+        "url": "https://www.djto.kr/kor/page.do?menuIdx=652",
+        "evidence": "검색 반환 본문에서 한빛탑 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-daejeon.webp",
+        "src/assets/trip-scenes/cities/v5/kr-daejeon-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "광역시급",
+      "administrativeClass": "upper_city",
+      "officialCityTarget": true,
+      "name": "울산",
+      "displayName": "울산",
+      "id": "kr-ulsan",
+      "canonicalInput": "울산",
+      "catalogAction": "retain",
+      "artworkAction": "create",
+      "currentStatus": "공통 → 전용",
+      "currentDedicated": false,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "대왕암·대왕교·해송",
+      "motifSource": {
+        "title": "한국관광공사 대왕암공원",
+        "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=3a402a2b-0784-4804-84f4-21d4dd7218c2",
+        "evidence": "대왕암·대왕교·해송 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-ulsan.webp",
+        "src/assets/trip-scenes/cities/v5/kr-ulsan-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "광역시급",
+      "administrativeClass": "upper_city",
+      "officialCityTarget": true,
+      "name": "세종",
+      "displayName": "세종",
+      "id": "kr-sejong",
+      "canonicalInput": "세종",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "국립세종수목원",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-sejong.webp",
+        "src/assets/trip-scenes/cities/v5/kr-sejong-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "광역시급",
+      "administrativeClass": "upper_city",
+      "officialCityTarget": true,
+      "name": "전남광주통합특별시",
+      "displayName": "전남광주통합특별시",
+      "id": "kr-jeonnam-gwangju",
+      "canonicalInput": "전남광주통합특별시",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "region",
+      "proposedMotif": "남도의 산·강·해안을 조합한 광역 풍경",
+      "motifSource": {
+        "title": "행안부 2026 행정구역 현황",
+        "url": "https://mois.go.kr/frt/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000055&nttId=128138",
+        "evidence": "통합특별시 범위 확인; 광역 풍경의 구도는 제작 제안"
+      },
+      "motifValidation": "광역 행정범위 확인; 대표 풍경과 구도는 제작 전 확정",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju.webp",
+        "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "수원",
+      "displayName": "수원",
+      "id": "kr-suwon",
+      "canonicalInput": "수원",
+      "catalogAction": "retain",
+      "artworkAction": "create",
+      "currentStatus": "공통 → 전용",
+      "currentDedicated": false,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "수원화성 성문·성곽",
+      "motifSource": {
+        "title": "수원문화재단 수원화성",
+        "url": "https://www.swcf.or.kr/?p=58",
+        "evidence": "성곽·성문 소재 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-suwon.webp",
+        "src/assets/trip-scenes/cities/v5/kr-suwon-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "성남",
+      "displayName": "성남",
+      "id": "kr-seongnam",
+      "canonicalInput": "성남",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "율동공원 호수·수변 숲",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "22–23"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-seongnam.webp",
+        "src/assets/trip-scenes/cities/v5/kr-seongnam-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "의정부",
+      "displayName": "의정부",
+      "id": "kr-uijeongbu",
+      "canonicalInput": "의정부",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "의정부 경전철·고가선로",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "72–73"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-uijeongbu.webp",
+        "src/assets/trip-scenes/cities/v5/kr-uijeongbu-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "안양",
+      "displayName": "안양",
+      "id": "kr-anyang",
+      "canonicalInput": "안양",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "안양예술공원·숲과 하천",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "50–51"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-anyang.webp",
+        "src/assets/trip-scenes/cities/v5/kr-anyang-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "부천",
+      "displayName": "부천",
+      "id": "kr-bucheon",
+      "canonicalInput": "부천",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "상동호수공원 수피아 온실",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "44–45"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-bucheon.webp",
+        "src/assets/trip-scenes/cities/v5/kr-bucheon-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "광명",
+      "displayName": "광명",
+      "id": "kr-gwangmyeong",
+      "canonicalInput": "광명",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "광명동굴",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-gwangmyeong.webp",
+        "src/assets/trip-scenes/cities/v5/kr-gwangmyeong-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "평택",
+      "displayName": "평택",
+      "id": "kr-pyeongtaek",
+      "canonicalInput": "평택",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "평택항·서해대교",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "56–57"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-pyeongtaek.webp",
+        "src/assets/trip-scenes/cities/v5/kr-pyeongtaek-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "동두천",
+      "displayName": "동두천",
+      "id": "kr-dongducheon",
+      "canonicalInput": "동두천",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "소요산 바위 능선·숲",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "66–67"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-dongducheon.webp",
+        "src/assets/trip-scenes/cities/v5/kr-dongducheon-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "안산",
+      "displayName": "안산",
+      "id": "kr-ansan",
+      "canonicalInput": "안산",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "시화나래 달전망대·바다",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "48–49"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-ansan.webp",
+        "src/assets/trip-scenes/cities/v5/kr-ansan-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "고양",
+      "displayName": "고양",
+      "id": "kr-goyang",
+      "canonicalInput": "고양",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "일산호수공원·꽃과 수변",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "62–63"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-goyang.webp",
+        "src/assets/trip-scenes/cities/v5/kr-goyang-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "과천",
+      "displayName": "과천",
+      "id": "kr-gwacheon",
+      "canonicalInput": "과천",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "국립과천과학관·서울대공원",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-gwacheon.webp",
+        "src/assets/trip-scenes/cities/v5/kr-gwacheon-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "구리",
+      "displayName": "구리",
+      "id": "kr-guri",
+      "canonicalInput": "구리",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "동구릉 봉분·소나무숲",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "10–11"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-guri.webp",
+        "src/assets/trip-scenes/cities/v5/kr-guri-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "남양주",
+      "displayName": "남양주",
+      "id": "kr-namyangju",
+      "canonicalInput": "남양주",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "정약용유적지 여유당",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "12–13"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-namyangju.webp",
+        "src/assets/trip-scenes/cities/v5/kr-namyangju-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "오산",
+      "displayName": "오산",
+      "id": "kr-osan",
+      "canonicalInput": "오산",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "독산성·세마대",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "52–53"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-osan.webp",
+        "src/assets/trip-scenes/cities/v5/kr-osan-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "시흥",
+      "displayName": "시흥",
+      "id": "kr-siheung",
+      "canonicalInput": "시흥",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "오이도 빨강등대",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "46–47"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-siheung.webp",
+        "src/assets/trip-scenes/cities/v5/kr-siheung-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "군포",
+      "displayName": "군포",
+      "id": "kr-gunpo",
+      "canonicalInput": "군포",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "철쭉동산",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "42–43"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-gunpo.webp",
+        "src/assets/trip-scenes/cities/v5/kr-gunpo-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "의왕",
+      "displayName": "의왕",
+      "id": "kr-uiwang",
+      "canonicalInput": "의왕",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "왕송호수·레일바이크",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "54–55"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-uiwang.webp",
+        "src/assets/trip-scenes/cities/v5/kr-uiwang-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "하남",
+      "displayName": "하남",
+      "id": "kr-hanam",
+      "canonicalInput": "하남",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "유니온파크·유니온타워",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "34–35"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-hanam.webp",
+        "src/assets/trip-scenes/cities/v5/kr-hanam-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "용인",
+      "displayName": "용인",
+      "id": "kr-yongin",
+      "canonicalInput": "용인",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "한국민속촌",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-yongin.webp",
+        "src/assets/trip-scenes/cities/v5/kr-yongin-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "파주",
+      "displayName": "파주",
+      "id": "kr-paju",
+      "canonicalInput": "파주",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "헤이리 예술마을",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-paju.webp",
+        "src/assets/trip-scenes/cities/v5/kr-paju-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "이천",
+      "displayName": "이천",
+      "id": "kr-icheon",
+      "canonicalInput": "이천",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "예스파크 도자예술마을·도자기",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "32–33"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-icheon.webp",
+        "src/assets/trip-scenes/cities/v5/kr-icheon-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "안성",
+      "displayName": "안성",
+      "id": "kr-anseong",
+      "canonicalInput": "안성",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "안성팜랜드 들판·목장 동물",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "26–27"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-anseong.webp",
+        "src/assets/trip-scenes/cities/v5/kr-anseong-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "김포",
+      "displayName": "김포",
+      "id": "kr-gimpo",
+      "canonicalInput": "김포",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "라베니체 수로·문보트",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "64–65"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-gimpo.webp",
+        "src/assets/trip-scenes/cities/v5/kr-gimpo-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "화성",
+      "displayName": "화성",
+      "id": "kr-hwaseong",
+      "canonicalInput": "화성",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "제부도·해상케이블카",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-hwaseong.webp",
+        "src/assets/trip-scenes/cities/v5/kr-hwaseong-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "광주",
+      "displayName": "광주(경기)",
+      "id": "kr-gwangju-gyeonggi",
+      "canonicalInput": "경기도 광주시",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "남한산성의 산능선 성곽",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "20–21"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi.webp",
+        "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "양주",
+      "displayName": "양주",
+      "id": "kr-yangju",
+      "canonicalInput": "양주",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "장욱진미술관",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "68–69"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-yangju.webp",
+        "src/assets/trip-scenes/cities/v5/kr-yangju-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "포천",
+      "displayName": "포천",
+      "id": "kr-pocheon",
+      "canonicalInput": "포천",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "천주호·채석장 절벽",
+      "motifSource": {
+        "title": "포천시 문화재 및 관광지",
+        "url": "https://www.pocheon.go.kr/www/contents.do?key=3805",
+        "evidence": "검색 반환 본문에서 천주호·채석장 절벽 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-pocheon.webp",
+        "src/assets/trip-scenes/cities/v5/kr-pocheon-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경기",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "여주",
+      "displayName": "여주",
+      "id": "kr-yeoju",
+      "canonicalInput": "여주",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "신륵사·강변 전탑",
+      "motifSource": {
+        "title": "경기관광공사 2025 관광 가이드북",
+        "url": "https://www.ggtourmap.or.kr/fileUpload/2025_%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81_%ED%95%9C%EA%B8%80_web_1.pdf",
+        "evidence": "도시별 소개의 소재 확인; 아래 쪽수는 책자 인쇄 쪽수",
+        "pages": "28–29"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-yeoju.webp",
+        "src/assets/trip-scenes/cities/v5/kr-yeoju-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "강원",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "춘천",
+      "displayName": "춘천",
+      "id": "kr-chuncheon",
+      "canonicalInput": "춘천",
+      "catalogAction": "retain",
+      "artworkAction": "reuse",
+      "currentStatus": "전용 유지",
+      "currentDedicated": true,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "현재 춘천 그림 유지",
+      "motifSource": {
+        "title": "현재 국내 삽화 비교",
+        "url": "../trip-scenes-redraw-20261004/contact-korea-landscape.png",
+        "evidence": "기존 자산 육안 확인"
+      },
+      "motifValidation": "기존 작품 유지",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v2/kr-chuncheon.webp",
+        "src/assets/trip-scenes/cities/v2/kr-chuncheon-mobile.webp"
+      ],
+      "productionStatus": "retained-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "강원",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "원주",
+      "displayName": "원주",
+      "id": "kr-wonju",
+      "canonicalInput": "원주",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "소금산그랜드밸리 교량·절벽",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-wonju.webp",
+        "src/assets/trip-scenes/cities/v5/kr-wonju-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "강원",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "강릉",
+      "displayName": "강릉",
+      "id": "kr-gangneung",
+      "canonicalInput": "강릉",
+      "catalogAction": "retain",
+      "artworkAction": "reuse",
+      "currentStatus": "전용 유지",
+      "currentDedicated": true,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "현재 강릉 그림 유지",
+      "motifSource": {
+        "title": "현재 국내 삽화 비교",
+        "url": "../trip-scenes-redraw-20261004/contact-korea-landscape.png",
+        "evidence": "기존 자산 육안 확인"
+      },
+      "motifValidation": "기존 작품 유지",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v2/kr-gangneung.webp",
+        "src/assets/trip-scenes/cities/v2/kr-gangneung-mobile.webp"
+      ],
+      "productionStatus": "retained-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "강원",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "동해",
+      "displayName": "동해",
+      "id": "kr-donghae",
+      "canonicalInput": "동해",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "도째비골 스카이밸리·해랑전망대",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-donghae.webp",
+        "src/assets/trip-scenes/cities/v5/kr-donghae-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "강원",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "태백",
+      "displayName": "태백",
+      "id": "kr-taebaek",
+      "canonicalInput": "태백",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "태백산하늘전망대·산능선",
+      "motifSource": {
+        "title": "한국관광공사 태백 여행",
+        "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=0b0bf610-ead2-45b9-8b36-95374735f2a1",
+        "evidence": "태백산하늘전망대와 산능선 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-taebaek.webp",
+        "src/assets/trip-scenes/cities/v5/kr-taebaek-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "강원",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "속초",
+      "displayName": "속초",
+      "id": "kr-sokcho",
+      "canonicalInput": "속초",
+      "catalogAction": "retain",
+      "artworkAction": "reuse",
+      "currentStatus": "전용 유지",
+      "currentDedicated": true,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "현재 속초 그림 유지",
+      "motifSource": {
+        "title": "현재 국내 삽화 비교",
+        "url": "../trip-scenes-redraw-20261004/contact-korea-landscape.png",
+        "evidence": "기존 자산 육안 확인"
+      },
+      "motifValidation": "기존 작품 유지",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v2/kr-sokcho.webp",
+        "src/assets/trip-scenes/cities/v2/kr-sokcho-mobile.webp"
+      ],
+      "productionStatus": "retained-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "강원",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "삼척",
+      "displayName": "삼척",
+      "id": "kr-samcheok",
+      "canonicalInput": "삼척",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "장호항·해안절벽",
+      "motifSource": {
+        "title": "삼척시 장호어촌체험마을",
+        "url": "https://www.samcheok.go.kr/tour/01458/01499/02263.web?cpage=2",
+        "evidence": "검색 반환 본문에서 장호항 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-samcheok.webp",
+        "src/assets/trip-scenes/cities/v5/kr-samcheok-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "충북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "청주",
+      "displayName": "청주",
+      "id": "kr-cheongju",
+      "canonicalInput": "청주",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "청남대",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-cheongju.webp",
+        "src/assets/trip-scenes/cities/v5/kr-cheongju-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "충북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "충주",
+      "displayName": "충주",
+      "id": "kr-chungju",
+      "canonicalInput": "충주",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "탄금대·강·소나무",
+      "motifSource": {
+        "title": "충북나드리 충주 탄금대",
+        "url": "https://tour.chungbuk.go.kr/www/selectTourCntnts.do?key=60&searchMainSe=ATTR&tourNo=620",
+        "evidence": "강·기암절벽·소나무숲 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-chungju.webp",
+        "src/assets/trip-scenes/cities/v5/kr-chungju-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "충북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "제천",
+      "displayName": "제천",
+      "id": "kr-jecheon",
+      "canonicalInput": "제천",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "청풍호",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-jecheon.webp",
+        "src/assets/trip-scenes/cities/v5/kr-jecheon-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "충남",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "천안",
+      "displayName": "천안",
+      "id": "kr-cheonan",
+      "canonicalInput": "천안",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "독립기념관",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-cheonan.webp",
+        "src/assets/trip-scenes/cities/v5/kr-cheonan-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "충남",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "공주",
+      "displayName": "공주",
+      "id": "kr-gongju",
+      "canonicalInput": "공주",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "공산성·금강",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-gongju.webp",
+        "src/assets/trip-scenes/cities/v5/kr-gongju-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "충남",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "보령",
+      "displayName": "보령",
+      "id": "kr-boryeong",
+      "canonicalInput": "보령",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "대천해수욕장",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-boryeong.webp",
+        "src/assets/trip-scenes/cities/v5/kr-boryeong-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "충남",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "아산",
+      "displayName": "아산",
+      "id": "kr-asan",
+      "canonicalInput": "아산",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "현충사",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-asan.webp",
+        "src/assets/trip-scenes/cities/v5/kr-asan-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "충남",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "서산",
+      "displayName": "서산",
+      "id": "kr-seosan",
+      "canonicalInput": "서산",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "해미읍성",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-seosan.webp",
+        "src/assets/trip-scenes/cities/v5/kr-seosan-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "충남",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "논산",
+      "displayName": "논산",
+      "id": "kr-nonsan",
+      "canonicalInput": "논산",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "관촉사 은진미륵",
+      "motifSource": {
+        "title": "충남관광 공식 관광지",
+        "url": "https://tour.chungnam.go.kr/",
+        "evidence": "논산 관촉사·당진 삽교호 목록 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-nonsan.webp",
+        "src/assets/trip-scenes/cities/v5/kr-nonsan-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "충남",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "계룡",
+      "displayName": "계룡",
+      "id": "kr-gyeryong",
+      "canonicalInput": "계룡",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "사계고택·정원",
+      "motifSource": {
+        "title": "계룡시 사계고택",
+        "url": "https://life.gyeryong.go.kr/tour/html/sub02/0204.html",
+        "evidence": "고택·정원·연못 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-gyeryong.webp",
+        "src/assets/trip-scenes/cities/v5/kr-gyeryong-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "충남",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "당진",
+      "displayName": "당진",
+      "id": "kr-dangjin",
+      "canonicalInput": "당진",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "삽교호 관광지·호수",
+      "motifSource": {
+        "title": "충남관광 공식 관광지",
+        "url": "https://tour.chungnam.go.kr/",
+        "evidence": "논산 관촉사·당진 삽교호 목록 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-dangjin.webp",
+        "src/assets/trip-scenes/cities/v5/kr-dangjin-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "전북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "전주",
+      "displayName": "전주",
+      "id": "kr-jeonju",
+      "canonicalInput": "전주",
+      "catalogAction": "retain",
+      "artworkAction": "reuse",
+      "currentStatus": "전용 유지",
+      "currentDedicated": true,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "현재 전주 그림 유지",
+      "motifSource": {
+        "title": "현재 국내 삽화 비교",
+        "url": "../trip-scenes-redraw-20261004/contact-korea-landscape.png",
+        "evidence": "기존 자산 육안 확인"
+      },
+      "motifValidation": "기존 작품 유지",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v2/kr-jeonju.webp",
+        "src/assets/trip-scenes/cities/v2/kr-jeonju-mobile.webp"
+      ],
+      "productionStatus": "retained-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "전북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "군산",
+      "displayName": "군산",
+      "id": "kr-gunsan",
+      "canonicalInput": "군산",
+      "catalogAction": "retain",
+      "artworkAction": "create",
+      "currentStatus": "공통 → 전용",
+      "currentDedicated": false,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "구 군산세관 적벽돌·아치창",
+      "motifSource": {
+        "title": "군산시 구 군산세관 본관",
+        "url": "https://www.gunsan.go.kr/tour/m2079/view/321795",
+        "evidence": "적벽돌·아치창·대칭정면 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-gunsan.webp",
+        "src/assets/trip-scenes/cities/v5/kr-gunsan-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "전북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "익산",
+      "displayName": "익산",
+      "id": "kr-iksan",
+      "canonicalInput": "익산",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "미륵사지 석탑",
+      "motifSource": {
+        "title": "익산시 문화관광",
+        "url": "https://www.iksan.go.kr/tour",
+        "evidence": "미륵사지 소재 확인; 석탑 외형은 생성 전 대조"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-iksan.webp",
+        "src/assets/trip-scenes/cities/v5/kr-iksan-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "전북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "정읍",
+      "displayName": "정읍",
+      "id": "kr-jeongeup",
+      "canonicalInput": "정읍",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "내장산 단풍·산능선",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-jeongeup.webp",
+        "src/assets/trip-scenes/cities/v5/kr-jeongeup-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "전북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "남원",
+      "displayName": "남원",
+      "id": "kr-namwon",
+      "canonicalInput": "남원",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "광한루·오작교·연못",
+      "motifSource": {
+        "title": "한국관광공사 광한루원",
+        "url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=fb901b63-eaae-4a7f-bd5e-37c6a72299b8",
+        "evidence": "광한루·연못·오작교 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-namwon.webp",
+        "src/assets/trip-scenes/cities/v5/kr-namwon-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "전북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "김제",
+      "displayName": "김제",
+      "id": "kr-gimje",
+      "canonicalInput": "김제",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "벽골제 수리시설·농경 풍경",
+      "motifSource": {
+        "title": "김제시 벽골제",
+        "url": "https://www.gimje.go.kr/byeokgolje/index.gimje?menuCd=DOM_000002001002000000",
+        "evidence": "농경문화와 고대 수리시설 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-gimje.webp",
+        "src/assets/trip-scenes/cities/v5/kr-gimje-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "전남권",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "목포",
+      "displayName": "목포",
+      "id": "kr-mokpo",
+      "canonicalInput": "목포",
+      "catalogAction": "retain",
+      "artworkAction": "create",
+      "currentStatus": "공통 → 전용",
+      "currentDedicated": false,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "유달산·해상케이블카",
+      "motifSource": {
+        "title": "목포문화관광 해상케이블카",
+        "url": "https://www.mokpo.go.kr/tour/attraction/area?idx=83802&mode=view",
+        "evidence": "검색 반환 본문에서 유달산·고하도 연결 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-mokpo.webp",
+        "src/assets/trip-scenes/cities/v5/kr-mokpo-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "전남권",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "여수",
+      "displayName": "여수",
+      "id": "kr-yeosu",
+      "canonicalInput": "여수",
+      "catalogAction": "retain",
+      "artworkAction": "reuse",
+      "currentStatus": "전용 유지",
+      "currentDedicated": true,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "현재 여수 그림 유지",
+      "motifSource": {
+        "title": "현재 국내 삽화 비교",
+        "url": "../trip-scenes-redraw-20261004/contact-korea-landscape.png",
+        "evidence": "기존 자산 육안 확인"
+      },
+      "motifValidation": "기존 작품 유지",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v2/kr-yeosu.webp",
+        "src/assets/trip-scenes/cities/v2/kr-yeosu-mobile.webp"
+      ],
+      "productionStatus": "retained-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "전남권",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "순천",
+      "displayName": "순천",
+      "id": "kr-suncheon",
+      "canonicalInput": "순천",
+      "catalogAction": "retain",
+      "artworkAction": "reuse",
+      "currentStatus": "전용 유지",
+      "currentDedicated": true,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "현재 순천 기준 그림 유지",
+      "motifSource": {
+        "title": "현재 국내 삽화 비교",
+        "url": "../trip-scenes-redraw-20261004/contact-korea-landscape.png",
+        "evidence": "기존 자산 육안 확인"
+      },
+      "motifValidation": "기존 작품 유지",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v2/kr-suncheon.webp",
+        "src/assets/trip-scenes/cities/v2/kr-suncheon-mobile.webp"
+      ],
+      "productionStatus": "retained-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "전남권",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "나주",
+      "displayName": "나주",
+      "id": "kr-naju",
+      "canonicalInput": "나주",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "금성관",
+      "motifSource": {
+        "title": "나주시 관광 10선",
+        "url": "https://www.naju.go.kr/www/administration/reporting/coverage?idx=95334&mode=view&page=3",
+        "evidence": "금성관·영산강 등대·황포돛배 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-naju.webp",
+        "src/assets/trip-scenes/cities/v5/kr-naju-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "전남권",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "광양",
+      "displayName": "광양",
+      "id": "kr-gwangyang",
+      "canonicalInput": "광양",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "매화마을·흰 매화",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-gwangyang.webp",
+        "src/assets/trip-scenes/cities/v5/kr-gwangyang-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "포항",
+      "displayName": "포항",
+      "id": "kr-pohang",
+      "canonicalInput": "포항",
+      "catalogAction": "retain",
+      "artworkAction": "create",
+      "currentStatus": "공통 → 전용",
+      "currentDedicated": false,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "호미곶 상생의 손·해안",
+      "motifSource": {
+        "title": "포항시 특별한 포항",
+        "url": "https://pohang.go.kr/phtour/html.do?menu_idx=116",
+        "evidence": "호미곶 상생의 손과 등대 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-pohang.webp",
+        "src/assets/trip-scenes/cities/v5/kr-pohang-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "경주",
+      "displayName": "경주",
+      "id": "kr-gyeongju",
+      "canonicalInput": "경주",
+      "catalogAction": "retain",
+      "artworkAction": "reuse",
+      "currentStatus": "전용 유지",
+      "currentDedicated": true,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "현재 경주 그림 유지",
+      "motifSource": {
+        "title": "현재 국내 삽화 비교",
+        "url": "../trip-scenes-redraw-20261004/contact-korea-landscape.png",
+        "evidence": "기존 자산 육안 확인"
+      },
+      "motifValidation": "기존 작품 유지",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v2/kr-gyeongju.webp",
+        "src/assets/trip-scenes/cities/v2/kr-gyeongju-mobile.webp"
+      ],
+      "productionStatus": "retained-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "김천",
+      "displayName": "김천",
+      "id": "kr-gimcheon",
+      "canonicalInput": "김천",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "직지사·황악산 자락",
+      "motifSource": {
+        "title": "김천시 관광안내지도",
+        "url": "https://www.gc.go.kr/design/culture/file/tourMap_2024.pdf",
+        "evidence": "직지사·사명대사공원 소재 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-gimcheon.webp",
+        "src/assets/trip-scenes/cities/v5/kr-gimcheon-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "안동",
+      "displayName": "안동",
+      "id": "kr-andong",
+      "canonicalInput": "안동",
+      "catalogAction": "retain",
+      "artworkAction": "create",
+      "currentStatus": "공통 → 전용",
+      "currentDedicated": false,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "하회마을·마을을 감싸는 강",
+      "motifSource": {
+        "title": "안동관광 하회마을",
+        "url": "https://www.tourandong.com/public/",
+        "evidence": "마을을 감싸는 낙동강 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-andong.webp",
+        "src/assets/trip-scenes/cities/v5/kr-andong-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "구미",
+      "displayName": "구미",
+      "id": "kr-gumi",
+      "canonicalInput": "구미",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "금오산·금오지",
+      "motifSource": {
+        "title": "구미시 금오산 소개",
+        "url": "https://www.gumi.go.kr/park/contents.do?mid=0201010000",
+        "evidence": "금오산·금오지·케이블카 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-gumi.webp",
+        "src/assets/trip-scenes/cities/v5/kr-gumi-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "영주",
+      "displayName": "영주",
+      "id": "kr-yeongju",
+      "canonicalInput": "영주",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "부석사 무량수전·석등",
+      "motifSource": {
+        "title": "영주시 부석면 문화재",
+        "url": "https://www.yeongju.go.kr/open_content/village/buseok/page.do?mnu_uid=868",
+        "evidence": "검색 반환 본문에서 무량수전·석등 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-yeongju.webp",
+        "src/assets/trip-scenes/cities/v5/kr-yeongju-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "영천",
+      "displayName": "영천",
+      "id": "kr-yeongcheon",
+      "canonicalInput": "영천",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "임고서원 문루·강당",
+      "motifSource": {
+        "title": "영천시 임고서원",
+        "url": "https://www.yc.go.kr/toursub/imgo/contents.do?mId=0200000000",
+        "evidence": "서원 문루와 강당 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-yeongcheon.webp",
+        "src/assets/trip-scenes/cities/v5/kr-yeongcheon-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "상주",
+      "displayName": "상주",
+      "id": "kr-sangju",
+      "canonicalInput": "상주",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "경천대·낙동강·노송",
+      "motifSource": {
+        "title": "상주시 경천대",
+        "url": "https://www.sangju.go.kr/tour/page/15164/11600.tc",
+        "evidence": "낙동강·기암절벽·노송·정자 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-sangju.webp",
+        "src/assets/trip-scenes/cities/v5/kr-sangju-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "문경",
+      "displayName": "문경",
+      "id": "kr-mungyeong",
+      "canonicalInput": "문경",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "문경새재 성문·성벽",
+      "motifSource": {
+        "title": "정책브리핑 문경새재",
+        "url": "https://www.korea.kr/multi/policyPhotoView.do?bbsKey=25289",
+        "evidence": "문경새재 소재 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-mungyeong.webp",
+        "src/assets/trip-scenes/cities/v5/kr-mungyeong-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경북",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "경산",
+      "displayName": "경산",
+      "id": "kr-gyeongsan",
+      "canonicalInput": "경산",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "반곡지 왕버드나무·저수지",
+      "motifSource": {
+        "title": "한국관광공사 경산 반곡지",
+        "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=4224f11f-1cb3-48e2-8c8e-5522583c8dd2",
+        "evidence": "왕버드나무와 저수지 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-gyeongsan.webp",
+        "src/assets/trip-scenes/cities/v5/kr-gyeongsan-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경남",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "창원",
+      "displayName": "창원",
+      "id": "kr-changwon",
+      "canonicalInput": "창원",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "진해 여좌천·벚꽃·다리",
+      "motifSource": {
+        "title": "한국관광공사 여좌천",
+        "url": "https://access.visitkorea.or.kr/opentour/detail.do?cotId=67ceefb2-2519-4513-aeed-e084b650457f",
+        "evidence": "창원시 진해구 소재·벚꽃·로망스다리 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-changwon.webp",
+        "src/assets/trip-scenes/cities/v5/kr-changwon-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경남",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "진주",
+      "displayName": "진주",
+      "id": "kr-jinju",
+      "canonicalInput": "진주",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "진주성",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-jinju.webp",
+        "src/assets/trip-scenes/cities/v5/kr-jinju-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경남",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "통영",
+      "displayName": "통영",
+      "id": "kr-tongyeong",
+      "canonicalInput": "통영",
+      "catalogAction": "retain",
+      "artworkAction": "reuse",
+      "currentStatus": "전용 유지",
+      "currentDedicated": true,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "현재 통영 그림 유지",
+      "motifSource": {
+        "title": "현재 국내 삽화 비교",
+        "url": "../trip-scenes-redraw-20261004/contact-korea-landscape.png",
+        "evidence": "기존 자산 육안 확인"
+      },
+      "motifValidation": "기존 작품 유지",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v2/kr-tongyeong.webp",
+        "src/assets/trip-scenes/cities/v2/kr-tongyeong-mobile.webp"
+      ],
+      "productionStatus": "retained-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경남",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "사천",
+      "displayName": "사천",
+      "id": "kr-sacheon",
+      "canonicalInput": "사천",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "사천바다케이블카",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-sacheon.webp",
+        "src/assets/trip-scenes/cities/v5/kr-sacheon-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경남",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "김해",
+      "displayName": "김해",
+      "id": "kr-gimhae",
+      "canonicalInput": "김해",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "수로왕릉 봉분·능역",
+      "motifSource": {
+        "title": "한국관광공사 김해 여행",
+        "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=17e9e104-5514-4a73-a5b4-8261e2aa832e",
+        "evidence": "수로왕릉의 원형 봉토와 왕릉공원 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-gimhae.webp",
+        "src/assets/trip-scenes/cities/v5/kr-gimhae-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경남",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "밀양",
+      "displayName": "밀양",
+      "id": "kr-miryang",
+      "canonicalInput": "밀양",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "영남루",
+      "motifSource": {
+        "title": "밀양시 영남루",
+        "url": "https://www.miryang.go.kr/market/Sub/sb4010100.php",
+        "evidence": "목조 누각과 대표 관광지 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-miryang.webp",
+        "src/assets/trip-scenes/cities/v5/kr-miryang-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경남",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "거제",
+      "displayName": "거제",
+      "id": "kr-geoje",
+      "canonicalInput": "거제",
+      "catalogAction": "retain",
+      "artworkAction": "reuse",
+      "currentStatus": "전용 유지",
+      "currentDedicated": true,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "현재 거제 그림 유지",
+      "motifSource": {
+        "title": "현재 국내 삽화 비교",
+        "url": "../trip-scenes-redraw-20261004/contact-korea-landscape.png",
+        "evidence": "기존 자산 육안 확인"
+      },
+      "motifValidation": "기존 작품 유지",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v2/kr-geoje.webp",
+        "src/assets/trip-scenes/cities/v2/kr-geoje-mobile.webp"
+      ],
+      "productionStatus": "retained-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "경남",
+      "administrativeClass": "municipal_city",
+      "officialCityTarget": true,
+      "name": "양산",
+      "displayName": "양산",
+      "id": "kr-yangsan",
+      "canonicalInput": "양산",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "통도사",
+      "motifSource": {
+        "title": "문체부 2025–2026 한국관광 100선",
+        "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+        "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-yangsan.webp",
+        "src/assets/trip-scenes/cities/v5/kr-yangsan-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "제주",
+      "administrativeClass": "administrative_city",
+      "officialCityTarget": true,
+      "name": "제주시",
+      "displayName": "제주시",
+      "id": "kr-jeju-city",
+      "canonicalInput": "제주시",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "용연계곡·용연구름다리",
+      "motifSource": {
+        "title": "제주관광공사 용연계곡",
+        "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500472",
+        "evidence": "제주시 용담동·용연구름다리·수변 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-jeju-city.webp",
+        "src/assets/trip-scenes/cities/v5/kr-jeju-city-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "제주",
+      "administrativeClass": "administrative_city",
+      "officialCityTarget": true,
+      "name": "서귀포시",
+      "displayName": "서귀포시",
+      "id": "kr-seogwipo",
+      "canonicalInput": "서귀포시",
+      "catalogAction": "add",
+      "artworkAction": "create",
+      "currentStatus": "신규 등록·제작",
+      "currentDedicated": false,
+      "currentKind": null,
+      "proposedKind": "city",
+      "proposedMotif": "정방폭포·해안절벽",
+      "motifSource": {
+        "title": "한국관광공사 정방폭포",
+        "url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=342fbe58-b003-4b39-9212-f1a5617f9d4c",
+        "evidence": "서귀포시·바다로 떨어지는 폭포 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-seogwipo.webp",
+        "src/assets/trip-scenes/cities/v5/kr-seogwipo-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "기존 도시권 보존",
+      "administrativeClass": "legacy_city_area",
+      "officialCityTarget": false,
+      "name": "광주 도시권",
+      "displayName": "광주 도시권",
+      "id": "kr-gwangju",
+      "canonicalInput": "광주광역시",
+      "catalogAction": "retain",
+      "artworkAction": "create",
+      "currentStatus": "공통 → 전용",
+      "currentDedicated": false,
+      "currentKind": "city",
+      "proposedKind": "city",
+      "proposedMotif": "무등산 입석대·서석대",
+      "motifSource": {
+        "title": "무등산권지질공원",
+        "url": "https://geopark.gwangju.go.kr/contents.do?M=020101010000&S=S01",
+        "evidence": "입석대·서석대 주상절리 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-gwangju.webp",
+        "src/assets/trip-scenes/cities/v5/kr-gwangju-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "기존 군과 섬 보존",
+      "administrativeClass": "retained_noncity",
+      "officialCityTarget": false,
+      "name": "가평",
+      "displayName": "가평",
+      "id": "kr-gapyeong",
+      "canonicalInput": "가평",
+      "catalogAction": "retain",
+      "artworkAction": "reuse",
+      "currentStatus": "전용 유지",
+      "currentDedicated": true,
+      "currentKind": "region",
+      "proposedKind": "region",
+      "proposedMotif": "현재 가평 그림 유지",
+      "motifSource": {
+        "title": "현재 국내 삽화 비교",
+        "url": "../trip-scenes-redraw-20261004/contact-korea-landscape.png",
+        "evidence": "기존 자산 육안 확인"
+      },
+      "motifValidation": "기존 작품 유지",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v2/kr-gapyeong.webp",
+        "src/assets/trip-scenes/cities/v2/kr-gapyeong-mobile.webp"
+      ],
+      "productionStatus": "retained-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "기존 군과 섬 보존",
+      "administrativeClass": "retained_noncity",
+      "officialCityTarget": false,
+      "name": "양양",
+      "displayName": "양양",
+      "id": "kr-yangyang",
+      "canonicalInput": "양양",
+      "catalogAction": "retain",
+      "artworkAction": "reuse",
+      "currentStatus": "전용 유지",
+      "currentDedicated": true,
+      "currentKind": "region",
+      "proposedKind": "region",
+      "proposedMotif": "현재 양양 그림 유지",
+      "motifSource": {
+        "title": "현재 국내 삽화 비교",
+        "url": "../trip-scenes-redraw-20261004/contact-korea-landscape.png",
+        "evidence": "기존 자산 육안 확인"
+      },
+      "motifValidation": "기존 작품 유지",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v2/kr-yangyang.webp",
+        "src/assets/trip-scenes/cities/v2/kr-yangyang-mobile.webp"
+      ],
+      "productionStatus": "retained-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "기존 군과 섬 보존",
+      "administrativeClass": "retained_noncity",
+      "officialCityTarget": false,
+      "name": "남해",
+      "displayName": "남해",
+      "id": "kr-namhae",
+      "canonicalInput": "남해",
+      "catalogAction": "retain",
+      "artworkAction": "reuse",
+      "currentStatus": "전용 유지",
+      "currentDedicated": true,
+      "currentKind": "region",
+      "proposedKind": "region",
+      "proposedMotif": "현재 남해 그림 유지",
+      "motifSource": {
+        "title": "현재 국내 삽화 비교",
+        "url": "../trip-scenes-redraw-20261004/contact-korea-landscape.png",
+        "evidence": "기존 자산 육안 확인"
+      },
+      "motifValidation": "기존 작품 유지",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v2/kr-namhae.webp",
+        "src/assets/trip-scenes/cities/v2/kr-namhae-mobile.webp"
+      ],
+      "productionStatus": "retained-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "기존 군과 섬 보존",
+      "administrativeClass": "retained_noncity",
+      "officialCityTarget": false,
+      "name": "제주도",
+      "displayName": "제주도",
+      "id": "kr-jeju",
+      "canonicalInput": "제주도",
+      "catalogAction": "retain",
+      "artworkAction": "reuse",
+      "currentStatus": "전용 유지",
+      "currentDedicated": true,
+      "currentKind": "region",
+      "proposedKind": "region",
+      "proposedMotif": "현재 제주도 전체 권역 그림 유지",
+      "motifSource": {
+        "title": "현재 국내 삽화 비교",
+        "url": "../trip-scenes-redraw-20261004/contact-korea-landscape.png",
+        "evidence": "기존 자산 육안 확인"
+      },
+      "motifValidation": "기존 작품 유지",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v2/kr-jeju.webp",
+        "src/assets/trip-scenes/cities/v2/kr-jeju-mobile.webp"
+      ],
+      "productionStatus": "retained-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "기존 군과 섬 보존",
+      "administrativeClass": "retained_noncity",
+      "officialCityTarget": false,
+      "name": "평창",
+      "displayName": "평창",
+      "id": "kr-pyeongchang",
+      "canonicalInput": "평창",
+      "catalogAction": "retain",
+      "artworkAction": "create",
+      "currentStatus": "공통 → 전용",
+      "currentDedicated": false,
+      "currentKind": "region",
+      "proposedKind": "region",
+      "proposedMotif": "대관령 초원·양떼·목책",
+      "motifSource": {
+        "title": "평창문화관광 대관령목장",
+        "url": "https://tour.pc.go.kr/Home/H20000/H20100/H20102/html",
+        "evidence": "초원·목장·양떼 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-pyeongchang.webp",
+        "src/assets/trip-scenes/cities/v5/kr-pyeongchang-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "기존 군과 섬 보존",
+      "administrativeClass": "retained_noncity",
+      "officialCityTarget": false,
+      "name": "단양",
+      "displayName": "단양",
+      "id": "kr-danyang",
+      "canonicalInput": "단양",
+      "catalogAction": "retain",
+      "artworkAction": "create",
+      "currentStatus": "공통 → 전용",
+      "currentDedicated": false,
+      "currentKind": "region",
+      "proposedKind": "region",
+      "proposedMotif": "도담삼봉",
+      "motifSource": {
+        "title": "단양관광 도담삼봉",
+        "url": "https://www.danyang.go.kr/tour/1909",
+        "evidence": "물 위 세 바위 봉우리 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-danyang.webp",
+        "src/assets/trip-scenes/cities/v5/kr-danyang-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "기존 군과 섬 보존",
+      "administrativeClass": "retained_noncity",
+      "officialCityTarget": false,
+      "name": "담양",
+      "displayName": "담양",
+      "id": "kr-damyang",
+      "canonicalInput": "담양",
+      "catalogAction": "retain",
+      "artworkAction": "create",
+      "currentStatus": "공통 → 전용",
+      "currentDedicated": false,
+      "currentKind": "region",
+      "proposedKind": "region",
+      "proposedMotif": "죽녹원 대나무숲·산책길",
+      "motifSource": {
+        "title": "한국관광공사 죽녹원",
+        "url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?menuSn=351&vcontsId=93987",
+        "evidence": "대나무숲 소재 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-damyang.webp",
+        "src/assets/trip-scenes/cities/v5/kr-damyang-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "기존 군과 섬 보존",
+      "administrativeClass": "retained_noncity",
+      "officialCityTarget": false,
+      "name": "보성",
+      "displayName": "보성",
+      "id": "kr-boseong",
+      "canonicalInput": "보성",
+      "catalogAction": "retain",
+      "artworkAction": "create",
+      "currentStatus": "공통 → 전용",
+      "currentDedicated": false,
+      "currentKind": "region",
+      "proposedKind": "region",
+      "proposedMotif": "능선을 따라 굽이치는 차밭",
+      "motifSource": {
+        "title": "농촌진흥청 보성 녹차밭",
+        "url": "https://www.rda.go.kr/webzine/2024/05/sub2-2.html",
+        "evidence": "곡선 능선의 차밭 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-boseong.webp",
+        "src/assets/trip-scenes/cities/v5/kr-boseong-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    },
+    {
+      "group": "기존 군과 섬 보존",
+      "administrativeClass": "retained_noncity",
+      "officialCityTarget": false,
+      "name": "울릉도",
+      "displayName": "울릉도",
+      "id": "kr-ulleung",
+      "canonicalInput": "울릉도",
+      "catalogAction": "retain",
+      "artworkAction": "create",
+      "currentStatus": "공통 → 전용",
+      "currentDedicated": false,
+      "currentKind": "island",
+      "proposedKind": "island",
+      "proposedMotif": "행남해안산책로·화산암 절벽",
+      "motifSource": {
+        "title": "한국관광공사 해안 테마길",
+        "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=7b6b7d8b-87d5-4c68-a85a-272454e19c2e",
+        "evidence": "행남해안산책로·화산암 지형 확인"
+      },
+      "motifValidation": "대표 소재 확인; 세부 외형과 최종 구도는 제작 전 대조",
+      "plannedAssets": [
+        "src/assets/trip-scenes/cities/v5/kr-ulleung.webp",
+        "src/assets/trip-scenes/cities/v5/kr-ulleung-mobile.webp"
+      ],
+      "productionStatus": "generated-integrated-and-verified",
+      "finalStatus": "PC·모바일 전용 그림 연결 및 4폭 헤더 검증 완료"
+    }
+  ],
+  "qaReport": "artifacts/qa/20261017-domestic-city-expansion/README.md"
+}

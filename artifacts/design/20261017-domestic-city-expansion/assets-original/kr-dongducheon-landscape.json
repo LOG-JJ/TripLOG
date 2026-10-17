@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-dongducheon-landscape",
+  "cityId": "kr-dongducheon",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Dongducheon, South Korea: Soyosan Mountain's rocky ridgeline rising above dense green woodland. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "f99a5e0a0ad970ed29b1612e77cd22c3eb0047066f2f2337d4d5aa8febfd1d45",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-dongducheon-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-39f54121-874c-4772-a22f-eaa7c56b0447.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-39f54121-874c-4772-a22f-eaa7c56b0447.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dongducheon-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "678c8a5defed74a59424200e16d2f377d276ab0b62f8469f57f80e1d1a5f17b5",
+  "savedSha256": "678c8a5defed74a59424200e16d2f377d276ab0b62f8469f57f80e1d1a5f17b5",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:12:36Z",
+  "toolCallId": "exec-39f54121-874c-4772-a22f-eaa7c56b0447",
+  "savedAt": "2026-10-17T05:13:09.106206+00:00"
+}

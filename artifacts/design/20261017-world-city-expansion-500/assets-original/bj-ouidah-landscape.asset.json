@@ -1,0 +1,52 @@
+{
+  "id": "bj-ouidah-landscape",
+  "cityId": "bj-ouidah",
+  "name": "위다",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bj-ouidah-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bj-ouidah-landscape.json",
+  "originalSha256": "a0d6e1588fed72b94d799b380a14f3e7cd7787475eee2365564043ac77d99cf0",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    33,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bj-ouidah.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 102900,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "58e097e98bc6703fc265b03063b4e48a0aa34259efad63e68a3f57ce3126dc89",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

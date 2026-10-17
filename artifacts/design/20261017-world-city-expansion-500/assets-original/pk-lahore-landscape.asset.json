@@ -1,0 +1,52 @@
+{
+  "id": "pk-lahore-landscape",
+  "cityId": "pk-lahore",
+  "name": "라호르",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/pk-lahore-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/pk-lahore-landscape.json",
+  "originalSha256": "02ec1861f0d56514b7e2ec08eec635bd0a830ead602d0d9755feab2533b1bffb",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    81,
+    37,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/pk-lahore.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 88462,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "6e92574991340f3d0e749ecf707788584353d4c3d876dc9f8d403fc9044065fb",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

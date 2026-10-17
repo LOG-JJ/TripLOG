@@ -1,0 +1,52 @@
+{
+  "id": "rs-novi-sad-landscape",
+  "cityId": "rs-novi-sad",
+  "name": "노비사드",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/rs-novi-sad-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/rs-novi-sad-landscape.json",
+  "originalSha256": "3dcc76291eccd750895282726be3e7c75243b47ad8dc1304152846ff9abee778",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    20,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/rs-novi-sad.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 98406,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "7f2f868192b4a436205d5f91a186d815ef578fde5e2d76f540ef18592b9df936",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

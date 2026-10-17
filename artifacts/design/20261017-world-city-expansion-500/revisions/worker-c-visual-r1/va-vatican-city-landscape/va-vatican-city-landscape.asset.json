@@ -1,0 +1,52 @@
+{
+  "id": "va-vatican-city-landscape",
+  "cityId": "va-vatican-city",
+  "name": "바티칸시국",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-landscape.json",
+  "originalSha256": "a89f4b8ddf746a76e3a61d77d1c4f1bec0353a80a6e4c1c335487d97afb5eec9",
+  "sourceSize": [
+    1619,
+    972
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    972
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/va-vatican-city.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 125088,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "16d2e9f9069b1a03d2f82658b52bb02a20e4470a1d6231383ce34fd8027d0357",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

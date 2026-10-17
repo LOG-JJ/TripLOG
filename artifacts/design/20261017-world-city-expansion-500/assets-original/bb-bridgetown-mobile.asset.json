@@ -1,0 +1,52 @@
+{
+  "id": "bb-bridgetown-mobile",
+  "cityId": "bb-bridgetown",
+  "name": "브리지타운",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bb-bridgetown-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bb-bridgetown-mobile.json",
+  "originalSha256": "ee74a561f84862fe74e6b04a3b60e1ae3e693242844adb1d23c81017ac21e7cb",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bb-bridgetown-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 100642,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "397446eb3ed65ac97c1beaf2b7bd4bec2db0a9c31e837e8f35b4667ca7b035ac",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

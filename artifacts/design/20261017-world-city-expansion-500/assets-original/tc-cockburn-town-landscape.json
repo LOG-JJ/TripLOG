@@ -1,0 +1,26 @@
+{
+  "jobId": "tc-cockburn-town-landscape",
+  "cityId": "tc-cockburn-town",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of the actual Turks and Caicos National Museum at Guinep House, Front Street, Cockburn Town on Grand Turk. Show its compact two-storey white limestone colonial building, plain red corrugated-metal hipped roof without dormer windows, dark green shutters, and white wraparound upper-floor veranda with green railing accents. A broad leafy guinep tree shades the street-side facade. Include the dry Front Street pavement and only a small strip of turquoise shoreline nearby. Preserve the museum's white walls, green shutters and red roof in both variants. This is a modest historic museum, not a mansion or a waterside resort; do not invent a sandy private beach directly at its entrance. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette. Keep the entire main building between x=18% and x=80% of the canvas with the roof below y=18%, leaving a clear transparent gap beyond its roof and right wall. The local supporting ground and low plants continue to the bottom and right edges.",
+  "promptSha256": "ce66bd36e08bab436787d2b4fe2b6c7f0ed5da04b7be7863e0a9333ab352b35f",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tc-cockburn-town-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-662dc3aa-6b89-41fd-a147-e9dbc4aab884.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-662dc3aa-6b89-41fd-a147-e9dbc4aab884.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/tc-cockburn-town-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "6d445a56b0bb274108b39041651ba8fd9a76bbae06b6cc03f46fa023f170ef47",
+  "savedSha256": "6d445a56b0bb274108b39041651ba8fd9a76bbae06b6cc03f46fa023f170ef47",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:54:11.833Z",
+  "toolCallId": "exec-662dc3aa-6b89-41fd-a147-e9dbc4aab884",
+  "savedAt": "2026-10-17T07:56:27.629387+00:00"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "es-segovia-landscape",
+  "cityId": "es-segovia",
+  "name": "세고비아",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-segovia-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-segovia-landscape.json",
+  "originalSha256": "305934f40bce318c9f1e89c1f76bdff4bcc4eb4f25e8bb1c6999aaab27a759a3",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    90,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/es-segovia.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 149702,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "b7676d0fabd452187e3153ab282f2ef848e132bc57b129d6e4f98c226da32848",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

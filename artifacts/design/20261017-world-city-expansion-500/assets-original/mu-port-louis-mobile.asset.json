@@ -1,0 +1,57 @@
+{
+  "id": "mu-port-louis-mobile",
+  "cityId": "mu-port-louis",
+  "name": "포트루이스",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mu-port-louis-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mu-port-louis-mobile.json",
+  "originalSha256": "9252c25321a68fb8bdc0c537642d81a5455c5f4a836a079ed2c262d497ecdb6f",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    27,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mu-port-louis-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 109390,
+  "technicalEmptyEdgeRefits": [
+    [
+      0,
+      4
+    ]
+  ],
+  "assetSha256": "cad4738746085fa6cc448cb186501db664bbd35f691921d8beef342bd5a8aea0",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

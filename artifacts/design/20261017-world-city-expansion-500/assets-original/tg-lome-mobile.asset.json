@@ -1,0 +1,52 @@
+{
+  "id": "tg-lome-mobile",
+  "cityId": "tg-lome",
+  "name": "로메",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/tg-lome-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/tg-lome-mobile.json",
+  "originalSha256": "75b7d34f676c77b5f835a86c0df3a1b7f2a06ae34e3d9bc625b2c031750905dc",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    37,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/tg-lome-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 101678,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c5d6400a1b2309735319a98b43fad3b27ebc2d71c83781b190c22957ddc83d77",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

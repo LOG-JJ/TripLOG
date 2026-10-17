@@ -1,0 +1,52 @@
+{
+  "id": "cl-valparaiso-mobile",
+  "cityId": "cl-valparaiso",
+  "name": "발파라이소",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cl-valparaiso-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cl-valparaiso-mobile.json",
+  "originalSha256": "24578882f3f61882d937ed4581e2575c14c4eb938b1f6bbd82fa841724b2ea40",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    145,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cl-valparaiso-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 93588,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "66897342a88e578df19d0919289a8a7064acf4365dd0f1daf79a151fbf7308e4",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

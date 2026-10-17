@@ -1,0 +1,51 @@
+{
+  "id": "kr-gwacheon-mobile",
+  "cityId": "kr-gwacheon",
+  "name": "과천",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwacheon-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwacheon-mobile.json",
+  "originalSha256": "c8ffed444ccec1eec24446b3694db6af858ac75996f5ec10f6ec198f9c44f520",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    37,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gwacheon-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 77130,
+  "assetSha256": "8abcbb6efcf34432f303dd5d36a25381023215dcedd137d7c32acd54809b9097",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

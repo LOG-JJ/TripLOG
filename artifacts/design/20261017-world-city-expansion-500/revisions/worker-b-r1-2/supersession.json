@@ -1,0 +1,218 @@
+[
+  {
+    "jobId": "bz-belize-city-landscape",
+    "reason": "Generic ornate cathedral with wrong tower types instead of modest single-tower brick St Johns.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/bz-belize-city-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/bz-belize-city-landscape/jobs/bz-belize-city-landscape.json",
+        "sha256": "ae56811e0d3d46f69c8871a3449b4d874a2a06c4c47da37368304bb776f11893"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/bz-belize-city-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/bz-belize-city-landscape/jobs/bz-belize-city-landscape.prompt.txt",
+        "sha256": "3305b78eca64f7bacc4f9407cf1dcb410552b41075dbbb78482054eece2ff3a5"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/bz-belize-city-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/bz-belize-city-landscape/originals/bz-belize-city-landscape.png",
+        "sha256": "bb015646d31581119940ada2e5c9261dc1ad84fe348fa0a9f073adc83464bd42"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/bz-belize-city-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/bz-belize-city-landscape/originals/bz-belize-city-landscape.json",
+        "sha256": "3e6e1be4476d739c9a804c151419d3202e0cd8c87051884fd05bdec4d9733734"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/bz-belize-city-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/bz-belize-city-landscape/originals/bz-belize-city-landscape.asset.json",
+        "sha256": "45d6c95910dcf99cbfb541e49783b9d7e12d17c84c371adc5d1c5f35aa9e22e4"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/bz-belize-city.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/bz-belize-city-landscape/runtime/bz-belize-city.webp",
+        "sha256": "ed43b7da42ac76007e18329319f7528225a796ce96826a3961649eac4890b409"
+      }
+    ]
+  },
+  {
+    "jobId": "bz-belize-city-mobile",
+    "reason": "Generic ornate cathedral with wrong tower types instead of modest single-tower brick St Johns.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/bz-belize-city-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/bz-belize-city-mobile/jobs/bz-belize-city-mobile.json",
+        "sha256": "2be564d8898a616de163fdf07b75eccb96101e08d05209769751e9ea94fffb8a"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/bz-belize-city-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/bz-belize-city-mobile/jobs/bz-belize-city-mobile.prompt.txt",
+        "sha256": "0a288cbee6748839140de448b28b6b686ddbf40e7d55721fa08a4cc2430e4135"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/bz-belize-city-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/bz-belize-city-mobile/originals/bz-belize-city-mobile.png",
+        "sha256": "d192be8f11038493c509f9714b4e2634c27b4e503b12da0d60154f58c0063d12"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/bz-belize-city-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/bz-belize-city-mobile/originals/bz-belize-city-mobile.json",
+        "sha256": "614b14d03ea1587f01d0049219a0359f64295d66308f9a90eca915774accb143"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/bz-belize-city-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/bz-belize-city-mobile/originals/bz-belize-city-mobile.asset.json",
+        "sha256": "3e3d8916e8ab97697156e8b9eb2216babc690a2db9f1865a76148a9845440eb6"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/bz-belize-city-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/bz-belize-city-mobile/runtime/bz-belize-city-mobile.webp",
+        "sha256": "91143a2a1935e6a1257eafe5f0b07b88c58d895688d43370e03c9f424862bff6"
+      }
+    ]
+  },
+  {
+    "jobId": "do-santo-domingo-landscape",
+    "reason": "Invented tall bell tower and dome obscured the real low west facade.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/do-santo-domingo-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/do-santo-domingo-landscape/jobs/do-santo-domingo-landscape.json",
+        "sha256": "eacbc1d78ebc371d2b7d115b3f6664c37f5e6705458904876a78877d18ae4e76"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/do-santo-domingo-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/do-santo-domingo-landscape/jobs/do-santo-domingo-landscape.prompt.txt",
+        "sha256": "1ce75c6980651e101965c4ea9b19af5ca697d54f75385cf74ff85361eb500ea0"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/do-santo-domingo-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/do-santo-domingo-landscape/originals/do-santo-domingo-landscape.png",
+        "sha256": "5ef5908a0e7a5f64e910a65e870371c441281a430aeb36fbc8e8270417e87405"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/do-santo-domingo-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/do-santo-domingo-landscape/originals/do-santo-domingo-landscape.json",
+        "sha256": "53844290861ec251a73283bdf27473ff5a9e9ace85dc309160bfa1c0a49abb37"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/do-santo-domingo-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/do-santo-domingo-landscape/originals/do-santo-domingo-landscape.asset.json",
+        "sha256": "e0acfe649047b699e9cf0114437c95c1f255afbeae855371fc6002a21634667d"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/do-santo-domingo.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/do-santo-domingo-landscape/runtime/do-santo-domingo.webp",
+        "sha256": "1fe9198120b4e06ee0e93fc35f56b0885c5d57ce8a3718f8362f515559d972dd"
+      }
+    ]
+  },
+  {
+    "jobId": "do-santo-domingo-mobile",
+    "reason": "Invented tall bell tower and dome obscured the real low west facade.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/do-santo-domingo-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/do-santo-domingo-mobile/jobs/do-santo-domingo-mobile.json",
+        "sha256": "ca85ecf44425a5244e55cbd64927845713be9adf05ceba21bd0e9a5b44a1f35c"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/do-santo-domingo-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/do-santo-domingo-mobile/jobs/do-santo-domingo-mobile.prompt.txt",
+        "sha256": "6cf0c276c139186b341db928e7e226b32563a1043fa6030757a749e7d2c35234"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/do-santo-domingo-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/do-santo-domingo-mobile/originals/do-santo-domingo-mobile.png",
+        "sha256": "e087ad33e0ea4f84f56468520794e1d7af19d10cf7341055ce9884204dbdc190"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/do-santo-domingo-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/do-santo-domingo-mobile/originals/do-santo-domingo-mobile.json",
+        "sha256": "27a3cf354c70fc4c2ad29d62dcde3c3b30731a0424142f3a1440390d2b32b9cc"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/do-santo-domingo-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/do-santo-domingo-mobile/originals/do-santo-domingo-mobile.asset.json",
+        "sha256": "12a7d5cdc3f71781356324abe9bc5c46cf6417023c5dac417d69abe9287fb770"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/do-santo-domingo-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/do-santo-domingo-mobile/runtime/do-santo-domingo-mobile.webp",
+        "sha256": "27d52302bc245aa2cf74f3149c9acf3c38414ae57d475717fd6f09229e80b2b0"
+      }
+    ]
+  },
+  {
+    "jobId": "lc-castries-landscape",
+    "reason": "Invented twin domed towers and large seated statue; actual basilica has a stone gable facade and single square tower.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/lc-castries-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/lc-castries-landscape/jobs/lc-castries-landscape.json",
+        "sha256": "01aec9f6674fda0f5bb59b44241f1e66ebd56ccf92d159b6c601703d4c3c8c94"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/lc-castries-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/lc-castries-landscape/jobs/lc-castries-landscape.prompt.txt",
+        "sha256": "d3c84001cf26450b345f86b5004d582e2d1358a94d4a859549739e9025e46e84"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/lc-castries-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/lc-castries-landscape/originals/lc-castries-landscape.png",
+        "sha256": "5d6fbe88561a3f6a511ae614e9e772b411c4331085f75a2e5fe460e789386ce3"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/lc-castries-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/lc-castries-landscape/originals/lc-castries-landscape.json",
+        "sha256": "820e9c9dc4f86a37ad7d897a76680c4dcbdb76e00ea57b7167d419e974557419"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/lc-castries-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/lc-castries-landscape/originals/lc-castries-landscape.asset.json",
+        "sha256": "9409bfb7dcb463e2079473b66b778b24763e949a984296441b02b7c80d96184e"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/lc-castries.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/lc-castries-landscape/runtime/lc-castries.webp",
+        "sha256": "563192bcdaac2a2f4461ed27ea339598a9c9f7331241ebd9175de4ea8b3346d1"
+      }
+    ]
+  },
+  {
+    "jobId": "lc-castries-mobile",
+    "reason": "Invented twin domed towers and large seated statue; actual basilica has a stone gable facade and single square tower.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/lc-castries-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/lc-castries-mobile/jobs/lc-castries-mobile.json",
+        "sha256": "1ca76eb97a1de9ba01b719284978a64390caa64a11574b55257e671685193c14"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/lc-castries-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/lc-castries-mobile/jobs/lc-castries-mobile.prompt.txt",
+        "sha256": "15fcafb4383edfcc3e34a271617dcd040e9696dff8321c4c2f6d091e490e2407"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/lc-castries-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/lc-castries-mobile/originals/lc-castries-mobile.png",
+        "sha256": "0534c8f8164468273ba81e27ac4da781a4971291af2a072ab471fde3513fb964"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/lc-castries-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/lc-castries-mobile/originals/lc-castries-mobile.json",
+        "sha256": "791d40980d17bbfd81ced7bbf9033960bd504a0c30b80be7c07d8a611c00cdb4"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/lc-castries-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/lc-castries-mobile/originals/lc-castries-mobile.asset.json",
+        "sha256": "b7a2af5393c38e3c87378217b3c7b828d4a7403d1da31c267bf644c97b179f03"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/lc-castries-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/lc-castries-mobile/runtime/lc-castries-mobile.webp",
+        "sha256": "598b2e9cb3d715fe34220c92d6625e8510c1beb4f3901723badf3e4a92a6fb55"
+      }
+    ]
+  }
+]

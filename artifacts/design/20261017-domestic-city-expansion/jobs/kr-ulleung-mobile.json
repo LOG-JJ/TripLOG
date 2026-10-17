@@ -1,0 +1,37 @@
+{
+  "id": "kr-ulleung-mobile",
+  "cityId": "kr-ulleung",
+  "cityName": "울릉도",
+  "englishName": "Ulleungdo Island",
+  "kind": "city",
+  "group": "기존 군과 섬 보존",
+  "variant": "mobile",
+  "phase": "pilot",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Ulleungdo Island, South Korea: the Haengnam coastal walking path winding closely around rugged volcanic sea cliffs, with green vegetation above and clear cyan seawater below. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and supporting land or water flowing vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted ground, water or foliage must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "5732d24496099c1e4311102bf46d1b31e88e3415f0da60088c7aec122cbaf6e1",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/jobs/kr-ulleung-mobile.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-ulleung-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-ulleung-mobile.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-ulleung-mobile.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v5/kr-ulleung-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "motif": "the Haengnam coastal walking path winding closely around rugged volcanic sea cliffs, with green vegetation above and clear cyan seawater below",
+  "proposedMotif": "행남해안산책로·화산암 절벽",
+  "motifSource": {
+    "title": "한국관광공사 해안 테마길",
+    "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=7b6b7d8b-87d5-4c68-a85a-272454e19c2e",
+    "evidence": "행남해안산책로·화산암 지형 확인"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone hand-drawn destination illustration of Ulleungdo Island, South Korea: the Haengnam coastal walking path winding closely around rugged volcanic sea cliffs, with green vegetation above and clear cyan seawater below. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and supporting land or water flowing vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted ground, water or foliage must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+    "transparent_background": true
+  },
+  "provenanceRule": "The --source argument must be the exact local original path returned by this job's image_gen call. Never search for a latest file."
+}

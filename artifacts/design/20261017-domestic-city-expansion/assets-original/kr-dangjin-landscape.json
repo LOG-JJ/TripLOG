@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-dangjin-landscape",
+  "cityId": "kr-dangjin",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Dangjin, South Korea: the Sapgyoho tourist waterfront, with its large circular Ferris wheel on the shore, slender spokes and small enclosed gondolas, a simple waterside promenade and broad calm blue water. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. Make the circular Ferris wheel the single clear landmark. Show its full round outline comfortably inside the right side of the canvas. Do not invent an observation tower, futuristic tower or lighthouse.",
+  "promptSha256": "74a8ced1595375ba62780ba06e5d0b9742f334e267092891302db61457dd8d70",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-dangjin-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-72d6a23a-4693-48e0-b824-b46dc5d2f5ce.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-72d6a23a-4693-48e0-b824-b46dc5d2f5ce.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "68066e1f78ed9f65065f594edb374107e0d12a259c1752bc2c122ddf90f46d3f",
+  "savedSha256": "68066e1f78ed9f65065f594edb374107e0d12a259c1752bc2c122ddf90f46d3f",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:31:58Z",
+  "toolCallId": "exec-72d6a23a-4693-48e0-b824-b46dc5d2f5ce",
+  "savedAt": "2026-10-17T05:33:16.505576+00:00"
+}

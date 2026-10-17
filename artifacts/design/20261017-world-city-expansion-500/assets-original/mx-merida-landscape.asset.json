@@ -1,0 +1,52 @@
+{
+  "id": "mx-merida-landscape",
+  "cityId": "mx-merida",
+  "name": "메리다(멕시코)",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mx-merida-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mx-merida-landscape.json",
+  "originalSha256": "6d3d82dd13a41c26470098fcbe743e1e7e0c64a1b13e573c0d122eec9125bf79",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mx-merida.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 127730,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "1458d76a30fcbfa0c1387a553e8e933c4f1cac7af62f933f3b3b05186c0025cd",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

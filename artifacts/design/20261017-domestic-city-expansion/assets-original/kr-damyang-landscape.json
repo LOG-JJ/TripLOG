@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-damyang-landscape",
+  "cityId": "kr-damyang",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Damyang, South Korea: Juknokwon's tall slender bamboo grove and a winding walking path beneath the green bamboo canopy. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "d52feebdf399ecc98f214c4dd5971aa417376c832ebe35553bd0e38cfcdbb7e7",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-damyang-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-40e6e4c1-5d34-41f7-b9da-093e9dbe83f7.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-40e6e4c1-5d34-41f7-b9da-093e9dbe83f7.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-damyang-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "15b90f8d410c2b08c2f1b5037128c80dc5e6686dd3c15be3dd1cbba7c1844f48",
+  "savedSha256": "15b90f8d410c2b08c2f1b5037128c80dc5e6686dd3c15be3dd1cbba7c1844f48",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:31:09Z",
+  "toolCallId": "exec-40e6e4c1-5d34-41f7-b9da-093e9dbe83f7",
+  "savedAt": "2026-10-17T05:31:41.599853+00:00"
+}

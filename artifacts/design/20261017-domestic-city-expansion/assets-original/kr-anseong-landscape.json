@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-anseong-landscape",
+  "cityId": "kr-anseong",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Anseong, South Korea: Anseong Farmland's open rolling pastures, simple pasture fencing and a small group of grazing farm animals. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "bb1aafd2eea4168e2474371ebf7c9182419e1059ce3e11c5dc4573bd322510e5",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-anseong-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-c18a5a9a-de75-4119-ab5f-0d6e832fd939.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-c18a5a9a-de75-4119-ab5f-0d6e832fd939.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-anseong-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "4a474f249547265edec92f9c436431cbf2309eaf38ce5baf37e534ef16393e11",
+  "savedSha256": "4a474f249547265edec92f9c436431cbf2309eaf38ce5baf37e534ef16393e11",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:15:31.941Z",
+  "toolCallId": "exec-c18a5a9a-de75-4119-ab5f-0d6e832fd939",
+  "savedAt": "2026-10-17T05:16:26.915896+00:00"
+}

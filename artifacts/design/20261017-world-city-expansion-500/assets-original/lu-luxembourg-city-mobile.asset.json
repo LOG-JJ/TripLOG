@@ -1,0 +1,52 @@
+{
+  "id": "lu-luxembourg-city-mobile",
+  "cityId": "lu-luxembourg-city",
+  "name": "룩셈부르크시",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/lu-luxembourg-city-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/lu-luxembourg-city-mobile.json",
+  "originalSha256": "0bfb5f7e9a49b653ed5e174d1c39814ea191a54c0cb972ddf390547a719a1d1d",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    31,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/lu-luxembourg-city-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 102074,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "d16539e397ba3a213e8a9b0d8647c5b5cd976ac49dc0baa92b41ccab0a1f2221",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

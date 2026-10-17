@@ -1,0 +1,52 @@
+{
+  "id": "tj-dushanbe-mobile",
+  "cityId": "tj-dushanbe",
+  "name": "두샨베",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/tj-dushanbe-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/tj-dushanbe-mobile.json",
+  "originalSha256": "efa34452843f78f4775fe38399f2842b4f2633232f80f4687c95ccd3fd4fde0d",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/tj-dushanbe-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 73910,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "f93ef96e20314ffc0c4ed2095dfa7245de9a125c626b728978808f2dcb153e06",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

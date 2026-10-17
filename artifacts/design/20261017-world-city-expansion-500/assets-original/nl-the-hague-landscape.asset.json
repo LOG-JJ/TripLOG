@@ -1,0 +1,52 @@
+{
+  "id": "nl-the-hague-landscape",
+  "cityId": "nl-the-hague",
+  "name": "헤이그",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/nl-the-hague-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/nl-the-hague-landscape.json",
+  "originalSha256": "bf24e30a6da892fdbbda0d57296cf85a1c9334305ee00c9daea636e1a4656004",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/nl-the-hague.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 105892,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "bc8ad7770fad48bca48bea5e8c355f8201620743a4e861275305b12208d3eb4b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

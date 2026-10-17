@@ -1,0 +1,607 @@
+{
+  "count": 20,
+  "uniqueSources": 20,
+  "totalBytes": 2116800,
+  "records": [
+    {
+      "id": "bl-gustavia-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/bl-gustavia.webp",
+      "sha256": "8a24a2fe6bd60a9695c9254becac3d45436441ed75a89515db1936b6682b8629",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        800,
+        480
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        0,
+        104,
+        800,
+        480
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 145990
+    },
+    {
+      "id": "bl-gustavia-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/bl-gustavia-mobile.webp",
+      "sha256": "b14b6464da4d5e8b45351b5c193885900630e9e35c9aa8aea399cf8d14ea019e",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        10,
+        480,
+        600
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        5,
+        132,
+        480,
+        600
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 110774
+    },
+    {
+      "id": "fk-stanley-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/fk-stanley.webp",
+      "sha256": "97bec7dc36860443fef700421d703fe8a114c6db3c8b551d2a816117703cfd8b",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        54,
+        800,
+        480
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        0,
+        61,
+        800,
+        480
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 112236
+    },
+    {
+      "id": "fk-stanley-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/fk-stanley-mobile.webp",
+      "sha256": "d7d8ec8b2e94f4079fab03d513d2c394720806c46864e22200fad10e7e006f8e",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        44,
+        480,
+        600
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        0,
+        101,
+        480,
+        600
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 90108
+    },
+    {
+      "id": "gi-gibraltar-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/gi-gibraltar.webp",
+      "sha256": "5957e330a348c3e85f42c6f7d56a424cd7464e75f4e7ded3ff2d2f2452ac3c51",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        800,
+        480
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        0,
+        68,
+        800,
+        480
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 122436
+    },
+    {
+      "id": "gi-gibraltar-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/gi-gibraltar-mobile.webp",
+      "sha256": "e674ddd326c668d66a5bd89aa93bf3da145560baad03d908fb3842eb73c8366e",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        42,
+        480,
+        600
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        0,
+        82,
+        480,
+        600
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 102806
+    },
+    {
+      "id": "je-saint-helier-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/je-saint-helier.webp",
+      "sha256": "3627f7989e1851b2995fb8400823642bbe7628c31824a85694765977d9786585",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        50,
+        800,
+        480
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        0,
+        107,
+        800,
+        480
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 107990
+    },
+    {
+      "id": "je-saint-helier-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/je-saint-helier-mobile.webp",
+      "sha256": "dc98d8aed9dc810627141d5a6051a3da391785e4bdb1af98dc23d866ec494d31",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        480,
+        600
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        12,
+        172,
+        480,
+        600
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 97068
+    },
+    {
+      "id": "ms-little-bay-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ms-little-bay.webp",
+      "sha256": "bd5fd6f03e7d9eeb43b8056b905ece1e6ef5b5304d0f48ed26086c344f343332",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        4,
+        34,
+        800,
+        480
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        6,
+        110,
+        800,
+        480
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 116736
+    },
+    {
+      "id": "ms-little-bay-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ms-little-bay-mobile.webp",
+      "sha256": "d7328b403d8e38204475023c13c1f465ee722e5fa19a1d89ede9993d03646efa",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        27,
+        480,
+        600
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        0,
+        98,
+        480,
+        600
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 112754
+    },
+    {
+      "id": "sj-longyearbyen-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/sj-longyearbyen.webp",
+      "sha256": "952f90a9cb300a638ac49400d09a0f9bbf42240ec0aff2ca42dd365e27b88694",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        22,
+        800,
+        480
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        2,
+        49,
+        800,
+        480
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 116376
+    },
+    {
+      "id": "sj-longyearbyen-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/sj-longyearbyen-mobile.webp",
+      "sha256": "d4e5e85ad31f6d1fabad8249ed48a6d1dc8a821ab5d5e6452987eee0fc0857d4",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        62,
+        480,
+        600
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        0,
+        105,
+        480,
+        600
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 90560
+    },
+    {
+      "id": "vi-charlotte-amalie-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/vi-charlotte-amalie.webp",
+      "sha256": "75dda3b469d1cc9402668b74715009f1ecaed9f4705e699f509fb569ab5fdce6",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        10,
+        800,
+        480
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        32,
+        69,
+        800,
+        480
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 94030
+    },
+    {
+      "id": "vi-charlotte-amalie-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/vi-charlotte-amalie-mobile.webp",
+      "sha256": "5d876f9715012a36cddf1cc528ca9c98f9ce06df8d1c91a36f241c930cc82fb6",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        16,
+        480,
+        600
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        0,
+        100,
+        480,
+        600
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 99928
+    },
+    {
+      "id": "nf-kingston-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/nf-kingston.webp",
+      "sha256": "06c3a8127e138d80f9710251c602e0ed7fa1e84201b5d34e757776def7561f1e",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        20,
+        13,
+        800,
+        480
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        37,
+        46,
+        800,
+        480
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 132756
+    },
+    {
+      "id": "nf-kingston-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/nf-kingston-mobile.webp",
+      "sha256": "839ce9ee2452a4d77e28764bce119ac8e549fd05a02f9174669eb4132c2114bb",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        15,
+        480,
+        600
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        0,
+        40,
+        480,
+        600
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 117628
+    },
+    {
+      "id": "gu-hagatna-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/gu-hagatna.webp",
+      "sha256": "8179ffa479233de56f97ad07434ec4820b2623969d1ed818269601599b91b70a",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        52,
+        800,
+        480
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        75,
+        54,
+        800,
+        480
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 99556
+    },
+    {
+      "id": "gu-hagatna-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/gu-hagatna-mobile.webp",
+      "sha256": "79ebe375840093b435b0ae15d506042a838b9926452f49c1be5271148b731479",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        53,
+        480,
+        600
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        0,
+        58,
+        480,
+        600
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 89042
+    },
+    {
+      "id": "eh-dakhla-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/eh-dakhla.webp",
+      "sha256": "09b90d9bfbe53e8ec50d91ea5039f5d1bccf6d30ce9b2efe9025033e1e1c6d02",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        58,
+        800,
+        480
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        28,
+        159,
+        800,
+        480
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 87032
+    },
+    {
+      "id": "eh-dakhla-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/eh-dakhla-mobile.webp",
+      "sha256": "362d9e57e7494e3580895be6c0ca8b01f66f4719b67fedbf81d6edc55a6c10e9",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        51,
+        480,
+        600
+      ],
+      "visibleAlphaThreshold": 8,
+      "visibleAlphaBounds": [
+        1,
+        230,
+        480,
+        600
+      ],
+      "visibleRightBottomGaps": [
+        0,
+        0
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 70994
+    }
+  ]
+}

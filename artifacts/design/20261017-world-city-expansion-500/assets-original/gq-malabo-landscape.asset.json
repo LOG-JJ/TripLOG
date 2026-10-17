@@ -1,0 +1,52 @@
+{
+  "id": "gq-malabo-landscape",
+  "cityId": "gq-malabo",
+  "name": "말라보",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gq-malabo-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gq-malabo-landscape.json",
+  "originalSha256": "bcd856a449918e2db616e337c4b7d6db83a172c2833ec1d9c540ec3af10ac8e4",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    25,
+    19,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gq-malabo.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 109086,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "7357d8cfcf16494984f285f51bec078065be58d616e32bd9ea621cb7a24e72b7",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "nc-noumea-mobile",
+  "cityId": "nc-noumea",
+  "name": "누메아",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/nc-noumea-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/nc-noumea-mobile.json",
+  "originalSha256": "b56687cac8724c5fb323e3f71cc68a19bbb8151a6646203cff76f82e8778b847",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/nc-noumea-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 107044,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "9e6279eb51b3980ef0744f741b51339bb92e1da525a94788b0a772b8ea91d967",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

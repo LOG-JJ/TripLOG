@@ -1,0 +1,52 @@
+{
+  "id": "gq-malabo-mobile",
+  "cityId": "gq-malabo",
+  "name": "말라보",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gq-malabo-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gq-malabo-mobile.json",
+  "originalSha256": "7b7536a0c7f06f6ef2cd8107ca420503e35964eed0060efb94dc8335286f71d5",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gq-malabo-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 105780,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "cdf2be269bc18f332b9570cf9851cdb58c3d9094b53e0bb87539fdd75f3254c9",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

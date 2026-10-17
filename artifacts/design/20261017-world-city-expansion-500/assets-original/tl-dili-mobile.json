@@ -1,0 +1,26 @@
+{
+  "jobId": "tl-dili-mobile",
+  "cityId": "tl-dili",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Dili, Timor-Leste: Cristo Rei standing on a globe at Cape Fatucama, with the curving coast of Dili Bay below. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "4d426a815d903380c1b768fcbeab697e8f0fb788f89c8cb845635843338c42f9",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tl-dili-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-80daf013-06b6-4f3f-90a1-425b3593a8fc.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-80daf013-06b6-4f3f-90a1-425b3593a8fc.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/tl-dili-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "c2291aff6f435eb57c6c24d6b0301523f517aed21d249cd78f6bae0008ce2be1",
+  "savedSha256": "c2291aff6f435eb57c6c24d6b0301523f517aed21d249cd78f6bae0008ce2be1",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:33:59.359Z",
+  "toolCallId": "exec-80daf013-06b6-4f3f-90a1-425b3593a8fc",
+  "savedAt": "2026-10-17T06:36:04.370496+00:00"
+}

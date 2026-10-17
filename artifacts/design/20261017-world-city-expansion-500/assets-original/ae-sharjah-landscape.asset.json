@@ -1,0 +1,52 @@
+{
+  "id": "ae-sharjah-landscape",
+  "cityId": "ae-sharjah",
+  "name": "샤르자",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ae-sharjah-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ae-sharjah-landscape.json",
+  "originalSha256": "970260486aed0fa75b779417e27b6d0ee8cf5e1bd2d2cdd53f7a9da613439960",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    39,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ae-sharjah.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 99352,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "7bc5fc5462e78b1d600584689283abefd400961ddeb3ee4bfd39a100a2163b53",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

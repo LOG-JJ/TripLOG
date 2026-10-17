@@ -1,0 +1,52 @@
+{
+  "id": "mz-ilha-de-mocambique-mobile",
+  "cityId": "mz-ilha-de-mocambique",
+  "name": "모잠비크섬 도시",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mz-ilha-de-mocambique-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mz-ilha-de-mocambique-mobile.json",
+  "originalSha256": "d5128767b8fbe87f07f0861e74af9353201e5bfc1fbe9932af5b1adce8f56774",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mz-ilha-de-mocambique-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 97654,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "961e261c1b221ad947f88bd4235c92e0f79032dbc4dce6cb336def0dfe62b418",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

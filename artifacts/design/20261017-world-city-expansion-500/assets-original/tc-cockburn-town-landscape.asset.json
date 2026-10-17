@@ -1,0 +1,52 @@
+{
+  "id": "tc-cockburn-town-landscape",
+  "cityId": "tc-cockburn-town",
+  "name": "코크번타운",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/tc-cockburn-town-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/tc-cockburn-town-landscape.json",
+  "originalSha256": "6d445a56b0bb274108b39041651ba8fd9a76bbae06b6cc03f46fa023f170ef47",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/tc-cockburn-town.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 128636,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "b78f5fef838955e0f08176817c097089e181613c9b20b425cddd25d2a7a887b8",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

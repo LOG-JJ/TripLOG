@@ -1,0 +1,26 @@
+{
+  "jobId": "es-cordoba-landscape",
+  "cityId": "es-cordoba",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Cordoba, Spain: the Mosque-Cathedral of Cordoba, with the Roman bridge over the Guadalquivir. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "962e7909b9fba9899eaf069adeb53c3405dcc6ad920f9593b44e563c7ca2d523",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/es-cordoba-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-ec0948fa-4598-4504-9d26-1ee8e6cd39fe.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-ec0948fa-4598-4504-9d26-1ee8e6cd39fe.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/es-cordoba-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "886a105e444f13ccfdb7ca33c9e550591741028ed098052e9988130a354b0e19",
+  "savedSha256": "886a105e444f13ccfdb7ca33c9e550591741028ed098052e9988130a354b0e19",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:10:31.110Z",
+  "toolCallId": "exec-ec0948fa-4598-4504-9d26-1ee8e6cd39fe",
+  "savedAt": "2026-10-17T06:11:54.772036+00:00"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "vg-road-town-mobile",
+  "cityId": "vg-road-town",
+  "name": "로드타운",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/vg-road-town-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/vg-road-town-mobile.json",
+  "originalSha256": "1df3c929717aaee83701fded124e7a70e7b692c88fee3202a1b8a5ff85ff3680",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/vg-road-town-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 156378,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2ebe55e80b452ad9912a48018605799cd487c685c44d5d1a65f74ae884fae3e2",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "jobId": "mp-garapan-landscape",
+    "reason": "Match the documented mostly-solid red tower shaft and short upper bell chamber, removing the invented full-height open bell ladder.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/mp-garapan-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r2/mp-garapan-landscape/jobs/mp-garapan-landscape.json",
+        "sha256": "0ce151463231d3f3a402aff4cbdf9a8f534ff836f98040a8372760db8da625dd"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/mp-garapan-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r2/mp-garapan-landscape/jobs/mp-garapan-landscape.prompt.txt",
+        "sha256": "3f100101dd2922f211bd8217a3925adec12d2d37a51f9f49288dd3661e2a863d"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/mp-garapan-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r2/mp-garapan-landscape/originals/mp-garapan-landscape.png",
+        "sha256": "f0d63ffcd896b029dbd47800ecef9259988cd7ecc981696cbb350788863109d3"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/mp-garapan-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r2/mp-garapan-landscape/originals/mp-garapan-landscape.json",
+        "sha256": "8d609030d81b7d7a6afbba1358dcac854f27e0f9c46841670c8c50d09c8df42c"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/mp-garapan-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r2/mp-garapan-landscape/originals/mp-garapan-landscape.asset.json",
+        "sha256": "69e3e5d23799f1201be7d91872e0ef541c52cdcddda480e0db7eaba8f0aa1a28"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/mp-garapan.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r2/mp-garapan-landscape/runtime/mp-garapan.webp",
+        "sha256": "57e73fb414e363186126a98092101ca07e04ebbdd150c558197c11d37c660457"
+      }
+    ]
+  },
+  {
+    "jobId": "mp-garapan-mobile",
+    "reason": "Match the documented mostly-solid red tower shaft and short upper bell chamber, removing the invented full-height open bell ladder.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/mp-garapan-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r2/mp-garapan-mobile/jobs/mp-garapan-mobile.json",
+        "sha256": "84c2a40ef318e656384fe6a3cd78ab008acd1f8d5eb7ad97fecda8c109c47cd1"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/mp-garapan-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r2/mp-garapan-mobile/jobs/mp-garapan-mobile.prompt.txt",
+        "sha256": "7b6e7c363610ec8e83da827f25cb3f6e9f09d901ee084f01e48a172854105b2d"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/mp-garapan-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r2/mp-garapan-mobile/originals/mp-garapan-mobile.png",
+        "sha256": "5ebc1cdcb3352f5d3460e1848e43785d2c4496f5a63ce89380eaf62ceee65090"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/mp-garapan-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r2/mp-garapan-mobile/originals/mp-garapan-mobile.json",
+        "sha256": "c1807bcf6e5c1eb3c01d86e5995e74b93be952de04caf5a5bf5b37f404005bf9"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/mp-garapan-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r2/mp-garapan-mobile/originals/mp-garapan-mobile.asset.json",
+        "sha256": "380b94d8cb03015861a08300adfef6bd8213c0ea76784eb6e5d7f2239a1e8a56"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/mp-garapan-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-coverage-r2/mp-garapan-mobile/runtime/mp-garapan-mobile.webp",
+        "sha256": "d43d84b55062bba3770d263183bb91a0b8c83985ffb420644ce5e2442a6a9a37"
+      }
+    ]
+  }
+]

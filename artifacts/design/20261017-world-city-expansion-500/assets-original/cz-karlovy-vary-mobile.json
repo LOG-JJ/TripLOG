@@ -1,0 +1,26 @@
+{
+  "jobId": "cz-karlovy-vary-mobile",
+  "cityId": "cz-karlovy-vary",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Karlovy Vary, Czechia: the long Mill Colonnade, with the Tepla river through the spa town. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the complete main landmark compact and readable in the middle. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette. Composition correction: Show a pulled-back elevated three-quarter overview of the WHOLE Mill Colonnade as a compact long building diagonally receding into the middle of the scene, with both ends fully visible. The near end must finish at 82 percent of picture width and the far end near 30 percent. Allow the Tepla river and low greenery to continue to the right and bottom edges. Preserve the same simple pastel hand-drawn style and transparent background. No image reference is supplied.",
+  "promptSha256": "d2be1753b971ede1880be4f4fc7a45c8c4f803c232328e5e7f72efbf07fe5406",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cz-karlovy-vary-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-a0d6473a-65a8-41ae-aeb5-b69389adeb90.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-a0d6473a-65a8-41ae-aeb5-b69389adeb90.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/cz-karlovy-vary-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "4f14cf9df0133eb0d53cec66ab819b5996df19e1f6888e1a93a032520c096015",
+  "savedSha256": "4f14cf9df0133eb0d53cec66ab819b5996df19e1f6888e1a93a032520c096015",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:57:33.381Z",
+  "toolCallId": "exec-a0d6473a-65a8-41ae-aeb5-b69389adeb90",
+  "savedAt": "2026-10-17T07:01:31.286423+00:00"
+}

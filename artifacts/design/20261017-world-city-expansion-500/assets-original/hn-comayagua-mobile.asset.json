@@ -1,0 +1,52 @@
+{
+  "id": "hn-comayagua-mobile",
+  "cityId": "hn-comayagua",
+  "name": "코마야과",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/hn-comayagua-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/hn-comayagua-mobile.json",
+  "originalSha256": "9af4b5cdff6fa25956506de415b780c39ec48cead2d0216aa24ff5059b712741",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    29,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/hn-comayagua-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 89594,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "1b7a9f9f2fa0d8b103de24fc648927be8952f288232cd097c187304d13232c7c",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

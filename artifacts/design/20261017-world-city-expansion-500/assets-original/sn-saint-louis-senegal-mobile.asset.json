@@ -1,0 +1,52 @@
+{
+  "id": "sn-saint-louis-senegal-mobile",
+  "cityId": "sn-saint-louis-senegal",
+  "name": "생루이(세네갈)",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-mobile.json",
+  "originalSha256": "2e8ada21146a65d126b3fce3639591528657e3c49afdee35c20fdc8ded65a173",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sn-saint-louis-senegal-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 73024,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "12140b10c327473fb6f0bfa453b838d7cdeb418be3138ac61dfb9d4bd20da4c7",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

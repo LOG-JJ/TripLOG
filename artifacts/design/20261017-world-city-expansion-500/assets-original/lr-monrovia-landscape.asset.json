@@ -1,0 +1,52 @@
+{
+  "id": "lr-monrovia-landscape",
+  "cityId": "lr-monrovia",
+  "name": "몬로비아",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/lr-monrovia-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/lr-monrovia-landscape.json",
+  "originalSha256": "a0f26c4f6208d8468d01801b6c9da08e1b803f4ab7cf77d4a963cd0ab1018fcd",
+  "sourceSize": [
+    1619,
+    972
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    29,
+    1619,
+    972
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/lr-monrovia.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 143710,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "69fdb7b3e4f490ef9c8c6dc20b1a7284d07d8043a373244c5afd0ef5ffa4fb98",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

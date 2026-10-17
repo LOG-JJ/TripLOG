@@ -1,0 +1,52 @@
+{
+  "id": "nl-utrecht-landscape",
+  "cityId": "nl-utrecht",
+  "name": "위트레흐트",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/nl-utrecht-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/nl-utrecht-landscape.json",
+  "originalSha256": "65ba8c5c471bc8934ff42a924e75301228a448bfaa5d7bc9841bfbeaf504edad",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/nl-utrecht.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 121542,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2fb561666bdc8f58bb7c49677eb4d77fb1d611b5b1dfce7b09b4c800fb80b005",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

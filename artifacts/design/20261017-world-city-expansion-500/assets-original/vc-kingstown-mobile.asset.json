@@ -1,0 +1,52 @@
+{
+  "id": "vc-kingstown-mobile",
+  "cityId": "vc-kingstown",
+  "name": "킹스타운",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/vc-kingstown-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/vc-kingstown-mobile.json",
+  "originalSha256": "7e42bea144be11ec7df3ecd0d1ddfa9577f6f53728cf8cdafbb61225bd1bd306",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/vc-kingstown-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 116618,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "712253dcdb5dfd2a597c6fc75edb76b363e1f3df206d20580585457a61afa5ab",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

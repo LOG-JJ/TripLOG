@@ -1,0 +1,26 @@
+{
+  "jobId": "co-medellin-mobile",
+  "cityId": "co-medellin",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Medellin, Colombia: the checker-patterned Palace of Culture Rafael Uribe Uribe, with a single rounded bronze horse sculpture on a low stone plinth in Plaza Botero; focus on the palace architecture and the bronze horse, without human figures or human sculptures. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "ac0b60dec8606b907caac4bcac7f83996cc7dcd182ec05d957724049e65be80d",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/co-medellin-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-92cd134a-d3b6-411b-8da3-00cdae11d76d.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-92cd134a-d3b6-411b-8da3-00cdae11d76d.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/co-medellin-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "75f8758159f4a81831545dce74d80ffd565a5c164d0a1764c3a63cc4770859d5",
+  "savedSha256": "75f8758159f4a81831545dce74d80ffd565a5c164d0a1764c3a63cc4770859d5",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:34:31Z",
+  "toolCallId": "exec-92cd134a-d3b6-411b-8da3-00cdae11d76d",
+  "savedAt": "2026-10-17T06:38:00.002677+00:00"
+}

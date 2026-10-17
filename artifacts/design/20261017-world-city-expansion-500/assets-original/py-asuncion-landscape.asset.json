@@ -1,0 +1,52 @@
+{
+  "id": "py-asuncion-landscape",
+  "cityId": "py-asuncion",
+  "name": "아순시온",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/py-asuncion-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/py-asuncion-landscape.json",
+  "originalSha256": "fa2034e8fd13153d7128b2ee2c13c1821cf47f985989ffce4ae49ac1c2389c62",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    99,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/py-asuncion.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 112018,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "4090044cf6240576cc2153c071812e5e598324bb57bba4466c32eb6d8f99f4ea",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

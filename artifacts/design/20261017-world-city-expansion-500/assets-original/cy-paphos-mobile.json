@@ -1,0 +1,26 @@
+{
+  "jobId": "cy-paphos-mobile",
+  "cityId": "cy-paphos",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Paphos, Cyprus: the rock-cut peristyle courtyards of the Tombs of the Kings, with the low coastal landscape of Paphos. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "e2d9261589cbbfd157fc6b5795e5e9e5e820eb33bfa61a617f14dfcb1b9f2f7c",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cy-paphos-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-623e4f34-07d5-43c0-8fcd-a8f4fe284103.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-623e4f34-07d5-43c0-8fcd-a8f4fe284103.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/cy-paphos-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "c27d15f2902b289cadf2db8d65ec3c7396a52c683365b381f724e3006fd65e35",
+  "savedSha256": "c27d15f2902b289cadf2db8d65ec3c7396a52c683365b381f724e3006fd65e35",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:05:24Z",
+  "toolCallId": "exec-623e4f34-07d5-43c0-8fcd-a8f4fe284103",
+  "savedAt": "2026-10-17T06:08:59.020494+00:00"
+}

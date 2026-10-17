@@ -1,0 +1,52 @@
+{
+  "id": "co-medellin-mobile",
+  "cityId": "co-medellin",
+  "name": "메데인",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/co-medellin-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/co-medellin-mobile.json",
+  "originalSha256": "75f8758159f4a81831545dce74d80ffd565a5c164d0a1764c3a63cc4770859d5",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    35,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/co-medellin-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 106830,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "ce70743bf4c838152cda2af315013641f6c8e6f96c4dc1a4c0c45056706434a4",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

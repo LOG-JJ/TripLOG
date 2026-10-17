@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-ulleung-landscape",
+  "cityId": "kr-ulleung",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Ulleungdo Island, South Korea: the Haengnam coastal walking path winding closely around rugged volcanic sea cliffs, with green vegetation above and clear cyan seawater below. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted ground, water or foliage must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "fda34598f8e58f535e0b6c69b3b9b8a1059516a907736b1488845555a9a864e4",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-ulleung-landscape.prompt.txt",
+  "sourceReturnedPath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-ce4b283a-c38b-4f57-b230-524cde5002ad.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-ce4b283a-c38b-4f57-b230-524cde5002ad.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-ulleung-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "6943fdeaf586d6e9af976f3b18eb9548bda13aacd31404dc0d719526e183d874",
+  "savedSha256": "6943fdeaf586d6e9af976f3b18eb9548bda13aacd31404dc0d719526e183d874",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:02:00Z",
+  "toolCallId": "exec-ce4b283a-c38b-4f57-b230-524cde5002ad",
+  "savedAt": "2026-10-17T05:02:33.146944+00:00"
+}

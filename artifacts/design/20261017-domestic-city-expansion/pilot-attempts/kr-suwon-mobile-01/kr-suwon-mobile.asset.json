@@ -1,0 +1,51 @@
+{
+  "id": "kr-suwon-mobile",
+  "cityId": "kr-suwon",
+  "name": "수원",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-suwon-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-suwon-mobile.json",
+  "originalSha256": "007b62776427abe9737e662176a69fdcaaec590aaa4537203d989a8d8e79afe1",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    25,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-suwon-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 86662,
+  "assetSha256": "dfb4e565f9dab37622f0c091e8163b765c9906b4b387c7446cd991567d24560f",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

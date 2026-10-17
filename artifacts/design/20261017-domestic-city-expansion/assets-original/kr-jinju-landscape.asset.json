@@ -1,0 +1,51 @@
+{
+  "id": "kr-jinju-landscape",
+  "cityId": "kr-jinju",
+  "name": "진주",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경남",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jinju-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jinju-landscape.json",
+  "originalSha256": "21ead1584e2003ab4fa7deeacaf4bbc9710b7381a47e6472d24231b8464b62bd",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    5,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-jinju.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 103934,
+  "assetSha256": "998c8c7d856d076d3d124ca4f619794b8004da14e23f5bf5f7c8db0cccc3c5ef",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

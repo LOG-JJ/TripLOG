@@ -1,0 +1,51 @@
+{
+  "id": "kr-dongducheon-mobile",
+  "cityId": "kr-dongducheon",
+  "name": "동두천",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dongducheon-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dongducheon-mobile.json",
+  "originalSha256": "faf6285574f644722360aee3d91abc69b9cf817319c6e4085e4f138a55030dd5",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-dongducheon-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 99442,
+  "assetSha256": "db1542363e365c17a22ca5eff8710faad8e53c9d4863517ced0deac362752140",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

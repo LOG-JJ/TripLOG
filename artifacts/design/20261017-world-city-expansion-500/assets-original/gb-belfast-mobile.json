@@ -1,0 +1,26 @@
+{
+  "jobId": "gb-belfast-mobile",
+  "cityId": "gb-belfast",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Belfast, United Kingdom: Titanic Belfast's angular silver facades, with the historic shipyard waterfront. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the complete main landmark compact and readable in the middle. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Composition correction: The only main subject is the complete contemporary Titanic Belfast museum with its four angular silver wings. Show all wing tips inside the picture, modest dockside water and distant yellow shipyard cranes. There must be no ship, liner, ferry or boat. Make the museum compact enough that its rightmost corner is visibly clear of the right edge. Preserve the same simple pastel hand-drawn style and transparent background. No image reference is supplied.",
+  "promptSha256": "98980867780db3f3825da0afca64601034f478d84eacdf6511fe81764109fc58",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-belfast-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-2ff4ec61-cc52-48de-91a1-1e26781880d7.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-2ff4ec61-cc52-48de-91a1-1e26781880d7.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/gb-belfast-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "9ece5b6597ce20cb3e94768e7ac9c1f3c2470d70b96dea9feba72c57c47940d7",
+  "savedSha256": "9ece5b6597ce20cb3e94768e7ac9c1f3c2470d70b96dea9feba72c57c47940d7",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:57:33.381Z",
+  "toolCallId": "exec-2ff4ec61-cc52-48de-91a1-1e26781880d7",
+  "savedAt": "2026-10-17T06:59:07.494026+00:00"
+}

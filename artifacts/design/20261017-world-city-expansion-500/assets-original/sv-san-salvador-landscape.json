@@ -1,0 +1,26 @@
+{
+  "jobId": "sv-san-salvador-landscape",
+  "cityId": "sv-san-salvador",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of San Salvador, El Salvador: the actual National Palace facing Gerardo Barrios square. Show a broad low two-storey neoclassical palace with a cream facade, a central portico of SIX tall Corinthian columns supporting one triangular pediment, a flat balustraded roofline, and symmetrical wings with arched windows. The palace has no dome anywhere, no clock tower and no turret. Include the square with its equestrian monument kept smaller than the main palace facade. Show the entire central pediment, portico and both palace ends clearly inside the frame. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "d0643c3200cfcd4fcb25b37173530689d8242713827b003b52949b42af6e6f6f",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sv-san-salvador-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-485d0889-8d11-4416-9034-8a2758a4becb.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-485d0889-8d11-4416-9034-8a2758a4becb.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/sv-san-salvador-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "da01e3aa6356ec44833068d6e4735cd5bf0638b1fa8ca401d297e485be210bfe",
+  "savedSha256": "da01e3aa6356ec44833068d6e4735cd5bf0638b1fa8ca401d297e485be210bfe",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:44:37Z",
+  "toolCallId": "exec-485d0889-8d11-4416-9034-8a2758a4becb",
+  "savedAt": "2026-10-17T06:47:47.819173+00:00"
+}

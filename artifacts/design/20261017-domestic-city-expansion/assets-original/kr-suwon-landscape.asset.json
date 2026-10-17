@@ -1,0 +1,51 @@
+{
+  "id": "kr-suwon-landscape",
+  "cityId": "kr-suwon",
+  "name": "수원",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-suwon-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-suwon-landscape.json",
+  "originalSha256": "e254afc4ff0eade8570443b2bec6889bfafc9743a3503b1e5d5aa3b3668b666a",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    74,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-suwon.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 89702,
+  "assetSha256": "0f1fcd461082ab6dd8085a96297bdfc41758a10e59b45707fc43babe9ef0639b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

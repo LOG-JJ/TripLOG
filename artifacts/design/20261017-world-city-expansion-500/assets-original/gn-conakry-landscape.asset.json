@@ -1,0 +1,52 @@
+{
+  "id": "gn-conakry-landscape",
+  "cityId": "gn-conakry",
+  "name": "코나크리",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gn-conakry-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gn-conakry-landscape.json",
+  "originalSha256": "8b865c006dddc9bc9257ecbf418b9e866066086fd538971bb48e368d7ae61da1",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    23,
+    57,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gn-conakry.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 98876,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2e990c037c710d4aa89b66df89e0b53bf654894cfe98a8bed6160b2daf3ff8f8",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

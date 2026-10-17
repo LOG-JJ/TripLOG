@@ -1,0 +1,52 @@
+{
+  "id": "dz-algiers-mobile",
+  "cityId": "dz-algiers",
+  "name": "알제",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/dz-algiers-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/dz-algiers-mobile.json",
+  "originalSha256": "018615ed16fa07c42b572171c54ce051f558cb3ae33c46f50c297ce44f4ce214",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/dz-algiers-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 104614,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e35e73660467ff4b4aa2bc820c82eb8d81d66ccc9024f0c2d795a1ff2508addd",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

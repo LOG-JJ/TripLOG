@@ -1,0 +1,52 @@
+{
+  "id": "pe-arequipa-mobile",
+  "cityId": "pe-arequipa",
+  "name": "아레키파",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/pe-arequipa-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/pe-arequipa-mobile.json",
+  "originalSha256": "7fdd81ef2e367616d002524a86ef6401529c32117964fa888f60c084a647a271",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    65,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/pe-arequipa-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 104914,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2aae7b03f6cfee6fc8fd74a3715ff20ea619f2e4d76c050b02c71f7065ff7397",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

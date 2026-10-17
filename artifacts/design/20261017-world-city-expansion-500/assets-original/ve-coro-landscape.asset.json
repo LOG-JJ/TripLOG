@@ -1,0 +1,52 @@
+{
+  "id": "ve-coro-landscape",
+  "cityId": "ve-coro",
+  "name": "코로",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ve-coro-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ve-coro-landscape.json",
+  "originalSha256": "4384f18b18641859ae990ec1fc283b5d8f0f922f5e0fd22e433198adddaacd35",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ve-coro.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 115760,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "7dbae1ab41546a87afa5fcb5ebfb14f1b4cc88243181c550d0e93c4e110a9cbf",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

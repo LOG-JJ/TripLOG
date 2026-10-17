@@ -1,0 +1,52 @@
+{
+  "id": "gf-cayenne-mobile",
+  "cityId": "gf-cayenne",
+  "name": "카옌",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "남미",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gf-cayenne-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gf-cayenne-mobile.json",
+  "originalSha256": "840a9726c9866f77cef7472b1df71adbec94572da4179ea1f4109ea90a2b9dd1",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gf-cayenne-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 132568,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "8ce372a95c8e2b680dc60452a5cd9b3447d0a204ad21d2d4191c39f20e7c57c7",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

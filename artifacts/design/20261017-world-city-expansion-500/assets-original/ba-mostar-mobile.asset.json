@@ -1,0 +1,52 @@
+{
+  "id": "ba-mostar-mobile",
+  "cityId": "ba-mostar",
+  "name": "모스타르",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ba-mostar-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ba-mostar-mobile.json",
+  "originalSha256": "a2fe71e430721fec05c2fd0fab3f7968cfd7112556652847e4f12236c8f8ac7a",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    88,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ba-mostar-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 98394,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "220a0d9dbf7630d264f69bcf2a75dcf63c27501b3d93be4d23677f9a6e16dd4f",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

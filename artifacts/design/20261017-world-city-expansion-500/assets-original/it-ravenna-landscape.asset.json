@@ -1,0 +1,52 @@
+{
+  "id": "it-ravenna-landscape",
+  "cityId": "it-ravenna",
+  "name": "라벤나",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-ravenna-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-ravenna-landscape.json",
+  "originalSha256": "6a4d43f37e54bc5230b2db57f30a6a46df8e6ffb3ddc5c1a29436fc4680d101f",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    8,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/it-ravenna.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 89882,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "df27c19968f5c3845f413ddcc61d800829d2d70d35a985ebd6c36a2df93f2a08",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

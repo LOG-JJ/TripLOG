@@ -1,0 +1,26 @@
+{
+  "jobId": "sl-freetown-landscape",
+  "cityId": "sl-freetown",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Freetown, Sierra Leone: the historic Gateway to the Old Kings Yard in Freetown, with a restrained strip of low heritage buildings; do not add the fallen Cotton Tree as an intact tree. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "4f1b1d638ec5a15c4ee5faa6b665292d3b071021287d2161541fe941d0715a74",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sl-freetown-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-e51f0bd4-f368-4aab-9b5f-c4fd6e319180.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-e51f0bd4-f368-4aab-9b5f-c4fd6e319180.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/sl-freetown-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "5b0fd303d092c9218e6c3d3f0b08d074d64ec9ac15f157d894b43891efd69d64",
+  "savedSha256": "5b0fd303d092c9218e6c3d3f0b08d074d64ec9ac15f157d894b43891efd69d64",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:56:15.784Z",
+  "toolCallId": "exec-e51f0bd4-f368-4aab-9b5f-c4fd6e319180",
+  "savedAt": "2026-10-17T07:00:53.011760+00:00"
+}

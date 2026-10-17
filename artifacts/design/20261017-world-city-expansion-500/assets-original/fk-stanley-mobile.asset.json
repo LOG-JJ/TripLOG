@@ -1,0 +1,52 @@
+{
+  "id": "fk-stanley-mobile",
+  "cityId": "fk-stanley",
+  "name": "스탠리",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "남대서양",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/fk-stanley-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/fk-stanley-mobile.json",
+  "originalSha256": "5c4506d35b5c047386934c6a73e1eb51339c0901d6451ce7b33c9efcdd4a9e06",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    55,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/fk-stanley-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 90108,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "d7d8ec8b2e94f4079fab03d513d2c394720806c46864e22200fad10e7e006f8e",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

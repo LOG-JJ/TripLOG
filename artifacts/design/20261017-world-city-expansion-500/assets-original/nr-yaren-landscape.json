@@ -1,0 +1,26 @@
+{
+  "jobId": "nr-yaren-landscape",
+  "cityId": "nr-yaren",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Yaren, Nauru: the low Parliament House of Nauru in Yaren, with coastal palms and the flat blue ocean horizon. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "28c1f8f088d2c1a4f411d95761536ceb3639f36b939e4fc6308a886c4ac32df5",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nr-yaren-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-62817602-87b8-4ce3-9d64-2ee52ec8bbca.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-62817602-87b8-4ce3-9d64-2ee52ec8bbca.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/nr-yaren-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "2e134048df1b4aa39a26feeb5a6b7513ba6b927e3ae653281892ded77b9e0790",
+  "savedSha256": "2e134048df1b4aa39a26feeb5a6b7513ba6b927e3ae653281892ded77b9e0790",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:01:46.918Z",
+  "toolCallId": "exec-62817602-87b8-4ce3-9d64-2ee52ec8bbca",
+  "savedAt": "2026-10-17T07:06:20.951410+00:00"
+}

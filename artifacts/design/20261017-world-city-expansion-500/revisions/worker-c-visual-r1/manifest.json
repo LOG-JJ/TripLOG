@@ -1,0 +1,622 @@
+{
+  "createdAt": "2026-10-17T07:20:56.708108+00:00",
+  "count": 14,
+  "records": [
+    {
+      "jobId": "nl-the-hague-mobile",
+      "reason": "Clock-tower finial touched the top edge and the right wing was clipped.",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/nl-the-hague-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/nl-the-hague-mobile/nl-the-hague-mobile.json",
+          "sha256": "0f00842363f44accf117c0a1bec612483da349e38a7158a8841500f41a2a9ae0"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/nl-the-hague-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/nl-the-hague-mobile/nl-the-hague-mobile.prompt.txt",
+          "sha256": "01917d45d55793e36a5515c26dd36c3ce43fbad42f5908ea5b4219d1e13d68fc"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/nl-the-hague-mobile.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/nl-the-hague-mobile/nl-the-hague-mobile.png",
+          "sha256": "f12d662c62d84e2db3610a2fb9f2417159729a6f7bc39690a6b52cba8557c305"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/nl-the-hague-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/nl-the-hague-mobile/nl-the-hague-mobile.json",
+          "sha256": "5e7eeda40c3672ba718a6af8befb26f3ac2659385b9c114c4ee4b70f0af9a286"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/nl-the-hague-mobile.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/nl-the-hague-mobile/nl-the-hague-mobile.asset.json",
+          "sha256": "579fdb2cabe4972e76632abf8db81f0cc613a46dac3fa32f3e1d7f48c9a4b950"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/nl-the-hague-mobile.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/nl-the-hague-mobile/nl-the-hague-mobile.webp",
+          "sha256": "ed4e7765f7f57ab7cd93ab899f25102ce4b515c7989361d93c0405316f3009fb"
+        }
+      ],
+      "newPromptSha256": "a70483f1f1033b2cb5bdbc0753ff91ad694b38bad15177f9303947e00df40cd9",
+      "generationMode": "independent T2I",
+      "imageInputs": [],
+      "source": {
+        "title": "The Hague and Partners — Peace Palace",
+        "url": "https://denhaag.com/en/peace-palace"
+      },
+      "photoInspected": null
+    },
+    {
+      "jobId": "va-vatican-city-landscape",
+      "reason": "The cross above the dome had insufficient clear headroom.",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/va-vatican-city-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-landscape/va-vatican-city-landscape.json",
+          "sha256": "c9b01359c1067e18779d0db4bf8677715702ebd465a21ac4f72602a2f4ee7047"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/va-vatican-city-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-landscape/va-vatican-city-landscape.prompt.txt",
+          "sha256": "47d623ef8a303f1991a7ca910163dcd29b5faa6c7dd7c222b299a2403e6c7208"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-landscape.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-landscape/va-vatican-city-landscape.png",
+          "sha256": "a89f4b8ddf746a76e3a61d77d1c4f1bec0353a80a6e4c1c335487d97afb5eec9"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-landscape/va-vatican-city-landscape.json",
+          "sha256": "137ab7e235575f738e25423f6699a3949a86363684b2a4c2ef58c87626bac326"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-landscape.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-landscape/va-vatican-city-landscape.asset.json",
+          "sha256": "bd9952fffc2be674b90ad8d7825fc9a2c79d7589d175521d1df4fcc8e4a27244"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/va-vatican-city.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-landscape/va-vatican-city.webp",
+          "sha256": "16d2e9f9069b1a03d2f82658b52bb02a20e4470a1d6231383ce34fd8027d0357"
+        }
+      ],
+      "newPromptSha256": "8bd132597cbcd1a7631a3864f8921a0cdb604f17b8071a5282746e7db3798b6f",
+      "generationMode": "independent T2I",
+      "imageInputs": [],
+      "source": {
+        "title": "UNESCO World Heritage Centre — Vatican City",
+        "url": "https://whc.unesco.org/en/list/286/"
+      },
+      "photoInspected": null
+    },
+    {
+      "jobId": "va-vatican-city-mobile",
+      "reason": "The main basilica right wing was clipped.",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/va-vatican-city-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-mobile/va-vatican-city-mobile.json",
+          "sha256": "110b1b36694e09a2f5086d1edc0485d53f6b40d939e5b9fde557544fb7236666"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/va-vatican-city-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-mobile/va-vatican-city-mobile.prompt.txt",
+          "sha256": "14c258ec116985253ccced56940e5b3d49cb65866a4bc8e7585262a64faaad89"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-mobile.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-mobile/va-vatican-city-mobile.png",
+          "sha256": "40d10f0f2b91b483ab61f24c677c5ea1a6d220c215bfe87d8255d6546022b853"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-mobile/va-vatican-city-mobile.json",
+          "sha256": "e4c6503e7bae7bc665c0ec9a74b008e691a942c9e9875774ad2a26de105f29cc"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-mobile.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-mobile/va-vatican-city-mobile.asset.json",
+          "sha256": "d202d03aa2e33f193c71423920859cfe40663ecda32d8f63f7cd4db0820f4f2c"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/va-vatican-city-mobile.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-mobile/va-vatican-city-mobile.webp",
+          "sha256": "fd5b6e1cf45f78054bd11a010844f1ca1308cd0680ad34a0e797e26e8b788537"
+        }
+      ],
+      "newPromptSha256": "3eef750e5c42171e9d21ced4896a9add5f72abd7ef89dbe802fe9ce13897450b",
+      "generationMode": "independent T2I",
+      "imageInputs": [],
+      "source": {
+        "title": "UNESCO World Heritage Centre — Vatican City",
+        "url": "https://whc.unesco.org/en/list/286/"
+      },
+      "photoInspected": null
+    },
+    {
+      "jobId": "mc-monaco-mobile",
+      "reason": "The palace right wing was cut off at the canvas edge.",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/mc-monaco-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/mc-monaco-mobile/mc-monaco-mobile.json",
+          "sha256": "d680383721caa65ce11ef6552b4b75e4dc6506ac69f9229bdb9fe07a74f92a4a"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/mc-monaco-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/mc-monaco-mobile/mc-monaco-mobile.prompt.txt",
+          "sha256": "d7ed3e909ceec00f2a8bb8aa456afd629ae1e9579a3bdc65b240d221a7ed2b70"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/mc-monaco-mobile.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/mc-monaco-mobile/mc-monaco-mobile.png",
+          "sha256": "51563b62c5aa3294309e5f6eb86edf901d25f51407a0de99fec0686156fbff6d"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/mc-monaco-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/mc-monaco-mobile/mc-monaco-mobile.json",
+          "sha256": "b3a7bef3099f44dc1cada7cbd834cbca6734fa67651c3f789962b7d7100d60b6"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/mc-monaco-mobile.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/mc-monaco-mobile/mc-monaco-mobile.asset.json",
+          "sha256": "2ab32da47959881170696ea5b08c117a44db60641341b9f4d8893625cb80be94"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/mc-monaco-mobile.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/mc-monaco-mobile/mc-monaco-mobile.webp",
+          "sha256": "341fd3c4c966f87d7135870f97e4a5d6dd4e16161ba78fa7498f5e7b5803ab60"
+        }
+      ],
+      "newPromptSha256": "eed28ebb92a5fb20db009bd1ac1bf1280c61da696ebbaa8191147ace371b920b",
+      "generationMode": "independent T2I",
+      "imageInputs": [],
+      "source": {
+        "title": "Visit Monaco — Official tourist map",
+        "url": "https://www.visitmonaco.com/Documents-Site/Plan%20touristique%20Monaco.pdf"
+      },
+      "photoInspected": null
+    },
+    {
+      "jobId": "gb-cardiff-landscape",
+      "reason": "The first version invented the lower gatehouse that was removed in the eighteenth century.",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-cardiff-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/gb-cardiff-landscape/gb-cardiff-landscape.json",
+          "sha256": "b14a755c2515e3fd6d9de8935786c5c45fdf3fbb088c773314abcef0d36ef1e2"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-cardiff-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/gb-cardiff-landscape/gb-cardiff-landscape.prompt.txt",
+          "sha256": "196c3c8c41be4958f25987608a03d5d074f510a0972f58dd80a2648ff484e323"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-cardiff-landscape.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/gb-cardiff-landscape/gb-cardiff-landscape.png",
+          "sha256": "fd645a779a023397d377449f8345881feb1aa18770f1a2687a64f6c3b6b90368"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-cardiff-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/gb-cardiff-landscape/gb-cardiff-landscape.json",
+          "sha256": "46615e8c308ad799bcc973fa3b483cc72b3dd9f7c75feda1473f4fbbaf5935ec"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-cardiff-landscape.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/gb-cardiff-landscape/gb-cardiff-landscape.asset.json",
+          "sha256": "32b01de1ab5b128c3d0085e753c6bf9feb07d3df8e4feced7a09322ec4e4f6c2"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/gb-cardiff.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/gb-cardiff-landscape/gb-cardiff.webp",
+          "sha256": "29ad7fef1a016d38432e292b1f2c3cf122c1dc18d16464883b40252ac037c9df"
+        }
+      ],
+      "newPromptSha256": "85686be47320313c696e6b9a6eea27c2fb8e65f1684edf3d796d32dfd2b2d1f9",
+      "generationMode": "independent T2I",
+      "imageInputs": [],
+      "source": {
+        "title": "Cardiff Castle — Norman Keep (current structure and removed gatehouse)",
+        "url": "https://www.cardiffcastle.com/visit/see-do/norman-keep/"
+      },
+      "photoInspected": "https://www.cardiffcastle.com/app/uploads/2022/05/Norman-Keep-850x480-1.jpg"
+    },
+    {
+      "jobId": "gb-cardiff-mobile",
+      "reason": "The first version invented the lower gatehouse that was removed in the eighteenth century.",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-cardiff-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/gb-cardiff-mobile/gb-cardiff-mobile.json",
+          "sha256": "369db3a2c3b03f7964d068465aefa039c5f2cd8a9ef65907723fdbedfbe01dbf"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-cardiff-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/gb-cardiff-mobile/gb-cardiff-mobile.prompt.txt",
+          "sha256": "5c1e8057e18758b59ee6f1d0fb853778f8f507c6cf6d8b137f29524befbf611d"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-cardiff-mobile.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/gb-cardiff-mobile/gb-cardiff-mobile.png",
+          "sha256": "0ef63cc6c631e422f326c4a16c8cdd62c7514b010ee61e67f37e099952872f56"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-cardiff-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/gb-cardiff-mobile/gb-cardiff-mobile.json",
+          "sha256": "6e47732bec8a135ffd15529cb6ea83cda3fb78e3d0ec62916421d047b49242c4"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-cardiff-mobile.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/gb-cardiff-mobile/gb-cardiff-mobile.asset.json",
+          "sha256": "67ecc8a5ab2abd4a829fea3efc991b8d23bf41b5713a71747406a2d228a33740"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/gb-cardiff-mobile.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/gb-cardiff-mobile/gb-cardiff-mobile.webp",
+          "sha256": "b7bda708b3cb616c21068f655b25b55ba8691721619761a849f7a94f6634555d"
+        }
+      ],
+      "newPromptSha256": "bc5071f8f7915606526b6377ad3ebc9d0ca50f4fba69be8566f2e06547bb4d7b",
+      "generationMode": "independent T2I",
+      "imageInputs": [],
+      "source": {
+        "title": "Cardiff Castle — Norman Keep (current structure and removed gatehouse)",
+        "url": "https://www.cardiffcastle.com/visit/see-do/norman-keep/"
+      },
+      "photoInspected": "https://www.cardiffcastle.com/app/uploads/2022/05/Norman-Keep-850x480-1.jpg"
+    },
+    {
+      "jobId": "kp-kaesong-landscape",
+      "reason": "The first landscape depicted a two-storey pavilion; the documented gate has a single-storey wooden upper pavilion.",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/kp-kaesong-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/kp-kaesong-landscape/kp-kaesong-landscape.json",
+          "sha256": "5bc9486c296ec57ba4420b4e40d94935463345a95e619b3fb8a913a455ed7224"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/kp-kaesong-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/kp-kaesong-landscape/kp-kaesong-landscape.prompt.txt",
+          "sha256": "5a1a870ddae6b17f1d06145bcd12f0abf0f6b024cfc56ad923e880caaadcf03d"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/kp-kaesong-landscape.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/kp-kaesong-landscape/kp-kaesong-landscape.png",
+          "sha256": "1b7e6e758b89b74b54af589b8206f416657201ca55372a72f481971c42848eb0"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/kp-kaesong-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/kp-kaesong-landscape/kp-kaesong-landscape.json",
+          "sha256": "97e9574abf9ee6b40893821e0d0c155e71bb1e7b78401425758dcb0140e4cea9"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/kp-kaesong-landscape.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/kp-kaesong-landscape/kp-kaesong-landscape.asset.json",
+          "sha256": "3bd46a109d9ac915d9027cb928f0759decfd8c7bc0d0a08db2355003eef867c8"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/kp-kaesong.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/kp-kaesong-landscape/kp-kaesong.webp",
+          "sha256": "e2aafbcd4790fb5b5cbe0aa9b4d98ccb5950efc4de82c138cd4b35d6652ddbcd"
+        }
+      ],
+      "newPromptSha256": "2359d5f6a17d6a8740b77752ea3ec502854c975138af821014d6c12dc66bf09a",
+      "generationMode": "independent T2I",
+      "imageInputs": [],
+      "source": {
+        "title": "UNESCO ICOMOS — Historic Monuments and Sites in Kaesong evaluation (Nam Gate)",
+        "url": "https://whc.unesco.org/document/122862"
+      },
+      "photoInspected": null
+    },
+    {
+      "jobId": "sz-lobamba-landscape",
+      "reason": "The first version invented a tall closed domed building and grand stairs, rather than the modest open memorial pavilion.",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sz-lobamba-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sz-lobamba-landscape/sz-lobamba-landscape.json",
+          "sha256": "9467abe8516b395d37364dc28331597a3bb9a49fc58fb902e6b8049037e6b34d"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sz-lobamba-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sz-lobamba-landscape/sz-lobamba-landscape.prompt.txt",
+          "sha256": "4fb26c54f9d877c4adbfd6894848c2a774192fecbec7c4a973d54f22f02a6a5e"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sz-lobamba-landscape.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sz-lobamba-landscape/sz-lobamba-landscape.png",
+          "sha256": "571ab72436feab995451344ff1c6668f7b3f596b8f7019ac7c58f4fa017a5c5f"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sz-lobamba-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sz-lobamba-landscape/sz-lobamba-landscape.json",
+          "sha256": "1769ad85aa6e102a5cadb7fd19bde873b27a297d04695f8ddda4713531dbb999"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sz-lobamba-landscape.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sz-lobamba-landscape/sz-lobamba-landscape.asset.json",
+          "sha256": "3121c6886b34d96321cde66308a9065ad78d74d5c945ed1835cbf6c96cdd6396"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/sz-lobamba.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sz-lobamba-landscape/sz-lobamba.webp",
+          "sha256": "5656842aafbfc8e4db1d36eea52c5c943eac6b00edeab3fe68734f229334f828"
+        }
+      ],
+      "newPromptSha256": "15b5aa2e9e7814dc74a3e83efea9799b9917fb1d2901e4c70e0f06c0ff591c51",
+      "generationMode": "independent T2I",
+      "imageInputs": [],
+      "source": {
+        "title": "Eswatini Tourism Authority — Lobamba and King Sobhuza II Memorial Park",
+        "url": "https://www.thekingdomofeswatini.com/central-eswatini/lobamba/"
+      },
+      "photoInspected": "https://www.thekingdomofeswatini.com/wp-content/uploads/2018/02/1aaSwaziland-Jonathan-Ramael-Royal-Museum.jpg"
+    },
+    {
+      "jobId": "sz-lobamba-mobile",
+      "reason": "The first version invented a tall closed domed building and grand stairs, rather than the modest open memorial pavilion.",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sz-lobamba-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sz-lobamba-mobile/sz-lobamba-mobile.json",
+          "sha256": "122e5cd18308543e3d68422b8ffb9128637e9f513ba0a929b194cfb1822690d0"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sz-lobamba-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sz-lobamba-mobile/sz-lobamba-mobile.prompt.txt",
+          "sha256": "9bf04a19bf07ce5786cc52279ec10564842cc197b15f84a28a385a2af6a9120d"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sz-lobamba-mobile.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sz-lobamba-mobile/sz-lobamba-mobile.png",
+          "sha256": "464c4d62315e64daf262b9b89608dc5f292396d1f1a60b00a69163babbae8aaa"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sz-lobamba-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sz-lobamba-mobile/sz-lobamba-mobile.json",
+          "sha256": "c1f2dbe2e609ac1050485063dd57494b63a6e24e3f11a738a9adb060e2a1c581"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sz-lobamba-mobile.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sz-lobamba-mobile/sz-lobamba-mobile.asset.json",
+          "sha256": "32b5f0c3cec34f62a572a545748f677c3a0d87b934f89998550f0c5d39bb7602"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/sz-lobamba-mobile.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sz-lobamba-mobile/sz-lobamba-mobile.webp",
+          "sha256": "c4896c1cef608174435b6d4f5ba229015df4229b42b05fc9ab9f3528b3b7c3e9"
+        }
+      ],
+      "newPromptSha256": "bdee3c7607ef17a6c7eeda1bffe6b39b2f34147ed909b4648b2ed7c439182602",
+      "generationMode": "independent T2I",
+      "imageInputs": [],
+      "source": {
+        "title": "Eswatini Tourism Authority — Lobamba and King Sobhuza II Memorial Park",
+        "url": "https://www.thekingdomofeswatini.com/central-eswatini/lobamba/"
+      },
+      "photoInspected": "https://www.thekingdomofeswatini.com/wp-content/uploads/2018/02/1aaSwaziland-Jonathan-Ramael-Royal-Museum.jpg"
+    },
+    {
+      "jobId": "sn-saint-louis-senegal-landscape",
+      "reason": "The river beneath the bridge was missing, leaving the piers floating on transparency.",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sn-saint-louis-senegal-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sn-saint-louis-senegal-landscape/sn-saint-louis-senegal-landscape.json",
+          "sha256": "10f1651318fed62a66ef6cdb8eccf1504f14fd6b6a6a00968f89f1a6e5fcf1ff"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sn-saint-louis-senegal-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sn-saint-louis-senegal-landscape/sn-saint-louis-senegal-landscape.prompt.txt",
+          "sha256": "8002132cba6826b911335903d0d75943f5c19dfc141b97671f4ea552d62aee18"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-landscape.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sn-saint-louis-senegal-landscape/sn-saint-louis-senegal-landscape.png",
+          "sha256": "9c12588cb97b2c46e29fd1a00165e9d7cef626a3373eefc839ed90236a062c95"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sn-saint-louis-senegal-landscape/sn-saint-louis-senegal-landscape.json",
+          "sha256": "cb2c1a9bc63e6cbabe73f8794b42981841b0e53fc0d62c91fd4f8e28ad7d9057"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-landscape.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sn-saint-louis-senegal-landscape/sn-saint-louis-senegal-landscape.asset.json",
+          "sha256": "382aa277f827c6be9549dd66246454fa18f226de28417b15bf9d105385d7906c"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/sn-saint-louis-senegal.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sn-saint-louis-senegal-landscape/sn-saint-louis-senegal.webp",
+          "sha256": "5ddbe3128baaa0e9e4f544191210a827dbe748241ee5ceb6ecddbe4363003d9e"
+        }
+      ],
+      "newPromptSha256": "66695b4170dd000e77661ddde4f5505507be402d20fbbb1408e11e03fc7cc647",
+      "generationMode": "independent T2I",
+      "imageInputs": [],
+      "source": {
+        "title": "UNESCO — Island of Saint-Louis",
+        "url": "https://whc.unesco.org/en/list/956/"
+      },
+      "photoInspected": null
+    },
+    {
+      "jobId": "sn-saint-louis-senegal-mobile",
+      "reason": "The river beneath the bridge was missing, leaving the piers floating on transparency.",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sn-saint-louis-senegal-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.json",
+          "sha256": "2f615a190fb8ee58edb5644d00507c579e12270293202044c507650481bcd993"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sn-saint-louis-senegal-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.prompt.txt",
+          "sha256": "d9345db537f3869f8080976edabe4ffed39e26a107de533853f043ea77e794f7"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-mobile.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.png",
+          "sha256": "0afcd30cb3d874b0ca14774755a7fa26c0a120eb1ead675c6d9924b1e89d7b26"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.json",
+          "sha256": "c6aeb14f9b4053f3c45fc89482cf1de2fdd51b9f84f62ef29ff2e208c3a9c575"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-mobile.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.asset.json",
+          "sha256": "c9c40d16a8dd9302e142a52604afd7cd49e76e245437f19c87f6f250949d98ef"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/sn-saint-louis-senegal-mobile.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.webp",
+          "sha256": "d1a191d168b82cf0c5954d78b0c4cb9ef462e64b66bec9b4a39ab50386ed85ff"
+        }
+      ],
+      "newPromptSha256": "724adc40bd534c7c1d8f79416b9dd06a02c2ae25cf925938acc6811d2aa93f2c",
+      "generationMode": "independent T2I",
+      "imageInputs": [],
+      "source": {
+        "title": "UNESCO — Island of Saint-Louis",
+        "url": "https://whc.unesco.org/en/list/956/"
+      },
+      "photoInspected": null
+    },
+    {
+      "jobId": "td-ndjamena-landscape",
+      "reason": "The first version invented a dome and columned portico; the institutional fieldwork photograph shows a flat rectangular modern facade.",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/td-ndjamena-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/td-ndjamena-landscape/td-ndjamena-landscape.json",
+          "sha256": "09e82f298bf0bb6ad720835ae16a0430e2fe8cb9fcd4456e509140f54b85b354"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/td-ndjamena-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/td-ndjamena-landscape/td-ndjamena-landscape.prompt.txt",
+          "sha256": "63bb1f689f670539fe9801f1204f9199892079e2d7c34021dbbcfef7ae909011"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-landscape.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/td-ndjamena-landscape/td-ndjamena-landscape.png",
+          "sha256": "ddce52a41119d32ce5c920c0b33474b8bb623f8c13f167ecb2c1838363491126"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/td-ndjamena-landscape/td-ndjamena-landscape.json",
+          "sha256": "5f584db946e26f989a8120645d1b4a37a95de83049b43d3da35baad64f9c2c10"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-landscape.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/td-ndjamena-landscape/td-ndjamena-landscape.asset.json",
+          "sha256": "0fe867a5ef4d3339daeab0b02411c13ccef7c4d0c3c0379b91d0929f6ecc10ce"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/td-ndjamena.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/td-ndjamena-landscape/td-ndjamena.webp",
+          "sha256": "422de39fef3e479e116530c891efa33a4310d636f8c847081c1c8ce428d58605"
+        }
+      ],
+      "newPromptSha256": "ea2ded3e9ef6be709337462ccea553567ae2b5d029a7a809607a736326794d13",
+      "generationMode": "independent T2I",
+      "imageInputs": [],
+      "source": {
+        "title": "German Archaeological Institute — Entangled Africa: National Museum of Chad fieldwork report",
+        "url": "https://www.dainst.blog/entangled-africa/bericht_2022_11/"
+      },
+      "photoInspected": "https://www.dainst.blog/wp-content/uploads/2022/11/IMG_20220628_094338690_HDR-scaled-2.jpg"
+    },
+    {
+      "jobId": "td-ndjamena-mobile",
+      "reason": "The first version invented a dome and columned portico; the institutional fieldwork photograph shows a flat rectangular modern facade.",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/td-ndjamena-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/td-ndjamena-mobile/td-ndjamena-mobile.json",
+          "sha256": "1a515dca5a81dd5ef87aeaaa1bb008a5a486b646d31b79fff34fca091375dd66"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/td-ndjamena-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/td-ndjamena-mobile/td-ndjamena-mobile.prompt.txt",
+          "sha256": "666edc9402ced53b2b5c031ac8118877b663beb23e41cd01d7457a0e9fe1292b"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-mobile.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/td-ndjamena-mobile/td-ndjamena-mobile.png",
+          "sha256": "88f00c3420ffc8889ee6b8da6f7a876b9f279cdef948de0fe7a7152c5e4abbe2"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/td-ndjamena-mobile/td-ndjamena-mobile.json",
+          "sha256": "7b97356d6710b47b9905d3a584d68ffc41c66e5677795493f375056d78c7bdbf"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-mobile.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/td-ndjamena-mobile/td-ndjamena-mobile.asset.json",
+          "sha256": "8d8797bdf5663dc90cd55ce6f189e0a4a36e0b04e9fa9b2fb4bc0f96182a6d7e"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/td-ndjamena-mobile.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/td-ndjamena-mobile/td-ndjamena-mobile.webp",
+          "sha256": "417a2828a489d2a273042766214a870881fae4d085a1730bed610b221e081136"
+        }
+      ],
+      "newPromptSha256": "997f980ab44b55a8d88123ee27499a97ed49fcb315d8d2447a0e2e26de9f59c5",
+      "generationMode": "independent T2I",
+      "imageInputs": [],
+      "source": {
+        "title": "German Archaeological Institute — Entangled Africa: National Museum of Chad fieldwork report",
+        "url": "https://www.dainst.blog/entangled-africa/bericht_2022_11/"
+      },
+      "photoInspected": "https://www.dainst.blog/wp-content/uploads/2022/11/IMG_20220628_094338690_HDR-scaled-2.jpg"
+    },
+    {
+      "jobId": "my-kuching-mobile",
+      "reason": "The Darul Hana Bridge right endpoint and cable geometry were clipped.",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/my-kuching-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/my-kuching-mobile/my-kuching-mobile.json",
+          "sha256": "bab32692df0f47585ef6424b9a4835fc8f1e3a286811cbd47dbc10eca5d47e97"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/my-kuching-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/my-kuching-mobile/my-kuching-mobile.prompt.txt",
+          "sha256": "db3378819b863b303e655c1048f696baa214c2e0b4a37970f4ad2fabe71f6659"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/my-kuching-mobile.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/my-kuching-mobile/my-kuching-mobile.png",
+          "sha256": "75eebb7d4ae685a4d406a88cf5e96db43ab54e50a9a818d3c27e5f4a4f0711db"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/my-kuching-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/my-kuching-mobile/my-kuching-mobile.json",
+          "sha256": "af9d088c86d801ee9d52f5a57ead6ffbce60d643899fb6255d8b9ed857c3a49c"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/my-kuching-mobile.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/my-kuching-mobile/my-kuching-mobile.asset.json",
+          "sha256": "d9c67a9e81ad0d5c5e640aceb521df561a20dc3549e0200881f3465ace0ab15d"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/my-kuching-mobile.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/my-kuching-mobile/my-kuching-mobile.webp",
+          "sha256": "df076684a90490665ecbaa2faca803cb582ed62a23a22df6dba4ad66e9274ed2"
+        }
+      ],
+      "newPromptSha256": "a50e1baab3bc8b703b309c8685296792f466c118a87d3e709ffce4aab321cdad",
+      "generationMode": "independent T2I",
+      "imageInputs": [],
+      "source": {
+        "title": "Sarawak Tourism Board — Kuching Waterfront",
+        "url": "https://www.sarawaktourism.com/web/places-to-visit/town-view/kuching/major-attractions/kuching-waterfront"
+      },
+      "photoInspected": null
+    }
+  ]
+}

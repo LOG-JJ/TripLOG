@@ -1,0 +1,26 @@
+{
+  "jobId": "sa-alula-landscape",
+  "cityId": "sa-alula",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of AlUla, Saudi Arabia: one monumental rock-cut tomb facade at Hegra with its stepped crown, with the warm sandstone outcrops of the AlUla oasis landscape. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "90aa1e0adc4cabf10d369029e8f320b85484daf12b8b443957ddf8d63c00ac23",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sa-alula-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-98230576-1d4f-4000-b5cd-dfb27473ca41.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-98230576-1d4f-4000-b5cd-dfb27473ca41.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/sa-alula-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "4576ff952d168d4176b87254a359ba1689b487ccf12820c3e3abcba57001324f",
+  "savedSha256": "4576ff952d168d4176b87254a359ba1689b487ccf12820c3e3abcba57001324f",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:45:17.976Z",
+  "toolCallId": "exec-98230576-1d4f-4000-b5cd-dfb27473ca41",
+  "savedAt": "2026-10-17T06:49:57.597760+00:00"
+}

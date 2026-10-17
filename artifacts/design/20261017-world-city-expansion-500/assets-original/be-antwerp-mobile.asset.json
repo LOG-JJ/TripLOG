@@ -1,0 +1,52 @@
+{
+  "id": "be-antwerp-mobile",
+  "cityId": "be-antwerp",
+  "name": "안트베르펜",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/be-antwerp-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/be-antwerp-mobile.json",
+  "originalSha256": "1e41f742360605172f444e2529a5f551a061da6547881410a86aee52e6286448",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    65,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/be-antwerp-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 92874,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c89232062cba37dce546fd072547571e9b3b897566156dcf40b5c61c245f9612",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

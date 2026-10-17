@@ -1,0 +1,52 @@
+{
+  "id": "bj-ouidah-mobile",
+  "cityId": "bj-ouidah",
+  "name": "위다",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bj-ouidah-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bj-ouidah-mobile.json",
+  "originalSha256": "e5388bc68f209b5e2769e2263a26092852e8e130703a76790fd807a7649da353",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bj-ouidah-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 101514,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "51464742c1ab418da8c67ad665e7ed321c0171f77016100182a56ca70de8fda5",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

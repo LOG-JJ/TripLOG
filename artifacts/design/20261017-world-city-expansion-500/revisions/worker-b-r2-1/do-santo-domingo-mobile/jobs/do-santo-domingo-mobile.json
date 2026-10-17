@@ -1,0 +1,39 @@
+{
+  "id": "do-santo-domingo-mobile",
+  "cityId": "do-santo-domingo",
+  "cityName": "산토도밍고",
+  "englishName": "Santo Domingo",
+  "countryCode": "DO",
+  "kind": "city",
+  "group": "Americas",
+  "variant": "mobile",
+  "phase": "core-500",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone destination illustration of Santo Domingo, Dominican Republic: the low broad west facade of the Cathedral of Santa Maria la Menor, also called Catedral Primada de America. Show its warm pale coral-stone facade with a simple triangular pediment, one small upper arched window, carved columns and statue niches, and the distinctive TWO adjoining round-arched wooden entrance doors beneath the ornate central portal. Keep the entire compact front elevation and its broad stone steps visible, with the colonial paved plaza and a few palm trees. This facade has no tall bell tower, no twin towers and no large dome; preserve its low horizontal silhouette. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "19fdc70f7f7b0aa759b1ccc45e2c4c71f1ecf1f6d0ba7245e51329b0521ab1ba",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/jobs/do-santo-domingo-mobile.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/do-santo-domingo-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/do-santo-domingo-mobile.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/do-santo-domingo-mobile.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v6/do-santo-domingo-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "source": {
+    "title": "UNESCO World Heritage Centre — Santo Domingo",
+    "url": "https://whc.unesco.org/en/list/526/"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone destination illustration of Santo Domingo, Dominican Republic: the low broad west facade of the Cathedral of Santa Maria la Menor, also called Catedral Primada de America. Show its warm pale coral-stone facade with a simple triangular pediment, one small upper arched window, carved columns and statue niches, and the distinctive TWO adjoining round-arched wooden entrance doors beneath the ornate central portal. Keep the entire compact front elevation and its broad stone steps visible, with the colonial paved plaza and a few palm trees. This facade has no tall bell tower, no twin towers and no large dome; preserve its low horizontal silhouette. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+    "transparent_background": true
+  },
+  "revision": {
+    "number": 2,
+    "reason": "Invented tall bell tower and dome obscured the real low west facade.",
+    "previousFiles": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-2/do-santo-domingo-mobile"
+  }
+}

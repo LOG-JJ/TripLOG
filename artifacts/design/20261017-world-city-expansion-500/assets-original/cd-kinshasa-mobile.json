@@ -1,0 +1,26 @@
+{
+  "jobId": "cd-kinshasa-mobile",
+  "cityId": "cd-kinshasa",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Kinshasa, Democratic Republic of the Congo: the actual new MNRDC National Museum completed in 2019 by Junglim Architecture and KOICA. Depict a LOW TWO-STOREY contemporary complex of broad horizontal red-brown brick rectangular volumes, large geometric perforated brick and screen-block patterns, open shaded ground-floor galleries and white concrete supports, flat roofs with raised rectangular skylights, and a planted lawn and paved entrance path. The red-brick horizontal architecture must dominate. Do not depict a tall monumental concrete temple, giant slanted fins, classical columns or enormous carved human panels. Keep the whole main building block and roof ends visible with side margins. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "82d64eb5980a7d7a400b39b0a73d2432f64cbee1816238a229059ee7865074ee",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cd-kinshasa-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-4dd2fda5-3d9e-49c4-a0c8-cd2c343ec7bd.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-4dd2fda5-3d9e-49c4-a0c8-cd2c343ec7bd.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/cd-kinshasa-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "3bd5e6137dbf6c913ea564e3d965962311289b79f8d3cba7a8d58cefbf147899",
+  "savedSha256": "3bd5e6137dbf6c913ea564e3d965962311289b79f8d3cba7a8d58cefbf147899",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:21:26Z",
+  "toolCallId": "exec-4dd2fda5-3d9e-49c4-a0c8-cd2c343ec7bd",
+  "savedAt": "2026-10-17T07:22:25.506844+00:00"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ls-maseru-mobile",
+  "cityId": "ls-maseru",
+  "name": "마세루",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ls-maseru-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ls-maseru-mobile.json",
+  "originalSha256": "b8a6ded9690c6d41330e9660a1edb4f7854b38e42a13cd5075cfb28fb73201ce",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    37,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ls-maseru-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 68456,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c0fd7f8d4439bacb0e227e211169c1f7f9299443932967968aa2d6150c59454d",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

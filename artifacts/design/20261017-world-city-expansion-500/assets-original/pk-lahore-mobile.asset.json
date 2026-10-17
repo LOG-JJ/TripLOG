@@ -1,0 +1,52 @@
+{
+  "id": "pk-lahore-mobile",
+  "cityId": "pk-lahore",
+  "name": "라호르",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/pk-lahore-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/pk-lahore-mobile.json",
+  "originalSha256": "716e151062bf93913d79c25aace0f4b9db5d89f3f28ce522775c973e6ffc5047",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    53,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/pk-lahore-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 83208,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "4065bc4a7cf45df48918e24c57ab2052459ad5aa8639db7da8e9f1207ce24ca5",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

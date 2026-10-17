@@ -1,0 +1,26 @@
+{
+  "jobId": "dm-roseau-mobile",
+  "cityId": "dm-roseau",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Roseau, Dominica: the historic colonial building of the Dominica Museum, with the old Roseau waterfront. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "8fa95ee761e1f9bb2362ff8ae222a14462c7ce95e4fd69f3654aeb7572b27fc4",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/dm-roseau-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-6828dcbb-a7d6-4f45-9691-c757497912cb.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-6828dcbb-a7d6-4f45-9691-c757497912cb.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/dm-roseau-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "82f5da2042569721e6887b4b458865f771fa443998d4f77859687b7534255508",
+  "savedSha256": "82f5da2042569721e6887b4b458865f771fa443998d4f77859687b7534255508",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:21:01.495Z",
+  "toolCallId": "exec-6828dcbb-a7d6-4f45-9691-c757497912cb",
+  "savedAt": "2026-10-17T06:24:51.091825+00:00"
+}

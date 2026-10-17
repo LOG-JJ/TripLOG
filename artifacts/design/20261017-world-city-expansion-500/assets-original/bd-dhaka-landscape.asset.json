@@ -1,0 +1,52 @@
+{
+  "id": "bd-dhaka-landscape",
+  "cityId": "bd-dhaka",
+  "name": "다카",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bd-dhaka-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bd-dhaka-landscape.json",
+  "originalSha256": "e1112de57d85eb64e51317d34fbccff382ab24f83ba04e1a5f362668de045fe6",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bd-dhaka.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 129196,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "9b83c25abc9108188aa5d401de74cf7550fb93e9a765041bce15cdf20d1981b7",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

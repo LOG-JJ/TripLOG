@@ -1,0 +1,39 @@
+{
+  "id": "sh-jamestown-landscape",
+  "cityId": "sh-jamestown",
+  "cityName": "제임스타운",
+  "englishName": "Jamestown",
+  "countryCode": "SH",
+  "kind": "town",
+  "group": "남대서양",
+  "variant": "landscape",
+  "phase": "country-coverage",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone destination illustration of Jamestown, St. Helena: Jacob's Ladder as a long straight staircase climbing the steep rocky valley side above Jamestown, with a short row of Georgian town facades at its foot. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette. Local form guard: Jacob's Ladder is one long, very steep, narrow and straight outdoor staircase running diagonally up the brown rocky valley slope from the small Georgian town at its foot. Suggest its many regular steps with a few clean rhythmic marks. It has no switchbacks, curved flights, giant bridge arch or elevated viaduct. Keep both the bottom start and the top landing inside the image, even in the portrait version; show the whole ascent at a smaller scale when necessary.",
+  "promptSha256": "6345a6b2d78d84a5909a5a78ee56737c7c1d31216e067728a42025d77a88832d",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/jobs/sh-jamestown-landscape.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/sh-jamestown-landscape.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/sh-jamestown-landscape.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/sh-jamestown-landscape.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v6/sh-jamestown.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "source": {
+    "title": "St Helena Tourism — History and Heritage",
+    "url": "https://sthelenatourism.com/history-and-heritage/"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone destination illustration of Jamestown, St. Helena: Jacob's Ladder as a long straight staircase climbing the steep rocky valley side above Jamestown, with a short row of Georgian town facades at its foot. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette. Local form guard: Jacob's Ladder is one long, very steep, narrow and straight outdoor staircase running diagonally up the brown rocky valley slope from the small Georgian town at its foot. Suggest its many regular steps with a few clean rhythmic marks. It has no switchbacks, curved flights, giant bridge arch or elevated viaduct. Keep both the bottom start and the top landing inside the image, even in the portrait version; show the whole ascent at a smaller scale when necessary.",
+    "transparent_background": true
+  },
+  "preflightRevision": "worker-b-coverage-preflight-r1",
+  "preflightSources": [
+    "https://sthelenatourism.com/history-and-heritage/",
+    "https://www.sainthelena.gov.sh/documents/2025_06_Report_Press.pdf"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "es-cordoba-landscape",
+  "cityId": "es-cordoba",
+  "name": "코르도바",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-cordoba-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-cordoba-landscape.json",
+  "originalSha256": "886a105e444f13ccfdb7ca33c9e550591741028ed098052e9988130a354b0e19",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    39,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/es-cordoba.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 111262,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "741a4134fb7da15cef1c65349a5f824f94468f18e6978b47c8c0fba6db757389",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

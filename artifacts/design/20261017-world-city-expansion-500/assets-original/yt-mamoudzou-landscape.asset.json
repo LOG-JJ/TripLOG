@@ -1,0 +1,52 @@
+{
+  "id": "yt-mamoudzou-landscape",
+  "cityId": "yt-mamoudzou",
+  "name": "마무주",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "인도양",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/yt-mamoudzou-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/yt-mamoudzou-landscape.json",
+  "originalSha256": "9c13b7df5a09820587bf5695ea8b38f71f721ed2f577487ad540aac27f589b1f",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    72,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/yt-mamoudzou.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 105970,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "b2d749c7400f24353958b023ec1de5a0a74d9c1d366bfec520ba7a5089722521",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

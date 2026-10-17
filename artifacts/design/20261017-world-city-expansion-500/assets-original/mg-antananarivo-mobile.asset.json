@@ -1,0 +1,52 @@
+{
+  "id": "mg-antananarivo-mobile",
+  "cityId": "mg-antananarivo",
+  "name": "안타나나리보",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mg-antananarivo-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mg-antananarivo-mobile.json",
+  "originalSha256": "ca4175c52c895a34b18ed7a84201b7a0f1e4bd1820c1eff193a19e1888776e7f",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    28,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mg-antananarivo-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 111110,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "542d1b03f82468ca5a43e7ed9b0e4d67cb65866656d45a6e35bfa5477347a0e3",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

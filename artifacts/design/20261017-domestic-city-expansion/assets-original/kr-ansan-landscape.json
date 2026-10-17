@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-ansan-landscape",
+  "cityId": "kr-ansan",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Ansan, South Korea: the Sihwa Narae Moon Observatory, a slender pale rectangular concrete tower shaft supporting a wide circular ring-shaped glazed observation deck, standing beside the sea and a low coastal park. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "dec45d3789a12ea01c71bb974be7ed6b59945f3131960ded3f0cd05fff1437f8",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-ansan-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-05785ca5-922a-4282-a5ac-7b5474e63fda.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-05785ca5-922a-4282-a5ac-7b5474e63fda.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-ansan-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "9db4882b0288be90bdcf3f37a5905e352062d2d157474ab4d40a4318ba5cc21d",
+  "savedSha256": "9db4882b0288be90bdcf3f37a5905e352062d2d157474ab4d40a4318ba5cc21d",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:10:03.612Z",
+  "toolCallId": "exec-05785ca5-922a-4282-a5ac-7b5474e63fda",
+  "savedAt": "2026-10-17T05:11:53.722610+00:00"
+}

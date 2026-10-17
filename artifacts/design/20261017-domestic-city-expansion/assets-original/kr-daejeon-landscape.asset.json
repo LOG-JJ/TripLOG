@@ -1,0 +1,51 @@
+{
+  "id": "kr-daejeon-landscape",
+  "cityId": "kr-daejeon",
+  "name": "대전",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "광역시급",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-daejeon-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-daejeon-landscape.json",
+  "originalSha256": "d3b11345ad4a98582f7e169d18641a1f986f9f80268ca4daefe8b8b5e70eb9fd",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-daejeon.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 69522,
+  "assetSha256": "c7fb7fc0fad161330392f3fde25303c94a23f9df1430a6617152712130ad2160",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

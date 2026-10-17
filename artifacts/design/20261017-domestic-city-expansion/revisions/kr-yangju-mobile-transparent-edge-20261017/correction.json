@@ -1,0 +1,24 @@
+{
+  "reason": "Remove fully transparent right/bottom padding left in the encoded WebP; preserve original generation PNG and provenance",
+  "source": "decoded previous WebP",
+  "beforeAlphaBounds": [
+    0,
+    9,
+    480,
+    593
+  ],
+  "afterAlphaBounds": [
+    0,
+    9,
+    480,
+    600
+  ],
+  "beforeSha256": "a5c280a50473d410d57b6763f06059c540ac1fe7674c82d2bbeeeddebb95e388",
+  "afterSha256": "aae87ae97170058126582c47b23d6c65ad18e49e14ea8bf9a8a8852fdbef1412",
+  "trimmedEmptyRightBottom": [
+    0,
+    7
+  ],
+  "archive": "artifacts/design/20261017-domestic-city-expansion/revisions/kr-yangju-mobile-transparent-edge-20261017",
+  "method": "crop right/bottom then aspect-preserving ImageOps.fit 480x600 anchored bottom-right"
+}

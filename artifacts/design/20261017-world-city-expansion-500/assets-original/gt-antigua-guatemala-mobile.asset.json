@@ -1,0 +1,52 @@
+{
+  "id": "gt-antigua-guatemala-mobile",
+  "cityId": "gt-antigua-guatemala",
+  "name": "안티과과테말라",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gt-antigua-guatemala-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gt-antigua-guatemala-mobile.json",
+  "originalSha256": "c2ec44434fd506bb7d2be512121f8a5e6dd30598bec575501a52d80089ec37b0",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    29,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gt-antigua-guatemala-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 94328,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "608341aad12e13e850637246760f7382cf37769450e7ee2a08c2eaa18e58534f",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

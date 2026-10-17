@@ -1,0 +1,39 @@
+{
+  "jobId": "eh-dakhla-landscape",
+  "reason": "Remove the unrequested dominant tall tower and keep the named low coastal town, sandy lagoon and fishing boats.",
+  "archivedFiles": [
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/eh-dakhla-landscape.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/eh-dakhla-landscape/eh-dakhla-landscape.json",
+      "sha256": "4542e4b52e0a92d7c1fddef8ecf5768a77d45bb7ea1174c996bdee777ca7189c"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/eh-dakhla-landscape.prompt.txt",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/eh-dakhla-landscape/eh-dakhla-landscape.prompt.txt",
+      "sha256": "61759ea7fa69a11059f91c4873050ae46bb13e97dd0bfeb9637ef1546ae7df31"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/eh-dakhla-landscape.png",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/eh-dakhla-landscape/eh-dakhla-landscape.png",
+      "sha256": "cca2abc48e984e73d1299382bc4cdf185424e11e458ff5c146187138ae508102"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/eh-dakhla-landscape.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/eh-dakhla-landscape/eh-dakhla-landscape.json",
+      "sha256": "584f1d832f2441aa8026b8e43cb1481815b2bac78e318bc6dd33847960f796f8"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/eh-dakhla-landscape.asset.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/eh-dakhla-landscape/eh-dakhla-landscape.asset.json",
+      "sha256": "1dbcfa648f62565314acab7514e676b56ba1225cb391b79efa61cfb46767e248"
+    },
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v6/eh-dakhla.webp",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-r1/eh-dakhla-landscape/eh-dakhla.webp",
+      "sha256": "815ccec109a1c608ec791baac1159772977c8e2b817250112d064ab8f6b54615"
+    }
+  ],
+  "newPromptSha256": "8a989d6fc80f555296f5839ad9936e791639f5af43b9d35e30a32050419eb011",
+  "generationMode": "independent T2I",
+  "imageInputs": []
+}

@@ -1,0 +1,51 @@
+{
+  "id": "kr-jeju-city-mobile",
+  "cityId": "kr-jeju-city",
+  "name": "제주시",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "제주",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jeju-city-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jeju-city-mobile.json",
+  "originalSha256": "d53d63aca8ea38650acc9b7baa87c0a4f4b63663ae59bd23638f5c0f60a20318",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    20,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-jeju-city-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 109782,
+  "assetSha256": "764ae4229c4b066bbc16e2227a434ff6b819c3bc43d969c01b80c1f395eaa04e",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

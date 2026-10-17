@@ -1,0 +1,51 @@
+{
+  "id": "kr-gyeongsan-mobile",
+  "cityId": "kr-gyeongsan",
+  "name": "경산",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경북",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gyeongsan-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gyeongsan-mobile.json",
+  "originalSha256": "328b1fad3fe3e9419d858c4e73e3cbcf74938a1bae7bc22c40be95daac899ec6",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    33,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gyeongsan-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 103304,
+  "assetSha256": "a5ba014d42db321d5d43fa9918023d9ff06839eda2a240626504438f05fecc70",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

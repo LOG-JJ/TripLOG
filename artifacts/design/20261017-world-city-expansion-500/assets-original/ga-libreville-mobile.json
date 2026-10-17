@@ -1,0 +1,26 @@
+{
+  "jobId": "ga-libreville-mobile",
+  "cityId": "ga-libreville",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Libreville, Gabon: Saint Michel de Nkembo church with its carved wooden pillars, with a few tropical trees in the church grounds. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "685797715bacee0d10eba33d8c8a736e2014d1e414be4b11a0accf47b308e0da",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ga-libreville-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-80445455-7208-4b28-958f-2424d2a96397.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-80445455-7208-4b28-958f-2424d2a96397.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/ga-libreville-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "99dcb298f9c9ababfaa612ec60aa167618888c5ff7731f0dca31052c358205d4",
+  "savedSha256": "99dcb298f9c9ababfaa612ec60aa167618888c5ff7731f0dca31052c358205d4",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:50:52.643Z",
+  "toolCallId": "exec-80445455-7208-4b28-958f-2424d2a96397",
+  "savedAt": "2026-10-17T06:55:20.466169+00:00"
+}

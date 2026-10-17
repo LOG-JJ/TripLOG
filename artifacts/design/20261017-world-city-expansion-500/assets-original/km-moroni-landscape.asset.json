@@ -1,0 +1,52 @@
+{
+  "id": "km-moroni-landscape",
+  "cityId": "km-moroni",
+  "name": "모로니",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/km-moroni-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/km-moroni-landscape.json",
+  "originalSha256": "a144e1b9a1e7fde4affc6bed25c0457d997a8600a50f59c2753bcb5a4cd8e5e4",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    39,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/km-moroni.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 116778,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "74a00906edf46e492f10d9321da9c9bc6c66cb77faf52f0b70a120616db1d04b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

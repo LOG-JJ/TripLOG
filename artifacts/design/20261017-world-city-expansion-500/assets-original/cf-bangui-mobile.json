@@ -1,0 +1,26 @@
+{
+  "jobId": "cf-bangui-mobile",
+  "cityId": "cf-bangui",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Bangui, Central African Republic: the rocky rapids of the Ubangi River at Bangui, with the low riverside city buildings and green hills. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "b2cac54e27819346f3fee92638a5888eeffa252b8d2f320907f77b78239c72d6",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cf-bangui-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-f0f95edf-9d21-4c78-86b9-6a9738720076.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-f0f95edf-9d21-4c78-86b9-6a9738720076.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/cf-bangui-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "70bdb45a0475cacfd45368383ddfc62c6b3350f63b221961d54dd48634ae7197",
+  "savedSha256": "70bdb45a0475cacfd45368383ddfc62c6b3350f63b221961d54dd48634ae7197",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:12:43Z",
+  "toolCallId": "exec-f0f95edf-9d21-4c78-86b9-6a9738720076",
+  "savedAt": "2026-10-17T07:15:00.808818+00:00"
+}

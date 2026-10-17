@@ -1,0 +1,52 @@
+{
+  "id": "wf-mata-utu-mobile",
+  "cityId": "wf-mata-utu",
+  "name": "마타우투",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "오세아니아",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/wf-mata-utu-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/wf-mata-utu-mobile.json",
+  "originalSha256": "71262fd5cbf8f6dd4928a51573fb2079d71778e766324b28ad1c028e62b5afd1",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    118,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/wf-mata-utu-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 108966,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "5cee8f4c1c53c84ed29931849a81f14d312f3d724f6362220eda85265fc3834f",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

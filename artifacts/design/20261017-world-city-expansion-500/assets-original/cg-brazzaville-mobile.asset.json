@@ -1,0 +1,97 @@
+{
+  "id": "cg-brazzaville-mobile",
+  "cityId": "cg-brazzaville",
+  "name": "브라자빌",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cg-brazzaville-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cg-brazzaville-mobile.json",
+  "originalSha256": "2a4705a51d946c98c670a7cadba073c6472b54814b9dd9f1b3d4ab78d20fa956",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    32,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cg-brazzaville-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 77298,
+  "technicalEmptyEdgeRefits": [
+    [
+      0,
+      7
+    ]
+  ],
+  "assetSha256": "118e4fab248fc1ced49de0d55989fdcdeb753ec7f76e9ab36c99d7479fadcb1d",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa",
+  "technicalVisibleEdgeRefit": {
+    "performedAt": "2026-10-17T07:39:42.783361+00:00",
+    "reason": "The 320px browser header had a 2.02995px painted bottom gap at alpha >= 8; remove only nearly transparent bottom/right padding during conversion.",
+    "alphaThreshold": 8,
+    "sourceVisibleAlphaBounds": [
+      16,
+      202,
+      1122,
+      1368
+    ],
+    "trimmedSourceRightBottom": [
+      0,
+      34
+    ],
+    "outputVisibleAlphaBounds": [
+      0,
+      88,
+      480,
+      600
+    ],
+    "outputVisibleRightBottomGaps": [
+      0,
+      0
+    ],
+    "refits": [],
+    "originalUnchangedSha256": "2a4705a51d946c98c670a7cadba073c6472b54814b9dd9f1b3d4ab78d20fa956",
+    "previousFiles": [
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/cg-brazzaville-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r3-alpha-edge/cg-brazzaville-mobile/cg-brazzaville-mobile.webp",
+        "sha256": "373f132e59d851dda3af448dc8974e3ef6a0a4b9181a5e0ff7677931b53ed2ca"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cg-brazzaville-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-a-r3-alpha-edge/cg-brazzaville-mobile/cg-brazzaville-mobile.asset.json",
+        "sha256": "e0b1fa5a7ac7c6d79c31f9a09fbf331f1e60599ce50887c651dafa9390308cc6"
+      }
+    ],
+    "method": "Original PNG -> remove only nearly transparent right/bottom edge -> anchored aspect-preserving LANCZOS fit -> WebP quality 90"
+  }
+}

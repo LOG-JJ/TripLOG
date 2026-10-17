@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-gumi-landscape",
+  "cityId": "kr-gumi",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Gumi, South Korea: Geumosan Mountain rising behind Geumoji Lake, with rocky upper slopes, wooded foothills and calm water. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "972e7861f4aa676f9ff24ca36426fb3c5bc0166522e79ae5d755228a46df73aa",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gumi-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-dd4c765c-667d-40d7-9b4e-77e832bb3c21.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-dd4c765c-667d-40d7-9b4e-77e832bb3c21.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gumi-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "f1adee563ce8c309ae366788d1870e77a4360dae4816e1d5cde16527a940d95c",
+  "savedSha256": "f1adee563ce8c309ae366788d1870e77a4360dae4816e1d5cde16527a940d95c",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:24:41Z",
+  "toolCallId": "exec-dd4c765c-667d-40d7-9b4e-77e832bb3c21",
+  "savedAt": "2026-10-17T05:25:51.665286+00:00"
+}

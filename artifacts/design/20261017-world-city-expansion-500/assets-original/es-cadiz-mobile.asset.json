@@ -1,0 +1,52 @@
+{
+  "id": "es-cadiz-mobile",
+  "cityId": "es-cadiz",
+  "name": "카디스",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-cadiz-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-cadiz-mobile.json",
+  "originalSha256": "12a542872f804910196caf2cc54a35975dce6fa45883f0eadf9d29a4eb07c39e",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    128,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/es-cadiz-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 102420,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2ebfdeeb517058887d2ceaeddcf7b5e42ea2c71b79070607222e231ed7b24006",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

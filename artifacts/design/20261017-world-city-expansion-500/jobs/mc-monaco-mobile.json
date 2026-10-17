@@ -1,0 +1,36 @@
+{
+  "id": "mc-monaco-mobile",
+  "cityId": "mc-monaco",
+  "cityName": "모나코",
+  "englishName": "Monaco",
+  "countryCode": "MC",
+  "kind": "city",
+  "group": "Europe",
+  "variant": "mobile",
+  "phase": "core-500",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone destination illustration of Monaco, Monaco: the Prince's Palace on the Rock of Monaco, with the Mediterranean harbour. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Composition correction: Fit the WHOLE Princes Palace into the upper-middle part of the portrait canvas, seen from a distance. Include the entire rightmost tower and palace wing ending before 85 percent of canvas width, with at least 10 percent clear space above its tallest flag. Harbor foliage and foreground buildings may meet the lower and right edges.",
+  "promptSha256": "eed28ebb92a5fb20db009bd1ac1bf1280c61da696ebbaa8191147ace371b920b",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/jobs/mc-monaco-mobile.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/mc-monaco-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/mc-monaco-mobile.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/mc-monaco-mobile.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v6/mc-monaco-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "source": {
+    "title": "Visit Monaco — Official tourist map",
+    "url": "https://www.visitmonaco.com/Documents-Site/Plan%20touristique%20Monaco.pdf"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone destination illustration of Monaco, Monaco: the Prince's Palace on the Rock of Monaco, with the Mediterranean harbour. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Composition correction: Fit the WHOLE Princes Palace into the upper-middle part of the portrait canvas, seen from a distance. Include the entire rightmost tower and palace wing ending before 85 percent of canvas width, with at least 10 percent clear space above its tallest flag. Harbor foliage and foreground buildings may meet the lower and right edges.",
+    "transparent_background": true
+  },
+  "revision": "worker-c-visual-r1",
+  "revisionReason": "The palace right wing was cut off at the canvas edge."
+}

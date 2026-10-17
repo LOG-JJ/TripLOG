@@ -1,0 +1,26 @@
+{
+  "jobId": "ve-coro-mobile",
+  "cityId": "ve-coro",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Coro, Venezuela: a compact street of ONLY low one-storey earthen colonial houses, their warm yellow, ochre and white plaster walls, terracotta-tiled roofs, dark timber doors and iron window grilles, with an old cobblestone lane and a few flowering pots. The houses themselves are the subject. The entire skyline consists only of these low tiled house roofs and a little foliage. Do not depict any church, cathedral, bell tower, dome, spire, monument or tall building anywhere in this scene. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "71d166769a518ccf5bb776a498e4b1265d6a927a468a71ebace4fc675ca989d1",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ve-coro-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-9f218d69-8f5c-41d4-a84f-ac6a4c2482ff.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-9f218d69-8f5c-41d4-a84f-ac6a4c2482ff.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/ve-coro-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "40371013ac6579afc239c5421c5fdbd37c686dd0190cc8bfc393f6e38064492d",
+  "savedSha256": "40371013ac6579afc239c5421c5fdbd37c686dd0190cc8bfc393f6e38064492d",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:48:40Z",
+  "toolCallId": "exec-9f218d69-8f5c-41d4-a84f-ac6a4c2482ff",
+  "savedAt": "2026-10-17T06:49:41.371533+00:00"
+}

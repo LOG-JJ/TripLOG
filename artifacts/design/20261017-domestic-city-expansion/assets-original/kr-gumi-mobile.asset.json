@@ -1,0 +1,51 @@
+{
+  "id": "kr-gumi-mobile",
+  "cityId": "kr-gumi",
+  "name": "구미",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경북",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gumi-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gumi-mobile.json",
+  "originalSha256": "d19b42b9317a78ef81ae7c195c79b56076b4d8850cadc05f7f98da0f57db9549",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gumi-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 97326,
+  "assetSha256": "17201065954f0504b99d9b34ed8460c726ada3c74a01b67e9e7b02360046114a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "kr-sejong-mobile",
+  "cityId": "kr-sejong",
+  "name": "세종",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "광역시급",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-mobile.json",
+  "originalSha256": "609a9f89db58c303533562d15b08d6d63088d54dff692895d2fd51838f980ded",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-sejong-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 63074,
+  "assetSha256": "db39209dd49cdfd9c08d0d9749cb88f01066a7b7f1004c74488dd83d49a14890",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

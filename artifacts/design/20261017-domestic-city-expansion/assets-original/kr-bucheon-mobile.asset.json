@@ -1,0 +1,51 @@
+{
+  "id": "kr-bucheon-mobile",
+  "cityId": "kr-bucheon",
+  "name": "부천",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-bucheon-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-bucheon-mobile.json",
+  "originalSha256": "3c120c1761a3ac1e022f8d9cccecc8ee011a80d45e956f50b2b8f2d7caa77824",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    120,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-bucheon-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 89008,
+  "assetSha256": "7618bd66651d10ef856787d31ea178f0013a77159f17e00e82829fc405a587e6",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

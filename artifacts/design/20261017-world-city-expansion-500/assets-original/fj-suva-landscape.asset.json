@@ -1,0 +1,52 @@
+{
+  "id": "fj-suva-landscape",
+  "cityId": "fj-suva",
+  "name": "수바",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/fj-suva-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/fj-suva-landscape.json",
+  "originalSha256": "294c18614a4811c9dd229bd469d9621fd97a08b3523236defe63b2e3a03f3ba8",
+  "sourceSize": [
+    1619,
+    972
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1619,
+    972
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/fj-suva.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 151650,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "6faa050ad685dcddb856c267277c00050603181079981d42c0b278d00d5b494e",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

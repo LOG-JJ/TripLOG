@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-jeonnam-gwangju-mobile",
+  "cityId": "kr-jeonnam-gwangju",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Jeonnam-Gwangju Integrated Special City, South Korea: a regional composite of Namdo's softly layered mountains, a winding river and a sheltered coastal shoreline, representing the whole integrated region rather than a single city landmark. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "c9ca7ae18f10d5ff16ba759781ad2b006e8e9a3ab3c646d768b1a9ad1540361d",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jeonnam-gwangju-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-63347297-ae65-48bb-9761-ec2747d7bc44.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-63347297-ae65-48bb-9761-ec2747d7bc44.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jeonnam-gwangju-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "8cf0924912193ed0b9d5f9c1d99cd6dfa8006a9fbf8b59cfffbda6c5181c4467",
+  "savedSha256": "8cf0924912193ed0b9d5f9c1d99cd6dfa8006a9fbf8b59cfffbda6c5181c4467",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:07:30.133Z",
+  "toolCallId": "exec-63347297-ae65-48bb-9761-ec2747d7bc44",
+  "savedAt": "2026-10-17T05:09:27.937448+00:00"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "gb-liverpool-mobile",
+  "cityId": "gb-liverpool",
+  "name": "리버풀",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-liverpool-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-liverpool-mobile.json",
+  "originalSha256": "7f8f09716a5d2abbe2bbc5bd61569ef4370ea7166e1013502220fd70533fcdb7",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    35,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gb-liverpool-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 99278,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "97f55426a64ebf46aad4285334da41264fe58a823a2a822e4af3957969399f43",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

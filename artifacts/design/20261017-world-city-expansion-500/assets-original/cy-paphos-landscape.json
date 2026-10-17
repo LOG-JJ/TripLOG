@@ -1,0 +1,26 @@
+{
+  "jobId": "cy-paphos-landscape",
+  "cityId": "cy-paphos",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Paphos, Cyprus: the rock-cut peristyle courtyards of the Tombs of the Kings, with the low coastal landscape of Paphos. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "ae2dc47bba4e41d3b73ad268b90cf8ba70a9acd2a501448e02164f60320a4a16",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cy-paphos-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-89c151df-79c5-4625-be3b-5635373cf2e4.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-89c151df-79c5-4625-be3b-5635373cf2e4.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/cy-paphos-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "5ef341c762c7a9f9aebad0cab276c6f3bb3dccf410897d5bad55abac168513a8",
+  "savedSha256": "5ef341c762c7a9f9aebad0cab276c6f3bb3dccf410897d5bad55abac168513a8",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:05:24Z",
+  "toolCallId": "exec-89c151df-79c5-4625-be3b-5635373cf2e4",
+  "savedAt": "2026-10-17T06:08:59.018488+00:00"
+}

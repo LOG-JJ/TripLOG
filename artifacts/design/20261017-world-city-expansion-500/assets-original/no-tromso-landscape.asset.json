@@ -1,0 +1,52 @@
+{
+  "id": "no-tromso-landscape",
+  "cityId": "no-tromso",
+  "name": "트롬쇠",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/no-tromso-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/no-tromso-landscape.json",
+  "originalSha256": "9b1766bf01e3290f6df3c1a5defd9c5eb5cced57fd9c503a86abd80546ca7e7b",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    49,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/no-tromso.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 91074,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "95c4f898439c8303ad75aa97b77a145f90ec14b8df04fa4ec576c8a2849cfb62",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,26 @@
+{
+  "jobId": "mk-ohrid-mobile",
+  "cityId": "mk-ohrid",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Ohrid, North Macedonia: the cliffside Church of Saint John at Kaneo, with Lake Ohrid. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "0eb22678e6a5c8698eec70cbf21348822a97cac4e3dc290b312168942589d427",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mk-ohrid-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-ea211d89-b845-433c-a408-4c585159eeec.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-ea211d89-b845-433c-a408-4c585159eeec.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/mk-ohrid-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "7c5b6fc86365a5059099f8796eba075ab37dd00c32b556a54350f3b25721642f",
+  "savedSha256": "7c5b6fc86365a5059099f8796eba075ab37dd00c32b556a54350f3b25721642f",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:06:10.439Z",
+  "toolCallId": "exec-ea211d89-b845-433c-a408-4c585159eeec",
+  "savedAt": "2026-10-17T06:07:53.735475+00:00"
+}

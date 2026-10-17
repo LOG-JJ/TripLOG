@@ -1,0 +1,52 @@
+{
+  "id": "it-palermo-landscape",
+  "cityId": "it-palermo",
+  "name": "팔레르모",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-palermo-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-palermo-landscape.json",
+  "originalSha256": "4450a33eb91a904a585820c656d3433781abd3dfbfad4027b59bac7aacf0d6a5",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/it-palermo.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 133854,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "85a8762bb1a9dce29d18e65d50f36eadc62f120e769d113921638c502387c5a1",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

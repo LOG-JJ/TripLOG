@@ -1,0 +1,52 @@
+{
+  "id": "br-brasilia-mobile",
+  "cityId": "br-brasilia",
+  "name": "브라질리아",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/br-brasilia-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/br-brasilia-mobile.json",
+  "originalSha256": "96ef08003a67783fe963027caab5d2ca16e9a544e84cb24393ba032ad0f6e3d1",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    104,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/br-brasilia-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 77096,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "11826eb79b2a0f07d65f024bf16e7af64026417b172b5e3c350a84ee7e2fd7da",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

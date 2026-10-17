@@ -1,0 +1,51 @@
+{
+  "id": "kr-gwangmyeong-landscape",
+  "cityId": "kr-gwangmyeong",
+  "name": "광명",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwangmyeong-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwangmyeong-landscape.json",
+  "originalSha256": "c6430c03282148d0a1e592706b09c70804aae04221192d43641ccb43276eecf4",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    31,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gwangmyeong.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 83802,
+  "assetSha256": "27ec527cbb80cc4663c98bbce9cd3079df3049a3013a320c67b06a1d0bc8eddd",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

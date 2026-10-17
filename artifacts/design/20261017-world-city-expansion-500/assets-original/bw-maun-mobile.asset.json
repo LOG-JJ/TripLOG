@@ -1,0 +1,52 @@
+{
+  "id": "bw-maun-mobile",
+  "cityId": "bw-maun",
+  "name": "마운",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bw-maun-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bw-maun-mobile.json",
+  "originalSha256": "4b1c7fcba11bb44c592a8525f3290ababe5d27d1f5daaece0ef57cfce61d7080",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    28,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bw-maun-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 106408,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "a94da2054b29f570b6e31e9f1c6015292d46a54ee700482cb51bb074d48f1d4c",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

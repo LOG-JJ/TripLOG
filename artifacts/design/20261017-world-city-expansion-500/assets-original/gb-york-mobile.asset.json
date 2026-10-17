@@ -1,0 +1,52 @@
+{
+  "id": "gb-york-mobile",
+  "cityId": "gb-york",
+  "name": "요크",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-york-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-york-mobile.json",
+  "originalSha256": "73a26ba84fc269801d2c4c74984bf31df3fb8dff51cb588272d75f1abdfbbdc2",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gb-york-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 109544,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "85fe74c720233b8ef1ddc80ecc972823126359bedc334304b794dc9b31fc01e3",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

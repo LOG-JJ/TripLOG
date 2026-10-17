@@ -1,0 +1,52 @@
+{
+  "id": "br-olinda-mobile",
+  "cityId": "br-olinda",
+  "name": "올린다",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/br-olinda-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/br-olinda-mobile.json",
+  "originalSha256": "f8dbbf80f93a66ef5c19d1d32edf307a56d87134a50a73ea4b158a7135bd7f3e",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/br-olinda-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 122720,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "109b436319caac22a701faeff6f9a49e6da7e547e8d4abb6ba474c224b2dc2ca",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

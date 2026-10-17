@@ -1,0 +1,39 @@
+{
+  "id": "kr-wonju-landscape",
+  "cityId": "kr-wonju",
+  "cityName": "원주",
+  "englishName": "Wonju",
+  "kind": "city",
+  "group": "강원",
+  "variant": "landscape",
+  "phase": "expansion",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Wonju, South Korea: the original blue Sogeumsan Chulleongdari pedestrian suspension bridge at Sogeumsan Grand Valley, a slim sky-blue steel walkway with closely spaced blue railing uprights and suspended cables, spanning between wooded rocky hills above a deep green valley. Keep the entire blue bridge span and both endpoints inside the composition. The bridge is a lightweight footbridge with no tall tower pylons, no red paint and no golden bridge; do not combine it with the different yellow Ulleongdari bridge. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "c61306941dc12639bfd9447a0018c793e2ebf9f34b29660d6b7757e464b79104",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/jobs/kr-wonju-landscape.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-wonju-landscape.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-wonju-landscape.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-wonju-landscape.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v5/kr-wonju.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "motif": "Sogeumsan Grand Valley's long pedestrian suspension bridge spanning between steep wooded cliffs",
+  "proposedMotif": "소금산그랜드밸리 교량·절벽",
+  "motifSource": {
+    "title": "문체부 2025–2026 한국관광 100선",
+    "url": "https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=21611",
+    "evidence": "공식 PDF 4쪽 관광지 목록 확인; 세부 외형은 생성 전 확인"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone hand-drawn destination illustration of Wonju, South Korea: the original blue Sogeumsan Chulleongdari pedestrian suspension bridge at Sogeumsan Grand Valley, a slim sky-blue steel walkway with closely spaced blue railing uprights and suspended cables, spanning between wooded rocky hills above a deep green valley. Keep the entire blue bridge span and both endpoints inside the composition. The bridge is a lightweight footbridge with no tall tower pylons, no red paint and no golden bridge; do not combine it with the different yellow Ulleongdari bridge. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+    "transparent_background": true
+  },
+  "provenanceRule": "The --source argument must be the exact local original path returned by this job's image_gen call. Never search for a latest file.",
+  "promptRevision": "pilot-subject-qa-20261017",
+  "visualCorrection": "Match original blue Chulleongdari railings and keep same subject in desktop/mobile."
+}

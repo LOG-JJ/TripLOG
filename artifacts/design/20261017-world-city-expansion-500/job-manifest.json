@@ -1,0 +1,3853 @@
+{
+  "status": "completed-and-locally-verified",
+  "generationMode": "independent T2I",
+  "imageInputs": [],
+  "assetVersion": "v6",
+  "expectedJobs": 480,
+  "jobs": [
+    {
+      "id": "al-tirana-landscape",
+      "cityId": "al-tirana",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/al-tirana-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/al-tirana.webp"
+    },
+    {
+      "id": "al-tirana-mobile",
+      "cityId": "al-tirana",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/al-tirana-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/al-tirana-mobile.webp"
+    },
+    {
+      "id": "ad-andorra-la-vella-landscape",
+      "cityId": "ad-andorra-la-vella",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ad-andorra-la-vella-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ad-andorra-la-vella.webp"
+    },
+    {
+      "id": "ad-andorra-la-vella-mobile",
+      "cityId": "ad-andorra-la-vella",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ad-andorra-la-vella-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ad-andorra-la-vella-mobile.webp"
+    },
+    {
+      "id": "by-nesvizh-landscape",
+      "cityId": "by-nesvizh",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/by-nesvizh-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/by-nesvizh.webp"
+    },
+    {
+      "id": "by-nesvizh-mobile",
+      "cityId": "by-nesvizh",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/by-nesvizh-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/by-nesvizh-mobile.webp"
+    },
+    {
+      "id": "cy-paphos-landscape",
+      "cityId": "cy-paphos",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cy-paphos-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cy-paphos.webp"
+    },
+    {
+      "id": "cy-paphos-mobile",
+      "cityId": "cy-paphos",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cy-paphos-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cy-paphos-mobile.webp"
+    },
+    {
+      "id": "li-vaduz-landscape",
+      "cityId": "li-vaduz",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/li-vaduz-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/li-vaduz.webp"
+    },
+    {
+      "id": "li-vaduz-mobile",
+      "cityId": "li-vaduz",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/li-vaduz-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/li-vaduz-mobile.webp"
+    },
+    {
+      "id": "lu-luxembourg-city-landscape",
+      "cityId": "lu-luxembourg-city",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/lu-luxembourg-city-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/lu-luxembourg-city.webp"
+    },
+    {
+      "id": "lu-luxembourg-city-mobile",
+      "cityId": "lu-luxembourg-city",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/lu-luxembourg-city-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/lu-luxembourg-city-mobile.webp"
+    },
+    {
+      "id": "md-chisinau-landscape",
+      "cityId": "md-chisinau",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/md-chisinau-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/md-chisinau.webp"
+    },
+    {
+      "id": "md-chisinau-mobile",
+      "cityId": "md-chisinau",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/md-chisinau-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/md-chisinau-mobile.webp"
+    },
+    {
+      "id": "mc-monaco-landscape",
+      "cityId": "mc-monaco",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mc-monaco-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mc-monaco.webp"
+    },
+    {
+      "id": "mc-monaco-mobile",
+      "cityId": "mc-monaco",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mc-monaco-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mc-monaco-mobile.webp"
+    },
+    {
+      "id": "mk-ohrid-landscape",
+      "cityId": "mk-ohrid",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mk-ohrid-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mk-ohrid.webp"
+    },
+    {
+      "id": "mk-ohrid-mobile",
+      "cityId": "mk-ohrid",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mk-ohrid-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mk-ohrid-mobile.webp"
+    },
+    {
+      "id": "sm-san-marino-landscape",
+      "cityId": "sm-san-marino",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sm-san-marino-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sm-san-marino.webp"
+    },
+    {
+      "id": "sm-san-marino-mobile",
+      "cityId": "sm-san-marino",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sm-san-marino-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sm-san-marino-mobile.webp"
+    },
+    {
+      "id": "ua-lviv-landscape",
+      "cityId": "ua-lviv",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ua-lviv-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ua-lviv.webp"
+    },
+    {
+      "id": "ua-lviv-mobile",
+      "cityId": "ua-lviv",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ua-lviv-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ua-lviv-mobile.webp"
+    },
+    {
+      "id": "va-vatican-city-landscape",
+      "cityId": "va-vatican-city",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/va-vatican-city-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/va-vatican-city.webp"
+    },
+    {
+      "id": "va-vatican-city-mobile",
+      "cityId": "va-vatican-city",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/va-vatican-city-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/va-vatican-city-mobile.webp"
+    },
+    {
+      "id": "gb-york-landscape",
+      "cityId": "gb-york",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-york-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gb-york.webp"
+    },
+    {
+      "id": "gb-york-mobile",
+      "cityId": "gb-york",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-york-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gb-york-mobile.webp"
+    },
+    {
+      "id": "gb-liverpool-landscape",
+      "cityId": "gb-liverpool",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-liverpool-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gb-liverpool.webp"
+    },
+    {
+      "id": "gb-liverpool-mobile",
+      "cityId": "gb-liverpool",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-liverpool-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gb-liverpool-mobile.webp"
+    },
+    {
+      "id": "gb-canterbury-landscape",
+      "cityId": "gb-canterbury",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-canterbury-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gb-canterbury.webp"
+    },
+    {
+      "id": "gb-canterbury-mobile",
+      "cityId": "gb-canterbury",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-canterbury-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gb-canterbury-mobile.webp"
+    },
+    {
+      "id": "gb-cardiff-landscape",
+      "cityId": "gb-cardiff",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-cardiff-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gb-cardiff.webp"
+    },
+    {
+      "id": "gb-cardiff-mobile",
+      "cityId": "gb-cardiff",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-cardiff-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gb-cardiff-mobile.webp"
+    },
+    {
+      "id": "gb-belfast-landscape",
+      "cityId": "gb-belfast",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-belfast-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gb-belfast.webp"
+    },
+    {
+      "id": "gb-belfast-mobile",
+      "cityId": "gb-belfast",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-belfast-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gb-belfast-mobile.webp"
+    },
+    {
+      "id": "fr-carcassonne-landscape",
+      "cityId": "fr-carcassonne",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fr-carcassonne-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/fr-carcassonne.webp"
+    },
+    {
+      "id": "fr-carcassonne-mobile",
+      "cityId": "fr-carcassonne",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fr-carcassonne-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/fr-carcassonne-mobile.webp"
+    },
+    {
+      "id": "fr-arles-landscape",
+      "cityId": "fr-arles",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fr-arles-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/fr-arles.webp"
+    },
+    {
+      "id": "fr-arles-mobile",
+      "cityId": "fr-arles",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fr-arles-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/fr-arles-mobile.webp"
+    },
+    {
+      "id": "fr-reims-landscape",
+      "cityId": "fr-reims",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fr-reims-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/fr-reims.webp"
+    },
+    {
+      "id": "fr-reims-mobile",
+      "cityId": "fr-reims",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fr-reims-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/fr-reims-mobile.webp"
+    },
+    {
+      "id": "it-matera-landscape",
+      "cityId": "it-matera",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/it-matera-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/it-matera.webp"
+    },
+    {
+      "id": "it-matera-mobile",
+      "cityId": "it-matera",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/it-matera-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/it-matera-mobile.webp"
+    },
+    {
+      "id": "it-palermo-landscape",
+      "cityId": "it-palermo",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/it-palermo-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/it-palermo.webp"
+    },
+    {
+      "id": "it-palermo-mobile",
+      "cityId": "it-palermo",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/it-palermo-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/it-palermo-mobile.webp"
+    },
+    {
+      "id": "it-ravenna-landscape",
+      "cityId": "it-ravenna",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/it-ravenna-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/it-ravenna.webp"
+    },
+    {
+      "id": "it-ravenna-mobile",
+      "cityId": "it-ravenna",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/it-ravenna-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/it-ravenna-mobile.webp"
+    },
+    {
+      "id": "it-lucca-landscape",
+      "cityId": "it-lucca",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/it-lucca-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/it-lucca.webp"
+    },
+    {
+      "id": "it-lucca-mobile",
+      "cityId": "it-lucca",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/it-lucca-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/it-lucca-mobile.webp"
+    },
+    {
+      "id": "es-cordoba-landscape",
+      "cityId": "es-cordoba",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/es-cordoba-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/es-cordoba.webp"
+    },
+    {
+      "id": "es-cordoba-mobile",
+      "cityId": "es-cordoba",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/es-cordoba-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/es-cordoba-mobile.webp"
+    },
+    {
+      "id": "es-segovia-landscape",
+      "cityId": "es-segovia",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/es-segovia-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/es-segovia.webp"
+    },
+    {
+      "id": "es-segovia-mobile",
+      "cityId": "es-segovia",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/es-segovia-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/es-segovia-mobile.webp"
+    },
+    {
+      "id": "es-salamanca-landscape",
+      "cityId": "es-salamanca",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/es-salamanca-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/es-salamanca.webp"
+    },
+    {
+      "id": "es-salamanca-mobile",
+      "cityId": "es-salamanca",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/es-salamanca-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/es-salamanca-mobile.webp"
+    },
+    {
+      "id": "es-cadiz-landscape",
+      "cityId": "es-cadiz",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/es-cadiz-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/es-cadiz.webp"
+    },
+    {
+      "id": "es-cadiz-mobile",
+      "cityId": "es-cadiz",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/es-cadiz-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/es-cadiz-mobile.webp"
+    },
+    {
+      "id": "de-lubeck-landscape",
+      "cityId": "de-lubeck",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/de-lubeck-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/de-lubeck.webp"
+    },
+    {
+      "id": "de-lubeck-mobile",
+      "cityId": "de-lubeck",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/de-lubeck-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/de-lubeck-mobile.webp"
+    },
+    {
+      "id": "de-bamberg-landscape",
+      "cityId": "de-bamberg",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/de-bamberg-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/de-bamberg.webp"
+    },
+    {
+      "id": "de-bamberg-mobile",
+      "cityId": "de-bamberg",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/de-bamberg-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/de-bamberg-mobile.webp"
+    },
+    {
+      "id": "de-trier-landscape",
+      "cityId": "de-trier",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/de-trier-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/de-trier.webp"
+    },
+    {
+      "id": "de-trier-mobile",
+      "cityId": "de-trier",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/de-trier-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/de-trier-mobile.webp"
+    },
+    {
+      "id": "nl-the-hague-landscape",
+      "cityId": "nl-the-hague",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nl-the-hague-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/nl-the-hague.webp"
+    },
+    {
+      "id": "nl-the-hague-mobile",
+      "cityId": "nl-the-hague",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nl-the-hague-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/nl-the-hague-mobile.webp"
+    },
+    {
+      "id": "nl-utrecht-landscape",
+      "cityId": "nl-utrecht",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nl-utrecht-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/nl-utrecht.webp"
+    },
+    {
+      "id": "nl-utrecht-mobile",
+      "cityId": "nl-utrecht",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nl-utrecht-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/nl-utrecht-mobile.webp"
+    },
+    {
+      "id": "be-antwerp-landscape",
+      "cityId": "be-antwerp",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/be-antwerp-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/be-antwerp.webp"
+    },
+    {
+      "id": "be-antwerp-mobile",
+      "cityId": "be-antwerp",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/be-antwerp-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/be-antwerp-mobile.webp"
+    },
+    {
+      "id": "ch-lugano-landscape",
+      "cityId": "ch-lugano",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ch-lugano-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ch-lugano.webp"
+    },
+    {
+      "id": "ch-lugano-mobile",
+      "cityId": "ch-lugano",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ch-lugano-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ch-lugano-mobile.webp"
+    },
+    {
+      "id": "at-graz-landscape",
+      "cityId": "at-graz",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/at-graz-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/at-graz.webp"
+    },
+    {
+      "id": "at-graz-mobile",
+      "cityId": "at-graz",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/at-graz-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/at-graz-mobile.webp"
+    },
+    {
+      "id": "pt-evora-landscape",
+      "cityId": "pt-evora",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pt-evora-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pt-evora.webp"
+    },
+    {
+      "id": "pt-evora-mobile",
+      "cityId": "pt-evora",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pt-evora-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pt-evora-mobile.webp"
+    },
+    {
+      "id": "pt-coimbra-landscape",
+      "cityId": "pt-coimbra",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pt-coimbra-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pt-coimbra.webp"
+    },
+    {
+      "id": "pt-coimbra-mobile",
+      "cityId": "pt-coimbra",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pt-coimbra-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pt-coimbra-mobile.webp"
+    },
+    {
+      "id": "gr-corfu-town-landscape",
+      "cityId": "gr-corfu-town",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gr-corfu-town-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gr-corfu-town.webp"
+    },
+    {
+      "id": "gr-corfu-town-mobile",
+      "cityId": "gr-corfu-town",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gr-corfu-town-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gr-corfu-town-mobile.webp"
+    },
+    {
+      "id": "gr-nafplio-landscape",
+      "cityId": "gr-nafplio",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gr-nafplio-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gr-nafplio.webp"
+    },
+    {
+      "id": "gr-nafplio-mobile",
+      "cityId": "gr-nafplio",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gr-nafplio-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gr-nafplio-mobile.webp"
+    },
+    {
+      "id": "pl-wroclaw-landscape",
+      "cityId": "pl-wroclaw",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pl-wroclaw-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pl-wroclaw.webp"
+    },
+    {
+      "id": "pl-wroclaw-mobile",
+      "cityId": "pl-wroclaw",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pl-wroclaw-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pl-wroclaw-mobile.webp"
+    },
+    {
+      "id": "ro-sighisoara-landscape",
+      "cityId": "ro-sighisoara",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ro-sighisoara-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ro-sighisoara.webp"
+    },
+    {
+      "id": "ro-sighisoara-mobile",
+      "cityId": "ro-sighisoara",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ro-sighisoara-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ro-sighisoara-mobile.webp"
+    },
+    {
+      "id": "bg-nesebar-landscape",
+      "cityId": "bg-nesebar",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bg-nesebar-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bg-nesebar.webp"
+    },
+    {
+      "id": "bg-nesebar-mobile",
+      "cityId": "bg-nesebar",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bg-nesebar-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bg-nesebar-mobile.webp"
+    },
+    {
+      "id": "hr-trogir-landscape",
+      "cityId": "hr-trogir",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/hr-trogir-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/hr-trogir.webp"
+    },
+    {
+      "id": "hr-trogir-mobile",
+      "cityId": "hr-trogir",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/hr-trogir-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/hr-trogir-mobile.webp"
+    },
+    {
+      "id": "si-piran-landscape",
+      "cityId": "si-piran",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/si-piran-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/si-piran.webp"
+    },
+    {
+      "id": "si-piran-mobile",
+      "cityId": "si-piran",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/si-piran-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/si-piran-mobile.webp"
+    },
+    {
+      "id": "ba-mostar-landscape",
+      "cityId": "ba-mostar",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ba-mostar-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ba-mostar.webp"
+    },
+    {
+      "id": "ba-mostar-mobile",
+      "cityId": "ba-mostar",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ba-mostar-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ba-mostar-mobile.webp"
+    },
+    {
+      "id": "rs-novi-sad-landscape",
+      "cityId": "rs-novi-sad",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/rs-novi-sad-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/rs-novi-sad.webp"
+    },
+    {
+      "id": "rs-novi-sad-mobile",
+      "cityId": "rs-novi-sad",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/rs-novi-sad-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/rs-novi-sad-mobile.webp"
+    },
+    {
+      "id": "hu-pecs-landscape",
+      "cityId": "hu-pecs",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/hu-pecs-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/hu-pecs.webp"
+    },
+    {
+      "id": "hu-pecs-mobile",
+      "cityId": "hu-pecs",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/hu-pecs-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/hu-pecs-mobile.webp"
+    },
+    {
+      "id": "cz-karlovy-vary-landscape",
+      "cityId": "cz-karlovy-vary",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cz-karlovy-vary-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cz-karlovy-vary.webp"
+    },
+    {
+      "id": "cz-karlovy-vary-mobile",
+      "cityId": "cz-karlovy-vary",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cz-karlovy-vary-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cz-karlovy-vary-mobile.webp"
+    },
+    {
+      "id": "sk-kosice-landscape",
+      "cityId": "sk-kosice",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sk-kosice-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sk-kosice.webp"
+    },
+    {
+      "id": "sk-kosice-mobile",
+      "cityId": "sk-kosice",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sk-kosice-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sk-kosice-mobile.webp"
+    },
+    {
+      "id": "se-gothenburg-landscape",
+      "cityId": "se-gothenburg",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/se-gothenburg-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/se-gothenburg.webp"
+    },
+    {
+      "id": "se-gothenburg-mobile",
+      "cityId": "se-gothenburg",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/se-gothenburg-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/se-gothenburg-mobile.webp"
+    },
+    {
+      "id": "dk-aarhus-landscape",
+      "cityId": "dk-aarhus",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/dk-aarhus-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/dk-aarhus.webp"
+    },
+    {
+      "id": "dk-aarhus-mobile",
+      "cityId": "dk-aarhus",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/dk-aarhus-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/dk-aarhus-mobile.webp"
+    },
+    {
+      "id": "no-tromso-landscape",
+      "cityId": "no-tromso",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/no-tromso-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/no-tromso.webp"
+    },
+    {
+      "id": "no-tromso-mobile",
+      "cityId": "no-tromso",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/no-tromso-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/no-tromso-mobile.webp"
+    },
+    {
+      "id": "ie-cork-landscape",
+      "cityId": "ie-cork",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ie-cork-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ie-cork.webp"
+    },
+    {
+      "id": "ie-cork-mobile",
+      "cityId": "ie-cork",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ie-cork-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ie-cork-mobile.webp"
+    },
+    {
+      "id": "fi-turku-landscape",
+      "cityId": "fi-turku",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fi-turku-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/fi-turku.webp"
+    },
+    {
+      "id": "fi-turku-mobile",
+      "cityId": "fi-turku",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fi-turku-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/fi-turku-mobile.webp"
+    },
+    {
+      "id": "lt-kaunas-landscape",
+      "cityId": "lt-kaunas",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/lt-kaunas-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/lt-kaunas.webp"
+    },
+    {
+      "id": "lt-kaunas-mobile",
+      "cityId": "lt-kaunas",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/lt-kaunas-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/lt-kaunas-mobile.webp"
+    },
+    {
+      "id": "ag-st-johns-landscape",
+      "cityId": "ag-st-johns",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ag-st-johns-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ag-st-johns.webp"
+    },
+    {
+      "id": "ag-st-johns-mobile",
+      "cityId": "ag-st-johns",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ag-st-johns-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ag-st-johns-mobile.webp"
+    },
+    {
+      "id": "bb-bridgetown-landscape",
+      "cityId": "bb-bridgetown",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bb-bridgetown-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bb-bridgetown.webp"
+    },
+    {
+      "id": "bb-bridgetown-mobile",
+      "cityId": "bb-bridgetown",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bb-bridgetown-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bb-bridgetown-mobile.webp"
+    },
+    {
+      "id": "bz-belize-city-landscape",
+      "cityId": "bz-belize-city",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bz-belize-city-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bz-belize-city.webp"
+    },
+    {
+      "id": "bz-belize-city-mobile",
+      "cityId": "bz-belize-city",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bz-belize-city-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bz-belize-city-mobile.webp"
+    },
+    {
+      "id": "bo-sucre-landscape",
+      "cityId": "bo-sucre",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bo-sucre-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bo-sucre.webp"
+    },
+    {
+      "id": "bo-sucre-mobile",
+      "cityId": "bo-sucre",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bo-sucre-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bo-sucre-mobile.webp"
+    },
+    {
+      "id": "bs-nassau-landscape",
+      "cityId": "bs-nassau",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bs-nassau-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bs-nassau.webp"
+    },
+    {
+      "id": "bs-nassau-mobile",
+      "cityId": "bs-nassau",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bs-nassau-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bs-nassau-mobile.webp"
+    },
+    {
+      "id": "dm-roseau-landscape",
+      "cityId": "dm-roseau",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/dm-roseau-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/dm-roseau.webp"
+    },
+    {
+      "id": "dm-roseau-mobile",
+      "cityId": "dm-roseau",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/dm-roseau-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/dm-roseau-mobile.webp"
+    },
+    {
+      "id": "do-santo-domingo-landscape",
+      "cityId": "do-santo-domingo",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/do-santo-domingo-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/do-santo-domingo.webp"
+    },
+    {
+      "id": "do-santo-domingo-mobile",
+      "cityId": "do-santo-domingo",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/do-santo-domingo-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/do-santo-domingo-mobile.webp"
+    },
+    {
+      "id": "gd-st-georges-landscape",
+      "cityId": "gd-st-georges",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gd-st-georges-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gd-st-georges.webp"
+    },
+    {
+      "id": "gd-st-georges-mobile",
+      "cityId": "gd-st-georges",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gd-st-georges-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gd-st-georges-mobile.webp"
+    },
+    {
+      "id": "gt-antigua-guatemala-landscape",
+      "cityId": "gt-antigua-guatemala",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gt-antigua-guatemala-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gt-antigua-guatemala.webp"
+    },
+    {
+      "id": "gt-antigua-guatemala-mobile",
+      "cityId": "gt-antigua-guatemala",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gt-antigua-guatemala-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gt-antigua-guatemala-mobile.webp"
+    },
+    {
+      "id": "gy-georgetown-landscape",
+      "cityId": "gy-georgetown",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gy-georgetown-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gy-georgetown.webp"
+    },
+    {
+      "id": "gy-georgetown-mobile",
+      "cityId": "gy-georgetown",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gy-georgetown-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gy-georgetown-mobile.webp"
+    },
+    {
+      "id": "hn-comayagua-landscape",
+      "cityId": "hn-comayagua",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/hn-comayagua-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/hn-comayagua.webp"
+    },
+    {
+      "id": "hn-comayagua-mobile",
+      "cityId": "hn-comayagua",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/hn-comayagua-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/hn-comayagua-mobile.webp"
+    },
+    {
+      "id": "ht-cap-haitien-landscape",
+      "cityId": "ht-cap-haitien",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ht-cap-haitien-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ht-cap-haitien.webp"
+    },
+    {
+      "id": "ht-cap-haitien-mobile",
+      "cityId": "ht-cap-haitien",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ht-cap-haitien-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ht-cap-haitien-mobile.webp"
+    },
+    {
+      "id": "jm-kingston-landscape",
+      "cityId": "jm-kingston",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/jm-kingston-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/jm-kingston.webp"
+    },
+    {
+      "id": "jm-kingston-mobile",
+      "cityId": "jm-kingston",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/jm-kingston-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/jm-kingston-mobile.webp"
+    },
+    {
+      "id": "kn-basseterre-landscape",
+      "cityId": "kn-basseterre",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/kn-basseterre-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/kn-basseterre.webp"
+    },
+    {
+      "id": "kn-basseterre-mobile",
+      "cityId": "kn-basseterre",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/kn-basseterre-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/kn-basseterre-mobile.webp"
+    },
+    {
+      "id": "lc-castries-landscape",
+      "cityId": "lc-castries",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/lc-castries-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/lc-castries.webp"
+    },
+    {
+      "id": "lc-castries-mobile",
+      "cityId": "lc-castries",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/lc-castries-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/lc-castries-mobile.webp"
+    },
+    {
+      "id": "ni-granada-landscape",
+      "cityId": "ni-granada",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ni-granada-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ni-granada.webp"
+    },
+    {
+      "id": "ni-granada-mobile",
+      "cityId": "ni-granada",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ni-granada-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ni-granada-mobile.webp"
+    },
+    {
+      "id": "py-asuncion-landscape",
+      "cityId": "py-asuncion",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/py-asuncion-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/py-asuncion.webp"
+    },
+    {
+      "id": "py-asuncion-mobile",
+      "cityId": "py-asuncion",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/py-asuncion-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/py-asuncion-mobile.webp"
+    },
+    {
+      "id": "sr-paramaribo-landscape",
+      "cityId": "sr-paramaribo",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sr-paramaribo-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sr-paramaribo.webp"
+    },
+    {
+      "id": "sr-paramaribo-mobile",
+      "cityId": "sr-paramaribo",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sr-paramaribo-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sr-paramaribo-mobile.webp"
+    },
+    {
+      "id": "sv-san-salvador-landscape",
+      "cityId": "sv-san-salvador",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sv-san-salvador-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sv-san-salvador.webp"
+    },
+    {
+      "id": "sv-san-salvador-mobile",
+      "cityId": "sv-san-salvador",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sv-san-salvador-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sv-san-salvador-mobile.webp"
+    },
+    {
+      "id": "tt-port-of-spain-landscape",
+      "cityId": "tt-port-of-spain",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tt-port-of-spain-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/tt-port-of-spain.webp"
+    },
+    {
+      "id": "tt-port-of-spain-mobile",
+      "cityId": "tt-port-of-spain",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tt-port-of-spain-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/tt-port-of-spain-mobile.webp"
+    },
+    {
+      "id": "uy-colonia-del-sacramento-landscape",
+      "cityId": "uy-colonia-del-sacramento",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/uy-colonia-del-sacramento-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/uy-colonia-del-sacramento.webp"
+    },
+    {
+      "id": "uy-colonia-del-sacramento-mobile",
+      "cityId": "uy-colonia-del-sacramento",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/uy-colonia-del-sacramento-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/uy-colonia-del-sacramento-mobile.webp"
+    },
+    {
+      "id": "vc-kingstown-landscape",
+      "cityId": "vc-kingstown",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/vc-kingstown-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/vc-kingstown.webp"
+    },
+    {
+      "id": "vc-kingstown-mobile",
+      "cityId": "vc-kingstown",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/vc-kingstown-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/vc-kingstown-mobile.webp"
+    },
+    {
+      "id": "ve-coro-landscape",
+      "cityId": "ve-coro",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ve-coro-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ve-coro.webp"
+    },
+    {
+      "id": "ve-coro-mobile",
+      "cityId": "ve-coro",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ve-coro-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ve-coro-mobile.webp"
+    },
+    {
+      "id": "us-charleston-landscape",
+      "cityId": "us-charleston",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/us-charleston-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/us-charleston.webp"
+    },
+    {
+      "id": "us-charleston-mobile",
+      "cityId": "us-charleston",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/us-charleston-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/us-charleston-mobile.webp"
+    },
+    {
+      "id": "us-st-augustine-landscape",
+      "cityId": "us-st-augustine",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/us-st-augustine-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/us-st-augustine.webp"
+    },
+    {
+      "id": "us-st-augustine-mobile",
+      "cityId": "us-st-augustine",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/us-st-augustine-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/us-st-augustine-mobile.webp"
+    },
+    {
+      "id": "ca-halifax-landscape",
+      "cityId": "ca-halifax",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ca-halifax-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ca-halifax.webp"
+    },
+    {
+      "id": "ca-halifax-mobile",
+      "cityId": "ca-halifax",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ca-halifax-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ca-halifax-mobile.webp"
+    },
+    {
+      "id": "ca-st-johns-landscape",
+      "cityId": "ca-st-johns",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ca-st-johns-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ca-st-johns.webp"
+    },
+    {
+      "id": "ca-st-johns-mobile",
+      "cityId": "ca-st-johns",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ca-st-johns-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ca-st-johns-mobile.webp"
+    },
+    {
+      "id": "ca-niagara-falls-landscape",
+      "cityId": "ca-niagara-falls",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ca-niagara-falls-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ca-niagara-falls.webp"
+    },
+    {
+      "id": "ca-niagara-falls-mobile",
+      "cityId": "ca-niagara-falls",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ca-niagara-falls-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ca-niagara-falls-mobile.webp"
+    },
+    {
+      "id": "mx-guanajuato-landscape",
+      "cityId": "mx-guanajuato",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mx-guanajuato-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mx-guanajuato.webp"
+    },
+    {
+      "id": "mx-guanajuato-mobile",
+      "cityId": "mx-guanajuato",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mx-guanajuato-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mx-guanajuato-mobile.webp"
+    },
+    {
+      "id": "mx-san-miguel-de-allende-landscape",
+      "cityId": "mx-san-miguel-de-allende",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mx-san-miguel-de-allende-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mx-san-miguel-de-allende.webp"
+    },
+    {
+      "id": "mx-san-miguel-de-allende-mobile",
+      "cityId": "mx-san-miguel-de-allende",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mx-san-miguel-de-allende-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mx-san-miguel-de-allende-mobile.webp"
+    },
+    {
+      "id": "mx-puebla-landscape",
+      "cityId": "mx-puebla",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mx-puebla-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mx-puebla.webp"
+    },
+    {
+      "id": "mx-puebla-mobile",
+      "cityId": "mx-puebla",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mx-puebla-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mx-puebla-mobile.webp"
+    },
+    {
+      "id": "mx-merida-landscape",
+      "cityId": "mx-merida",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mx-merida-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mx-merida.webp"
+    },
+    {
+      "id": "mx-merida-mobile",
+      "cityId": "mx-merida",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mx-merida-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mx-merida-mobile.webp"
+    },
+    {
+      "id": "br-olinda-landscape",
+      "cityId": "br-olinda",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/br-olinda-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/br-olinda.webp"
+    },
+    {
+      "id": "br-olinda-mobile",
+      "cityId": "br-olinda",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/br-olinda-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/br-olinda-mobile.webp"
+    },
+    {
+      "id": "br-brasilia-landscape",
+      "cityId": "br-brasilia",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/br-brasilia-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/br-brasilia.webp"
+    },
+    {
+      "id": "br-brasilia-mobile",
+      "cityId": "br-brasilia",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/br-brasilia-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/br-brasilia-mobile.webp"
+    },
+    {
+      "id": "br-ouro-preto-landscape",
+      "cityId": "br-ouro-preto",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/br-ouro-preto-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/br-ouro-preto.webp"
+    },
+    {
+      "id": "br-ouro-preto-mobile",
+      "cityId": "br-ouro-preto",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/br-ouro-preto-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/br-ouro-preto-mobile.webp"
+    },
+    {
+      "id": "ar-ushuaia-landscape",
+      "cityId": "ar-ushuaia",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ar-ushuaia-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ar-ushuaia.webp"
+    },
+    {
+      "id": "ar-ushuaia-mobile",
+      "cityId": "ar-ushuaia",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ar-ushuaia-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ar-ushuaia-mobile.webp"
+    },
+    {
+      "id": "ar-mendoza-landscape",
+      "cityId": "ar-mendoza",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ar-mendoza-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ar-mendoza.webp"
+    },
+    {
+      "id": "ar-mendoza-mobile",
+      "cityId": "ar-mendoza",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ar-mendoza-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ar-mendoza-mobile.webp"
+    },
+    {
+      "id": "ar-salta-landscape",
+      "cityId": "ar-salta",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ar-salta-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ar-salta.webp"
+    },
+    {
+      "id": "ar-salta-mobile",
+      "cityId": "ar-salta",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ar-salta-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ar-salta-mobile.webp"
+    },
+    {
+      "id": "pe-arequipa-landscape",
+      "cityId": "pe-arequipa",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pe-arequipa-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pe-arequipa.webp"
+    },
+    {
+      "id": "pe-arequipa-mobile",
+      "cityId": "pe-arequipa",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pe-arequipa-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pe-arequipa-mobile.webp"
+    },
+    {
+      "id": "co-medellin-landscape",
+      "cityId": "co-medellin",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/co-medellin-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/co-medellin.webp"
+    },
+    {
+      "id": "co-medellin-mobile",
+      "cityId": "co-medellin",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/co-medellin-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/co-medellin-mobile.webp"
+    },
+    {
+      "id": "cl-valparaiso-landscape",
+      "cityId": "cl-valparaiso",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cl-valparaiso-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cl-valparaiso.webp"
+    },
+    {
+      "id": "cl-valparaiso-mobile",
+      "cityId": "cl-valparaiso",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cl-valparaiso-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cl-valparaiso-mobile.webp"
+    },
+    {
+      "id": "ec-cuenca-landscape",
+      "cityId": "ec-cuenca",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ec-cuenca-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ec-cuenca.webp"
+    },
+    {
+      "id": "ec-cuenca-mobile",
+      "cityId": "ec-cuenca",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ec-cuenca-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ec-cuenca-mobile.webp"
+    },
+    {
+      "id": "cu-trinidad-landscape",
+      "cityId": "cu-trinidad",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cu-trinidad-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cu-trinidad.webp"
+    },
+    {
+      "id": "cu-trinidad-mobile",
+      "cityId": "cu-trinidad",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cu-trinidad-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cu-trinidad-mobile.webp"
+    },
+    {
+      "id": "cr-cartago-landscape",
+      "cityId": "cr-cartago",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cr-cartago-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cr-cartago.webp"
+    },
+    {
+      "id": "cr-cartago-mobile",
+      "cityId": "cr-cartago",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cr-cartago-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cr-cartago-mobile.webp"
+    },
+    {
+      "id": "af-bamiyan-landscape",
+      "cityId": "af-bamiyan",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/af-bamiyan-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/af-bamiyan.webp"
+    },
+    {
+      "id": "af-bamiyan-mobile",
+      "cityId": "af-bamiyan",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/af-bamiyan-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/af-bamiyan-mobile.webp"
+    },
+    {
+      "id": "pk-lahore-landscape",
+      "cityId": "pk-lahore",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pk-lahore-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pk-lahore.webp"
+    },
+    {
+      "id": "pk-lahore-mobile",
+      "cityId": "pk-lahore",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pk-lahore-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pk-lahore-mobile.webp"
+    },
+    {
+      "id": "bd-dhaka-landscape",
+      "cityId": "bd-dhaka",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bd-dhaka-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bd-dhaka.webp"
+    },
+    {
+      "id": "bd-dhaka-mobile",
+      "cityId": "bd-dhaka",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bd-dhaka-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bd-dhaka-mobile.webp"
+    },
+    {
+      "id": "bn-bandar-seri-begawan-landscape",
+      "cityId": "bn-bandar-seri-begawan",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bn-bandar-seri-begawan-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bn-bandar-seri-begawan.webp"
+    },
+    {
+      "id": "bn-bandar-seri-begawan-mobile",
+      "cityId": "bn-bandar-seri-begawan",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bn-bandar-seri-begawan-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bn-bandar-seri-begawan-mobile.webp"
+    },
+    {
+      "id": "tl-dili-landscape",
+      "cityId": "tl-dili",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tl-dili-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/tl-dili.webp"
+    },
+    {
+      "id": "tl-dili-mobile",
+      "cityId": "tl-dili",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tl-dili-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/tl-dili-mobile.webp"
+    },
+    {
+      "id": "kz-almaty-landscape",
+      "cityId": "kz-almaty",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/kz-almaty-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/kz-almaty.webp"
+    },
+    {
+      "id": "kz-almaty-mobile",
+      "cityId": "kz-almaty",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/kz-almaty-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/kz-almaty-mobile.webp"
+    },
+    {
+      "id": "kg-bishkek-landscape",
+      "cityId": "kg-bishkek",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/kg-bishkek-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/kg-bishkek.webp"
+    },
+    {
+      "id": "kg-bishkek-mobile",
+      "cityId": "kg-bishkek",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/kg-bishkek-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/kg-bishkek-mobile.webp"
+    },
+    {
+      "id": "tj-dushanbe-landscape",
+      "cityId": "tj-dushanbe",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tj-dushanbe-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/tj-dushanbe.webp"
+    },
+    {
+      "id": "tj-dushanbe-mobile",
+      "cityId": "tj-dushanbe",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tj-dushanbe-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/tj-dushanbe-mobile.webp"
+    },
+    {
+      "id": "tm-ashgabat-landscape",
+      "cityId": "tm-ashgabat",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tm-ashgabat-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/tm-ashgabat.webp"
+    },
+    {
+      "id": "tm-ashgabat-mobile",
+      "cityId": "tm-ashgabat",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tm-ashgabat-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/tm-ashgabat-mobile.webp"
+    },
+    {
+      "id": "am-yerevan-landscape",
+      "cityId": "am-yerevan",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/am-yerevan-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/am-yerevan.webp"
+    },
+    {
+      "id": "am-yerevan-mobile",
+      "cityId": "am-yerevan",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/am-yerevan-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/am-yerevan-mobile.webp"
+    },
+    {
+      "id": "ir-isfahan-landscape",
+      "cityId": "ir-isfahan",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ir-isfahan-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ir-isfahan.webp"
+    },
+    {
+      "id": "ir-isfahan-mobile",
+      "cityId": "ir-isfahan",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ir-isfahan-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ir-isfahan-mobile.webp"
+    },
+    {
+      "id": "iq-erbil-landscape",
+      "cityId": "iq-erbil",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/iq-erbil-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/iq-erbil.webp"
+    },
+    {
+      "id": "iq-erbil-mobile",
+      "cityId": "iq-erbil",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/iq-erbil-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/iq-erbil-mobile.webp"
+    },
+    {
+      "id": "lb-byblos-landscape",
+      "cityId": "lb-byblos",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/lb-byblos-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/lb-byblos.webp"
+    },
+    {
+      "id": "lb-byblos-mobile",
+      "cityId": "lb-byblos",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/lb-byblos-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/lb-byblos-mobile.webp"
+    },
+    {
+      "id": "sy-damascus-landscape",
+      "cityId": "sy-damascus",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sy-damascus-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sy-damascus.webp"
+    },
+    {
+      "id": "sy-damascus-mobile",
+      "cityId": "sy-damascus",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sy-damascus-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sy-damascus-mobile.webp"
+    },
+    {
+      "id": "ye-sanaa-landscape",
+      "cityId": "ye-sanaa",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ye-sanaa-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ye-sanaa.webp"
+    },
+    {
+      "id": "ye-sanaa-mobile",
+      "cityId": "ye-sanaa",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ye-sanaa-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ye-sanaa-mobile.webp"
+    },
+    {
+      "id": "kp-kaesong-landscape",
+      "cityId": "kp-kaesong",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/kp-kaesong-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/kp-kaesong.webp"
+    },
+    {
+      "id": "kp-kaesong-mobile",
+      "cityId": "kp-kaesong",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/kp-kaesong-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/kp-kaesong-mobile.webp"
+    },
+    {
+      "id": "ps-bethlehem-landscape",
+      "cityId": "ps-bethlehem",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ps-bethlehem-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ps-bethlehem.webp"
+    },
+    {
+      "id": "ps-bethlehem-mobile",
+      "cityId": "ps-bethlehem",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ps-bethlehem-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ps-bethlehem-mobile.webp"
+    },
+    {
+      "id": "jp-himeji-landscape",
+      "cityId": "jp-himeji",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/jp-himeji-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/jp-himeji.webp"
+    },
+    {
+      "id": "jp-himeji-mobile",
+      "cityId": "jp-himeji",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/jp-himeji-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/jp-himeji-mobile.webp"
+    },
+    {
+      "id": "jp-matsumoto-landscape",
+      "cityId": "jp-matsumoto",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/jp-matsumoto-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/jp-matsumoto.webp"
+    },
+    {
+      "id": "jp-matsumoto-mobile",
+      "cityId": "jp-matsumoto",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/jp-matsumoto-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/jp-matsumoto-mobile.webp"
+    },
+    {
+      "id": "cn-nanjing-landscape",
+      "cityId": "cn-nanjing",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cn-nanjing-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cn-nanjing.webp"
+    },
+    {
+      "id": "cn-nanjing-mobile",
+      "cityId": "cn-nanjing",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cn-nanjing-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cn-nanjing-mobile.webp"
+    },
+    {
+      "id": "cn-dunhuang-landscape",
+      "cityId": "cn-dunhuang",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cn-dunhuang-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cn-dunhuang.webp"
+    },
+    {
+      "id": "cn-dunhuang-mobile",
+      "cityId": "cn-dunhuang",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cn-dunhuang-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cn-dunhuang-mobile.webp"
+    },
+    {
+      "id": "vn-sa-pa-landscape",
+      "cityId": "vn-sa-pa",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/vn-sa-pa-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/vn-sa-pa.webp"
+    },
+    {
+      "id": "vn-sa-pa-mobile",
+      "cityId": "vn-sa-pa",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/vn-sa-pa-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/vn-sa-pa-mobile.webp"
+    },
+    {
+      "id": "th-kanchanaburi-landscape",
+      "cityId": "th-kanchanaburi",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/th-kanchanaburi-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/th-kanchanaburi.webp"
+    },
+    {
+      "id": "th-kanchanaburi-mobile",
+      "cityId": "th-kanchanaburi",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/th-kanchanaburi-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/th-kanchanaburi-mobile.webp"
+    },
+    {
+      "id": "my-kuching-landscape",
+      "cityId": "my-kuching",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/my-kuching-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/my-kuching.webp"
+    },
+    {
+      "id": "my-kuching-mobile",
+      "cityId": "my-kuching",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/my-kuching-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/my-kuching-mobile.webp"
+    },
+    {
+      "id": "id-bandung-landscape",
+      "cityId": "id-bandung",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/id-bandung-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/id-bandung.webp"
+    },
+    {
+      "id": "id-bandung-mobile",
+      "cityId": "id-bandung",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/id-bandung-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/id-bandung-mobile.webp"
+    },
+    {
+      "id": "id-ubud-landscape",
+      "cityId": "id-ubud",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/id-ubud-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/id-ubud.webp"
+    },
+    {
+      "id": "id-ubud-mobile",
+      "cityId": "id-ubud",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/id-ubud-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/id-ubud-mobile.webp"
+    },
+    {
+      "id": "ph-vigan-landscape",
+      "cityId": "ph-vigan",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ph-vigan-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ph-vigan.webp"
+    },
+    {
+      "id": "ph-vigan-mobile",
+      "cityId": "ph-vigan",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ph-vigan-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ph-vigan-mobile.webp"
+    },
+    {
+      "id": "mm-yangon-landscape",
+      "cityId": "mm-yangon",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mm-yangon-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mm-yangon.webp"
+    },
+    {
+      "id": "mm-yangon-mobile",
+      "cityId": "mm-yangon",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mm-yangon-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mm-yangon-mobile.webp"
+    },
+    {
+      "id": "in-amritsar-landscape",
+      "cityId": "in-amritsar",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/in-amritsar-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/in-amritsar.webp"
+    },
+    {
+      "id": "in-amritsar-mobile",
+      "cityId": "in-amritsar",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/in-amritsar-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/in-amritsar-mobile.webp"
+    },
+    {
+      "id": "bt-thimphu-landscape",
+      "cityId": "bt-thimphu",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bt-thimphu-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bt-thimphu.webp"
+    },
+    {
+      "id": "bt-thimphu-mobile",
+      "cityId": "bt-thimphu",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bt-thimphu-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bt-thimphu-mobile.webp"
+    },
+    {
+      "id": "uz-bukhara-landscape",
+      "cityId": "uz-bukhara",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/uz-bukhara-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/uz-bukhara.webp"
+    },
+    {
+      "id": "uz-bukhara-mobile",
+      "cityId": "uz-bukhara",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/uz-bukhara-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/uz-bukhara-mobile.webp"
+    },
+    {
+      "id": "mv-male-landscape",
+      "cityId": "mv-male",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mv-male-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mv-male.webp"
+    },
+    {
+      "id": "mv-male-mobile",
+      "cityId": "mv-male",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mv-male-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mv-male-mobile.webp"
+    },
+    {
+      "id": "ae-sharjah-landscape",
+      "cityId": "ae-sharjah",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ae-sharjah-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ae-sharjah.webp"
+    },
+    {
+      "id": "ae-sharjah-mobile",
+      "cityId": "ae-sharjah",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ae-sharjah-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ae-sharjah-mobile.webp"
+    },
+    {
+      "id": "sa-alula-landscape",
+      "cityId": "sa-alula",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sa-alula-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sa-alula.webp"
+    },
+    {
+      "id": "sa-alula-mobile",
+      "cityId": "sa-alula",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sa-alula-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sa-alula-mobile.webp"
+    },
+    {
+      "id": "dz-algiers-landscape",
+      "cityId": "dz-algiers",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/dz-algiers-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/dz-algiers.webp"
+    },
+    {
+      "id": "dz-algiers-mobile",
+      "cityId": "dz-algiers",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/dz-algiers-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/dz-algiers-mobile.webp"
+    },
+    {
+      "id": "ao-luanda-landscape",
+      "cityId": "ao-luanda",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ao-luanda-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ao-luanda.webp"
+    },
+    {
+      "id": "ao-luanda-mobile",
+      "cityId": "ao-luanda",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ao-luanda-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ao-luanda-mobile.webp"
+    },
+    {
+      "id": "bj-ouidah-landscape",
+      "cityId": "bj-ouidah",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bj-ouidah-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bj-ouidah.webp"
+    },
+    {
+      "id": "bj-ouidah-mobile",
+      "cityId": "bj-ouidah",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bj-ouidah-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bj-ouidah-mobile.webp"
+    },
+    {
+      "id": "bw-maun-landscape",
+      "cityId": "bw-maun",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bw-maun-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bw-maun.webp"
+    },
+    {
+      "id": "bw-maun-mobile",
+      "cityId": "bw-maun",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bw-maun-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bw-maun-mobile.webp"
+    },
+    {
+      "id": "bf-bobo-dioulasso-landscape",
+      "cityId": "bf-bobo-dioulasso",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bf-bobo-dioulasso-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bf-bobo-dioulasso.webp"
+    },
+    {
+      "id": "bf-bobo-dioulasso-mobile",
+      "cityId": "bf-bobo-dioulasso",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bf-bobo-dioulasso-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bf-bobo-dioulasso-mobile.webp"
+    },
+    {
+      "id": "bi-bujumbura-landscape",
+      "cityId": "bi-bujumbura",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bi-bujumbura-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bi-bujumbura.webp"
+    },
+    {
+      "id": "bi-bujumbura-mobile",
+      "cityId": "bi-bujumbura",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bi-bujumbura-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bi-bujumbura-mobile.webp"
+    },
+    {
+      "id": "cm-limbe-landscape",
+      "cityId": "cm-limbe",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cm-limbe-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cm-limbe.webp"
+    },
+    {
+      "id": "cm-limbe-mobile",
+      "cityId": "cm-limbe",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cm-limbe-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cm-limbe-mobile.webp"
+    },
+    {
+      "id": "cv-mindelo-landscape",
+      "cityId": "cv-mindelo",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cv-mindelo-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cv-mindelo.webp"
+    },
+    {
+      "id": "cv-mindelo-mobile",
+      "cityId": "cv-mindelo",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cv-mindelo-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cv-mindelo-mobile.webp"
+    },
+    {
+      "id": "cf-bangui-landscape",
+      "cityId": "cf-bangui",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cf-bangui-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cf-bangui.webp"
+    },
+    {
+      "id": "cf-bangui-mobile",
+      "cityId": "cf-bangui",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cf-bangui-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cf-bangui-mobile.webp"
+    },
+    {
+      "id": "td-ndjamena-landscape",
+      "cityId": "td-ndjamena",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/td-ndjamena-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/td-ndjamena.webp"
+    },
+    {
+      "id": "td-ndjamena-mobile",
+      "cityId": "td-ndjamena",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/td-ndjamena-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/td-ndjamena-mobile.webp"
+    },
+    {
+      "id": "km-moroni-landscape",
+      "cityId": "km-moroni",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/km-moroni-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/km-moroni.webp"
+    },
+    {
+      "id": "km-moroni-mobile",
+      "cityId": "km-moroni",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/km-moroni-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/km-moroni-mobile.webp"
+    },
+    {
+      "id": "cg-brazzaville-landscape",
+      "cityId": "cg-brazzaville",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cg-brazzaville-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cg-brazzaville.webp"
+    },
+    {
+      "id": "cg-brazzaville-mobile",
+      "cityId": "cg-brazzaville",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cg-brazzaville-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cg-brazzaville-mobile.webp"
+    },
+    {
+      "id": "cd-kinshasa-landscape",
+      "cityId": "cd-kinshasa",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cd-kinshasa-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cd-kinshasa.webp"
+    },
+    {
+      "id": "cd-kinshasa-mobile",
+      "cityId": "cd-kinshasa",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cd-kinshasa-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cd-kinshasa-mobile.webp"
+    },
+    {
+      "id": "ci-grand-bassam-landscape",
+      "cityId": "ci-grand-bassam",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ci-grand-bassam-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ci-grand-bassam.webp"
+    },
+    {
+      "id": "ci-grand-bassam-mobile",
+      "cityId": "ci-grand-bassam",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ci-grand-bassam-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ci-grand-bassam-mobile.webp"
+    },
+    {
+      "id": "dj-djibouti-city-landscape",
+      "cityId": "dj-djibouti-city",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/dj-djibouti-city-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/dj-djibouti-city.webp"
+    },
+    {
+      "id": "dj-djibouti-city-mobile",
+      "cityId": "dj-djibouti-city",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/dj-djibouti-city-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/dj-djibouti-city-mobile.webp"
+    },
+    {
+      "id": "gq-malabo-landscape",
+      "cityId": "gq-malabo",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gq-malabo-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gq-malabo.webp"
+    },
+    {
+      "id": "gq-malabo-mobile",
+      "cityId": "gq-malabo",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gq-malabo-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gq-malabo-mobile.webp"
+    },
+    {
+      "id": "er-asmara-landscape",
+      "cityId": "er-asmara",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/er-asmara-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/er-asmara.webp"
+    },
+    {
+      "id": "er-asmara-mobile",
+      "cityId": "er-asmara",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/er-asmara-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/er-asmara-mobile.webp"
+    },
+    {
+      "id": "sz-lobamba-landscape",
+      "cityId": "sz-lobamba",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sz-lobamba-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sz-lobamba.webp"
+    },
+    {
+      "id": "sz-lobamba-mobile",
+      "cityId": "sz-lobamba",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sz-lobamba-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sz-lobamba-mobile.webp"
+    },
+    {
+      "id": "et-lalibela-landscape",
+      "cityId": "et-lalibela",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/et-lalibela-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/et-lalibela.webp"
+    },
+    {
+      "id": "et-lalibela-mobile",
+      "cityId": "et-lalibela",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/et-lalibela-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/et-lalibela-mobile.webp"
+    },
+    {
+      "id": "ga-libreville-landscape",
+      "cityId": "ga-libreville",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ga-libreville-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ga-libreville.webp"
+    },
+    {
+      "id": "ga-libreville-mobile",
+      "cityId": "ga-libreville",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ga-libreville-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ga-libreville-mobile.webp"
+    },
+    {
+      "id": "gm-banjul-landscape",
+      "cityId": "gm-banjul",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gm-banjul-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gm-banjul.webp"
+    },
+    {
+      "id": "gm-banjul-mobile",
+      "cityId": "gm-banjul",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gm-banjul-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gm-banjul-mobile.webp"
+    },
+    {
+      "id": "gh-cape-coast-landscape",
+      "cityId": "gh-cape-coast",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gh-cape-coast-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gh-cape-coast.webp"
+    },
+    {
+      "id": "gh-cape-coast-mobile",
+      "cityId": "gh-cape-coast",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gh-cape-coast-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gh-cape-coast-mobile.webp"
+    },
+    {
+      "id": "gn-conakry-landscape",
+      "cityId": "gn-conakry",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gn-conakry-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gn-conakry.webp"
+    },
+    {
+      "id": "gn-conakry-mobile",
+      "cityId": "gn-conakry",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gn-conakry-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gn-conakry-mobile.webp"
+    },
+    {
+      "id": "gw-bissau-landscape",
+      "cityId": "gw-bissau",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gw-bissau-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gw-bissau.webp"
+    },
+    {
+      "id": "gw-bissau-mobile",
+      "cityId": "gw-bissau",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gw-bissau-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gw-bissau-mobile.webp"
+    },
+    {
+      "id": "ls-maseru-landscape",
+      "cityId": "ls-maseru",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ls-maseru-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ls-maseru.webp"
+    },
+    {
+      "id": "ls-maseru-mobile",
+      "cityId": "ls-maseru",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ls-maseru-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ls-maseru-mobile.webp"
+    },
+    {
+      "id": "lr-monrovia-landscape",
+      "cityId": "lr-monrovia",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/lr-monrovia-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/lr-monrovia.webp"
+    },
+    {
+      "id": "lr-monrovia-mobile",
+      "cityId": "lr-monrovia",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/lr-monrovia-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/lr-monrovia-mobile.webp"
+    },
+    {
+      "id": "ly-tripoli-libya-landscape",
+      "cityId": "ly-tripoli-libya",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ly-tripoli-libya-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ly-tripoli-libya.webp"
+    },
+    {
+      "id": "ly-tripoli-libya-mobile",
+      "cityId": "ly-tripoli-libya",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ly-tripoli-libya-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ly-tripoli-libya-mobile.webp"
+    },
+    {
+      "id": "mg-antananarivo-landscape",
+      "cityId": "mg-antananarivo",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mg-antananarivo-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mg-antananarivo.webp"
+    },
+    {
+      "id": "mg-antananarivo-mobile",
+      "cityId": "mg-antananarivo",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mg-antananarivo-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mg-antananarivo-mobile.webp"
+    },
+    {
+      "id": "mw-zomba-landscape",
+      "cityId": "mw-zomba",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mw-zomba-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mw-zomba.webp"
+    },
+    {
+      "id": "mw-zomba-mobile",
+      "cityId": "mw-zomba",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mw-zomba-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mw-zomba-mobile.webp"
+    },
+    {
+      "id": "ml-djenne-landscape",
+      "cityId": "ml-djenne",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ml-djenne-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ml-djenne.webp"
+    },
+    {
+      "id": "ml-djenne-mobile",
+      "cityId": "ml-djenne",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ml-djenne-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ml-djenne-mobile.webp"
+    },
+    {
+      "id": "mr-chinguetti-landscape",
+      "cityId": "mr-chinguetti",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mr-chinguetti-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mr-chinguetti.webp"
+    },
+    {
+      "id": "mr-chinguetti-mobile",
+      "cityId": "mr-chinguetti",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mr-chinguetti-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mr-chinguetti-mobile.webp"
+    },
+    {
+      "id": "mu-port-louis-landscape",
+      "cityId": "mu-port-louis",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mu-port-louis-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mu-port-louis.webp"
+    },
+    {
+      "id": "mu-port-louis-mobile",
+      "cityId": "mu-port-louis",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mu-port-louis-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mu-port-louis-mobile.webp"
+    },
+    {
+      "id": "mz-ilha-de-mocambique-landscape",
+      "cityId": "mz-ilha-de-mocambique",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mz-ilha-de-mocambique-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mz-ilha-de-mocambique.webp"
+    },
+    {
+      "id": "mz-ilha-de-mocambique-mobile",
+      "cityId": "mz-ilha-de-mocambique",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mz-ilha-de-mocambique-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mz-ilha-de-mocambique-mobile.webp"
+    },
+    {
+      "id": "ne-agadez-landscape",
+      "cityId": "ne-agadez",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ne-agadez-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ne-agadez.webp"
+    },
+    {
+      "id": "ne-agadez-mobile",
+      "cityId": "ne-agadez",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ne-agadez-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ne-agadez-mobile.webp"
+    },
+    {
+      "id": "ng-osogbo-landscape",
+      "cityId": "ng-osogbo",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ng-osogbo-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ng-osogbo.webp"
+    },
+    {
+      "id": "ng-osogbo-mobile",
+      "cityId": "ng-osogbo",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ng-osogbo-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ng-osogbo-mobile.webp"
+    },
+    {
+      "id": "rw-kigali-landscape",
+      "cityId": "rw-kigali",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/rw-kigali-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/rw-kigali.webp"
+    },
+    {
+      "id": "rw-kigali-mobile",
+      "cityId": "rw-kigali",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/rw-kigali-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/rw-kigali-mobile.webp"
+    },
+    {
+      "id": "st-sao-tome-landscape",
+      "cityId": "st-sao-tome",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/st-sao-tome-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/st-sao-tome.webp"
+    },
+    {
+      "id": "st-sao-tome-mobile",
+      "cityId": "st-sao-tome",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/st-sao-tome-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/st-sao-tome-mobile.webp"
+    },
+    {
+      "id": "sn-saint-louis-senegal-landscape",
+      "cityId": "sn-saint-louis-senegal",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sn-saint-louis-senegal-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sn-saint-louis-senegal.webp"
+    },
+    {
+      "id": "sn-saint-louis-senegal-mobile",
+      "cityId": "sn-saint-louis-senegal",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sn-saint-louis-senegal-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sn-saint-louis-senegal-mobile.webp"
+    },
+    {
+      "id": "sc-victoria-seychelles-landscape",
+      "cityId": "sc-victoria-seychelles",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sc-victoria-seychelles-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sc-victoria-seychelles.webp"
+    },
+    {
+      "id": "sc-victoria-seychelles-mobile",
+      "cityId": "sc-victoria-seychelles",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sc-victoria-seychelles-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sc-victoria-seychelles-mobile.webp"
+    },
+    {
+      "id": "sl-freetown-landscape",
+      "cityId": "sl-freetown",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sl-freetown-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sl-freetown.webp"
+    },
+    {
+      "id": "sl-freetown-mobile",
+      "cityId": "sl-freetown",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sl-freetown-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sl-freetown-mobile.webp"
+    },
+    {
+      "id": "so-mogadishu-landscape",
+      "cityId": "so-mogadishu",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/so-mogadishu-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/so-mogadishu.webp"
+    },
+    {
+      "id": "so-mogadishu-mobile",
+      "cityId": "so-mogadishu",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/so-mogadishu-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/so-mogadishu-mobile.webp"
+    },
+    {
+      "id": "sd-suakin-landscape",
+      "cityId": "sd-suakin",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sd-suakin-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sd-suakin.webp"
+    },
+    {
+      "id": "sd-suakin-mobile",
+      "cityId": "sd-suakin",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sd-suakin-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sd-suakin-mobile.webp"
+    },
+    {
+      "id": "ss-juba-landscape",
+      "cityId": "ss-juba",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ss-juba-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ss-juba.webp"
+    },
+    {
+      "id": "ss-juba-mobile",
+      "cityId": "ss-juba",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ss-juba-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ss-juba-mobile.webp"
+    },
+    {
+      "id": "tg-lome-landscape",
+      "cityId": "tg-lome",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tg-lome-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/tg-lome.webp"
+    },
+    {
+      "id": "tg-lome-mobile",
+      "cityId": "tg-lome",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tg-lome-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/tg-lome-mobile.webp"
+    },
+    {
+      "id": "ug-entebbe-landscape",
+      "cityId": "ug-entebbe",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ug-entebbe-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ug-entebbe.webp"
+    },
+    {
+      "id": "ug-entebbe-mobile",
+      "cityId": "ug-entebbe",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ug-entebbe-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ug-entebbe-mobile.webp"
+    },
+    {
+      "id": "zm-livingstone-landscape",
+      "cityId": "zm-livingstone",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/zm-livingstone-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/zm-livingstone.webp"
+    },
+    {
+      "id": "zm-livingstone-mobile",
+      "cityId": "zm-livingstone",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/zm-livingstone-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/zm-livingstone-mobile.webp"
+    },
+    {
+      "id": "eg-aswan-landscape",
+      "cityId": "eg-aswan",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/eg-aswan-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/eg-aswan.webp"
+    },
+    {
+      "id": "eg-aswan-mobile",
+      "cityId": "eg-aswan",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/eg-aswan-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/eg-aswan-mobile.webp"
+    },
+    {
+      "id": "ma-chefchaouen-landscape",
+      "cityId": "ma-chefchaouen",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ma-chefchaouen-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ma-chefchaouen.webp"
+    },
+    {
+      "id": "ma-chefchaouen-mobile",
+      "cityId": "ma-chefchaouen",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ma-chefchaouen-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ma-chefchaouen-mobile.webp"
+    },
+    {
+      "id": "fm-kolonia-landscape",
+      "cityId": "fm-kolonia",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fm-kolonia-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/fm-kolonia.webp"
+    },
+    {
+      "id": "fm-kolonia-mobile",
+      "cityId": "fm-kolonia",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fm-kolonia-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/fm-kolonia-mobile.webp"
+    },
+    {
+      "id": "ki-bairiki-landscape",
+      "cityId": "ki-bairiki",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ki-bairiki-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ki-bairiki.webp"
+    },
+    {
+      "id": "ki-bairiki-mobile",
+      "cityId": "ki-bairiki",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ki-bairiki-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ki-bairiki-mobile.webp"
+    },
+    {
+      "id": "mh-majuro-landscape",
+      "cityId": "mh-majuro",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mh-majuro-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mh-majuro.webp"
+    },
+    {
+      "id": "mh-majuro-mobile",
+      "cityId": "mh-majuro",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mh-majuro-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mh-majuro-mobile.webp"
+    },
+    {
+      "id": "nr-yaren-landscape",
+      "cityId": "nr-yaren",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nr-yaren-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/nr-yaren.webp"
+    },
+    {
+      "id": "nr-yaren-mobile",
+      "cityId": "nr-yaren",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nr-yaren-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/nr-yaren-mobile.webp"
+    },
+    {
+      "id": "pw-koror-landscape",
+      "cityId": "pw-koror",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pw-koror-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pw-koror.webp"
+    },
+    {
+      "id": "pw-koror-mobile",
+      "cityId": "pw-koror",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pw-koror-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pw-koror-mobile.webp"
+    },
+    {
+      "id": "pg-port-moresby-landscape",
+      "cityId": "pg-port-moresby",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pg-port-moresby-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pg-port-moresby.webp"
+    },
+    {
+      "id": "pg-port-moresby-mobile",
+      "cityId": "pg-port-moresby",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pg-port-moresby-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pg-port-moresby-mobile.webp"
+    },
+    {
+      "id": "ws-apia-landscape",
+      "cityId": "ws-apia",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ws-apia-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ws-apia.webp"
+    },
+    {
+      "id": "ws-apia-mobile",
+      "cityId": "ws-apia",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ws-apia-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ws-apia-mobile.webp"
+    },
+    {
+      "id": "sb-honiara-landscape",
+      "cityId": "sb-honiara",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sb-honiara-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sb-honiara.webp"
+    },
+    {
+      "id": "sb-honiara-mobile",
+      "cityId": "sb-honiara",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sb-honiara-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sb-honiara-mobile.webp"
+    },
+    {
+      "id": "to-nukualofa-landscape",
+      "cityId": "to-nukualofa",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/to-nukualofa-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/to-nukualofa.webp"
+    },
+    {
+      "id": "to-nukualofa-mobile",
+      "cityId": "to-nukualofa",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/to-nukualofa-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/to-nukualofa-mobile.webp"
+    },
+    {
+      "id": "tv-vaiaku-landscape",
+      "cityId": "tv-vaiaku",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tv-vaiaku-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/tv-vaiaku.webp"
+    },
+    {
+      "id": "tv-vaiaku-mobile",
+      "cityId": "tv-vaiaku",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tv-vaiaku-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/tv-vaiaku-mobile.webp"
+    },
+    {
+      "id": "vu-port-vila-landscape",
+      "cityId": "vu-port-vila",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/vu-port-vila-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/vu-port-vila.webp"
+    },
+    {
+      "id": "vu-port-vila-mobile",
+      "cityId": "vu-port-vila",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/vu-port-vila-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/vu-port-vila-mobile.webp"
+    },
+    {
+      "id": "fj-suva-landscape",
+      "cityId": "fj-suva",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fj-suva-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/fj-suva.webp"
+    },
+    {
+      "id": "fj-suva-mobile",
+      "cityId": "fj-suva",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fj-suva-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/fj-suva-mobile.webp"
+    },
+    {
+      "id": "pf-papeete-landscape",
+      "cityId": "pf-papeete",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pf-papeete-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pf-papeete.webp"
+    },
+    {
+      "id": "pf-papeete-mobile",
+      "cityId": "pf-papeete",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pf-papeete-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pf-papeete-mobile.webp"
+    },
+    {
+      "id": "nz-wellington-landscape",
+      "cityId": "nz-wellington",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nz-wellington-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/nz-wellington.webp"
+    },
+    {
+      "id": "nz-wellington-mobile",
+      "cityId": "nz-wellington",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nz-wellington-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/nz-wellington-mobile.webp"
+    },
+    {
+      "id": "nc-noumea-landscape",
+      "cityId": "nc-noumea",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nc-noumea-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/nc-noumea.webp"
+    },
+    {
+      "id": "nc-noumea-mobile",
+      "cityId": "nc-noumea",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nc-noumea-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/nc-noumea-mobile.webp"
+    },
+    {
+      "id": "ck-avarua-landscape",
+      "cityId": "ck-avarua",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ck-avarua-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ck-avarua.webp"
+    },
+    {
+      "id": "ck-avarua-mobile",
+      "cityId": "ck-avarua",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ck-avarua-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ck-avarua-mobile.webp"
+    },
+    {
+      "id": "nu-alofi-landscape",
+      "cityId": "nu-alofi",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nu-alofi-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/nu-alofi.webp"
+    },
+    {
+      "id": "nu-alofi-mobile",
+      "cityId": "nu-alofi",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nu-alofi-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/nu-alofi-mobile.webp"
+    },
+    {
+      "id": "as-pago-pago-landscape",
+      "cityId": "as-pago-pago",
+      "phase": "core-500",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/as-pago-pago-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/as-pago-pago.webp"
+    },
+    {
+      "id": "as-pago-pago-mobile",
+      "cityId": "as-pago-pago",
+      "phase": "core-500",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/as-pago-pago-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/as-pago-pago-mobile.webp"
+    },
+    {
+      "id": "ai-the-valley-landscape",
+      "cityId": "ai-the-valley",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ai-the-valley-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ai-the-valley.webp"
+    },
+    {
+      "id": "ai-the-valley-mobile",
+      "cityId": "ai-the-valley",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ai-the-valley-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ai-the-valley-mobile.webp"
+    },
+    {
+      "id": "aw-oranjestad-landscape",
+      "cityId": "aw-oranjestad",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/aw-oranjestad-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/aw-oranjestad.webp"
+    },
+    {
+      "id": "aw-oranjestad-mobile",
+      "cityId": "aw-oranjestad",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/aw-oranjestad-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/aw-oranjestad-mobile.webp"
+    },
+    {
+      "id": "ax-mariehamn-landscape",
+      "cityId": "ax-mariehamn",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ax-mariehamn-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ax-mariehamn.webp"
+    },
+    {
+      "id": "ax-mariehamn-mobile",
+      "cityId": "ax-mariehamn",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ax-mariehamn-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ax-mariehamn-mobile.webp"
+    },
+    {
+      "id": "bl-gustavia-landscape",
+      "cityId": "bl-gustavia",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bl-gustavia-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bl-gustavia.webp"
+    },
+    {
+      "id": "bl-gustavia-mobile",
+      "cityId": "bl-gustavia",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bl-gustavia-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bl-gustavia-mobile.webp"
+    },
+    {
+      "id": "bm-hamilton-landscape",
+      "cityId": "bm-hamilton",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bm-hamilton-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bm-hamilton.webp"
+    },
+    {
+      "id": "bm-hamilton-mobile",
+      "cityId": "bm-hamilton",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bm-hamilton-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bm-hamilton-mobile.webp"
+    },
+    {
+      "id": "bq-kralendijk-landscape",
+      "cityId": "bq-kralendijk",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bq-kralendijk-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bq-kralendijk.webp"
+    },
+    {
+      "id": "bq-kralendijk-mobile",
+      "cityId": "bq-kralendijk",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/bq-kralendijk-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/bq-kralendijk-mobile.webp"
+    },
+    {
+      "id": "cw-willemstad-landscape",
+      "cityId": "cw-willemstad",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cw-willemstad-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cw-willemstad.webp"
+    },
+    {
+      "id": "cw-willemstad-mobile",
+      "cityId": "cw-willemstad",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cw-willemstad-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cw-willemstad-mobile.webp"
+    },
+    {
+      "id": "fk-stanley-landscape",
+      "cityId": "fk-stanley",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fk-stanley-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/fk-stanley.webp"
+    },
+    {
+      "id": "fk-stanley-mobile",
+      "cityId": "fk-stanley",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fk-stanley-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/fk-stanley-mobile.webp"
+    },
+    {
+      "id": "fo-torshavn-landscape",
+      "cityId": "fo-torshavn",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fo-torshavn-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/fo-torshavn.webp"
+    },
+    {
+      "id": "fo-torshavn-mobile",
+      "cityId": "fo-torshavn",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fo-torshavn-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/fo-torshavn-mobile.webp"
+    },
+    {
+      "id": "gf-cayenne-landscape",
+      "cityId": "gf-cayenne",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gf-cayenne-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gf-cayenne.webp"
+    },
+    {
+      "id": "gf-cayenne-mobile",
+      "cityId": "gf-cayenne",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gf-cayenne-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gf-cayenne-mobile.webp"
+    },
+    {
+      "id": "gg-saint-peter-port-landscape",
+      "cityId": "gg-saint-peter-port",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gg-saint-peter-port-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gg-saint-peter-port.webp"
+    },
+    {
+      "id": "gg-saint-peter-port-mobile",
+      "cityId": "gg-saint-peter-port",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gg-saint-peter-port-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gg-saint-peter-port-mobile.webp"
+    },
+    {
+      "id": "gi-gibraltar-landscape",
+      "cityId": "gi-gibraltar",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gi-gibraltar-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gi-gibraltar.webp"
+    },
+    {
+      "id": "gi-gibraltar-mobile",
+      "cityId": "gi-gibraltar",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gi-gibraltar-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gi-gibraltar-mobile.webp"
+    },
+    {
+      "id": "gl-nuuk-landscape",
+      "cityId": "gl-nuuk",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gl-nuuk-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gl-nuuk.webp"
+    },
+    {
+      "id": "gl-nuuk-mobile",
+      "cityId": "gl-nuuk",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gl-nuuk-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gl-nuuk-mobile.webp"
+    },
+    {
+      "id": "gp-pointe-a-pitre-landscape",
+      "cityId": "gp-pointe-a-pitre",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gp-pointe-a-pitre-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gp-pointe-a-pitre.webp"
+    },
+    {
+      "id": "gp-pointe-a-pitre-mobile",
+      "cityId": "gp-pointe-a-pitre",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gp-pointe-a-pitre-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gp-pointe-a-pitre-mobile.webp"
+    },
+    {
+      "id": "im-douglas-landscape",
+      "cityId": "im-douglas",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/im-douglas-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/im-douglas.webp"
+    },
+    {
+      "id": "im-douglas-mobile",
+      "cityId": "im-douglas",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/im-douglas-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/im-douglas-mobile.webp"
+    },
+    {
+      "id": "je-saint-helier-landscape",
+      "cityId": "je-saint-helier",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/je-saint-helier-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/je-saint-helier.webp"
+    },
+    {
+      "id": "je-saint-helier-mobile",
+      "cityId": "je-saint-helier",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/je-saint-helier-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/je-saint-helier-mobile.webp"
+    },
+    {
+      "id": "ky-george-town-landscape",
+      "cityId": "ky-george-town",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ky-george-town-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ky-george-town.webp"
+    },
+    {
+      "id": "ky-george-town-mobile",
+      "cityId": "ky-george-town",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ky-george-town-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ky-george-town-mobile.webp"
+    },
+    {
+      "id": "mf-marigot-landscape",
+      "cityId": "mf-marigot",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mf-marigot-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mf-marigot.webp"
+    },
+    {
+      "id": "mf-marigot-mobile",
+      "cityId": "mf-marigot",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mf-marigot-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mf-marigot-mobile.webp"
+    },
+    {
+      "id": "mq-fort-de-france-landscape",
+      "cityId": "mq-fort-de-france",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mq-fort-de-france-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mq-fort-de-france.webp"
+    },
+    {
+      "id": "mq-fort-de-france-mobile",
+      "cityId": "mq-fort-de-france",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mq-fort-de-france-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mq-fort-de-france-mobile.webp"
+    },
+    {
+      "id": "ms-little-bay-landscape",
+      "cityId": "ms-little-bay",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ms-little-bay-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ms-little-bay.webp"
+    },
+    {
+      "id": "ms-little-bay-mobile",
+      "cityId": "ms-little-bay",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ms-little-bay-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/ms-little-bay-mobile.webp"
+    },
+    {
+      "id": "pm-saint-pierre-landscape",
+      "cityId": "pm-saint-pierre",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pm-saint-pierre-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pm-saint-pierre.webp"
+    },
+    {
+      "id": "pm-saint-pierre-mobile",
+      "cityId": "pm-saint-pierre",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pm-saint-pierre-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pm-saint-pierre-mobile.webp"
+    },
+    {
+      "id": "pr-san-juan-landscape",
+      "cityId": "pr-san-juan",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pr-san-juan-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pr-san-juan.webp"
+    },
+    {
+      "id": "pr-san-juan-mobile",
+      "cityId": "pr-san-juan",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pr-san-juan-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pr-san-juan-mobile.webp"
+    },
+    {
+      "id": "sh-jamestown-landscape",
+      "cityId": "sh-jamestown",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sh-jamestown-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sh-jamestown.webp"
+    },
+    {
+      "id": "sh-jamestown-mobile",
+      "cityId": "sh-jamestown",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sh-jamestown-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sh-jamestown-mobile.webp"
+    },
+    {
+      "id": "sj-longyearbyen-landscape",
+      "cityId": "sj-longyearbyen",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sj-longyearbyen-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sj-longyearbyen.webp"
+    },
+    {
+      "id": "sj-longyearbyen-mobile",
+      "cityId": "sj-longyearbyen",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sj-longyearbyen-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sj-longyearbyen-mobile.webp"
+    },
+    {
+      "id": "sx-philipsburg-landscape",
+      "cityId": "sx-philipsburg",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sx-philipsburg-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sx-philipsburg.webp"
+    },
+    {
+      "id": "sx-philipsburg-mobile",
+      "cityId": "sx-philipsburg",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sx-philipsburg-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/sx-philipsburg-mobile.webp"
+    },
+    {
+      "id": "tc-cockburn-town-landscape",
+      "cityId": "tc-cockburn-town",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tc-cockburn-town-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/tc-cockburn-town.webp"
+    },
+    {
+      "id": "tc-cockburn-town-mobile",
+      "cityId": "tc-cockburn-town",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tc-cockburn-town-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/tc-cockburn-town-mobile.webp"
+    },
+    {
+      "id": "vg-road-town-landscape",
+      "cityId": "vg-road-town",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/vg-road-town-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/vg-road-town.webp"
+    },
+    {
+      "id": "vg-road-town-mobile",
+      "cityId": "vg-road-town",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/vg-road-town-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/vg-road-town-mobile.webp"
+    },
+    {
+      "id": "vi-charlotte-amalie-landscape",
+      "cityId": "vi-charlotte-amalie",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/vi-charlotte-amalie-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/vi-charlotte-amalie.webp"
+    },
+    {
+      "id": "vi-charlotte-amalie-mobile",
+      "cityId": "vi-charlotte-amalie",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/vi-charlotte-amalie-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/vi-charlotte-amalie-mobile.webp"
+    },
+    {
+      "id": "xk-prizren-landscape",
+      "cityId": "xk-prizren",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/xk-prizren-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/xk-prizren.webp"
+    },
+    {
+      "id": "xk-prizren-mobile",
+      "cityId": "xk-prizren",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/xk-prizren-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/xk-prizren-mobile.webp"
+    },
+    {
+      "id": "cc-west-island-landscape",
+      "cityId": "cc-west-island",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cc-west-island-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cc-west-island.webp"
+    },
+    {
+      "id": "cc-west-island-mobile",
+      "cityId": "cc-west-island",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cc-west-island-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cc-west-island-mobile.webp"
+    },
+    {
+      "id": "cx-flying-fish-cove-landscape",
+      "cityId": "cx-flying-fish-cove",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cx-flying-fish-cove-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cx-flying-fish-cove.webp"
+    },
+    {
+      "id": "cx-flying-fish-cove-mobile",
+      "cityId": "cx-flying-fish-cove",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cx-flying-fish-cove-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/cx-flying-fish-cove-mobile.webp"
+    },
+    {
+      "id": "nf-kingston-landscape",
+      "cityId": "nf-kingston",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nf-kingston-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/nf-kingston.webp"
+    },
+    {
+      "id": "nf-kingston-mobile",
+      "cityId": "nf-kingston",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nf-kingston-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/nf-kingston-mobile.webp"
+    },
+    {
+      "id": "pn-adamstown-landscape",
+      "cityId": "pn-adamstown",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pn-adamstown-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pn-adamstown.webp"
+    },
+    {
+      "id": "pn-adamstown-mobile",
+      "cityId": "pn-adamstown",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pn-adamstown-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/pn-adamstown-mobile.webp"
+    },
+    {
+      "id": "tk-nukunonu-village-landscape",
+      "cityId": "tk-nukunonu-village",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tk-nukunonu-village-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/tk-nukunonu-village.webp"
+    },
+    {
+      "id": "tk-nukunonu-village-mobile",
+      "cityId": "tk-nukunonu-village",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tk-nukunonu-village-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/tk-nukunonu-village-mobile.webp"
+    },
+    {
+      "id": "wf-mata-utu-landscape",
+      "cityId": "wf-mata-utu",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/wf-mata-utu-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/wf-mata-utu.webp"
+    },
+    {
+      "id": "wf-mata-utu-mobile",
+      "cityId": "wf-mata-utu",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/wf-mata-utu-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/wf-mata-utu-mobile.webp"
+    },
+    {
+      "id": "gu-hagatna-landscape",
+      "cityId": "gu-hagatna",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gu-hagatna-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gu-hagatna.webp"
+    },
+    {
+      "id": "gu-hagatna-mobile",
+      "cityId": "gu-hagatna",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gu-hagatna-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/gu-hagatna-mobile.webp"
+    },
+    {
+      "id": "mp-garapan-landscape",
+      "cityId": "mp-garapan",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mp-garapan-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mp-garapan.webp"
+    },
+    {
+      "id": "mp-garapan-mobile",
+      "cityId": "mp-garapan",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mp-garapan-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/mp-garapan-mobile.webp"
+    },
+    {
+      "id": "re-saint-denis-landscape",
+      "cityId": "re-saint-denis",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/re-saint-denis-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/re-saint-denis.webp"
+    },
+    {
+      "id": "re-saint-denis-mobile",
+      "cityId": "re-saint-denis",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/re-saint-denis-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/re-saint-denis-mobile.webp"
+    },
+    {
+      "id": "yt-mamoudzou-landscape",
+      "cityId": "yt-mamoudzou",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/yt-mamoudzou-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/yt-mamoudzou.webp"
+    },
+    {
+      "id": "yt-mamoudzou-mobile",
+      "cityId": "yt-mamoudzou",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/yt-mamoudzou-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/yt-mamoudzou-mobile.webp"
+    },
+    {
+      "id": "eh-dakhla-landscape",
+      "cityId": "eh-dakhla",
+      "phase": "country-coverage",
+      "variant": "landscape",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/eh-dakhla-landscape.json",
+      "asset": "src/assets/trip-scenes/cities/v6/eh-dakhla.webp"
+    },
+    {
+      "id": "eh-dakhla-mobile",
+      "cityId": "eh-dakhla",
+      "phase": "country-coverage",
+      "variant": "mobile",
+      "jobFile": "artifacts/design/20261017-world-city-expansion-500/jobs/eh-dakhla-mobile.json",
+      "asset": "src/assets/trip-scenes/cities/v6/eh-dakhla-mobile.webp"
+    }
+  ],
+  "completedJobs": 480,
+  "generatedImageInputs": [],
+  "sourceHashMatches": 480,
+  "finalVerification": "../../qa/20261017-world-city-expansion-500/verification-summary.json"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "cu-trinidad-mobile",
+  "cityId": "cu-trinidad",
+  "name": "트리니다드(쿠바)",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cu-trinidad-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cu-trinidad-mobile.json",
+  "originalSha256": "75d7e4d16009dd0358ff5a20a0509616af00080b2a5ebb6845a8057093a3f88a",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    25,
+    1121,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    1,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cu-trinidad-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 109986,
+  "technicalEmptyEdgeRefits": [
+    [
+      3,
+      0
+    ]
+  ],
+  "assetSha256": "603b0e736162a5c02208a50d76c682985ac19dcb93f3bea25fd783dae7502779",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

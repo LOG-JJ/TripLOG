@@ -1,0 +1,26 @@
+{
+  "jobId": "it-palermo-landscape",
+  "cityId": "it-palermo",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Palermo, Italy: Palermo Cathedral's arcaded facade and towers, with the palm-lined forecourt. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "901bc7fcf01ebf284433fdbc8670970e834fd07610024ecbd24bd949e8004e3f",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/it-palermo-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-a2ebd5bf-285a-4c8b-9ed6-48ad3e98c861.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-a2ebd5bf-285a-4c8b-9ed6-48ad3e98c861.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/it-palermo-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "33a26a250c44b294fcb0db83bcaa99db1a65747e0843b5436e9a9315837a47a3",
+  "savedSha256": "33a26a250c44b294fcb0db83bcaa99db1a65747e0843b5436e9a9315837a47a3",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:10:03.848Z",
+  "toolCallId": "exec-a2ebd5bf-285a-4c8b-9ed6-48ad3e98c861",
+  "savedAt": "2026-10-17T06:13:33.170932+00:00"
+}

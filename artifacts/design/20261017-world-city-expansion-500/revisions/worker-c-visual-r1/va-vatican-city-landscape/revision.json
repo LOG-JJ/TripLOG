@@ -1,0 +1,44 @@
+{
+  "jobId": "va-vatican-city-landscape",
+  "reason": "The cross above the dome had insufficient clear headroom.",
+  "archivedFiles": [
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/va-vatican-city-landscape.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-landscape/va-vatican-city-landscape.json",
+      "sha256": "c9b01359c1067e18779d0db4bf8677715702ebd465a21ac4f72602a2f4ee7047"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/va-vatican-city-landscape.prompt.txt",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-landscape/va-vatican-city-landscape.prompt.txt",
+      "sha256": "47d623ef8a303f1991a7ca910163dcd29b5faa6c7dd7c222b299a2403e6c7208"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-landscape.png",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-landscape/va-vatican-city-landscape.png",
+      "sha256": "a89f4b8ddf746a76e3a61d77d1c4f1bec0353a80a6e4c1c335487d97afb5eec9"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-landscape.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-landscape/va-vatican-city-landscape.json",
+      "sha256": "137ab7e235575f738e25423f6699a3949a86363684b2a4c2ef58c87626bac326"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-landscape.asset.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-landscape/va-vatican-city-landscape.asset.json",
+      "sha256": "bd9952fffc2be674b90ad8d7825fc9a2c79d7589d175521d1df4fcc8e4a27244"
+    },
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v6/va-vatican-city.webp",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/va-vatican-city-landscape/va-vatican-city.webp",
+      "sha256": "16d2e9f9069b1a03d2f82658b52bb02a20e4470a1d6231383ce34fd8027d0357"
+    }
+  ],
+  "newPromptSha256": "8bd132597cbcd1a7631a3864f8921a0cdb604f17b8071a5282746e7db3798b6f",
+  "generationMode": "independent T2I",
+  "imageInputs": [],
+  "source": {
+    "title": "UNESCO World Heritage Centre — Vatican City",
+    "url": "https://whc.unesco.org/en/list/286/"
+  },
+  "photoInspected": null
+}

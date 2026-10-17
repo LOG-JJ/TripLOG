@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-boseong-mobile",
+  "cityId": "kr-boseong",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Boseong, South Korea: orderly curved rows of tea bushes sweeping across rounded hillside ridges, their alternating green bands following the contours of the tea fields. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and supporting land or water flowing vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted ground, water or foliage must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "481628ae1da502471ed823a15a1802c2861260314e8d28253a1d04b32074c017",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-boseong-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-1028668b-9a35-4ad3-b4a0-f941c9b3ed92.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-1028668b-9a35-4ad3-b4a0-f941c9b3ed92.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-boseong-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "c9a8f87dbe8ce5d9d92c98607779802ff3b545ff8b81b904ed2d66ea62ad473b",
+  "savedSha256": "c9a8f87dbe8ce5d9d92c98607779802ff3b545ff8b81b904ed2d66ea62ad473b",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:02:18.200Z",
+  "toolCallId": "exec-1028668b-9a35-4ad3-b4a0-f941c9b3ed92",
+  "savedAt": "2026-10-17T05:03:13.340532+00:00"
+}

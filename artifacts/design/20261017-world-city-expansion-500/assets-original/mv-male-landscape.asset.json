@@ -1,0 +1,52 @@
+{
+  "id": "mv-male-landscape",
+  "cityId": "mv-male",
+  "name": "말레",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mv-male-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mv-male-landscape.json",
+  "originalSha256": "8b035444051b82d282806abcd358cf05d5f0552abeb6684fae6998886c5c1200",
+  "sourceSize": [
+    1619,
+    972
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    38,
+    1619,
+    972
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mv-male.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 124658,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "992e2d67ab4302ba9b56330a94443913bd0059b0a7b9c24557284d6f9dc297f4",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "it-lucca-landscape",
+  "cityId": "it-lucca",
+  "name": "루카",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-lucca-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-lucca-landscape.json",
+  "originalSha256": "45da7dfc9c2566e0fa39104ba2252fd3a25fbbb4b8995c5800e3919a666877e4",
+  "sourceSize": [
+    1619,
+    972
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    64,
+    1619,
+    972
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/it-lucca.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 116650,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "aa2adcfccd437913c0c7f43fc601e4754143073870c945b03b31b70454c33492",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

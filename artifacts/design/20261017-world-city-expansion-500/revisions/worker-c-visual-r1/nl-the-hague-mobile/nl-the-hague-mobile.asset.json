@@ -1,0 +1,52 @@
+{
+  "id": "nl-the-hague-mobile",
+  "cityId": "nl-the-hague",
+  "name": "헤이그",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/nl-the-hague-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/nl-the-hague-mobile.json",
+  "originalSha256": "f12d662c62d84e2db3610a2fb9f2417159729a6f7bc39690a6b52cba8557c305",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/nl-the-hague-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 94418,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "ed4e7765f7f57ab7cd93ab899f25102ce4b515c7989361d93c0405316f3009fb",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

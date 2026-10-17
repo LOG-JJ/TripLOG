@@ -1,0 +1,52 @@
+{
+  "id": "cy-paphos-landscape",
+  "cityId": "cy-paphos",
+  "name": "파포스",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cy-paphos-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cy-paphos-landscape.json",
+  "originalSha256": "5ef341c762c7a9f9aebad0cab276c6f3bb3dccf410897d5bad55abac168513a8",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cy-paphos.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 147560,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e874514c6efd9611b6d4de61ae509edead1a585e118612483e49873d8c5230ea",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

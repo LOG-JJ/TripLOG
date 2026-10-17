@@ -1,0 +1,52 @@
+{
+  "id": "gm-banjul-mobile",
+  "cityId": "gm-banjul",
+  "name": "반줄",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gm-banjul-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gm-banjul-mobile.json",
+  "originalSha256": "58a0d2e7482e90cf4ad238a1fee0112bcb3e38ecb7c5e577b224337b6eaea14a",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    35,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gm-banjul-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 96554,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "3d810d7f622ebadf6c54aa6f25cc4086acab15a7165ed410d5ed735fe950a2b0",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

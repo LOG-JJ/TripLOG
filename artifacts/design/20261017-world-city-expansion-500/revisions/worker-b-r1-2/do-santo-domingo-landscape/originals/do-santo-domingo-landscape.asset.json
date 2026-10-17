@@ -1,0 +1,52 @@
+{
+  "id": "do-santo-domingo-landscape",
+  "cityId": "do-santo-domingo",
+  "name": "산토도밍고",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/do-santo-domingo-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/do-santo-domingo-landscape.json",
+  "originalSha256": "5ef5908a0e7a5f64e910a65e870371c441281a430aeb36fbc8e8270417e87405",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    74,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/do-santo-domingo.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 140290,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "1fe9198120b4e06ee0e93fc35f56b0885c5d57ce8a3718f8362f515559d972dd",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

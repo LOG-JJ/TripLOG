@@ -1,0 +1,52 @@
+{
+  "id": "ro-sighisoara-mobile",
+  "cityId": "ro-sighisoara",
+  "name": "시기쇼아라",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ro-sighisoara-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ro-sighisoara-mobile.json",
+  "originalSha256": "37e1591f6c15d1d759aebd2ebeb6bd102939ca58b0401ada1b5832c4ac6607ab",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ro-sighisoara-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 101780,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "b6dfa9ec72e3c39b273e6c43208670ca73ab4ebc3afe8abd2ac9dfca25808e08",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

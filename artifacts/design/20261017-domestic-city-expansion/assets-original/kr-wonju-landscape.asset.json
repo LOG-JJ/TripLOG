@@ -1,0 +1,51 @@
+{
+  "id": "kr-wonju-landscape",
+  "cityId": "kr-wonju",
+  "name": "원주",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "강원",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-wonju-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-wonju-landscape.json",
+  "originalSha256": "65ccfd591e5f906026a5b386a70267623090bc5a9cd81ea7d70aa66d04648b5a",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    47,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-wonju.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 109540,
+  "assetSha256": "5c4e55f276db2df5be1476652d362965674dde1940702848ee7d82714bf60a4b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

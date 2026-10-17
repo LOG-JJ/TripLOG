@@ -1,0 +1,51 @@
+{
+  "id": "kr-goyang-mobile",
+  "cityId": "kr-goyang",
+  "name": "고양",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-goyang-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-goyang-mobile.json",
+  "originalSha256": "4765698ec0b8fefec886545e6cdb8bef64e4af574a06d056fcfbf5d613183334",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    19,
+    11,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-goyang-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 97698,
+  "assetSha256": "9550a1d5678842cc739e44ea71933c77b7a2cf8d356c71d6f51129f529c64443",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

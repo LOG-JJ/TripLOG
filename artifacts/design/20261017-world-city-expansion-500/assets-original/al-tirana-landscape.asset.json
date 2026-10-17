@@ -1,0 +1,52 @@
+{
+  "id": "al-tirana-landscape",
+  "cityId": "al-tirana",
+  "name": "티라나",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/al-tirana-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/al-tirana-landscape.json",
+  "originalSha256": "3acc4fa9e8bf87ed9037edfe07bed9f080c002bd82732c5ea288db3f150170c8",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/al-tirana.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 108850,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "ad92ed43855c676c4af88136d90728caed1533b3dfdab7b936cf412da72ebd5a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

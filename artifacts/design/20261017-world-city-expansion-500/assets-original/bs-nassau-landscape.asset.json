@@ -1,0 +1,52 @@
+{
+  "id": "bs-nassau-landscape",
+  "cityId": "bs-nassau",
+  "name": "나소",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bs-nassau-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bs-nassau-landscape.json",
+  "originalSha256": "9410ec2aedba9f79a99627fb9bec9e9fe3446979399a94dfc6a2d2387845a7c3",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bs-nassau.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 135012,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "695ba2da9b5baa69fd9f6406ce32fc0c8a0aa0878feae3845179f084b448d17c",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

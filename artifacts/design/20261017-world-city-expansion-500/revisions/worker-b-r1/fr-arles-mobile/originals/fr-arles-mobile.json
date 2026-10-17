@@ -1,0 +1,26 @@
+{
+  "jobId": "fr-arles-mobile",
+  "cityId": "fr-arles",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Arles, France: the oval Roman amphitheatre of Arles, with its tiers of stone arches. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "773e5247fb02790ba0228a4c2f8cf6deed1f5168185c888aa0531eb42adbdbda",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fr-arles-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-852b1b22-964c-4006-a473-35d0ea568e97.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-852b1b22-964c-4006-a473-35d0ea568e97.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/fr-arles-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "1722bc1c7b6470d05759eed67bf4049d9c0f00afcfe3a1db911ade8a4bf0ab3f",
+  "savedSha256": "1722bc1c7b6470d05759eed67bf4049d9c0f00afcfe3a1db911ade8a4bf0ab3f",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:09:17Z",
+  "toolCallId": "exec-852b1b22-964c-4006-a473-35d0ea568e97",
+  "savedAt": "2026-10-17T06:11:41.992112+00:00"
+}

@@ -1,0 +1,32 @@
+{
+  "completedAt": "2026-10-17T08:01:47.417Z",
+  "status": "implemented-and-locally-verified",
+  "totals": {
+    "existingOverseas": 300,
+    "coreAdded": 200,
+    "afterCore": 500,
+    "coverageAdded": 40,
+    "finalOverseas": 540,
+    "domestic": 95,
+    "finalCatalog": 635,
+    "newArtworkPairs": 240,
+    "newImageFiles": 480,
+    "activeImageFiles": 1290,
+    "requiredOverseasCountriesAndRegions": 242
+  },
+  "newSourceFiles": 480,
+  "newRuntimeFiles": 480,
+  "sourceHashMatches": 480,
+  "uniqueSourceHashes": 480,
+  "unchangedExistingImages": 810,
+  "newAssetBytes": 52010326,
+  "allJobsComplete": true,
+  "generationMode": "independent T2I",
+  "imageInputs": [],
+  "localBuildVerified": true,
+  "committed": false,
+  "pushed": false,
+  "deployed": false,
+  "allDeploymentFileHashMatches": 1552,
+  "buildFingerprint": "71b81a4853d3c7ade42b"
+}

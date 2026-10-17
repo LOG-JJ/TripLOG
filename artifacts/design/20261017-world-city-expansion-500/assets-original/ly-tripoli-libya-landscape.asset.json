@@ -1,0 +1,52 @@
+{
+  "id": "ly-tripoli-libya-landscape",
+  "cityId": "ly-tripoli-libya",
+  "name": "트리폴리(리비아)",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ly-tripoli-libya-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ly-tripoli-libya-landscape.json",
+  "originalSha256": "cf4da126bd3d9d225b545de4e3ca9eb3721f5f5e5e95826c34143df996f02cc6",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    25,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ly-tripoli-libya.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 123934,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2ce6a64776ccb518e2d7c28d93a755093000caac5d4a7bdbcbc6cd4092690b24",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

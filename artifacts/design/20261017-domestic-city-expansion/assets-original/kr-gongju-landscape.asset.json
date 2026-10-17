@@ -1,0 +1,51 @@
+{
+  "id": "kr-gongju-landscape",
+  "cityId": "kr-gongju",
+  "name": "공주",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "충남",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gongju-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gongju-landscape.json",
+  "originalSha256": "b37f0b08ce72603e1285e7ab86d3036b1e5861e208cd4a989dc6b556c890889b",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gongju.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 101040,
+  "assetSha256": "8c9beadf274e6ec1d24465ff49d4609461f5c0d5b3a9c0ac94116c923609b847",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

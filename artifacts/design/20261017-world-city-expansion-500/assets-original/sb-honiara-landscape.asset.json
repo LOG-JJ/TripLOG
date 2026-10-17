@@ -1,0 +1,52 @@
+{
+  "id": "sb-honiara-landscape",
+  "cityId": "sb-honiara",
+  "name": "호니아라",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sb-honiara-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sb-honiara-landscape.json",
+  "originalSha256": "a07319ddea1c8dc98061f2babcb731af72377f0efaf360823f0f8ef167e17bed",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    25,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sb-honiara.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 105520,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "9bf39be945a1f402c4398662c79522f52b8f423196065c8482191a6568fa44e8",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

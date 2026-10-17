@@ -1,0 +1,385 @@
+{
+  "count": 18,
+  "generationMode": "independent T2I",
+  "imageInputs": [],
+  "records": [
+    {
+      "jobId": "bl-gustavia-landscape",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/bl-gustavia-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/bl-gustavia-landscape/bl-gustavia-landscape.json",
+          "sha256": "258b736c16dbf34f8d51118f16ee07b1a11ecf4654848a18402671dab03ff904"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/bl-gustavia-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/bl-gustavia-landscape/bl-gustavia-landscape.prompt.txt",
+          "sha256": "8b23350c5f6f99a274bdca7837ccaa49de695c11a249a9f72b83c6376690c866"
+        }
+      ],
+      "newPromptSha256": "bebb7fb4a14b9d6d887d753ad6d7c6414c125358814203bf323e132daba0792e",
+      "research": {
+        "note": "The tourism authority describes surviving stone guardhouse and cisterns, with replica cannon; do not invent an intact fortress.",
+        "url": "https://www.saintbarth-tourisme.com/en/fort-gustav-iii-2/",
+        "imageInputs": []
+      }
+    },
+    {
+      "jobId": "bl-gustavia-mobile",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/bl-gustavia-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/bl-gustavia-mobile/bl-gustavia-mobile.json",
+          "sha256": "a6eb1a4ff999a2cd237be3cced7ffdb0a94b5a7b0d6abf8d693340c7c045d465"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/bl-gustavia-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/bl-gustavia-mobile/bl-gustavia-mobile.prompt.txt",
+          "sha256": "3f8feb9a90b0282fc4a213cca7e2012399bbae5816165e318dad79a1d58c3281"
+        }
+      ],
+      "newPromptSha256": "79143eab3f89e7e3cb8a9308a1cfad972aebe2d631b1062966639e4286fb5b89",
+      "research": {
+        "note": "The tourism authority describes surviving stone guardhouse and cisterns, with replica cannon; do not invent an intact fortress.",
+        "url": "https://www.saintbarth-tourisme.com/en/fort-gustav-iii-2/",
+        "imageInputs": []
+      }
+    },
+    {
+      "jobId": "fk-stanley-landscape",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/fk-stanley-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/fk-stanley-landscape/fk-stanley-landscape.json",
+          "sha256": "f13f103b30b56c71a535a8d631e5770a4cb6548de4152321512e81c1e9f2666f"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/fk-stanley-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/fk-stanley-landscape/fk-stanley-landscape.prompt.txt",
+          "sha256": "e4ae40b7b16095cf67b14c9e2237e13ab3a3d3c2b332a0cf0ab5734b35dcabe1"
+        }
+      ],
+      "newPromptSha256": "90e9876c4572f102542b1b0fc755c5ec16847c9e413915958287c8df913bdcd9",
+      "research": {
+        "note": "Official tourist-board photograph inspected: grey masonry with red brick edges, square clock tower, red roofs; whalebone sculpture uses four upward-curving bones.",
+        "url": "https://www.falklandislands.com/things-to-do/christ-church-cathedral-p673891",
+        "imageInputs": []
+      }
+    },
+    {
+      "jobId": "fk-stanley-mobile",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/fk-stanley-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/fk-stanley-mobile/fk-stanley-mobile.json",
+          "sha256": "fd32b3e547d44cd97c37abb1e672a41ea394a128b1dfb6c6ab56626e344e9639"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/fk-stanley-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/fk-stanley-mobile/fk-stanley-mobile.prompt.txt",
+          "sha256": "8341a1b376d8ce5f8112a137c18ed364046364423d57dfb89ed03783d1c38b81"
+        }
+      ],
+      "newPromptSha256": "9b09c08b96af9f665cdb1749890f763addadad5fc3ce86ece25f3af775c61594",
+      "research": {
+        "note": "Official tourist-board photograph inspected: grey masonry with red brick edges, square clock tower, red roofs; whalebone sculpture uses four upward-curving bones.",
+        "url": "https://www.falklandislands.com/things-to-do/christ-church-cathedral-p673891",
+        "imageInputs": []
+      }
+    },
+    {
+      "jobId": "gi-gibraltar-landscape",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gi-gibraltar-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/gi-gibraltar-landscape/gi-gibraltar-landscape.json",
+          "sha256": "1da7d32b0c8d3f156116b120b600b693114deda5c9797a29b4caef39e9498f13"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gi-gibraltar-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/gi-gibraltar-landscape/gi-gibraltar-landscape.prompt.txt",
+          "sha256": "4893aa3487f3fc104a4d84bc7a62a88843184a3ab9f11d1fb4e42d0e1100585a"
+        }
+      ],
+      "newPromptSha256": "ea1609ff9f3b4a726161c3abdf7f90042d8415f11212aa5bed59b12f2b6aa26e",
+      "research": {
+        "note": "The existing tourist-board Upper Rock reference establishes the limestone profile. Added explicit blue harbour water for the shared scene-boundary rule.",
+        "url": "https://www.visitgibraltar.gi/uploads/Leaflets/GNR_NatureReserve_8pp_NEW.pdf",
+        "imageInputs": []
+      }
+    },
+    {
+      "jobId": "gi-gibraltar-mobile",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gi-gibraltar-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/gi-gibraltar-mobile/gi-gibraltar-mobile.json",
+          "sha256": "97d75fa82013c7a385131fba76571eaa52eeb3111e2b73b4c2002310f4debfc9"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gi-gibraltar-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/gi-gibraltar-mobile/gi-gibraltar-mobile.prompt.txt",
+          "sha256": "37c069cdab8dcfce4bf36549259c2178ab002d878995fb1cf5dc1cd6adec12d4"
+        }
+      ],
+      "newPromptSha256": "11ab8038e98dd2c69979a0269d0b2d12a23fb2f8e3fe3b1d8dcd2358138c3965",
+      "research": {
+        "note": "The existing tourist-board Upper Rock reference establishes the limestone profile. Added explicit blue harbour water for the shared scene-boundary rule.",
+        "url": "https://www.visitgibraltar.gi/uploads/Leaflets/GNR_NatureReserve_8pp_NEW.pdf",
+        "imageInputs": []
+      }
+    },
+    {
+      "jobId": "je-saint-helier-landscape",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/je-saint-helier-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/je-saint-helier-landscape/je-saint-helier-landscape.json",
+          "sha256": "f086e784955feb649158beea97068974384814c980ddc44c8701ef0e3231b829"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/je-saint-helier-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/je-saint-helier-landscape/je-saint-helier-landscape.prompt.txt",
+          "sha256": "6226e2f220983835df947cc534e0cc4139d5701acf2b00c4ef7aa8e959deacb5"
+        }
+      ],
+      "newPromptSha256": "48ecf4d3ff0affabe8d8039187debd2564e9fef095e4fb1dcffb2b9823f1a6f3",
+      "research": {
+        "note": "Official Visit Jersey photograph inspected: thick low stone sea-facing ramparts and rocky shore; text confirms causeway visible at low tide.",
+        "url": "https://www.jersey.com/things-to-do/attractions/listings/elizabeth-castle/",
+        "imageInputs": []
+      }
+    },
+    {
+      "jobId": "je-saint-helier-mobile",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/je-saint-helier-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/je-saint-helier-mobile/je-saint-helier-mobile.json",
+          "sha256": "a20fcc1c70ba104b664cf9be4584923f6997ab6a142aafdab5331d850838f521"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/je-saint-helier-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/je-saint-helier-mobile/je-saint-helier-mobile.prompt.txt",
+          "sha256": "cffd0eb26e3faea2d465ccf946f7708b64a0ec86399e2fd9ed037b45fa3ea2b8"
+        }
+      ],
+      "newPromptSha256": "38c6e6017060463966aa9637238a5ab1d52b57613854cca3813904301e7e3b2b",
+      "research": {
+        "note": "Official Visit Jersey photograph inspected: thick low stone sea-facing ramparts and rocky shore; text confirms causeway visible at low tide.",
+        "url": "https://www.jersey.com/things-to-do/attractions/listings/elizabeth-castle/",
+        "imageInputs": []
+      }
+    },
+    {
+      "jobId": "ms-little-bay-landscape",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ms-little-bay-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/ms-little-bay-landscape/ms-little-bay-landscape.json",
+          "sha256": "d9fbb0220143e0041eadc100dd63faf9d2a229793a3bf54e86ed793b3ef11049"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ms-little-bay-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/ms-little-bay-landscape/ms-little-bay-landscape.prompt.txt",
+          "sha256": "be194c9da638c02c17590751029bcf445f43398bd0e56964102fafd8bbdb1d8f"
+        }
+      ],
+      "newPromptSha256": "00c734b978d503d4e12003396185abb859141150b1615365365de5618609e2ab",
+      "research": {
+        "note": "Government heritage booklet describes and photographs a low pinkish-brown museum with white roof; the current museum operator also specifies its pink Little Bay building. The PDF screenshot could not be fetched, so its embedded image description was used alongside operator text.",
+        "url": "https://www.gov.ms/wp-content/uploads/2020/07/Historic-Cultural-Sights.pdf",
+        "imageInputs": []
+      }
+    },
+    {
+      "jobId": "ms-little-bay-mobile",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ms-little-bay-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/ms-little-bay-mobile/ms-little-bay-mobile.json",
+          "sha256": "2d49b2900820e3a3c1dd4d279515bd898d2b4da49e3fc6171b6fe68d06ff669b"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ms-little-bay-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/ms-little-bay-mobile/ms-little-bay-mobile.prompt.txt",
+          "sha256": "52a47fd3ac6e633c4eb7fe2c3ba4e37666345c28467bc5d15c5e2531a6342c39"
+        }
+      ],
+      "newPromptSha256": "adfc79acd6314d1e0c37ca35ef0a22489a1d513cbade2e92d3f268f2346cbfe1",
+      "research": {
+        "note": "Government heritage booklet describes and photographs a low pinkish-brown museum with white roof; the current museum operator also specifies its pink Little Bay building. The PDF screenshot could not be fetched, so its embedded image description was used alongside operator text.",
+        "url": "https://www.gov.ms/wp-content/uploads/2020/07/Historic-Cultural-Sights.pdf",
+        "imageInputs": []
+      }
+    },
+    {
+      "jobId": "sj-longyearbyen-landscape",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sj-longyearbyen-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/sj-longyearbyen-landscape/sj-longyearbyen-landscape.json",
+          "sha256": "6f3f6a6f17965c8537a3ce94de6fd875674c2a49f8f7d45d2ad746eaa64f8c7d"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sj-longyearbyen-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/sj-longyearbyen-landscape/sj-longyearbyen-landscape.prompt.txt",
+          "sha256": "2e0906adf2d963ae00e31dde7cf1362eb3e3832b28eb0d8c453e5ea8c541eb5a"
+        }
+      ],
+      "newPromptSha256": "81df0b99bff1462c2678ecd21fa7b6fc72ee18da97167ef85abede0d949418b1",
+      "research": {
+        "note": "Visit Svalbard exterior photograph inspected: red steep-gabled church section, narrow red spire, long pale annex, bare Arctic hillside.",
+        "url": "https://www.visitsvalbard.com/se-og-gjore/svalbard-kirke-p3500473",
+        "imageInputs": []
+      }
+    },
+    {
+      "jobId": "sj-longyearbyen-mobile",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sj-longyearbyen-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/sj-longyearbyen-mobile/sj-longyearbyen-mobile.json",
+          "sha256": "31c3d4d52c9e1dfa65b3049fd76f682c64e3aad0a0a1ea2a50204fb3ab9b1766"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sj-longyearbyen-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/sj-longyearbyen-mobile/sj-longyearbyen-mobile.prompt.txt",
+          "sha256": "edd2200bd0c99057251d59138f0d6fbafaf770ade0ce7c95473435c9fb062d36"
+        }
+      ],
+      "newPromptSha256": "bdd18bfdfd4ca115908c30b7f680cb986e5b7579c0ceec27d1e8dd6dc801fe43",
+      "research": {
+        "note": "Visit Svalbard exterior photograph inspected: red steep-gabled church section, narrow red spire, long pale annex, bare Arctic hillside.",
+        "url": "https://www.visitsvalbard.com/se-og-gjore/svalbard-kirke-p3500473",
+        "imageInputs": []
+      }
+    },
+    {
+      "jobId": "vi-charlotte-amalie-landscape",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/vi-charlotte-amalie-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/vi-charlotte-amalie-landscape/vi-charlotte-amalie-landscape.json",
+          "sha256": "77c9e51aa0787f1ec3a800cbe04f950e05a5c914f48c488b2554c82e41eae51e"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/vi-charlotte-amalie-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/vi-charlotte-amalie-landscape/vi-charlotte-amalie-landscape.prompt.txt",
+          "sha256": "6bb62fda182c00baa4178dd31264d822ec9b4d8d02ff88f148784daf76db2302"
+        }
+      ],
+      "newPromptSha256": "282aea542dac2ea28de5b0c33af6b2cdd3072a39b80a64e2e8ad2c3ee2626ccb",
+      "research": {
+        "note": "USVI tourism photograph inspected: deep red square clock tower, flat crenellated top, cream bands and trim, green shutters.",
+        "url": "https://www.visitusvi.com/experience/must-see-historic-sites/",
+        "imageInputs": []
+      }
+    },
+    {
+      "jobId": "vi-charlotte-amalie-mobile",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/vi-charlotte-amalie-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/vi-charlotte-amalie-mobile/vi-charlotte-amalie-mobile.json",
+          "sha256": "c6ae3655379779d0dc728a4c0ff9e37a89714d73745a93d328718972ceba7dd4"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/vi-charlotte-amalie-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/vi-charlotte-amalie-mobile/vi-charlotte-amalie-mobile.prompt.txt",
+          "sha256": "c40cd75107d865b021c8e5505d63b57ee5c28038fe5c5f27870161bdb2aad9e0"
+        }
+      ],
+      "newPromptSha256": "a5852acaf9fe7bf8cfd6c148246524f6fe076bd934300feb6ff9ac2d4245f399",
+      "research": {
+        "note": "USVI tourism photograph inspected: deep red square clock tower, flat crenellated top, cream bands and trim, green shutters.",
+        "url": "https://www.visitusvi.com/experience/must-see-historic-sites/",
+        "imageInputs": []
+      }
+    },
+    {
+      "jobId": "nf-kingston-landscape",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/nf-kingston-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/nf-kingston-landscape/nf-kingston-landscape.json",
+          "sha256": "888a2433119a57f417f22703626f4aa525868045b0d00fd2c4447b48a667aee6"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/nf-kingston-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/nf-kingston-landscape/nf-kingston-landscape.prompt.txt",
+          "sha256": "adbe14048e774c1b418d43468214c2596d3dc530b64c51291ddba834c2db5621"
+        }
+      ],
+      "newPromptSha256": "9967472ea9b638d060c861f85ce87f0ab70b74ab10d25abfe0d7b7eb6e64ea24",
+      "research": {
+        "note": "Existing Norfolk Island Government heritage reference; clarified stepped pine silhouette and explicit ocean water for shared boundary rule.",
+        "url": "https://kingston.norfolkisland.gov.au/",
+        "imageInputs": []
+      }
+    },
+    {
+      "jobId": "nf-kingston-mobile",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/nf-kingston-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/nf-kingston-mobile/nf-kingston-mobile.json",
+          "sha256": "bbdef098e79823d4236715bdd98bb5cb219fbee45902d2de6e7168d7df7ae911"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/nf-kingston-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/nf-kingston-mobile/nf-kingston-mobile.prompt.txt",
+          "sha256": "81c0efcfbb9005eb7120b22ffe9c26df50eedee10e283e0a8f181a01bc02fc0e"
+        }
+      ],
+      "newPromptSha256": "cba4e63d0cbf1afb15e951a36c01bdda82632279a51931b8e0079bc471f37299",
+      "research": {
+        "note": "Existing Norfolk Island Government heritage reference; clarified stepped pine silhouette and explicit ocean water for shared boundary rule.",
+        "url": "https://kingston.norfolkisland.gov.au/",
+        "imageInputs": []
+      }
+    },
+    {
+      "jobId": "gu-hagatna-landscape",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gu-hagatna-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/gu-hagatna-landscape/gu-hagatna-landscape.json",
+          "sha256": "642b5eeedd974c457fc095f3c5a48cb5e402501d4b3da38898ae2dfb6b4887a8"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gu-hagatna-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/gu-hagatna-landscape/gu-hagatna-landscape.prompt.txt",
+          "sha256": "5e0ea20d3884811b36caf9bc187b314d2372d8289a3046c1aa4e4f962f61f25b"
+        }
+      ],
+      "newPromptSha256": "8ec9cb7a704c12b52d2a37e452473261292e1e7b522c1bca68f88bd2f3834bff",
+      "research": {
+        "note": "Guam Visitors Bureau gallery inspected: broad white central arched window, low arcades and asymmetrical single clock tower with open cupola.",
+        "url": "https://www.visitguam.com/listing/dulce-nombre-de-maria-cathedral-basilica/3688/",
+        "imageInputs": []
+      }
+    },
+    {
+      "jobId": "gu-hagatna-mobile",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gu-hagatna-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/gu-hagatna-mobile/gu-hagatna-mobile.json",
+          "sha256": "5054233d5eafb40138e0b17eb052115cd4384e320df5e80106ed9eb82a1500af"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gu-hagatna-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-coverage-preflight/gu-hagatna-mobile/gu-hagatna-mobile.prompt.txt",
+          "sha256": "b1f3063361869297c168c20e38956c139f70d06f03731775a93a1150838a3626"
+        }
+      ],
+      "newPromptSha256": "462189eece5087d7507696bc33904ae3f4ea38ff4efbc00813bbef79e1356ab8",
+      "research": {
+        "note": "Guam Visitors Bureau gallery inspected: broad white central arched window, low arcades and asymmetrical single clock tower with open cupola.",
+        "url": "https://www.visitguam.com/listing/dulce-nombre-de-maria-cathedral-basilica/3688/",
+        "imageInputs": []
+      }
+    }
+  ]
+}

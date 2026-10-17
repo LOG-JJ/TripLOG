@@ -1,0 +1,72 @@
+{
+  "id": "ki-bairiki-mobile",
+  "cityId": "ki-bairiki",
+  "name": "바이리키",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ki-bairiki-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ki-bairiki-mobile.json",
+  "originalSha256": "8e3141ad8f663eb7ac59bda382cd6f5eefad880c8e8fdd77fefee0e74497e46c",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    44,
+    25,
+    1115,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    7,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ki-bairiki-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 119212,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "5b6cc2539fa5286b76b976d06ded0d935a045f6188207d223755ba4b49ef8388",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa",
+  "technicalFaintEdgeRefit": {
+    "checkedAt": "2026-10-17T07:38:33.060891+00:00",
+    "alphaThreshold": 8,
+    "beforeGaps": [
+      4,
+      5
+    ],
+    "afterGaps": [
+      0,
+      0
+    ],
+    "refits": [
+      [
+        4,
+        5
+      ]
+    ],
+    "source": "original PNG preserved",
+    "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1"
+  }
+}

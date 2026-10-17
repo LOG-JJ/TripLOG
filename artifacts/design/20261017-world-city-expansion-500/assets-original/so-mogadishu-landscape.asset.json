@@ -1,0 +1,52 @@
+{
+  "id": "so-mogadishu-landscape",
+  "cityId": "so-mogadishu",
+  "name": "모가디슈",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/so-mogadishu-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/so-mogadishu-landscape.json",
+  "originalSha256": "a9253951cc8262088ebb92981e2447a16180758642c7b1f8e2e444ef27d152ca",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    49,
+    19,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/so-mogadishu.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 89062,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "b6c8f4606198b37b4b84d20a345adf1e40c307bffa78529f991d960f18dcf226",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

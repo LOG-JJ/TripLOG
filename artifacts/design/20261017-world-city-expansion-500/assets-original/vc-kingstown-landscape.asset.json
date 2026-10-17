@@ -1,0 +1,52 @@
+{
+  "id": "vc-kingstown-landscape",
+  "cityId": "vc-kingstown",
+  "name": "킹스타운",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/vc-kingstown-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/vc-kingstown-landscape.json",
+  "originalSha256": "d29e8c04bee87e656db998ddefcf5cc8ae61dee73b721b5300b22e97ddc637b4",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/vc-kingstown.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 128100,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "3c34864dd49a607c411792ad52446c7a5e0dd6cb04b63a23faf337486f4fa54d",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

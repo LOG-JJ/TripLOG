@@ -1,0 +1,52 @@
+{
+  "id": "pg-port-moresby-mobile",
+  "cityId": "pg-port-moresby",
+  "name": "포트모르즈비",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/pg-port-moresby-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/pg-port-moresby-mobile.json",
+  "originalSha256": "a5b364fa7e06bae6cae2f561e19605e562ed862bc8eca291d2e45f06cf89e56f",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    98,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/pg-port-moresby-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 105960,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e6385628ce11126f79e1e27bade5b2c9512fe1864c6b056d80c524bbdff313f4",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

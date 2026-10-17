@@ -1,0 +1,43 @@
+{
+  "id": "kr-nonsan-landscape",
+  "cityId": "kr-nonsan",
+  "cityName": "논산",
+  "englishName": "Nonsan",
+  "kind": "city",
+  "group": "충남",
+  "variant": "landscape",
+  "phase": "expansion",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Nonsan, South Korea: the Eunjin Mireuk standing stone Bodhisattva at Gwanchoksa Temple, with a large broad face, long earlobes, a tall cylindrical stone crown capped by a wide square stone canopy, a simple upright robed body and raised hands, surrounded by a few temple-ground trees. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "09e30db7e797979d67c0839c06ee544ec2e390551f9937e9a3aea36217f56967",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/jobs/kr-nonsan-landscape.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-nonsan-landscape.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-nonsan-landscape.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-nonsan-landscape.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v5/kr-nonsan.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "motif": "the Eunjin Mireuk standing stone Bodhisattva at Gwanchoksa Temple, with a large broad face, long earlobes, a tall cylindrical stone crown capped by a wide square stone canopy, a simple upright robed body and raised hands, surrounded by a few temple-ground trees",
+  "proposedMotif": "관촉사 은진미륵",
+  "motifSource": {
+    "title": "충남관광 공식 관광지",
+    "url": "https://tour.chungnam.go.kr/",
+    "evidence": "논산 관촉사·당진 삽교호 목록 확인"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone hand-drawn destination illustration of Nonsan, South Korea: the Eunjin Mireuk standing stone Bodhisattva at Gwanchoksa Temple, with a large broad face, long earlobes, a tall cylindrical stone crown capped by a wide square stone canopy, a simple upright robed body and raised hands, surrounded by a few temple-ground trees. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+    "transparent_background": true
+  },
+  "provenanceRule": "The --source argument must be the exact local original path returned by this job's image_gen call. Never search for a latest file.",
+  "promptRevision": "pilot-subject-qa-20261017",
+  "subjectReview": {
+    "source": "https://img.segye.com/content/image/2018/04/20/20180420517866.jpg",
+    "reviewedOn": "2026-10-17",
+    "imageInput": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "jobId": "ao-luanda-landscape",
+  "cityId": "ao-luanda",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Luanda, Angola: the pale fortress walls of Fortaleza de Sao Miguel above Luanda, with the curving seafront promenade and bay. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "91b82b342fcec0eeb858ff50d55f7736a5ae3441e8480bd7cbd2b9c48a96d5f7",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ao-luanda-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-f0f98755-2f11-479e-9e6b-70ae07b29cac.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-f0f98755-2f11-479e-9e6b-70ae07b29cac.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/ao-luanda-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "bbbf20c98327eb6de6187898c4acf4728dc98921125c9c6b32d9db86a889fe33",
+  "savedSha256": "bbbf20c98327eb6de6187898c4acf4728dc98921125c9c6b32d9db86a889fe33",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:44:45Z",
+  "toolCallId": "exec-f0f98755-2f11-479e-9e6b-70ae07b29cac",
+  "savedAt": "2026-10-17T06:47:14.205925+00:00"
+}

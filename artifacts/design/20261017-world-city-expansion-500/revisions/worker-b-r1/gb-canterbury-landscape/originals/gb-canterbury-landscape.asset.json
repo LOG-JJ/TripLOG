@@ -1,0 +1,52 @@
+{
+  "id": "gb-canterbury-landscape",
+  "cityId": "gb-canterbury",
+  "name": "캔터베리",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-canterbury-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-canterbury-landscape.json",
+  "originalSha256": "994f6e882d8458787a2ff67f434e011a979f2e88692af0d236d9cb8d7cfd883a",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gb-canterbury.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 128082,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2d42c698c394853c4771ec0952d2547c753dbdde908d6a062d752ddde54d8e72",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ar-mendoza-landscape",
+  "cityId": "ar-mendoza",
+  "name": "멘도사",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ar-mendoza-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ar-mendoza-landscape.json",
+  "originalSha256": "83d53871d23852b3a38f9d242510bbe75299956897ffe39712d02d6a51a8e317",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    2,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ar-mendoza.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 133836,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "4099c38ff7741e72ed87c2f741540cc5ff026d7c0c178fb40cb43f2770767dd1",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

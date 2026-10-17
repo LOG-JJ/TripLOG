@@ -1,0 +1,1293 @@
+{
+  "final": true,
+  "generated": 160,
+  "expected": 160,
+  "pending": [],
+  "sourceHashMatches": 160,
+  "uniqueSourceHashes": 160,
+  "newAssetBytes": 15401632,
+  "aspectWarnings": [],
+  "assets": [
+    {
+      "id": "kr-andong-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-andong.webp",
+      "bytes": 104054,
+      "sourceSha256": "0262b553fb791bb9e4f55ac32f61205570467c5d0ad7d759459561f6309b1589",
+      "assetSha256": "f3647026695b1f7d2c724d682bf6377effec377839375397d7d9a7d5e9dc2452",
+      "transparentFraction": 0.4188385416666667
+    },
+    {
+      "id": "kr-andong-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-andong-mobile.webp",
+      "bytes": 84252,
+      "sourceSha256": "cad2c30ea4862b9e59c73d6b9ca03219941c20fe4ee47d21270ea98a29003acc",
+      "assetSha256": "6da2b5c9cac40899a060bcd07ea32736bbbe70dd725bd0db6f83856bed96afc3",
+      "transparentFraction": 0.41646180555555556
+    },
+    {
+      "id": "kr-ansan-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-ansan.webp",
+      "bytes": 81148,
+      "sourceSha256": "9db4882b0288be90bdcf3f37a5905e352062d2d157474ab4d40a4318ba5cc21d",
+      "assetSha256": "4c7c94a3980a5e3f4f8bbca7224537e7bb69ffe96369033d048ace6a66470fe8",
+      "transparentFraction": 0.6285859375
+    },
+    {
+      "id": "kr-ansan-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-ansan-mobile.webp",
+      "bytes": 67542,
+      "sourceSha256": "7b7b5a80fdcefd720a6f13366d7663fd7638e860d36b896b4d773a1dd4cbdc98",
+      "assetSha256": "6a9f1e65adaf542346ed79b6de174d5fd66d525b6e4b77a8304dd3bec7708283",
+      "transparentFraction": 0.5548298611111111
+    },
+    {
+      "id": "kr-anseong-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-anseong.webp",
+      "bytes": 80094,
+      "sourceSha256": "4a474f249547265edec92f9c436431cbf2309eaf38ce5baf37e534ef16393e11",
+      "assetSha256": "d4f7c9900a75f01716eed8deb532f54473bc297848ff8a51f86eef45e8215b39",
+      "transparentFraction": 0.5098229166666667
+    },
+    {
+      "id": "kr-anseong-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-anseong-mobile.webp",
+      "bytes": 75776,
+      "sourceSha256": "2a6f1955ebfe9dcbd8a637f64fd9e830d3cd914de1b2252f6662a9e25d763225",
+      "assetSha256": "817f7ad12c27d7a71a1a4d933059b986bf3b18d8f7483c877161becca289b0f4",
+      "transparentFraction": 0.4220833333333333
+    },
+    {
+      "id": "kr-anyang-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-anyang.webp",
+      "bytes": 130846,
+      "sourceSha256": "f3d877c578a9de1817d40f3551566e44cdc3fbfbb2039ec653f85b476128f2ad",
+      "assetSha256": "a5ab096e8b71c3bd3a721d0a0bbf1724d6b26437df9b89ef614c1f76533cf15b",
+      "transparentFraction": 0.35482291666666665
+    },
+    {
+      "id": "kr-anyang-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-anyang-mobile.webp",
+      "bytes": 88610,
+      "sourceSha256": "546f29d61f9c4caf72c1183151177ef81920e403973fa7bd89d71039d0bff04d",
+      "assetSha256": "5842745a29757627e7527d04cd324cb4bc24910e146754b8233be348018eadf4",
+      "transparentFraction": 0.3779652777777778
+    },
+    {
+      "id": "kr-asan-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-asan.webp",
+      "bytes": 101654,
+      "sourceSha256": "a1ff2a2973d85946825f39af523c47699f4befa87931742fb17374a443be573f",
+      "assetSha256": "1614d837f22bb3c86f60efa4f5459288975b95f336ddd84c60dec58343a712ca",
+      "transparentFraction": 0.49311458333333336
+    },
+    {
+      "id": "kr-asan-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-asan-mobile.webp",
+      "bytes": 94206,
+      "sourceSha256": "93823886522779a3355b4a72562ec0614db58417f660aed39e8e96ff3a1e70ba",
+      "assetSha256": "47ca0edc78cf9f6cca4f75d8f032212017c1023ddb8fea0c4dd682f7544c4f99",
+      "transparentFraction": 0.37862847222222223
+    },
+    {
+      "id": "kr-boryeong-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-boryeong.webp",
+      "bytes": 77828,
+      "sourceSha256": "64bed7fbf74c020b547dd981b8a2bf44bff238e9d774526b6ed61b0a37ce8861",
+      "assetSha256": "da8f3e03efdcf586494c87ce3ed3e330b4063116b3e97026ee3350911caee5f0",
+      "transparentFraction": 0.43394791666666666
+    },
+    {
+      "id": "kr-boryeong-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-boryeong-mobile.webp",
+      "bytes": 62970,
+      "sourceSha256": "549c256dddb983ef80e5c41957d1af1fafd861dbe2bdad4351c0bc45fb3c004c",
+      "assetSha256": "e39147c629df379039291013c9a360d989c558052778c56debf669dacc343055",
+      "transparentFraction": 0.4713263888888889
+    },
+    {
+      "id": "kr-boseong-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-boseong.webp",
+      "bytes": 110218,
+      "sourceSha256": "2d9188f7198bdc39bf3a15b542201efcd0c9bb742245b77eacd3d5365ac8d4d0",
+      "assetSha256": "f60f779b7a7f4b31776b497d6430c37dc1c3d2d967587f8086d8efbee31256ec",
+      "transparentFraction": 0.4605885416666667
+    },
+    {
+      "id": "kr-boseong-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-boseong-mobile.webp",
+      "bytes": 98718,
+      "sourceSha256": "3e184b4b26abe341be68d7a39cde18c916f3f812816ef5fca06bba1b89e5ac68",
+      "assetSha256": "8619298b3518ad4bc85648266beaad9efa2c38b9761031c77a50cd42501fa27d",
+      "transparentFraction": 0.36213541666666665
+    },
+    {
+      "id": "kr-bucheon-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-bucheon.webp",
+      "bytes": 89062,
+      "sourceSha256": "825d353619002a5226629708ab8ce8ed44cff11dba3c7c8ab8d5b1cd9a2535c2",
+      "assetSha256": "d39ca9fc8113febc2ebfeef564fe8d01dcd7a0c4b424276b91bc1ed00f849c9f",
+      "transparentFraction": 0.56046875
+    },
+    {
+      "id": "kr-bucheon-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-bucheon-mobile.webp",
+      "bytes": 89008,
+      "sourceSha256": "3c120c1761a3ac1e022f8d9cccecc8ee011a80d45e956f50b2b8f2d7caa77824",
+      "assetSha256": "7618bd66651d10ef856787d31ea178f0013a77159f17e00e82829fc405a587e6",
+      "transparentFraction": 0.4122777777777778
+    },
+    {
+      "id": "kr-changwon-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-changwon.webp",
+      "bytes": 140498,
+      "sourceSha256": "f84b8ff72135b495308eab3e96d2828396409276aa83192677e508cf234e7394",
+      "assetSha256": "f0cdb7677438cce1a812b26d4891b621e0845bbd4781adb58024bd675488a5c0",
+      "transparentFraction": 0.4031432291666667
+    },
+    {
+      "id": "kr-changwon-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-changwon-mobile.webp",
+      "bytes": 117678,
+      "sourceSha256": "8ccaed8c1395da686f983045cd91856451faf7b076422b4fd4fdb47a9e0a206b",
+      "assetSha256": "b72ff78c7ce4424237bde372d3b856880905e69a690b504fcf0e365a7499c870",
+      "transparentFraction": 0.3841145833333333
+    },
+    {
+      "id": "kr-cheonan-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-cheonan.webp",
+      "bytes": 75004,
+      "sourceSha256": "4b1dc6b6a96fb9552becfac7273218c84b4bc08abbea46cd1c1d7563e772a58c",
+      "assetSha256": "6af5c15a193efc3d6f89df231de690d34a218d1a82179cceab54ed78faf1099d",
+      "transparentFraction": 0.5724348958333333
+    },
+    {
+      "id": "kr-cheonan-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-cheonan-mobile.webp",
+      "bytes": 65154,
+      "sourceSha256": "dce904f1c36628e53cfb6f92db6e4e6303cb3363532acf894496ad85a7a4defd",
+      "assetSha256": "cec014ad24515f3859a2674ba1d75a55eda55b0b2a6eec568034dad69aedf023",
+      "transparentFraction": 0.46627083333333336
+    },
+    {
+      "id": "kr-cheongju-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-cheongju.webp",
+      "bytes": 106650,
+      "sourceSha256": "07e672dbf8a4a47608d3f91c1ca076690057175808bee5a48828c71fca9bfb9d",
+      "assetSha256": "f939ec49f53346d440e6abc30a2b4d7db709075925c35c2e18edb6d8477315dd",
+      "transparentFraction": 0.43959895833333335
+    },
+    {
+      "id": "kr-cheongju-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-cheongju-mobile.webp",
+      "bytes": 97566,
+      "sourceSha256": "0a10b8f6ace67a44e9fe74fa16ae822864c13b185e99fe5b17820c1b02504bae",
+      "assetSha256": "c589dcc82000ff7686346b8862b81cbe45506a723ebd6a5f71f494afe1fccc25",
+      "transparentFraction": 0.35799305555555555
+    },
+    {
+      "id": "kr-chungju-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-chungju.webp",
+      "bytes": 106958,
+      "sourceSha256": "c42c3227f71559508285424e78aee8277dd817d02fbf808deb95af6f417fa2ea",
+      "assetSha256": "b8f51ebab74e8dbdbd13125387294c4aa3409069717ce87cf483a79e1c2e3508",
+      "transparentFraction": 0.4680859375
+    },
+    {
+      "id": "kr-chungju-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-chungju-mobile.webp",
+      "bytes": 85198,
+      "sourceSha256": "48aa0d6f44ec45225fe1fa7e958240601e5044938de278cb025206a09a85c375",
+      "assetSha256": "d1399b986609bbcdd99937ca24769d4fca8d224ac4b659132168cb9001f42467",
+      "transparentFraction": 0.42054861111111114
+    },
+    {
+      "id": "kr-daegu-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-daegu.webp",
+      "bytes": 88492,
+      "sourceSha256": "c6ba2b3613212b677734cd44cf483bc4b40245b80f68e02041f0691ce51b9990",
+      "assetSha256": "c5017aa4f96c69848dd181719a65ced47ef0c2b1386016e3c89491b367eacf6c",
+      "transparentFraction": 0.5507578125
+    },
+    {
+      "id": "kr-daegu-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-daegu-mobile.webp",
+      "bytes": 77398,
+      "sourceSha256": "b8538cb53a98fc48d1ac05e2b34e7b9c49faa8b801789eafd44a54c58c43c79a",
+      "assetSha256": "dde1b21690c5aa389e492a57703daf0966dd5f8a9439dcf523860bc62f9ff0b8",
+      "transparentFraction": 0.4136284722222222
+    },
+    {
+      "id": "kr-daejeon-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-daejeon.webp",
+      "bytes": 69522,
+      "sourceSha256": "d3b11345ad4a98582f7e169d18641a1f986f9f80268ca4daefe8b8b5e70eb9fd",
+      "assetSha256": "c7fb7fc0fad161330392f3fde25303c94a23f9df1430a6617152712130ad2160",
+      "transparentFraction": 0.65759375
+    },
+    {
+      "id": "kr-daejeon-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-daejeon-mobile.webp",
+      "bytes": 59194,
+      "sourceSha256": "8f7e77879014de6a169255b6739e1f06a491e763a71cc15881d1ad7c99718aa8",
+      "assetSha256": "424af0ab9ef13d7ecbde2389e039f9a70d1ec63c5633710d5fac5694dc5c7b0d",
+      "transparentFraction": 0.6284409722222222
+    },
+    {
+      "id": "kr-damyang-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-damyang.webp",
+      "bytes": 129490,
+      "sourceSha256": "15b90f8d410c2b08c2f1b5037128c80dc5e6686dd3c15be3dd1cbba7c1844f48",
+      "assetSha256": "bb8a0baba20ee593fb3167d5add086f61bdeb0041641d78c0f482df299c2a749",
+      "transparentFraction": 0.4515416666666667
+    },
+    {
+      "id": "kr-damyang-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-damyang-mobile.webp",
+      "bytes": 88058,
+      "sourceSha256": "ca278ef8deb05b84b4722db5577db8f340cb5e214e17d844e978047078bc0d2a",
+      "assetSha256": "4a81e7d0155172a97a1f3c4d79a1424ee3f8cc3d78700308cab4a5ade7071cac",
+      "transparentFraction": 0.4444340277777778
+    },
+    {
+      "id": "kr-dangjin-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-dangjin.webp",
+      "bytes": 115640,
+      "sourceSha256": "68066e1f78ed9f65065f594edb374107e0d12a259c1752bc2c122ddf90f46d3f",
+      "assetSha256": "d991ff75e94a21b6d1dcacadf82ebb89509af1424c6b76570cbf344200ce9740",
+      "transparentFraction": 0.5383880208333334
+    },
+    {
+      "id": "kr-dangjin-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-dangjin-mobile.webp",
+      "bytes": 85296,
+      "sourceSha256": "483f19dab5170e8e8d7660638559a2b0472377057f7566da119e11247f341e2c",
+      "assetSha256": "1b287a85f6ab200ab0666e25d239cbcfacaa5c680b22d50620484261a2c7ee94",
+      "transparentFraction": 0.5401388888888888
+    },
+    {
+      "id": "kr-danyang-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-danyang.webp",
+      "bytes": 74758,
+      "sourceSha256": "0be8d320dd0826f760ef1f19c7d646f74c6ce97cd60b61baa2d66a35fa8cfce6",
+      "assetSha256": "bb0991f2a7bba14c1fa524cc7e402e5cd4c3c6e354e73729bf1eebd12c1007f0",
+      "transparentFraction": 0.5848229166666666
+    },
+    {
+      "id": "kr-danyang-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-danyang-mobile.webp",
+      "bytes": 84244,
+      "sourceSha256": "02ffbd4ebd4e747d036d019b837c68e376373abfe41f52498282d9d35929270e",
+      "assetSha256": "444aca21bfe42e7223c953340d400fb3e42ec5672cc7b6abe7732f3c990ec7c2",
+      "transparentFraction": 0.48827777777777776
+    },
+    {
+      "id": "kr-dongducheon-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-dongducheon.webp",
+      "bytes": 117932,
+      "sourceSha256": "678c8a5defed74a59424200e16d2f377d276ab0b62f8469f57f80e1d1a5f17b5",
+      "assetSha256": "344fbfa6baf47d81fb996512fa3d3bc3021f2b2ea84bbd368e6f73235ebd4606",
+      "transparentFraction": 0.4322213541666667
+    },
+    {
+      "id": "kr-dongducheon-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-dongducheon-mobile.webp",
+      "bytes": 99442,
+      "sourceSha256": "faf6285574f644722360aee3d91abc69b9cf817319c6e4085e4f138a55030dd5",
+      "assetSha256": "db1542363e365c17a22ca5eff8710faad8e53c9d4863517ced0deac362752140",
+      "transparentFraction": 0.38928819444444446
+    },
+    {
+      "id": "kr-donghae-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-donghae.webp",
+      "bytes": 124982,
+      "sourceSha256": "51d85f9fae8b4c82bd14c8017a3040987a56cd3c7128bbe26f3d4b09dbdb8528",
+      "assetSha256": "7969a5619a419fab9bf0baf504bcbd008b3682ea54986adfab33b60eae1da51c",
+      "transparentFraction": 0.38224479166666664
+    },
+    {
+      "id": "kr-donghae-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-donghae-mobile.webp",
+      "bytes": 95696,
+      "sourceSha256": "cbfe552b8b77b7b0d591d89dbb1aa606d8c07f442acb40c6cb8e705fac0f9540",
+      "assetSha256": "71e8b256b1a61e29d3f5c1b430c4f292a09024f8e3befdd741b6ec23c1382043",
+      "transparentFraction": 0.3824340277777778
+    },
+    {
+      "id": "kr-gimcheon-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gimcheon.webp",
+      "bytes": 128754,
+      "sourceSha256": "dedfec661fc192157764ee2d4d8dc347c979e13e9b10b16b6ec21978a04f0d56",
+      "assetSha256": "c81b6861501db2b78551f1b5d625b7664a80154d577765142059217f1743c9ef",
+      "transparentFraction": 0.44342708333333336
+    },
+    {
+      "id": "kr-gimcheon-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gimcheon-mobile.webp",
+      "bytes": 101794,
+      "sourceSha256": "61e6b9bafc836f318026b738314178f01e9db24dab5921df039dd183a62f5926",
+      "assetSha256": "e6bc62ac9f072db70e269ea5bdd51fd39a0d8ec2f040d1423d4626e45dcf0177",
+      "transparentFraction": 0.38103472222222223
+    },
+    {
+      "id": "kr-gimhae-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gimhae.webp",
+      "bytes": 97820,
+      "sourceSha256": "b7a910714fb1ccdf4d53d1cfeac8d0972d21a624b8f4d5c98f689dfa4f8b6f7f",
+      "assetSha256": "5233d7cbe21dde48380e279dc4f6cc7849e2781fcf9ca44bf6bb632e030e3720",
+      "transparentFraction": 0.5065442708333333
+    },
+    {
+      "id": "kr-gimhae-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gimhae-mobile.webp",
+      "bytes": 90190,
+      "sourceSha256": "bd1b98511b62de45539089dbc3469ce209af29384d96468a91c09aa582cfe762",
+      "assetSha256": "3fceca44084955cabdc147cbd383ae0a5766d2028b2515df46dd91bead671580",
+      "transparentFraction": 0.4318020833333333
+    },
+    {
+      "id": "kr-gimje-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gimje.webp",
+      "bytes": 115092,
+      "sourceSha256": "43ccf19ad2d1ab370a8868e9d1454bc8d5f9b5da8be104272bc63a4ef812eede",
+      "assetSha256": "41a7d07e01c1105f9f44ead9bfa297db7132b2f7731a5e6012cfec016a6c6eeb",
+      "transparentFraction": 0.4254140625
+    },
+    {
+      "id": "kr-gimje-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gimje-mobile.webp",
+      "bytes": 97716,
+      "sourceSha256": "aac227d0de42ccfef0cb25cee757a3ba1f28edc17ba168cebee9793198da5d6a",
+      "assetSha256": "be06741e26ac98eea82c0d11c408f32e66b860446b309b1b25d599824a1b7d5a",
+      "transparentFraction": 0.38974305555555555
+    },
+    {
+      "id": "kr-gimpo-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gimpo.webp",
+      "bytes": 83712,
+      "sourceSha256": "309112be7d50fea5f977a962c7b2a0a82e69cea9846d5ac549d8e9d14df4a111",
+      "assetSha256": "572692c90c21fb978970e458e62522a48af8a18d9e5676dea06a542f62dbcd69",
+      "transparentFraction": 0.570046875
+    },
+    {
+      "id": "kr-gimpo-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gimpo-mobile.webp",
+      "bytes": 77846,
+      "sourceSha256": "91b5f31ea58629510e6dc4b6432fb7ce511cd714e55ab217474d244d07361bbc",
+      "assetSha256": "db8d0e534fbe43ce8d8b0f32c2ab36e94dbdd0f8ce80582ad09d705c48ae366e",
+      "transparentFraction": 0.40684375
+    },
+    {
+      "id": "kr-gongju-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gongju.webp",
+      "bytes": 101040,
+      "sourceSha256": "b37f0b08ce72603e1285e7ab86d3036b1e5861e208cd4a989dc6b556c890889b",
+      "assetSha256": "8c9beadf274e6ec1d24465ff49d4609461f5c0d5b3a9c0ac94116c923609b847",
+      "transparentFraction": 0.41203385416666666
+    },
+    {
+      "id": "kr-gongju-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gongju-mobile.webp",
+      "bytes": 88936,
+      "sourceSha256": "b8dfa5d2cfc34b159d50ddb609a0444ccb946bab6d85c06ab3e3703273cfb05c",
+      "assetSha256": "d96f86210fbe88fbaf7c8682a4ab618603cc7e3f3cb2b39582cd554f6ac5a0cb",
+      "transparentFraction": 0.4258576388888889
+    },
+    {
+      "id": "kr-goyang-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-goyang.webp",
+      "bytes": 100354,
+      "sourceSha256": "4c2b0eed710141d022070ba93b79573379af0b7036e214ddabf7bc19966f4d4c",
+      "assetSha256": "3a2c5b21cc676680e252679e9b48541b6536a246a042ebff27d31a1bc6595210",
+      "transparentFraction": 0.4761666666666667
+    },
+    {
+      "id": "kr-goyang-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-goyang-mobile.webp",
+      "bytes": 97698,
+      "sourceSha256": "4765698ec0b8fefec886545e6cdb8bef64e4af574a06d056fcfbf5d613183334",
+      "assetSha256": "9550a1d5678842cc739e44ea71933c77b7a2cf8d356c71d6f51129f529c64443",
+      "transparentFraction": 0.38190972222222225
+    },
+    {
+      "id": "kr-gumi-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gumi.webp",
+      "bytes": 104940,
+      "sourceSha256": "f1adee563ce8c309ae366788d1870e77a4360dae4816e1d5cde16527a940d95c",
+      "assetSha256": "a44c15cd3779bc989497186edc65d7c2f32e203fb42493d35aa16b98a988e1fa",
+      "transparentFraction": 0.4803072916666667
+    },
+    {
+      "id": "kr-gumi-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gumi-mobile.webp",
+      "bytes": 97326,
+      "sourceSha256": "d19b42b9317a78ef81ae7c195c79b56076b4d8850cadc05f7f98da0f57db9549",
+      "assetSha256": "17201065954f0504b99d9b34ed8460c726ada3c74a01b67e9e7b02360046114a",
+      "transparentFraction": 0.3500520833333333
+    },
+    {
+      "id": "kr-gunpo-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gunpo.webp",
+      "bytes": 101488,
+      "sourceSha256": "7ff302eaf51659bb09718570aaa3e1629b4d4346f92e043be83dcaf65af892c0",
+      "assetSha256": "944b58682d23aeda182123bc5b7b4fb6d76d1fe0be28833474b8444d173574bb",
+      "transparentFraction": 0.4931041666666667
+    },
+    {
+      "id": "kr-gunpo-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gunpo-mobile.webp",
+      "bytes": 89334,
+      "sourceSha256": "c4e9aed63cf394986fc36f17293c50eed4e5aeb9e7cd233cb90a6856227712d9",
+      "assetSha256": "929b4470c2a2c7d2f60d1b77c5e106f6dd02fcf85ac631521906a0e20736cd69",
+      "transparentFraction": 0.42989930555555556
+    },
+    {
+      "id": "kr-gunsan-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gunsan.webp",
+      "bytes": 92680,
+      "sourceSha256": "4b1bba1d11e6a03b43ecaafe31238e3863dcfecf8e10dce7e2c5bf0ce4cba8d5",
+      "assetSha256": "0c960101f120edbdfc1c3d99488b967ea4b72542a3fcaf26f7412afc50ab339b",
+      "transparentFraction": 0.5116875
+    },
+    {
+      "id": "kr-gunsan-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gunsan-mobile.webp",
+      "bytes": 87966,
+      "sourceSha256": "2b5e5a8c90cb2e09a31d390ceb29e7296cdba7130fe5224852c2d77066bebe86",
+      "assetSha256": "64f48d3a8ce8b58105c8e2b5d700c04ccd476f6692dba05d2aacb20013233ed0",
+      "transparentFraction": 0.40963194444444445
+    },
+    {
+      "id": "kr-guri-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-guri.webp",
+      "bytes": 116288,
+      "sourceSha256": "a00c11f38500239264d1fe308b0cbc8d63ff0e6a70ac7d176ca6f6375f37f45b",
+      "assetSha256": "22afee9c6fbbda688540973bf0e4edbb9e1020749ed5f6133453c9a4042d6c38",
+      "transparentFraction": 0.503515625
+    },
+    {
+      "id": "kr-guri-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-guri-mobile.webp",
+      "bytes": 105136,
+      "sourceSha256": "55bb52c9e7c99592cfa40b4357ca7ecf82deea3fe92b0b06ab8af4b97472f5b3",
+      "assetSha256": "9f1a847e12007d1d45096b64dd66c8de3f7f9b94c2ce71333079daa4e40feb91",
+      "transparentFraction": 0.4489270833333333
+    },
+    {
+      "id": "kr-gwacheon-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwacheon.webp",
+      "bytes": 84046,
+      "sourceSha256": "a297cad9855db6413604600e161076ac97907845351f80c0e4cf25a7224d0291",
+      "assetSha256": "19f529ac3278aaaee46a72f74865f178e89f77bd729ebe8b603e225f7514f009",
+      "transparentFraction": 0.5940651041666667
+    },
+    {
+      "id": "kr-gwacheon-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwacheon-mobile.webp",
+      "bytes": 77130,
+      "sourceSha256": "c8ffed444ccec1eec24446b3694db6af858ac75996f5ec10f6ec198f9c44f520",
+      "assetSha256": "8abcbb6efcf34432f303dd5d36a25381023215dcedd137d7c32acd54809b9097",
+      "transparentFraction": 0.46942708333333333
+    },
+    {
+      "id": "kr-gwangju-gyeonggi-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi.webp",
+      "bytes": 102354,
+      "sourceSha256": "3c13cb279f7bd6f033edea25c84992b259cf3a91e813c51ebb05be97919ee371",
+      "assetSha256": "7ac6d6669b83fdaef63282832b81c0dd2f88db40547b4e64a7387499662942cf",
+      "transparentFraction": 0.4072864583333333
+    },
+    {
+      "id": "kr-gwangju-gyeonggi-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwangju-gyeonggi-mobile.webp",
+      "bytes": 87686,
+      "sourceSha256": "c3c0e7db69c327d664bb7f376b6ce7e33b9cb100c5bc9e92e68d76b6c2a2f102",
+      "assetSha256": "2e1aeae51677ac96c7f40b62e8aa0df13d53506d6e3ff8665ec890e84bb3f5fc",
+      "transparentFraction": 0.4403229166666667
+    },
+    {
+      "id": "kr-gwangju-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwangju.webp",
+      "bytes": 111078,
+      "sourceSha256": "8117aea2e2ac74c03c1052365c8c9f0fa2fae4e6a9f93612fe5e82ab093d6454",
+      "assetSha256": "8b09398938ea2f0f9d0149bf32d261a5e403fe3382101d4d1c38952f125c195a",
+      "transparentFraction": 0.4818854166666667
+    },
+    {
+      "id": "kr-gwangju-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwangju-mobile.webp",
+      "bytes": 98936,
+      "sourceSha256": "c71509be5d6e070fb0bc4a4e8e54301b2f871bd4166c6b7a20fc80387b53426b",
+      "assetSha256": "1c6e728d554ddb4f363ae92ec185991feda00523699fd7bdf86f1f2dbbf94124",
+      "transparentFraction": 0.395625
+    },
+    {
+      "id": "kr-gwangmyeong-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwangmyeong.webp",
+      "bytes": 83802,
+      "sourceSha256": "c6430c03282148d0a1e592706b09c70804aae04221192d43641ccb43276eecf4",
+      "assetSha256": "27ec527cbb80cc4663c98bbce9cd3079df3049a3013a320c67b06a1d0bc8eddd",
+      "transparentFraction": 0.5129479166666666
+    },
+    {
+      "id": "kr-gwangmyeong-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwangmyeong-mobile.webp",
+      "bytes": 94170,
+      "sourceSha256": "3e0fe552412e2bef4bef9d47ca52c98567bda168a76bbbc326225a1d7e26d527",
+      "assetSha256": "643ed518ea72f28e804d71f4cfbef1427b9b82c5d0592f89f972ec5afa65c1da",
+      "transparentFraction": 0.3904722222222222
+    },
+    {
+      "id": "kr-gwangyang-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwangyang.webp",
+      "bytes": 143398,
+      "sourceSha256": "2dd6ca87c10ee6490f4ce187a3942fcd7be52b98678b8ebc180fe4f538edc951",
+      "assetSha256": "f6c3140d1258237bbe4b205b2558b41cfc5f59e4c57e1a60cd5113f0b3136e2a",
+      "transparentFraction": 0.4342421875
+    },
+    {
+      "id": "kr-gwangyang-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gwangyang-mobile.webp",
+      "bytes": 110560,
+      "sourceSha256": "a4c99be97dc6d6dee541d74b20ba219e3f6ac7e592dfe9406ac47c03154917c4",
+      "assetSha256": "48f2018561026b6f0b9c6c86f35bf83dbd8a4bdd11e25fc5aa74ffa7b70046fb",
+      "transparentFraction": 0.3990208333333333
+    },
+    {
+      "id": "kr-gyeongsan-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gyeongsan.webp",
+      "bytes": 111748,
+      "sourceSha256": "7b25e6df8451f651563c8f809738ad2e53f2cfcecbbdcc8741f20e1a18ff4381",
+      "assetSha256": "f24ac279fba3e666e31ac0667f903093e058983e6ae496f4ba38719a0efcfcae",
+      "transparentFraction": 0.430296875
+    },
+    {
+      "id": "kr-gyeongsan-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gyeongsan-mobile.webp",
+      "bytes": 103304,
+      "sourceSha256": "328b1fad3fe3e9419d858c4e73e3cbcf74938a1bae7bc22c40be95daac899ec6",
+      "assetSha256": "a5ba014d42db321d5d43fa9918023d9ff06839eda2a240626504438f05fecc70",
+      "transparentFraction": 0.3222951388888889
+    },
+    {
+      "id": "kr-gyeryong-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gyeryong.webp",
+      "bytes": 109280,
+      "sourceSha256": "7481d1a8a8de5410262bbe0164f23f8f988a895ca0cdbfda4adb29666ed0fb92",
+      "assetSha256": "aa6dd0766368bf475deba997b8a6be69a3fac237f567b92fe32a363dab88767b",
+      "transparentFraction": 0.4936979166666667
+    },
+    {
+      "id": "kr-gyeryong-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-gyeryong-mobile.webp",
+      "bytes": 86186,
+      "sourceSha256": "6b71a24df80abc500610ee1d5618b4abe03cad9aacc78d86e96f3a27bb1bd5d6",
+      "assetSha256": "17b2a80f6ef00f49fbcc36d5a005716f9b7c032b2bf7bf48745cf96bbe9c27e0",
+      "transparentFraction": 0.41778125
+    },
+    {
+      "id": "kr-hanam-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-hanam.webp",
+      "bytes": 62422,
+      "sourceSha256": "15f7ee3e8b6199f3d8b793f8adf5a43f0880fffccf86646ac2c68395c216d34f",
+      "assetSha256": "a4283b1d9e1b97a0de34958214af31ddcebdfd3d179e1793797bd12d04c835d2",
+      "transparentFraction": 0.6663854166666666
+    },
+    {
+      "id": "kr-hanam-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-hanam-mobile.webp",
+      "bytes": 70902,
+      "sourceSha256": "b80a9daed788798561dc990bd4da69748cd2c2ab3e4f24b788b0a16e5c57bc1a",
+      "assetSha256": "03002b459a9656e62dbe12755779772808387f23bb0707dfab9f6d7f17a320b8",
+      "transparentFraction": 0.5596423611111111
+    },
+    {
+      "id": "kr-hwaseong-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-hwaseong.webp",
+      "bytes": 82430,
+      "sourceSha256": "d0df2559434b6a0939ad0d72fc1d812adab642dc84e0f6fbb6b8dc1dd556d8a9",
+      "assetSha256": "d0251773716cc0037526d200bae0a592496ff07c66353af0dda63f509144a42c",
+      "transparentFraction": 0.5965052083333333
+    },
+    {
+      "id": "kr-hwaseong-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-hwaseong-mobile.webp",
+      "bytes": 70646,
+      "sourceSha256": "fab2607985e695336c73f2a6dee6400108b6f7783f8157637fac9b1edccfc82a",
+      "assetSha256": "f66cde8e8bba84b14596a61620cafb7e030823710174d59425980f507585d61d",
+      "transparentFraction": 0.5208020833333333
+    },
+    {
+      "id": "kr-icheon-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-icheon.webp",
+      "bytes": 118670,
+      "sourceSha256": "a39ce1104f601a963c5d8c45f23feda5aa6dec90c573d421d7cb1c50d59abd31",
+      "assetSha256": "bc042270986d68482dcea3e1dd14bb106178e6bc91ee0c4a47321bae990c4a5b",
+      "transparentFraction": 0.40282291666666664
+    },
+    {
+      "id": "kr-icheon-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-icheon-mobile.webp",
+      "bytes": 93628,
+      "sourceSha256": "0a2bdd6e5b32a386b0c04a4d08c3eade953535125f03be960f43114c3e362587",
+      "assetSha256": "20caa173e72d27d53e9f053a07ff71e4cb5dadb0c6416169d9f52949f0709ac8",
+      "transparentFraction": 0.4121736111111111
+    },
+    {
+      "id": "kr-iksan-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-iksan.webp",
+      "bytes": 81380,
+      "sourceSha256": "d0363a7eb6cba70a9c58323a58f84da93c07abc382be3f1bd5c8759043f28a85",
+      "assetSha256": "6e8a4ce2df374953414bd17734c8cea705485214f444b1064c5d31c82991f24f",
+      "transparentFraction": 0.5233255208333333
+    },
+    {
+      "id": "kr-iksan-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-iksan-mobile.webp",
+      "bytes": 63292,
+      "sourceSha256": "e98bcfe68e3cc5f6895d4f4177848f027cd353bdb0f1788d6f9c1915cc67d6c3",
+      "assetSha256": "8f25264bfc8f19688747d3c60e38480aeba98c308c99de44aaac456695bd58f3",
+      "transparentFraction": 0.5046666666666667
+    },
+    {
+      "id": "kr-incheon-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-incheon.webp",
+      "bytes": 96172,
+      "sourceSha256": "14e31b8b4ec15ffc78654be35907b6f3fd3c755b48b5d76f443b4de4a22b06b9",
+      "assetSha256": "2fa1675a2552e24eb6339188160e372699f9147dd80c092976ec59db335463c4",
+      "transparentFraction": 0.51240625
+    },
+    {
+      "id": "kr-incheon-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-incheon-mobile.webp",
+      "bytes": 78342,
+      "sourceSha256": "fc24dc23c21d6ffa69762e635beb04ae44f0fd46004f030f9dd24e3b0f806222",
+      "assetSha256": "713ddace5b5a80a40901f1e14f8f96312473a6fff29772c129788ed02d3bb4c0",
+      "transparentFraction": 0.4112048611111111
+    },
+    {
+      "id": "kr-jecheon-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jecheon.webp",
+      "bytes": 86342,
+      "sourceSha256": "9d858b6fee62a6e40d3d1ced3426d6141fb2016cc78d656a89df45f1721cfd76",
+      "assetSha256": "4690ddf7f84a04dc679dec49f612f1042f99b9a6a463ab6502bd53e2b7f76d8e",
+      "transparentFraction": 0.5364270833333333
+    },
+    {
+      "id": "kr-jecheon-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jecheon-mobile.webp",
+      "bytes": 101574,
+      "sourceSha256": "6c2e77d92fd790d8fed0ca69fa82d8b709d1aff3f4f35ccb222adb114f396975",
+      "assetSha256": "be7717da315ac6bb7afe347c1a6929ec03a8f1340cb0400c0ed6e59aeadcb263",
+      "transparentFraction": 0.3512326388888889
+    },
+    {
+      "id": "kr-jeju-city-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jeju-city.webp",
+      "bytes": 91006,
+      "sourceSha256": "1b9e6aa4e796f85238dc13f3f1c32b44b7251bce4202483906f6186462b0d6f3",
+      "assetSha256": "f431781ab3175f4e4a468a54959144ddd678f12b671f0502c325994887caa102",
+      "transparentFraction": 0.5955911458333333
+    },
+    {
+      "id": "kr-jeju-city-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jeju-city-mobile.webp",
+      "bytes": 109782,
+      "sourceSha256": "d53d63aca8ea38650acc9b7baa87c0a4f4b63663ae59bd23638f5c0f60a20318",
+      "assetSha256": "764ae4229c4b066bbc16e2227a434ff6b819c3bc43d969c01b80c1f395eaa04e",
+      "transparentFraction": 0.42826041666666664
+    },
+    {
+      "id": "kr-jeongeup-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jeongeup.webp",
+      "bytes": 120232,
+      "sourceSha256": "bd1d78b3516939cd1b5d733a6a498aca7be623f4b6b3836087e25c3c2d46d509",
+      "assetSha256": "b580e27fbdca05ee682ecce31f00e2008084099a8117c8c1210d07f3b74fdf92",
+      "transparentFraction": 0.45212239583333336
+    },
+    {
+      "id": "kr-jeongeup-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jeongeup-mobile.webp",
+      "bytes": 97068,
+      "sourceSha256": "2390bd48459cdc31ed4dc08c3b4829c82d90d3f3ab7ef7db31d983e5590bdb03",
+      "assetSha256": "eb9550af1cd538f1f2deb88fd53a5cbef5c8e971dc78a59b9583b52b9391639f",
+      "transparentFraction": 0.28460069444444447
+    },
+    {
+      "id": "kr-jeonnam-gwangju-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju.webp",
+      "bytes": 127700,
+      "sourceSha256": "87ec30fd535f5aaebe1bea69d5b0847514023397810b74ed20587cf2015e0ccc",
+      "assetSha256": "b3a4334c8e3fc30bb7fdaf63ee45ee05153e29c1571c570c90a9fa22655ed3a1",
+      "transparentFraction": 0.4124791666666667
+    },
+    {
+      "id": "kr-jeonnam-gwangju-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju-mobile.webp",
+      "bytes": 113898,
+      "sourceSha256": "8cf0924912193ed0b9d5f9c1d99cd6dfa8006a9fbf8b59cfffbda6c5181c4467",
+      "assetSha256": "a2d3668cff61cef3aeea35e64181e90a8933ba835532440582be93e27d520831",
+      "transparentFraction": 0.3086388888888889
+    },
+    {
+      "id": "kr-jinju-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jinju.webp",
+      "bytes": 103934,
+      "sourceSha256": "21ead1584e2003ab4fa7deeacaf4bbc9710b7381a47e6472d24231b8464b62bd",
+      "assetSha256": "998c8c7d856d076d3d124ca4f619794b8004da14e23f5bf5f7c8db0cccc3c5ef",
+      "transparentFraction": 0.42571614583333334
+    },
+    {
+      "id": "kr-jinju-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-jinju-mobile.webp",
+      "bytes": 88258,
+      "sourceSha256": "b4487ed25f131908557a3adb8b26ffaf1dbffe2da9043634b1cc0aa57261cbb9",
+      "assetSha256": "5ee402918fd707faedd89a94161af7c1ba711ca05af19cfa36c7bb7a4cfcd299",
+      "transparentFraction": 0.37372916666666667
+    },
+    {
+      "id": "kr-miryang-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-miryang.webp",
+      "bytes": 123536,
+      "sourceSha256": "bac4e7b1086a385a46bd219507a4f5c528d46af9387824ef93195292327a7ea1",
+      "assetSha256": "4a7096edc76a69f4ef56bd07e88607684d212584d8d98072c3b82535a300eec4",
+      "transparentFraction": 0.438234375
+    },
+    {
+      "id": "kr-miryang-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-miryang-mobile.webp",
+      "bytes": 82572,
+      "sourceSha256": "8e89f97f963d97d14540a0f13e72930f480ba1172cd04dd613447f2953b83f6b",
+      "assetSha256": "80bc0e8b4634df5cd31dd20898bdfd1f1b224cb221fe17ec162dd074721eb97b",
+      "transparentFraction": 0.3987013888888889
+    },
+    {
+      "id": "kr-mokpo-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-mokpo.webp",
+      "bytes": 88922,
+      "sourceSha256": "158a55b76bf4616652d7959062fa5e212dd4874b9b87c30e5793772e9bee1495",
+      "assetSha256": "5d19437371fa08513a33bd167f285260fc38cf3dba9550b6de10d79c887aba0f",
+      "transparentFraction": 0.5206302083333333
+    },
+    {
+      "id": "kr-mokpo-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-mokpo-mobile.webp",
+      "bytes": 85250,
+      "sourceSha256": "976bc91721c40e081a6bca173606c5de9803547d6a7fba2e462f63c4be4f71f8",
+      "assetSha256": "2f33835b5086fe3ec1468e484c444ec4ecc774be13d412f9e17ba8fe1966d880",
+      "transparentFraction": 0.4281875
+    },
+    {
+      "id": "kr-mungyeong-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-mungyeong.webp",
+      "bytes": 96974,
+      "sourceSha256": "64a889a319c8f712201ae4ab98d18131e332b9834aec37843c8844e077d9831f",
+      "assetSha256": "3db61b56f9b967d4947f5160b41ebcda77df98bce7ad8b3050a34e3a922acc98",
+      "transparentFraction": 0.44693229166666665
+    },
+    {
+      "id": "kr-mungyeong-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-mungyeong-mobile.webp",
+      "bytes": 110782,
+      "sourceSha256": "e515ea5c209a374e5845d9908f539ffb0dfe9a85c961e6781cdfaa7accd71a39",
+      "assetSha256": "3b48cb4303ca266326819fd97641f28885510639690e1557674552be63e94116",
+      "transparentFraction": 0.34798263888888886
+    },
+    {
+      "id": "kr-naju-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-naju.webp",
+      "bytes": 118726,
+      "sourceSha256": "78594d949b7b7131fc0c039fc5ad1b02a81b2a3e79ef614e4097753480f21685",
+      "assetSha256": "2f9ba909ab88028eb0767cc531f43632c14a1ec048f1aaf1ac399192b0a56917",
+      "transparentFraction": 0.385578125
+    },
+    {
+      "id": "kr-naju-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-naju-mobile.webp",
+      "bytes": 81448,
+      "sourceSha256": "bdd5b2cc6c218bb94612faf2ac7cfbc4d4ddf8c5ddbad895d52c24c567c368ed",
+      "assetSha256": "f3c840cb93de365df57f7843345bee5ddd4149bbfbc5d46c9c756f9cb610b8b0",
+      "transparentFraction": 0.4851701388888889
+    },
+    {
+      "id": "kr-namwon-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-namwon.webp",
+      "bytes": 115690,
+      "sourceSha256": "7b5e031b9c9c407bdebab52dabdc15d4064474c3418a54bdc9689168f08c5f9c",
+      "assetSha256": "5c31cdf3459588517ebc8c2bb41f9868fc7a52a2e28ae253d482cc9c16013609",
+      "transparentFraction": 0.3766328125
+    },
+    {
+      "id": "kr-namwon-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-namwon-mobile.webp",
+      "bytes": 84760,
+      "sourceSha256": "8a14f11e25c31ae6df347f4f392daca1031727cebe07e6962846e74f45f409cc",
+      "assetSha256": "a5f65b8323933ef47e3dcc7d7abb25b4e68c6c2faa785cb88a066bdaa7297c97",
+      "transparentFraction": 0.3924548611111111
+    },
+    {
+      "id": "kr-namyangju-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-namyangju.webp",
+      "bytes": 109630,
+      "sourceSha256": "ac929e2dc045b73f16ef6b4a845c078d031286083ca343854343d2bd7f42bef0",
+      "assetSha256": "e9724461ecea7f8308847c46e84efd8f07a0ad4125655abd51a00e6cd56fd7ca",
+      "transparentFraction": 0.4561380208333333
+    },
+    {
+      "id": "kr-namyangju-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-namyangju-mobile.webp",
+      "bytes": 88422,
+      "sourceSha256": "c843927a735a4ff5562614cebb5a9158530234c7c3a51aa88b8c4ddd2fec5586",
+      "assetSha256": "1c42a2aa9495f24cfdc04833ef1618773b21059b9faf83ed6ba1d552ed8626c3",
+      "transparentFraction": 0.4421319444444444
+    },
+    {
+      "id": "kr-nonsan-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-nonsan.webp",
+      "bytes": 100208,
+      "sourceSha256": "f1d694e6c758897bc1e34e68223c30cd0636687bceea54e1e6801d772337749b",
+      "assetSha256": "94d68f31ce40d1d753dd37507dbbba729c18b839d68b6951f452d2669fd427ec",
+      "transparentFraction": 0.509921875
+    },
+    {
+      "id": "kr-nonsan-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-nonsan-mobile.webp",
+      "bytes": 103308,
+      "sourceSha256": "06e83c6359765a23b1fbd94a64ed7b06777291b2395f054899cf5789c325dafe",
+      "assetSha256": "0c3d5619fd2a932931a43553b5176ed1b2585efe7a144a198a4b4642f2c04ff0",
+      "transparentFraction": 0.3609201388888889
+    },
+    {
+      "id": "kr-osan-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-osan.webp",
+      "bytes": 102270,
+      "sourceSha256": "6daf28644c2e68d8eeef64211d544824552e5913662b255e2b74ee25cb02fcc6",
+      "assetSha256": "c24001820cb00362fb27d7af5a3930ed6eb4cbac6252a85d28fed5e764677f13",
+      "transparentFraction": 0.4854453125
+    },
+    {
+      "id": "kr-osan-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-osan-mobile.webp",
+      "bytes": 87410,
+      "sourceSha256": "3bae1d5e0df1a0d1ee17b899b384a7f869ded0980d3f6fb14bdd7aafbacbb562",
+      "assetSha256": "0d32d26d67b999fb49feecb31b991cd8af44c23a4a683336d57ff076ce0f3857",
+      "transparentFraction": 0.4413229166666667
+    },
+    {
+      "id": "kr-paju-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-paju.webp",
+      "bytes": 118584,
+      "sourceSha256": "1d5a563075799441d0f5c0da274c74a2fb74a062924bb8dc20e81c61a6e96625",
+      "assetSha256": "12ea078ebc507a71f02eb6d9a3ffd24c1b6028f70e1ded346bfc080d708d7992",
+      "transparentFraction": 0.4500104166666667
+    },
+    {
+      "id": "kr-paju-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-paju-mobile.webp",
+      "bytes": 92112,
+      "sourceSha256": "04205c5093cdf7ab96c29ad8937b40c2a36d848e8ab2117abd4578361e6a271a",
+      "assetSha256": "034e4210f37716b8e0e5581bce29eb8d0412eabbefbe26602e9355109a9a85bb",
+      "transparentFraction": 0.4174375
+    },
+    {
+      "id": "kr-pocheon-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-pocheon.webp",
+      "bytes": 122706,
+      "sourceSha256": "60c9a2b9c8db9ff3a9718c7a71c5dc45b2eb3015a50ae8a2a31502e362975d47",
+      "assetSha256": "05fbc46e56695bfc3ed3d423b0f1431e3945231633414db91df263d5b9d0497a",
+      "transparentFraction": 0.36713541666666666
+    },
+    {
+      "id": "kr-pocheon-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-pocheon-mobile.webp",
+      "bytes": 105868,
+      "sourceSha256": "8b6115ece28b76e33717d6c452b2fe7e34597f1f44de7dcf619e2dfac1e6cdfe",
+      "assetSha256": "e7bb40d1b5e5ec26fafc98164936ae2f5a1fa62a47d5a3c9f9e75811f7da52fc",
+      "transparentFraction": 0.3371909722222222
+    },
+    {
+      "id": "kr-pohang-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-pohang.webp",
+      "bytes": 81384,
+      "sourceSha256": "283832df2c12ed434cf34d56126e79f756a7c3e49c18ac4be4368ddf88cc51b8",
+      "assetSha256": "a1acf55071ccd9787b2d3e8592769561a5963637e4ed99626701d80f815c9a52",
+      "transparentFraction": 0.5818489583333334
+    },
+    {
+      "id": "kr-pohang-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-pohang-mobile.webp",
+      "bytes": 85482,
+      "sourceSha256": "18a6f3e02029d738c9bf226fffe402f881050a03e27aa847eaa3272a0a0333ff",
+      "assetSha256": "79441f6a9b8a660338f2c5f0b5f2ce463d0ba54918e1316eacd4a776fe283be1",
+      "transparentFraction": 0.43507986111111113
+    },
+    {
+      "id": "kr-pyeongchang-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-pyeongchang.webp",
+      "bytes": 73776,
+      "sourceSha256": "871a7c851ce538444e9e5311c94c738e21a268099cd8fd1bd6e8742c6bea8d23",
+      "assetSha256": "8356153ac6dee402bb3f297766227d8939e6edeb80dbbaf1d487c790c131e16e",
+      "transparentFraction": 0.5474947916666667
+    },
+    {
+      "id": "kr-pyeongchang-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-pyeongchang-mobile.webp",
+      "bytes": 67148,
+      "sourceSha256": "b9101a360ee3e322060e9a0901a3d4d0242363524deaa734042bb2f2c57c73d9",
+      "assetSha256": "3d0589f23f4137b0d141c50825739774cd65ef9c03f2e810356e2cae01ba7998",
+      "transparentFraction": 0.43565625
+    },
+    {
+      "id": "kr-pyeongtaek-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-pyeongtaek.webp",
+      "bytes": 109904,
+      "sourceSha256": "5c0e7730c097e53a4dddf992389a958c7f4ac322582aff41e2d7df28679e8e57",
+      "assetSha256": "5168bd2fbf647a00efcaf93f769ba4385b5883a2eaa626c2a6462807ff8deebb",
+      "transparentFraction": 0.6330677083333334
+    },
+    {
+      "id": "kr-pyeongtaek-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-pyeongtaek-mobile.webp",
+      "bytes": 77394,
+      "sourceSha256": "5eeb5658dac324b4f8d0263053a62ae065eedebbf954accb5b71681592a43d8f",
+      "assetSha256": "f2b05460ce88a4e3fc13c52bd12653f4cc26458f81fcdbb764c56ee992f683b7",
+      "transparentFraction": 0.5138263888888889
+    },
+    {
+      "id": "kr-sacheon-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-sacheon.webp",
+      "bytes": 94176,
+      "sourceSha256": "6781a626aa05aa17921601ca08bacdca158851b2c6a3bbda3c4480f681309092",
+      "assetSha256": "3f894dfc8ccbbc6205f95cf7726db7e145f00d815896a51cde03b35394aadc3c",
+      "transparentFraction": 0.589140625
+    },
+    {
+      "id": "kr-sacheon-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-sacheon-mobile.webp",
+      "bytes": 72876,
+      "sourceSha256": "1a0c3d4c8db7307a82870bc7a250aca5cc2f0d9e72b5b0e3afb9152799cf7e4b",
+      "assetSha256": "45bff089df0efec1240ba4aa42324e7c614b855a7cfe45e40de83333223607b8",
+      "transparentFraction": 0.5670069444444444
+    },
+    {
+      "id": "kr-samcheok-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-samcheok.webp",
+      "bytes": 115808,
+      "sourceSha256": "10b72cb586c755d115794d18325b7b5e9e55f36ab3424e0d498f42a71a2a3284",
+      "assetSha256": "f70d5414c57119256e00b32a499a2a0c2f98b57bbf15618ec2ed1802a811a96a",
+      "transparentFraction": 0.48377604166666666
+    },
+    {
+      "id": "kr-samcheok-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-samcheok-mobile.webp",
+      "bytes": 91994,
+      "sourceSha256": "65b71ebc90f4fec116a40bd469be5ff5d1477c4f5497373721976e32cbcf7172",
+      "assetSha256": "384a035766bb263bcceff2da745b405a93e4c1650948fd51e54b30da80f072a0",
+      "transparentFraction": 0.4610138888888889
+    },
+    {
+      "id": "kr-sangju-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-sangju.webp",
+      "bytes": 114642,
+      "sourceSha256": "50b1ef08fe97820f092fa48c74c56698e9ea0d436119015f9fff5831bf9e391d",
+      "assetSha256": "0df4f3a78a030b1b32cbb57cb85a0c503d5bda956779dee57817c90f0c302846",
+      "transparentFraction": 0.44973958333333336
+    },
+    {
+      "id": "kr-sangju-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-sangju-mobile.webp",
+      "bytes": 103500,
+      "sourceSha256": "41bea1e4daa1ce9c2b3c0c5f7e9bca6d18e20d5519a98301e29bb0eb89c6670d",
+      "assetSha256": "4ec777b36b1ee934cb09b0fe4734c05e42674affc6d5d1c1373020e4a727041b",
+      "transparentFraction": 0.34809375
+    },
+    {
+      "id": "kr-sejong-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-sejong.webp",
+      "bytes": 95980,
+      "sourceSha256": "b32d217debcdca4c20a92f946969032dc2b50930d56ca5c3846c4c953719e41e",
+      "assetSha256": "9b2f56f1d743ae26bafa013b64db344935cc9d7bd71b70e97e5e8b72ecdf9126",
+      "transparentFraction": 0.5770859375
+    },
+    {
+      "id": "kr-sejong-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-sejong-mobile.webp",
+      "bytes": 63074,
+      "sourceSha256": "609a9f89db58c303533562d15b08d6d63088d54dff692895d2fd51838f980ded",
+      "assetSha256": "db39209dd49cdfd9c08d0d9749cb88f01066a7b7f1004c74488dd83d49a14890",
+      "transparentFraction": 0.5968958333333333
+    },
+    {
+      "id": "kr-seogwipo-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-seogwipo.webp",
+      "bytes": 105584,
+      "sourceSha256": "da870b1dc060bd9fa5d90c95ccad6136c740e18ef2c6917e4f1e54b1a7a49bdd",
+      "assetSha256": "d9efdf48ef411c471ae52b767864cb4f5a5e170c15a35e577eb1068a6b29cb4c",
+      "transparentFraction": 0.409
+    },
+    {
+      "id": "kr-seogwipo-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-seogwipo-mobile.webp",
+      "bytes": 89652,
+      "sourceSha256": "f8c94cd1d2ff05cb6afff10520d97c0d7235ef267ec854323ec9adee2bf49a74",
+      "assetSha256": "822dca06757daaf843bd9297b2bf6ff199226f657b105dc9530573cd0fb63fa3",
+      "transparentFraction": 0.40900694444444446
+    },
+    {
+      "id": "kr-seongnam-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-seongnam.webp",
+      "bytes": 105512,
+      "sourceSha256": "86b93e4a016cc21a5ba2e139a1754871d3d66e23a091f17413d1a3161a422667",
+      "assetSha256": "38f2f1c857033c43bd9828439aa8caddea3315c336b1c1d6147c583d39fd2629",
+      "transparentFraction": 0.4610286458333333
+    },
+    {
+      "id": "kr-seongnam-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-seongnam-mobile.webp",
+      "bytes": 78450,
+      "sourceSha256": "eae337eb4addaa8f22a89f5fe466226adfb28e415ef4ce548ffed89bd2a44c22",
+      "assetSha256": "6f6e9752da7a028132d27b23eaedac0548a555508face9418baf8f14894d2de2",
+      "transparentFraction": 0.47222569444444445
+    },
+    {
+      "id": "kr-seosan-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-seosan.webp",
+      "bytes": 94476,
+      "sourceSha256": "4b4b8fda89882324acc6b3a22739caf71bdf9f7a11e277c2e018c80a340bba8a",
+      "assetSha256": "af4d463c4145b4e5e9870acbea8678f1b0640603fbdf6daf68d53369e5960d4d",
+      "transparentFraction": 0.4799921875
+    },
+    {
+      "id": "kr-seosan-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-seosan-mobile.webp",
+      "bytes": 94204,
+      "sourceSha256": "65b5685fa4499296435f7b07a8bd5f2e151d413f8e05c421cf6583860b18c9e0",
+      "assetSha256": "952c74df649f9b8ea457f1852c6d67d77b6d3cac795551093734f27cb5491657",
+      "transparentFraction": 0.40877430555555555
+    },
+    {
+      "id": "kr-siheung-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-siheung.webp",
+      "bytes": 65604,
+      "sourceSha256": "086727979eb37b73801f32d6524b564e4f2a92182fe82adf9c29e37602bb0f55",
+      "assetSha256": "d951afba4890a4cc5607d592cb5b066fbea728d8674b3524e4e83afa9bd7125b",
+      "transparentFraction": 0.5845234375
+    },
+    {
+      "id": "kr-siheung-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-siheung-mobile.webp",
+      "bytes": 64004,
+      "sourceSha256": "79e8c3524584d359d8a9f2477b109d641b39287c54e574d807c573f67c9894ef",
+      "assetSha256": "42afe4a4bd015cb4fa77fbb1993433e1bc19bb57a7de90582bf64ec93f90f298",
+      "transparentFraction": 0.5146006944444445
+    },
+    {
+      "id": "kr-suwon-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-suwon.webp",
+      "bytes": 89702,
+      "sourceSha256": "e254afc4ff0eade8570443b2bec6889bfafc9743a3503b1e5d5aa3b3668b666a",
+      "assetSha256": "0f1fcd461082ab6dd8085a96297bdfc41758a10e59b45707fc43babe9ef0639b",
+      "transparentFraction": 0.4786692708333333
+    },
+    {
+      "id": "kr-suwon-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-suwon-mobile.webp",
+      "bytes": 73338,
+      "sourceSha256": "54628df433d3b0b61d0ae08853f7c1ef9b4b19ba81659fc746b3b702017f1e4f",
+      "assetSha256": "1076268037d0ae171ef9490acb184f9916f522326e40d5609c99a4a7778b7435",
+      "transparentFraction": 0.4597777777777778
+    },
+    {
+      "id": "kr-taebaek-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-taebaek.webp",
+      "bytes": 127216,
+      "sourceSha256": "6fee269fd56256b388991da6dca1c1686fb13be7629057de30d7f6dc08cfe83a",
+      "assetSha256": "78b8c2f3b98ae74817de78cb5a88d6eda9ccdd0335c3fcb4dbf0c2fa77ca9d79",
+      "transparentFraction": 0.4417682291666667
+    },
+    {
+      "id": "kr-taebaek-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-taebaek-mobile.webp",
+      "bytes": 112836,
+      "sourceSha256": "0c44df2833840bee7c5b4fe6a80c1a33189f26ee788307cf53cf8f27a114d881",
+      "assetSha256": "c8458f2fd87fe9878558718d8427a18315c32049af25a3868d8830bcfa40c943",
+      "transparentFraction": 0.3917013888888889
+    },
+    {
+      "id": "kr-uijeongbu-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-uijeongbu.webp",
+      "bytes": 90806,
+      "sourceSha256": "982b583df4ec387e4956c2393fb66ec91ee37d189f0bceee931be036c429b5ff",
+      "assetSha256": "d7211012736dcd5950a2c90910fbd6fe644fb0ddc4e5291970bb872d702fbd78",
+      "transparentFraction": 0.4577630208333333
+    },
+    {
+      "id": "kr-uijeongbu-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-uijeongbu-mobile.webp",
+      "bytes": 88020,
+      "sourceSha256": "7c0612477aad26f7066f2e155d130407a52d361939cec65813da71cb8a2da376",
+      "assetSha256": "2d3d15e256c44b8d4fa3d6419caaae1ef11f6497d65d812fa1ee3413583693eb",
+      "transparentFraction": 0.37745833333333334
+    },
+    {
+      "id": "kr-uiwang-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-uiwang.webp",
+      "bytes": 116996,
+      "sourceSha256": "a87f4a8fa6e3726fb06d880f0597f6fe6ec2494e5559a5329504897f401d9267",
+      "assetSha256": "2d84ab2b562739e53910663809140f06ba22b7f38d05595d768ee0aa5b172a77",
+      "transparentFraction": 0.4968203125
+    },
+    {
+      "id": "kr-uiwang-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-uiwang-mobile.webp",
+      "bytes": 90726,
+      "sourceSha256": "b8236ddc31adb1f48119999831fedd5dfd29fbef9d9015ca247cdafd0e61be61",
+      "assetSha256": "59bffbaa8c218a8714037374f2d5787bc5bce8d7f19d640d22299cd6a9998e23",
+      "transparentFraction": 0.42185069444444445
+    },
+    {
+      "id": "kr-ulleung-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-ulleung.webp",
+      "bytes": 118640,
+      "sourceSha256": "6943fdeaf586d6e9af976f3b18eb9548bda13aacd31404dc0d719526e183d874",
+      "assetSha256": "f67b15b4c780ae94a06ddc52864aeb48a99c5f67f74d8c993ac33c26d7ebb3d4",
+      "transparentFraction": 0.46727604166666664
+    },
+    {
+      "id": "kr-ulleung-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-ulleung-mobile.webp",
+      "bytes": 115578,
+      "sourceSha256": "8ec9bd618dc0b33b8465a2f64cba21a45ba020885723356f8831830c94299a9c",
+      "assetSha256": "36be712c3f1e7c9dc2f6e657fd4b7eb890181ac281e47eeb9f191500199b6c55",
+      "transparentFraction": 0.3597708333333333
+    },
+    {
+      "id": "kr-ulsan-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-ulsan.webp",
+      "bytes": 108942,
+      "sourceSha256": "ecfc415af7d259473f02b5e3c37484bc65c275fb5720ff58f6257e3c798541f5",
+      "assetSha256": "fd71c6aa20d808229814d12851c4ad323dc4692283bd915253901c59476b3745",
+      "transparentFraction": 0.5205807291666666
+    },
+    {
+      "id": "kr-ulsan-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-ulsan-mobile.webp",
+      "bytes": 98050,
+      "sourceSha256": "a394b2b8f5d7d70b6f4107a967ff927839eb819bfa8ef539dcd3f44826f33a2a",
+      "assetSha256": "92b84089252cbf79544913dfdf00380beb91f4542b55bd98400f3e5f01013d22",
+      "transparentFraction": 0.45394097222222224
+    },
+    {
+      "id": "kr-wonju-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-wonju.webp",
+      "bytes": 109540,
+      "sourceSha256": "65ccfd591e5f906026a5b386a70267623090bc5a9cd81ea7d70aa66d04648b5a",
+      "assetSha256": "5c4e55f276db2df5be1476652d362965674dde1940702848ee7d82714bf60a4b",
+      "transparentFraction": 0.4609739583333333
+    },
+    {
+      "id": "kr-wonju-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-wonju-mobile.webp",
+      "bytes": 106064,
+      "sourceSha256": "63645f9b83320ab0478347ea0204f476fc5af5b2d1f535aa04232f664518d6c6",
+      "assetSha256": "944d1194e0c3e430d0bf7bd4640ebc15c25b1cf9739fcb6eb2ed19a2a5645ae0",
+      "transparentFraction": 0.3602326388888889
+    },
+    {
+      "id": "kr-yangju-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yangju.webp",
+      "bytes": 81206,
+      "sourceSha256": "8c6f2af168d77cef783d988e1c955ff902074173b7ebfed1142ab02deadf8a36",
+      "assetSha256": "64a2bcd6ff5ee7ca937f6c60a88c37a925f0af41ea74f05d96c70868efe713fb",
+      "transparentFraction": 0.4725
+    },
+    {
+      "id": "kr-yangju-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yangju-mobile.webp",
+      "bytes": 83012,
+      "sourceSha256": "f9f3d4fa1db0f869eac7ee9307a430b6dfda54e5391d13d8ace4d49c2f94aab3",
+      "assetSha256": "aae87ae97170058126582c47b23d6c65ad18e49e14ea8bf9a8a8852fdbef1412",
+      "transparentFraction": 0.3801805555555556
+    },
+    {
+      "id": "kr-yangsan-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yangsan.webp",
+      "bytes": 117176,
+      "sourceSha256": "d3761811452f8256492c9056e291a0ec7641406789bba77058cf33d4d62257dd",
+      "assetSha256": "5733e1179dc68fe661fdf5c2d35004fe78ab573e453eda14ce402e9da36ea870",
+      "transparentFraction": 0.40930208333333334
+    },
+    {
+      "id": "kr-yangsan-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yangsan-mobile.webp",
+      "bytes": 102796,
+      "sourceSha256": "b3caf508fc0aa22700389b68aa346f4141989294103087f97e91ea572108b305",
+      "assetSha256": "3d19b159585504670557c335da55bd53171fdbb7b13b19df5045aa0814be45b4",
+      "transparentFraction": 0.3890173611111111
+    },
+    {
+      "id": "kr-yeoju-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yeoju.webp",
+      "bytes": 91356,
+      "sourceSha256": "55c2a072b7929f27bccc284a70df40fdf2d2c34e9305f69d38d2558018831c5a",
+      "assetSha256": "9d0cd71b4506430d37f981c54f76b78b9e6555aed8915ac3c715730562e900f3",
+      "transparentFraction": 0.467109375
+    },
+    {
+      "id": "kr-yeoju-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yeoju-mobile.webp",
+      "bytes": 85166,
+      "sourceSha256": "b986639fce81c4cf81df78fd68126c8a669e63b642f9a978438bae054a55bfd7",
+      "assetSha256": "7a0191c1468cb35a3974ba532c6127e8536682c538900190cfcdcedd3c53c6fd",
+      "transparentFraction": 0.38171180555555556
+    },
+    {
+      "id": "kr-yeongcheon-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yeongcheon.webp",
+      "bytes": 126666,
+      "sourceSha256": "1da9b25edbc23449b95a718e3a72662d721754eead78bc6ac7957bcc45a6c2d2",
+      "assetSha256": "816afbd9a3cbfbb1b663509c9d50eef710ffbe62fc5581589c141057aac33a2c",
+      "transparentFraction": 0.40627083333333336
+    },
+    {
+      "id": "kr-yeongcheon-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yeongcheon-mobile.webp",
+      "bytes": 100232,
+      "sourceSha256": "41018665126c5d02c017f9f6f7dc6edf6ab2483b4449f6640454fec16edfc2d1",
+      "assetSha256": "75b6f04cd044a1c0248f62d8243e1f7db268b7de20f572939b47bbd604b8eac5",
+      "transparentFraction": 0.41913194444444446
+    },
+    {
+      "id": "kr-yeongju-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yeongju.webp",
+      "bytes": 120548,
+      "sourceSha256": "8868f93d021061aaaf74f9478492f038bb1516b6d0cf12411227a2064b17c9c3",
+      "assetSha256": "8743294b0ed88e73958f8640b2b99f97a4458cf22a4909d45c804baf9db05e37",
+      "transparentFraction": 0.41959114583333335
+    },
+    {
+      "id": "kr-yeongju-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yeongju-mobile.webp",
+      "bytes": 103474,
+      "sourceSha256": "992e7e095e702b49e82276dcdd2bffe9a4a53eea721fe5867389b2ee93962d77",
+      "assetSha256": "6850070d4c6bade8437f06b4dc32f300df10c46cc252be36668ea7c1dde5d579",
+      "transparentFraction": 0.37010069444444443
+    },
+    {
+      "id": "kr-yongin-landscape",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yongin.webp",
+      "bytes": 104564,
+      "sourceSha256": "461478834558e701312987a5d090c0add7a326c435bcab4314a6550866c3f8ab",
+      "assetSha256": "cf037899e5b83bcb9da200c7c4795126628c4a6641f5c658065668507584b478",
+      "transparentFraction": 0.4205859375
+    },
+    {
+      "id": "kr-yongin-mobile",
+      "asset": "src/assets/trip-scenes/cities/v5/kr-yongin-mobile.webp",
+      "bytes": 96878,
+      "sourceSha256": "b08179a0c4b8b6bf36c0341b00581ac1c37fc981256101174920ccb9d44cf8c8",
+      "assetSha256": "23b436b94e3343f4bff7b43701f0350dc8f333e7e9441f9ebd26056d52a12417",
+      "transparentFraction": 0.3360625
+    }
+  ],
+  "unchangedExistingDomesticImages": 30
+}

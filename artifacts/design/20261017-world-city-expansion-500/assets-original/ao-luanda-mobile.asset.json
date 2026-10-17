@@ -1,0 +1,52 @@
+{
+  "id": "ao-luanda-mobile",
+  "cityId": "ao-luanda",
+  "name": "루안다",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ao-luanda-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ao-luanda-mobile.json",
+  "originalSha256": "83923ed25b78c1e53c64a6111bb0e22fc134b9fc4ea2c6edb0e61fe03511c1b8",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    65,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ao-luanda-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 82212,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "aaafb621cacc6edb6d86333956284f6d556acf2bfb64b58ce3c4bd6eb70d5cb9",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

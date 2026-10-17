@@ -1,0 +1,52 @@
+{
+  "id": "id-bandung-landscape",
+  "cityId": "id-bandung",
+  "name": "반둥",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/id-bandung-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/id-bandung-landscape.json",
+  "originalSha256": "9ea73e348a3be67e53789b84e9b26bab331498535b21a6b8b4c88a7d47ac0eca",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    23,
+    21,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/id-bandung.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 108490,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "baa61b647948aabc8a1663a57d0b0bb54a002d7676716a667239e1b1221fb124",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

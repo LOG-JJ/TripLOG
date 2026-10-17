@@ -1,0 +1,26 @@
+{
+  "jobId": "gb-cardiff-landscape",
+  "cityId": "gb-cardiff",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Cardiff, Wales: the present-day Norman Keep at Cardiff Castle, a compact roofless twelve-sided grey stone shell keep with crenellated walls and one slightly taller square entrance projection, standing alone on a steep grassy motte. A long straight narrow stone stairway climbs the bare grass directly to its raised arched entrance. At the foot of the stairway there is ONLY grass and a path, without a gatehouse, arch, wall or lower fortification. Show a small Welsh flag, a few park trees, and a slim real moat around the base of the grassy motte. The keep is a hollow polygonal shell, not a multi-tower fantasy castle. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "85686be47320313c696e6b9a6eea27c2fb8e65f1684edf3d796d32dfd2b2d1f9",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-cardiff-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-ca69215a-45de-434f-8500-869b6d12c090.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-ca69215a-45de-434f-8500-869b6d12c090.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/gb-cardiff-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "b4ba73822a7556767c49dc344ce6d4fee7d4544730fdfd5cef38f538fa96f46e",
+  "savedSha256": "b4ba73822a7556767c49dc344ce6d4fee7d4544730fdfd5cef38f538fa96f46e",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:21:04Z",
+  "toolCallId": "exec-ca69215a-45de-434f-8500-869b6d12c090",
+  "savedAt": "2026-10-17T07:23:43.116355+00:00"
+}

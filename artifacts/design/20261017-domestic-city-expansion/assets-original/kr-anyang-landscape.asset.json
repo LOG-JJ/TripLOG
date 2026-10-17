@@ -1,0 +1,51 @@
+{
+  "id": "kr-anyang-landscape",
+  "cityId": "kr-anyang",
+  "name": "안양",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-anyang-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-anyang-landscape.json",
+  "originalSha256": "f3d877c578a9de1817d40f3551566e44cdc3fbfbb2039ec653f85b476128f2ad",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-anyang.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 130846,
+  "assetSha256": "a5ab096e8b71c3bd3a721d0a0bbf1724d6b26437df9b89ef614c1f76533cf15b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

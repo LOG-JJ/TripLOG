@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-jeongeup-mobile",
+  "cityId": "kr-jeongeup",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Jeongeup, South Korea: Naejangsan's layered mountain ridges and broad masses of autumn maple foliage. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "573b0a860f67e55f0f1e58751789b2d3fcf7660ec7d61305f5e4dd22c63525d9",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jeongeup-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-d7462739-c868-4241-97fd-b5aa33892959.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-d7462739-c868-4241-97fd-b5aa33892959.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jeongeup-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "2390bd48459cdc31ed4dc08c3b4829c82d90d3f3ab7ef7db31d983e5590bdb03",
+  "savedSha256": "2390bd48459cdc31ed4dc08c3b4829c82d90d3f3ab7ef7db31d983e5590bdb03",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:24:09.734Z",
+  "toolCallId": "exec-d7462739-c868-4241-97fd-b5aa33892959",
+  "savedAt": "2026-10-17T05:25:16.446705+00:00"
+}

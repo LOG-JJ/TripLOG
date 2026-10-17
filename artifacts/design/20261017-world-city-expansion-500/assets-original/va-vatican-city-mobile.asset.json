@@ -1,0 +1,52 @@
+{
+  "id": "va-vatican-city-mobile",
+  "cityId": "va-vatican-city",
+  "name": "바티칸시국",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/va-vatican-city-mobile.json",
+  "originalSha256": "4b1c47421567cd45f623ef23b8128984264a2b3e3b7e059ee1d6f577bdef0a33",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    44,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/va-vatican-city-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 93378,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "694e950b345c1916fc67f5f06b1b65303f06d8ea1978873fcfbbe3abb0bf3ac8",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

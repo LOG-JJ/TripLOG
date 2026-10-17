@@ -1,0 +1,52 @@
+{
+  "id": "gy-georgetown-landscape",
+  "cityId": "gy-georgetown",
+  "name": "조지타운(가이아나)",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gy-georgetown-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gy-georgetown-landscape.json",
+  "originalSha256": "0c6b87dbd9068c428280b36c17e5dc95e4ee843c4e1e88071e678b679f5a806f",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    3,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gy-georgetown.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 119380,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c451904cab6f7a3bff16ca33cfa7686e8c74f16943956834c393f1ff12c428fb",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

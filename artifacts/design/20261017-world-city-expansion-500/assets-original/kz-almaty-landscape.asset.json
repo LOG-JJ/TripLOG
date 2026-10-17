@@ -1,0 +1,52 @@
+{
+  "id": "kz-almaty-landscape",
+  "cityId": "kz-almaty",
+  "name": "알마티",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/kz-almaty-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/kz-almaty-landscape.json",
+  "originalSha256": "d1c0c6c411af3509acfe9f501d40a84b53c865f9d2e19313423ce2448bb146ac",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/kz-almaty.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 122166,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "7ab80a855b563074be5c728fbfdcb62bc78e922de9c9dd20950a7e8d75ab4497",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

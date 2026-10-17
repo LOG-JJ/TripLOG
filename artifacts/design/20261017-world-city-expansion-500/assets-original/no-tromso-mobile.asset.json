@@ -1,0 +1,52 @@
+{
+  "id": "no-tromso-mobile",
+  "cityId": "no-tromso",
+  "name": "트롬쇠",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/no-tromso-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/no-tromso-mobile.json",
+  "originalSha256": "ec97a6ca6da37888f8fe63e16038921638ac09e18714df66d0b52691c49b3400",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    54,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/no-tromso-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 74364,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "b75fe6c7cf3d39acda74942e1271f2220a01591aee2dbbda3163a5705ce12c04",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "gb-york-landscape",
+  "cityId": "gb-york",
+  "name": "요크",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-york-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-york-landscape.json",
+  "originalSha256": "093f8ad867bf62ad716e507c6737c4d27ea9f1fb2badb76ccfc467e5e82494a3",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gb-york.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 155172,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "5da9438f3f2126a4c25837df70dbbe3a3ff85c919a2f6882c2e9f1ac0ee0f77b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

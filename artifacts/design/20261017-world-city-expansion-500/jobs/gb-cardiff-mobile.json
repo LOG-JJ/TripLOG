@@ -1,0 +1,37 @@
+{
+  "id": "gb-cardiff-mobile",
+  "cityId": "gb-cardiff",
+  "cityName": "카디프",
+  "englishName": "Cardiff",
+  "countryCode": "GB",
+  "kind": "city",
+  "group": "Europe",
+  "variant": "mobile",
+  "phase": "core-500",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone destination illustration of Cardiff, Wales: the present-day Norman Keep at Cardiff Castle, a compact roofless twelve-sided grey stone shell keep with crenellated walls and one slightly taller square entrance projection, standing alone on a steep grassy motte. A long straight narrow stone stairway climbs the bare grass directly to its raised arched entrance. At the foot of the stairway there is ONLY grass and a path, without a gatehouse, arch, wall or lower fortification. Show a small Welsh flag, a few park trees, and a slim real moat around the base of the grassy motte. The keep is a hollow polygonal shell, not a multi-tower fantasy castle. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "bc5071f8f7915606526b6377ad3ebc9d0ca50f4fba69be8566f2e06547bb4d7b",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/jobs/gb-cardiff-mobile.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/gb-cardiff-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/gb-cardiff-mobile.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/gb-cardiff-mobile.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v6/gb-cardiff-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "source": {
+    "title": "Cardiff Castle — Norman Keep (current structure and removed gatehouse)",
+    "url": "https://www.cardiffcastle.com/visit/see-do/norman-keep/"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone destination illustration of Cardiff, Wales: the present-day Norman Keep at Cardiff Castle, a compact roofless twelve-sided grey stone shell keep with crenellated walls and one slightly taller square entrance projection, standing alone on a steep grassy motte. A long straight narrow stone stairway climbs the bare grass directly to its raised arched entrance. At the foot of the stairway there is ONLY grass and a path, without a gatehouse, arch, wall or lower fortification. Show a small Welsh flag, a few park trees, and a slim real moat around the base of the grassy motte. The keep is a hollow polygonal shell, not a multi-tower fantasy castle. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+    "transparent_background": true
+  },
+  "revision": "worker-c-visual-r1",
+  "revisionReason": "The first version invented the lower gatehouse that was removed in the eighteenth century.",
+  "visualResearchPhoto": "https://www.cardiffcastle.com/app/uploads/2022/05/Norman-Keep-850x480-1.jpg"
+}

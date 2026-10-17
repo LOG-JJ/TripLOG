@@ -1,0 +1,51 @@
+{
+  "id": "kr-gimhae-mobile",
+  "cityId": "kr-gimhae",
+  "name": "김해",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경남",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gimhae-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gimhae-mobile.json",
+  "originalSha256": "bd1b98511b62de45539089dbc3469ce209af29384d96468a91c09aa582cfe762",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gimhae-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 90190,
+  "assetSha256": "3fceca44084955cabdc147cbd383ae0a5766d2028b2515df46dd91bead671580",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

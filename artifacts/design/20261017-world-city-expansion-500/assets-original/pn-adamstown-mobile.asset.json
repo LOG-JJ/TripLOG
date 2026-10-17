@@ -1,0 +1,52 @@
+{
+  "id": "pn-adamstown-mobile",
+  "cityId": "pn-adamstown",
+  "name": "애덤스타운",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "오세아니아",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/pn-adamstown-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/pn-adamstown-mobile.json",
+  "originalSha256": "b84843c3cfd18aee2fe623bd1f7003871a6e3912e44bc4f3d00fea61befcbd0e",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    37,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/pn-adamstown-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 117822,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "7f89a2d6e9a9a168a68b8787fc7e6453103abb1eb60ddd670e31bab3ac756a17",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

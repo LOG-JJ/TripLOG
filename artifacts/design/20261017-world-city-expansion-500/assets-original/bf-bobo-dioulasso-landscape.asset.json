@@ -1,0 +1,52 @@
+{
+  "id": "bf-bobo-dioulasso-landscape",
+  "cityId": "bf-bobo-dioulasso",
+  "name": "보보디울라소",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bf-bobo-dioulasso-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bf-bobo-dioulasso-landscape.json",
+  "originalSha256": "a6877922ec06670acc0591aafea20cb32bc38fda2210ac8b52f9fb8d2df95082",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bf-bobo-dioulasso.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 84380,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "929a53308c60ae6bdc429b49a306037f96c1e3f9467004fe76e7cf134b71812b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

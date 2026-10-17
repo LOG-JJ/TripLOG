@@ -1,0 +1,51 @@
+{
+  "id": "kr-jeonnam-gwangju-landscape",
+  "cityId": "kr-jeonnam-gwangju",
+  "name": "전남광주통합특별시",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "광역시급",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jeonnam-gwangju-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jeonnam-gwangju-landscape.json",
+  "originalSha256": "87ec30fd535f5aaebe1bea69d5b0847514023397810b74ed20587cf2015e0ccc",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    3,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-jeonnam-gwangju.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 127700,
+  "assetSha256": "b3a4334c8e3fc30bb7fdaf63ee45ee05153e29c1571c570c90a9fa22655ed3a1",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

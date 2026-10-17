@@ -1,0 +1,52 @@
+{
+  "id": "cl-valparaiso-landscape",
+  "cityId": "cl-valparaiso",
+  "name": "발파라이소",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cl-valparaiso-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cl-valparaiso-landscape.json",
+  "originalSha256": "462b2a8248c43eae03ac932358dff724707c496d3058ddebc02b825e67369740",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cl-valparaiso.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 114152,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "f94a4b55b3f654a6c74137787a9f9e954cafaf7e28057e26d4a2d623ee9da7c1",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

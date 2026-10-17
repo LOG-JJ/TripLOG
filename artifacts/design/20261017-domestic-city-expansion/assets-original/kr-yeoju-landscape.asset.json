@@ -1,0 +1,51 @@
+{
+  "id": "kr-yeoju-landscape",
+  "cityId": "kr-yeoju",
+  "name": "여주",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeoju-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeoju-landscape.json",
+  "originalSha256": "55c2a072b7929f27bccc284a70df40fdf2d2c34e9305f69d38d2558018831c5a",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    32,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-yeoju.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 91356,
+  "assetSha256": "9d0cd71b4506430d37f981c54f76b78b9e6555aed8915ac3c715730562e900f3",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

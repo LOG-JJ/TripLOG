@@ -1,0 +1,52 @@
+{
+  "id": "mh-majuro-mobile",
+  "cityId": "mh-majuro",
+  "name": "마주로",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mh-majuro-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mh-majuro-mobile.json",
+  "originalSha256": "e70b4716e33291f44d995fd7a32dbcb9663b0578e011f84950b93c64e61c7fdb",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mh-majuro-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 133238,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "9236b407de1d0e1925b5769a0b14fcc36674d3765249648686eb28d03b8b8c0a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

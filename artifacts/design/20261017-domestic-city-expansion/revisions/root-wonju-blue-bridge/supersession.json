@@ -1,0 +1,71 @@
+{
+  "reason": "Initial desktop bridge was red and differed from mobile. Direct original bridge photo shows bright blue steel railings and no tall entrance pylons. Replaced both variants with independent T2I specifying original Chulleongdari.",
+  "sources": [
+    "https://www.wonju.go.kr/tour/selectBbsNttView.do?bbsNo=984&key=5538&nttNo=340209&pageIndex=3&pageUnit=10&searchCnd=all",
+    "https://www.wonju.go.kr/tour/selectBbsNttView.do?bbsNo=1050&key=5540&nttNo=387478&pageIndex=5&pageUnit=10&searchCnd=all"
+  ],
+  "viewedPhoto": "https://www.wonju.go.kr/DATA/bbs/1050/20220216183934080CD208FG992DG467E.jpg",
+  "imageInputs": [],
+  "files": [
+    {
+      "previousPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\assets-original\\kr-wonju-landscape.png",
+      "preservedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\revisions\\root-wonju-blue-bridge\\landscape\\kr-wonju-landscape.png",
+      "sha256": "b64e3b538e2d0485d8deb19f8b3540713c8288cd5f9bab841f1c3cdf3a586315"
+    },
+    {
+      "previousPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\assets-original\\kr-wonju-landscape.json",
+      "preservedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\revisions\\root-wonju-blue-bridge\\landscape\\kr-wonju-landscape.json",
+      "sha256": "7608fc104829f28a8ab40f90dc364a2435965c47dcb6013477f6f2fad8eb5e22"
+    },
+    {
+      "previousPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\assets-original\\kr-wonju-landscape.asset.json",
+      "preservedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\revisions\\root-wonju-blue-bridge\\landscape\\kr-wonju-landscape.asset.json",
+      "sha256": "e3c796cb2b9009635fc8f911478fd552ba002af0793c4764188d05aedb5d5238"
+    },
+    {
+      "previousPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\src\\assets\\trip-scenes\\cities\\v5\\kr-wonju.webp",
+      "preservedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\revisions\\root-wonju-blue-bridge\\landscape\\kr-wonju.webp",
+      "sha256": "cd08051737465bb907515d5b1dad28138ca46b27b8f5e2ef93760b255bdac02c"
+    },
+    {
+      "previousPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\jobs\\kr-wonju-landscape.json",
+      "preservedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\revisions\\root-wonju-blue-bridge\\landscape\\kr-wonju-landscape.json",
+      "sha256": "c3bdf45567bc5d03c1441f619ff2f8e6382e726435033d5dfce1afdd31fc065c"
+    },
+    {
+      "previousPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\jobs\\kr-wonju-landscape.prompt.txt",
+      "preservedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\revisions\\root-wonju-blue-bridge\\landscape\\kr-wonju-landscape.prompt.txt",
+      "sha256": "0776784d68da2e245b2ae459d0044a26ef95868b001670757f7941f3b8dc161a"
+    },
+    {
+      "previousPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\assets-original\\kr-wonju-mobile.png",
+      "preservedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\revisions\\root-wonju-blue-bridge\\mobile\\kr-wonju-mobile.png",
+      "sha256": "59d39e0a4145e21c8130791f2d25ab41cdf3da9f93c806fcdb62a8768fc898c3"
+    },
+    {
+      "previousPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\assets-original\\kr-wonju-mobile.json",
+      "preservedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\revisions\\root-wonju-blue-bridge\\mobile\\kr-wonju-mobile.json",
+      "sha256": "29b7ae58e66663815d101119cbfccee4f096ab49f0597133c4cf6fd816badf4a"
+    },
+    {
+      "previousPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\assets-original\\kr-wonju-mobile.asset.json",
+      "preservedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\revisions\\root-wonju-blue-bridge\\mobile\\kr-wonju-mobile.asset.json",
+      "sha256": "7053f6153b2fd0d9743d2d0d7bb7d3d26b81f0db7207bf8656fc7d3911ce9d27"
+    },
+    {
+      "previousPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\src\\assets\\trip-scenes\\cities\\v5\\kr-wonju-mobile.webp",
+      "preservedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\revisions\\root-wonju-blue-bridge\\mobile\\kr-wonju-mobile.webp",
+      "sha256": "b8774cc951650389e271457a6048ec87d5528a8e9f6e034eda03ae067ee88d8d"
+    },
+    {
+      "previousPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\jobs\\kr-wonju-mobile.json",
+      "preservedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\revisions\\root-wonju-blue-bridge\\mobile\\kr-wonju-mobile.json",
+      "sha256": "c1266847e733a4f3e7f862fd512fc3c04005456d267614f7498bb7275d48cedc"
+    },
+    {
+      "previousPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\jobs\\kr-wonju-mobile.prompt.txt",
+      "preservedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\revisions\\root-wonju-blue-bridge\\mobile\\kr-wonju-mobile.prompt.txt",
+      "sha256": "5b817afd18b2da60b5fc484d4805e5c54ef0e43469290d09da9c71b5ba759f5d"
+    }
+  ]
+}

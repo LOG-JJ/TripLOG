@@ -1,0 +1,52 @@
+{
+  "id": "eg-aswan-mobile",
+  "cityId": "eg-aswan",
+  "name": "아스완",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/eg-aswan-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/eg-aswan-mobile.json",
+  "originalSha256": "cb1f07cfcf92b386df36ee5788710382f0ccb9fea84cc485d1880eed59511ba6",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    46,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/eg-aswan-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 91340,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "01b0610f10600fd64d0e876e35eb4d0e8a4520ece1129b8aac1bda0330d08bfc",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-bucheon-landscape",
+  "cityId": "kr-bucheon",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Bucheon, South Korea: Supia Conservatory in Sangdong Lake Park, a low broad rounded glass greenhouse with curved sides, white structural ribs and a slim cyan roof rim, surrounded by green park planting. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "88aea215e1dab7b4f5f7e2860b7e2bb2c6c8204f1c8df4cb380a404bb810d5ec",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-bucheon-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-f9c3645a-bee6-40b8-8ed1-28e273d784d1.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-f9c3645a-bee6-40b8-8ed1-28e273d784d1.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-bucheon-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "825d353619002a5226629708ab8ce8ed44cff11dba3c7c8ab8d5b1cd9a2535c2",
+  "savedSha256": "825d353619002a5226629708ab8ce8ed44cff11dba3c7c8ab8d5b1cd9a2535c2",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:10:03.612Z",
+  "toolCallId": "exec-f9c3645a-bee6-40b8-8ed1-28e273d784d1",
+  "savedAt": "2026-10-17T05:11:53.729131+00:00"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "gi-gibraltar-landscape",
+  "cityId": "gi-gibraltar",
+  "name": "지브롤터",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "남유럽",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gi-gibraltar-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gi-gibraltar-landscape.json",
+  "originalSha256": "c216903dccf77143fef33cba939e018d2836cae51b9c88016667424ee40944b1",
+  "sourceSize": [
+    1619,
+    972
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1619,
+    972
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gi-gibraltar.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 122436,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "5957e330a348c3e85f42c6f7d56a424cd7464e75f4e7ded3ff2d2f2452ac3c51",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "dm-roseau-mobile",
+  "cityId": "dm-roseau",
+  "name": "로조",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/dm-roseau-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/dm-roseau-mobile.json",
+  "originalSha256": "82f5da2042569721e6887b4b458865f771fa443998d4f77859687b7534255508",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/dm-roseau-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 105920,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "b07bdf531cc0fd122a748197bc45f2d20d9241e2f59452655da195ebc650daf3",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

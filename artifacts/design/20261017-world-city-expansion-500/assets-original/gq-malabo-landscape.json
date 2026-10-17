@@ -1,0 +1,26 @@
+{
+  "jobId": "gq-malabo-landscape",
+  "cityId": "gq-malabo",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Malabo, Equatorial Guinea: the twin spires and pale Gothic facade of the Cathedral of Santa Isabel in Malabo, with its open planted square. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "15ab6e2527bc44f7b38a9c0695ac09ea76f2357432292e65be0629b746886933",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gq-malabo-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-1cf5df7b-d8cb-4cf7-a912-322f4af59b33.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-1cf5df7b-d8cb-4cf7-a912-322f4af59b33.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/gq-malabo-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "bcd856a449918e2db616e337c4b7d6db83a172c2833ec1d9c540ec3af10ac8e4",
+  "savedSha256": "bcd856a449918e2db616e337c4b7d6db83a172c2833ec1d9c540ec3af10ac8e4",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:50:52.643Z",
+  "toolCallId": "exec-1cf5df7b-d8cb-4cf7-a912-322f4af59b33",
+  "savedAt": "2026-10-17T06:55:20.451150+00:00"
+}

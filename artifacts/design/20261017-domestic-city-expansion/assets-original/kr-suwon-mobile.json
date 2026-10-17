@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-suwon-mobile",
+  "cityId": "kr-suwon",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Suwon, South Korea: Hwaseomun Gate of Suwon Hwaseong Fortress, with one central arched passage through a low gray-beige stone gate base, a single-storey wooden gate pavilion with a broad gray Korean hipped-and-gabled tiled roof above it, low connecting stone fortress walls and a curved outer defensive wall; preserve the single-storey Hwaseomun form rather than the two-storey Janganmun gate. The gate stands on dry grass and earth. No river, lake, sea, moat, canal or water anywhere. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and supporting grassy ground flowing vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted grass must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "6f26e10a93c51501a69e4b3f903d0b9326540072ef0a3338309adedafd09dbb7",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-suwon-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-91270f3f-217a-4a1e-ab08-7e1bd2f08092.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-91270f3f-217a-4a1e-ab08-7e1bd2f08092.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-suwon-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "54628df433d3b0b61d0ae08853f7c1ef9b4b19ba81659fc746b3b702017f1e4f",
+  "savedSha256": "54628df433d3b0b61d0ae08853f7c1ef9b4b19ba81659fc746b3b702017f1e4f",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:05:25Z",
+  "toolCallId": "exec-91270f3f-217a-4a1e-ab08-7e1bd2f08092",
+  "savedAt": "2026-10-17T05:06:15.879242+00:00"
+}

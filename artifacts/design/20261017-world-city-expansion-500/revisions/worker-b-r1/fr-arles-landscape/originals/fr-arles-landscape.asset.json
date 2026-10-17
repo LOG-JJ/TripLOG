@@ -1,0 +1,52 @@
+{
+  "id": "fr-arles-landscape",
+  "cityId": "fr-arles",
+  "name": "아를",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/fr-arles-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/fr-arles-landscape.json",
+  "originalSha256": "23dc9131ed680e7760d5ddf6d89400fa1f83d2267e3a2992777568de7b52df57",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    17,
+    9,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/fr-arles.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 112798,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "5a9e1358f2458cd8ff5c023b2b9080982ee7d79eb14abe23a998e98d953e500c",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

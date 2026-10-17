@@ -1,0 +1,52 @@
+{
+  "id": "dk-aarhus-landscape",
+  "cityId": "dk-aarhus",
+  "name": "오르후스",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/dk-aarhus-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/dk-aarhus-landscape.json",
+  "originalSha256": "f5c8a36d7be87ddf678f069d9e9eae54d3bbf0e34acf576c5fd5a90efa377bba",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/dk-aarhus.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 134700,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e045297df9b5130cb2a578c53a36f751b8e45e52e7c1d9ba1b5f55bbc73b7e3d",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "nz-wellington-landscape",
+  "cityId": "nz-wellington",
+  "name": "웰링턴",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/nz-wellington-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/nz-wellington-landscape.json",
+  "originalSha256": "2a87686a53b88135ed89f2914532c7166fd8a337cb0e947efc3ea8af76630475",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    49,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/nz-wellington.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 112782,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "681fdd2d170acd738c8a98dd0b7537f58df6041a4f8a89fcd855e0fc5ebeaea1",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

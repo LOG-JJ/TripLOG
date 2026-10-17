@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-chungju-mobile",
+  "cityId": "kr-chungju",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Chungju, South Korea: Tangeumdae's rocky riverbank, the wide river curving past it and tall pine trees above the bank. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "80962efd463d13ad321117d2194e5659218c7e98e7448af57ddd3fb1fd6404a0",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-chungju-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-3e362548-777b-4c0c-902a-b394f15ab3d6.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-3e362548-777b-4c0c-902a-b394f15ab3d6.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-chungju-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "48aa0d6f44ec45225fe1fa7e958240601e5044938de278cb025206a09a85c375",
+  "savedSha256": "48aa0d6f44ec45225fe1fa7e958240601e5044938de278cb025206a09a85c375",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:19:26.952Z",
+  "toolCallId": "exec-3e362548-777b-4c0c-902a-b394f15ab3d6",
+  "savedAt": "2026-10-17T05:20:22.636956+00:00"
+}

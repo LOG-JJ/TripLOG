@@ -1,0 +1,52 @@
+{
+  "id": "ar-mendoza-mobile",
+  "cityId": "ar-mendoza",
+  "name": "멘도사",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ar-mendoza-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ar-mendoza-mobile.json",
+  "originalSha256": "b0ee585a664483a358eb0bd9325d1e9065f925205083d547c922aede720b3ca9",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ar-mendoza-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 121410,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "d1f0235cd1fd6c78994ca0eb67428559136a5387069fc3a28a1f19adccb0721d",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

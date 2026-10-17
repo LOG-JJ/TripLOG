@@ -1,0 +1,52 @@
+{
+  "id": "gb-cardiff-mobile",
+  "cityId": "gb-cardiff",
+  "name": "카디프",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-cardiff-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-cardiff-mobile.json",
+  "originalSha256": "051b1addd7d5d5186e11e657ae66c95506a7aeb2937e337e8f69fea54cfbc965",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    40,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gb-cardiff-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 99738,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "ce4a152aa856adecc4a1b1b7d8efd0e987013a57eb3219e84f5b8541239545e7",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

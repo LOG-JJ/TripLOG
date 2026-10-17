@@ -1,0 +1,52 @@
+{
+  "id": "cd-kinshasa-landscape",
+  "cityId": "cd-kinshasa",
+  "name": "킨샤사",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cd-kinshasa-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cd-kinshasa-landscape.json",
+  "originalSha256": "991fb2cb60ea10409636bfe8c2819abde12239f36bf4e4b904c661aa1c6bff39",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    18,
+    23,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cd-kinshasa.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 106662,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "68d4c4c3cb775e3576cdab4c8d1335434b63034425c443ad1698dfc3031d39bd",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

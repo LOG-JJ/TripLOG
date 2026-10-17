@@ -1,0 +1,26 @@
+{
+  "jobId": "so-mogadishu-mobile",
+  "cityId": "so-mogadishu",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Mogadishu, Somalia: the historic Arba Rukun Mosque in Mogadishu as a modest low whitewashed square mosque compound on a flat old-town street. Its low boundary walls have simple square crenellations with tiny pyramidal caps. A single visible very slender plain white cylindrical minaret with a sharp conical top rises behind the courtyard; include one short plain conical corner turret attached to the low wall. The prayer hall is low and simple, with a plain shallow roof and modest arched openings. Surround it with a few pale low old-town buildings and leafy trees; the distant Indian Ocean may appear as a small blue glimpse beyond the town, not directly under the mosque. No huge multistorey palace, no four tall corner minarets, no bulbous onion crowns and no cliffside fortress. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "f097c810c4110657a86db534bde1f31d2b68f6bd1b0ac3e4b1c0ddae2fa9b34b",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/so-mogadishu-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-81a98179-72b4-4e41-9951-0d5a4ff67269.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-81a98179-72b4-4e41-9951-0d5a4ff67269.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/so-mogadishu-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "20a4e3b7cf67b1d84ac03761c0beb91e9b8aa497328024fe8dd0045683d328b2",
+  "savedSha256": "20a4e3b7cf67b1d84ac03761c0beb91e9b8aa497328024fe8dd0045683d328b2",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:29:33.516Z",
+  "toolCallId": "exec-81a98179-72b4-4e41-9951-0d5a4ff67269",
+  "savedAt": "2026-10-17T07:30:40.690910+00:00"
+}

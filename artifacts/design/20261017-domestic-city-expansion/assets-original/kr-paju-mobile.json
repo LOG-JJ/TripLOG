@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-paju-mobile",
+  "cityId": "kr-paju",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Paju, South Korea: Heyri Art Village, a few distinctive low-rise contemporary gallery buildings among trees and quiet pedestrian lanes. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "3323629dfc7e01686912ffe794d42341dffb581c4422b724c15e9d50b9539aa1",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-paju-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-c33587e4-30d5-4241-bf67-b696ab2a0200.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-c33587e4-30d5-4241-bf67-b696ab2a0200.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-paju-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "04205c5093cdf7ab96c29ad8937b40c2a36d848e8ab2117abd4578361e6a271a",
+  "savedSha256": "04205c5093cdf7ab96c29ad8937b40c2a36d848e8ab2117abd4578361e6a271a",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:16:08Z",
+  "toolCallId": "exec-c33587e4-30d5-4241-bf67-b696ab2a0200",
+  "savedAt": "2026-10-17T05:16:48.046632+00:00"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "us-charleston-landscape",
+  "cityId": "us-charleston",
+  "name": "찰스턴",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/us-charleston-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/us-charleston-landscape.json",
+  "originalSha256": "f08866e46592e43ef97dc3c8719b4e055f753b505d02ef624b56863a3ec68f99",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    4,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/us-charleston.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 120428,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "1ec641408c7ca80620a441e5dcd2123d99ff836906768ebc90eca379607962ac",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

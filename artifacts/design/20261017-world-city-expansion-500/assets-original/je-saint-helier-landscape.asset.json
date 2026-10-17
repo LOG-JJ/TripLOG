@@ -1,0 +1,52 @@
+{
+  "id": "je-saint-helier-landscape",
+  "cityId": "je-saint-helier",
+  "name": "세인트헬리어",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "서유럽",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/je-saint-helier-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/je-saint-helier-landscape.json",
+  "originalSha256": "2c6ebbcd98d376384e952911c1c266e6ac829390c4c0426000dc9bdbba1775e1",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    86,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/je-saint-helier.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 107990,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "3627f7989e1851b2995fb8400823642bbe7628c31824a85694765977d9786585",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

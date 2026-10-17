@@ -1,0 +1,44 @@
+{
+  "jobId": "mc-monaco-mobile",
+  "reason": "The palace right wing was cut off at the canvas edge.",
+  "archivedFiles": [
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/mc-monaco-mobile.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/mc-monaco-mobile/mc-monaco-mobile.json",
+      "sha256": "d680383721caa65ce11ef6552b4b75e4dc6506ac69f9229bdb9fe07a74f92a4a"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/mc-monaco-mobile.prompt.txt",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/mc-monaco-mobile/mc-monaco-mobile.prompt.txt",
+      "sha256": "d7ed3e909ceec00f2a8bb8aa456afd629ae1e9579a3bdc65b240d221a7ed2b70"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/mc-monaco-mobile.png",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/mc-monaco-mobile/mc-monaco-mobile.png",
+      "sha256": "51563b62c5aa3294309e5f6eb86edf901d25f51407a0de99fec0686156fbff6d"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/mc-monaco-mobile.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/mc-monaco-mobile/mc-monaco-mobile.json",
+      "sha256": "b3a7bef3099f44dc1cada7cbd834cbca6734fa67651c3f789962b7d7100d60b6"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/mc-monaco-mobile.asset.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/mc-monaco-mobile/mc-monaco-mobile.asset.json",
+      "sha256": "2ab32da47959881170696ea5b08c117a44db60641341b9f4d8893625cb80be94"
+    },
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v6/mc-monaco-mobile.webp",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/mc-monaco-mobile/mc-monaco-mobile.webp",
+      "sha256": "341fd3c4c966f87d7135870f97e4a5d6dd4e16161ba78fa7498f5e7b5803ab60"
+    }
+  ],
+  "newPromptSha256": "eed28ebb92a5fb20db009bd1ac1bf1280c61da696ebbaa8191147ace371b920b",
+  "generationMode": "independent T2I",
+  "imageInputs": [],
+  "source": {
+    "title": "Visit Monaco — Official tourist map",
+    "url": "https://www.visitmonaco.com/Documents-Site/Plan%20touristique%20Monaco.pdf"
+  },
+  "photoInspected": null
+}

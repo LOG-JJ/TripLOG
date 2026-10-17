@@ -1,0 +1,38 @@
+{
+  "id": "kr-dangjin-mobile",
+  "cityId": "kr-dangjin",
+  "cityName": "당진",
+  "englishName": "Dangjin",
+  "kind": "city",
+  "group": "충남",
+  "variant": "mobile",
+  "phase": "expansion",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Dangjin, South Korea: the Sapgyoho tourist waterfront, with its large circular Ferris wheel on the shore, slender spokes and small enclosed gondolas, a simple waterside promenade and broad calm blue water. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. Make the circular Ferris wheel the single clear landmark. Show its full round outline comfortably inside the right side of the canvas. Do not invent an observation tower, futuristic tower or lighthouse.",
+  "promptSha256": "d486ff808376b7c05e42fbffe5f5b51164b01c870db39bf99562721d18536277",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/jobs/kr-dangjin-mobile.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-mobile.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-dangjin-mobile.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v5/kr-dangjin-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "motif": "the Sapgyoho tourist waterfront, with its large circular Ferris wheel on the shore, slender spokes and small enclosed gondolas, a simple waterside promenade and broad calm blue water",
+  "proposedMotif": "삽교호 관광지·호수",
+  "motifSource": {
+    "title": "당진시 문화관광 - SEA선강탈코스",
+    "url": "https://www.dangjin.go.kr/tour/",
+    "evidence": "공식 관광 안내가 삽교호바다공원-삽교호놀이공원-삽교호호수공원 코스와 대관람차를 명시한다."
+  },
+  "callArguments": {
+    "prompt": "Create one standalone hand-drawn destination illustration of Dangjin, South Korea: the Sapgyoho tourist waterfront, with its large circular Ferris wheel on the shore, slender spokes and small enclosed gondolas, a simple waterside promenade and broad calm blue water. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. Make the circular Ferris wheel the single clear landmark. Show its full round outline comfortably inside the right side of the canvas. Do not invent an observation tower, futuristic tower or lighthouse.",
+    "transparent_background": true
+  },
+  "provenanceRule": "The --source argument must be the exact local original path returned by this job's image_gen call. Never search for a latest file.",
+  "promptRevision": "worker-b-visual-qa-r2-20261017"
+}

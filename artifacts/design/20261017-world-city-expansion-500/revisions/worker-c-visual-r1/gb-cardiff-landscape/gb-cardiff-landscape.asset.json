@@ -1,0 +1,52 @@
+{
+  "id": "gb-cardiff-landscape",
+  "cityId": "gb-cardiff",
+  "name": "카디프",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-cardiff-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-cardiff-landscape.json",
+  "originalSha256": "fd645a779a023397d377449f8345881feb1aa18770f1a2687a64f6c3b6b90368",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gb-cardiff.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 110042,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "29ad7fef1a016d38432e292b1f2c3cf122c1dc18d16464883b40252ac037c9df",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

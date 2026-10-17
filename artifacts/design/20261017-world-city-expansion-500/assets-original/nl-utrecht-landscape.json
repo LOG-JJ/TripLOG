@@ -1,0 +1,26 @@
+{
+  "jobId": "nl-utrecht-landscape",
+  "cityId": "nl-utrecht",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Utrecht, Netherlands: the tall Dom Tower, with the Oudegracht canal and wharves. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Composition correction: The entire Dom Tower including its tiny finial must stand below a generous transparent top margin of 10 percent of the picture height. Keep the full tower large enough to recognize but visibly separated from the top edge. Preserve the same simple pastel hand-drawn style and transparent background. No image reference is supplied.",
+  "promptSha256": "677fb29c8c19341f44c2768c921aecfe821d76a8cfa46eb156f4387ace9148b4",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nl-utrecht-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-5b5a0ab1-9d13-49f1-9cbd-34131986f4f6.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-5b5a0ab1-9d13-49f1-9cbd-34131986f4f6.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/nl-utrecht-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "5f67115163b66d38caf1c2b53b0a47c1f0972565af331a3a9f774006df246255",
+  "savedSha256": "5f67115163b66d38caf1c2b53b0a47c1f0972565af331a3a9f774006df246255",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:57:33.381Z",
+  "toolCallId": "exec-5b5a0ab1-9d13-49f1-9cbd-34131986f4f6",
+  "savedAt": "2026-10-17T06:59:30.330272+00:00"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ga-libreville-landscape",
+  "cityId": "ga-libreville",
+  "name": "리브르빌",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ga-libreville-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ga-libreville-landscape.json",
+  "originalSha256": "fc7757dd7b59310bd4bf6f659d69d7390d5f2015c5bf0d862cc124a0c164c721",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    37,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ga-libreville.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 114266,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "cbf51186be0ed07b2d33f195c4a6affe37b23696723bf6a738bee72e0845199a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

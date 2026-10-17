@@ -1,0 +1,52 @@
+{
+  "id": "km-moroni-mobile",
+  "cityId": "km-moroni",
+  "name": "모로니",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/km-moroni-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/km-moroni-mobile.json",
+  "originalSha256": "e59046fe2764d9a028765bdff4114929171ef6bbb48e9ee0706740a33ebf4bb1",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    8,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/km-moroni-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 100206,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "93929719f614e2a0c52a867c39e317f477f862d3feb535085c33bed0bfce8256",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

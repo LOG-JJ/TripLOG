@@ -1,0 +1,40 @@
+{
+  "revisedAt": "2026-10-17T06:53:52.369Z",
+  "reason": "Redistribute ten unstarted core cities while worker-b completes architectural corrections; country-coverage assignments remain unchanged.",
+  "requestedBy": "root coordination",
+  "source": "worker-b",
+  "transfers": {
+    "root": [
+      "mw-zomba",
+      "mz-ilha-de-mocambique",
+      "st-sao-tome",
+      "so-mogadishu",
+      "ug-entebbe"
+    ],
+    "worker-a": [
+      "fm-kolonia",
+      "pw-koror",
+      "to-nukualofa",
+      "pf-papeete",
+      "nu-alofi"
+    ]
+  },
+  "priorFile": "planning-assignments.json",
+  "priorSha256": "19ed5aa7ac30afe6137577b291e58c5b201eb39d4abdcc15f26acdf7dc992d19",
+  "currentFile": "generation-assignments.json",
+  "currentSha256": "6dea241a14d1f7dbafb765bc32e0d83e61a727d98f1443397e1bdf0cdcacfc1e",
+  "beforeCoreCityCounts": {
+    "root": 50,
+    "worker-a": 50,
+    "worker-b": 50,
+    "worker-c": 50
+  },
+  "afterCoreCityCounts": {
+    "root": 55,
+    "worker-a": 55,
+    "worker-b": 40,
+    "worker-c": 50
+  },
+  "preservedCoreCities": 200,
+  "coverageUnchanged": true
+}

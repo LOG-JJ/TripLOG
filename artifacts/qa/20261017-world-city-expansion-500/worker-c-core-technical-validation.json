@@ -1,0 +1,1907 @@
+{
+  "count": 100,
+  "uniqueSources": 100,
+  "totalBytes": 10468772,
+  "records": [
+    {
+      "id": "cy-paphos-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/cy-paphos.webp",
+      "sha256": "e874514c6efd9611b6d4de61ae509edead1a585e118612483e49873d8c5230ea",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 147560
+    },
+    {
+      "id": "cy-paphos-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/cy-paphos-mobile.webp",
+      "sha256": "29ddf1ff05e2b757a57e9820d4f8d7b3e5699d3bf0874001146c638ac535ce7d",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        17,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 114788
+    },
+    {
+      "id": "mc-monaco-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/mc-monaco.webp",
+      "sha256": "0e158cb75f461592674dbac7ffd9447fd22055849bd9e995dc0f34a9025e4505",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        4,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 156878
+    },
+    {
+      "id": "mc-monaco-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/mc-monaco-mobile.webp",
+      "sha256": "f8358dd611e3329976c4d023b75faa9a580a9a7b3b7fbe6661a6cc580be16954",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        16,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 113150
+    },
+    {
+      "id": "va-vatican-city-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/va-vatican-city.webp",
+      "sha256": "4d07bc4d031c5e2b1c4c2d36d9cf693392ef6aff18d47886be44fbe54e24496e",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        25,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 119842
+    },
+    {
+      "id": "va-vatican-city-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/va-vatican-city-mobile.webp",
+      "sha256": "694e950b345c1916fc67f5f06b1b65303f06d8ea1978873fcfbbe3abb0bf3ac8",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        63,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 93378
+    },
+    {
+      "id": "gb-cardiff-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/gb-cardiff.webp",
+      "sha256": "984118433b78f29dc066159f3ea9c2d5cedaf7be9759959ca6c57539f6f3d26a",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        8,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 131096
+    },
+    {
+      "id": "gb-cardiff-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/gb-cardiff-mobile.webp",
+      "sha256": "ce4a152aa856adecc4a1b1b7d8efd0e987013a57eb3219e84f5b8541239545e7",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        59,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 99738
+    },
+    {
+      "id": "fr-reims-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/fr-reims.webp",
+      "sha256": "6d0cedefbce403343ab5d5290272644c3224db29f6cf120317f126fc3aa37459",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        21,
+        8,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 125804
+    },
+    {
+      "id": "fr-reims-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/fr-reims-mobile.webp",
+      "sha256": "4f0f23661fdda3593426a04ba13d8eb660864bab70433244bb51be90253486c7",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        14,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 128394
+    },
+    {
+      "id": "it-lucca-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/it-lucca.webp",
+      "sha256": "aa2adcfccd437913c0c7f43fc601e4754143073870c945b03b31b70454c33492",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        31,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 116650
+    },
+    {
+      "id": "it-lucca-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/it-lucca-mobile.webp",
+      "sha256": "639e12b960d87b45f30ba62a277e08ad1b893bcdca33815dd7a6ea0d6708a4f3",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 96730
+    },
+    {
+      "id": "es-cadiz-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/es-cadiz.webp",
+      "sha256": "410b260da3dfebd7b9fdea1095ed01cbb32f48ef5ff81c84cc44557cefee80fb",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        18,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 121876
+    },
+    {
+      "id": "es-cadiz-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/es-cadiz-mobile.webp",
+      "sha256": "2ebfdeeb517058887d2ceaeddcf7b5e42ea2c71b79070607222e231ed7b24006",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        84,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 102420
+    },
+    {
+      "id": "nl-the-hague-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/nl-the-hague.webp",
+      "sha256": "bc8ad7770fad48bca48bea5e8c355f8201620743a4e861275305b12208d3eb4b",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        48,
+        0,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 105892
+    },
+    {
+      "id": "nl-the-hague-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/nl-the-hague-mobile.webp",
+      "sha256": "ee24a805e189b8539ee41bff139e34152fcc0016d11dc8409d1fe62592fb6e2b",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 89140
+    },
+    {
+      "id": "at-graz-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/at-graz.webp",
+      "sha256": "64aef29b2162bc0a01dee3e0334475e5eba6d43588408dcbc2dbc947e4718d7b",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        15,
+        10,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 113842
+    },
+    {
+      "id": "at-graz-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/at-graz-mobile.webp",
+      "sha256": "616739599fb71ff44b0023fcc3bf7924bd2cce44a34f6e7a2e9bd3215b56b66b",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        38,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 87098
+    },
+    {
+      "id": "gr-nafplio-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/gr-nafplio.webp",
+      "sha256": "51aa6e85d0d3b1aa9664a92775cc140519a2bb0348307495adaf974547517d97",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        24,
+        43,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 78240
+    },
+    {
+      "id": "gr-nafplio-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/gr-nafplio-mobile.webp",
+      "sha256": "59a531ff3f65a671b234379e9c74d235df663733efa74d563d020376c5bfa171",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        17,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 80112
+    },
+    {
+      "id": "hr-trogir-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/hr-trogir.webp",
+      "sha256": "2c6a89a0d3f274a572f5f426d005588612db53a0c55c7ef04dff5fed84845bde",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        14,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 109182
+    },
+    {
+      "id": "hr-trogir-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/hr-trogir-mobile.webp",
+      "sha256": "e4275d7719e85cd6b2f5dccecede87fedf3343a7122ef1954f938e6fd605313a",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        28,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 86058
+    },
+    {
+      "id": "hu-pecs-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/hu-pecs.webp",
+      "sha256": "e45a00b338d7d886c68e43c5dfef0f5d0ca241db5f07fc1c2912385ae4dfabf7",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        18,
+        25,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 103554
+    },
+    {
+      "id": "hu-pecs-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/hu-pecs-mobile.webp",
+      "sha256": "19e08c3d864164ac1f13d9a3bd2a4a24ea47665c72893d0e2f27028694932a03",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 98192
+    },
+    {
+      "id": "dk-aarhus-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/dk-aarhus.webp",
+      "sha256": "e045297df9b5130cb2a578c53a36f751b8e45e52e7c1d9ba1b5f55bbc73b7e3d",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 134700
+    },
+    {
+      "id": "dk-aarhus-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/dk-aarhus-mobile.webp",
+      "sha256": "7db16170c233363381cf6dc9b5ddaa452d85239b8a30f02af9b4fa3f251ece96",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        59,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 118774
+    },
+    {
+      "id": "lt-kaunas-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/lt-kaunas.webp",
+      "sha256": "83807f74ff5e980cddd578a7d8c281cc9355815644636975cc44dd40bd865e58",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        22,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 73220
+    },
+    {
+      "id": "lt-kaunas-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/lt-kaunas-mobile.webp",
+      "sha256": "1993fc0f313db491e3295a17dcc953176ee3ef2583e549985cb4aac97381bd12",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        47,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 50482
+    },
+    {
+      "id": "bo-sucre-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/bo-sucre.webp",
+      "sha256": "c48cef7c6c0b20962bc0fffdb5425a7d35e170e6f9ea9b19c8db233d5d5ac4a7",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        41,
+        22,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 114152
+    },
+    {
+      "id": "bo-sucre-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/bo-sucre-mobile.webp",
+      "sha256": "a73ad05376509e1b1b2d4f209171947166df92ad27859123a7295e48096d80a8",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        35,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 96356
+    },
+    {
+      "id": "gd-st-georges-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/gd-st-georges.webp",
+      "sha256": "9bc48f03ccc24fcbb004c273969dad0adee82c866c5b129529ba371a1d90efb2",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        8,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 121276
+    },
+    {
+      "id": "gd-st-georges-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/gd-st-georges-mobile.webp",
+      "sha256": "b45f95863f6aaa0ccdef3792a16cb06e47a0a9d661e88fffe504d593c211f1ab",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        76,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 112690
+    },
+    {
+      "id": "ht-cap-haitien-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ht-cap-haitien.webp",
+      "sha256": "a248321f998136a7d4d897693e948b63fe05d42dd2a9a9702bce5daecef10a69",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        14,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 127720
+    },
+    {
+      "id": "ht-cap-haitien-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ht-cap-haitien-mobile.webp",
+      "sha256": "9172b28d71328dbe4a53a0ead706ec0a334011cadd992c0e53b31da1562491a4",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        15,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 108936
+    },
+    {
+      "id": "ni-granada-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ni-granada.webp",
+      "sha256": "dc2224ee2a4fe47983e28799681c0eac4258bee3d72a1e6960e7705c90c59a07",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        17,
+        41,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 103086
+    },
+    {
+      "id": "ni-granada-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ni-granada-mobile.webp",
+      "sha256": "63428cff65d6510e1c72795c2c13183c395989f859061c127cbbe096126afb0c",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        65,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 102690
+    },
+    {
+      "id": "tt-port-of-spain-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/tt-port-of-spain.webp",
+      "sha256": "e33bb5d95f8375c2addab2b2826bf8df490b04fb4770afe147d1eefe936377a5",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        48,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 122430
+    },
+    {
+      "id": "tt-port-of-spain-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/tt-port-of-spain-mobile.webp",
+      "sha256": "2bf9038d5f97e30522595166e85bb8249aeda0f5682a2c413f2e136572280c9b",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        30,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 100558
+    },
+    {
+      "id": "us-charleston-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/us-charleston.webp",
+      "sha256": "1ec641408c7ca80620a441e5dcd2123d99ff836906768ebc90eca379607962ac",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        24,
+        62,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 120428
+    },
+    {
+      "id": "us-charleston-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/us-charleston-mobile.webp",
+      "sha256": "6492a28605a78c3dee9ad2bc46115868a256980fa7c4d59d21edad58b1d09fe9",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        7,
+        19,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 92388
+    },
+    {
+      "id": "ca-niagara-falls-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ca-niagara-falls.webp",
+      "sha256": "921dbdaacc8d5a6ebd0996a28ef2d006d632635f6a6930035b7e0553e7f73ec8",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        25,
+        42,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 101064
+    },
+    {
+      "id": "ca-niagara-falls-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ca-niagara-falls-mobile.webp",
+      "sha256": "2cb4dd4763e882343ece0985041178cf2b785faee9aea6d098353225fa51f255",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        72,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 83406
+    },
+    {
+      "id": "mx-merida-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/mx-merida.webp",
+      "sha256": "1458d76a30fcbfa0c1387a553e8e933c4f1cac7af62f933f3b3b05186c0025cd",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        42,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 127730
+    },
+    {
+      "id": "mx-merida-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/mx-merida-mobile.webp",
+      "sha256": "bfda31de385b7449cbe53fc058064be7543182780896fe514746a3613d60553f",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        14,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 115558
+    },
+    {
+      "id": "ar-ushuaia-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ar-ushuaia.webp",
+      "sha256": "26b173bd1ab5ef69c35baa9c340a8392e0c15685262a48fce8161b40822fcfce",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        17,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 91502
+    },
+    {
+      "id": "ar-ushuaia-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ar-ushuaia-mobile.webp",
+      "sha256": "15fd8aaaaf59794868b442a92559ef80ce6dafe4736c25e089e75c330da22720",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        31,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 68158
+    },
+    {
+      "id": "co-medellin-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/co-medellin.webp",
+      "sha256": "2dc6f26922102a87005ab0f657d9fea2deea8818e653abe6703930c01281ef49",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        43,
+        10,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 126032
+    },
+    {
+      "id": "co-medellin-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/co-medellin-mobile.webp",
+      "sha256": "ce70743bf4c838152cda2af315013641f6c8e6f96c4dc1a4c0c45056706434a4",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 106830
+    },
+    {
+      "id": "cr-cartago-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/cr-cartago.webp",
+      "sha256": "54def015ef4a3e80bde37e26611fdd4e167a8fc027da9f4cd6fe48698df8f04f",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        42,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 115142
+    },
+    {
+      "id": "cr-cartago-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/cr-cartago-mobile.webp",
+      "sha256": "9614aa00eebd322f69d33c61bbc0e8f4cd0e0c5cc2d573d22cc60247a93c7777",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        8,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 102160
+    },
+    {
+      "id": "bn-bandar-seri-begawan-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/bn-bandar-seri-begawan.webp",
+      "sha256": "fd55c86d35f679c2a18d8264da1db7c65134b89036c3182a86b852dd739d0b18",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        12,
+        9,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 107188
+    },
+    {
+      "id": "bn-bandar-seri-begawan-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/bn-bandar-seri-begawan-mobile.webp",
+      "sha256": "764d5237073e11b0404173f415c875f3884a8e2e83e81ccc5d6268a21325089c",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        8,
+        22,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 82122
+    },
+    {
+      "id": "tj-dushanbe-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/tj-dushanbe.webp",
+      "sha256": "815e44f207927b466336d0b40350151871c1908d91816cbb6e2c0547a2a17289",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        10,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 106188
+    },
+    {
+      "id": "tj-dushanbe-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/tj-dushanbe-mobile.webp",
+      "sha256": "f93ef96e20314ffc0c4ed2095dfa7245de9a125c626b728978808f2dcb153e06",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        3,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 73910
+    },
+    {
+      "id": "iq-erbil-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/iq-erbil.webp",
+      "sha256": "f1c4a892607aceacc57dcf194e181721d4d59265d0410c9b04a616148cc4c885",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        44,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 118298
+    },
+    {
+      "id": "iq-erbil-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/iq-erbil-mobile.webp",
+      "sha256": "108305b7837c21e10acc9cf18853ee2031143cad9cad456fd8f3c6118fb34a88",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        20,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 97408
+    },
+    {
+      "id": "kp-kaesong-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/kp-kaesong.webp",
+      "sha256": "a73e3f17cb4729f36e216c7f47ee13393076edc62625a3f0ff5806c359a580b4",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        24,
+        6,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 127136
+    },
+    {
+      "id": "kp-kaesong-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/kp-kaesong-mobile.webp",
+      "sha256": "0e246de924bb0fb11c015b07b572557300fb0274da6e9b5cbad477ec539899da",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        3,
+        26,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 84212
+    },
+    {
+      "id": "cn-nanjing-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/cn-nanjing.webp",
+      "sha256": "2fa878b8477e5e0ce3e46b31ad35951c7de7267a8dd4df2625a6eff10940a239",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        68,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 113690
+    },
+    {
+      "id": "cn-nanjing-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/cn-nanjing-mobile.webp",
+      "sha256": "f3e18386572af6fac38f97e6ed2f2990303266325b67989ae8a535714e218688",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        15,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 79970
+    },
+    {
+      "id": "my-kuching-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/my-kuching.webp",
+      "sha256": "2192e682006aa9c51c5c0c8ff4bc99c4263afba55fb74ac4085b635eaaea7ffa",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        49,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 114158
+    },
+    {
+      "id": "my-kuching-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/my-kuching-mobile.webp",
+      "sha256": "0b936ebdec78a8cf4e5d4cd44974f5277afede92c0c506ef1f663d78d30d87cf",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        26,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 107530
+    },
+    {
+      "id": "mm-yangon-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/mm-yangon.webp",
+      "sha256": "41f7ba6df1f0448ba6e11df5c88522011f1befb012b88f499369b36d7c018537",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        16,
+        24,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 96082
+    },
+    {
+      "id": "mm-yangon-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/mm-yangon-mobile.webp",
+      "sha256": "1bc14d62d1695b24b16e1b928c7060b80fb0bdf84067fe0e4865957c89090f24",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        22,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 92012
+    },
+    {
+      "id": "mv-male-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/mv-male.webp",
+      "sha256": "992e2d67ab4302ba9b56330a94443913bd0059b0a7b9c24557284d6f9dc297f4",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        88,
+        19,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 124658
+    },
+    {
+      "id": "mv-male-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/mv-male-mobile.webp",
+      "sha256": "57c3064af5452143979e71ddb1d5167c0c5ce49daba418c1f7885835e20dd46f",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        56,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 99358
+    },
+    {
+      "id": "ao-luanda-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ao-luanda.webp",
+      "sha256": "ca2eb5b08067c324b4ab4f2038a24bfd9e6b094df94440ab483318eb59e4f48b",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        5,
+        74,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 115248
+    },
+    {
+      "id": "ao-luanda-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ao-luanda-mobile.webp",
+      "sha256": "aaafb621cacc6edb6d86333956284f6d556acf2bfb64b58ce3c4bd6eb70d5cb9",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        28,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 82212
+    },
+    {
+      "id": "bi-bujumbura-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/bi-bujumbura.webp",
+      "sha256": "422a05b2dbab36ce94ac7c6012326552b2879e9f249ecc333413258e75f63e57",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        83,
+        29,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 90554
+    },
+    {
+      "id": "bi-bujumbura-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/bi-bujumbura-mobile.webp",
+      "sha256": "faf1c8bda4ccbf88069e89db5de68dbe2c8bc9ed148bc876c724402a6791f8d1",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 89350
+    },
+    {
+      "id": "td-ndjamena-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/td-ndjamena.webp",
+      "sha256": "a4fbd0572abe5f8163d762fb9035a7be1e6bb08f6b4b97006ed95772cadce753",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        36,
+        27,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 63142
+    },
+    {
+      "id": "td-ndjamena-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/td-ndjamena-mobile.webp",
+      "sha256": "a0bd93ed971d8f2737459202567504d5c6a6b566b1f9664b136c18116e5a91d9",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        64,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 50394
+    },
+    {
+      "id": "ci-grand-bassam-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ci-grand-bassam.webp",
+      "sha256": "981a0df938689c21761c1ff6e302568d9cf4fb31e884d59d4abbe1e83d1e9428",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        6,
+        47,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 133468
+    },
+    {
+      "id": "ci-grand-bassam-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ci-grand-bassam-mobile.webp",
+      "sha256": "60189d6d176460f56b2306e1ae7ddddfe251a3944e5f75b0397479b599e90271",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        10,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 117632
+    },
+    {
+      "id": "sz-lobamba-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/sz-lobamba.webp",
+      "sha256": "f377b24b44c695395a763c505574cb4f6429694e262d358b38dbd9b1e9f1cb22",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        10,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 101986
+    },
+    {
+      "id": "sz-lobamba-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/sz-lobamba-mobile.webp",
+      "sha256": "35b56aa302b7809e894b607dc984e79dacd2610f8fce70ce0c72028f40c691cc",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        43,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 104622
+    },
+    {
+      "id": "gh-cape-coast-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/gh-cape-coast.webp",
+      "sha256": "d16aa79407f5f999ed64908898cdb99dba9918f43af667af1beaeaac2b163c48",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        10,
+        9,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 113130
+    },
+    {
+      "id": "gh-cape-coast-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/gh-cape-coast-mobile.webp",
+      "sha256": "0f435a5737bee5da5edaf2fccf5e9072eb2c9084a805b5b2f047145752260ad8",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        68,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 108098
+    },
+    {
+      "id": "lr-monrovia-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/lr-monrovia.webp",
+      "sha256": "69fdb7b3e4f490ef9c8c6dc20b1a7284d07d8043a373244c5afd0ef5ffa4fb98",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        32,
+        33,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 143710
+    },
+    {
+      "id": "lr-monrovia-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/lr-monrovia-mobile.webp",
+      "sha256": "0f5ad8ba6884f65e359f185dda905b6dc5fc347f8cae130c2c207146fdbefcb2",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        15,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 124030
+    },
+    {
+      "id": "ml-djenne-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ml-djenne.webp",
+      "sha256": "e9bbd429f5c9c492bb8a00c54d1f41e53195033044bc5224a49d29962b862f81",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        16,
+        42,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 90892
+    },
+    {
+      "id": "ml-djenne-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ml-djenne-mobile.webp",
+      "sha256": "bc928c256a94926422ca5429e1e7247099bd00fe3ae61b176b27fc9f852455b0",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        29,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 74076
+    },
+    {
+      "id": "ne-agadez-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ne-agadez.webp",
+      "sha256": "8f15b5248f4d358e69608c7c11a5e7b8c6fd994d56cca9633c9673d3edf2e99e",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        24,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 71004
+    },
+    {
+      "id": "ne-agadez-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ne-agadez-mobile.webp",
+      "sha256": "e60063652c9f404ff16f0cc09c8617cac82cfac3dfb3dc50d06e670e42ffa7cf",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        30,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 74370
+    },
+    {
+      "id": "sn-saint-louis-senegal-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/sn-saint-louis-senegal.webp",
+      "sha256": "4d5d531875e5d2ce8611c4592dbad6d692e622b2059d1d940530f371f08319b7",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        19,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 107194
+    },
+    {
+      "id": "sn-saint-louis-senegal-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/sn-saint-louis-senegal-mobile.webp",
+      "sha256": "12140b10c327473fb6f0bfa453b838d7cdeb418be3138ac61dfb9d4bd20da4c7",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 73024
+    },
+    {
+      "id": "sd-suakin-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/sd-suakin.webp",
+      "sha256": "1d6a14ad1bf0a75a614fb8405d16328d16d61fdbaf5e733678b67e61488587ac",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        33,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 116204
+    },
+    {
+      "id": "sd-suakin-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/sd-suakin-mobile.webp",
+      "sha256": "f3782d9942b066f21ffc75461a0446bc4b4659491147dc07f35681eb91272b89",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        30,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 93660
+    },
+    {
+      "id": "zm-livingstone-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/zm-livingstone.webp",
+      "sha256": "eebb7f8f08eb09b7da2544b255aac0e8d434ffc7d36c80bf0220da68671ea567",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        36,
+        0,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 131004
+    },
+    {
+      "id": "zm-livingstone-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/zm-livingstone-mobile.webp",
+      "sha256": "c8d41920528bf3e9a52376f3d5d51175fb8f69f34d2af006e8b82a49624b7b12",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        8,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 123052
+    },
+    {
+      "id": "ki-bairiki-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ki-bairiki.webp",
+      "sha256": "83239698dacbf587baa096e810668bffeeacf9ba0cbfdf64202fc3efd93f8f1e",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        22,
+        28,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 116830
+    },
+    {
+      "id": "ki-bairiki-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ki-bairiki-mobile.webp",
+      "sha256": "88e36d2ea4a98e98df2f91a083e335d72cfb390f01c02c5ab89e85f7d2e8661f",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        18,
+        7,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 118858
+    },
+    {
+      "id": "pg-port-moresby-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/pg-port-moresby.webp",
+      "sha256": "2f6f3df57c6175259418e6e01e2d7475ee723f305e4e1fff30f0fe0e2bf5f6d9",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        135,
+        33,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 109704
+    },
+    {
+      "id": "pg-port-moresby-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/pg-port-moresby-mobile.webp",
+      "sha256": "e6385628ce11126f79e1e27bade5b2c9512fe1864c6b056d80c524bbdff313f4",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        62,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 105960
+    },
+    {
+      "id": "tv-vaiaku-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/tv-vaiaku.webp",
+      "sha256": "67c2d08c6d441c21bff09a20ae967455779b10911827838660885e3340120b1e",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        23,
+        19,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 119224
+    },
+    {
+      "id": "tv-vaiaku-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/tv-vaiaku-mobile.webp",
+      "sha256": "82b4c18e72b8edce1bbbe55889a27c685efb0e88e3117d3da148d2810a28391f",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        40,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 97414
+    },
+    {
+      "id": "nz-wellington-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/nz-wellington.webp",
+      "sha256": "681fdd2d170acd738c8a98dd0b7537f58df6041a4f8a89fcd855e0fc5ebeaea1",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        24,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 112782
+    },
+    {
+      "id": "nz-wellington-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/nz-wellington-mobile.webp",
+      "sha256": "ab894496511b8f5108f75d43db0f973aee7b2e606b4c45a48baad530b9fb94db",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        20,
+        27,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 129118
+    },
+    {
+      "id": "as-pago-pago-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/as-pago-pago.webp",
+      "sha256": "1e5e95cbbd01d70bca4e7f8f26ddc848d31f13e58e2c6aa7e3714bdfdaea03fd",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        11,
+        800,
+        480
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 105538
+    },
+    {
+      "id": "as-pago-pago-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/as-pago-pago-mobile.webp",
+      "sha256": "c6767f41b9036e35679ad407d3f60a7d45c8afb10ffcbb84d194b47e8d828e55",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        4,
+        32,
+        480,
+        600
+      ],
+      "originalEquality": true,
+      "promptEquality": true,
+      "imageInputs": [],
+      "bytes": 80286
+    }
+  ]
+}

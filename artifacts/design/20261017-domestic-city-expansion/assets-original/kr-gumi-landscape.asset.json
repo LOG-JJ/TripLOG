@@ -1,0 +1,51 @@
+{
+  "id": "kr-gumi-landscape",
+  "cityId": "kr-gumi",
+  "name": "구미",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경북",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gumi-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gumi-landscape.json",
+  "originalSha256": "f1adee563ce8c309ae366788d1870e77a4360dae4816e1d5cde16527a940d95c",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gumi.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 104940,
+  "assetSha256": "a44c15cd3779bc989497186edc65d7c2f32e203fb42493d35aa16b98a988e1fa",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

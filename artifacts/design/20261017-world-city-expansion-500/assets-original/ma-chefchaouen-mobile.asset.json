@@ -1,0 +1,52 @@
+{
+  "id": "ma-chefchaouen-mobile",
+  "cityId": "ma-chefchaouen",
+  "name": "셰프샤우엔",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ma-chefchaouen-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ma-chefchaouen-mobile.json",
+  "originalSha256": "c1ca8c0a0c7fd64cd444a066c9139411a0c8759402c4af98abbe667a4eaace1c",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    7,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ma-chefchaouen-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 107986,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "caffe5c08c64e60ac66d387e639fa7045f1ce2e7d1cd41fb927eea0740ee07e8",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

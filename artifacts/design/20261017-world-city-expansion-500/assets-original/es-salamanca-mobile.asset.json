@@ -1,0 +1,52 @@
+{
+  "id": "es-salamanca-mobile",
+  "cityId": "es-salamanca",
+  "name": "살라망카",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-salamanca-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-salamanca-mobile.json",
+  "originalSha256": "8452ebcf5bf4f5e9e534409b1d7edeeb1ba452bf0f9aa8be79debb1d6d1b0779",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    7,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/es-salamanca-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 106764,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "68260a5f1b2111c10f0611d2e31ae10b9032c6260a57d682e1e93e9b05882551",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

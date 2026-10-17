@@ -1,0 +1,51 @@
+{
+  "id": "kr-mungyeong-mobile",
+  "cityId": "kr-mungyeong",
+  "name": "문경",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경북",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-mungyeong-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-mungyeong-mobile.json",
+  "originalSha256": "e515ea5c209a374e5845d9908f539ffb0dfe9a85c961e6781cdfaa7accd71a39",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    96,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-mungyeong-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 110782,
+  "assetSha256": "3b48cb4303ca266326819fd97641f28885510639690e1557674552be63e94116",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

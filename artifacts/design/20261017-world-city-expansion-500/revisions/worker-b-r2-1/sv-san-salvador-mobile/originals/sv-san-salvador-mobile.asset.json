@@ -1,0 +1,52 @@
+{
+  "id": "sv-san-salvador-mobile",
+  "cityId": "sv-san-salvador",
+  "name": "산살바도르",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sv-san-salvador-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sv-san-salvador-mobile.json",
+  "originalSha256": "e8cb99615c8e09a69d69da2cd5e2a749845d218127c2cfad2577df427fd772ce",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    216,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sv-san-salvador-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 88278,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "f7ff6c01189a5c0da7b497f0e06b0e9daf32ce3746fdd33d244d62c1e668521e",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

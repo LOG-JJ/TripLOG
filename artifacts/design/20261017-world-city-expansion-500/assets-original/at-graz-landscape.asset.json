@@ -1,0 +1,52 @@
+{
+  "id": "at-graz-landscape",
+  "cityId": "at-graz",
+  "name": "그라츠",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/at-graz-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/at-graz-landscape.json",
+  "originalSha256": "03c068d333ca5cca3504b554cc2fb84bb7d2f3503363a3c3def1ebdc0d5121dc",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/at-graz.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 113842,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "64aef29b2162bc0a01dee3e0334475e5eba6d43588408dcbc2dbc947e4718d7b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

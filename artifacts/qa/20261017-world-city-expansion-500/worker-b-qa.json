@@ -1,0 +1,414 @@
+{
+  "owner": "worker-b",
+  "scope": "core first 40 cities following reassignment",
+  "cityCount": 40,
+  "assetCount": 80,
+  "status": "passed",
+  "visualReviewMethod": "All 40 pairs inspected in 8 contact sheets, with per-image full generation previews and targeted landmark research. T2I corrections replaced visibly incorrect landmarks, extra buildings and cropped main structures; original attempts retained with SHA256 provenance.",
+  "imageInputs": [],
+  "contactSheets": [
+    "worker-b-contact-1.png",
+    "worker-b-contact-2.png",
+    "worker-b-contact-3.png",
+    "worker-b-contact-4.png",
+    "worker-b-contact-5.png",
+    "worker-b-contact-6.png",
+    "worker-b-contact-7.png",
+    "worker-b-contact-8.png"
+  ],
+  "technicalValidation": "worker-b-technical-validation.json",
+  "correctionResearch": "../../design/20261017-world-city-expansion-500/research-worker-b-corrections.md",
+  "records": [
+    {
+      "cityId": "by-nesvizh",
+      "status": "passed",
+      "reason": "Mobile palace right wing clipped; landscape accepted.",
+      "resolution": "Independent T2I correction visually checked against paired variants; identifying landmark inside frame and intended support restored."
+    },
+    {
+      "cityId": "md-chisinau",
+      "status": "passed",
+      "reason": "Landscape missing identifying round clock; mobile accepted.",
+      "resolution": "Independent T2I correction visually checked against paired variants; identifying landmark inside frame and intended support restored."
+    },
+    {
+      "cityId": "ua-lviv",
+      "status": "passed",
+      "checks": [
+        "same town hall and clock tower in both variants",
+        "main tower and flag completely inside frame",
+        "paved square supports lower edge",
+        "palette and alpha silhouette consistent"
+      ]
+    },
+    {
+      "cityId": "gb-canterbury",
+      "status": "passed",
+      "reason": "Invented foreground waterways and mobile bridge; cathedral ends need safe margins.",
+      "resolution": "Independent T2I correction visually checked against paired variants; identifying landmark inside frame and intended support restored."
+    },
+    {
+      "cityId": "fr-arles",
+      "status": "passed",
+      "reason": "Right perimeter of amphitheatre cropped in both variants.",
+      "resolution": "Independent T2I correction visually checked against paired variants; identifying landmark inside frame and intended support restored."
+    },
+    {
+      "cityId": "it-ravenna",
+      "status": "passed",
+      "checks": [
+        "paired landmark identity consistent",
+        "main identifying roofs towers summit and clock details visible",
+        "no unwanted waters added to dry scenes",
+        "header palette and alpha silhouette checked"
+      ]
+    },
+    {
+      "cityId": "es-salamanca",
+      "status": "passed",
+      "checks": [
+        "paired landmark identity consistent",
+        "main identifying roofs towers summit and clock details visible",
+        "no unwanted waters added to dry scenes",
+        "header palette and alpha silhouette checked"
+      ]
+    },
+    {
+      "cityId": "de-trier",
+      "status": "passed",
+      "checks": [
+        "paired landmark identity consistent",
+        "main identifying roofs towers summit and clock details visible",
+        "no unwanted waters added to dry scenes",
+        "header palette and alpha silhouette checked"
+      ]
+    },
+    {
+      "cityId": "ch-lugano",
+      "status": "passed",
+      "checks": [
+        "paired landmark identity consistent",
+        "main identifying roofs towers summit and clock details visible",
+        "no unwanted waters added to dry scenes",
+        "header palette and alpha silhouette checked"
+      ]
+    },
+    {
+      "cityId": "gr-corfu-town",
+      "status": "passed",
+      "checks": [
+        "paired landmark identity consistent",
+        "main identifying roofs towers summit and clock details visible",
+        "no unwanted waters added to dry scenes",
+        "header palette and alpha silhouette checked"
+      ]
+    },
+    {
+      "cityId": "bg-nesebar",
+      "status": "passed",
+      "checks": [
+        "same identifying landmark in both variants",
+        "rooflines towers and clock faces not clipped",
+        "shore/river only where destination explicitly includes it",
+        "palette consistent and alpha edge connection checked"
+      ]
+    },
+    {
+      "cityId": "rs-novi-sad",
+      "status": "passed",
+      "checks": [
+        "same identifying landmark in both variants",
+        "rooflines towers and clock faces not clipped",
+        "shore/river only where destination explicitly includes it",
+        "palette consistent and alpha edge connection checked"
+      ]
+    },
+    {
+      "cityId": "se-gothenburg",
+      "status": "passed",
+      "checks": [
+        "same identifying landmark in both variants",
+        "rooflines towers and clock faces not clipped",
+        "shore/river only where destination explicitly includes it",
+        "palette consistent and alpha edge connection checked"
+      ]
+    },
+    {
+      "cityId": "fi-turku",
+      "status": "passed",
+      "checks": [
+        "same identifying landmark in both variants",
+        "rooflines towers and clock faces not clipped",
+        "shore/river only where destination explicitly includes it",
+        "palette consistent and alpha edge connection checked"
+      ]
+    },
+    {
+      "cityId": "bz-belize-city",
+      "status": "passed",
+      "checks": [
+        "same identifying landmark in both variants",
+        "rooflines towers and clock faces not clipped",
+        "shore/river only where destination explicitly includes it",
+        "palette consistent and alpha edge connection checked"
+      ],
+      "correction": "Actual brick single-tower architecture restored by independent T2I"
+    },
+    {
+      "cityId": "do-santo-domingo",
+      "status": "passed",
+      "checks": [
+        "same named motif across both variants",
+        "main roof and tower features inside frame",
+        "no unwanted large water body",
+        "runtime alpha silhouettes and lower supporting ground checked"
+      ],
+      "correction": "Independent T2I corrections preserved in revision ledger."
+    },
+    {
+      "cityId": "hn-comayagua",
+      "status": "passed",
+      "checks": [
+        "same named motif across both variants",
+        "main roof and tower features inside frame",
+        "no unwanted large water body",
+        "runtime alpha silhouettes and lower supporting ground checked"
+      ]
+    },
+    {
+      "cityId": "lc-castries",
+      "status": "passed",
+      "checks": [
+        "same named motif across both variants",
+        "main roof and tower features inside frame",
+        "no unwanted large water body",
+        "runtime alpha silhouettes and lower supporting ground checked"
+      ],
+      "correction": "Independent T2I corrections preserved in revision ledger."
+    },
+    {
+      "cityId": "sv-san-salvador",
+      "status": "passed",
+      "checks": [
+        "same named motif across both variants",
+        "main roof and tower features inside frame",
+        "no unwanted large water body",
+        "runtime alpha silhouettes and lower supporting ground checked"
+      ],
+      "correction": "Independent T2I corrections preserved in revision ledger."
+    },
+    {
+      "cityId": "ve-coro",
+      "status": "passed",
+      "checks": [
+        "same named motif across both variants",
+        "main roof and tower features inside frame",
+        "no unwanted large water body",
+        "runtime alpha silhouettes and lower supporting ground checked"
+      ],
+      "correction": "Independent T2I corrections preserved in revision ledger."
+    },
+    {
+      "cityId": "ca-st-johns",
+      "status": "passed",
+      "checks": [
+        "paired subjects and color accents agree",
+        "tower tops dome tops and named mountain remain inside frame",
+        "readable main structure in both proportions",
+        "transparent silhouette and foreground connection verified"
+      ]
+    },
+    {
+      "cityId": "mx-puebla",
+      "status": "passed",
+      "checks": [
+        "paired subjects and color accents agree",
+        "tower tops dome tops and named mountain remain inside frame",
+        "readable main structure in both proportions",
+        "transparent silhouette and foreground connection verified"
+      ]
+    },
+    {
+      "cityId": "br-ouro-preto",
+      "status": "passed",
+      "checks": [
+        "paired subjects and color accents agree",
+        "tower tops dome tops and named mountain remain inside frame",
+        "readable main structure in both proportions",
+        "transparent silhouette and foreground connection verified"
+      ]
+    },
+    {
+      "cityId": "pe-arequipa",
+      "status": "passed",
+      "checks": [
+        "paired subjects and color accents agree",
+        "tower tops dome tops and named mountain remain inside frame",
+        "readable main structure in both proportions",
+        "transparent silhouette and foreground connection verified"
+      ]
+    },
+    {
+      "cityId": "cu-trinidad",
+      "status": "passed",
+      "checks": [
+        "paired subjects and color accents agree",
+        "tower tops dome tops and named mountain remain inside frame",
+        "readable main structure in both proportions",
+        "transparent silhouette and foreground connection verified"
+      ]
+    },
+    {
+      "cityId": "bd-dhaka",
+      "status": "passed",
+      "checks": [
+        "paired landmark subject consistent",
+        "primary dome minaret roof flag or tower top remains visible",
+        "pale blue green yellow base palette with restrained local accents",
+        "lower foreground connected to frame with transparent exterior"
+      ]
+    },
+    {
+      "cityId": "kg-bishkek",
+      "status": "passed",
+      "checks": [
+        "paired landmark subject consistent",
+        "primary dome minaret roof flag or tower top remains visible",
+        "pale blue green yellow base palette with restrained local accents",
+        "lower foreground connected to frame with transparent exterior"
+      ]
+    },
+    {
+      "cityId": "ir-isfahan",
+      "status": "passed",
+      "checks": [
+        "paired landmark subject consistent",
+        "primary dome minaret roof flag or tower top remains visible",
+        "pale blue green yellow base palette with restrained local accents",
+        "lower foreground connected to frame with transparent exterior"
+      ]
+    },
+    {
+      "cityId": "ye-sanaa",
+      "status": "passed",
+      "checks": [
+        "paired landmark subject consistent",
+        "primary dome minaret roof flag or tower top remains visible",
+        "pale blue green yellow base palette with restrained local accents",
+        "lower foreground connected to frame with transparent exterior"
+      ]
+    },
+    {
+      "cityId": "jp-matsumoto",
+      "status": "passed",
+      "checks": [
+        "paired landmark subject consistent",
+        "primary dome minaret roof flag or tower top remains visible",
+        "pale blue green yellow base palette with restrained local accents",
+        "lower foreground connected to frame with transparent exterior"
+      ]
+    },
+    {
+      "cityId": "th-kanchanaburi",
+      "status": "passed",
+      "checks": [
+        "same subjects in paired variants",
+        "complete bridge endpoints or tower silhouettes checked",
+        "named local materials and principal color accents preserved",
+        "no large blank supporting-ground gap"
+      ],
+      "correction": "Bridge endpoints restored in both; curved and straight truss sequence restored in landscape."
+    },
+    {
+      "cityId": "ph-vigan",
+      "status": "passed",
+      "checks": [
+        "same subjects in paired variants",
+        "complete bridge endpoints or tower silhouettes checked",
+        "named local materials and principal color accents preserved",
+        "no large blank supporting-ground gap"
+      ],
+      "correction": "Unrelated church removed from landscape."
+    },
+    {
+      "cityId": "uz-bukhara",
+      "status": "passed",
+      "checks": [
+        "same subjects in paired variants",
+        "complete bridge endpoints or tower silhouettes checked",
+        "named local materials and principal color accents preserved",
+        "no large blank supporting-ground gap"
+      ]
+    },
+    {
+      "cityId": "dz-algiers",
+      "status": "passed",
+      "checks": [
+        "same subjects in paired variants",
+        "complete bridge endpoints or tower silhouettes checked",
+        "named local materials and principal color accents preserved",
+        "no large blank supporting-ground gap"
+      ]
+    },
+    {
+      "cityId": "bf-bobo-dioulasso",
+      "status": "passed",
+      "checks": [
+        "same subjects in paired variants",
+        "complete bridge endpoints or tower silhouettes checked",
+        "named local materials and principal color accents preserved",
+        "no large blank supporting-ground gap"
+      ]
+    },
+    {
+      "cityId": "cf-bangui",
+      "status": "passed",
+      "checks": [
+        "same named subject in paired variants",
+        "principal towers, wing tips and hat silhouettes remain inside frame",
+        "local materials and principal color accents preserved",
+        "no large blank supporting-ground gap"
+      ]
+    },
+    {
+      "cityId": "cd-kinshasa",
+      "status": "passed",
+      "checks": [
+        "same named subject in paired variants",
+        "principal towers, wing tips and hat silhouettes remain inside frame",
+        "local materials and principal color accents preserved",
+        "no large blank supporting-ground gap"
+      ]
+    },
+    {
+      "cityId": "er-asmara",
+      "status": "passed",
+      "checks": [
+        "same named subject in paired variants",
+        "principal towers, wing tips and hat silhouettes remain inside frame",
+        "local materials and principal color accents preserved",
+        "no large blank supporting-ground gap"
+      ]
+    },
+    {
+      "cityId": "gm-banjul",
+      "status": "passed",
+      "checks": [
+        "same named subject in paired variants",
+        "principal towers, wing tips and hat silhouettes remain inside frame",
+        "local materials and principal color accents preserved",
+        "no large blank supporting-ground gap"
+      ]
+    },
+    {
+      "cityId": "ls-maseru",
+      "status": "passed",
+      "checks": [
+        "same named subject in paired variants",
+        "principal towers, wing tips and hat silhouettes remain inside frame",
+        "local materials and principal color accents preserved",
+        "no large blank supporting-ground gap"
+      ]
+    }
+  ]
+}

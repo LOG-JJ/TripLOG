@@ -1,0 +1,52 @@
+{
+  "id": "cf-bangui-landscape",
+  "cityId": "cf-bangui",
+  "name": "방기",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cf-bangui-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cf-bangui-landscape.json",
+  "originalSha256": "eaf472782cfc695988a56a6f942246a5e8bae0f029dd9448d0a6a4a65f910574",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    37,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cf-bangui.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 128832,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e2cbac78c0e2ed826ce2e04a59e9973f77c5ad5ae41700af7f35d203f792f0dd",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

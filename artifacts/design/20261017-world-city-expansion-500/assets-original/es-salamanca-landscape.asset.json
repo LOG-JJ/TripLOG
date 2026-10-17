@@ -1,0 +1,52 @@
+{
+  "id": "es-salamanca-landscape",
+  "cityId": "es-salamanca",
+  "name": "살라망카",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-salamanca-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/es-salamanca-landscape.json",
+  "originalSha256": "59d8aa78dcf153c7b674ffae98d14e842c3b7980dbebebf0e2e53e5497df6245",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/es-salamanca.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 107300,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "475577a9c96ef3d151898a386f377ccec4f5e0ff54a7c76d7dcbf71503294fa7",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

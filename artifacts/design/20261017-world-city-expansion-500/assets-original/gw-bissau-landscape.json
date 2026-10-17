@@ -1,0 +1,26 @@
+{
+  "jobId": "gw-bissau-landscape",
+  "cityId": "gw-bissau",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Bissau, Guinea-Bissau: the low stone ramparts and entrance of Amura Fortress, with the low buildings of Bissau Velho. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "5effb81452a8ba4ee64eaff6ac1fa4677d42b8b31d14489df0301b0abb999d47",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gw-bissau-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-d0043e31-488c-492d-a6fa-a83fe101c404.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-d0043e31-488c-492d-a6fa-a83fe101c404.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/gw-bissau-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "ab8515992df82e4f21a773f5f218bff727d8dd9f359e66d3987e3d84c562e306",
+  "savedSha256": "ab8515992df82e4f21a773f5f218bff727d8dd9f359e66d3987e3d84c562e306",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:50:52.643Z",
+  "toolCallId": "exec-d0043e31-488c-492d-a6fa-a83fe101c404",
+  "savedAt": "2026-10-17T06:55:20.465669+00:00"
+}

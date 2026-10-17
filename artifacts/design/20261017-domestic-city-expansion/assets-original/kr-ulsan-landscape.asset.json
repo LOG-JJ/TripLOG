@@ -1,0 +1,51 @@
+{
+  "id": "kr-ulsan-landscape",
+  "cityId": "kr-ulsan",
+  "name": "울산",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "광역시급",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-ulsan-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-ulsan-landscape.json",
+  "originalSha256": "ecfc415af7d259473f02b5e3c37484bc65c275fb5720ff58f6257e3c798541f5",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    20,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-ulsan.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 108942,
+  "assetSha256": "fd71c6aa20d808229814d12851c4ad323dc4692283bd915253901c59476b3745",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "sk-kosice-landscape",
+  "cityId": "sk-kosice",
+  "name": "코시체",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sk-kosice-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sk-kosice-landscape.json",
+  "originalSha256": "d2d6051c99692d938c8bef187bf5fd11e55ba6843de9bfc8ece7b531db4e0580",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    3,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sk-kosice.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 133576,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "882f770af21d000482d9cf8d6c3a8023b6100451e8516a94db4f1a347a713dfc",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

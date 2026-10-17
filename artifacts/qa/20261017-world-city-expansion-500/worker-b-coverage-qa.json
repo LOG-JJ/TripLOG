@@ -1,0 +1,128 @@
+{
+  "owner": "worker-b",
+  "scope": "country-coverage 10 cities",
+  "cityCount": 10,
+  "assetCount": 20,
+  "generationCallCount": 22,
+  "status": "passed",
+  "generationMode": "Independent text-to-image for every variant and correction",
+  "imageInputs": [],
+  "visualReviewMethod": "All 10 PC/mobile pairs inspected in 2 contact sheets and individual returned generation previews. Source-based form guards prepared before generation. Mata-Utu mobile was regenerated with a frontal composition to keep the complete church inside the frame.",
+  "technicalValidation": "worker-b-coverage-technical-validation.json",
+  "contactSheets": [
+    "worker-b-coverage-contact-1.png",
+    "worker-b-coverage-contact-2.png"
+  ],
+  "alpha8Edges": {
+    "rightGapAllPixels": 0,
+    "bottomGapAllPixels": 0,
+    "corrections": [
+      "ax-mariehamn-mobile: right 2px to 0px",
+      "im-douglas-mobile: right 2px/bottom 5px to 0px"
+    ],
+    "method": "Regenerated WebP from exact preserved PNG after trimming only sub-visible right/bottom padding; source PNG and generation provenance unchanged; previous WebP and asset metadata retained with SHA256."
+  },
+  "records": [
+    {
+      "cityId": "ax-mariehamn",
+      "status": "passed",
+      "checks": [
+        "paired variants preserve the same named subject and recognizable form",
+        "principal masts, towers, roofs and dome tops remain visible",
+        "palette and material accents remain consistent",
+        "alpha>=8 right and bottom gaps are zero after technical refits"
+      ]
+    },
+    {
+      "cityId": "cw-willemstad",
+      "status": "passed",
+      "checks": [
+        "paired variants preserve the same named subject and recognizable form",
+        "principal masts, towers, roofs and dome tops remain visible",
+        "palette and material accents remain consistent",
+        "alpha>=8 right and bottom gaps are zero after technical refits"
+      ]
+    },
+    {
+      "cityId": "gg-saint-peter-port",
+      "status": "passed",
+      "checks": [
+        "paired variants preserve the same named subject and recognizable form",
+        "principal masts, towers, roofs and dome tops remain visible",
+        "palette and material accents remain consistent",
+        "alpha>=8 right and bottom gaps are zero after technical refits"
+      ]
+    },
+    {
+      "cityId": "im-douglas",
+      "status": "passed",
+      "checks": [
+        "paired variants preserve the same named subject and recognizable form",
+        "principal masts, towers, roofs and dome tops remain visible",
+        "palette and material accents remain consistent",
+        "alpha>=8 right and bottom gaps are zero after technical refits"
+      ]
+    },
+    {
+      "cityId": "mq-fort-de-france",
+      "status": "passed",
+      "checks": [
+        "paired variants preserve the same named subject and recognizable form",
+        "principal masts, towers, roofs and dome tops remain visible",
+        "palette and material accents remain consistent",
+        "alpha>=8 right and bottom gaps are zero after technical refits"
+      ]
+    },
+    {
+      "cityId": "sh-jamestown",
+      "status": "passed",
+      "checks": [
+        "paired variants preserve the same named subject and recognizable form",
+        "principal staircase, fountain, jetty, cathedral towers or ferry remains readable",
+        "local materials and principal color accents preserved",
+        "alpha>=8 right and bottom gaps are zero"
+      ]
+    },
+    {
+      "cityId": "vg-road-town",
+      "status": "passed",
+      "checks": [
+        "paired variants preserve the same named subject and recognizable form",
+        "principal staircase, fountain, jetty, cathedral towers or ferry remains readable",
+        "local materials and principal color accents preserved",
+        "alpha>=8 right and bottom gaps are zero"
+      ]
+    },
+    {
+      "cityId": "cx-flying-fish-cove",
+      "status": "passed",
+      "checks": [
+        "paired variants preserve the same named subject and recognizable form",
+        "principal staircase, fountain, jetty, cathedral towers or ferry remains readable",
+        "local materials and principal color accents preserved",
+        "alpha>=8 right and bottom gaps are zero"
+      ]
+    },
+    {
+      "cityId": "wf-mata-utu",
+      "status": "passed",
+      "checks": [
+        "paired variants preserve the same named subject and recognizable form",
+        "principal staircase, fountain, jetty, cathedral towers or ferry remains readable",
+        "local materials and principal color accents preserved",
+        "alpha>=8 right and bottom gaps are zero"
+      ],
+      "correction": "Mobile changed to a strict frontal view by independent T2I after two oblique attempts reached the right border; both replaced attempts and provenance retained."
+    },
+    {
+      "cityId": "yt-mamoudzou",
+      "status": "passed",
+      "checks": [
+        "paired variants preserve the same named subject and recognizable form",
+        "principal staircase, fountain, jetty, cathedral towers or ferry remains readable",
+        "local materials and principal color accents preserved",
+        "alpha>=8 right and bottom gaps are zero"
+      ]
+    }
+  ]
+}

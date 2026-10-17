@@ -1,0 +1,52 @@
+{
+  "id": "bd-dhaka-mobile",
+  "cityId": "bd-dhaka",
+  "name": "다카",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bd-dhaka-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bd-dhaka-mobile.json",
+  "originalSha256": "1f6c919a0fb25222f8eb679fe91714ea0ba2bcb5beea33356e6661dab432b76c",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    116,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bd-dhaka-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 86404,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "6fd164727ab72d2a83fb6a8eae0e7506cba37b32f02405a2ff2302c653233aeb",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "kr-yeongcheon-landscape",
+  "cityId": "kr-yeongcheon",
+  "name": "영천",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경북",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongcheon-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongcheon-landscape.json",
+  "originalSha256": "1da9b25edbc23449b95a718e3a72662d721754eead78bc6ac7957bcc45a6c2d2",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-yeongcheon.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 126666,
+  "assetSha256": "816afbd9a3cbfbb1b663509c9d50eef710ffbe62fc5581589c141057aac33a2c",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

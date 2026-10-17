@@ -1,0 +1,72 @@
+{
+  "id": "ky-george-town-landscape",
+  "cityId": "ky-george-town",
+  "name": "조지타운(케이맨)",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ky-george-town-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ky-george-town-landscape.json",
+  "originalSha256": "0c146fea6df59a70022272709e393797ca44432ebac6e37b13e604eb86120de4",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    25,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ky-george-town.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 122012,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c29e2e97349c6518e43e8c3382c704693fac2982611476cc3f7ece0f1fcc4b12",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa",
+  "technicalFaintEdgeRefit": {
+    "checkedAt": "2026-10-17T07:53:04.310505+00:00",
+    "alphaThreshold": 8,
+    "beforeGaps": [
+      0,
+      5
+    ],
+    "afterGaps": [
+      0,
+      0
+    ],
+    "refits": [
+      [
+        0,
+        5
+      ]
+    ],
+    "source": "original PNG preserved",
+    "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\root-coverage-alpha8"
+  }
+}

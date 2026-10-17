@@ -1,0 +1,57 @@
+{
+  "id": "it-palermo-mobile",
+  "cityId": "it-palermo",
+  "name": "팔레르모",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-palermo-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-palermo-mobile.json",
+  "originalSha256": "420b33e6bd2e89b8309d4fbed15d59f8f85c959c53e63e7a14f893fd27556b9e",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    28,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/it-palermo-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 118390,
+  "technicalEmptyEdgeRefits": [
+    [
+      0,
+      5
+    ]
+  ],
+  "assetSha256": "3f94a5d7d62de8ab6f248fba80c5db316b744468730c945dc0de8548b291b1f4",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

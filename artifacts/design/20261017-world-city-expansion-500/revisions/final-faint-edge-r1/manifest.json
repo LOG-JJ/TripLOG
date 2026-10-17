@@ -1,0 +1,269 @@
+{
+  "reason": "Technical crop/refit of nearly transparent right/bottom padding exposed by rendered-header QA; original PNG and prompt unchanged.",
+  "records": [
+    {
+      "id": "bg-nesebar-landscape",
+      "beforeGaps": [
+        0,
+        5
+      ],
+      "afterGaps": [
+        0,
+        0
+      ],
+      "assetSha256": "b0545a9ed52622d605fc1cf7fae9b0ce394a669a6d95f00ff0a638dd8a3ea96f",
+      "archived": [
+        {
+          "original": "src\\assets\\trip-scenes\\cities\\v6\\bg-nesebar.webp",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\bg-nesebar.webp",
+          "sha256": "a93da905bee09ad5ee19a69d89cdda34ce9408a2e394a9a599bd73cb79574db5"
+        },
+        {
+          "original": "artifacts\\design\\20261017-world-city-expansion-500\\assets-original\\bg-nesebar-landscape.asset.json",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\bg-nesebar-landscape.asset.json",
+          "sha256": "ee700fe00a55d5acc3745159a893b6f31fd2061781689f31f171db4db8eb3695"
+        }
+      ]
+    },
+    {
+      "id": "bg-nesebar-mobile",
+      "beforeGaps": [
+        5,
+        4
+      ],
+      "afterGaps": [
+        0,
+        0
+      ],
+      "assetSha256": "e6a5e00ac1959daa2429af4ff76f61858971845770b3be0c718e31131d66e20a",
+      "archived": [
+        {
+          "original": "src\\assets\\trip-scenes\\cities\\v6\\bg-nesebar-mobile.webp",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\bg-nesebar-mobile.webp",
+          "sha256": "71539aed7607b50c221747ea40e7d2e9c23b8975338f3db947e8bac8f0d22efd"
+        },
+        {
+          "original": "artifacts\\design\\20261017-world-city-expansion-500\\assets-original\\bg-nesebar-mobile.asset.json",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\bg-nesebar-mobile.asset.json",
+          "sha256": "8df5101cf8736c1ff21476032a195c6b09c3a29f13375926118eba58d618a753"
+        }
+      ]
+    },
+    {
+      "id": "cu-trinidad-mobile",
+      "beforeGaps": [
+        4,
+        6
+      ],
+      "afterGaps": [
+        0,
+        0
+      ],
+      "assetSha256": "72ec5cd075012138c3948350ff05a17bb4d2e24b802905a4e8e4a827f04d07b3",
+      "archived": [
+        {
+          "original": "src\\assets\\trip-scenes\\cities\\v6\\cu-trinidad-mobile.webp",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\cu-trinidad-mobile.webp",
+          "sha256": "603b0e736162a5c02208a50d76c682985ac19dcb93f3bea25fd783dae7502779"
+        },
+        {
+          "original": "artifacts\\design\\20261017-world-city-expansion-500\\assets-original\\cu-trinidad-mobile.asset.json",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\cu-trinidad-mobile.asset.json",
+          "sha256": "3e1cfca23f7b530d19fa6d48f91b2d2c20b5283e521d9e6ee0f350620360e1ba"
+        }
+      ]
+    },
+    {
+      "id": "es-segovia-landscape",
+      "beforeGaps": [
+        6,
+        0
+      ],
+      "afterGaps": [
+        0,
+        0
+      ],
+      "assetSha256": "866944421c97f02b0d71c6a6981f9073af518725d67e343c442c2298e92dc6bd",
+      "archived": [
+        {
+          "original": "src\\assets\\trip-scenes\\cities\\v6\\es-segovia.webp",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\es-segovia.webp",
+          "sha256": "e426a3e0f2fe9e7542986a524ecf378d60226d7a4eb158d16134f4d7630a9530"
+        },
+        {
+          "original": "artifacts\\design\\20261017-world-city-expansion-500\\assets-original\\es-segovia-landscape.asset.json",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\es-segovia-landscape.asset.json",
+          "sha256": "bd959ea92c6da5f5a6dfcb77b1efb2d826ea0b01aecd381ab3765fbb6aed5de1"
+        }
+      ]
+    },
+    {
+      "id": "gb-belfast-mobile",
+      "beforeGaps": [
+        0,
+        5
+      ],
+      "afterGaps": [
+        0,
+        0
+      ],
+      "assetSha256": "39162b33170e0bd8916316f0b3478625c5dfbca0ea1b62cd63fb8e1040023777",
+      "archived": [
+        {
+          "original": "src\\assets\\trip-scenes\\cities\\v6\\gb-belfast-mobile.webp",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\gb-belfast-mobile.webp",
+          "sha256": "55db4c1f880b21d8f19b8bd9f0df1fdd18a64b20b7895ce88481719901846ae6"
+        },
+        {
+          "original": "artifacts\\design\\20261017-world-city-expansion-500\\assets-original\\gb-belfast-mobile.asset.json",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\gb-belfast-mobile.asset.json",
+          "sha256": "e174ee47e0afbad9684ea876b80988edf2a4875870b731e855c2dd55a12f2b29"
+        }
+      ]
+    },
+    {
+      "id": "gw-bissau-mobile",
+      "beforeGaps": [
+        6,
+        6
+      ],
+      "afterGaps": [
+        0,
+        0
+      ],
+      "assetSha256": "309cbe620200441b9df4d2b5f2e153c1bff358d9b9fbedc626c8768c7fd96793",
+      "archived": [
+        {
+          "original": "src\\assets\\trip-scenes\\cities\\v6\\gw-bissau-mobile.webp",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\gw-bissau-mobile.webp",
+          "sha256": "2dfd3bb6c04b6732b70e6bf46a53cef62314e3650c8450464170faeaa918acc1"
+        },
+        {
+          "original": "artifacts\\design\\20261017-world-city-expansion-500\\assets-original\\gw-bissau-mobile.asset.json",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\gw-bissau-mobile.asset.json",
+          "sha256": "419a82806ccaab7a848087cb62fc4ca5b4c98080b0c3aa67e5db734941d52d32"
+        }
+      ]
+    },
+    {
+      "id": "it-ravenna-mobile",
+      "beforeGaps": [
+        0,
+        5
+      ],
+      "afterGaps": [
+        0,
+        0
+      ],
+      "assetSha256": "4b832697cb71a6bd2c3cd47bfac29e5121136ae77229b0b8a2f458fa845713e4",
+      "archived": [
+        {
+          "original": "src\\assets\\trip-scenes\\cities\\v6\\it-ravenna-mobile.webp",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\it-ravenna-mobile.webp",
+          "sha256": "9c81af19124f3636c36c7a01a3e9a0f963e53c42331223b8b8c1b88148b134cd"
+        },
+        {
+          "original": "artifacts\\design\\20261017-world-city-expansion-500\\assets-original\\it-ravenna-mobile.asset.json",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\it-ravenna-mobile.asset.json",
+          "sha256": "0a5b8354283b94222a42c30300f4840075fee70e8717e5cffa5e0d79760d2faf"
+        }
+      ]
+    },
+    {
+      "id": "ki-bairiki-mobile",
+      "beforeGaps": [
+        4,
+        5
+      ],
+      "afterGaps": [
+        0,
+        0
+      ],
+      "assetSha256": "5b6cc2539fa5286b76b976d06ded0d935a045f6188207d223755ba4b49ef8388",
+      "archived": [
+        {
+          "original": "src\\assets\\trip-scenes\\cities\\v6\\ki-bairiki-mobile.webp",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\ki-bairiki-mobile.webp",
+          "sha256": "88e36d2ea4a98e98df2f91a083e335d72cfb390f01c02c5ab89e85f7d2e8661f"
+        },
+        {
+          "original": "artifacts\\design\\20261017-world-city-expansion-500\\assets-original\\ki-bairiki-mobile.asset.json",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\ki-bairiki-mobile.asset.json",
+          "sha256": "9000a230c4ade7fb2c1f341d4080cba256125d46e31b5107b2934bf3f4f29687"
+        }
+      ]
+    },
+    {
+      "id": "mh-majuro-mobile",
+      "beforeGaps": [
+        4,
+        6
+      ],
+      "afterGaps": [
+        0,
+        0
+      ],
+      "assetSha256": "9e4f840847cc8575a3308a5c9abdef47c3264678c3f1d0b843bb9bbaf7c07aab",
+      "archived": [
+        {
+          "original": "src\\assets\\trip-scenes\\cities\\v6\\mh-majuro-mobile.webp",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\mh-majuro-mobile.webp",
+          "sha256": "bd96fd98ef86119d04f4fe0471b8d0910a06d5c5870e7bbbfd9f6517aecb8866"
+        },
+        {
+          "original": "artifacts\\design\\20261017-world-city-expansion-500\\assets-original\\mh-majuro-mobile.asset.json",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\mh-majuro-mobile.asset.json",
+          "sha256": "08334b4a1b0b1d14c4114b730ae05fdcda7203e4e023f1f998d35676f9c1190f"
+        }
+      ]
+    },
+    {
+      "id": "pf-papeete-mobile",
+      "beforeGaps": [
+        5,
+        5
+      ],
+      "afterGaps": [
+        0,
+        0
+      ],
+      "assetSha256": "aef8507c8f84cd57ab8bbff886f76dc1ea696adb27a5dd1a37c3d36b652a0691",
+      "archived": [
+        {
+          "original": "src\\assets\\trip-scenes\\cities\\v6\\pf-papeete-mobile.webp",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\pf-papeete-mobile.webp",
+          "sha256": "49ff2e392e36cdf41b3a9e5bc5cb376d7775499b6e468fa6ac333ea87b856005"
+        },
+        {
+          "original": "artifacts\\design\\20261017-world-city-expansion-500\\assets-original\\pf-papeete-mobile.asset.json",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\pf-papeete-mobile.asset.json",
+          "sha256": "5d59562911f887737bf7a1e7002ca68d4565c677cd7fb91ae28164456f318665"
+        }
+      ]
+    },
+    {
+      "id": "vu-port-vila-mobile",
+      "beforeGaps": [
+        0,
+        11
+      ],
+      "afterGaps": [
+        0,
+        0
+      ],
+      "assetSha256": "8c9ceb6a2d8418dea827e4f7931f99aaf19e9fbd97b4db725eb3700cc5303113",
+      "archived": [
+        {
+          "original": "src\\assets\\trip-scenes\\cities\\v6\\vu-port-vila-mobile.webp",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\vu-port-vila-mobile.webp",
+          "sha256": "efe5305d513eec85f61bdbaf74dfcb10c4f9e4c9d71f7d1303a2227289afb1a0"
+        },
+        {
+          "original": "artifacts\\design\\20261017-world-city-expansion-500\\assets-original\\vu-port-vila-mobile.asset.json",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1\\vu-port-vila-mobile.asset.json",
+          "sha256": "304c7a0389a8852e6a59cc8762f0f44fd0138ac121db2876d0973a17d0545875"
+        }
+      ]
+    }
+  ]
+}

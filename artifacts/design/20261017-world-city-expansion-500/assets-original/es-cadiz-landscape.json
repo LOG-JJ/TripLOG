@@ -1,0 +1,26 @@
+{
+  "jobId": "es-cadiz-landscape",
+  "cityId": "es-cadiz",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Cadiz, Spain: Cadiz Cathedral's golden dome, with the Atlantic waterfront. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "23a19254ddb3da93edcc2f4c2b4307e172252c1e3c2873d5d759fc85040142d4",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/es-cadiz-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-0764d0bf-020d-4b9b-927d-ba5bca46e210.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-0764d0bf-020d-4b9b-927d-ba5bca46e210.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/es-cadiz-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "aaf87f91def21b238094880bf587a1d80fea0ff840747531b23c6b8fb0ff3350",
+  "savedSha256": "aaf87f91def21b238094880bf587a1d80fea0ff840747531b23c6b8fb0ff3350",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:09:27Z",
+  "toolCallId": "exec-0764d0bf-020d-4b9b-927d-ba5bca46e210",
+  "savedAt": "2026-10-17T06:11:47.962003+00:00"
+}

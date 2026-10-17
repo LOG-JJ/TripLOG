@@ -1,0 +1,73 @@
+{
+  "jobId": "kr-naju-mobile",
+  "reason": "Main landmark right roof edge and outer column were clipped in actual travel-header composition. Preserve the whole identifiable building inside the frame.",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "savedAt": "2026-10-17T05:37:20.809943+00:00",
+  "previousFiles": [
+    {
+      "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-naju-mobile.json",
+      "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/kr-naju-mobile-composition-20261017/kr-naju-mobile.job.json",
+      "sha256": "0d09b982aca1a3861a66d163e6fe06f0800761bf72c3d63683467472538ed92d"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-naju-mobile.prompt.txt",
+      "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/kr-naju-mobile-composition-20261017/kr-naju-mobile.prompt.txt",
+      "sha256": "ffb676dc41e64421887b024a3a2efbfd04d602beafe42d8419afc6fa631c2e99"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-naju-mobile.png",
+      "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/kr-naju-mobile-composition-20261017/kr-naju-mobile.png",
+      "sha256": "64482feea762c73bc4abe17a6586fe8134aa468790b5a4f15bc0ad13c3e06e20"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-naju-mobile.json",
+      "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/kr-naju-mobile-composition-20261017/kr-naju-mobile.json",
+      "sha256": "58d3d618e31cab9b5263ea601e48c03bfe451ecc37f56ea2f2d297f7d96da6d4"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-naju-mobile.asset.json",
+      "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/kr-naju-mobile-composition-20261017/kr-naju-mobile.asset.json",
+      "sha256": "6182cb468e32c6c11644a25ceeec8fe523e6708881d942a96532d391bf117167"
+    },
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v5/kr-naju-mobile.webp",
+      "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/kr-naju-mobile-composition-20261017/kr-naju-mobile.webp",
+      "sha256": "1a77412ab62e86960e1cd8b38e064516ff3d8214bf8e601de289cb1969a38ad1"
+    }
+  ],
+  "status": "accepted-after-render-qa",
+  "replacementSourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-48f3d44c-bec3-4a1c-80e5-5609ed816e43.png",
+  "replacementSourceSha256": "bdd5b2cc6c218bb94612faf2ac7cfbc4d4ddf8c5ddbad895d52c24c567c368ed",
+  "replacementPromptSha256": "5ed09e7feb8c7c35bcd90cccf9239d6d376a32f2dd8f7e5785236628457b7bac",
+  "replacementFiles": [
+    {
+      "path": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-naju-mobile.png",
+      "sha256": "bdd5b2cc6c218bb94612faf2ac7cfbc4d4ddf8c5ddbad895d52c24c567c368ed"
+    },
+    {
+      "path": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-naju-mobile.json",
+      "sha256": "df39a1ec0bf30ab099a7a0fda8292d97286c111d0522e6aaa000355fa89d770e"
+    },
+    {
+      "path": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-naju-mobile.asset.json",
+      "sha256": "ee8587496e579beefd5ff7bd25a5c1014ed2a4bbbc4536296e344866b2e6d2ca"
+    },
+    {
+      "path": "src/assets/trip-scenes/cities/v5/kr-naju-mobile.webp",
+      "sha256": "f3c840cb93de365df57f7843345bee5ddd4149bbfbc5d46c9c756f9cb610b8b0"
+    }
+  ],
+  "replacedAt": "2026-10-17T05:39:30.569624+00:00",
+  "archiveRepair": "The original job JSON and provenance shared a basename. Restored the exact original job bytes under a distinct .job.json name and matched the SHA256 recorded before changes. All six historical file copies now have distinct names and matching recorded hashes.",
+  "qa": {
+    "viewports": [
+      320,
+      390,
+      599,
+      1440
+    ],
+    "renderResults": "artifacts/tmp/20261017-domestic-city-expansion/worker-a-revised-headers/results.json",
+    "visualFinding": "Main landmark roof tips, outer pillars and overall building silhouette are visible inside the actual header. Right and bottom foreground connect to header edges."
+  }
+}

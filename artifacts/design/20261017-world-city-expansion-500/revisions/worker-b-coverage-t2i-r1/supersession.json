@@ -1,0 +1,38 @@
+[
+  {
+    "jobId": "wf-mata-utu-mobile",
+    "reason": "Mobile rear nave roof reaches the right border; use frontal smaller complete church composition",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/wf-mata-utu-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-t2i-r1/wf-mata-utu-mobile/jobs/wf-mata-utu-mobile.json",
+        "sha256": "d49e0ae3741c673dc9c3696a089c97ea478e8cebf189a17185a1dfaa1da8f62c"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/wf-mata-utu-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-t2i-r1/wf-mata-utu-mobile/jobs/wf-mata-utu-mobile.prompt.txt",
+        "sha256": "7f4c8764cecdda0a830826581e5ae3b4fc93bf4228a3336cae83215e7a9f3dfe"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/wf-mata-utu-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-t2i-r1/wf-mata-utu-mobile/originals/wf-mata-utu-mobile.png",
+        "sha256": "d86ebde8c6640a80e27e8d69c2a36f4afd9e2025fb73b20fde616408df84d2d7"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/wf-mata-utu-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-t2i-r1/wf-mata-utu-mobile/originals/wf-mata-utu-mobile.json",
+        "sha256": "3630603603bcb6b3b792c5e89ff04618c8a79f4e00c5460a1703ce9b99e61788"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/wf-mata-utu-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-t2i-r1/wf-mata-utu-mobile/originals/wf-mata-utu-mobile.asset.json",
+        "sha256": "70c16b313905179f763170929a8c25032b8d231ffdf682299ce412f0f0be9b25"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/wf-mata-utu-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-t2i-r1/wf-mata-utu-mobile/runtime/wf-mata-utu-mobile.webp",
+        "sha256": "9a4e728b9c7a557a0777c7f6d7e130716bd7919f39c8ecb9b7fea3c486c255ee"
+      }
+    ]
+  }
+]

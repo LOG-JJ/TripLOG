@@ -586,8 +586,7 @@ function init() {
         reader.onload = (e) => {
           if (state.id !== tripId || editingItineraryId !== itemId || els.itineraryVoucherFile.files[0] !== file) { resolve(false); return; }
           window.TripLog.features.itinerary.form.setVoucherFile(e.target.result, file.name);
-          els.ticketFileNameDisplay.textContent = file.name;
-          els.ticketFileResetBtn.style.display = "inline-flex";
+          window.TripLog.features.itinerary.form.syncVoucherFileUi();
           els.itineraryMemoInput.dispatchEvent(new Event("input", { bubbles: true }));
           resolve(true);
         };
@@ -601,8 +600,7 @@ function init() {
     els.ticketFileResetBtn.addEventListener("click", () => {
       window.TripLog.features.itinerary.form.setVoucherFile(null, null);
       els.itineraryVoucherFile.value = "";
-      els.ticketFileNameDisplay.textContent = "선택된 파일 없음";
-      els.ticketFileResetBtn.style.display = "none";
+      window.TripLog.features.itinerary.form.syncVoucherFileUi();
     });
   }
 

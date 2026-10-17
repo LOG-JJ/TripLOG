@@ -1,0 +1,52 @@
+{
+  "id": "am-yerevan-mobile",
+  "cityId": "am-yerevan",
+  "name": "예레반",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/am-yerevan-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/am-yerevan-mobile.json",
+  "originalSha256": "2ff4c0346747f9a30ec2b50b27298beea7a8d56562a7919991e02ba5643aadde",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    40,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/am-yerevan-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 95942,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "5f88ef06df4f06fc37ccdbfe2b880c280590d0c2789ff219d83298e8e9d17188",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

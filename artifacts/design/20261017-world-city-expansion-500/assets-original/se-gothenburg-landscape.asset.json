@@ -1,0 +1,52 @@
+{
+  "id": "se-gothenburg-landscape",
+  "cityId": "se-gothenburg",
+  "name": "예테보리",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/se-gothenburg-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/se-gothenburg-landscape.json",
+  "originalSha256": "80552e796004cfbf113f70a9d607ef5723d593d7bfd3417224a6611ab0ccbc2c",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    73,
+    21,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/se-gothenburg.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 98250,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e379e6189076c4285e8f2bb66901c1a8a7a09b15b0eb387066b99b2b523c2b7e",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

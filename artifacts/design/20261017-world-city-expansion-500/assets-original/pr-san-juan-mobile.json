@@ -1,0 +1,26 @@
+{
+  "jobId": "pr-san-juan-mobile",
+  "cityId": "pr-san-juan",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of San Juan, Puerto Rico: Castillo San Felipe del Morro's thick stepped stone walls and small domed sentry box above San Juan Bay, with a broad grassy approach. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette. Use a pulled-back three-quarter view of the entire visible fort complex, deliberately small enough to fit fully between x=18% and x=78% of the canvas and below y=18%. Show the complete right-hand end of the thick fortress wall with transparent sky beyond it, while keeping all domed sentry boxes whole. There must be a wide clear gap to the right of every wall, roof and turret, not merely the nearest sentry box. Only the broad grassy approach, low bushes and a narrow strip of San Juan Bay may extend to the bottom and right canvas edges. Avoid the close-up view in which the fortress wall is cut by the right edge.",
+  "promptSha256": "c5e472683a989ddb62a7016b551065e7720f9bdbcb0553520312135fad8a2fbf",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/pr-san-juan-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-0b6d8c35-365d-4c44-8ea4-201496731f34.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-0b6d8c35-365d-4c44-8ea4-201496731f34.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/pr-san-juan-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "362f8614d3ae777b900e765b02edbddb1d9547491dcb286e63a40dc268da508c",
+  "savedSha256": "362f8614d3ae777b900e765b02edbddb1d9547491dcb286e63a40dc268da508c",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:54:11.833Z",
+  "toolCallId": "exec-0b6d8c35-365d-4c44-8ea4-201496731f34",
+  "savedAt": "2026-10-17T07:56:27.633398+00:00"
+}

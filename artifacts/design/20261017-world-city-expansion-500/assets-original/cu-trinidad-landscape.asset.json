@@ -1,0 +1,52 @@
+{
+  "id": "cu-trinidad-landscape",
+  "cityId": "cu-trinidad",
+  "name": "트리니다드(쿠바)",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cu-trinidad-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cu-trinidad-landscape.json",
+  "originalSha256": "510dbc83b3d7b934cebc9e02f0953bc364cedb39c132b550a6498b581d7686ee",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    56,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cu-trinidad.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 112004,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "a84ca1e07d38260ef4cd4eed4d744494b63726a61bd65f6064c4c7055d2c8764",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

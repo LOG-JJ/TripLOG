@@ -1,0 +1,52 @@
+{
+  "id": "ec-cuenca-landscape",
+  "cityId": "ec-cuenca",
+  "name": "쿠엥카(에콰도르)",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ec-cuenca-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ec-cuenca-landscape.json",
+  "originalSha256": "c9bf1f23a9880a0f4b640886e9f6b085a3d48300358149dcdaeb574efb64c58d",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    36,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ec-cuenca.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 115242,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c6071bdf3028af516bc05a4e27582e27bebb3dc5f2773c0bb38281570f69908e",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

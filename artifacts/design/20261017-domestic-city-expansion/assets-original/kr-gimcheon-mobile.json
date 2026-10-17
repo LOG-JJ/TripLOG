@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-gimcheon-mobile",
+  "cityId": "kr-gimcheon",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Gimcheon, South Korea: Jikjisa Temple's traditional tiled roofs among trees at the green foot of Hwangaksan Mountain. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "557b054b09828b9734864d09070f016527baea8d7f57bebc8ccac05fb0fb366a",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimcheon-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-e7c80702-7418-4420-9a8f-37ae29536c69.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-e7c80702-7418-4420-9a8f-37ae29536c69.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gimcheon-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "61e6b9bafc836f318026b738314178f01e9db24dab5921df039dd183a62f5926",
+  "savedSha256": "61e6b9bafc836f318026b738314178f01e9db24dab5921df039dd183a62f5926",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:25:53.592Z",
+  "toolCallId": "exec-e7c80702-7418-4420-9a8f-37ae29536c69",
+  "savedAt": "2026-10-17T05:26:55.250022+00:00"
+}

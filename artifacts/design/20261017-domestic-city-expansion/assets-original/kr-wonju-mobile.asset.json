@@ -1,0 +1,51 @@
+{
+  "id": "kr-wonju-mobile",
+  "cityId": "kr-wonju",
+  "name": "원주",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "강원",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-wonju-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-wonju-mobile.json",
+  "originalSha256": "63645f9b83320ab0478347ea0204f476fc5af5b2d1f535aa04232f664518d6c6",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-wonju-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 106064,
+  "assetSha256": "944d1194e0c3e430d0bf7bd4640ebc15c25b1cf9739fcb6eb2ed19a2a5645ae0",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

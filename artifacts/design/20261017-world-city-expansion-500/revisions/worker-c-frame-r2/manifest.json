@@ -1,0 +1,122 @@
+{
+  "count": 3,
+  "records": [
+    {
+      "jobId": "td-ndjamena-landscape",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/td-ndjamena-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-landscape/td-ndjamena-landscape.json",
+          "sha256": "c6a061f8b0bfa7a3643da8d6aa435acb83919c1732d69225074ed0c6d826f419"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/td-ndjamena-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-landscape/td-ndjamena-landscape.prompt.txt",
+          "sha256": "db2cf7916032f68584106e2290d656eeee944dd932c1054f9d6a8a5c6ba2147d"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-landscape.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-landscape/td-ndjamena-landscape.png",
+          "sha256": "3cb9ee5873df2a81d6c5f597c7f3e4e4450db2d20e6662516a38c978a94475cf"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-landscape/td-ndjamena-landscape.json",
+          "sha256": "6406c9425f21360beadad783847527db58d70cf7de24479cc3ab59a7db2c62ff"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-landscape.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-landscape/td-ndjamena-landscape.asset.json",
+          "sha256": "fc0f4ecc1ec4794cbe9c4a13f17d65e61c81c434c6d356a8be164c151cc8b2a4"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/td-ndjamena.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-landscape/td-ndjamena.webp",
+          "sha256": "a69e59812d342f641948bb5f034ee3a601d50d378f49b22b075e4f011aa5753f"
+        }
+      ],
+      "reason": "Second framing correction to include the complete bridge or museum outline.",
+      "newPromptSha256": "38f80ba42f452c5d48096d73a06905bd532128ea74c3fb1e26bf2f54f4278dd1",
+      "generationMode": "independent T2I",
+      "imageInputs": []
+    },
+    {
+      "jobId": "td-ndjamena-mobile",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/td-ndjamena-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-mobile/td-ndjamena-mobile.json",
+          "sha256": "9e41e197f47b1a787d8e81cb3a95b162f1441884d7fb83e4ec555e628614c577"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/td-ndjamena-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-mobile/td-ndjamena-mobile.prompt.txt",
+          "sha256": "b92a580f4f4c36516b75dc8167a65061bc288c75b23e95edf2f04dc33488a7ac"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-mobile.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-mobile/td-ndjamena-mobile.png",
+          "sha256": "0af72380d1fecd1455720a762e64797fa0f576084cd8c33d1523cec614118a6e"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-mobile/td-ndjamena-mobile.json",
+          "sha256": "32014f598d2d1c73cc5a11785b85ab0c479b77ea6babda0cb167708b93fbe377"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/td-ndjamena-mobile.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-mobile/td-ndjamena-mobile.asset.json",
+          "sha256": "db3c72fab823946a308175c7d103028a2bbaef4769f215f0ffc4e8dcf0ce225f"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/td-ndjamena-mobile.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/td-ndjamena-mobile/td-ndjamena-mobile.webp",
+          "sha256": "e2144bb6b355dc881e6058045c20c8fcd1efdf4732b998058e3e7ed35639735c"
+        }
+      ],
+      "reason": "Second framing correction to include the complete bridge or museum outline.",
+      "newPromptSha256": "08c8fbc7424f2a225428e38a0559b8091b02e79c5eb1f1f4ac0b84474c3c1e34",
+      "generationMode": "independent T2I",
+      "imageInputs": []
+    },
+    {
+      "jobId": "sn-saint-louis-senegal-mobile",
+      "archivedFiles": [
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sn-saint-louis-senegal-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.json",
+          "sha256": "031ae13dc96a6ebdc97c96746f6fa65c02debe2f5209b6e8ca4e6e18324b7dab"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sn-saint-louis-senegal-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.prompt.txt",
+          "sha256": "a4c791a3a25d19c8f61eb47102dc09d9ab7d6f4cccd9f1c94f97147e7845afac"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-mobile.png",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.png",
+          "sha256": "4a45e914b2ab2ed4cefad3dfd93b1dbe3a54ebba58eeda50dfd59e72cb588d84"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.json",
+          "sha256": "605b9b31920534ca206cc5d8c73bfb27733c13a9383916aa7c11a53076d18c7a"
+        },
+        {
+          "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-mobile.asset.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.asset.json",
+          "sha256": "fe9f35ea26677208649c4bcd75e159e00e517972d87057a603d20130755a58d8"
+        },
+        {
+          "previousPath": "src/assets/trip-scenes/cities/v6/sn-saint-louis-senegal-mobile.webp",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.webp",
+          "sha256": "091c5b93f700c34e84456b5e509ca579d0db7e5d2d7714a09dc66a97b12914c3"
+        }
+      ],
+      "reason": "Second framing correction to include the complete bridge or museum outline.",
+      "newPromptSha256": "54ce8a0ebbea6620436888ee499a552d8476fc2ef2fcbc36933a26cdb64469d8",
+      "generationMode": "independent T2I",
+      "imageInputs": []
+    }
+  ]
+}

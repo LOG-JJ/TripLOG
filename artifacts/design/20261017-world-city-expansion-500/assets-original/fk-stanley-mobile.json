@@ -1,0 +1,26 @@
+{
+  "jobId": "fk-stanley-mobile",
+  "cityId": "fk-stanley",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Stanley, Falkland Islands: Christ Church Cathedral, a modest long grey-stone church with red brick buttresses and window borders, a red pitched nave roof, and one square clock-and-bell tower capped by a low red pyramidal roof. Beside it show the Whalebone Arch as FOUR long pale curved whale jawbones meeting at their tips, on a small green seafront lawn. Include a narrow blue harbour strip beyond the shoreline. Preserve the distinctive grey stone and red brick colours; no huge cathedral spire and no whale-tail sculpture. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "9b09c08b96af9f665cdb1749890f763addadad5fc3ce86ece25f3af775c61594",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/fk-stanley-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-043db845-4c01-4207-9314-1797a26d8e3d.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-043db845-4c01-4207-9314-1797a26d8e3d.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/fk-stanley-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "5c4506d35b5c047386934c6a73e1eb51339c0901d6451ce7b33c9efcdd4a9e06",
+  "savedSha256": "5c4506d35b5c047386934c6a73e1eb51339c0901d6451ce7b33c9efcdd4a9e06",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:40:24Z",
+  "toolCallId": "exec-043db845-4c01-4207-9314-1797a26d8e3d",
+  "savedAt": "2026-10-17T07:44:05.372560+00:00"
+}

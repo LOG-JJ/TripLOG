@@ -1,0 +1,3462 @@
+{
+  "checkedAt": "2026-10-17T08:00:43.405Z",
+  "overseas": 540,
+  "requiredCountriesAndRegions": 242,
+  "covered": 242,
+  "missing": [],
+  "excludedCodes": [
+    "AQ",
+    "BV",
+    "GS",
+    "HM",
+    "IO",
+    "TF",
+    "UM"
+  ],
+  "rows": [
+    {
+      "code": "AD",
+      "country": "안도라",
+      "englishCountry": "Andorra",
+      "representativeId": "ad-andorra-la-vella",
+      "representativeName": "안도라라베야",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ad-andorra-la-vella"
+      ]
+    },
+    {
+      "code": "AE",
+      "country": "아랍에미리트",
+      "englishCountry": "United Arab Emirates",
+      "representativeId": "ae-dubai",
+      "representativeName": "두바이",
+      "kind": "city",
+      "destinationCount": 3,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ae-dubai",
+        "ae-abu-dhabi",
+        "ae-sharjah"
+      ]
+    },
+    {
+      "code": "AF",
+      "country": "아프가니스탄",
+      "englishCountry": "Afghanistan",
+      "representativeId": "af-bamiyan",
+      "representativeName": "바미얀",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "af-bamiyan"
+      ]
+    },
+    {
+      "code": "AG",
+      "country": "앤티가 바부다",
+      "englishCountry": "Antigua & Barbuda",
+      "representativeId": "ag-st-johns",
+      "representativeName": "세인트존스(앤티가)",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ag-st-johns"
+      ]
+    },
+    {
+      "code": "AI",
+      "country": "앵귈라",
+      "englishCountry": "Anguilla",
+      "representativeId": "ai-the-valley",
+      "representativeName": "더밸리",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ai-the-valley"
+      ]
+    },
+    {
+      "code": "AL",
+      "country": "알바니아",
+      "englishCountry": "Albania",
+      "representativeId": "al-tirana",
+      "representativeName": "티라나",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "al-tirana"
+      ]
+    },
+    {
+      "code": "AM",
+      "country": "아르메니아",
+      "englishCountry": "Armenia",
+      "representativeId": "am-yerevan",
+      "representativeName": "예레반",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "am-yerevan"
+      ]
+    },
+    {
+      "code": "AO",
+      "country": "앙골라",
+      "englishCountry": "Angola",
+      "representativeId": "ao-luanda",
+      "representativeName": "루안다",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ao-luanda"
+      ]
+    },
+    {
+      "code": "AR",
+      "country": "아르헨티나",
+      "englishCountry": "Argentina",
+      "representativeId": "ar-buenos-aires",
+      "representativeName": "부에노스아이레스",
+      "kind": "city",
+      "destinationCount": 5,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ar-buenos-aires",
+        "ar-bariloche",
+        "ar-ushuaia",
+        "ar-mendoza",
+        "ar-salta"
+      ]
+    },
+    {
+      "code": "AS",
+      "country": "아메리칸 사모아",
+      "englishCountry": "American Samoa",
+      "representativeId": "as-pago-pago",
+      "representativeName": "파고파고",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "as-pago-pago"
+      ]
+    },
+    {
+      "code": "AT",
+      "country": "오스트리아",
+      "englishCountry": "Austria",
+      "representativeId": "at-vienna",
+      "representativeName": "빈",
+      "kind": "city",
+      "destinationCount": 5,
+      "hasDedicatedPair": true,
+      "ids": [
+        "at-vienna",
+        "at-salzburg",
+        "at-innsbruck",
+        "at-hallstatt",
+        "at-graz"
+      ]
+    },
+    {
+      "code": "AU",
+      "country": "오스트레일리아",
+      "englishCountry": "Australia",
+      "representativeId": "au-sydney",
+      "representativeName": "시드니",
+      "kind": "city",
+      "destinationCount": 8,
+      "hasDedicatedPair": true,
+      "ids": [
+        "au-sydney",
+        "au-melbourne",
+        "au-brisbane",
+        "au-gold-coast",
+        "au-cairns",
+        "au-perth",
+        "au-adelaide",
+        "au-hobart"
+      ]
+    },
+    {
+      "code": "AW",
+      "country": "아루바",
+      "englishCountry": "Aruba",
+      "representativeId": "aw-oranjestad",
+      "representativeName": "오라녜스타트",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "aw-oranjestad"
+      ]
+    },
+    {
+      "code": "AX",
+      "country": "올란드 제도",
+      "englishCountry": "Åland Islands",
+      "representativeId": "ax-mariehamn",
+      "representativeName": "마리에함",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ax-mariehamn"
+      ]
+    },
+    {
+      "code": "AZ",
+      "country": "아제르바이잔",
+      "englishCountry": "Azerbaijan",
+      "representativeId": "az-baku",
+      "representativeName": "바쿠",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "az-baku"
+      ]
+    },
+    {
+      "code": "BA",
+      "country": "보스니아 헤르체고비나",
+      "englishCountry": "Bosnia & Herzegovina",
+      "representativeId": "ba-sarajevo",
+      "representativeName": "사라예보",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ba-sarajevo",
+        "ba-mostar"
+      ]
+    },
+    {
+      "code": "BB",
+      "country": "바베이도스",
+      "englishCountry": "Barbados",
+      "representativeId": "bb-bridgetown",
+      "representativeName": "브리지타운",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "bb-bridgetown"
+      ]
+    },
+    {
+      "code": "BD",
+      "country": "방글라데시",
+      "englishCountry": "Bangladesh",
+      "representativeId": "bd-dhaka",
+      "representativeName": "다카",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "bd-dhaka"
+      ]
+    },
+    {
+      "code": "BE",
+      "country": "벨기에",
+      "englishCountry": "Belgium",
+      "representativeId": "be-brussels",
+      "representativeName": "브뤼셀",
+      "kind": "city",
+      "destinationCount": 4,
+      "hasDedicatedPair": true,
+      "ids": [
+        "be-brussels",
+        "be-bruges",
+        "be-ghent",
+        "be-antwerp"
+      ]
+    },
+    {
+      "code": "BF",
+      "country": "부르키나파소",
+      "englishCountry": "Burkina Faso",
+      "representativeId": "bf-bobo-dioulasso",
+      "representativeName": "보보디울라소",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "bf-bobo-dioulasso"
+      ]
+    },
+    {
+      "code": "BG",
+      "country": "불가리아",
+      "englishCountry": "Bulgaria",
+      "representativeId": "bg-sofia",
+      "representativeName": "소피아",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "bg-sofia",
+        "bg-nesebar"
+      ]
+    },
+    {
+      "code": "BH",
+      "country": "바레인",
+      "englishCountry": "Bahrain",
+      "representativeId": "bh-manama",
+      "representativeName": "마나마",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "bh-manama"
+      ]
+    },
+    {
+      "code": "BI",
+      "country": "부룬디",
+      "englishCountry": "Burundi",
+      "representativeId": "bi-bujumbura",
+      "representativeName": "부줌부라",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "bi-bujumbura"
+      ]
+    },
+    {
+      "code": "BJ",
+      "country": "베냉",
+      "englishCountry": "Benin",
+      "representativeId": "bj-ouidah",
+      "representativeName": "위다",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "bj-ouidah"
+      ]
+    },
+    {
+      "code": "BL",
+      "country": "생바르텔레미",
+      "englishCountry": "St. Barthélemy",
+      "representativeId": "bl-gustavia",
+      "representativeName": "구스타비아",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "bl-gustavia"
+      ]
+    },
+    {
+      "code": "BM",
+      "country": "버뮤다",
+      "englishCountry": "Bermuda",
+      "representativeId": "bm-hamilton",
+      "representativeName": "해밀턴(버뮤다)",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "bm-hamilton"
+      ]
+    },
+    {
+      "code": "BN",
+      "country": "브루나이",
+      "englishCountry": "Brunei",
+      "representativeId": "bn-bandar-seri-begawan",
+      "representativeName": "반다르스리브가완",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "bn-bandar-seri-begawan"
+      ]
+    },
+    {
+      "code": "BO",
+      "country": "볼리비아",
+      "englishCountry": "Bolivia",
+      "representativeId": "bo-sucre",
+      "representativeName": "수크레",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "bo-sucre"
+      ]
+    },
+    {
+      "code": "BQ",
+      "country": "네덜란드령 카리브",
+      "englishCountry": "Caribbean Netherlands",
+      "representativeId": "bq-kralendijk",
+      "representativeName": "크랄렌데이크",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "bq-kralendijk"
+      ]
+    },
+    {
+      "code": "BR",
+      "country": "브라질",
+      "englishCountry": "Brazil",
+      "representativeId": "br-rio-de-janeiro",
+      "representativeName": "리우데자네이루",
+      "kind": "city",
+      "destinationCount": 6,
+      "hasDedicatedPair": true,
+      "ids": [
+        "br-rio-de-janeiro",
+        "br-sao-paulo",
+        "br-salvador",
+        "br-olinda",
+        "br-brasilia",
+        "br-ouro-preto"
+      ]
+    },
+    {
+      "code": "BS",
+      "country": "바하마",
+      "englishCountry": "Bahamas",
+      "representativeId": "bs-nassau",
+      "representativeName": "나소",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "bs-nassau"
+      ]
+    },
+    {
+      "code": "BT",
+      "country": "부탄",
+      "englishCountry": "Bhutan",
+      "representativeId": "bt-paro",
+      "representativeName": "파로",
+      "kind": "town",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "bt-paro",
+        "bt-thimphu"
+      ]
+    },
+    {
+      "code": "BW",
+      "country": "보츠와나",
+      "englishCountry": "Botswana",
+      "representativeId": "bw-maun",
+      "representativeName": "마운",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "bw-maun"
+      ]
+    },
+    {
+      "code": "BY",
+      "country": "벨라루스",
+      "englishCountry": "Belarus",
+      "representativeId": "by-nesvizh",
+      "representativeName": "네스비시",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "by-nesvizh"
+      ]
+    },
+    {
+      "code": "BZ",
+      "country": "벨리즈",
+      "englishCountry": "Belize",
+      "representativeId": "bz-belize-city",
+      "representativeName": "벨리즈시티",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "bz-belize-city"
+      ]
+    },
+    {
+      "code": "CA",
+      "country": "캐나다",
+      "englishCountry": "Canada",
+      "representativeId": "ca-vancouver",
+      "representativeName": "밴쿠버",
+      "kind": "city",
+      "destinationCount": 10,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ca-vancouver",
+        "ca-toronto",
+        "ca-montreal",
+        "ca-quebec-city",
+        "ca-victoria",
+        "ca-ottawa",
+        "ca-banff",
+        "ca-halifax",
+        "ca-st-johns",
+        "ca-niagara-falls"
+      ]
+    },
+    {
+      "code": "CC",
+      "country": "코코스 제도",
+      "englishCountry": "Cocos (Keeling) Islands",
+      "representativeId": "cc-west-island",
+      "representativeName": "웨스트 아일랜드",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "cc-west-island"
+      ]
+    },
+    {
+      "code": "CD",
+      "country": "콩고민주공화국",
+      "englishCountry": "Congo - Kinshasa",
+      "representativeId": "cd-kinshasa",
+      "representativeName": "킨샤사",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "cd-kinshasa"
+      ]
+    },
+    {
+      "code": "CF",
+      "country": "중앙 아프리카 공화국",
+      "englishCountry": "Central African Republic",
+      "representativeId": "cf-bangui",
+      "representativeName": "방기",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "cf-bangui"
+      ]
+    },
+    {
+      "code": "CG",
+      "country": "콩고공화국",
+      "englishCountry": "Congo - Brazzaville",
+      "representativeId": "cg-brazzaville",
+      "representativeName": "브라자빌",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "cg-brazzaville"
+      ]
+    },
+    {
+      "code": "CH",
+      "country": "스위스",
+      "englishCountry": "Switzerland",
+      "representativeId": "ch-interlaken",
+      "representativeName": "인터라켄",
+      "kind": "city",
+      "destinationCount": 9,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ch-interlaken",
+        "ch-zurich",
+        "ch-lucerne",
+        "ch-geneva",
+        "ch-zermatt",
+        "ch-bern",
+        "ch-lausanne",
+        "ch-grindelwald",
+        "ch-lugano"
+      ]
+    },
+    {
+      "code": "CI",
+      "country": "코트디부아르",
+      "englishCountry": "Côte d’Ivoire",
+      "representativeId": "ci-grand-bassam",
+      "representativeName": "그랑바삼",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ci-grand-bassam"
+      ]
+    },
+    {
+      "code": "CK",
+      "country": "쿡 제도",
+      "englishCountry": "Cook Islands",
+      "representativeId": "ck-avarua",
+      "representativeName": "아바루아",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ck-avarua"
+      ]
+    },
+    {
+      "code": "CL",
+      "country": "칠레",
+      "englishCountry": "Chile",
+      "representativeId": "cl-santiago",
+      "representativeName": "산티아고",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "cl-santiago",
+        "cl-valparaiso"
+      ]
+    },
+    {
+      "code": "CM",
+      "country": "카메룬",
+      "englishCountry": "Cameroon",
+      "representativeId": "cm-limbe",
+      "representativeName": "림베",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "cm-limbe"
+      ]
+    },
+    {
+      "code": "CN",
+      "country": "중국",
+      "englishCountry": "China",
+      "representativeId": "cn-shanghai",
+      "representativeName": "상하이",
+      "kind": "city",
+      "destinationCount": 18,
+      "hasDedicatedPair": true,
+      "ids": [
+        "cn-shanghai",
+        "cn-beijing",
+        "cn-qingdao",
+        "cn-zhangjiajie",
+        "cn-guangzhou",
+        "cn-shenzhen",
+        "cn-chengdu",
+        "cn-chongqing",
+        "cn-xian",
+        "cn-hangzhou",
+        "cn-suzhou",
+        "cn-guilin",
+        "cn-lijiang",
+        "cn-dali",
+        "cn-xiamen",
+        "cn-harbin",
+        "cn-nanjing",
+        "cn-dunhuang"
+      ]
+    },
+    {
+      "code": "CO",
+      "country": "콜롬비아",
+      "englishCountry": "Colombia",
+      "representativeId": "co-bogota",
+      "representativeName": "보고타",
+      "kind": "city",
+      "destinationCount": 3,
+      "hasDedicatedPair": true,
+      "ids": [
+        "co-bogota",
+        "co-cartagena",
+        "co-medellin"
+      ]
+    },
+    {
+      "code": "CR",
+      "country": "코스타리카",
+      "englishCountry": "Costa Rica",
+      "representativeId": "cr-san-jose",
+      "representativeName": "산호세",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "cr-san-jose",
+        "cr-cartago"
+      ]
+    },
+    {
+      "code": "CU",
+      "country": "쿠바",
+      "englishCountry": "Cuba",
+      "representativeId": "cu-havana",
+      "representativeName": "아바나",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "cu-havana",
+        "cu-trinidad"
+      ]
+    },
+    {
+      "code": "CV",
+      "country": "카보베르데",
+      "englishCountry": "Cape Verde",
+      "representativeId": "cv-mindelo",
+      "representativeName": "민델루",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "cv-mindelo"
+      ]
+    },
+    {
+      "code": "CW",
+      "country": "퀴라소",
+      "englishCountry": "Curaçao",
+      "representativeId": "cw-willemstad",
+      "representativeName": "빌렘스타트",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "cw-willemstad"
+      ]
+    },
+    {
+      "code": "CX",
+      "country": "크리스마스섬",
+      "englishCountry": "Christmas Island",
+      "representativeId": "cx-flying-fish-cove",
+      "representativeName": "플라잉 피시 코브",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "cx-flying-fish-cove"
+      ]
+    },
+    {
+      "code": "CY",
+      "country": "키프로스",
+      "englishCountry": "Cyprus",
+      "representativeId": "cy-paphos",
+      "representativeName": "파포스",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "cy-paphos"
+      ]
+    },
+    {
+      "code": "CZ",
+      "country": "체코",
+      "englishCountry": "Czechia",
+      "representativeId": "cz-prague",
+      "representativeName": "프라하",
+      "kind": "city",
+      "destinationCount": 3,
+      "hasDedicatedPair": true,
+      "ids": [
+        "cz-prague",
+        "cz-cesky-krumlov",
+        "cz-karlovy-vary"
+      ]
+    },
+    {
+      "code": "DE",
+      "country": "독일",
+      "englishCountry": "Germany",
+      "representativeId": "de-berlin",
+      "representativeName": "베를린",
+      "kind": "city",
+      "destinationCount": 12,
+      "hasDedicatedPair": true,
+      "ids": [
+        "de-berlin",
+        "de-munich",
+        "de-frankfurt",
+        "de-hamburg",
+        "de-heidelberg",
+        "de-cologne",
+        "de-dresden",
+        "de-nuremberg",
+        "de-rothenburg-ob-der-tauber",
+        "de-lubeck",
+        "de-bamberg",
+        "de-trier"
+      ]
+    },
+    {
+      "code": "DJ",
+      "country": "지부티",
+      "englishCountry": "Djibouti",
+      "representativeId": "dj-djibouti-city",
+      "representativeName": "지부티시",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "dj-djibouti-city"
+      ]
+    },
+    {
+      "code": "DK",
+      "country": "덴마크",
+      "englishCountry": "Denmark",
+      "representativeId": "dk-copenhagen",
+      "representativeName": "코펜하겐",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "dk-copenhagen",
+        "dk-aarhus"
+      ]
+    },
+    {
+      "code": "DM",
+      "country": "도미니카",
+      "englishCountry": "Dominica",
+      "representativeId": "dm-roseau",
+      "representativeName": "로조",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "dm-roseau"
+      ]
+    },
+    {
+      "code": "DO",
+      "country": "도미니카 공화국",
+      "englishCountry": "Dominican Republic",
+      "representativeId": "do-santo-domingo",
+      "representativeName": "산토도밍고",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "do-santo-domingo"
+      ]
+    },
+    {
+      "code": "DZ",
+      "country": "알제리",
+      "englishCountry": "Algeria",
+      "representativeId": "dz-algiers",
+      "representativeName": "알제",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "dz-algiers"
+      ]
+    },
+    {
+      "code": "EC",
+      "country": "에콰도르",
+      "englishCountry": "Ecuador",
+      "representativeId": "ec-quito",
+      "representativeName": "키토",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ec-quito",
+        "ec-cuenca"
+      ]
+    },
+    {
+      "code": "EE",
+      "country": "에스토니아",
+      "englishCountry": "Estonia",
+      "representativeId": "ee-tallinn",
+      "representativeName": "탈린",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ee-tallinn"
+      ]
+    },
+    {
+      "code": "EG",
+      "country": "이집트",
+      "englishCountry": "Egypt",
+      "representativeId": "eg-cairo",
+      "representativeName": "카이로",
+      "kind": "city",
+      "destinationCount": 4,
+      "hasDedicatedPair": true,
+      "ids": [
+        "eg-cairo",
+        "eg-giza",
+        "eg-luxor",
+        "eg-aswan"
+      ]
+    },
+    {
+      "code": "EH",
+      "country": "서사하라",
+      "englishCountry": "Western Sahara",
+      "representativeId": "eh-dakhla",
+      "representativeName": "다클라",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "eh-dakhla"
+      ]
+    },
+    {
+      "code": "ER",
+      "country": "에리트리아",
+      "englishCountry": "Eritrea",
+      "representativeId": "er-asmara",
+      "representativeName": "아스마라",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "er-asmara"
+      ]
+    },
+    {
+      "code": "ES",
+      "country": "스페인",
+      "englishCountry": "Spain",
+      "representativeId": "es-barcelona",
+      "representativeName": "바르셀로나",
+      "kind": "city",
+      "destinationCount": 13,
+      "hasDedicatedPair": true,
+      "ids": [
+        "es-barcelona",
+        "es-madrid",
+        "es-seville",
+        "es-granada",
+        "es-valencia",
+        "es-malaga",
+        "es-bilbao",
+        "es-toledo",
+        "es-santiago-de-compostela",
+        "es-cordoba",
+        "es-segovia",
+        "es-salamanca",
+        "es-cadiz"
+      ]
+    },
+    {
+      "code": "ET",
+      "country": "에티오피아",
+      "englishCountry": "Ethiopia",
+      "representativeId": "et-lalibela",
+      "representativeName": "랄리벨라",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "et-lalibela"
+      ]
+    },
+    {
+      "code": "FI",
+      "country": "핀란드",
+      "englishCountry": "Finland",
+      "representativeId": "fi-helsinki",
+      "representativeName": "헬싱키",
+      "kind": "city",
+      "destinationCount": 3,
+      "hasDedicatedPair": true,
+      "ids": [
+        "fi-helsinki",
+        "fi-rovaniemi",
+        "fi-turku"
+      ]
+    },
+    {
+      "code": "FJ",
+      "country": "피지",
+      "englishCountry": "Fiji",
+      "representativeId": "fj-nadi",
+      "representativeName": "난디",
+      "kind": "town",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "fj-nadi",
+        "fj-suva"
+      ]
+    },
+    {
+      "code": "FK",
+      "country": "포클랜드 제도",
+      "englishCountry": "Falkland Islands",
+      "representativeId": "fk-stanley",
+      "representativeName": "스탠리",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "fk-stanley"
+      ]
+    },
+    {
+      "code": "FM",
+      "country": "미크로네시아",
+      "englishCountry": "Micronesia",
+      "representativeId": "fm-kolonia",
+      "representativeName": "콜로니아",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "fm-kolonia"
+      ]
+    },
+    {
+      "code": "FO",
+      "country": "페로 제도",
+      "englishCountry": "Faroe Islands",
+      "representativeId": "fo-torshavn",
+      "representativeName": "토르스하운",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "fo-torshavn"
+      ]
+    },
+    {
+      "code": "FR",
+      "country": "프랑스",
+      "englishCountry": "France",
+      "representativeId": "fr-paris",
+      "representativeName": "파리",
+      "kind": "city",
+      "destinationCount": 12,
+      "hasDedicatedPair": true,
+      "ids": [
+        "fr-paris",
+        "fr-nice",
+        "fr-lyon",
+        "fr-marseille",
+        "fr-bordeaux",
+        "fr-strasbourg",
+        "fr-avignon",
+        "fr-annecy",
+        "fr-mont-saint-michel",
+        "fr-carcassonne",
+        "fr-arles",
+        "fr-reims"
+      ]
+    },
+    {
+      "code": "GA",
+      "country": "가봉",
+      "englishCountry": "Gabon",
+      "representativeId": "ga-libreville",
+      "representativeName": "리브르빌",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ga-libreville"
+      ]
+    },
+    {
+      "code": "GB",
+      "country": "영국",
+      "englishCountry": "United Kingdom",
+      "representativeId": "gb-london",
+      "representativeName": "런던",
+      "kind": "city",
+      "destinationCount": 9,
+      "hasDedicatedPair": true,
+      "ids": [
+        "gb-london",
+        "gb-edinburgh",
+        "gb-bath",
+        "gb-oxford",
+        "gb-york",
+        "gb-liverpool",
+        "gb-canterbury",
+        "gb-cardiff",
+        "gb-belfast"
+      ]
+    },
+    {
+      "code": "GD",
+      "country": "그레나다",
+      "englishCountry": "Grenada",
+      "representativeId": "gd-st-georges",
+      "representativeName": "세인트조지스",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "gd-st-georges"
+      ]
+    },
+    {
+      "code": "GE",
+      "country": "조지아",
+      "englishCountry": "Georgia",
+      "representativeId": "ge-tbilisi",
+      "representativeName": "트빌리시",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ge-tbilisi"
+      ]
+    },
+    {
+      "code": "GF",
+      "country": "프랑스령 기아나",
+      "englishCountry": "French Guiana",
+      "representativeId": "gf-cayenne",
+      "representativeName": "카옌",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "gf-cayenne"
+      ]
+    },
+    {
+      "code": "GG",
+      "country": "건지",
+      "englishCountry": "Guernsey",
+      "representativeId": "gg-saint-peter-port",
+      "representativeName": "세인트피터포트",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "gg-saint-peter-port"
+      ]
+    },
+    {
+      "code": "GH",
+      "country": "가나",
+      "englishCountry": "Ghana",
+      "representativeId": "gh-cape-coast",
+      "representativeName": "케이프코스트",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "gh-cape-coast"
+      ]
+    },
+    {
+      "code": "GI",
+      "country": "지브롤터",
+      "englishCountry": "Gibraltar",
+      "representativeId": "gi-gibraltar",
+      "representativeName": "지브롤터",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "gi-gibraltar"
+      ]
+    },
+    {
+      "code": "GL",
+      "country": "그린란드",
+      "englishCountry": "Greenland",
+      "representativeId": "gl-nuuk",
+      "representativeName": "누크",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "gl-nuuk"
+      ]
+    },
+    {
+      "code": "GM",
+      "country": "감비아",
+      "englishCountry": "Gambia",
+      "representativeId": "gm-banjul",
+      "representativeName": "반줄",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "gm-banjul"
+      ]
+    },
+    {
+      "code": "GN",
+      "country": "기니",
+      "englishCountry": "Guinea",
+      "representativeId": "gn-conakry",
+      "representativeName": "코나크리",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "gn-conakry"
+      ]
+    },
+    {
+      "code": "GP",
+      "country": "과들루프",
+      "englishCountry": "Guadeloupe",
+      "representativeId": "gp-pointe-a-pitre",
+      "representativeName": "푸앵타피트르",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "gp-pointe-a-pitre"
+      ]
+    },
+    {
+      "code": "GQ",
+      "country": "적도 기니",
+      "englishCountry": "Equatorial Guinea",
+      "representativeId": "gq-malabo",
+      "representativeName": "말라보",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "gq-malabo"
+      ]
+    },
+    {
+      "code": "GR",
+      "country": "그리스",
+      "englishCountry": "Greece",
+      "representativeId": "gr-athens",
+      "representativeName": "아테네",
+      "kind": "city",
+      "destinationCount": 7,
+      "hasDedicatedPair": true,
+      "ids": [
+        "gr-athens",
+        "gr-thessaloniki",
+        "gr-santorini",
+        "gr-rhodes",
+        "gr-heraklion",
+        "gr-corfu-town",
+        "gr-nafplio"
+      ]
+    },
+    {
+      "code": "GT",
+      "country": "과테말라",
+      "englishCountry": "Guatemala",
+      "representativeId": "gt-antigua-guatemala",
+      "representativeName": "안티과과테말라",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "gt-antigua-guatemala"
+      ]
+    },
+    {
+      "code": "GU",
+      "country": "괌",
+      "englishCountry": "Guam",
+      "representativeId": "gu-hagatna",
+      "representativeName": "하갓냐",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "gu-guam",
+        "gu-hagatna"
+      ]
+    },
+    {
+      "code": "GW",
+      "country": "기니비사우",
+      "englishCountry": "Guinea-Bissau",
+      "representativeId": "gw-bissau",
+      "representativeName": "비사우",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "gw-bissau"
+      ]
+    },
+    {
+      "code": "GY",
+      "country": "가이아나",
+      "englishCountry": "Guyana",
+      "representativeId": "gy-georgetown",
+      "representativeName": "조지타운(가이아나)",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "gy-georgetown"
+      ]
+    },
+    {
+      "code": "HK",
+      "country": "홍콩(중국 특별행정구)",
+      "englishCountry": "Hong Kong SAR China",
+      "representativeId": "hk-hong-kong",
+      "representativeName": "홍콩",
+      "kind": "region",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "hk-hong-kong"
+      ]
+    },
+    {
+      "code": "HN",
+      "country": "온두라스",
+      "englishCountry": "Honduras",
+      "representativeId": "hn-comayagua",
+      "representativeName": "코마야과",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "hn-comayagua"
+      ]
+    },
+    {
+      "code": "HR",
+      "country": "크로아티아",
+      "englishCountry": "Croatia",
+      "representativeId": "hr-dubrovnik",
+      "representativeName": "두브로브니크",
+      "kind": "city",
+      "destinationCount": 4,
+      "hasDedicatedPair": true,
+      "ids": [
+        "hr-dubrovnik",
+        "hr-split",
+        "hr-zagreb",
+        "hr-trogir"
+      ]
+    },
+    {
+      "code": "HT",
+      "country": "아이티",
+      "englishCountry": "Haiti",
+      "representativeId": "ht-cap-haitien",
+      "representativeName": "카프아이시앵",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ht-cap-haitien"
+      ]
+    },
+    {
+      "code": "HU",
+      "country": "헝가리",
+      "englishCountry": "Hungary",
+      "representativeId": "hu-budapest",
+      "representativeName": "부다페스트",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "hu-budapest",
+        "hu-pecs"
+      ]
+    },
+    {
+      "code": "ID",
+      "country": "인도네시아",
+      "englishCountry": "Indonesia",
+      "representativeId": "id-jakarta",
+      "representativeName": "자카르타",
+      "kind": "city",
+      "destinationCount": 5,
+      "hasDedicatedPair": true,
+      "ids": [
+        "id-bali",
+        "id-jakarta",
+        "id-yogyakarta",
+        "id-bandung",
+        "id-ubud"
+      ]
+    },
+    {
+      "code": "IE",
+      "country": "아일랜드",
+      "englishCountry": "Ireland",
+      "representativeId": "ie-dublin",
+      "representativeName": "더블린",
+      "kind": "city",
+      "destinationCount": 3,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ie-dublin",
+        "ie-galway",
+        "ie-cork"
+      ]
+    },
+    {
+      "code": "IL",
+      "country": "이스라엘",
+      "englishCountry": "Israel",
+      "representativeId": "il-jerusalem",
+      "representativeName": "예루살렘",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "il-jerusalem",
+        "il-tel-aviv"
+      ]
+    },
+    {
+      "code": "IM",
+      "country": "맨섬",
+      "englishCountry": "Isle of Man",
+      "representativeId": "im-douglas",
+      "representativeName": "더글러스",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "im-douglas"
+      ]
+    },
+    {
+      "code": "IN",
+      "country": "인도",
+      "englishCountry": "India",
+      "representativeId": "in-delhi",
+      "representativeName": "뉴델리",
+      "kind": "city",
+      "destinationCount": 9,
+      "hasDedicatedPair": true,
+      "ids": [
+        "in-delhi",
+        "in-agra",
+        "in-jaipur",
+        "in-mumbai",
+        "in-varanasi",
+        "in-udaipur",
+        "in-kochi",
+        "in-goa",
+        "in-amritsar"
+      ]
+    },
+    {
+      "code": "IQ",
+      "country": "이라크",
+      "englishCountry": "Iraq",
+      "representativeId": "iq-erbil",
+      "representativeName": "아르빌",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "iq-erbil"
+      ]
+    },
+    {
+      "code": "IR",
+      "country": "이란",
+      "englishCountry": "Iran",
+      "representativeId": "ir-isfahan",
+      "representativeName": "이스파한",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ir-isfahan"
+      ]
+    },
+    {
+      "code": "IS",
+      "country": "아이슬란드",
+      "englishCountry": "Iceland",
+      "representativeId": "is-reykjavik",
+      "representativeName": "레이캬비크",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "is-reykjavik"
+      ]
+    },
+    {
+      "code": "IT",
+      "country": "이탈리아",
+      "englishCountry": "Italy",
+      "representativeId": "it-rome",
+      "representativeName": "로마",
+      "kind": "city",
+      "destinationCount": 14,
+      "hasDedicatedPair": true,
+      "ids": [
+        "it-rome",
+        "it-venice",
+        "it-florence",
+        "it-milan",
+        "it-naples",
+        "it-pisa",
+        "it-verona",
+        "it-bologna",
+        "it-siena",
+        "it-turin",
+        "it-matera",
+        "it-palermo",
+        "it-ravenna",
+        "it-lucca"
+      ]
+    },
+    {
+      "code": "JE",
+      "country": "저지",
+      "englishCountry": "Jersey",
+      "representativeId": "je-saint-helier",
+      "representativeName": "세인트헬리어",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "je-saint-helier"
+      ]
+    },
+    {
+      "code": "JM",
+      "country": "자메이카",
+      "englishCountry": "Jamaica",
+      "representativeId": "jm-kingston",
+      "representativeName": "킹스턴",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "jm-kingston"
+      ]
+    },
+    {
+      "code": "JO",
+      "country": "요르단",
+      "englishCountry": "Jordan",
+      "representativeId": "jo-amman",
+      "representativeName": "암만",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "jo-amman",
+        "jo-petra"
+      ]
+    },
+    {
+      "code": "JP",
+      "country": "일본",
+      "englishCountry": "Japan",
+      "representativeId": "jp-tokyo",
+      "representativeName": "도쿄",
+      "kind": "city",
+      "destinationCount": 27,
+      "hasDedicatedPair": true,
+      "ids": [
+        "jp-tokyo",
+        "jp-osaka",
+        "jp-kyoto",
+        "jp-fukuoka",
+        "jp-sapporo",
+        "jp-okinawa",
+        "jp-nagoya",
+        "jp-nara",
+        "jp-yufuin",
+        "jp-hakone",
+        "jp-yokohama",
+        "jp-kobe",
+        "jp-hiroshima",
+        "jp-nagasaki",
+        "jp-kanazawa",
+        "jp-takayama",
+        "jp-hakodate",
+        "jp-otaru",
+        "jp-asahikawa",
+        "jp-sendai",
+        "jp-niigata",
+        "jp-kumamoto",
+        "jp-kagoshima",
+        "jp-beppu",
+        "jp-nikko",
+        "jp-himeji",
+        "jp-matsumoto"
+      ]
+    },
+    {
+      "code": "KE",
+      "country": "케냐",
+      "englishCountry": "Kenya",
+      "representativeId": "ke-nairobi",
+      "representativeName": "나이로비",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ke-nairobi"
+      ]
+    },
+    {
+      "code": "KG",
+      "country": "키르기스스탄",
+      "englishCountry": "Kyrgyzstan",
+      "representativeId": "kg-bishkek",
+      "representativeName": "비슈케크",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "kg-bishkek"
+      ]
+    },
+    {
+      "code": "KH",
+      "country": "캄보디아",
+      "englishCountry": "Cambodia",
+      "representativeId": "kh-siem-reap",
+      "representativeName": "시엠레아프",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "kh-siem-reap",
+        "kh-phnom-penh"
+      ]
+    },
+    {
+      "code": "KI",
+      "country": "키리바시",
+      "englishCountry": "Kiribati",
+      "representativeId": "ki-bairiki",
+      "representativeName": "바이리키",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ki-bairiki"
+      ]
+    },
+    {
+      "code": "KM",
+      "country": "코모로",
+      "englishCountry": "Comoros",
+      "representativeId": "km-moroni",
+      "representativeName": "모로니",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "km-moroni"
+      ]
+    },
+    {
+      "code": "KN",
+      "country": "세인트키츠 네비스",
+      "englishCountry": "St. Kitts & Nevis",
+      "representativeId": "kn-basseterre",
+      "representativeName": "바스테르(세인트키츠)",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "kn-basseterre"
+      ]
+    },
+    {
+      "code": "KP",
+      "country": "북한",
+      "englishCountry": "North Korea",
+      "representativeId": "kp-kaesong",
+      "representativeName": "개성",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "kp-kaesong"
+      ]
+    },
+    {
+      "code": "KW",
+      "country": "쿠웨이트",
+      "englishCountry": "Kuwait",
+      "representativeId": "kw-kuwait-city",
+      "representativeName": "쿠웨이트시티",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "kw-kuwait-city"
+      ]
+    },
+    {
+      "code": "KY",
+      "country": "케이맨 제도",
+      "englishCountry": "Cayman Islands",
+      "representativeId": "ky-george-town",
+      "representativeName": "조지타운(케이맨)",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ky-george-town"
+      ]
+    },
+    {
+      "code": "KZ",
+      "country": "카자흐스탄",
+      "englishCountry": "Kazakhstan",
+      "representativeId": "kz-almaty",
+      "representativeName": "알마티",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "kz-almaty"
+      ]
+    },
+    {
+      "code": "LA",
+      "country": "라오스",
+      "englishCountry": "Laos",
+      "representativeId": "la-luang-prabang",
+      "representativeName": "루앙프라방",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "la-luang-prabang",
+        "la-vientiane"
+      ]
+    },
+    {
+      "code": "LB",
+      "country": "레바논",
+      "englishCountry": "Lebanon",
+      "representativeId": "lb-byblos",
+      "representativeName": "비블로스",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "lb-byblos"
+      ]
+    },
+    {
+      "code": "LC",
+      "country": "세인트루시아",
+      "englishCountry": "St. Lucia",
+      "representativeId": "lc-castries",
+      "representativeName": "캐스트리스",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "lc-castries"
+      ]
+    },
+    {
+      "code": "LI",
+      "country": "리히텐슈타인",
+      "englishCountry": "Liechtenstein",
+      "representativeId": "li-vaduz",
+      "representativeName": "파두츠",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "li-vaduz"
+      ]
+    },
+    {
+      "code": "LK",
+      "country": "스리랑카",
+      "englishCountry": "Sri Lanka",
+      "representativeId": "lk-colombo",
+      "representativeName": "콜롬보",
+      "kind": "city",
+      "destinationCount": 3,
+      "hasDedicatedPair": true,
+      "ids": [
+        "lk-colombo",
+        "lk-kandy",
+        "lk-galle"
+      ]
+    },
+    {
+      "code": "LR",
+      "country": "라이베리아",
+      "englishCountry": "Liberia",
+      "representativeId": "lr-monrovia",
+      "representativeName": "몬로비아",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "lr-monrovia"
+      ]
+    },
+    {
+      "code": "LS",
+      "country": "레소토",
+      "englishCountry": "Lesotho",
+      "representativeId": "ls-maseru",
+      "representativeName": "마세루",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ls-maseru"
+      ]
+    },
+    {
+      "code": "LT",
+      "country": "리투아니아",
+      "englishCountry": "Lithuania",
+      "representativeId": "lt-vilnius",
+      "representativeName": "빌뉴스",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "lt-vilnius",
+        "lt-kaunas"
+      ]
+    },
+    {
+      "code": "LU",
+      "country": "룩셈부르크",
+      "englishCountry": "Luxembourg",
+      "representativeId": "lu-luxembourg-city",
+      "representativeName": "룩셈부르크시",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "lu-luxembourg-city"
+      ]
+    },
+    {
+      "code": "LV",
+      "country": "라트비아",
+      "englishCountry": "Latvia",
+      "representativeId": "lv-riga",
+      "representativeName": "리가",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "lv-riga"
+      ]
+    },
+    {
+      "code": "LY",
+      "country": "리비아",
+      "englishCountry": "Libya",
+      "representativeId": "ly-tripoli-libya",
+      "representativeName": "트리폴리(리비아)",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ly-tripoli-libya"
+      ]
+    },
+    {
+      "code": "MA",
+      "country": "모로코",
+      "englishCountry": "Morocco",
+      "representativeId": "ma-marrakesh",
+      "representativeName": "마라케시",
+      "kind": "city",
+      "destinationCount": 4,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ma-marrakesh",
+        "ma-fes",
+        "ma-casablanca",
+        "ma-chefchaouen"
+      ]
+    },
+    {
+      "code": "MC",
+      "country": "모나코",
+      "englishCountry": "Monaco",
+      "representativeId": "mc-monaco",
+      "representativeName": "모나코",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "mc-monaco"
+      ]
+    },
+    {
+      "code": "MD",
+      "country": "몰도바",
+      "englishCountry": "Moldova",
+      "representativeId": "md-chisinau",
+      "representativeName": "키시너우",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "md-chisinau"
+      ]
+    },
+    {
+      "code": "ME",
+      "country": "몬테네그로",
+      "englishCountry": "Montenegro",
+      "representativeId": "me-kotor",
+      "representativeName": "코토르",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "me-kotor"
+      ]
+    },
+    {
+      "code": "MF",
+      "country": "생마르탱",
+      "englishCountry": "St. Martin",
+      "representativeId": "mf-marigot",
+      "representativeName": "마리고",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "mf-marigot"
+      ]
+    },
+    {
+      "code": "MG",
+      "country": "마다가스카르",
+      "englishCountry": "Madagascar",
+      "representativeId": "mg-antananarivo",
+      "representativeName": "안타나나리보",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "mg-antananarivo"
+      ]
+    },
+    {
+      "code": "MH",
+      "country": "마셜 제도",
+      "englishCountry": "Marshall Islands",
+      "representativeId": "mh-majuro",
+      "representativeName": "마주로",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "mh-majuro"
+      ]
+    },
+    {
+      "code": "MK",
+      "country": "북마케도니아",
+      "englishCountry": "North Macedonia",
+      "representativeId": "mk-ohrid",
+      "representativeName": "오흐리드",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "mk-ohrid"
+      ]
+    },
+    {
+      "code": "ML",
+      "country": "말리",
+      "englishCountry": "Mali",
+      "representativeId": "ml-djenne",
+      "representativeName": "젠네",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ml-djenne"
+      ]
+    },
+    {
+      "code": "MM",
+      "country": "미얀마",
+      "englishCountry": "Myanmar (Burma)",
+      "representativeId": "mm-yangon",
+      "representativeName": "양곤",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "mm-bagan",
+        "mm-yangon"
+      ]
+    },
+    {
+      "code": "MN",
+      "country": "몽골",
+      "englishCountry": "Mongolia",
+      "representativeId": "mn-ulaanbaatar",
+      "representativeName": "울란바토르",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "mn-ulaanbaatar"
+      ]
+    },
+    {
+      "code": "MO",
+      "country": "마카오(중국 특별행정구)",
+      "englishCountry": "Macao SAR China",
+      "representativeId": "mo-macau",
+      "representativeName": "마카오",
+      "kind": "region",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "mo-macau"
+      ]
+    },
+    {
+      "code": "MP",
+      "country": "북마리아나제도",
+      "englishCountry": "Northern Mariana Islands",
+      "representativeId": "mp-garapan",
+      "representativeName": "가라판",
+      "kind": "town",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "mp-saipan",
+        "mp-garapan"
+      ]
+    },
+    {
+      "code": "MQ",
+      "country": "마르티니크",
+      "englishCountry": "Martinique",
+      "representativeId": "mq-fort-de-france",
+      "representativeName": "포르드프랑스",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "mq-fort-de-france"
+      ]
+    },
+    {
+      "code": "MR",
+      "country": "모리타니",
+      "englishCountry": "Mauritania",
+      "representativeId": "mr-chinguetti",
+      "representativeName": "칭게티",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "mr-chinguetti"
+      ]
+    },
+    {
+      "code": "MS",
+      "country": "몬트세라트",
+      "englishCountry": "Montserrat",
+      "representativeId": "ms-little-bay",
+      "representativeName": "리틀베이",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ms-little-bay"
+      ]
+    },
+    {
+      "code": "MT",
+      "country": "몰타",
+      "englishCountry": "Malta",
+      "representativeId": "mt-valletta",
+      "representativeName": "발레타",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "mt-valletta"
+      ]
+    },
+    {
+      "code": "MU",
+      "country": "모리셔스",
+      "englishCountry": "Mauritius",
+      "representativeId": "mu-port-louis",
+      "representativeName": "포트루이스",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "mu-port-louis"
+      ]
+    },
+    {
+      "code": "MV",
+      "country": "몰디브",
+      "englishCountry": "Maldives",
+      "representativeId": "mv-male",
+      "representativeName": "말레",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "mv-maldives",
+        "mv-male"
+      ]
+    },
+    {
+      "code": "MW",
+      "country": "말라위",
+      "englishCountry": "Malawi",
+      "representativeId": "mw-zomba",
+      "representativeName": "좀바",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "mw-zomba"
+      ]
+    },
+    {
+      "code": "MX",
+      "country": "멕시코",
+      "englishCountry": "Mexico",
+      "representativeId": "mx-mexico-city",
+      "representativeName": "멕시코시티",
+      "kind": "city",
+      "destinationCount": 7,
+      "hasDedicatedPair": true,
+      "ids": [
+        "mx-mexico-city",
+        "mx-cancun",
+        "mx-oaxaca",
+        "mx-guanajuato",
+        "mx-san-miguel-de-allende",
+        "mx-puebla",
+        "mx-merida"
+      ]
+    },
+    {
+      "code": "MY",
+      "country": "말레이시아",
+      "englishCountry": "Malaysia",
+      "representativeId": "my-kota-kinabalu",
+      "representativeName": "코타키나발루",
+      "kind": "city",
+      "destinationCount": 6,
+      "hasDedicatedPair": true,
+      "ids": [
+        "my-kota-kinabalu",
+        "my-kuala-lumpur",
+        "my-george-town",
+        "my-malacca",
+        "my-langkawi",
+        "my-kuching"
+      ]
+    },
+    {
+      "code": "MZ",
+      "country": "모잠비크",
+      "englishCountry": "Mozambique",
+      "representativeId": "mz-ilha-de-mocambique",
+      "representativeName": "모잠비크섬 도시",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "mz-ilha-de-mocambique"
+      ]
+    },
+    {
+      "code": "NA",
+      "country": "나미비아",
+      "englishCountry": "Namibia",
+      "representativeId": "na-swakopmund",
+      "representativeName": "스바코프문트",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "na-swakopmund"
+      ]
+    },
+    {
+      "code": "NC",
+      "country": "뉴칼레도니아",
+      "englishCountry": "New Caledonia",
+      "representativeId": "nc-noumea",
+      "representativeName": "누메아",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "nc-noumea"
+      ]
+    },
+    {
+      "code": "NE",
+      "country": "니제르",
+      "englishCountry": "Niger",
+      "representativeId": "ne-agadez",
+      "representativeName": "아가데즈",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ne-agadez"
+      ]
+    },
+    {
+      "code": "NF",
+      "country": "노퍽섬",
+      "englishCountry": "Norfolk Island",
+      "representativeId": "nf-kingston",
+      "representativeName": "킹스턴(노퍽)",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "nf-kingston"
+      ]
+    },
+    {
+      "code": "NG",
+      "country": "나이지리아",
+      "englishCountry": "Nigeria",
+      "representativeId": "ng-osogbo",
+      "representativeName": "오쇼그보",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ng-osogbo"
+      ]
+    },
+    {
+      "code": "NI",
+      "country": "니카라과",
+      "englishCountry": "Nicaragua",
+      "representativeId": "ni-granada",
+      "representativeName": "그라나다(니카라과)",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ni-granada"
+      ]
+    },
+    {
+      "code": "NL",
+      "country": "네덜란드",
+      "englishCountry": "Netherlands",
+      "representativeId": "nl-amsterdam",
+      "representativeName": "암스테르담",
+      "kind": "city",
+      "destinationCount": 4,
+      "hasDedicatedPair": true,
+      "ids": [
+        "nl-amsterdam",
+        "nl-rotterdam",
+        "nl-the-hague",
+        "nl-utrecht"
+      ]
+    },
+    {
+      "code": "NO",
+      "country": "노르웨이",
+      "englishCountry": "Norway",
+      "representativeId": "no-oslo",
+      "representativeName": "오슬로",
+      "kind": "city",
+      "destinationCount": 3,
+      "hasDedicatedPair": true,
+      "ids": [
+        "no-oslo",
+        "no-bergen",
+        "no-tromso"
+      ]
+    },
+    {
+      "code": "NP",
+      "country": "네팔",
+      "englishCountry": "Nepal",
+      "representativeId": "np-kathmandu",
+      "representativeName": "카트만두",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "np-kathmandu",
+        "np-pokhara"
+      ]
+    },
+    {
+      "code": "NR",
+      "country": "나우루",
+      "englishCountry": "Nauru",
+      "representativeId": "nr-yaren",
+      "representativeName": "야렌",
+      "kind": "region",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "nr-yaren"
+      ]
+    },
+    {
+      "code": "NU",
+      "country": "니우에",
+      "englishCountry": "Niue",
+      "representativeId": "nu-alofi",
+      "representativeName": "알로피",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "nu-alofi"
+      ]
+    },
+    {
+      "code": "NZ",
+      "country": "뉴질랜드",
+      "englishCountry": "New Zealand",
+      "representativeId": "nz-auckland",
+      "representativeName": "오클랜드",
+      "kind": "city",
+      "destinationCount": 5,
+      "hasDedicatedPair": true,
+      "ids": [
+        "nz-auckland",
+        "nz-queenstown",
+        "nz-rotorua",
+        "nz-christchurch",
+        "nz-wellington"
+      ]
+    },
+    {
+      "code": "OM",
+      "country": "오만",
+      "englishCountry": "Oman",
+      "representativeId": "om-muscat",
+      "representativeName": "무스카트",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "om-muscat",
+        "om-salalah"
+      ]
+    },
+    {
+      "code": "PA",
+      "country": "파나마",
+      "englishCountry": "Panama",
+      "representativeId": "pa-panama-city",
+      "representativeName": "파나마시티",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "pa-panama-city"
+      ]
+    },
+    {
+      "code": "PE",
+      "country": "페루",
+      "englishCountry": "Peru",
+      "representativeId": "pe-lima",
+      "representativeName": "리마",
+      "kind": "city",
+      "destinationCount": 4,
+      "hasDedicatedPair": true,
+      "ids": [
+        "pe-lima",
+        "pe-cusco",
+        "pe-machu-picchu",
+        "pe-arequipa"
+      ]
+    },
+    {
+      "code": "PF",
+      "country": "프랑스령 폴리네시아",
+      "englishCountry": "French Polynesia",
+      "representativeId": "pf-papeete",
+      "representativeName": "파페에테",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "pf-bora-bora",
+        "pf-papeete"
+      ]
+    },
+    {
+      "code": "PG",
+      "country": "파푸아뉴기니",
+      "englishCountry": "Papua New Guinea",
+      "representativeId": "pg-port-moresby",
+      "representativeName": "포트모르즈비",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "pg-port-moresby"
+      ]
+    },
+    {
+      "code": "PH",
+      "country": "필리핀",
+      "englishCountry": "Philippines",
+      "representativeId": "ph-manila",
+      "representativeName": "마닐라",
+      "kind": "city",
+      "destinationCount": 6,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ph-cebu",
+        "ph-boracay",
+        "ph-manila",
+        "ph-el-nido",
+        "ph-bohol",
+        "ph-vigan"
+      ]
+    },
+    {
+      "code": "PK",
+      "country": "파키스탄",
+      "englishCountry": "Pakistan",
+      "representativeId": "pk-lahore",
+      "representativeName": "라호르",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "pk-lahore"
+      ]
+    },
+    {
+      "code": "PL",
+      "country": "폴란드",
+      "englishCountry": "Poland",
+      "representativeId": "pl-warsaw",
+      "representativeName": "바르샤바",
+      "kind": "city",
+      "destinationCount": 4,
+      "hasDedicatedPair": true,
+      "ids": [
+        "pl-warsaw",
+        "pl-krakow",
+        "pl-gdansk",
+        "pl-wroclaw"
+      ]
+    },
+    {
+      "code": "PM",
+      "country": "생피에르 미클롱",
+      "englishCountry": "St. Pierre & Miquelon",
+      "representativeId": "pm-saint-pierre",
+      "representativeName": "생피에르",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "pm-saint-pierre"
+      ]
+    },
+    {
+      "code": "PN",
+      "country": "핏케언 제도",
+      "englishCountry": "Pitcairn Islands",
+      "representativeId": "pn-adamstown",
+      "representativeName": "애덤스타운",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "pn-adamstown"
+      ]
+    },
+    {
+      "code": "PR",
+      "country": "푸에르토리코",
+      "englishCountry": "Puerto Rico",
+      "representativeId": "pr-san-juan",
+      "representativeName": "산후안",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "pr-san-juan"
+      ]
+    },
+    {
+      "code": "PS",
+      "country": "팔레스타인",
+      "englishCountry": "Palestinian Territories",
+      "representativeId": "ps-bethlehem",
+      "representativeName": "베들레헴",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ps-bethlehem"
+      ]
+    },
+    {
+      "code": "PT",
+      "country": "포르투갈",
+      "englishCountry": "Portugal",
+      "representativeId": "pt-lisbon",
+      "representativeName": "리스본",
+      "kind": "city",
+      "destinationCount": 6,
+      "hasDedicatedPair": true,
+      "ids": [
+        "pt-lisbon",
+        "pt-porto",
+        "pt-sintra",
+        "pt-funchal",
+        "pt-evora",
+        "pt-coimbra"
+      ]
+    },
+    {
+      "code": "PW",
+      "country": "팔라우",
+      "englishCountry": "Palau",
+      "representativeId": "pw-koror",
+      "representativeName": "코로르",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "pw-koror"
+      ]
+    },
+    {
+      "code": "PY",
+      "country": "파라과이",
+      "englishCountry": "Paraguay",
+      "representativeId": "py-asuncion",
+      "representativeName": "아순시온",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "py-asuncion"
+      ]
+    },
+    {
+      "code": "QA",
+      "country": "카타르",
+      "englishCountry": "Qatar",
+      "representativeId": "qa-doha",
+      "representativeName": "도하",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "qa-doha"
+      ]
+    },
+    {
+      "code": "RE",
+      "country": "레위니옹",
+      "englishCountry": "Réunion",
+      "representativeId": "re-saint-denis",
+      "representativeName": "생드니(레위니옹)",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "re-saint-denis"
+      ]
+    },
+    {
+      "code": "RO",
+      "country": "루마니아",
+      "englishCountry": "Romania",
+      "representativeId": "ro-bucharest",
+      "representativeName": "부쿠레슈티",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ro-bucharest",
+        "ro-sighisoara"
+      ]
+    },
+    {
+      "code": "RS",
+      "country": "세르비아",
+      "englishCountry": "Serbia",
+      "representativeId": "rs-belgrade",
+      "representativeName": "베오그라드",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "rs-belgrade",
+        "rs-novi-sad"
+      ]
+    },
+    {
+      "code": "RU",
+      "country": "러시아",
+      "englishCountry": "Russia",
+      "representativeId": "ru-moscow",
+      "representativeName": "모스크바",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ru-moscow",
+        "ru-saint-petersburg"
+      ]
+    },
+    {
+      "code": "RW",
+      "country": "르완다",
+      "englishCountry": "Rwanda",
+      "representativeId": "rw-kigali",
+      "representativeName": "키갈리",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "rw-kigali"
+      ]
+    },
+    {
+      "code": "SA",
+      "country": "사우디아라비아",
+      "englishCountry": "Saudi Arabia",
+      "representativeId": "sa-riyadh",
+      "representativeName": "리야드",
+      "kind": "city",
+      "destinationCount": 3,
+      "hasDedicatedPair": true,
+      "ids": [
+        "sa-riyadh",
+        "sa-jeddah",
+        "sa-alula"
+      ]
+    },
+    {
+      "code": "SB",
+      "country": "솔로몬 제도",
+      "englishCountry": "Solomon Islands",
+      "representativeId": "sb-honiara",
+      "representativeName": "호니아라",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "sb-honiara"
+      ]
+    },
+    {
+      "code": "SC",
+      "country": "세이셸",
+      "englishCountry": "Seychelles",
+      "representativeId": "sc-victoria-seychelles",
+      "representativeName": "빅토리아(세이셸)",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "sc-victoria-seychelles"
+      ]
+    },
+    {
+      "code": "SD",
+      "country": "수단",
+      "englishCountry": "Sudan",
+      "representativeId": "sd-suakin",
+      "representativeName": "수아킨",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "sd-suakin"
+      ]
+    },
+    {
+      "code": "SE",
+      "country": "스웨덴",
+      "englishCountry": "Sweden",
+      "representativeId": "se-stockholm",
+      "representativeName": "스톡홀름",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "se-stockholm",
+        "se-gothenburg"
+      ]
+    },
+    {
+      "code": "SG",
+      "country": "싱가포르",
+      "englishCountry": "Singapore",
+      "representativeId": "sg-singapore",
+      "representativeName": "싱가포르",
+      "kind": "region",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "sg-singapore"
+      ]
+    },
+    {
+      "code": "SH",
+      "country": "세인트헬레나",
+      "englishCountry": "St. Helena",
+      "representativeId": "sh-jamestown",
+      "representativeName": "제임스타운",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "sh-jamestown"
+      ]
+    },
+    {
+      "code": "SI",
+      "country": "슬로베니아",
+      "englishCountry": "Slovenia",
+      "representativeId": "si-ljubljana",
+      "representativeName": "류블랴나",
+      "kind": "city",
+      "destinationCount": 3,
+      "hasDedicatedPair": true,
+      "ids": [
+        "si-ljubljana",
+        "si-bled",
+        "si-piran"
+      ]
+    },
+    {
+      "code": "SJ",
+      "country": "스발바르제도-얀마웬섬",
+      "englishCountry": "Svalbard & Jan Mayen",
+      "representativeId": "sj-longyearbyen",
+      "representativeName": "롱위에아르뷔엔",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "sj-longyearbyen"
+      ]
+    },
+    {
+      "code": "SK",
+      "country": "슬로바키아",
+      "englishCountry": "Slovakia",
+      "representativeId": "sk-bratislava",
+      "representativeName": "브라티슬라바",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "sk-bratislava",
+        "sk-kosice"
+      ]
+    },
+    {
+      "code": "SL",
+      "country": "시에라리온",
+      "englishCountry": "Sierra Leone",
+      "representativeId": "sl-freetown",
+      "representativeName": "프리타운",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "sl-freetown"
+      ]
+    },
+    {
+      "code": "SM",
+      "country": "산마리노",
+      "englishCountry": "San Marino",
+      "representativeId": "sm-san-marino",
+      "representativeName": "산마리노시",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "sm-san-marino"
+      ]
+    },
+    {
+      "code": "SN",
+      "country": "세네갈",
+      "englishCountry": "Senegal",
+      "representativeId": "sn-saint-louis-senegal",
+      "representativeName": "생루이(세네갈)",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "sn-saint-louis-senegal"
+      ]
+    },
+    {
+      "code": "SO",
+      "country": "소말리아",
+      "englishCountry": "Somalia",
+      "representativeId": "so-mogadishu",
+      "representativeName": "모가디슈",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "so-mogadishu"
+      ]
+    },
+    {
+      "code": "SR",
+      "country": "수리남",
+      "englishCountry": "Suriname",
+      "representativeId": "sr-paramaribo",
+      "representativeName": "파라마리보",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "sr-paramaribo"
+      ]
+    },
+    {
+      "code": "SS",
+      "country": "남수단",
+      "englishCountry": "South Sudan",
+      "representativeId": "ss-juba",
+      "representativeName": "주바",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ss-juba"
+      ]
+    },
+    {
+      "code": "ST",
+      "country": "상투메 프린시페",
+      "englishCountry": "São Tomé & Príncipe",
+      "representativeId": "st-sao-tome",
+      "representativeName": "상투메시",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "st-sao-tome"
+      ]
+    },
+    {
+      "code": "SV",
+      "country": "엘살바도르",
+      "englishCountry": "El Salvador",
+      "representativeId": "sv-san-salvador",
+      "representativeName": "산살바도르",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "sv-san-salvador"
+      ]
+    },
+    {
+      "code": "SX",
+      "country": "신트마르턴",
+      "englishCountry": "Sint Maarten",
+      "representativeId": "sx-philipsburg",
+      "representativeName": "필립스뷔르흐",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "sx-philipsburg"
+      ]
+    },
+    {
+      "code": "SY",
+      "country": "시리아",
+      "englishCountry": "Syria",
+      "representativeId": "sy-damascus",
+      "representativeName": "다마스쿠스",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "sy-damascus"
+      ]
+    },
+    {
+      "code": "SZ",
+      "country": "에스와티니",
+      "englishCountry": "Eswatini",
+      "representativeId": "sz-lobamba",
+      "representativeName": "로밤바",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "sz-lobamba"
+      ]
+    },
+    {
+      "code": "TC",
+      "country": "터크스 케이커스 제도",
+      "englishCountry": "Turks & Caicos Islands",
+      "representativeId": "tc-cockburn-town",
+      "representativeName": "코크번타운",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "tc-cockburn-town"
+      ]
+    },
+    {
+      "code": "TD",
+      "country": "차드",
+      "englishCountry": "Chad",
+      "representativeId": "td-ndjamena",
+      "representativeName": "은자메나",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "td-ndjamena"
+      ]
+    },
+    {
+      "code": "TG",
+      "country": "토고",
+      "englishCountry": "Togo",
+      "representativeId": "tg-lome",
+      "representativeName": "로메",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "tg-lome"
+      ]
+    },
+    {
+      "code": "TH",
+      "country": "태국",
+      "englishCountry": "Thailand",
+      "representativeId": "th-bangkok",
+      "representativeName": "방콕",
+      "kind": "city",
+      "destinationCount": 10,
+      "hasDedicatedPair": true,
+      "ids": [
+        "th-bangkok",
+        "th-chiang-mai",
+        "th-phuket",
+        "th-pattaya",
+        "th-chiang-rai",
+        "th-krabi",
+        "th-ayutthaya",
+        "th-sukhothai",
+        "th-ko-samui",
+        "th-kanchanaburi"
+      ]
+    },
+    {
+      "code": "TJ",
+      "country": "타지키스탄",
+      "englishCountry": "Tajikistan",
+      "representativeId": "tj-dushanbe",
+      "representativeName": "두샨베",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "tj-dushanbe"
+      ]
+    },
+    {
+      "code": "TK",
+      "country": "토켈라우",
+      "englishCountry": "Tokelau",
+      "representativeId": "tk-nukunonu-village",
+      "representativeName": "누쿠노누 마을",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "tk-nukunonu-village"
+      ]
+    },
+    {
+      "code": "TL",
+      "country": "동티모르",
+      "englishCountry": "Timor-Leste",
+      "representativeId": "tl-dili",
+      "representativeName": "딜리",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "tl-dili"
+      ]
+    },
+    {
+      "code": "TM",
+      "country": "투르크메니스탄",
+      "englishCountry": "Turkmenistan",
+      "representativeId": "tm-ashgabat",
+      "representativeName": "아시가바트",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "tm-ashgabat"
+      ]
+    },
+    {
+      "code": "TN",
+      "country": "튀니지",
+      "englishCountry": "Tunisia",
+      "representativeId": "tn-tunis",
+      "representativeName": "튀니스",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "tn-tunis"
+      ]
+    },
+    {
+      "code": "TO",
+      "country": "통가",
+      "englishCountry": "Tonga",
+      "representativeId": "to-nukualofa",
+      "representativeName": "누쿠알로파",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "to-nukualofa"
+      ]
+    },
+    {
+      "code": "TR",
+      "country": "튀르키예",
+      "englishCountry": "Türkiye",
+      "representativeId": "tr-istanbul",
+      "representativeName": "이스탄불",
+      "kind": "city",
+      "destinationCount": 3,
+      "hasDedicatedPair": true,
+      "ids": [
+        "tr-istanbul",
+        "tr-antalya",
+        "tr-cappadocia"
+      ]
+    },
+    {
+      "code": "TT",
+      "country": "트리니다드 토바고",
+      "englishCountry": "Trinidad & Tobago",
+      "representativeId": "tt-port-of-spain",
+      "representativeName": "포트오브스페인",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "tt-port-of-spain"
+      ]
+    },
+    {
+      "code": "TV",
+      "country": "투발루",
+      "englishCountry": "Tuvalu",
+      "representativeId": "tv-vaiaku",
+      "representativeName": "바이아쿠",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "tv-vaiaku"
+      ]
+    },
+    {
+      "code": "TW",
+      "country": "대만",
+      "englishCountry": "Taiwan",
+      "representativeId": "tw-taipei",
+      "representativeName": "타이베이",
+      "kind": "city",
+      "destinationCount": 7,
+      "hasDedicatedPair": true,
+      "ids": [
+        "tw-taipei",
+        "tw-kaohsiung",
+        "tw-taichung",
+        "tw-tainan",
+        "tw-hualien",
+        "tw-jiufen",
+        "tw-chiayi"
+      ]
+    },
+    {
+      "code": "TZ",
+      "country": "탄자니아",
+      "englishCountry": "Tanzania",
+      "representativeId": "tz-zanzibar-city",
+      "representativeName": "잔지바르시티",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "tz-zanzibar-city"
+      ]
+    },
+    {
+      "code": "UA",
+      "country": "우크라이나",
+      "englishCountry": "Ukraine",
+      "representativeId": "ua-lviv",
+      "representativeName": "리비우",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ua-lviv"
+      ]
+    },
+    {
+      "code": "UG",
+      "country": "우간다",
+      "englishCountry": "Uganda",
+      "representativeId": "ug-entebbe",
+      "representativeName": "엔테베",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ug-entebbe"
+      ]
+    },
+    {
+      "code": "US",
+      "country": "미국",
+      "englishCountry": "United States",
+      "representativeId": "us-new-york",
+      "representativeName": "뉴욕",
+      "kind": "city",
+      "destinationCount": 27,
+      "hasDedicatedPair": true,
+      "ids": [
+        "us-new-york",
+        "us-san-francisco",
+        "us-los-angeles",
+        "us-las-vegas",
+        "us-seattle",
+        "us-chicago",
+        "us-washington-dc",
+        "us-boston",
+        "us-miami",
+        "us-honolulu",
+        "us-oahu",
+        "us-san-diego",
+        "us-orlando",
+        "us-new-orleans",
+        "us-san-antonio",
+        "us-austin",
+        "us-philadelphia",
+        "us-denver",
+        "us-dallas",
+        "us-nashville",
+        "us-savannah",
+        "us-key-west",
+        "us-santa-fe",
+        "us-anchorage",
+        "us-salt-lake-city",
+        "us-charleston",
+        "us-st-augustine"
+      ]
+    },
+    {
+      "code": "UY",
+      "country": "우루과이",
+      "englishCountry": "Uruguay",
+      "representativeId": "uy-colonia-del-sacramento",
+      "representativeName": "콜로니아델사크라멘토",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "uy-colonia-del-sacramento"
+      ]
+    },
+    {
+      "code": "UZ",
+      "country": "우즈베키스탄",
+      "englishCountry": "Uzbekistan",
+      "representativeId": "uz-samarkand",
+      "representativeName": "사마르칸트",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "uz-samarkand",
+        "uz-bukhara"
+      ]
+    },
+    {
+      "code": "VA",
+      "country": "바티칸 시국",
+      "englishCountry": "Vatican City",
+      "representativeId": "va-vatican-city",
+      "representativeName": "바티칸시국",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "va-vatican-city"
+      ]
+    },
+    {
+      "code": "VC",
+      "country": "세인트빈센트그레나딘",
+      "englishCountry": "St. Vincent & Grenadines",
+      "representativeId": "vc-kingstown",
+      "representativeName": "킹스타운",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "vc-kingstown"
+      ]
+    },
+    {
+      "code": "VE",
+      "country": "베네수엘라",
+      "englishCountry": "Venezuela",
+      "representativeId": "ve-coro",
+      "representativeName": "코로",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ve-coro"
+      ]
+    },
+    {
+      "code": "VG",
+      "country": "영국령 버진아일랜드",
+      "englishCountry": "British Virgin Islands",
+      "representativeId": "vg-road-town",
+      "representativeName": "로드타운",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "vg-road-town"
+      ]
+    },
+    {
+      "code": "VI",
+      "country": "미국령 버진아일랜드",
+      "englishCountry": "U.S. Virgin Islands",
+      "representativeId": "vi-charlotte-amalie",
+      "representativeName": "샬럿아말리에",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "vi-charlotte-amalie"
+      ]
+    },
+    {
+      "code": "VN",
+      "country": "베트남",
+      "englishCountry": "Vietnam",
+      "representativeId": "vn-da-nang",
+      "representativeName": "다낭",
+      "kind": "city",
+      "destinationCount": 10,
+      "hasDedicatedPair": true,
+      "ids": [
+        "vn-da-nang",
+        "vn-nha-trang",
+        "vn-hanoi",
+        "vn-ho-chi-minh",
+        "vn-hoi-an",
+        "vn-phu-quoc",
+        "vn-da-lat",
+        "vn-hue",
+        "vn-ha-long",
+        "vn-sa-pa"
+      ]
+    },
+    {
+      "code": "VU",
+      "country": "바누아투",
+      "englishCountry": "Vanuatu",
+      "representativeId": "vu-port-vila",
+      "representativeName": "포트빌라",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "vu-port-vila"
+      ]
+    },
+    {
+      "code": "WF",
+      "country": "왈리스-푸투나 제도",
+      "englishCountry": "Wallis & Futuna",
+      "representativeId": "wf-mata-utu",
+      "representativeName": "마타우투",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "wf-mata-utu"
+      ]
+    },
+    {
+      "code": "WS",
+      "country": "사모아",
+      "englishCountry": "Samoa",
+      "representativeId": "ws-apia",
+      "representativeName": "아피아",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ws-apia"
+      ]
+    },
+    {
+      "code": "XK",
+      "country": "코소보",
+      "englishCountry": "Kosovo",
+      "representativeId": "xk-prizren",
+      "representativeName": "프리즈렌",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "xk-prizren"
+      ]
+    },
+    {
+      "code": "YE",
+      "country": "예멘",
+      "englishCountry": "Yemen",
+      "representativeId": "ye-sanaa",
+      "representativeName": "사나",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "ye-sanaa"
+      ]
+    },
+    {
+      "code": "YT",
+      "country": "마요트",
+      "englishCountry": "Mayotte",
+      "representativeId": "yt-mamoudzou",
+      "representativeName": "마무주",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "yt-mamoudzou"
+      ]
+    },
+    {
+      "code": "ZA",
+      "country": "남아프리카",
+      "englishCountry": "South Africa",
+      "representativeId": "za-cape-town",
+      "representativeName": "케이프타운",
+      "kind": "city",
+      "destinationCount": 2,
+      "hasDedicatedPair": true,
+      "ids": [
+        "za-cape-town",
+        "za-johannesburg"
+      ]
+    },
+    {
+      "code": "ZM",
+      "country": "잠비아",
+      "englishCountry": "Zambia",
+      "representativeId": "zm-livingstone",
+      "representativeName": "리빙스턴",
+      "kind": "city",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "zm-livingstone"
+      ]
+    },
+    {
+      "code": "ZW",
+      "country": "짐바브웨",
+      "englishCountry": "Zimbabwe",
+      "representativeId": "zw-victoria-falls",
+      "representativeName": "빅토리아폴스",
+      "kind": "town",
+      "destinationCount": 1,
+      "hasDedicatedPair": true,
+      "ids": [
+        "zw-victoria-falls"
+      ]
+    }
+  ]
+}

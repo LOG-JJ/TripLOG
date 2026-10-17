@@ -1,0 +1,26 @@
+{
+  "jobId": "nl-the-hague-mobile",
+  "cityId": "nl-the-hague",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of The Hague, Netherlands: the Peace Palace's red-brick clock tower, with its formal garden. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Composition correction: Frame the ENTIRE Peace Palace as a compact middle-distance subject. Its clock tower finial must have at least 12 percent of canvas height of clear transparent headroom, and its complete right facade including the small corner tower must end before 85 percent of canvas width. The garden may continue to the lower and right edges.",
+  "promptSha256": "a70483f1f1033b2cb5bdbc0753ff91ad694b38bad15177f9303947e00df40cd9",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nl-the-hague-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-8791c37f-ab0f-4c1c-b8c0-c7d9b854bd26.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-8791c37f-ab0f-4c1c-b8c0-c7d9b854bd26.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/nl-the-hague-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "165b6ae682ffef32f8b9dd5b4126bea4255f4319bb9e9ae7d9a9b934a6a6b897",
+  "savedSha256": "165b6ae682ffef32f8b9dd5b4126bea4255f4319bb9e9ae7d9a9b934a6a6b897",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:21:04Z",
+  "toolCallId": "exec-8791c37f-ab0f-4c1c-b8c0-c7d9b854bd26",
+  "savedAt": "2026-10-17T07:24:33.504598+00:00"
+}

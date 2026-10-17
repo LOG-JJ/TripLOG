@@ -1,0 +1,26 @@
+{
+  "jobId": "nu-alofi-landscape",
+  "cityId": "nu-alofi",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Alofi, Niue: the Ekalesia church at Alofi with its simple pale facade, with Niue coral-limestone coast and tropical trees. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "141e5037fa583cd6b4c40a747804a07c74468703feea765141e1bf6004460a21",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nu-alofi-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-fb6d46ff-beea-431d-9ed6-352bb308d934.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-fb6d46ff-beea-431d-9ed6-352bb308d934.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/nu-alofi-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "b906ecda4d00a02d2a457eb25748b1118c592211ea18e3f40443cdd40e173c37",
+  "savedSha256": "b906ecda4d00a02d2a457eb25748b1118c592211ea18e3f40443cdd40e173c37",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:30:55.400Z",
+  "toolCallId": "exec-fb6d46ff-beea-431d-9ed6-352bb308d934",
+  "savedAt": "2026-10-17T07:35:08.002229+00:00"
+}

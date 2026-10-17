@@ -1,0 +1,52 @@
+{
+  "id": "cf-bangui-mobile",
+  "cityId": "cf-bangui",
+  "name": "방기",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cf-bangui-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cf-bangui-mobile.json",
+  "originalSha256": "70bdb45a0475cacfd45368383ddfc62c6b3350f63b221961d54dd48634ae7197",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    79,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cf-bangui-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 107556,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "ef96f5e17e5f86d7a9670599023c1ebe485d77e82652253263dc37ba70d4008b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

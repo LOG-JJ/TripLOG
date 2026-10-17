@@ -1,0 +1,52 @@
+{
+  "id": "it-matera-mobile",
+  "cityId": "it-matera",
+  "name": "마테라",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-matera-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-matera-mobile.json",
+  "originalSha256": "807fc27bc9761b2691c4bd7211af4f2e07414d1b76507feb28cc3f8c8eb87532",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    39,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/it-matera-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 106070,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "6db5ea35df7f4ec06636b73da59ec3e153e9ee006b50d58356ef07f1c31fdba5",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

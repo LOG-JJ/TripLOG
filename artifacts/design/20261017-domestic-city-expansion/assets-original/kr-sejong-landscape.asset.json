@@ -1,0 +1,51 @@
+{
+  "id": "kr-sejong-landscape",
+  "cityId": "kr-sejong",
+  "name": "세종",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "광역시급",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sejong-landscape.json",
+  "originalSha256": "b32d217debcdca4c20a92f946969032dc2b50930d56ca5c3846c4c953719e41e",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-sejong.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 95980,
+  "assetSha256": "9b2f56f1d743ae26bafa013b64db344935cc9d7bd71b70e97e5e8b72ecdf9126",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "gw-bissau-mobile",
+  "cityId": "gw-bissau",
+  "name": "비사우",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gw-bissau-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gw-bissau-mobile.json",
+  "originalSha256": "f60052786b8b79acd261f148210b2b7bdc9b191d8fbc75655af7f70bfaadcc6a",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gw-bissau-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 115096,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "309cbe620200441b9df4d2b5f2e153c1bff358d9b9fbedc626c8768c7fd96793",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa",
+  "technicalFaintEdgeRefit": {
+    "checkedAt": "2026-10-17T07:38:27.232535+00:00",
+    "alphaThreshold": 8,
+    "beforeGaps": [
+      6,
+      6
+    ],
+    "afterGaps": [
+      0,
+      0
+    ],
+    "refits": [
+      [
+        6,
+        6
+      ]
+    ],
+    "source": "original PNG preserved",
+    "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1"
+  }
+}

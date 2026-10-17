@@ -1,0 +1,52 @@
+{
+  "id": "iq-erbil-mobile",
+  "cityId": "iq-erbil",
+  "name": "아르빌",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/iq-erbil-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/iq-erbil-mobile.json",
+  "originalSha256": "aa502c97a2d6a0d47ebf90acdf9a04cf1bc20acb3171f3acd6359d092de8e990",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/iq-erbil-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 97408,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "108305b7837c21e10acc9cf18853ee2031143cad9cad456fd8f3c6118fb34a88",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

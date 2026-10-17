@@ -1,0 +1,26 @@
+{
+  "jobId": "br-ouro-preto-mobile",
+  "cityId": "br-ouro-preto",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Ouro Preto, Brazil: the curving facade of Sao Francisco de Assis church, with the steep colonial street. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "e76cd285f4702b7bd707f05d7d51c7ebf2a54f4bfe9e21ac57b0f652318f48fa",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/br-ouro-preto-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-2de085ef-2e8e-4d50-9d52-d5d0129d956c.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-2de085ef-2e8e-4d50-9d52-d5d0129d956c.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/br-ouro-preto-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "e4fbf22247e07cdba01d537bc3717cb0957555823ae2ca8e235247e210fb2460",
+  "savedSha256": "e4fbf22247e07cdba01d537bc3717cb0957555823ae2ca8e235247e210fb2460",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:48:40Z",
+  "toolCallId": "exec-2de085ef-2e8e-4d50-9d52-d5d0129d956c",
+  "savedAt": "2026-10-17T06:51:50.409618+00:00"
+}

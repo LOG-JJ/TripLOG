@@ -1,0 +1,52 @@
+{
+  "id": "lt-kaunas-mobile",
+  "cityId": "lt-kaunas",
+  "name": "카우나스",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/lt-kaunas-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/lt-kaunas-mobile.json",
+  "originalSha256": "cc47d350db1a0046b5fe66e5b26fe5984cc929aff10368557028c2bd5fd7c27d",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    114,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/lt-kaunas-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 50482,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "1993fc0f313db491e3295a17dcc953176ee3ef2583e549985cb4aac97381bd12",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

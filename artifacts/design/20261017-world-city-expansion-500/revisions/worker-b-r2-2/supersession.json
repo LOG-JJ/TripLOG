@@ -1,0 +1,38 @@
+[
+  {
+    "jobId": "th-kanchanaburi-landscape",
+    "reason": "Whole-bridge r2 composition lost the identifying rounded original steel truss tops; restore curved spans while retaining both endpoints.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/th-kanchanaburi-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-2/th-kanchanaburi-landscape/jobs/th-kanchanaburi-landscape.json",
+        "sha256": "2b029f7fb96f674644e2a5116c3a63d19e5ed6b4789f527149bab938446ea550"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/th-kanchanaburi-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-2/th-kanchanaburi-landscape/jobs/th-kanchanaburi-landscape.prompt.txt",
+        "sha256": "ac0550f0af8d56ac2ca1a60d64954959ed93e9c1aa90767571710213b137f552"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/th-kanchanaburi-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-2/th-kanchanaburi-landscape/originals/th-kanchanaburi-landscape.png",
+        "sha256": "af299e41a8e8ab493b5f183614466fe73f9d287b0e72f2d415a8ac3475cfb7e0"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/th-kanchanaburi-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-2/th-kanchanaburi-landscape/originals/th-kanchanaburi-landscape.json",
+        "sha256": "30dc5fb9aaad2cfe9f256c0d785d7805d39603b25eadf7759b1979663b24509f"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/th-kanchanaburi-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-2/th-kanchanaburi-landscape/originals/th-kanchanaburi-landscape.asset.json",
+        "sha256": "ed0d7a7755b63fe48b83c7ca5c9d22f9b62f38323f250265294c3f55ee0f8302"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/th-kanchanaburi.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r2-2/th-kanchanaburi-landscape/runtime/th-kanchanaburi.webp",
+        "sha256": "cfc444dd692c3fdd83a6d2868cc4bd04a2cf7aa87366aefe216e77eddce53ea1"
+      }
+    ]
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "id": "gb-belfast-mobile",
+  "cityId": "gb-belfast",
+  "cityName": "벨파스트",
+  "englishName": "Belfast",
+  "countryCode": "GB",
+  "kind": "city",
+  "group": "Europe",
+  "variant": "mobile",
+  "phase": "core-500",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone destination illustration of Belfast, United Kingdom: Titanic Belfast's angular silver facades, with the historic shipyard waterfront. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the complete main landmark compact and readable in the middle. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Composition correction: The only main subject is the complete contemporary Titanic Belfast museum with its four angular silver wings. Show all wing tips inside the picture, modest dockside water and distant yellow shipyard cranes. There must be no ship, liner, ferry or boat. Make the museum compact enough that its rightmost corner is visibly clear of the right edge. Preserve the same simple pastel hand-drawn style and transparent background. No image reference is supplied.",
+  "promptSha256": "98980867780db3f3825da0afca64601034f478d84eacdf6511fe81764109fc58",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/jobs/gb-belfast-mobile.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/gb-belfast-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/gb-belfast-mobile.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/gb-belfast-mobile.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v6/gb-belfast-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "source": {
+    "title": "Visit Belfast — Titanic Belfast",
+    "url": "https://visitbelfast.com/see-do/attractions/titanic-belfast/"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone destination illustration of Belfast, United Kingdom: Titanic Belfast's angular silver facades, with the historic shipyard waterfront. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the complete main landmark compact and readable in the middle. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Composition correction: The only main subject is the complete contemporary Titanic Belfast museum with its four angular silver wings. Show all wing tips inside the picture, modest dockside water and distant yellow shipyard cranes. There must be no ship, liner, ferry or boat. Make the museum compact enough that its rightmost corner is visibly clear of the right edge. Preserve the same simple pastel hand-drawn style and transparent background. No image reference is supplied.",
+    "transparent_background": true
+  },
+  "revision": {
+    "number": 2,
+    "reason": "Unrequested large liner competes with the Titanic Belfast building.",
+    "previousFiles": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r1/gb-belfast-mobile"
+  }
+}

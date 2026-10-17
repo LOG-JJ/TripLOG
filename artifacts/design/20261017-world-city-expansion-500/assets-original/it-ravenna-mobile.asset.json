@@ -1,0 +1,72 @@
+{
+  "id": "it-ravenna-mobile",
+  "cityId": "it-ravenna",
+  "name": "라벤나",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-ravenna-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/it-ravenna-mobile.json",
+  "originalSha256": "69c60b7c8d62969a914cb25b3bf5ec7f5ef7bf4d3316e331b5432da95616749b",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    31,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/it-ravenna-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 111244,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "4b832697cb71a6bd2c3cd47bfac29e5121136ae77229b0b8a2f458fa845713e4",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa",
+  "technicalFaintEdgeRefit": {
+    "checkedAt": "2026-10-17T07:38:30.319815+00:00",
+    "alphaThreshold": 8,
+    "beforeGaps": [
+      0,
+      5
+    ],
+    "afterGaps": [
+      0,
+      0
+    ],
+    "refits": [
+      [
+        0,
+        5
+      ]
+    ],
+    "source": "original PNG preserved",
+    "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1"
+  }
+}

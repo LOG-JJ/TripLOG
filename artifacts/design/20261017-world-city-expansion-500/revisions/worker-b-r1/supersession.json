@@ -1,0 +1,218 @@
+[
+  {
+    "jobId": "by-nesvizh-mobile",
+    "reason": "The palace right wing reaches the frame edge.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/by-nesvizh-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/by-nesvizh-mobile/jobs/by-nesvizh-mobile.json",
+        "sha256": "96715b424ad7d5029e6e486581708fe9be9fac7ecb7352b9201f82ed3eaae06d"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/by-nesvizh-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/by-nesvizh-mobile/jobs/by-nesvizh-mobile.prompt.txt",
+        "sha256": "c418f78021370de88f73d057b320415f11d3ec0de1c55a45ebca4e7173e2ad08"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/by-nesvizh-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/by-nesvizh-mobile/originals/by-nesvizh-mobile.png",
+        "sha256": "09179c7a24eb57285eeb63fe34e779df43aa1c3dc9d023adf06884673369f589"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/by-nesvizh-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/by-nesvizh-mobile/originals/by-nesvizh-mobile.json",
+        "sha256": "0f8d3dce4994d32e4518d0dba56bcddd277d6d28b7f72e943f4e384665776ce3"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/by-nesvizh-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/by-nesvizh-mobile/originals/by-nesvizh-mobile.asset.json",
+        "sha256": "0e573f178e32ef890ca1e548c4579da7d1756a1a3774ba0c0132f79b2d720ec1"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/by-nesvizh-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/by-nesvizh-mobile/runtime/by-nesvizh-mobile.webp",
+        "sha256": "c75b664792a685106d06c2f4279074cea364da6839fe1369018253b6453bd0fb"
+      }
+    ]
+  },
+  {
+    "jobId": "md-chisinau-landscape",
+    "reason": "The Triumphal Arch clock is omitted.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/md-chisinau-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/md-chisinau-landscape/jobs/md-chisinau-landscape.json",
+        "sha256": "268dbc65ea4a2fbfb1d3213860b5b1dc1c764bbae904d1aa09b80df8637b9560"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/md-chisinau-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/md-chisinau-landscape/jobs/md-chisinau-landscape.prompt.txt",
+        "sha256": "1a7a489b4eb099e61dc5986846fbbe012e8448dfdde8d4c233b6e8a189f9bc19"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/md-chisinau-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/md-chisinau-landscape/originals/md-chisinau-landscape.png",
+        "sha256": "aa2d8a67d8e4a8e57086f6aa46a906a265bf5cee065b47b6feef827bfbac56b0"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/md-chisinau-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/md-chisinau-landscape/originals/md-chisinau-landscape.json",
+        "sha256": "4945a786732d35c78264e5b856f21cb8ddc546d63c25d537fea3b54910a537ab"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/md-chisinau-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/md-chisinau-landscape/originals/md-chisinau-landscape.asset.json",
+        "sha256": "2b47cf1160d8779d35d59a56a07bdca7a148a822e64e812e6f08c82786fbd110"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/md-chisinau.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/md-chisinau-landscape/runtime/md-chisinau.webp",
+        "sha256": "cc83501f98dd5eb4aa0e47b3e411319c9f30047fc852915343a745de0c760c2a"
+      }
+    ]
+  },
+  {
+    "jobId": "gb-canterbury-landscape",
+    "reason": "Invented foreground river and cathedral right wing clipping.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-canterbury-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/gb-canterbury-landscape/jobs/gb-canterbury-landscape.json",
+        "sha256": "e5521de9613386e930a73557e26812a97df1b8d49fe701023390f7c10011093d"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-canterbury-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/gb-canterbury-landscape/jobs/gb-canterbury-landscape.prompt.txt",
+        "sha256": "433db98908ffe527e83616470f643e9c2b6eb45fc65859a45640e7d9f8dabb1b"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-canterbury-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/gb-canterbury-landscape/originals/gb-canterbury-landscape.png",
+        "sha256": "994f6e882d8458787a2ff67f434e011a979f2e88692af0d236d9cb8d7cfd883a"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-canterbury-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/gb-canterbury-landscape/originals/gb-canterbury-landscape.json",
+        "sha256": "8f18fcc916aa38ebbee751b953ce24ac89ecd4e611522165b7e24e2abf94c223"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-canterbury-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/gb-canterbury-landscape/originals/gb-canterbury-landscape.asset.json",
+        "sha256": "79e5279a5009d5f63409f75dd294c92d32b3adbb9afa9f1857b357426169c946"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/gb-canterbury.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/gb-canterbury-landscape/runtime/gb-canterbury.webp",
+        "sha256": "2d42c698c394853c4771ec0952d2547c753dbdde908d6a062d752ddde54d8e72"
+      }
+    ]
+  },
+  {
+    "jobId": "gb-canterbury-mobile",
+    "reason": "Invented foreground river and bridge.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-canterbury-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/gb-canterbury-mobile/jobs/gb-canterbury-mobile.json",
+        "sha256": "8e2bf5aad0a7cf213fb738283e6f38890b29d1c81c9e432b0aa344d5c6be9cad"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-canterbury-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/gb-canterbury-mobile/jobs/gb-canterbury-mobile.prompt.txt",
+        "sha256": "5a8e8c936006fc639493febc0d8b301344919c381f072dc4cdc31d41533bfef8"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-canterbury-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/gb-canterbury-mobile/originals/gb-canterbury-mobile.png",
+        "sha256": "8cbfc45b2d3860ff617ed9e74593c364da37f776371f0c22757b594bcfc59cf8"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-canterbury-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/gb-canterbury-mobile/originals/gb-canterbury-mobile.json",
+        "sha256": "678329b3138ab959e700c05e578493acf720f43df78d867860f62c4b27c8ea60"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-canterbury-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/gb-canterbury-mobile/originals/gb-canterbury-mobile.asset.json",
+        "sha256": "aadf832a66123187436cf00e54ffaac21894e4282ad58a532650879066239664"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/gb-canterbury-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/gb-canterbury-mobile/runtime/gb-canterbury-mobile.webp",
+        "sha256": "92d4606995aab0145a2273b32e6823dad454668020a195bbddc3074d7865ccf2"
+      }
+    ]
+  },
+  {
+    "jobId": "fr-arles-landscape",
+    "reason": "The amphitheatre right end is clipped.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/fr-arles-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/fr-arles-landscape/jobs/fr-arles-landscape.json",
+        "sha256": "4cb932a14da578b5acdebce4452458f9c1ebadaa8b65d339c1f3f7194ec7c8ec"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/fr-arles-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/fr-arles-landscape/jobs/fr-arles-landscape.prompt.txt",
+        "sha256": "cd1f0df7248430de11126be1fb0b2ba40b90dcd86d37825aa58758b3f3a6858c"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/fr-arles-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/fr-arles-landscape/originals/fr-arles-landscape.png",
+        "sha256": "23dc9131ed680e7760d5ddf6d89400fa1f83d2267e3a2992777568de7b52df57"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/fr-arles-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/fr-arles-landscape/originals/fr-arles-landscape.json",
+        "sha256": "327ba588fb6f567c85be5a31554b1faedc42536b66d2634764e5d5e96b3f7636"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/fr-arles-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/fr-arles-landscape/originals/fr-arles-landscape.asset.json",
+        "sha256": "950b983fd7f2a2d95756f957f8de57e1e87e96be75df83ddcec7c44b14deba84"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/fr-arles.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/fr-arles-landscape/runtime/fr-arles.webp",
+        "sha256": "5a9e1358f2458cd8ff5c023b2b9080982ee7d79eb14abe23a998e98d953e500c"
+      }
+    ]
+  },
+  {
+    "jobId": "fr-arles-mobile",
+    "reason": "The amphitheatre right end is clipped.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/fr-arles-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/fr-arles-mobile/jobs/fr-arles-mobile.json",
+        "sha256": "29d6049deaea2973744115622a3935588e3f92db456430a92cf26852c36c4479"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/fr-arles-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/fr-arles-mobile/jobs/fr-arles-mobile.prompt.txt",
+        "sha256": "ff24e35afc19da8069a81b74b4dadd2060ef0e80bb3ab2b73d39860c420abbdf"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/fr-arles-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/fr-arles-mobile/originals/fr-arles-mobile.png",
+        "sha256": "1722bc1c7b6470d05759eed67bf4049d9c0f00afcfe3a1db911ade8a4bf0ab3f"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/fr-arles-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/fr-arles-mobile/originals/fr-arles-mobile.json",
+        "sha256": "bb29e459cbfb7d21fda46389c069cb73d95c83aacdb0485cdbac7ed22bbef0b3"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/fr-arles-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/fr-arles-mobile/originals/fr-arles-mobile.asset.json",
+        "sha256": "001295e08eeb91aa2aa4bf9228350d3684debfcc135e20a77ac4c2b23af2ba03"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/fr-arles-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1/fr-arles-mobile/runtime/fr-arles-mobile.webp",
+        "sha256": "2472a6ec544a6b658f15061c3128054dbbd0bc3e30e9bd2442eafc26a5097e73"
+      }
+    ]
+  }
+]

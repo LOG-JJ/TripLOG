@@ -1,0 +1,51 @@
+{
+  "id": "kr-naju-mobile",
+  "cityId": "kr-naju",
+  "name": "나주",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "전남권",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-naju-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-naju-mobile.json",
+  "originalSha256": "64482feea762c73bc4abe17a6586fe8134aa468790b5a4f15bc0ad13c3e06e20",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    27,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-naju-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 84570,
+  "assetSha256": "1a77412ab62e86960e1cd8b38e064516ff3d8214bf8e601de289cb1969a38ad1",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

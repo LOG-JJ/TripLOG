@@ -1,0 +1,52 @@
+{
+  "id": "ms-little-bay-mobile",
+  "cityId": "ms-little-bay",
+  "name": "리틀베이",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ms-little-bay-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ms-little-bay-mobile.json",
+  "originalSha256": "a5af4dd741d1d36ea512a2ffb980fac1d18a8b0db9069166d174b017507b5b07",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    55,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ms-little-bay-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 112754,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "d7328b403d8e38204475023c13c1f465ee722e5fa19a1d89ede9993d03646efa",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

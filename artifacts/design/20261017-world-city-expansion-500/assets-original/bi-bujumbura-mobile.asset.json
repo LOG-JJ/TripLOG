@@ -1,0 +1,52 @@
+{
+  "id": "bi-bujumbura-mobile",
+  "cityId": "bi-bujumbura",
+  "name": "부줌부라",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bi-bujumbura-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bi-bujumbura-mobile.json",
+  "originalSha256": "06d64f9e5feaa57fc6d4b0a103dd2f61473e95e8570a86a6f1c4ae65d4f0e773",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bi-bujumbura-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 89350,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "faf1c8bda4ccbf88069e89db5de68dbe2c8bc9ed148bc876c724402a6791f8d1",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

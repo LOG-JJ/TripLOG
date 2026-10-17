@@ -1,0 +1,52 @@
+{
+  "id": "us-st-augustine-mobile",
+  "cityId": "us-st-augustine",
+  "name": "세인트오거스틴",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/us-st-augustine-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/us-st-augustine-mobile.json",
+  "originalSha256": "ec6db65d1d65a98aa3284293fa866081788cd09798e185644f8cb4e1fd9bccdc",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/us-st-augustine-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 101918,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "0cef60d020a5b78be50fdddd72d251fbf7b4a7da9d6e0b5a771f2d9686e4fbbc",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

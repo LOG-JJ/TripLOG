@@ -1,0 +1,52 @@
+{
+  "id": "kn-basseterre-landscape",
+  "cityId": "kn-basseterre",
+  "name": "바스테르(세인트키츠)",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/kn-basseterre-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/kn-basseterre-landscape.json",
+  "originalSha256": "8da5cc952833d0a8a45fd56a80c7caa1f08ef7d0317993cf992d47176fe953a0",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    37,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/kn-basseterre.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 111902,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "cd08e659ef2ff696ca23323aaaf618cc3e3d3556c4afb1bf4b21fb84fa580918",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

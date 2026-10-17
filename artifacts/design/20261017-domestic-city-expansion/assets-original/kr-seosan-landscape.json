@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-seosan-landscape",
+  "cityId": "kr-seosan",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Seosan, South Korea: Jinnammun, the south gate of Haemieupseong Fortress: a single low arched stone passage through a broad gray-brown masonry rampart, with one single-storey wooden pavilion and a wide dark-gray Korean hipped-and-gabled tiled roof above the stone arch, low adjoining stone walls and open flat grassland. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat. The entrance arch is cut through the thick stone wall, with wedge-shaped arch stones clearly visible; the wooden pavilion stands entirely above the masonry wall. Keep the fortress on flat ground with one continuous low wall, not multiple terraces.",
+  "promptSha256": "9e50f13d934fd27476da6bdfe0b799d495e897e3afb2ba08f56553822c11765e",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-seosan-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-d4bb9bfe-08d1-44b6-a672-c5a169a47346.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-d4bb9bfe-08d1-44b6-a672-c5a169a47346.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-seosan-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "4b4b8fda89882324acc6b3a22739caf71bdf9f7a11e277c2e018c80a340bba8a",
+  "savedSha256": "4b4b8fda89882324acc6b3a22739caf71bdf9f7a11e277c2e018c80a340bba8a",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:33:50Z",
+  "toolCallId": "exec-d4bb9bfe-08d1-44b6-a672-c5a169a47346",
+  "savedAt": "2026-10-17T05:34:22.849447+00:00"
+}

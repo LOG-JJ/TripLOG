@@ -1,0 +1,36 @@
+{
+  "id": "my-kuching-mobile",
+  "cityId": "my-kuching",
+  "cityName": "쿠칭",
+  "englishName": "Kuching",
+  "countryCode": "MY",
+  "kind": "city",
+  "group": "asia",
+  "variant": "mobile",
+  "phase": "core-500",
+  "status": "queued-not-generated",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackground": true,
+  "prompt": "Create one standalone destination illustration of Kuching, Malaysia: the curving Darul Hana pedestrian bridge over the Sarawak River, with Kuching waterfront trees and low historic buildings. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette. Composition correction: Make the entire Darul Hana pedestrian bridge the main subject, viewed at a distance so its complete curved deck, both angled pylons, all cables and BOTH endpoints fit inside the portrait canvas. The right endpoint and the rightmost cable end must stop before 85 percent of canvas width. Sarawak River water is explicitly present under the bridge. Any Sarawak Assembly building is a small distant supporting building, not the main subject. Supporting riverside trees may reach the right edge.",
+  "promptSha256": "a50e1baab3bc8b703b309c8685296792f466c118a87d3e709ffce4aab321cdad",
+  "promptFile": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/jobs/my-kuching-mobile.prompt.txt",
+  "original": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/my-kuching-mobile.png",
+  "metadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/my-kuching-mobile.json",
+  "assetMetadata": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/my-kuching-mobile.asset.json",
+  "asset": "src/assets/trip-scenes/cities/v6/my-kuching-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "source": {
+    "title": "Sarawak Tourism Board — Kuching Waterfront",
+    "url": "https://www.sarawaktourism.com/web/places-to-visit/town-view/kuching/major-attractions/kuching-waterfront"
+  },
+  "callArguments": {
+    "prompt": "Create one standalone destination illustration of Kuching, Malaysia: the curving Darul Hana pedestrian bridge over the Sarawak River, with Kuching waterfront trees and low historic buildings. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette. Composition correction: Make the entire Darul Hana pedestrian bridge the main subject, viewed at a distance so its complete curved deck, both angled pylons, all cables and BOTH endpoints fit inside the portrait canvas. The right endpoint and the rightmost cable end must stop before 85 percent of canvas width. Sarawak River water is explicitly present under the bridge. Any Sarawak Assembly building is a small distant supporting building, not the main subject. Supporting riverside trees may reach the right edge.",
+    "transparent_background": true
+  },
+  "revision": "worker-c-visual-r1",
+  "revisionReason": "The Darul Hana Bridge right endpoint and cable geometry were clipped."
+}

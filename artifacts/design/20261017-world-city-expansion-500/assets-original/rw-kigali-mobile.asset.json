@@ -1,0 +1,52 @@
+{
+  "id": "rw-kigali-mobile",
+  "cityId": "rw-kigali",
+  "name": "키갈리",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/rw-kigali-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/rw-kigali-mobile.json",
+  "originalSha256": "9c4eb3915d67ec00cf9572be3dc8075c7012e362dec266c5598caef869a63465",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    15,
+    154,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/rw-kigali-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 89962,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "f4c7d4567f097a98076e76525a5224fc04d4391fcb6c362ac6575b9b21971554",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

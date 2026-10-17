@@ -1,0 +1,52 @@
+{
+  "id": "aw-oranjestad-mobile",
+  "cityId": "aw-oranjestad",
+  "name": "오라녜스타트",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/aw-oranjestad-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/aw-oranjestad-mobile.json",
+  "originalSha256": "ea7d79f31423f8fc96f31787527c21795c3e322c390ce1baa4f3a29470651a78",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/aw-oranjestad-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 93666,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "fca656abf781e30c483ab15688dc30f6e0cbe24de9eb5e28f9f4f7606c50db76",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

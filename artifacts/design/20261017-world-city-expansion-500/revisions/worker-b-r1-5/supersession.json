@@ -1,0 +1,74 @@
+[
+  {
+    "jobId": "cd-kinshasa-landscape",
+    "reason": "The initial images show a generic tall pale concrete institution; the actual new MNRDC is a low brick and screen-block complex.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cd-kinshasa-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-5/cd-kinshasa-landscape/jobs/cd-kinshasa-landscape.json",
+        "sha256": "1ba24d29299e5d9b1bfc9679ce0632827cdd273b17c912149b8f236dc30139cb"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cd-kinshasa-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-5/cd-kinshasa-landscape/jobs/cd-kinshasa-landscape.prompt.txt",
+        "sha256": "7e536cb7a4c4238e1c651cda481fe8908bd0965e73ef0e77015ad592a62feeae"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cd-kinshasa-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-5/cd-kinshasa-landscape/originals/cd-kinshasa-landscape.png",
+        "sha256": "991fb2cb60ea10409636bfe8c2819abde12239f36bf4e4b904c661aa1c6bff39"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cd-kinshasa-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-5/cd-kinshasa-landscape/originals/cd-kinshasa-landscape.json",
+        "sha256": "55f3597c04872298de29b09c389eddc6e2ee386e55550f4dbff52067ecbfe333"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cd-kinshasa-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-5/cd-kinshasa-landscape/originals/cd-kinshasa-landscape.asset.json",
+        "sha256": "886207b96aa4777fd84c717d25fe6da821b6c7635bcedf216a3a3567bcd0f9ff"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/cd-kinshasa.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-5/cd-kinshasa-landscape/runtime/cd-kinshasa.webp",
+        "sha256": "68d4c4c3cb775e3576cdab4c8d1335434b63034425c443ad1698dfc3031d39bd"
+      }
+    ]
+  },
+  {
+    "jobId": "cd-kinshasa-mobile",
+    "reason": "The initial images show a generic tall pale concrete institution; the actual new MNRDC is a low brick and screen-block complex.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cd-kinshasa-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-5/cd-kinshasa-mobile/jobs/cd-kinshasa-mobile.json",
+        "sha256": "a7fa8f22ae4394140d5a8d94a5095cd512368a7b3e0274327740c9829bbe2026"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cd-kinshasa-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-5/cd-kinshasa-mobile/jobs/cd-kinshasa-mobile.prompt.txt",
+        "sha256": "cc291e85cf17d3a93c5aab29890d804c08ed71685511c12f2006596dd57227f0"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cd-kinshasa-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-5/cd-kinshasa-mobile/originals/cd-kinshasa-mobile.png",
+        "sha256": "a122ce6ce83733662db5329a0ff902d17c4e39dd654231f4646112bf032587d4"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cd-kinshasa-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-5/cd-kinshasa-mobile/originals/cd-kinshasa-mobile.json",
+        "sha256": "daec8e0e0c06c88956f9aed1bdd728064bae1440431b1b7a089da040abe59f19"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/cd-kinshasa-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-5/cd-kinshasa-mobile/originals/cd-kinshasa-mobile.asset.json",
+        "sha256": "cadcb85be9ab79b792d475227db6f2bfb0da34c220d59063524d91022b51f08a"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/cd-kinshasa-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-r1-5/cd-kinshasa-mobile/runtime/cd-kinshasa-mobile.webp",
+        "sha256": "b1bc87f35a52d4943c724db5cff93b7023f37aa12cb416a0925e2d1c9d570cef"
+      }
+    ]
+  }
+]

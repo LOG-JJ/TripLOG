@@ -1,0 +1,51 @@
+{
+  "id": "kr-pocheon-mobile",
+  "cityId": "kr-pocheon",
+  "name": "포천",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-pocheon-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-pocheon-mobile.json",
+  "originalSha256": "8b6115ece28b76e33717d6c452b2fe7e34597f1f44de7dcf619e2dfac1e6cdfe",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-pocheon-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 105868,
+  "assetSha256": "e7bb40d1b5e5ec26fafc98164936ae2f5a1fa62a47d5a3c9f9e75811f7da52fc",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

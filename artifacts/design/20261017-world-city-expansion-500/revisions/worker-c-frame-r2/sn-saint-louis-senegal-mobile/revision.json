@@ -1,0 +1,39 @@
+{
+  "jobId": "sn-saint-louis-senegal-mobile",
+  "archivedFiles": [
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sn-saint-louis-senegal-mobile.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.json",
+      "sha256": "031ae13dc96a6ebdc97c96746f6fa65c02debe2f5209b6e8ca4e6e18324b7dab"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sn-saint-louis-senegal-mobile.prompt.txt",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.prompt.txt",
+      "sha256": "a4c791a3a25d19c8f61eb47102dc09d9ab7d6f4cccd9f1c94f97147e7845afac"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-mobile.png",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.png",
+      "sha256": "4a45e914b2ab2ed4cefad3dfd93b1dbe3a54ebba58eeda50dfd59e72cb588d84"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-mobile.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.json",
+      "sha256": "605b9b31920534ca206cc5d8c73bfb27733c13a9383916aa7c11a53076d18c7a"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/sn-saint-louis-senegal-mobile.asset.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.asset.json",
+      "sha256": "fe9f35ea26677208649c4bcd75e159e00e517972d87057a603d20130755a58d8"
+    },
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v6/sn-saint-louis-senegal-mobile.webp",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-frame-r2/sn-saint-louis-senegal-mobile/sn-saint-louis-senegal-mobile.webp",
+      "sha256": "091c5b93f700c34e84456b5e509ca579d0db7e5d2d7714a09dc66a97b12914c3"
+    }
+  ],
+  "reason": "Second framing correction to include the complete bridge or museum outline.",
+  "newPromptSha256": "54ce8a0ebbea6620436888ee499a552d8476fc2ef2fcbc36933a26cdb64469d8",
+  "generationMode": "independent T2I",
+  "imageInputs": []
+}

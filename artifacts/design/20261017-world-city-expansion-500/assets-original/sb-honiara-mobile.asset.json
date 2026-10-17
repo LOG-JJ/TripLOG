@@ -1,0 +1,52 @@
+{
+  "id": "sb-honiara-mobile",
+  "cityId": "sb-honiara",
+  "name": "호니아라",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sb-honiara-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sb-honiara-mobile.json",
+  "originalSha256": "6c09c22a9b0cd9624092a00ca5d60454bed46f56e2acf480c2d2bc4ac5a7e5c2",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sb-honiara-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 82922,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "9bec855df024daeacd2dc0e2fb4469b4f8d22a8178bec4cd0753588a39ba30dd",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

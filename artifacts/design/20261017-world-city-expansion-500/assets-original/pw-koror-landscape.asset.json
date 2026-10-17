@@ -1,0 +1,52 @@
+{
+  "id": "pw-koror-landscape",
+  "cityId": "pw-koror",
+  "name": "코로르",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/pw-koror-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/pw-koror-landscape.json",
+  "originalSha256": "cc531c538e4052a21b318d9a0214e3729cebacb8c09401a9ae7f85a8032f9365",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/pw-koror.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 151218,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "d81223c873ce0da36ea668c841f848ed05613b525b7bc4120f90ba4e16dca6ed",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

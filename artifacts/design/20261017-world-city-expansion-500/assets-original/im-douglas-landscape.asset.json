@@ -1,0 +1,52 @@
+{
+  "id": "im-douglas-landscape",
+  "cityId": "im-douglas",
+  "name": "더글러스",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "서유럽",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/im-douglas-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/im-douglas-landscape.json",
+  "originalSha256": "b2a1e2a62cdb0ccc9530fea33c8294c026299b74ef4130917e52b35115ab1e81",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    31,
+    31,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/im-douglas.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 104102,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "1fbf4ad8c79d05a855e6fa491d4da20612346ab09c69caf867272e92481c601e",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

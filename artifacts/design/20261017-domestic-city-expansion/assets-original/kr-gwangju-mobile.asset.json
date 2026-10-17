@@ -1,0 +1,51 @@
+{
+  "id": "kr-gwangju-mobile",
+  "cityId": "kr-gwangju",
+  "name": "광주 도시권",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "기존 도시권 보존",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwangju-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwangju-mobile.json",
+  "originalSha256": "c71509be5d6e070fb0bc4a4e8e54301b2f871bd4166c6b7a20fc80387b53426b",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    33,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gwangju-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 98936,
+  "assetSha256": "1c6e728d554ddb4f363ae92ec185991feda00523699fd7bdf86f1f2dbbf94124",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

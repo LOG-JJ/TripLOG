@@ -1,0 +1,52 @@
+{
+  "id": "gd-st-georges-mobile",
+  "cityId": "gd-st-georges",
+  "name": "세인트조지스",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gd-st-georges-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gd-st-georges-mobile.json",
+  "originalSha256": "87f22e8759a31cda71252c5ff947b031f93b2b02286b0147cf5ccd7f4095172d",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    55,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gd-st-georges-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 112690,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "b45f95863f6aaa0ccdef3792a16cb06e47a0a9d661e88fffe504d593c211f1ab",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

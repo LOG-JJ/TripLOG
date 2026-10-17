@@ -1,0 +1,52 @@
+{
+  "id": "cd-kinshasa-mobile",
+  "cityId": "cd-kinshasa",
+  "name": "킨샤사",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cd-kinshasa-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cd-kinshasa-mobile.json",
+  "originalSha256": "3bd5e6137dbf6c913ea564e3d965962311289b79f8d3cba7a8d58cefbf147899",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    55,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cd-kinshasa-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 78674,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "7dbef4889d61234f342b0add0f440f7b926b16eb6e26c9c1d918f53f4a917d74",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

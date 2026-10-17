@@ -1,0 +1,316 @@
+[
+  {
+    "jobId": "tm-ashgabat-mobile",
+    "reason": "Replace invented eagle finial with the documented crescent and five stars.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/tm-ashgabat-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/tm-ashgabat-mobile/jobs/tm-ashgabat-mobile.json",
+        "sha256": "721872c15e7ca195e030a472d890d4ba2af4e031dd0a8b98497f79a887054927"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/tm-ashgabat-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/tm-ashgabat-mobile/jobs/tm-ashgabat-mobile.prompt.txt",
+        "sha256": "e9a374b807a7c31852159afd8ddf3fe37cbfa9c03f8a9d0f09dfc40e2e5f59f8"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/tm-ashgabat-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/tm-ashgabat-mobile/originals/tm-ashgabat-mobile.png",
+        "sha256": "c1e4f38681389f1c8bd2074bbccdc8fa3b6bba83fe1b0a3207bf68a5e409f625"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/tm-ashgabat-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/tm-ashgabat-mobile/originals/tm-ashgabat-mobile.json",
+        "sha256": "e459dfd1a6da29db6b73cfc9dc231cb150c7771f5fe985464b41887567200d61"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/tm-ashgabat-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/tm-ashgabat-mobile/originals/tm-ashgabat-mobile.asset.json",
+        "sha256": "688b38d997d864dd5ce67170a3363bcb27b2846049e5ce3477dc9c2e13ee9b6e"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/tm-ashgabat-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/tm-ashgabat-mobile/runtime/tm-ashgabat-mobile.webp",
+        "sha256": "044b877955baacc4f507aa6123cfdbbf8770bbb56e72269329d49452507c9aa8"
+      }
+    ]
+  },
+  {
+    "jobId": "ps-bethlehem-landscape",
+    "reason": "Restore the tiny rectangular Door of Humility and low limestone basilica exterior.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ps-bethlehem-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/ps-bethlehem-landscape/jobs/ps-bethlehem-landscape.json",
+        "sha256": "f07c4cfd6676dad0163ec28c2e68a18c2530a2642e41a608c8ba7fa901835ab4"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ps-bethlehem-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/ps-bethlehem-landscape/jobs/ps-bethlehem-landscape.prompt.txt",
+        "sha256": "f953ab26c0abd394338430dc888ca807091fc7a803d73e9d0e20630f2075b638"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ps-bethlehem-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/ps-bethlehem-landscape/originals/ps-bethlehem-landscape.png",
+        "sha256": "5e1748b1291ef33cf7275a5a640045210f8413de94be0a017dbaf5471710e80f"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ps-bethlehem-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/ps-bethlehem-landscape/originals/ps-bethlehem-landscape.json",
+        "sha256": "d303c107d58f5f52aacdfaac38ca11f2d1d202fc4042dc83c2147dd1ddbd9857"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ps-bethlehem-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/ps-bethlehem-landscape/originals/ps-bethlehem-landscape.asset.json",
+        "sha256": "5b5cb3dcbb5fc039cc88fd472a72e9b81d9903614672f8c9866223d64a035376"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/ps-bethlehem.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/ps-bethlehem-landscape/runtime/ps-bethlehem.webp",
+        "sha256": "01346d56eaec9a536d99d35b1d0ab6700119b33f3ccad22fd050ea375f800304"
+      }
+    ]
+  },
+  {
+    "jobId": "ps-bethlehem-mobile",
+    "reason": "Restore the tiny rectangular Door of Humility and low limestone basilica exterior.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ps-bethlehem-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/ps-bethlehem-mobile/jobs/ps-bethlehem-mobile.json",
+        "sha256": "ee8c5defb7e8974f522572e2ae2d2d079ddaeb372b103af3ec0dba8bf59304d7"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ps-bethlehem-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/ps-bethlehem-mobile/jobs/ps-bethlehem-mobile.prompt.txt",
+        "sha256": "8687eee90b8f7acdd218e9e14add126c9e52966c1dfdd6df3c196dc1a97b6c82"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ps-bethlehem-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/ps-bethlehem-mobile/originals/ps-bethlehem-mobile.png",
+        "sha256": "448a15909a9e0c53e0b2e6544ceec6d554df9a9b236ba7018fede919d143df06"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ps-bethlehem-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/ps-bethlehem-mobile/originals/ps-bethlehem-mobile.json",
+        "sha256": "1c638ad67442436ab927866e220bdb9925541314a64ecce88be69642cb5b11ba"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ps-bethlehem-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/ps-bethlehem-mobile/originals/ps-bethlehem-mobile.asset.json",
+        "sha256": "39d1deab1658bde8311744cb8823fba2261be58878a98a8e272eec9785fba668"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/ps-bethlehem-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/ps-bethlehem-mobile/runtime/ps-bethlehem-mobile.webp",
+        "sha256": "eb5ee40d7449d6398d4a5c30419b1697fe26b9dd56ab8ff802de63d5a5442879"
+      }
+    ]
+  },
+  {
+    "jobId": "id-bandung-mobile",
+    "reason": "Unexpected 1159x1358 source aspect; preserve the entire horizontal facade in a proper portrait composition.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/id-bandung-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/id-bandung-mobile/jobs/id-bandung-mobile.json",
+        "sha256": "1759b2808f75fccae69304984a5663a3a3d2c203aa6d3245475402f57f6d4482"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/id-bandung-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/id-bandung-mobile/jobs/id-bandung-mobile.prompt.txt",
+        "sha256": "fe3d5b26deaae1948d9b680b9a4d19f5b99701a64b31e86b8ffee88254ed7a21"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/id-bandung-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/id-bandung-mobile/originals/id-bandung-mobile.png",
+        "sha256": "aaee20cec765316866aad962cfe2f11c8857ed489fdda4b50efbbc2e329a6eb9"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/id-bandung-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/id-bandung-mobile/originals/id-bandung-mobile.json",
+        "sha256": "ccc0842e190ffb61fb3b4462a1ffb94a5f045662dd11634f2f7bc683b961ab31"
+      }
+    ]
+  },
+  {
+    "jobId": "ss-juba-mobile",
+    "reason": "Remove the invented egg-shaped highrise; depict the planned Juba riverfront with low buildings.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ss-juba-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/ss-juba-mobile/jobs/ss-juba-mobile.json",
+        "sha256": "9e51e43ab525a6f6d1ea18b9dcee65b96e4e0e0cb05e4f8f5f28bb7e89a1f009"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ss-juba-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/ss-juba-mobile/jobs/ss-juba-mobile.prompt.txt",
+        "sha256": "62ac584ad44d36caaa60582b14fcdd55c9f03715b97bed73e14e294667ed5ee0"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ss-juba-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/ss-juba-mobile/originals/ss-juba-mobile.png",
+        "sha256": "3e72cdb1e7a7b37abd5e0c6c90bfd19baba11767b6cc91d4e25459b4c72fafb2"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ss-juba-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/ss-juba-mobile/originals/ss-juba-mobile.json",
+        "sha256": "8ac205190729f2a63ed00295d620ae92d94d9a11985fd529870d7638276c7c7b"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/ss-juba-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/ss-juba-mobile/originals/ss-juba-mobile.asset.json",
+        "sha256": "93b1076777b6547f310cc3b1661015456a26573a339fb0e4c9f4b24278dca324"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/ss-juba-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/ss-juba-mobile/runtime/ss-juba-mobile.webp",
+        "sha256": "69f750c1c8bbdf6b14e0a031b1d770e0ed9e39d89559a3f37deda0bf922db732"
+      }
+    ]
+  },
+  {
+    "jobId": "mh-majuro-landscape",
+    "reason": "Replace invented round pavilion with the modest rectangular raised museum building.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/mh-majuro-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/mh-majuro-landscape/jobs/mh-majuro-landscape.json",
+        "sha256": "6bf6a2337547ca3af3956816b5ef3dd8f88333a9a900628cd285bd26ea6ccfed"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/mh-majuro-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/mh-majuro-landscape/jobs/mh-majuro-landscape.prompt.txt",
+        "sha256": "337553e163d059b02347759ac1385df88f8ccff2791fc8f667d50e9a501782ab"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/mh-majuro-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/mh-majuro-landscape/originals/mh-majuro-landscape.png",
+        "sha256": "d55326e03649b73577f21d31483d5a5a9e6299ba77251f85cb0ffa315fc6eea0"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/mh-majuro-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/mh-majuro-landscape/originals/mh-majuro-landscape.json",
+        "sha256": "e6d6dae3a7033cb9e175c3647300ad68b284ec95cf9aecd751d1652044194aae"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/mh-majuro-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/mh-majuro-landscape/originals/mh-majuro-landscape.asset.json",
+        "sha256": "5ece88bed362ef15734de8b9cf8ffcb6b0700e2ac06cbffb68c65bc8f43fd04a"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/mh-majuro.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/mh-majuro-landscape/runtime/mh-majuro.webp",
+        "sha256": "63177eb415307fe6d67ff7348ea9d033fd5b65660e3de139710b4c564972aec4"
+      }
+    ]
+  },
+  {
+    "jobId": "mh-majuro-mobile",
+    "reason": "Replace invented tiered pointed pavilion with the modest rectangular raised museum building.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/mh-majuro-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/mh-majuro-mobile/jobs/mh-majuro-mobile.json",
+        "sha256": "14abc3ee78f470fff01e04be14bde76ed62dd33950514d8179dbe017f55b69e9"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/mh-majuro-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/mh-majuro-mobile/jobs/mh-majuro-mobile.prompt.txt",
+        "sha256": "e27d3da9e479ad3a47844655e8b18addfefd6c10927a8eb36ce7c458408569c5"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/mh-majuro-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/mh-majuro-mobile/originals/mh-majuro-mobile.png",
+        "sha256": "e70b4716e33291f44d995fd7a32dbcb9663b0578e011f84950b93c64e61c7fdb"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/mh-majuro-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/mh-majuro-mobile/originals/mh-majuro-mobile.json",
+        "sha256": "05b3ac775b281362884f506388a8afec4e0a000c03bf0e45683b4b9d43b245da"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/mh-majuro-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/mh-majuro-mobile/originals/mh-majuro-mobile.asset.json",
+        "sha256": "a9433cd65d814522d1b427f475cb1547aeb595461cbc8cce073fc5a0a792a435"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/mh-majuro-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/mh-majuro-mobile/runtime/mh-majuro-mobile.webp",
+        "sha256": "9236b407de1d0e1925b5769a0b14fcc36674d3765249648686eb28d03b8b8c0a"
+      }
+    ]
+  },
+  {
+    "jobId": "vu-port-vila-landscape",
+    "reason": "Replace the invented all-thatch narrow tent with the actual glazed gabled hall and separate low entrance canopy.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/vu-port-vila-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/vu-port-vila-landscape/jobs/vu-port-vila-landscape.json",
+        "sha256": "2c81075595ff4a1a206c1e8acc701c3dfa35070aa84187a6f936d7a8724a2f28"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/vu-port-vila-landscape.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/vu-port-vila-landscape/jobs/vu-port-vila-landscape.prompt.txt",
+        "sha256": "f1e3ca5aa4478370303db3d44f6643e8941b7d3006340df4faae7ee242f750b7"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/vu-port-vila-landscape.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/vu-port-vila-landscape/originals/vu-port-vila-landscape.png",
+        "sha256": "374deae7b112c53aa27195c49b023a56d8d8b5448b894d6c4fd7d500b2cbbeb9"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/vu-port-vila-landscape.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/vu-port-vila-landscape/originals/vu-port-vila-landscape.json",
+        "sha256": "fec6b2987696ee6c780a88d4e292cc7f02ab08a5146f446ba6aa65f7195e0b8c"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/vu-port-vila-landscape.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/vu-port-vila-landscape/originals/vu-port-vila-landscape.asset.json",
+        "sha256": "62ab3768a02e83ad984814bcf4bd8850136320e79c977077e6b6c596fef98875"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/vu-port-vila.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/vu-port-vila-landscape/runtime/vu-port-vila.webp",
+        "sha256": "50e551624057e1fad2a4d7011778a189438f0ce42f3ba6d0e4dbee3d0130d8d5"
+      }
+    ]
+  },
+  {
+    "jobId": "vu-port-vila-mobile",
+    "reason": "Replace the invented all-thatch narrow tent with the actual glazed gabled hall and separate low entrance canopy.",
+    "files": [
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/vu-port-vila-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/vu-port-vila-mobile/jobs/vu-port-vila-mobile.json",
+        "sha256": "1ea89a5c66714579b5c5c8e7394ac258cfb793d8e87ffc509cdd0933e41caed5"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/vu-port-vila-mobile.prompt.txt",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/vu-port-vila-mobile/jobs/vu-port-vila-mobile.prompt.txt",
+        "sha256": "70e1e27564e82890462f3c1031046c23402c3562b889b8dd7613414693f44c7c"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/vu-port-vila-mobile.png",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/vu-port-vila-mobile/originals/vu-port-vila-mobile.png",
+        "sha256": "2782d87e444ec8491dbf10148c100760574bf3800298983724c56a9bf0a7a24e"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/vu-port-vila-mobile.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/vu-port-vila-mobile/originals/vu-port-vila-mobile.json",
+        "sha256": "9935ce85a176c1da1902f3c06f1f7d8d8ef183098691a3a0dad00fe614947973"
+      },
+      {
+        "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/vu-port-vila-mobile.asset.json",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/vu-port-vila-mobile/originals/vu-port-vila-mobile.asset.json",
+        "sha256": "47c480e199c633b1a986e162fd746c44996fdd2dbd512ff79244e128cf2559ac"
+      },
+      {
+        "previousPath": "src/assets/trip-scenes/cities/v6/vu-port-vila-mobile.webp",
+        "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/root-r2/vu-port-vila-mobile/runtime/vu-port-vila-mobile.webp",
+        "sha256": "5ea77e3a11adedf05c1dc093a3cc8aa20a4ebdf71216ea3b08125a98a7718e58"
+      }
+    ]
+  }
+]

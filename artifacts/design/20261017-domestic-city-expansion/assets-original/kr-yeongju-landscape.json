@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-yeongju-landscape",
+  "cityId": "kr-yeongju",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Yeongju, South Korea: Buseoksa Temple in Yeongju, with Muryangsujeon as a low single-storey wooden hall under a broad gray Korean hipped-and-gabled tiled roof, warm brown wooden pillars and pale door panels, one slender gray stone lantern standing in its dry courtyard on the mountain terrace. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat. Fit the entire Muryangsujeon hall and both roof tips fully inside the canvas with a clear margin on the right. Make the hall compact enough to show its full right side and its complete hipped-and-gabled roof; no part of the roof or wooden building may touch or cross a canvas edge. Only low plants and foreground ground should extend to the right and bottom edges.",
+  "promptSha256": "772659102779743aa6c51e3f703b6364b242671cc063f75c7405e1aee3fb1048",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yeongju-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-1b62e354-891a-4957-a1d5-0f5a0016d893.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-1b62e354-891a-4957-a1d5-0f5a0016d893.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yeongju-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "8868f93d021061aaaf74f9478492f038bb1516b6d0cf12411227a2064b17c9c3",
+  "savedSha256": "8868f93d021061aaaf74f9478492f038bb1516b6d0cf12411227a2064b17c9c3",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:34:22Z",
+  "toolCallId": "exec-1b62e354-891a-4957-a1d5-0f5a0016d893",
+  "savedAt": "2026-10-17T05:34:50.630328+00:00"
+}

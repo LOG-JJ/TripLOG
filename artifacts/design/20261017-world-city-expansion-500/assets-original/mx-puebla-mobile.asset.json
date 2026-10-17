@@ -1,0 +1,52 @@
+{
+  "id": "mx-puebla-mobile",
+  "cityId": "mx-puebla",
+  "name": "푸에블라",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mx-puebla-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mx-puebla-mobile.json",
+  "originalSha256": "8721e28b0970a47ac39051f15667564c8f50543f25177fac2d61dd18bc70185a",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    79,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mx-puebla-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 106684,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "81ba52f9269ccc3712e7fc39eb6b3c2863b45aee37be74a65f5ef89ef4efeee9",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

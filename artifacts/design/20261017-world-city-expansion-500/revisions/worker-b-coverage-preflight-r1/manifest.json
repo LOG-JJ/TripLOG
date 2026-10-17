@@ -1,0 +1,536 @@
+{
+  "preparedAt": "2026-10-17T07:35:52.811210+00:00",
+  "status": "not generated; awaiting core checkpoint",
+  "mode": "text-only prompt refinement; no image input",
+  "jobCount": 20,
+  "records": [
+    {
+      "jobId": "ax-mariehamn-landscape",
+      "cityId": "ax-mariehamn",
+      "reason": "Preserve Pommern's four-masted barque silhouette and prevent a generic tall ship or compressed mobile hull.",
+      "guardAdded": "Local form guard: Pommern is a long, slender steel barque with exactly four masts; the first three carry horizontal yards and the fourth is the aft mast. Show the ship moored as a museum vessel, with furled sails and readable sparse rigging, rather than broad billowing sail sheets. Keep the entire bow, bowsprit, stern, all four mast tips and the low pavilion inside the image. In the portrait version use an oblique harbour view and a smaller ship scale instead of shortening the hull or dropping masts.",
+      "sources": [
+        "https://visitaland.com/en/experience/sights-excursions/mariehamn/",
+        "https://www.pommern.ax/en/tall-ship-pommern/"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "830cc8491a52f6b663b00c9476ec9cef24a6ab34f26211e11769d55bd9babd1e",
+      "afterJobSha256": "b0a37d4f2e362ffdb79841de2b16504dcf923f2c00299b776003c1d8558bf570",
+      "beforePromptSha256": "ed6f5753df4dc702f799952fb8dd6c0bec3a596036470a6f3b9607551cbf7fca",
+      "afterPromptSha256": "fa95d2faf3340d3195a8cbbf67d95086b262bcf21c5df3c13e07ed9954e426d5",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ax-mariehamn-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/ax-mariehamn-landscape.json",
+          "sha256": "830cc8491a52f6b663b00c9476ec9cef24a6ab34f26211e11769d55bd9babd1e"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ax-mariehamn-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/ax-mariehamn-landscape.prompt.txt",
+          "sha256": "99dc05f4e91b292f31540af71511457c30e4f5e3a17dc81d625ce3dcb12a573b"
+        }
+      ]
+    },
+    {
+      "jobId": "ax-mariehamn-mobile",
+      "cityId": "ax-mariehamn",
+      "reason": "Preserve Pommern's four-masted barque silhouette and prevent a generic tall ship or compressed mobile hull.",
+      "guardAdded": "Local form guard: Pommern is a long, slender steel barque with exactly four masts; the first three carry horizontal yards and the fourth is the aft mast. Show the ship moored as a museum vessel, with furled sails and readable sparse rigging, rather than broad billowing sail sheets. Keep the entire bow, bowsprit, stern, all four mast tips and the low pavilion inside the image. In the portrait version use an oblique harbour view and a smaller ship scale instead of shortening the hull or dropping masts.",
+      "sources": [
+        "https://visitaland.com/en/experience/sights-excursions/mariehamn/",
+        "https://www.pommern.ax/en/tall-ship-pommern/"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "c00eda0b473e87f8e328ac50d25cd0b6a5b23ddb8dcfec0e3c0fe354818c26cd",
+      "afterJobSha256": "3c6dce774980980dd5e6c99fa53cad9ef66b8cdc7b37329b8b9c51d80c7b72cc",
+      "beforePromptSha256": "00be6ea1387f446a308c1cf82b5a3c806df5f9e38db845f32614bff642d5556b",
+      "afterPromptSha256": "144074ae5da06982ccf66c606ffa72488bbc89dbb4f8c6a786f517f6eb93bb60",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ax-mariehamn-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/ax-mariehamn-mobile.json",
+          "sha256": "c00eda0b473e87f8e328ac50d25cd0b6a5b23ddb8dcfec0e3c0fe354818c26cd"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/ax-mariehamn-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/ax-mariehamn-mobile.prompt.txt",
+          "sha256": "23e15f045f694f9ab4ef38c02547d4ea35e52bcc80d819c4ea3b206c97a3265a"
+        }
+      ]
+    },
+    {
+      "jobId": "cw-willemstad-landscape",
+      "cityId": "cw-willemstad",
+      "reason": "Preserve the low Dutch-gabled waterfront and identify Queen Emma as a pontoon walkway.",
+      "guardAdded": "Local form guard: the Handelskade is a close row of narrow, modest-height waterfront buildings with individual curved Dutch gables and pastel yellow, coral, blue and cream facades. Keep the roofline of the complete selected group visible. The supporting Queen Emma Bridge section is a low floating pedestrian walkway close to the water, not a high arched bridge, suspension bridge or tower bridge.",
+      "sources": [
+        "https://www.curacao.com/en/activity/district-punda?cat=sights-and-landmarks"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "8ba317e907cbd27b8f6e2ab236ca13bd3c751b7c3628b3ad757e31986c2af03b",
+      "afterJobSha256": "be69fb0039b57d01ab080c6f09c32443ab859da5374fbf89a8a3bbc2aaae799c",
+      "beforePromptSha256": "8531e90252fe9fe48b0fc889192f5272f2eebbe1bc160c713ed332dc7793eb61",
+      "afterPromptSha256": "726c9883430a417e0f1003c26dcc9a0c1a0bc81b67d6a337f0aae2ee8a5ed51d",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cw-willemstad-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/cw-willemstad-landscape.json",
+          "sha256": "8ba317e907cbd27b8f6e2ab236ca13bd3c751b7c3628b3ad757e31986c2af03b"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cw-willemstad-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/cw-willemstad-landscape.prompt.txt",
+          "sha256": "4604754955490a0b55cd19c6b14140161118510e504f21f09e12c70f1bc61627"
+        }
+      ]
+    },
+    {
+      "jobId": "cw-willemstad-mobile",
+      "cityId": "cw-willemstad",
+      "reason": "Preserve the low Dutch-gabled waterfront and identify Queen Emma as a pontoon walkway.",
+      "guardAdded": "Local form guard: the Handelskade is a close row of narrow, modest-height waterfront buildings with individual curved Dutch gables and pastel yellow, coral, blue and cream facades. Keep the roofline of the complete selected group visible. The supporting Queen Emma Bridge section is a low floating pedestrian walkway close to the water, not a high arched bridge, suspension bridge or tower bridge.",
+      "sources": [
+        "https://www.curacao.com/en/activity/district-punda?cat=sights-and-landmarks"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "546eb34f654e6b3b86d5840b7fda3406b08fdf2e497f3d260fadd0c309939848",
+      "afterJobSha256": "ea5dcd1a83876a301ff96cd9149c3b747d270cd1720ca3d94f0f8f455556820e",
+      "beforePromptSha256": "fe36d1922901101e1cf9ba0c01189e788f4ea0fc887fc2128ea20d74333dd049",
+      "afterPromptSha256": "372c8d1fc560bd38a4b015aa0d3496d54ebb9147b7a8cf4dfdd7f5fdd1ef02f0",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cw-willemstad-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/cw-willemstad-mobile.json",
+          "sha256": "546eb34f654e6b3b86d5840b7fda3406b08fdf2e497f3d260fadd0c309939848"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cw-willemstad-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/cw-willemstad-mobile.prompt.txt",
+          "sha256": "d004343e5a099a29cf9c726bfd6e687cc6be9479b51d4bdc3bdd27997f925bbe"
+        }
+      ]
+    },
+    {
+      "jobId": "gg-saint-peter-port-landscape",
+      "cityId": "gg-saint-peter-port",
+      "reason": "Avoid replacing the surviving layered fortifications with a fantasy high keep.",
+      "guardAdded": "Local form guard: Castle Cornet should read as a broad, low, layered coastal fortress of weathered grey-brown stone ramparts and a few low pitched-roof buildings within the walls. Its stepped outer walls dominate the silhouette; do not add a tall central keep, tall conical turrets or a grand palace. Keep the selected fortress silhouette whole, with the marina masts smaller and secondary.",
+      "sources": [
+        "https://www.visitguernsey.com/experiences/activities/castle-cornet-its-museums/"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "7e3b51895438d4424020d934fddea0e32dd5710c3c9f9fccbe191abda8c3d48c",
+      "afterJobSha256": "cb34222e20e1f6c0519b2c3386383a9c215f54b9f5862889f3d62a0e1a393f7b",
+      "beforePromptSha256": "a82539c0ad15a254d1fe22fbd306940641e1a98255c1a3257ebd32a005ffc8c1",
+      "afterPromptSha256": "45a465a8a4a2e45ac613690fe71efe9c3411d0495686b3f19ec9f6284b26b2be",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gg-saint-peter-port-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/gg-saint-peter-port-landscape.json",
+          "sha256": "7e3b51895438d4424020d934fddea0e32dd5710c3c9f9fccbe191abda8c3d48c"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gg-saint-peter-port-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/gg-saint-peter-port-landscape.prompt.txt",
+          "sha256": "235e2e15219aa29bd2e5b8cae26475f2663d6da8c5716bcc866b5ac9788abca1"
+        }
+      ]
+    },
+    {
+      "jobId": "gg-saint-peter-port-mobile",
+      "cityId": "gg-saint-peter-port",
+      "reason": "Avoid replacing the surviving layered fortifications with a fantasy high keep.",
+      "guardAdded": "Local form guard: Castle Cornet should read as a broad, low, layered coastal fortress of weathered grey-brown stone ramparts and a few low pitched-roof buildings within the walls. Its stepped outer walls dominate the silhouette; do not add a tall central keep, tall conical turrets or a grand palace. Keep the selected fortress silhouette whole, with the marina masts smaller and secondary.",
+      "sources": [
+        "https://www.visitguernsey.com/experiences/activities/castle-cornet-its-museums/"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "ac1be2f22b8ae2fecc51ed6db932fdee2c9ead86ae2dfc18e49e7aa250077595",
+      "afterJobSha256": "6252455ef41f4e0243888e2bfd7aab09190981b57f556869b9d18ba3447e377a",
+      "beforePromptSha256": "8cb92713ac79b8cd6b894e2c231f88915e2d16d687821a77f07b051c5600dc67",
+      "afterPromptSha256": "1df0224b76ba563571a41deb50b2a0f9f065aac0d8cfffd156db41103b396176",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gg-saint-peter-port-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/gg-saint-peter-port-mobile.json",
+          "sha256": "ac1be2f22b8ae2fecc51ed6db932fdee2c9ead86ae2dfc18e49e7aa250077595"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/gg-saint-peter-port-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/gg-saint-peter-port-mobile.prompt.txt",
+          "sha256": "20f3658fdda36aa1276331bbb0d625e7fef44dda67d64bfc4916d93aa3499a33"
+        }
+      ]
+    },
+    {
+      "jobId": "im-douglas-landscape",
+      "cityId": "im-douglas",
+      "reason": "Keep the Tower of Refuge compact and visually separate from the shore.",
+      "guardAdded": "Local form guard: this is a small, compact castellated stone refuge on a low tidal rock, with a short main tower, smaller corner turrets and crenellated parapets. It is not a tall lighthouse or a sprawling castle. The battlements have no pointed spires. Keep the whole low rocky islet and complete refuge silhouette visible, and show the seaside promenade only as a small distant shore support.",
+      "sources": [
+        "https://www.visitisleofman.com/experience/tower-of-refuge-p1295741"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "d81c69d3e2495f77f5228583836958eabe351462f8af60fc2ce4ffe12ed3f6e0",
+      "afterJobSha256": "f381f61fb7be8961242195352f7987f530e3118c44d3d9475de20564ccbd7f8e",
+      "beforePromptSha256": "9c5c0fce65a3746a022c8a4216055ad6e7b70693516dd2ffb481b9f39516dfe2",
+      "afterPromptSha256": "2c721f6cfc888e1290ec4af6f58c4b222f92e12719d601de80f09dc28f20346e",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/im-douglas-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/im-douglas-landscape.json",
+          "sha256": "d81c69d3e2495f77f5228583836958eabe351462f8af60fc2ce4ffe12ed3f6e0"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/im-douglas-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/im-douglas-landscape.prompt.txt",
+          "sha256": "224754d56c315c4904f681f3f85323bce54c7e9e9c56763c9d590a764b47d220"
+        }
+      ]
+    },
+    {
+      "jobId": "im-douglas-mobile",
+      "cityId": "im-douglas",
+      "reason": "Keep the Tower of Refuge compact and visually separate from the shore.",
+      "guardAdded": "Local form guard: this is a small, compact castellated stone refuge on a low tidal rock, with a short main tower, smaller corner turrets and crenellated parapets. It is not a tall lighthouse or a sprawling castle. The battlements have no pointed spires. Keep the whole low rocky islet and complete refuge silhouette visible, and show the seaside promenade only as a small distant shore support.",
+      "sources": [
+        "https://www.visitisleofman.com/experience/tower-of-refuge-p1295741"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "2d98d5351cd4934c300f81982ee0b1de92a2ecb31fe47a88d5edad8bdf4aaa5e",
+      "afterJobSha256": "47b09a6ce4371baa78943adc1b036c35d5739a36146965e2a62b9c6cd673f0f4",
+      "beforePromptSha256": "bc6b2794108b1cff03dbf898034b3878db81c2c03e7d65ef6216e5e89edd4c1c",
+      "afterPromptSha256": "3ef89a033177301baf630ab1e8c96b3eae330e1cbc656a92d1cfc084f5992c5d",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/im-douglas-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/im-douglas-mobile.json",
+          "sha256": "2d98d5351cd4934c300f81982ee0b1de92a2ecb31fe47a88d5edad8bdf4aaa5e"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/im-douglas-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/im-douglas-mobile.prompt.txt",
+          "sha256": "3b6ee828f1729159e303212846919e821b4b18f9424bd7e5daa8f8e592b89f4e"
+        }
+      ]
+    },
+    {
+      "jobId": "mq-fort-de-france-landscape",
+      "cityId": "mq-fort-de-france",
+      "reason": "Constrain the library's compact scale, ornate central arch and restrained dome instead of a generic monumental domed palace.",
+      "guardAdded": "Local form guard: Schœlcher Library is a compact, relatively low historic pavilion with a richly ornamented central arched entrance facade and its domed reading-room roof behind. Use the recognizable polychrome cream-yellow and muted coral-red facade accents, with the ornamental facade reading more strongly than the roof. Do not enlarge the roof into a giant high onion dome or add tall towers, minarets or palace wings. The library and its complete roof remain fully visible above the dry garden and entrance path.",
+      "sources": [
+        "https://www.martinique.org/en/bibliotheque-schoelcher",
+        "https://www.martinique.org/fr/tout-savoir/culture/architecture"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "aaec4fe45e68f3e085e7ac84a2221e9a47fa4866fd6965979da8154ed9a7c113",
+      "afterJobSha256": "c7fe8d3006f588bc5eac4f630950c245780049ae44fc7c97e0c0a5ee71173e10",
+      "beforePromptSha256": "cd4a5e0c56c5db59d565c147209add971944a67b05f301b209e7ef88177cd004",
+      "afterPromptSha256": "df73284c7bff7a1acb4f0200d80694002feb97fec239b4b70df3d266e739dd33",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/mq-fort-de-france-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/mq-fort-de-france-landscape.json",
+          "sha256": "aaec4fe45e68f3e085e7ac84a2221e9a47fa4866fd6965979da8154ed9a7c113"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/mq-fort-de-france-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/mq-fort-de-france-landscape.prompt.txt",
+          "sha256": "5ff67a66354e5506f317653255e44d4241a3c07f9fa4541f89508fc505a78eb6"
+        }
+      ]
+    },
+    {
+      "jobId": "mq-fort-de-france-mobile",
+      "cityId": "mq-fort-de-france",
+      "reason": "Constrain the library's compact scale, ornate central arch and restrained dome instead of a generic monumental domed palace.",
+      "guardAdded": "Local form guard: Schœlcher Library is a compact, relatively low historic pavilion with a richly ornamented central arched entrance facade and its domed reading-room roof behind. Use the recognizable polychrome cream-yellow and muted coral-red facade accents, with the ornamental facade reading more strongly than the roof. Do not enlarge the roof into a giant high onion dome or add tall towers, minarets or palace wings. The library and its complete roof remain fully visible above the dry garden and entrance path.",
+      "sources": [
+        "https://www.martinique.org/en/bibliotheque-schoelcher",
+        "https://www.martinique.org/fr/tout-savoir/culture/architecture"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "c0b0b8adcfbaf87346cd0ce19cfec8d2eb36b1ca196ae0e47c252e85187460fd",
+      "afterJobSha256": "23424fc94fb6755211d9728440fd3316774724ab09d77f574fb0d1085fea372c",
+      "beforePromptSha256": "0f9f51b59d07111e91e8d7c8a912aecb99edea6d18ab2b5b9db0629f740b5024",
+      "afterPromptSha256": "d39357f59d8e5a68a5edefc08786a27080c7dfef2f8b10b51ca649d107cc912e",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/mq-fort-de-france-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/mq-fort-de-france-mobile.json",
+          "sha256": "c0b0b8adcfbaf87346cd0ce19cfec8d2eb36b1ca196ae0e47c252e85187460fd"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/mq-fort-de-france-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/mq-fort-de-france-mobile.prompt.txt",
+          "sha256": "46010afd5d428f753b5a93bcae8eb178bf4fe9a4fb33a28acdf1a7ebf59565c6"
+        }
+      ]
+    },
+    {
+      "jobId": "sh-jamestown-landscape",
+      "cityId": "sh-jamestown",
+      "reason": "Make the landmark a single uninterrupted staircase with both endpoints visible.",
+      "guardAdded": "Local form guard: Jacob's Ladder is one long, very steep, narrow and straight outdoor staircase running diagonally up the brown rocky valley slope from the small Georgian town at its foot. Suggest its many regular steps with a few clean rhythmic marks. It has no switchbacks, curved flights, giant bridge arch or elevated viaduct. Keep both the bottom start and the top landing inside the image, even in the portrait version; show the whole ascent at a smaller scale when necessary.",
+      "sources": [
+        "https://sthelenatourism.com/history-and-heritage/",
+        "https://www.sainthelena.gov.sh/documents/2025_06_Report_Press.pdf"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "481256cb86e752a2a63072fde40fb7f155466e346ab6a921e1e3f699fd080742",
+      "afterJobSha256": "5441bdee0839553b4a09b3de660590487ea8db4f30e99c31bf5bd1454833952c",
+      "beforePromptSha256": "75cda4f4c94b4ec06afe5de4f45e8b5adfd0da6b3042143c08536998d09a50e1",
+      "afterPromptSha256": "6345a6b2d78d84a5909a5a78ee56737c7c1d31216e067728a42025d77a88832d",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sh-jamestown-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/sh-jamestown-landscape.json",
+          "sha256": "481256cb86e752a2a63072fde40fb7f155466e346ab6a921e1e3f699fd080742"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sh-jamestown-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/sh-jamestown-landscape.prompt.txt",
+          "sha256": "eab36d59089dd4ba49954c36c5fb908af3983e05f7f49cc4444db99ddf731744"
+        }
+      ]
+    },
+    {
+      "jobId": "sh-jamestown-mobile",
+      "cityId": "sh-jamestown",
+      "reason": "Make the landmark a single uninterrupted staircase with both endpoints visible.",
+      "guardAdded": "Local form guard: Jacob's Ladder is one long, very steep, narrow and straight outdoor staircase running diagonally up the brown rocky valley slope from the small Georgian town at its foot. Suggest its many regular steps with a few clean rhythmic marks. It has no switchbacks, curved flights, giant bridge arch or elevated viaduct. Keep both the bottom start and the top landing inside the image, even in the portrait version; show the whole ascent at a smaller scale when necessary.",
+      "sources": [
+        "https://sthelenatourism.com/history-and-heritage/",
+        "https://www.sainthelena.gov.sh/documents/2025_06_Report_Press.pdf"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "7e450d1efaeb077f12cdf15abdba311fa053986fdf44275036dd7efb5c5f2f8e",
+      "afterJobSha256": "d19f9ba9f76c23231babe882dee973ee3aed13b4718ce495b7cd29e5f962b957",
+      "beforePromptSha256": "43f82f485fe612ceef2687d89863ebc4a2feece6ed655258efa044614097f3a2",
+      "afterPromptSha256": "e9b20d3242649bf8b7713c091f0c5ff2918abf6b5cfcae6ff1deb23ffa8c872b",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sh-jamestown-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/sh-jamestown-mobile.json",
+          "sha256": "7e450d1efaeb077f12cdf15abdba311fa053986fdf44275036dd7efb5c5f2f8e"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/sh-jamestown-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/sh-jamestown-mobile.prompt.txt",
+          "sha256": "3c6bbe79ae5d68fb9b23fcc25f71af693d7ea7db6eb82c7faf9482137369699d"
+        }
+      ]
+    },
+    {
+      "jobId": "vg-road-town-landscape",
+      "cityId": "vg-road-town",
+      "reason": "Keep the garden composition modest and grounded in the royal-palm avenue, fountain and pergola.",
+      "guardAdded": "Local form guard: form a modest tropical botanical-garden scene with a straight avenue of tall royal palms leading toward a small garden fountain, plus one small flowering pergola. Keep the fountain much smaller than the palms. Use garden paths and planting beds as the supporting foreground; do not invent a palace, huge monument, oceanfront, waterfall or large lake. Preserve the palm crowns rather than cutting them at the top edge.",
+      "sources": [
+        "https://www.bvinationalparkstrust.org/events/joseph-reynold-oneal-botanic-garden"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "d3f7709b6cabb6a907ade5af486613daf258c55cbcba083380f0633e8d3620da",
+      "afterJobSha256": "a5b9b66c0f94d7d0758e305ee14ae6b03430c01dcc69d8166e31e7a2d46eba9e",
+      "beforePromptSha256": "8c3cfef7572b2c4fe338ee40a47c3f0a23789071421fbf9167b5a8b9c85f314c",
+      "afterPromptSha256": "7e7ad6c120e60f185f844c2ec0253edc47ccb1cfcf33dab637cba9d69bf8ec6e",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/vg-road-town-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/vg-road-town-landscape.json",
+          "sha256": "d3f7709b6cabb6a907ade5af486613daf258c55cbcba083380f0633e8d3620da"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/vg-road-town-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/vg-road-town-landscape.prompt.txt",
+          "sha256": "6cabab06f1b507b92591f02f2dfe1e501b8637d000f7f18990a6e61d30cbefbf"
+        }
+      ]
+    },
+    {
+      "jobId": "vg-road-town-mobile",
+      "cityId": "vg-road-town",
+      "reason": "Keep the garden composition modest and grounded in the royal-palm avenue, fountain and pergola.",
+      "guardAdded": "Local form guard: form a modest tropical botanical-garden scene with a straight avenue of tall royal palms leading toward a small garden fountain, plus one small flowering pergola. Keep the fountain much smaller than the palms. Use garden paths and planting beds as the supporting foreground; do not invent a palace, huge monument, oceanfront, waterfall or large lake. Preserve the palm crowns rather than cutting them at the top edge.",
+      "sources": [
+        "https://www.bvinationalparkstrust.org/events/joseph-reynold-oneal-botanic-garden"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "e5c01bee7ca9e5d88f82b73d38eb9ebb3a123c8383ef81df77dd511cc617a673",
+      "afterJobSha256": "2dd7a9b483700a3940433d9064d31bba1f5cd9f364ece82eb1817b5648ce0c8a",
+      "beforePromptSha256": "161cc0d87bc758e1e8284a3995a373626926a9c1f46dfd23c98c78e299deb878",
+      "afterPromptSha256": "605a1caa3e00a3afd3f025e18a7709ad42b076fe3e4a9d9b11150e64912785c8",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/vg-road-town-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/vg-road-town-mobile.json",
+          "sha256": "e5c01bee7ca9e5d88f82b73d38eb9ebb3a123c8383ef81df77dd511cc617a673"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/vg-road-town-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/vg-road-town-mobile.prompt.txt",
+          "sha256": "ad47c681d7dcef317d1ce6ac230a65cad5bb74907b882451b68fff08aaef4fab"
+        }
+      ]
+    },
+    {
+      "jobId": "cx-flying-fish-cove-landscape",
+      "cityId": "cx-flying-fish-cove",
+      "reason": "Preserve a lived-in curved cove and simple low jetty without turning the harbour into a bridge landmark.",
+      "guardAdded": "Local form guard: show a compact curved cove with a pale narrow beach, dense green hillside and low waterfront settlement. The jetty is a simple low straight harbour structure projecting into the clear blue water, not a large bridge, decorative pier pavilion or high-rise port. Keep the entire short jetty visible and keep the homes secondary to the cove and hillside.",
+      "sources": [
+        "https://www.christmas.net.au/beaches"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "3a96880dda800d465b5c60e8407f910fb34a06357872b693dba7f89af7c74d9c",
+      "afterJobSha256": "82c0a117e262313406e3752ebea83e953637dd38d7d1a0e247ec12db8e2beafc",
+      "beforePromptSha256": "db14e71d4cdb4f8b04c31fd63f625b7ecd9958b8bb4b7f02fedce00c942d7c9d",
+      "afterPromptSha256": "4a2ee7144a1a2b210d281e8981b0a3ac8bd86b13a9adb48ed1324724d4f458a8",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cx-flying-fish-cove-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/cx-flying-fish-cove-landscape.json",
+          "sha256": "3a96880dda800d465b5c60e8407f910fb34a06357872b693dba7f89af7c74d9c"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cx-flying-fish-cove-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/cx-flying-fish-cove-landscape.prompt.txt",
+          "sha256": "a498a45383059649e3d9da7599f487c4c9c72ebb4c7550b84475f87d61119e2c"
+        }
+      ]
+    },
+    {
+      "jobId": "cx-flying-fish-cove-mobile",
+      "cityId": "cx-flying-fish-cove",
+      "reason": "Preserve a lived-in curved cove and simple low jetty without turning the harbour into a bridge landmark.",
+      "guardAdded": "Local form guard: show a compact curved cove with a pale narrow beach, dense green hillside and low waterfront settlement. The jetty is a simple low straight harbour structure projecting into the clear blue water, not a large bridge, decorative pier pavilion or high-rise port. Keep the entire short jetty visible and keep the homes secondary to the cove and hillside.",
+      "sources": [
+        "https://www.christmas.net.au/beaches"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "3e0afa071e945d6eed46d84b6bf385839afeb4e1b896f47d6777d080761ea572",
+      "afterJobSha256": "8026c3d91e14235f660ce04c4c37b9a18e9bc82bce1fc344bf34b310522155d1",
+      "beforePromptSha256": "5e8e4cb75c23771c584704f809a23c2ad79da613346bbc2d37f045140d2a81ee",
+      "afterPromptSha256": "2148b384a8adab5f02e0acbc1a85ff2c2cdeb4bdcadd0da14db4e374db258909",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cx-flying-fish-cove-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/cx-flying-fish-cove-mobile.json",
+          "sha256": "3e0afa071e945d6eed46d84b6bf385839afeb4e1b896f47d6777d080761ea572"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/cx-flying-fish-cove-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/cx-flying-fish-cove-mobile.prompt.txt",
+          "sha256": "21f664289ac7c0b7e8a4eb1e8c90776e80b3348ee6942eeb120fe054aa3b4b38"
+        }
+      ]
+    },
+    {
+      "jobId": "wf-mata-utu-landscape",
+      "cityId": "wf-mata-utu",
+      "reason": "Specify the cathedral's twin square towers, volcanic masonry and red roof to prevent a generic pale Gothic church.",
+      "guardAdded": "Local form guard: Mata-Utu Cathedral has a broad dark volcanic-stone facade with pale mortar, two stout square front towers, a central gable and three principal arched entrance openings. The twin towers end in low squared parapets rather than tall pointed spires. A small statue crowns the central gable, and the long nave behind has a muted red pitched roof. Keep both towers, the statue and all roof edges visible. Preserve the dark stone, pale joints and red roof while simplifying small details; do not replace it with a white European Gothic cathedral.",
+      "sources": [
+        "https://www.france.fr/fr/destination/iles-de-wallis-et-futuna/",
+        "https://www.wallis-et-futuna.wf/voyager"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "ab893c6c0a8084620f0dc195ca9fdeee8eecbb694d17b41b33621f995e8b6672",
+      "afterJobSha256": "f42d4fa793a44b2a5ad1eae1984beca5495b3379f2982f207cad6907230dcf29",
+      "beforePromptSha256": "e514714ef0d52ddcc83e01773620bbafdb52031f539d6b38209a8f15754029db",
+      "afterPromptSha256": "8765f325445848d34cfda4579ba91818e8cdb881b488b608af355f1ab482bd17",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/wf-mata-utu-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/wf-mata-utu-landscape.json",
+          "sha256": "ab893c6c0a8084620f0dc195ca9fdeee8eecbb694d17b41b33621f995e8b6672"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/wf-mata-utu-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/wf-mata-utu-landscape.prompt.txt",
+          "sha256": "eb0fe08acdf43526d25352969b659875b9d32080e851892c6867d50493290259"
+        }
+      ]
+    },
+    {
+      "jobId": "wf-mata-utu-mobile",
+      "cityId": "wf-mata-utu",
+      "reason": "Specify the cathedral's twin square towers, volcanic masonry and red roof to prevent a generic pale Gothic church.",
+      "guardAdded": "Local form guard: Mata-Utu Cathedral has a broad dark volcanic-stone facade with pale mortar, two stout square front towers, a central gable and three principal arched entrance openings. The twin towers end in low squared parapets rather than tall pointed spires. A small statue crowns the central gable, and the long nave behind has a muted red pitched roof. Keep both towers, the statue and all roof edges visible. Preserve the dark stone, pale joints and red roof while simplifying small details; do not replace it with a white European Gothic cathedral.",
+      "sources": [
+        "https://www.france.fr/fr/destination/iles-de-wallis-et-futuna/",
+        "https://www.wallis-et-futuna.wf/voyager"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "628c8b228a78503595a2542d6eb2f3cea02d0fd11b4a2547762cf8c018c947a6",
+      "afterJobSha256": "d49e0ae3741c673dc9c3696a089c97ea478e8cebf189a17185a1dfaa1da8f62c",
+      "beforePromptSha256": "32822288473bfb27a731cbc3b5cfcb0b014e4f5a9d2cbb0f768196970031c738",
+      "afterPromptSha256": "6462c91b6c0392fcc77dd610855711ebf73deef021be78378aa2d3f8d57cb5a8",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/wf-mata-utu-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/wf-mata-utu-mobile.json",
+          "sha256": "628c8b228a78503595a2542d6eb2f3cea02d0fd11b4a2547762cf8c018c947a6"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/wf-mata-utu-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/wf-mata-utu-mobile.prompt.txt",
+          "sha256": "bbbd98c07264bf1a3d79c5e933bcea421002a91d1c855ca92e82784415f46d57"
+        }
+      ]
+    },
+    {
+      "jobId": "yt-mamoudzou-landscape",
+      "cityId": "yt-mamoudzou",
+      "reason": "Keep Mamoudzou's low waterfront and local ferry at a plausible scale.",
+      "guardAdded": "Local form guard: depict Mamoudzou as a low waterfront settlement spreading onto a green hillside beside the blue Mayotte lagoon. The local ferry is compact, with a low practical passenger cabin, and remains small relative to the waterfront. Do not turn it into a multi-deck cruise liner or add a monumental palace, skyline tower or invented cathedral. Preserve the full visible ferry outline and the calm lagoon shoreline.",
+      "sources": [
+        "https://www.mayotte-tourisme.com/newsletter/croisieres-une-reprise-dynamique-a-mayotte-pour-la-saison-2025-2026/"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "eaa5543bc0c81f59493e9bfd716ef70341aa0740b439ddce6d16aac5154a4b2c",
+      "afterJobSha256": "1684297a0e450738c2c261e81efd07c0d66bae19a27c721a3fe3acf2d27bf086",
+      "beforePromptSha256": "8f676158bb20b5a3161682c3c2800570311e3b1fd868f607878d9b17a508baad",
+      "afterPromptSha256": "bf6d11f24e3bd5c8d0801781f7c73340f0dff535d9d19c2e89a1a0f3b5ed4e38",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/yt-mamoudzou-landscape.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/yt-mamoudzou-landscape.json",
+          "sha256": "eaa5543bc0c81f59493e9bfd716ef70341aa0740b439ddce6d16aac5154a4b2c"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/yt-mamoudzou-landscape.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/yt-mamoudzou-landscape.prompt.txt",
+          "sha256": "2438b01980fb438890763dc2dfd55bc79a53645e0cbf5b974243d9497743c1db"
+        }
+      ]
+    },
+    {
+      "jobId": "yt-mamoudzou-mobile",
+      "cityId": "yt-mamoudzou",
+      "reason": "Keep Mamoudzou's low waterfront and local ferry at a plausible scale.",
+      "guardAdded": "Local form guard: depict Mamoudzou as a low waterfront settlement spreading onto a green hillside beside the blue Mayotte lagoon. The local ferry is compact, with a low practical passenger cabin, and remains small relative to the waterfront. Do not turn it into a multi-deck cruise liner or add a monumental palace, skyline tower or invented cathedral. Preserve the full visible ferry outline and the calm lagoon shoreline.",
+      "sources": [
+        "https://www.mayotte-tourisme.com/newsletter/croisieres-une-reprise-dynamique-a-mayotte-pour-la-saison-2025-2026/"
+      ],
+      "imageInputs": [],
+      "beforeJobSha256": "bba27c2cb46b5522442678c97e5a9c44361300479f47956d6cdc261ff05cee3c",
+      "afterJobSha256": "c72e5adba9dc7a7a8307e1e40ccca83320005ff27630c5acf51fbf38ccb5c0b6",
+      "beforePromptSha256": "b7978f5f624caaf25c424200b9e7adcb31793c24f3fbfe8cba3b2702c2dbb896",
+      "afterPromptSha256": "21fb43af1afeb419d6529c04255bff866754e361716fbee082b85e71c51db51b",
+      "preservedFiles": [
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/yt-mamoudzou-mobile.json",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/yt-mamoudzou-mobile.json",
+          "sha256": "bba27c2cb46b5522442678c97e5a9c44361300479f47956d6cdc261ff05cee3c"
+        },
+        {
+          "oldPath": "artifacts/design/20261017-world-city-expansion-500/jobs/yt-mamoudzou-mobile.prompt.txt",
+          "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-b-coverage-preflight-r1/yt-mamoudzou-mobile.prompt.txt",
+          "sha256": "19a674e1e0575fae0e363f048a8a789c3f81125994ee0d16a7a547900d2ec7c4"
+        }
+      ]
+    }
+  ]
+}

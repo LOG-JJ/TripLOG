@@ -1,0 +1,26 @@
+{
+  "jobId": "gb-york-landscape",
+  "cityId": "gb-york",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of York, United Kingdom: York Minster's Gothic towers, with the narrow medieval streets. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "e5089fb905c590a01bc752d7bad1b3ae017819fd6625b1513564ad87fa52c60b",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/gb-york-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-917401c0-f0ab-4a74-80fe-bea6ee8746c2.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-917401c0-f0ab-4a74-80fe-bea6ee8746c2.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/gb-york-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "093f8ad867bf62ad716e507c6737c4d27ea9f1fb2badb76ccfc467e5e82494a3",
+  "savedSha256": "093f8ad867bf62ad716e507c6737c4d27ea9f1fb2badb76ccfc467e5e82494a3",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:06:10.439Z",
+  "toolCallId": "exec-917401c0-f0ab-4a74-80fe-bea6ee8746c2",
+  "savedAt": "2026-10-17T06:08:25.065219+00:00"
+}

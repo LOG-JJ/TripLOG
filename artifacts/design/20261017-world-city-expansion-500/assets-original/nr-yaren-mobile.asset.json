@@ -1,0 +1,52 @@
+{
+  "id": "nr-yaren-mobile",
+  "cityId": "nr-yaren",
+  "name": "야렌",
+  "kind": "region",
+  "variant": "mobile",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/nr-yaren-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/nr-yaren-mobile.json",
+  "originalSha256": "5abe7c712d4f4ff30921358fb9317b9f5711770338110aa0909c9c1e362f7487",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    18,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/nr-yaren-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 110350,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "39c3216267a598e8a4855862e0527cf687ff8710f6e0373d67c4e1888c121244",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

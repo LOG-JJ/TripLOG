@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-jecheon-landscape",
+  "cityId": "kr-jecheon",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Jecheon, South Korea: Cheongpungho Lake, broad blue water weaving between wooded green hills and distant ridgelines. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "6d8b91784d540c6a46188fff778ebce7dfaa680c6fe8eb0c52a4faf8cbab7105",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jecheon-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-d7079a08-da1f-4efe-a4cd-2621961aa6aa.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-d7079a08-da1f-4efe-a4cd-2621961aa6aa.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jecheon-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "9d858b6fee62a6e40d3d1ced3426d6141fb2016cc78d656a89df45f1721cfd76",
+  "savedSha256": "9d858b6fee62a6e40d3d1ced3426d6141fb2016cc78d656a89df45f1721cfd76",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:18:59Z",
+  "toolCallId": "exec-d7079a08-da1f-4efe-a4cd-2621961aa6aa",
+  "savedAt": "2026-10-17T05:20:01.840418+00:00"
+}

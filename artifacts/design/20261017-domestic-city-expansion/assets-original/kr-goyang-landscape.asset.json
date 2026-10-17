@@ -1,0 +1,51 @@
+{
+  "id": "kr-goyang-landscape",
+  "cityId": "kr-goyang",
+  "name": "고양",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-goyang-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-goyang-landscape.json",
+  "originalSha256": "4c2b0eed710141d022070ba93b79573379af0b7036e214ddabf7bc19966f4d4c",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    25,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-goyang.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 100354,
+  "assetSha256": "3a2c5b21cc676680e252679e9b48541b6536a246a042ebff27d31a1bc6595210",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,44 @@
+{
+  "jobId": "my-kuching-mobile",
+  "reason": "The Darul Hana Bridge right endpoint and cable geometry were clipped.",
+  "archivedFiles": [
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/my-kuching-mobile.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/my-kuching-mobile/my-kuching-mobile.json",
+      "sha256": "bab32692df0f47585ef6424b9a4835fc8f1e3a286811cbd47dbc10eca5d47e97"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/jobs/my-kuching-mobile.prompt.txt",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/my-kuching-mobile/my-kuching-mobile.prompt.txt",
+      "sha256": "db3378819b863b303e655c1048f696baa214c2e0b4a37970f4ad2fabe71f6659"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/my-kuching-mobile.png",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/my-kuching-mobile/my-kuching-mobile.png",
+      "sha256": "75eebb7d4ae685a4d406a88cf5e96db43ab54e50a9a818d3c27e5f4a4f0711db"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/my-kuching-mobile.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/my-kuching-mobile/my-kuching-mobile.json",
+      "sha256": "af9d088c86d801ee9d52f5a57ead6ffbce60d643899fb6255d8b9ed857c3a49c"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-world-city-expansion-500/assets-original/my-kuching-mobile.asset.json",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/my-kuching-mobile/my-kuching-mobile.asset.json",
+      "sha256": "d9c67a9e81ad0d5c5e640aceb521df561a20dc3549e0200881f3465ace0ab15d"
+    },
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v6/my-kuching-mobile.webp",
+      "preservedPath": "artifacts/design/20261017-world-city-expansion-500/revisions/worker-c-visual-r1/my-kuching-mobile/my-kuching-mobile.webp",
+      "sha256": "df076684a90490665ecbaa2faca803cb582ed62a23a22df6dba4ad66e9274ed2"
+    }
+  ],
+  "newPromptSha256": "a50e1baab3bc8b703b309c8685296792f466c118a87d3e709ffce4aab321cdad",
+  "generationMode": "independent T2I",
+  "imageInputs": [],
+  "source": {
+    "title": "Sarawak Tourism Board — Kuching Waterfront",
+    "url": "https://www.sarawaktourism.com/web/places-to-visit/town-view/kuching/major-attractions/kuching-waterfront"
+  },
+  "photoInspected": null
+}

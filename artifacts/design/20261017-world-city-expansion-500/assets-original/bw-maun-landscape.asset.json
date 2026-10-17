@@ -1,0 +1,52 @@
+{
+  "id": "bw-maun-landscape",
+  "cityId": "bw-maun",
+  "name": "마운",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bw-maun-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bw-maun-landscape.json",
+  "originalSha256": "b7ec328f18ad1cf46b5d72359d02915ba2e5ca384a922af399dbc9ed46863d21",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bw-maun.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 110696,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "fea88b70f3e095a39af0a9756fa064bfbc0d425d5b3866fcb2bbfcea09674998",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

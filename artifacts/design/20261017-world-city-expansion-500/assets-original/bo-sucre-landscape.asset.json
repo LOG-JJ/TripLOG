@@ -1,0 +1,52 @@
+{
+  "id": "bo-sucre-landscape",
+  "cityId": "bo-sucre",
+  "name": "수크레",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bo-sucre-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bo-sucre-landscape.json",
+  "originalSha256": "88f4315b1b391f602db03b4c7dbeffbe31cb7afeee8bf55b78e9e31a4c169315",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    46,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bo-sucre.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 114152,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c48cef7c6c0b20962bc0fffdb5425a7d35e170e6f9ea9b19c8db233d5d5ac4a7",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

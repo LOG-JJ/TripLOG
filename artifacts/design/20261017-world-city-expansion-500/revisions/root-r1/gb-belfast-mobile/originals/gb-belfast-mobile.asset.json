@@ -1,0 +1,52 @@
+{
+  "id": "gb-belfast-mobile",
+  "cityId": "gb-belfast",
+  "name": "벨파스트",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-belfast-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-belfast-mobile.json",
+  "originalSha256": "458f86537315502be7292383110c60f50df863d80fe89af6fcbf4f90dbeb8e93",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gb-belfast-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 109128,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "d8f51e87afc0c6e9b3c11070a79df14a908aed6cb27382872d5fd3507a408967",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

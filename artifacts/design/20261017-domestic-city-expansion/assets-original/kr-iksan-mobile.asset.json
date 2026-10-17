@@ -1,0 +1,51 @@
+{
+  "id": "kr-iksan-mobile",
+  "cityId": "kr-iksan",
+  "name": "익산",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "전북",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-iksan-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-iksan-mobile.json",
+  "originalSha256": "e98bcfe68e3cc5f6895d4f4177848f027cd353bdb0f1788d6f9c1915cc67d6c3",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    73,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-iksan-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 63292,
+  "assetSha256": "8f25264bfc8f19688747d3c60e38480aeba98c308c99de44aaac456695bd58f3",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

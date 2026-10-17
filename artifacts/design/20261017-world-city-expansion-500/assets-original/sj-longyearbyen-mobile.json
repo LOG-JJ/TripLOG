@@ -1,0 +1,26 @@
+{
+  "jobId": "sj-longyearbyen-mobile",
+  "cityId": "sj-longyearbyen",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Longyearbyen, Svalbard: Svalbard Church, a LOW wooden building on treeless Arctic tundra. Its left church section has red wooden walls, white window trim and a very steep broad dark triangular front gable edged in white. Behind the gable rises one slender RED bell turret with white louver openings and a pointed red pyramidal spire. A long LOW pale-grey annex extends horizontally to the right. A broad snow-dusted grey Arctic ridge stands behind the church, with sparse tundra grass and patches of snow. Do not draw a tall white stone church, multiple steeples, forest or palms. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "bdd18bfdfd4ca115908c30b7f680cb986e5b7579c0ceec27d1e8dd6dc801fe43",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/sj-longyearbyen-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-9a9867c1-41d8-42af-9e40-30271d3f5a34.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-9a9867c1-41d8-42af-9e40-30271d3f5a34.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/sj-longyearbyen-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "742226ec1b2b87666d7114e177ddfe3ace1094a5e94647b7e6d7d56674d0e519",
+  "savedSha256": "742226ec1b2b87666d7114e177ddfe3ace1094a5e94647b7e6d7d56674d0e519",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:44:29Z",
+  "toolCallId": "exec-9a9867c1-41d8-42af-9e40-30271d3f5a34",
+  "savedAt": "2026-10-17T07:48:38.989113+00:00"
+}

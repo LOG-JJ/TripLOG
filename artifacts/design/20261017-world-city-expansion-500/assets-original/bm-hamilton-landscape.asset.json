@@ -1,0 +1,52 @@
+{
+  "id": "bm-hamilton-landscape",
+  "cityId": "bm-hamilton",
+  "name": "해밀턴(버뮤다)",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "북대서양",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bm-hamilton-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bm-hamilton-landscape.json",
+  "originalSha256": "70c80d45b07113b18e2b5ad9ffa7187f06e4d3d65800252c56ac07ce9091b2bf",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    39,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bm-hamilton.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 112868,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2b6eb3bc7910d1f2c706e86c87cb8b3811577bfa12af605c9f10f717d775c865",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "pm-saint-pierre-landscape",
+  "cityId": "pm-saint-pierre",
+  "name": "생피에르",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "북대서양",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/pm-saint-pierre-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/pm-saint-pierre-landscape.json",
+  "originalSha256": "9566ccf716011519998b8099ca7f028350cde243b389ab38362f4463ebd46953",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    33,
+    20,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/pm-saint-pierre.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 86590,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "115fd6e051d088f195d0ba691284fd88393c33558d9eb4b58726d5ea71156368",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

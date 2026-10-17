@@ -1,0 +1,28 @@
+{
+  "completedAt": "2026-10-17T05:43:07.583348+00:00",
+  "status": "local-implementation-and-verification-complete",
+  "officialCityTargets": 85,
+  "domesticDestinations": 95,
+  "newImageFiles": 160,
+  "retainedExistingDomesticImages": 30,
+  "worldwideDestinations": 395,
+  "activeImagesIncludingThemes": 810,
+  "newWebpBytes": 15401632,
+  "buildFingerprint": "716507a4b95c46bf7dd7",
+  "newSourceDistHashMatches": 160,
+  "originalSourceHashMatches": 160,
+  "independentT2I": true,
+  "imageInputs": [],
+  "allHeaderCases": 488,
+  "tests": {
+    "npm test": "PASS",
+    "npm run artifacts:check": "PASS",
+    "npm run test:source": "PASS",
+    "npm run build": "PASS",
+    "trip-header-browser-regression": "PASS",
+    "trip-scene-art-browser-regression": "PASS 380 + 108",
+    "trip-scene-cache-browser-regression": "PASS"
+  },
+  "commitPush": "not performed",
+  "automaticDeployment": "not requested or verified"
+}

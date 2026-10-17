@@ -1,0 +1,51 @@
+{
+  "id": "kr-gwangyang-mobile",
+  "cityId": "kr-gwangyang",
+  "name": "광양",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "전남권",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwangyang-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwangyang-mobile.json",
+  "originalSha256": "a4c99be97dc6d6dee541d74b20ba219e3f6ac7e592dfe9406ac47c03154917c4",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gwangyang-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 110560,
+  "assetSha256": "48f2018561026b6f0b9c6c86f35bf83dbd8a4bdd11e25fc5aa74ffa7b70046fb",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

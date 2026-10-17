@@ -1,0 +1,104 @@
+{
+  "worker": "worker-b",
+  "reviewedAt": "2026-10-17",
+  "scope": {
+    "cities": 19,
+    "variants": 38,
+    "cityIds": [
+      "kr-ulsan",
+      "kr-uijeongbu",
+      "kr-pyeongtaek",
+      "kr-gwacheon",
+      "kr-siheung",
+      "kr-yongin",
+      "kr-gimpo",
+      "kr-pocheon",
+      "kr-taebaek",
+      "kr-jecheon",
+      "kr-asan",
+      "kr-dangjin",
+      "kr-namwon",
+      "kr-gwangyang",
+      "kr-gumi",
+      "kr-mungyeong",
+      "kr-sacheon",
+      "kr-jeju-city",
+      "kr-danyang"
+    ],
+    "pilotAssetsExcludedFromCount": [
+      "kr-ulleung-landscape",
+      "kr-ulleung-mobile"
+    ]
+  },
+  "generation": {
+    "mode": "built-in image_gen, text-to-image",
+    "imageInputs": [],
+    "initialCalls": 38,
+    "correctionCalls": 3,
+    "finalAssets": 38
+  },
+  "technicalValidation": {
+    "originalCopyAndToolSourceSha256Equal": true,
+    "runtimeWebpSha256MatchesMetadata": true,
+    "allDimensionsCorrect": true,
+    "landscapeSize": [
+      800,
+      480
+    ],
+    "mobileSize": [
+      480,
+      600
+    ],
+    "allAlphaExtrema": [
+      0,
+      255
+    ],
+    "details": "worker-b-technical-validation.json"
+  },
+  "visualReview": {
+    "method": "Final WebP contact sheets at 400x240 landscape and 240x300 mobile on a pale neutral background.",
+    "checks": [
+      "Main landmark identification remains inside the image frame after conversion.",
+      "Landscape and mobile variants retain the same destination subject.",
+      "Navy outlines and green/cyan/sandy palette remain consistent across the assigned set.",
+      "Right and bottom foreground meet the asset edge without fully empty padding."
+    ],
+    "result": "Reviewed with two destination corrections completed.",
+    "limitations": [
+      "This is an asset-level contact-sheet review. The parent task performs actual browser header layout and breakpoint verification.",
+      "Independent T2I variants preserve the motif and palette but are not geometrically identical architectural depictions."
+    ],
+    "contactSheets": [
+      "worker-b-contact-1.png",
+      "worker-b-contact-2.png",
+      "worker-b-contact-3.png",
+      "worker-b-contact-4.png"
+    ]
+  },
+  "corrections": [
+    {
+      "id": "kr-gwacheon-landscape",
+      "issue": "Initial extra-wide output was cropped by the standard fit, cutting the left roof tip.",
+      "action": "New independent 5:3 T2I call explicitly keeps the complete building within the right two-thirds. Final WebP shows both roof tips.",
+      "sourceSize": [
+        1619,
+        971
+      ]
+    },
+    {
+      "id": "kr-dangjin-landscape",
+      "issue": "Initial waterfront image included an unsupported observation tower.",
+      "action": "New T2I call uses the officially documented Sapgyoho Ferris wheel. Full round silhouette is retained.",
+      "source": "https://www.dangjin.go.kr/tour/"
+    },
+    {
+      "id": "kr-dangjin-mobile",
+      "issue": "Initial waterfront image included a different unsupported observation tower.",
+      "action": "New T2I call uses the same Ferris-wheel motif as the landscape asset.",
+      "source": "https://www.dangjin.go.kr/tour/"
+    }
+  ],
+  "previousVersions": "../../design/20261017-domestic-city-expansion/revisions/worker-b-r1/supersession.json",
+  "runtimeDirectory": "../../../src/assets/trip-scenes/cities/v5",
+  "runtimeCodeChanged": false
+}

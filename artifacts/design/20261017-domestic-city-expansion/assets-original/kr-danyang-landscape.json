@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-danyang-landscape",
+  "cityId": "kr-danyang",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Danyang, South Korea: Dodamsambong's three distinct rocky peaks rising from the river, with a small traditional pavilion on the central formation. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "b52df51b7f1db526238c9d8db87ff9ef71b822403784ffa9c4c68f74545c7cfa",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-danyang-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-8594b470-003f-429e-b061-61c6f62714e4.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-8594b470-003f-429e-b061-61c6f62714e4.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-danyang-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "0be8d320dd0826f760ef1f19c7d646f74c6ce97cd60b61baa2d66a35fa8cfce6",
+  "savedSha256": "0be8d320dd0826f760ef1f19c7d646f74c6ce97cd60b61baa2d66a35fa8cfce6",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:29:28Z",
+  "toolCallId": "exec-8594b470-003f-429e-b061-61c6f62714e4",
+  "savedAt": "2026-10-17T05:30:23.883570+00:00"
+}

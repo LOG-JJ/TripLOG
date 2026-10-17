@@ -1,0 +1,52 @@
+{
+  "id": "mr-chinguetti-landscape",
+  "cityId": "mr-chinguetti",
+  "name": "칭게티",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mr-chinguetti-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mr-chinguetti-landscape.json",
+  "originalSha256": "e608910911e52ecea8b833bff04dfb7a4c75cdff926450e9adff9ba45d691912",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    51,
+    38,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mr-chinguetti.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 100586,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c1bb5cec48222cd93fdcba292d6d876e32339cec1024d6f9bf3bfbd66d16f61b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

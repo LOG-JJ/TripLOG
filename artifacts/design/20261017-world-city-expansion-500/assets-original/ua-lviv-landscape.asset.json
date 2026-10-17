@@ -1,0 +1,52 @@
+{
+  "id": "ua-lviv-landscape",
+  "cityId": "ua-lviv",
+  "name": "리비우",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ua-lviv-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ua-lviv-landscape.json",
+  "originalSha256": "e22bc584ef617fe66267b961469d8f20aac3d31a98542121e1c2f0f6bffc065a",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ua-lviv.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 117234,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "1651684f466702677ec2755de4988a7b7a968a7482328b24fae68c922e2bc613",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

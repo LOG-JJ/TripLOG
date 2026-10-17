@@ -1,0 +1,175 @@
+{
+  "count": 10,
+  "records": [
+    {
+      "id": "bg-nesebar-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/bg-nesebar.webp",
+      "sourceSha256": "d3d9603b91f4a7b2df80697730b6cc9fab691194b9c779fb53e07fe382a8ef90",
+      "assetSha256": "a93da905bee09ad5ee19a69d89cdda34ce9408a2e394a9a599bd73cb79574db5",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        23,
+        43,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "bg-nesebar-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/bg-nesebar-mobile.webp",
+      "sourceSha256": "5b329b26929092627d3e081bd0a70938b8e5681ea9549920041293e3638a23be",
+      "assetSha256": "71539aed7607b50c221747ea40e7d2e9c23b8975338f3db947e8bac8f0d22efd",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        67,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "rs-novi-sad-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/rs-novi-sad.webp",
+      "sourceSha256": "3dcc76291eccd750895282726be3e7c75243b47ad8dc1304152846ff9abee778",
+      "assetSha256": "7f2f868192b4a436205d5f91a186d815ef578fde5e2d76f540ef18592b9df936",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        17,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "rs-novi-sad-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/rs-novi-sad-mobile.webp",
+      "sourceSha256": "c5c1501ecfc2682831a09c81d92f799d657d8690571954a3dbbc17aa941afcbc",
+      "assetSha256": "7bb38cff2d481bbc0293b886511cd2345d7caa369c5038425129c7ee0b657874",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        28,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "se-gothenburg-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/se-gothenburg.webp",
+      "sourceSha256": "80552e796004cfbf113f70a9d607ef5723d593d7bfd3417224a6611ab0ccbc2c",
+      "assetSha256": "e379e6189076c4285e8f2bb66901c1a8a7a09b15b0eb387066b99b2b523c2b7e",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        36,
+        37,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "se-gothenburg-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/se-gothenburg-mobile.webp",
+      "sourceSha256": "f9a496cff8641541dd1b11c3a385ebba0ad3e28be8dffa54ea2d7eefd539fd72",
+      "assetSha256": "663d0234c5206383b29ba5bde8a5791a7b347b1e558d1165b62667f91b04ee9f",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        25,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "fi-turku-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/fi-turku.webp",
+      "sourceSha256": "ef70ea1878d84bf80a3e97065f27e2070aa6423a513e38845c26a1ff9c1f8953",
+      "assetSha256": "7925163c9b0ddfde549f632cf3780866f02a81223324e5d8f4f014949aef65f8",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        14,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "fi-turku-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/fi-turku-mobile.webp",
+      "sourceSha256": "869b818edde2d5237719577f9c51f9a9352b75cb69f94c4e0f0fd62bc5a47b52",
+      "assetSha256": "fb54d4ebc12d16aec6b35f9fe9cb12d0096fbdb282eb6ce97fa4ba665f6d912f",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        10,
+        22,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "bz-belize-city-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/bz-belize-city.webp",
+      "sourceSha256": "d7dc8f60ab253d18dec50c25c08cc8d9a915447f7c822c84ae877459c0ca2d36",
+      "assetSha256": "dff82a981cf5f5fa6a130cff2dbc1dca66593041b746fe872ad03838887671b3",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        24,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "bz-belize-city-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/bz-belize-city-mobile.webp",
+      "sourceSha256": "072bf550d2cc1883ba4498d479bd0d665555728de7ffd9683c923346abaa50c4",
+      "assetSha256": "1b14ff8930f56e67c8edd42a83346258e1ba8b0741de18632d5e91584a823c64",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        10,
+        480,
+        600
+      ],
+      "originalEquality": true
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "cm-limbe-mobile",
+  "cityId": "cm-limbe",
+  "name": "림베",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cm-limbe-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cm-limbe-mobile.json",
+  "originalSha256": "c01985a4f52abc249fb6e9911aaaddda4be475bf3945c707898f7894a9739bf6",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cm-limbe-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 132248,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "0373c9ba031bb6a7e248642ac1fae7cb055de1b4aa8f907317f99fdf46d23ed8",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,77 @@
+{
+  "reason": "Technical crop/refit of nearly transparent right/bottom padding exposed by rendered-header QA; original PNG and prompt unchanged.",
+  "records": [
+    {
+      "id": "ky-george-town-landscape",
+      "beforeGaps": [
+        0,
+        5
+      ],
+      "afterGaps": [
+        0,
+        0
+      ],
+      "assetSha256": "c29e2e97349c6518e43e8c3382c704693fac2982611476cc3f7ece0f1fcc4b12",
+      "archived": [
+        {
+          "original": "src\\assets\\trip-scenes\\cities\\v6\\ky-george-town.webp",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\root-coverage-alpha8\\ky-george-town.webp",
+          "sha256": "178590c79cf564f99fabd1dbb00eab85ab7ceb9954ab1ade95f2eee736df795d"
+        },
+        {
+          "original": "artifacts\\design\\20261017-world-city-expansion-500\\assets-original\\ky-george-town-landscape.asset.json",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\root-coverage-alpha8\\ky-george-town-landscape.asset.json",
+          "sha256": "598a3edf6ecdf138fcd8cbe3c30cb91a7e4cf7be72e0b79e7a1b82b4b988d533"
+        }
+      ]
+    },
+    {
+      "id": "ky-george-town-mobile",
+      "beforeGaps": [
+        0,
+        4
+      ],
+      "afterGaps": [
+        0,
+        0
+      ],
+      "assetSha256": "49c039f440172e7dc83a8cfca1dab017c2df618d5862be1a290e4b04ffb2645d",
+      "archived": [
+        {
+          "original": "src\\assets\\trip-scenes\\cities\\v6\\ky-george-town-mobile.webp",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\root-coverage-alpha8\\ky-george-town-mobile.webp",
+          "sha256": "240723c41a2776bb7e65620c7f7613cfe4456355cb0e062b035c8cf8ca0d2584"
+        },
+        {
+          "original": "artifacts\\design\\20261017-world-city-expansion-500\\assets-original\\ky-george-town-mobile.asset.json",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\root-coverage-alpha8\\ky-george-town-mobile.asset.json",
+          "sha256": "238865ed178ab9e2eaeb8b1121de7ef10ce36ded383479017d0335b78d49b6c5"
+        }
+      ]
+    },
+    {
+      "id": "xk-prizren-mobile",
+      "beforeGaps": [
+        2,
+        3
+      ],
+      "afterGaps": [
+        0,
+        0
+      ],
+      "assetSha256": "7fa28e3e4b9a45f9aa5047527192424be2b7490b26ec8e4c068a11608b0a8b57",
+      "archived": [
+        {
+          "original": "src\\assets\\trip-scenes\\cities\\v6\\xk-prizren-mobile.webp",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\root-coverage-alpha8\\xk-prizren-mobile.webp",
+          "sha256": "ae6260db19ec8d582dbbce4edeb3f0186d0da72fb1c507cfb44027424bf989e2"
+        },
+        {
+          "original": "artifacts\\design\\20261017-world-city-expansion-500\\assets-original\\xk-prizren-mobile.asset.json",
+          "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\root-coverage-alpha8\\xk-prizren-mobile.asset.json",
+          "sha256": "230de99a21e3adbdd05bdc87215b3e27902d814f9a718eb3af01c4a8218dfb3f"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "jobId": "vu-port-vila-landscape",
+  "cityId": "vu-port-vila",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Port Vila, Vanuatu: the steep thatched roof of Vanuatu Cultural Centre and National Museum in Port Vila, with the tropical trees of its grounds. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "a9c630228edd637cf0074ab8b6cf6c69f3886d4e683a983355667e6941dda40a",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/vu-port-vila-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-08e95faa-9f1e-4f19-a121-bf1a702bb03f.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-08e95faa-9f1e-4f19-a121-bf1a702bb03f.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/vu-port-vila-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "374deae7b112c53aa27195c49b023a56d8d8b5448b894d6c4fd7d500b2cbbeb9",
+  "savedSha256": "374deae7b112c53aa27195c49b023a56d8d8b5448b894d6c4fd7d500b2cbbeb9",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:53:51.118Z",
+  "toolCallId": "exec-08e95faa-9f1e-4f19-a121-bf1a702bb03f",
+  "savedAt": "2026-10-17T06:57:02.539320+00:00"
+}

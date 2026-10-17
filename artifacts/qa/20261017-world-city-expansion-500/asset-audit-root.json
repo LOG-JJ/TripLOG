@@ -1,0 +1,1103 @@
+{
+  "final": true,
+  "stage": "all",
+  "owner": "root",
+  "generated": 136,
+  "expected": 136,
+  "pending": [],
+  "sourceHashMatches": 136,
+  "uniqueSourceHashes": 136,
+  "newAssetBytes": 14874680,
+  "warnings": [],
+  "unchangedExistingImages": 810,
+  "assets": [
+    {
+      "id": "ae-sharjah-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ae-sharjah.webp",
+      "bytes": 99352,
+      "sourceSha256": "970260486aed0fa75b779417e27b6d0ee8cf5e1bd2d2cdd53f7a9da613439960",
+      "assetSha256": "7bc5fc5462e78b1d600584689283abefd400961ddeb3ee4bfd39a100a2163b53",
+      "transparentFraction": 0.6306588541666667
+    },
+    {
+      "id": "ae-sharjah-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ae-sharjah-mobile.webp",
+      "bytes": 86964,
+      "sourceSha256": "7d0e8f5ebec511cd2521abdf9abb722d27b540c01fbfb8f1bcae56b0b9e0da5f",
+      "assetSha256": "2215762d541d080038ec2ee0c80715415cb48ab42fcb4d5374fcb68fd4846d07",
+      "transparentFraction": 0.5005868055555556
+    },
+    {
+      "id": "af-bamiyan-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/af-bamiyan.webp",
+      "bytes": 118236,
+      "sourceSha256": "3c99139705cc2dfe779ca1fab6a9472c787b4352be7c8ee8508499c786dccb5b",
+      "assetSha256": "19007a2d0237a3390fbe4c5eac1ddd84f5234f7e748b1a4b02481c2b5b0170d0",
+      "transparentFraction": 0.4292447916666667
+    },
+    {
+      "id": "af-bamiyan-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/af-bamiyan-mobile.webp",
+      "bytes": 102230,
+      "sourceSha256": "767bde3d50f971ccc0dcd1ce9a1e94217d716cdb475b8193775f151e39e25c27",
+      "assetSha256": "b9f3b1422df0ea8392a83ffb67991a71332cd9936f03fab5d22d5b5c842ee9c0",
+      "transparentFraction": 0.3415625
+    },
+    {
+      "id": "ag-st-johns-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ag-st-johns.webp",
+      "bytes": 108842,
+      "sourceSha256": "d771436e360901962910ad09fa1a06e63c340b05eb03026ea08844960673b4dc",
+      "assetSha256": "1d81f70768032a6648bf27bed21291aa1eff86149a58608472b40991a5cbaa78",
+      "transparentFraction": 0.5559192708333334
+    },
+    {
+      "id": "ag-st-johns-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ag-st-johns-mobile.webp",
+      "bytes": 97728,
+      "sourceSha256": "98e648574beb825ffa1fb5142654a5915937c5b3b8e1ce95558fc71a43b71566",
+      "assetSha256": "e2efedbb68653d7c2488f00a3bb8d8b937435b145f7165594bc1e1b2ffc4660b",
+      "transparentFraction": 0.46324652777777775
+    },
+    {
+      "id": "ai-the-valley-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ai-the-valley.webp",
+      "bytes": 150026,
+      "sourceSha256": "c4ffba1cbd7a22f2d0f1b7bcac8f7907c0eefe8af2e95184695e5df052317b0e",
+      "assetSha256": "7071e17156905be0aeab999f2b68ed9923059e41bc56c587dcefc069a1e2e735",
+      "transparentFraction": 0.46782552083333334
+    },
+    {
+      "id": "ai-the-valley-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ai-the-valley-mobile.webp",
+      "bytes": 139066,
+      "sourceSha256": "42112b1c2a65cec1d3d4cd50cbf70e2a9beefb3a1e97654a814d3e70f0be3334",
+      "assetSha256": "c98ba1699cdcddd64efb5e92de05fe2d6f89267ddba562b9774a8d720aaf93b0",
+      "transparentFraction": 0.38396180555555554
+    },
+    {
+      "id": "al-tirana-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/al-tirana.webp",
+      "bytes": 108850,
+      "sourceSha256": "3acc4fa9e8bf87ed9037edfe07bed9f080c002bd82732c5ea288db3f150170c8",
+      "assetSha256": "ad92ed43855c676c4af88136d90728caed1533b3dfdab7b936cf412da72ebd5a",
+      "transparentFraction": 0.5694114583333333
+    },
+    {
+      "id": "al-tirana-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/al-tirana-mobile.webp",
+      "bytes": 111088,
+      "sourceSha256": "e77a15d6e8bfea66093e546effb63d8c6f38f49d34efaf043663c7e705e57092",
+      "assetSha256": "d282eaee843ae4e7c4a5a3ce5e083961e26a4b8aed55dca8404aefaac64f4a39",
+      "transparentFraction": 0.4615902777777778
+    },
+    {
+      "id": "ar-mendoza-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ar-mendoza.webp",
+      "bytes": 133836,
+      "sourceSha256": "83d53871d23852b3a38f9d242510bbe75299956897ffe39712d02d6a51a8e317",
+      "assetSha256": "4099c38ff7741e72ed87c2f741540cc5ff026d7c0c178fb40cb43f2770767dd1",
+      "transparentFraction": 0.4505
+    },
+    {
+      "id": "ar-mendoza-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ar-mendoza-mobile.webp",
+      "bytes": 121410,
+      "sourceSha256": "b0ee585a664483a358eb0bd9325d1e9065f925205083d547c922aede720b3ca9",
+      "assetSha256": "d1f0235cd1fd6c78994ca0eb67428559136a5387069fc3a28a1f19adccb0721d",
+      "transparentFraction": 0.39410069444444445
+    },
+    {
+      "id": "bj-ouidah-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/bj-ouidah.webp",
+      "bytes": 102900,
+      "sourceSha256": "a0d6e1588fed72b94d799b380a14f3e7cd7787475eee2365564043ac77d99cf0",
+      "assetSha256": "58e097e98bc6703fc265b03063b4e48a0aa34259efad63e68a3f57ce3126dc89",
+      "transparentFraction": 0.51821875
+    },
+    {
+      "id": "bj-ouidah-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/bj-ouidah-mobile.webp",
+      "bytes": 101514,
+      "sourceSha256": "e5388bc68f209b5e2769e2263a26092852e8e130703a76790fd807a7649da353",
+      "assetSha256": "51464742c1ab418da8c67ad665e7ed321c0171f77016100182a56ca70de8fda5",
+      "transparentFraction": 0.5023784722222222
+    },
+    {
+      "id": "bm-hamilton-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/bm-hamilton.webp",
+      "bytes": 112868,
+      "sourceSha256": "70c80d45b07113b18e2b5ad9ffa7187f06e4d3d65800252c56ac07ce9091b2bf",
+      "assetSha256": "2b6eb3bc7910d1f2c706e86c87cb8b3811577bfa12af605c9f10f717d775c865",
+      "transparentFraction": 0.5563776041666667
+    },
+    {
+      "id": "bm-hamilton-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/bm-hamilton-mobile.webp",
+      "bytes": 103760,
+      "sourceSha256": "0236b5fcfe5b44177f3de88fcfc44562a4797fbe48cd338b88a54fd007f999d0",
+      "assetSha256": "fe26b879169d91d06143749d5c0fe0fbeed7d81b5bbd0b6be30074a30ff3d9e9",
+      "transparentFraction": 0.42299305555555555
+    },
+    {
+      "id": "br-olinda-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/br-olinda.webp",
+      "bytes": 146578,
+      "sourceSha256": "374b540cf344afa142278954f98667b889af5a2d1ad3c2434734b427156b6f06",
+      "assetSha256": "dd9d2dbdf8823b708bbd60c0fa3e04d8cd34309897f5c4be7cb98143ce7d18c8",
+      "transparentFraction": 0.4610416666666667
+    },
+    {
+      "id": "br-olinda-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/br-olinda-mobile.webp",
+      "bytes": 122720,
+      "sourceSha256": "f8dbbf80f93a66ef5c19d1d32edf307a56d87134a50a73ea4b158a7135bd7f3e",
+      "assetSha256": "109b436319caac22a701faeff6f9a49e6da7e547e8d4abb6ba474c224b2dc2ca",
+      "transparentFraction": 0.3903402777777778
+    },
+    {
+      "id": "bs-nassau-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/bs-nassau.webp",
+      "bytes": 135012,
+      "sourceSha256": "9410ec2aedba9f79a99627fb9bec9e9fe3446979399a94dfc6a2d2387845a7c3",
+      "assetSha256": "695ba2da9b5baa69fd9f6406ce32fc0c8a0aa0878feae3845179f084b448d17c",
+      "transparentFraction": 0.4932239583333333
+    },
+    {
+      "id": "bs-nassau-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/bs-nassau-mobile.webp",
+      "bytes": 130680,
+      "sourceSha256": "3777b1e90a67db841a9440ffd6deedc9c0eee3450c3b821a8619cb1d2c011816",
+      "assetSha256": "45630f6fb4c61f9b505a3710f0f64b1b94e73fe60bee1688a3ee2c597902c6ef",
+      "transparentFraction": 0.3683680555555556
+    },
+    {
+      "id": "cc-west-island-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/cc-west-island.webp",
+      "bytes": 127052,
+      "sourceSha256": "8133bd0618f868f6f681cd869eeb6ddb195b42d4783ae4013607230527917ce0",
+      "assetSha256": "4c3626076d7310a4a3df8d7f57ae3e9d2f4a9b1b0f0d8fcb7b022a151a121373",
+      "transparentFraction": 0.4973958333333333
+    },
+    {
+      "id": "cc-west-island-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/cc-west-island-mobile.webp",
+      "bytes": 126556,
+      "sourceSha256": "e6c039accfb91284c12544b7d780ae2a278e698b81ea9ffa33c57ff466a31a48",
+      "assetSha256": "8450a3b520397c6a13c6c2d85f0efcf6048c2c5ee8f800026251e5004e9ded97",
+      "transparentFraction": 0.4648263888888889
+    },
+    {
+      "id": "cl-valparaiso-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/cl-valparaiso.webp",
+      "bytes": 114152,
+      "sourceSha256": "462b2a8248c43eae03ac932358dff724707c496d3058ddebc02b825e67369740",
+      "assetSha256": "f94a4b55b3f654a6c74137787a9f9e954cafaf7e28057e26d4a2d623ee9da7c1",
+      "transparentFraction": 0.4846875
+    },
+    {
+      "id": "cl-valparaiso-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/cl-valparaiso-mobile.webp",
+      "bytes": 93588,
+      "sourceSha256": "24578882f3f61882d937ed4581e2575c14c4eb938b1f6bbd82fa841724b2ea40",
+      "assetSha256": "66897342a88e578df19d0919289a8a7064acf4365dd0f1daf79a151fbf7308e4",
+      "transparentFraction": 0.41835069444444445
+    },
+    {
+      "id": "cm-limbe-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/cm-limbe.webp",
+      "bytes": 160732,
+      "sourceSha256": "c6c85d80b0e5ffa94631c66a2fa8ef073deb3fd808e12d4794121d2069335627",
+      "assetSha256": "2c2d0c430e4735d9f7bb58de896734c6ca53bff2854f5885cbb384b13c2c415a",
+      "transparentFraction": 0.4989661458333333
+    },
+    {
+      "id": "cm-limbe-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/cm-limbe-mobile.webp",
+      "bytes": 132248,
+      "sourceSha256": "c01985a4f52abc249fb6e9911aaaddda4be475bf3945c707898f7894a9739bf6",
+      "assetSha256": "0373c9ba031bb6a7e248642ac1fae7cb055de1b4aa8f907317f99fdf46d23ed8",
+      "transparentFraction": 0.43416319444444446
+    },
+    {
+      "id": "cn-dunhuang-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/cn-dunhuang.webp",
+      "bytes": 97894,
+      "sourceSha256": "920453781fb040f683f2594dd6d958d680c64b3bc719f4d53a59f9114cb41fd2",
+      "assetSha256": "26db8e7525c17a63a43e228e48f1a6f3337ab7543dc4a35c0be1ad9ceb4a82b5",
+      "transparentFraction": 0.4548932291666667
+    },
+    {
+      "id": "cn-dunhuang-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/cn-dunhuang-mobile.webp",
+      "bytes": 98818,
+      "sourceSha256": "65af9c4d1d5385d67c3ac0d70fd20bd17e5968b040ed784f23926f9bca3df5db",
+      "assetSha256": "0fc2be243e647681b8cd9c6db7505446786c76edc31a29620c9a83f6a4f3d24e",
+      "transparentFraction": 0.3650555555555556
+    },
+    {
+      "id": "cz-karlovy-vary-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/cz-karlovy-vary.webp",
+      "bytes": 123690,
+      "sourceSha256": "f78d372b4ce008354e2d67a8bed988b6fd17dd51176c8b904c7bd4e1d9646050",
+      "assetSha256": "603831f9f68cc09f6dbd4aa09f033ed22a8cc8cfe386dea6bb0f78b0b4f6c197",
+      "transparentFraction": 0.41415625
+    },
+    {
+      "id": "cz-karlovy-vary-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/cz-karlovy-vary-mobile.webp",
+      "bytes": 111036,
+      "sourceSha256": "4f14cf9df0133eb0d53cec66ab819b5996df19e1f6888e1a93a032520c096015",
+      "assetSha256": "0823cc9a37ffbd77d41c07467b855d26d5ec636899d7483d579b52e67aa704c3",
+      "transparentFraction": 0.42933680555555553
+    },
+    {
+      "id": "de-lubeck-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/de-lubeck.webp",
+      "bytes": 121666,
+      "sourceSha256": "7345d1a31f5abd3b5b0e3fda2477a5e34feea078a0ff5da608d0b53922fc155c",
+      "assetSha256": "3b015862e071a190ec986c7113aac06eca890417b0fee1a8e7b570c6dce626f0",
+      "transparentFraction": 0.5082994791666666
+    },
+    {
+      "id": "de-lubeck-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/de-lubeck-mobile.webp",
+      "bytes": 95026,
+      "sourceSha256": "2fbb9adf50d2fe2d6694ace5824712812008a0b0f4ad256cec37f39a7d12003d",
+      "assetSha256": "07cd7f69a8ee621bf0477d82a0c8b8bbc12b5ebe91b2983748581659be944ce5",
+      "transparentFraction": 0.4528402777777778
+    },
+    {
+      "id": "dj-djibouti-city-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/dj-djibouti-city.webp",
+      "bytes": 95120,
+      "sourceSha256": "4a98caad8409c7cfbf5af90a8a195dbcd955263fd6a9522bbb8fb246cf433198",
+      "assetSha256": "8eff8e0900f94d53e83de6b0c6ccf83eecb826199523c2a4055d2e8e7062dbd8",
+      "transparentFraction": 0.582515625
+    },
+    {
+      "id": "dj-djibouti-city-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/dj-djibouti-city-mobile.webp",
+      "bytes": 79138,
+      "sourceSha256": "b9b39fea60b7f0019351c56675b9dd929418bfdbb66acedf33541c1bc12cb72c",
+      "assetSha256": "3023771695dcef961190da4ab00cf3e6ed850edfcda9059020e0d7544a11c9f6",
+      "transparentFraction": 0.5406145833333333
+    },
+    {
+      "id": "eg-aswan-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/eg-aswan.webp",
+      "bytes": 113090,
+      "sourceSha256": "27236dea5531ef6da69eeb47d255632e36d69b8ce07473e60274a9a4b8c9c65a",
+      "assetSha256": "1ff0fb258c11b99693da9da1920ed4a0048c4bdb2c94ed609ddb76be6cfdc5d6",
+      "transparentFraction": 0.4852213541666667
+    },
+    {
+      "id": "eg-aswan-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/eg-aswan-mobile.webp",
+      "bytes": 91340,
+      "sourceSha256": "cb1f07cfcf92b386df36ee5788710382f0ccb9fea84cc485d1880eed59511ba6",
+      "assetSha256": "01b0610f10600fd64d0e876e35eb4d0e8a4520ece1129b8aac1bda0330d08bfc",
+      "transparentFraction": 0.44814583333333335
+    },
+    {
+      "id": "es-cordoba-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/es-cordoba.webp",
+      "bytes": 111262,
+      "sourceSha256": "886a105e444f13ccfdb7ca33c9e550591741028ed098052e9988130a354b0e19",
+      "assetSha256": "741a4134fb7da15cef1c65349a5f824f94468f18e6978b47c8c0fba6db757389",
+      "transparentFraction": 0.48871875
+    },
+    {
+      "id": "es-cordoba-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/es-cordoba-mobile.webp",
+      "bytes": 93758,
+      "sourceSha256": "d711745af4d82c7571ce6f5d4ca3fb559c464e0805153d1e19266ea66148f7b9",
+      "assetSha256": "cb5208a6eeda27e46cd94bd29b49f540a6aa7a1ba1a216616624a9fdcff99f6e",
+      "transparentFraction": 0.42678819444444444
+    },
+    {
+      "id": "et-lalibela-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/et-lalibela.webp",
+      "bytes": 135212,
+      "sourceSha256": "34d089a14e100f6855215a6576b20bd9c47f51b2168373b8430732e1dc497ff8",
+      "assetSha256": "7c136c93b154b31d6fe10912ec9cf50664f8f6833ec24b69dc42f36b9150a664",
+      "transparentFraction": 0.44247135416666666
+    },
+    {
+      "id": "et-lalibela-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/et-lalibela-mobile.webp",
+      "bytes": 112714,
+      "sourceSha256": "065a8fe835529ec267b822c06be917da7dbf401937aa39e16e53e9d18b4d35dd",
+      "assetSha256": "265097bc4180453e8909e3f928de2a68b834d0fda5df1cbef1a1eb2753b79da1",
+      "transparentFraction": 0.33760416666666665
+    },
+    {
+      "id": "fo-torshavn-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/fo-torshavn.webp",
+      "bytes": 103274,
+      "sourceSha256": "728f553372464fa85441c954cff28d7dcea9889fbdcc4f8735a7fa50170508fd",
+      "assetSha256": "102e58526643d5cde1366390d032b861f09f18f0b0b90668b41de9a7738d235f",
+      "transparentFraction": 0.5764036458333334
+    },
+    {
+      "id": "fo-torshavn-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/fo-torshavn-mobile.webp",
+      "bytes": 91436,
+      "sourceSha256": "d824da6c7c43e24c82ee4a8960cfc591d50867c9f2c1aad0af1a9c0c9a8ff300",
+      "assetSha256": "2c8f5d18accbb09b9b1509269ec8f5454bf48c36d07eeb9fca0ccf8172d7800a",
+      "transparentFraction": 0.47028125
+    },
+    {
+      "id": "gb-belfast-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/gb-belfast.webp",
+      "bytes": 133252,
+      "sourceSha256": "dadc124848e0b6d5ef6207f398f8cbe0d6d77b4b01a7cfa38dab8a534c580922",
+      "assetSha256": "00e4de9bd4e6fa03e9f5db67b565198904cbe18ca0bd70a595c41f435b478451",
+      "transparentFraction": 0.45104947916666666
+    },
+    {
+      "id": "gb-belfast-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/gb-belfast-mobile.webp",
+      "bytes": 80598,
+      "sourceSha256": "9ece5b6597ce20cb3e94768e7ac9c1f3c2470d70b96dea9feba72c57c47940d7",
+      "assetSha256": "39162b33170e0bd8916316f0b3478625c5dfbca0ea1b62cd63fb8e1040023777",
+      "transparentFraction": 0.44614583333333335
+    },
+    {
+      "id": "gb-york-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/gb-york.webp",
+      "bytes": 155172,
+      "sourceSha256": "093f8ad867bf62ad716e507c6737c4d27ea9f1fb2badb76ccfc467e5e82494a3",
+      "assetSha256": "5da9438f3f2126a4c25837df70dbbe3a3ff85c919a2f6882c2e9f1ac0ee0f77b",
+      "transparentFraction": 0.39965364583333335
+    },
+    {
+      "id": "gb-york-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/gb-york-mobile.webp",
+      "bytes": 109544,
+      "sourceSha256": "73a26ba84fc269801d2c4c74984bf31df3fb8dff51cb588272d75f1abdfbbdc2",
+      "assetSha256": "85fe74c720233b8ef1ddc80ecc972823126359bedc334304b794dc9b31fc01e3",
+      "transparentFraction": 0.4565625
+    },
+    {
+      "id": "gl-nuuk-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/gl-nuuk.webp",
+      "bytes": 113654,
+      "sourceSha256": "e23143445b3c197081f6da64ac4b5a4200ad3646828334d9efc3c2b70f13be46",
+      "assetSha256": "8b48c848259e0871ec10ee6cefc983fb37637f7b4dd2bee7b6e7b60b357b236e",
+      "transparentFraction": 0.4719375
+    },
+    {
+      "id": "gl-nuuk-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/gl-nuuk-mobile.webp",
+      "bytes": 74128,
+      "sourceSha256": "d3a5a8bba765f7c938dfaa668f01c85154ee409427b06fed5261c617bbe06622",
+      "assetSha256": "41090ab46ce0ac851f97b2a6d35d02eeb7bdc49e1ec8c0102b95137ba945738a",
+      "transparentFraction": 0.5097152777777778
+    },
+    {
+      "id": "gn-conakry-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/gn-conakry.webp",
+      "bytes": 98876,
+      "sourceSha256": "8b865c006dddc9bc9257ecbf418b9e866066086fd538971bb48e368d7ae61da1",
+      "assetSha256": "2e990c037c710d4aa89b66df89e0b53bf654894cfe98a8bed6160b2daf3ff8f8",
+      "transparentFraction": 0.6349973958333334
+    },
+    {
+      "id": "gn-conakry-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/gn-conakry-mobile.webp",
+      "bytes": 102776,
+      "sourceSha256": "144d75d7b520f3850912f0ecc89988ea4f20ffa198520374b0dbd067a286ea32",
+      "assetSha256": "900d09c87b4d1fb7d4511d8b502712fd1fc1d8ad957cf0770776b093e80fc1e1",
+      "transparentFraction": 0.5072673611111111
+    },
+    {
+      "id": "gt-antigua-guatemala-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/gt-antigua-guatemala.webp",
+      "bytes": 95490,
+      "sourceSha256": "3bdee727d61be8d4bdb07857ef180fd44247e6d6950dfe28a31996984e808b48",
+      "assetSha256": "03d91787b94758e1bbee9fb0a5a6241585b10e62ffc7b4b0ca5c57b66c8e16b0",
+      "transparentFraction": 0.5285130208333333
+    },
+    {
+      "id": "gt-antigua-guatemala-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/gt-antigua-guatemala-mobile.webp",
+      "bytes": 94328,
+      "sourceSha256": "c2ec44434fd506bb7d2be512121f8a5e6dd30598bec575501a52d80089ec37b0",
+      "assetSha256": "608341aad12e13e850637246760f7382cf37769450e7ee2a08c2eaa18e58534f",
+      "transparentFraction": 0.4272326388888889
+    },
+    {
+      "id": "id-bandung-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/id-bandung.webp",
+      "bytes": 108490,
+      "sourceSha256": "9ea73e348a3be67e53789b84e9b26bab331498535b21a6b8b4c88a7d47ac0eca",
+      "assetSha256": "baa61b647948aabc8a1663a57d0b0bb54a002d7676716a667239e1b1221fb124",
+      "transparentFraction": 0.4978151041666667
+    },
+    {
+      "id": "id-bandung-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/id-bandung-mobile.webp",
+      "bytes": 66378,
+      "sourceSha256": "c318dbda94fcdbc1217c8330f6c9fc9f4e68a614376307e3bf3dc810a74e2c2a",
+      "assetSha256": "a857bfec3696956640e6376cd24a3d7905020fcd607bffbffc686f4546125380",
+      "transparentFraction": 0.61215625
+    },
+    {
+      "id": "in-amritsar-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/in-amritsar.webp",
+      "bytes": 114032,
+      "sourceSha256": "69548e1db76a6cd4212342d0952e50ec327c015dd56663a788749e19ba638649",
+      "assetSha256": "2020aef4dccfa5fd3e23050702718b3e4bc0402bb67d13cb0051e5fad4ee0972",
+      "transparentFraction": 0.5275104166666666
+    },
+    {
+      "id": "in-amritsar-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/in-amritsar-mobile.webp",
+      "bytes": 93748,
+      "sourceSha256": "560a12a069e6090be039556b1b17cbffcb20524be26e4d978d0aa506ef5e5d1f",
+      "assetSha256": "4bbf1aecfddfc78da80d2e65e26efad13c4db1395c55848e89dbbb11cfe4803c",
+      "transparentFraction": 0.4158368055555556
+    },
+    {
+      "id": "it-matera-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/it-matera.webp",
+      "bytes": 139660,
+      "sourceSha256": "09a42fa41b251dae3f5a89cf78a90b9084878fc7ec4aa0f1614bd9fb76716d45",
+      "assetSha256": "b676090b0836681d4a94b1eb3088aaf250c7fcb99a958f34fcc862bbca37fe7b",
+      "transparentFraction": 0.46603125
+    },
+    {
+      "id": "it-matera-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/it-matera-mobile.webp",
+      "bytes": 106070,
+      "sourceSha256": "807fc27bc9761b2691c4bd7211af4f2e07414d1b76507feb28cc3f8c8eb87532",
+      "assetSha256": "6db5ea35df7f4ec06636b73da59ec3e153e9ee006b50d58356ef07f1c31fdba5",
+      "transparentFraction": 0.39652430555555557
+    },
+    {
+      "id": "jm-kingston-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/jm-kingston.webp",
+      "bytes": 156468,
+      "sourceSha256": "c8351ee41866ffe2115df894d38a5f6e1ea98be7f0eea1e4458d079fab48a723",
+      "assetSha256": "89dda1eca004bf757f9e1837c650cfcee3dcb7fcb918cf90478e2515fc39155c",
+      "transparentFraction": 0.44220052083333333
+    },
+    {
+      "id": "jm-kingston-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/jm-kingston-mobile.webp",
+      "bytes": 126944,
+      "sourceSha256": "9baac149dc7f542d91add5bc8ae34fe87dd3a36b4954fd7659cf3557a328d48d",
+      "assetSha256": "4c170730389d96d80d69764c02b42099343b8008adde8c22a080104870ff1755",
+      "transparentFraction": 0.4239965277777778
+    },
+    {
+      "id": "km-moroni-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/km-moroni.webp",
+      "bytes": 116778,
+      "sourceSha256": "a144e1b9a1e7fde4affc6bed25c0457d997a8600a50f59c2753bcb5a4cd8e5e4",
+      "assetSha256": "74a00906edf46e492f10d9321da9c9bc6c66cb77faf52f0b70a120616db1d04b",
+      "transparentFraction": 0.5507421875
+    },
+    {
+      "id": "km-moroni-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/km-moroni-mobile.webp",
+      "bytes": 100206,
+      "sourceSha256": "e59046fe2764d9a028765bdff4114929171ef6bbb48e9ee0706740a33ebf4bb1",
+      "assetSha256": "93929719f614e2a0c52a867c39e317f477f862d3feb535085c33bed0bfce8256",
+      "transparentFraction": 0.50209375
+    },
+    {
+      "id": "ky-george-town-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ky-george-town.webp",
+      "bytes": 122012,
+      "sourceSha256": "0c146fea6df59a70022272709e393797ca44432ebac6e37b13e604eb86120de4",
+      "assetSha256": "c29e2e97349c6518e43e8c3382c704693fac2982611476cc3f7ece0f1fcc4b12",
+      "transparentFraction": 0.5320182291666666
+    },
+    {
+      "id": "ky-george-town-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ky-george-town-mobile.webp",
+      "bytes": 124400,
+      "sourceSha256": "5db34ff90a9c7ba97b308a135b9f52705e24d7fc0abbbfe24001c69d37cc6521",
+      "assetSha256": "49c039f440172e7dc83a8cfca1dab017c2df618d5862be1a290e4b04ffb2645d",
+      "transparentFraction": 0.4426076388888889
+    },
+    {
+      "id": "lb-byblos-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/lb-byblos.webp",
+      "bytes": 127960,
+      "sourceSha256": "86852e459f82b55f8b6ed130966074e3abb13d1231e2e44329728a6447c11f4a",
+      "assetSha256": "23e9d2e096c454c7eba02ac6ebb42a5e33caf368f41fc69e373df5631628d93a",
+      "transparentFraction": 0.5147916666666666
+    },
+    {
+      "id": "lb-byblos-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/lb-byblos-mobile.webp",
+      "bytes": 110312,
+      "sourceSha256": "67262c50319ad43d7d3172a6a59e116bf9d902aa18048d44237f55056a53574d",
+      "assetSha256": "e351228cd004fbec34ef7431368b4e3ffc28f87adf869cc30d3164b96c8bb907",
+      "transparentFraction": 0.36286805555555557
+    },
+    {
+      "id": "li-vaduz-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/li-vaduz.webp",
+      "bytes": 112766,
+      "sourceSha256": "e9639b8581b16b13b3d9183e85c9ff3d187297387330a5bc5a6b77649d25628c",
+      "assetSha256": "6823ee391156c0b5df88df804081a6b57aa22cd6f82ad1d626219ed02b0ee4e6",
+      "transparentFraction": 0.438171875
+    },
+    {
+      "id": "li-vaduz-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/li-vaduz-mobile.webp",
+      "bytes": 102036,
+      "sourceSha256": "e07f03ff0f912252b2bbd1c85c051f368d58e11eaacdae10ddc5605b5ff7f52d",
+      "assetSha256": "eddd90fa30b6497940ac01e2ee1c1e9d9794eb21de641d1cfddba44b1ca17a20",
+      "transparentFraction": 0.3912361111111111
+    },
+    {
+      "id": "ly-tripoli-libya-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ly-tripoli-libya.webp",
+      "bytes": 123934,
+      "sourceSha256": "cf4da126bd3d9d225b545de4e3ca9eb3721f5f5e5e95826c34143df996f02cc6",
+      "assetSha256": "2ce6a64776ccb518e2d7c28d93a755093000caac5d4a7bdbcbc6cd4092690b24",
+      "transparentFraction": 0.4050182291666667
+    },
+    {
+      "id": "ly-tripoli-libya-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ly-tripoli-libya-mobile.webp",
+      "bytes": 86854,
+      "sourceSha256": "87739262ca7829bb43d2ab928d54f9908f1a449cd529ebecc1fd6fc3e1f4a1cd",
+      "assetSha256": "8f28dee3b6b7264ecb4d1fefd3c666de758780057e03d0820af174feff48885e",
+      "transparentFraction": 0.43421180555555555
+    },
+    {
+      "id": "mh-majuro-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/mh-majuro.webp",
+      "bytes": 153260,
+      "sourceSha256": "8d077903da872a1284e08db95526d49a168550bf730d04e93ab1742e588d46e3",
+      "assetSha256": "0a1eed69d377bf85e17040cc35de78ea8d86bfb616c737f81cb92839edd074cd",
+      "transparentFraction": 0.400359375
+    },
+    {
+      "id": "mh-majuro-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/mh-majuro-mobile.webp",
+      "bytes": 123678,
+      "sourceSha256": "363fcb8d1e3f8d531331de2c24cc350441689dc0aa2360a9606c2a3b7a9e5a93",
+      "assetSha256": "9e4f840847cc8575a3308a5c9abdef47c3264678c3f1d0b843bb9bbaf7c07aab",
+      "transparentFraction": 0.42303125
+    },
+    {
+      "id": "mk-ohrid-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/mk-ohrid.webp",
+      "bytes": 118922,
+      "sourceSha256": "24d802c7876aa8f05e0d265de02cffb6f9ba513ed7156c23c70e166033880270",
+      "assetSha256": "60f09c8da54e3d4b1930145df1d41016d35fa616360c5e6bb0bcb0901f413215",
+      "transparentFraction": 0.462453125
+    },
+    {
+      "id": "mk-ohrid-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/mk-ohrid-mobile.webp",
+      "bytes": 106538,
+      "sourceSha256": "7c5b6fc86365a5059099f8796eba075ab37dd00c32b556a54350f3b25721642f",
+      "assetSha256": "19b14cdc4089af0946d271f27887a1e40c36db30bed7293c3341742b95ee1393",
+      "transparentFraction": 0.41181944444444446
+    },
+    {
+      "id": "mp-garapan-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/mp-garapan.webp",
+      "bytes": 102908,
+      "sourceSha256": "56c52ab680c3779014921eccc1736c99a5dfab309102b154154ddbab31cb34db",
+      "assetSha256": "109ddd7fbaaa8b72006d34568cc46d22245e3a34b52fca6b09af056bba319e4a",
+      "transparentFraction": 0.66296875
+    },
+    {
+      "id": "mp-garapan-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/mp-garapan-mobile.webp",
+      "bytes": 87782,
+      "sourceSha256": "337bcf0f9091658704a7f4a4e286341e4c9f45f87f81169382007ebe46801a6e",
+      "assetSha256": "77422c607d8f5a79f20c44ea930ff512697f5c57a12cb1f56ae3c2003ddc8f46",
+      "transparentFraction": 0.5351180555555556
+    },
+    {
+      "id": "mr-chinguetti-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/mr-chinguetti.webp",
+      "bytes": 100586,
+      "sourceSha256": "e608910911e52ecea8b833bff04dfb7a4c75cdff926450e9adff9ba45d691912",
+      "assetSha256": "c1bb5cec48222cd93fdcba292d6d876e32339cec1024d6f9bf3bfbd66d16f61b",
+      "transparentFraction": 0.577734375
+    },
+    {
+      "id": "mr-chinguetti-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/mr-chinguetti-mobile.webp",
+      "bytes": 90910,
+      "sourceSha256": "234dc100dc2143041bec057882ae2ab7192f80684fa340c45f041a4eea4cc767",
+      "assetSha256": "be5bfe5e0fc33922722406fd5928b2348af5c3de7474f6fb66db0fcd9a9a0327",
+      "transparentFraction": 0.4953958333333333
+    },
+    {
+      "id": "mw-zomba-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/mw-zomba.webp",
+      "bytes": 127858,
+      "sourceSha256": "b1f801f09c5f640d2ba6627ff604b709fed3dd96f030ffdd472110e67ffe4345",
+      "assetSha256": "828ec4d4f95a5d1f8d938fdb16ada26150169ff61c9cc10926bf3e214b3f7a48",
+      "transparentFraction": 0.44554166666666667
+    },
+    {
+      "id": "mw-zomba-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/mw-zomba-mobile.webp",
+      "bytes": 106136,
+      "sourceSha256": "ebd907d472f3082557f4b2bfc6982c7a74aa913457fba5fd8025e82a20683f36",
+      "assetSha256": "02e4c426c84e1849405d0a54429fc5ca9dfbc48d5b0d503b316077915c62ae8b",
+      "transparentFraction": 0.40743402777777776
+    },
+    {
+      "id": "mx-guanajuato-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/mx-guanajuato.webp",
+      "bytes": 95424,
+      "sourceSha256": "368f515b6946616c2754a98341c68b41f4358a7682f738a4b39147ca870cc349",
+      "assetSha256": "c7feb3cac2ad8d3ccbebe45dfd7db09e703980a588c8e3de0f33d0d25a264993",
+      "transparentFraction": 0.532765625
+    },
+    {
+      "id": "mx-guanajuato-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/mx-guanajuato-mobile.webp",
+      "bytes": 100188,
+      "sourceSha256": "d2176d68f975dddc4d588bef71700e438b8ea6704d5ea1ecc5e51aa69392d646",
+      "assetSha256": "f8714e085a1e06523ff1adbd1ecfb73cc65c17d19135fe8109560f632a566506",
+      "transparentFraction": 0.44904513888888886
+    },
+    {
+      "id": "mz-ilha-de-mocambique-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/mz-ilha-de-mocambique.webp",
+      "bytes": 106966,
+      "sourceSha256": "2807d6530be10e31bdebe5495f3bd48384f9741ebf2d2fafcd3b79d37c724db6",
+      "assetSha256": "8909ba474e30cf599cc5e85de2bb2189f5b3dad6649710c0f680db31d07c616f",
+      "transparentFraction": 0.5757994791666666
+    },
+    {
+      "id": "mz-ilha-de-mocambique-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/mz-ilha-de-mocambique-mobile.webp",
+      "bytes": 97654,
+      "sourceSha256": "d5128767b8fbe87f07f0861e74af9353201e5bfc1fbe9932af5b1adce8f56774",
+      "assetSha256": "961e261c1b221ad947f88bd4235c92e0f79032dbc4dce6cb336def0dfe62b418",
+      "transparentFraction": 0.52128125
+    },
+    {
+      "id": "nc-noumea-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/nc-noumea.webp",
+      "bytes": 130162,
+      "sourceSha256": "7e6bde0fe47502ae390f6dd306eb13bab991a55d5021d142dfa77d2a1b7959bc",
+      "assetSha256": "5b961c8001b3bb8f3314b7b4d6c3162e06baa96652c22e3815f71d03757ca435",
+      "transparentFraction": 0.5196536458333333
+    },
+    {
+      "id": "nc-noumea-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/nc-noumea-mobile.webp",
+      "bytes": 107044,
+      "sourceSha256": "b56687cac8724c5fb323e3f71cc68a19bbb8151a6646203cff76f82e8778b847",
+      "assetSha256": "9e6279eb51b3980ef0744f741b51339bb92e1da525a94788b0a772b8ea91d967",
+      "transparentFraction": 0.4233576388888889
+    },
+    {
+      "id": "ng-osogbo-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ng-osogbo.webp",
+      "bytes": 129980,
+      "sourceSha256": "a20f8dc8a3ef05211e1884e8552ddb6a84c336ac8116473a1f8a5ee14ac4190a",
+      "assetSha256": "943fa0fa5c987edca9c8b4874d98150850499ad8faaba4a48b484271558c1407",
+      "transparentFraction": 0.4706432291666667
+    },
+    {
+      "id": "ng-osogbo-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ng-osogbo-mobile.webp",
+      "bytes": 122042,
+      "sourceSha256": "fe5f6f8a0daad7d50af5b1a4094376b2744f85b0f99ed22a108422ac4dc0f336",
+      "assetSha256": "240016a2e6e7b87a8206b3ddccc9411b93a8e628bb31b264cb921967fa6b0946",
+      "transparentFraction": 0.3686527777777778
+    },
+    {
+      "id": "nl-utrecht-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/nl-utrecht.webp",
+      "bytes": 120056,
+      "sourceSha256": "5f67115163b66d38caf1c2b53b0a47c1f0972565af331a3a9f774006df246255",
+      "assetSha256": "0ceff3b4512061277705170edfe09b88d9152cf6debc7780f7e0fe3e6fec500e",
+      "transparentFraction": 0.5429322916666667
+    },
+    {
+      "id": "nl-utrecht-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/nl-utrecht-mobile.webp",
+      "bytes": 93918,
+      "sourceSha256": "4bf0d2587fea17dec6e5067645370334458df4f7ba3d7c11eb4e103b784cd4b3",
+      "assetSha256": "e51188cf38b0829f59e20bb608678fc90af7c95d950e129675b7394bcc7bb1f1",
+      "transparentFraction": 0.4728125
+    },
+    {
+      "id": "no-tromso-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/no-tromso.webp",
+      "bytes": 91074,
+      "sourceSha256": "9b1766bf01e3290f6df3c1a5defd9c5eb5cced57fd9c503a86abd80546ca7e7b",
+      "assetSha256": "95c4f898439c8303ad75aa97b77a145f90ec14b8df04fa4ec576c8a2849cfb62",
+      "transparentFraction": 0.5290885416666666
+    },
+    {
+      "id": "no-tromso-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/no-tromso-mobile.webp",
+      "bytes": 74364,
+      "sourceSha256": "ec97a6ca6da37888f8fe63e16038921638ac09e18714df66d0b52691c49b3400",
+      "assetSha256": "b75fe6c7cf3d39acda74942e1271f2220a01591aee2dbbda3163a5705ce12c04",
+      "transparentFraction": 0.42876041666666664
+    },
+    {
+      "id": "pl-wroclaw-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/pl-wroclaw.webp",
+      "bytes": 87056,
+      "sourceSha256": "f017dd091348bdeec48f54a0d940445b49c43c6c39d98b23e1e87f9ebd486d11",
+      "assetSha256": "f32eecd9e7414a885930e0489322f576b14f77cbc09b3f3d91ce6ec7a29dac5a",
+      "transparentFraction": 0.5295104166666667
+    },
+    {
+      "id": "pl-wroclaw-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/pl-wroclaw-mobile.webp",
+      "bytes": 75216,
+      "sourceSha256": "d0709029c3bdbc8c4255dabc24818c039aaba2bdc216383bb225281268cb2ff8",
+      "assetSha256": "2f912969321626edea846d0c501ccf43552281fb23bea0d3bc3a00590b853bba",
+      "transparentFraction": 0.5355208333333333
+    },
+    {
+      "id": "pm-saint-pierre-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/pm-saint-pierre.webp",
+      "bytes": 78582,
+      "sourceSha256": "64f0f91725f0fd9316416d6aefbf44e939d96cb4f22cd06d8c02240f80cded8f",
+      "assetSha256": "45ae666615ba81b1061e99209d6b8f516d92740dd1bd5d20e3073bde75529c06",
+      "transparentFraction": 0.61146875
+    },
+    {
+      "id": "pm-saint-pierre-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/pm-saint-pierre-mobile.webp",
+      "bytes": 62060,
+      "sourceSha256": "0e9fee7350499a38caadd5d46932c247dc25b02a4a0e008c990200c1ec8fad26",
+      "assetSha256": "b166311e111353923c171bc337ef90e53c1463fac25ef8a0732988dba2754be2",
+      "transparentFraction": 0.55596875
+    },
+    {
+      "id": "pn-adamstown-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/pn-adamstown.webp",
+      "bytes": 123330,
+      "sourceSha256": "d0f92db57729a23d6d243428ea6cc263b94577ce18774717a1b03f3b761ee07f",
+      "assetSha256": "3a77bb5a6d34d2312c6f2372b13b84b14cbf5ce5e080c010cf69f2fa50271ecc",
+      "transparentFraction": 0.4515208333333333
+    },
+    {
+      "id": "pn-adamstown-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/pn-adamstown-mobile.webp",
+      "bytes": 117822,
+      "sourceSha256": "b84843c3cfd18aee2fe623bd1f7003871a6e3912e44bc4f3d00fea61befcbd0e",
+      "assetSha256": "7f89a2d6e9a9a168a68b8787fc7e6453103abb1eb60ddd670e31bab3ac756a17",
+      "transparentFraction": 0.3883298611111111
+    },
+    {
+      "id": "ps-bethlehem-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ps-bethlehem.webp",
+      "bytes": 119072,
+      "sourceSha256": "3c6a0ca523d760b25b8401a7165760582a1a0d80d411d41334da40234b926ed6",
+      "assetSha256": "8405004c15553a84bbe292e691ab6172f1f60a9599a873cca820ac5f55d7da9d",
+      "transparentFraction": 0.40244010416666665
+    },
+    {
+      "id": "ps-bethlehem-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ps-bethlehem-mobile.webp",
+      "bytes": 71886,
+      "sourceSha256": "ba1971ba6830992f8efa3be4e7a2a216810c8c58184931dba6d72d08b707edef",
+      "assetSha256": "5f27bace0542abf7ab69e466317be910277d610438a37cbdee402fe3ce71bf94",
+      "transparentFraction": 0.4514444444444444
+    },
+    {
+      "id": "pt-evora-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/pt-evora.webp",
+      "bytes": 131012,
+      "sourceSha256": "e329547e1a532f73f4f0ffec04465859fb5ac47e42719e317d6d0f07d2d24d93",
+      "assetSha256": "b69da63fbcefa7d7e2b110f2e7773ac6edcd577865d1fcb3bd3e85105a190f08",
+      "transparentFraction": 0.5205338541666666
+    },
+    {
+      "id": "pt-evora-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/pt-evora-mobile.webp",
+      "bytes": 114562,
+      "sourceSha256": "ea526dde2bac817059c362363b863ea873e163638beafba180cd34093becb3cf",
+      "assetSha256": "2c6c122bfaa6ac71757e4349347679150665b9140a0207fec03c7d277c5b4376",
+      "transparentFraction": 0.39989930555555553
+    },
+    {
+      "id": "py-asuncion-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/py-asuncion.webp",
+      "bytes": 112018,
+      "sourceSha256": "fa2034e8fd13153d7128b2ee2c13c1821cf47f985989ffce4ae49ac1c2389c62",
+      "assetSha256": "4090044cf6240576cc2153c071812e5e598324bb57bba4466c32eb6d8f99f4ea",
+      "transparentFraction": 0.5518671875
+    },
+    {
+      "id": "py-asuncion-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/py-asuncion-mobile.webp",
+      "bytes": 96278,
+      "sourceSha256": "5b42841233d14b2b300518bb4c2a36e6c1f5ff7fd2ece2af5f7aa3853efbd25e",
+      "assetSha256": "56077a7d404ca8ebcc1665493dbdf93983e2e9c50d0ddce40a2c0d9dfc71c416",
+      "transparentFraction": 0.4430659722222222
+    },
+    {
+      "id": "re-saint-denis-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/re-saint-denis.webp",
+      "bytes": 115786,
+      "sourceSha256": "5c9e7c3953da77a4cfaf28bd7b60d5f8c3eaa555bb5577ee9c79c2d06c1ef565",
+      "assetSha256": "b996f44efada6252a0d51bce4e2aadfe793171d2d0aa90e711cc018d04bde661",
+      "transparentFraction": 0.6318359375
+    },
+    {
+      "id": "re-saint-denis-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/re-saint-denis-mobile.webp",
+      "bytes": 116546,
+      "sourceSha256": "b9efe22c93053bc751ac87474fe0494c61d58d9f4deacfa272ba4151152e9bf0",
+      "assetSha256": "1d22c2702ad3b607097bfad8b991d0986e30a12046e20bc0a5a970ffcd1887ef",
+      "transparentFraction": 0.4324409722222222
+    },
+    {
+      "id": "sc-victoria-seychelles-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/sc-victoria-seychelles.webp",
+      "bytes": 126268,
+      "sourceSha256": "b42351c0488628459d1e97726aecfa7a5d9f634710020ca9d9ab365a0c23faae",
+      "assetSha256": "77e91454bfc20a6f76e568414e521faa170331a4ba4b53359c7eac7f08eb48b8",
+      "transparentFraction": 0.5425625
+    },
+    {
+      "id": "sc-victoria-seychelles-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/sc-victoria-seychelles-mobile.webp",
+      "bytes": 119826,
+      "sourceSha256": "1fe645d82948db69a7e83986e75877b227277584dd2372a31ec4c6aa9ebea99c",
+      "assetSha256": "a2e2e7f2f3976ac1cf06b5ef76f4d95b82c975dded3899e2d574e776e913e6f9",
+      "transparentFraction": 0.43735069444444447
+    },
+    {
+      "id": "si-piran-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/si-piran.webp",
+      "bytes": 105722,
+      "sourceSha256": "6edf7e914af1f85d1460afc9a541b4e541018f6a08a2e693d9cac5dd02ea83b1",
+      "assetSha256": "8957f74e1d3ed73dab2560995b5d42495bfd58197c73e8015a730821b6f24293",
+      "transparentFraction": 0.5280364583333333
+    },
+    {
+      "id": "si-piran-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/si-piran-mobile.webp",
+      "bytes": 88248,
+      "sourceSha256": "666e56a519b6f1f0f18b376b25092d6558235d76a178db9bd5d9040f5ede4ea8",
+      "assetSha256": "9b30bec8084b4583742d235d085fa01721de3575984856cc5de1b0f26a611d71",
+      "transparentFraction": 0.43649305555555556
+    },
+    {
+      "id": "so-mogadishu-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/so-mogadishu.webp",
+      "bytes": 89062,
+      "sourceSha256": "a9253951cc8262088ebb92981e2447a16180758642c7b1f8e2e444ef27d152ca",
+      "assetSha256": "b6c8f4606198b37b4b84d20a345adf1e40c307bffa78529f991d960f18dcf226",
+      "transparentFraction": 0.5849296875
+    },
+    {
+      "id": "so-mogadishu-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/so-mogadishu-mobile.webp",
+      "bytes": 72450,
+      "sourceSha256": "20a4e3b7cf67b1d84ac03761c0beb91e9b8aa497328024fe8dd0045683d328b2",
+      "assetSha256": "7e14add32939e72ccc330cacd8123020db62e70cde323e77ebb2d7051d9de843",
+      "transparentFraction": 0.5473020833333333
+    },
+    {
+      "id": "ss-juba-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ss-juba.webp",
+      "bytes": 92120,
+      "sourceSha256": "0e2c56499ff0b3d897fe1b2bd96a0db6c43d7ddb982c83aaf5c913d8afdb0267",
+      "assetSha256": "5c417ae7182106b1119a013a94d4f074c8f725c1e458136b6af30ad4d191c57c",
+      "transparentFraction": 0.55728125
+    },
+    {
+      "id": "ss-juba-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ss-juba-mobile.webp",
+      "bytes": 89872,
+      "sourceSha256": "d3ab813c000304ebaa68dd2c1e80a506a4f444b3da1f0aaf6312d54195dac12d",
+      "assetSha256": "7dc0d9fd3bbe0c72ad060e3e2ae444635dd0b32768ef02c97170ec7785bd31b8",
+      "transparentFraction": 0.49407291666666664
+    },
+    {
+      "id": "st-sao-tome-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/st-sao-tome.webp",
+      "bytes": 113040,
+      "sourceSha256": "421f3cd7cb995fa41422d51e6564c6db8aca84646ed5450d9d481a42a779866a",
+      "assetSha256": "48bc54131a9ae8e7ab660208f3dbeca20a982ab2fff5a3f4e13bec74c2676ef4",
+      "transparentFraction": 0.6226953125
+    },
+    {
+      "id": "st-sao-tome-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/st-sao-tome-mobile.webp",
+      "bytes": 120550,
+      "sourceSha256": "dd9c6472e2b9292c4ef65aeae1beec3c37f384124627ececf32281efb1c6e4c9",
+      "assetSha256": "a9578d5dc87fff2caa53d0e35ccc4c82334ce3d9bb55c7cb493011f0da41c947",
+      "transparentFraction": 0.4791111111111111
+    },
+    {
+      "id": "sx-philipsburg-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/sx-philipsburg.webp",
+      "bytes": 135706,
+      "sourceSha256": "676968e9a12d9d7d93836a986e2ac2a46b61e9d39d9c28f38b9880aabffde85b",
+      "assetSha256": "c5a781923ac802e0449d430682d77dac1ad5e43e8e890ffe6963a9d68dd9c021",
+      "transparentFraction": 0.46016145833333333
+    },
+    {
+      "id": "sx-philipsburg-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/sx-philipsburg-mobile.webp",
+      "bytes": 114222,
+      "sourceSha256": "632475146030873b92af1f0beb58a4b26a7a9e41fac93130d04435bcaaa5d581",
+      "assetSha256": "34282a55f89450b8890314f732b96cebe4d3f5eb0ec7025f8ed509a6c48f722d",
+      "transparentFraction": 0.39271875
+    },
+    {
+      "id": "tk-nukunonu-village-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/tk-nukunonu-village.webp",
+      "bytes": 123198,
+      "sourceSha256": "6059ba912626b36950b3b42000c937eff479024240b62ddec5eef814ffad9b0a",
+      "assetSha256": "a8b3a194863341ec4ef7b6635330c624dc6bfa71256ff6b34d1c8cf3e3278850",
+      "transparentFraction": 0.5970989583333334
+    },
+    {
+      "id": "tk-nukunonu-village-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/tk-nukunonu-village-mobile.webp",
+      "bytes": 121780,
+      "sourceSha256": "8e7daafce8c814fe3ed62810028a8111a9830782540de825a804e69997d1268f",
+      "assetSha256": "3a2c821a3fbd8fdc48846862e215df8ee8ae58543748da8ffeaa155a0ee1510b",
+      "transparentFraction": 0.5473680555555556
+    },
+    {
+      "id": "tl-dili-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/tl-dili.webp",
+      "bytes": 89442,
+      "sourceSha256": "bc553f3d907d86c93a6e4755a3f39f14228b47dba917712ee886afeeccb390eb",
+      "assetSha256": "98906beb04e42c672be17af0d739e7ba3d269dd11b16045da96e8a0f6a89bf5a",
+      "transparentFraction": 0.6460026041666667
+    },
+    {
+      "id": "tl-dili-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/tl-dili-mobile.webp",
+      "bytes": 88922,
+      "sourceSha256": "c2291aff6f435eb57c6c24d6b0301523f517aed21d249cd78f6bae0008ce2be1",
+      "assetSha256": "d74e7a0e555558c56d24e0c7dd444b73f805fa3811291fdec019e5447d6997dd",
+      "transparentFraction": 0.5537534722222223
+    },
+    {
+      "id": "tm-ashgabat-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/tm-ashgabat.webp",
+      "bytes": 71496,
+      "sourceSha256": "700ab71fc844ca520a223bf741ee4ee05f6b3bc3556ac9e3a464ed20dbd90a82",
+      "assetSha256": "72203f3a054ab4d82b95b66d9c630a32d985ebdd582bb5eaca1eff5fcaa1195a",
+      "transparentFraction": 0.7330989583333334
+    },
+    {
+      "id": "tm-ashgabat-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/tm-ashgabat-mobile.webp",
+      "bytes": 44084,
+      "sourceSha256": "f7fda2f0f99d1835c8520f010a7d703c88892c6ae2cc8d5792dd1cb5f1292069",
+      "assetSha256": "9f0ded56a67990860df4c98e912878a23e7443a8c02060f9adcadf51a140b377",
+      "transparentFraction": 0.8038611111111111
+    },
+    {
+      "id": "ug-entebbe-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ug-entebbe.webp",
+      "bytes": 135546,
+      "sourceSha256": "659c488008a7dd05660851c10033b14cc91e14795513d7db7e3d4a2395b61027",
+      "assetSha256": "bcc9e3094fc2e6cbcab99fbd7b4e76558b724ae1feb054e2f01e02ea6525742b",
+      "transparentFraction": 0.5494427083333333
+    },
+    {
+      "id": "ug-entebbe-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ug-entebbe-mobile.webp",
+      "bytes": 126996,
+      "sourceSha256": "ddf7ad65768d6a5e200fa7895883a24d4d08dbc691219a01561c22b18968e3b4",
+      "assetSha256": "30d51d205423d1a650e3023fc40fae0542e66244aad6059faa59be0bddbd6d6d",
+      "transparentFraction": 0.4480486111111111
+    },
+    {
+      "id": "us-st-augustine-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/us-st-augustine.webp",
+      "bytes": 99338,
+      "sourceSha256": "0a014459296f907aa67d19e2e4372388f37727ec4480b858ab5b8b75cd8a2e83",
+      "assetSha256": "d4aff0b78e7e50068d21548ecec9922d2d610b0aa6bc7a9adfe1d2a78cd27575",
+      "transparentFraction": 0.5482265625
+    },
+    {
+      "id": "us-st-augustine-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/us-st-augustine-mobile.webp",
+      "bytes": 101918,
+      "sourceSha256": "ec6db65d1d65a98aa3284293fa866081788cd09798e185644f8cb4e1fd9bccdc",
+      "assetSha256": "0cef60d020a5b78be50fdddd72d251fbf7b4a7da9d6e0b5a771f2d9686e4fbbc",
+      "transparentFraction": 0.4183298611111111
+    },
+    {
+      "id": "uy-colonia-del-sacramento-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/uy-colonia-del-sacramento.webp",
+      "bytes": 124156,
+      "sourceSha256": "957b9e6b233fcaf993d1c4cba33f8cadcbe3aa53e242dd299e24621126a296e1",
+      "assetSha256": "de4ded3802adf325ed075d3835418f8790ac991cca74d9c914d52c90138e7c07",
+      "transparentFraction": 0.5873046875
+    },
+    {
+      "id": "uy-colonia-del-sacramento-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/uy-colonia-del-sacramento-mobile.webp",
+      "bytes": 105354,
+      "sourceSha256": "34fb9b40e869fb6c47f73eaee55406c22aabed666225a6ea985cc19f1543009b",
+      "assetSha256": "50dbfae122885bdfd2c28ed1d88d1f1f88a57e5b0573d8b84a2b9ac4891036d0",
+      "transparentFraction": 0.47240625
+    },
+    {
+      "id": "vu-port-vila-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/vu-port-vila.webp",
+      "bytes": 142194,
+      "sourceSha256": "8bfc171ceef9f374d3f02a17fbf7143a21d703ef8a1d46dbeb560f5c24c93ab9",
+      "assetSha256": "42dcdc90b14ae90ca9c5c9976e8a4f603b4977415621235a8750cb5babc5006d",
+      "transparentFraction": 0.42476302083333334
+    },
+    {
+      "id": "vu-port-vila-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/vu-port-vila-mobile.webp",
+      "bytes": 111432,
+      "sourceSha256": "97957b7105cd031b39167e3fd5586ea30ede9d9a297457c215fac3a96b478544",
+      "assetSha256": "8c9ceb6a2d8418dea827e4f7931f99aaf19e9fbd97b4db725eb3700cc5303113",
+      "transparentFraction": 0.3888784722222222
+    },
+    {
+      "id": "ws-apia-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ws-apia.webp",
+      "bytes": 134468,
+      "sourceSha256": "8d71536a245b56c00e4cd4b62c32a2dfd49cb4c94fb44b9161717aae35de13c9",
+      "assetSha256": "73a0c24e1c9cb09c7f7070a1610772b60f9635f98975400c639bdcd70af1790a",
+      "transparentFraction": 0.4870703125
+    },
+    {
+      "id": "ws-apia-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ws-apia-mobile.webp",
+      "bytes": 108060,
+      "sourceSha256": "09e5a4bb2b9095d8dd0d8b06e278accb660641a716fcfd7989913cf8653d327a",
+      "assetSha256": "c0cf25c475c0defe494d1cda95fb6afef550d1328b9bdcd94dad2a963c6bfdf8",
+      "transparentFraction": 0.4032222222222222
+    },
+    {
+      "id": "xk-prizren-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/xk-prizren.webp",
+      "bytes": 112754,
+      "sourceSha256": "2a8a0ea015c44dbec0d2b2fdb156acf8f6684a198433af5fcb54d45943bdce9a",
+      "assetSha256": "7c15b3a37552fb589f9dccbe1053e20a5ee496998f82478b9b144608292c43cf",
+      "transparentFraction": 0.571171875
+    },
+    {
+      "id": "xk-prizren-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/xk-prizren-mobile.webp",
+      "bytes": 98452,
+      "sourceSha256": "8f54f721a71a597d55cf15496aee4650dcdc41ca87a67bd1ea3ae517548c93e2",
+      "assetSha256": "7fa28e3e4b9a45f9aa5047527192424be2b7490b26ec8e4c068a11608b0a8b57",
+      "transparentFraction": 0.48059375
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-jeju-city-mobile",
+  "cityId": "kr-jeju-city",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Jeju City, South Korea: Yongyeon Gorge's dark volcanic rock banks and the short narrow Yongyeon pedestrian suspension bridge spanning the blue-green inlet, with slender suspension cables and trees along the rocky banks. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. Keep the bridge at the modest scale of a short pedestrian crossing over the gorge, not a large highway bridge.",
+  "promptSha256": "972a6bf27113df7bb81f6b47fcea474c76107b7dea875b63890f2b1584b79602",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-jeju-city-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-2c88915c-5bf1-474e-b300-b99a7d0b0138.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-2c88915c-5bf1-474e-b300-b99a7d0b0138.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-jeju-city-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "d53d63aca8ea38650acc9b7baa87c0a4f4b63663ae59bd23638f5c0f60a20318",
+  "savedSha256": "d53d63aca8ea38650acc9b7baa87c0a4f4b63663ae59bd23638f5c0f60a20318",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:28:26Z",
+  "toolCallId": "exec-2c88915c-5bf1-474e-b300-b99a7d0b0138",
+  "savedAt": "2026-10-17T05:29:19.549896+00:00"
+}

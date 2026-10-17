@@ -1,0 +1,51 @@
+{
+  "id": "kr-gimje-landscape",
+  "cityId": "kr-gimje",
+  "name": "김제",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "전북",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gimje-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gimje-landscape.json",
+  "originalSha256": "43ccf19ad2d1ab370a8868e9d1454bc8d5f9b5da8be104272bc63a4ef812eede",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-gimje.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 115092,
+  "assetSha256": "41a7d07e01c1105f9f44ead9bfa297db7132b2f7731a5e6012cfec016a6c6eeb",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

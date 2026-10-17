@@ -1,0 +1,52 @@
+{
+  "id": "fj-suva-mobile",
+  "cityId": "fj-suva",
+  "name": "수바",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/fj-suva-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/fj-suva-mobile.json",
+  "originalSha256": "fa7bdc0b1403eb5abfea20fd1cc91d6b75a95d7a6ade2cff5187dfcadc69277b",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/fj-suva-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 121004,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "d1da5938013b096864a3397935ec18d0546ccfbfa92e776bc4f68ee00d52e12b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

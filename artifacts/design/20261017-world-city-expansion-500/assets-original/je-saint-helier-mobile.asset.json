@@ -1,0 +1,52 @@
+{
+  "id": "je-saint-helier-mobile",
+  "cityId": "je-saint-helier",
+  "name": "세인트헬리어",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "서유럽",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/je-saint-helier-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/je-saint-helier-mobile.json",
+  "originalSha256": "612d38946312376e18d2585ccc50f6e6c91f824afb9f69ba3cb59f0092e43abe",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/je-saint-helier-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 97068,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "dc98d8aed9dc810627141d5a6051a3da391785e4bdb1af98dc23d866ec494d31",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "cn-dunhuang-landscape",
+  "cityId": "cn-dunhuang",
+  "name": "둔황",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cn-dunhuang-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cn-dunhuang-landscape.json",
+  "originalSha256": "920453781fb040f683f2594dd6d958d680c64b3bc719f4d53a59f9114cb41fd2",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cn-dunhuang.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 97894,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "26db8e7525c17a63a43e228e48f1a6f3337ab7543dc4a35c0be1ad9ceb4a82b5",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

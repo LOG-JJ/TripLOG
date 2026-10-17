@@ -1,0 +1,52 @@
+{
+  "id": "kp-kaesong-landscape",
+  "cityId": "kp-kaesong",
+  "name": "개성",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/kp-kaesong-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/kp-kaesong-landscape.json",
+  "originalSha256": "1b7e6e758b89b74b54af589b8206f416657201ca55372a72f481971c42848eb0",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/kp-kaesong.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 109876,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e2aafbcd4790fb5b5cbe0aa9b4d98ccb5950efc4de82c138cd4b35d6652ddbcd",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

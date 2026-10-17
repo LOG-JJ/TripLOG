@@ -1,0 +1,51 @@
+{
+  "id": "kr-paju-mobile",
+  "cityId": "kr-paju",
+  "name": "파주",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-paju-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-paju-mobile.json",
+  "originalSha256": "04205c5093cdf7ab96c29ad8937b40c2a36d848e8ab2117abd4578361e6a271a",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-paju-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 92112,
+  "assetSha256": "034e4210f37716b8e0e5581bce29eb8d0412eabbefbe26602e9355109a9a85bb",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

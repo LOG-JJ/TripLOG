@@ -1,0 +1,26 @@
+{
+  "jobId": "es-cordoba-mobile",
+  "cityId": "es-cordoba",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Cordoba, Spain: the Mosque-Cathedral of Cordoba, with the Roman bridge over the Guadalquivir. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "cc36e571c343b20f9d085c919d758b6ae0da028bdede0fe88260f44b604f9126",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/es-cordoba-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-46f51b2d-5a85-4872-b330-138c699aa8af.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-46f51b2d-5a85-4872-b330-138c699aa8af.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/es-cordoba-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "d711745af4d82c7571ce6f5d4ca3fb559c464e0805153d1e19266ea66148f7b9",
+  "savedSha256": "d711745af4d82c7571ce6f5d4ca3fb559c464e0805153d1e19266ea66148f7b9",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:10:31.110Z",
+  "toolCallId": "exec-46f51b2d-5a85-4872-b330-138c699aa8af",
+  "savedAt": "2026-10-17T06:12:32.285599+00:00"
+}

@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-ansan-mobile",
+  "cityId": "kr-ansan",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Ansan, South Korea: the Sihwa Narae Moon Observatory, a slender pale rectangular concrete tower shaft supporting a wide circular ring-shaped glazed observation deck, standing beside the sea and a low coastal park. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "8ad47f4919df1f2add125429895d82d23d75147fa93a61e01054096df4becb50",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-ansan-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-5347bce2-7038-4c4a-920b-27c10cf12daa.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-5347bce2-7038-4c4a-920b-27c10cf12daa.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-ansan-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "7b7b5a80fdcefd720a6f13366d7663fd7638e860d36b896b4d773a1dd4cbdc98",
+  "savedSha256": "7b7b5a80fdcefd720a6f13366d7663fd7638e860d36b896b4d773a1dd4cbdc98",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:10:03.612Z",
+  "toolCallId": "exec-5347bce2-7038-4c4a-920b-27c10cf12daa",
+  "savedAt": "2026-10-17T05:11:53.729131+00:00"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ae-sharjah-mobile",
+  "cityId": "ae-sharjah",
+  "name": "샤르자",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ae-sharjah-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ae-sharjah-mobile.json",
+  "originalSha256": "7d0e8f5ebec511cd2521abdf9abb722d27b540c01fbfb8f1bcae56b0b9e0da5f",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ae-sharjah-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 86964,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2215762d541d080038ec2ee0c80715415cb48ab42fcb4d5374fcb68fd4846d07",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

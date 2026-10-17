@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-gimhae-landscape",
+  "cityId": "kr-gimhae",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Gimhae, South Korea: the rounded grass-covered burial mound of King Suro and the traditional gate and walls of the surrounding royal tomb grounds. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a wide 5:3 composition for an 800 x 480 desktop illustration placed on the right side of a travel header. Spread the local scene horizontally through the middle-right and lower-right, with the main landmark clearly separated from the quieter upper-left. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "f508bc8a37b89d1127a36d9e10e72dce723cb78c19a4fc9c31c3d3622eb89831",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gimhae-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-d9eb88ff-fce9-4dd8-a810-72095a45fa9e.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-d9eb88ff-fce9-4dd8-a810-72095a45fa9e.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gimhae-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "b7a910714fb1ccdf4d53d1cfeac8d0972d21a624b8f4d5c98f689dfa4f8b6f7f",
+  "savedSha256": "b7a910714fb1ccdf4d53d1cfeac8d0972d21a624b8f4d5c98f689dfa4f8b6f7f",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:28:47Z",
+  "toolCallId": "exec-d9eb88ff-fce9-4dd8-a810-72095a45fa9e",
+  "savedAt": "2026-10-17T05:29:44.495428+00:00"
+}

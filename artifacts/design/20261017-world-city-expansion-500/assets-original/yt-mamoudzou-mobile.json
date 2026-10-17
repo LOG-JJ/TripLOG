@@ -1,0 +1,26 @@
+{
+  "jobId": "yt-mamoudzou-mobile",
+  "cityId": "yt-mamoudzou",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Mamoudzou, Mayotte: Mamoudzou's waterfront facing the Mayotte lagoon, a local passenger ferry on blue water and low town buildings on the green hillside behind. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette. Local form guard: depict Mamoudzou as a low waterfront settlement spreading onto a green hillside beside the blue Mayotte lagoon. The local ferry is compact, with a low practical passenger cabin, and remains small relative to the waterfront. Do not turn it into a multi-deck cruise liner or add a monumental palace, skyline tower or invented cathedral. Preserve the full visible ferry outline and the calm lagoon shoreline.",
+  "promptSha256": "21fb43af1afeb419d6529c04255bff866754e361716fbee082b85e71c51db51b",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/yt-mamoudzou-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-3debbfc2-bf09-4416-a115-10474b7a45f3.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-3debbfc2-bf09-4416-a115-10474b7a45f3.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/yt-mamoudzou-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "ef71400da34d24f6620e0f5798b00598d97a71a56a2da6022330487a02ae4461",
+  "savedSha256": "ef71400da34d24f6620e0f5798b00598d97a71a56a2da6022330487a02ae4461",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:44:47Z",
+  "toolCallId": "exec-3debbfc2-bf09-4416-a115-10474b7a45f3",
+  "savedAt": "2026-10-17T07:46:57.613950+00:00"
+}

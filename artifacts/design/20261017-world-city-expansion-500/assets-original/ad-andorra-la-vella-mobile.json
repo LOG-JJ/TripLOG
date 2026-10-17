@@ -1,0 +1,26 @@
+{
+  "jobId": "ad-andorra-la-vella-mobile",
+  "cityId": "ad-andorra-la-vella",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Casa de la Vall in Andorra la Vella, Andorra. Show the compact, broad three-storey grey local-stone manor house, its dark slate pitched roof and small rounded corner watch-turrets attached to the building. Set it on a dry paved terrace above the valley with Pyrenean slopes behind it. The house has a restrained rectangular facade, small shuttered windows and a simple arched entrance. There is no river, stream, bridge, moat or tall detached castle tower in this scene. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the local supporting dry ground or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Draw the entire principal building at a deliberately modest size, fully between x=16% and x=82% of the canvas, with its highest point below y=16%. Leave transparent space around its identifying outer silhouette. The supporting terrain and plants continue to the right and bottom edges. Do not crop any part of the main landmark. ",
+  "promptSha256": "e52f47b8db5f9a8c5dd386a779db1970af8d7c174afa2309efd3fdc8f9f633c1",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/ad-andorra-la-vella-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-08d5617d-50de-4d4e-b569-9ddf95257bf4.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-08d5617d-50de-4d4e-b569-9ddf95257bf4.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/ad-andorra-la-vella-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "38fe8bd9782294a1c90171a46c3d1e93e6867d6842cca398a7c2dc4351edfb6d",
+  "savedSha256": "38fe8bd9782294a1c90171a46c3d1e93e6867d6842cca398a7c2dc4351edfb6d",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:16:43.471Z",
+  "toolCallId": "exec-08d5617d-50de-4d4e-b569-9ddf95257bf4",
+  "savedAt": "2026-10-17T07:20:16.894332+00:00"
+}

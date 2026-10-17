@@ -1,0 +1,26 @@
+{
+  "jobId": "tv-vaiaku-landscape",
+  "cityId": "tv-vaiaku",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Vaiaku, Tuvalu: the Vaiaku shoreline on Funafuti Lagoon with its small low civic settlement, with coconut palms and a traditional canoe. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "28a8683f5cbc0a50abeb305f20d12c3bf282bb134187c4ff026dc04d47ac07d6",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/tv-vaiaku-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-24390d15-9801-48ba-9f76-d55f724cb696.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-24390d15-9801-48ba-9f76-d55f724cb696.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/tv-vaiaku-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "fe4002ee5ff197b7062624513e76aaa23914a882b582a094dcc67a1eba45adf0",
+  "savedSha256": "fe4002ee5ff197b7062624513e76aaa23914a882b582a094dcc67a1eba45adf0",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T07:16:33Z",
+  "toolCallId": "exec-24390d15-9801-48ba-9f76-d55f724cb696",
+  "savedAt": "2026-10-17T07:19:11.713869+00:00"
+}

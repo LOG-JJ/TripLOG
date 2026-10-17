@@ -1,0 +1,52 @@
+{
+  "id": "mh-majuro-landscape",
+  "cityId": "mh-majuro",
+  "name": "마주로",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mh-majuro-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mh-majuro-landscape.json",
+  "originalSha256": "8d077903da872a1284e08db95526d49a168550bf730d04e93ab1742e588d46e3",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mh-majuro.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 153260,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "0a1eed69d377bf85e17040cc35de78ea8d86bfb616c737f81cb92839edd074cd",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "bs-nassau-mobile",
+  "cityId": "bs-nassau",
+  "name": "나소",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bs-nassau-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bs-nassau-mobile.json",
+  "originalSha256": "3777b1e90a67db841a9440ffd6deedc9c0eee3450c3b821a8619cb1d2c011816",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bs-nassau-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 130680,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "45630f6fb4c61f9b505a3710f0f64b1b94e73fe60bee1688a3ee2c597902c6ef",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

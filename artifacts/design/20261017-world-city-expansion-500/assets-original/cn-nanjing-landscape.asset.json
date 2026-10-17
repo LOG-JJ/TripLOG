@@ -1,0 +1,52 @@
+{
+  "id": "cn-nanjing-landscape",
+  "cityId": "cn-nanjing",
+  "name": "난징",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/cn-nanjing-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/cn-nanjing-landscape.json",
+  "originalSha256": "1e1b5cec94e6356c9ba25172e9d6418a39eb7f6631c02ee72ddc1d9832dd67f1",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    31,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/cn-nanjing.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 113690,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "2fa878b8477e5e0ce3e46b31ad35951c7de7267a8dd4df2625a6eff10940a239",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

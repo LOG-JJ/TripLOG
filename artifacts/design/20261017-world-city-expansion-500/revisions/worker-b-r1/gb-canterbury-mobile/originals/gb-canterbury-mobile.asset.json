@@ -1,0 +1,52 @@
+{
+  "id": "gb-canterbury-mobile",
+  "cityId": "gb-canterbury",
+  "name": "캔터베리",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-canterbury-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gb-canterbury-mobile.json",
+  "originalSha256": "8cbfc45b2d3860ff617ed9e74593c364da37f776371f0c22757b594bcfc59cf8",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gb-canterbury-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 109300,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "92d4606995aab0145a2273b32e6823dad454668020a195bbddc3074d7865ccf2",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

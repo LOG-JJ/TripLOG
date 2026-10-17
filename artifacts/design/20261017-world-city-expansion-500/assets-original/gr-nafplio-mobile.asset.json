@@ -1,0 +1,52 @@
+{
+  "id": "gr-nafplio-mobile",
+  "cityId": "gr-nafplio",
+  "name": "나플리오",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gr-nafplio-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gr-nafplio-mobile.json",
+  "originalSha256": "c79607e95c81f8e9f699b5726fae7b697098fdea0be16c3f872da59ec7097620",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    41,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gr-nafplio-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 80112,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "59a531ff3f65a671b234379e9c74d235df663733efa74d563d020376c5bfa171",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

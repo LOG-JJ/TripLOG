@@ -1,0 +1,73 @@
+{
+  "jobId": "kr-yangsan-mobile",
+  "reason": "Main landmark right roof edge and outer column were clipped in actual travel-header composition. Preserve the whole identifiable building inside the frame.",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "savedAt": "2026-10-17T05:37:20.888781+00:00",
+  "previousFiles": [
+    {
+      "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yangsan-mobile.json",
+      "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/kr-yangsan-mobile-composition-20261017/kr-yangsan-mobile.job.json",
+      "sha256": "8f6761e748fac9d83b582766597e48145cdab44fde7c711175340b31a56871d2"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-yangsan-mobile.prompt.txt",
+      "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/kr-yangsan-mobile-composition-20261017/kr-yangsan-mobile.prompt.txt",
+      "sha256": "424719d7e1c22729e2d960efcd7caa5e304f2e4ec7584b957357d3da33aea9d0"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yangsan-mobile.png",
+      "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/kr-yangsan-mobile-composition-20261017/kr-yangsan-mobile.png",
+      "sha256": "7db02e2bf606923fc46901a0b5a01c49936b2b10c90364b3160c39156c615604"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yangsan-mobile.json",
+      "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/kr-yangsan-mobile-composition-20261017/kr-yangsan-mobile.json",
+      "sha256": "2a95021dc58ab358e28b82ebc211309b72d13fb0d3955b1eaea757ac1afa66fe"
+    },
+    {
+      "previousPath": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yangsan-mobile.asset.json",
+      "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/kr-yangsan-mobile-composition-20261017/kr-yangsan-mobile.asset.json",
+      "sha256": "5840375f8c8725ff18294fc15baccafe77b7b30c926bc4fb61d8b0c0c67253d9"
+    },
+    {
+      "previousPath": "src/assets/trip-scenes/cities/v5/kr-yangsan-mobile.webp",
+      "archivePath": "artifacts/design/20261017-domestic-city-expansion/revisions/kr-yangsan-mobile-composition-20261017/kr-yangsan-mobile.webp",
+      "sha256": "0fb797028490f347582657c2be84378cdaa31d612a0d137fc2c4c4063f94cf0e"
+    }
+  ],
+  "status": "accepted-after-render-qa",
+  "replacementSourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-3a68614b-3452-41a1-a9ce-b29f0764e764.png",
+  "replacementSourceSha256": "b3caf508fc0aa22700389b68aa346f4141989294103087f97e91ea572108b305",
+  "replacementPromptSha256": "2e1df0317e1cf2a477e1c3da4f2ef4df04e36b67ad5b0b2b8224d2f62f933650",
+  "replacementFiles": [
+    {
+      "path": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yangsan-mobile.png",
+      "sha256": "b3caf508fc0aa22700389b68aa346f4141989294103087f97e91ea572108b305"
+    },
+    {
+      "path": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yangsan-mobile.json",
+      "sha256": "8f89b7f4e0d55fadbb2a3cb8f97829c192d2e57954fd81b841ed45968bda136c"
+    },
+    {
+      "path": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-yangsan-mobile.asset.json",
+      "sha256": "6057bcc22b1dfa9f481581a0586396446355e30deb08e81c8d0e0d88ce22824a"
+    },
+    {
+      "path": "src/assets/trip-scenes/cities/v5/kr-yangsan-mobile.webp",
+      "sha256": "3d19b159585504670557c335da55bd53171fdbb7b13b19df5045aa0814be45b4"
+    }
+  ],
+  "replacedAt": "2026-10-17T05:39:36.113467+00:00",
+  "archiveRepair": "The original job JSON and provenance shared a basename. Restored the exact original job bytes under a distinct .job.json name and matched the SHA256 recorded before changes. All six historical file copies now have distinct names and matching recorded hashes.",
+  "qa": {
+    "viewports": [
+      320,
+      390,
+      599,
+      1440
+    ],
+    "renderResults": "artifacts/tmp/20261017-domestic-city-expansion/worker-a-revised-headers/results.json",
+    "visualFinding": "Main landmark roof tips, outer pillars and overall building silhouette are visible inside the actual header. Right and bottom foreground connect to header edges."
+  }
+}

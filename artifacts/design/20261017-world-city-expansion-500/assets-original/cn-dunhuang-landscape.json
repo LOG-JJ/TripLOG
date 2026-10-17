@@ -1,0 +1,26 @@
+{
+  "jobId": "cn-dunhuang-landscape",
+  "cityId": "cn-dunhuang",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Dunhuang, China: the red multi-storey facade at the Mogao Caves set against the ochre cliff, with low desert slopes. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "3c69c56384fdfed9015ff3f73bdcbe2d8722a94c186011234855107199e00c77",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/cn-dunhuang-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-1cfbf1a0-536c-4175-b417-40ed7ffcc85a.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-1cfbf1a0-536c-4175-b417-40ed7ffcc85a.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/cn-dunhuang-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "920453781fb040f683f2594dd6d958d680c64b3bc719f4d53a59f9114cb41fd2",
+  "savedSha256": "920453781fb040f683f2594dd6d958d680c64b3bc719f4d53a59f9114cb41fd2",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:38:05.362Z",
+  "toolCallId": "exec-1cfbf1a0-536c-4175-b417-40ed7ffcc85a",
+  "savedAt": "2026-10-17T06:39:33.238609+00:00"
+}

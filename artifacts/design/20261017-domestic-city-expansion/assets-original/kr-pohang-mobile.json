@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-pohang-mobile",
+  "cityId": "kr-pohang",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Pohang, South Korea: Homigot's monumental Hand of Harmony rising from the coastal water, with the five fingers clearly silhouetted above the sea. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering.",
+  "promptSha256": "8050e47ff38dc60182fd12caf8b412d854fb9c77d866882f24d98e835be42826",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-pohang-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-206329b1-afa2-477a-8cae-a2261558f1d4.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-206329b1-afa2-477a-8cae-a2261558f1d4.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-pohang-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "18a6f3e02029d738c9bf226fffe402f881050a03e27aa847eaa3272a0a0333ff",
+  "savedSha256": "18a6f3e02029d738c9bf226fffe402f881050a03e27aa847eaa3272a0a0333ff",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:25:08Z",
+  "toolCallId": "exec-206329b1-afa2-477a-8cae-a2261558f1d4",
+  "savedAt": "2026-10-17T05:25:32.644085+00:00"
+}

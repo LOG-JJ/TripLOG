@@ -1,0 +1,52 @@
+{
+  "id": "ca-halifax-mobile",
+  "cityId": "ca-halifax",
+  "name": "핼리팩스",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ca-halifax-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ca-halifax-mobile.json",
+  "originalSha256": "1b152dd282bb07db7c9e942d05a1c58fd4d0f16877e37f050a88af5518e3aa96",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    80,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ca-halifax-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 100306,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "47f41304bdda7db0406bb14c0022c14b460766d6b23fe45bf1467765c36a2feb",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

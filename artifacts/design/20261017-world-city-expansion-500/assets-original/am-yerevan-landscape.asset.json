@@ -1,0 +1,52 @@
+{
+  "id": "am-yerevan-landscape",
+  "cityId": "am-yerevan",
+  "name": "예레반",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/am-yerevan-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/am-yerevan-landscape.json",
+  "originalSha256": "2362acdd0f8fbdcb7b092cbd1088fc70b84fb6075b9e26e98ac4c5bffbcabc10",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    17,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/am-yerevan.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 112940,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "486175010e7c9331f5e14dbbf4c2886a3c04e51a9fb9c3ecbcfe651f909e75dc",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

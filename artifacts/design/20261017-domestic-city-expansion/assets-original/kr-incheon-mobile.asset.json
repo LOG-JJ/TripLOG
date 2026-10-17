@@ -1,0 +1,51 @@
+{
+  "id": "kr-incheon-mobile",
+  "cityId": "kr-incheon",
+  "name": "인천",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "광역시급",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-incheon-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-incheon-mobile.json",
+  "originalSha256": "fc24dc23c21d6ffa69762e635beb04ae44f0fd46004f030f9dd24e3b0f806222",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    15,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-incheon-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 78342,
+  "assetSha256": "713ddace5b5a80a40901f1e14f8f96312473a6fff29772c129788ed02d3bb4c0",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

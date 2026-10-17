@@ -1,0 +1,51 @@
+{
+  "id": "kr-nonsan-mobile",
+  "cityId": "kr-nonsan",
+  "name": "논산",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "충남",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-nonsan-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-nonsan-mobile.json",
+  "originalSha256": "06e83c6359765a23b1fbd94a64ed7b06777291b2395f054899cf5789c325dafe",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    22,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-nonsan-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 103308,
+  "assetSha256": "0c3d5619fd2a932931a43553b5176ed1b2585efe7a144a198a4b4642f2c04ff0",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

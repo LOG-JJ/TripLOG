@@ -1,0 +1,52 @@
+{
+  "id": "vn-sa-pa-mobile",
+  "cityId": "vn-sa-pa",
+  "name": "사파",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "asia",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/vn-sa-pa-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/vn-sa-pa-mobile.json",
+  "originalSha256": "3d08003623ee036d0da61f4d910e89347fe16421b7430007db47918243891857",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    32,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/vn-sa-pa-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 107904,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "4befb6190dd5ffeee41adaac9eb089c1c97bb2f336a64d3578d55f8ec12eeecb",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

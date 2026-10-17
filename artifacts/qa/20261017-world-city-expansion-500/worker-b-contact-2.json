@@ -1,0 +1,175 @@
+{
+  "count": 10,
+  "records": [
+    {
+      "id": "it-ravenna-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/it-ravenna.webp",
+      "sourceSha256": "6a4d43f37e54bc5230b2db57f30a6a46df8e6ffb3ddc5c1a29436fc4680d101f",
+      "assetSha256": "df27c19968f5c3845f413ddcc61d800829d2d70d35a985ebd6c36a2df93f2a08",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        20,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "it-ravenna-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/it-ravenna-mobile.webp",
+      "sourceSha256": "69c60b7c8d62969a914cb25b3bf5ec7f5ef7bf4d3316e331b5432da95616749b",
+      "assetSha256": "9c81af19124f3636c36c7a01a3e9a0f963e53c42331223b8b8c1b88148b134cd",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        44,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "es-salamanca-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/es-salamanca.webp",
+      "sourceSha256": "59d8aa78dcf153c7b674ffae98d14e842c3b7980dbebebf0e2e53e5497df6245",
+      "assetSha256": "475577a9c96ef3d151898a386f377ccec4f5e0ff54a7c76d7dcbf71503294fa7",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        72,
+        16,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "es-salamanca-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/es-salamanca-mobile.webp",
+      "sourceSha256": "8452ebcf5bf4f5e9e534409b1d7edeeb1ba452bf0f9aa8be79debb1d6d1b0779",
+      "assetSha256": "68260a5f1b2111c10f0611d2e31ae10b9032c6260a57d682e1e93e9b05882551",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        8,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "de-trier-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/de-trier.webp",
+      "sourceSha256": "fb28267caa6fac4d734e6f47daac984c0d722d8b22b209e196c26a856a065417",
+      "assetSha256": "8df2bcc48a734448d3816d2ee110d9cd15319b5e8d2a6ddfade483f00340c965",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        123,
+        66,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "de-trier-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/de-trier-mobile.webp",
+      "sourceSha256": "5281ef5bc7f9ca391852057dbb00a8edfaa2aa5eb83c634d76a7b02fc3b671e8",
+      "assetSha256": "2614ab8637815f02b4494d392517a11346511c082bb409af0b1b3bf5c5270dbe",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        80,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "ch-lugano-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ch-lugano.webp",
+      "sourceSha256": "2ad75aad103404042d3a50b2435c017ef25409c261046eb84f3ba0f0aa1b3f7a",
+      "assetSha256": "ff2f693043c12609ebe416fd5b83f1aaa721f8e1447fea84a78c39726a025849",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        12,
+        45,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "ch-lugano-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ch-lugano-mobile.webp",
+      "sourceSha256": "b0c6b9b82605996c2b2f792df8fc30daf46227b6009291c60c874c0d0a089d05",
+      "assetSha256": "4fc2670ee38d556c50ea0d249801115b2cea5176449b1f0c5e8631553f84d1c3",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        63,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "gr-corfu-town-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/gr-corfu-town.webp",
+      "sourceSha256": "284fc22d5003f072d032c7da16aa59f2dd5ce98df12e6fce235515ca1e96bd10",
+      "assetSha256": "3e840c81cfc481443f22aa53ce07f839b3fffe8d094888273e36d4cdc3b140a2",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        51,
+        10,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "gr-corfu-town-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/gr-corfu-town-mobile.webp",
+      "sourceSha256": "89b4f272838803f8d2df78369c49321807610a88c9445101845f79911bcdcf8e",
+      "assetSha256": "680ed88b4bb3199e9767fe70c058e86aabb9b9e595010fb5c2d77f3bf3e21a8e",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        63,
+        480,
+        600
+      ],
+      "originalEquality": true
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-gwacheon-mobile",
+  "cityId": "kr-gwacheon",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Gwacheon, South Korea: the Gwacheon National Science Museum alone, with its broad low contemporary main building, aircraft-inspired swept roof form, glass entrance and landscaped forecourt. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat. Depict only the science museum and its own grounds; do not combine it with Seoul Grand Park or an amusement park.",
+  "promptSha256": "6f04cb1d28a199c455b07cf91e6c1232cd7f2d8240f1a5fe1cb657740e848a18",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-gwacheon-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482e-26fd-7a32-8994-05ecac564cdd\\exec-fda7c735-1f84-4692-be31-6d7cca7a05a3.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482e-26fd-7a32-8994-05ecac564cdd/exec-fda7c735-1f84-4692-be31-6d7cca7a05a3.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-gwacheon-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "c8ffed444ccec1eec24446b3694db6af858ac75996f5ec10f6ec198f9c44f520",
+  "savedSha256": "c8ffed444ccec1eec24446b3694db6af858ac75996f5ec10f6ec198f9c44f520",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:11:04Z",
+  "toolCallId": "exec-fda7c735-1f84-4692-be31-6d7cca7a05a3",
+  "savedAt": "2026-10-17T05:11:59.865841+00:00"
+}

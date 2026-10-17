@@ -1,0 +1,52 @@
+{
+  "id": "fm-kolonia-landscape",
+  "cityId": "fm-kolonia",
+  "name": "콜로니아",
+  "kind": "town",
+  "variant": "landscape",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/fm-kolonia-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/fm-kolonia-landscape.json",
+  "originalSha256": "d51c7a1240dedf2c7cdb3fc305a42968597ad0bd28a1965929e63d802e938475",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/fm-kolonia.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 159796,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "65019dc2445351e80cf30c5d1b740eaec0db05151b4597cba1812b740934f487",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

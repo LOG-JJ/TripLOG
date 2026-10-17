@@ -1,0 +1,52 @@
+{
+  "id": "vu-port-vila-mobile",
+  "cityId": "vu-port-vila",
+  "name": "포트빌라",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/vu-port-vila-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/vu-port-vila-mobile.json",
+  "originalSha256": "2782d87e444ec8491dbf10148c100760574bf3800298983724c56a9bf0a7a24e",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/vu-port-vila-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 117006,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "5ea77e3a11adedf05c1dc093a3cc8aa20a4ebdf71216ea3b08125a98a7718e58",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

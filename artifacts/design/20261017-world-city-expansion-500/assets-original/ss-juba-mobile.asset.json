@@ -1,0 +1,52 @@
+{
+  "id": "ss-juba-mobile",
+  "cityId": "ss-juba",
+  "name": "주바",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ss-juba-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ss-juba-mobile.json",
+  "originalSha256": "d3ab813c000304ebaa68dd2c1e80a506a4f444b3da1f0aaf6312d54195dac12d",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    44,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ss-juba-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 89872,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "7dc0d9fd3bbe0c72ad060e3e2ae444635dd0b32768ef02c97170ec7785bd31b8",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

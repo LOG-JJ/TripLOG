@@ -1,0 +1,52 @@
+{
+  "id": "ro-sighisoara-landscape",
+  "cityId": "ro-sighisoara",
+  "name": "시기쇼아라",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Europe",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ro-sighisoara-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ro-sighisoara-landscape.json",
+  "originalSha256": "794adaaf974db995ee7c5183719d37d698a30f04af36006632dd9f36aaa9eeae",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ro-sighisoara.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 96302,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "7684c296f02e85e876b19e78b6e11a33acf477b72f284fcc0492e4dd7a00f656",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

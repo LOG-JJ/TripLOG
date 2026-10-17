@@ -1,0 +1,51 @@
+{
+  "id": "kr-sangju-mobile",
+  "cityId": "kr-sangju",
+  "name": "상주",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "경북",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sangju-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-sangju-mobile.json",
+  "originalSha256": "41bea1e4daa1ce9c2b3c0c5f7e9bca6d18e20d5519a98301e29bb0eb89c6670d",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-sangju-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 103500,
+  "assetSha256": "4ec777b36b1ee934cb09b0fe4734c05e42674affc6d5d1c1373020e4a727041b",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

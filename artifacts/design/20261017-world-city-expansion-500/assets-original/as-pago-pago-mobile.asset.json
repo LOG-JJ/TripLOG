@@ -1,0 +1,52 @@
+{
+  "id": "as-pago-pago-mobile",
+  "cityId": "as-pago-pago",
+  "name": "파고파고",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/as-pago-pago-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/as-pago-pago-mobile.json",
+  "originalSha256": "3a20f5fafc0b146edc1d9bc83e4a923069c545554aefefa34ab8e0aade105af5",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    39,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/as-pago-pago-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 80286,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "c6767f41b9036e35679ad407d3f60a7d45c8afb10ffcbb84d194b47e8d828e55",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

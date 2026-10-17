@@ -1,0 +1,52 @@
+{
+  "id": "rw-kigali-landscape",
+  "cityId": "rw-kigali",
+  "name": "키갈리",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/rw-kigali-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/rw-kigali-landscape.json",
+  "originalSha256": "12c0e31329f7c0dae3b3927d7213bf1d3a312ea9da47021f460dfa43a219d1f3",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    11,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/rw-kigali.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 113126,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "e1f6cf4a1653f2ba137a8714d44c672c45f695cca723f6123be38bf9a8237004",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

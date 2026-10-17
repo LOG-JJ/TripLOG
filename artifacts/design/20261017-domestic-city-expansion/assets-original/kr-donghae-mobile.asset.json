@@ -1,0 +1,51 @@
+{
+  "id": "kr-donghae-mobile",
+  "cityId": "kr-donghae",
+  "name": "동해",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "강원",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-donghae-mobile.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-donghae-mobile.json",
+  "originalSha256": "cbfe552b8b77b7b0d591d89dbb1aa606d8c07f442acb40c6cb8e705fac0f9540",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    19,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-donghae-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 95696,
+  "assetSha256": "71e8b256b1a61e29d3f5c1b430c4f292a09024f8e3befdd741b6ec23c1382043",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

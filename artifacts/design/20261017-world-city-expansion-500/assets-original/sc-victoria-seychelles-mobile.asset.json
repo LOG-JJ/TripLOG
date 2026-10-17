@@ -1,0 +1,52 @@
+{
+  "id": "sc-victoria-seychelles-mobile",
+  "cityId": "sc-victoria-seychelles",
+  "name": "빅토리아(세이셸)",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/sc-victoria-seychelles-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/sc-victoria-seychelles-mobile.json",
+  "originalSha256": "1fe645d82948db69a7e83986e75877b227277584dd2372a31ec4c6aa9ebea99c",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/sc-victoria-seychelles-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 119826,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "a2e2e7f2f3976ac1cf06b5ef76f4d95b82c975dded3899e2d574e776e913e6f9",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

@@ -1,0 +1,26 @@
+{
+  "jobId": "nc-noumea-mobile",
+  "cityId": "nc-noumea",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Noumea, New Caledonia: the tall curved timber-shell structures of the Tjibaou Cultural Centre, with the lagoon and mangrove greenery. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a tall 4:5 portrait composition for a 480 x 600 image on the right of a mobile travel header. Arrange the same local subject vertically in a compact composition, with the main landmark large and readable in the middle-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "2339b4de2dbe2e3ded2047332c20b6d2eb5f8e20a81c01b631d1d076312fcc4f",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/nc-noumea-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-9435-78f1-94cb-c2d07e86bcd9\\exec-e0d96390-dd8a-4ef2-a88e-d29561230498.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-9435-78f1-94cb-c2d07e86bcd9/exec-e0d96390-dd8a-4ef2-a88e-d29561230498.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/nc-noumea-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "b56687cac8724c5fb323e3f71cc68a19bbb8151a6646203cff76f82e8778b847",
+  "savedSha256": "b56687cac8724c5fb323e3f71cc68a19bbb8151a6646203cff76f82e8778b847",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:57:33.381Z",
+  "toolCallId": "exec-e0d96390-dd8a-4ef2-a88e-d29561230498",
+  "savedAt": "2026-10-17T06:58:32.852039+00:00"
+}

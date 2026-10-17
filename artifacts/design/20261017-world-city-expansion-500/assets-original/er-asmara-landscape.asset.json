@@ -1,0 +1,52 @@
+{
+  "id": "er-asmara-landscape",
+  "cityId": "er-asmara",
+  "name": "아스마라",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/er-asmara-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/er-asmara-landscape.json",
+  "originalSha256": "00317265b1b6ca07f38a7856bc0665443a67e1da656347c03249c15ea22d5237",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    23,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/er-asmara.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 102126,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "f0bfabad6db9046408030e42f13a4395344d966fdb76405a7ccfb08c21d371bc",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

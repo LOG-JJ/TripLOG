@@ -1,0 +1,57 @@
+{
+  "id": "bl-gustavia-mobile",
+  "cityId": "bl-gustavia",
+  "name": "구스타비아",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "카리브해",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/bl-gustavia-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/bl-gustavia-mobile.json",
+  "originalSha256": "d527446071ea8a62cc366bad102c69a849b1e07d72d02c997d67dfb715f6d8eb",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    254
+  ],
+  "originalAlphaBounds": [
+    0,
+    4,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/bl-gustavia-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 111930,
+  "technicalEmptyEdgeRefits": [
+    [
+      0,
+      5
+    ]
+  ],
+  "assetSha256": "d31189945517bce6bf409c302131a867569a4420a85ca60446f53009645f60ac",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

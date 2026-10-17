@@ -1,0 +1,72 @@
+{
+  "id": "vu-port-vila-mobile",
+  "cityId": "vu-port-vila",
+  "name": "포트빌라",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/vu-port-vila-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/vu-port-vila-mobile.json",
+  "originalSha256": "97957b7105cd031b39167e3fd5586ea30ede9d9a297457c215fac3a96b478544",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    55,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/vu-port-vila-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 111432,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "8c9ceb6a2d8418dea827e4f7931f99aaf19e9fbd97b4db725eb3700cc5303113",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa",
+  "technicalFaintEdgeRefit": {
+    "checkedAt": "2026-10-17T07:38:42.127130+00:00",
+    "alphaThreshold": 8,
+    "beforeGaps": [
+      0,
+      11
+    ],
+    "afterGaps": [
+      0,
+      0
+    ],
+    "refits": [
+      [
+        0,
+        11
+      ]
+    ],
+    "source": "original PNG preserved",
+    "archive": "artifacts\\design\\20261017-world-city-expansion-500\\revisions\\final-faint-edge-r1"
+  }
+}

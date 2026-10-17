@@ -1,0 +1,26 @@
+{
+  "jobId": "dm-roseau-landscape",
+  "cityId": "dm-roseau",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Roseau, Dominica: the historic colonial building of the Dominica Museum, with the old Roseau waterfront. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting foreground specific to this place should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border. Strict scene boundaries: depict only the local subjects named in the destination description. Do not add a large body of water, bridge, boats or ships unless they are explicitly named in that description; use dry supporting ground for scenes that do not name water. Keep the rightmost identifying outline of the landmark at least 8 percent of the canvas width away from the right edge, and keep every roof tip, tower top, dome, statue and finial at least 5 percent of the canvas height below the top edge. Only supporting foreground may reach the right and bottom edges. Preserve the whole landmark silhouette.",
+  "promptSha256": "4d738f5ce115a5f6eb1b6fdfe1389ed82cc44cb7c604f7b2f5367126f82a749b",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/dm-roseau-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482d-c5dd-7722-8844-40fe21b57170\\exec-430566da-2722-4b4d-a6f5-8b63c6d0c2fe.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482d-c5dd-7722-8844-40fe21b57170/exec-430566da-2722-4b4d-a6f5-8b63c6d0c2fe.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/dm-roseau-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "353e3f5bee5ce42fbb91b420650247a64f3e508467f2c983f211adace14fbea6",
+  "savedSha256": "353e3f5bee5ce42fbb91b420650247a64f3e508467f2c983f211adace14fbea6",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:21:01.495Z",
+  "toolCallId": "exec-430566da-2722-4b4d-a6f5-8b63c6d0c2fe",
+  "savedAt": "2026-10-17T06:24:51.054279+00:00"
+}

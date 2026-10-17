@@ -1,0 +1,52 @@
+{
+  "id": "ws-apia-landscape",
+  "cityId": "ws-apia",
+  "name": "아피아",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "oceania",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/ws-apia-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/ws-apia-landscape.json",
+  "originalSha256": "8d71536a245b56c00e4cd4b62c32a2dfd49cb4c94fb44b9161717aae35de13c9",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    0,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/ws-apia.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 134468,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "73a0c24e1c9cb09c7f7070a1610772b60f9635f98975400c639bdcd70af1790a",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

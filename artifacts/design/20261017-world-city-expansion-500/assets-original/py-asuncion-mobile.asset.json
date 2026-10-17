@@ -1,0 +1,52 @@
+{
+  "id": "py-asuncion-mobile",
+  "cityId": "py-asuncion",
+  "name": "아순시온",
+  "kind": "city",
+  "variant": "mobile",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/py-asuncion-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/py-asuncion-mobile.json",
+  "originalSha256": "5b42841233d14b2b300518bb4c2a36e6c1f5ff7fd2ece2af5f7aa3853efbd25e",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    21,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/py-asuncion-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 96278,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "56077a7d404ca8ebcc1665493dbdf93983e2e9c50d0ddce40a2c0d9dfc71c416",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

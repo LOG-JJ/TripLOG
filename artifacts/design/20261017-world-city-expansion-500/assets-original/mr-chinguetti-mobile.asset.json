@@ -1,0 +1,52 @@
+{
+  "id": "mr-chinguetti-mobile",
+  "cityId": "mr-chinguetti",
+  "name": "칭게티",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "africa",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/mr-chinguetti-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/mr-chinguetti-mobile.json",
+  "originalSha256": "234dc100dc2143041bec057882ae2ab7192f80684fa340c45f041a4eea4cc767",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    37,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/mr-chinguetti-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 90910,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "be5bfe5e0fc33922722406fd5928b2348af5c3de7474f6fb66db0fcd9a9a0327",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

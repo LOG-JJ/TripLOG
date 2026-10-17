@@ -1,0 +1,175 @@
+{
+  "count": 10,
+  "records": [
+    {
+      "id": "by-nesvizh-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/by-nesvizh.webp",
+      "sourceSha256": "add2ceb8c9420c63d6f8972e92cb1ada0437fef904296c09ab42ac140fda62ac",
+      "assetSha256": "dfa46f15cae2b9bfa6d838a590257a43c9fc8d1681dfd8455906a1065b4f62d0",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        10,
+        10,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "by-nesvizh-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/by-nesvizh-mobile.webp",
+      "sourceSha256": "582bdee853c132e00d32cd3be8c5b2fabba6db5fe630ecb5c883c636cb365844",
+      "assetSha256": "d613943253081b2b420f1897fee5259cb48744d5c16dc8cdbb899b476f8f67e3",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        11,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "md-chisinau-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/md-chisinau.webp",
+      "sourceSha256": "3832c1345fa9093286057c86731435e01b7d1b4366b2b5e77a3f987414fcd0a1",
+      "assetSha256": "d3a3dadbfd3651e86549488edb8137f0ea653e283e3e89c5db145cb4471eb45f",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        7,
+        62,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "md-chisinau-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/md-chisinau-mobile.webp",
+      "sourceSha256": "9a725f4fdc806f262c74b87cd24a15f3430201933541b6da6af087b793bbd8e0",
+      "assetSha256": "ce63895501c023dde5ac4ace085a7c41545cd1427befc8ba9e3971a1d4aac37a",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        71,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "ua-lviv-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ua-lviv.webp",
+      "sourceSha256": "e22bc584ef617fe66267b961469d8f20aac3d31a98542121e1c2f0f6bffc065a",
+      "assetSha256": "1651684f466702677ec2755de4988a7b7a968a7482328b24fae68c922e2bc613",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        12,
+        0,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "ua-lviv-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ua-lviv-mobile.webp",
+      "sourceSha256": "fe524f1542c8a14fe00d263ec4dc0b1898349b37907437df0da6044133609d9f",
+      "assetSha256": "ef94aa4f5b6771bc4cd241b5c52742578cbc1f5fa74072fb4fec71064ed6892a",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        13,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "gb-canterbury-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/gb-canterbury.webp",
+      "sourceSha256": "86da2e347458f10e35f6917fa1e4bbd49b2a1395ed2cfb37d1c25386d137f683",
+      "assetSha256": "a0f9f47d8a382f346fbff55ae9ac686ab2e6023f267e4801b11114b87524f78b",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        31,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "gb-canterbury-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/gb-canterbury-mobile.webp",
+      "sourceSha256": "38d05ee233537338bba4e553921acfc39d1d8c55ea5c21354e87659b7dca6bc5",
+      "assetSha256": "e8440afa526d32df8cf161ef147bf6ccaaa5b1a1fae68047e15e360fed5701bb",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "fr-arles-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/fr-arles.webp",
+      "sourceSha256": "443e00478409fea9d35d742a1b638f9b233f841402b305608e1e5018b1c48e1f",
+      "assetSha256": "19a26ee660e7d05994d24af358f966ae4c35a264b59c8319123c18b179747a77",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        52,
+        6,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "fr-arles-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/fr-arles-mobile.webp",
+      "sourceSha256": "984116da06d1838b1c687653c20f5d9fa38049ff513c1ad1cecedbfeb8bf78e2",
+      "assetSha256": "342a2a4d9a5e278ef12cd95a0024bae9450e92fe9bccbc6e0720536ec05eb0f3",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        52,
+        480,
+        600
+      ],
+      "originalEquality": true
+    }
+  ]
+}

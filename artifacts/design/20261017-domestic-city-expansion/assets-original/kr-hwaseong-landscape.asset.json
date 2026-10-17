@@ -1,0 +1,51 @@
+{
+  "id": "kr-hwaseong-landscape",
+  "cityId": "kr-hwaseong",
+  "name": "화성",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "경기",
+  "original": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-hwaseong-landscape.png",
+  "provenance": "artifacts/design/20261017-domestic-city-expansion/assets-original/kr-hwaseong-landscape.json",
+  "originalSha256": "d0df2559434b6a0939ad0d72fc1d812adab642dc84e0f6fbb6b8dc1dd556d8a9",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    18,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v5/kr-hwaseong.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 82430,
+  "assetSha256": "d0251773716cc0037526d200bae0a592496ff07c66353af0dda63f509144a42c",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

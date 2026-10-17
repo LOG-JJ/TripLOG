@@ -58,8 +58,7 @@
     itineraryCopying = !editingItineraryId && Boolean(draft.copying);
     selectedPlaceCandidate = draft.candidate || null;
     setVoucherFile(draft.voucherFile || null, draft.voucherFileName || null);
-    els.ticketFileNameDisplay.textContent = currentVoucherFileName || '선택된 파일 없음';
-    els.ticketFileResetBtn.style.display = currentVoucherFileName ? 'inline-flex' : 'none';
+    syncVoucherFileUi();
     [els.itineraryDaySelect, els.itineraryThemeSelect, els.itineraryTransSelect].forEach(input => syncCustomSelect(input));
     [els.itineraryTimeInput, els.itineraryEndTimeInput].forEach(input => syncCustomTimePicker(input));
     show({ edit: true, previewMap: false });

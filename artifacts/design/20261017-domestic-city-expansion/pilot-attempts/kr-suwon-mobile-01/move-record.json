@@ -1,0 +1,31 @@
+{
+  "jobId": "kr-suwon-mobile",
+  "attempt": 1,
+  "reason": "Unsupported waterway in front of Hwaseomun; retain exact first attempt before approved subject correction",
+  "movedAt": "2026-10-17T05:04:59.2828662Z",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-bb01278a-6445-40c3-811e-9a08309cd3be.png",
+  "toolOriginalUntouched": true,
+  "sha256Verified": true,
+  "files": [
+    {
+      "previousPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\assets-original\\kr-suwon-mobile.png",
+      "archivePath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\pilot-attempts\\kr-suwon-mobile-01\\kr-suwon-mobile.png",
+      "sha256": "007b62776427abe9737e662176a69fdcaaec590aaa4537203d989a8d8e79afe1"
+    },
+    {
+      "previousPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\assets-original\\kr-suwon-mobile.json",
+      "archivePath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\pilot-attempts\\kr-suwon-mobile-01\\kr-suwon-mobile.json",
+      "sha256": "9cbae42366f50735a53a82d1e3369f92eed19d7b8df88c5db13c6bd22c83396c"
+    },
+    {
+      "previousPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\assets-original\\kr-suwon-mobile.asset.json",
+      "archivePath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\pilot-attempts\\kr-suwon-mobile-01\\kr-suwon-mobile.asset.json",
+      "sha256": "6303d8ba8d2a51c8c34df944ebcaa9d8aea662cf33793d3586747c41703fa5f6"
+    },
+    {
+      "previousPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\src\\assets\\trip-scenes\\cities\\v5\\kr-suwon-mobile.webp",
+      "archivePath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261017-domestic-city-expansion\\pilot-attempts\\kr-suwon-mobile-01\\kr-suwon-mobile.webp",
+      "sha256": "dfb4e565f9dab37622f0c091e8163b765c9906b4b387c7446cd991567d24560f"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "pm-saint-pierre-mobile",
+  "cityId": "pm-saint-pierre",
+  "name": "생피에르",
+  "kind": "town",
+  "variant": "mobile",
+  "group": "북대서양",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/pm-saint-pierre-mobile.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/pm-saint-pierre-mobile.json",
+  "originalSha256": "ca41dc0e7762a82485bce70db697c6e57428d6ff0cf165c9e33ae1165e5662bb",
+  "sourceSize": [
+    1122,
+    1402
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    53,
+    1122,
+    1402
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/pm-saint-pierre-mobile.webp",
+  "assetSize": [
+    480,
+    600
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 66510,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "1d0fa85f5535d12405e6e429f8d8ae5ee3649ff7ed8e4471e1a2f7f4bcba1468",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}

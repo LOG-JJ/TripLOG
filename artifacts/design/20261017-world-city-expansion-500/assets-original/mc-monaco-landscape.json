@@ -1,0 +1,26 @@
+{
+  "jobId": "mc-monaco-landscape",
+  "cityId": "mc-monaco",
+  "variant": "landscape",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone destination illustration of Monaco, Monaco: the Prince's Palace on the Rock of Monaco, with the Mediterranean harbour. Use TripLOG's simple hand-drawn travel illustration style: bold nearly uniform dark navy outlines, broad uncomplicated shapes, flat pale sky blue, soft green and sandy yellow colors with restrained local accents, sparse light pencil marks and minimal shading. Keep architectural and foliage detail sparse enough to read at a small header size. No photorealistic rendering, 3D effects, dense hatching, watercolor washes or glossy reflections. Use a wide 5:3 landscape composition for an 800 x 480 image on the right of a travel header. Spread the scene across the middle-right and bottom-right. Use a transparent background with quiet upper-left space and a natural irregular left silhouette. Keep the complete identifying outline of the main landmark inside the frame, with breathing room around its top and sides; do not cut roof tips, tower tops, domes, statues or bridge endpoints. Only the supporting ground, water or foliage should meet the right and bottom canvas edges, without empty padding there. Artwork only: no text, signs, labels, logos, interface, frame or border.",
+  "promptSha256": "155eacc6dc2004a867045cf15f7702554f7300e7ed9f721deef314f35957eab6",
+  "promptFile": "artifacts/design/20261017-world-city-expansion-500/jobs/mc-monaco-landscape.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-2b282d61-099f-40e5-b2bd-a301a8fd1272.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-2b282d61-099f-40e5-b2bd-a301a8fd1272.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-world-city-expansion-500/assets-original/mc-monaco-landscape.png",
+  "actualDimensions": [
+    1619,
+    971
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "9ec172764b8d1dbf8405b93dd95d28b0d5681ab4d1015ccca024043c228ea31b",
+  "savedSha256": "9ec172764b8d1dbf8405b93dd95d28b0d5681ab4d1015ccca024043c228ea31b",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T06:05:24Z",
+  "toolCallId": "exec-2b282d61-099f-40e5-b2bd-a301a8fd1272",
+  "savedAt": "2026-10-17T06:08:59.018488+00:00"
+}

@@ -1,0 +1,175 @@
+{
+  "count": 10,
+  "records": [
+    {
+      "id": "ca-st-johns-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/ca-st-johns.webp",
+      "sourceSha256": "eff16d2a35c691e6789364ab4aea0e9cdb5fd45f7ab8478e34211d4f8008d24b",
+      "assetSha256": "a8f1ee4404a3c4a411e8b162ed91a4c8450524b07f1c43b36ed950a8e3e49190",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "ca-st-johns-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/ca-st-johns-mobile.webp",
+      "sourceSha256": "1bd31441da989c33ff5d6666e599ab888eaea98cbccf648589c8332a1e116f51",
+      "assetSha256": "d1263672b8738045b80902b1ca16d30b1973e4b503344d214de7ba4046cb8396",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        30,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "mx-puebla-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/mx-puebla.webp",
+      "sourceSha256": "cb797c5e32be0c7629c22522fecd3afd0a06248e3fa44bb1edd295f1c53ee428",
+      "assetSha256": "e842117686ef0c1135e09d5f07063b8ceb5ad1774de1df0754ce8614e6792b78",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        11,
+        18,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "mx-puebla-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/mx-puebla-mobile.webp",
+      "sourceSha256": "8721e28b0970a47ac39051f15667564c8f50543f25177fac2d61dd18bc70185a",
+      "assetSha256": "81ba52f9269ccc3712e7fc39eb6b3c2863b45aee37be74a65f5ef89ef4efeee9",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        43,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "br-ouro-preto-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/br-ouro-preto.webp",
+      "sourceSha256": "4a941eb550bfe43f7b95edf8726fad2768ab3ea0ccedfec714d93da99f2dc50d",
+      "assetSha256": "a71d1ae48fa46a57e422db2ccec27a4b1adf198c11dcaae6491c69a054bf42e8",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        4,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "br-ouro-preto-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/br-ouro-preto-mobile.webp",
+      "sourceSha256": "e4fbf22247e07cdba01d537bc3717cb0957555823ae2ca8e235247e210fb2460",
+      "assetSha256": "8750138b8cc41823d96ed603f5d5d5a0fbc8ce5ae19b3ac6e969e6d7cc7d1e35",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "pe-arequipa-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/pe-arequipa.webp",
+      "sourceSha256": "5e7cb8769d3e9d3e72aa8dfbf9d103bb2570d32591bfad935fdfad36a070db70",
+      "assetSha256": "a311acf2848668420f6ed2659386229a4e40a6816d5c380ca2df009e5333f628",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        0,
+        23,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "pe-arequipa-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/pe-arequipa-mobile.webp",
+      "sourceSha256": "7fdd81ef2e367616d002524a86ef6401529c32117964fa888f60c084a647a271",
+      "assetSha256": "2aae7b03f6cfee6fc8fd74a3715ff20ea619f2e4d76c050b02c71f7065ff7397",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        28,
+        480,
+        600
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "cu-trinidad-landscape",
+      "asset": "src/assets/trip-scenes/cities/v6/cu-trinidad.webp",
+      "sourceSha256": "510dbc83b3d7b934cebc9e02f0953bc364cedb39c132b550a6498b581d7686ee",
+      "assetSha256": "a84ca1e07d38260ef4cd4eed4d744494b63726a61bd65f6064c4c7055d2c8764",
+      "size": [
+        800,
+        480
+      ],
+      "alphaBounds": [
+        116,
+        30,
+        800,
+        480
+      ],
+      "originalEquality": true
+    },
+    {
+      "id": "cu-trinidad-mobile",
+      "asset": "src/assets/trip-scenes/cities/v6/cu-trinidad-mobile.webp",
+      "sourceSha256": "75d7e4d16009dd0358ff5a20a0509616af00080b2a5ebb6845a8057093a3f88a",
+      "assetSha256": "603b0e736162a5c02208a50d76c682985ac19dcb93f3bea25fd783dae7502779",
+      "size": [
+        480,
+        600
+      ],
+      "alphaBounds": [
+        0,
+        21,
+        480,
+        600
+      ],
+      "originalEquality": true
+    }
+  ]
+}

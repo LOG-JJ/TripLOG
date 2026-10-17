@@ -1,0 +1,26 @@
+{
+  "jobId": "kr-cheonan-mobile",
+  "cityId": "kr-cheonan",
+  "variant": "mobile",
+  "generationMode": "built-in image_gen, text-to-image",
+  "imageInputs": [],
+  "transparentBackgroundRequested": true,
+  "prompt": "Create one standalone hand-drawn destination illustration of Cheonan, South Korea: the Independence Hall of Korea, with the House of the People as a broad monumental hall under one long gray Korean gabled tiled roof, a row of pale columns and an open paved approach, accompanied by the distant Monument to the Nation formed by two tall slim pale stone uprights. Use bold clean uniform dark navy ink outlines, simplified flat-color travel cartoon, broad rounded shapes, a small restrained pastel palette, very sparse pencil accents, minimal shading, clearly readable at a small header size; no detailed architectural hatching, realistic water reflections, watercolor washes or photographic rendering. Favor pale flat cyan, fresh green and sandy yellow, with restrained local accent colors where the named landmark requires them. Use a tall 4:5 composition for a 480 x 600 mobile illustration placed on the right side of a travel header. Compose this portrait drawing independently, with the main landmark in the middle-right and the named scene and its supporting forms arranged vertically toward the bottom. Keep the same subjects, palette and drawing character as the landscape version, but arrange them for the tall canvas rather than cropping or stretching a landscape picture. Use a transparent background. Keep a natural irregular left silhouette visibly inside the canvas and quiet transparent space toward the upper-left. The painted foreground of this specific place must reach the right and bottom canvas edges without empty padding. Keep the main landmark comfortably inside the frame so its identifying shape is not clipped. Artwork only: no text, labels, letters, numbers, logo, UI, frame or border, and no photographic rendering. This is a dry-land setting. Keep the foreground as land, paths, vegetation or the named architecture; do not add any river, lake, sea, canal or moat.",
+  "promptSha256": "30478d4c9b53b37e1ef8c12eb6c51264a30d4a71fdd69e945eac5dfc02a22239",
+  "promptFile": "artifacts/design/20261017-domestic-city-expansion/jobs/kr-cheonan-mobile.prompt.txt",
+  "sourceReturnedPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a1482f-18c7-74b0-95a4-f0212f857e6e\\exec-ca5dafb6-0ca7-4667-8a9c-47a5bd9ac61e.png",
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a1482f-18c7-74b0-95a4-f0212f857e6e/exec-ca5dafb6-0ca7-4667-8a9c-47a5bd9ac61e.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261017-domestic-city-expansion/assets-original/kr-cheonan-mobile.png",
+  "actualDimensions": [
+    1122,
+    1402
+  ],
+  "sourceMode": "RGBA",
+  "sourceSha256": "dce904f1c36628e53cfb6f92db6e4e6303cb3363532acf894496ad85a7a4defd",
+  "savedSha256": "dce904f1c36628e53cfb6f92db6e4e6303cb3363532acf894496ad85a7a4defd",
+  "equality": true,
+  "overwritten": false,
+  "generationStartedAt": "2026-10-17T05:20:20Z",
+  "toolCallId": "exec-ca5dafb6-0ca7-4667-8a9c-47a5bd9ac61e",
+  "savedAt": "2026-10-17T05:20:55.418445+00:00"
+}

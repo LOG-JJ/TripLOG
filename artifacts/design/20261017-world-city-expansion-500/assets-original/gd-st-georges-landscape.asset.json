@@ -1,0 +1,52 @@
+{
+  "id": "gd-st-georges-landscape",
+  "cityId": "gd-st-georges",
+  "name": "세인트조지스",
+  "kind": "city",
+  "variant": "landscape",
+  "group": "Americas",
+  "original": "artifacts/design/20261017-world-city-expansion-500/assets-original/gd-st-georges-landscape.png",
+  "provenance": "artifacts/design/20261017-world-city-expansion-500/assets-original/gd-st-georges-landscape.json",
+  "originalSha256": "93d61cd32a6d3547949dcd9273d38833451e64b14d43546de335439ddb592f7d",
+  "sourceSize": [
+    1619,
+    971
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    255
+  ],
+  "originalAlphaBounds": [
+    0,
+    9,
+    1619,
+    971
+  ],
+  "trimmedEmptyRightBottom": [
+    0,
+    0
+  ],
+  "preservedExterior": "left/top",
+  "fit": {
+    "method": "aspect-preserving ImageOps.fit",
+    "centering": [
+      1,
+      1
+    ],
+    "resampling": "LANCZOS"
+  },
+  "asset": "src/assets/trip-scenes/cities/v6/gd-st-georges.webp",
+  "assetSize": [
+    800,
+    480
+  ],
+  "assetAlphaExtrema": [
+    0,
+    255
+  ],
+  "bytes": 121276,
+  "technicalEmptyEdgeRefits": [],
+  "assetSha256": "9bc48f03ccc24fcbb004c273969dad0adee82c866c5b129529ba371a1d90efb2",
+  "webpQuality": 90,
+  "status": "prepared-pending-visual-qa"
+}
