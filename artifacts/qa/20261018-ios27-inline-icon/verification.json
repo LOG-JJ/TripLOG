@@ -1,0 +1,26 @@
+{
+  "scope": "iOS 27.2 Safari Home Screen icon compatibility",
+  "userObserved": "Share sheet shows the approved icon; Add to Home Screen shows the letter T. User confirmed Safari / iOS 27.2.",
+  "approach": "A single 180x180 apple-touch-icon is embedded in both entry HTML files as a PNG data URI. No separate installer icon request is required; smaller external declarations cannot be selected first.",
+  "artworkSource": "icons/triplog-icon-180.png",
+  "artworkSHA256": "76ffa94052a4bb98c066401832d699c6edff444c04d2c20c56f21865d7c71045",
+  "originalBytesPreserved": true,
+  "embeddedPNGBytes": 63007,
+  "embeddedBase64Characters": 84012,
+  "references": [
+    "https://www.reddit.com/r/PWA/comments/1wsruwy/pwa_icon_not_working_on_ios_272beta2/",
+    "https://webkit.org/blog/13878/",
+    "https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html"
+  ],
+  "evidenceLimit": "The similar developer report supports a compatibility workaround, not a confirmed Apple diagnosis of this device.",
+  "validation": {
+    "npm test": "passed on the isolated deployment snapshot",
+    "appIconBrowser": "passed for root/start/itinerary; embedded image decodes while fully offline",
+    "build": "passed; built HTML matches source",
+    "repeatPrepareStable": true,
+    "artifactLayout": "passed"
+  },
+  "localBuild": "f765cfa4e545e232f962",
+  "physicalIPhoneHomeScreen": "Pending user confirmation; desktop browser checks cannot inspect the native iPhone installation sheet.",
+  "dataStorageChanges": false
+}

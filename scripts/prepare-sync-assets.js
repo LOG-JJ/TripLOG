@@ -32,10 +32,10 @@ const iconFiles = ['favicon-32.png', 'apple-touch-icon.png', ...fs.readdirSync(p
 const iconDigest = crypto.createHash('sha256');
 for (const file of iconFiles) { iconDigest.update(file); iconDigest.update(fs.readFileSync(path.join(root, file))); }
 const iconVersion = iconDigest.digest('hex').slice(0, 12);
-// Home Screen metadata uses a new pathname for each artwork revision, rather
-// than relying on a query string to refresh a previously saved iOS icon.
+// File-based fallbacks follow artwork revisions; the iPhone declaration embeds
+// the same PNG so the Home Screen installer needs no separate icon request.
 const appleIcons = prepareAppleIcons(root);
-const updateIconLinks = html => applyAppleIconLinks(html, appleIcons)
+const updateIconLinks = html => applyAppleIconLinks(html, appleIcons, root)
   .replace(/(href="\/(?:site\.webmanifest|favicon-32\.png|apple-touch-icon\.png|icons\/triplog-icon-\d+\.png))(?:\?[^"]*)?(")/g, (_, prefix, suffix) => `${prefix}?v=${iconVersion}${suffix}`);
 const indexPath = path.join(root, 'index.html');
 fs.writeFileSync(indexPath, updateIconLinks(fs.readFileSync(indexPath, 'utf8')));

@@ -1,0 +1,44 @@
+{
+  "browser": "isolated Edge; metadata/resource verification, not a physical iPhone installation",
+  "checks": [
+    {
+      "route": "/",
+      "icons": [
+        {
+          "size": 180,
+          "delivery": "embedded PNG; decoded while offline",
+          "bytes": 63007,
+          "sha256": "76ffa94052a4bb98c066401832d699c6edff444c04d2c20c56f21865d7c71045"
+        }
+      ],
+      "title": "TripLOG",
+      "status": "passed"
+    },
+    {
+      "route": "/Travel?page=start",
+      "icons": [
+        {
+          "size": 180,
+          "delivery": "embedded PNG; decoded while offline",
+          "bytes": 63007,
+          "sha256": "76ffa94052a4bb98c066401832d699c6edff444c04d2c20c56f21865d7c71045"
+        }
+      ],
+      "title": "TripLOG",
+      "status": "passed"
+    },
+    {
+      "route": "/Travel?page=itinerary",
+      "icons": [
+        {
+          "size": 180,
+          "delivery": "embedded PNG; decoded while offline",
+          "bytes": 63007,
+          "sha256": "76ffa94052a4bb98c066401832d699c6edff444c04d2c20c56f21865d7c71045"
+        }
+      ],
+      "title": "TripLOG",
+      "status": "passed"
+    }
+  ]
+}

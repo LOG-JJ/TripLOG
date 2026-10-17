@@ -19,11 +19,22 @@ function prepareAppleIcons(root) {
   return icons;
 }
 
-function applyAppleIconLinks(html, icons) {
-  return html.replace(/<link\b[^>]*\brel="apple-touch-icon"[^>]*>/g, tag => {
-    const size = Number(tag.match(/\bsizes="(\d+)x\d+"/)?.[1] || 180);
-    const icon = icons.find(icon => icon.size === size) || icons.find(icon => icon.size === 180);
-    return tag.replace(/\bhref="[^"]*"/, `href="/${icon.file}"`);
+function applyAppleIconLinks(html, icons, root) {
+  const iphone = icons.find(icon => icon.size === 180);
+  const inlineIcon = `data:image/png;base64,${fs.readFileSync(path.join(root, iphone.source)).toString('base64')}`;
+  const newline = html.includes('\r\n') ? '\r\n' : '\n';
+  // Some iOS 27.2 Home Screen installers fail to fetch URL-based icons even
+  // though Safari can display them. Embed the existing iPhone PNG at build time.
+  // Declare a single 180px source: a smaller network alternative could be
+  // selected first. This also covers the 152/167px iPad targets. Conventional
+  // PNG files remain available for existing clients and root-icon discovery.
+  const declarations = [`<link rel="apple-touch-icon" sizes="180x180" href="${inlineIcon}" />`];
+  let replaced = false;
+  return html.replace(/^[ \t]*<link\b[^>\r\n]*\brel="apple-touch-icon"[^>\r\n]*>[ \t]*(?:\r?\n|$)/gm, tag => {
+    if (replaced) return '';
+    replaced = true;
+    const indent = tag.match(/^[ \t]*/)[0];
+    return declarations.map(declaration => indent + declaration + newline).join('');
   });
 }
 
