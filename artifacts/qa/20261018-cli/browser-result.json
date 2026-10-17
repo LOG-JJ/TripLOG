@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "browser": "Playwright",
+  "reason": "Browser plugin not available",
+  "viewports": [
+    "1440x1000",
+    "390x844"
+  ],
+  "identity": "여행 가계부",
+  "pageErrors": [],
+  "applicationErrors": [],
+  "expectedExternalBlocks": [
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    },
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+    },
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "https://tile.openstreetmap.org/6/54/24.png"
+    },
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "https://tile.openstreetmap.org/6/54/25.png"
+    },
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "https://tile.openstreetmap.org/6/53/24.png"
+    },
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "https://tile.openstreetmap.org/6/55/24.png"
+    },
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "https://tile.openstreetmap.org/6/53/25.png"
+    },
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "https://tile.openstreetmap.org/6/55/25.png"
+    },
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "https://tile.openstreetmap.org/6/54/23.png"
+    },
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "https://tile.openstreetmap.org/6/54/26.png"
+    },
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "https://tile.openstreetmap.org/6/53/23.png"
+    },
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "https://tile.openstreetmap.org/6/55/23.png"
+    },
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "https://tile.openstreetmap.org/6/53/26.png"
+    },
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "https://tile.openstreetmap.org/6/55/26.png"
+    },
+    {
+      "text": "Failed to load resource: net::ERR_FAILED",
+      "url": "https://nominatim.openstreetmap.org/search?q=%EC%88%9C%EC%B2%9C%EB%A7%8C+%EA%B5%AD%EA%B0%80%EC%A0%95%EC%9B%90&format=jsonv2&addressdetails=1&namedetails=1&countrycodes=kr&limit=6&accept-language=ko"
+    }
+  ],
+  "checks": [
+    "CLI to web",
+    "web to CLI",
+    "linked expense parity",
+    "no horizontal overflow",
+    "PDF and HTML export"
+  ],
+  "productionDataUsed": false
+}

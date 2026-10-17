@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "renderer": "Production ANSI in @xterm/xterm 6.0.0",
+  "browser": "Playwright terminal-rendering harness; no browser application or external requests",
+  "frames": [
+    {
+      "name": "home-wide-120x38",
+      "columns": 120,
+      "rows": 38
+    },
+    {
+      "name": "home-medium-100x30",
+      "columns": 100,
+      "rows": 30
+    },
+    {
+      "name": "home-compact-80x24",
+      "columns": 80,
+      "rows": 24
+    },
+    {
+      "name": "home-minimum-60x20",
+      "columns": 60,
+      "rows": 20
+    },
+    {
+      "name": "menu-minimum-60x20",
+      "columns": 60,
+      "rows": 20
+    },
+    {
+      "name": "itinerary-form-120x38",
+      "columns": 120,
+      "rows": 38
+    },
+    {
+      "name": "itinerary-form-80x24",
+      "columns": 80,
+      "rows": 24
+    },
+    {
+      "name": "save-confirmation-120x38",
+      "columns": 120,
+      "rows": 38
+    },
+    {
+      "name": "save-confirmation-60x20",
+      "columns": 60,
+      "rows": 20
+    },
+    {
+      "name": "save-confirmation-scrolled-60x20",
+      "columns": 60,
+      "rows": 20
+    },
+    {
+      "name": "itinerary-list-120x38",
+      "columns": 120,
+      "rows": 38
+    },
+    {
+      "name": "development-120x38",
+      "columns": 120,
+      "rows": 38
+    },
+    {
+      "name": "login-masked-120x38",
+      "columns": 120,
+      "rows": 38
+    }
+  ],
+  "errors": [],
+  "at": "2026-10-17T17:26:24.274Z"
+}

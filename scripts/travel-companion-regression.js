@@ -196,6 +196,7 @@ assert.deepEqual(clone(sandbox.normalizeTravelCompanion(applied.travelCompanion)
 assert.equal(sandbox.hasNoSavedRecords({ entries: [], itineraryItems: [], travelCompanion: wallet.travelCompanion }), false);
 // Old/new cloud snapshots must obey the same privacy rules, including another trip.
 sandbox.state = { ...clone(wallet), collaboration: sandbox.normalizeCollaborationSettings({ privacy: { shareItinerary: false, shareExpenses: false } }) };
+sandbox.window.TripLog.data = { serviceConfig: require('../src/app/data/service-config') };
 vm.runInContext(fs.readFileSync(path.join(root, 'src/app/features/collaboration/trip-collaboration.js'), 'utf8'), sandbox);
 const sharing = registry['features.collaboration.tripCollaboration'];
 const hidden = sharing.buildSharedTripSnapshot(sandbox.state);

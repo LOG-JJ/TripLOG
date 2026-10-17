@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "frames": [
+    {
+      "columns": 120,
+      "rows": 38,
+      "focus": "menu"
+    },
+    {
+      "columns": 120,
+      "rows": 38,
+      "focus": "content"
+    },
+    {
+      "columns": 100,
+      "rows": 30,
+      "focus": "menu"
+    },
+    {
+      "columns": 100,
+      "rows": 30,
+      "focus": "content"
+    },
+    {
+      "columns": 80,
+      "rows": 24,
+      "focus": "menu"
+    },
+    {
+      "columns": 80,
+      "rows": 24,
+      "focus": "content"
+    },
+    {
+      "columns": 60,
+      "rows": 20,
+      "focus": "menu"
+    },
+    {
+      "columns": 60,
+      "rows": 20,
+      "focus": "content"
+    }
+  ],
+  "cases": [
+    "preview/cancel/one save",
+    "Korean/grapheme editing",
+    "bracketed paste isolation",
+    "password masking and exact bytes",
+    "file CAS conflict",
+    "cloud version and privacy baseline conflicts",
+    "stale read and connection cancellation",
+    "reservation stay nights",
+    "foreign expense create/update conversion",
+    "packing and companion forms",
+    "notes and comments",
+    "backup roundtrip and settlement finalization",
+    "new file create and archive/restore",
+    "TTY cleanup and Ctrl+J",
+    "plain numbered menu",
+    "job cancellation",
+    "non-TTY guard"
+  ],
+  "at": "2026-10-17T17:29:15.219Z"
+}

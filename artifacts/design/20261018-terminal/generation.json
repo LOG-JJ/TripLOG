@@ -1,0 +1,12 @@
+{
+  "prompt": "Create a visual concept for TripLOG, a Korean travel planner, as a real character-cell terminal user interface for Windows Terminal and PowerShell. Show one complete terminal screen at 120 columns by 38 rows, presented clearly at approximately 1440 by 960 pixels. All visible interface elements must be achievable with monospaced text, Unicode box-drawing characters, spacing, and terminal colors. Use TripLOG’s existing pink, yellow, and light-blue accents with a readable dark terminal background.\n\nPut “TRIPLOG” and “여행을 기록하는 터미널” at the top, followed by the current connection mode and selected trip. Give the left menu clear keyboard selection and these Korean entries: “여행 개요”, “일정”, “지출”, “예약”, “준비물”, “동행인·정산”, “메모·댓글”, “백업·리포트”, “개발 도구”, “연결 설정”. The main area should prioritize the selected trip’s name, dates, itinerary count, total expenses, and a short upcoming itinerary. Use an explicitly fictional trip named “예시 · 순천 2박 3일”. Include a compact action area for “여행 선택”, “일정 추가”, and “지출 추가”. Keep the amount of information low and Korean text easy to read. At the bottom, show a concise status message and keyboard hints for arrow keys, Enter, Tab, Esc, and quitting. This is an implementation reference for a usable terminal menu, so make hierarchy, selection, spacing, and text boundaries unambiguous.",
+  "startedAt": {
+    "current_time": "2026-10-17 16:35:00 UTC"
+  },
+  "mode": "T2I",
+  "inputs": [],
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-876b7d4d-22e2-4161-aa7c-bbfda1ceb8ca.png",
+  "savedPath": "artifacts/design/20261018-terminal/triplog-terminal-concept.png",
+  "selected": true,
+  "sha256": "A8F68B364FA0CE3544E5A91BE59A219B534D597E14E72C2EC954F77EB7B80B23"
+}

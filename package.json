@@ -2,7 +2,19 @@
   "name": "triplog",
   "version": "0.1.0",
   "private": true,
+  "bin": {
+    "triplog": "bin/triplog.js"
+  },
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
+    "cli": "node bin/triplog.js",
+    "terminal": "node bin/triplog.js ui",
+    "terminal:demo": "node bin/triplog.js ui --demo",
+    "test:terminal": "node scripts/terminal-regression.js",
+    "test:terminal:visual": "node scripts/terminal-visual-regression.js",
+    "test:cli": "node scripts/cli-regression.js",
     "prepare:sync": "node scripts/prepare-sync-assets.js",
     "artifacts:check": "node scripts/artifacts-check.js",
     "preview": "node scripts/serve-test.js",
@@ -14,11 +26,13 @@
     "test:maps": "node scripts/coordinate-cache-regression.js && node scripts/place-selection-regression.js",
     "test:order": "node scripts/itinerary-order-regression.js",
     "test:print": "node scripts/print-report-regression.js && node scripts/print-export-browser-regression.js",
-    "test": "npm run test:source && npm run test:sync && node scripts/sync-navigation-regression.js && node scripts/persistence-backup-regression.js && node scripts/travel-companion-regression.js && node scripts/redesign-regression.js && npm run test:maps && npm run test:order && node scripts/country-search-regression.js && node scripts/destination-scenes-regression.js && node scripts/time-picker-regression.js && node scripts/receipt-parser-regression.js && node scripts/receipt-json-regression.js && node scripts/print-report-regression.js && node scripts/travel-costs-regression.js && node scripts/itinerary-art-regression.js",
-    "test:source": "node scripts/source-integrity-regression.js"
+    "test": "npm run test:source && npm run test:sync && node scripts/sync-navigation-regression.js && node scripts/persistence-backup-regression.js && node scripts/travel-companion-regression.js && node scripts/redesign-regression.js && npm run test:maps && npm run test:order && node scripts/country-search-regression.js && node scripts/destination-scenes-regression.js && node scripts/time-picker-regression.js && node scripts/receipt-parser-regression.js && node scripts/receipt-json-regression.js && node scripts/print-report-regression.js && node scripts/travel-costs-regression.js && node scripts/itinerary-art-regression.js && npm run test:cli && npm run test:terminal",
+    "test:source": "node scripts/source-integrity-regression.js && node scripts/cli-source-regression.js"
   },
   "devDependencies": {
     "@electric-sql/pglite": "0.5.8",
+    "@xterm/headless": "6.0.0",
+    "@xterm/xterm": "6.0.0",
     "esbuild": "0.28.2",
     "fake-indexeddb": "6.2.5",
     "playwright": "1.62.1"
@@ -26,6 +40,7 @@
   "dependencies": {
     "@dnd-kit/collision": "0.5.1",
     "@dnd-kit/dom": "0.5.1",
+    "@supabase/supabase-js": "2.107.0",
     "motion": "14.3.0",
     "yjs": "13.6.32"
   }

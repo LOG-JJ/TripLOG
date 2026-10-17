@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "subprocessAssertions": 204,
+  "cases": [
+    "file roundtrip",
+    "atomic linked expense",
+    "real SQL conflicts",
+    "lost response retry",
+    "permission boundary",
+    "notes and comments",
+    "attachment transfer",
+    "backup restore",
+    "deployment scoping",
+    "Windows protected session"
+  ],
+  "at": "2026-10-17T16:28:52.483Z"
+}

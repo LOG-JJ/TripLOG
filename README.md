@@ -158,6 +158,34 @@ TripLOG의 런타임 상태는 전역 `state` 객체입니다. `await saveAndRen
 - 지도 서비스는 `shared/map-links.js`에서 여행 유형으로 선택합니다. 해외는 Google 프레임, 국내는 `services/maps/domestic-map.js`의 OpenStreetMap 지도와 네이버 길찾기 링크를 사용합니다. 주소 후보 조회는 별도로 진행하며 기존 좌표 출처 검증을 유지합니다. 국내 지도 표시에 네이버 클라우드 키나 유료 API는 사용하지 않습니다.
 - 캐시 때문에 변경이 보이지 않으면 브라우저 강력 새로고침을 하거나 `app.js`의 `scriptVersion`, `Travel.html`의 CSS/앱 쿼리 버전을 갱신합니다.
 
+## 터미널 메뉴와 CLI
+
+명령어 없이 사용하는 터미널 화면은 프로젝트 폴더의 **`TripLOG.cmd`를 더블클릭**하거나 `npm run terminal`로 실행합니다. Windows Terminal·PowerShell에서 방향키로 여행을 고르고 일정·지출·예약 등을 입력할 수 있습니다. 첫 화면에서 로그인, JSON 파일 열기, 새 파일 만들기, 예시 체험을 선택합니다.
+
+```powershell
+npm run terminal
+npm run terminal:demo
+```
+
+`terminal:demo`는 `artifacts/tmp/`의 별도 예시 파일만 사용합니다. 120열 × 38행에서 전체 화면이 가장 잘 보이며 80열 × 24행과 60열 × 20행에서도 축약해 표시합니다. `Tab`은 패널 전환, `Enter`는 선택, `Esc`는 뒤로, `Q`는 종료입니다. 입력 폼은 `Ctrl+S` 또는 `F10`으로 변경 내용을 확인한 뒤 저장합니다. [이미지 생성 목업](artifacts/design/20261018-terminal/triplog-terminal-concept.png), [구현 화면·검증 기록](artifacts/qa/20261018-terminal/README.md), [터미널 상세 사용법](docs/cli.md#대화형-터미널)을 확인하세요.
+
+Node.js 24 이상에서 `npm run cli -- --help`로 앱 데이터와 개발 명령을 확인할 수 있습니다. `npm link`를 실행하면 `triplog` 명령으로도 사용할 수 있습니다. 연결·로그인·명령별 예제와 데이터 범위는 [CLI 사용법](docs/cli.md)에 정리했습니다.
+
+```powershell
+npm run cli -- dev doctor
+npm run cli -- auth login
+npm run cli -- trip list
+npm run cli -- itinerary list --trip TRIP_ID
+npm run cli -- expense summary --trip TRIP_ID
+npm run cli -- dev test --suite cli
+```
+
+여행·일정·지출·예약·준비물·동행인·정산·공동 메모·댓글·첨부파일·백업·이력을 관리합니다. `--source cloud`는 기존 사용자 인증과 명령 API를 사용하고, `--store backup.json`은 파일 모드입니다. 파일 변경은 `--out` 또는 `--in-place`를 지정합니다. 변경 명령의 `--dry-run`, 자동화용 `--json`, 응답 유실 후 `operation retry`를 제공합니다. 서버 모드는 브라우저의 미전송 변경이나 비공개 데이터를 읽지 않습니다.
+
+`dev serve/test/build/doctor/artifacts`는 기존 프로젝트 작업에 연결합니다. `dev deploy plan/run/status`는 명시한 파일을 검증·커밋·푸시하고 운영 빌드 일치를 별도로 확인합니다. 관련 없는 변경과 기존 미푸시 커밋이 있으면 배포를 중단합니다. Supabase DB·Edge Function 자체 배포는 포함하지 않습니다.
+
+CLI 회귀 검증은 `npm run test:cli`, 터미널 동작 검증은 `npm run test:terminal`이며 모두 `npm test`에 포함됩니다. 실제 SQL 함수와 격리 HTTP 서버로 변경·충돌·재시도·권한·백업 왕복을 확인합니다. `npm run test:terminal:visual`은 실제 ANSI 출력을 xterm에서 렌더링해 화면을 검증합니다. `node scripts/cli-browser-regression.js`는 CLI↔웹앱 편집과 PDF/HTML 내보내기를 검증하며 전체 브라우저 실행 목록에도 등록되어 있습니다.
+
 ## 검증
 
 `npm test`는 PostgreSQL(PGlite)·IndexedDB·독립 기기 동기화 및 기존 기능 회귀 테스트를 실행합니다. `npm run test:browser`는 별도 로컬 서버와 격리된 브라우저 두 개로 화면·오프라인 앱·초안을 확인합니다. Windows에서는 설치된 Edge, 다른 OS에서는 `npx playwright install chromium`으로 설치한 Chromium을 사용합니다.

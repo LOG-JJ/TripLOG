@@ -1,5 +1,6 @@
 // Browser integration suites, in dependency-free execution order.
 module.exports = [
+  'cli-browser-regression.js',
   'app-icon-browser-regression.js',
   'entry-splash-browser-regression.js',
   'trip-library-browser-regression.js',

@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "skillValidator": "passed",
+  "metadataAndReferences": "passed",
+  "sourceRegression": "passed via CLI",
+  "artifactCheck": "passed via CLI",
+  "cases": [
+    "file preview does not write",
+    "authorized separate-output write and read-back",
+    "invalid input returns JSON error and nonzero exit without writing",
+    "build dry-run returns plan only"
+  ],
+  "fixture": "artifacts\\tmp\\20261018-skill-workflow\\command-smoke\\run-vyy4vI",
+  "productionReads": false,
+  "productionWrites": false,
+  "appSourceModified": false,
+  "at": "2026-10-17T17:43:41.086Z"
+}

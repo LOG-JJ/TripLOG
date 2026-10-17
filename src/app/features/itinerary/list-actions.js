@@ -20,37 +20,14 @@ async function moveItineraryItem(draggedId, targetId, placement = 'before') {
 }
 
 function syncTransitTotals(item) {
-  if (!item.transits || item.transits.length === 0) {
-    item.transits = [{ trans: item.trans || "none", duration: item.duration || 0, cost: item.cost || 0, memo: "" }];
-  }
-  item.duration = item.transits.reduce((acc, x) => acc + (x.duration || 0), 0);
-  item.cost = item.transits.reduce((acc, x) => acc + (x.cost || 0), 0);
-  item.trans = item.transits[0]?.trans || "none";
+  Object.assign(item, window.TripLog.domain.commands.transitTotals(item));
 }
 
 function syncSegmentExpense(item) {
-  if (item.syncExpense && item.cost > 0) {
-    const transLabels = { walk: "도보", car: "차량", train: "기차", bus: "버스", flight: "비행", etc: "비행", none: "이동" };
-    const segmentsDesc = item.transits.map(x => transLabels[x.trans] || "이동").filter(Boolean).join("+");
-    const desc = `${item.place} 이동 경비 (${segmentsDesc})`;
-
-    if (item.expenseId) {
-      state.entries = state.entries.map(entry => {
-        if (entry.id === item.expenseId) {
-          return { ...entry, date: item.date, amount: item.cost, description: desc };
-        }
-        return entry;
-      });
-    } else {
-      const newEntry = createEntry(item.date, "교통", desc, item.cost, "일정 자동 연동");
-      item.expenseId = newEntry.id;
-      state.entries.push(newEntry);
-    }
-  } else if (item.expenseId && (item.cost <= 0 || !item.syncExpense)) {
-    window.TripLog.persistence.stateStorage.markDeletedEntity("expense", item.expenseId);
-    state.entries = state.entries.filter(entry => entry.id !== item.expenseId);
-    item.expenseId = null;
-  }
+  const result = window.TripLog.domain.commands.transitExpense(state, item, createId);
+  Object.assign(item, result.item);
+  state.entries = result.entries;
+  result.deleted.forEach(id => window.TripLog.persistence.stateStorage.markDeletedEntity("expense", id));
 }
 
 function handleItineraryListAction(event) {

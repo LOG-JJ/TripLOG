@@ -3,10 +3,7 @@
   const SUPABASE_CONFIG_STORAGE_KEY = "domesticTravelExpensePlanner.supabaseConfig.v1";
   const AUTH_PENDING_EMAIL_KEY = "domesticTravelExpensePlanner.authPendingEmail.v1";
   const SUPABASE_CDN_URL = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.107.0/dist/umd/supabase.min.js";
-  const DEFAULT_SUPABASE_CONFIG = {
-    url: "https://iehdziiplzgvxcrbizgv.supabase.co",
-    publishableKey: "sb_publishable_b5CwF1zyb5bzNHUT50xNsg_pSon5Glc",
-  };
+  const DEFAULT_SUPABASE_CONFIG = window.TripLog.data.serviceConfig;
   const INVITE_PARAM = "invite";
   const AUTH_PASSWORD_MIN_LENGTH = 8;
   const MEMBER_SYNC_INTERVAL_MS = 15000;
