@@ -1,0 +1,46 @@
+{
+  "created_at": "2026-10-17T08:57:59.505Z",
+  "user_request": "메인스플래시 화면 구현하려함 이미지생성모델기반 목업ㄱ 그거다음에 여행선택화면으로이어지게할것",
+  "tool": "image_gen.imagegen",
+  "mode": "T2I",
+  "input_images": [],
+  "prompt": "Create a mobile UI mockup for TripLOG showing two consecutive app screens side by side, each designed for a 390 × 844 px viewport, with an arrow between them indicating automatic progression. The first screen is the main splash: make “TripLOG” the primary focus, followed by the short Korean line “떠날 여행도, 다녀온 순간도” and a small loading indication with “여행을 준비하고 있어요”. Keep the splash information minimal and the text easy to read. The second screen is the travel selection screen: show a smaller “TripLOG” brand mark, the title “내 여행”, the subtitle “떠날 여행도, 다녀온 순간도”, a search field labeled “여행 이름이나 여행지 검색”, filters “ALL”, “UP NEXT”, and “MEMORIES”, and a two-column collection of selectable trips with names, dates, and destinations. Use two illustrative sample entries: “제주 여행”, “2026.11.07 – 11.09”, “JEJU”; and “오사카 여행”, “2026.12.12 – 12.15”, “OSAKA”. Include a clear “새 여행 만들기” action. Prioritize the splash identity first and the travel choices second. The splash automatically leads into travel selection when ready. Explore a fresh visual direction with a coherent identity across both screens.",
+  "exact_returned_original_path": "C:/Users/tbdk5/.codex/generated_images/01a14913-9507-7a83-8611-89197656a742/exec-d734a578-3e1d-44f9-a950-a9ccb5320102.png",
+  "saved_path": "artifacts/design/20261017-main-splash/triplog-splash-to-trip-selection.png",
+  "sha256": "3615B15001CBD7F435138D08516E44EC0EA883362FD32BA214BF634E0CF000C8",
+  "original_saved_hash_match": true,
+  "overwritten_existing_file": false,
+  "variant": "01 — Main splash and travel selection flow",
+  "selection_status": "concept delivered; not selected for implementation",
+  "intended_viewports": [
+    {
+      "width": 390,
+      "height": 844,
+      "screen": "splash"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "screen": "trip selection"
+    }
+  ],
+  "proposed_flow": {
+    "signed_in": [
+      "스플래시",
+      "내 여행 (page=start)",
+      "선택한 여행 개요 (page=overview&trip=<id>)"
+    ],
+    "signed_out": [
+      "스플래시",
+      "기존 로그인",
+      "내 여행"
+    ],
+    "transition": "일반 앱 시작에서 준비 완료 후 자동 전환. 정확한 표시 시간과 모션은 구현 시 결정.",
+    "preserve_direct_links": "trip이 포함된 직접 링크, 초대, 비밀번호 복구 목적지는 유지한다."
+  },
+  "sample_data": "제주 여행과 오사카 여행 및 날짜는 목업 전용 가상 예시.",
+  "scope": "이미지 생성 기반 디자인 목업. 앱 코드/라우팅 수정, 커밋, 푸시, 배포 없음.",
+  "checks": [
+    "원본과 저장본 SHA256 일치"
+  ]
+}

@@ -27,7 +27,7 @@ async function main() {
     await blockExternalRequests(context, origin);
     const page = await context.newPage(), errors = []; page.on('pageerror', error => errors.push(error.message));
     await page.clock.setFixedTime(fixedDate);
-    const ready = () => page.waitForFunction(() => document.documentElement.dataset.triplogInitialized === 'true' && document.documentElement.dataset.appReady === 'true' && document.documentElement.dataset.auth === 'signed-in');
+    const ready = () => page.waitForFunction(() => document.documentElement.dataset.triplogInitialized === 'true' && document.documentElement.dataset.appReady === 'true' && document.documentElement.dataset.auth === 'signed-in' && document.querySelector('#entrySplash')?.hidden !== false);
     const home = async () => { await page.locator('.rd-brand-link').click(); await page.waitForFunction(() => activePage === 'start'); };
     const cards = page.locator('[data-library-trip]');
     const snapshot = () => page.evaluate(() => window.TripLog.persistence.stateStorage.getTrips().map(t => ({ id: t.id, name: t.tripName, items: t.itineraryItems.map(i => [i.id, i.place, i.time]), entries: t.entries.map(e => [e.id, e.amount, e.description]) })).sort((a, b) => a.id.localeCompare(b.id)));

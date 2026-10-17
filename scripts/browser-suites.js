@@ -1,5 +1,6 @@
 // Browser integration suites, in dependency-free execution order.
 module.exports = [
+  'entry-splash-browser-regression.js',
   'trip-library-browser-regression.js',
   'trip-header-browser-regression.js',
   'trip-scene-art-browser-regression.js',

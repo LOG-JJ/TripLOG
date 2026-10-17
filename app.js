@@ -1,6 +1,9 @@
 (() => {
+  const entrySplash = window.TripLogEntrySplash;
+  entrySplash?.mount();
   const scriptVersion = document.querySelector('meta[name="triplog-build"]')?.content || "development";
   const scriptFiles = [
+    { path: "../../vendor/motion-14.3.0.min.js", optional: true, independent: true },
     { path: "../../vendor/supabase-js-2.107.0.min.js", optional: true },
     { path: "../../vendor/yjs-13.6.32.min.js", optional: true },
     { path: "../../vendor/leaflet-1.9.4/leaflet.js", optional: true },
@@ -119,11 +122,12 @@
   const loading = scriptFiles.map((entry) => {
     const file = typeof entry === "string" ? entry : entry.path;
     const optional = typeof entry === "object" && entry.optional;
+    const independent = typeof entry === "object" && entry.independent;
     return new Promise((resolve, reject) => {
       const script = document.createElement("script");
-      script.async = false;
+      script.async = Boolean(independent);
       script.src = `${new URL(file, baseUrl).toString()}?v=${scriptVersion}`;
-      script.onload = resolve;
+      script.onload = () => { if (independent) entrySplash?.motionReady(); resolve(); };
       script.onerror = () => {
         if (optional) {
           resolve();
@@ -132,15 +136,19 @@
         reject(new Error(`TripLOG script load failed: ${file}`));
       };
       document.head.appendChild(script);
+      // Optional visual enhancements must never hold the app's ordered loader.
+      if (independent) resolve();
     });
   });
 
   Promise.all(loading).then(() => {
     document.documentElement.dataset.appReady = "true";
+    entrySplash?.connect();
   }).catch((error) => {
     document.documentElement.dataset.appReady = "error";
     const status = document.querySelector("#authGateStatus");
     if (status) status.textContent = "화면을 불러오지 못했어요. 새로고침해 주세요.";
+    entrySplash?.fail();
     console.error(error);
   });
 })();

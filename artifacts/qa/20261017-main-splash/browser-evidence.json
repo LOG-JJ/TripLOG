@@ -1,0 +1,504 @@
+{
+  "origin": "http://127.0.0.1:11708",
+  "browser": "Edge",
+  "viewports": [
+    {
+      "width": 320,
+      "height": 568,
+      "bounds": {
+        "viewport": {
+          "width": 320,
+          "height": 568
+        },
+        "overlay": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 568,
+          "top": 0,
+          "right": 320,
+          "bottom": 568,
+          "left": 0
+        },
+        "scrollWidth": 320,
+        "logo": {
+          "x": 30,
+          "y": 51.109375,
+          "width": 260,
+          "height": 92.46875,
+          "top": 51.109375,
+          "right": 290,
+          "bottom": 143.578125,
+          "left": 30
+        },
+        "passports": [
+          {
+            "x": 1.4188232421875,
+            "y": 241.61813354492188,
+            "width": 147.4862518310547,
+            "height": 194.74746704101562,
+            "top": 241.61813354492188,
+            "right": 148.9050750732422,
+            "bottom": 436.3656005859375,
+            "left": 1.4188232421875
+          },
+          {
+            "x": 171.25631713867188,
+            "y": 242.05384826660156,
+            "width": 144.88931274414062,
+            "height": 193.4134063720703,
+            "top": 242.05384826660156,
+            "right": 316.1456298828125,
+            "bottom": 435.4672546386719,
+            "left": 171.25631713867188
+          },
+          {
+            "x": 79.50970458984375,
+            "y": 223.7333221435547,
+            "width": 147.64012145996094,
+            "height": 211.7852325439453,
+            "top": 223.7333221435547,
+            "right": 227.1498260498047,
+            "bottom": 435.5185546875,
+            "left": 79.50970458984375
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:11708/src/assets/triplog-wordmark.png",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:11708/src/assets/home-passport-blue.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:11708/src/assets/home-passport-pink.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:11708/src/assets/home-passport-mint.webp",
+            "loaded": true
+          }
+        ]
+      },
+      "timing": {
+        "states": [
+          {
+            "status": "showing",
+            "time": 86.80000000074506
+          },
+          {
+            "status": "exiting",
+            "time": 2014.3999999985099
+          },
+          {
+            "status": "done",
+            "time": 2813
+          }
+        ],
+        "readyAt": 1387.1000000014901
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "bounds": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "overlay": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "top": 0,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "scrollWidth": 390,
+        "logo": {
+          "x": 34,
+          "y": 143.46875,
+          "width": 322,
+          "height": 114.515625,
+          "top": 143.46875,
+          "right": 356,
+          "bottom": 257.984375,
+          "left": 34
+        },
+        "passports": [
+          {
+            "x": 4.040554046630859,
+            "y": 404.1275939941406,
+            "width": 177.61192321777344,
+            "height": 234.52511596679688,
+            "top": 404.1275939941406,
+            "right": 181.6524772644043,
+            "bottom": 638.6527099609375,
+            "left": 4.040554046630859
+          },
+          {
+            "x": 208.54129028320312,
+            "y": 404.65301513671875,
+            "width": 174.4837646484375,
+            "height": 232.91796875,
+            "top": 404.65301513671875,
+            "right": 383.0250549316406,
+            "bottom": 637.5709838867188,
+            "left": 208.54129028320312
+          },
+          {
+            "x": 98.08411407470703,
+            "y": 382.59271240234375,
+            "width": 177.78472900390625,
+            "height": 255.04095458984375,
+            "top": 382.59271240234375,
+            "right": 275.8688430786133,
+            "bottom": 637.6336669921875,
+            "left": 98.08411407470703
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:11708/src/assets/triplog-wordmark.png",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:11708/src/assets/home-passport-blue.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:11708/src/assets/home-passport-pink.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:11708/src/assets/home-passport-mint.webp",
+            "loaded": true
+          }
+        ]
+      },
+      "timing": {
+        "states": [
+          {
+            "status": "showing",
+            "time": 63.400000002235174
+          },
+          {
+            "status": "exiting",
+            "time": 1988.2000000029802
+          },
+          {
+            "status": "done",
+            "time": 2787
+          }
+        ],
+        "readyAt": 1341.9000000022352
+      }
+    },
+    {
+      "width": 600,
+      "height": 800,
+      "bounds": {
+        "viewport": {
+          "width": 600,
+          "height": 800
+        },
+        "overlay": {
+          "x": 0,
+          "y": 0,
+          "width": 600,
+          "height": 800,
+          "top": 0,
+          "right": 600,
+          "bottom": 800,
+          "left": 0
+        },
+        "scrollWidth": 600,
+        "logo": {
+          "x": 130,
+          "y": 136,
+          "width": 340,
+          "height": 120.921875,
+          "top": 136,
+          "right": 470,
+          "bottom": 256.921875,
+          "left": 130
+        },
+        "passports": [
+          {
+            "x": 93.41024780273438,
+            "y": 375.65435791015625,
+            "width": 192.15997314453125,
+            "height": 253.74273681640625,
+            "top": 375.65435791015625,
+            "right": 285.5702209472656,
+            "bottom": 629.3970947265625,
+            "left": 93.41024780273438
+          },
+          {
+            "x": 314.6392822265625,
+            "y": 376.2230224609375,
+            "width": 188.775146484375,
+            "height": 252.00372314453125,
+            "top": 376.2230224609375,
+            "right": 503.4144287109375,
+            "bottom": 628.2267456054688,
+            "left": 314.6392822265625
+          },
+          {
+            "x": 195.15679931640625,
+            "y": 352.3895568847656,
+            "width": 192.33084106445312,
+            "height": 275.9081115722656,
+            "top": 352.3895568847656,
+            "right": 387.4876403808594,
+            "bottom": 628.2976684570312,
+            "left": 195.15679931640625
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:11708/src/assets/triplog-wordmark.png",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:11708/src/assets/home-passport-blue.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:11708/src/assets/home-passport-pink.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:11708/src/assets/home-passport-mint.webp",
+            "loaded": true
+          }
+        ]
+      },
+      "timing": {
+        "states": [
+          {
+            "status": "showing",
+            "time": 56.399999998509884
+          },
+          {
+            "status": "exiting",
+            "time": 1981.3999999985099
+          },
+          {
+            "status": "done",
+            "time": 2784.699999999255
+          }
+        ],
+        "readyAt": 1331.3999999985099
+      }
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "bounds": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "overlay": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900,
+          "left": 0
+        },
+        "scrollWidth": 1440,
+        "logo": {
+          "x": 550,
+          "y": 150,
+          "width": 340,
+          "height": 120.921875,
+          "top": 150,
+          "right": 890,
+          "bottom": 270.921875,
+          "left": 550
+        },
+        "passports": [
+          {
+            "x": 513.4102783203125,
+            "y": 428.65435791015625,
+            "width": 192.159912109375,
+            "height": 253.74273681640625,
+            "top": 428.65435791015625,
+            "right": 705.5701904296875,
+            "bottom": 682.3970947265625,
+            "left": 513.4102783203125
+          },
+          {
+            "x": 734.6390991210938,
+            "y": 429.22332763671875,
+            "width": 188.77484130859375,
+            "height": 252.00347900390625,
+            "top": 429.22332763671875,
+            "right": 923.4139404296875,
+            "bottom": 681.226806640625,
+            "left": 734.6390991210938
+          },
+          {
+            "x": 615.16015625,
+            "y": 405.3968200683594,
+            "width": 192.326904296875,
+            "height": 275.9043273925781,
+            "top": 405.3968200683594,
+            "right": 807.487060546875,
+            "bottom": 681.3011474609375,
+            "left": 615.16015625
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:11708/src/assets/triplog-wordmark.png",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:11708/src/assets/home-passport-blue.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:11708/src/assets/home-passport-pink.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:11708/src/assets/home-passport-mint.webp",
+            "loaded": true
+          }
+        ]
+      },
+      "timing": {
+        "states": [
+          {
+            "status": "showing",
+            "time": 50.69999999925494
+          },
+          {
+            "status": "exiting",
+            "time": 1978.4000000022352
+          },
+          {
+            "status": "done",
+            "time": 2777
+          }
+        ],
+        "readyAt": 1332.9000000022352
+      }
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "bounds": {
+        "viewport": {
+          "width": 844,
+          "height": 390
+        },
+        "overlay": {
+          "x": 0,
+          "y": 0,
+          "width": 844,
+          "height": 390,
+          "top": 0,
+          "right": 844,
+          "bottom": 390,
+          "left": 0
+        },
+        "scrollWidth": 844,
+        "logo": {
+          "x": 117,
+          "y": 163.734375,
+          "width": 260,
+          "height": 92.46875,
+          "top": 163.734375,
+          "right": 377,
+          "bottom": 256.203125,
+          "left": 117
+        },
+        "passports": [
+          {
+            "x": 435.080078125,
+            "y": 107.09545135498047,
+            "width": 150.60986328125,
+            "height": 198.86993408203125,
+            "top": 107.09545135498047,
+            "right": 585.68994140625,
+            "bottom": 305.9653854370117,
+            "left": 435.080078125
+          },
+          {
+            "x": 608.4749145507812,
+            "y": 107.54037475585938,
+            "width": 147.95794677734375,
+            "height": 197.50765991210938,
+            "top": 107.54037475585938,
+            "right": 756.432861328125,
+            "bottom": 305.04803466796875,
+            "left": 608.4749145507812
+          },
+          {
+            "x": 514.8125,
+            "y": 88.82588958740234,
+            "width": 150.76727294921875,
+            "height": 216.26168823242188,
+            "top": 88.82588958740234,
+            "right": 665.5797729492188,
+            "bottom": 305.0875778198242,
+            "left": 514.8125
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:11708/src/assets/triplog-wordmark.png",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:11708/src/assets/home-passport-blue.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:11708/src/assets/home-passport-pink.webp",
+            "loaded": true
+          },
+          {
+            "src": "http://127.0.0.1:11708/src/assets/home-passport-mint.webp",
+            "loaded": true
+          }
+        ]
+      },
+      "timing": {
+        "states": [
+          {
+            "status": "showing",
+            "time": 57.5
+          },
+          {
+            "status": "exiting",
+            "time": 1987.5
+          },
+          {
+            "status": "done",
+            "time": 2792.2999999970198
+          }
+        ],
+        "readyAt": 1346.0999999977648
+      }
+    }
+  ],
+  "checks": [
+    "responsive entrance, automatic collection reveal, local assets, navigation and data preservation",
+    "missing and indefinitely stalled animation library",
+    "slow app-loader focus protection, slow bootstrap keyboard continuation and focus transfer, mandatory-script failure",
+    "reduced motion, signed-in and signed-out accessibility",
+    "live reduced-motion preference change",
+    "trip and itinerary direct links, password recovery"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-17",
+  "scope": "Animated passport entry splash only",
+  "base_commit": "b146d47b72cb3ee617cec7d310a7b0741db74deb",
+  "target": "origin/main (https://github.com/LOG-JJ/TripLOG.git)",
+  "local_isolated_build": "066d3dfda0cca3d0abd9",
+  "checks": {
+    "npm ci": "passed",
+    "npm test": "passed",
+    "npm run build": "passed",
+    "node scripts/entry-splash-browser-regression.js": "passed",
+    "node scripts/trip-library-browser-regression.js": "passed",
+    "node scripts/auth-session-browser-regression.js": "passed",
+    "npm run artifacts:check": "passed",
+    "git diff --check": "passed"
+  },
+  "isolation": "Created from fetched origin/main. Transferred only splash files and splash hunks in Travel.html/README.md. Regenerated Travel.html/sw.js in this isolated tree. Existing local city expansion, confirmation and itinerary changes are excluded and preserved.",
+  "production_before": {
+    "url": "https://triplog-5qs.pages.dev/Travel?page=start",
+    "status": 200,
+    "build": "b6b5c0b352f995e07f95",
+    "splash_present": false
+  },
+  "note": "This records pre-push validation. Production completion is verified separately after push. Deployment services may regenerate a different build fingerprint from normalized Git checkout line endings."
+}

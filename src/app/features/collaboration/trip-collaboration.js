@@ -33,6 +33,7 @@
   let memberSyncIntervalId = null;
   let memberSyncInFlight = false;
   let initialTripListSyncComplete = false;
+  let initialSessionCheckComplete = false;
 
   function readJsonStorage(key, fallback) {
     try {
@@ -394,7 +395,7 @@
   }
 
   async function checkSupabaseSession(generation) {
-    if (!hasSupabaseConfig()) return;
+    if (!hasSupabaseConfig()) { initialSessionCheckComplete = true; return; }
     let client = null;
     let revision = authRevision;
     const isCurrent = () => generation === clientGeneration && client === supabaseClient && revision === authRevision;
@@ -438,7 +439,10 @@
         scheduleSessionRetry(generation);
       }
     } finally {
-      if (generation === clientGeneration) renderTripCollaboration();
+      if (generation === clientGeneration) {
+        initialSessionCheckComplete = true;
+        renderTripCollaboration();
+      }
     }
   }
 
@@ -1577,6 +1581,7 @@
     openTripInviteModal,
     syncSupabaseSession,
     isTripListReady: () => initialTripListSyncComplete,
+    isInitialSessionReady: () => initialSessionCheckComplete,
     syncSupabaseTripList,
     syncSupabaseTripState,
     uploadSupabaseTripState,

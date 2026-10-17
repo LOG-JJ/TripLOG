@@ -17,6 +17,14 @@ const dragLicenses = ['@dnd-kit/dom', '@dnd-kit/abstract', '@dnd-kit/state', '@d
   return `${name}\n${fs.readFileSync(path.join(directory, license), 'utf8')}`;
 });
 fs.writeFileSync(path.join(root, 'vendor/dnd-kit-LICENSES.txt'), dragLicenses.join('\n\n---\n\n'));
+// Keep splash and screen choreography available in the installed offline app.
+esbuild.buildSync({ stdin: { contents: 'export {animate, stagger} from "motion";', resolveDir: root }, bundle: true, minify: true, format: 'iife', globalName: 'TripLogMotion', outfile: path.join(root, 'vendor/motion-14.3.0.min.js'), legalComments: 'eof' });
+const motionLicenses = ['motion', 'framer-motion', 'motion-dom', 'motion-utils', 'tslib'].map(name => {
+  const directory = path.join(root, 'node_modules', name);
+  const license = fs.readdirSync(directory).find(file => /^licen[sc]e(?:[._-]|$)/i.test(file));
+  return `${name}\n${fs.readFileSync(path.join(directory, license), 'utf8')}`;
+});
+fs.writeFileSync(path.join(root, 'vendor/motion-LICENSES.txt'), motionLicenses.join('\n\n---\n\n'));
 // Icon URLs follow the actual artwork so manifest/favicon caches update without
 // another hand-maintained release label when the app image changes.
 const iconFiles = ['favicon-32.png', 'apple-touch-icon.png', ...fs.readdirSync(path.join(root, 'icons')).filter(file => file.endsWith('.png')).map(file => `icons/${file}`)].sort();

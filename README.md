@@ -14,6 +14,8 @@ TripLOG는 여행 일정, 지출, 정산, 저장 기록, 리포트를 관리하�
 
 선택한 [1안 원본](artifacts/design/20261003/triplog-home-passport-library-20261003.png)과 [구현 비교 및 QA](artifacts/design/home-passport-20261003/design-qa.md)를 보관합니다. 목업의 예시 여행은 운영 데이터로 넣지 않습니다. 격리된 시각 미리보기는 `node scripts/preview-trip-library.js`, 기능 검증은 `node scripts/trip-library-browser-regression.js`로 실행합니다.
 
+일반 앱 진입에는 [선택한 스플래시 목업](artifacts/design/20261017-main-splash/triplog-splash-to-trip-selection-v2-brand.png)을 바탕으로 로고·여권 등장과 내 여행 전환이 이어집니다. Motion 14.3.0을 앱 내부에 고정 버전으로 포함해 외부 CDN 없이 재생하며, 기존 로고와 여권 자산을 재사용합니다. 준비된 화면은 보통 약 3초 안에 열리고, 동작 줄이기 설정에서는 장식 애니메이션과 최소 대기를 생략합니다. 로그인이 필요하면 로그인 화면을 표시하고, 여행 직접 링크·초대·비밀번호 복구·브라우저 뒤로가기는 원래 목적지를 유지합니다. 메뉴 이동으로는 재생하지 않습니다. 로딩이 길면 이동 버튼을 제공하며 최대 8초 후에는 스플래시를 해제합니다. 격리 검증은 `node scripts/entry-splash-browser-regression.js`, 대표 근거는 `artifacts/qa/20261017-main-splash/`에 보관합니다.
+
 ## 배포 절차
 
 2026-09-29 사용자 확인 기준으로 **Git 커밋·푸시 → 연결된 자동 배포**를 사용합니다. 사용자는 Supabase 연동을 사용한다고 확인했습니다. 작업 절차는 [AGENTS.md](AGENTS.md)를 따릅니다.

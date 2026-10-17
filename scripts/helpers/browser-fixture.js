@@ -47,7 +47,8 @@ function seedTrip(context, { origin, user, expiry, token = fixtureToken(user, ex
 
 function waitForApp(page) {
   return page.waitForFunction(() => document.documentElement.dataset.triplogInitialized === 'true'
-    && document.documentElement.dataset.auth === 'signed-in' && document.documentElement.dataset.appReady === 'true');
+    && document.documentElement.dataset.auth === 'signed-in' && document.documentElement.dataset.appReady === 'true'
+    && document.querySelector('#entrySplash')?.hidden !== false);
 }
 
 module.exports = { launchBrowser, fixtureToken, blockExternalRequests, startServer, stopServer, seedTrip, waitForApp };

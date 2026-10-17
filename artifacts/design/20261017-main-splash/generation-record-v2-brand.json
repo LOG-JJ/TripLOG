@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-10-17T11:11:02.240Z",
+  "user_request": "좀더 내 어플 톤에맞게 개선해줘라 목업다시 ㄱ",
+  "tool": "image_gen.imagegen",
+  "mode": "T2I",
+  "input_images": [],
+  "prompt": "Create a revised TripLOG mobile UI mockup that closely matches the app’s established visual identity. Show two flat app screens side by side, each designed for a 390 × 844 px viewport, with a small progression arrow between them. Use warm ivory #fffdf7, dark ink #202730, yellow #ffeb50 accents, sky blue #bce6fb, pink #f7afc7, and mint passport covers. Use readable Pretendard-like Korean typography, confident dark outlines, gently rounded controls, and restrained hand-drawn travel illustrations. Preserve the established wordmark structure: bold rounded black “TRIP” followed by “LOG” inside a pink rounded rectangle with a black outline and a small dark offset shadow.\n\nLeft screen: a minimal main splash. Prioritize the large wordmark, a small illustration of pastel travel passports that belongs to the same visual family as the trip library, and the Korean line “떠날 여행도, 다녀온 순간도”. Keep generous ivory space and a small yellow-accented loading indicator with “여행을 준비하고 있어요”. This is a brief automatic entry screen.\n\nRight screen: the existing passport-style trip selection screen. Place the smaller wordmark at the upper left and a simple mint profile button at the upper right. Show “내 여행” as a bold 27 px heading, “떠날 여행도, 다녀온 순간도” as the subtitle, an outlined search field labeled “여행 이름이나 여행지 검색”, and compact filters “ALL”, “UP NEXT”, “MEMORIES”, with ALL selected in yellow. Below, arrange four upright passport covers in a two-column grid: a sky-blue “강릉 주말여행” passport dated “2026.10.24 – 10.25”, a pink “오사카 여행” passport dated “2026.11.07 – 11.10”, a mint “제주 여행” passport dated “2026.12.04 – 12.06”, and a yellow “새 여행 만들기” passport with a plus symbol. Each travel passport integrates its title, dates, small destination label, and a hand-drawn destination illustration on the cover. Keep the information readable and the layout compact at actual mobile size. Make the splash feel like the opening page of this same travel collection, followed automatically by “내 여행”.",
+  "exact_returned_original_path": "C:/Users/tbdk5/.codex/generated_images/01a14913-9507-7a83-8611-89197656a742/exec-a958a661-87a5-4ea3-a701-a42bed404866.png",
+  "saved_path": "artifacts/design/20261017-main-splash/triplog-splash-to-trip-selection-v2-brand.png",
+  "sha256": "01EF242B62951395BD4075E7AAC65D94B9B4C2429A16392BDD9C07712A1778D9",
+  "original_saved_hash_match": true,
+  "overwritten_existing_file": false,
+  "variant": "02 — Current TripLOG identity: ivory, pink LOG, pastel passport library",
+  "selection_status": "selected by user for implementation with animation library on 2026-10-17",
+  "intended_viewports": [
+    {
+      "width": 390,
+      "height": 844,
+      "screen": "splash"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "screen": "trip selection"
+    }
+  ],
+  "brand_evidence": [
+    "src/styles/trip-library.css",
+    "src/styles/redesign.css",
+    "src/assets/triplog-wordmark.png",
+    "src/app/features/home/trip-library.js",
+    "artifacts/design/home-passport-20261003/design-qa.md"
+  ],
+  "style_requirements": [
+    "현재 워드마크 형태: 검은 TRIP + 분홍 박스 LOG",
+    "아이보리 #fffdf7, 잉크 #202730, 노랑 #ffeb50, 하늘 #bce6fb, 분홍 #f7afc7, 민트",
+    "읽기 쉬운 Pretendard 계열 한글",
+    "검은 외곽선과 손그림 여행 삽화",
+    "모바일 2열 세로 여권 보관함"
+  ],
+  "proposed_flow": {
+    "signed_in": [
+      "스플래시",
+      "내 여행 (page=start)",
+      "선택한 여행 개요"
+    ],
+    "signed_out": [
+      "스플래시",
+      "기존 로그인",
+      "내 여행"
+    ],
+    "transition": "준비 완료 후 자동 전환",
+    "preserve_direct_links": true
+  },
+  "sample_data": "강릉/오사카/제주 여행 이름 및 날짜는 목업용 가상 예시.",
+  "scope": "이미지 목업 재생성 및 보관. 앱 소스/라우팅 변경 없음."
+}

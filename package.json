@@ -26,6 +26,7 @@
   "dependencies": {
     "@dnd-kit/collision": "0.5.1",
     "@dnd-kit/dom": "0.5.1",
+    "motion": "14.3.0",
     "yjs": "13.6.32"
   }
 }

@@ -9,6 +9,8 @@ const { inspectArtifactLayout } = require('./artifacts-check');
 
 const loader = fs.readFileSync(path.join(assets.root, 'app.js'), 'utf8');
 const modules = [...loader.matchAll(/^\s+"([^"\n]+\.js)",/gm)].map(match => `src/app/${match[1]}`);
+// The entry splash intentionally runs before the ordered app loader.
+modules.push('src/app/bootstrap/entry-splash.js');
 assert.equal(new Set(modules).size, modules.length, 'No duplicate app modules');
 for (const file of modules) {
   const source = fs.readFileSync(path.join(assets.root, file), 'utf8');

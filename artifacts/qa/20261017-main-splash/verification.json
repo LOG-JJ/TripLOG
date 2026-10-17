@@ -1,0 +1,144 @@
+{
+  "date": "2026-10-17",
+  "result": "passed",
+  "build_fingerprint": "387720825569806ea649",
+  "selected_mockup": "../../design/20261017-main-splash/triplog-splash-to-trip-selection-v2-brand.png",
+  "scope": "메인 스플래시 구현 및 기존 내 여행/로그인 화면 연결. 배포 없음.",
+  "library": {
+    "name": "Motion",
+    "version": "14.3.0",
+    "delivery": "local offline bundle",
+    "bundle": "vendor/motion-14.3.0.min.js",
+    "bytes": 65678,
+    "gzip_bytes": 24751,
+    "docs": [
+      "https://motion.dev/docs/animate",
+      "https://motion.dev/docs/stagger"
+    ]
+  },
+  "files": [
+    "Travel.html",
+    "app.js",
+    "src/app/bootstrap/entry-splash.js",
+    "src/styles/entry-splash.css",
+    "src/app/features/collaboration/trip-collaboration.js",
+    "package.json",
+    "package-lock.json",
+    "scripts/prepare-sync-assets.js",
+    "scripts/entry-splash-browser-regression.js",
+    "scripts/browser-suites.js",
+    "scripts/helpers/browser-fixture.js",
+    "scripts/trip-library-browser-regression.js",
+    "scripts/source-integrity-regression.js",
+    "vendor/motion-14.3.0.min.js",
+    "vendor/motion-LICENSES.txt",
+    "README.md",
+    "sw.js"
+  ],
+  "choreography": [
+    "로고와 부제 등장",
+    "3색 여권이 시차를 두고 펼쳐짐",
+    "비행기 이동과 진행 막대",
+    "큰 로고가 다음 화면 상단 로고 위치로 이동",
+    "제목과 실제 여행 목록의 순차 등장"
+  ],
+  "timing": {
+    "minimum_splash_ms": 1850,
+    "typical_total_ms": 2730,
+    "slow_continue_ms": 4500,
+    "hard_release_ms": 8000,
+    "reduced_motion": "장식 애니메이션과 최소 대기 생략; 초기 화면 준비만 대기"
+  },
+  "flow": {
+    "regular_entry": "스플래시 → 내 여행",
+    "signed_out": "스플래시 → 기존 로그인",
+    "trip_selected": "내 여행 → 선택한 여행 개요",
+    "direct_links": "여행/일정/초대/인증 콜백 목적지 유지",
+    "history": "in-app 복귀와 back/forward 탐색 재생 없음"
+  },
+  "checks": {
+    "npm test": "passed",
+    "npm run test:browser": "passed — all 36 registered suites, including 2540 city/viewport combinations",
+    "node scripts/entry-splash-browser-regression.js": "passed again after final animation changes",
+    "node scripts/trip-library-browser-regression.js": "passed",
+    "node scripts/auth-session-browser-regression.js": "passed",
+    "npm run build": "passed",
+    "npm run test:source": "passed — 107 modules, 28 stylesheets, 36 browser suites",
+    "npm run artifacts:check": "passed",
+    "git diff --check": "passed"
+  },
+  "environment": {
+    "automated": "isolated Playwright/Edge with external requests blocked",
+    "browser_skill": "Browser plugin not available; repository Playwright fixtures used",
+    "interactive": "Codex in-app browser",
+    "preview": "http://127.0.0.1:18086/Travel?page=start",
+    "synthetic_data": true,
+    "viewports": [
+      "320x568",
+      "390x844",
+      "600x800",
+      "1440x900",
+      "844x390"
+    ]
+  },
+  "browser_checks": {
+    "identity": "correct TripLOG page and route",
+    "content": "nonblank splash followed by real trip collection or login",
+    "overlay": "no framework error overlay",
+    "console": "no uncaught app errors in normal flows; isolated preview's expected external exchange-rate fetch warnings only",
+    "visual": "no overflow or overlap at all five viewport sizes; inspected entrance/exit frames",
+    "interaction": "search → select Jeju → overview → brand link → collection, no replay; login inputs reachable"
+  },
+  "resilience": [
+    "Motion missing or stalled",
+    "late Motion cannot restart completed splash",
+    "slow app.js blocks background keyboard focus as soon as surfaces parse",
+    "slow bootstrap Continue button transfers focus",
+    "required bootstrap failure releases splash and shows reload message",
+    "reduced motion at load and during animation",
+    "direct trip and itinerary links",
+    "password recovery callback",
+    "cached PWA offline restart",
+    "auto updates and editor drafts preserved"
+  ],
+  "comparison": {
+    "matched": [
+      "ivory background",
+      "current black/pink wordmark",
+      "fan of pastel passports",
+      "hand-drawn destinations",
+      "small yellow loading rail",
+      "same brand continued into existing collection"
+    ],
+    "intentional_differences": [
+      "Reused the app's actual passport and logo originals instead of generating replacement runtime art.",
+      "Real collection uses existing live trip labels/counts and current responsive columns; sample mockup trips are not inserted."
+    ]
+  },
+  "fixed_during_qa": [
+    "wait for both wordmark and staggered list before cleanup",
+    "lock keyboard focus during slow app-loader download",
+    "retain focus-return signal before hiding Continue",
+    "explicit transform keyframes prevent artwork collapse",
+    "blend moving logo outside isolated splash and delay incoming title to avoid text overlap"
+  ],
+  "source_sha256": {
+    "src/app/bootstrap/entry-splash.js": "12079655C3BD55AAD2BE57396574328A2CE55D30C00C116C84D75431A3F99989",
+    "src/styles/entry-splash.css": "4D4C1D0DF090DF39A66B22C09881940F629919EC9B894EFF13E097FF9A7F98D4",
+    "vendor/motion-14.3.0.min.js": "546D8F1F6731309393CE1EB3729823CA3D9822D316A689D977721A3709B90351"
+  },
+  "artifacts": [
+    "splash-mobile.png",
+    "splash-small-mobile.png",
+    "splash-desktop.png",
+    "trip-selection-mobile.png",
+    "splash-transition.mp4",
+    "browser-evidence.json",
+    "motion-evidence.json"
+  ],
+  "limitations": [
+    "Physical iOS/Safari and Android devices were not tested.",
+    "Live production deployment was not requested; no commit or push performed."
+  ],
+  "temporary_outputs": "Final evidence promoted here. Automatic approval review blocked the cleanup command by policy; disposable outputs remain Git-ignored under artifacts/tmp/20261017-main-splash and artifacts/tmp/20261017-main-splash-final."
+}
