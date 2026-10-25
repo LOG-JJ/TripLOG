@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "cases": [
+    "latest default",
+    "before/after and first/last moves",
+    "invalid/no-op guards",
+    "new rows append to manual order",
+    "rank precision rebase",
+    "content/totals/linked itinerary unchanged",
+    "independent sync property",
+    "CLI and JSON roundtrip",
+    "IndexedDB reopen",
+    "concurrent independent SQL moves and same-row conflict"
+  ],
+  "at": "2026-10-25T15:45:22.164Z"
+}

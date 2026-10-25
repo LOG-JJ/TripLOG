@@ -1,4 +1,20 @@
 /* Compact expense hierarchy. Editable text stays at 16px to avoid iOS focus zoom. */
+.ex-reorder-hint { margin: 0 0 12px; color: var(--ex-muted); font-size: 12px; line-height: 1.6; }
+.ex-table.has-reorder-handles th:last-child { width: 88px; }
+.ex-row-actions { display: flex; justify-content: flex-end; position: relative; z-index: 1; }
+body.rd-app .ex-row-edit .tl-sort-handle:hover { background: transparent; }
+.ex-table [data-dnd-placeholder] td { visibility: hidden; }
+.ex-table [data-dnd-placeholder] .ex-row-copy::before { content: '여기에 놓기'; position: absolute; left: 45%; top: 50%; padding: 4px 10px; border-radius: 20px; transform: translateY(-50%); background: #fff0b0; color: #252a35; font-size: 11px; visibility: visible; }
+.ex-table tr[data-dnd-placeholder] { position: relative; background: #fffdf2; }
+.ex-table [data-dnd-dragging] { background: white; box-shadow: 0 2px 6px #1720330a, 0 10px 28px #17203324; }
+@media (min-width: 761px) {
+  .ex-table [data-dnd-dragging] { display: table; table-layout: fixed; border-radius: 10px; }
+  .ex-table [data-dnd-dragging] td:first-child { width: 105px; }
+  .ex-table [data-dnd-dragging] td:nth-child(3) { width: 105px; }
+  .ex-table [data-dnd-dragging] td:nth-child(4) { width: 110px; }
+  .ex-table [data-dnd-dragging] td:nth-child(5) { width: 142px; }
+  .ex-table [data-dnd-dragging] td:last-child { width: 88px; }
+}
 body.rd-app #budgetPage .ex-heading h1, body.rd-app #rdExpenseEditor #rdExpenseEditorTitle { font-size: 20px !important; line-height: 1.3; letter-spacing: -.4px; }
 body.rd-app .ex-ledger .ex-button { font-size: 13px; }
 body.rd-app .ex-ledger .ex-button .ph { font-size: 18px; }
@@ -41,6 +57,10 @@ body.rd-app :is(#exCategoryFilterMenu, #expenseSortSelectMenu) .ph { font-size: 
 body.rd-app :is(#exCategoryFilterMenu, #expenseSortSelectMenu) .control-option-check { width: 16px; height: 18px; flex-basis: 16px; border: 0; }
 body.rd-app :is(#exCategoryFilterMenu, #expenseSortSelectMenu) .control-option-check .ph { font-size: 14px; }
 @media (max-width: 760px) {
+  body.rd-app .ex-table.has-reorder-handles .ex-row-edit { display: flex; justify-content: flex-end; align-self: center; grid-column: 3; grid-row: 2 / 4; position: relative; z-index: 1; }
+  body.rd-app .ex-row-actions .ex-entry-edit { display: none; }
+  body.rd-app .ex-table.has-reorder-handles .ex-row-date, body.rd-app .ex-table.has-reorder-handles .ex-row-copy .ex-note { grid-column: 2; }
+
   body.rd-app .ex-toolbar { grid-template-columns: minmax(0, 1fr) auto; gap: 7px; }
   body.rd-app .ex-filter-controls { gap: 7px; }
   body.rd-app .ex-search #rdSearchMount #expenseSearchInput { font-size: 16px; }

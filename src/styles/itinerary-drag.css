@@ -2,18 +2,21 @@
 #itineraryPage .timeline-stop-heading { grid-template-columns: 19px minmax(0, 1fr) auto; }
 #itineraryPage .timeline-stop-actions { display: flex; align-items: center; align-self: start; gap: 0; margin: -5px -6px -7px 0; }
 #itineraryPage .timeline-stop-actions .timeline-edit { width: 28px; min-width: 28px; height: 44px; min-height: 44px; padding: 4px; margin: 0; }
-.rd-app #itineraryPage .timeline-drag-handle {
+.rd-app [data-reorder-component="shared-sortable-list"] .tl-sort-handle {
   display: grid; place-items: center; width: 44px; height: 44px; min-width: 44px; min-height: 44px; flex: 0 0 44px;
   padding: 10px; margin: 0; border: 0; border-radius: 7px; box-shadow: none; background: transparent; color: #737d8b;
   touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; cursor: grab;
 }
-.rd-app #itineraryPage .timeline-drag-handle .ph { font-size: 22px; pointer-events: none; }
-.rd-app #itineraryPage .timeline-drag-handle:focus-visible { outline: 2px solid #236eab; outline-offset: -4px; }
-.rd-app #itineraryPage .timeline-drag-handle[aria-pressed="true"],
-.rd-app #itineraryPage [data-dnd-dragging] .timeline-drag-handle { color: #242a35; background: transparent; cursor: grabbing; }
-.rd-app #itineraryPage [data-dnd-dragging] .timeline-drag-handle { position: relative; }
-.rd-app #itineraryPage [data-dnd-dragging] .timeline-drag-handle::before { content: ""; position: absolute; inset: 8px; border-radius: 7px; background: #fff0b0; }
-.rd-app #itineraryPage [data-dnd-dragging] .timeline-drag-handle .ph { position: relative; }
+.rd-app .tl-sort-handle .ph { font-size: 22px; pointer-events: none; }
+.rd-app .tl-sort-handle:focus-visible { outline: 2px solid #236eab; outline-offset: -4px; }
+.rd-app .tl-sort-handle[aria-pressed="true"],
+.rd-app [data-dnd-dragging] .tl-sort-handle { color: #242a35; background: transparent; cursor: grabbing; }
+.rd-app [data-dnd-dragging] .tl-sort-handle { position: relative; }
+.rd-app [data-dnd-dragging] .tl-sort-handle::before { content: ""; position: absolute; inset: 8px; border-radius: 7px; background: #fff0b0; }
+.rd-app [data-dnd-dragging] .tl-sort-handle .ph { position: relative; }
+.tl-sort-announcement { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+body.tl-pointer-dragging { user-select: none; -webkit-user-select: none; cursor: grabbing; }
+body.tl-pointer-dragging .ex-table { overflow-anchor: none; }
 /* dnd-kit keeps the original element and its exact dimensions while dragging. */
 #itineraryPage .timeline-sortable-item { position: relative; --drag-axis-width: 22px; --drag-accent: #ffd34d; }
 #itineraryPage .timeline-sortable-item > .timeline-stop .timeline-axis::before { bottom: 0; }
@@ -46,7 +49,6 @@ body.itinerary-pointer-dragging #itineraryList { overflow-anchor: none; }
   border-color: #dde1e7; border-radius: 10px; background: #fff;
   box-shadow: 0 2px 6px #1720330a, 0 10px 28px #17203324;
 }
-.itinerary-drag-announcement { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 @media (min-width: 850px) {
   #itineraryPage .timeline-sortable-item { --drag-axis-width: 28px; }
   #itineraryPage .timeline-sortable-gap { grid-template-columns: 52px 28px minmax(0, 1fr); }
@@ -56,4 +58,4 @@ body.itinerary-pointer-dragging #itineraryList { overflow-anchor: none; }
   #itineraryPage .timeline-sortable-gap { grid-template-columns: 39px 19px minmax(0, 1fr); }
   #itineraryPage .timeline-stop-actions .timeline-edit { width: 24px; min-width: 24px; padding: 2px; }
 }
-@media print { #itineraryPage .timeline-drag-handle, #itineraryPage [data-dnd-placeholder] { display: none !important; } }
+@media print { .tl-sort-handle, #itineraryPage [data-dnd-placeholder] { display: none !important; } }

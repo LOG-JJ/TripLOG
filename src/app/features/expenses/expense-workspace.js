@@ -10,6 +10,25 @@
   const categoryIcons = Object.fromEntries(categories.map(name => [name, categoryData.get(name, 'ledger').icon]));
   const categoryColors = Object.fromEntries(categories.map(name => [name, categoryData.get(name, 'ledger').color]));
   let ready = false, ui = {}, currentTab = 'all', lastTrip = '', submitIntent = null, tripPreferences = null;
+  let reorderPending = false, orderControls = null;
+  const canReorder = () => window.TripLog.features.redesign.workspace.canEditTripSettings();
+
+  async function moveExpense(id, targetId, placement = 'before') {
+    if (reorderPending || !canReorder() || els.expenseSortSelect.value !== 'default') return false;
+    const result = window.TripLog.shared.expenseOrder.move(state.entries, id, targetId, placement);
+    if (!result.changed) return false;
+    const tripId = state.id;
+    reorderPending = true;
+    state.entries = result.items;
+    try {
+      const saved = await saveAndRender();
+      if (state.id !== tripId) return saved;
+      showToast(!saved ? '순서를 저장하지 못했어요. 상단 저장 상태에서 다시 시도해 주세요.'
+        : window.TripLogSyncRepository.cached(tripId)?.conflicts.length ? '순서 변경을 보관했어요. 저장 상태에서 겹친 변경을 확인해 주세요.'
+        : '지출 순서를 변경했어요.');
+      return saved;
+    } finally { reorderPending = false; renderLedger(); }
+  }
 
   function shortDate(date) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(date || '')) return '날짜 미지정';
@@ -32,6 +51,7 @@
         <div id="exFilterControls" class="ex-filter-controls"><label class="ex-filter"><span class="ex-sr-only">카테고리 필터</span><select id="exCategoryFilter" aria-label="카테고리 필터"><option value="전체">전체 카테고리</option>${categories.map(c => `<option value="${c}">${c}</option>`).join('')}</select></label>
         <div id="exSortMount" class="ex-sort"></div></div></div>
       <div class="ex-list-controls"><div id="rdExpenseTabs" class="ex-tabs" role="group" aria-label="지출 시기">${[['all', '전체'], ['pretrip', '사전구매'], ['during', '여행 중']].map(([key, label]) => `<button type="button" data-rd-action="expense-tab" data-tab="${key}" aria-pressed="${key === 'all'}">${label}<span data-count="${key}"></span></button>`).join('')}</div><button type="button" id="exFilterReset" class="ex-text-button" data-rd-action="expense-tab" data-tab="all" hidden>필터 초기화</button></div>
+      <p id="exReorderHint" class="ex-reorder-hint" hidden>순서를 이동하려면 정렬에서 기본순을 선택하세요.</p>
       <p id="exResultSummary" class="ex-result-summary" role="status" aria-live="polite"></p>
       <div class="ex-table-wrap"><table class="ex-table"><caption class="ex-sr-only">지출 기록. 내용 또는 수정 버튼을 누르면 편집할 수 있습니다.</caption><thead><tr><th scope="col">날짜</th><th scope="col">내용</th><th scope="col">카테고리</th><th scope="col">결제 수단</th><th scope="col">금액</th><th scope="col"><span class="ex-sr-only">관리</span></th></tr></thead><tbody id="rdExpenseList"></tbody></table><div id="exExpenseEmpty" hidden></div></div>
       <div class="ex-mobile-add"><button type="button" class="ex-button ex-primary" data-rd-action="expense-new">${icon('plus')} 지출 추가</button></div>`;
@@ -42,9 +62,11 @@
     mobileLayout.addEventListener('change', updateSearchHint); updateSearchHint();
     $('#exSortMount').appendChild(sort);
     els.expenseSortSelect.setAttribute('aria-label', '지출 정렬');
-    els.expenseSortSelect.querySelector('[value="default"]').textContent = '최신순';
+    els.expenseSortSelect.querySelector('[value="default"]').textContent = '기본순';
+    if (!els.expenseSortSelect.querySelector('[value="dateDesc"]')) els.expenseSortSelect.add(new Option('최신순', 'dateDesc'));
     if (!els.expenseSortSelect.querySelector('[value="dateAsc"]')) els.expenseSortSelect.add(new Option('오래된순', 'dateAsc'));
     els.expenseSortSelect.insertBefore(els.expenseSortSelect.querySelector('[value="dateAsc"]'), els.expenseSortSelect.querySelector('[value="amountDesc"]'));
+    els.expenseSortSelect.insertBefore(els.expenseSortSelect.querySelector('[value="dateDesc"]'), els.expenseSortSelect.querySelector('[value="dateAsc"]'));
     syncCustomSelect(els.expenseSortSelect, { rebuild: true });
     setupCustomSelect($('#exCategoryFilter'));
     customSelects.get($('#exCategoryFilter'))?.button.insertAdjacentHTML('afterbegin', icon('tag'));
@@ -55,16 +77,29 @@
     $('#exCategoryFilter').addEventListener('change', event => setFilter(event.target.value));
     $('#exSearchClear').addEventListener('click', () => { search.value = ''; search.dispatchEvent(new Event('input', { bubbles: true })); search.focus(); });
     $('#exFilterReset').addEventListener('click', () => { search.value = ''; activeFilter = '전체'; });
+    orderControls = window.TripLog.ui.sortableList.setup({
+      list: $('#rdExpenseList'), itemSelector: 'tr:not([data-dnd-placeholder])', rowSelector: 'tr', group: 'expense', label: '지출',
+      instructionsId: 'expenseDragInstructions', announcementAnchor: $('.ex-table'),
+      getScope: () => JSON.stringify([state.id, currentTab, activeFilter, els.expenseSearchInput.value, els.expenseSortSelect.value]),
+      enabled: () => !reorderPending && canReorder() && els.expenseSortSelect.value === 'default',
+      find: findEntry, getItems: () => getFilteredEntries().filter(entry => currentTab === 'all' || (currentTab === 'pretrip') === isPreTripExpenseDate(entry.date)),
+      getLabel: entry => entry.description || '지출', move: moveExpense,
+    });
   }
 
   function renderLedger(tab = currentTab) {
     if (!ready) return;
+    orderControls.cancel();
     currentTab = tab;
     if (lastTrip !== state.id) { lastTrip = state.id; activeFilter = '전체'; }
     const cost = window.TripLog.shared.travelCosts.summarize(state, { members: window.TripLog.features.collaboration.tripCollaboration.getTripMembers().length });
     $('#rdBudgetSummary').innerHTML = window.TripLog.ui.costSummary.render(cost);
     const filtered = getFilteredEntries();
     const rows = filtered.filter(entry => tab === 'all' || (tab === 'pretrip') === isPreTripExpenseDate(entry.date));
+    const hasHandles = canReorder() && els.expenseSortSelect.value === 'default' && rows.length > 1;
+    $('#exReorderHint').hidden = !canReorder() || els.expenseSortSelect.value === 'default' || rows.length < 2;
+    $('.ex-table').classList.toggle('has-reorder-handles', hasHandles);
+    $('#rdExpenseList').setAttribute('aria-busy', String(reorderPending));
     const counts = { all: filtered.length, pretrip: filtered.filter(e => isPreTripExpenseDate(e.date)).length, during: filtered.filter(e => !isPreTripExpenseDate(e.date)).length };
     $$('#rdExpenseTabs button').forEach(button => {
       button.classList.toggle('active', button.dataset.tab === tab);
@@ -89,8 +124,11 @@
       const chips = `<span class="ex-row-mobile-meta"><span class="ex-meta-chip" title="여행 일정">${icon(isPreTripExpenseDate(entry.date) ? 'airplane-tilt' : 'calendar-blank')}${safe(period)}</span><span class="ex-meta-chip">${icon(entry.paymentMethod === 'cash' ? 'money' : 'credit-card')}${safe(payment || '미지정')}</span></span>`;
       const note = `<small class="ex-note${entry.note ? '' : ' is-empty'}" title="${safe(entry.note || period)}"><span class="ex-desktop-period">${safe(period)}</span>${entry.note ? `${icon('note-blank')}<span>${safe(entry.note)}</span>` : ''}</small>`;
       const foreign = entry.currency && entry.currency !== 'KRW' && Number(entry.foreignAmount) > 0 ? `${safe(entry.currency)} ${Number(entry.foreignAmount).toLocaleString('ko-KR', { maximumFractionDigits: 2 })}` : '';
-      return `<tr data-rd-action="expense-edit" data-id="${safe(entry.id)}"><td class="ex-row-date"><time datetime="${safe(date)}" title="결제일">${safe(shortDate(date))}</time>${chips}</td><td class="ex-row-copy"><button type="button" class="ex-entry-title" data-rd-action="expense-edit" data-id="${safe(entry.id)}" aria-label="${safe(entry.description)} 수정">${safe(entry.description)}</button>${note}</td><td class="ex-row-category"><span style="--ex-category:${categoryColors[category]}" title="${safe(category)}">${icon(categoryIcons[category])}<span>${safe(category)}</span></span></td><td class="ex-row-payment">${payment ? `${icon(entry.paymentMethod === 'cash' ? 'money' : 'credit-card')}<span>${safe(payment)}</span>` : '<span>미지정</span>'}</td><td class="ex-row-amount"><strong>${won(entry.amount)}</strong>${foreign ? `<small>${foreign}</small>` : ''}</td><td class="ex-row-edit"><button type="button" data-rd-action="expense-edit" data-id="${safe(entry.id)}" aria-label="${safe(entry.description)} 수정">${icon('pencil-simple')}</button></td></tr>`;
+      const orderButton = hasHandles ? window.TripLog.ui.sortableList.handle({label: entry.description || '지출', instructionsId: 'expenseDragInstructions', className: 'ex-drag-handle', disabled: reorderPending}) : '';
+      const editButton = `<button type="button" class="ex-entry-edit" data-rd-action="expense-edit" data-id="${safe(entry.id)}" aria-label="${safe(entry.description)} 수정">${icon('pencil-simple')}</button>`;
+      return `<tr data-rd-action="expense-edit" data-id="${safe(entry.id)}"><td class="ex-row-date"><time datetime="${safe(date)}" title="결제일">${safe(shortDate(date))}</time>${chips}</td><td class="ex-row-copy"><button type="button" class="ex-entry-title" data-rd-action="expense-edit" data-id="${safe(entry.id)}" aria-label="${safe(entry.description)} 수정">${safe(entry.description)}</button>${note}</td><td class="ex-row-category"><span style="--ex-category:${categoryColors[category]}" title="${safe(category)}">${icon(categoryIcons[category])}<span>${safe(category)}</span></span></td><td class="ex-row-payment">${payment ? `${icon(entry.paymentMethod === 'cash' ? 'money' : 'credit-card')}<span>${safe(payment)}</span>` : '<span>미지정</span>'}</td><td class="ex-row-amount"><strong>${won(entry.amount)}</strong>${foreign ? `<small>${foreign}</small>` : ''}</td><td class="ex-row-edit"><span class="ex-row-actions">${editButton}${orderButton}</span></td></tr>`;
     }).join('');
+    orderControls.refresh();
     const empty = $('#exExpenseEmpty'); empty.hidden = rows.length > 0;
     $('.ex-table').hidden = !rows.length;
     if (!rows.length) empty.innerHTML = `<div class="ex-empty">${icon(state.entries.length ? 'magnifying-glass' : 'receipt')}<h2>${state.entries.length ? '조건에 맞는 지출이 없어요' : '첫 지출을 기록해 보세요'}</h2><p>${state.entries.length ? '검색어나 카테고리를 바꿔 보세요.' : '금액과 내용을 입력하면 여행 경비를 한눈에 볼 수 있어요.'}</p><button type="button" class="ex-button ex-secondary" ${state.entries.length ? 'data-rd-action="expense-tab" data-tab="all" data-ex-reset' : 'data-rd-action="expense-new"'}>${state.entries.length ? '필터 초기화' : '지출 추가'}</button></div>`;

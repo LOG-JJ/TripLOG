@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-26",
+  "passed": true,
+  "component": "ui.sortableList",
+  "library": "@dnd-kit/dom 0.5.1 (existing bundled version)",
+  "handle": "shared 44px handle; one per row; no reorder mode or separate arrow buttons",
+  "tests": {
+    "all": {
+      "exitCode": 0,
+      "ok": true,
+      "existingCliAssertions": 204
+    },
+    "expenseOrder": "model, rank precision, local reload, SQL synchronization and conflicts passed",
+    "expenseBrowser": "10 interaction groups passed",
+    "expenseUi": "passed",
+    "expenseFilter": "passed",
+    "itineraryDrag": "passed",
+    "itineraryTouchDrag": "passed",
+    "source": "passed",
+    "build": {
+      "exitCode": 0,
+      "ok": true,
+      "id": "c5614686919388c5ea2b",
+      "runtimeAssetsCached": true
+    },
+    "artifactLayout": "passed"
+  },
+  "environment": {
+    "browser": "Isolated Playwright/Edge; Browser plugin not available",
+    "viewports": [
+      "1440x1100",
+      "390x844 native touch",
+      "320x740"
+    ],
+    "externalRequests": "blocked",
+    "realTravelDataWrites": false
+  },
+  "delivery": {
+    "localImplementation": true,
+    "committed": false,
+    "pushed": false,
+    "productionDeployment": false
+  },
+  "at": "2026-10-25T15:50:46.347Z"
+}

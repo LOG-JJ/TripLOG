@@ -21,6 +21,7 @@ function baseOptions(context, group) {
 function describePreview(preview, context, label, spec = {}) {
   const lines = [`작업: ${label}`];
   const fieldNames = { tripName: '여행 이름', country: '국가', countryCode: '국가 코드', city: '도시', travelMode: '여행 유형', startDate: '시작일', endDate: '종료일', currencyCode: '통화', totalBudget: '예산', place: '장소', date: '일자', time: '시작', endTime: '종료', location: '주소', memo: '메모', note: '메모', body: '내용', name: '이름', title: '예약 이름', description: '지출 내용', amount: '원화 금액', mode: '금액 유형', currency: '통화', foreignAmount: '외화 금액', exchangeRate: '환율', exchangeBase: '환율 기준 단위', checked: '준비 완료', cost: '이동 비용', duration: '이동 시간', trans: '이동 수단', transits: '이동 구간', syncExpense: '지출 연동', individualSpent: '개인 지출', payerKey: '결제자', paymentMethod: '결제 수단', paymentDate: '결제일', category: '분류', type: '종류', reference: '예약 번호', transportKind: '교통수단', arrivalDate: '도착일', from: '출발지', to: '도착지', url: '링크', leaderName: '대표 이름', splitMode: '분담 방식', role: '권한', userId: '멤버 ID', displayName: '표시 이름', shareItinerary: '일정 공유', shareExpenses: '지출 공유', showMemberEmail: '이메일 표시', allowInviteRequests: '초대 요청 허용', sequence: '변경 번호' };
+  fieldNames.expenseOrder = '지출 순서';
   const describeFields = fields => {
     for (const [raw, value] of Object.entries(fields || {})) {
       const key = raw.replace(/^[pg]:/, '');

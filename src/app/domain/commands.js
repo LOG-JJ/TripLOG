@@ -1,10 +1,11 @@
 (function (root, factory) {
   const node = typeof module === 'object' && module.exports;
   const api = factory(node ? require('../shared/itinerary-order') : root.TripLogItineraryOrder,
-    node ? require('../features/travel-companion/model') : root.TripLog.features.travelCompanion.model);
+    node ? require('../features/travel-companion/model') : root.TripLog.features.travelCompanion.model,
+    node ? require('../shared/expense-order') : root.TripLog.shared.expenseOrder);
   if (node) module.exports = api;
   root.TripLog?.register('domain.commands', api);
-})(typeof window === 'undefined' ? globalThis : window, function (Order, Companion) {
+})(typeof window === 'undefined' ? globalThis : window, function (Order, Companion, ExpenseOrder) {
   'use strict';
   const clone = value => JSON.parse(JSON.stringify(value));
   const uuid = () => globalThis.crypto.randomUUID();
@@ -111,7 +112,10 @@
     return item;
   }
   const collections = { itinerary: 'itineraryItems', expense: 'entries', packing: 'packingList', companion: 'companions' };
-  function list(trip, kind) { return kind === 'reservation' ? (trip.travelCompanion?.reservations || []) : (trip[collections[kind]] || []); }
+  function list(trip, kind) {
+    const rows = kind === 'reservation' ? (trip.travelCompanion?.reservations || []) : (trip[collections[kind]] || []);
+    return kind === 'expense' && rows.some(entry => ExpenseOrder.rank(entry) !== null) ? ExpenseOrder.sort(rows) : rows;
+  }
   function find(trip, kind, id) { const item = list(trip, kind).find(row => row.id === id); if (!item) { const e = new Error(`대상을 찾을 수 없습니다: ${id}`); e.code = 'NOT_FOUND'; e.exitCode = 3; throw e; } return item; }
   function normalizeExpense(item, data) {
     if (item.mode === 'overseas' && ['foreignAmount', 'exchangeRate', 'exchangeBase'].some(key => Object.hasOwn(data, key)) && !Object.hasOwn(data, 'amount')) item.amount = Math.round(item.foreignAmount * item.exchangeRate / item.exchangeBase);
@@ -134,7 +138,7 @@
       }
       return trip;
     }
-    let rows = list(trip, kind), item = action === 'add' ? null : find(trip, kind, id);
+    let rows = kind === 'expense' ? (trip.entries || []) : list(trip, kind), item = action === 'add' ? null : find(trip, kind, id);
     if (action === 'remove') {
       if (kind === 'companion') {
         const key = `companion:${id}`;
@@ -159,6 +163,7 @@
       find(trip, kind, target);
       if (id === target) return trip;
       if (kind === 'itinerary') { const result = Order.move(rows, id, target, placement); if (!result.changed) problem('같은 날짜 안에서 일정 순서를 이동해 주세요.'); rows = result.items; }
+      else if (kind === 'expense') rows = ExpenseOrder.move(rows, id, target, placement).items;
       else { rows = rows.filter(row => row.id !== id); rows.splice(rows.findIndex(row => row.id === target) + (placement === 'after' ? 1 : 0), 0, item); rows.forEach((row, index) => { row._syncPosition = (index + 1) * 1024; }); }
     } else if (action === 'check') { if (kind !== 'packing') problem('준비물에만 check를 사용할 수 있습니다.'); item.checked = checked !== false; }
     else if (action === 'complete' || action === 'lock') {

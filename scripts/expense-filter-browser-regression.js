@@ -70,7 +70,7 @@ async function main() {
     assert.deepEqual(await controls(), all, 'Arrow navigation without selection does not filter');
     assert.equal(await page.evaluate(() => document.activeElement.id), 'exCategoryFilterButton');
     await page.locator('#expenseSortSelectButton').press('ArrowDown'); await page.keyboard.press('ArrowDown'); await page.keyboard.press('Enter');
-    assert.equal(await page.locator('#expenseSortSelect').inputValue(), 'dateAsc');
+    assert.equal(await page.locator('#expenseSortSelect').inputValue(), 'dateDesc');
     await pick('expenseSortSelect', 'default');
     const measurements = [];
     for (const width of [1440, 390, 320]) {

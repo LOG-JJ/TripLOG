@@ -8,6 +8,7 @@
   const names = { itinerary: "일정", expense: "지출", packing: "준비물", participant: "참여자", reservation: "예약", trip: "여행 정보", settings: "설정", split: "분담", share: "분담", progress: "진행 상태", note_update: "공동 메모", comment: "댓글" };
   const labels = { date: "날짜", time: "시작 시간", endTime: "종료 시간", startDate: "시작일", endDate: "종료일", place: "장소", location: "주소", memo: "메모", description: "내용", amount: "금액", foreignAmount: "외화 금액", currency: "통화", currencyCode: "통화", exchangeRate: "환율", exchangeBase: "환율 기준", cost: "경비", duration: "소요 시간", trans: "이동 수단", transits: "이동 구간", syncExpense: "지출 연결", expenseId: "연결된 지출", paymentDate: "결제일", payerKey: "결제자", paymentMethod: "결제 방법", category: "분류", name: "이름", tripName: "여행 이름", totalBudget: "예산", individualSpent: "개인 지출", checked: "준비 완료", completed: "완료", locked: "잠금", title: "제목", body: "내용", voucherName: "예약 이름", voucherCode: "예약 번호", voucherFile: "첨부파일", voucherFileName: "파일 이름", country: "국가", city: "도시", travelMode: "여행 유형", timeZone: "시간대", splitMode: "분담 방식", leaderName: "기본 결제자", assigneeId: "담당자", value: "분담 내용", lat: "위도", lon: "경도" };
   const groupNames = { schedule: "시간 변경", place: "장소 변경", transit: "이동·경비 변경", voucher: "예약·첨부 변경", money: "금액 변경", payment: "결제 정보 변경", dates: "여행 기간 변경", destination: "여행지 변경", currency: "통화·환율 변경" };
+  labels.expenseOrder = '지출 순서';
   function count(record) { return (record?.conflicts || []).reduce((n, c) => n + Math.max(1, c.patches?.length || 0), 0); }
   function badge(status, record) {
     const total = count(record);

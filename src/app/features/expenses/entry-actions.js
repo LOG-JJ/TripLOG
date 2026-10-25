@@ -103,7 +103,9 @@ function getFilteredEntries() {
     result.sort((a, b) => Number(a.amount || 0) - Number(b.amount || 0));
   } else if (sortOption === "descAsc") {
     result.sort((a, b) => (a.description || "").localeCompare(b.description || ""));
-  } else if (sortOption === 'default' || sortOption === 'dateAsc') {
+  } else if (sortOption === 'default') {
+    result = window.TripLog.shared.expenseOrder.sort(result);
+  } else if (sortOption === 'dateDesc' || sortOption === 'dateAsc') {
     const paymentDate = entry => window.TripLog.features.redesign?.model?.paymentDate(entry) || entry.date || '';
     const direction = sortOption === 'dateAsc' ? 1 : -1;
     result.sort((a, b) => direction * (paymentDate(a).localeCompare(paymentDate(b)) || (Number(a.createdAt) || 0) - (Number(b.createdAt) || 0)));

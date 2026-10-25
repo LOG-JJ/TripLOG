@@ -36,6 +36,7 @@ module.exports = [
   'map-provider-browser-regression.js',
   'domestic-route-browser-regression.js',
   'expense-ui-browser-regression.js',
+  'expense-order-browser-regression.js',
   'manual-exchange-rate-browser-regression.js',
   'reservation-expense-editor-browser-regression.js',
   'expense-filter-browser-regression.js',
