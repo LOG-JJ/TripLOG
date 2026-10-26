@@ -10,7 +10,7 @@ html:is([data-splash="showing"], [data-splash="exiting"]) :is(#authGate, #appShe
   pointer-events: none;
 }
 .entry-splash {
-  --splash-paper: #fffdf7;
+  --splash-paper: var(--tl-surface, #fff);
   --splash-ink: #172733;
   position: fixed;
   inset: 0;
@@ -208,7 +208,7 @@ html:is([data-splash="showing"], [data-splash="exiting"]) :is(#authGate, #appShe
   overflow: hidden;
   border: 1.5px solid var(--splash-ink);
   border-radius: 999px;
-  background: #fffefa;
+  background: var(--tl-surface, #fff);
 }
 .entry-splash-progress {
   display: block;

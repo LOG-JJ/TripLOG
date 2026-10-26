@@ -29,7 +29,7 @@
 .rd-app #rdReservation .pp-field :is(input:not([type=hidden]), textarea) { min-width: 0; width: 100%; min-height: 30px; height: 30px; padding: 2px 0; margin: 0; border: 0; border-radius: 0; box-shadow: none; background: transparent; color: var(--text); font-family: var(--font); font-size: 16px; font-weight: 550; line-height: 1.4; outline: none; }
 #rdReservation .pp-field :is(input, textarea)::placeholder { color: #838b97; font-size: 13px; font-weight: 400; }
 .rd-app #rdReservation .pp-field textarea { height: auto; min-height: 58px; resize: vertical; }
-#rdReservation .pp-field:focus-within { background: #fffdf0; border-color: var(--text); box-shadow: 1px 2px 0 var(--text); }
+#rdReservation .pp-field:focus-within { background: var(--tl-surface, #fff); border-color: var(--text); box-shadow: 1px 2px 0 var(--text); }
 .rd-app #rdReservation .pp-field :is(.custom-date-button, .custom-time-button) { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 32px; height: 32px; padding: 2px 0; gap: 5px; border: 0; border-radius: 0; background: transparent; box-shadow: none; color: var(--text); font-size: 15px; font-weight: 550; }
 #rdReservation .pp-field :is(.custom-date-button, .custom-time-button) .ph { font-size: 18px; }
 #rdReservation .pp-field .custom-time-label { font-size: 14px; }
@@ -44,7 +44,7 @@
 #rdReservation .pp-journey > button[aria-pressed=true] { background: var(--rd-blue); }
 .rd-app #rdReservation .pp-amount-label { display: flex; flex-direction: column; gap: 6px; min-width: 0; font-size: 12px; font-weight: 650; margin: 0; }
 #rdReservation .pp-amount-row { display: flex; align-items: center; min-width: 0; height: 46px; border: 1.5px solid var(--text); border-radius: 8px; background: #fff; overflow: hidden; }
-#rdReservation .pp-amount-row:focus-within { background: #fffbd6; box-shadow: 1px 2px 0 var(--text); }
+#rdReservation .pp-amount-row:focus-within { background: var(--tl-surface, #fff); box-shadow: 1px 2px 0 var(--text); }
 .rd-app #rdReservation .pp-amount-row input { flex: 1; width: 0; min-width: 0; height: 42px; min-height: 42px; padding: 7px 12px; border: 0; border-radius: 0; background: transparent; box-shadow: none; outline: none; color: var(--text); font-size: 22px; font-weight: 750; line-height: 1.2; font-variant-numeric: tabular-nums; }
 #rdReservation .pp-currency { display: flex; align-items: center; justify-content: center; align-self: stretch; flex-shrink: 0; width: 90px; padding: 0 10px; border-left: 1px solid #c1c6cf; font-size: 13px; font-weight: 600; }
 #rdReservation .pp-method-field { min-width: 0; padding: 5px 6px 6px; margin: 0; border: 1.3px solid #8d95a3; border-radius: 8px; background: #fff; }
@@ -59,7 +59,7 @@
 #rdReservation .pp-extra > summary .ph { flex-shrink: 0; font-size: 19px; }
 #rdReservation .pp-extra > summary .ph:last-child { margin-left: auto; font-size: 17px; transition: transform var(--rd-motion); }
 #rdReservation .pp-extra > summary small { font-size: 11px; color: var(--muted); font-weight: 400; }
-#rdReservation .pp-extra[open] > summary { background: #fff8ce; }
+#rdReservation .pp-extra[open] > summary { background: var(--tl-surface, #fff); }
 #rdReservation .pp-extra[open] > summary .ph:last-child { transform: rotate(180deg); }
 #rdReservation .pp-extra > div { display: grid; gap: 10px; padding-top: 10px; }
 #rdReservation .pp-save-help { display: flex; align-items: flex-start; gap: 7px; padding: 9px 10px; margin: 12px 0 0; border-radius: 7px; background: #eaf7ff; color: #38556e; font-size: 12px; font-weight: 500; line-height: 1.45; }

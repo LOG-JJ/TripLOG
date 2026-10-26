@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-26",
+  "status": "local-validation-passed",
+  "deployed": false,
+  "build": "c81e3ade45e5ac4a2d0f",
+  "captures": [
+    {
+      "file": "before-mobile-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-dense-time\\before-390.png",
+      "sha256": "6af24ed5875cb1c13f513ca6c21570bbe45847fc8c08deef3bf5d62cb7b9008d"
+    },
+    {
+      "file": "after-mobile-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-dense-time\\after-390.png",
+      "sha256": "2ff0a901b7ec93ce78e94aa091218599d96ff7ca2a01e61e1a49c7b89c9dcc9f"
+    },
+    {
+      "file": "after-desktop-1440.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-dense-time\\after-1440.png",
+      "sha256": "95525c108915102ae1d300a471185cb8a66df170a22e43f060552866c9fee9e7"
+    },
+    {
+      "file": "after-mobile-320.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-dense-time\\after-320.png",
+      "sha256": "4e0b4d58810dd21cf7e2c34afa2ad6b5a9da6fca80daa52e1bc1b8990026253c"
+    }
+  ]
+}

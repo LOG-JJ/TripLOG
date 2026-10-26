@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-26",
+  "status": "local-validation-passed",
+  "deployed": false,
+  "build": "52448cbb9685a7b7cc53",
+  "browser": "Playwright/installed Edge with CDP touch emulation; Browser plugin unavailable",
+  "osKeyboardVerified": false,
+  "health": [
+    {
+      "viewport": 1440,
+      "runtimeErrors": [],
+      "unexpectedConsole": []
+    },
+    {
+      "viewport": 390,
+      "runtimeErrors": [],
+      "unexpectedConsole": []
+    },
+    {
+      "viewport": 320,
+      "runtimeErrors": [],
+      "unexpectedConsole": []
+    },
+    {
+      "viewport": 640,
+      "runtimeErrors": [],
+      "unexpectedConsole": []
+    }
+  ],
+  "captures": [
+    {
+      "file": "picker-mobile-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-time-input-mode\\after-390.png",
+      "sha256": "e059abcb5da1eb70e1819de0e1721179b454f6c914e340a79cdfe1623e2a8422"
+    },
+    {
+      "file": "picker-mobile-320.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-time-input-mode\\after-320.png",
+      "sha256": "41440aa9229f0cc3655e2d458864b7545e142140eae76eba02ffb5be09286037"
+    },
+    {
+      "file": "picker-desktop-1440.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-time-input-mode\\after-1440.png",
+      "sha256": "7026092874ac41841b07373c528cb64a63b447726a3b2ee4f7d7ff9ade8e9701"
+    },
+    {
+      "file": "direct-input-mobile.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-time-input-mode\\time-wheel\\time-direct-input-mobile.png",
+      "sha256": "524962de1444da15d33510cbc0a89c8c8667c8d91a68e46c99468a47adb3e8b9"
+    }
+  ]
+}

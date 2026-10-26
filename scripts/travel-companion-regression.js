@@ -47,6 +47,23 @@ assert.equal(M.stayItinerary(stayTrip, { ...stayRow, endDate: day }, null, stayI
 assert.equal(M.stayItinerary(stayTrip, { ...stayRow, date: '2026-02-30' }, null, stayId).itineraryItems.length, 0);
 const legacyStay = { ...firstNight, id: 'legacy-stay' }; delete legacyStay.reservationStayDate;
 assert.equal(M.stayItinerary({ ...stayTrip, itineraryItems: [legacyStay] }, stayRow, stayRow, stayId).itineraryItems[0].id, 'legacy-stay');
+// Old bookings get one missing stop per night, using the same IDs on two devices.
+const oldBookingTrip = { ...clone(stayTrip), travelCompanion: { reservations: [{ ...stayRow, id: 'old-booking' }] } };
+const defaults = M.defaultStayItinerary(oldBookingTrip);
+assert.deepEqual(Array.from(defaults.itineraryItems, item => item.date), [day, '2026-09-19']);
+assert.deepEqual(clone(M.defaultStayItinerary(clone(oldBookingTrip))), clone(defaults), 'Independent devices derive identical stops');
+assert.deepEqual(clone(M.defaultStayItinerary({ ...clone(oldBookingTrip), id: 'another-device-local-id' })), clone(defaults), 'Local trip aliases cannot duplicate a shared booking night');
+assert.equal(oldBookingTrip.itineraryItems.length, 0, 'Default planning never mutates its input');
+const customizedDefaults = clone(defaults.itineraryItems); customizedDefaults[0].memo = '내 메모'; customizedDefaults[0].time = '21:30';
+const repairedDefaults = M.defaultStayItinerary({ ...oldBookingTrip, itineraryItems: [customizedDefaults[0]] });
+assert.equal(repairedDefaults.addedIds.length, 1);
+assert.deepEqual(clone(repairedDefaults.itineraryItems[0]), customizedDefaults[0], 'Backfill preserves existing day edits');
+assert.equal(M.defaultStayItinerary({ ...oldBookingTrip, itineraryItems: defaults.itineraryItems }).addedIds.length, 0, 'Reopening never duplicates a booked night');
+assert.equal(M.defaultStayItinerary({ ...oldBookingTrip, travelCompanion: { reservations: [...oldBookingTrip.travelCompanion.reservations, ...oldBookingTrip.travelCompanion.reservations] } }).addedIds.length, 2, 'Repeated copies of the same booking do not double its nights');
+const manuallyRecordedHotel = { id: 'manual-night', date: day, theme: 'lodging', place: stayRow.title, location: stayRow.location, memo: '독립적인 숙소 기록' };
+const manualDefault = M.defaultStayItinerary({ ...oldBookingTrip, itineraryItems: [manuallyRecordedHotel] });
+assert.equal(manualDefault.addedIds.length, 1, 'An existing matching hotel already covers its night');
+assert.deepEqual(clone(manualDefault.itineraryItems[0]), manuallyRecordedHotel, 'Matching manual stops keep their identity and independent ownership');
 const purchaseStay = M.stayFromEntry({ id: 'hotel-purchase', hotelName: '예약 호텔', hotelCheckIn: day, hotelCheckOut: '2026-09-20', hotelAddress: '주소', bookingCode: 'CODE', pretripMemo: '예약 메모', amount: 200000 });
 assert.deepEqual([purchaseStay.id, purchaseStay.title, purchaseStay.date, purchaseStay.endDate, purchaseStay.note], ['entry:hotel-purchase', '예약 호텔', day, '2026-09-20', '예약 메모']);
 assert.equal(M.minutes('24:00'), null);

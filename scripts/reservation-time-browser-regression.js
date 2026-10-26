@@ -71,8 +71,12 @@ async function main() {
       assert.equal(await page.locator('#ttReservationArrivalTime').inputValue(), '06:00');
       assert(await page.locator('#ttReservationEditor').isVisible(), 'Escape closes only the picker');
       await open('ttReservationArrivalTime');
-      await editPart(panel, 'hour', '08'); await editPart(panel, 'minute', '25');
-      await panel.locator('[data-time-action="close"]').click();
+      await panel.locator('[data-time-action="type"]').click();
+      assert.equal(await panel.isVisible(), false, 'Direct input closes the reservation time picker');
+      assert(await page.locator('#ttReservationEditor').isVisible(), 'Direct input keeps the reservation editor open');
+      const text = page.locator('#ttReservationArrivalTimeText');
+      assert(await text.evaluate(node => node === document.activeElement));
+      await text.fill('0825'); await text.press('Enter');
       assert.equal(await page.locator('#ttReservationArrivalTime').inputValue(), '08:25');
       assert.equal(await page.locator('#ttReservationTime').inputValue(), '20:44', 'Arrival changes do not replace departure');
       await open('ttReservationTime');
@@ -94,7 +98,7 @@ async function main() {
         const row = state.travelCompanion.reservations[0]; return [row.time, row.endTime, row.arrivalDate];
       }), [departureValue, '08:25', '2026-09-26']);
       assert.deepEqual(errors, []);
-      console.log(`PASS reservation time ${width}: shared picker appearance, visible selected row, focus/direct input/wheel, confirm/Escape/clear, independent departure/arrival, overnight save/reload`);
+      console.log(`PASS reservation time ${width}: shared picker appearance, visible selected row, focus/explicit input/wheel, confirm/Escape/clear, independent departure/arrival, overnight save/reload`);
       await context.close();
     }
   } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }

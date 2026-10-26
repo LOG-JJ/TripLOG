@@ -57,7 +57,7 @@
 .rd-app .control-theme-emoji { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 20px; width: 20px; font-size: 18px; line-height: 1.2; }
 .rd-app .custom-select[data-control="theme"] .custom-select-value { display: flex; align-items: center; gap: 8px; }
 .rd-app .custom-select[data-control="theme"] [data-itinerary-theme-icon] { display: none; }
-.rd-app .custom-select[data-control="theme"] .custom-select-button { background: #fffbd6; }
+.rd-app .custom-select[data-control="theme"] .custom-select-button { background: var(--tl-surface, #fff); }
 .rd-app .control-select-theme { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; padding: 8px; border-radius: 12px !important; box-shadow: 3px 3px 0 var(--control-ink) !important; }
 .rd-app .control-select-theme .custom-select-option { min-height: 44px; gap: 7px; padding: 8px; border-color: #e0e4e9; border-radius: 8px; font-size: 14px !important; font-weight: 650 !important; }
 .rd-app .control-select-theme .custom-select-option.selected { border-radius: 8px !important; box-shadow: 0 1px 0 var(--control-ink) !important; }
@@ -129,11 +129,11 @@
 .rd-app .custom-time-button.open .custom-select-chevron { transform: rotate(225deg); }
 .rd-app .custom-time-button .custom-select-chevron.ph { transform: none; }
 .rd-app .custom-time-button.open .custom-select-chevron.ph { transform: rotate(180deg); }
-.rd-app .control-time-wheel { --time-row: 36px; padding: 16px; max-width: calc(100vw - 24px); }
-.rd-app .control-time-wheel .time-panel-grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 0; }
-.rd-app .control-time-wheel .time-panel-grid::after { content: ''; position: absolute; top: 30px; bottom: 0; left: 50%; width: 1px; background: #e5edf4; pointer-events: none; }
+.rd-app .control-time-wheel { --time-row: 18px; padding: 6px; max-width: calc(100vw - 24px); border-radius: 10px !important; box-shadow: 2px 3px 0 var(--control-ink) !important; }
+.rd-app .control-time-wheel .time-panel-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; margin: 0; }
+.rd-app .control-time-wheel .time-panel-grid::after { content: ''; position: absolute; top: 18px; bottom: 0; left: 50%; width: 1px; background: #e5edf4; pointer-events: none; }
 .rd-app .time-wheel-column { min-width: 0; }
-.rd-app .control-time-wheel .time-wheel-label { display: block; padding: 0 0 10px; color: var(--control-ink); text-align: center; font-size: 13px !important; font-weight: 650 !important; line-height: 20px; }
+.rd-app .control-time-wheel .time-wheel-label { display: block; padding: 0 0 4px; color: var(--control-ink); text-align: center; font-size: 11px !important; font-weight: 650 !important; line-height: 14px; }
 .rd-app .time-wheel-frame { position: relative; border: 1px solid #d4dde6; border-radius: 10px; overflow: hidden; background: #fbfdff; isolation: isolate; }
 .rd-app .time-wheel-frame:focus-within { border-color: #5286b0; box-shadow: 0 0 0 2px #e0f1ff; }
 .rd-app .time-wheel-band { position: absolute; top: calc(var(--time-row) * 2); left: 4px; right: 4px; height: var(--time-row); border-radius: 5px; background: var(--control-yellow); pointer-events: none; z-index: -1; }
@@ -146,12 +146,12 @@
 .rd-app .time-wheel-list::-webkit-scrollbar { display: none; }
 .rd-app .time-wheel-list:active { cursor: grabbing; }
 .rd-app .control-time-wheel .time-wheel-option { height: var(--time-row); display: flex; align-items: center; justify-content: center; padding: 0; margin: 0; border: 0; background: transparent; user-select: none; -webkit-user-select: none; touch-action: pan-y; }
-.rd-app .control-time-wheel .time-wheel-number { display: inline-block; font-family: inherit; font-size: 18px !important; font-variant-numeric: tabular-nums; font-weight: 650; line-height: 1; color: #707a8b; pointer-events: none; transform-origin: center; }
+.rd-app .control-time-wheel .time-wheel-number { display: inline-block; font-family: inherit; font-size: 14px !important; font-variant-numeric: tabular-nums; font-weight: 650; line-height: 1; color: #707a8b; pointer-events: none; transform-origin: center; }
 .rd-app .control-time-wheel input.time-wheel-input,
 .rd-app #rdExpenseEditor .control-time-wheel input.time-wheel-input {
   position: absolute; top: calc(var(--time-row) * 2); left: 4px; width: calc(100% - 8px); min-width: 0; height: var(--time-row); min-height: var(--time-row);
   margin: 0; padding: 0; border: 0; border-radius: 5px; background: transparent; box-shadow: none;
-  text-align: center; font-size: 18px; font-weight: 750; font-variant-numeric: tabular-nums;
+  text-align: center; font-size: 14px; font-weight: 750; font-variant-numeric: tabular-nums;
   line-height: var(--time-row); color: transparent; caret-color: transparent; pointer-events: none;
 }
 .rd-app .control-time-wheel .time-wheel-input::selection { background: transparent; color: transparent; }
@@ -159,13 +159,14 @@
 .rd-app .control-time-wheel .is-editing input.time-wheel-input,
 .rd-app #rdExpenseEditor .control-time-wheel .is-editing input.time-wheel-input { background: var(--control-yellow); color: var(--control-ink); caret-color: var(--control-ink); pointer-events: auto; }
 .rd-app .control-time-wheel .is-editing input.time-wheel-input::selection { background: #bce4ff; color: var(--control-ink); }
-.rd-app .control-time-wheel .time-panel-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 16px 0 0; margin: 0; border: 0; }
-.rd-app .control-time-wheel .time-soft-button { height: 42px; min-height: 42px; margin: 0; padding: 8px 10px; border: 1.7px solid var(--control-ink); border-radius: 9px; box-shadow: 0 2px 0 var(--control-ink); background: #fff; color: var(--control-ink); font-size: 14px; font-weight: 700; }
+.rd-app .control-time-wheel .time-panel-actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding: 6px 0 0; margin: 0; border: 0; }
+.rd-app .control-time-wheel .time-soft-button { height: 30px; min-height: 30px; min-width: 0; margin: 0; padding: 4px; border: 1.5px solid var(--control-ink); border-radius: 6px; box-shadow: 0 1px 0 var(--control-ink); background: #fff; color: var(--control-ink); font-size: 11px; font-weight: 700; line-height: 1.25; white-space: nowrap; }
 .rd-app .control-time-wheel [data-time-action="close"] { background: var(--control-yellow); }
 @media (pointer: coarse) {
-  .rd-app .control-time-wheel { --time-row: 44px; }
-  .rd-app .control-time-wheel .time-soft-button { min-height: 44px; height: 44px; }
-  .rd-app .control-time-wheel .is-editing input.time-wheel-input { font-size: 18px; }
+  .rd-app .control-time-wheel { --time-row: 20px; }
+  .rd-app .control-time-wheel .time-soft-button { min-height: 32px; height: 32px; }
+  /* Keep direct editing at 16px to avoid iOS zooming the compact picker. */
+  .rd-app .control-time-wheel .is-editing input.time-wheel-input { font-size: 16px; }
 }
 
 /* Calendar: airy seven-column grid, weekend colors, selected date and today dot. */

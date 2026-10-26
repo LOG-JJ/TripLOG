@@ -95,7 +95,7 @@
 #itineraryPage .timeline-stop[data-theme=food] .timeline-axis .ph { background: var(--rd-pink); }
 #itineraryPage .timeline-stop.is-selected .timeline-axis .ph { background: var(--rd-yellow); }
 #itineraryPage .timeline-stop-body { padding: 7px 9px 10px; border: 1.3px solid #727987; border-radius: 8px; background: #fff; transition: background var(--rd-motion), border-color var(--rd-motion), box-shadow var(--rd-motion); }
-#itineraryPage .is-selected .timeline-stop-body { background: #fffdf0; border-color: var(--text); box-shadow: 1px 2px 0 var(--text); }
+#itineraryPage .is-selected .timeline-stop-body { background: var(--tl-surface, #fff); border-color: var(--text); box-shadow: 1px 2px 0 var(--text); }
 #itineraryPage .timeline-stop-heading { display: grid; grid-template-columns: 19px minmax(0, 1fr) 32px; align-items: start; gap: 6px; }
 #itineraryPage .timeline-place-icon { padding-top: 6px; }
 #itineraryPage .timeline-place-icon .ph { font-size: 20px; }
@@ -118,7 +118,7 @@
 #itineraryPage .timeline-transit-label > span { flex: 1; min-width: 0; }
 #itineraryPage .timeline-transit-label > .ph { font-size: 17px; }
 #itineraryPage .timeline-transit-label > .ph:last-child { font-size: 16px; transition: transform var(--rd-motion); }
-#itineraryPage .timeline-transit[open] .timeline-transit-label { background: #fff8c6; }
+#itineraryPage .timeline-transit[open] .timeline-transit-label { background: var(--tl-surface, #fff); }
 #itineraryPage .timeline-transit[open] .timeline-transit-label > .ph:last-child { transform: rotate(180deg); }
 #itineraryPage .timeline-transit-fields { margin: 0 0 10px 65px; padding: 10px; border: 1px solid var(--rd-divider); background: #fafbfc; }
 #itineraryPage .timeline-transit-fields .custom-select-button { font-size: 13px; padding: 8px; }

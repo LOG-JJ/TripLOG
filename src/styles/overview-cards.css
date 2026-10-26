@@ -2,7 +2,7 @@
 body.rd-app #overviewPage {
   --ov-card-border: 1.5px solid var(--text);
   --ov-card-radius: 10px;
-  --ov-card-surface: #fff;
+  --ov-card-surface: var(--tl-surface, #fff);
   --ov-card-padding: 12px;
 }
 body.rd-app #overviewPage .ov-card {

@@ -29,7 +29,6 @@ async function main() {
     const snapshot = () => page.evaluate(() => JSON.parse(JSON.stringify({ reservations: state.travelCompanion.reservations, items: state.itineraryItems, entries: state.entries })));
     const submit = () => page.locator('#ttReservationEditor [type="submit"]').click();
     const copyButton = id => page.locator(`[data-itinerary-action="copy"][data-id="${id}"]`);
-    const closeEditor = () => page.locator('#itineraryEditorClose').click();
     await page.goto(`${origin}/Travel?page=overview&trip=reservation-empty-fixture`); await ready();
     await page.evaluate(async () => { state.itineraryItems = []; await saveAndRender(); });
     await page.locator('[data-rd-action="companion-stay-new"]').click();
@@ -79,24 +78,19 @@ async function main() {
     }
     await page.setViewportSize({ width: 390, height: 844 });
     const original = (await snapshot()).items[0];
-    await copyButton(original.id).focus(); await page.keyboard.press('Enter');
-    assert.equal(await page.locator('#itineraryEditorTitle').innerText(), '일정 복사');
-    assert.equal(await page.locator('#itineraryPlaceInput').inputValue(), original.place);
-    assert.equal(await page.locator('#itineraryTimeInput').inputValue(), '21:40');
-    await closeEditor(); assert.equal((await snapshot()).items.length, 2, 'Cancel creates nothing');
-    await copyButton(original.id).click();
-    await set({ itineraryDaySelect: '2026-09-27', itineraryMemoInput: '복사해서 만든 일정' });
-    await page.locator('#itineraryEditor').screenshot({ path: path.join(output, 'copy-editor-390.png'), animations: 'disabled' });
     await page.evaluate(() => { window.__realSave = saveAndRender; saveAndRender = async () => false; });
-    await page.locator('#itinerarySubmitButton').click();
+    await copyButton(original.id).click();
+    await page.waitForFunction(() => itineraryCopiesPending.size === 0);
     assert.equal((await snapshot()).items.length, 2, 'Failed copy keeps original collection');
-    assert(await page.locator('#itineraryEditor').isVisible());
+    assert.equal(await page.locator('#itineraryEditor').isVisible(), false, 'Copy never opens the place editor');
     await page.evaluate(() => { saveAndRender = window.__realSave; });
-    await page.locator('#itinerarySubmitButton').click(); await page.locator('#itineraryEditor').waitFor({ state: 'hidden' });
-    const copied = await snapshot(), copy = copied.items.find(item => item.date === '2026-09-27');
+    await copyButton(original.id).focus(); await page.keyboard.press('Enter');
+    await page.waitForFunction(() => itineraryCopiesPending.size === 0 && state.itineraryItems.length === 3);
+    const copied = await snapshot(), copy = copied.items.find(item => !shortened.items.some(source => source.id === item.id));
     assert(copy && copy.id !== original.id);
+    assert.equal(await page.locator('#itineraryEditor').isVisible(), false);
     assert.deepEqual(copied.items.find(item => item.id === original.id), original, 'Copy never edits its source');
-    assert.equal(copy.memo, '복사해서 만든 일정'); assert.equal(copy.time, '21:40');
+    assert.equal(copy.memo, original.memo); assert.equal(copy.time, '21:40'); assert.equal(copy.date, original.date);
     assert(!copy.linkedReservationId && !copy.reservationStayDate && !copy.expenseId, 'Copy has independent reservation/payment ownership');
     assert.equal(copy.voucherCode, 'HOTEL-UPDATED');
     await page.reload(); await ready(); assert.equal((await snapshot()).items.length, 3);
@@ -128,9 +122,10 @@ async function main() {
       await saveAndRender(); window.TripLog.features.redesign.workspace.navigate('itinerary'); state.selectedItineraryDate = item.date; render();
     }, original.id);
     const sourceWithTransit = (await snapshot()).items.find(item => item.id === original.id);
+    const beforeTransitCopyIds = (await snapshot()).items.map(item => item.id);
     await copyButton(original.id).click();
-    await page.locator('#itinerarySubmitButton').click(); await page.locator('#itineraryEditor').waitFor({ state: 'hidden' });
-    const withTransitCopy = await snapshot(), copiedTransit = withTransitCopy.items.find(item => item.date === sourceWithTransit.date && item.id !== sourceWithTransit.id);
+    await page.waitForFunction(() => itineraryCopiesPending.size === 0);
+    const withTransitCopy = await snapshot(), copiedTransit = withTransitCopy.items.find(item => !beforeTransitCopyIds.includes(item.id));
     assert(copiedTransit && !copiedTransit.expenseId && copiedTransit.cost === 0);
     assert.deepEqual(withTransitCopy.items.find(item => item.id === original.id), sourceWithTransit);
     assert.equal(withTransitCopy.entries.length, 2);
@@ -153,8 +148,68 @@ async function main() {
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
       await page.locator('#itineraryList').screenshot({ path: path.join(output, `copy-and-reorder-${width}.png`), animations: 'disabled' });
     }
+    // Double clicks while storage is pending still create one adjacent copy in
+    // a manually ordered day, preserving the existing source and payments.
+    const beforeRapid = await snapshot();
+    await page.evaluate(id => {
+      const source = findItineraryItem(id);
+      state.itineraryItems.filter(item => item.date === source.date).forEach((item, index) => { item.itineraryOrder = { date: item.date, rank: (index + 1) * 1024 }; });
+      return saveAndRender();
+    }, original.id);
+    await page.evaluate(() => {
+      window.__realSave = saveAndRender;
+      saveAndRender = () => { const saved = window.__realSave(); return new Promise(resolve => { window.__copyRelease = () => Promise.resolve(saved).then(resolve); }); };
+    });
+    await copyButton(original.id).dblclick();
+    assert.equal((await snapshot()).items.length, beforeRapid.items.length + 1, 'A pending double click creates one copy');
+    await page.evaluate(() => { window.__copyRelease(); saveAndRender = window.__realSave; });
+    await page.waitForFunction(() => itineraryCopiesPending.size === 0);
+    const rapidCopy = (await snapshot()).items.find(item => !beforeRapid.items.some(before => before.id === item.id));
+    const ordered = await page.evaluate(() => getFilteredItineraryItems().map(item => item.id));
+    assert.equal(ordered[ordered.indexOf(original.id) + 1], rapidCopy.id, 'A manually sorted copy is inserted immediately after its source');
+    assert.equal((await snapshot()).entries.length, beforeRapid.entries.length);
+
+    // Bookings created before nightly expansion are repaired on itinerary entry.
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.evaluate(async () => {
+      window.TripLog.features.redesign.workspace.navigate('overview');
+      for (const [kind, rows] of [['itinerary', state.itineraryItems], ['expense', state.entries], ['reservation', state.travelCompanion.reservations]]) {
+        rows.forEach(row => window.TripLog.persistence.stateStorage.markDeletedEntity(kind, row.id));
+      }
+      state.travelCompanion.reservations = [{ id: 'legacy-hotel', type: 'stay', title: '기존 예약 숙소', date: '2026-09-25', endDate: '2026-09-27', location: '교토', reference: 'OLD-HOTEL' }];
+      state.entries = [{ id: 'legacy-paid-hotel', pretripType: 'hotel', hotelName: '다음 예약 숙소', hotelCheckIn: '2026-09-27', hotelCheckOut: '2026-09-28', amount: 120000, category: '숙소', date: '__pretrip__' }];
+      state.itineraryItems = [{ id: 'custom-first-night', theme: 'lodging', date: '2026-09-25', time: '21:40', place: '내가 수정한 숙소명', memo: '보존할 메모', linkedReservationId: 'manual:legacy-hotel' }];
+      if (!await saveAndRender()) throw new Error('Could not persist isolated legacy-booking fixture');
+      window.__realSave = saveAndRender; saveAndRender = async () => false;
+      window.TripLog.features.redesign.workspace.navigate('itinerary');
+    });
+    await page.waitForFunction(() => stayBackfillsPending.size === 0);
+    assert.equal((await snapshot()).items.length, 1, 'Failed automatic backfill rolls back additions');
+    await page.evaluate(() => { saveAndRender = window.__realSave; });
+    await page.reload(); await ready();
+    await page.evaluate(() => window.TripLog.features.redesign.workspace.navigate('itinerary'));
+    await page.waitForFunction(() => stayBackfillsPending.size === 0 && state.itineraryItems.length === 3);
+    const legacyDefaults = await snapshot();
+    assert.deepEqual(legacyDefaults.items.map(item => item.date).sort(), ['2026-09-25','2026-09-26','2026-09-27']);
+    assert.equal(legacyDefaults.items.find(item => item.id === 'custom-first-night').memo, '보존할 메모');
+    assert.equal(legacyDefaults.items.find(item => item.id === 'custom-first-night').place, '내가 수정한 숙소명');
+    assert.equal(legacyDefaults.entries.length, 1, 'Automatic defaults never create more hotel payments');
+    await page.reload(); await ready();
+    await page.waitForFunction(() => stayBackfillsPending.size === 0);
+    assert.deepEqual((await snapshot()).items, legacyDefaults.items, 'Backfilled IDs and dates survive reload without duplicates');
+    await page.locator('#itineraryList').screenshot({ path: path.join(output, 'legacy-booking-defaults-390.png'), animations: 'disabled' });
+    // Receiving a read-only trip does not run an automatic write.
+    await page.evaluate(async () => {
+      await TripLogSyncRepository.update(state.id, record => {
+        record.role = 'viewer'; record.snapshot.itineraryItems = []; return record;
+      });
+      window.TripLog.persistence.stateStorage.applyRepositoryChange(state.id);
+      render();
+    });
+    await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+    assert.equal((await snapshot()).items.length, 0, 'Read-only trips are not backfilled');
     assert.deepEqual(errors, []);
-    console.log('PASS: daily hotel nights, no checkout stop, manual and paid reservation saves, stable IDs, edits/removals/reload, save rollback, independent copy/cancel/date selection, keyboard access, 320/390/850/1440px.');
+    console.log('PASS: daily hotel nights, no checkout stop, manual and paid reservation saves, stable IDs, edits/removals/reload, save rollback, immediate independent copy without an editor, keyboard access, 320/390/850/1440px.');
   } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

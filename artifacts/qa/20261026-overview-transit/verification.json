@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-26",
+  "status": "local-validation-passed",
+  "deployed": false,
+  "build": "0ff2d398c2a34fb7d78f",
+  "browser": "Playwright / installed Edge; isolated fixtures",
+  "actualIPhoneVerified": false,
+  "trainSyncRoundTrip": "saved and retained after reload",
+  "conflictsPreserved": [
+    "destination time",
+    "transit contents",
+    "origin place",
+    "changed previous stop",
+    "linked expense amount"
+  ],
+  "captures": [
+    {
+      "file": "cost-mobile-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-overview-transit\\travel-costs\\cost-six-categories-390.png",
+      "sha256": "e7d55753ef32b722e7c0e981d30704e65b5e2bf9135aa212924d3850662de276"
+    },
+    {
+      "file": "cost-mobile-320-large-text.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-overview-transit\\travel-costs\\cost-six-categories-320-large-text.png",
+      "sha256": "477db5eb61463ad826af05103274d77d211f59390b02155209f2f25584f95c74"
+    },
+    {
+      "file": "cost-desktop-1440.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-overview-transit\\travel-costs\\overview-cost-1440.png",
+      "sha256": "88b39da3c31b4ed0fab2811f6de2cd71c464717d7a49ac233e707f4b6f25fadf"
+    },
+    {
+      "file": "transit-error-before.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-overview-transit-before\\transit-journey\\failure.png",
+      "sha256": "e5716b78d83e0e8bab58a2b2c57c15a639e759855298af2220496f9a6249d040"
+    },
+    {
+      "file": "reported-mobile.png",
+      "source": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-bfdfb044-030c-4ff3-8aa6-2d45a48db48a.png",
+      "sha256": "ee78ec4d9405b142a25e8cb902f7df9bf2203f0427403746904138f410f9988b"
+    }
+  ]
+}

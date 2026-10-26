@@ -256,7 +256,8 @@ async function main() {
     recordFlow('Map key removal exposes no credential and requires confirmation');
     await closes(); await page.reload(); await waitForApp(page);
     assert.equal(await page.evaluate(() => state.entries.length), 0);
-    assert.equal(await page.evaluate(() => state.itineraryItems.length), 1);
+    assert.deepEqual(await page.evaluate(() => state.itineraryItems.filter(item => item.theme !== 'lodging').map(item => item.id)), ['restaurant']);
+    assert.deepEqual(await page.evaluate(() => state.itineraryItems.filter(item => item.theme === 'lodging').map(item => item.date).sort()), ['2026-10-17', '2026-10-18'], 'Automatically added hotel nights remain after deleting only their reservation');
     assert.equal(await page.evaluate(() => state.packingList.length), 6);
     recordFlow('Committed record deletions and packing reset survive reload');
 

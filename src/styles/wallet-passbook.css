@@ -31,7 +31,7 @@ body.rd-app #ttCompanion .pw-wallet-ticket { position: relative; margin: 0 0 14p
 #ttCompanion .pw-ticket-band { display: grid; grid-template-columns: minmax(0, 1fr) 104px; min-height: 37px; border-radius: 9px 9px 0 0; background: var(--pw-blue); }
 #ttCompanion .pw-wallet-ticket.pink .pw-ticket-band { background: var(--pw-pink); }
 #ttCompanion .pw-wallet-ticket.green .pw-ticket-band { background: #e7f4eb; }
-#ttCompanion .pw-wallet-ticket.yellow .pw-ticket-band { background: #fff4ca; }
+#ttCompanion .pw-wallet-ticket.yellow .pw-ticket-band { background: var(--tl-surface, #fff); }
 #ttCompanion .pw-ticket-band > div:first-child { display: flex; align-items: center; gap: 6px; padding: 8px 12px; min-width: 0; }
 #ttCompanion .pw-ticket-band > div:first-child > .ph { font-size: 18px; flex-shrink: 0; }
 #ttCompanion .pw-ticket-band > div:first-child > span { font-size: 10px; font-weight: 700; white-space: nowrap; }
@@ -77,9 +77,9 @@ body.rd-app #ttCompanion .pw-row-main .pw-row-type { display: block; font-size: 
 body.rd-app #ttCompanion .pw-row-main .tt-reservation-date { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 10px; font-weight: 450; line-height: 1.45; }
 #ttCompanion .pw-row-main > .ph { font-size: 13px; }
 body.rd-app #ttCompanion.tt-wallet-ui #ttPrimary > .tt-button { margin: 0; }
-body.rd-app :is(#ttReservationDetail, #ttReservationEditor, #ttCopy).tt-wallet-ui { background: #fffdf7; border: 1px solid #d8d6cd; box-shadow: 0 12px 50px #18232b33; }
-body.rd-app :is(#ttReservationDetail, #ttReservationEditor, #ttCopy) :is(.tt-header, .tt-sub-footer, .tt-detail-list) { background: #fffdf7; }
-body.rd-app #ttWalletSortMenu.control-popover { padding: 0; gap: 0; font-size: 12px; border: 1px solid #3c444c !important; border-radius: 8px !important; box-shadow: 1px 2px 0 #3c444c !important; background: #fffdf7 !important; }
+body.rd-app :is(#ttReservationDetail, #ttReservationEditor, #ttCopy).tt-wallet-ui { background: var(--tl-surface, #fff); border: 1px solid #d8d6cd; box-shadow: 0 12px 50px #18232b33; }
+body.rd-app :is(#ttReservationDetail, #ttReservationEditor, #ttCopy) :is(.tt-header, .tt-sub-footer, .tt-detail-list) { background: var(--tl-surface, #fff); }
+body.rd-app #ttWalletSortMenu.control-popover { padding: 0; gap: 0; font-size: 12px; border: 1px solid #3c444c !important; border-radius: 8px !important; box-shadow: 1px 2px 0 #3c444c !important; background: var(--tl-surface, #fff) !important; }
 body.rd-app #ttWalletSortMenu .custom-select-option { min-height: 34px; height: 34px; gap: 8px; padding: 7px 10px; font-size: 12px !important; font-weight: 550 !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; background: transparent; }
 body.rd-app #ttWalletSortMenu .custom-select-option + .custom-select-option { border-top: 1px solid #e5e5df !important; }
 body.rd-app #ttWalletSortMenu .custom-select-option.selected { background: #fff5a6 !important; }

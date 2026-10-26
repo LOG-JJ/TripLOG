@@ -64,7 +64,7 @@
       || !saved.rows.every(row => row && typeof row === 'object' && typeof row.durationInput === 'string')
       || typeof saved.original !== 'string') return;
     const source = context(saved.id);
-    if (!source || source.previous.id !== saved.previousId || signature(source) !== saved.signature) return;
+    if (!source || source.previous.id !== saved.previousId || !matchesSignature(source, saved.signature)) return;
     setActivePage('itinerary'); open(saved.id, saved.previousId, saved.mode);
     draft.rows = saved.rows.map(row => ({ ...row, key: ++serial, durationInput: String(row.durationInput || '') }));
     draft.original = saved.original; renderRows(); renderJourney();
@@ -210,6 +210,19 @@
   function signature(value) {
     return JSON.stringify({ tripId: state.id, item: value.item, previous: value.previous,
       expense: value.item.expenseId ? state.entries.find(entry => entry.id === value.item.expenseId) : null });
+  }
+  function matchesSignature(value, captured) {
+    const content = serialized => {
+      const snapshot = JSON.parse(serialized);
+      // Sync decode rebuilds object keys and attaches storage positions. The
+      // actual neighboring stops are checked by context, not these positions.
+      for (const row of [snapshot.item, snapshot.previous, snapshot.expense]) {
+        if (row && typeof row === 'object') delete row._syncPosition;
+      }
+      return snapshot;
+    };
+    try { return window.TripLogSyncModel.equal(content(signature(value)), content(captured)); }
+    catch (_) { return false; }
   }
   function normalized(row) {
     const { key, durationInput, ...segment } = row;
@@ -462,7 +475,7 @@
     }
     const current = context(draft.id);
     if (draft.tripId !== state.id || getActiveTripId() !== state.id) { error('여행이 변경됐어요. 닫고 이동 정보를 다시 열어 주세요.'); return; }
-    if (!current || signature(current) !== draft.signature) { error('일정이 다른 곳에서 변경됐어요. 닫고 이동 구간을 다시 확인해 주세요.'); return; }
+    if (!current || !matchesSignature(current, draft.signature)) { error('일정이 다른 곳에서 변경됐어요. 닫고 이동 구간을 다시 확인해 주세요.'); return; }
     const segments = draft.rows.map(normalized);
     if (JSON.stringify(segments) === draft.original) { dialog.close(); return; }
     const previousItems = state.itineraryItems, previousEntries = state.entries, submittedTrip = state.id;

@@ -27,7 +27,7 @@
 .rd-app .tt-hero h2{font-size:25px;line-height:1.2;margin:6px 0 4px;overflow-wrap:anywhere}
 .tt-hero p{font-size:14px;color:var(--muted);font-weight:650;white-space:normal}
 .tt-badge{display:inline-block;border:1.7px solid var(--text);border-radius:7px;padding:2px 8px;font-size:14px;line-height:1.2;font-weight:800;box-shadow:1px 1px 0 var(--text)}
-.tt-dialog .pink{background:#fce6ed}.tt-dialog .blue{background:#eaf7ff}.tt-dialog .green{background:#e2f7e9}.tt-dialog .yellow{background:#fff8ce}
+.tt-dialog .pink{background:#fce6ed}.tt-dialog .blue{background:#eaf7ff}.tt-dialog .green{background:#e2f7e9}.tt-dialog .yellow{background:var(--tl-surface, #fff)}
 .tt-hero .tt-badge{background:var(--rd-pink)}
 .tt-hero figure{width:85px;flex:none;text-align:center;align-self:center}
 .tt-hero figure img{width:74px;height:100px;object-fit:contain;display:block;margin:auto}

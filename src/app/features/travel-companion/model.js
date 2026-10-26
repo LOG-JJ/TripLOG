@@ -72,7 +72,7 @@
     const nights = dates.map(date => {
       const current = linked.find(item => item.date === date && !used.has(item.id));
       if (current) used.add(current.id);
-      const item = current || { id: newId(), time: '', trans: 'none', transits: [], duration: 0, cost: 0, createdAt: Date.now() };
+      const item = current || { id: newId(date), time: '', trans: 'none', transits: [], duration: 0, cost: 0, createdAt: Date.now() };
       const next = { ...item, date, theme: 'lodging', endTime: '', linkedReservationId: row.id, reservationStayDate: date };
       for (const [field, source] of Object.entries(fields)) {
         // Keep a day's own notes/place edits when the reservation changes.
@@ -95,6 +95,31 @@
     });
     itineraryItems.push(...nights.filter(item => !used.has(item.id)));
     return { itineraryItems, removedIds };
+  }
+  function defaultStayItinerary(trip) {
+    const items = asList(trip.itineraryItems), added = [], used = new Set(items.map(item => item.id)), tripDates = days(trip);
+    for (const row of reservations(trip).filter(row => row.type === 'stay' && row.source !== 'itinerary')) {
+      const same = (left, right) => String(left || '').trim() === String(right || '').trim();
+      const dates = new Set([...items, ...added].filter(item => item.linkedReservationId === row.id || (
+        item.theme === 'lodging' && !item.linkedReservationId && same(item.place, row.title)
+        && (!item.location || !row.location || same(item.location, row.location))
+        && (!item.voucherCode || !row.reference || same(item.voucherCode, row.reference))
+      )).map(item => item.date));
+      if (!tripDates.some(date => date >= row.date && date < row.endDate && !dates.has(date))) continue;
+      const defaults = stayItinerary({ ...trip, itineraryItems: [] }, row, row, date => {
+        // Reservation IDs are shared across devices; a trip's local ID may not be.
+        const base = `stay:${encodeURIComponent(row.id)}:${date}`;
+        let id = base, suffix = 0;
+        while (used.has(id)) id = `${base}:${++suffix}`;
+        used.add(id); return id;
+      });
+      for (const item of defaults.itineraryItems) {
+        if (dates.has(item.date)) continue;
+        added.push({ ...item, createdAt: Date.parse(`${item.date}T00:00:00Z`) });
+        dates.add(item.date);
+      }
+    }
+    return { itineraryItems: [...items, ...added], addedIds: added.map(item => item.id) };
   }
   function dayItems(trip, date) {
     return orderItems(asList(trip.itineraryItems).filter(item => item.date === date));
@@ -296,7 +321,7 @@
     const header = /^data:image\/png;base64,[A-Za-z0-9+/=]+$/.test(logo) ? `<img width="108" alt="TripLOG" src="${logo}">` : '<strong class="logo">TRIP<span>LOG</span></strong>';
     return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'"><title>${esc(trip.tripName)} · 포켓노트</title><style>*{box-sizing:border-box}body{margin:0;background:#fff;color:#0b1020;font:16px/1.6 system-ui,sans-serif}main{max-width:760px;margin:auto;padding:24px 18px}h1{font-size:32px;line-height:1.2;margin:28px 0 8px}h2{font-size:23px;margin-top:30px}h3{margin:0 0 6px;font-size:19px}p{margin:6px 0;overflow-wrap:anywhere}article{border:2px solid #0b1020;border-radius:10px;padding:16px;margin:12px 0;break-inside:avoid}.muted{color:#686b75}.badge{background:#fff05a;border:1px solid;border-radius:6px;padding:2px 8px;display:inline-block}.logo{font-size:24px}.logo span{background:#f7afc7;border:2px solid;border-radius:7px}.summary{background:#bce6fb}code{font:inherit;font-weight:700;overflow-wrap:anywhere}footer{margin-top:32px;border-top:1px solid #e4e5e9;padding-top:14px}@media print{main{max-width:none}article{box-shadow:none}}</style></head><body><main>${header}<h1>${esc(trip.tripName || '나의 여행')}</h1><p class="muted">${esc(trip.startDate)} – ${esc(trip.endDate)} · ${esc([trip.city, trip.country].filter(Boolean).join(' · '))}</p><span class="badge">오프라인 포켓노트</span><p class="muted">저장한 시점의 기록입니다. 변경한 일정은 다시 저장해 주세요.</p>${itinerary ? `<h2>여행 일정</h2>${items.length ? items.map(item => `<article><small>${esc(item.date)} · ${esc(item.time || '시간 미정')}${item.theme !== 'lodging' && item.endTime ? ' – ' + esc(item.endTime) : ''}</small><h3>${esc(item.place)}</h3>${line('장소', item.location)}${line('메모', item.memo)}</article>`).join('') : '<p>등록된 일정이 없어요.</p>'}` : ''}<h2>예약 지갑</h2>${wallet.length ? wallet.map(row => `<article><span class="badge">${types[row.type].label}</span><h3>${esc(row.title)}</h3>${line('일자', [row.date, row.endDate ? '– ' + row.endDate : '', row.time].filter(Boolean).join(' '))}${line('장소', row.location)}${references ? line('예약번호', row.reference) : ''}${references ? line('메모', row.note) : ''}</article>`).join('') : '<p>등록된 예약이 없어요.</p>'}${costs || budget ? `<article class="summary"><h2>여행 경비</h2>${line('누적 지출', money(cost.total))}${line('기록한 지출', cost.count + '건')}</article>` : ''}<footer class="muted">TripLOG · 이 문서는 인터넷 연결 없이 열 수 있습니다. ${references ? '예약번호가 포함되어 있으니 개인 기기에 보관하세요.' : '예약번호와 예약 메모는 제외했습니다.'}</footer></main></body></html>`;
   }
-  const api = { types, transportKinds, transportInfo, transportFromItinerary, itineraryForReservation, stayFromEntry, stayItinerary, arrivalDay, endMinutes, esc, validDate, minutes, clock, days, dayItems, flags, transitMinutes, dateInZone, defaultZone, today, dailySpending, reviewDay, outsideItems, signature, planAdjustment, applyAdjustment, undoAdjustment, safeUrl, reservations, validateReservation, directions, utcTime, foldLine, createCalendar, createPocketNote };
+  const api = { types, transportKinds, transportInfo, transportFromItinerary, itineraryForReservation, stayFromEntry, stayItinerary, defaultStayItinerary, arrivalDay, endMinutes, esc, validDate, minutes, clock, days, dayItems, flags, transitMinutes, dateInZone, defaultZone, today, dailySpending, reviewDay, outsideItems, signature, planAdjustment, applyAdjustment, undoAdjustment, safeUrl, reservations, validateReservation, directions, utcTime, foldLine, createCalendar, createPocketNote };
   if (node) module.exports = api;
   else window.TripLog.register('features.travelCompanion.model', api);
 })();

@@ -109,7 +109,8 @@ function positionFormPopup(panel, trigger, preferredWidth) {
   const height = viewport?.height || window.innerHeight;
   const offsetTop = viewport?.offsetTop || 0;
   const offsetLeft = viewport?.offsetLeft || 0;
-  const popupWidth = Math.min(preferredWidth || rect.width, width - 24);
+  const requestedWidth = typeof preferredWidth === 'function' ? preferredWidth(rect) : preferredWidth;
+  const popupWidth = Math.min(requestedWidth || rect.width, width - 24);
   panel.classList.add('form-popup');
   panel.style.width = `${popupWidth}px`;
   panel.style.left = `${Math.max(offsetLeft + 12, Math.min(rect.left, offsetLeft + width - popupWidth - 12))}px`;

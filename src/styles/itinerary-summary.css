@@ -34,7 +34,7 @@ body.rd-app #itineraryPage .itinerary-summary-toggle { display: grid; place-item
 #itineraryPage .itinerary-summary-toggle .ph { font-size: 18px; transition: transform 150ms; }
 #itineraryPage .is-open .itinerary-summary-toggle .ph { transform: rotate(180deg); }
 #itineraryPage .itinerary-summary-day-meta { margin: 0; padding: 0 12px 8px; color: #536074; font-size: var(--tl-text-meta); line-height: 1.55; font-weight: 400; word-break: keep-all; overflow-wrap: anywhere; }
-#itineraryPage .is-open :where(.itinerary-summary-day-head, .itinerary-summary-day-meta) { background: #fffbed; }
+#itineraryPage .is-open :where(.itinerary-summary-day-head, .itinerary-summary-day-meta) { background: var(--tl-surface, #fff); }
 #itineraryPage .itinerary-summary-warning { display: flex; align-items: start; gap: 5px; margin: 0; padding: 0 12px 8px; color: #875c22; font-size: var(--tl-text-meta); line-height: 1.5; }
 #itineraryPage .itinerary-summary-warning .ph { flex-shrink: 0; font-size: 15px; margin-top: 2px; }
 #itineraryPage .itinerary-summary-route { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin: 0 12px 11px; padding: 0; color: #59677b; font-size: var(--tl-text-label); line-height: 1.55; font-weight: 400; word-break: keep-all; overflow-wrap: anywhere; }

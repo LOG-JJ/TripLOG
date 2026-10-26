@@ -1,0 +1,114 @@
+{
+  "start": 14,
+  "totalRegistered": 41,
+  "results": [
+    {
+      "file": "settlement-name-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "travel-costs-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "report-refund-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "print-export-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "auth-session-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "sync-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "sync-offline-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "sync-navigation-recovery-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "sync-auto-update-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "trip-chooser-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "itinerary-drag-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "itinerary-touch-drag-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "controls-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "time-wheel-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "reservation-time-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "itinerary-controls-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "transit-journey-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "companion-passport-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "wallet-passbook-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "map-provider-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "domestic-route-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "expense-ui-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "expense-order-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "manual-exchange-rate-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "reservation-expense-editor-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "expense-filter-browser-regression.js",
+      "exitCode": 0
+    },
+    {
+      "file": "receipt-json-browser-regression.js",
+      "exitCode": 0
+    }
+  ]
+}

@@ -15,9 +15,15 @@ body.rd-app #overviewPage .tc-category-list { display: grid; grid-template-colum
 body.rd-app #overviewPage .tc-category-list li { min-width: 0; }
 body.rd-app #overviewPage .tc-category { display: flex; align-items: center; justify-content: space-between; gap: 4px; width: 100%; min-height: 44px; padding: 5px 0; border: 0; border-radius: 5px; box-shadow: none; background: transparent; color: var(--text); text-align: left; font-size: 12px; font-weight: 550; line-height: 1.4; }
 body.rd-app #overviewPage .tc-category-name { display: flex; align-items: center; gap: 5px; min-width: 0; }
-body.rd-app #overviewPage .tc-category-name > span:last-child { min-width: 0; overflow-wrap: anywhere; }
+body.rd-app #overviewPage .tc-category-name > span:last-child { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 body.rd-app #overviewPage .tc-color-dot { flex: 0 0 8px; height: 8px; border-radius: 50%; background: var(--tc-color); }
-body.rd-app #overviewPage .tc-category-percent { color: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+body.rd-app #overviewPage .tc-category-percent { flex-shrink: 0; color: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+@media (max-width: 600px) {
+  /* Keep each label horizontal even when mobile text expands. The share gets
+     its own line, within the existing 44px touch row and three-column legend. */
+  body.rd-app #overviewPage .tc-category { display: grid; grid-template-columns: minmax(0, 1fr); align-content: center; gap: 0; }
+  body.rd-app #overviewPage .tc-category-percent { padding-left: 13px; text-align: left; }
+}
 body.rd-app #overviewPage .tc-empty { padding: 2px 0; }
 body.rd-app #overviewPage .tc-empty p, body.rd-app #overviewPage .tc-refund-note { margin: 7px 0 0; padding: 0; border: 0; color: var(--muted); font-size: 11px; font-weight: 500; line-height: 1.5; overflow-wrap: anywhere; }
 body.rd-app #overviewPage .tc-empty .rd-empty-add { margin-top: 8px; }

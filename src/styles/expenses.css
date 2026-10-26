@@ -96,7 +96,7 @@
 .ex-field-title, .ex-category-field legend { font-size: 14px; line-height: 20px; font-weight: 650; margin: 0 0 6px; }
 .ex-field-title > span, .ex-category-field legend > span { color: #ff4b70; margin-left: 4px; }
 .ex-amount-input-row { display: flex; align-items: center; border: 1.8px solid var(--ex-ink); border-radius: 9px; padding: 0; min-height: 46px; transition: background-color var(--rd-motion), box-shadow var(--rd-motion); }
-.ex-amount-input-row:focus-within { background: #fffbd6; box-shadow: 1px 2px 0 var(--ex-ink); }
+.ex-amount-input-row:focus-within { background: var(--tl-surface, #fff); box-shadow: 1px 2px 0 var(--ex-ink); }
 #exAmountInputs { flex: 1; min-width: 0; }
 .rd-app #rdExpenseEditor.ex-editor .ex-payment-amount > span { position: absolute; clip-path: inset(50%); width: 1px; height: 1px; overflow: hidden; }
 .rd-app #rdExpenseEditor.ex-editor .ex-payment-amount input { border: 0; border-radius: 7px; width: 100%; min-width: 0; padding: 7px 11px; background: transparent; font-size: 22px; line-height: 1.25; height: 42px; min-height: 42px; font-weight: 750; letter-spacing: -.35px; font-variant-numeric: tabular-nums; }
@@ -110,7 +110,7 @@
 .ex-conversion-row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-top: 5px; min-height: 18px; }
 #exConversionSummary { font-size: 12px; line-height: 1.5; color: var(--ex-muted); }
 .rd-app #exRateToggle { flex-shrink: 0; min-height: 24px; padding: 0; border: 0; background: none; color: var(--ex-ink); font-size: 12px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; box-shadow: none; }
-#exRatePanel { padding: 10px; margin-top: 8px; border: 1px solid var(--ex-ink); border-radius: 9px; background: #fffbd6; }
+#exRatePanel { padding: 10px; margin-top: 8px; border: 1px solid var(--ex-ink); border-radius: 9px; background: var(--tl-surface, #fff); }
 .ex-description-field { position: relative; }
 .rd-app #rdExpenseEditor.ex-editor .ex-description-field input { padding-right: 44px; }
 .rd-app #rdExpenseEditor.ex-editor .ex-description-clear { position: absolute; right: 4px; bottom: 2px; display: grid; place-items: center; width: 38px; min-height: 42px; padding: 0; border: 0; background: none; color: #8293ae; box-shadow: none; }

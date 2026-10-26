@@ -186,8 +186,57 @@ async function main() {
     assert.equal(await duration(0).inputValue(), '61');
     assert.equal(await rows().first().getByRole('button', { name: '이동 구간 1 초록', exact: true }).getAttribute('aria-pressed'), 'true');
     await close(); assert.deepEqual(await saved(), navigationSource);
+    // A normal sync encode/decode changes object key order and internal positions,
+    // but must not invalidate an otherwise unchanged manual train draft.
+    await page.evaluate(() => { state.itineraryItems.forEach(item => { delete item._syncPosition; }); render(); });
+    await open(); await page.locator('#itineraryTransitManualTab').click();
+    await rows().first().locator('.custom-select-button').click();
+    await rows().first().locator('.custom-select-option[data-value="train"]').click();
+    await duration(0).fill('31');
+    const syncEquality = await page.evaluate(() => {
+      const strip = list => list.map(({ _syncPosition, ...item }) => item);
+      const before = strip(state.itineraryItems);
+      const decoded = TripLogSyncModel.decode(TripLogSyncModel.encode(state), state);
+      state.itineraryItems = decoded.itineraryItems; state.entries = decoded.entries;
+      render(); return TripLogSyncModel.equal(before, strip(state.itineraryItems));
+    });
+    assert(syncEquality, 'Sync round trip preserves all actual itinerary fields');
+    await page.locator('#itineraryTransitSave').click();
+    await page.waitForFunction(() => !document.querySelector('#itineraryTransitDialog').open || !document.querySelector('#itineraryTransitError').hidden);
+    assert(await page.locator('#itineraryTransitError').isHidden(), `Unchanged train save rejected: ${await page.locator('#itineraryTransitError').textContent()}`);
+    await dialog.waitFor({ state: 'hidden' });
+    assert.equal((await saved()).transits[0].trans, 'train');
+    assert.equal((await saved()).transits[0].duration, 31);
+    await page.reload(); await ready();
+    assert.equal((await saved()).transits[0].trans, 'train');
+    assert.equal((await saved()).transits[0].duration, 31);
+    // Real schedule, route and linked-expense edits still require a fresh draft.
+    const conflictBase = await page.evaluate(() => JSON.parse(JSON.stringify({ items: state.itineraryItems, entries: state.entries })));
+    for (const kind of ['destination', 'transit', 'previous', 'neighbor', 'expense']) {
+      await page.evaluate(({ base, kind }) => {
+        state.itineraryItems = base.items; state.entries = base.entries;
+        if (kind === 'expense') {
+          state.itineraryItems.find(item => item.id === 'journey-temple').expenseId = 'transit-conflict-expense';
+          state.entries.push({ id: 'transit-conflict-expense', date: state.startDate, amount: 1000, category: '교통', description: '연결 지출' });
+        }
+        render();
+      }, { base: conflictBase, kind });
+      await open(); await page.locator('#itineraryTransitManualTab').click(); await duration(0).fill('45');
+      const concurrent = await page.evaluate(kind => {
+        if (kind === 'destination') state.itineraryItems.find(item => item.id === 'journey-temple').time = '13:00';
+        if (kind === 'transit') state.itineraryItems.find(item => item.id === 'journey-temple').transits[0].memo = '다른 곳에서 수정한 이동';
+        if (kind === 'previous') state.itineraryItems.find(item => item.id === 'journey-hotel').place = '다른 출발지';
+        if (kind === 'neighbor') state.itineraryItems.push({ id: 'new-neighbor', date: state.startDate, time: '10:30', place: '추가된 경유지', theme: 'sightseeing' });
+        if (kind === 'expense') state.entries.find(entry => entry.id === 'transit-conflict-expense').amount = 2500;
+        return JSON.stringify({ items: state.itineraryItems, entries: state.entries });
+      }, kind);
+      await page.locator('#itineraryTransitSave').click();
+      assert(await page.locator('#itineraryTransitError').isVisible(), `${kind} conflict is retained`);
+      assert.equal(await page.evaluate(() => JSON.stringify({ items: state.itineraryItems, entries: state.entries })), concurrent, 'A conflicting draft never overwrites the current data');
+      await close();
+    }
     assert.deepEqual(errors, []);
-    console.log(`PASS compact journey: generic train, color edit/save/reload/cancel, full-width map with internal controls and 192/160px height, intact transit/walking directions, cumulative times, transfer/line fields, tab continuity, edit shortcuts, unknown-field preservation, invalid/overnight/missing times, 1536/768/390/320 layout. Screenshots: ${output}`);
+    console.log(`PASS compact journey: train save after an unchanged sync round trip, schedule/transit/origin/neighbor/expense conflicts preserved, color edit/save/reload/cancel, full-width map with internal controls and 192/160px height, intact transit/walking directions, cumulative times, transfer/line fields, tab continuity, edit shortcuts, unknown-field preservation, invalid/overnight/missing times, 1536/768/390/320 layout. Screenshots: ${output}`);
   } catch (error) { await page.screenshot({ path: path.join(output, 'failure.png') }).catch(() => {}); throw error; }
   finally { await browser.close(); await stopServer(server); }
 }

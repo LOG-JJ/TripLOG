@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-26",
+  "status": "local-validation-passed",
+  "deployed": false,
+  "build": "2fbc02193001306a5171",
+  "browserSuites": {
+    "total": 41,
+    "initialPrefixPassed": 13,
+    "updatedDeletionPassed": 1,
+    "resumedPassed": 27
+  },
+  "browser": "Playwright/Edge isolated fixture (Browser plugin not available)",
+  "actualIPhoneVerified": false,
+  "captures": [
+    {
+      "file": "menu-white-mobile-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-itinerary-defaults-white\\trip-navigation\\itinerary-390x844.png",
+      "sha256": "c42fe83d2a5964b62703121def2ae99d3b2a96dc7e3cba3a9546da89dda7462f"
+    },
+    {
+      "file": "wallet-white-mobile-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-itinerary-defaults-white\\wallet-passbook\\wallet-390.png",
+      "sha256": "5ddcd857e014d05c28df1a9920d37e47b76962a91db55107771bea1095967509"
+    },
+    {
+      "file": "immediate-copy-mobile-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-itinerary-defaults-white\\stay-copy\\copy-and-reorder-390.png",
+      "sha256": "656b3f6dcf7bc8c1079b5978389c1ae15fe21a7c0bb77e9c9e6fd5204ec91ac5"
+    },
+    {
+      "file": "legacy-stay-mobile-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-itinerary-defaults-white\\stay-copy\\legacy-booking-defaults-390.png",
+      "sha256": "e93b73a6bfac1138eac961b9470cf285efe475b694534f13bbf8e057b2ef7993"
+    },
+    {
+      "file": "reported-menu.png",
+      "source": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-799b687e-8e2a-4049-9370-d1de165f6737.png",
+      "sha256": "84fc9d3dfee357280e7031aea2aafff34ff27101da0102c1b9e518cd3866a4f8"
+    }
+  ]
+}

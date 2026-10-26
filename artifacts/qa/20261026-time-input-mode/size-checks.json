@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "sizes": [
+    {
+      "viewport": 390,
+      "width": 170,
+      "height": 174,
+      "rows": 5,
+      "box": {
+        "x": 16,
+        "y": 482.77886962890625,
+        "width": 170,
+        "height": 174
+      },
+      "fits": true,
+      "actionsFit": true
+    },
+    {
+      "viewport": 320,
+      "width": 152,
+      "height": 174,
+      "rows": 5,
+      "box": {
+        "x": 13,
+        "y": 486.5210266113281,
+        "width": 152,
+        "height": 173.99996948242188
+      },
+      "fits": true,
+      "actionsFit": true
+    },
+    {
+      "viewport": 640,
+      "width": 224,
+      "height": 174,
+      "rows": 5,
+      "box": {
+        "x": 16,
+        "y": 174,
+        "width": 224,
+        "height": 174
+      },
+      "fits": true,
+      "actionsFit": true
+    },
+    {
+      "viewport": 1440,
+      "width": 169,
+      "height": 174,
+      "rows": 5,
+      "box": {
+        "x": 823,
+        "y": 579.171875,
+        "width": 169,
+        "height": 174
+      },
+      "fits": true,
+      "actionsFit": true
+    }
+  ]
+}

@@ -27,6 +27,7 @@ function setupItineraryDragDrop() {
 }
 
 function renderItineraryPage() {
+  backfillReservationStays();
   const days = getTripDays();
   if (state.selectedItineraryDate !== "all" && !days.some(day => day.date === state.selectedItineraryDate)) state.selectedItineraryDate = days[0]?.date || state.startDate;
   const day = days.find(entry => entry.date === state.selectedItineraryDate);

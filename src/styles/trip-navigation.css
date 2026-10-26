@@ -4,7 +4,7 @@
  */
 body.rd-app {
   --tl-nav-dock-height: calc(66px + env(safe-area-inset-bottom, 0px));
-  --tl-nav-sheet: #fffdf8;
+  --tl-nav-sheet: var(--tl-surface, #fff);
   --tl-nav-ease: cubic-bezier(.2, .75, .2, 1);
 }
 
@@ -14,7 +14,7 @@ body.rd-app {
   padding-top: 5px;
   padding-bottom: calc(4px + env(safe-area-inset-bottom, 0px));
   border-top: 1px solid #e9e6df;
-  background: #fffdf9;
+  background: var(--tl-surface, #fff);
   isolation: isolate;
 }
 
@@ -297,7 +297,7 @@ body.rd-app #tripNavigationMenu .tl-nav-item {
   padding: 9px 12px;
   border: 1px solid #e7e4de;
   border-radius: 12px;
-  background: #fffdf9;
+  background: var(--tl-surface, #fff);
   color: #171b24;
   box-shadow: none;
   text-align: left;
@@ -308,7 +308,7 @@ body.rd-app #tripNavigationMenu .tl-nav-item {
 body.rd-app #tripNavigationMenu .tl-nav-item.is-primary {
   min-height: 68px;
   border-color: #efc952;
-  background: #fff0b5;
+  background: var(--tl-surface, #fff);
 }
 
 #tripNavigationMenu .tl-nav-item-icon {

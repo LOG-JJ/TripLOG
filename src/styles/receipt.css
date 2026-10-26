@@ -36,7 +36,7 @@
 #receiptCancelButton { flex-shrink: 0; }
 .receipt-review-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px 12px; }
 .receipt-wide { grid-column: 1 / -1; }
-.receipt-warnings { margin: 0 0 18px; padding: 12px 14px 12px 30px; border: 1px solid #f4d583; border-radius: 12px; background: #fff9e8; color: #78551a; font-size: 12px; line-height: 1.7; }
+.receipt-warnings { margin: 0 0 18px; padding: 12px 14px 12px 30px; border: 1px solid #f4d583; border-radius: 12px; background: var(--tl-surface, #fff); color: #78551a; font-size: 12px; line-height: 1.7; }
 .receipt-warnings li + li { margin-top: 5px; }
 .receipt-text-details { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 18px; }
 .receipt-text-details summary { min-height: 44px; font-size: 13px; cursor: pointer; }

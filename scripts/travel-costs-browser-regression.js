@@ -174,6 +174,30 @@ async function main() {
     assert.equal(await page.locator('.tc-composition').count(), 0);
     assert.match(await page.locator('.tc-refund-note').innerText(), /9,000원/);
     await capture('.tc-card','cost-refund-only-390.png');
+    // Six categories and the longer tiny-share label must keep Korean names
+    // horizontal on narrow phones, including enlarged browser text.
+    await page.evaluate(() => {
+      state.entries = ['교통','식비','쇼핑','숙소','관광','기타'].map((category, index) => ({
+        id: `mobile-category-${index}`, category, amount: [950000,418000,398000,251000,77000,109][index], description: category,
+      })); render();
+    });
+    for (const [width, enlarged] of [[320,false],[390,false],[430,false],[320,true],[390,true]]) {
+      await page.setViewportSize({ width, height: 844 });
+      await page.locator('.tc-category').evaluateAll((nodes, enlarged) => nodes.forEach(node => {
+        node.style.fontSize = enlarged ? '16px' : '';
+        node.querySelector('.tc-category-percent').style.fontSize = enlarged ? '14px' : '';
+      }), enlarged);
+      const labels = await page.locator('.tc-category').evaluateAll(nodes => nodes.map(node => {
+        const name = node.querySelector('.tc-category-name > span:last-child'), percent = node.querySelector('.tc-category-percent');
+        const box = name.getBoundingClientRect(), share = percent.getBoundingClientRect(), row = node.getBoundingClientRect();
+        const range = document.createRange(); range.selectNodeContents(name);
+        return { name: name.textContent, lines: range.getClientRects().length, fits: name.scrollWidth <= name.clientWidth + 1,
+          within: box.left >= row.left && box.right <= row.right + 1 && share.right <= row.right + 1,
+          disjoint: box.right <= share.left || box.bottom <= share.top + 1 || share.bottom <= box.top + 1 };
+      }));
+      assert(labels.every(label => label.lines === 1 && label.fits && label.within && label.disjoint), `Horizontal mobile categories at ${width}, enlarged=${enlarged}: ${JSON.stringify(labels)}`);
+      await capture('.tc-card', `cost-six-categories-${width}${enlarged ? '-large-text' : ''}.png`);
+    }
     await page.setViewportSize({width:320,height:844});
     await page.evaluate(()=>{state.entries=[{id:'huge',amount:123456789012,category:'아주 긴 분류 이름 <img src=x onerror=alert(1)>',description:'많은 금액'},{id:'tiny',amount:1,category:'교통',description:'작은 금액'}];render();});
     assert.equal(await page.locator('.tc-card img').count(), 0, 'Imported category names remain text');
@@ -187,7 +211,7 @@ async function main() {
     await page.locator('.rd-overview-cost [data-rd-nav="budget"]').click();
     await readSummary('#rdBudgetSummary', 486000, 14);
     assert.deepEqual(errors, []);
-    console.log(`PASS compact travel costs: at most half the previous height, equal desktop cards, 5 first-day stops/6th-stop cap, overview/expenses/report/today, add/edit/delete/refund/pretrip/reload, trip isolation, legacy budget independence, proportional categories/color keys/keyboard drill-down/filter reset, no budget UI, empty/refund-only/tiny/large/escaped input and 320/390/599/759/760/849/850/1024/1440 layout. ${output}`);
+    console.log(`PASS compact travel costs: horizontal six-category names with tiny shares and enlarged mobile text, at most half the previous height, equal desktop cards, 5 first-day stops/6th-stop cap, overview/expenses/report/today, add/edit/delete/refund/pretrip/reload, trip isolation, legacy budget independence, proportional categories/color keys/keyboard drill-down/filter reset, no budget UI, empty/refund-only/tiny/large/escaped input and 320/390/599/759/760/849/850/1024/1440 layout. ${output}`);
   } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

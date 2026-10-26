@@ -8,6 +8,10 @@ function attachCustomTimePickerDocumentListener() {
     pruneDetachedCustomTimePickers();
     customTimePickers.forEach((control, input) => {
       if (!control.shell.contains(event.target)) {
+        if (control.textEntry) {
+          finishTimeTextEntry(input);
+          if (document.activeElement === control.value) returnTimePickerFocus(control);
+        }
         closeCustomTimePicker(input);
       }
     });
@@ -59,6 +63,7 @@ function setupCustomTimePicker(input) {
   value.className = "custom-time-value";
   value.placeholder = "시간 선택";
   value.inputMode = "numeric";
+  value.enterKeyHint = "done";
   value.autocomplete = "off";
   value.setAttribute("aria-label", "시간 직접 입력");
   value.style.border = "none";
@@ -106,7 +111,7 @@ function setupCustomTimePicker(input) {
   const label = input.closest("label");
   if (label?.htmlFor === input.id) label.htmlFor = value.id;
 
-  customTimePickers.set(input, { shell, button, value, panel, toggle, openValue: input.value || "", panelDirty: false });
+  customTimePickers.set(input, { shell, button, value, panel, toggle, openValue: input.value || "", panelDirty: false, textEntry: null });
   attachCustomTimePickerDocumentListener();
 
   // Pointer users expect the whole field to behave like the clock icon. Open
@@ -114,14 +119,17 @@ function setupCustomTimePicker(input) {
   // block the UI). Keyboard users can still focus the input with Tab and type.
   value.addEventListener("pointerdown", (event) => {
     if (event.button !== 0 || input.disabled) return;
+    if (customTimePickers.get(input)?.textEntry) return;
     event.preventDefault();
     event.stopPropagation();
+    focusTimePickerElement(toggle);
     openCustomTimePicker(input);
   });
 
   // Open panel on keyboard focus.
   value.addEventListener("focus", () => {
-    if (!customTimePickers.get(input)?.suppressFocusOpen) openCustomTimePicker(input);
+    const control = customTimePickers.get(input);
+    if (control && !control.textEntry) openCustomTimePicker(input);
   });
 
   value.addEventListener("click", (event) => {
@@ -147,6 +155,13 @@ function setupCustomTimePicker(input) {
   });
 
   value.addEventListener("keydown", (event) => {
+    const control = customTimePickers.get(input);
+    if (control?.textEntry && (event.key === 'Enter' || event.key === 'Escape')) {
+      event.preventDefault(); event.stopPropagation();
+      finishTimeTextEntry(input, { commit: event.key === 'Enter' });
+      returnTimePickerFocus(control);
+      return;
+    }
     if (event.key === "Enter") {
       event.preventDefault();
       const normalized = parseTypedTime(value.value);
@@ -172,6 +187,10 @@ function setupCustomTimePicker(input) {
   });
 
   value.addEventListener("blur", () => {
+    if (customTimePickers.get(input)?.textEntry) {
+      finishTimeTextEntry(input);
+      return;
+    }
     setTimeout(() => {
       const currentControl = customTimePickers.get(input);
       if (currentControl?.shell.contains(document.activeElement) || (currentControl && !currentControl.panel.hidden)) {
@@ -198,7 +217,9 @@ function setupCustomTimePicker(input) {
   // Keep focus inside the control on pointer press. Otherwise blur can close
   // the panel before click, and label activation can focus/reopen the text box.
   button.addEventListener('pointerdown', event => {
-    if (event.button === 0 && event.target !== value) event.preventDefault();
+    if (event.button === 0 && event.target !== value) {
+      event.preventDefault(); focusTimePickerElement(toggle);
+    }
   });
   toggle.addEventListener('click', event => {
     event.preventDefault(); event.stopPropagation();
@@ -208,7 +229,7 @@ function setupCustomTimePicker(input) {
   button.addEventListener("click", (event) => {
     event.preventDefault();
     event.stopPropagation();
-    // The chevron must reopen after Confirm has already restored input focus.
+    // Keep the whole trigger clickable after returning focus from the picker.
     if (event.target !== value && event.target !== icon && !icon.contains(event.target)) {
       toggleCustomTimePicker(input);
     }
@@ -224,6 +245,11 @@ function setupCustomTimePicker(input) {
 
   input.addEventListener("change", () => syncCustomTimePicker(input));
 
+  // A touch tap can synthesize mousedown and move focus to the surrounding
+  // dialog. Keep selection/actions in this control without blocking touch scroll.
+  panel.addEventListener('mousedown', event => {
+    if (!event.target.closest('.time-wheel-input')) event.preventDefault();
+  });
   panel.addEventListener("click", (event) => {
     event.stopPropagation();
     handleTimePickerClick(event, input);
@@ -294,6 +320,8 @@ function openCustomTimePicker(input) {
   // or reset the original value used to commit changes when it closes.
   if (!control || input.disabled || !control.panel.hidden) return;
 
+  if (control.textEntry) finishTimeTextEntry(input);
+
   closeAllCustomSelects();
   closeAllCustomDatePickers();
   closeAllCustomTimePickers(input);
@@ -306,7 +334,7 @@ function openCustomTimePicker(input) {
   control.toggle.setAttribute('aria-expanded', 'true');
   control.toggle.setAttribute('aria-label', '시간 선택 닫기');
   setTimePickerLayerState(input, true);
-  positionFormPopup(control.panel, control.button, 304);
+  positionFormPopup(control.panel, control.button, () => Math.min(224, Math.max(152, control.button.offsetWidth)));
   alignSelectedTimeOptions(input);
 }
 
@@ -319,6 +347,7 @@ function closeCustomTimePicker(input, { commit = true } = {}) {
     return;
   }
 
+  if (control.textEntry) finishTimeTextEntry(input, { commit });
   const wasOpen = !control.panel.hidden;
   if (!wasOpen) return;
   let shouldDispatchChange = false;
@@ -372,7 +401,7 @@ function renderTimePicker(input) {
   const grid = document.createElement('div'); grid.className = 'time-panel-grid';
   grid.append(createTimeColumn(input, '시', 'hour', 24), createTimeColumn(input, '분', 'minute', 60));
   const actions = document.createElement('div'); actions.className = 'time-panel-actions';
-  actions.innerHTML = '<button type="button" class="time-soft-button" data-time-action="clear">시간 없음</button><button type="button" class="time-soft-button" data-time-action="close">확인</button>';
+  actions.innerHTML = '<button type="button" class="time-soft-button" data-time-action="type" aria-label="시간 직접 입력">입력</button><button type="button" class="time-soft-button" data-time-action="clear" aria-label="시간 없음">없음</button><button type="button" class="time-soft-button" data-time-action="close">확인</button>';
   control.panel.append(grid, actions);
   refreshOpenTimePickerSelection(input);
 }
@@ -404,7 +433,11 @@ function createTimeColumn(input, label, part, count) {
   const wheel = window.TripLogTimeWheel.create(list, {
     count, isOpen: () => input.isConnected && !input.disabled && !control.panel.hidden,
     onSelect: value => setTimePickerPart(input, part, padNumber(value), { fromWheel: true }),
-    onEdit: () => { frame.classList.add('is-editing'); focusTimePickerElement(editor); editor.select(); },
+    onEdit: event => {
+      // Touch selects the wheel only. The explicit Input action opens a keyboard.
+      if (event.pointerType === 'touch' || event.sourceCapabilities?.firesTouchEvents || (!event.pointerType && matchMedia('(pointer: coarse)').matches)) return;
+      frame.classList.add('is-editing'); focusTimePickerElement(editor); editor.select();
+    },
     onInteract: () => {
       control.panel.querySelectorAll('.time-wheel-frame.is-editing').forEach(activeFrame => {
         const activeEditor = activeFrame.querySelector('[data-time-part-input]');
@@ -441,12 +474,42 @@ function handleTimePickerChange(event, input) {
 
 function focusTimePickerElement(element) { element?.focus({ preventScroll: true }); }
 function returnTimePickerFocus(control) {
-  control.suppressFocusOpen = true; focusTimePickerElement(control.value); control.suppressFocusOpen = false;
+  focusTimePickerElement(control.toggle);
+}
+
+function startTimeTextEntry(input) {
+  const control = customTimePickers.get(input);
+  if (!control || input.disabled) return;
+  closeCustomTimePicker(input);
+  control.textEntry = { value: input.value || '' };
+  control.value.value = input.value || '';
+  control.shell.classList.add('is-text-entry');
+  // Focus synchronously in the user's click so mobile browsers can open the
+  // keyboard, while keeping the wheel closed and the surrounding editor open.
+  focusTimePickerElement(control.value);
+  control.value.select();
+}
+
+function finishTimeTextEntry(input, { commit = true } = {}) {
+  const control = customTimePickers.get(input);
+  if (!control?.textEntry) return;
+  const previous = control.textEntry.value;
+  const next = commit ? parseTypedTime(control.value.value) : previous;
+  control.textEntry = null;
+  control.shell.classList.remove('is-text-entry');
+  if (input.value !== next) {
+    input.value = next;
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+  control.value.value = input.value || '';
+  control.openValue = input.value || '';
+  if (commit && input.value !== previous) input.dispatchEvent(new Event('change', { bubbles: true }));
 }
 
 function handleTimePickerAction(action, input) {
   const control = customTimePickers.get(input);
   if (!control) return;
+  if (action === 'type') { startTimeTextEntry(input); return; }
   if (action === 'clear') {
     stopTimeWheels(input);
     const changed = input.value !== '';

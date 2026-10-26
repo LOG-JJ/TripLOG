@@ -163,9 +163,10 @@ window.TripLogTimeWheel = (() => {
       if (performance.now() < suppressClickUntil) return;
       // Pointer capture can retarget mouse clicks to the scroller itself.
       const row = event.target.closest('[data-time-option]');
-      const index = row ? Number(row.dataset.wheelIndex) : Math.round((event.clientY - list.getBoundingClientRect().top + list.scrollTop - step * 2 - step / 2) / step);
+      const padding = parseFloat(getComputedStyle(list).paddingTop) || 0;
+      const index = row ? Number(row.dataset.wheelIndex) : Math.round((event.clientY - list.getBoundingClientRect().top + list.scrollTop - padding - step / 2) / step);
       const next = mod(index, count);
-      if (next === value && Math.abs(index * step - list.scrollTop) < step / 2) { finish(); onEdit(); }
+      if (next === value && Math.abs(index * step - list.scrollTop) < step / 2) { finish(); onEdit(event); }
       else select(next);
     });
     listen(motionPreference, 'change', () => { if (motionPreference.matches) finish(); });

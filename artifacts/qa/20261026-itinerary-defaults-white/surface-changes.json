@@ -1,0 +1,280 @@
+[
+  {
+    "file": "companion-passport.css",
+    "replaced": [
+      {
+        "selector": "/* Selected reference: triplog-companion-pocket-passport-20260922.png.\n   Scope the passport to Today / Review / Tools; the reservation wallet retains its own design. */\n.rd-app #ttCompanion.tt-passport-ui",
+        "color": "#fffdf7"
+      },
+      {
+        "selector": ".pp-budget-strip",
+        "color": "#fff4c6"
+      },
+      {
+        "selector": "/* Follow-through sheets keep the same paper, type and compact controls. */\nbody.rd-app .tt-dialog.tt-passport-detail",
+        "color": "#fffdf7"
+      },
+      {
+        "selector": "body.rd-app .tt-passport-detail .tt-sub-footer",
+        "color": "#fffdf7"
+      },
+      {
+        "selector": ".pp-review-status",
+        "color": "#fff6eb"
+      },
+      {
+        "selector": "body.rd-app .tt-passport-detail .tt-notice",
+        "color": "#fff3e8"
+      }
+    ]
+  },
+  {
+    "file": "controls.css",
+    "replaced": [
+      {
+        "selector": ".rd-app .custom-select[data-control=\"theme\"] .custom-select-button",
+        "color": "#fffbd6"
+      }
+    ]
+  },
+  {
+    "file": "entry-splash.css",
+    "replaced": [
+      {
+        "selector": ".entry-splash",
+        "color": "#fffdf7"
+      },
+      {
+        "selector": ".entry-splash-track",
+        "color": "#fffefa"
+      }
+    ]
+  },
+  {
+    "file": "expense-polish.css",
+    "replaced": [
+      {
+        "selector": "body.rd-app #rdExpenseEditor.ex-editor .needs-rate",
+        "color": "#fff5d6"
+      }
+    ]
+  },
+  {
+    "file": "expenses.css",
+    "replaced": [
+      {
+        "selector": ".ex-amount-input-row:focus-within",
+        "color": "#fffbd6"
+      },
+      {
+        "selector": "#exRatePanel",
+        "color": "#fffbd6"
+      }
+    ]
+  },
+  {
+    "file": "interactions.css",
+    "replaced": [
+      {
+        "selector": ".rd-app .rd-sync.is-dirty",
+        "color": "#fffbd6"
+      },
+      {
+        "selector": ".rd-app :is(.custom-select-button, .custom-date-button, .custom-time-button).open,\r\n.rd-app .custom-time:focus-within .custom-time-button",
+        "color": "#fffbd6"
+      },
+      {
+        "selector": ".rd-app .rd-trip-edit",
+        "color": "#fffef1"
+      },
+      {
+        "selector": ".rd-app details[open] > summary",
+        "color": "#fffbd6"
+      }
+    ]
+  },
+  {
+    "file": "itinerary-summary.css",
+    "replaced": [
+      {
+        "selector": "#itineraryPage .is-open :where(.itinerary-summary-day-head, .itinerary-summary-day-meta)",
+        "color": "#fffbed"
+      }
+    ]
+  },
+  {
+    "file": "overview-cards.css",
+    "replaced": []
+  },
+  {
+    "file": "planning.css",
+    "replaced": [
+      {
+        "selector": "#itineraryPage .is-selected .timeline-stop-body",
+        "color": "#fffdf0"
+      },
+      {
+        "selector": "#itineraryPage .timeline-transit[open] .timeline-transit-label",
+        "color": "#fff8c6"
+      }
+    ]
+  },
+  {
+    "file": "prepurchase.css",
+    "replaced": [
+      {
+        "selector": "#rdReservation .pp-field:focus-within",
+        "color": "#fffdf0"
+      },
+      {
+        "selector": "#rdReservation .pp-amount-row:focus-within",
+        "color": "#fffbd6"
+      },
+      {
+        "selector": "#rdReservation .pp-extra[open] > summary",
+        "color": "#fff8ce"
+      }
+    ]
+  },
+  {
+    "file": "receipt.css",
+    "replaced": [
+      {
+        "selector": ".receipt-warnings",
+        "color": "#fff9e8"
+      }
+    ]
+  },
+  {
+    "file": "redesign.css",
+    "replaced": [
+      {
+        "selector": ".rd-transfers",
+        "color": "#fffbd6"
+      },
+      {
+        "selector": ".rd-analysis-metrics>div",
+        "color": "#fffbd6"
+      },
+      {
+        "selector": ".rd-app .rd-trip-choice.is-current",
+        "color": "#fffbd6"
+      }
+    ]
+  },
+  {
+    "file": "reservation-wallet.css",
+    "replaced": [
+      {
+        "selector": ".tt-wallet-search:focus-within",
+        "color": "#fffdf0"
+      },
+      {
+        "selector": ".rd-app .tt-wallet-ui .tt-form :is(input, textarea):not(.control-popover input):focus",
+        "color": "#fffdf0"
+      },
+      {
+        "selector": ".tt-reservation-extras[open] > summary",
+        "color": "#fff9cf"
+      }
+    ]
+  },
+  {
+    "file": "sync.css",
+    "replaced": [
+      {
+        "selector": ".sync-notice[data-tone=warning]",
+        "color": "#fff8e9"
+      }
+    ]
+  },
+  {
+    "file": "transit-editor.css",
+    "replaced": [
+      {
+        "selector": "#itineraryPage .has-transit .timeline-transit-summary",
+        "color": "#fffbed"
+      },
+      {
+        "selector": "#itineraryTransitMapStatus.is-slow",
+        "color": "#fffbed"
+      },
+      {
+        "selector": "body.rd-app #itineraryTransitDialog #itineraryTransitRecordInstead",
+        "color": "#fffbed"
+      }
+    ]
+  },
+  {
+    "file": "travel-companion.css",
+    "replaced": [
+      {
+        "selector": ".tt-dialog .yellow",
+        "color": "#fff8ce"
+      }
+    ]
+  },
+  {
+    "file": "trip-library.css",
+    "replaced": [
+      {
+        "selector": "/* Passport Library: selected home concept, with real raster cover artwork. */\nbody.rd-app[data-page=\"start\"], body.rd-app[data-page=\"start\"] .app-shell",
+        "color": "#fffdf7"
+      },
+      {
+        "selector": "body.rd-app .tl-library-search",
+        "color": "#fffefa"
+      },
+      {
+        "selector": ".tl-library-view-switch",
+        "color": "#fffefa"
+      },
+      {
+        "selector": "body.rd-app .tl-library[data-view=\"list\"] .tl-passport-new",
+        "color": "#fff7cd"
+      }
+    ]
+  },
+  {
+    "file": "trip-navigation.css",
+    "replaced": [
+      {
+        "selector": "/* Shared navigation and the approved itinerary / expenses / report sheets.\n * Entry, exit and panel resizing use the bundled Motion library.\n * Keep layout transitions off the sheet so interrupted gestures stay smooth.\n */\nbody.rd-app",
+        "color": "#fffdf8"
+      },
+      {
+        "selector": ".rd-app .tl-bottom-nav",
+        "color": "#fffdf9"
+      },
+      {
+        "selector": "body.rd-app #tripNavigationMenu .tl-nav-item",
+        "color": "#fffdf9"
+      },
+      {
+        "selector": "body.rd-app #tripNavigationMenu .tl-nav-item.is-primary",
+        "color": "#fff0b5"
+      }
+    ]
+  },
+  {
+    "file": "wallet-passbook.css",
+    "replaced": [
+      {
+        "selector": "#ttCompanion .pw-wallet-ticket.yellow .pw-ticket-band",
+        "color": "#fff4ca"
+      },
+      {
+        "selector": "body.rd-app :is(#ttReservationDetail, #ttReservationEditor, #ttCopy).tt-wallet-ui",
+        "color": "#fffdf7"
+      },
+      {
+        "selector": "body.rd-app :is(#ttReservationDetail, #ttReservationEditor, #ttCopy) :is(.tt-header, .tt-sub-footer, .tt-detail-list)",
+        "color": "#fffdf7"
+      },
+      {
+        "selector": "body.rd-app #ttWalletSortMenu.control-popover",
+        "color": "#fffdf7"
+      }
+    ]
+  }
+]

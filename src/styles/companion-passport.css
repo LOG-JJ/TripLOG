@@ -1,7 +1,7 @@
 /* Selected reference: triplog-companion-pocket-passport-20260922.png.
    Scope the passport to Today / Review / Tools; the reservation wallet retains its own design. */
 .rd-app #ttCompanion.tt-passport-ui {
-  --pp-paper: #fffdf7;
+  --pp-paper: var(--tl-surface, #fff);
   --pp-ink: #202730;
   --pp-muted: #626871;
   --pp-line: #d4d5d4;
@@ -97,7 +97,7 @@ body.rd-app #ttCompanion.tt-passport-ui .pp-stop-detail { display: flex; justify
 .pp-stop-detail small { display: flex; align-items: center; gap: 3px; min-width: 0; width: 37%; font-size: 10px; color: #6c7177; line-height: 1.4; }
 .pp-stop-detail small > .ph { flex: none; }
 .pp-stop-detail > .ph { margin-left: auto; font-size: 12px; }
-.pp-budget-strip { display: flex; align-items: center; gap: 8px; min-height: 48px; width: 100%; background: #fff4c6; border: 0; border-radius: 7px; margin: 4px 0 0; padding: 8px 10px; color: #282d31; text-align: left; font-family: inherit; cursor: pointer; box-shadow: none; }
+.pp-budget-strip { display: flex; align-items: center; gap: 8px; min-height: 48px; width: 100%; background: var(--tl-surface, #fff); border: 0; border-radius: 7px; margin: 4px 0 0; padding: 8px 10px; color: #282d31; text-align: left; font-family: inherit; cursor: pointer; box-shadow: none; }
 .pp-budget-strip > .ph { font-size: 22px; flex: none; }
 .pp-budget-strip > span { font-size: 10px; font-weight: 600; flex: none; }
 .pp-budget-strip > div { margin-left: auto; flex: 1; min-width: 0; text-align: right; }
@@ -142,7 +142,7 @@ body.rd-app #ttCompanion.tt-passport-ui .pp-review-transit { display: flex; widt
 .pp-review-transit > .ph:first-child { font-size: 17px; }
 .pp-review-transit > .ph:last-child { margin-left: auto; font-size: 12px; }
 .pp-review-transit small { color: #a14d66; font-size: 9px; }
-.pp-review-status { display: flex; gap: 9px; padding: 11px 10px; margin: 12px 0 0; border: 1px solid #edcba6; background: #fff6eb; border-radius: 8px; }
+.pp-review-status { display: flex; gap: 9px; padding: 11px 10px; margin: 12px 0 0; border: 1px solid #edcba6; background: var(--tl-surface, #fff); border-radius: 8px; }
 .pp-review-status > .ph { flex: none; font-size: 23px; color: #aa681c; }
 .pp-review-status strong { font-size: 12px; font-weight: 700; line-height: 1.4; }
 .pp-review-status small { display: block; font-size: 10px; color: #6e7072; margin-top: 3px; line-height: 1.5; }
@@ -232,13 +232,13 @@ body.rd-app .tt-dialog.tt-passport-detail {
   width: calc(100% - 28px); max-width: 460px; height: auto;
   max-height: calc(100dvh - 32px); margin: auto; padding: 16px 16px 0;
   border: 1px solid #d8d6cd; border-radius: 14px; box-shadow: 0 12px 50px #18232b33;
-  background: #fffdf7; font-size: 13px;
+  background: var(--tl-surface, #fff); font-size: 13px;
 }
 body.rd-app .tt-passport-detail .tt-heading > p { font-size: 12px; }
 body.rd-app .tt-passport-detail .tt-button { font-size: 13px; border-width: 1px; border-color: #c0c2c0; min-height: 40px; box-shadow: none; }
 body.rd-app .tt-passport-detail .tt-icon { min-height: 36px; font-size: 21px; border: 0; }
 body.rd-app .tt-passport-detail .tt-card { border: 1px solid #d4d5cf; background: transparent; border-radius: 8px; }
-body.rd-app .tt-passport-detail .tt-notice { border: 1px solid #eadbd4; background: #fff3e8; font-size: 12px; padding: 9px 10px; border-radius: 7px; margin: 10px 0; }
+body.rd-app .tt-passport-detail .tt-notice { border: 1px solid #eadbd4; background: var(--tl-surface, #fff); font-size: 12px; padding: 9px 10px; border-radius: 7px; margin: 10px 0; }
 body.rd-app .tt-passport-detail .tt-notice > .ph { font-size: 20px; }
 body.rd-app .tt-passport-detail :is(.tt-adjust-controls, #ttAdjustmentResult) > h2 { font-size: 14px; margin-bottom: 9px; }
 body.rd-app .tt-passport-detail .tt-number-fields { margin-top: 12px; }
@@ -249,7 +249,7 @@ body.rd-app .tt-passport-detail .tt-adjust-row b { font-size: 12px; }
 body.rd-app .tt-passport-detail .tt-adjust-row small { font-size: 10px; }
 body.rd-app .tt-passport-detail .tt-adjust-row > strong { font-size: 12px; color: #ad285a; background: #ffe6ed; border-radius: 4px; padding: 5px; }
 body.rd-app .tt-passport-detail .tt-step { width: 24px; height: 24px; font-size: 11px; background: #eeece3; }
-body.rd-app .tt-passport-detail .tt-sub-footer { background: #fffdf7; padding-top: 12px; }
+body.rd-app .tt-passport-detail .tt-sub-footer { background: var(--tl-surface, #fff); padding-top: 12px; }
 body.rd-app .tt-passport-detail .tt-sub-footer > div > .tt-button { font-size: 14px; min-height: 42px; }
 body.rd-app .tt-passport-detail .tt-primary { background: #ffeb50; border-color: #343a40; }
 body.rd-app .tt-passport-detail .tt-detail-list dt { font-size: 12px; }

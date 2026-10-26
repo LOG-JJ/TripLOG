@@ -50,6 +50,8 @@ async function main() {
       await page.waitForFunction(title => document.querySelector('#tripNavigationTitle')?.textContent.trim() === title, groups[key].title);
       await settled();
       assert.equal(await menu.locator('[data-nav-item]').count(), groups[key].count);
+      const surfaces = await menu.locator('.tl-nav-panel, .tl-nav-dock, [data-nav-item]').evaluateAll(nodes => nodes.map(node => getComputedStyle(node).backgroundColor));
+      assert(surfaces.every(color => color === 'rgb(255, 255, 255)'), `Navigation uses the main white surface: ${surfaces}`);
       assert.equal(await dock(key).getAttribute('aria-expanded'), 'true');
       const dockAfter = await menu.locator('.tl-nav-dock [data-trip-nav]').evaluateAll(nodes => nodes.map(node => {
         const { x, y, width, height } = node.getBoundingClientRect(); return { x, y, width, height };

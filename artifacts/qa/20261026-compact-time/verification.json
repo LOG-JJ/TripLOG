@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-26",
+  "status": "local-validation-passed",
+  "deployed": false,
+  "build": "25524ceefae0f2961b9e",
+  "browser": "Playwright with installed Edge; Browser plugin unavailable",
+  "captures": [
+    {
+      "file": "before-mobile-390.png",
+      "sha256": "834a1c8debcc1102bb67bcfb84ca7b14eb17529cc4a21e4847ffac557bca55ab",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-compact-time\\before-390.png"
+    },
+    {
+      "file": "after-mobile-390.png",
+      "sha256": "5049cdfd6676d7258c3b9ec42cebadaff9369166739e45287b9cfc6e2355ea7f",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-compact-time\\after-390.png"
+    },
+    {
+      "file": "after-mobile-320.png",
+      "sha256": "0456c630a5528f836ea6de31f7113e433afc451b0e7637432988318e2703fd0d",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-compact-time\\after-320.png"
+    },
+    {
+      "file": "after-desktop-1440.png",
+      "sha256": "20480f76dc9d437ec95ae3fe68b5ab2bb1f8005e1ab2e9d86e42bbd1c6574c9e",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-compact-time\\after-1440.png"
+    }
+  ]
+}

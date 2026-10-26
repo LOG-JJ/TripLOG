@@ -19,7 +19,7 @@ body.rd-app {
 .rd-app .rd-sync { width: auto; min-width: 0; min-height: 38px; height: 38px; padding: 7px 10px; gap: 6px; font-size: 13px; border: 1.5px solid var(--text); border-radius: 9px; background: #fff; }
 .rd-app .rd-sync::before, .rd-app .rd-sync::after { display: none; }
 .rd-app .rd-sync svg { position: static; inset: auto; flex-shrink: 0; transform: none; width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.8; }
-.rd-app .rd-sync.is-dirty { background: #fffbd6; }
+.rd-app .rd-sync.is-dirty { background: var(--tl-surface, #fff); }
 .rd-app .rd-sync.is-syncing, .rd-app .rd-sync.is-synced { background: var(--rd-yellow); }
 .rd-app .rd-sync.is-syncing svg { animation: rd-spin 800ms linear infinite; }
 
@@ -57,7 +57,7 @@ body.rd-app {
   background: #fff; color: var(--text); font-size: 15px; font-weight: 650;
 }
 .rd-app :is(.custom-select-button, .custom-date-button, .custom-time-button).open,
-.rd-app .custom-time:focus-within .custom-time-button { background: #fffbd6; box-shadow: 1px 2px 0 var(--text); }
+.rd-app .custom-time:focus-within .custom-time-button { background: var(--tl-surface, #fff); box-shadow: 1px 2px 0 var(--text); }
 .rd-app .custom-select-value { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .rd-app :is(.custom-select-menu, .custom-date-panel, .custom-time-panel, .time-dropdown-menu) {
   background: #fff; background-image: none; color: var(--text);
@@ -106,11 +106,11 @@ body.rd-app {
 .rd-app .rd-expense-tools { display: flex; justify-content: flex-end; margin-bottom: 18px; }
 .rd-app .rd-receipt-launch { min-height: 40px; font-size: 14px; background: #fff; }
 .rd-app .rd-receipt-launch.active, .rd-app .rd-receipt-launch:active { background: var(--rd-yellow); }
-.rd-app .rd-trip-edit { padding: 18px; border: 1.8px solid var(--text); border-radius: 12px; background: #fffef1; }
+.rd-app .rd-trip-edit { padding: 18px; border: 1.8px solid var(--text); border-radius: 12px; background: var(--tl-surface, #fff); }
 .rd-app #rdExpenseEditor .rd-amount-field { display: flex; }
 .rd-app #rdExpenseEditor .foreign-fields { width: 100%; }
 .rd-app details > summary { cursor: pointer; border-radius: 8px; }
-.rd-app details[open] > summary { background: #fffbd6; color: var(--text); }
+.rd-app details[open] > summary { background: var(--tl-surface, #fff); color: var(--text); }
 .rd-app details > summary .ph:last-child { transition: transform var(--rd-motion); }
 .rd-app details[open] > summary .ph-caret-down:last-child { transform: rotate(180deg); }
 .rd-app #rdReceiptStatusInfo[open] > summary { background: var(--rd-yellow); }
