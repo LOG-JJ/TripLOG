@@ -57,9 +57,12 @@ body.rd-app :is(#exCategoryFilterMenu, #expenseSortSelectMenu) .ph { font-size: 
 body.rd-app :is(#exCategoryFilterMenu, #expenseSortSelectMenu) .control-option-check { width: 16px; height: 18px; flex-basis: 16px; border: 0; }
 body.rd-app :is(#exCategoryFilterMenu, #expenseSortSelectMenu) .control-option-check .ph { font-size: 14px; }
 @media (max-width: 760px) {
-  body.rd-app .ex-table.has-reorder-handles .ex-row-edit { display: flex; justify-content: flex-end; align-self: center; grid-column: 3; grid-row: 2 / 4; position: relative; z-index: 1; }
+  body.rd-app .ex-table.has-reorder-handles tr { grid-template-columns: 32px minmax(0, 1fr) minmax(0, auto) 44px; column-gap: 6px; }
+  body.rd-app .ex-table.has-reorder-handles .ex-row-edit { display: flex; justify-content: flex-end; align-self: start; grid-column: 4; grid-row: 1; position: relative; z-index: 1; }
+  body.rd-app .ex-table.has-reorder-handles .ex-row-edit .tl-sort-handle { margin-top: 0; }
+  body.rd-app .ex-table.has-reorder-handles .ex-row-amount { align-self: center; }
   body.rd-app .ex-row-actions .ex-entry-edit { display: none; }
-  body.rd-app .ex-table.has-reorder-handles .ex-row-date, body.rd-app .ex-table.has-reorder-handles .ex-row-copy .ex-note { grid-column: 2; }
+  body.rd-app .ex-table.has-reorder-handles .ex-row-date, body.rd-app .ex-table.has-reorder-handles .ex-row-copy .ex-note { grid-column: 2 / -1; }
 
   body.rd-app .ex-toolbar { grid-template-columns: minmax(0, 1fr) auto; gap: 7px; }
   body.rd-app .ex-filter-controls { gap: 7px; }

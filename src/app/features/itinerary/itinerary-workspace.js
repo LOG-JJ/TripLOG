@@ -97,7 +97,6 @@
     els.itinerarySubmitButton.querySelector("span").textContent = editingItineraryId ? "일정 저장" : itineraryCopying ? "복사해서 추가" : "일정에 추가";
     const themeIcon = query("[data-itinerary-theme-icon]");
     if (themeIcon) themeIcon.className = `ph ph-${els.itineraryThemeSelect.value === "sightseeing" ? "bank" : (itineraryThemes[els.itineraryThemeSelect.value]?.icon || "map-pin")}`;
-    const lodging = els.itineraryThemeSelect.value === 'lodging';
     const transport = els.itineraryThemeSelect.value === 'transport';
     query('#itineraryTransportFields').hidden = !transport;
     query('#itineraryTransportFields').disabled = !transport;
@@ -105,16 +104,13 @@
     syncCustomSelect(query('#itineraryTransportKind'));
     const startField = els.itineraryTimeInput.closest('.time-field-item');
     const endField = els.itineraryEndTimeInput.closest('.time-field-item');
-    startField.querySelector(':scope > span').textContent = lodging ? '도착 시각' : transport ? '출발 시간' : '시작';
-    startField.querySelector('.custom-time-button')?.setAttribute('aria-label', lodging ? '도착 시각 선택' : transport ? '출발 시간 선택' : '시작 시간 선택');
-    startField.querySelector('.custom-time-value')?.setAttribute('aria-label', lodging ? '도착 시각' : transport ? '출발 시간' : '시작 시간');
-    endField.hidden = lodging;
+    startField.querySelector(':scope > span').textContent = transport ? '출발 시간' : '시작';
+    startField.querySelector('.custom-time-button')?.setAttribute('aria-label', transport ? '출발 시간 선택' : '시작 시간 선택');
+    startField.querySelector('.custom-time-value')?.setAttribute('aria-label', transport ? '출발 시간' : '시작 시간');
     endField.querySelector(':scope > span').textContent = transport ? '도착 시간' : '종료';
     endField.querySelector('.custom-time-button')?.setAttribute('aria-label', transport ? '도착 시간 선택' : '종료 시간 선택');
     endField.querySelector('.custom-time-value')?.setAttribute('aria-label', transport ? '도착 시간' : '종료 시간');
-    els.itineraryEndTimeInput.disabled = lodging;
     syncCustomTimePicker(els.itineraryEndTimeInput);
-    startField.parentElement.classList.toggle('is-lodging', lodging);
   }
 
   function show({ edit = false, previewMap = true } = {}) {

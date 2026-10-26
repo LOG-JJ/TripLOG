@@ -76,7 +76,7 @@
     if (kind === 'itinerary') {
       date(item.date, '일정 날짜'); text(item.place, '장소', 1000);
       for (const key of ['time', 'endTime']) if (item[key] && Companion.minutes(item[key]) === null) problem('시간은 HH:MM 형식이어야 합니다.');
-      if (item.endTime && item.theme !== 'lodging' && (!item.time || Companion.endMinutes(item) <= Companion.minutes(item.time))) problem('일정의 종료 시간은 시작 시간보다 늦어야 합니다.');
+      if (item.endTime && (!item.time || Companion.endMinutes(item) <= Companion.minutes(item.time))) problem('일정의 종료 시간은 시작 시간보다 늦어야 합니다.');
       if (!Array.isArray(item.transits) || item.transits.length > 100) problem('이동 구간 목록을 확인해 주세요.');
       for (const segment of item.transits) { if (!segment || typeof segment !== 'object' || Array.isArray(segment)) problem('이동 구간은 객체여야 합니다.'); amount(segment.cost || 0, '이동 비용'); amount(segment.duration || 0, '이동 시간'); }
       amount(item.cost || 0, '이동 비용'); amount(item.duration || 0, '이동 시간');

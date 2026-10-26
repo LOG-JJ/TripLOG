@@ -12,7 +12,7 @@
   const clockText = value => `${value >= 1440 ? `+${Math.floor(value / 1440)}일 ` : ''}${String(Math.floor(value / 60) % 24).padStart(2, '0')}:${String(value % 60).padStart(2, '0')}`;
   const modeFor = row => itineraryTransitModes[row.trans === 'etc' ? 'flight' : row.trans] || itineraryTransitModes.none;
   const modeKey = row => row.trans === 'etc' ? 'flight' : row.trans || 'none';
-  const departureTime = () => minutes((draft.previous.theme === 'lodging' ? '' : draft.previous.endTime) || draft.previous.time);
+  const departureTime = () => minutes(draft.previous.endTime || draft.previous.time);
   const validDuration = row => /^\d+$/.test(row.durationInput) && Number(row.durationInput) <= 1440 ? Number(row.durationInput) : 0;
   const transferName = (row, index) => index ? String(row.fromPlace || '').trim() || `환승 ${index}` : itineraryPlaceLabel(draft.previous);
   const transitColors = [ ['#2879ef', '파랑'], ['#e93545', '빨강'], ['#248452', '초록'], ['#b96609', '주황'], ['#748197', '회색'] ];

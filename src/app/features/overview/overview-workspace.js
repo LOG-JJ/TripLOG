@@ -10,10 +10,11 @@
     const team = members(), cost = window.TripLog.shared.travelCosts.summarize(state, { members: team.length });
     const days = getTripDays(), validDates = new Set(days.map(day => day.date));
     const plans = sortItineraryItems(state.itineraryItems.filter(item => validDates.has(item.date)));
-    const today = M().localDate();
-    const scheduleDate = validDates.has(today) ? today : plans[0]?.date || state.startDate;
+    const companion = window.TripLog.features.travelCompanion.model;
+    const today = companion.dateInZone(companion.defaultZone(state) || undefined);
+    const scheduleDate = getDefaultItineraryDate();
     const scheduleDay = days.find(day => day.date === scheduleDate);
-    const scheduleTitle = scheduleDate === today ? '오늘 일정' : scheduleDate === state.startDate ? '첫날 일정' : `${scheduleDay?.label || ''} 일정`;
+    const scheduleTitle = scheduleDate === today ? '오늘 일정' : scheduleDate === state.startDate ? '첫날 일정' : scheduleDate === state.endDate ? '마지막 날 일정' : `${scheduleDay?.label || '여행'} 일정`;
     const items = plans.filter(item => item.date === scheduleDate).slice(0, 5), packing = state.packingList || [];
     const overviewCard = window.TripLog.features.overview.card;
     $('#rdOverview').innerHTML = `

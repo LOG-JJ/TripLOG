@@ -115,6 +115,14 @@ async function main() {
     cases.push('read-only trips do not expose reorder controls');
 
     const { page: mobile, context: mobileContext } = await createPage(true);
+    const assertAmountHandle = async () => {
+      const boxes = await mobile.locator('#rdExpenseList tr').evaluateAll(rows => rows.map(row => {
+        const amount = row.querySelector('.ex-row-amount').getBoundingClientRect(), handle = row.querySelector('.ex-drag-handle').getBoundingClientRect();
+        return { id: row.dataset.id, right: handle.left >= amount.right - 1, aligned: handle.top < amount.bottom && amount.top < handle.bottom, fits: handle.right <= innerWidth + 1, width: handle.width, height: handle.height };
+      }));
+      assert(boxes.every(box => box.right && box.aligned && box.fits && box.width >= 44 && box.height >= 44), `Move handles stay to the right of amounts: ${JSON.stringify(boxes)}`);
+    };
+    await assertAmountHandle();
     await mobile.evaluate(() => { window.orderPointerEvents = []; for (const name of ['pointerdown', 'pointermove', 'pointerup', 'pointercancel']) document.addEventListener(name, event => window.orderPointerEvents.push({ name, type: event.pointerType, primary: event.isPrimary, button: event.button, id: event.pointerId, target: event.target.closest('.ex-drag-handle')?.getAttribute('aria-label'), y: event.clientY }), true); });
     const client = await mobileContext.newCDPSession(mobile);
     await mobile.evaluate(() => window.scrollTo({ top: 260, behavior: 'instant' }));
@@ -150,8 +158,9 @@ async function main() {
     cases.push('touch cancellation and mobile reload preserve the saved order');
 
     await mobile.setViewportSize({ width: 320, height: 740 });
-    await mobile.evaluate(() => { state.entries[0].description = '아주 긴 지출 내용과 예약 정보 '.repeat(12); state.entries[0].amount = 123456789012; render(); });
+    await mobile.evaluate(() => { state.entries[0].description = '아주 긴 지출 내용과 예약 정보 '.repeat(12); state.entries[0].amount = 123456789012; state.entries[0].foreignAmount = 123456789; state.entries[0].currency = 'JPY'; render(); });
     assert(await mobile.evaluate(() => document.documentElement.scrollWidth <= innerWidth), '320px layout must not overflow');
+    await assertAmountHandle();
     for (const button of await mobile.locator('tr[data-id="a"] .tl-sort-handle').all()) { const box = await button.boundingBox(); assert(box.x >= 0 && box.x + box.width <= 321); }
     await mobile.locator('tr[data-id="a"]').evaluate(row => row.scrollIntoView({ block: 'center', behavior: 'instant' }));
     await mobile.screenshot({ path: path.join(output, 'reorder-mobile-320-long.png') });

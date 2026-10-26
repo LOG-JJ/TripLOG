@@ -82,7 +82,7 @@ async function saveItineraryForm(event) {
     id,
     date: els.itineraryDaySelect.value || state.selectedItineraryDate,
     time: els.itineraryTimeInput.value,
-    endTime: theme === 'lodging' ? '' : els.itineraryEndTimeInput.value,
+    endTime: els.itineraryEndTimeInput.value,
     place,
     location,
     mapQuery: candidateSelected ? (selectedPlaceCandidate.mapQuery || "") : (existingPlaceUnchanged ? existingItem.mapQuery || "" : ""),

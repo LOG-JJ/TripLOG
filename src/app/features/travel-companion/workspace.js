@@ -93,7 +93,7 @@
     const items = M().dayItems(state, selectedDay), issues = M().reviewDay(state, selectedDay), outside = M().outsideItems(state);
     const plan = M().planAdjustment(state, selectedDay, 0, 10), flags = M().flags(state);
     const changes = new Map(plan.changes.map(change => [change.id, change]));
-    const times = (start, end, lodging) => `<time>${text(start || '미정')}</time>${!lodging && end ? `<small>– ${text(end)}</small>` : ''}`;
+    const times = (start, end) => `<time>${text(start || '미정')}</time>${end ? `<small>– ${text(end)}</small>` : ''}`;
     const rows = items.map((item, index) => {
       const change = changes.get(item.id), locked = flags.locked.has(item.id), completed = flags.completed.has(item.id);
       const itemIssues = issues.filter(issue => issue.id === item.id), delta = change ? M().minutes(change.time) - M().minutes(item.time) : 0;
@@ -102,8 +102,8 @@
       const transit = index && !completed ? button(`${icon(transitIcon)}<span>${M().transitMinutes(item, 0) ? `이동 시간 <b>${M().transitMinutes(item, 0)}분</b>` : '이동 미정 · 10분 기준'}</span>${itemIssues.some(issue => issue.type === 'transit') ? `<small>${text(itemIssues.find(issue => issue.type === 'transit').title.replace('이동 시간 ', ''))}</small>` : ''}${icon('caret-right')}`, 'transit-edit', 'pp-review-transit', `data-id="${text(item.id)}" aria-label="${text(item.place)} 이동 정보 수정"`) : '';
       return `${transit}<div class="pp-review-row${change ? ' has-change' : ''}" data-review-id="${text(item.id)}">
         <div class="pp-review-place"><span class="pp-review-number${!completed && index === items.findIndex(row => !flags.completed.has(row.id)) ? ' is-next' : ''}">${String(index + 1).padStart(2, '0')}</span>${button(`<strong>${text(item.place || '장소 미정')}</strong><small>${text(item.location || state.city || '')}</small>`, 'itinerary-edit', 'pp-review-detail', `data-id="${text(item.id)}" aria-label="${text(item.place)} 일정 상세"`)}</div>
-        <div class="pp-review-current">${times(item.time, item.endTime, item.theme === 'lodging')}</div><span class="pp-review-arrow" aria-hidden="true">${icon('arrow-right')}</span>
-        <div class="pp-review-proposed">${times(change?.time || item.time, change ? change.endTime : item.endTime, item.theme === 'lodging')}</div>
+        <div class="pp-review-current">${times(item.time, item.endTime)}</div><span class="pp-review-arrow" aria-hidden="true">${icon('arrow-right')}</span>
+        <div class="pp-review-proposed">${times(change?.time || item.time, change ? change.endTime : item.endTime)}</div>
         <div class="pp-review-note">${completed ? `<span class="pp-review-completed">${icon('check')}완료</span>` : button(locked ? `${icon('lock-key')}<small>고정</small>` : delta ? `<b>+${delta}분</b>` : icon('lock-key-open'), 'lock', 'pp-review-lock', `data-id="${text(item.id)}" aria-label="${text(item.place)} ${locked ? '잠금 해제' : '시간 잠금'}" aria-pressed="${locked}"`)}</div>
       </div>${itemIssues.filter(issue => issue.type !== 'transit').map(issue => `<p class="pp-review-warning">${icon('warning-circle')}${text(issue.title)}</p>`).join('')}`;
     }).join('');
@@ -357,7 +357,7 @@
   function editItinerary(item) {
     if (!item) return;
     closeAll(); state.selectedItineraryDate = item.date;
-    window.TripLog.features.redesign.workspace.navigate('itinerary'); startItineraryEdit(item);
+    window.TripLog.features.redesign.workspace.navigate('itinerary', { date: state.selectedItineraryDate }); startItineraryEdit(item);
   }
   async function linkReservation(row) {
     if (row.source === 'itinerary') { editItinerary(findItineraryItem(row.sourceId)); return; }
@@ -412,12 +412,12 @@
           const items = M().dayItems(state, selectedDay), index = items.findIndex(item => item.id === id);
           if (index < 1) break;
           closeAll(); state.selectedItineraryDate = selectedDay;
-          window.TripLog.features.redesign.workspace.navigate('itinerary');
+          window.TripLog.features.redesign.workspace.navigate('itinerary', { date: state.selectedItineraryDate });
           window.TripLog.features.itinerary.transitEditor.open(id, items[index - 1].id);
           break;
         }
-        case 'itinerary-new': closeAll(); state.selectedItineraryDate = selectedDay || state.startDate; window.TripLog.features.redesign.workspace.navigate('itinerary'); window.TripLog.features.itinerary.workspace.show(); break;
-        case 'itinerary-day': case 'itinerary-all': closeAll(); state.selectedItineraryDate = action === 'itinerary-all' ? 'all' : selectedDay; window.TripLog.features.redesign.workspace.navigate('itinerary'); saveAndRender(); break;
+        case 'itinerary-new': closeAll(); state.selectedItineraryDate = selectedDay || state.startDate; window.TripLog.features.redesign.workspace.navigate('itinerary', { date: state.selectedItineraryDate }); window.TripLog.features.itinerary.workspace.show(); break;
+        case 'itinerary-day': case 'itinerary-all': closeAll(); state.selectedItineraryDate = action === 'itinerary-all' ? 'all' : selectedDay; window.TripLog.features.redesign.workspace.navigate('itinerary', { date: state.selectedItineraryDate }); saveAndRender(); break;
         case 'cost-info': { const data = M().dailySpending(state, selectedDay); $('#ttCostInfoBody').innerHTML = `<p>기록한 지출을 합산한 금액입니다. 환불은 합계에서 차감해요.</p><dl class="tt-detail-list"><dt>이날 여행 경비</dt><dd>${money(data.dayTotal)} · ${data.dayCount}건</dd><dt>전체 누적 경비</dt><dd>${money(data.total)} · ${data.count}건</dd><dt>사전구매 경비</dt><dd>${money(data.pretrip)}</dd></dl><p class="tt-muted">전체 누적 경비에는 사전구매와 날짜 미정 기록도 포함합니다.</p>`; openDialog('ttCostInfo'); break; }
         case 'adjustment': showAdjustment(); break;
         case 'delay': $('#ttDelay').value = target.dataset.delay; updateAdjustment(); break;

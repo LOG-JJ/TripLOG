@@ -94,7 +94,7 @@ layout.columns.forEach(day => day.timed.forEach((row, i) => {
   });
 }));
 assert.deepEqual(model.timeRange({ date: '2026-10-09', time: '23:30', endTime: '01:15' }), { start: 1410, end: 1515 });
-assert.deepEqual(model.timeRange({ date: '2026-10-09', time: '23:30', endTime: '07:00', theme: 'lodging' }), { start: 1410, end: null });
+assert.deepEqual(model.timeRange({ date: '2026-10-09', time: '23:30', endTime: '07:00', theme: 'lodging' }), { start: 1410, end: 1860 });
 assert.equal(model.timeRange({ date: '2026-10-09', time: '20:00', endTime: '09:00', transportReservation: { arrivalDate: '2026-10-11' } }).end, 3420);
 assert.equal(model.dateValue('2026-02-30'), null); assert.equal(model.timeMinutes('25:00'), null);
 assert.equal(model.create(empty).total, 0); assert.equal(model.create(empty).days.length, 0);

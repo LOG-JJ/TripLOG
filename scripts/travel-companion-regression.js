@@ -20,6 +20,11 @@ const trip = { id: 'test-trip', tripName: '서울 주말 여행', countryCode: '
 assert.equal(M.days(trip).length, 3);
 assert.equal(M.validDate('2026-02-30'), false);
 assert.equal(M.validDate('2024-02-29'), true);
+for (const [now, expected] of [['2026-09-17', day], ['2026-09-18', day], ['2026-09-19', '2026-09-19'], ['2026-09-20', '2026-09-20'], ['2026-09-21', '2026-09-20']]) {
+  assert.equal(M.defaultItineraryDate(trip, new Date(`${now}T12:00:00+09:00`)), expected);
+}
+assert.equal(M.defaultItineraryDate({ ...trip, countryCode: 'GB', travelCompanion: { timeZone: 'Europe/London' } }, new Date('2026-09-18T22:30:00Z')), day);
+assert.equal(M.defaultItineraryDate({ ...trip, endDate: '2026-02-30' }), '');
 // A stay occupies nights, never its checkout day. Re-saving must reuse IDs,
 // preserve per-day edits and leave the single hotel payment untouched.
 let staySequence = 0;
@@ -34,12 +39,13 @@ assert.deepEqual(stayTrip.entries, [{ id: 'payment', amount: 200000 }]);
 const withStay = { ...stayTrip, itineraryItems: addedStay.itineraryItems };
 assert.deepEqual(clone(M.stayItinerary(withStay, stayRow, stayRow, stayId).itineraryItems), clone(addedStay.itineraryItems));
 const firstNight = withStay.itineraryItems[0];
-Object.assign(firstNight, { time: '22:30', memo: '짐 맡기기', lat: 37.5, lon: 127, coordinateSignature: 'old' });
+Object.assign(firstNight, { time: '22:30', endTime: '23:30', memo: '짐 맡기기', lat: 37.5, lon: 127, coordinateSignature: 'old' });
 const changedStay = { ...stayRow, title: '변경 호텔', location: '부산', note: '새 예약 메모', endDate: '2026-09-19' };
 const changedNights = M.stayItinerary(withStay, changedStay, stayRow, stayId);
 assert.equal(changedNights.itineraryItems.length, 1);
 assert.deepEqual(Array.from(changedNights.removedIds), [withStay.itineraryItems[1].id]);
 assert.deepEqual([changedNights.itineraryItems[0].id, changedNights.itineraryItems[0].time, changedNights.itineraryItems[0].memo, changedNights.itineraryItems[0].place], [firstNight.id, '22:30', '짐 맡기기', '변경 호텔']);
+assert.equal(changedNights.itineraryItems[0].endTime, '23:30', 'Reservation updates preserve the edited end time');
 assert.equal(changedNights.itineraryItems[0].lat, undefined, 'Changing a hotel invalidates its old coordinates');
 assert.deepEqual(Array.from(M.stayItinerary({ ...stayTrip, startDate: '2024-02-28', endDate: '2024-03-02' }, { ...stayRow, date: '2024-02-28', endDate: '2024-03-01' }, null, stayId).itineraryItems, item => item.date), ['2024-02-28', '2024-02-29']);
 assert.deepEqual(Array.from(M.stayItinerary(stayTrip, { ...stayRow, date: '2026-09-17', endDate: '2026-09-22' }, null, stayId).itineraryItems, item => item.date), [day, '2026-09-19', '2026-09-20'], 'Only travel dates are populated');
@@ -94,24 +100,27 @@ assert.ok(M.planAdjustment(late, day, 30).errors.some(error => error.includes('�
 assert.ok(M.planAdjustment(trip, day, -1).errors.length);
 assert.ok(M.planAdjustment({ ...trip, itineraryItems: [{ ...trip.itineraryItems[0], endTime: '' }] }, day, 0).errors.length);
 assert.ok(M.planAdjustment(trip, '2026-09-17').errors.length);
-// Lodging records an arrival, not an activity duration. Legacy overnight ends
-// must not produce invalid-time warnings, block adjustment or leak into exports.
+// Lodging shares ordinary start/end handling, including persistence and exports.
 const lodgingTrip = { ...clone(trip), itineraryItems: [
   { id: 'dinner', date: day, theme: 'food', time: '18:00', endTime: '19:00', place: '저녁 식사' },
-  { id: 'hotel', date: day, theme: 'lodging', time: '19:30', endTime: '08:00', place: '교토 숙소', duration: 20 },
+  { id: 'hotel', date: day, theme: 'lodging', time: '19:30', endTime: '20:30', place: '교토 숙소', duration: 20 },
 ] };
 assert.equal(M.reviewDay(lodgingTrip, day).length, 0);
 const lodgingPlan = M.planAdjustment(lodgingTrip, day, 60, 10);
 assert.equal(lodgingPlan.errors.length, 0);
-assert.deepEqual(Array.from(lodgingPlan.changes, row => [row.time, row.endTime]), [['19:00', '20:00'], ['20:20', '']]);
+assert.deepEqual(Array.from(lodgingPlan.changes, row => [row.time, row.endTime]), [['19:00', '20:00'], ['20:20', '21:20']]);
 const lodgingApplied = { ...lodgingTrip, ...M.applyAdjustment(lodgingTrip, lodgingPlan) };
 assert.equal(M.reviewDay(lodgingApplied, day).length, 0);
 assert.deepEqual(clone(M.undoAdjustment(lodgingApplied).itineraryItems), lodgingTrip.itineraryItems);
 const lodgingCalendar = M.createCalendar({ ...lodgingTrip, itineraryItems: [lodgingTrip.itineraryItems[1]] }, 'Asia/Seoul');
 assert.ok(lodgingCalendar.includes('DTSTART:20260918T103000Z'));
-assert.ok(!lodgingCalendar.includes('DTEND:'));
-assert.ok(!M.createPocketNote(lodgingTrip).includes('19:30 – 08:00'));
-assert.equal(M.reviewDay({ ...lodgingTrip, itineraryItems: [{ ...lodgingTrip.itineraryItems[1], endTime: '' }] }, day).length, 0);
+assert.ok(lodgingCalendar.includes('DTEND:20260918T113000Z'));
+assert.ok(M.createPocketNote(lodgingTrip).includes('19:30 – 20:30'));
+assert.equal(M.reviewDay({ ...lodgingTrip, itineraryItems: [{ ...lodgingTrip.itineraryItems[1], endTime: '' }] }, day)[0].type, 'missing');
+const overnightHotel = { ...lodgingTrip.itineraryItems[1], time: '23:30', endTime: '07:00' };
+assert.equal(M.arrivalDay(overnightHotel), '2026-09-19');
+assert.equal(M.endMinutes(overnightHotel), 1860);
+assert.ok(M.createCalendar({ ...lodgingTrip, itineraryItems: [overnightHotel] }, 'Asia/Seoul').includes('DTEND:20260918T220000Z'));
 const daily = M.dailySpending(trip, day);
 assert.deepEqual([daily.total, daily.dayTotal, daily.pretrip, daily.count], [204000, 54000, 150000, 2]);
 assert.equal(M.dailySpending(trip, '2026-09-19').dayTotal, 0);

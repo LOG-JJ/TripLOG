@@ -6,6 +6,7 @@ module.exports = [
   'trip-library-browser-regression.js',
   'trip-library-views-browser-regression.js',
   'trip-navigation-browser-regression.js',
+  'itinerary-default-date-browser-regression.js',
   'trip-header-browser-regression.js',
   'trip-scene-art-browser-regression.js',
   'trip-scene-cache-browser-regression.js',

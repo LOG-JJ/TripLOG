@@ -49,7 +49,7 @@
   }
   function timeRange(item) {
     const start = timeMinutes(item.time);
-    let end = item.theme === 'lodging' ? null : timeMinutes(item.endTime);
+    let end = timeMinutes(item.endTime);
     const departure = dateValue(item.date), arrival = dateValue(item.transportReservation?.arrivalDate);
     if (start !== null && end !== null) {
       if (departure !== null && arrival !== null && arrival > departure) end += (arrival - departure) / 86400000 * 1440;

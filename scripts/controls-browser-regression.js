@@ -41,7 +41,8 @@ async function main() {
     await page.locator('#itineraryThemeSelectButton').click();
     assert.equal(await page.locator('#itineraryThemeSelectMenu .control-theme-emoji').count(), 6);
     await page.locator('#itineraryThemeSelectMenu [data-value="lodging"]').click();
-    assert.equal(await page.locator('#itineraryEndTimeInput').isDisabled(), true);
+    assert.equal(await page.locator('#itineraryEndTimeInput').isDisabled(), false);
+    assert(await page.locator('#itineraryEndTimeInputText').isVisible(), 'Lodging uses the same visible start/end component');
     await page.locator('#itineraryThemeSelectButton').click();
     await capture('#itineraryThemeSelectMenu', '02-theme-desktop');
     await page.keyboard.press('Escape');
@@ -72,10 +73,24 @@ async function main() {
     await page.waitForFunction(() => document.querySelector('#itineraryTimeInput').value === '11:00');
     await hour.fill('09');
     await page.locator('#itineraryTimeInputPanel [data-time-action="close"]').click();
+    await page.locator('#itineraryEndTimeInputText').click();
+    await page.locator('#itineraryEndTimeInputPanel [data-time-action="type"]').click();
+    await page.locator('#itineraryEndTimeInputText').fill('1030');
+    await page.locator('#itineraryEndTimeInputText').press('Enter');
+    for (const width of [320, 390, 1440]) {
+      await page.setViewportSize({ width, height: 900 });
+      const fields = await page.locator('#itineraryEditor .time-field-item').evaluateAll(nodes => nodes.map(node => {
+        const box = node.getBoundingClientRect(); return { label: node.querySelector(':scope > span').textContent, visible: box.width > 0 && box.height > 0, right: box.right };
+      }));
+      assert.deepEqual(fields.map(field => field.label), ['시작', '종료']);
+      assert(fields.every(field => field.visible && field.right <= width), 'Shared lodging time fields fit the viewport');
+      await page.locator('#itineraryEditor .itinerary-time-range-field').screenshot({ path: path.join(output, `lodging-start-end-${width}.png`) });
+    }
     await page.locator('#itineraryPlaceInput').fill('목업 검증 호텔');
     await page.locator('#itinerarySubmitButton').click();
-    await page.waitForFunction(() => state.itineraryItems.some(item => item.place === '목업 검증 호텔' && item.theme === 'lodging' && item.time === '09:00' && !item.endTime));
-    console.log('PASS theme, lodging arrival-only, wheel scrolling, editable time, keyboard boundary, Escape and real itinerary save.');
+    await page.waitForFunction(() => state.itineraryItems.some(item => item.place === '목업 검증 호텔' && item.theme === 'lodging' && item.time === '09:00' && item.endTime === '10:30'));
+    assert.deepEqual(await page.locator('#itineraryList .timeline-times time').allTextContents(), ['09:00', '10:30']);
+    console.log('PASS theme, shared lodging start/end, wheel scrolling, editable time, keyboard boundary, Escape and real itinerary save.');
 
     await page.evaluate(() => setActivePage('budget'));
     await page.locator('#exCategoryFilterButton').click();
@@ -147,7 +162,7 @@ async function main() {
       assert.equal(await page.locator('#itineraryTimeInput').inputValue(), '');
     }
     await page.reload(); await ready();
-    assert(await page.evaluate(() => state.itineraryItems.some(item => item.place === '목업 검증 호텔' && item.time === '09:00')), 'Saved itinerary survives reload');
+    assert(await page.evaluate(() => state.itineraryItems.some(item => item.place === '목업 검증 호텔' && item.time === '09:00' && item.endTime === '10:30')), 'Both saved lodging times survive reload');
     assert(await page.evaluate(() => state.entries.some(entry => entry.description === '목업 검증 점심' && entry.amount === 12000 && entry.paymentDate === '2026-09-27')), 'Expense values survive reload');
     assert.deepEqual(errors, []);
     console.log(`PASS viewport 320/390/768/1440, clear time, persisted itinerary after reload and no runtime errors. Screenshots: ${output}`);

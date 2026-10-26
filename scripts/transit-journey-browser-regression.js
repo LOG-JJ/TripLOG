@@ -11,7 +11,7 @@ const fixture = {
   startDate: '2026-09-25', endDate: '2026-09-25', entries: [], companions: [], packingList: [],
   itineraryItems: [
     { id: 'journey-hotel', date: '2026-09-25', place: 'Hotel Mondonce Kyoto Gojo', location: '228-1 Gojo, Kyoto, 600-8183, 일본', theme: 'lodging', time: '09:00', endTime: '10:00', createdAt: 1 },
-    { id: 'journey-temple', date: '2026-09-25', place: '텐류지', location: '616-8385 Kyoto, Ukyo Ward, 일본', theme: 'sightseeing', time: '11:00', endTime: '12:00', createdAt: 2,
+    { id: 'journey-temple', date: '2026-09-25', place: '텐류지', location: '616-8385 Kyoto, Ukyo Ward, 일본', theme: 'sightseeing', time: '12:00', endTime: '13:00', createdAt: 2,
       transits: [
         { trans: 'bus', duration: 46, lineName: '시내버스', memo: '교토 시내버스 탑승 (Hotel → 가라스마)', cost: 0, ticketRef: 'preserve-unknown-field' },
         { trans: 'walk', duration: 5, fromPlace: '가라스마', memo: '', cost: 0 },
@@ -71,9 +71,10 @@ async function main() {
     await page.locator('[data-transit-map-mode="transit"]').click();
     assert.equal(new URL(await page.locator('#itineraryTransitMap iframe:not([hidden])').getAttribute('src')).searchParams.get('dirflg'), 'r');
     assert.equal(await dialog.locator('.transit-journey-leg').count(), 4);
-    assert.deepEqual(await dialog.locator('.transit-journey-stop time').allTextContents(), ['09:00', '09:46', '09:51', '10:46', '11:00']);
+    assert.deepEqual(await dialog.locator('.transit-journey-stop time').allTextContents(), ['10:00', '10:46', '10:51', '11:46', '12:00']);
+    assert.equal(await page.locator('#itineraryTransitDeparture').innerText(), '10:00', 'Departure follows the lodging end, like every other stop');
     assert.equal(await page.locator('#itineraryTransitTotal').innerText(), '2시간 0분');
-    assert.equal(await page.locator('#itineraryTransitArrival').innerText(), '11:00');
+    assert.equal(await page.locator('#itineraryTransitArrival').innerText(), '12:00');
     await page.locator('#itineraryTransitManualTab').click();
     await capture('manual-desktop-initial');
     const original = await saved();
@@ -87,7 +88,7 @@ async function main() {
     }
     // Editing a leg updates every following clock and the map-tab timeline without saving.
     await duration(0).fill('30');
-    assert.equal(await page.locator('#itineraryTransitEndTime').innerText(), '10:44');
+    assert.equal(await page.locator('#itineraryTransitEndTime').innerText(), '11:44');
     await rows().nth(1).locator('[data-transit-field="fromPlace"]').fill('四条駅 <script>');
     await rows().nth(2).locator('.transit-segment-menu summary').click();
     await rows().nth(2).locator('[data-transit-field="lineName"]').fill('阪急京都線');
@@ -97,7 +98,7 @@ async function main() {
     assert.equal(await dialog.locator('.transit-journey-leg').first().evaluate(node => node.style.getPropertyValue('--leg-color')), '#248452');
     assert.match(await page.locator('#itineraryTransitJourney').innerText(), /四条駅 <script>/);
     assert.equal(await page.locator('#itineraryTransitJourney script').count(), 0);
-    assert.deepEqual(await dialog.locator('.transit-journey-stop time').allTextContents(), ['09:00', '09:30', '09:35', '10:30', '10:44']);
+    assert.deepEqual(await dialog.locator('.transit-journey-stop time').allTextContents(), ['10:00', '10:30', '10:35', '11:30', '11:44']);
     await dialog.locator('[data-transit-edit]').nth(2).click();
     assert.equal(await page.locator('#itineraryTransitManualTab').getAttribute('aria-selected'), 'true');
     await page.locator('#itineraryTransitSave').click(); await dialog.waitFor({ state: 'hidden' });
@@ -109,7 +110,7 @@ async function main() {
     assert.equal(updated.transits[2].lineName, '阪急京都線');
     assert.equal(updated.duration, 104);
     await page.reload(); await ready(); await open();
-    assert.equal(await page.locator('#itineraryTransitArrival').innerText(), '10:44');
+    assert.equal(await page.locator('#itineraryTransitArrival').innerText(), '11:44');
     await page.locator('#itineraryTransitManualTab').click();
     assert.equal(await rows().nth(0).getByRole('button', { name: '이동 구간 1 초록', exact: true }).getAttribute('aria-pressed'), 'true');
     assert.equal(await rows().nth(1).locator('[data-transit-field="fromPlace"]').inputValue(), '四条駅 <script>');
@@ -127,7 +128,7 @@ async function main() {
     assert.equal(await duration(0).getAttribute('aria-invalid'), 'true');
     await close(); assert.deepEqual(await saved(), beforeCancel);
     // Missing and overnight times do not manufacture a scheduled arrival.
-    await page.evaluate(() => { state.itineraryItems[0].time = '23:50'; state.itineraryItems[1].time = ''; render(); });
+    await page.evaluate(() => { state.itineraryItems[0].time = '23:50'; state.itineraryItems[0].endTime = ''; state.itineraryItems[1].time = ''; render(); });
     await open(); assert.equal(await page.locator('#itineraryTransitArrival').innerText(), '+1일 01:34'); await close();
     await page.evaluate(() => { state.itineraryItems[0].time = ''; render(); });
     await open(); assert.equal(await page.locator('#itineraryTransitArrival').innerText(), '—'); await close();
@@ -149,7 +150,7 @@ async function main() {
       if (width < 600) {
         if (width === 390) assert(bounds.height <= 725, 'Four edited legs should fit in a compact mobile sheet');
         await duration(3).fill('20');
-        assert.equal(await page.locator('#itineraryTransitArrival').innerText(), '11:06');
+        assert.equal(await page.locator('#itineraryTransitArrival').innerText(), '12:06');
         assert.match(await page.locator('#itineraryTransitTiming').innerText(), /6분 늦게/);
         await duration(3).fill('14');
       }

@@ -18,6 +18,7 @@ async function main() {
     context.setDefaultTimeout(12000);
     await blockExternalRequests(context, origin);
     const page = await context.newPage(), errors = [];
+    await page.clock.setFixedTime(new Date('2026-09-25T09:00:00+09:00'));
     page.on('pageerror', error => errors.push(error.message));
     const ready = () => page.waitForFunction(() => document.documentElement.dataset.appReady === 'true' && document.documentElement.dataset.auth === 'signed-in' && state.collaboration?.ownerId);
     const set = values => page.evaluate(values => {

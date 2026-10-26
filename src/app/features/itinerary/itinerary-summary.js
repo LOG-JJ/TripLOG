@@ -51,7 +51,7 @@
       let recorded = 0, missing = 0, segments = 0, missingTimes = 0;
       const starts = [], ends = [];
       group.items.forEach((item, index) => {
-        const start = timeMinutes(item.time), end = item.theme === 'lodging' ? null : timeMinutes(item.endTime);
+        const start = timeMinutes(item.time), end = timeMinutes(item.endTime);
         if (start === null) missingTimes++;
         else { starts.push(start); ends.push(end === null ? start : end < start ? end + 1440 : end); }
         // Incoming travel belongs only to adjacent stops on the same known date.

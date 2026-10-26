@@ -62,6 +62,11 @@ async function main() {
     await cli(['companion', 'remove', ...fileArgs, '--id', person.id], { code: 2 });
     await cli(['reservation', 'add', ...fileArgs, '--type', 'stay', '--title', '정원 호텔', '--date', '2026-11-07', '--end-date', '2026-11-09', '--reference', 'ABC']);
     const stays = (await cli(['itinerary', 'list', '--store', store, '--trip', trip])).filter(row => row.theme === 'lodging'); assert.equal(stays.length, 2);
+    await cli(['itinerary', 'update', ...fileArgs, '--id', stays[0].id, '--time', '22:30', '--end-time', '07:00']);
+    const savedStay = (await cli(['itinerary', 'list', '--store', store, '--trip', trip])).find(row => row.id === stays[0].id);
+    assert.deepEqual([savedStay.time, savedStay.endTime], ['22:30', '07:00'], 'Shared lodging start/end fields persist through CLI reads');
+    await cli(['itinerary', 'update', ...fileArgs, '--id', stays[0].id, '--data', '{"time":""}'], { code: 2 });
+    await cli(['itinerary', 'update', ...fileArgs, '--id', stays[0].id, '--end-time', '23:00']);
     await cli(['packing', 'add', ...fileArgs, '--name', '우산']); const packing = (await cli(['packing', 'list', '--store', store, '--trip', trip]))[0];
     await cli(['packing', 'check', ...fileArgs, '--id', packing.id]);
     await cli(['note', 'set', ...fileArgs, '--text', '첫 공동 메모']); await cli(['note', 'append', ...fileArgs, '--text', '\n두 번째 줄']);

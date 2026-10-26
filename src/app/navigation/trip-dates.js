@@ -21,6 +21,10 @@ function updateTripDate(field, value) {
   saveAndRender();
 }
 
+function getDefaultItineraryDate(sourceState = state, now = new Date()) {
+  return window.TripLog.features.travelCompanion.model.defaultItineraryDate(sourceState, now);
+}
+
 function getTripDays(sourceState = state) {
   return getTripDaysForRange(sourceState?.startDate, sourceState?.endDate);
 }
@@ -89,6 +93,7 @@ function compareExpenseEntryDates(a, b) {
 window.TripLog.register("navigation.tripDates", {
   updateTripDate,
   getTripDays,
+  getDefaultItineraryDate,
   getTripDaysForRange,
   getPreTripExpenseDay,
   isPreTripExpenseDate,

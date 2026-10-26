@@ -116,7 +116,18 @@
     window.TripLog.ui.dialog.open(el, { returnFocus });
   }
   function closeAll() { $$('.rd-dialog[open]').forEach(el => el.close()); }
-  function navigate(page, { replace = false } = {}) { closeAll(); window.TripLog.features.itinerary.workspace?.close?.(); const url=window.TripLog.navigation.pageRouter.pageUrl(page); if(url.href!==location.href)history[replace?'replaceState':'pushState']({page},'',url);setActivePage(page); }
+  function navigate(page, { replace = false, date } = {}) {
+    const samePage = page === activePage;
+    if (page === 'itinerary') {
+      state.selectedItineraryDate = date === 'all' || getTripDays().some(day => day.date === date) ? date : getDefaultItineraryDate();
+      if (state.selectedItineraryDate !== 'all') state.lastActiveItineraryDate = state.selectedItineraryDate;
+    }
+    closeAll(); window.TripLog.features.itinerary.workspace?.close?.();
+    const url = window.TripLog.navigation.pageRouter.pageUrl(page);
+    if (url.href !== location.href) history[replace ? 'replaceState' : 'pushState']({ page }, '', url);
+    setActivePage(page);
+    if (samePage && page === 'itinerary') window.TripLog.features.render.main.render({ pageOnly: true });
+  }
   function selectNavigationItem(key) {
     const companionTabs = { today: 'today', review: 'review', wallet: 'wallet', tools: 'tools' };
     if (companionTabs[key]) {
@@ -490,12 +501,12 @@
       case 'overview-itinerary':{
         state.selectedItineraryDate=el.dataset.date||state.startDate;
         state.lastActiveItineraryDate=state.selectedItineraryDate;
-        clearItineraryEditMode(false);navigate('itinerary');saveAndRender();
+        clearItineraryEditMode(false);navigate('itinerary', { date: state.selectedItineraryDate });saveAndRender();
         if(action==='overview-add-plan')window.TripLog.features.itinerary.workspace.show();
         break;
       }
-      case 'all-itinerary':state.selectedItineraryDate='all';navigate('itinerary');saveAndRender();break;
-      case 'plan':{const item=findItineraryItem(el.dataset.id);if(item){state.selectedItineraryDate=item.date;navigate('itinerary');startItineraryEdit(item);}break;}
+      case 'all-itinerary':navigate('itinerary', { date: 'all' });saveAndRender();break;
+      case 'plan':{const item=findItineraryItem(el.dataset.id);if(item){navigate('itinerary', { date: item.date });startItineraryEdit(item);}break;}
     }
   }
   document.addEventListener('change',event=>{if(event.target.id==='rdReportDay'){window.TripLog.features.reports.workspace.setDay(event.target.value);}const id=event.target.dataset.rdPack;if(id){const item=state.packingList.find(i=>i.id===id);if(item){item.checked=event.target.checked;saveAndRender();}}});

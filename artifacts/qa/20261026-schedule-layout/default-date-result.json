@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "now": "2026-10-23",
+      "date": "2026-10-24",
+      "title": "첫날 일정"
+    },
+    {
+      "now": "2026-10-24",
+      "date": "2026-10-24",
+      "title": "오늘 일정"
+    },
+    {
+      "now": "2026-10-26",
+      "date": "2026-10-26",
+      "title": "오늘 일정"
+    },
+    {
+      "now": "2026-10-28",
+      "date": "2026-10-28",
+      "title": "오늘 일정"
+    },
+    {
+      "now": "2026-10-29",
+      "date": "2026-10-28",
+      "title": "마지막 날 일정"
+    },
+    {
+      "now": "2026-11-02",
+      "date": "2026-10-28",
+      "title": "마지막 날 일정"
+    }
+  ],
+  "emptyToday": true,
+  "destinationTimeZone": true,
+  "manualDayPreserved": true,
+  "explicitDateAndAll": true,
+  "errors": []
+}

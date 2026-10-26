@@ -157,7 +157,6 @@ body[data-page="itinerary"] .page-stage { margin: 0; padding: 0; overflow: visib
 .itinerary-page .itinerary-form :is(input:not([type="file"]), select, .custom-select-button, .custom-time-button) { width: 100%; min-height: 42px; height: 42px; padding: 9px 12px; border: 1.7px solid var(--it-ink); border-radius: 7px; box-shadow: none; background: #fff; color: var(--it-ink); font-size: 16px; font-weight: 550; line-height: 20px; }
 .itinerary-form .native-select-hidden, .itinerary-form .native-time-hidden { position: absolute !important; width: 1px !important; height: 1px !important; min-height: 1px !important; padding: 0 !important; border: 0 !important; }
 .itinerary-page .itinerary-time-range-field { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-.itinerary-page .itinerary-time-range-field.is-lodging { grid-template-columns: 1fr; }
 .itinerary-form .custom-time { width: 100%; min-width: 0; }
 .itinerary-form .custom-time-button { display: flex; align-items: center; gap: 8px; }
 .itinerary-form .custom-time-button > .ph { font-size: 20px; }

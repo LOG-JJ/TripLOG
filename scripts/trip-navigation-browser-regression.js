@@ -31,6 +31,7 @@ async function main() {
       expiry: Math.floor(Date.now() / 1000) + 3600, seed, marker: 'navigation-fixture',
     });
     const page = await context.newPage();
+    await page.clock.setFixedTime(new Date('2026-09-25T09:00:00+09:00'));
     page.on('pageerror', error => errors.push(error.message));
     page.on('console', message => {
       if (['error', 'warning'].includes(message.type()) && !/net::ERR_FAILED|Failed to fetch|Service Worker registration blocked by Playwright/.test(message.text())) consoleIssues.push(message.text());
@@ -247,7 +248,8 @@ async function main() {
     });
     assert.equal(await menu.getAttribute('data-motion'), 'motion', 'The bundled Motion library drives the transition');
     assert(motion.samples.some(sample => sample.opacity > 0 && sample.opacity < 1), 'Normal motion includes an actual gradual entrance');
-    assert.equal(motion.samples.at(-1).opacity, 1);
+    await settled();
+    assert.equal(await panel.evaluate(node => Number(getComputedStyle(node).opacity)), 1, 'The completed entrance is fully visible');
     assert(motion.samples.every(sample => sample.dockDrift <= 1), 'Dock position stays fixed throughout the complete Motion entrance');
     await page.keyboard.press('Escape'); await closed();
 

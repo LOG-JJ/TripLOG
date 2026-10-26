@@ -74,12 +74,13 @@ async function main() {
         assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${name} fits ${width}px`);
         const fits = await page.locator(selector).evaluate(node => ({ width: node.clientWidth, scrollWidth: node.scrollWidth }));
         assert(fits.scrollWidth <= fits.width + 1, `${name} card fits ${width}px`);
-        if (name === 'overview') assert((await page.locator(selector).boundingBox()).height <= 287, 'Overview cost card is no more than half the former 574px height');
+        if (name === 'overview') assert((await page.locator(selector).boundingBox()).height <= (width <= 600 ? 331 : 287), 'Mobile side-by-side shares add at most one 44px legend row');
         await capture(selector, `${name}-cost-${width}.png`);
         if ([390, 1440].includes(width)) await page.screenshot({ path: path.join(output, `${name}-context-${width}.png`) });
       }
     }
 
+    await page.clock.setFixedTime(new Date('2026-10-09T09:00:00+09:00'));
     await page.goto(`${origin}/Travel?page=overview&trip=export-overview-five`); await ready();
     for (const width of [320, 390, 849, 850, 1440]) {
       await page.setViewportSize({width,height:width>=850?1000:844});
@@ -90,7 +91,7 @@ async function main() {
         const cost=document.querySelector('.tc-card').getBoundingClientRect(), schedule=document.querySelector('.rd-key-schedule').getBoundingClientRect();
         return {costHeight:cost.height,scheduleHeight:schedule.height,x:Math.floor(Math.min(cost.x,schedule.x)),y:Math.floor(Math.min(cost.y,schedule.y)),width:Math.ceil(Math.max(cost.right,schedule.right)-Math.min(cost.x,schedule.x)),height:Math.ceil(Math.max(cost.bottom,schedule.bottom)-Math.min(cost.y,schedule.y))};
       });
-      assert(pair.costHeight<=287);
+      assert(pair.costHeight <= (width <= 600 ? 331 : 287));
       if(width>=850) assert(Math.abs(pair.costHeight-pair.scheduleHeight)<1,'Desktop cost and five-stop cards have equal heights');
       assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
       if([390,1440].includes(width)) await page.screenshot({path:path.join(output,`compact-pair-${width}.png`),clip:{x:pair.x,y:pair.y,width:pair.width,height:pair.height}});
@@ -193,7 +194,7 @@ async function main() {
         const range = document.createRange(); range.selectNodeContents(name);
         return { name: name.textContent, lines: range.getClientRects().length, fits: name.scrollWidth <= name.clientWidth + 1,
           within: box.left >= row.left && box.right <= row.right + 1 && share.right <= row.right + 1,
-          disjoint: box.right <= share.left || box.bottom <= share.top + 1 || share.bottom <= box.top + 1 };
+          disjoint: box.right <= share.left && Math.abs((box.top + box.bottom) / 2 - (share.top + share.bottom) / 2) <= 1 };
       }));
       assert(labels.every(label => label.lines === 1 && label.fits && label.within && label.disjoint), `Horizontal mobile categories at ${width}, enlarged=${enlarged}: ${JSON.stringify(labels)}`);
       await capture('.tc-card', `cost-six-categories-${width}${enlarged ? '-large-text' : ''}.png`);

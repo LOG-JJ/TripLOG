@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-26",
+  "status": "local-validation-passed",
+  "deployed": false,
+  "baseCommit": "f2fdfa7f549988cb996a25d457d78bdeac91c96c",
+  "build": "fd4056f01c0341c5cc80",
+  "browser": "Playwright/Edge isolated fixtures; Browser plugin not available",
+  "actualIPhoneVerified": false,
+  "fullCore": {
+    "exitCode": 0,
+    "ok": true
+  },
+  "finalCli": {
+    "exitCode": 0,
+    "ok": true,
+    "processAssertions": 212
+  },
+  "registeredBrowserSuites": 42,
+  "executedBrowserSuites": [
+    "itinerary-default-date",
+    "travel-costs",
+    "expense-order",
+    "controls",
+    "stay-copy",
+    "trip-navigation",
+    "transit-journey",
+    "print-export",
+    "companion-passport",
+    "itinerary-controls",
+    "reservation-time"
+  ],
+  "dateResult": {
+    "passed": true,
+    "cases": [
+      {
+        "now": "2026-10-23",
+        "date": "2026-10-24",
+        "title": "첫날 일정"
+      },
+      {
+        "now": "2026-10-24",
+        "date": "2026-10-24",
+        "title": "오늘 일정"
+      },
+      {
+        "now": "2026-10-26",
+        "date": "2026-10-26",
+        "title": "오늘 일정"
+      },
+      {
+        "now": "2026-10-28",
+        "date": "2026-10-28",
+        "title": "오늘 일정"
+      },
+      {
+        "now": "2026-10-29",
+        "date": "2026-10-28",
+        "title": "마지막 날 일정"
+      },
+      {
+        "now": "2026-11-02",
+        "date": "2026-10-28",
+        "title": "마지막 날 일정"
+      }
+    ],
+    "emptyToday": true,
+    "destinationTimeZone": true,
+    "manualDayPreserved": true,
+    "explicitDateAndAll": true,
+    "errors": []
+  },
+  "captures": [
+    {
+      "file": "category-shares-mobile-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-schedule-layout\\travel-costs\\cost-six-categories-390.png",
+      "sha256": "496a5bbd8f369df0371c4f2bc3b6e24f0e6d91b170f505a4b264c185ce71849b"
+    },
+    {
+      "file": "category-shares-mobile-320-large-text.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-schedule-layout\\travel-costs\\cost-six-categories-320-large-text.png",
+      "sha256": "b3cc1884b65e152dd84e7e315a88b5194ea0a05b6a9d92f556c49a7348dd320d"
+    },
+    {
+      "file": "lodging-start-end-mobile-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-schedule-layout\\controls\\lodging-start-end-390.png",
+      "sha256": "7e8024adc6ffcb7328e76d5aa980cbfc3e16beea29a5626e1f346b4323e90e36"
+    },
+    {
+      "file": "expense-handles-mobile-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-schedule-layout\\expense-order-browser\\reorder-mobile-390.png",
+      "sha256": "84bdb698281a004dac003360d6120f0353158f528b7c27a531448a0db79b8543"
+    },
+    {
+      "file": "expense-handles-mobile-320-long.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-schedule-layout\\expense-order-browser\\reorder-mobile-320-long.png",
+      "sha256": "231b8963cc6c80029cfff550444a5fcabd70efb0ae71392041f24252a1139faf"
+    },
+    {
+      "file": "current-day-mobile-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261026-schedule-layout\\itinerary-default-date\\current-day-mobile-390.png",
+      "sha256": "4b8c935fab3ef6dfcd6c82b8ce1c12fee03fa7eb58f23fb789889bcaaddb218b"
+    }
+  ],
+  "checkedAt": "2026-10-26T06:01:30.573Z"
+}
