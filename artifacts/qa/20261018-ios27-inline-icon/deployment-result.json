@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-17T15:08:34.171917+00:00",
+  "url": "https://triplog-5qs.pages.dev/Travel?page=start",
+  "commit": "11c803e2789e59d6c00cfd5060b71b8204f73214",
+  "localBuild": "f765cfa4e545e232f962",
+  "liveBuild": "c24a2e936401f0481034",
+  "verified": true,
+  "checks": [
+    {
+      "route": "Travel?page=start",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "matches": true,
+      "appleIconCount": 1,
+      "embeddedPNGBytes": 63007,
+      "matchesApprovedImage": true,
+      "sha256": "76ffa94052a4bb98c066401832d699c6edff444c04d2c20c56f21865d7c71045"
+    },
+    {
+      "route": "index.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "matches": true,
+      "appleIconCount": 1,
+      "embeddedPNGBytes": 63007,
+      "matchesApprovedImage": true,
+      "sha256": "76ffa94052a4bb98c066401832d699c6edff444c04d2c20c56f21865d7c71045"
+    },
+    {
+      "route": "sw.js",
+      "status": 200,
+      "contentType": "application/javascript",
+      "matches": true
+    }
+  ],
+  "physicalIPhoneHomeScreen": "Pending user confirmation on Safari / iOS 27.2."
+}

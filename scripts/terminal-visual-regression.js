@@ -51,6 +51,11 @@ async function main() {
     controller.stack = []; controller.home(); controller.loginForm();
     controller.state.view.values.email = 'example@example.invalid'; controller.state.view.values.password = 'not-a-real-secret'; controller.state.view.index = visibleFields(controller.state.view).findIndex(field => field.key === 'password');
     assert(!render(controller.state, 120, 38).plain().includes('not-a-real-secret')); await capture('login-masked-120x38', 120, 38);
+    controller.service.login = async () => { const error = new Error('인증 서버 연결 시간이 초과됐습니다. 비밀번호 확인 단계까지 도달하지 못했습니다.'); error.code = 'NETWORK_ERROR'; error.details = { hint: '잠시 후 다시 로그인해 주세요. 계속되면 VPN·프록시·방화벽의 Node.js 연결 설정을 확인해 주세요.' }; throw error; };
+    await controller.submitForm(); assert.equal(controller.state.view.type, 'result');
+    await capture('login-network-error-80x24', 80, 24); await capture('login-network-error-60x20', 60, 20);
+    await controller.key('', { name: 'return' }); assert.equal(controller.state.view.values.password, ''); assert.equal(controller.state.view.index, 2);
+    await capture('login-retry-80x24', 80, 24);
     assert.deepEqual(errors, []);
     await fs.writeFile(path.join(out, 'result.json'), JSON.stringify({ passed: true, renderer: 'Production ANSI in @xterm/xterm 6.0.0', browser: 'Playwright terminal-rendering harness; no browser application or external requests', frames, errors, at: new Date().toISOString() }, null, 2));
     console.log(`PASS terminal visual: ${frames.length} ANSI screens, exact cell comparisons, no page errors. ${out}`);

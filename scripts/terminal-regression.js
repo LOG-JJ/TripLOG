@@ -73,9 +73,21 @@ async function main() {
   const stale = new Controller({}, { service: slowService }); const reading = stale.readResult('오래된 결과', 'auth', 'status');
   await stale.key('', { name: 'escape' }); await stale.activate(8); pending.resolve({ email: 'old@example.invalid' }); await reading;
   assert.equal(stale.state.view.title, '개발 도구', 'cancelled read must not replace the new screen');
-  await testWorkflows(); await testConnectionCancellation(); await testCloud(service); await testRuntime(); await testPlain(); await testJobs(); await testNoTty();
+  await testLoginRecovery(); await testWorkflows(); await testConnectionCancellation(); await testCloud(service); await testRuntime(); await testPlain(); await testJobs(); await testNoTty();
   await fs.writeFile(path.join(out, 'result.json'), JSON.stringify({ passed: true, frames, cases: ['preview/cancel/one save', 'Korean/grapheme editing', 'bracketed paste isolation', 'password masking and exact bytes', 'file CAS conflict', 'cloud version and privacy baseline conflicts', 'stale read and connection cancellation', 'reservation stay nights', 'foreign expense create/update conversion', 'packing and companion forms', 'notes and comments', 'backup roundtrip and settlement finalization', 'new file create and archive/restore', 'TTY cleanup and Ctrl+J', 'plain numbered menu', 'job cancellation', 'non-TTY guard'], at: new Date().toISOString() }, null, 2));
   controller.close(); stale.close(); console.log('PASS terminal: native cell layouts, Korean editing, safe paste, masked secrets, preview/cancel/save, file/cloud conflicts, stale reads, TTY restore and child-process cancellation.');
+}
+async function testLoginRecovery() {
+  const controller = new Controller({ profile: 'login-fixture' }, { service: { login: async () => { const error = new Error('인증 서버 연결 시간이 초과됐습니다.'); error.code = 'NETWORK_ERROR'; error.details = { hint: '잠시 후 다시 로그인해 주세요.' }; throw error; } } });
+  controller.loginForm(); await fill(controller, 'email', 'login-fixture@example.invalid'); await fill(controller, 'password', 'do-not-print-password');
+  await controller.submitForm(); assert.equal(controller.state.busy, false); assert.equal(controller.state.view.type, 'result');
+  assert(controller.state.view.lines.includes('잠시 후 다시 로그인해 주세요.'));
+  assert(!render(controller.state, 80, 24).plain().includes('do-not-print-password'));
+  await controller.key('', { name: 'return' });
+  assert.equal(controller.state.view.type, 'form'); assert.equal(controller.state.view.values.profile, 'login-fixture');
+  assert.equal(controller.state.view.values.email, 'login-fixture@example.invalid'); assert.equal(controller.state.view.values.password, '');
+  assert.equal(controller.state.view.index, 2); assert.equal(controller.state.view.cursors.password, 0);
+  controller.close();
 }
 async function testWorkflows() {
   const controller = new Controller({ demo: true }); await controller.init();

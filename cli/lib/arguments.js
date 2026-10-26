@@ -2,7 +2,7 @@
 const { parseArgs } = require('node:util');
 const { fail } = require('./errors');
 const booleans = ['help', 'version', 'json', 'dry-run', 'overwrite', 'in-place', 'archived', 'unchecked', 'demo', 'plain', 'no-color'];
-const strings = ['profile', 'source', 'store', 'trip', 'id', 'file', 'data', 'out', 'query', 'email', 'url', 'key', 'name', 'country', 'country-code', 'city', 'mode', 'start', 'end', 'date', 'time', 'end-time', 'place', 'location', 'category', 'description', 'amount', 'foreign-amount', 'currency', 'exchange-rate', 'exchange-base', 'payment-date', 'payment-method', 'payer', 'note', 'memo', 'theme', 'trans', 'duration', 'cost', 'sync-expense', 'individual-spent', 'checked', 'target', 'placement', 'type', 'title', 'reference', 'end-date', 'arrival-date', 'transport-kind', 'from', 'to', 'text', 'role', 'user', 'token', 'sequence', 'format', 'timezone', 'suite', 'port', 'message'];
+const strings = ['profile', 'source', 'store', 'trip', 'id', 'file', 'data', 'out', 'query', 'email', 'url', 'key', 'name', 'country', 'country-code', 'city', 'mode', 'start', 'end', 'date', 'time', 'end-time', 'place', 'location', 'category', 'description', 'amount', 'foreign-amount', 'currency', 'exchange-rate', 'exchange-base', 'payment-date', 'payment-method', 'payer', 'note', 'memo', 'theme', 'theme-subtype', 'trans', 'duration', 'cost', 'sync-expense', 'individual-spent', 'checked', 'target', 'placement', 'type', 'title', 'reference', 'end-date', 'arrival-date', 'transport-kind', 'from', 'to', 'text', 'role', 'user', 'token', 'sequence', 'format', 'timezone', 'suite', 'port', 'message'];
 const camel = name => name.replace(/-([a-z])/g, (_, character) => character.toUpperCase());
 function parse(argv) {
   let parsed;
@@ -59,7 +59,7 @@ function validateOptions(group, action, subaction, options) {
     }
     if (['add', 'update'].includes(action)) {
       if (['itinerary', 'expense', 'packing', 'companion', 'reservation', 'settlement'].includes(group)) add('file data');
-      if (group === 'itinerary') add('date time endTime place location theme memo trans duration cost syncExpense');
+      if (group === 'itinerary') add('date time endTime place location theme themeSubtype memo trans duration cost syncExpense');
       if (group === 'expense') add('date category description amount note mode currency foreignAmount exchangeRate exchangeBase paymentDate paymentMethod payer');
       if (group === 'packing') add('name checked');
       if (group === 'companion') add('name individualSpent');

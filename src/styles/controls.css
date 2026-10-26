@@ -63,6 +63,12 @@
 .rd-app .control-select-theme .custom-select-option.selected { border-radius: 8px !important; box-shadow: 0 1px 0 var(--control-ink) !important; }
 .rd-app .control-select-theme .control-option-check { width: 14px; height: 18px; flex-basis: 14px; }
 .rd-app .control-select-theme .control-option-check .ph { font-size: 15px; }
+.rd-app .custom-select[data-control="theme-subtype"] .custom-select-value { display: flex; align-items: center; gap: 8px; }
+.rd-app .custom-select[data-control="theme-subtype"] .custom-select-value > .ph { flex: 0 0 18px; font-size: 18px; }
+.rd-app .control-select-theme-subtype { padding: 7px; max-height: min(320px, var(--control-available-height, calc(100dvh - 24px))) !important; border-radius: 12px !important; box-shadow: 3px 3px 0 var(--control-ink) !important; }
+.rd-app .control-select-theme-subtype .custom-select-option { min-height: 44px; padding: 8px 10px; gap: 10px; font-size: 14px !important; }
+.rd-app .control-select-theme-subtype .custom-select-option > .ph { flex: 0 0 20px; font-size: 20px; }
+.rd-app .control-select-theme-subtype .custom-select-option:first-child { margin-bottom: 4px; }
 .rd-app .control-select-category { padding: 10px; }
 .rd-app .control-select-category .custom-select-option { min-height: 50px; gap: 12px; padding: 8px 10px; }
 .rd-app .control-select-category .custom-select-option + .custom-select-option { margin-top: 0; }

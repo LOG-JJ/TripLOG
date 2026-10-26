@@ -181,7 +181,7 @@ function buildPrintReport(type = 'expense', options = {}) {
     const grid = hours.map(minute => `<span class="ex-time-rule" style="top:${(minute - layout.start) * layout.scale}px"><time>${clock(minute)}</time></span>`).join('');
     const colors = ['#f9d6e2', '#d9effb', '#fff5b5'];
     const columns = layout.columns.map((day, column) => `<div class="ex-time-column" style="--ex-day:${colors[column % colors.length]}"><div class="ex-time-day"><b>${day.index ? `DAY ${day.index}` : '별도 일정'}</b><span>${text(day.label)}</span></div><div class="ex-time-events" style="height:${layout.height}px">${day.timed.map(row => {
-      const theme = typeof itineraryThemes === 'object' ? itineraryThemes[row.item.theme] || itineraryThemes.etc : { icon: 'map-pin' };
+      const theme = window.TripLog.shared.itineraryArt.presentation(row.item);
       const transit = options.transit === false ? '' : formatPrintTransitSummary(row.item);
       const compact = row.compact || row.height < 44;
       const tall = !compact && row.height >= 160;

@@ -42,6 +42,7 @@
       const control = document.getElementById(id); if (!control || !document.querySelector("#itineraryForm").contains(control)) continue;
       control.value = saved.value; control.checked = saved.checked;
     }
+    syncItinerarySubtype(draft.fields.itinerarySubtypeSelect?.value || '');
     setVoucherFile(draft.voucherFile || null, draft.voucherFileName || null);
     document.querySelector("#itineraryExtraDetails").open = true;
     for (const id of ["itineraryDaySelect", "itineraryThemeSelect"]) syncCustomSelect(document.getElementById(id));

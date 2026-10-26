@@ -98,7 +98,7 @@
     const mount = $('#exMobileItinerary');
     mount.innerHTML = type === 'expense' ? '' : report.days.map((day, index) => `<details class="ex-mini-day" ${index === 0 ? 'open' : ''}><summary>${day.index ? `<b>DAY ${day.index}</b>` : ''}<span>${text(day.label)}</span>${icon('caret-down')}</summary><ol>${day.items.map(item => {
       const appearance = renderer();
-      const theme = itineraryThemes[item.theme] || itineraryThemes.etc;
+      const theme = window.TripLog.shared.itineraryArt.presentation(item);
       const transit = options.transit ? formatPrintTransitSummary(item) : '';
       return `<li><time>${text(item.time || '미정')}</time><div class="ex-mini-stop has-art" style="--ex-event:${appearance.eventColors[item.theme] || appearance.eventColors.etc}"><strong>${icon(theme.icon)}${text(item.place || '장소 미정')}</strong>${options.notes && item.memo ? `<small>${text(item.memo)}</small>` : ''}${appearance.eventArt(item, 'ex-mini-art')}</div>${transit ? `<span class="ex-mini-transit">${text(transit)}</span>` : ''}</li>`;
     }).join('') || '<li class="ex-mini-empty">아직 등록한 일정이 없어요.</li>'}</ol></details>`).join('');

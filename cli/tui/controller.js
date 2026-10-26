@@ -38,6 +38,7 @@ class Controller extends EventEmitter {
   error(error) {
     const lines = [error.message || String(error)];
     if (error.code) lines.unshift(`상태: ${error.code}`);
+    if (error.details?.hint) lines.push(error.details.hint);
     if (error.details?.journalId) lines.push(`요청 기록: ${error.details.journalId}`, '응답이 불명확하면 새로 저장하지 말고 요청 기록에서 재시도하세요.');
     if (error.details?.conflicts) lines.push('다른 변경과 겹쳤습니다. 최신 내용을 확인한 뒤 다시 입력해 주세요.');
     this.show({ type: 'result', title: '작업을 완료하지 못했습니다', error: true, lines });
@@ -272,7 +273,7 @@ class Controller extends EventEmitter {
     this.form('TripLOG 로그인', [text('profile', '프로필', true, this.state.context.profile || 'default'), text('email', '이메일', true), text('password', '비밀번호', true, '', { type: 'password' })], data => this.task(async () => {
       const form = this.state.view;
       try { await this.service.login({ profile: data.profile }, data.email, data.password); await this.connect({ source: 'cloud', profile: data.profile }); }
-      finally { data.password = ''; form.values.password = ''; }
+      finally { data.password = ''; form.values.password = ''; (form.cursors ||= {}).password = 0; form.index = 2; }
     }, { write: true }), { submitLabel: '로그인', subtitle: '비밀번호는 화면·명령 인자·설정 파일에 남기지 않습니다.' });
   }
   fileForm(create = false) {

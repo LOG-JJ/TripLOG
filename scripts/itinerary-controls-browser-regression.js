@@ -44,7 +44,7 @@ async function main() {
         const option=menu.querySelector('.custom-select-option'), trigger=document.querySelector('#itineraryThemeSelectButton');
         return { width:menu.getBoundingClientRect().width, height:menu.getBoundingClientRect().height, triggerWidth:trigger.getBoundingClientRect().width, left:menu.getBoundingClientRect().left, triggerLeft:trigger.getBoundingClientRect().left, row:option.getBoundingClientRect().height, font:getComputedStyle(option).fontSize, emoji:getComputedStyle(option.querySelector('.control-theme-emoji')).fontSize };
       });
-      assert(Math.abs(metrics.width - metrics.triggerWidth) < 1 && Math.abs(metrics.left - metrics.triggerLeft) < 1, JSON.stringify(metrics));
+      assert(Math.abs(metrics.width - Math.max(280, metrics.triggerWidth)) < 1, JSON.stringify(metrics));
       assert(metrics.height <= 168 && metrics.row === 44, JSON.stringify(metrics));
       assert.equal(metrics.font,'14px'); assert.equal(metrics.emoji,'18px');
       await capture('#itineraryThemeSelectMenu', `theme-compact-${width}`);
@@ -56,7 +56,7 @@ async function main() {
     await page.waitForFunction(() => {
       const menu=document.querySelector('#itineraryThemeSelectMenu').getBoundingClientRect();
       const field=document.querySelector('#itineraryThemeSelectButton').getBoundingClientRect();
-      return Math.abs(menu.width-field.width)<1 && Math.abs(menu.left-field.left)<1;
+      return Math.abs(menu.width-Math.max(280,field.width))<1;
     });
     await page.keyboard.press('Escape');
     const panel=page.locator('#itineraryTimeInputPanel');
@@ -121,7 +121,7 @@ async function main() {
     await page.locator('#itineraryTransitAdd').focus();
     assert((await scroll.evaluate(node=>node.scrollTop))>0);
     assert.deepEqual(errors,[]);
-    console.log('PASS theme matches field width/left edge at 1440/390/320 with compact 44px/14px/18px sizing; repeated arrow close, held pointer, keyboard Enter/Space; transit overflow scroll preserved with invisible tracks, centered options and icon-aligned field text.');
+    console.log('PASS theme uses readable popup width at 1440/390/320 with compact 44px/14px/18px sizing; repeated arrow close, held pointer, keyboard Enter/Space; transit overflow scroll preserved with invisible tracks, centered options and icon-aligned field text.');
   } catch(error) {
     if(page) await page.screenshot({path:path.join(output,'failure.png')}).catch(()=>{});
     throw error;

@@ -1,8 +1,4 @@
-const itineraryThemes = {
-  sightseeing: { label: "명소", icon: "map-pin" }, lodging: { label: "숙소", icon: "bed" },
-  food: { label: "맛집", icon: "fork-knife" }, shopping: { label: "쇼핑", icon: "shopping-bag" },
-  transport: { label: "이동", icon: "train" }, etc: { label: "기타", icon: "map-pin" },
-};
+const itineraryThemes = window.TripLog.data.itineraryArt.themes;
 const itineraryTransitModes = {
   none: { label: "이동", icon: "path" }, walk: { label: "도보", icon: "person-simple-walk" },
   car: { label: "차량", icon: "car" }, train: { label: "기차", icon: "train" },
@@ -141,7 +137,7 @@ function renderItineraryList(days) {
       }
       els.itineraryList.append(container);
     } else if (previous?.date === item.date) container.append(buildItineraryTransit(item, previous));
-    const theme = itineraryThemes[item.theme] || itineraryThemes.sightseeing;
+    const theme = window.TripLog.shared.itineraryArt.presentation(item);
     const article = document.createElement("article"); article.className = `timeline-stop${selectedId === item.id ? " is-selected" : ""}`;
     article.dataset.theme = item.theme || "sightseeing";
     article.dataset.id = item.id; article.draggable = false;

@@ -1,0 +1,229 @@
+{
+  "commit": "7178cf3bcbcd6137557241ebe4c31a65d772ffeb",
+  "remoteHead": "7178cf3bcbcd6137557241ebe4c31a65d772ffeb",
+  "gitPush": "completed",
+  "expectedBuild": "e6c39004269505f57f29",
+  "liveBuild": "e6c39004269505f57f29",
+  "pageMatches": true,
+  "workerMatches": true,
+  "automaticDeployment": "verified",
+  "url": "https://triplog-5qs.pages.dev/Travel",
+  "assets": [
+    {
+      "file": "src/app/domain/commands.js",
+      "status": 200,
+      "expectedSha256": "881fe48739820f586368dad9554c5c102847a2d14db370b570aac648274e99a0",
+      "liveSha256": "881fe48739820f586368dad9554c5c102847a2d14db370b570aac648274e99a0",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/itinerary/itinerary-form.js",
+      "status": 200,
+      "expectedSha256": "bc6746f85bdaf781af2a8156b28f99f438523f90ceadcebd937c1ab5d3013345",
+      "liveSha256": "bc6746f85bdaf781af2a8156b28f99f438523f90ceadcebd937c1ab5d3013345",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/itinerary/itinerary-render.js",
+      "status": 200,
+      "expectedSha256": "10ea37d6104f6bb1512214aad6bdbf4e3fc44dcb2e3b668849b5d6c5104bc8be",
+      "liveSha256": "10ea37d6104f6bb1512214aad6bdbf4e3fc44dcb2e3b668849b5d6c5104bc8be",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/itinerary/itinerary-summary.js",
+      "status": 200,
+      "expectedSha256": "7ed63ec0994e051a128a682907ec1efec5d2cf43305d6c69c34f498ad3861e48",
+      "liveSha256": "7ed63ec0994e051a128a682907ec1efec5d2cf43305d6c69c34f498ad3861e48",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/itinerary/itinerary-workspace.js",
+      "status": 200,
+      "expectedSha256": "402b70d0663e81cd7b635285c82ef52b074f0e9fbe7e4002b179f410b57151c2",
+      "liveSha256": "402b70d0663e81cd7b635285c82ef52b074f0e9fbe7e4002b179f410b57151c2",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/itinerary/transit-editor.js",
+      "status": 200,
+      "expectedSha256": "3e6a918545552f06f944a3a8023563833f37618ed4d947be1041dcc7dd57e33f",
+      "liveSha256": "3e6a918545552f06f944a3a8023563833f37618ed4d947be1041dcc7dd57e33f",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/overview/overview-workspace.js",
+      "status": 200,
+      "expectedSha256": "ebabba711e4e0dfc0bb096e1fc9c382d7b49864174367ddb07c241d157acc039",
+      "liveSha256": "ebabba711e4e0dfc0bb096e1fc9c382d7b49864174367ddb07c241d157acc039",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/print/report-model.js",
+      "status": 200,
+      "expectedSha256": "f25daf65b1ae175d120489b39bd60dc433aec37166895fd7bdcca70ec2af9cfa",
+      "liveSha256": "f25daf65b1ae175d120489b39bd60dc433aec37166895fd7bdcca70ec2af9cfa",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/redesign/design-workspace.js",
+      "status": 200,
+      "expectedSha256": "f25f27e4cc1ef31026b986c3b2d7d59baabd2b8979520912192b4d2a5d774d01",
+      "liveSha256": "f25f27e4cc1ef31026b986c3b2d7d59baabd2b8979520912192b4d2a5d774d01",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/travel-companion/model.js",
+      "status": 200,
+      "expectedSha256": "b9ac38a341c6c8738b16644ab36c36be2f8dd7fdff7083862a94e65972fb1d3e",
+      "liveSha256": "b9ac38a341c6c8738b16644ab36c36be2f8dd7fdff7083862a94e65972fb1d3e",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/travel-companion/workspace.js",
+      "status": 200,
+      "expectedSha256": "e5fbe14a55a7664c2e9bdace70f3916701f3df971b367cf9ab565b7297cc9521",
+      "liveSha256": "e5fbe14a55a7664c2e9bdace70f3916701f3df971b367cf9ab565b7297cc9521",
+      "matches": true
+    },
+    {
+      "file": "src/app/navigation/trip-dates.js",
+      "status": 200,
+      "expectedSha256": "043ecb68c0da52a4c78e8f69b102900210181c9a6e4a7e64265905f1aa326d9c",
+      "liveSha256": "043ecb68c0da52a4c78e8f69b102900210181c9a6e4a7e64265905f1aa326d9c",
+      "matches": true
+    },
+    {
+      "file": "src/styles/expense-polish.css",
+      "status": 200,
+      "expectedSha256": "3c7f331852eeb4baa34eed3757e4b502fbefdc54e4158a4ea0b17e829c880e3e",
+      "liveSha256": "3c7f331852eeb4baa34eed3757e4b502fbefdc54e4158a4ea0b17e829c880e3e",
+      "matches": true
+    },
+    {
+      "file": "src/styles/itinerary.css",
+      "status": 200,
+      "expectedSha256": "acfbc9d46ef9ce03ee455eb1d0adce1b8723bbe1e253146fae85a282e0b0c95d",
+      "liveSha256": "acfbc9d46ef9ce03ee455eb1d0adce1b8723bbe1e253146fae85a282e0b0c95d",
+      "matches": true
+    },
+    {
+      "file": "src/styles/travel-costs.css",
+      "status": 200,
+      "expectedSha256": "3cd367f2f0573f3534cca48a78cdedd9a6b2ca75a0ff4c7bdd11c7b106deb6e0",
+      "liveSha256": "3cd367f2f0573f3534cca48a78cdedd9a6b2ca75a0ff4c7bdd11c7b106deb6e0",
+      "matches": true
+    },
+    {
+      "file": "Travel.html",
+      "status": 200,
+      "expectedSha256": "a4eb29a5071483930bd15a83eb1192a32a8568739dd945e96c99ae3d902071af",
+      "liveSha256": "a4eb29a5071483930bd15a83eb1192a32a8568739dd945e96c99ae3d902071af",
+      "matches": true
+    },
+    {
+      "file": "sw.js",
+      "status": 200,
+      "expectedSha256": "87e90799a9f9c4337ead389036168ebe4e433dd099e1683858d68a62be11c5da",
+      "liveSha256": "87e90799a9f9c4337ead389036168ebe4e433dd099e1683858d68a62be11c5da",
+      "matches": true
+    }
+  ],
+  "verified": true,
+  "checkedAt": "2026-10-26T06:17:01.577Z",
+  "validation": {
+    "core": "passed by deploy run",
+    "browserSuites": 42,
+    "build": "passed by deploy run",
+    "browserPlugin": "not available",
+    "browser": "isolated Playwright/Edge",
+    "liveDataModified": false,
+    "cliProcessAssertions": 212,
+    "deployExitCode": 0,
+    "deployOk": true
+  },
+  "productionBrowser": {
+    "passed": true,
+    "origin": "https://triplog-5qs.pages.dev",
+    "commit": "7178cf3bcbcd6137557241ebe4c31a65d772ffeb",
+    "build": "e6c39004269505f57f29",
+    "browser": "Playwright/Edge; Browser plugin not available",
+    "fixturesOnly": true,
+    "externalRequestsBlocked": true,
+    "liveDataModified": false,
+    "actualIPhoneVerified": false,
+    "suites": [
+      {
+        "suite": "itinerary-default-date-browser-regression.js",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "suite": "controls-browser-regression.js",
+        "exitCode": 0,
+        "passed": true
+      },
+      {
+        "suite": "expense-order-browser-regression.js",
+        "exitCode": 0,
+        "passed": true
+      }
+    ],
+    "measurement": "Expense geometry is queried and measured atomically from the current DOM. Initial locator measurements observed detached rows (zero/null); immediate diagnostics showed visible 44px controls. Production modules and original assertions are unchanged.",
+    "artifactDirectory": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261018-cli-deploy\\checkout\\artifacts\\tmp\\20261026-schedule-release-production",
+    "checkedAt": "2026-10-26T06:25:15.438Z",
+    "captures": [
+      {
+        "file": "production-lodging-start-end-390.png",
+        "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261018-cli-deploy\\checkout\\artifacts\\tmp\\20261026-schedule-release-production\\controls\\lodging-start-end-390.png",
+        "sha256": "ca8c1c62d9e22d3986d6d12044e3782520a8e0716cbcb27e10ed1711b7fce21c"
+      },
+      {
+        "file": "production-expense-handles-390.png",
+        "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261018-cli-deploy\\checkout\\artifacts\\tmp\\20261026-schedule-release-production\\expense-order-browser\\reorder-mobile-390.png",
+        "sha256": "84bdb698281a004dac003360d6120f0353158f528b7c27a531448a0db79b8543"
+      },
+      {
+        "file": "production-current-day-390.png",
+        "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261018-cli-deploy\\checkout\\artifacts\\tmp\\20261026-schedule-release-production\\itinerary-default-date\\current-day-mobile-390.png",
+        "sha256": "4b8c935fab3ef6dfcd6c82b8ce1c12fee03fa7eb58f23fb789889bcaaddb218b"
+      }
+    ],
+    "initialMeasurementFailures": [
+      {
+        "file": "artifacts\\tmp\\20261026-schedule-release\\production-expense-order-initial-failure.log",
+        "sha256": "01dec2701173c5297bf42f20ccacc0f509506d23bda451c084e6d12cf9d31dcc"
+      },
+      {
+        "file": "artifacts\\tmp\\20261026-schedule-release\\production-expense-order-second-failure.log",
+        "sha256": "f9df12ed674f2cd0164135a01af53f4e61f1a48176514d104a8c06fbe3595b14"
+      }
+    ]
+  },
+  "generatedReview": {
+    "commit": "7178cf3bcbcd6137557241ebe4c31a65d772ffeb",
+    "selectedFiles": 36,
+    "changedTrackedFiles": 38,
+    "generated": [
+      "Travel.html",
+      "sw.js"
+    ],
+    "htmlOnlyBuildChange": true,
+    "workerOnlyBuildChange": true,
+    "scoped": true,
+    "build": "e6c39004269505f57f29"
+  },
+  "workingCheckout": {
+    "head": "7178cf3bcbcd6137557241ebe4c31a65d772ffeb",
+    "originMain": "7178cf3bcbcd6137557241ebe4c31a65d772ffeb",
+    "preservedFiles": 73,
+    "generatedUpdated": [
+      "Travel.html",
+      "sw.js"
+    ],
+    "remainingChanges": "M cli/lib/auth.js\n M cli/lib/transport.js\n M cli/tui/controller.js\n M docs/cli.md\n M package.json\n M scripts/terminal-regression.js\n M scripts/terminal-visual-regression.js\n?? artifacts/qa/20261017-bottom-navigation/deployment-result.json\n?? artifacts/qa/20261017-iphone-icon/deployment-result.json\n?? artifacts/qa/20261017-main-splash/deployment-result.json\n?? artifacts/qa/20261017-main-splash/production-browser.json\n?? artifacts/qa/20261017-main-splash/production-login-mobile.png\n?? artifacts/qa/20261017-main-splash/production-splash-mobile.png\n?? artifacts/qa/20261018-city-screen-deploy/deployment-result.json\n?? artifacts/qa/20261018-city-screen-deploy/production-browser.json\n?? artifacts/qa/20261018-city-screen-deploy/production-login-390.png\n?? artifacts/qa/20261018-cli/deployment-result.json\n?? artifacts/qa/20261018-ios27-inline-icon/deployment-result.json\n?? artifacts/qa/20261018-terminal-login/\n?? artifacts/qa/20261026-expense-order/deployment-result.json\n?? artifacts/qa/20261026-expense-order/production-browser.json\n?? artifacts/qa/20261026-expense-order/production-expense-list.png\n?? artifacts/qa/20261026-expense-order/production-mobile-390.png\n?? artifacts/qa/20261026-itinerary-defaults-white/deployment-result.json\n?? artifacts/qa/20261026-itinerary-defaults-white/production-time-direct-input.png\n?? artifacts/qa/20261026-itinerary-defaults-white/production-time-picker-mobile.png\n?? cli/lib/http.js\n?? cli/lib/http3.ps1\n?? scripts/cli-auth-regression.js\n?? scripts/cli-http-regression.js",
+    "at": "2026-10-26T06:14:01.328Z"
+  },
+  "testsLogSha256": "c68ab1f2658490282c0c0ac13a84be68f359fcaf72920412fef6286edcf3d4db",
+  "updatedAt": "2026-10-26T06:26:07.029Z"
+}

@@ -1,0 +1,340 @@
+{
+  "commit": "f2fdfa7f549988cb996a25d457d78bdeac91c96c",
+  "remoteHead": "f2fdfa7f549988cb996a25d457d78bdeac91c96c",
+  "gitPush": "completed",
+  "expectedBuild": "71948c1a728b7a496ce6",
+  "liveBuild": "71948c1a728b7a496ce6",
+  "pageMatches": true,
+  "workerMatches": true,
+  "automaticDeployment": "verified",
+  "url": "https://triplog-5qs.pages.dev/Travel",
+  "assets": [
+    {
+      "file": "src/app/features/itinerary/itinerary-render.js",
+      "status": 200,
+      "expectedSha256": "3edf4caf7155c733d78198b0715e902bc681a0ce0aa31ce2975bfc356dcb7635",
+      "liveSha256": "3edf4caf7155c733d78198b0715e902bc681a0ce0aa31ce2975bfc356dcb7635",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/itinerary/list-actions.js",
+      "status": 200,
+      "expectedSha256": "1c3ab7866120b8d7f79b4fb20503f30ba1433d51c23182020ed9c5cd7eecf66d",
+      "liveSha256": "1c3ab7866120b8d7f79b4fb20503f30ba1433d51c23182020ed9c5cd7eecf66d",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/itinerary/transit-editor.js",
+      "status": 200,
+      "expectedSha256": "ff2e9036eb17b49865eaa87919f06d09224940df73c5314fd90d478ce448c243",
+      "liveSha256": "ff2e9036eb17b49865eaa87919f06d09224940df73c5314fd90d478ce448c243",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/travel-companion/model.js",
+      "status": 200,
+      "expectedSha256": "8f997c15b722fb5f0ae0ce09ebd2bfdfb3d91f20e7971c6938a36c78f4d12925",
+      "liveSha256": "8f997c15b722fb5f0ae0ce09ebd2bfdfb3d91f20e7971c6938a36c78f4d12925",
+      "matches": true
+    },
+    {
+      "file": "src/app/ui/form-controls.js",
+      "status": 200,
+      "expectedSha256": "a1df45c8fa523cf720b9cabc745465f706a601abc430adafae3b549e9a9d13e6",
+      "liveSha256": "a1df45c8fa523cf720b9cabc745465f706a601abc430adafae3b549e9a9d13e6",
+      "matches": true
+    },
+    {
+      "file": "src/app/ui/time-picker.js",
+      "status": 200,
+      "expectedSha256": "934d12d8beb469df765e66eff43f6a7ad3f4e9acc362b1911ddc8e1b1b421f7b",
+      "liveSha256": "934d12d8beb469df765e66eff43f6a7ad3f4e9acc362b1911ddc8e1b1b421f7b",
+      "matches": true
+    },
+    {
+      "file": "src/app/ui/time-wheel.js",
+      "status": 200,
+      "expectedSha256": "c875ebc2c9930456583aa173045967ee5406dd4fb8f4a67e383b217c18aa2f5a",
+      "liveSha256": "c875ebc2c9930456583aa173045967ee5406dd4fb8f4a67e383b217c18aa2f5a",
+      "matches": true
+    },
+    {
+      "file": "src/styles/companion-passport.css",
+      "status": 200,
+      "expectedSha256": "f41c36bf66a03ee7927b69b54d3226d3825bd929c55f9b766dfc870f38619866",
+      "liveSha256": "f41c36bf66a03ee7927b69b54d3226d3825bd929c55f9b766dfc870f38619866",
+      "matches": true
+    },
+    {
+      "file": "src/styles/controls.css",
+      "status": 200,
+      "expectedSha256": "78d9272168c4becd754b15db8a079337db3396d41306126452a23e87af55b839",
+      "liveSha256": "78d9272168c4becd754b15db8a079337db3396d41306126452a23e87af55b839",
+      "matches": true
+    },
+    {
+      "file": "src/styles/entry-splash.css",
+      "status": 200,
+      "expectedSha256": "805f787c98942bb88e33d37e78d372a3a41e642c721b61f5453e6f2586756a73",
+      "liveSha256": "805f787c98942bb88e33d37e78d372a3a41e642c721b61f5453e6f2586756a73",
+      "matches": true
+    },
+    {
+      "file": "src/styles/expense-polish.css",
+      "status": 200,
+      "expectedSha256": "a14521a8c7793e35da17f331bf600e3e4fb45184728816f53ead8f838561a059",
+      "liveSha256": "a14521a8c7793e35da17f331bf600e3e4fb45184728816f53ead8f838561a059",
+      "matches": true
+    },
+    {
+      "file": "src/styles/expenses.css",
+      "status": 200,
+      "expectedSha256": "28f3d2d94f6e998aac0765f2ac720935afd21d7e698758fed1c678d1d957aca3",
+      "liveSha256": "28f3d2d94f6e998aac0765f2ac720935afd21d7e698758fed1c678d1d957aca3",
+      "matches": true
+    },
+    {
+      "file": "src/styles/interactions.css",
+      "status": 200,
+      "expectedSha256": "e174574d45b2777b780681a47a2af9deccb103051e26820c7f3e1e7466265b84",
+      "liveSha256": "e174574d45b2777b780681a47a2af9deccb103051e26820c7f3e1e7466265b84",
+      "matches": true
+    },
+    {
+      "file": "src/styles/itinerary-summary.css",
+      "status": 200,
+      "expectedSha256": "7e22c3a4c668b6fb1feb88e516bf5174b1d7bd67b93b898a0436a742895f388e",
+      "liveSha256": "7e22c3a4c668b6fb1feb88e516bf5174b1d7bd67b93b898a0436a742895f388e",
+      "matches": true
+    },
+    {
+      "file": "src/styles/overview-cards.css",
+      "status": 200,
+      "expectedSha256": "15f6ab54e0d6390dab8bdb12ca9d1c75da576dce4fc40b6b62c441dc153bc18e",
+      "liveSha256": "15f6ab54e0d6390dab8bdb12ca9d1c75da576dce4fc40b6b62c441dc153bc18e",
+      "matches": true
+    },
+    {
+      "file": "src/styles/planning.css",
+      "status": 200,
+      "expectedSha256": "37a2edbc18ae1f873ffe17ae8aa06fff0e62b9866dbdb818c5b833b0dcb71fe4",
+      "liveSha256": "37a2edbc18ae1f873ffe17ae8aa06fff0e62b9866dbdb818c5b833b0dcb71fe4",
+      "matches": true
+    },
+    {
+      "file": "src/styles/prepurchase.css",
+      "status": 200,
+      "expectedSha256": "7da0302a2be9e93f6315ce31765cc2d6faee2eaada26b28fe342fad656045133",
+      "liveSha256": "7da0302a2be9e93f6315ce31765cc2d6faee2eaada26b28fe342fad656045133",
+      "matches": true
+    },
+    {
+      "file": "src/styles/receipt.css",
+      "status": 200,
+      "expectedSha256": "88cef4272a101bc7ac7128a46088da281a569cac4b7c158b3a9c5e3be0c8901f",
+      "liveSha256": "88cef4272a101bc7ac7128a46088da281a569cac4b7c158b3a9c5e3be0c8901f",
+      "matches": true
+    },
+    {
+      "file": "src/styles/redesign.css",
+      "status": 200,
+      "expectedSha256": "fb1726bbe9f1be35ba8c4751d2ddd84d21975ebebf54fa89c60fe559ce519308",
+      "liveSha256": "fb1726bbe9f1be35ba8c4751d2ddd84d21975ebebf54fa89c60fe559ce519308",
+      "matches": true
+    },
+    {
+      "file": "src/styles/reservation-wallet.css",
+      "status": 200,
+      "expectedSha256": "69adbeae8a28800cf18d316f0185dac8d093736bddf2429334c981a543ecd4b1",
+      "liveSha256": "69adbeae8a28800cf18d316f0185dac8d093736bddf2429334c981a543ecd4b1",
+      "matches": true
+    },
+    {
+      "file": "src/styles/sync.css",
+      "status": 200,
+      "expectedSha256": "6a46efe08f3804312138a7ca08a22103e631c24cd4fb363a7a4a4ae49161341f",
+      "liveSha256": "6a46efe08f3804312138a7ca08a22103e631c24cd4fb363a7a4a4ae49161341f",
+      "matches": true
+    },
+    {
+      "file": "src/styles/transit-editor.css",
+      "status": 200,
+      "expectedSha256": "0e6d3e29e1e197ccf32a90bbcd7636bafb557ebc071a02002ce412888ba3f586",
+      "liveSha256": "0e6d3e29e1e197ccf32a90bbcd7636bafb557ebc071a02002ce412888ba3f586",
+      "matches": true
+    },
+    {
+      "file": "src/styles/travel-companion.css",
+      "status": 200,
+      "expectedSha256": "9bf0703d53096987a91113ddb1f43d3b35926e185ca63aa812dbc607b7a66795",
+      "liveSha256": "9bf0703d53096987a91113ddb1f43d3b35926e185ca63aa812dbc607b7a66795",
+      "matches": true
+    },
+    {
+      "file": "src/styles/travel-costs.css",
+      "status": 200,
+      "expectedSha256": "2053318a200876da63a3284cc5e2ac58aeca146c9367e5660741776494268ad2",
+      "liveSha256": "2053318a200876da63a3284cc5e2ac58aeca146c9367e5660741776494268ad2",
+      "matches": true
+    },
+    {
+      "file": "src/styles/trip-library.css",
+      "status": 200,
+      "expectedSha256": "b788ab573c674134766982952f32a9728401666a5fc97810241319dcfaadff63",
+      "liveSha256": "b788ab573c674134766982952f32a9728401666a5fc97810241319dcfaadff63",
+      "matches": true
+    },
+    {
+      "file": "src/styles/trip-navigation.css",
+      "status": 200,
+      "expectedSha256": "8bedae7df9edc7bb5820e1282bb761a8b55be2dceb2908b25cea8865b9e30536",
+      "liveSha256": "8bedae7df9edc7bb5820e1282bb761a8b55be2dceb2908b25cea8865b9e30536",
+      "matches": true
+    },
+    {
+      "file": "src/styles/wallet-passbook.css",
+      "status": 200,
+      "expectedSha256": "ed36d1d7b53a7b496bf133af4f4863bdf24a51a317cc3f3311c17af440e19f44",
+      "liveSha256": "ed36d1d7b53a7b496bf133af4f4863bdf24a51a317cc3f3311c17af440e19f44",
+      "matches": true
+    },
+    {
+      "file": "Travel.html",
+      "status": 200,
+      "expectedSha256": "c54a837ea9da315048c7c70bd59815a87b82165c17f001b79ca4d0d6d6ece19d",
+      "liveSha256": "c54a837ea9da315048c7c70bd59815a87b82165c17f001b79ca4d0d6d6ece19d",
+      "matches": true
+    },
+    {
+      "file": "sw.js",
+      "status": 200,
+      "expectedSha256": "5ec5eff563861e26e6097888227ffcc24d8848c013be4252f5d38d9fd4e6c4fe",
+      "liveSha256": "5ec5eff563861e26e6097888227ffcc24d8848c013be4252f5d38d9fd4e6c4fe",
+      "matches": true
+    }
+  ],
+  "verified": true,
+  "checkedAt": "2026-10-26T04:54:29.221Z",
+  "validation": {
+    "core": "passed by deploy run",
+    "browserSuites": 41,
+    "build": "passed by deploy run",
+    "browserPlugin": "not available",
+    "browser": "isolated Playwright/Edge",
+    "liveDataModified": false,
+    "testCommand": "node bin/triplog.js dev deploy run --files ... --message ... --json",
+    "exitCode": 0,
+    "ok": true,
+    "artifactRoot": "artifacts/tmp/20261026-itinerary-release"
+  },
+  "generatedReview": {
+    "commit": "f2fdfa7f549988cb996a25d457d78bdeac91c96c",
+    "committedFiles": 80,
+    "selectedFiles": 78,
+    "generated": [
+      "Travel.html",
+      "sw.js"
+    ],
+    "htmlOnlyBuildChange": true,
+    "workerOnlyBuildChange": true,
+    "scoped": true
+  },
+  "workingCheckout": {
+    "head": "f2fdfa7f549988cb996a25d457d78bdeac91c96c",
+    "originMain": "f2fdfa7f549988cb996a25d457d78bdeac91c96c",
+    "preservedFiles": 112,
+    "generatedUpdated": [
+      "Travel.html",
+      "sw.js"
+    ],
+    "remainingChanges": "M cli/lib/auth.js\n M cli/lib/transport.js\n M cli/tui/controller.js\n M docs/cli.md\n M package.json\n M scripts/terminal-regression.js\n M scripts/terminal-visual-regression.js\n?? artifacts/qa/20261017-bottom-navigation/deployment-result.json\n?? artifacts/qa/20261017-iphone-icon/deployment-result.json\n?? artifacts/qa/20261017-main-splash/deployment-result.json\n?? artifacts/qa/20261017-main-splash/production-browser.json\n?? artifacts/qa/20261017-main-splash/production-login-mobile.png\n?? artifacts/qa/20261017-main-splash/production-splash-mobile.png\n?? artifacts/qa/20261018-city-screen-deploy/deployment-result.json\n?? artifacts/qa/20261018-city-screen-deploy/production-browser.json\n?? artifacts/qa/20261018-city-screen-deploy/production-login-390.png\n?? artifacts/qa/20261018-cli/deployment-result.json\n?? artifacts/qa/20261018-ios27-inline-icon/deployment-result.json\n?? artifacts/qa/20261018-terminal-login/\n?? artifacts/qa/20261026-expense-order/deployment-result.json\n?? artifacts/qa/20261026-expense-order/production-browser.json\n?? artifacts/qa/20261026-expense-order/production-expense-list.png\n?? artifacts/qa/20261026-expense-order/production-mobile-390.png\n?? cli/lib/http.js\n?? cli/lib/http3.ps1\n?? scripts/cli-auth-regression.js\n?? scripts/cli-http-regression.js",
+    "at": "2026-10-26T04:52:22.181Z"
+  },
+  "productionBrowser": {
+    "passed": true,
+    "origin": "https://triplog-5qs.pages.dev",
+    "engine": "Playwright/Edge",
+    "fixturesOnly": true,
+    "externalRequestsBlocked": true,
+    "actualIPhoneVerified": false,
+    "runtimeErrors": [],
+    "flows": [
+      "wheel and touch selection without editable focus",
+      "explicit numeric input, Done, Escape and blur",
+      "confirm, clear and persisted value after reload"
+    ],
+    "sizeChecks": {
+      "passed": true,
+      "sizes": [
+        {
+          "viewport": 390,
+          "width": 170,
+          "height": 174,
+          "rows": 5,
+          "box": {
+            "x": 16,
+            "y": 482.4836730957031,
+            "width": 170,
+            "height": 173.99996948242188
+          },
+          "fits": true,
+          "actionsFit": true
+        },
+        {
+          "viewport": 320,
+          "width": 152,
+          "height": 174,
+          "rows": 5,
+          "box": {
+            "x": 13,
+            "y": 486.0557861328125,
+            "width": 152,
+            "height": 174
+          },
+          "fits": true,
+          "actionsFit": true
+        },
+        {
+          "viewport": 640,
+          "width": 224,
+          "height": 174,
+          "rows": 5,
+          "box": {
+            "x": 16,
+            "y": 174,
+            "width": 224,
+            "height": 174
+          },
+          "fits": true,
+          "actionsFit": true
+        },
+        {
+          "viewport": 1440,
+          "width": 169,
+          "height": 174,
+          "rows": 5,
+          "box": {
+            "x": 823,
+            "y": 579.171875,
+            "width": 169,
+            "height": 174
+          },
+          "fits": true,
+          "actionsFit": true
+        }
+      ]
+    },
+    "captures": [
+      {
+        "file": "production-time-picker-mobile.png",
+        "sha256": "142166a61bf95839d4e458271641ef6684db36a4dd38872c8fd18cf3d2303d2a"
+      },
+      {
+        "file": "production-time-direct-input.png",
+        "sha256": "70c005efeacdc9da89897409b3780079590f364a954c3cb9c61f0fb9977a1750"
+      }
+    ]
+  },
+  "providerStatus": "GitHub connector status query returned 404; verified against live build and exact file hashes",
+  "testsLogSha256": "8dc4cf8b2cc9d7007d313c45341865346d60b48eb0a48d3ef2dd570695834487"
+}

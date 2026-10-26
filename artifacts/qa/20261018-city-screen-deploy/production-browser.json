@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "identity": {
+    "url": "https://triplog-5qs.pages.dev/Travel?page=start&release_check=541d7872e2bfe4eeee67a71621db7ea25504e70b",
+    "title": "여행 가계부",
+    "build": "0370f878dfc1caf3acd5"
+  },
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "meaningfulLogin": true,
+  "noOverflow": true,
+  "focusInteraction": true,
+  "errors": [],
+  "consoleIssues": [],
+  "actualUserStorage": "isolated fresh browser context",
+  "productionDataWrites": false,
+  "checkedAt": "2026-10-17T19:43:18.131Z"
+}

@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "origin": "http://127.0.0.1:11693",
+  "browser": "Playwright / Edge",
+  "fallback": "Browser plugin not available",
+  "viewports": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "errors": [],
+  "checked": [
+    "50 shared types",
+    "dependent options",
+    "save/reload/edit/copy",
+    "manual PDF artwork and icons",
+    "automatic fallback",
+    "theme reset",
+    "legacy items",
+    "draft recovery",
+    "scroll and keyboard focus"
+  ]
+}

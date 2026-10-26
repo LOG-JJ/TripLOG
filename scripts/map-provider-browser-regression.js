@@ -57,6 +57,8 @@ async function main() {
 
       // Native mobile navigation must preserve the unsaved itinerary draft.
       if (mobile) {
+        await page.locator('#itineraryThemeSelect').selectOption('food');
+        await page.locator('#itinerarySubtypeSelect').selectOption('cafe');
         await page.locator('#itineraryPlaceInput').fill('돌아와도 남는 장소');
         await page.locator('#placeSearchButton').click();
         await page.waitForFunction(() => document.querySelector('#googleMapsLink').dataset.mapQuery.includes('돌아와도'));
@@ -65,6 +67,7 @@ async function main() {
         await page.goBack(); await ready();
         await page.locator('#itineraryEditor[open]').waitFor();
         assert.equal(await page.locator('#itineraryPlaceInput').inputValue(), '돌아와도 남는 장소');
+        assert.equal(await page.locator('#itinerarySubtypeSelect').inputValue(), 'cafe');
         assert.match(await page.locator('#googleMapsLink').getAttribute('href'), /map\.naver\.com/);
       }
       await page.locator('#itineraryEditorClose').click();

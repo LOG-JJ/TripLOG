@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "cases": [
+    "connect timeout retries once and sign-in succeeds with exact credentials",
+    "persistent connection failure stops after two attempts without SDK console output",
+    "response loss and certificate failures are not replayed or bypassed",
+    "credential, rate-limit, and server HTTP errors are not blindly retried",
+    "total deadline cancels a pending connection retry",
+    "CLI preserves transport cause while clearing it after an actual HTTP response",
+    "Windows login stores DPAPI session and refresh network failure preserves it"
+  ],
+  "platform": "win32",
+  "consoleErrors": 0,
+  "at": "2026-10-18T05:35:37.109Z"
+}

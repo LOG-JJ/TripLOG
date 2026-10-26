@@ -1,0 +1,337 @@
+{
+  "base": "6892c78695901a2669863198e598580cd87fb9e5",
+  "scope": "All remaining source, CLI/TUI auth and itinerary subtype changes, plus retained design/QA records; no server schema/function changes remain.",
+  "files": [
+    {
+      "file": "README.md",
+      "sha256": "bdb238f6a514eb0f149f3c7c29ff36b839a2778bb8034a800d27674debd72122"
+    },
+    {
+      "file": "Travel.html",
+      "sha256": "78b378a05d8147841d7811e8d78650f43280848778b22735499b508203680712"
+    },
+    {
+      "file": "app.js",
+      "sha256": "66f8765aefbcba7e69179c2f91eca809d5591be77513b094b50e6a6e273f350b"
+    },
+    {
+      "file": "cli/index.js",
+      "sha256": "e1f2e9f36ec3f98b67f61e4d056d9d0138e89d6bd695dc9d19543a3bb8be0f2b"
+    },
+    {
+      "file": "cli/lib/arguments.js",
+      "sha256": "db8c1361d75163940eee87d20921428216c17103a1b6d516d63750856ae96895"
+    },
+    {
+      "file": "cli/lib/auth.js",
+      "sha256": "0ec490b4673ede7b1a2a60d6c062bc4ffe9b0fee778134adf95109cfb426aa9f"
+    },
+    {
+      "file": "cli/lib/transport.js",
+      "sha256": "92819b1cbab7b1037ab3ba4953a0418ca6d07bb2a48af6d1613876b0851b84de"
+    },
+    {
+      "file": "cli/tui/controller.js",
+      "sha256": "0efb4e78a9fa9b7ea474f968a26ef865291ba48aff3ab62ae7765846cd663e8c"
+    },
+    {
+      "file": "docs/cli.md",
+      "sha256": "49f4a5d5dc9a6f32f351742afe8d0d4b02c0f1772e66331ede86e741c6b2f608"
+    },
+    {
+      "file": "package.json",
+      "sha256": "d4519413c0e78514a73e2e2f19abfc1812a3f0403d8fdf8b3dfb17823da68276"
+    },
+    {
+      "file": "scripts/browser-suites.js",
+      "sha256": "ccd04d761c79b0b687e7e6a5d5f89c18394925ca97ffbbde287ba6f8316d3950"
+    },
+    {
+      "file": "scripts/cli-regression.js",
+      "sha256": "130ce533108777cb6ce9bc5514988ab11eba204eaaa98f9c0c122ca604fcce11"
+    },
+    {
+      "file": "scripts/itinerary-art-regression.js",
+      "sha256": "9d3d8ef7548f12eebfdbebeb1fc00ac49eed259a8d6a4e30e3c2e9f43800bd82"
+    },
+    {
+      "file": "scripts/itinerary-controls-browser-regression.js",
+      "sha256": "213b59f18eb983b3cdcc2187a40d00aea97ee7736678acbaf2c0471f6074f068"
+    },
+    {
+      "file": "scripts/map-provider-browser-regression.js",
+      "sha256": "4566af11ef2a3ccba4ca1c122876fa6c82e1c37130ce014289db9fb0ac3ef1f4"
+    },
+    {
+      "file": "scripts/terminal-regression.js",
+      "sha256": "698a05da0b3dfbcd9b7b1599aac72573c2e7c8e9b2810725ae6d5bdb8dc649e3"
+    },
+    {
+      "file": "scripts/terminal-visual-regression.js",
+      "sha256": "0d238634bef57a05cf0b5b0b0014ab250b41f56040af99b27a66c9af2c748e10"
+    },
+    {
+      "file": "src/app/core/runtime.js",
+      "sha256": "ee91b46a8345aa9059f55bef28e963b90dd32adaad6df6d414e59ee381274fff"
+    },
+    {
+      "file": "src/app/data/itinerary-art.js",
+      "sha256": "a27dba7f59fb295ba488f6273c450a08b93a65fea1ba81970f12c3026b39a7bd"
+    },
+    {
+      "file": "src/app/domain/commands.js",
+      "sha256": "d76e73443d1461a02f2cadc7aeb337630ee8bf987ef7d4ae9383dd324d8fd031"
+    },
+    {
+      "file": "src/app/features/itinerary/itinerary-form.js",
+      "sha256": "aed9c72b59079ee3480f0efbb6469862da5626a3615306a0637570dc99b4b85c"
+    },
+    {
+      "file": "src/app/features/itinerary/itinerary-render.js",
+      "sha256": "68654888b06e3efa149de3610932d917fcc2fc761b60fc80ab1ad0e3db45b05a"
+    },
+    {
+      "file": "src/app/features/itinerary/itinerary-workspace.js",
+      "sha256": "a84ff0832a3172b9721e8aacd9f765b7d915e86f5f4a73cfd6aa300a71bd61a1"
+    },
+    {
+      "file": "src/app/features/overview/overview-workspace.js",
+      "sha256": "092385bace101be3664e38482d57fdb7c5fa0b7f837e69e3949f4b346c889395"
+    },
+    {
+      "file": "src/app/features/print/export-studio.js",
+      "sha256": "fd09344130409040d5c6cb33ff4f40bbdf43737f45b8f590ddbee9303e10139e"
+    },
+    {
+      "file": "src/app/features/print/print-export.js",
+      "sha256": "9b0cc184ed74c7fbdb7a3320bb893984562b3d69b3969a57dd533b15a23351c3"
+    },
+    {
+      "file": "src/app/shared/itinerary-art.js",
+      "sha256": "86768ac1f3dc5d82e22db1a27933add59a6a0472acb31538e6daaa9ef3a65233"
+    },
+    {
+      "file": "src/app/sync/drafts.js",
+      "sha256": "4022a0739d4fd2d37a70d3f68d9c5b077f397c8afffac274e01ae905070c161c"
+    },
+    {
+      "file": "src/app/ui/custom-select.js",
+      "sha256": "27c641d1cbd17c923946bb1da8e6432530506a73c3129ee1e54264edbbfb55a7"
+    },
+    {
+      "file": "src/styles/controls.css",
+      "sha256": "4cc4f3236838caea7e7a402a929c0174c02d53d15306119545b37a40c7e5fba1"
+    },
+    {
+      "file": "src/styles/itinerary.css",
+      "sha256": "61767b7c8b2e672ba465eaaa984e4a3637bf0532383335225f4de7d627c12ed7"
+    },
+    {
+      "file": "sw.js",
+      "sha256": "a3ddb28f7987f8da641ec7256af68b15d08743ab03e5851c23abec0e97c24185"
+    },
+    {
+      "file": "artifacts/design/20261026-itinerary-subthemes/generation.md",
+      "sha256": "b3e6f4e020fd8cc343fd4a54ba5379f303ef100544d2f5c2697888656cff26f4"
+    },
+    {
+      "file": "artifacts/design/20261026-itinerary-subthemes/theme-subtype-concept.png",
+      "sha256": "624eb2cc911e320de87e5c83e37b31ff4fba4f0b6d3049729f6c71c63e9a5d3a"
+    },
+    {
+      "file": "artifacts/qa/20261017-bottom-navigation/deployment-result.json",
+      "sha256": "6a2ba8652133651f7a8477895343e0f361332ea74e864bfbe4270829b1e05546"
+    },
+    {
+      "file": "artifacts/qa/20261017-iphone-icon/deployment-result.json",
+      "sha256": "a73201207aee808e8b5b61de278c5675a2ca05c2637ed6d481c39af8fef1d176"
+    },
+    {
+      "file": "artifacts/qa/20261017-main-splash/deployment-result.json",
+      "sha256": "72dfc131cd781f498afcfabda018767e82f5e2b0d076fbdc43edb899ba09c7df"
+    },
+    {
+      "file": "artifacts/qa/20261017-main-splash/production-browser.json",
+      "sha256": "37cd1373675ceacec92e774b3280729c6524c6a618b2299ecd385584276f9612"
+    },
+    {
+      "file": "artifacts/qa/20261017-main-splash/production-login-mobile.png",
+      "sha256": "d6cefcba687fca14ec50f94a122caf0c02ab630661ff4492dd6bbb45371a9956"
+    },
+    {
+      "file": "artifacts/qa/20261017-main-splash/production-splash-mobile.png",
+      "sha256": "8695bcc77bb9363627f7f519a555348d14750ce3b1f14c11c695c26f6e9c0bd3"
+    },
+    {
+      "file": "artifacts/qa/20261018-city-screen-deploy/deployment-result.json",
+      "sha256": "20c4289eb7bd9c585bca27e551e25538270836b56bdd0dc7480e460250630d80"
+    },
+    {
+      "file": "artifacts/qa/20261018-city-screen-deploy/production-browser.json",
+      "sha256": "9e7fca3b417e361e6f8f34073c56cd550b5085d85ac638c57559fde5f7586134"
+    },
+    {
+      "file": "artifacts/qa/20261018-city-screen-deploy/production-login-390.png",
+      "sha256": "a45664ef0fa6e8921f9dc44244d44c6ccb580f538167bbf77c3a86d5934a7771"
+    },
+    {
+      "file": "artifacts/qa/20261018-cli/deployment-result.json",
+      "sha256": "64f82833c5140d9649259fec283b9615f63186ccf4dc922c5e67aa8f20d8851f"
+    },
+    {
+      "file": "artifacts/qa/20261018-ios27-inline-icon/deployment-result.json",
+      "sha256": "fa139ad1d9a92de232b5aeacda8683618f7298d94500e0b49ce5311d3d898d50"
+    },
+    {
+      "file": "artifacts/qa/20261018-terminal-login/auth-result.json",
+      "sha256": "4a38c901f20103dc9f67cc8de27a08df33a55dbcba17cd7b804be57971c7849f"
+    },
+    {
+      "file": "artifacts/qa/20261018-terminal-login/capture-hashes.json",
+      "sha256": "f2c98bd13dea421546e6f09deee74900751992b81fa22e92e3fb3cd45cae0d74"
+    },
+    {
+      "file": "artifacts/qa/20261018-terminal-login/http-result.json",
+      "sha256": "0b7b653f856a9e915ecd92adb42782840815563e55ad22712adc2a9003152c5d"
+    },
+    {
+      "file": "artifacts/qa/20261018-terminal-login/login-network-error-60x20.png",
+      "sha256": "f349f64e0fa168859a6ec697e36751af6c8f05016cf0a687a9bd3028fc34f9ff"
+    },
+    {
+      "file": "artifacts/qa/20261018-terminal-login/login-network-error-80x24.png",
+      "sha256": "99acc0dfea5a2df1d91b6773242b34bab73792cd4e680d17f95d5e6ca3924922"
+    },
+    {
+      "file": "artifacts/qa/20261018-terminal-login/login-retry-80x24.png",
+      "sha256": "41acd110f46e122173f0e63cc178f18866526b9dfe7391696e5128f2024d67f4"
+    },
+    {
+      "file": "artifacts/qa/20261018-terminal-login/terminal-result.json",
+      "sha256": "82ba7886daa76e14c9c793bdff20d9bf8d8e14b02f441b8e257f71a3ef1290ec"
+    },
+    {
+      "file": "artifacts/qa/20261018-terminal-login/visual-result.json",
+      "sha256": "14f7786ccfe7ffc5071a8a0b0eccee11e0cd95520f828dd783ad2d299381e1a1"
+    },
+    {
+      "file": "artifacts/qa/20261026-expense-order/deployment-result.json",
+      "sha256": "a5be7378d35fe989c9234269f02b168161594ef97f4bdd896b1d28cd23eadf51"
+    },
+    {
+      "file": "artifacts/qa/20261026-expense-order/production-browser.json",
+      "sha256": "0f721e9328574ca2161704882ff003a67e36ee2c77e845e350760ddef806dacf"
+    },
+    {
+      "file": "artifacts/qa/20261026-expense-order/production-expense-list.png",
+      "sha256": "5ee4935eaffe5d39cc061d6bb1277c5975ca2f5dbec3479e6dd91e30ca12f40b"
+    },
+    {
+      "file": "artifacts/qa/20261026-expense-order/production-mobile-390.png",
+      "sha256": "83701fc8c4f49532a0d15ba4c9d0f0df687b8a80de8e7db41010bc60c9ee5ed7"
+    },
+    {
+      "file": "artifacts/qa/20261026-itinerary-defaults-white/deployment-result.json",
+      "sha256": "2fbe8e5504c23dff371d70ae3f3930e56e40d46c0c4b30a3eadca4f2571d75af"
+    },
+    {
+      "file": "artifacts/qa/20261026-itinerary-defaults-white/production-time-direct-input.png",
+      "sha256": "70c005efeacdc9da89897409b3780079590f364a954c3cb9c61f0fb9977a1750"
+    },
+    {
+      "file": "artifacts/qa/20261026-itinerary-defaults-white/production-time-picker-mobile.png",
+      "sha256": "142166a61bf95839d4e458271641ef6684db36a4dd38872c8fd18cf3d2303d2a"
+    },
+    {
+      "file": "artifacts/qa/20261026-itinerary-subthemes/cafe-form-390.png",
+      "sha256": "55ec57dd2624537b5398c4f9577dc2fbeb49f7d377110bae2d509a444d26e715"
+    },
+    {
+      "file": "artifacts/qa/20261026-itinerary-subthemes/cafe-menu-390.png",
+      "sha256": "80a8fa2ec7e64c1694134f0473e7f9b197fb72efc89cdffa7963a133303d41b0"
+    },
+    {
+      "file": "artifacts/qa/20261026-itinerary-subthemes/pdf-subtype-preview.png",
+      "sha256": "2d8ba57a9483d85f11eab3edf7ea888247bd82aa9e3aab76a742714c9c54bc4d"
+    },
+    {
+      "file": "artifacts/qa/20261026-itinerary-subthemes/result.json",
+      "sha256": "0c8ecdd15cb561ddae01c332bc941ad2c6662426c3b5a158239b4f91aa6827b4"
+    },
+    {
+      "file": "artifacts/qa/20261026-itinerary-subthemes/sightseeing-menu-320.png",
+      "sha256": "683abb28d649cab36f9ab7d68ed7b0e70c722e88c2e895cddada07dcccdce7ca"
+    },
+    {
+      "file": "artifacts/qa/20261026-itinerary-subthemes/verification.md",
+      "sha256": "976021c34d0f3ffe79af1212a4f72c7b067a1f86f7c1b029bff04aa0fb460afd"
+    },
+    {
+      "file": "artifacts/qa/20261026-schedule-layout/deployment-result.json",
+      "sha256": "2845b09dba0ad11342929761b780eb18e4ee28c84af8fccf19335c18fc4746d7"
+    },
+    {
+      "file": "artifacts/qa/20261026-schedule-layout/production-browser.json",
+      "sha256": "bae77f1f7027e5349c109090f0f3d4505d549086dda99a41bb36ba37a9cf38e0"
+    },
+    {
+      "file": "artifacts/qa/20261026-schedule-layout/production-current-day-390.png",
+      "sha256": "4b8c935fab3ef6dfcd6c82b8ce1c12fee03fa7eb58f23fb789889bcaaddb218b"
+    },
+    {
+      "file": "artifacts/qa/20261026-schedule-layout/production-expense-handles-390.png",
+      "sha256": "84bdb698281a004dac003360d6120f0353158f528b7c27a531448a0db79b8543"
+    },
+    {
+      "file": "artifacts/qa/20261026-schedule-layout/production-geometry-diagnostic.json",
+      "sha256": "fd521efcd0d50d44ebe91f847f0df1234b47aba3a5df8e7f8900453308982fe7"
+    },
+    {
+      "file": "artifacts/qa/20261026-schedule-layout/production-lodging-start-end-390.png",
+      "sha256": "ca8c1c62d9e22d3986d6d12044e3782520a8e0716cbcb27e10ed1711b7fce21c"
+    },
+    {
+      "file": "artifacts/qa/20261026-trip-removal/deployment-result.json",
+      "sha256": "7ea9476950d4d2f2cc645746b58ffe1ffaea1408160d8cd644e20f5635369e1a"
+    },
+    {
+      "file": "artifacts/qa/20261026-trip-removal/production-browser.json",
+      "sha256": "86142970f3695876ac202d3e30456a724648711dc413e78e1fc712e285a2c68a"
+    },
+    {
+      "file": "artifacts/qa/20261026-trip-removal/production-empty-after-last-delete-320.png",
+      "sha256": "99621ae8fe0ba1093ff74c48cfa7be4c9c603c16aab22b28800722eda3c6bba8"
+    },
+    {
+      "file": "artifacts/qa/20261026-trip-removal/production-last-member-delete-320.png",
+      "sha256": "e6e315cca06eec9d04aca023eb5c84560d706a8213d07339cff48f481853784a"
+    },
+    {
+      "file": "cli/lib/http.js",
+      "sha256": "b0f9c246ce781a40122d2c58bb16dd7afe8eae9b0926dbd41221e819327607df"
+    },
+    {
+      "file": "cli/lib/http3.ps1",
+      "sha256": "ae0e73b9e1fdf899c9314c5560098f0bc1dba539174372d23729bf3907c19246"
+    },
+    {
+      "file": "scripts/cli-auth-regression.js",
+      "sha256": "a4d17e33ac533e7cb3d0cc9b3105ce03c8bcb1d8b51b39aee1d41ca646bfbb24"
+    },
+    {
+      "file": "scripts/cli-http-regression.js",
+      "sha256": "0a5210f5c0672a93be4e92f43d5618fe627fca8b80d07a5850cb9b9f68f83e46"
+    },
+    {
+      "file": "scripts/itinerary-subtypes-browser-regression.js",
+      "sha256": "27e2038cb783293421d748234705e5225422cd72014068c035423900b37a55ab"
+    }
+  ],
+  "textFormat": "canonical LF",
+  "validation": {
+    "source": "passed; 44 registered browser suites, 28 CLI modules",
+    "terminalVisual": "16 ANSI screens passed",
+    "artwork": "No city artwork changed. Prior release verified 2540 city/viewport combinations; final regression uses 3 representative city headers with all 44 suite files."
+  },
+  "deployment": "pending"
+}

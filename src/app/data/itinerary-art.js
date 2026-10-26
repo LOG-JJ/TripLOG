@@ -5,6 +5,21 @@
 })(typeof window === 'undefined' ? globalThis : window, function () {
   'use strict';
   const base = 'src/assets/itinerary-art/v1';
+  const themes = Object.freeze(Object.fromEntries([
+    ['sightseeing', '명소', 'map-pin'], ['lodging', '숙소', 'bed'], ['food', '맛집', 'fork-knife'],
+    ['shopping', '쇼핑', 'shopping-bag'], ['transport', '이동', 'train'], ['etc', '기타', 'map-pin'],
+  ].map(([id, label, icon]) => [id, Object.freeze({ label, icon })])));
+  const icons = {
+    travel: 'suitcase-rolling', sightseeing: 'map-pin', beach: 'umbrella', island: 'island', mountain: 'mountains',
+    forest: 'tree', lake: 'waves', wetland: 'plant', desert: 'sun', garden: 'flower', waterfall: 'waves',
+    cave: 'mountains', snow: 'snowflake', urban: 'buildings', oldtown: 'house-line', museum: 'bank', gallery: 'palette',
+    castle: 'castle-turret', temple: 'buildings', shrine: 'buildings', church: 'church', mosque: 'mosque',
+    tower: 'binoculars', monument: 'bank', 'theme-park': 'park', aquarium: 'fish', zoo: 'paw-print',
+    stadium: 'soccer-ball', theater: 'mask-happy', wellness: 'bathtub', hiking: 'person-simple-hike',
+    restaurant: 'fork-knife', cafe: 'coffee', bakery: 'bread', bar: 'wine', hotel: 'bed', resort: 'swimming-pool',
+    camping: 'tent', hostel: 'house', shopping: 'shopping-bag', market: 'storefront', mall: 'buildings',
+    transport: 'train', airport: 'airplane', train: 'train', bus: 'bus', ferry: 'boat', car: 'car', bicycle: 'bicycle', walk: 'person-simple-walk',
+  };
   // Generic type illustrations describe an activity, never claim to depict the
   // exact building or destination. Existing city art remains in the trip header.
   const rows = [
@@ -18,13 +33,13 @@
     ['mosque', '모스크', 'sightseeing'], ['tower', '전망대·타워', 'sightseeing'], ['monument', '기념물', 'sightseeing'],
     ['theme-park', '테마파크', 'sightseeing'], ['aquarium', '수족관', 'sightseeing'], ['zoo', '동물원', 'sightseeing'],
     ['stadium', '경기장', 'sightseeing'], ['theater', '공연장', 'sightseeing'], ['wellness', '온천·휴식', 'sightseeing'], ['hiking', '하이킹', 'sightseeing'],
-    ['restaurant', '식당', 'food'], ['cafe', '카페', 'food'], ['bakery', '베이커리', 'food'], ['bar', '바', 'food'],
-    ['hotel', '숙소', 'lodging'], ['resort', '리조트', 'lodging'], ['camping', '캠핑', 'lodging'], ['hostel', '호스텔', 'lodging'],
-    ['shopping', '쇼핑', 'shopping'], ['market', '시장', 'shopping'], ['mall', '쇼핑몰', 'shopping'],
+    ['restaurant', '식당', 'food'], ['cafe', '카페', 'food'], ['bakery', '베이커리', 'food'], ['bar', '바·펍', 'food'],
+    ['hotel', '호텔', 'lodging'], ['resort', '리조트', 'lodging'], ['camping', '캠핑', 'lodging'], ['hostel', '호스텔·게스트하우스', 'lodging'],
+    ['shopping', '쇼핑', 'shopping'], ['market', '시장·야시장', 'shopping'], ['mall', '쇼핑몰·백화점', 'shopping'],
     ['transport', '이동', 'transport'], ['airport', '공항·항공', 'transport'], ['train', '철도', 'transport'],
     ['bus', '버스', 'transport'], ['ferry', '배·항구', 'transport'], ['car', '차량', 'transport'], ['bicycle', '자전거', 'transport'], ['walk', '도보', 'transport'],
   ];
-  const catalog = Object.freeze(Object.fromEntries(rows.map(([id, label, group]) => [id, Object.freeze({ id, label, group, src: `${base}/${id}.webp` })])));
+  const catalog = Object.freeze(Object.fromEntries(rows.map(([id, label, group]) => [id, Object.freeze({ id, label, group, icon: icons[id], src: `${base}/${id}.webp` })])));
   const fallbacks = Object.freeze({ sightseeing: 'sightseeing', food: 'restaurant', lodging: 'hotel', shopping: 'shopping', transport: 'transport', etc: 'travel' });
   // Human-readable, multilingual local rules. Matching never sends a user's
   // itinerary to an image generator, geocoder, classifier, or search service.
@@ -78,5 +93,5 @@
     oldtown: '전통마을|한옥마을|구시가지|old town|oldtown|historic district|altstadt|centro historico|旧市街|古城|古镇|المدينة القديمة',
   };
   const providerTypes = Object.freeze({ airport: 'airport', train_station: 'train', subway_station: 'train', transit_station: 'transport', bus_station: 'bus', ferry_terminal: 'ferry', car_rental: 'car', restaurant: 'restaurant', cafe: 'cafe', coffee_shop: 'cafe', bakery: 'bakery', bar: 'bar', lodging: 'hotel', hotel: 'hotel', resort_hotel: 'resort', hostel: 'hostel', campground: 'camping', shopping_mall: 'mall', department_store: 'mall', market: 'market', store: 'shopping', art_gallery: 'gallery', museum: 'museum', mosque: 'mosque', church: 'church', hindu_temple: 'sightseeing', buddhist_temple: 'temple', place_of_worship: 'sightseeing', tourist_attraction: 'sightseeing', park: 'garden', botanical_garden: 'garden', beach: 'beach', national_park: 'sightseeing', aquarium: 'aquarium', zoo: 'zoo', amusement_park: 'theme-park', stadium: 'stadium', performing_arts_theater: 'theater', spa: 'wellness', hiking_area: 'hiking', ski_resort: 'snow' });
-  return Object.freeze({ version: 1, catalog, fallbacks, keywords: Object.freeze(keywords), providerTypes });
+  return Object.freeze({ version: 1, themes, catalog, fallbacks, keywords: Object.freeze(keywords), providerTypes });
 });

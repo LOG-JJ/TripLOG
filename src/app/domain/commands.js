@@ -2,16 +2,17 @@
   const node = typeof module === 'object' && module.exports;
   const api = factory(node ? require('../shared/itinerary-order') : root.TripLogItineraryOrder,
     node ? require('../features/travel-companion/model') : root.TripLog.features.travelCompanion.model,
-    node ? require('../shared/expense-order') : root.TripLog.shared.expenseOrder);
+    node ? require('../shared/expense-order') : root.TripLog.shared.expenseOrder,
+    node ? require('../shared/itinerary-art') : root.TripLog.shared.itineraryArt);
   if (node) module.exports = api;
   root.TripLog?.register('domain.commands', api);
-})(typeof window === 'undefined' ? globalThis : window, function (Order, Companion, ExpenseOrder) {
+})(typeof window === 'undefined' ? globalThis : window, function (Order, Companion, ExpenseOrder, Art) {
   'use strict';
   const clone = value => JSON.parse(JSON.stringify(value));
   const uuid = () => globalThis.crypto.randomUUID();
   const fields = {
     trip: 'tripName country countryCode city travelMode startDate endDate totalBudget currencyCode currencySymbol currencyUnit exchangeBase exchangeRate exchangeRateSource exchangeRateUpdatedAt',
-    itinerary: 'date time endTime place location theme memo trans transits duration cost syncExpense lat lon mapQuery coordinateSource coordinateSignature coordinatePrecision coordinateAddress googlePlaceId voucherName voucherCode voucherFile voucherFileName transportReservation',
+    itinerary: 'date time endTime place location theme themeSubtype memo trans transits duration cost syncExpense lat lon mapQuery coordinateSource coordinateSignature coordinatePrecision coordinateAddress googlePlaceId voucherName voucherCode voucherFile voucherFileName transportReservation',
     expense: 'date category description amount note mode currency currencySymbol currencyUnit foreignAmount exchangeRate exchangeBase paymentDate paymentMethod payerKey pretripType pretripMemo bookingCode hotelName hotelAddress hotelCheckIn hotelCheckOut flightFrom flightTo flightAirline flightNumber flightDepartDate flightDepartTime flightReturnDate flightReturnDepartTime receipt',
     packing: 'name checked', companion: 'name individualSpent',
     reservation: 'type title date endDate time endTime arrivalDate transportKind from to reference location note url',
@@ -75,6 +76,7 @@
     for (const [key, value] of Object.entries(item)) if (typeof value === 'string' && value.length > (key === 'voucherFile' ? 2200000 : 100000)) problem(`필드가 너무 깁니다: ${key}`);
     if (kind === 'itinerary') {
       date(item.date, '일정 날짜'); text(item.place, '장소', 1000);
+      if (item.themeSubtype && !Art.subtype(item)) problem('세부 분류는 선택한 테마에 속하는 유형이어야 합니다.');
       for (const key of ['time', 'endTime']) if (item[key] && Companion.minutes(item[key]) === null) problem('시간은 HH:MM 형식이어야 합니다.');
       if (item.endTime && (!item.time || Companion.endMinutes(item) <= Companion.minutes(item.time))) problem('일정의 종료 시간은 시작 시간보다 늦어야 합니다.');
       if (!Array.isArray(item.transits) || item.transits.length > 100) problem('이동 구간 목록을 확인해 주세요.');
@@ -176,6 +178,7 @@
       const defaults = { itinerary: { time: '', endTime: '', location: '', memo: '', theme: 'sightseeing', trans: 'none', transits: [], cost: 0, duration: 0, syncExpense: false }, expense: { mode: 'domestic', paymentMethod: 'card', payerKey: 'leader', note: '' }, packing: { checked: false }, companion: { individualSpent: 0 }, reservation: { type: 'other', time: '', endTime: '', reference: '', note: '', location: '', url: '' } };
       let next = { ...(item || { ...defaults[kind], id: uuid(), createdAt: Date.now() }), ...values };
       if (kind === 'itinerary') {
+        if (Object.hasOwn(values, 'theme') && values.theme !== item?.theme && !Object.hasOwn(values, 'themeSubtype')) delete next.themeSubtype;
         if (!Object.hasOwn(values, 'transits') && ['trans', 'duration', 'cost'].some(key => Object.hasOwn(values, key))) next.transits = [{ trans: next.trans, duration: next.duration, cost: next.cost, memo: '' }];
         next = transitTotals(next); validateItem(kind, next, trip);
         if (item && (item.place !== next.place || item.location !== next.location) && !Object.hasOwn(values, 'lat')) for (const key of ['lat', 'lon', 'mapQuery', 'coordinateSource', 'coordinateSignature', 'coordinatePrecision', 'coordinateAddress', 'googlePlaceId']) delete next[key];

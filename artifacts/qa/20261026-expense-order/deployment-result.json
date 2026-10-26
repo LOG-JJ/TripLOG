@@ -1,0 +1,202 @@
+{
+  "commit": "51ea4134a8c94d45674798670f4968561dfb4257",
+  "gitPush": "completed",
+  "expectedBuild": "4df7e2c3284fbb0e3018",
+  "liveBuild": "4df7e2c3284fbb0e3018",
+  "pageMatches": true,
+  "workerMatches": true,
+  "automaticDeployment": "verified",
+  "url": "https://triplog-5qs.pages.dev/Travel",
+  "remoteHead": "51ea4134a8c94d45674798670f4968561dfb4257",
+  "assets": [
+    {
+      "file": "app.js",
+      "status": 200,
+      "expectedSha256": "4906ff40b53bf3c0d26b07a88bbff6cb1a53f2211a3ee796d5e2b2cd7ee09d2c",
+      "liveSha256": "4906ff40b53bf3c0d26b07a88bbff6cb1a53f2211a3ee796d5e2b2cd7ee09d2c",
+      "matches": true
+    },
+    {
+      "file": "src/app/domain/commands.js",
+      "status": 200,
+      "expectedSha256": "73f569873c8aaa44ade2bc9ed7f411a1a783263723046368dbaee32a22f46bec",
+      "liveSha256": "73f569873c8aaa44ade2bc9ed7f411a1a783263723046368dbaee32a22f46bec",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/expenses/entry-actions.js",
+      "status": 200,
+      "expectedSha256": "c412ab7673b6be4c3041512921dabe44373cd2359d1abec9b9c1c229055e0d7e",
+      "liveSha256": "c412ab7673b6be4c3041512921dabe44373cd2359d1abec9b9c1c229055e0d7e",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/expenses/expense-workspace.js",
+      "status": 200,
+      "expectedSha256": "19e1eec03f8fed4f3ddcf5bf90a96715d86f9c5bf3fc4de1217b348b0e40e5ba",
+      "liveSha256": "19e1eec03f8fed4f3ddcf5bf90a96715d86f9c5bf3fc4de1217b348b0e40e5ba",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/itinerary/dnd-drag.js",
+      "status": 200,
+      "expectedSha256": "b6886bdca8ab2fce65cccf6badb64b41dc34254eef04abd7609df1fd5b4f19e6",
+      "liveSha256": "b6886bdca8ab2fce65cccf6badb64b41dc34254eef04abd7609df1fd5b4f19e6",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/itinerary/itinerary-render.js",
+      "status": 200,
+      "expectedSha256": "f22fee415e272bc555343f0685c63f907f01078d7cdae3fc14bf7e4307f392cc",
+      "liveSha256": "f22fee415e272bc555343f0685c63f907f01078d7cdae3fc14bf7e4307f392cc",
+      "matches": true
+    },
+    {
+      "file": "src/app/shared/expense-order.js",
+      "status": 200,
+      "expectedSha256": "f584372a413d8b96dba0552e24955daf67203c1fe5a84134c4ecc4eea04ca17b",
+      "liveSha256": "f584372a413d8b96dba0552e24955daf67203c1fe5a84134c4ecc4eea04ca17b",
+      "matches": true
+    },
+    {
+      "file": "src/app/sync/presentation.js",
+      "status": 200,
+      "expectedSha256": "d2233ffeba91454dc1ec2765d264388f163657bffb40bc79281212cce5fdbfa5",
+      "liveSha256": "d2233ffeba91454dc1ec2765d264388f163657bffb40bc79281212cce5fdbfa5",
+      "matches": true
+    },
+    {
+      "file": "src/app/ui/sortable-list.js",
+      "status": 200,
+      "expectedSha256": "73dde454c4f457d8cab5bdefd724a94d4e4d2ff30681b13518522c3ebea53ce5",
+      "liveSha256": "73dde454c4f457d8cab5bdefd724a94d4e4d2ff30681b13518522c3ebea53ce5",
+      "matches": true
+    },
+    {
+      "file": "src/styles/expense-polish.css",
+      "status": 200,
+      "expectedSha256": "4bf36f233b051f3cdcb30f31a835d1f077a98c75f42db3e383b76d0c3b1e5eac",
+      "liveSha256": "4bf36f233b051f3cdcb30f31a835d1f077a98c75f42db3e383b76d0c3b1e5eac",
+      "matches": true
+    },
+    {
+      "file": "src/styles/itinerary-drag.css",
+      "status": 200,
+      "expectedSha256": "11b175e95fd41ec6407267e73d162b8573961cb0e5cdb229ae9b93a514569149",
+      "liveSha256": "11b175e95fd41ec6407267e73d162b8573961cb0e5cdb229ae9b93a514569149",
+      "matches": true
+    },
+    {
+      "file": "sw.js",
+      "status": 200,
+      "expectedSha256": "bf01fed5b1b388b49c5a198123d8c221b0a8fc7a7d0519f69f9b12d16fd22738",
+      "liveSha256": "bf01fed5b1b388b49c5a198123d8c221b0a8fc7a7d0519f69f9b12d16fd22738",
+      "matches": true
+    },
+    {
+      "file": "Travel.html",
+      "status": 200,
+      "expectedSha256": "7671863e6efed9179f2bdf91deadcc6ee8b0a42ec91ddb948076c0d45d2a33b4",
+      "liveSha256": "7671863e6efed9179f2bdf91deadcc6ee8b0a42ec91ddb948076c0d45d2a33b4",
+      "matches": true
+    }
+  ],
+  "verified": true,
+  "checkedAt": "2026-10-25T16:10:07.053Z",
+  "tests": {
+    "core": "npm test passed",
+    "cliProcessAssertions": 204,
+    "browserSuites": 41,
+    "expenseProductionInteractionGroups": 10,
+    "build": "passed"
+  },
+  "productionBrowser": {
+    "passed": true,
+    "origin": "https://triplog-5qs.pages.dev",
+    "viewports": [
+      "1440x1100",
+      "390x844 touch",
+      "320x740"
+    ],
+    "errors": [],
+    "consoleIssues": [],
+    "fixturesOnly": true,
+    "externalRequestsBlocked": true,
+    "measurement": "Atomic DOM rectangles in the production fixture harness avoid transient detached-node boundingBox results during offline sync rendering; shipped app code and assertions are unchanged."
+  },
+  "generatedReview": {
+    "commit": "51ea4134a8c94d45674798670f4968561dfb4257",
+    "committedFiles": 33,
+    "selectedFiles": 29,
+    "generated": [
+      "Travel.html",
+      "sw.js",
+      "vendor/dnd-kit-LICENSES.txt",
+      "vendor/motion-LICENSES.txt"
+    ],
+    "htmlOnlyBuildChange": true,
+    "workerOnlyBuildAndInventoryChange": true,
+    "addedAssets": [
+      "/src/app/shared/expense-order.js",
+      "/src/app/ui/sortable-list.js"
+    ],
+    "removedAssets": [],
+    "licenses": [
+      {
+        "file": "vendor/dnd-kit-LICENSES.txt",
+        "contentUnchanged": true
+      },
+      {
+        "file": "vendor/motion-LICENSES.txt",
+        "contentUnchanged": true
+      }
+    ],
+    "passed": true
+  },
+  "scope": {
+    "files": [
+      "README.md",
+      "app.js",
+      "cli/tui/service.js",
+      "scripts/browser-suites.js",
+      "scripts/expense-filter-browser-regression.js",
+      "scripts/expense-order-browser-regression.js",
+      "scripts/expense-order-regression.js",
+      "src/app/domain/commands.js",
+      "src/app/features/expenses/entry-actions.js",
+      "src/app/features/expenses/expense-workspace.js",
+      "src/app/features/itinerary/dnd-drag.js",
+      "src/app/features/itinerary/itinerary-render.js",
+      "src/app/sync/presentation.js",
+      "src/app/shared/expense-order.js",
+      "src/app/ui/sortable-list.js",
+      "src/styles/expense-polish.css",
+      "src/styles/itinerary-drag.css",
+      "artifacts/qa/20261026-expense-order/browser-result.json",
+      "artifacts/qa/20261026-expense-order/capture-hashes.json",
+      "artifacts/qa/20261026-expense-order/desktop-1440.png",
+      "artifacts/qa/20261026-expense-order/drag-desktop.png",
+      "artifacts/qa/20261026-expense-order/drag-mobile.png",
+      "artifacts/qa/20261026-expense-order/expense-list-desktop.png",
+      "artifacts/qa/20261026-expense-order/mobile-320-long.png",
+      "artifacts/qa/20261026-expense-order/mobile-390.png",
+      "artifacts/qa/20261026-expense-order/model-result.json",
+      "artifacts/qa/20261026-expense-order/README.md",
+      "artifacts/qa/20261026-expense-order/verification.json",
+      "package.json"
+    ],
+    "earlierLoginWorkPreserved": true
+  },
+  "workingCheckout": {
+    "head": "51ea4134a8c94d45674798670f4968561dfb4257",
+    "originMain": "51ea4134a8c94d45674798670f4968561dfb4257",
+    "workingFilesPreserved": 22,
+    "generatedUpdated": [
+      "Travel.html",
+      "sw.js"
+    ],
+    "remainingChanges": "M cli/lib/auth.js\n M cli/lib/transport.js\n M cli/tui/controller.js\n M docs/cli.md\n M package.json\n M scripts/terminal-regression.js\n M scripts/terminal-visual-regression.js\n?? artifacts/qa/20261017-bottom-navigation/deployment-result.json\n?? artifacts/qa/20261017-iphone-icon/deployment-result.json\n?? artifacts/qa/20261017-main-splash/deployment-result.json\n?? artifacts/qa/20261017-main-splash/production-browser.json\n?? artifacts/qa/20261017-main-splash/production-login-mobile.png\n?? artifacts/qa/20261017-main-splash/production-splash-mobile.png\n?? artifacts/qa/20261018-city-screen-deploy/deployment-result.json\n?? artifacts/qa/20261018-city-screen-deploy/production-browser.json\n?? artifacts/qa/20261018-city-screen-deploy/production-login-390.png\n?? artifacts/qa/20261018-cli/deployment-result.json\n?? artifacts/qa/20261018-ios27-inline-icon/deployment-result.json\n?? artifacts/qa/20261018-terminal-login/\n?? cli/lib/http.js\n?? cli/lib/http3.ps1\n?? scripts/cli-auth-regression.js\n?? scripts/cli-http-regression.js",
+    "at": "2026-10-25T16:16:54.349Z"
+  },
+  "at": "2026-10-25T16:17:42.183Z"
+}

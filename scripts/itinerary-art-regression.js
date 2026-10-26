@@ -3,6 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const art = require('../src/app/shared/itinerary-art');
 const data = require('../src/app/data/itinerary-art');
+const sync = require('../src/app/sync/model');
 const root = path.resolve(__dirname, '..');
 const cases = [
   ['Cafe de Flore', 'food', 'cafe'], ['CAFÉ DU PORT', 'food', 'cafe'], ['카페 호텔 파크', 'food', 'cafe'],
@@ -36,10 +37,25 @@ for (const countryCode of ['KR', 'JP', 'US', 'FR', 'BR', 'ZA', 'EG', 'AE', 'IN',
 }
 assert.equal(JSON.stringify(item), baseline);
 assert.equal(Object.keys(art.catalog).length, 50);
+assert.equal(art.resolve({ theme: 'food', place: '국립 박물관', themeSubtype: 'cafe', placeType: 'bakery' }).id, 'cafe', 'Manual subtype wins over place names and provider metadata');
+assert.equal(art.resolve({ theme: 'transport', themeSubtype: 'bus', transportReservation: { kind: 'flight' } }).id, 'bus', 'Manual subtype wins over reservation artwork');
+assert.equal(art.resolve({ theme: 'food', place: '카페', themeSubtype: 'museum' }).id, 'cafe', 'A stale subtype from another theme falls back to automatic selection');
+assert.equal(art.resolve({ theme: 'food', place: '카페', themeSubtype: '__proto__' }).id, 'cafe');
+assert.equal(art.presentation({ theme: 'food', themeSubtype: 'cafe' }).label, '카페');
+assert.equal(art.presentation({ theme: 'food' }).label, '맛집', 'Existing items retain broad theme labels');
+const iconCss = fs.readFileSync(path.join(root, 'vendor/phosphor-2.1.1/regular.css'), 'utf8');
 for (const [id, row] of Object.entries(art.catalog)) {
   assert.equal(row.id, id);
   assert(/^src\/assets\/itinerary-art\/v1\/[a-z-]+\.webp$/.test(row.src));
   assert(fs.existsSync(path.join(root, row.src)), `Missing final asset ${row.src}`);
+  assert(iconCss.includes(`.ph-${row.icon}:`), `Missing subtype icon: ${row.icon}`);
+  assert(art.subtypes(row.group).some(item => item.id === id));
+  const explicit = { id: `subtype-${id}`, date: '2026-10-26', place: '직접 선택한 장소', theme: row.group, themeSubtype: id };
+  assert.equal(art.resolve(explicit).id, id);
+  assert.equal(art.resolve(explicit).reason, 'selected');
+  const snapshot = { id: 'subtype-trip', itineraryItems: [explicit] };
+  const restored = sync.decode(sync.encode(snapshot));
+  assert.equal(restored.itineraryItems[0].themeSubtype, id, 'Subtype survives shared sync serialization');
   const resolved = art.resolve({ place: data.keywords[id]?.split('|')[0] || '', theme: row.group });
   assert(fs.existsSync(path.join(root, resolved.src)));
   assert(fs.existsSync(path.join(root, resolved.fallbackSrc)));

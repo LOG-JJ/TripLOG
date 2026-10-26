@@ -142,6 +142,7 @@ const els = {
   itineraryRouteButton: document.querySelector("#itineraryRouteButton"),
   itineraryTransSelect: document.querySelector("#itineraryTransSelect"),
   itineraryThemeSelect: document.querySelector("#itineraryThemeSelect"),
+  itinerarySubtypeSelect: document.querySelector("#itinerarySubtypeSelect"),
   packingInput: document.querySelector("#packingInput"),
   packingAddBtn: document.querySelector("#packingAddBtn"),
   itineraryForm: document.querySelector("#itineraryForm"),

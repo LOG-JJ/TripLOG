@@ -1,0 +1,13 @@
+{
+  "verified_at": "2026-10-17T12:20:20.047Z",
+  "state": {
+    "url": "https://triplog-5qs.pages.dev/Travel?page=start",
+    "build": "5f68aaac07960e3f86db",
+    "splash": "done",
+    "motion": "motion",
+    "auth": "locked",
+    "inert": false
+  },
+  "page_errors": [],
+  "flow": "fresh unauthenticated production entry → animated splash → accessible login; no credentials or user records used"
+}

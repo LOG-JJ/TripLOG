@@ -1,0 +1,208 @@
+{
+  "commit": "6892c78695901a2669863198e598580cd87fb9e5",
+  "gitPush": "completed",
+  "expectedBuild": "81c726e15d6c1e1d36d2",
+  "liveBuild": "81c726e15d6c1e1d36d2",
+  "pageMatches": true,
+  "workerMatches": true,
+  "automaticDeployment": "verified",
+  "url": "https://triplog-5qs.pages.dev/Travel",
+  "remoteHead": "6892c78695901a2669863198e598580cd87fb9e5",
+  "assets": [
+    {
+      "file": "src/app/sync/repository.js",
+      "status": 200,
+      "expectedSha256": "2abd653225a803f1d5f9221051d8fae093ceba984eef909c8d08432e5f84e4a6",
+      "liveSha256": "2abd653225a803f1d5f9221051d8fae093ceba984eef909c8d08432e5f84e4a6",
+      "matches": true
+    },
+    {
+      "file": "src/app/sync/engine.js",
+      "status": 200,
+      "expectedSha256": "466c6e6cee6cf054e4129dda8a8974244ac78a1ae85e5f4910eb0f703c821928",
+      "liveSha256": "466c6e6cee6cf054e4129dda8a8974244ac78a1ae85e5f4910eb0f703c821928",
+      "matches": true
+    },
+    {
+      "file": "src/app/sync/controller.js",
+      "status": 200,
+      "expectedSha256": "3f0f4e1a666fff80a749d8de5443de90c1807e576436768991d0622fa1ec4e79",
+      "liveSha256": "3f0f4e1a666fff80a749d8de5443de90c1807e576436768991d0622fa1ec4e79",
+      "matches": true
+    },
+    {
+      "file": "src/app/sync/status-ui.js",
+      "status": 200,
+      "expectedSha256": "bf9623d0080d82eb8a719fe4e705e468bbfe926615e25926973a1477544d753e",
+      "liveSha256": "bf9623d0080d82eb8a719fe4e705e468bbfe926615e25926973a1477544d753e",
+      "matches": true
+    },
+    {
+      "file": "src/app/persistence/state-storage.js",
+      "status": 200,
+      "expectedSha256": "b20c250036c853fd1b3b8ec71b6e4ddde05aa78dc9e11b07ae90b2adc4fdd56b",
+      "liveSha256": "b20c250036c853fd1b3b8ec71b6e4ddde05aa78dc9e11b07ae90b2adc4fdd56b",
+      "matches": true
+    },
+    {
+      "file": "src/app/ui/confirmation.js",
+      "status": 200,
+      "expectedSha256": "8ac232cfed0194d2e626bd335de215e8c92f138778e0d9758a644f291440522e",
+      "liveSha256": "8ac232cfed0194d2e626bd335de215e8c92f138778e0d9758a644f291440522e",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/home/trip-library.js",
+      "status": 200,
+      "expectedSha256": "b2ed0b7feca5f2e44007cc6e0c814d013248be3712b9a47ae98c9c877d49ff4d",
+      "liveSha256": "b2ed0b7feca5f2e44007cc6e0c814d013248be3712b9a47ae98c9c877d49ff4d",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/redesign/design-workspace.js",
+      "status": 200,
+      "expectedSha256": "f1c4e608b051b6ad464fcfda1646dc20290679aa5b1f182471768bdec1108fc9",
+      "liveSha256": "f1c4e608b051b6ad464fcfda1646dc20290679aa5b1f182471768bdec1108fc9",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/collaboration/trip-collaboration.js",
+      "status": 200,
+      "expectedSha256": "dfecc8b087bd236e38fc532f12cc612a544a5502b31c3ac0de581145d40bca68",
+      "liveSha256": "dfecc8b087bd236e38fc532f12cc612a544a5502b31c3ac0de581145d40bca68",
+      "matches": true
+    },
+    {
+      "file": "Travel.html",
+      "status": 200,
+      "expectedSha256": "51604f1ca9addf07d43148ea834b94b04f22e1b1a5d5725af41bd277359c0f50",
+      "liveSha256": "51604f1ca9addf07d43148ea834b94b04f22e1b1a5d5725af41bd277359c0f50",
+      "matches": true,
+      "build": "81c726e15d6c1e1d36d2"
+    },
+    {
+      "file": "sw.js",
+      "status": 200,
+      "expectedSha256": "5c44cb0c7f95aca43666b8ab4396850e34a90275c1dd6013e4ddb0e962bea4ba",
+      "liveSha256": "5c44cb0c7f95aca43666b8ab4396850e34a90275c1dd6013e4ddb0e962bea4ba",
+      "matches": true
+    }
+  ],
+  "verified": true,
+  "checkedAt": "2026-10-26T08:54:47.076Z",
+  "backend": {
+    "projectRef": "iehdziiplzgvxcrbizgv",
+    "migration": "20261026065147",
+    "migrationApplied": true,
+    "edgeFunction": {
+      "created_at": 1789828461282,
+      "entrypoint_path": "file:///tmp/user_fn_iehdziiplzgvxcrbizgv_8c589af3-b289-4d87-b35c-eb7628e19c1c_6/source/supabase/functions/triplog-sync/index.ts",
+      "ezbr_sha256": "1ed8012b8baea6c24fb5ec7aa71611f78bb97bffa83024b32db96f5e73ae571a",
+      "id": "8c589af3-b289-4d87-b35c-eb7628e19c1c",
+      "import_map": false,
+      "name": "triplog-sync",
+      "slug": "triplog-sync",
+      "status": "ACTIVE",
+      "updated_at": 1793002423358,
+      "verify_jwt": false,
+      "version": 6
+    },
+    "sourceFiles": [
+      {
+        "file": "supabase/functions/triplog-sync/index.ts",
+        "expectedSha256": "ff46645497b10956a94baf1a0e3b602ea8371486378729cdca9edbcc2b9349b3",
+        "deployedSha256": "ff46645497b10956a94baf1a0e3b602ea8371486378729cdca9edbcc2b9349b3",
+        "matches": true
+      },
+      {
+        "file": "supabase/functions/triplog-sync/handler.ts",
+        "expectedSha256": "bca55064a7e80571ed618edf937b7b36bc4b418b7d4ebae2608f342e52ad0c37",
+        "deployedSha256": "bca55064a7e80571ed618edf937b7b36bc4b418b7d4ebae2608f342e52ad0c37",
+        "matches": true
+      },
+      {
+        "file": "supabase/functions/_shared/sync-model.js",
+        "expectedSha256": "0be5470f00531279af2ff24a89de7a10d446325c1e6db2cea675799a8bc9c02f",
+        "deployedSha256": "0be5470f00531279af2ff24a89de7a10d446325c1e6db2cea675799a8bc9c02f",
+        "matches": true
+      },
+      {
+        "file": "supabase/functions/_shared/settlement-model.js",
+        "expectedSha256": "7081e35ae10cdca8eec18b3fa5e4717eeeaa445ead5b6b255e5a885fb82dda4f",
+        "deployedSha256": "7081e35ae10cdca8eec18b3fa5e4717eeeaa445ead5b6b255e5a885fb82dda4f",
+        "matches": true
+      }
+    ],
+    "database": {
+      "function": {
+        "anon_execute": false,
+        "authenticated_execute": false,
+        "config": [
+          "search_path=\"\""
+        ],
+        "invoker": true,
+        "service_execute": true
+      },
+      "migration": true,
+      "tables": [
+        {
+          "anon_select": false,
+          "authenticated_select": false,
+          "name": "triplog_trip_removal_receipts",
+          "rls": true,
+          "service_all": true
+        },
+        {
+          "anon_select": false,
+          "authenticated_select": false,
+          "name": "triplog_attachment_cleanup",
+          "rls": true,
+          "service_all": true
+        }
+      ]
+    },
+    "securityAdvisories": {
+      "relatedToThisChange": [],
+      "existingAuthWarning": "Leaked Password Protection Disabled",
+      "remediation": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection"
+    },
+    "realTravelDataModified": false
+  },
+  "backendAuthGate": {
+    "status": 401,
+    "code": "UNAUTHENTICATED",
+    "authGate": "verified",
+    "liveTravelDataModified": false
+  },
+  "validation": {
+    "core": "passed by deploy run",
+    "browserSuites": 43,
+    "edgeTests": 3,
+    "build": "passed by deploy run",
+    "cliProcessAssertions": 212,
+    "realTravelDataModified": false,
+    "artwork": "Initial full run and later full artwork runs passed 2540 combinations; final deploy uses 3 unchanged representative cities at 4 widths. All 43 suite files execute.",
+    "harnessFixes": [
+      "Await visible budget before geometry checks",
+      "Await cache key index before exact cache assertion",
+      "Persist navigation fixture before baseline"
+    ]
+  },
+  "productionBrowser": {
+    "passed": true,
+    "flow": "delete -> leave and retain companions -> delete last member on server",
+    "lostResponseRetry": true,
+    "lastLocalTrip": true,
+    "otherDevice": true,
+    "serverId": "ddb407f9-baef-484f-bd48-1e22d965c73f",
+    "errors": [],
+    "source": "Live production app assets with an isolated local SQL API and synthetic accounts",
+    "realTravelDataModified": false
+  },
+  "rootReflection": {
+    "before": "7178cf3bcbcd6137557241ebe4c31a65d772ffeb",
+    "after": "6892c78695901a2669863198e598580cd87fb9e5",
+    "workingFilesPreserved": 111,
+    "changedWorkingFiles": []
+  }
+}

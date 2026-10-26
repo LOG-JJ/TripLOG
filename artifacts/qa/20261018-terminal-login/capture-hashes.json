@@ -1,0 +1,30 @@
+[
+  {
+    "file": "auth-result.json",
+    "sha256": "4a38c901f20103dc9f67cc8de27a08df33a55dbcba17cd7b804be57971c7849f"
+  },
+  {
+    "file": "http-result.json",
+    "sha256": "0b7b653f856a9e915ecd92adb42782840815563e55ad22712adc2a9003152c5d"
+  },
+  {
+    "file": "terminal-result.json",
+    "sha256": "82ba7886daa76e14c9c793bdff20d9bf8d8e14b02f441b8e257f71a3ef1290ec"
+  },
+  {
+    "file": "visual-result.json",
+    "sha256": "14f7786ccfe7ffc5071a8a0b0eccee11e0cd95520f828dd783ad2d299381e1a1"
+  },
+  {
+    "file": "login-network-error-80x24.png",
+    "sha256": "99acc0dfea5a2df1d91b6773242b34bab73792cd4e680d17f95d5e6ca3924922"
+  },
+  {
+    "file": "login-network-error-60x20.png",
+    "sha256": "f349f64e0fa168859a6ec697e36751af6c8f05016cf0a687a9bd3028fc34f9ff"
+  },
+  {
+    "file": "login-retry-80x24.png",
+    "sha256": "41acd110f46e122173f0e63cc178f18866526b9dfe7391696e5128f2024d67f4"
+  }
+]

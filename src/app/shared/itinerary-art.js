@@ -26,10 +26,18 @@
     const fallback = data.catalog[data.fallbacks[theme] || data.fallbacks[chosen.group] || 'travel'];
     return { ...chosen, reason, fallbackSrc: fallback.src, universalSrc: data.catalog.travel.src, version: data.version };
   }
+  function subtype(item = {}) {
+    const chosen = own(data.catalog, item?.themeSubtype);
+    return chosen?.group === (item?.theme || 'sightseeing') ? chosen : null;
+  }
+  function subtypes(theme) { return Object.values(data.catalog).filter(row => row.group === theme); }
+  function presentation(item = {}) { return subtype(item) || own(data.themes, item?.theme) || data.themes.sightseeing; }
   function resolve(item = {}, trip = {}) {
     item = item && typeof item === 'object' ? item : {};
     const theme = Object.hasOwn(data.fallbacks, item.theme) ? item.theme : 'etc';
     const fallback = data.fallbacks[theme];
+    const selected = subtype(item);
+    if (selected) return result(selected.id, 'selected', theme);
     // Explicit reservation kind describes the event itself. Incoming transport
     // segments (item.trans/transits) are deliberately not used to classify POIs.
     if (theme === 'transport' || theme === 'etc') {
@@ -56,5 +64,5 @@
     // semantically broad illustration. Selection is stable across render/order.
     return result(structured.length === 1 ? structured[0] : fallback, matches.length ? 'ambiguous' : 'theme', theme);
   }
-  return Object.freeze({ resolve, normalize, catalog: data.catalog, version: data.version });
+  return Object.freeze({ resolve, normalize, subtype, subtypes, presentation, catalog: data.catalog, version: data.version });
 });

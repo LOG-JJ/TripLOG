@@ -1,0 +1,91 @@
+{
+  "commit": "e27c704fb66e5edfaa34e378ade535420aff99c7",
+  "featureCommit": "bc3f033144259a08245c1efd5d70eb13fab7a7b0",
+  "gitPush": "completed",
+  "expectedBuild": "6b3a327f08d9a044ef0e",
+  "canonicalRebuild": "Rebuilt the exact committed UTF-8 text bytes, including extensionless license notices, to match the deployment environment; only Travel.html and sw.js fingerprint references changed in the follow-up commit.",
+  "validation": {
+    "npmTest": "passed (including 204 CLI process assertions and terminal regression)",
+    "browserSuites": 40,
+    "build": "passed",
+    "sourceAfterCanonicalBuild": "passed",
+    "automaticUpdateBrowserAfterCanonicalBuild": "passed"
+  },
+  "at": "2026-10-17T18:24:29.413Z",
+  "remoteHead": "e27c704fb66e5edfaa34e378ade535420aff99c7",
+  "liveBuild": "6b3a327f08d9a044ef0e",
+  "pageMatches": true,
+  "workerMatches": true,
+  "automaticDeployment": "verified",
+  "url": "https://triplog-5qs.pages.dev/Travel",
+  "assets": [
+    {
+      "file": "app.js",
+      "status": 200,
+      "expectedSha256": "9098ba142bc616033f072752cf3917f32de7f7847f73d35b1ade033b87afcf0e",
+      "liveSha256": "9098ba142bc616033f072752cf3917f32de7f7847f73d35b1ade033b87afcf0e",
+      "matches": true
+    },
+    {
+      "file": "src/app/data/service-config.js",
+      "status": 200,
+      "expectedSha256": "6711077e1a230fddaf0ea71b671800d7601f74b10ad7fc8b92f6ddb4f0d841f6",
+      "liveSha256": "6711077e1a230fddaf0ea71b671800d7601f74b10ad7fc8b92f6ddb4f0d841f6",
+      "matches": true
+    },
+    {
+      "file": "src/app/domain/commands.js",
+      "status": 200,
+      "expectedSha256": "89c471f112ca312cb37ad634c43dea2df1e7809ba8a8858752292ad39855054c",
+      "liveSha256": "89c471f112ca312cb37ad634c43dea2df1e7809ba8a8858752292ad39855054c",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/collaboration/trip-collaboration.js",
+      "status": 200,
+      "expectedSha256": "9f81fb0fdf36e5c4cc9ee1334c785bf7a126fdd4697aeb7c256c5be145432e9e",
+      "liveSha256": "9f81fb0fdf36e5c4cc9ee1334c785bf7a126fdd4697aeb7c256c5be145432e9e",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/itinerary/list-actions.js",
+      "status": 200,
+      "expectedSha256": "f082d9d10ff9a7afa3f881dfab97c47a418e074272be026d8bb9248c55787686",
+      "liveSha256": "f082d9d10ff9a7afa3f881dfab97c47a418e074272be026d8bb9248c55787686",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/travel-companion/model.js",
+      "status": 200,
+      "expectedSha256": "024a2680b9611cb83bbcba4dc251fbe686dba502f454867efd3cca67edb20c74",
+      "liveSha256": "024a2680b9611cb83bbcba4dc251fbe686dba502f454867efd3cca67edb20c74",
+      "matches": true
+    }
+  ],
+  "verified": true,
+  "checkedAt": "2026-10-17T18:24:32.101Z",
+  "verifiedBy": "Live HTML and service-worker fingerprint plus six committed application source assets; remote main matches final commit.",
+  "scope": {
+    "featureFiles": 71,
+    "generatedFiles": [
+      "Travel.html",
+      "sw.js"
+    ],
+    "excluded": [
+      "unfinished city artwork/catalogs",
+      "confirmation and itinerary UI work",
+      "unrelated earlier deployment receipts",
+      "personal skill files outside the repository"
+    ]
+  },
+  "originalCheckout": {
+    "head": "11c803e2789e59d6c00cfd5060b71b8204f73214",
+    "workingFilesChecked": 26,
+    "allPreserved": true,
+    "branchLeftAtOriginalHead": true
+  },
+  "executionCheckout": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261018-cli-deploy\\checkout",
+  "sourceScope": "CLI, native terminal, shared browser/domain integration, project AI guidance, and related retained artifacts",
+  "personalSkill": "Updated on this PC under .codex/skills/triplog; not a website runtime asset",
+  "recordedAt": "2026-10-17T18:25:19.231Z"
+}

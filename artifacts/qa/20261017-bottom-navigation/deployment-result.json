@@ -1,0 +1,97 @@
+{
+  "checkedAt": "2026-10-17T14:00:52.997633+00:00",
+  "url": "https://triplog-5qs.pages.dev/Travel?page=start",
+  "localBuild": "7e787136a186e2cf7123",
+  "liveBuild": "e03d8f6c29901fcfd87a",
+  "verified": true,
+  "comparison": "SHA256 after normalizing CRLF and each build fingerprint; connected host rebuilds from Git",
+  "checks": [
+    {
+      "file": "Travel.html",
+      "status": 200,
+      "matches": true,
+      "expectedSHA256": "1ada59c77a3b20251525f63710ee9c829b44caea2102609b4dbab71a653397e8",
+      "liveSHA256": "1ada59c77a3b20251525f63710ee9c829b44caea2102609b4dbab71a653397e8"
+    },
+    {
+      "file": "app.js",
+      "status": 200,
+      "matches": true,
+      "expectedSHA256": "ef6c23fc6afbec06603330da1ad1f25a747cfb158740b4143e2c1cd86f856440",
+      "liveSHA256": "ef6c23fc6afbec06603330da1ad1f25a747cfb158740b4143e2c1cd86f856440"
+    },
+    {
+      "file": "src/app/navigation/trip-navigation.js",
+      "status": 200,
+      "matches": true,
+      "expectedSHA256": "6f42a34de2b7dd72624ae54c7f656b16747179fe4cd986a5b3a7957ed1b3c305",
+      "liveSHA256": "6f42a34de2b7dd72624ae54c7f656b16747179fe4cd986a5b3a7957ed1b3c305"
+    },
+    {
+      "file": "src/styles/trip-navigation.css",
+      "status": 200,
+      "matches": true,
+      "expectedSHA256": "7fbba2ee727473aa4b661280175485189b3170dd65282cfc0e292100dc689c38",
+      "liveSHA256": "7fbba2ee727473aa4b661280175485189b3170dd65282cfc0e292100dc689c38"
+    },
+    {
+      "file": "src/app/features/redesign/design-workspace.js",
+      "status": 200,
+      "matches": true,
+      "expectedSHA256": "d8e6f177d063ce49dde1b626c4e54cd27caf600f3ba674cecf5b09c88dc4b26e",
+      "liveSHA256": "d8e6f177d063ce49dde1b626c4e54cd27caf600f3ba674cecf5b09c88dc4b26e"
+    },
+    {
+      "file": "src/app/navigation/page-router.js",
+      "status": 200,
+      "matches": true,
+      "expectedSHA256": "3f71d24edd76d273420851aad524c8e7b0ecb194640124e2aa23f14be178e68a",
+      "liveSHA256": "3f71d24edd76d273420851aad524c8e7b0ecb194640124e2aa23f14be178e68a"
+    },
+    {
+      "file": "src/app/features/home/trip-library.js",
+      "status": 200,
+      "matches": true,
+      "expectedSHA256": "d599e9ce7506e984bc588d8d978335fd33332626a1f85c72ed88d2d9006ab287",
+      "liveSHA256": "d599e9ce7506e984bc588d8d978335fd33332626a1f85c72ed88d2d9006ab287"
+    },
+    {
+      "file": "src/styles/trip-library.css",
+      "status": 200,
+      "matches": true,
+      "expectedSHA256": "419e2fb761b8a3242706e20d1e89cb405b9ea86878e4d9d9c09bd6ee473d62d1",
+      "liveSHA256": "419e2fb761b8a3242706e20d1e89cb405b9ea86878e4d9d9c09bd6ee473d62d1"
+    },
+    {
+      "file": "src/app/bootstrap/entry-splash.js",
+      "status": 200,
+      "matches": true,
+      "expectedSHA256": "21b9dac6e49a50f207dfeeb7cb7b021afa608643d06b5b9fe9c852c7c512e1f2",
+      "liveSHA256": "21b9dac6e49a50f207dfeeb7cb7b021afa608643d06b5b9fe9c852c7c512e1f2"
+    },
+    {
+      "file": "sw.js",
+      "status": 200,
+      "matches": true,
+      "expectedSHA256": "eaee3cd9f76aa8ccf1bc54676b80ed08498018ef9771c72cf5bbc1d1728c053f",
+      "liveSHA256": "eaee3cd9f76aa8ccf1bc54676b80ed08498018ef9771c72cf5bbc1d1728c053f"
+    }
+  ],
+  "commit": "10d24729ca3a1a5d70fd5da2376f1ee93d2c05f1",
+  "branch": "main",
+  "remote": "https://github.com/LOG-JJ/TripLOG.git",
+  "scope": [
+    "Fixed bottom navigation with itinerary/expense/report submenus and Settings",
+    "Bundled Motion transitions",
+    "Passport/list trip collection view"
+  ],
+  "validation": {
+    "isolatedSnapshot": "origin/main plus requested changes only",
+    "npm test": "passed",
+    "trip-navigation-browser-regression": "passed",
+    "trip-library-views-browser-regression": "passed",
+    "npm run build": "passed",
+    "push": "passed",
+    "productionFiles": "10 of 10 matched after build-fingerprint and newline normalization"
+  }
+}

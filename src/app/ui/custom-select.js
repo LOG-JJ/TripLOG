@@ -5,6 +5,7 @@ const controlCategoryIcons = { 전체: 'tag', 식비: 'fork-knife', 교통: 'tra
 
 function getSelectPresentation(select) {
   if (select.id === 'itineraryThemeSelect') return 'theme';
+  if (select.id === 'itinerarySubtypeSelect') return 'theme-subtype';
   if (['currencySelect', 'settingsCurrencySelect'].includes(select.id)) return 'currency';
   if (select.id === 'exCategoryFilter') return 'expense-category';
   if (select.id === 'expenseSortSelect') return 'expense-sort';
@@ -34,6 +35,9 @@ function renderSelectOptionContent(item, option, variant) {
     const emoji = controlSpan('control-theme-emoji', controlThemeEmojis[option.value] || '✨');
     emoji.setAttribute('aria-hidden', 'true');
     item.append(emoji, label);
+  } else if (variant === 'theme-subtype') {
+    const subtype = window.TripLog.shared.itineraryArt.catalog[option.value];
+    item.append(controlIcon(subtype?.icon || 'sparkle'), label);
   } else if (variant === 'currency') {
     const currency = getCurrencyMeta(option.value);
     label.textContent = currency.label;
@@ -267,6 +271,9 @@ function syncCustomSelect(select, options = {}) {
       const emoji = controlSpan('control-theme-emoji', controlThemeEmojis[selectedOption?.value] || '✨');
       emoji.setAttribute('aria-hidden', 'true');
       control.value.append(emoji, controlSpan('control-option-label', selectedOption?.textContent || '테마 선택'));
+    } else if (control.variant === 'theme-subtype') {
+      const subtype = window.TripLog.shared.itineraryArt.catalog[selectedOption?.value];
+      control.value.append(controlIcon(subtype?.icon || 'sparkle'), controlSpan('control-option-label', selectedOption?.textContent || '자동'));
     } else {
       control.value.textContent = selectedOption?.textContent || "선택";
     }
@@ -306,7 +313,7 @@ function toggleCustomSelect(select) {
   if (willOpen) {
     if (control.search) { control.search.value = ''; filterCurrencyOptions(select); }
     // Theme follows its trigger on open and on every viewport reposition.
-    const widths = { category: 300, currency: 360, day: 330, 'expense-category': 200, 'expense-sort': 200, 'wallet-sort': 184 };
+    const widths = { theme: rect => Math.max(280, rect.width), 'theme-subtype': 280, category: 300, currency: 360, day: 330, 'expense-category': 200, 'expense-sort': 200, 'wallet-sort': 184 };
     positionFormPopup(control.menu, control.button, widths[control.variant]);
     const selected = control.menu.querySelector(".custom-select-option.selected");
     if (selected && !['theme', 'currency'].includes(control.variant)) control.list.scrollTop = Math.max(0, selected.offsetTop - control.list.clientHeight / 2);

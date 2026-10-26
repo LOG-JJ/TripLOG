@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-10-17T14:44:27.716587+00:00",
+  "url": "https://triplog-5qs.pages.dev/Travel?page=start",
+  "commit": "78750495f6b88dee5f54d87e9c47c0836f3825f8",
+  "localBuild": "a25653a6417610c16550",
+  "liveBuild": "b2f67fb424b98f8c10a9",
+  "verified": true,
+  "checks": [
+    {
+      "file": "Travel.html",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "file": "icons/apple-touch-icon-120-ffe3822b855d.png",
+      "status": 200,
+      "matches": true,
+      "contentType": "image/png",
+      "sha256": "ffe3822b855da7d75472ca3898a4d6c35ec6cfb3b81352909db7459653289e1d"
+    },
+    {
+      "file": "icons/apple-touch-icon-152-f638d0b8522d.png",
+      "status": 200,
+      "matches": true,
+      "contentType": "image/png",
+      "sha256": "f638d0b8522d3ce5fe4b86568e5e2612495baec3a6dfa5305021ceaf0406022e"
+    },
+    {
+      "file": "icons/apple-touch-icon-167-b9945ddee33d.png",
+      "status": 200,
+      "matches": true,
+      "contentType": "image/png",
+      "sha256": "b9945ddee33d3ce9e490165487068bf9ee974dcb33126fb70217e9776f83ac23"
+    },
+    {
+      "file": "icons/apple-touch-icon-180-76ffa94052a4.png",
+      "status": 200,
+      "matches": true,
+      "contentType": "image/png",
+      "sha256": "76ffa94052a4bb98c066401832d699c6edff444c04d2c20c56f21865d7c71045"
+    }
+  ],
+  "physicalIPhoneHomeScreen": "User must confirm the newly added Home Screen icon on the device."
+}

@@ -3,7 +3,7 @@
   let dialog, menu, toolsDialog, returnFocus, draftTripId, ready = false;
   const mapDraftKey = 'triplog.itineraryMapDraft.v1';
   const mapDraftFields = ['itineraryDaySelect', 'itineraryTimeInput', 'itineraryEndTimeInput',
-    'itineraryThemeSelect', 'itineraryTransSelect', 'itineraryPlaceInput', 'itineraryLocationInput',
+    'itineraryThemeSelect', 'itinerarySubtypeSelect', 'itineraryTransSelect', 'itineraryPlaceInput', 'itineraryLocationInput',
     'manualAddressInput', 'itineraryMemoInput', 'itineraryVoucherName', 'itineraryVoucherCode',
     'itineraryTransportName', 'itineraryTransportKind', 'itineraryTransportFrom', 'itineraryTransportTo', 'itineraryArrivalDate'];
   let pendingMapDraft = null, mapDraftAuthObserver;
@@ -54,6 +54,7 @@
     for (const id of mapDraftFields) {
       if (typeof draft.fields[id] === 'string') query(`#${id}`).value = draft.fields[id];
     }
+    syncItinerarySubtype(draft.fields.itinerarySubtypeSelect || '');
     editingItineraryId = draft.editingId || null;
     itineraryCopying = !editingItineraryId && Boolean(draft.copying);
     selectedPlaceCandidate = draft.candidate || null;
@@ -95,6 +96,7 @@
     query("#itineraryEditActions").hidden = !editingItineraryId;
     query("#itineraryEditorTitle").textContent = editingItineraryId ? "장소 수정" : itineraryCopying ? "일정 복사" : "장소 추가";
     els.itinerarySubmitButton.querySelector("span").textContent = editingItineraryId ? "일정 저장" : itineraryCopying ? "복사해서 추가" : "일정에 추가";
+    syncItinerarySubtype();
     const themeIcon = query("[data-itinerary-theme-icon]");
     if (themeIcon) themeIcon.className = `ph ph-${els.itineraryThemeSelect.value === "sightseeing" ? "bank" : (itineraryThemes[els.itineraryThemeSelect.value]?.icon || "map-pin")}`;
     const transport = els.itineraryThemeSelect.value === 'transport';
@@ -233,7 +235,7 @@
     const themeIcon = document.createElement("i");
     themeIcon.dataset.itineraryThemeIcon = ""; themeIcon.setAttribute("aria-hidden", "true");
     els.itineraryThemeSelect.closest(".custom-select").querySelector(".custom-select-button").prepend(themeIcon);
-    els.itineraryThemeSelect.addEventListener("change", () => render());
+    els.itineraryThemeSelect.addEventListener("change", () => { syncItinerarySubtype(''); render(); });
     menu.addEventListener("click", event => { if (event.target.closest("[data-mode]")) menu.close(); });
     query("#itineraryPage").addEventListener("click", event => {
       if (event.target.closest("[data-itinerary-add]")) show();

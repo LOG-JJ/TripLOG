@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "flow": "budget -> reorder -> shared handle drag/keyboard -> persisted manual order",
+  "browser": "Playwright/Edge; Browser plugin not available",
+  "origin": "https://triplog-5qs.pages.dev",
+  "viewports": [
+    "1440x1100",
+    "390x844 touch",
+    "320x740"
+  ],
+  "cases": [
+    "shared dnd-kit list and one handle per row; keyboard reorder without opening the editor",
+    "mouse drag saves only on drop, and Escape cancels the preview",
+    "reload and alternate sort preserve saved manual order, totals, metadata and linked itinerary",
+    "filtered moves leave hidden rows intact; single visible row has no unnecessary move handle",
+    "read-only trips do not expose reorder controls",
+    "native mobile touch drag reorders from its handle without accidental editing",
+    "shared feedback preserves desktop row width and mobile geometry during the drag",
+    "touch cancellation and mobile reload preserve the saved order",
+    "320px layout keeps long descriptions, large amounts and move controls within the viewport",
+    "storage failure is reported without a false success, and controls recover for retry"
+  ],
+  "errors": [],
+  "consoleIssues": [],
+  "fixtureWarnings": [
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Service Worker registration blocked by Playwright",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Service Worker registration blocked by Playwright",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Service Worker registration blocked by Playwright",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Failed to load resource: net::ERR_FAILED",
+    "Service Worker registration blocked by Playwright",
+    "Failed to load resource: net::ERR_FAILED"
+  ],
+  "at": "2026-10-25T16:16:18.111Z"
+}

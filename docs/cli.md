@@ -82,6 +82,10 @@ triplog config show
 
 비밀번호는 터미널에서 숨김 입력합니다. Windows 로그인 세션은 현재 Windows 사용자에게 묶인 DPAPI로 암호화해 `%LOCALAPPDATA%\TripLOG\cli\sessions`에 저장합니다. 프로젝트 파일이나 Git에 인증 토큰을 저장하지 않습니다. 로그아웃은 이 CLI 세션을 대상으로 하며 웹앱 전체 세션을 로그아웃시키지 않습니다. 서버 세션 폐기 여부는 `remoteSessionRevoked`로 구분합니다.
 
+`NETWORK_ERROR`의 `networkCode: UND_ERR_CONNECT_TIMEOUT`은 인증 서버 연결 단계의 시간 초과입니다. Windows에서는 연결 전 실패에 한해 설치된 PowerShell 7의 .NET HTTP/3 전송으로 한 번 복구를 시도합니다. HTTP/3를 지원하는 Windows와 PowerShell 7이 필요하며, 사용할 수 없으면 기존 Node 연결을 한 번 재시도합니다. 성공한 전송 경로는 실행 중인 프로세스의 같은 서버에 대한 로그인·세션 확인·여행 조회·저장에 함께 사용합니다. 모든 시도에는 총 25초 제한이 적용됩니다.
+
+비밀번호 불일치 응답, 인증서 오류, 이미 전송한 요청의 응답 유실은 자동으로 반복하지 않습니다. 비밀번호·토큰은 보조 프로세스의 표준 입력으로만 전달하며 명령행·로그·임시 파일에 기록하지 않습니다. 인증서 검증을 유지하고 다른 주소로의 리디렉션은 차단합니다. TUI 오류는 화면 안에 표시하고, 돌아오면 프로필·이메일을 유지한 채 비밀번호 칸에 다시 입력할 수 있습니다. 계속 실패하면 표시된 연결 코드와 안내를 확인하세요.
+
 자동화나 Windows 이외의 환경에서는 비밀 저장소가 제공하는 사용자 액세스 토큰을 `TRIPLOG_ACCESS_TOKEN` 환경변수로 전달합니다. 환경변수 인증은 세션 파일을 만들지 않으며 토큰 갱신은 호출자가 담당합니다. 토큰을 명령 인자나 문서에 입력하지 마세요. 현재 영구 로그인 저장은 Windows를 지원합니다.
 
 환경변수 토큰 모드에서는 `auth login/logout` 대신 호출 환경의 토큰을 설정·해제합니다. CLI가 상위 셸의 환경변수를 지우거나 외부 토큰을 폐기했다고 표시하지 않습니다.
@@ -132,7 +136,7 @@ triplog trip restore --trip TRIP_ID
 
 | 영역 | 명령 | 주요 입력 |
 | --- | --- | --- |
-| 일정 | `itinerary list/show/add/update/remove/move/complete/lock` | `--date`, `--time`, `--end-time`, `--place`, `--location`, `--memo`, `--trans`, `--duration`, `--cost`, `--sync-expense true` |
+| 일정 | `itinerary list/show/add/update/remove/move/complete/lock` | `--date`, `--time`, `--end-time`, `--place`, `--location`, `--theme`, `--theme-subtype`, `--memo`, `--trans`, `--duration`, `--cost`, `--sync-expense true` |
 | 지출 | `expense list/show/add/update/remove/summary` | `--date`, `--category`, `--description`, `--amount`, `--payer`, `--payment-method card\|cash` |
 | 준비물 | `packing list/show/add/update/remove/move/check` | `--name`, `--checked true\|false` |
 | 동행인 | `companion list/show/add/update/remove` | `--name`, `--individual-spent` |
@@ -141,6 +145,8 @@ triplog trip restore --trip TRIP_ID
 조회는 `--query`로 검색하고 일정·지출·예약 목록은 `--date`로 필터링할 수 있습니다. 준비물 `check`, 일정 `complete/lock`은 `--unchecked`로 해제합니다. `move --id ITEM_ID --target OTHER_ID --placement before|after`는 순서를 바꿉니다. 일정 이동은 같은 날짜 안에서 지원하며 시간을 바꾸지 않습니다.
 
 일정의 `--cost`, `--duration`은 원화 비용과 분 단위 이동 시간입니다. `--sync-expense true`로 연결한 교통 지출은 일정 변경·삭제와 함께 한 서버 요청에 포함됩니다. 연결 지출의 금액·날짜는 `itinerary update`로 수정합니다. 독립 지출을 삭제하면 해당 일정의 지출 연결을 해제합니다.
+
+일정 테마는 `sightseeing`, `food`, `lodging`, `shopping`, `transport`, `etc`이며, 선택 사항인 `themeSubtype`으로 PDF와 같은 50개 유형을 지정할 수 있습니다. 예를 들어 `--theme food --theme-subtype cafe`는 카페입니다. 사용 가능한 ID와 소속 테마는 `schema itinerary --json`의 `themeSubtypes`를 확인합니다. 테마만 변경하면 이전 세부 분류를 초기화하고, 테마에 맞지 않는 조합은 거부합니다. JSON 입력에서 `"themeSubtype":""`로 지정하면 자동 판별로 돌립니다. 앱의 일정표 라벨·아이콘과 PDF 그림은 직접 선택한 유형을 우선 사용합니다.
 
 결제자는 `leader` 또는 `companion:동행인ID`입니다. 지출이나 직접 입력 분담금이 남은 동행인을 지우려면 먼저 결제자·분담금을 옮깁니다. 사전구매 일자는 `__pretrip__`입니다.
 

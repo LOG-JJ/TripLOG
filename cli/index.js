@@ -16,12 +16,13 @@ const { report } = require('./commands/report');
 const { exportBackup, importBackup } = require('./commands/backup');
 const { note, comment } = require('./commands/documents');
 const { attachment } = require('./commands/attachments');
+const ItineraryArt = require('../src/app/data/itinerary-art');
 function bool(value, label) { if (value === true || value === 'true') return true; if (value === false || value === 'false') return false; fail('USAGE', `${label}는 true 또는 false입니다.`); }
 const requireValue = (value, name) => { if (!value) fail('USAGE', `${name} 옵션이 필요합니다.`); return value; };
 async function dataFor(kind, options) {
   const data = options.file ? await readJson(options.file) : options.data ? parseJson(options.data) : {};
   if (!data || typeof data !== 'object' || Array.isArray(data)) fail('INVALID_INPUT', '입력은 JSON 객체여야 합니다.');
-  const mapping = { name: kind === 'trip' ? 'tripName' : 'name', country: 'country', countryCode: 'countryCode', city: 'city', mode: kind === 'trip' ? 'travelMode' : 'mode', start: 'startDate', end: 'endDate', date: 'date', time: 'time', endTime: 'endTime', place: 'place', location: 'location', category: 'category', description: 'description', amount: 'amount', foreignAmount: 'foreignAmount', currency: kind === 'trip' ? 'currencyCode' : 'currency', exchangeRate: 'exchangeRate', exchangeBase: 'exchangeBase', paymentDate: 'paymentDate', paymentMethod: 'paymentMethod', payer: 'payerKey', note: 'note', memo: 'memo', theme: 'theme', trans: 'trans', duration: 'duration', cost: 'cost', syncExpense: 'syncExpense', individualSpent: 'individualSpent', checked: 'checked', type: 'type', title: 'title', reference: 'reference', endDate: 'endDate', arrivalDate: 'arrivalDate', transportKind: 'transportKind', from: 'from', to: 'to', url: 'url' };
+  const mapping = { name: kind === 'trip' ? 'tripName' : 'name', country: 'country', countryCode: 'countryCode', city: 'city', mode: kind === 'trip' ? 'travelMode' : 'mode', start: 'startDate', end: 'endDate', date: 'date', time: 'time', endTime: 'endTime', place: 'place', location: 'location', category: 'category', description: 'description', amount: 'amount', foreignAmount: 'foreignAmount', currency: kind === 'trip' ? 'currencyCode' : 'currency', exchangeRate: 'exchangeRate', exchangeBase: 'exchangeBase', paymentDate: 'paymentDate', paymentMethod: 'paymentMethod', payer: 'payerKey', note: 'note', memo: 'memo', theme: 'theme', themeSubtype: 'themeSubtype', trans: 'trans', duration: 'duration', cost: 'cost', syncExpense: 'syncExpense', individualSpent: 'individualSpent', checked: 'checked', type: 'type', title: 'title', reference: 'reference', endDate: 'endDate', arrivalDate: 'arrivalDate', transportKind: 'transportKind', from: 'from', to: 'to', url: 'url' };
   const numeric = new Set(['amount', 'foreignAmount', 'exchangeRate', 'exchangeBase', 'duration', 'cost', 'individualSpent']);
   for (const [option, field] of Object.entries(mapping)) if (options[option] !== undefined) {
     let value = options[option];
@@ -53,7 +54,11 @@ async function dispatch(positionals, options) {
   if (options.help || !group || group === 'help') return help(group === 'help' ? action : group);
   if (!Object.hasOwn(commands, group) || (group !== 'schema' && !commands[group].includes(action)) || rest.length || (subaction && !(group === 'dev' && action === 'deploy'))) fail('USAGE', '지원하지 않는 명령입니다. triplog --help를 확인해 주세요.');
   validateOptions(group, action, subaction, options);
-  if (group === 'schema') { if (!Object.hasOwn(Domain.fields, action)) fail('USAGE', 'schema 다음에 데이터 영역을 지정해 주세요.'); return { kind: action, fields: Domain.fields[action].split(' '), exampleInput: '--file input.json', managedFields: ['id', 'createdAt', 'expenseId', 'linkedReservationId'] }; }
+  if (group === 'schema') {
+    if (!Object.hasOwn(Domain.fields, action)) fail('USAGE', 'schema 다음에 데이터 영역을 지정해 주세요.');
+    return { kind: action, fields: Domain.fields[action].split(' '), exampleInput: '--file input.json', managedFields: ['id', 'createdAt', 'expenseId', 'linkedReservationId'],
+      ...(action === 'itinerary' ? { themeSubtypes: Object.fromEntries(Object.entries(ItineraryArt.themes).map(([theme, meta]) => [theme, { label: meta.label, types: Object.values(ItineraryArt.catalog).filter(row => row.group === theme).map(({ id, label }) => ({ id, label })) }])) } : {}) };
+  }
   if (options.dryRun && (['auth', 'config', 'operation'].includes(group) || group === 'dev' && ['serve', 'doctor'].includes(action))) fail('USAGE', '이 명령은 --dry-run을 지원하지 않습니다.');
   if (group === 'dev') return require('./commands/dev').execute(action, subaction, options);
   if (group === 'config') {

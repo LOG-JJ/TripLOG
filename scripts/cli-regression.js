@@ -46,10 +46,16 @@ async function main() {
     await cli(['expense', 'add', ...fileArgs, '--date', '2026-02-30', '--category', '식비', '--description', '잘못된 날짜', '--amount', '1'], { code: 2 });
     await cli(['expense', 'add', ...fileArgs, '--date', '2026-11-07', '--category', '식비', '--description', '잘못된 금액', '--amount', '-1'], { code: 2 });
     await cli(['expense', 'add', ...fileArgs, '--data', '{"__proto__":{}}'], { code: 2 });
-    await cli(['itinerary', 'add', ...fileArgs, '--date', '2026-11-07', '--time', '10:00', '--place', '국가정원', '--cost', '5000', '--duration', '20', '--sync-expense', 'true']);
+    await cli(['itinerary', 'add', ...fileArgs, '--date', '2026-11-07', '--time', '10:00', '--place', '국가정원', '--theme-subtype', 'garden', '--cost', '5000', '--duration', '20', '--sync-expense', 'true']);
     const plans = await cli(['itinerary', 'list', '--store', store, '--trip', trip]); const item = plans[0];
+    assert.equal(item.themeSubtype, 'garden');
+    await cli(['itinerary', 'update', ...fileArgs, '--id', item.id, '--theme-subtype', 'cafe'], { code: 2 });
     assert.equal((await cli(['expense', 'summary', '--store', store, '--trip', trip])).total, 23000);
     await cli(['itinerary', 'update', ...fileArgs, '--id', item.id, '--cost', '6500']);
+    assert.equal((await cli(['itinerary', 'show', '--store', store, '--trip', trip, '--id', item.id])).themeSubtype, 'garden');
+    await cli(['itinerary', 'update', ...fileArgs, '--id', item.id, '--theme', 'food']);
+    assert.equal((await cli(['itinerary', 'show', '--store', store, '--trip', trip, '--id', item.id])).themeSubtype, undefined);
+    await cli(['itinerary', 'update', ...fileArgs, '--id', item.id, '--theme', 'sightseeing', '--theme-subtype', 'garden']);
     assert.equal((await cli(['expense', 'summary', '--store', store, '--trip', trip])).total, 24500);
     await cli(['itinerary', 'add', ...fileArgs, '--date', '2026-11-07', '--time', '12:00', '--place', '습지']);
     const second = (await cli(['itinerary', 'list', '--store', store, '--trip', trip]))[1];
@@ -97,8 +103,9 @@ async function main() {
     const created = await cli(['trip', 'create', '--name', '서버 CLI 여행', '--start', '2026-11-07', '--end', '2026-11-09']);
     const serverId = created.tripId;
     await cli(['auth', 'status']); await cli(['trip', 'show', '--trip', created.appTripId]);
-    await cli(['itinerary', 'add', '--trip', serverId, '--date', '2026-11-07', '--time', '10:00', '--place', '국가정원', '--cost', '4000', '--sync-expense', 'true']);
+    await cli(['itinerary', 'add', '--trip', serverId, '--date', '2026-11-07', '--time', '10:00', '--place', '국가정원', '--theme-subtype', 'garden', '--cost', '4000', '--sync-expense', 'true']);
     const remoteItem = (await cli(['itinerary', 'list', '--trip', serverId]))[0];
+    assert.equal(remoteItem.themeSubtype, 'garden', 'Cloud fixture retains the selected subtype');
     await cli(['itinerary', 'update', '--trip', serverId, '--id', remoteItem.id, '--cost', '6000']);
     assert.equal((await cli(['expense', 'summary', '--trip', serverId])).total, 6000);
     const writeCount = fixture.requests.filter(row => row.action === 'apply').length;

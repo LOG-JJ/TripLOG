@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "origin": "https://triplog-5qs.pages.dev",
+  "commit": "7178cf3bcbcd6137557241ebe4c31a65d772ffeb",
+  "build": "e6c39004269505f57f29",
+  "browser": "Playwright/Edge; Browser plugin not available",
+  "fixturesOnly": true,
+  "externalRequestsBlocked": true,
+  "liveDataModified": false,
+  "actualIPhoneVerified": false,
+  "suites": [
+    {
+      "suite": "itinerary-default-date-browser-regression.js",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "suite": "controls-browser-regression.js",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "suite": "expense-order-browser-regression.js",
+      "exitCode": 0,
+      "passed": true
+    }
+  ],
+  "measurement": "Expense geometry is queried and measured atomically from the current DOM. Initial locator measurements observed detached rows (zero/null); immediate diagnostics showed visible 44px controls. Production modules and original assertions are unchanged.",
+  "artifactDirectory": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261018-cli-deploy\\checkout\\artifacts\\tmp\\20261026-schedule-release-production",
+  "checkedAt": "2026-10-26T06:25:15.438Z",
+  "captures": [
+    {
+      "file": "production-lodging-start-end-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261018-cli-deploy\\checkout\\artifacts\\tmp\\20261026-schedule-release-production\\controls\\lodging-start-end-390.png",
+      "sha256": "ca8c1c62d9e22d3986d6d12044e3782520a8e0716cbcb27e10ed1711b7fce21c"
+    },
+    {
+      "file": "production-expense-handles-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261018-cli-deploy\\checkout\\artifacts\\tmp\\20261026-schedule-release-production\\expense-order-browser\\reorder-mobile-390.png",
+      "sha256": "84bdb698281a004dac003360d6120f0353158f528b7c27a531448a0db79b8543"
+    },
+    {
+      "file": "production-current-day-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261018-cli-deploy\\checkout\\artifacts\\tmp\\20261026-schedule-release-production\\itinerary-default-date\\current-day-mobile-390.png",
+      "sha256": "4b8c935fab3ef6dfcd6c82b8ce1c12fee03fa7eb58f23fb789889bcaaddb218b"
+    }
+  ],
+  "initialMeasurementFailures": [
+    {
+      "file": "artifacts\\tmp\\20261026-schedule-release\\production-expense-order-initial-failure.log",
+      "sha256": "01dec2701173c5297bf42f20ccacc0f509506d23bda451c084e6d12cf9d31dcc"
+    },
+    {
+      "file": "artifacts\\tmp\\20261026-schedule-release\\production-expense-order-second-failure.log",
+      "sha256": "f9df12ed674f2cd0164135a01af53f4e61f1a48176514d104a8c06fbe3595b14"
+    }
+  ]
+}

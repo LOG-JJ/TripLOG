@@ -20,6 +20,15 @@ let itinerarySubmissionPending = false;
 const itineraryDeletionsPending = new Set();
 let initialPlaceCandidate = null;
 let itineraryCopying = false;
+function syncItinerarySubtype(value = els.itinerarySubtypeSelect.value) {
+  const select = els.itinerarySubtypeSelect, theme = els.itineraryThemeSelect.value;
+  if (select.dataset.theme !== theme) {
+    select.dataset.theme = theme;
+    select.replaceChildren(new Option('자동', ''), ...window.TripLog.shared.itineraryArt.subtypes(theme).map(row => new Option(row.label, row.id)));
+  }
+  select.value = window.TripLog.shared.itineraryArt.subtype({ theme, themeSubtype: value }) ? value : '';
+  syncCustomSelect(select);
+}
 async function handleItinerarySubmit(event) {
   event.preventDefault();
   if (itinerarySubmissionPending) return;
@@ -88,6 +97,7 @@ async function saveItineraryForm(event) {
     mapQuery: candidateSelected ? (selectedPlaceCandidate.mapQuery || "") : (existingPlaceUnchanged ? existingItem.mapQuery || "" : ""),
     memo: els.itineraryMemoInput.value.trim(),
     theme,
+    themeSubtype: els.itinerarySubtypeSelect.value,
     trans,
     transits,
     voucherName,
@@ -107,6 +117,8 @@ async function saveItineraryForm(event) {
     googlePlaceId: "",
     createdAt: existingItem ? existingItem.createdAt : Date.now(),
   };
+
+  if (!window.TripLog.shared.itineraryArt.subtype(item)) delete item.themeSubtype;
 
   if (theme === 'transport') {
     item.transportReservation = { kind: transportInput('itineraryTransportKind'), from: transportInput('itineraryTransportFrom'), to: transportInput('itineraryTransportTo'), arrivalDate: transportInput('itineraryArrivalDate') };
@@ -139,7 +151,7 @@ async function saveItineraryForm(event) {
   if (existingItem) {
     // This editor owns place, schedule, memo and voucher inputs. Opening it or
     // saving an unrelated field must not turn display defaults into new writes.
-    const unchanged = ['time', 'endTime', 'memo', 'voucherName', 'voucherCode', 'voucherFile', 'voucherFileName']
+    const unchanged = ['time', 'endTime', 'memo', 'themeSubtype', 'voucherName', 'voucherCode', 'voucherFile', 'voucherFileName']
       .filter(key => String(item[key] ?? '') === String(existingItem[key] ?? ''));
     if (theme === (existingItem.theme || 'sightseeing')) unchanged.push('theme');
     if (existingPlaceUnchanged && (!candidateSelected || selectedPlaceCandidate === initialPlaceCandidate)) {
@@ -202,6 +214,7 @@ function startItineraryEdit(item, { copy = false } = {}) {
   els.itineraryEndTimeInput.value = item.endTime || "";
   els.itineraryTransSelect.value = "none";
   els.itineraryThemeSelect.value = item.theme || "sightseeing";
+  syncItinerarySubtype(item.themeSubtype || '');
   els.itineraryPlaceInput.value = item.place || "";
   els.itineraryLocationInput.value = item.location || "";
   els.manualAddressInput.value = item.location || "";
@@ -250,6 +263,7 @@ function clearItineraryEditMode(shouldRender = true) {
   els.itineraryDaySelect.value = state.selectedItineraryDate || state.startDate;
   els.itineraryTransSelect.value = "none";
   els.itineraryThemeSelect.value = "sightseeing";
+  syncItinerarySubtype('');
   els.itineraryLocationInput.value = "";
   els.manualAddressInput.value = "";
   

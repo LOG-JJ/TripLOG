@@ -1,0 +1,61 @@
+{
+  "checked_at": "2026-10-17T12:19:25.361Z",
+  "commit": "150be220d618961b9f163dbc7d867b1780490c17",
+  "url": "https://triplog-5qs.pages.dev/Travel?page=start",
+  "expected_local_build": "066d3dfda0cca3d0abd9",
+  "live_build": "5f68aaac07960e3f86db",
+  "splash_present": true,
+  "checks": [
+    {
+      "file": "Travel.html",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "a7a993a1e557870ad8c5c56bdfc4355becf4b9f25b8eb32ebac3995bd4358d09",
+      "live_sha256": "a7a993a1e557870ad8c5c56bdfc4355becf4b9f25b8eb32ebac3995bd4358d09"
+    },
+    {
+      "file": "app.js",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "93999c304f6232d1b9b5f9f7f7bd82bfe498b4b9f1a8c4e02991d2b2316d6934",
+      "live_sha256": "93999c304f6232d1b9b5f9f7f7bd82bfe498b4b9f1a8c4e02991d2b2316d6934"
+    },
+    {
+      "file": "src/app/bootstrap/entry-splash.js",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "12079655c3bd55aad2be57396574328a2ce55d30c00c116c84d75431a3f99989",
+      "live_sha256": "12079655c3bd55aad2be57396574328a2ce55d30c00c116c84d75431a3f99989"
+    },
+    {
+      "file": "src/styles/entry-splash.css",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "4d4c1d0df090df39a66b22c09881940f629919ec9b894eff13e097ff9a7f98d4",
+      "live_sha256": "4d4c1d0df090df39a66b22c09881940f629919ec9b894eff13e097ff9a7f98d4"
+    },
+    {
+      "file": "src/app/features/collaboration/trip-collaboration.js",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "e68f2e76ce46c4df2689ef70b8f3888d52e142c07bd1a2bbce54bdd149bf514c",
+      "live_sha256": "e68f2e76ce46c4df2689ef70b8f3888d52e142c07bd1a2bbce54bdd149bf514c"
+    },
+    {
+      "file": "vendor/motion-14.3.0.min.js",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "546d8f1f6731309393ce1eb3729823ca3d9822d316a689d977721a3709b90351",
+      "live_sha256": "546d8f1f6731309393ce1eb3729823ca3d9822d316a689d977721a3709b90351"
+    },
+    {
+      "file": "sw.js",
+      "status": 200,
+      "matches": true,
+      "expected_sha256": "a70c31a0caeb2fa1dc33c510275a04a12bc015854e0824cf67b74ce98ac454e4",
+      "live_sha256": "a70c31a0caeb2fa1dc33c510275a04a12bc015854e0824cf67b74ce98ac454e4"
+    }
+  ],
+  "verified": true,
+  "comparison": "SHA256 after CRLF normalization and replacement of each build fingerprint (hosting rebuilds from Git)."
+}

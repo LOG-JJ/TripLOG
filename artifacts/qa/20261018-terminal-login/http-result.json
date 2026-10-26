@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "cases": [
+    "pre-connection failure recovers over HTTP/3 and subsequent same-origin requests reuse the working transport",
+    "cloud synchronization uses the same recovery path after login",
+    "lost responses, certificate errors and HTTP failures never replay a credential or write request",
+    "an uncertain HTTP/3 response is not followed by another request",
+    "missing optional Windows runtime and other platforms retain bounded Node connection retry",
+    "helper preserves Unicode credentials in stdin only, ignores stderr and reconstructs response headers/body",
+    "helper blocks redirects, retains TLS failures, handles missing runtime and accepts empty 204 responses",
+    "user cancellation and the shared deadline terminate the owned helper process"
+  ],
+  "at": "2026-10-18T05:35:37.220Z"
+}

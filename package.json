@@ -14,7 +14,7 @@
     "terminal:demo": "node bin/triplog.js ui --demo",
     "test:terminal": "node scripts/terminal-regression.js",
     "test:terminal:visual": "node scripts/terminal-visual-regression.js",
-    "test:cli": "node scripts/cli-regression.js",
+    "test:cli": "node scripts/cli-regression.js && node scripts/cli-auth-regression.js && node scripts/cli-http-regression.js",
     "prepare:sync": "node scripts/prepare-sync-assets.js",
     "artifacts:check": "node scripts/artifacts-check.js",
     "preview": "node scripts/serve-test.js",
