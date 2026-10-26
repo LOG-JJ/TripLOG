@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "build": "01c248a73b9d74a475f1",
+  "deployed": false,
+  "behavior": "Theme and subtype menus follow trigger width and left edge; theme is one column; long subtype labels wrap without horizontal overflow.",
+  "viewports": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "checks": [
+    "source integrity passed",
+    "itinerary controls: matched menu width/left at 1440/390/320 and live resize passed",
+    "subtypes: matched width/left/right at 320/390/768/1440, 44px rows, long text wrap, selection/save/copy/reload/draft/PDF passed",
+    "shared controls browser passed",
+    "build and artifact layout passed"
+  ],
+  "captures": [
+    {
+      "file": "theme-menu-320.png",
+      "sha256": "ed4cfe0f135cc0195da9174748d0536b97da3f61c24ae58de6d1671b65c3f343"
+    },
+    {
+      "file": "subtype-menu-390.png",
+      "sha256": "91f51b1978f2ad5274313928231e3a74e8ef92b5c458de113050de90b03617bc"
+    },
+    {
+      "file": "long-subtype-menu-320.png",
+      "sha256": "7504f278685993ff7393d998019ec270f9850806e3c675963b44b3259690cfea"
+    }
+  ]
+}

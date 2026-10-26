@@ -312,8 +312,8 @@ function toggleCustomSelect(select) {
 
   if (willOpen) {
     if (control.search) { control.search.value = ''; filterCurrencyOptions(select); }
-    // Theme follows its trigger on open and on every viewport reposition.
-    const widths = { theme: rect => Math.max(280, rect.width), 'theme-subtype': 280, category: 300, currency: 360, day: 330, 'expense-category': 200, 'expense-sort': 200, 'wallet-sort': 184 };
+    // Theme and subtype use the default trigger width, including on resize.
+    const widths = { category: 300, currency: 360, day: 330, 'expense-category': 200, 'expense-sort': 200, 'wallet-sort': 184 };
     positionFormPopup(control.menu, control.button, widths[control.variant]);
     const selected = control.menu.querySelector(".custom-select-option.selected");
     if (selected && !['theme', 'currency'].includes(control.variant)) control.list.scrollTop = Math.max(0, selected.offsetTop - control.list.clientHeight / 2);

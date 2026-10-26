@@ -53,10 +53,12 @@ async function main() {
         const box = menu.getBoundingClientRect(), trigger = document.querySelector('#itinerarySubtypeSelectButton').getBoundingClientRect();
         const fields = document.querySelector('.itinerary-theme-fields');
         return { x: box.x, right: box.right, y: box.y, bottom: box.bottom, width: box.width, row: menu.querySelector('button').getBoundingClientRect().height,
-          columns: getComputedStyle(fields).gridTemplateColumns.split(' ').length, triggerWidth: trigger.width };
+          columns: getComputedStyle(fields).gridTemplateColumns.split(' ').length, triggerWidth: trigger.width, triggerLeft: trigger.left, triggerRight: trigger.right, scrollWidth: menu.scrollWidth, clientWidth: menu.clientWidth };
       });
       assert(metrics.x >= 0 && metrics.right <= width && metrics.y >= 0 && metrics.bottom <= 900, JSON.stringify(metrics));
       assert.equal(metrics.columns, 2);
+      assert(Math.abs(metrics.width - metrics.triggerWidth) < 1 && Math.abs(metrics.x - metrics.triggerLeft) < 1 && Math.abs(metrics.right - metrics.triggerRight) < 1, JSON.stringify(metrics));
+      assert(metrics.scrollWidth <= metrics.clientWidth + 1, 'Subtype options stay inside the matched menu width');
       assert(metrics.row >= 44);
       await capture(`cafe-menu-${width}`);
       await page.keyboard.press('Escape');
@@ -135,11 +137,23 @@ async function main() {
     await page.evaluate(row => window.TripLog.sync.drafts.resume(row), draft);
     assert.equal(await page.locator('#itineraryThemeSelect').inputValue(), 'shopping');
     assert.equal(await page.locator('#itinerarySubtypeSelect').inputValue(), 'market');
+    await page.setViewportSize({ width: 320, height: 844 });
+    await chooseTheme('lodging');
+    await page.locator('#itinerarySubtypeSelectButton').click();
+    const longLabel = await page.locator('#itinerarySubtypeSelectMenu').evaluate(menu => {
+      const box = menu.getBoundingClientRect(), field = document.querySelector('#itinerarySubtypeSelectButton').getBoundingClientRect();
+      const option = menu.querySelector('[data-value="hostel"]'), label = option.querySelector('.control-option-label');
+      return { width: box.width, fieldWidth: field.width, left: box.left, fieldLeft: field.left, menuWidth: menu.clientWidth, menuScroll: menu.scrollWidth, labelWidth: label.clientWidth, labelScroll: label.scrollWidth, labelHeight: label.getBoundingClientRect().height, lineHeight: parseFloat(getComputedStyle(label).lineHeight), rowHeight: option.getBoundingClientRect().height };
+    });
+    assert(Math.abs(longLabel.width - longLabel.fieldWidth) < 1 && Math.abs(longLabel.left - longLabel.fieldLeft) < 1, JSON.stringify(longLabel));
+    assert(longLabel.menuScroll <= longLabel.menuWidth + 1 && longLabel.labelScroll <= longLabel.labelWidth + 1 && longLabel.labelHeight > longLabel.lineHeight && longLabel.rowHeight >= 44, JSON.stringify(longLabel));
+    await capture('long-subtype-menu-320');
+    await page.keyboard.press('Escape');
     await page.locator('#itineraryEditorClose').click();
     await page.setViewportSize({ width: 390, height: 844 }); await capture('timeline-mobile');
     assert.deepEqual(errors, []);
     fs.writeFileSync(path.join(output, 'result.json'), JSON.stringify({ ok: true, origin, browser: 'Playwright / Edge', fallback: 'Browser plugin not available', viewports: [320, 390, 768, 1440], errors, checked: ['50 shared types', 'dependent options', 'save/reload/edit/copy', 'manual PDF artwork and icons', 'automatic fallback', 'theme reset', 'legacy items', 'draft recovery', 'scroll and keyboard focus'] }, null, 2));
-    console.log(`PASS itinerary subtypes: dependent selection, manual labels/icons/PDF, save/reload/copy, automatic fallback, theme reset, legacy preservation, drafts and 320/390/768/1440 layout. ${output}`);
+    console.log(`PASS itinerary subtypes: matched field/menu width, wrapped long labels, dependent selection, manual labels/icons/PDF, save/reload/copy, automatic fallback, theme reset, legacy preservation, drafts and 320/390/768/1440 layout. ${output}`);
   } catch (error) {
     if (page) await page.screenshot({ path: path.join(output, 'failure.png'), fullPage: true }).catch(() => {});
     throw error;
