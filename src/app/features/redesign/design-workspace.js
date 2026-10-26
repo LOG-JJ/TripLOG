@@ -171,9 +171,9 @@
     $('#rdTripChooserList').setAttribute('aria-busy', String(Boolean(removingTripId)));
     $('#rdTripChooserList').innerHTML=matching.length?matching.map(trip=>{
       const current=trip.id===state.id, past=trip.endDate&&trip.endDate<today;
-      const name=trip.tripName||'새로운 여행', deleteDisabled=trips.length<=1||Boolean(removingTripId);
+      const name=trip.tripName||'새로운 여행', deleteDisabled=Boolean(removingTripId);
       const thumbnail=/서울/.test(trip.city||'')?'<img src="src/assets/seoul-tower.png" alt="">':icon(trip.travelMode==='overseas'?'airplane-tilt':'suitcase-rolling');
-      return `<div class="rd-trip-choice ${current?'is-current':''}"><button type="button" class="rd-trip-choice-select" data-rd-action="trip-select" data-id="${text(trip.id)}" aria-pressed="${current}" ${removingTripId?'disabled':''}><span class="rd-trip-thumbnail">${thumbnail}</span><span class="rd-trip-choice-copy"><strong>${text(name)}</strong><span>${text([trip.city,trip.country].filter(Boolean).join(' · ')||'목적지 미정')}</span><small>${text(trip.startDate?.slice(0,4)||'')} · ${period(trip)} · ${duration(trip)}</small>${current?'<em>현재 여행</em>':past?'<em class="is-past">MEMORIES</em>':''}</span>${icon(current?'radio-button':'circle')}</button><button type="button" class="rd-trip-delete" data-rd-action="trip-choice-delete" data-id="${text(trip.id)}" aria-label="${text(name)} 여행 삭제" title="${trips.length<=1?'마지막 여행은 삭제할 수 없어요':'여행 삭제'}" ${deleteDisabled?'disabled':''}>${icon('trash')}</button></div>`;
+      return `<div class="rd-trip-choice ${current?'is-current':''}"><button type="button" class="rd-trip-choice-select" data-rd-action="trip-select" data-id="${text(trip.id)}" aria-pressed="${current}" ${removingTripId?'disabled':''}><span class="rd-trip-thumbnail">${thumbnail}</span><span class="rd-trip-choice-copy"><strong>${text(name)}</strong><span>${text([trip.city,trip.country].filter(Boolean).join(' · ')||'목적지 미정')}</span><small>${text(trip.startDate?.slice(0,4)||'')} · ${period(trip)} · ${duration(trip)}</small>${current?'<em>현재 여행</em>':past?'<em class="is-past">MEMORIES</em>':''}</span>${icon(current?'radio-button':'circle')}</button><button type="button" class="rd-trip-delete" data-rd-action="trip-choice-delete" data-id="${text(trip.id)}" aria-label="${text(name)} 여행 삭제" title="여행 삭제" ${deleteDisabled?'disabled':''}>${icon('trash')}</button></div>`;
     }).join(''):`<div class="rd-trip-search-empty">${icon('magnifying-glass')}<strong>검색 결과가 없어요</strong><p>다른 여행 이름이나 여행지를 입력해 보세요.</p></div>`;
   }
   async function removeTripFromChooser(id) {
@@ -182,8 +182,7 @@
     removingTripId=id;
     renderTripChooser();
     try {
-      const removed=await window.TripLog.persistence.stateStorage.deleteTrip(id);
-      if (removed) showToast('여행을 목록에서 삭제했어요.');
+      await window.TripLog.persistence.stateStorage.deleteTrip(id);
     } finally {
       removingTripId='';
       if (chooser.open) {

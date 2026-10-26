@@ -34,6 +34,9 @@ async function main() {
       });
       await page.goto(`${origin}/Travel?page=budget`); await waitForApp(page);
       await page.waitForFunction(() => document.querySelectorAll('#rdExpenseList tr:not([data-dnd-placeholder])').length === 6);
+      // Rows can exist while the initial account/route transition still hides
+      // the page. Geometry checks require the rendered budget, not only its DOM.
+      await page.locator('#rdExpenseList .ex-drag-handle').first().waitFor({ state: 'visible' });
       return { page, context };
     };
     const rowIds = page => page.locator('#rdExpenseList tr:not([data-dnd-placeholder])').evaluateAll(rows => rows.map(row => row.dataset.id));

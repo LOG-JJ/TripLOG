@@ -79,16 +79,16 @@
       </div>
     </section>`;
   }
-  function card(trip, date, canRemove) {
+  function card(trip, date) {
     const [city, country] = destination(trip), group = status(trip, date), name = trip.tripName || '새로운 여행';
     return `<div class="tl-passport-entry"><button type="button" class="tl-passport cover-${cover(trip)}" data-library-trip="${text(trip.id)}" aria-label="${text(name)} 여행 열기" ${opening || removing ? 'disabled' : ''}>
       <img class="tl-passport-art" src="src/assets/home-passport-${cover(trip)}.webp" alt="" width="174" height="268" loading="lazy" decoding="async">
       <span class="tl-passport-head"><img src="src/assets/triplog-wordmark.png" alt="" width="48" height="16">${icon('airplane-tilt')}</span>
       <span class="tl-passport-copy"><strong>${text(name)}</strong><span class="tl-passport-dates">${text(dates(trip))}</span><span class="tl-passport-status is-${group}">${opening === trip.id ? '여는 중' : text(badge(trip, date))}</span></span>
       <span class="tl-passport-foot"><span><b>${text(city)}</b><small>${text(country)}</small></span>${icon('identification-card')}</span>
-    </button><button type="button" class="tl-passport-remove" data-library-remove="${text(trip.id)}" aria-label="${text(name)} 여행 제거" title="${canRemove ? '여행 제거' : '마지막 여행은 삭제할 수 없어요'}" ${opening || removing || !canRemove ? 'disabled' : ''}>${icon(removing === trip.id ? 'hourglass' : 'x')}</button></div>`;
+    </button><button type="button" class="tl-passport-remove" data-library-remove="${text(trip.id)}" aria-label="${text(name)} 여행 삭제" title="여행 삭제" ${opening || removing ? 'disabled' : ''}>${icon(removing === trip.id ? 'hourglass' : 'x')}</button></div>`;
   }
-  function listCard(trip, date, canRemove) {
+  function listCard(trip, date) {
     const group = status(trip, date), name = trip.tripName || '새로운 여행';
     const place = [trip.city, trip.country].filter(Boolean).join(' · ') || '목적지 미정';
     const label = group === 'upcoming' ? badge(trip, date).replace(`${statusLabels.upcoming} · `, '')
@@ -99,7 +99,7 @@
         <span class="tl-trip-row-copy"><strong>${text(name)}</strong><span class="tl-trip-row-destination">${icon('map-pin')}<span>${text(place)}</span></span><span class="tl-trip-row-dates">${icon('calendar-blank')}<span>${text(dates(trip))}</span></span></span>
         <span class="tl-trip-row-status is-${group}">${opening === trip.id ? '여는 중' : text(label)}</span>
       </button>
-      <button type="button" class="tl-trip-row-remove" data-library-remove="${text(trip.id)}" aria-label="${text(name)} 여행 제거" title="${canRemove ? '여행 제거' : '마지막 여행은 삭제할 수 없어요'}" ${opening || removing || !canRemove ? 'disabled' : ''}>${icon(removing === trip.id ? 'hourglass' : 'trash')}</button>
+      <button type="button" class="tl-trip-row-remove" data-library-remove="${text(trip.id)}" aria-label="${text(name)} 여행 삭제" title="여행 삭제" ${opening || removing ? 'disabled' : ''}>${icon(removing === trip.id ? 'hourglass' : 'trash')}</button>
     </div>`;
   }
   function setViewMode(value) {
@@ -150,7 +150,7 @@
     $('#tripLibrarySearchClear').hidden = !$('#tripLibrarySearch').value;
     $('#tripLibraryResult').textContent = loading ? '여행을 불러오는 중' : `${visible.length}개의 여행`;
     const renderTrip = viewMode === 'list' ? listCard : card;
-    const list = $('#tripLibraryItems'), html = visible.map(trip => renderTrip(trip, date, all.length > 1)).join('');
+    const list = $('#tripLibraryItems'), html = visible.map(trip => renderTrip(trip, date)).join('');
     if (list.innerHTML !== html) {
       const focused = document.activeElement?.dataset.libraryTrip;
       const focusedRemove = document.activeElement?.dataset.libraryRemove;
@@ -179,11 +179,9 @@
   }
   async function removeTrip(id) {
     if (opening || removing || !trips().some(trip => trip.id === id)) return;
-    const account = window.TripLog.sync.controller.getAccount()?.id;
     removing = id; render();
     try {
-      if (await window.TripLog.persistence.stateStorage.deleteTrip(id)
-          && account === window.TripLog.sync.controller.getAccount()?.id) showToast('여행을 목록에서 제거했어요.');
+      await window.TripLog.persistence.stateStorage.deleteTrip(id);
     } finally {
       removing = ''; render();
       if (activePage === 'start') ([...document.querySelectorAll('[data-library-remove]')].find(button => button.dataset.libraryRemove === id) || $('#tripLibrarySearch'))?.focus({ preventScroll: true });

@@ -12,6 +12,8 @@ TripLOG는 여행 일정, 지출, 정산, 저장 기록, 리포트를 관리하�
 
 앱은 여권 모양의 **내 여행 보관함**에서 시작합니다. 여행 이름·여행지 검색과 예정/진행/지난 여행 필터를 사용하고, 표지를 눌러 해당 여행의 개요를 엽니다. 기존 `page=overview` 홈 북마크도 여행 ID가 없으면 보관함으로 연결됩니다. 선택한 여행의 URL에는 `trip`이 포함되어 새로고침·뒤로가기에서도 선택을 유지합니다. 상단 로고로 보관함에 돌아갈 수 있으며, 여행 메뉴에서 정보 수정과 기존 여행 바꾸기/삭제 흐름을 사용할 수 있습니다. 설치형 앱의 시작 주소도 보관함입니다.
 
+여행 목록의 **삭제**는 보관과 구분합니다. 동행 계정이 남아 있으면 내 참여와 내 목록만 삭제하고 공유 여행은 유지하며, 여행장이 나가면 남은 멤버에게 소유권을 이전합니다. 마지막 멤버가 삭제하면 서버 여행·일정·지출·예약·공유 기록과 첨부파일을 삭제합니다. 초대 대기자와 정산용 이름은 참여 계정 수에 포함하지 않습니다. 내 목록의 마지막 여행도 삭제할 수 있고, 통신 실패 시 같은 요청 ID로 결과를 재확인합니다. 이 기능의 운영 반영에는 `supabase/migrations/20261026065147_trip_removal_lifecycle.sql`, `triplog-sync` Edge Function, 프런트엔드가 함께 필요합니다. Git 프런트엔드 자동 배포만으로 DB·함수 반영이 완료되지는 않습니다. 격리 검증은 `node scripts/trip-removal-browser-regression.js`와 동기화·Edge 회귀 테스트에서 실행합니다.
+
 선택한 [1안 원본](artifacts/design/20261003/triplog-home-passport-library-20261003.png)과 [구현 비교 및 QA](artifacts/design/home-passport-20261003/design-qa.md)를 보관합니다. 목업의 예시 여행은 운영 데이터로 넣지 않습니다. 격리된 시각 미리보기는 `node scripts/preview-trip-library.js`, 기능 검증은 `node scripts/trip-library-browser-regression.js`로 실행합니다.
 
 검색·기간 필터 아래의 **여권 / 목록** 버튼으로 보기 방식을 바꿀 수 있습니다. 목록은 작은 목적지 그림과 여행명·여행지·날짜·상태를 간결하게 표시하고, 여행 열기·제거·새 여행 만들기는 두 보기에서 동일하게 동작합니다. 보기 전환 중에도 검색어와 필터가 유지되며, 마지막 선택은 기기의 `triplog.tripLibraryView.v1` 설정으로 기억합니다. 이 설정은 여행 데이터나 동기화 명령을 변경하지 않습니다. [목업](artifacts/design/20261017-trip-library-views/passport-list-toggle.png), [검증 자료](artifacts/qa/20261017-trip-library-views/)를 보관하며, `node scripts/trip-library-views-browser-regression.js`로 전환·설정 복원·목록 동작·접근성·반응형을 검증합니다.

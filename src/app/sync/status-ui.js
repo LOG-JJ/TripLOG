@@ -175,7 +175,7 @@
     } else if (selected === "recovery") {
       content.append(element("p", "기존 여행을 유지한 채 선택한 기록을 별도 여행으로 복원합니다."));
       const identity = controller.engine.status();
-      const archived = (await R.all()).filter(r => (r.hidden || r.archivedAt) && (!r.accountId || r.accountId === identity.accountId) && (!r.projectId || r.projectId === identity.projectId));
+      const archived = (await R.all()).filter(r => !r.removedAt && (r.hidden || r.archivedAt) && (!r.accountId || r.accountId === identity.accountId) && (!r.projectId || r.projectId === identity.projectId));
       if (stale()) return;
       for (const trip of archived) {
         const card = element("section", null, "sync-conflict"); card.append(element("strong", `${trip.snapshot.tripName} · 보관된 여행`));

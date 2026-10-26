@@ -90,6 +90,7 @@
     if (drafts.some(d => !d.persisted) && !localWrites.get(localId)) return { tone: "error", label: "초안 저장 재시도 필요", detail: "입력 내용을 그대로 유지했습니다. 연결과 기기 저장 공간을 확인하면 다시 저장할 수 있어요.", pending };
     if (localFailure) return { tone: "error", label: "기기에 저장하지 못함", detail: localFailure.message, pending };
     if (localWrites.get(localId)) return { tone: "saving", label: "기기에 저장 중", detail: "입력 내용을 기기 저장소에 기록하고 있습니다.", pending };
+    if (record?.removal && !record.removedAt) return { tone: "warning", label: "여행 삭제 결과 확인 필요", detail: "여행 목록에서 삭제를 다시 누르면 같은 요청으로 결과를 확인합니다.", pending };
     if (record?.archivedAt) return { tone: "local", label: "보관된 여행", detail: "현재 내용은 읽기 전용입니다. 소유자가 복구 기록에서 다시 열 수 있습니다.", pending };
     if (record?.quarantined) return { tone: "local", label: "보관 사본", detail: "이 기기에 보관된 사본입니다. 내용을 확인한 뒤 새 공유 여행으로 저장할 수 있습니다.", pending };
     if (!runtime.active) return { tone: "local", label: "기기에 보관됨", detail: "로그인하면 이 계정의 공유 여행을 자동으로 연결합니다.", pending };

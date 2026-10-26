@@ -79,50 +79,50 @@ async function main() {
     assert.equal(await page.evaluate(()=>window.TripLog.persistence.stateStorage.getTrips().length),5,'Cancel preserves every trip');
     await remove('spare-one').click();await accept();await waitRemoved('spare-one');
     assert.equal(await page.locator('#rdTripSearch').inputValue(),'새 여행');assert.equal(await page.locator('.rd-trip-choice').count(),1,'Search results update after deletion');
-    assert.equal(await page.evaluate(()=>state.id),'current');assert.deepEqual(await snapshot('spare-one'),before,'Archived itinerary and expenses stay recoverable');
+    assert.equal(await page.evaluate(()=>state.id),'current');
+    assert.deepEqual((await snapshot('spare-one')).entries,[],'Deleted expense content is purged');
+    assert.deepEqual((await snapshot('spare-one')).itineraryItems,[],'Deleted itinerary content is purged');
+    assert.equal(await page.evaluate(()=>!!TripLogSyncRepository.cached('spare-one').removedAt),true);
     await page.reload();await ready();await page.waitForFunction(()=>state.id==='current');
     await open();assert.equal(await page.locator('.rd-trip-choice').count(),4,'Deletion survives reload');assert.equal(await remove('spare-one').count(),0);
-    await close();await page.locator('#itineraryPageButton').click();await page.getByRole('button',{name:'복구 기록',exact:true}).click();
-    const recovery=page.locator('#triplogSyncStatus .sync-conflict').filter({hasText:'새 여행 · 보관된 여행'});
-    await recovery.getByRole('button',{name:'여행 다시 열기',exact:true}).click();
-    await page.waitForFunction(()=>window.TripLogSyncRepository.cached('spare-one')?.hidden===false);
-    await page.locator('#triplogSyncStatus .sync-close').click();await open();assert.equal(await page.locator('.rd-trip-choice').count(),5);
-    assert.deepEqual(await snapshot('spare-one'),before,'Recovery returns the original data');
-    // Exercise the existing archive command boundary with isolated role/failure
-    // fixtures. No request can reach a real account or trip in this context.
+    // Isolated server boundary mocks supplement the real SQL-backed removal suite.
     await page.evaluate(async user=>{
-      window.__archiveCalls=[];window.__archiveFailure=false;
-      window.TripLog.sync.controller.engine.control=async(id,action)=>{window.__archiveCalls.push({id,action});if(window.__archiveFailure)throw new Error('Offline fixture');return {};};
-      await window.TripLogSyncRepository.update('shared',r=>({...r,serverId:'fixture-shared',role:'owner',accountId:user.id}));
+      window.__removalCalls=[];window.__removalFailure=false;
+      window.TripLog.sync.controller.engine.removeTrip=async id=>{
+        window.__removalCalls.push(id);if(window.__removalFailure)throw new Error('Offline fixture');
+        await TripLogSyncRepository.removeTrip(id,{accountId:user.id});
+        return {removed:true,serverDeleted:false,remainingMembers:1};
+      };
+      await TripLogSyncRepository.update('shared',r=>({...r,serverId:'fixture-shared',role:'owner',accountId:user.id}));
     },user);
-    await remove('shared').click();assert.match(await page.locator('#rdConfirmMessage').textContent(),/모든 멤버/);
-    await page.evaluate(()=>window.TripLogSyncRepository.update('shared',r=>({...r,role:'editor'})));await accept();
+    await remove('shared').click();assert.match(await page.locator('#rdConfirmMessage').textContent(),/동행이 남아/);
+    await page.evaluate(()=>TripLogSyncRepository.update('shared',r=>({...r,role:'editor'})));await accept();
     await page.waitForFunction(()=>document.querySelector('#rdTripChooserList')?.getAttribute('aria-busy')==='false');
-    assert.equal(await remove('shared').count(),1);assert.equal(await page.evaluate(()=>window.__archiveCalls.length),0,'Changed sharing scope must be confirmed again');
-    await page.evaluate(async()=>{await window.TripLogSyncRepository.update('shared',r=>({...r,role:'owner'}));window.__archiveFailure=true;});
+    assert.equal(await remove('shared').count(),1);assert.equal(await page.evaluate(()=>window.__removalCalls.length),0,'Changed sharing scope must be confirmed again');
+    await page.evaluate(async()=>{await TripLogSyncRepository.update('shared',r=>({...r,role:'owner'}));window.__removalFailure=true;});
     await remove('shared').click();await accept();
     await page.waitForFunction(()=>document.querySelector('#rdTripChooserList')?.getAttribute('aria-busy')==='false');
-    assert.equal(await page.evaluate(()=>!!window.TripLogSyncRepository.cached('shared').hidden),false,'Failed archive keeps the trip visible');
+    assert.equal(await page.evaluate(()=>!!TripLogSyncRepository.cached('shared').hidden),false,'Failed removal keeps the trip visible');
     assert(await remove('shared').isEnabled());
-    await page.evaluate(()=>{window.__archiveFailure=false;});await remove('shared').click();await accept();await waitRemoved('shared');
-    assert.deepEqual(await page.evaluate(()=>window.__archiveCalls),[{id:'shared',action:'archive'},{id:'shared',action:'archive'}]);
-    await page.evaluate(()=>window.TripLogSyncRepository.update('jeju',r=>({...r,serverId:'fixture-member',role:'editor'})));
-    await remove('jeju').click();assert.match(await page.locator('#rdConfirmMessage').textContent(),/이 기기의 목록/);await accept();await waitRemoved('jeju');
-    assert.equal(await page.evaluate(()=>window.__archiveCalls.length),2,'A member hides their own listing without archiving for everyone');
+    await page.evaluate(()=>{window.__removalFailure=false;});await remove('shared').click();await accept();await waitRemoved('shared');
+    assert.deepEqual(await page.evaluate(()=>window.__removalCalls),['shared','shared']);
+    await page.evaluate(()=>TripLogSyncRepository.update('jeju',r=>({...r,serverId:'fixture-member',role:'editor'})));
+    await remove('jeju').click();assert.match(await page.locator('#rdConfirmMessage').textContent(),/마지막 멤버/);await accept();await waitRemoved('jeju');
+    assert.equal(await page.evaluate(()=>window.__removalCalls.length),3,'Members use the same server removal boundary');
     await remove('current').click();await accept();await waitRemoved('current');
     await page.locator('#rdTripChooser').waitFor({state:'hidden'});
     assert.notEqual(await page.evaluate(()=>state.id),'current','Deleting the active trip switches to another saved trip');
-    await open();
-    const inactive=await page.evaluate(()=>window.TripLog.persistence.stateStorage.getTrips().find(trip=>trip.id!==state.id).id);
-    await remove(inactive).click();await accept();await waitRemoved(inactive);
-    assert.equal(await page.locator('.rd-trip-choice').count(),1);assert.equal(await page.locator('.rd-trip-delete').isEnabled(),false,'Keep one usable trip');
-    assert.equal(await page.evaluate(()=>window.TripLog.persistence.stateStorage.deleteTrip(state.id)),false);
-    assert.equal(await page.evaluate(()=>window.TripLog.persistence.stateStorage.getTrips().length),1);
-    // The ordinary selection action continues to work on the same row structure.
+    await open();assert.equal(await page.locator('.rd-trip-choice').count(),1);
+    assert.equal(await page.locator('.rd-trip-delete').isEnabled(),true,'The last trip can also be deleted');
+    // Ordinary selection still works; deleting the final row returns to the empty library.
     await page.locator('.rd-trip-choice-select').click();await page.locator('#rdTripChooser').waitFor({state:'hidden'});
+    const finalId=await page.evaluate(()=>state.id);await open();
+    await remove(finalId).click();await accept();await waitRemoved(finalId);
+    await page.waitForFunction(()=>activePage==='start'&&document.querySelectorAll('[data-library-trip]').length===0);
+    assert(await page.locator('#tripLibraryEmpty').isVisible());
     assert.deepEqual(errors,[]);
     fs.writeFileSync(path.join(output,'verification.json'),JSON.stringify({dimensions,errors},null,2));
-    console.log('PASS trip chooser: compact mockup at 320/390/1440, separate selection/trash, named confirmation/cancel, filtered removal/reload/recovery, owner/member scope, failed archive, changed sharing scope, active switch and last-trip guard. '+output);
+    console.log('PASS trip chooser: compact mockup at 320/390/1440, separate selection/trash, named confirmation/cancel, filtered deletion/reload/content purge, owner/member scope, failed removal, changed sharing scope, active switch and final-trip empty state. '+output);
   } finally {await browser.close();await new Promise(resolve=>server.close(resolve));}
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

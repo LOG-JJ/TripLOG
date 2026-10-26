@@ -20,6 +20,7 @@ async function createDatabase() {
   await db.exec(fs.readFileSync(path.join(root,'supabase/migrations/20260919143539_realtime_collaboration_v2.sql'),'utf8'));
   await db.exec(fs.readFileSync(path.join(root,'supabase/migrations/20260919144121_fix_sync_service_auth_permissions.sql'),'utf8'));
   await db.exec(fs.readFileSync(path.join(root,'supabase/migrations/20260921134457_safe_history_restore.sql'),'utf8'));
+  await db.exec(fs.readFileSync(path.join(root,'supabase/migrations/20261026065147_trip_removal_lifecycle.sql'),'utf8'));
   // Hosted Supabase service_role cannot SELECT auth.users; the verified API and
   // foreign keys establish identity without extending access to auth internals.
   await db.exec('grant all on all tables in schema public to service_role;');

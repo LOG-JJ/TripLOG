@@ -23,7 +23,7 @@
       checkScope(token);
       return result;
     }
-    async function acceptRemote(remote, token = generation) {
+    async function acceptRemote(remote, token = generation, { restoreRemoved = false } = {}) {
       checkScope(token);
       const actor = accountId, project = projectId;
       let records = await R.all();
@@ -31,6 +31,14 @@
       let record = records.find(r => r.accountId === accountId && (!r.projectId || r.projectId === projectId) && r.serverId === remote.tripId);
       if (!record) record = records.find(r => !r.serverId && !r.quarantined && (!r.projectId || r.projectId === projectId) && r.localId === remote.appTripId && (!r.accountId || r.accountId === accountId));
       const entities = M.fromRows(remote.entities);
+      if (record?.removedAt) {
+        if (!restoreRemoved) return record;
+        const snapshot = M.decode(entities, { id: record.localId, tripName: remote.tripName, collaboration: { ownerId: remote.ownerId || "", privacy: remote.privacy } });
+        record = await R.update(record.localId, () => {
+          checkScope(token);
+          return { ...R.makeRecord(snapshot), accountId: actor, projectId: project, serverId: remote.tripId, base: entities, cursor: remote.cursor, role: remote.role, epoch: remote.epoch };
+        }, { allowRemoved: true });
+      }
       if (!record) {
         let localId = remote.appTripId || M.uuid();
         if (records.some(r => r.localId === localId)) localId = M.uuid();
@@ -74,9 +82,18 @@
       if (listing) return listing;
       const token = generation;
       listing = (async () => {
-        const result = await request({ action: "list" }, token);
+        const result = await request({ action: "list", tripRemovalVersion: 1 }, token);
         if (result.protocolVersion !== 2) throw new Error("UPGRADE_REQUIRED");
         for (const remote of result.trips) await acceptRemote(remote, token);
+        if (result.tripRemovalVersion === 1) {
+          const present = new Set(result.trips.map(trip => trip.tripId));
+          for (const record of await R.all()) {
+            checkScope(token);
+            if (record.accountId !== accountId || (record.projectId && record.projectId !== projectId) || !record.serverId || record.removal || present.has(record.serverId)) continue;
+            subscriptions.get(record.localId)?.close(); subscriptions.delete(record.localId);
+            await R.removeTrip(record.localId, { accountId, projectId });
+          }
+        }
         error = null; failures = 0;
         return result;
       })().finally(() => { if (token === generation) listing = null; announce(); });
@@ -125,7 +142,7 @@
       let more = false;
       running = (async () => {
         if (listing) await listing;
-        const records = (await R.all()).filter(r => !r.hidden && (!r.accountId || r.accountId === accountId) && (!r.projectId || r.projectId === projectId));
+        const records = (await R.all()).filter(r => !r.hidden && !r.removal && (!r.accountId || r.accountId === accountId) && (!r.projectId || r.projectId === projectId));
         for (const candidate of records) {
           checkScope(token);
           let record = await R.read(candidate.localId);
@@ -304,15 +321,46 @@
       const record = await R.read(localId);
       checkScope(token);
       if (!record?.serverId) throw new Error("서버에 여행을 저장한 뒤 다시 시도해 주세요.");
+      if (record.removal) throw new Error("TRIP_REMOVAL_PENDING");
       if (record.accountId !== accountId || (record.projectId && record.projectId !== projectId)) throw new Error("FORBIDDEN");
       const result = await request({ action: "control", tripId: record.serverId, control, data }, token);
       return result;
+    }
+    async function removeTrip(localId) {
+      const token = generation;
+      await pump(); checkScope(token);
+      let record = await R.read(localId); checkScope(token);
+      if (!record || record.accountId !== accountId || (record.projectId && record.projectId !== projectId)) throw new Error("FORBIDDEN");
+      if (record.removedAt) return { ok: true, removed: true, serverDeleted: Boolean(record.removal?.serverDeleted) };
+      if (!record.serverId) throw new Error("INVALID_TRIP");
+      if (record.queue.length || record.conflicts.length) throw new Error("UNSYNCED_CHANGES");
+      const actor = accountId, project = projectId;
+      if (!record.removal) record = await R.update(localId, current => {
+        checkScope(token);
+        if (current.queue.length || current.conflicts.length) throw new Error("UNSYNCED_CHANGES");
+        current.removal = { id: M.uuid(), status: "pending" }; return current;
+      });
+      const operationId = record.removal.id;
+      let result;
+      try { result = await request({ action: "remove-trip", tripId: record.serverId, operationId }, token); }
+      catch (error) {
+        if (["FORBIDDEN", "UNKNOWN_ACTION", "FUNCTION_NOT_FOUND", "INVALID_OPERATION_ID"].includes(error.code || error.message)) {
+          checkScope(token);
+          await R.update(localId, current => { if (current.removal?.id === operationId) delete current.removal; return current; });
+        }
+        throw error;
+      }
+      checkScope(token);
+      if (result?.removed !== true) throw new Error("INVALID_REMOVAL_RESPONSE");
+      subscriptions.get(localId)?.close(); subscriptions.delete(localId);
+      await R.removeTrip(localId, { accountId: actor, projectId: project, operationId, serverDeleted: result.serverDeleted === true });
+      onChange(localId); return result;
     }
     const online = () => { retryAt = 0; if (active) refresh().then(() => wake(0)).catch(() => wake()); };
     root.addEventListener?.("online", online);
     root.addEventListener?.("pageshow", event => { if (event.persisted) online(); });
     root.document?.addEventListener("visibilitychange", () => { if (root.document.visibilityState === "visible") online(); });
-    return { start, stop, pump, refresh, wake, resolve, control, request, acceptRemote,
+    return { start, stop, pump, refresh, wake, resolve, control, removeTrip, request, acceptRemote,
       status: () => ({ active, accountId, projectId, error, retryAt, running: Boolean(running) }),
       subscribe(fn) { listeners.add(fn); return () => listeners.delete(fn); },
     };

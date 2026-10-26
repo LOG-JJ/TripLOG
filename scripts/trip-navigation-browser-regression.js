@@ -88,6 +88,10 @@ async function main() {
     assert.equal(await page.title(), '여행 가계부'); assert.equal(new URL(page.url()).origin, origin);
     assert.match(await page.locator('#rdOverview').innerText(), /오사카/);
     assert.equal(await page.locator('vite-error-overlay, nextjs-portal').count(), 0);
+    // Finish the fixture's first persistence/normalization before comparing
+    // later navigation with it, including the generated stable sort positions.
+    assert.equal(await page.evaluate(() => saveStateSilently()), true);
+    await page.evaluate(() => window.TripLog.persistence.stateStorage.whenSaved());
     const baseline = await data();
     for (const [width, height] of [[320, 568], [320, 740], [390, 844], [844, 390], [1280, 900]]) {
       await page.setViewportSize({ width, height });

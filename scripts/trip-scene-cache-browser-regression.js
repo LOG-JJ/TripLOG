@@ -61,6 +61,12 @@ async function main() {
     await page.goto(`${origin}/Travel?page=overview&trip=trip-header-suncheon`); await ready();
     await imageReady(suncheonMobile);
     await page.waitForFunction(async source => Boolean(await (await caches.open('triplog-destination-scenes-v1')).match(source)), suncheonMobile);
+    // Require the indexed key set used by the assertion, rather than only a
+    // successful response lookup during the first cache write.
+    await page.waitForFunction(async source => {
+      const keys = await (await caches.open('triplog-destination-scenes-v1')).keys();
+      return keys.length === 1 && new URL(keys[0].url).pathname === source;
+    }, suncheonMobile);
     assert.deepEqual([...requested], [suncheonMobile], 'First load requests only the selected mobile illustration');
     assert.deepEqual(await cacheKeys(), [suncheonMobile]);
     await context.setOffline(true);

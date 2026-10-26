@@ -4,7 +4,13 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { artifactDirectory } = require('./helpers/artifact-output');
 const { launchBrowser, startServer, stopServer, seedTrip, blockExternalRequests, waitForApp } = require('./helpers/browser-fixture');
-const concepts = require('../artifacts/design/20261017-delete-dialogs/brief.json').sheets.slice(0, 4).flatMap(sheet => sheet.cases);
+// Keep the original design brief intact; these two contracts now delete/leave
+// instead of retaining a recoverable archive.
+const currentTripCopy = {
+  trip: { message: '이 기기에 저장된 여행과 관련 기록을 삭제해요.' },
+  'shared-trip': { title: '여행을 삭제할까요?', message: '동행이 남아 있으면 내 목록에서만 삭제돼요.\n마지막 멤버라면 서버의 여행과 관련 기록도 삭제돼요.', confirmLabel: '삭제' },
+};
+const concepts = require('../artifacts/design/20261017-delete-dialogs/brief.json').sheets.slice(0, 4).flatMap(sheet => sheet.cases).map(value => ({ ...value, ...currentTripCopy[value.id] }));
 const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || artifactDirectory('delete-dialogs');
 const user = { id: '00000000-0000-4000-8000-000000000088', email: 'delete-dialogs@example.test' };
 const seed = {

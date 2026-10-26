@@ -8,7 +8,7 @@ const Settlement = require('../../src/app/sync/settlement-model');
 async function startCliFixture() {
   const db = await createDatabase(), attachments = new Map(), requests = [];
   const call = async (name, args) => (await db.query(`select public.${name}(${args.map((_, index) => '$' + (index + 1)).join(',')}) as result`, args.map(value => value && typeof value === 'object' ? JSON.stringify(value) : value))).rows[0].result;
-  let origin, dropApply = false;
+  let origin, dropApply = false, dropRemoval = false;
   const server = http.createServer(async (req, res) => {
     const respond = (value, status = 200) => { res.writeHead(status, { 'Content-Type': 'application/json' }); res.end(JSON.stringify(value)); };
     try {
@@ -23,7 +23,15 @@ async function startCliFixture() {
       if (body.action === 'list') {
         const rows = (await db.query('select id,owner_id from public.triplog_trips')).rows, trips = [];
         for (const row of rows) if (await call('triplog_sync_role', [actor, row.id])) trips.push({ ...await call('triplog_read_sync', [actor, row.id, null]), ownerId: row.owner_id });
-        return respond({ protocolVersion: 2, trips });
+        return respond({ protocolVersion: 2, tripRemovalVersion: 1, trips });
+      }
+      if (body.action === 'remove-trip') {
+        const result = await call('triplog_remove_trip', [actor, body.tripId, body.operationId]);
+        const jobs = (await db.query('select object_paths from public.triplog_attachment_cleanup where actor_id=$1 and operation_id=$2', [actor, body.operationId])).rows;
+        for (const job of jobs) for (const objectPath of job.object_paths) attachments.delete(objectPath);
+        await db.query('delete from public.triplog_attachment_cleanup where actor_id=$1 and operation_id=$2', [actor, body.operationId]);
+        if (dropRemoval) { dropRemoval = false; req.socket.destroy(); return; }
+        return respond(result);
       }
       if (body.action === 'read') return respond(await read());
       if (body.action === 'create') {
@@ -71,6 +79,6 @@ async function startCliFixture() {
     } catch (error) { const code = error.message.match(/\b[A-Z][A-Z_]{3,}\b/)?.[0] || 'FAILED'; respond({ code }, /FORBIDDEN|OWNER_REQUIRED/.test(code) ? 403 : /STALE|HISTORY_CHANGED|PRIVACY_CONFLICT/.test(code) ? 409 : 422); }
   });
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve)); origin = `http://127.0.0.1:${server.address().port}`;
-  return { db, origin, actors, requests, call, dropNextApply() { dropApply = true; }, close: async () => { server.closeAllConnections(); await new Promise(resolve => server.close(resolve)); await db.close(); } };
+  return { db, origin, actors, requests, call, dropNextApply() { dropApply = true; }, dropNextRemoval() { dropRemoval = true; }, close: async () => { server.closeAllConnections(); await new Promise(resolve => server.close(resolve)); await db.close(); } };
 }
 module.exports = { startCliFixture };

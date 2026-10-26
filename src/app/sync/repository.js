@@ -84,13 +84,14 @@
     for (const row of rows) cache.set(row.localId, M.clone(row));
     return rows;
   }
-  async function update(localId, change, { snapshot = false, source = "before-change" } = {}) {
+  async function update(localId, change, { snapshot = false, source = "before-change", allowRemoved = false } = {}) {
     const result = await transaction(["trips", "snapshots"], "readwrite", (tx, done, fail) => {
       const store = tx.objectStore("trips");
       const request = store.get(localId);
       request.onsuccess = () => {
         try {
           const record = request.result || null;
+          if (record?.removedAt && !allowRemoved) throw new Error("TRIP_REMOVED");
           if (snapshot) backup(tx, record, source);
           const next = change(record, tx);
           if (next) { next.updatedAt = Date.now(); store.put(next); }
@@ -102,6 +103,30 @@
     channel?.postMessage({ localId });
     emit(localId);
     return result;
+  }
+  async function removeTrip(localId, { accountId, projectId, operationId, serverDeleted = false } = {}) {
+    const result = await transaction(["trips", "snapshots", "drafts"], "readwrite", (tx, done, fail) => {
+      const store = tx.objectStore("trips"), request = store.get(localId);
+      request.onsuccess = () => {
+        const old = request.result;
+        if (!old) { done(null); return; }
+        if ((accountId && old.accountId && old.accountId !== accountId) || (projectId && old.projectId && old.projectId !== projectId)) { fail(new Error("SESSION_CHANGED")); return; }
+        const now = new Date().toISOString();
+        // Retain only a local tombstone so old tabs cannot recreate the trip.
+        const next = { localId, accountId: old.accountId || accountId || "", projectId: old.projectId || projectId || "", serverId: old.serverId || null,
+          snapshot: { id: localId, tripName: "삭제된 여행", itineraryItems: [], entries: [], companions: [], packingList: [], travelCompanion: {} },
+          base: null, queue: [], conflicts: [], localRevision: 0, cursor: 0, role: "viewer", hidden: true, archivedAt: now, removedAt: now, updatedAt: Date.now(),
+          removal: { id: operationId || old.removal?.id || M.uuid(), status: "confirmed", serverDeleted } };
+        store.put(next);
+        const snapshots = tx.objectStore("snapshots").index("tripId").openKeyCursor(localId);
+        snapshots.onsuccess = () => { const cursor = snapshots.result; if (cursor) { tx.objectStore("snapshots").delete(cursor.primaryKey); cursor.continue(); } };
+        const drafts = tx.objectStore("drafts").openCursor();
+        drafts.onsuccess = () => { const cursor = drafts.result; if (cursor) { if (cursor.value.value?.tripId === localId) cursor.delete(); cursor.continue(); } };
+        done(next);
+      };
+    });
+    if (result) cache.set(localId, M.clone(result));
+    channel?.postMessage({ localId }); emit(localId); return result;
   }
   async function migrate(trips, { accountId = "" } = {}) {
     await open();
@@ -192,6 +217,7 @@
     }
     return update(localId, old => {
       const record = old || makeRecord(ranked);
+      if (record.removal) throw new Error("여행 삭제 결과를 먼저 확인해 주세요.");
       if (record.archivedAt && patches.length) throw new Error("보관된 여행입니다. 복구 기록에서 여행을 다시 열어 주세요.");
       if (record.role === "viewer" && patches.length) throw new Error("보기 전용 여행입니다. 소유자에게 편집 권한을 요청해 주세요.");
       const fresh = M.encode(record.snapshot);
@@ -307,7 +333,7 @@
   async function enqueue(localId, patches) {
     return update(localId, record => {
       if (!record) throw new Error("여행을 찾지 못했습니다.");
-      if (record.role === "viewer" || record.archivedAt) throw new Error("현재 여행은 읽기 전용입니다.");
+      if (record.removal || record.role === "viewer" || record.archivedAt) throw new Error("현재 여행은 읽기 전용입니다.");
       const dependencies = record.queue.filter(q => q.patches.some(parent => patches.some(p => (p.kind === parent.kind && p.id === parent.id) || (p.kind === "comment" && p.fields?.["p:targetId"] === parent.id && parent.kind === "itinerary")))).map(q => q.id);
       record.queue.push({ id: M.uuid(), patches: M.clone(patches), status: "queued", createdAt: Date.now(), dependsOn: dependencies });
       record.localRevision++;
@@ -317,10 +343,17 @@
     });
   }
   async function draft(id, value) {
-    return transaction(["drafts"], value === undefined ? "readonly" : "readwrite", (tx, done) => {
+    return transaction(["drafts", "trips"], value === undefined ? "readonly" : "readwrite", (tx, done, fail) => {
       const store = tx.objectStore("drafts");
       if (value === null) store.delete(id);
-      else if (value !== undefined) store.put({ id, value: M.clone(value), savedAt: Date.now() });
+      else if (value !== undefined) {
+        const put = () => store.put({ id, value: M.clone(value), savedAt: Date.now() });
+        if (!value.tripId) put();
+        else {
+          const request = tx.objectStore("trips").get(value.tripId);
+          request.onsuccess = () => { if (request.result?.removedAt) fail(new Error("TRIP_REMOVED")); else put(); };
+        }
+      }
       else { const request = store.get(id); request.onsuccess = () => done(request.result?.value || null); }
     });
   }
@@ -331,7 +364,7 @@
     return rows.filter(row => !localId || row.value.tripId === localId).sort((a, b) => b.savedAt - a.savedAt);
   }
   function close() { channel?.close(); channel = null; database?.close(); database = null; opening = null; }
-  const api = { open, migrate, all, read, update, save, attach, reconcile, receive, acknowledge, enqueue, project, snapshots, draft, drafts, makeRecord, close, cached: id => M.clone(cache.get(id)), subscribe: fn => { listeners.add(fn); return () => listeners.delete(fn); } };
+  const api = { open, migrate, all, read, update, removeTrip, save, attach, reconcile, receive, acknowledge, enqueue, project, snapshots, draft, drafts, makeRecord, close, cached: id => M.clone(cache.get(id)), subscribe: fn => { listeners.add(fn); return () => listeners.delete(fn); } };
   root.TripLog?.register("sync.repository", api);
   root.TripLogSyncRepository = api;
 })(typeof window === "undefined" ? globalThis : window);

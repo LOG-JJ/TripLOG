@@ -192,4 +192,4 @@ async function main(){
   await legacy.engine.refresh();legacy.engine.stop();legacy.R.close();
   for(const d of [a,b,reboot])d.engine.stop();for(const d of [a,b,reboot,tab])d.R.close();await db.close();
 }
-main().catch(error=>{console.error(error);process.exitCode=1;});
+main().then(()=>require('./trip-removal-client-regression').run()).catch(error=>{console.error(error);process.exitCode=1;});

@@ -12,6 +12,8 @@ const repositorySources = new Map();
 const repositoryPending = new Map();
 const repositoryFailures = new Map();
 const repositoryDeletions = new Map();
+const repositoryTripRemovals = new Set();
+let repositoryRemovalRefresh = Promise.resolve();
 let repositoryWriteTail = Promise.resolve();
 let storageReadyPromise;
 const highTrustSavedCoordinateSources = new Set(["coordinate-text", "google-places", "google-geocoding", "nominatim-search", "knowledge-search"]);
@@ -535,49 +537,56 @@ async function createNewTrip({ tripName, country, countryCode, city, travelMode,
 }
 
 async function deleteTrip(tripId) {
-  let trips = getTrips();
-  const trip = trips.find(trip => trip.id === tripId);
+  if (repositoryTripRemovals.has(tripId)) return false;
+  const trip = getTrips().find(trip => trip.id === tripId);
   if (!trip) return false;
-  if (trips.length <= 1) {
-    showToast("마지막 여행은 삭제할 수 없어요.");
-    return false;
-  }
-
   const record = window.TripLogSyncRepository?.cached(tripId);
-  const kind = record?.serverId && record.role === "owner" ? "shared-trip" : "trip";
-  if (!await window.TripLog.ui.confirmation.ask({ kind, subject: trip.tripName || '새로운 여행' })) {
+  const account = repositoryAccount, project = repositoryProject;
+  const kind = record?.serverId ? "shared-trip" : "trip";
+  if (!record?.removal && !await window.TripLog.ui.confirmation.ask({ kind, subject: trip.tripName || '새로운 여행' })) {
     return false;
   }
-
-  trips = getTrips();
-  if (trips.length <= 1 || !trips.some(trip => trip.id === tripId)) return false;
+  if (!getTrips().some(trip => trip.id === tripId)) return false;
   const latest = window.TripLogSyncRepository?.cached(tripId);
-  if (latest?.serverId !== record?.serverId || latest?.role !== record?.role) {
+  if (repositoryAccount !== account || repositoryProject !== project || latest?.serverId !== record?.serverId || latest?.role !== record?.role) {
     showToast("여행의 공유 상태가 바뀌었어요. 다시 선택해 주세요.");
     return false;
   }
-  trips = trips.filter(t => t.id !== tripId);
+  repositoryTripRemovals.add(tripId);
   try {
+    let result;
     if (repositoryReady) {
-      if (record?.serverId && record.role === "owner") {
-        await window.TripLog.sync.controller.engine.control(tripId, "archive", {});
+      if (record?.serverId) result = await window.TripLog.sync.controller.engine.removeTrip(tripId);
+      else {
+        await window.TripLogSyncRepository.removeTrip(tripId, { accountId: account, projectId: project });
+        result = { removed: true, serverDeleted: true };
       }
-      await window.TripLogSyncRepository.update(tripId, record => ({ ...record, hidden: true }), { snapshot: true, source: "before-trip-hide" });
-      repositoryTrips = getTrips().filter(trip => trip.id !== tripId);
-      trips = repositoryTrips;
-    } else localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
-  } catch (_) {
-    showToast("여행을 삭제하지 못했어요. 연결과 저장 상태를 확인한 뒤 다시 시도해 주세요.");
+      if (repositoryAccount !== account || repositoryProject !== project) return false;
+      repositoryTrips = repositoryTrips.filter(trip => trip.id !== tripId);
+      repositorySources.delete(tripId); repositoryViews.delete(tripId);
+      await activateAccount(account, project);
+      if (!getTrips().some(trip => !window.TripLogSyncRepository.cached(trip.id)?.placeholder)) setActivePage("start");
+    } else {
+      const trips = getTrips().filter(trip => trip.id !== tripId);
+      localStorage.setItem(TRIPS_KEY, JSON.stringify(trips));
+      if (state.id === tripId) {
+        if (trips.length) await switchTrip(trips[0].id);
+        else { for (const key of Object.keys(state)) delete state[key]; Object.assign(state, getFallbackState(createId())); setActivePage("start"); }
+      }
+      result = { removed: true, serverDeleted: true };
+    }
+    showToast(result.serverDeleted ? "여행을 삭제했어요." : "내 여행 목록에서 삭제했어요. 동행의 여행은 유지됩니다.");
+    render(); return true;
+  } catch (error) {
+    const pending = window.TripLogSyncRepository?.cached(tripId)?.removal;
+    showToast(error?.message === "UNSYNCED_CHANGES" ? "저장 대기 중인 변경과 충돌을 먼저 정리해 주세요." : pending
+      ? "삭제 결과를 확인하지 못했어요. 다시 누르면 같은 요청으로 확인해요."
+      : "여행을 삭제하지 못했어요. 연결과 저장 상태를 확인한 뒤 다시 시도해 주세요.");
     return false;
+  } finally {
+    repositoryTripRemovals.delete(tripId);
+    if (window.TripLogSyncRepository?.cached(tripId)?.removedAt) applyRepositoryChange(tripId);
   }
-
-  const activeTripId = getActiveTripId();
-  if (activeTripId === tripId) {
-    await switchTrip(trips[0].id);
-  } else {
-    render();
-  }
-  return true;
 }
 
 function normalizeImportedTripSnapshot(snapshot = {}) {
@@ -771,8 +780,25 @@ async function activateAccount(accountId, projectId = "") {
 }
 
 function applyRepositoryChange(localId) {
-  if (!repositoryReady || repositoryPending.get(localId) || repositoryFailures.has(localId)) return;
+  if (!repositoryReady) return;
   const M = window.TripLogSyncModel, record = window.TripLogSyncRepository.cached(localId);
+  if (record?.removedAt && !repositoryTripRemovals.has(localId) && (!record.accountId || record.accountId === repositoryAccount) && (!record.projectId || record.projectId === repositoryProject)) {
+    repositoryFailures.delete(localId); repositoryDeletions.delete(localId);
+    window.TripLog.sync.controller?.setLocalFailure(null, localId);
+    repositoryTrips = repositoryTrips.filter(trip => trip.id !== localId);
+    repositorySources.delete(localId); repositoryViews.delete(localId);
+    if (state.id === localId) {
+      const account = repositoryAccount, project = repositoryProject;
+      repositoryRemovalRefresh = repositoryRemovalRefresh.then(async () => {
+        if (repositoryAccount !== account || repositoryProject !== project) return;
+        await activateAccount(account, project);
+        if (!getTrips().some(trip => !window.TripLogSyncRepository.cached(trip.id)?.placeholder)) setActivePage("start");
+      }).catch(error => window.TripLog.sync.controller?.setLocalFailure(error));
+    }
+    else if (typeof render === "function") render();
+    return;
+  }
+  if (repositoryPending.get(localId) || repositoryFailures.has(localId)) return;
   if (!record || record.hidden || (record.accountId && record.accountId !== repositoryAccount) || (record.projectId && record.projectId !== repositoryProject)) return;
   const index = repositoryTrips.findIndex(t => t.id === localId);
   if (index < 0) repositoryTrips.push(record.snapshot); else repositoryTrips[index] = record.snapshot;

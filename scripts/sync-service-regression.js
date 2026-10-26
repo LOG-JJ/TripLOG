@@ -135,6 +135,7 @@ async function main() {
     assert.equal(finalized.id,replayed.id);
     await assert.rejects(rpc('triplog_finalize_settlement',[actors[0],tid,M.uuid(),financialCursor,hash,calculated]),/SETTLEMENT_STALE/);
     console.log('PASS service: integer settlement conserves totals, unknown payers and bad shares rejected, finalization CAS and idempotency');
+    await require('./trip-removal-regression').run(db);
   } finally { await db.close(); }
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

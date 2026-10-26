@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "flow": "delete -> leave and retain companions -> delete last member on server",
+  "lostResponseRetry": true,
+  "lastLocalTrip": true,
+  "otherDevice": true,
+  "serverId": "2c4bab50-54a1-44f9-9046-8fdf7c47dabf",
+  "errors": []
+}

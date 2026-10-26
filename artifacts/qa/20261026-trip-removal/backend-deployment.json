@@ -1,0 +1,78 @@
+{
+  "projectRef": "iehdziiplzgvxcrbizgv",
+  "migration": "20261026065147",
+  "migrationApplied": true,
+  "edgeFunction": {
+    "created_at": 1789828461282,
+    "entrypoint_path": "file:///tmp/user_fn_iehdziiplzgvxcrbizgv_8c589af3-b289-4d87-b35c-eb7628e19c1c_6/source/supabase/functions/triplog-sync/index.ts",
+    "ezbr_sha256": "1ed8012b8baea6c24fb5ec7aa71611f78bb97bffa83024b32db96f5e73ae571a",
+    "id": "8c589af3-b289-4d87-b35c-eb7628e19c1c",
+    "import_map": false,
+    "name": "triplog-sync",
+    "slug": "triplog-sync",
+    "status": "ACTIVE",
+    "updated_at": 1793002423358,
+    "verify_jwt": false,
+    "version": 6
+  },
+  "sourceFiles": [
+    {
+      "file": "supabase/functions/triplog-sync/index.ts",
+      "expectedSha256": "ff46645497b10956a94baf1a0e3b602ea8371486378729cdca9edbcc2b9349b3",
+      "deployedSha256": "ff46645497b10956a94baf1a0e3b602ea8371486378729cdca9edbcc2b9349b3",
+      "matches": true
+    },
+    {
+      "file": "supabase/functions/triplog-sync/handler.ts",
+      "expectedSha256": "bca55064a7e80571ed618edf937b7b36bc4b418b7d4ebae2608f342e52ad0c37",
+      "deployedSha256": "bca55064a7e80571ed618edf937b7b36bc4b418b7d4ebae2608f342e52ad0c37",
+      "matches": true
+    },
+    {
+      "file": "supabase/functions/_shared/sync-model.js",
+      "expectedSha256": "0be5470f00531279af2ff24a89de7a10d446325c1e6db2cea675799a8bc9c02f",
+      "deployedSha256": "0be5470f00531279af2ff24a89de7a10d446325c1e6db2cea675799a8bc9c02f",
+      "matches": true
+    },
+    {
+      "file": "supabase/functions/_shared/settlement-model.js",
+      "expectedSha256": "7081e35ae10cdca8eec18b3fa5e4717eeeaa445ead5b6b255e5a885fb82dda4f",
+      "deployedSha256": "7081e35ae10cdca8eec18b3fa5e4717eeeaa445ead5b6b255e5a885fb82dda4f",
+      "matches": true
+    }
+  ],
+  "database": {
+    "function": {
+      "anon_execute": false,
+      "authenticated_execute": false,
+      "config": [
+        "search_path=\"\""
+      ],
+      "invoker": true,
+      "service_execute": true
+    },
+    "migration": true,
+    "tables": [
+      {
+        "anon_select": false,
+        "authenticated_select": false,
+        "name": "triplog_trip_removal_receipts",
+        "rls": true,
+        "service_all": true
+      },
+      {
+        "anon_select": false,
+        "authenticated_select": false,
+        "name": "triplog_attachment_cleanup",
+        "rls": true,
+        "service_all": true
+      }
+    ]
+  },
+  "securityAdvisories": {
+    "relatedToThisChange": [],
+    "existingAuthWarning": "Leaked Password Protection Disabled",
+    "remediation": "https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection"
+  },
+  "realTravelDataModified": false
+}

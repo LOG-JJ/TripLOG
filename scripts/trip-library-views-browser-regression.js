@@ -236,7 +236,7 @@ async function main() {
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
     await page.screenshot({ path: path.join(output, 'list-long-undated-320.png'), fullPage: true, animations: 'disabled' });
     await page.evaluate(async () => {
-      for (const record of await window.TripLogSyncRepository.all()) await window.TripLogSyncRepository.update(record.localId, current => ({ ...current, hidden: true }));
+      for (const record of await window.TripLogSyncRepository.all()) if (!record.removedAt) await window.TripLogSyncRepository.update(record.localId, current => ({ ...current, hidden: true }));
     });
     await page.waitForFunction(() => !document.querySelector('[data-library-trip]'));
     assert.match(await page.locator('#tripLibraryEmpty').innerText(), /첫 여행/);

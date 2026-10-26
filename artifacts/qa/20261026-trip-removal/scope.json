@@ -1,0 +1,142 @@
+{
+  "base": "7178cf3bcbcd6137557241ebe4c31a65d772ffeb",
+  "build": "216fb82ad30c20d68dac",
+  "isolation": "The task was verified in a scoped clone because the working directory also contains unrelated auth/TUI and itinerary-subtype edits.",
+  "files": [
+    {
+      "file": "supabase/migrations/20261026065147_trip_removal_lifecycle.sql",
+      "sha256": "ef02af8bd5a960e523120287a4b28f9881f9ed507741f99b12fcc1e450da5b11"
+    },
+    {
+      "file": "supabase/functions/triplog-sync/handler.ts",
+      "sha256": "bca55064a7e80571ed618edf937b7b36bc4b418b7d4ebae2608f342e52ad0c37"
+    },
+    {
+      "file": "supabase/functions/triplog-sync/handler_test.ts",
+      "sha256": "c2da4c9b80696daa4145ddd2f9daaf1b2752f814b9f1ce2e603a9970ca480236"
+    },
+    {
+      "file": "src/app/sync/repository.js",
+      "sha256": "2abd653225a803f1d5f9221051d8fae093ceba984eef909c8d08432e5f84e4a6"
+    },
+    {
+      "file": "src/app/sync/engine.js",
+      "sha256": "466c6e6cee6cf054e4129dda8a8974244ac78a1ae85e5f4910eb0f703c821928"
+    },
+    {
+      "file": "src/app/sync/controller.js",
+      "sha256": "3f0f4e1a666fff80a749d8de5443de90c1807e576436768991d0622fa1ec4e79"
+    },
+    {
+      "file": "src/app/sync/status-ui.js",
+      "sha256": "bf9623d0080d82eb8a719fe4e705e468bbfe926615e25926973a1477544d753e"
+    },
+    {
+      "file": "src/app/persistence/state-storage.js",
+      "sha256": "64a35596a64fad10cb0c7b6e15f917e6f692a8b45323aa678b3a67c810c4692e"
+    },
+    {
+      "file": "src/app/ui/confirmation.js",
+      "sha256": "8ac232cfed0194d2e626bd335de215e8c92f138778e0d9758a644f291440522e"
+    },
+    {
+      "file": "src/app/features/home/trip-library.js",
+      "sha256": "b2ed0b7feca5f2e44007cc6e0c814d013248be3712b9a47ae98c9c877d49ff4d"
+    },
+    {
+      "file": "src/app/features/redesign/design-workspace.js",
+      "sha256": "f1c4e608b051b6ad464fcfda1646dc20290679aa5b1f182471768bdec1108fc9"
+    },
+    {
+      "file": "src/app/features/collaboration/trip-collaboration.js",
+      "sha256": "9a3151fc8f5842b74ce7155efc874a1901250cff0c0d40e9f05fa5fa626d85c9"
+    },
+    {
+      "file": "scripts/sync-database-regression.js",
+      "sha256": "81920eee3cb5b463a6f40f57cb3ee700bb8c64ca061fd7c1e72b8696ddae8b24"
+    },
+    {
+      "file": "scripts/sync-service-regression.js",
+      "sha256": "47588d5e21cfd0cd3a92811c5e55497297deb3af886e9ea723103a9cf9062525"
+    },
+    {
+      "file": "scripts/sync-client-regression.js",
+      "sha256": "ec84603a2432b33b01107d27883143ed374cad37564640bd6e3b05952d123c52"
+    },
+    {
+      "file": "scripts/helpers/cli-fixture.js",
+      "sha256": "f23782487c151334306f9d31f12f5986531abeab15938e05db7ca56a1386e4cd"
+    },
+    {
+      "file": "scripts/trip-removal-regression.js",
+      "sha256": "ce7f5d20247df949686e3a3ddffff836c4822f4ed347d8d36856dda2a62e6420"
+    },
+    {
+      "file": "scripts/trip-removal-client-regression.js",
+      "sha256": "2832e7d12b5242dc6034fa9587039cd9bd39ddb06ed6d89719f567c970514f4f"
+    },
+    {
+      "file": "scripts/trip-removal-browser-regression.js",
+      "sha256": "cb96de4144400f2be9fa9c951d1c4fee7799a4020574d446891ae1f0a09dcb49"
+    },
+    {
+      "file": "scripts/trip-chooser-browser-regression.js",
+      "sha256": "b3ef816bb486311829534feaee8ae4a5205f7aa028784b4327e311ec91d65fc5"
+    },
+    {
+      "file": "scripts/transport-reservations-browser-regression.js",
+      "sha256": "99e99d27cf85579e90f2278ac4733f795a1b2aece125d3f61fba655c3b23055f"
+    },
+    {
+      "file": "scripts/trip-library-views-browser-regression.js",
+      "sha256": "aea1bf196daefd922d62363b376ba53c914f04ab1ee213f0689f6aa1cd29ce30"
+    },
+    {
+      "file": "scripts/delete-dialogs-browser-regression.js",
+      "sha256": "97a519d041ec646ccc1fa9136c23a59f718915bd1b785020fa04f10bddf7d21e"
+    },
+    {
+      "file": "README.md",
+      "sha256": "7a8814f2ed5a2059da5e844d443f789ed36319e4ddd3471cf82f247a00959c8a"
+    },
+    {
+      "file": "scripts/browser-suites.js",
+      "sha256": "e1cd71b4618e5ba077d0cbaffe4e5a25ad5c439c9b974cb0c1d58c0b275eb7fd"
+    }
+  ],
+  "generated": [
+    {
+      "file": "Travel.html",
+      "sha256": "0e726b3685ea7bf26c956095327f836da1236636b23ddc91f8fdebb79f6c8df9"
+    },
+    {
+      "file": "sw.js",
+      "sha256": "132721d28e03b6cef33b2dcec36834083f759bf814e931cfaced435ac1581b71"
+    }
+  ],
+  "deployed": false,
+  "evidence": [
+    {
+      "file": "last-member-delete-320.png",
+      "sha256": "e6e315cca06eec9d04aca023eb5c84560d706a8213d07339cff48f481853784a"
+    },
+    {
+      "file": "empty-after-last-delete-320.png",
+      "sha256": "272b6a950a968984b4738040fd6a837b037362e81388bffe393f22ab8979c91a"
+    },
+    {
+      "file": "browser-result.json",
+      "sha256": "89d9264e54764ebe02dcd02fee65ae381e6af905c626f1798a37cf6767c8d070"
+    }
+  ],
+  "validation": {
+    "core": "passed",
+    "source": "passed (root 44 suites registered; isolated scope 43)",
+    "cliProcessAssertions": 212,
+    "edgeTests": 3,
+    "browserSuites": 9,
+    "build": "passed",
+    "artifacts": "passed",
+    "finalScopeGuard": "new removal-client regression and rebuild passed after the full regression run"
+  }
+}

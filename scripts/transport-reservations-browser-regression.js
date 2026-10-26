@@ -121,12 +121,12 @@ async function main() {
     console.log('PASS transport: mode/route/time save/reload, failed-save retention, compact responsive summary, bidirectional itinerary edits, no duplicate or lost voucher/memo, overnight validation/export, stale-edit guard');
 
     // Collection delete: independent action, named confirmation, filter retention,
-    // recoverable data, active switch, failure and last-trip protection.
+    // content purge, failure and final-trip empty state.
     await page.locator('.rd-brand-link').click(); await page.waitForFunction(() => activePage === 'start');
     const remove = id => page.locator(`[data-library-remove="${id}"]`);
     const accept = () => page.locator('#rdConfirm [data-rd-action="confirm-accept"]').click();
     const waitIdle = () => page.waitForFunction(() => document.querySelector('#rdTripList').getAttribute('aria-busy') === 'false');
-    const beforeRemoval = await page.evaluate(() => JSON.stringify(window.TripLogSyncRepository.cached('reservation-pockets-fixture').snapshot));
+
     await page.locator('#tripLibrarySearch').fill('추석');
     await remove('reservation-pockets-fixture').press('Enter');
     assert.match(await page.locator('#rdConfirmMessage').innerText(), /오사카&교토 추석 가족여행/);
@@ -137,31 +137,32 @@ async function main() {
     await remove('reservation-pockets-fixture').click(); await accept(); await waitIdle();
     assert.equal(await remove('reservation-pockets-fixture').count(), 0);
     assert.equal(await page.locator('#tripLibrarySearch').inputValue(), '추석');
-    assert.equal(await page.evaluate(() => JSON.stringify(window.TripLogSyncRepository.cached('reservation-pockets-fixture').snapshot)), beforeRemoval);
+    assert.deepEqual(await page.evaluate(() => TripLogSyncRepository.cached('reservation-pockets-fixture').snapshot.entries), []);
+    assert.deepEqual(await page.evaluate(() => TripLogSyncRepository.cached('reservation-pockets-fixture').snapshot.itineraryItems), []);
     await page.reload(); await ready();
     assert.equal(await page.locator('[data-library-trip]').count(), 1);
-    assert.equal(await remove('reservation-empty-fixture').isDisabled(), true);
-    await page.evaluate(() => window.TripLogSyncRepository.update('reservation-pockets-fixture', record => ({ ...record, hidden: false })));
-    await page.waitForFunction(() => document.querySelectorAll('[data-library-trip]').length === 2);
+    assert.equal(await remove('reservation-empty-fixture').isEnabled(), true);
     // Role boundary is stubbed only for isolated failure verification.
     await page.evaluate(async () => {
-      await window.TripLogSyncRepository.update('reservation-empty-fixture', record => ({ ...record, role: 'owner', serverId: 'synthetic-only' }));
-      window.__archiveFailed = true;
-      window.TripLog.sync.controller.engine.control = async () => { if (window.__archiveFailed) throw new Error('Offline fixture'); return {}; };
+      await TripLogSyncRepository.update('reservation-empty-fixture', record => ({ ...record, role: 'owner', serverId: 'synthetic-only' }));
+      window.__removalFailed = true;
+      TripLog.sync.controller.engine.removeTrip = async id => {
+        if (window.__removalFailed) throw new Error('Offline fixture');
+        await TripLogSyncRepository.removeTrip(id); return {removed:true,serverDeleted:true};
+      };
     });
     await remove('reservation-empty-fixture').click(); await accept(); await waitIdle();
     assert.equal(await remove('reservation-empty-fixture').count(), 1);
-    await page.evaluate(() => { window.__archiveFailed = false; });
+    await page.evaluate(() => { window.__removalFailed = false; });
     await remove('reservation-empty-fixture').click(); await accept(); await waitIdle();
-    assert.equal(await page.evaluate(() => state.id), 'reservation-pockets-fixture');
     assert.equal(await page.evaluate(() => activePage), 'start');
-    assert.equal(await page.locator('[data-library-trip]').count(), 1);
-    assert.equal(await page.evaluate(() => window.TripLog.persistence.stateStorage.deleteTrip(state.id)), false);
+    assert.equal(await page.locator('[data-library-trip]').count(), 0);
+    assert(await page.locator('#tripLibraryEmpty').isVisible());
     assert.equal(await page.locator('button button').count(), 0);
     await page.evaluate(async () => { await Promise.all([...document.querySelectorAll('.tl-passport-art')].map(image => image.decode())); });
     await page.screenshot({ path: path.join(output, 'library-remove-390.png'), fullPage: true });
     assert.deepEqual(errors, []);
-    console.log(`PASS library removal: keyboard/named cancel, search retention, recoverable data/reload, failed archive, active switch, last-trip guard; no runtime errors. Screenshots: ${output}`);
+    console.log(`PASS library removal: keyboard/named cancel, search retention, deleted content/reload, failed deletion, final-trip empty state; no runtime errors. Screenshots: ${output}`);
   } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

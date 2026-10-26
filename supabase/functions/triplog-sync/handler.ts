@@ -7,7 +7,7 @@ declare const EdgeRuntime: { waitUntil(task: Promise<unknown>): void };
 const M = (globalThis as any).TripLogSyncModel;
 const cors = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "authorization, apikey, content-type, x-client-info", "Access-Control-Allow-Methods": "POST, OPTIONS" };
 const jsonReply = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { ...cors, "Content-Type": "application/json", "Cache-Control": "no-store" } });
-const allowedActions = new Set(["list", "read", "apply", "create", "control", "accept", "resolve", "history", "members", "attachment-upload", "attachment-download", "settlement-preview", "settlement-finalize"]);
+const allowedActions = new Set(["list", "read", "apply", "create", "control", "accept", "resolve", "history", "members", "attachment-upload", "attachment-download", "settlement-preview", "settlement-finalize", "remove-trip"]);
 function checkObject(value: any, depth = 0) {
   if (depth > 24) throw new Error("INPUT_TOO_DEEP");
   if (!value || typeof value !== "object") return;
@@ -82,7 +82,7 @@ export async function handleRequest(req: Request) {
       if (error) throw error;
       return data;
     };
-    const category = body.action.startsWith("attachment-") ? "attachment" : body.action === "create" ? "create" : ["apply", "control", "accept", "settlement-finalize"].includes(body.action) ? "write" : "read";
+    const category = body.action.startsWith("attachment-") ? "attachment" : body.action === "create" ? "create" : ["apply", "control", "accept", "settlement-finalize", "remove-trip"].includes(body.action) ? "write" : "read";
     const allowed = await rpc("triplog_rate_limit", { p_actor: actor, p_category: category, p_limit: { attachment: 60, create: 20, write: 600, read: 1200 }[category] });
     if (!allowed) return reply({ code: "RATE_LIMITED", retryAfter: 60 }, 429);
     const role = async (tripId: string) => {
@@ -91,6 +91,22 @@ export async function handleRequest(req: Request) {
       return value;
     };
     const read = (tripId: string, after: number | null = null) => rpc("triplog_read_sync", { p_actor: actor, p_trip: tripId, p_after: after });
+    const cleanupAttachments = async (operationId?: string) => {
+      let query = admin.from("triplog_attachment_cleanup").select("actor_id,operation_id,trip_id,object_paths").eq("actor_id", actor).limit(10);
+      if (operationId) query = query.eq("operation_id", operationId);
+      const { data: jobs, error } = await query;
+      if (error) throw error;
+      for (const job of jobs || []) {
+        const paths = job.object_paths as string[];
+        if (!Array.isArray(paths) || paths.some(path => !path.startsWith(`${job.trip_id}/`) || !/^[a-f0-9]{64}$/.test(path.slice(job.trip_id.length + 1)))) throw new Error("INVALID_ATTACHMENT_PATH");
+        for (let offset = 0; offset < paths.length; offset += 1000) {
+          const { error: storageError } = await admin.storage.from("triplog-private-attachments").remove(paths.slice(offset, offset + 1000));
+          if (storageError) throw new Error("REMOVAL_CLEANUP_PENDING");
+        }
+        const { error: removeError } = await admin.from("triplog_attachment_cleanup").delete().eq("actor_id", actor).eq("operation_id", job.operation_id);
+        if (removeError) throw removeError;
+      }
+    };
     const noteDocument = async (tripId: string) => {
       const { data, error } = await admin.from("triplog_entities").select("data").eq("trip_id", tripId).eq("kind", "note_update").is("deleted_at", null);
       if (error) throw error;
@@ -126,10 +142,11 @@ export async function handleRequest(req: Request) {
       } finally { await admin.removeChannel(channel); }
     };
     if (body.action === "list") {
-      const { data: memberships, error: memberError } = await admin.from("triplog_trip_members").select("trip_id").eq("user_id", actor).eq("status", "accepted");
+      if (body.tripRemovalVersion === 1) EdgeRuntime.waitUntil(cleanupAttachments().catch(() => {}));
+      const { data: memberships, error: memberError, count: memberCount } = await admin.from("triplog_trip_members").select("trip_id", { count: "exact" }).eq("user_id", actor).eq("status", "accepted");
       if (memberError) throw memberError;
       const ids = (memberships || []).map(m => m.trip_id);
-      const { data: rows, error } = await admin.from("triplog_trips").select("*").or(`owner_id.eq.${actor}${ids.length ? ",id.in.(" + ids.join(",") + ")" : ""}`);
+      const { data: rows, error, count: tripCount } = await admin.from("triplog_trips").select("*", { count: "exact" }).or(`owner_id.eq.${actor}${ids.length ? ",id.in.(" + ids.join(",") + ")" : ""}`);
       if (error) throw error;
       const trips = [];
       for (const row of rows || []) {
@@ -138,7 +155,10 @@ export async function handleRequest(req: Request) {
         trips.push({ ...current, ownerId: row.owner_id });
         EdgeRuntime.waitUntil(deliver(row.id).catch(() => {}));
       }
-      return reply({ protocolVersion: 2, trips });
+      // Only a complete list may retire absent device copies. PostgREST can cap
+      // rows; a truncated membership or trip query must never imply removal.
+      const complete = memberCount === (memberships || []).length && tripCount === (rows || []).length;
+      return reply({ protocolVersion: 2, tripRemovalVersion: complete ? 1 : 0, trips });
     }
     if (body.action === "create") {
       if (!body.snapshot || typeof body.snapshot !== "object" || Array.isArray(body.snapshot)) throw new Error("INVALID_TRIP");
@@ -175,6 +195,14 @@ export async function handleRequest(req: Request) {
       return reply(await read(id));
     }
     const tripId = String(body.tripId || "");
+    if (body.action === "remove-trip") {
+      if (!/^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/i.test(String(body.operationId || ""))) throw new Error("INVALID_OPERATION_ID");
+      // The RPC verifies membership or a receipt for this verified actor. A
+      // replay must also work after the actor's membership/trip was deleted.
+      const result = await rpc("triplog_remove_trip", { p_actor: actor, p_trip: tripId, p_operation: body.operationId });
+      await cleanupAttachments(body.operationId);
+      return reply(result);
+    }
     const currentRole = await role(tripId);
     if (body.action === "settlement-preview" || body.action === "settlement-finalize") {
       const current = await read(tripId);
@@ -235,7 +263,12 @@ export async function handleRequest(req: Request) {
         const { error: uploadError } = await bucket.upload(objectPath, bytes, { contentType: match[1], upsert: false });
         if (uploadError && !/already exists|duplicate/i.test(uploadError.message)) throw uploadError;
         const { error: metadataError } = await admin.from("triplog_attachments").upsert({ trip_id: tripId, digest, object_path: objectPath, content_type: match[1], byte_size: bytes.length, created_by: actor }, { onConflict: "trip_id,digest", ignoreDuplicates: true });
-        if (metadataError) throw metadataError;
+        if (metadataError) {
+          // The final member can delete a trip while this upload is in flight.
+          // Compensate a failed metadata commit so it cannot leave an orphan.
+          await bucket.remove([objectPath]);
+          throw metadataError;
+        }
       }
       return reply({ reference: `triplog-attachment:${digest}` });
     }

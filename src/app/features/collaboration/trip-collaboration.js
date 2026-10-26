@@ -1434,7 +1434,7 @@
   async function acceptSupabaseInvite(account) {
     if (!getSessionAccount()) throw new Error("먼저 로그인한 뒤 초대를 수락해 주세요.");
     const remote = await window.TripLog.sync.controller.engine.request({ action: "accept", token: pendingInviteRecord.token });
-    const record = await window.TripLog.sync.controller.engine.acceptRemote(remote);
+    const record = await window.TripLog.sync.controller.engine.acceptRemote(remote, undefined, { restoreRemoved: true });
     window.TripLog.persistence.stateStorage.applyRepositoryChange(record.localId);
     window.TripLog.persistence.stateStorage.switchTrip(record.localId);
     saveStoredAccount(account);
