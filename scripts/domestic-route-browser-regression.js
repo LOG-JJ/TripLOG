@@ -131,7 +131,7 @@ async function main() {
       await resolved(); const lookupsBeforeReopen = requests.length;
       await close(); await open(); await resolved(); assert.equal(requests.length, lookupsBeforeReopen, 'Reopening uses the verified cache');
       assert.equal(await page.evaluate(() => domesticMapViews.size), 1, 'Reopening reuses its map instance'); await close();
-      await page.locator('#itineraryAddButton').click(); await page.locator('#itineraryRouteButton').click();
+      await page.locator('#itineraryAddButton').click(); await page.evaluate(() => window.TripLog.features.itinerary.workspace.showFullRoute());
       assert.ok((await page.locator('#googleMapsLink').getAttribute('href')).includes('slat='), 'Full-day route uses the same resolved places');
       await page.locator('#itineraryEditorClose').click();
 
@@ -153,7 +153,7 @@ async function main() {
         assert.equal(await page.locator('#itineraryTransitDialog').getAttribute('open'), null);
         assert.deepEqual(await page.evaluate(() => JSON.parse(JSON.stringify(state.itineraryItems))), before);
         await page.evaluate(() => domesticRouteCache.clear());
-        await page.locator('#itineraryAddButton').click(); await page.locator('#itineraryRouteButton').click();
+        await page.locator('#itineraryAddButton').click(); await page.evaluate(() => window.TripLog.features.itinerary.workspace.showFullRoute());
         await page.waitForFunction(() => document.querySelector('#googleMapsLink').href.includes('slat=') && document.querySelector('#naverMapPreview').getAttribute('aria-busy') === 'false');
         assert.equal(await page.locator('#naverMapPreview ol a').count(), 2);
         assert.deepEqual(await page.evaluate(() => JSON.parse(JSON.stringify(state.itineraryItems))), before);

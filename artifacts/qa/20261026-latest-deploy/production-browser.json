@@ -1,0 +1,37 @@
+{
+  "itinerarySubtypes": {
+    "ok": true,
+    "origin": "https://triplog-5qs.pages.dev",
+    "browser": "Playwright / Edge",
+    "fallback": "Browser plugin not available",
+    "viewports": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "errors": [],
+    "checked": [
+      "50 shared types",
+      "dependent options",
+      "save/reload/edit/copy",
+      "manual PDF artwork and icons",
+      "automatic fallback",
+      "theme reset",
+      "legacy items",
+      "draft recovery",
+      "scroll and keyboard focus"
+    ]
+  },
+  "tripRemoval": {
+    "passed": true,
+    "flow": "delete -> leave and retain companions -> delete last member on server",
+    "lostResponseRetry": true,
+    "lastLocalTrip": true,
+    "otherDevice": true,
+    "serverId": "212bfb1b-4b6a-4c1d-acc5-dfd6670a0bc2",
+    "errors": []
+  },
+  "source": "Live production app files, synthetic accounts and isolated storage/API fixtures",
+  "realTravelDataModified": false
+}

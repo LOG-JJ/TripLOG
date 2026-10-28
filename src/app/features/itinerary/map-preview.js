@@ -3,6 +3,7 @@ function updateMapPreview(item, { geocodeMissing = true } = {}) {
   // and the external link must keep pointing to the map currently on screen.
   if (!geocodeMissing || !document.querySelector('#itineraryEditor')?.open) return;
   renderTripMapPreview(item);
+  window.TripLog.features.itinerary.editorTools?.updateAddressPreview(item);
 }
 
 function setPrimaryMapLink(url, { query = '', route = false, label = `${getTripMapLabel()}에서 열기` } = {}) {
@@ -13,6 +14,7 @@ function setPrimaryMapLink(url, { query = '', route = false, label = `${getTripM
   link.dataset.mapQuery = query;
   link.dataset.mapRoute = String(route);
   link.querySelector('span').textContent = label;
+  if (!route) window.TripLog.features.itinerary.editorTools?.syncMapActions();
 }
 
 function buildTripMapRouteUrls(items, options = {}) {

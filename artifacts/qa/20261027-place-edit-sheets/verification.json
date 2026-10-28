@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "build": "7251522cbcea0dade1de",
+  "deployed": false,
+  "browser": "isolated Playwright / Edge",
+  "viewports": [
+    320,
+    390,
+    767,
+    768,
+    1440
+  ],
+  "keyboardSimulationHeight": 420,
+  "checks": [
+    "source integrity",
+    "itinerary editor and sheets",
+    "map provider",
+    "domestic route",
+    "sync browser",
+    "itinerary subtypes",
+    "itinerary controls",
+    "build",
+    "artifact layout",
+    "git diff --check"
+  ],
+  "realTravelDataModified": false,
+  "designQa": "design-qa.md"
+}

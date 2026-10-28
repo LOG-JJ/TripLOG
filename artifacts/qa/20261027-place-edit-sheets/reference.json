@@ -1,0 +1,67 @@
+{
+  "source": "C:\\Users\\tbdk5\\AppData\\Local\\Temp\\codex-clipboard-d2c85a79-955e-45eb-bbf4-b3a973804fd0.png",
+  "savedReference": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261027-place-edit-sheets\\selected-reference.png",
+  "sha256": "f33e0812435a23521b5f9e77b3a8783b84f9e6694140196c5ebee2f560d0a944",
+  "sourcePixels": [
+    1476,
+    1066
+  ],
+  "cssViewport": [
+    390,
+    844
+  ],
+  "deviceScaleFactor": 1,
+  "sheetCrops": [
+    [
+      506,
+      603,
+      971,
+      1048
+    ],
+    [
+      995,
+      276,
+      1460,
+      1048
+    ]
+  ],
+  "normalization": "Reference crops scaled to 390px width, aspect preserved; bottom aligned with matching implementation state.",
+  "evidence": [
+    {
+      "file": "name-sheet-only.png",
+      "sha256": "917165464f4fed0646b90362364674542f506e975d46a910fadee3fef948f1b8"
+    },
+    {
+      "file": "address-sheet-only.png",
+      "sha256": "24fae14334b1ebe11f1f32d9f1f9617183344008c8111ea35a88aacfb0dbb1c7"
+    },
+    {
+      "file": "name-sheet-320.png",
+      "sha256": "6e7bb770f0954b0df6b40fc5db29703c34c5f0fe7b856fb12f1c5a779e01dd27"
+    },
+    {
+      "file": "name-sheet-390.png",
+      "sha256": "dbcbe123e12376a78bd478f8c4f0543f99126713828d5fcce77ad07eca302ed9"
+    },
+    {
+      "file": "name-sheet-1440.png",
+      "sha256": "680c098b262ac69394c38fa120a0ac3d3e8279c484aad2307cbe45ae6e31b459"
+    },
+    {
+      "file": "address-sheet-320.png",
+      "sha256": "1b68717f29c120ecf9065d5ef1fd8520278ed6eb226cb41933c490177b73530a"
+    },
+    {
+      "file": "address-sheet-390.png",
+      "sha256": "3d2a95c0078c09f3837fdfeb2ae4fa0d72f582c6e29a6bd770e40d089ba93e98"
+    },
+    {
+      "file": "address-sheet-1440.png",
+      "sha256": "4353e63f4551024e78b959cd37c4ea5bb36274da96911f5ff5ba8bab29e7505a"
+    },
+    {
+      "file": "place-actions.png",
+      "sha256": "be13120bcac5c5c72fd1a14239b6d175d8f1d9028ed894207fb2b8c1498dc91a"
+    }
+  ]
+}

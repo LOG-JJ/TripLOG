@@ -5,6 +5,7 @@
 })(typeof window === 'undefined' ? globalThis : window, function () {
   'use strict';
   const base = 'src/assets/itinerary-art/v1';
+  const colorEmojis = { travel: '1f9f3', sightseeing: '1f4cd', beach: '1f3d6', island: '1f3dd', mountain: '26f0', forest: '1f332', lake: '1f30a', wetland: '1f33e', desert: '1f3dc', garden: '1f337', waterfall: '1f4a6', cave: '1faa8', snow: '1f3bf', urban: '1f3d9', oldtown: '1f3d8', museum: '1f3db', gallery: '1f3a8', castle: '1f3f0', temple: '1f6d5', shrine: '26e9', church: '26ea', mosque: '1f54c', tower: '1f5fc', monument: '1f5fd', 'theme-park': '1f3a1', aquarium: '1f420', zoo: '1f981', stadium: '1f3df', theater: '1f3ad', wellness: '2668', hiking: '1f97e', restaurant: '1f37d', cafe: '2615', bakery: '1f950', bar: '1f377', hotel: '1f3e8', resort: '1f3dd', camping: '26fa', hostel: '1f3e0', shopping: '1f6cd', market: '1f3ea', mall: '1f3ec', transport: '1f686', airport: '2708', train: '1f686', bus: '1f68c', ferry: '26f4', car: '1f697', bicycle: '1f6b2', walk: '1f6b6' };
   const themes = Object.freeze(Object.fromEntries([
     ['sightseeing', '명소', 'map-pin'], ['lodging', '숙소', 'bed'], ['food', '맛집', 'fork-knife'],
     ['shopping', '쇼핑', 'shopping-bag'], ['transport', '이동', 'train'], ['etc', '기타', 'map-pin'],
@@ -39,7 +40,7 @@
     ['transport', '이동', 'transport'], ['airport', '공항·항공', 'transport'], ['train', '철도', 'transport'],
     ['bus', '버스', 'transport'], ['ferry', '배·항구', 'transport'], ['car', '차량', 'transport'], ['bicycle', '자전거', 'transport'], ['walk', '도보', 'transport'],
   ];
-  const catalog = Object.freeze(Object.fromEntries(rows.map(([id, label, group]) => [id, Object.freeze({ id, label, group, icon: icons[id], src: `${base}/${id}.webp` })])));
+  const catalog = Object.freeze(Object.fromEntries(rows.map(([id, label, group]) => [id, Object.freeze({ id, label, group, icon: icons[id], emoji: String.fromCodePoint(parseInt(colorEmojis[id], 16)), colorIcon: `src/assets/noto-emoji/emoji_u${colorEmojis[id]}.svg`, src: `${base}/${id}.webp` })])));
   const fallbacks = Object.freeze({ sightseeing: 'sightseeing', food: 'restaurant', lodging: 'hotel', shopping: 'shopping', transport: 'transport', etc: 'travel' });
   // Human-readable, multilingual local rules. Matching never sends a user's
   // itinerary to an image generator, geocoder, classifier, or search service.

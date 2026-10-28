@@ -1,0 +1,7 @@
+Create a single TripLOG mobile itinerary-planning UI mockup at a 390 × 844 CSS-pixel viewport. Use white surfaces, dark navy text, thin outlines, compact Korean typography, modest corner rounding, and a yellow primary button. Show app content only.
+
+Use one compact top header row: “TripLOG” on the left, “일정 계획” beside it, and a close X button on the far right. Immediately to the left of X, show a compact read-only two-line date block: bold “Day 2” above smaller “10.21 (수)”. This represents the edited itinerary item’s day and date. It is informational, with no dropdown arrow. Remove the horizontal day/date-selection strip completely. The map starts directly below the header.
+
+Below the compact map preview, show “지도에서 열기” and “전체 동선”, then an “일정 편집” section. Show the place name “니시스가모 호텔” and address “도쿄도 도시마구 니시스가모”. Place two equal-width white outlined buttons directly below, side by side: a pencil icon with “이름 변경” and a location-pin icon with “주소 변경”.
+
+Continue with paired “테마 / 소분류” fields containing “숙소 / 호텔”, paired “시작 / 종료” fields containing “16:00 / 17:00”, a collapsed “메모 · 티켓 추가” row, and a yellow “일정 저장” button. Keep the full layout compact and readable, with the day/date block clearly adjacent to the top X.

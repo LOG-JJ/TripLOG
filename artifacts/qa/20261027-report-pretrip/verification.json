@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-27",
+  "status": "passed",
+  "build": "0d9937e4c921e4bd4099",
+  "change": "Report payment chart groups all __pretrip__ expenses under a leading 사전구매 label; ordinary expenses still use payment dates.",
+  "sourceData": "Expense records and actual payment dates are preserved. Signed refunds and total amounts are unchanged.",
+  "checks": [
+    "node scripts/travel-costs-regression.js",
+    "node scripts/redesign-regression.js",
+    "node bin/triplog.js dev test --suite source --json",
+    "node scripts/report-refund-browser-regression.js",
+    "node bin/triplog.js dev build --json",
+    "git diff --check"
+  ],
+  "browser": {
+    "engine": "Installed Edge via isolated Playwright fixture",
+    "reason": "Browser plugin not available",
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "pretripWidths": [
+      390,
+      1440
+    ],
+    "runtimeErrors": []
+  },
+  "deployment": "local only; not committed, pushed or deployed"
+}

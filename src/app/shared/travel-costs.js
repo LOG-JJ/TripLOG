@@ -62,8 +62,8 @@
     return [...sums].map(([date, value]) => ({ date, amount: value }));
   }
   function paymentTrend(entries) {
-    return groupByDate(entries, entry => paymentDate(entry) || '날짜 미지정')
-      .sort((a, b) => a.date.localeCompare(b.date));
+    return groupByDate(entries, entry => entry.date === '__pretrip__' ? '__pretrip__' : paymentDate(entry) || '날짜 미지정')
+      .sort((a, b) => (a.date === '__pretrip__' ? -1 : b.date === '__pretrip__' ? 1 : a.date.localeCompare(b.date)));
   }
   function percentOfTotal(value, total) {
     return Number.isFinite(value) && Number.isFinite(total) && total > 0 ? value / total * 100 : null;

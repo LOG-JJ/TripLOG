@@ -44,3 +44,24 @@ assert.equal(costs.formatShare(costs.percentOfTotal(0, 100000)), '0.0%');
 assert.equal(costs.formatShare(costs.percentOfTotal(1, 100000)), '<0.1%');
 assert.equal(costs.formatShare(costs.percentOfTotal(-1, 100000)), '-<0.1%');
 console.log('PASS payment shares: supplied example, single-day totals, signed refunds, unavailable non-positive totals and tiny percentages.');
+
+const pretripEntries = [
+  { date: '__pretrip__', paymentDate: '2026-10-13', amount: 120000 },
+  { date: '__pretrip__', receipt: { recognizedDate: '2026-10-14' }, amount: 50000 },
+  { date: '__pretrip__', createdAt: Date.UTC(2026, 9, 15), amount: -20000 },
+  { date: '__pretrip__', amount: 10000 },
+  { date: '2026-10-14', paymentDate: '2026-10-13', amount: 30000 },
+  { date: '2026-10-15', amount: 7000 },
+  { amount: 2000 },
+];
+const pretripBefore = JSON.stringify(pretripEntries);
+assert.deepEqual(costs.paymentTrend(pretripEntries), [
+  { date: '__pretrip__', amount: 160000 },
+  { date: '2026-10-13', amount: 30000 },
+  { date: '2026-10-15', amount: 7000 },
+  { date: '날짜 미지정', amount: 2000 },
+]);
+assert.equal(costs.paymentDate(pretripEntries[0]), '2026-10-13', 'Actual payment dates remain available outside the report grouping');
+assert.equal(costs.paymentTrend(pretripEntries).reduce((sum, row) => sum + row.amount, 0), costs.summarize({ entries: pretripEntries }).total);
+assert.equal(JSON.stringify(pretripEntries), pretripBefore, 'Grouping does not mutate expense records');
+console.log('PASS pretrip report grouping: one leading group across payment dates, signed refunds, legacy undated purchases and ordinary same-day expenses kept separate.');

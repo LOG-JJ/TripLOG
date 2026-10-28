@@ -1,0 +1,55 @@
+{
+  "before": "4852bdeb8f37c8649a697c4d5a85c1f9cdc5ab87",
+  "commit": "c16cb47878c492897e51f750cd71ec9673f21226",
+  "remoteHead": "c16cb47878c492897e51f750cd71ec9673f21226",
+  "build": "e1d4b702b82725df0f45",
+  "gitPush": "completed",
+  "tests": "Reused completed source and 3 focused browser suites; no additional tests, per user request",
+  "buildResult": "passed",
+  "files": [
+    "Travel.html",
+    "sw.js",
+    "src/app/ui/custom-select.js",
+    "src/styles/controls.css",
+    "scripts/itinerary-controls-browser-regression.js",
+    "scripts/itinerary-subtypes-browser-regression.js",
+    "artifacts/qa/20261026-theme-menu-width/long-subtype-menu-320.png",
+    "artifacts/qa/20261026-theme-menu-width/README.md",
+    "artifacts/qa/20261026-theme-menu-width/subtype-menu-390.png",
+    "artifacts/qa/20261026-theme-menu-width/theme-menu-320.png",
+    "artifacts/qa/20261026-theme-menu-width/verification.json"
+  ],
+  "automaticDeployment": "verified",
+  "assets": [
+    {
+      "file": "Travel.html",
+      "status": 200,
+      "expectedSha256": "f95b7308f1bc6ae791e8a50fd3b6ad8c39cdf96dcf78164f53ba37c91c479676",
+      "liveSha256": "f95b7308f1bc6ae791e8a50fd3b6ad8c39cdf96dcf78164f53ba37c91c479676",
+      "matches": true
+    },
+    {
+      "file": "sw.js",
+      "status": 200,
+      "expectedSha256": "b52c315fa8e0ec52a27e6ab474f6541ebc9fb7a5793e3d6f7a3fda81ca978817",
+      "liveSha256": "b52c315fa8e0ec52a27e6ab474f6541ebc9fb7a5793e3d6f7a3fda81ca978817",
+      "matches": true
+    },
+    {
+      "file": "src/app/ui/custom-select.js",
+      "status": 200,
+      "expectedSha256": "cd3f23eeba3ab7a69aabbfb5a0a903d33e469e29ada42d18ef517c7ada33acd8",
+      "liveSha256": "cd3f23eeba3ab7a69aabbfb5a0a903d33e469e29ada42d18ef517c7ada33acd8",
+      "matches": true
+    },
+    {
+      "file": "src/styles/controls.css",
+      "status": 200,
+      "expectedSha256": "40835354f689ce2432b29aeea0c1379919d2fc9f1e6306b99306d8d27bf83167",
+      "liveSha256": "40835354f689ce2432b29aeea0c1379919d2fc9f1e6306b99306d8d27bf83167",
+      "matches": true
+    }
+  ],
+  "verified": true,
+  "checkedAt": "2026-10-26T14:06:46.294Z"
+}

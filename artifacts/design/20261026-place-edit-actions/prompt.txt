@@ -1,0 +1,7 @@
+Create a TripLOG mobile UI mockup showing one proposed workflow in three adjacent states, each at a 390 × 844 CSS-pixel viewport: the itinerary editor, the name-change dialog, and the address-change view. This is one design with three interaction states. Use the existing product’s white surfaces, dark navy text and thin outlines, compact Korean typography, modest corner rounding, and yellow primary buttons. No phone frames or operating-system chrome.
+
+In the editor, show the TripLOG header, “일정 편집”, day selectors, a compact map preview, and a place summary named “니시스가모 호텔” with address “도쿄도 도시마구 니시스가모”. Immediately below the place summary, place two equal-width white outlined buttons side by side: a pencil icon with “이름 변경” and a location-pin icon with “주소 변경”. Below are paired “테마 / 소분류” fields with “숙소 / 호텔”, paired “시작 / 종료” fields with “16:00 / 17:00”, a collapsed “메모 · 티켓 추가” row, and a yellow “일정 저장” button.
+
+The second state shows a small “이름 변경” dialog over the same editor, with one field labeled “일정에 표시할 이름” containing “숙소 체크인”, helper text “주소와 지도 위치는 그대로 유지돼요.”, and “취소 / 적용” buttons.
+
+The third state shows “주소 변경”, the retained name “숙소 체크인”, a search field containing “니시스가모”, a compact map and a short location-results list, with a yellow “이 위치로 변경” button. Keep the three states aligned and Korean text readable. Label the states “기본 화면”, “이름 변경”, and “주소 변경” above the mobile viewports.

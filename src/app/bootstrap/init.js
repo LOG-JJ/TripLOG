@@ -303,10 +303,6 @@ function init() {
     else render();
   });
 
-  els.itineraryRouteButton.addEventListener("click", () => {
-    window.TripLog.features.itinerary.workspace.showFullRoute();
-  });
-
   els.packingAddBtn.addEventListener("click", () => {
     addPackingItem();
   });

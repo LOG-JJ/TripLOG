@@ -139,7 +139,6 @@ const els = {
   itineraryViewAllButton: document.querySelector("#itineraryViewAllButton"),
   itineraryDaySummary: document.querySelector("#itineraryDaySummary"),
   itineraryCount: document.querySelector("#itineraryCount"),
-  itineraryRouteButton: document.querySelector("#itineraryRouteButton"),
   itineraryTransSelect: document.querySelector("#itineraryTransSelect"),
   itineraryThemeSelect: document.querySelector("#itineraryThemeSelect"),
   itinerarySubtypeSelect: document.querySelector("#itinerarySubtypeSelect"),

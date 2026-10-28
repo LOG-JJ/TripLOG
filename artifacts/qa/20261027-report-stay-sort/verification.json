@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-27",
+  "status": "passed",
+  "build": "6b8839e95b88abcee9a2",
+  "change": "Report place stay durations can be sorted by schedule (default), longest, or shortest using the shared dropdown.",
+  "behavior": [
+    "Unknown durations last in both duration sorts",
+    "Equal durations preserve schedule order",
+    "Date filters and report tab switches preserve the selected sort",
+    "Sorting does not mutate itinerary records or change metrics",
+    "Place clicks still open the correct itinerary editor",
+    "Keyboard focus restored to the new dropdown after rerender"
+  ],
+  "checks": [
+    "node scripts/report-refund-browser-regression.js",
+    "node bin/triplog.js dev test --suite source --json",
+    "node bin/triplog.js dev build --json",
+    "git diff --check"
+  ],
+  "browser": {
+    "engine": "Installed Edge via isolated Playwright fixture",
+    "reason": "Browser plugin not available",
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "runtimeErrors": []
+  },
+  "deployment": "local only; not committed, pushed or deployed"
+}

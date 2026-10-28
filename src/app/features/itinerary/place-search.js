@@ -372,7 +372,8 @@ function renderPlaceSearchResults(results, query, { previewedResultId = "", goog
     button.classList.toggle("is-previewed", result.id === previewedResultId);
 
     const sourceLabel = getPlaceSearchSourceLabel(result);
-    button.innerHTML = `
+    const addressEditing = window.TripLog.features.itinerary.editorTools?.isAddressEditing();
+    button.innerHTML = addressEditing ? `<img class="place-result-icon" src="src/assets/noto-emoji/emoji_u1f4cd.svg" alt="" width="24" height="24" aria-hidden="true"><span class="place-result-copy"><strong>${escapeHtml(result.place)}</strong><span>${escapeHtml(result.location)}</span>${sourceLabel ? `<small>${escapeHtml(sourceLabel)}</small>` : ''}</span><span class="place-result-state" aria-hidden="true"><i class="ph ph-circle"></i><i class="ph ph-check-circle"></i></span>` : `
       <strong>
         ${sourceLabel ? `<span class="tag" style="--tag-color: var(--accent-sky); margin-right: 6px; border-width: 1.5px; padding: 1px 5px; font-size: 10px; box-shadow: none;">${sourceLabel}</span>` : ""}
         ${escapeHtml(result.place)}
@@ -437,7 +438,7 @@ function previewPlaceSearchResult(result, { statusMessage = "", updateStatus = t
 function applyPlaceSearchResult(result, { closeResults = true } = {}) {
   cancelPlaceLookup();
   previewPlaceSearchResult(result);
-  if (closeResults) closePlaceSearchResults();
+  if (closeResults && !window.TripLog.features.itinerary.editorTools?.isAddressEditing()) closePlaceSearchResults();
   window.TripLog.features.itinerary.workspace?.syncPlace?.({ selected: true });
 }
 
@@ -450,6 +451,7 @@ function markPreviewedPlaceSearchResult(id) {
 }
 
 function revealMapPreview() {
+  if (window.TripLog.features.itinerary.editorTools?.isAddressEditing()) return;
   const mapSection = document.querySelector(".map-section-top");
   if (!mapSection) return;
 
@@ -465,6 +467,7 @@ function previewGoogleMapSearch(query, { revealMap = false } = {}) {
   selectedPlaceCandidate = createGoogleMapSearchCandidate(query, googleQuery);
   els.itineraryLocationInput.value = query;
   renderTripMapPreview(selectedPlaceCandidate, googleQuery);
+  window.TripLog.features.itinerary.editorTools?.updateAddressPreview(selectedPlaceCandidate);
   if (revealMap) revealMapPreview();
 }
 

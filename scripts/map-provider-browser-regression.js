@@ -34,7 +34,7 @@ async function main() {
       await context.route('**/*', route => {
         const url = new URL(route.request().url());
         if (url.origin === origin) return route.continue();
-        if (url.hostname === 'map.naver.com' && route.request().resourceType() === 'document') return route.fulfill({ contentType: 'text/html', body: '<h1>Naver navigation fixture</h1>' });
+        if (['map.naver.com', 'www.google.com'].includes(url.hostname) && route.request().resourceType() === 'document') return route.fulfill({ contentType: 'text/html', body: '<h1>Map navigation fixture</h1>' });
         return route.abort();
       });
       const page = await context.newPage(), errors = [];
@@ -42,11 +42,12 @@ async function main() {
       const ready = () => page.waitForFunction(() => document.documentElement.dataset.triplogInitialized === 'true' && document.documentElement.dataset.auth === 'signed-in' && document.documentElement.dataset.appReady === 'true');
       await page.goto(`${origin}/Travel?page=itinerary`); await ready();
       await page.locator('#itineraryAddButton').click();
-      assert.match(await page.locator('#googleMapsLink').innerText(), /네이버지도/);
-      assert.equal(new URL(await page.locator('#googleMapsLink').getAttribute('href')).hostname, 'map.naver.com');
+      assert.match(await page.locator('#googleMapsLink').innerText(), /구글지도 열기/);
+      assert.equal(new URL(await page.locator('#googleMapsLink').getAttribute('href')).hostname, 'www.google.com');
       assert.equal(await page.locator('#googleMapFrame').getAttribute('src'), null);
       assert.equal(await page.locator('#itineraryDomesticMap').isVisible(), true);
-      await page.locator('#itineraryRouteButton').click();
+      // The old full-day renderer remains covered independently of the new editor actions.
+      await page.evaluate(() => window.TripLog.features.itinerary.workspace.showFullRoute());
       assert.equal(await page.locator('#naverMapPreview ol a').count(), 3);
       const route = new URL(await page.locator('#googleMapsLink').getAttribute('href'));
       assert.equal(route.searchParams.get('slat'), '37.5547');
@@ -63,12 +64,12 @@ async function main() {
         await page.locator('#placeSearchButton').click();
         await page.waitForFunction(() => document.querySelector('#googleMapsLink').dataset.mapQuery.includes('돌아와도'));
         assert.match(await page.locator('#placeSearchResults').innerText(), /네이버지도 검색/);
-        await Promise.all([page.waitForURL('https://map.naver.com/**'), page.locator('#googleMapsLink').click()]);
+        await Promise.all([page.waitForURL('https://www.google.com/**'), page.locator('#googleMapsLink').click()]);
         await page.goBack(); await ready();
         await page.locator('#itineraryEditor[open]').waitFor();
         assert.equal(await page.locator('#itineraryPlaceInput').inputValue(), '돌아와도 남는 장소');
         assert.equal(await page.locator('#itinerarySubtypeSelect').inputValue(), 'cafe');
-        assert.match(await page.locator('#googleMapsLink').getAttribute('href'), /map\.naver\.com/);
+        assert.match(await page.locator('#googleMapsLink').getAttribute('href'), /www\.google\.com/);
       }
       await page.locator('#itineraryEditorClose').click();
 
@@ -103,7 +104,7 @@ async function main() {
         state.travelMode = 'overseas'; state.country = '일본'; state.city = '교토'; state.countryCode = 'JP'; render();
       });
       await page.locator('#itineraryAddButton').click();
-      assert.match(await page.locator('#googleMapsLink').innerText(), /Google 지도/);
+      assert.match(await page.locator('#googleMapsLink').innerText(), /구글지도 열기/);
       assert.equal(new URL(await page.locator('#googleMapsLink').getAttribute('href')).hostname, 'www.google.com');
       assert.equal(await page.locator('#naverMapPreview').isVisible(), false);
       assert.match(await page.locator('#googleMapFrame').getAttribute('src'), /google\.com/);

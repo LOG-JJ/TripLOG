@@ -97,6 +97,41 @@ async function main() {
     assert.deepEqual(await shares(), ['68.2%', '16.5%', '15.3%'], 'Returning to the expense tab keeps the calculated percentages');
     await page.evaluate(() => { state.entries[0].amount += 100000; render(); });
     assert.deepEqual(await shares(), ['76.4%', '12.2%', '11.4%'], 'Shares recalculate when an amount changes');
+    const pretripBefore = await page.evaluate(() => {
+      state.entries = [
+        { id: 'pretrip-flight', date: '__pretrip__', paymentDate: '2026-10-13', category: '교통', amount: 60000 },
+        { id: 'pretrip-hotel', date: '__pretrip__', paymentDate: '2026-10-14', category: '숙소', amount: 40000 },
+        { id: 'pretrip-refund', date: '__pretrip__', paymentDate: '2026-10-15', category: '숙소', amount: -10000 },
+        { id: 'pretrip-undated', date: '__pretrip__', category: '관광', amount: 5000 },
+        { id: 'ordinary-same-date', date: '2026-10-14', paymentDate: '2026-10-13', category: '식비', amount: 10000 },
+        { id: 'ordinary-next-date', date: '2026-10-14', paymentDate: '2026-10-14', category: '식비', amount: 20000 },
+      ];
+      const before = JSON.stringify(state.entries); render(); return before;
+    });
+    const expectedDates = await page.evaluate(() => ['사전구매', ...['2026-10-13', '2026-10-14'].map(formatTripShortDate)]);
+    for (const width of [390, 1440]) {
+      await page.setViewportSize({ width, height: width === 390 ? 844 : 1000 });
+      assert.deepEqual(await page.locator('.rd-bar-date').allTextContents(), expectedDates, 'Pretrip purchases use one named group before ordinary payment dates');
+      assert.deepEqual(await page.locator('.rd-bar-amount').allTextContents(), ['95,000원', '10,000원', '20,000원']);
+      assert.deepEqual(await shares(), ['76.0%', '8.0%', '16.0%']);
+      assert.match(await page.locator('#rdReportSummary').innerText(), /125,000원/);
+      assert.match(await page.locator('.rd-trend').innerText(), /사전구매 별도 집계/);
+      const labelFits = await page.locator('.rd-bar-date').first().evaluate(label => {
+        const rect = label.getBoundingClientRect(), chart = label.closest('.rd-bars').getBoundingClientRect();
+        return rect.left >= chart.left && rect.right <= chart.right && label.clientHeight >= parseFloat(getComputedStyle(label).lineHeight);
+      });
+      assert(labelFits, `Pretrip label stays visible on one line at ${width}px`);
+      await page.locator('.rd-trend').evaluate(node => window.scrollTo({ top: scrollY + node.getBoundingClientRect().top - 72, behavior: 'instant' }));
+      await page.locator('.rd-trend').screenshot({ path: path.join(output, `pretrip-group-${width}.png`), animations: 'disabled' });
+    }
+    await page.locator('#rdReportItineraryTab').click();
+    await page.locator('#rdReportExpenseTab').click();
+    assert.deepEqual(await page.locator('.rd-bar-date').allTextContents(), expectedDates);
+    assert.equal(await page.evaluate(() => JSON.stringify(state.entries)), pretripBefore, 'Report grouping preserves original expense records and payment dates');
+    await page.evaluate(() => { state.entries = [{ id: 'pretrip-only-refund', date: '__pretrip__', paymentDate: '2026-10-13', amount: -1000 }]; render(); });
+    assert.deepEqual(await page.locator('.rd-bar-date').allTextContents(), ['사전구매']);
+    assert.deepEqual(await page.locator('.rd-bar-amount').allTextContents(), ['-1,000원']);
+    assert.equal(await page.locator('.is-refund').count(), 1);
     await page.evaluate(() => { state.entries = [{ id: 'only-refund', amount: -1000, date: '2026-10-13' }]; render(); });
     assert.deepEqual(await shares(), ['—']);
     assert.match(await page.locator('.rd-trend-note').innerText(), /0원 이하/);
@@ -104,8 +139,66 @@ async function main() {
     assert.equal(await page.locator('.rd-bar-item').count(), 0);
     assert.match(await page.locator('.rd-trend').innerText(), /지출을 기록하면/);
     assert.doesNotMatch(await page.locator('.rd-trend').innerText(), /NaN|Infinity/);
+
+    // Sorting changes only the report view, with unknown durations last.
+    const itineraryBefore = await page.evaluate(() => {
+      state.itineraryItems = [
+        { id: 'long', date: '2026-10-14', time: '10:00', endTime: '12:00', place: '미술관', theme: 'sightseeing' },
+        { id: 'first', date: '2026-10-13', time: '09:00', endTime: '10:00', place: '아침 산책', theme: 'sightseeing' },
+        { id: 'missing', date: '2026-10-13', time: '11:00', endTime: '', place: '시간 미정 장소', theme: 'sightseeing' },
+        { id: 'equal', date: '2026-10-13', time: '15:00', endTime: '16:00', place: '박물관', theme: 'sightseeing' },
+        { id: 'short', date: '2026-10-13', time: '13:00', endTime: '13:30', place: '점심 식사', theme: 'food' },
+        { id: 'hotel', date: '2026-10-13', time: '18:00', endTime: '23:00', place: '검증 호텔', theme: 'lodging' },
+      ];
+      render(); return JSON.stringify(state.itineraryItems);
+    });
+    await page.locator('#rdReportItineraryTab').click();
+    const stayIds = () => page.locator('.rd-analysis-place').evaluateAll(rows => rows.map(row => row.dataset.id));
+    const sort = async value => {
+      await page.locator('#rdReportStaySortButton').click();
+      await page.locator(`#rdReportStaySortMenu [data-value="${value}"]`).click();
+    };
+    const metrics = await page.locator('.rd-analysis-metrics').innerText();
+    assert.deepEqual(await stayIds(), ['first', 'missing', 'short', 'equal', 'long']);
+    await sort('longest');
+    assert.deepEqual(await stayIds(), ['long', 'first', 'equal', 'short', 'missing']);
+    assert.equal(await page.locator('#rdReportStaySortButton').evaluate(node => node === document.activeElement), true, 'Sort retains keyboard focus after rendering');
+    await sort('shortest');
+    assert.deepEqual(await stayIds(), ['short', 'first', 'equal', 'long', 'missing']);
+    assert.equal(await page.locator('.rd-analysis-metrics').innerText(), metrics, 'Sort does not change summary totals');
+    await page.locator('#rdReportDay').selectOption('2026-10-13');
+    assert.deepEqual(await stayIds(), ['short', 'first', 'equal', 'missing']);
+    assert.equal(await page.locator('#rdReportStaySort').inputValue(), 'shortest');
+    await page.locator('#rdReportExpenseTab').click();
+    await page.locator('#rdReportItineraryTab').click();
+    assert.deepEqual(await stayIds(), ['short', 'first', 'equal', 'missing']);
+    await page.locator('#rdReportDay').selectOption('2026-10-15');
+    assert.equal(await page.locator('.rd-analysis-place').count(), 0);
+    assert.match(await page.locator('#rdPlanAnalytics').innerText(), /체류 시간을 기록할 일정이 없어요/);
+    await page.locator('#rdReportDay').selectOption('all');
+    await sort('schedule');
+    assert.deepEqual(await stayIds(), ['first', 'missing', 'short', 'equal', 'long']);
+    await sort('longest');
+    for (const width of [320, 390, 768, 1440]) {
+      await page.setViewportSize({ width, height: width >= 768 ? 1000 : 844 });
+      const fits = await page.locator('.rd-analysis-heading').evaluate(node => {
+        const rect = node.getBoundingClientRect(), select = node.querySelector('.custom-select-button').getBoundingClientRect();
+        const heading = node.querySelector('h2').getBoundingClientRect();
+        return select.left >= rect.left && select.right <= rect.right + 1 && select.height >= 40
+          && (select.left >= heading.right || select.top >= heading.bottom);
+      });
+      assert(fits, `Stay heading and sorting filter fit without overlap at ${width}px`);
+      assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
+      if ([390, 1440].includes(width)) {
+        await page.locator('#rdPlanAnalytics').evaluate(node => window.scrollTo({ top: scrollY + node.getBoundingClientRect().top - 72, behavior: 'instant' }));
+        await page.locator('#rdPlanAnalytics').screenshot({ path: path.join(output, `stay-sort-${width}.png`), animations: 'disabled' });
+      }
+    }
+    assert.equal(await page.evaluate(() => JSON.stringify(state.itineraryItems)), itineraryBefore, 'Report sorting never reorders or changes the saved itinerary');
+    await page.locator('.rd-analysis-place').first().click();
+    await page.waitForFunction(() => editingItineraryId === 'long' && document.getElementById('itineraryEditor').open);
     assert.deepEqual(errors, []);
-    console.log('PASS report shares: exact example percentages, live recalculation, signed/zero/negative/empty totals, refund baseline, tab/navigation, proportional bars, 320/390/768/1440 layout and no runtime errors.');
+    console.log('PASS reports: payment shares/pretrip/refunds, stay schedule/longest/shortest sorting, missing durations last, stable ties, date and tab persistence, unchanged itinerary/totals, edit navigation, 320/390/768/1440 layout and no runtime errors.');
   } catch (error) { if (errors.length) console.error('Page errors:', errors); throw error; }
   finally { await browser.close(); await stopServer(server); }
 }

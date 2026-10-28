@@ -49,6 +49,9 @@ for (const [id, row] of Object.entries(art.catalog)) {
   assert(/^src\/assets\/itinerary-art\/v1\/[a-z-]+\.webp$/.test(row.src));
   assert(fs.existsSync(path.join(root, row.src)), `Missing final asset ${row.src}`);
   assert(iconCss.includes(`.ph-${row.icon}:`), `Missing subtype icon: ${row.icon}`);
+  assert(/^src\/assets\/noto-emoji\/emoji_u[0-9a-f]+\.svg$/.test(row.colorIcon), `Missing color mapping: ${id}`);
+  assert(fs.readFileSync(path.join(root, row.colorIcon), 'utf8').includes('<svg'), `Missing color asset: ${id}`);
+  assert(row.emoji, `Missing offline emoji fallback: ${id}`);
   assert(art.subtypes(row.group).some(item => item.id === id));
   const explicit = { id: `subtype-${id}`, date: '2026-10-26', place: '직접 선택한 장소', theme: row.group, themeSubtype: id };
   assert.equal(art.resolve(explicit).id, id);

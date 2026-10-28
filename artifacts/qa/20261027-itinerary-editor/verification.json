@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "build": "e69e6b650123bce9ece9",
+  "deployed": false,
+  "productionDataModified": false,
+  "viewports": [
+    320,
+    390,
+    767,
+    768,
+    1440
+  ],
+  "browser": "isolated Playwright / installed Edge; Browser plugin not available",
+  "browserSuites": [
+    "itinerary-editor",
+    "itinerary-subtypes",
+    "itinerary-controls",
+    "controls",
+    "map-provider",
+    "domestic-route",
+    "sync",
+    "stay-copy"
+  ],
+  "otherChecks": [
+    "source integrity",
+    "CLI: 222 process assertions, auth and HTTP regressions",
+    "itinerary art and color mappings",
+    "build",
+    "git diff --check"
+  ],
+  "manualVisualInspection": [
+    "mobile editor",
+    "name dialog",
+    "address dialog",
+    "color subtype popup"
+  ],
+  "limitations": [
+    "Google map content is intercepted/blocked in fixtures; screenshots verify app controls, not live map content.",
+    "Physical iOS/Android app handoff not tested; external URLs and draft recovery tested using isolated navigation fixtures."
+  ],
+  "evidence": [
+    {
+      "file": "editor-320.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261027-editor-final\\itinerary-editor\\editor-320.png",
+      "sha256": "88841e151260404e49d91e6d6fba32bfc71723ba7ab62a6071ce0646ae3b09f6"
+    },
+    {
+      "file": "editor-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261027-editor-final\\itinerary-editor\\editor-390.png",
+      "sha256": "5c929b775ad100edea74c3c037387b72cbc60de95fca0575d485887ad11b33d1"
+    },
+    {
+      "file": "editor-1440.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261027-editor-final\\itinerary-editor\\editor-1440.png",
+      "sha256": "f0ab91732d03f9443b5bf1cd37dd2e0f2afabbdf006e0ccdc745bc56b322b534"
+    },
+    {
+      "file": "map-actions.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261027-editor-final\\itinerary-editor\\map-actions.png",
+      "sha256": "83626b204555bc3dbfdf922af657ccf09f009c7752d45034ba21e8189a9e072b"
+    },
+    {
+      "file": "place-actions.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261027-editor-final\\itinerary-editor\\place-actions.png",
+      "sha256": "0148eb7dff56bf2b9477280db37e267b2bbb16c111f17e3146c632dc260f51d7"
+    },
+    {
+      "file": "color-subtypes-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261027-editor-final\\itinerary-editor\\color-subtypes-390.png",
+      "sha256": "c1f30212b76415e42c8ac241ecb54dff701feb10c933c9e29962c812b0b98e83"
+    },
+    {
+      "file": "rename-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261027-editor-final\\itinerary-editor\\rename-390.png",
+      "sha256": "5a2c31d0265003451064197a7c50b2562d6b3d9dc009ac7f838b0f02b2860643"
+    },
+    {
+      "file": "address-390.png",
+      "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261027-editor-final\\itinerary-editor\\address-390.png",
+      "sha256": "036b097bba22b714e9709b4a7df0b4672c681dbc47cdff07ced2af6c3a49a5e0"
+    }
+  ]
+}

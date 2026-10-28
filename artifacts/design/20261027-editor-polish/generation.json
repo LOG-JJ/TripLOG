@@ -1,0 +1,13 @@
+{
+  "mode": "T2I",
+  "tool": "built-in image_gen",
+  "inputImages": [],
+  "startedAtUtc": "2026-10-26 15:04:16 UTC",
+  "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-fc927c88-1a3d-4325-ae18-9528f4b298db.png",
+  "savedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261027-editor-polish\\editor-polish-concept.png",
+  "sha256": "43c185b2f927c2d8cb5bf07ee1802c72ff9dd88ba2ccb06b1a9028bbe9cb840c",
+  "copyVerified": true,
+  "overwritten": false,
+  "prompt": "Create a focused TripLOG mobile UI component mockup at 390 CSS pixels wide. White background, dark navy Korean text, modest corner rounding, yellow selected accents. At the top, place three equal white outlined buttons in one row: “구글지도 열기”, “길찾기”, “주변검색”. Each button has a small icon on the LEFT and its label on the RIGHT, both on ONE LINE. Use compact 11–12px labels and 14–16px icons, with 44px touch height.\n\nBelow show “니시스가모 호텔” and its address, then two equal-width refined buttons: “이름 변경” with a small blue pencil in a pale blue icon badge and a blue-tinted outline, and “주소 변경” with a green location pin in a pale mint icon badge and a green-tinted outline. Keep button surfaces white.\n\nShow paired “테마 / 소분류” fields with “숙소 / 호텔”. Open the subtype menu aligned exactly to its field width. Use consistent Noto-style COLOR emoji icons for “자동”, “호텔”, “료칸”, “호스텔·게스트하우스”, “리조트”. Selected “호텔” has a yellow highlight. Keep long labels readable with wrapping.\n",
+  "scope": "Single-line map actions, blue/mint edit buttons, color subtype icons; user requested implementation"
+}

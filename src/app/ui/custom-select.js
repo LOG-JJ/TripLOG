@@ -29,6 +29,18 @@ function controlIcon(name) {
   return icon;
 }
 
+function controlSubtypeIcon(subtype) {
+  const image = document.createElement('img');
+  image.className = 'control-subtype-image'; image.alt = ''; image.setAttribute('aria-hidden', 'true');
+  image.width = 20; image.height = 20;
+  image.src = subtype?.colorIcon || 'src/assets/noto-emoji/emoji_u2728.svg';
+  image.addEventListener('error', () => {
+    const fallback = controlSpan('control-subtype-image', subtype?.emoji || '✨');
+    fallback.setAttribute('aria-hidden', 'true'); image.replaceWith(fallback);
+  }, { once: true });
+  return image;
+}
+
 function renderSelectOptionContent(item, option, variant) {
   const label = controlSpan('control-option-label', option.textContent);
   if (variant === 'theme') {
@@ -37,7 +49,7 @@ function renderSelectOptionContent(item, option, variant) {
     item.append(emoji, label);
   } else if (variant === 'theme-subtype') {
     const subtype = window.TripLog.shared.itineraryArt.catalog[option.value];
-    item.append(controlIcon(subtype?.icon || 'sparkle'), label);
+    item.append(controlSubtypeIcon(subtype), label);
   } else if (variant === 'currency') {
     const currency = getCurrencyMeta(option.value);
     label.textContent = currency.label;
@@ -273,7 +285,7 @@ function syncCustomSelect(select, options = {}) {
       control.value.append(emoji, controlSpan('control-option-label', selectedOption?.textContent || '테마 선택'));
     } else if (control.variant === 'theme-subtype') {
       const subtype = window.TripLog.shared.itineraryArt.catalog[selectedOption?.value];
-      control.value.append(controlIcon(subtype?.icon || 'sparkle'), controlSpan('control-option-label', selectedOption?.textContent || '자동'));
+      control.value.append(controlSubtypeIcon(subtype), controlSpan('control-option-label', selectedOption?.textContent || '자동'));
     } else {
       control.value.textContent = selectedOption?.textContent || "선택";
     }

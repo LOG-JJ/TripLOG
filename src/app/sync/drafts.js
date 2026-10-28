@@ -14,7 +14,7 @@
     const fields = Object.fromEntries([...form.querySelectorAll("input[id],select[id],textarea[id]")]
       .filter(el => !["file", "password"].includes(el.type)).map(el => [el.id, { value: el.value, checked: el.checked }]));
     const value = { tripId, accountId: account(), formId: form.id, editId, fields,
-      ...(form.id === "itineraryForm" ? { voucherFile: currentVoucherFile, voucherFileName: currentVoucherFileName } : {}) };
+      ...(form.id === "itineraryForm" ? { voucherFile: currentVoucherFile, voucherFileName: currentVoucherFileName, placeCandidate: window.TripLog.features.itinerary.editorTools.candidateSnapshot() } : {}) };
     const id = key(form.id, tripId, editId), row = { id, value, savedAt: Date.now(), persisted: false };
     memory.set(id, row);
     controller.localWrite(tripId, 1);
@@ -43,11 +43,14 @@
       control.value = saved.value; control.checked = saved.checked;
     }
     syncItinerarySubtype(draft.fields.itinerarySubtypeSelect?.value || '');
+    selectedPlaceCandidate = draft.placeCandidate?.place === els.itineraryPlaceInput.value ? draft.placeCandidate : null;
     setVoucherFile(draft.voucherFile || null, draft.voucherFileName || null);
     document.querySelector("#itineraryExtraDetails").open = true;
     for (const id of ["itineraryDaySelect", "itineraryThemeSelect"]) syncCustomSelect(document.getElementById(id));
     for (const id of ["itineraryTimeInput", "itineraryEndTimeInput"]) syncCustomTimePicker(document.getElementById(id));
     window.TripLog.features.itinerary.workspace.render();
+    window.TripLog.features.itinerary.workspace.syncPlace({ selected: Boolean(selectedPlaceCandidate) });
+    window.TripLog.features.itinerary.workspace.previewRoute();
     showToast("초안을 새 일정 입력창에 불러왔어요. 확인 후 추가해 주세요.");
   }
   function setup() {

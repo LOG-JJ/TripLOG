@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "build": "e293235c1f77312c7bc9",
+  "deployed": false,
+  "productionDataModified": false,
+  "checks": [
+    "source integrity",
+    "transport reservations browser regression",
+    "itinerary editor browser regression",
+    "build",
+    "artifact layout"
+  ],
+  "captures": [
+    {
+      "file": "plain-transport-390.png",
+      "sha256": "63ebc02854981d9bd44c933fb2aba258338a95e1b1ddeec12199ec1284aaa00e"
+    },
+    {
+      "file": "existing-booking-390.png",
+      "sha256": "29d18e7d48cbc5c8f3ece8f1d5a67fe85f5040e420ae150b911377bede19b130"
+    }
+  ]
+}

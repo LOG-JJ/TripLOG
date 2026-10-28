@@ -116,11 +116,6 @@
 .tt-transport-fields { display: grid; gap: 12px; }
 .tt-transport-fields[hidden] { display: none; }
 .rd-app .tt-wallet-ui .tt-form select { width: 100%; min-height: 44px; padding: 8px 10px; border: 1.3px solid #9199a6; border-radius: 8px; font: inherit; font-size: 16px; background: #fff; }
-.rd-app .itinerary-transport-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 10px; min-width: 0; margin: 0; padding: 12px; border: 1px solid #ccd3da; border-radius: 10px; }
-.rd-app .itinerary-transport-fields[hidden] { display: none; }
-.itinerary-transport-fields legend { padding: 0 5px; font-size: 13px; font-weight: 700; }
-.itinerary-transport-fields label { min-width: 0; margin: 0; }
-.itinerary-transport-fields .wide { grid-column: 1 / -1; }
 .rd-app .tt-wallet-ui .tt-form :is(input:not([type=hidden]), textarea):not(.control-popover input) { min-height: 44px; padding: 10px 11px; border: 1.3px solid #9199a6; border-radius: 8px; background: #fff; font-size: 16px; font-weight: 500; line-height: 1.35; }
 .rd-app .tt-wallet-ui .tt-form :is(input, textarea):not(.control-popover input):focus { border-color: var(--text); background: var(--tl-surface, #fff); box-shadow: none; }
 .tt-wallet-ui .tt-form :is(input, textarea):not(.control-popover input)::placeholder { font-size: 13px; color: #757c89; }

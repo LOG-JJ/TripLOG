@@ -34,13 +34,12 @@ body.rd-app {
 .rd-app .rd-nav button.active .ph { background: var(--rd-yellow); border-radius: 6px; }
 .rd-app .rd-nav button.active::after { background: var(--text); }
 
-.rd-app #itineraryDayStrip, .rd-app #itineraryEditorDays {
+.rd-app #itineraryDayStrip {
   display: flex; flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden;
   gap: 8px; width: 100%; min-width: 0; max-width: 100%;
   padding: 3px 2px 7px; touch-action: pan-x pan-y; overscroll-behavior-x: contain;
 }
-.rd-app #itineraryDayStrip .itinerary-day-chip,
-.rd-app #itineraryEditorDays .itinerary-day-chip { flex: 0 0 112px; min-width: 112px; }
+.rd-app #itineraryDayStrip .itinerary-day-chip { flex: 0 0 112px; min-width: 112px; }
 
 /* Hidden native controls must not inherit full-size form input rules. */
 .rd-app :is(.native-select-hidden, .native-date-hidden, .native-time-hidden) {

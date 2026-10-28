@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "build": "d5f02e594e0be71d545e",
+  "deployed": false,
+  "viewports": [
+    320,
+    390,
+    767,
+    768,
+    1440
+  ],
+  "checks": [
+    "itinerary editor browser regression",
+    "default itinerary date browser regression",
+    "source integrity",
+    "build"
+  ],
+  "realTravelDataModified": false,
+  "captures": [
+    {
+      "file": "editor-390.png",
+      "sha256": "10cf7d646f0e102c24c9ae66c2eb3b7853d5dfe60e5a32a5a677fa9aea3b96c1"
+    },
+    {
+      "file": "editor-1440.png",
+      "sha256": "409c90fc83e16fe255d617b8436bf02d910548d01c1b325b65b00be0fb16ba0c"
+    },
+    {
+      "file": "long-trip-name-320.png",
+      "sha256": "46e25e2c666290a1f2a8d81aef88a501641a7d1712812b0db4455ae33058f843"
+    }
+  ]
+}

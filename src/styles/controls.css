@@ -69,6 +69,7 @@
 .rd-app .control-select-theme-subtype .custom-select-option { min-height: 44px; padding: 8px; gap: 6px; font-size: 14px !important; }
 .rd-app .control-select-theme-subtype .custom-select-option > .ph { flex: 0 0 18px; font-size: 18px; }
 .rd-app .control-select-theme-subtype .control-option-check { width: 14px; flex-basis: 14px; }
+.rd-app .control-subtype-image { display: inline-block; width: 20px; height: 20px; min-width: 20px; flex: 0 0 20px; object-fit: contain; vertical-align: middle; font-size: 18px; line-height: 20px; }
 .rd-app :is(.control-select-theme, .control-select-theme-subtype) .control-option-label { white-space: normal; overflow-wrap: anywhere; }
 .rd-app .control-select-theme-subtype .custom-select-option:first-child { margin-bottom: 4px; }
 .rd-app .control-select-category { padding: 10px; }

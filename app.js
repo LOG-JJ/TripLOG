@@ -67,6 +67,7 @@
     "features/itinerary/place-search.js",
     "features/itinerary/itinerary-form.js",
     "features/itinerary/map-preview.js",
+    "features/itinerary/editor-tools.js",
     "features/itinerary/itinerary-workspace.js",
     "features/history/history-actions.js",
     "ui/day-strip.js",

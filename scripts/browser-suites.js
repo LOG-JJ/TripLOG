@@ -32,6 +32,7 @@ module.exports = [
   'time-wheel-browser-regression.js',
   'reservation-time-browser-regression.js',
   'itinerary-controls-browser-regression.js',
+  'itinerary-editor-browser-regression.js',
   'itinerary-subtypes-browser-regression.js',
   'transit-journey-browser-regression.js',
   'companion-passport-browser-regression.js',

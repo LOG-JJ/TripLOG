@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "build": "37e0cc2ca7e41194fde6",
+  "deployed": false,
+  "productionDataModified": false,
+  "checks": [
+    "itinerary editor browser regression",
+    "source integrity",
+    "build",
+    "git diff --check"
+  ],
+  "capture": {
+    "file": "map-actions.png",
+    "sha256": "22c090e59033d0065483f71d2390fe7bfd5d9b5dce297b9b8794efd8dad1584c"
+  }
+}

@@ -508,6 +508,6 @@
       case 'plan':{const item=findItineraryItem(el.dataset.id);if(item){navigate('itinerary', { date: item.date });startItineraryEdit(item);}break;}
     }
   }
-  document.addEventListener('change',event=>{if(event.target.id==='rdReportDay'){window.TripLog.features.reports.workspace.setDay(event.target.value);}const id=event.target.dataset.rdPack;if(id){const item=state.packingList.find(i=>i.id===id);if(item){item.checked=event.target.checked;saveAndRender();}}});
+  document.addEventListener('change',event=>{if(event.target.id==='rdReportDay'){window.TripLog.features.reports.workspace.setDay(event.target.value);}if(event.target.id==='rdReportStaySort'){window.TripLog.features.reports.workspace.setStaySort(event.target.value);}const id=event.target.dataset.rdPack;if(id){const item=state.packingList.find(i=>i.id===id);if(item){item.checked=event.target.checked;saveAndRender();}}});
   window.TripLog.register('features.redesign.workspace',{setup,render,renderMembers,navigate,open,openExpenseEditor,openPretripEditor:showReservation,showSavedPretrip,expenseSaved,expenseMetadata,confirmAction,canEditTripSettings,isTripEditing,cancelTripEdit});
 })();

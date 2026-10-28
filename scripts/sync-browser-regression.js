@@ -168,7 +168,8 @@ async function main() {
       state.entries.find(entry=>entry.id==='legacy-fare').amount=1500;await saveAndRender();
     });
     await a.waitForFunction(()=>window.TripLogSyncRepository.cached(state.id).snapshot.entries.find(entry=>entry.id==='legacy-fare').amount===1500);
-    await a.locator('#itineraryChangePlace').click();await a.locator('#itineraryPlaceInput').fill('후시미이나리 변경 검증');
+    await a.locator('#itineraryChangePlace').click();await a.locator('#itineraryPlaceInput').fill('후시미이나리 변경 검증');await a.locator('#itineraryAddressApply').click();
+    await a.locator('#itineraryChangeName').click();await a.locator('#itineraryNameEdit').fill('후시미이나리 변경 검증');await a.locator('#itineraryNameForm [type="submit"]').click();
     await a.locator('#itinerarySubmitButton').click();await a.locator('#itineraryEditor').waitFor({state:'hidden'});
     await b.waitForFunction(()=>state.itineraryItems.find(item=>item.id==='legacy-delete').place==='후시미이나리 변경 검증');
     assert.equal(await b.evaluate(()=>state.itineraryItems.find(item=>item.id==='legacy-delete').cost),1500,'Place edits preserve another device’s updated transit');
@@ -177,7 +178,8 @@ async function main() {
     assert.equal(await b.evaluate(()=>state.itineraryItems.find(item=>item.id==='legacy-delete').lat),undefined,'Changed places discard stale coordinates');
     // Exercise direct place replacement on another legacy coordinate record.
     await a.evaluate(()=>startItineraryEdit(state.itineraryItems.find(item=>item.id==='kyoto')));
-    await a.locator('#itineraryChangePlace').click();await a.locator('#itineraryPlaceInput').fill('교토역 변경 검증');
+    await a.locator('#itineraryChangePlace').click();await a.locator('#itineraryPlaceInput').fill('교토역 변경 검증');await a.locator('#itineraryAddressApply').click();
+    await a.locator('#itineraryChangeName').click();await a.locator('#itineraryNameEdit').fill('교토역 변경 검증');await a.locator('#itineraryNameForm [type="submit"]').click();
     await a.locator('#itinerarySubmitButton').click();await a.locator('#itineraryEditor').waitFor({state:'hidden'});
     await b.waitForFunction(()=>state.itineraryItems.find(item=>item.id==='kyoto').place==='교토역 변경 검증');
     await a.evaluate(()=>startItineraryEdit(state.itineraryItems.find(item=>item.id==='legacy-delete')));
@@ -214,7 +216,7 @@ async function main() {
     console.log('PASS browser: actual place changes preserve concurrent transit/money; failed delete keeps editor/input; offline legacy delete survives reload and reconnect');
     await a.evaluate(()=>{setActivePage('itinerary');startItineraryEdit(state.itineraryItems.find(i=>i.id==='kyoto'));});
     await a.locator('#itineraryMemoInput').fill('작성 중인 내 메모');
-    await a.locator('#itineraryVoucherFile').setInputFiles({name:'fixture.png',mimeType:'image/png',buffer:Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aF1sAAAAASUVORK5CYII=','base64')});
+    assert.equal(await a.locator('#itineraryVoucherFile').isDisabled(), true, 'New uploads are removed; legacy attachment remains readable');
     await b.evaluate(async()=>{state.itineraryItems[0].time='12:00';state.itineraryItems[0].endTime='13:00';await saveAndRender();});
     await a.waitForFunction(()=>window.TripLogSyncRepository.cached(state.id)?.base['itinerary:kyoto'].fields['g:schedule'].time==='12:00');
     assert.equal(await a.locator('#itineraryMemoInput').inputValue(),'작성 중인 내 메모');

@@ -13,7 +13,7 @@ function syncVoucherFileUi() {
   const name = currentVoucherFileName || '선택된 파일 없음';
   els.ticketFileNameDisplay.textContent = name;
   els.ticketFileNameDisplay.closest('.ticket-file-row').classList.toggle('is-long-filename', Array.from(name).length > 24);
-  els.ticketFileResetBtn.style.display = currentVoucherFileName ? 'inline-flex' : 'none';
+  els.ticketFileResetBtn.style.display = 'none';
 }
 
 let itinerarySubmissionPending = false;
@@ -73,8 +73,7 @@ async function saveItineraryForm(event) {
   const syncExpense = existingItem ? existingItem.syncExpense !== false : true;
   const expenseId = existingItem ? existingItem.expenseId : null;
 
-  const transportInput = id => document.querySelector(`#${id}`).value.trim();
-  const voucherName = theme === 'transport' ? transportInput('itineraryTransportName') || place : els.itineraryVoucherName.value.trim();
+  const voucherName = els.itineraryVoucherName.value.trim();
   const voucherCode = els.itineraryVoucherCode.value.trim();
 
   const candidateSelected = selectedPlaceCandidate && selectedPlaceCandidate.place === place;
@@ -120,14 +119,8 @@ async function saveItineraryForm(event) {
 
   if (!window.TripLog.shared.itineraryArt.subtype(item)) delete item.themeSubtype;
 
-  if (theme === 'transport') {
-    item.transportReservation = { kind: transportInput('itineraryTransportKind'), from: transportInput('itineraryTransportFrom'), to: transportInput('itineraryTransportTo'), arrivalDate: transportInput('itineraryArrivalDate') };
-    const problem = window.TripLog.features.travelCompanion.model.validateReservation(window.TripLog.features.travelCompanion.model.transportFromItinerary(item));
-    if (problem) { const error = document.querySelector('#itineraryFormError'); error.textContent = problem; error.hidden = false; error.scrollIntoView({ block: 'nearest' }); return; }
-  } else if (existingItem?.transportReservation) {
-    delete item.transportReservation;
-    if (existingItem.linkedReservationId?.startsWith('manual:')) delete item.linkedReservationId;
-  }
+  // Transport bookings belong to the reservation wallet. A generic schedule
+  // edit preserves existing booking metadata and never creates a new booking.
   if (existingItem?.reservationStayDate && (item.date !== existingItem.date || theme !== 'lodging')) {
     delete item.reservationStayDate;
     delete item.linkedReservationId;
@@ -223,12 +216,6 @@ function startItineraryEdit(item, { copy = false } = {}) {
   // Voucher binding
   els.itineraryVoucherName.value = item.voucherName || "";
   els.itineraryVoucherCode.value = item.voucherCode || "";
-  document.querySelector('#itineraryTransportName').value = item.voucherName || (item.theme === 'transport' ? item.place : '') || '';
-  document.querySelector('#itineraryTransportKind').value = item.transportReservation?.kind || '';
-  document.querySelector('#itineraryTransportFrom').value = item.transportReservation?.from || '';
-  document.querySelector('#itineraryTransportTo').value = item.transportReservation?.to || '';
-  document.querySelector('#itineraryArrivalDate').value = item.transportReservation?.arrivalDate || '';
-  syncCustomSelect(document.querySelector('#itineraryTransportKind'));
   currentVoucherFile = item.voucherFile || null;
   currentVoucherFileName = item.voucherFileName || null;
   voucherReadPromise = Promise.resolve(true);

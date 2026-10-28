@@ -1,0 +1,198 @@
+{
+  "commit": "4852bdeb8f37c8649a697c4d5a85c1f9cdc5ab87",
+  "gitPush": "completed",
+  "expectedBuild": "435bc8396b9e50a38c80",
+  "liveBuild": "435bc8396b9e50a38c80",
+  "pageMatches": true,
+  "workerMatches": true,
+  "automaticDeployment": "verified",
+  "url": "https://triplog-5qs.pages.dev/Travel",
+  "remoteHead": "4852bdeb8f37c8649a697c4d5a85c1f9cdc5ab87",
+  "assets": [
+    {
+      "file": "Travel.html",
+      "status": 200,
+      "expectedSha256": "092b3e86904520dea5c513f8e7588d3cfe452bd2d33a661639cc930478d9d164",
+      "liveSha256": "092b3e86904520dea5c513f8e7588d3cfe452bd2d33a661639cc930478d9d164",
+      "matches": true,
+      "build": "435bc8396b9e50a38c80"
+    },
+    {
+      "file": "app.js",
+      "status": 200,
+      "expectedSha256": "66f8765aefbcba7e69179c2f91eca809d5591be77513b094b50e6a6e273f350b",
+      "liveSha256": "66f8765aefbcba7e69179c2f91eca809d5591be77513b094b50e6a6e273f350b",
+      "matches": true
+    },
+    {
+      "file": "src/app/core/runtime.js",
+      "status": 200,
+      "expectedSha256": "ee91b46a8345aa9059f55bef28e963b90dd32adaad6df6d414e59ee381274fff",
+      "liveSha256": "ee91b46a8345aa9059f55bef28e963b90dd32adaad6df6d414e59ee381274fff",
+      "matches": true
+    },
+    {
+      "file": "src/app/data/itinerary-art.js",
+      "status": 200,
+      "expectedSha256": "a27dba7f59fb295ba488f6273c450a08b93a65fea1ba81970f12c3026b39a7bd",
+      "liveSha256": "a27dba7f59fb295ba488f6273c450a08b93a65fea1ba81970f12c3026b39a7bd",
+      "matches": true
+    },
+    {
+      "file": "src/app/domain/commands.js",
+      "status": 200,
+      "expectedSha256": "d76e73443d1461a02f2cadc7aeb337630ee8bf987ef7d4ae9383dd324d8fd031",
+      "liveSha256": "d76e73443d1461a02f2cadc7aeb337630ee8bf987ef7d4ae9383dd324d8fd031",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/itinerary/itinerary-form.js",
+      "status": 200,
+      "expectedSha256": "aed9c72b59079ee3480f0efbb6469862da5626a3615306a0637570dc99b4b85c",
+      "liveSha256": "aed9c72b59079ee3480f0efbb6469862da5626a3615306a0637570dc99b4b85c",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/itinerary/itinerary-render.js",
+      "status": 200,
+      "expectedSha256": "68654888b06e3efa149de3610932d917fcc2fc761b60fc80ab1ad0e3db45b05a",
+      "liveSha256": "68654888b06e3efa149de3610932d917fcc2fc761b60fc80ab1ad0e3db45b05a",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/itinerary/itinerary-workspace.js",
+      "status": 200,
+      "expectedSha256": "a84ff0832a3172b9721e8aacd9f765b7d915e86f5f4a73cfd6aa300a71bd61a1",
+      "liveSha256": "a84ff0832a3172b9721e8aacd9f765b7d915e86f5f4a73cfd6aa300a71bd61a1",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/overview/overview-workspace.js",
+      "status": 200,
+      "expectedSha256": "092385bace101be3664e38482d57fdb7c5fa0b7f837e69e3949f4b346c889395",
+      "liveSha256": "092385bace101be3664e38482d57fdb7c5fa0b7f837e69e3949f4b346c889395",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/print/export-studio.js",
+      "status": 200,
+      "expectedSha256": "fd09344130409040d5c6cb33ff4f40bbdf43737f45b8f590ddbee9303e10139e",
+      "liveSha256": "fd09344130409040d5c6cb33ff4f40bbdf43737f45b8f590ddbee9303e10139e",
+      "matches": true
+    },
+    {
+      "file": "src/app/features/print/print-export.js",
+      "status": 200,
+      "expectedSha256": "9b0cc184ed74c7fbdb7a3320bb893984562b3d69b3969a57dd533b15a23351c3",
+      "liveSha256": "9b0cc184ed74c7fbdb7a3320bb893984562b3d69b3969a57dd533b15a23351c3",
+      "matches": true
+    },
+    {
+      "file": "src/app/shared/itinerary-art.js",
+      "status": 200,
+      "expectedSha256": "86768ac1f3dc5d82e22db1a27933add59a6a0472acb31538e6daaa9ef3a65233",
+      "liveSha256": "86768ac1f3dc5d82e22db1a27933add59a6a0472acb31538e6daaa9ef3a65233",
+      "matches": true
+    },
+    {
+      "file": "src/app/sync/drafts.js",
+      "status": 200,
+      "expectedSha256": "4022a0739d4fd2d37a70d3f68d9c5b077f397c8afffac274e01ae905070c161c",
+      "liveSha256": "4022a0739d4fd2d37a70d3f68d9c5b077f397c8afffac274e01ae905070c161c",
+      "matches": true
+    },
+    {
+      "file": "src/app/ui/custom-select.js",
+      "status": 200,
+      "expectedSha256": "27c641d1cbd17c923946bb1da8e6432530506a73c3129ee1e54264edbbfb55a7",
+      "liveSha256": "27c641d1cbd17c923946bb1da8e6432530506a73c3129ee1e54264edbbfb55a7",
+      "matches": true
+    },
+    {
+      "file": "src/styles/controls.css",
+      "status": 200,
+      "expectedSha256": "4cc4f3236838caea7e7a402a929c0174c02d53d15306119545b37a40c7e5fba1",
+      "liveSha256": "4cc4f3236838caea7e7a402a929c0174c02d53d15306119545b37a40c7e5fba1",
+      "matches": true
+    },
+    {
+      "file": "src/styles/itinerary.css",
+      "status": 200,
+      "expectedSha256": "61767b7c8b2e672ba465eaaa984e4a3637bf0532383335225f4de7d627c12ed7",
+      "liveSha256": "61767b7c8b2e672ba465eaaa984e4a3637bf0532383335225f4de7d627c12ed7",
+      "matches": true
+    },
+    {
+      "file": "sw.js",
+      "status": 200,
+      "expectedSha256": "dcb1367b7fea065cfbc58a754ffbb7d1778953e54f4633360fb980ba7a6071e5",
+      "liveSha256": "dcb1367b7fea065cfbc58a754ffbb7d1778953e54f4633360fb980ba7a6071e5",
+      "matches": true
+    }
+  ],
+  "verified": true,
+  "checkedAt": "2026-10-26T12:09:42.990Z",
+  "validation": {
+    "core": "passed by deploy run",
+    "browserSuiteFiles": 44,
+    "cityArtwork": "Unchanged; 3 representative cities at 4 widths. All 2540 combinations verified in previous release.",
+    "terminalVisualScreens": 16,
+    "build": "passed by deploy run",
+    "realTravelDataModified": false,
+    "cliProcessAssertions": 222
+  },
+  "productionBrowser": {
+    "itinerarySubtypes": {
+      "ok": true,
+      "origin": "https://triplog-5qs.pages.dev",
+      "browser": "Playwright / Edge",
+      "fallback": "Browser plugin not available",
+      "viewports": [
+        320,
+        390,
+        768,
+        1440
+      ],
+      "errors": [],
+      "checked": [
+        "50 shared types",
+        "dependent options",
+        "save/reload/edit/copy",
+        "manual PDF artwork and icons",
+        "automatic fallback",
+        "theme reset",
+        "legacy items",
+        "draft recovery",
+        "scroll and keyboard focus"
+      ]
+    },
+    "tripRemoval": {
+      "passed": true,
+      "flow": "delete -> leave and retain companions -> delete last member on server",
+      "lostResponseRetry": true,
+      "lastLocalTrip": true,
+      "otherDevice": true,
+      "serverId": "212bfb1b-4b6a-4c1d-acc5-dfd6670a0bc2",
+      "errors": []
+    },
+    "source": "Live production app files, synthetic accounts and isolated storage/API fixtures",
+    "realTravelDataModified": false
+  },
+  "http3Health": {
+    "transport": "windows-http3",
+    "endpoint": "auth/v1/health",
+    "status": 200,
+    "passed": true,
+    "credentialsUsed": false
+  },
+  "rootReflection": {
+    "before": "6892c78695901a2669863198e598580cd87fb9e5",
+    "after": "4852bdeb8f37c8649a697c4d5a85c1f9cdc5ab87",
+    "preservedSourceFiles": 81,
+    "changedSourceFiles": [],
+    "generatedAligned": [
+      "Travel.html",
+      "sw.js"
+    ]
+  }
+}

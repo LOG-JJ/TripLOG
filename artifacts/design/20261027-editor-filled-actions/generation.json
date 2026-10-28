@@ -1,0 +1,13 @@
+{
+  "mode": "T2I",
+  "tool": "built-in image_gen",
+  "inputImages": [],
+  "startedAtUtc": "2026-10-26 15:13:50 UTC",
+  "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-ff675e3e-3c08-4535-b95c-adbae3b56c8c.png",
+  "savedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261027-editor-filled-actions\\filled-actions-concept.png",
+  "sha256": "00db484a8818aee96aa6c95743cf4f1f5a4aff35424f59a62e61384b9655e196",
+  "copyVerified": true,
+  "overwritten": false,
+  "prompt": "Create a focused 390px-wide TripLOG mobile component mockup. On a white page, show three equal compact buttons in one row, with icon and text on one line: “구글지도 열기”, “길찾기”, “주변검색”. Fill them with muted pastel blue, periwinkle, and sage green respectively. Use the recognizable Google Maps multicolor pin for the first button. Below a hotel place summary, show “이름 변경” and “주소 변경” buttons filled with lavender and soft apricot. Give all five buttons dark navy 1.5px outlines, 8px corners, and a restrained solid shadow offset 2px right and 3px down, matching TripLOG’s existing graphic style. Keep 44px touch heights and compact readable text. Also show a small name-edit dialog with a pale lavender surface, matching outline and shadow, a readable input, and a yellow “적용” action.\n",
+  "scope": "Color fills, Google Maps icon and outlines/shadows for approved editor actions"
+}

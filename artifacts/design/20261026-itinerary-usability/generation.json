@@ -1,0 +1,15 @@
+{
+  "mode": "T2I",
+  "tool": "built-in image_gen",
+  "inputImages": [],
+  "startedAtUtc": "2026-10-26 14:37:53 UTC",
+  "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-145649b9-1f19-4bd9-911c-bbacb86a2a11.png",
+  "savedPath": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261026-itinerary-usability\\itinerary-usability-board.png",
+  "sha256": "e1fb617a6bf4271604e4b92ce5d39bc5369a3d7a95487be00a21b192f182c99b",
+  "copyVerified": true,
+  "overwritten": false,
+  "selected": false,
+  "target": "Four states, each targeting 390 x 844 CSS pixels",
+  "prompt": "Create a TripLOG mobile usability mockup board with four labeled screens in a 2 × 2 arrangement. Each screen represents a 390 × 844 CSS-pixel viewport. Use white surfaces, dark navy text, thin outlines, compact readable Korean typography, modest rounding, and yellow primary actions. Show app content without phone frames. These are four states of one workflow.\n\nPreserve the established editor: compact “TripLOG / 일정 계획” header, read-only “Day 2 / 10.21 (수)” immediately left of the top-right X, no day-selector strip, compact map, three equal buttons “구글지도 열기 / 길찾기 / 주변검색”, hotel name “니시스가모 호텔”, address, “이름 변경 / 주소 변경”, paired “테마 / 소분류” fields showing “숙소 / 호텔”, paired start/end times, “＋ 메모 추가”, and yellow “일정 저장”.\n\nUpper left, labeled “앞뒤 일정 · 시간 안내”: above the time fields show a compact two-line context, “이전 15:30 카페 종료” and “다음 18:00 저녁 식사 시작”. Start is 16:00 and end is 18:20. Beneath the fields show a small amber inline message, “다음 일정과 20분 겹쳐요.” Keep saving available.\n\nUpper right, labeled “체류시간으로 종료 설정”: show the same editor with its end-time picker open. Add quick choices “30분 / 1시간 / 2시간 / 직접 선택”. Select “1시간”; show “16:00 시작 → 17:00 종료”. Preserve compact hour/minute wheel controls and confirmation.\n\nLower left, labeled “이번 여행 장소 재사용”: show an address-change search view. Beneath its search field, show “이번 여행에서 사용한 장소” and three selectable location rows: “니시스가모 호텔”, “도쿄역”, “나리타공항”. Show a compact map and yellow “이 위치로 변경”.\n\nLower right, labeled “저장 후 다음 일정 추가”: show the itinerary timeline after saving the hotel at 16:00–17:00. At the bottom show a nonmodal confirmation panel, “일정을 추가했어요”, “다음 일정의 시작시간으로 17:00을 제안해요.”, with yellow “다음 일정 추가” and secondary “일정표 보기”.\n",
+  "implementation": "Mockup only; app code and production data unchanged"
+}
