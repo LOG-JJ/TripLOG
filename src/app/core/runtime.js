@@ -2,7 +2,7 @@ let activeFilter = "전체";
 let editingId = null;
 const initialPageParams = new URLSearchParams(window.location.search);
 const initialPage = initialPageParams.get("page");
-const initialAllowedPages = ["start", "overview", "itinerary", "budget", "settlement", "report", "settings"];
+const initialAllowedPages = ["start", "overview", "itinerary", "travel", "budget", "settlement", "report", "settings"];
 let activePage = initialPageParams.has("itinerary")
   ? "itinerary"
   : (initialPage === "overview" && !initialPageParams.has("trip") ? "start"
@@ -49,6 +49,7 @@ const els = {
   startPage: document.querySelector("#startPage"),
   budgetPage: document.querySelector("#budgetPage"),
   itineraryPage: document.querySelector("#itineraryPage"),
+  travelPage: document.querySelector("#travelPage"),
   itineraryPageButton: document.querySelector("#itineraryPageButton"),
   overviewPage: document.querySelector("#overviewPage"),
   settlementPage: document.querySelector("#settlementPage"),

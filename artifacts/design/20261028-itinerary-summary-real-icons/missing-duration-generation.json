@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-28",
+  "mode": "I2I, user-requested revision of selected original option 2",
+  "tool": "built-in image_gen",
+  "startedAt": {
+    "current_time": "2026-10-28 04:09:40 UTC"
+  },
+  "prompt": "Revise the selected TripLOG mobile itinerary-summary mockup. Preserve the selected layout, actual project category icons, short place names, dates, typography, white surfaces, navy outlines, yellow accents and blue journey connectors. The target remains 390 × 844 CSS pixels. Current date: 2026-10-28; preserve the example trip dates October 20–24, 2026.\n\nReplace the visible sentence “이동 시간 미입력 5구간” with a compact visual indicator on the Day 1 metadata row: a dotted-route icon combined with a small question mark, followed by the bold number “5”. Use a restrained pale amber background, navy ink and a small amber accent so the indicator feels informative rather than alarming. Place it beside the time range and stop count, with enough separation to distinguish it from the destination-count bubble “+5”. Do not label the indicator with a sentence.\n\nFor route previews, express recorded travel durations with solid blue connectors and unknown durations with light dashed connectors and a small question-mark marker. These are partial route previews; do not invent a complete-route percentage or total segment count. Keep the existing remaining-stop counts unchanged. Show the Day 1 missing-duration indicator prominently enough to understand, without adding explanatory paragraphs, warning logs or expanded details. Preserve the existing generic category icons; add no landmark-specific illustrations. Output one app-content-only image without phone hardware or OS chrome.\n\nInput images:\n- color-journey.png: the selected second mockup to revise.\n- project-icon-reference.png: reference for the actual category icons already used in TripLOG.",
+  "inputImages": [
+    {
+      "path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261028-itinerary-summary-real-icons/color-journey.png",
+      "role": "Selected original second mockup to revise",
+      "sha256": "ccd3d3a7ca54fbbfe0fbf6bbd18a75e9f229509a26f584a661a87265b592918b"
+    },
+    {
+      "path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261028-itinerary-summary-real-icons/project-icon-reference.png",
+      "role": "Existing project category icon reference",
+      "sha256": "19bd7b061debf0a3aed314fa570c190929e31770e3bc7f017d47351f07da3d82"
+    }
+  ],
+  "sourcePath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-b358f4b9-a4e1-4af9-91bb-3f417af9b8e6.png",
+  "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261028-itinerary-summary-real-icons/color-journey-missing-duration.png",
+  "baseOption": 2,
+  "selectedRevision": true,
+  "implementation": "Implemented locally with later requested smaller icons/text, 4/6/8 previews and a single date column on PC. See artifacts/qa/20261028-summary-implementation/design-qa.md",
+  "sourceSha256": "296884c789be0508ad219c2b163fa09ca873da8fc78290323aabb7c5f5992040",
+  "savedSha256": "296884c789be0508ad219c2b163fa09ca873da8fc78290323aabb7c5f5992040",
+  "copyVerified": true,
+  "overwritten": false,
+  "selectedAt": "2026-10-28"
+}

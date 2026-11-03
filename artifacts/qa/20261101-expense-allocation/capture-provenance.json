@@ -1,0 +1,116 @@
+[
+  {
+    "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-allocation\\expense-allocation\\amount-390.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-allocation\\amount-390.png",
+    "sha256": "4759bb5bad09a2b0877ff4b8a520c4161899bdc56f0ee590edaba7059e496c29"
+  },
+  {
+    "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-allocation\\expense-allocation\\amount-390-component.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-allocation\\amount-390-component.png",
+    "sha256": "0e4ed1b3da8609a584299a0e417a90d48f55c532af3e58cdfa15d77c5c90af5d"
+  },
+  {
+    "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-allocation\\expense-allocation\\percent-390.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-allocation\\percent-390.png",
+    "sha256": "1ce8ede9a5013d8774ccb712475ca7deadd99e459a5c4cec56e05d52228c5a54"
+  },
+  {
+    "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-allocation\\expense-allocation\\percent-390-component.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-allocation\\percent-390-component.png",
+    "sha256": "4df7c9e36170de5c5a279c099b8205ba5cab3803cabfdbd8822a127604ff5a85"
+  },
+  {
+    "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-allocation\\expense-allocation\\percent-320.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-allocation\\percent-320.png",
+    "sha256": "dbc8e14e55e8900b0cc795b32c0b7c7835f765248cc118a7dc6ccff8ad88091c"
+  },
+  {
+    "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-allocation\\expense-allocation\\percent-320-component.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-allocation\\percent-320-component.png",
+    "sha256": "7f9619acfc45d60bd9d0751949136b31b408f4d48ee251d270e01033cbbdad1f"
+  },
+  {
+    "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-allocation\\expense-allocation\\percent-decimal-320.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-allocation\\percent-decimal-320.png",
+    "sha256": "44a83c3ecb8fe560daf60176711c041c41e26d14e9f51346046f6177e283aa95"
+  },
+  {
+    "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-allocation\\expense-allocation\\percent-decimal-320-component.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-allocation\\percent-decimal-320-component.png",
+    "sha256": "616ac25b75b0438e74af80ee16f0ba9dddf3d9a23eacb24561028ea94bf47d96"
+  },
+  {
+    "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-allocation\\expense-allocation\\percent-incomplete-390.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-allocation\\percent-incomplete-390.png",
+    "sha256": "086b21fa87ac895157a9ea227b7ea2a234f1015fff63d18c1ff864a3109e5922"
+  },
+  {
+    "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-allocation\\expense-allocation\\percent-incomplete-390-component.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-allocation\\percent-incomplete-390-component.png",
+    "sha256": "1dcd07e3d31e6394f02024a3de06e6963675aeb85e6cf2d94b53084ee309a9f5"
+  },
+  {
+    "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-allocation\\expense-allocation\\percent-1440.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-allocation\\percent-1440.png",
+    "sha256": "fb125dc5c768f1da315c31020c1887f27d67467c27f7e61519f66dce1f470972"
+  },
+  {
+    "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-allocation\\expense-allocation\\percent-1440-component.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-allocation\\percent-1440-component.png",
+    "sha256": "a49419200342d500010ef12c87b06b01098f60165d014a0d1b1344f0566c8104"
+  },
+  {
+    "comparison": "amount-comparison.png",
+    "reference": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261101-expense-item-split-refinement\\allocation-component.png",
+    "referencePixels": [
+      1774,
+      887
+    ],
+    "crop": [
+      55,
+      86,
+      836,
+      817
+    ],
+    "normalizedReferencePixels": [
+      326,
+      305
+    ],
+    "implementationPixels": [
+      326,
+      309
+    ],
+    "cssViewport": [
+      390,
+      844
+    ],
+    "deviceScaleFactor": 1
+  },
+  {
+    "comparison": "percent-comparison.png",
+    "reference": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261101-expense-item-split-refinement\\allocation-component.png",
+    "referencePixels": [
+      1774,
+      887
+    ],
+    "crop": [
+      938,
+      86,
+      1728,
+      817
+    ],
+    "normalizedReferencePixels": [
+      326,
+      302
+    ],
+    "implementationPixels": [
+      326,
+      309
+    ],
+    "cssViewport": [
+      390,
+      844
+    ],
+    "deviceScaleFactor": 1
+  }
+]

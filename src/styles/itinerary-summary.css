@@ -1,4 +1,4 @@
-/* Inline itinerary views, matched to the selected TripLOG summary mockup. */
+/* Selected icon journey summary. Runtime graphics reuse the subtype SVG catalog. */
 #itineraryPage :where(#itineraryEditView, #itinerarySummaryView)[hidden] { display: none !important; }
 body.rd-app #itineraryPage[data-itinerary-view=summary] { padding-bottom: calc(90px + env(safe-area-inset-bottom)); }
 #itineraryPage .itinerary-title-row { min-height: 32px; }
@@ -13,42 +13,92 @@ body.rd-app #itineraryPage .itinerary-days-toolbar .itinerary-view-all { flex-di
 #itineraryPage .itinerary-days-toolbar .itinerary-view-all .ph { font-size: 18px; }
 #itinerarySummaryView { margin-top: 20px; }
 #itineraryPage .itinerary-summary-toolbar { display: flex; align-items: stretch; gap: 8px; margin-bottom: 14px; }
-#itineraryPage .itinerary-summary-total { display: flex; align-items: center; flex: 1; min-width: 0; gap: 8px; padding: 10px; border: 1px solid #ccd3de; border-radius: 8px; background: #f7f8fa; }
+#itineraryPage .itinerary-summary-total { display: flex; align-items: center; flex: 1; min-width: 0; gap: 8px; padding: 8px 0; }
 #itineraryPage .itinerary-summary-total > .ph { flex-shrink: 0; font-size: 21px; }
 #itineraryPage .itinerary-summary-total p { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 7px; margin: 0; font-size: var(--tl-text-meta); line-height: 1.45; color: var(--muted); }
-#itineraryPage .itinerary-summary-total strong { color: var(--text); font-size: var(--tl-text-label); font-weight: 700; white-space: nowrap; }
-#itineraryPage .itinerary-summary-total span { overflow-wrap: anywhere; }
+#itineraryPage .itinerary-summary-total :is(strong, span) { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+#itineraryPage .itinerary-summary-total strong { color: var(--text); font-size: var(--tl-text-label); font-weight: 700; }
+#itineraryPage .itinerary-summary-total .ph { font-size: 18px; }
 body.rd-app #itinerarySummaryCopy { display: flex; align-items: center; justify-content: center; gap: 5px; align-self: stretch; min-height: 44px; min-width: 83px; padding: 9px 10px; margin: 0; border: 1.5px solid var(--text); border-radius: 8px; color: var(--text); background: #fff; box-shadow: none; font-size: var(--tl-text-label); font-weight: 650; line-height: 1.4; flex-shrink: 0; }
 #itinerarySummaryCopy .ph { font-size: 20px; }
 #itinerarySummaryCopy:disabled { opacity: .55; }
-#itinerarySummaryDays { display: grid; gap: 12px; }
-#itineraryPage .itinerary-summary-day { min-width: 0; border: 1px solid #c9d1dd; border-radius: 9px; background: #f8f9fb; overflow: hidden; transition: border-color 150ms, background 150ms; }
-#itineraryPage .itinerary-summary-day.is-open { border-color: #dfce64; background: #fff; }
-#itineraryPage .itinerary-summary-day-head { display: flex; align-items: center; gap: 5px; min-width: 0; padding: 3px 8px 0 12px; cursor: pointer; }
-body.rd-app #itineraryPage .itinerary-summary-day-head h2 { display: flex; align-items: baseline; flex-wrap: wrap; gap: 1px 9px; flex: 1; min-width: 0; margin: 0; padding: 9px 0; color: var(--text); font-size: var(--tl-text-label); line-height: 1.4; font-weight: 600; }
-#itineraryPage .itinerary-summary-day-head h2 strong { font-size: var(--tl-text-section); font-weight: 750; white-space: nowrap; }
-#itineraryPage .itinerary-summary-day-head h2 span { font-size: var(--tl-text-label); color: #505c6f; font-weight: 500; white-space: nowrap; }
-body.rd-app #itineraryPage .itinerary-summary-edit { display: inline-flex; align-items: center; justify-content: center; gap: 3px; flex-shrink: 0; min-height: 44px; margin: 0; padding: 7px 2px; border: 0; border-radius: 5px; color: #4e6077; background: transparent; font-size: var(--tl-text-meta); font-weight: 500; line-height: 1.4; box-shadow: none; }
-#itineraryPage .itinerary-summary-edit .ph { font-size: 15px; }
-body.rd-app #itineraryPage .itinerary-summary-toggle { display: grid; place-items: center; flex-shrink: 0; width: 36px; min-height: 44px; margin: 0; padding: 7px; border: 0; border-radius: 5px; color: #536074; background: transparent; box-shadow: none; }
-#itineraryPage .itinerary-summary-toggle .ph { font-size: 18px; transition: transform 150ms; }
+#itinerarySummaryDays { display: grid; gap: 16px; }
+#itineraryPage .itinerary-summary-day { min-width: 0; border: 1.25px solid #c8e4f3; border-radius: 14px; background: #fff; box-shadow: 0 3px 10px #13294b08; overflow: hidden; transition: border-color 150ms; }
+#itineraryPage .itinerary-summary-day.is-open { border-color: #91cbea; }
+#itineraryPage .itinerary-summary-day-head { padding: 8px 14px 2px; }
+body.rd-app #itineraryPage .itinerary-summary-day-head h2 { min-width: 0; margin: 0; padding: 0; color: var(--text); font-size: var(--tl-text-label); line-height: 1.4; }
+#itineraryPage .itinerary-summary-day-head h2 strong { padding: 4px 9px; border-radius: 7px; background: #c9eafa; font-size: 16px; font-weight: 750; white-space: nowrap; }
+#itineraryPage .itinerary-summary-day-head h2 span { font-size: 15px; color: var(--text); font-weight: 700; white-space: nowrap; }
+body.rd-app #itineraryPage .itinerary-summary-edit { display: grid; place-items: center; align-self: end; width: 32px; min-height: 32px; margin: 0; padding: 0; border: 0; border-radius: 6px; color: #50657d; background: transparent; box-shadow: none; }
+#itineraryPage .itinerary-summary-edit .ph { font-size: 18px; }
+body.rd-app #itineraryPage .itinerary-summary-toggle { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 44px; margin: 0; padding: 0; border: 0; border-radius: 5px; color: var(--text); background: transparent; box-shadow: none; }
+#itineraryPage .itinerary-summary-toggle .ph { margin-left: auto; font-size: 22px; transition: transform 150ms; }
 #itineraryPage .is-open .itinerary-summary-toggle .ph { transform: rotate(180deg); }
-#itineraryPage .itinerary-summary-day-meta { margin: 0; padding: 0 12px 8px; color: #536074; font-size: var(--tl-text-meta); line-height: 1.55; font-weight: 400; word-break: keep-all; overflow-wrap: anywhere; }
-#itineraryPage .is-open :where(.itinerary-summary-day-head, .itinerary-summary-day-meta) { background: var(--tl-surface, #fff); }
-#itineraryPage .itinerary-summary-warning { display: flex; align-items: start; gap: 5px; margin: 0; padding: 0 12px 8px; color: #875c22; font-size: var(--tl-text-meta); line-height: 1.5; }
-#itineraryPage .itinerary-summary-warning .ph { flex-shrink: 0; font-size: 15px; margin-top: 2px; }
-#itineraryPage .itinerary-summary-route { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin: 0 12px 11px; padding: 0; color: #59677b; font-size: var(--tl-text-label); line-height: 1.55; font-weight: 400; word-break: keep-all; overflow-wrap: anywhere; }
-#itineraryPage .itinerary-summary-day-body { padding: 7px 12px 11px; }
+#itineraryPage .itinerary-summary-day-meta { display: grid; grid-template-columns: minmax(0, 1fr) 32px; align-items: center; gap: 8px; margin: 0; padding: 0 14px 6px; min-height: 32px; color: #50657d; font-size: 13px; line-height: 1.4; font-variant-numeric: tabular-nums; }
+#itineraryPage .summary-day-metrics { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 12px; min-width: 0; }
+#itineraryPage .summary-metric { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+#itineraryPage .summary-metric > .ph { font-size: 18px; }
+body.rd-app #itineraryPage .summary-issue-badge { display: inline-flex; align-items: center; justify-content: center; gap: 4px; min-height: 32px; margin: 0; padding: 4px 7px; border: 1px solid transparent; border-radius: 9px; background: #fff0d7; color: #4b3716; box-shadow: none; font-size: 14px; }
+#itineraryPage .summary-issue-badge > .ph { font-size: 18px; }
+#itineraryPage .summary-question { display: inline-grid; place-items: center; width: 17px; height: 17px; border: 1px solid #db9709; border-radius: 50%; background: #ffdc7d; color: #45310a; font-size: 12px; font-weight: 800; line-height: 1; }
+#itineraryPage .summary-issue-badge[aria-expanded=true] { border-color: #cb941e; }
+#itineraryPage .itinerary-summary-route { margin: 0; padding: 6px 14px 12px; }
+#itineraryPage .summary-preview-stops { display: grid; grid-template-columns: repeat(var(--preview-count), minmax(0, 1fr)); align-items: start; width: 100%; gap: 4px; }
+#itineraryPage .summary-preview-stops:has(.summary-preview-more) { grid-template-columns: repeat(var(--preview-count), minmax(0, 1fr)) 36px; }
+#itineraryPage .summary-preview-stop { position: relative; min-width: 0; }
+body.rd-app #itineraryPage .summary-preview-place { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%; min-width: 0; min-height: 64px; margin: 0; padding: 0; border: 0; border-radius: 6px; box-shadow: none; background: #fff; color: var(--text); font-size: 12px; font-weight: 600; line-height: 1.4; }
+#itineraryPage .summary-preview-place img { display: block; position: relative; width: 36px; height: 36px; object-fit: contain; }
+#itineraryPage .summary-preview-place > span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; max-width: 100%; word-break: keep-all; overflow-wrap: anywhere; }
+#itineraryPage .summary-preview-place > .ph { display: grid; place-items: center; width: 36px; height: 36px; font-size: 28px; }
+#itineraryPage .summary-route-link { position: absolute; z-index: 1; top: 19px; left: calc(50% + 20px); width: calc(100% - 36px); border-top: 2px solid #9bd5f5; pointer-events: none; }
+#itineraryPage .summary-route-link > span { position: absolute; top: -7px; left: 50%; transform: translateX(-50%); width: 12px; height: 12px; border: 2px solid #8ccef2; border-radius: 50%; background: #fff; }
+#itineraryPage .summary-route-link.is-missing { border-top-style: dashed; }
+#itineraryPage .summary-route-link.is-missing > span { display: grid; place-items: center; top: -10px; width: 18px; height: 18px; border: 1px solid #e3ae3d; background: #fff1cc; color: #594013; font-size: 12px; font-weight: 800; line-height: 1; }
+body.rd-app #itineraryPage .summary-preview-more { display: grid; place-items: start center; min-width: 0; min-height: 54px; margin: 2px 0 0; padding: 0; border: 0; border-radius: 50%; box-shadow: none; background: transparent; color: var(--text); font-size: 13px; font-weight: 750; }
+#itineraryPage .summary-preview-more span { display: grid; place-items: center; min-width: 32px; height: 32px; padding: 0 4px; border-radius: 50%; background: #f8c0d6; }
+#itineraryPage .itinerary-summary-issues { margin: 6px 14px 14px; border: 1px solid #dde7ef; border-radius: 12px; background: #fff; color: var(--text); box-shadow: 0 3px 12px #203b5d06; font-size: 13px; line-height: 1.5; overflow: hidden; }
+#itineraryPage .summary-issues-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 48px; padding: 4px 10px 4px 14px; border-bottom: 1px solid #e8eef3; }
+#itineraryPage .summary-issues-head strong { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; }
+#itineraryPage .summary-issues-head strong > .ph { font-size: 23px; color: #47739a; }
+#itineraryPage .summary-issues-head b { display: grid; place-items: center; min-width: 25px; height: 25px; padding: 0 5px; border-radius: 50%; background: #ffe39b; color: #513b0f; font-size: 13px; }
+body.rd-app #itineraryPage .summary-issues-close { display: grid; place-items: center; flex: 0 0 36px; min-height: 36px; margin: 0; padding: 0; border: 0; border-radius: 7px; background: transparent; color: #657a92; box-shadow: none; font-size: 20px; }
+#itineraryPage .itinerary-summary-issues ul { display: grid; gap: 0; padding: 0; margin: 0; list-style: none; }
+#itineraryPage .itinerary-summary-issues li { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 14px; min-width: 0; padding: 10px 14px; border-top: 1px solid #edf1f5; }
+#itineraryPage .itinerary-summary-issues li:first-child { border-top: 0; }
+#itineraryPage .summary-issue-route { display: grid; grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1fr); align-items: center; gap: 12px; min-width: 0; }
+#itineraryPage .summary-issue-place { display: flex; align-items: center; gap: 8px; min-width: 0; font-size: 13px; font-weight: 650; }
+#itineraryPage .summary-issue-place img { flex: 0 0 28px; width: 28px; height: 28px; object-fit: contain; }
+#itineraryPage .summary-issue-place > span { min-width: 0; word-break: keep-all; overflow-wrap: anywhere; }
+#itineraryPage .summary-issue-arrow { display: flex; align-items: center; color: #8a9fb4; }
+#itineraryPage .summary-issue-arrow::before { content: ''; flex: 1; border-top: 1px dashed #a3b6c8; }
+#itineraryPage .summary-issue-arrow .ph { font-size: 17px; }
+#itineraryPage .summary-issue-duration { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; color: #52657c; font-size: 13px; font-variant-numeric: tabular-nums; }
+#itineraryPage .summary-issue-duration > .ph { font-size: 17px; }
+#itineraryPage .summary-issue-duration small { padding: 1px 4px; border-radius: 4px; background: #f0f4f8; color: #50647d; font-size: 11px; }
+body.rd-app #itineraryPage .summary-issue-action { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 36px; margin: 0; padding: 7px 10px; border: 1px solid #d3e8fb; border-radius: 8px; background: #e9f4ff; color: #205d97; box-shadow: 0 1px 2px #173d6510; font-size: 12px; font-weight: 650; line-height: 1.4; white-space: nowrap; }
+#itineraryPage .summary-issue-action > .ph { font-size: 16px; }
+#itineraryPage .itinerary-summary-day-body { padding: 3px 14px 12px; }
 #itineraryPage .itinerary-summary-day [hidden] { display: none !important; }
 #itineraryPage .itinerary-summary-day ol { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
-#itineraryPage .itinerary-summary-day li { display: grid; grid-template-columns: 41px 18px minmax(0, 1fr); gap: 9px; align-items: start; min-height: 39px; padding: 7px 0; position: relative; font-size: var(--tl-text-body); line-height: 1.5; }
-#itineraryPage .itinerary-summary-day time { font-size: var(--tl-text-label); font-weight: 650; font-variant-numeric: tabular-nums; line-height: 21px; white-space: nowrap; }
-#itineraryPage .itinerary-summary-day li > strong { min-width: 0; color: var(--text); font-size: var(--tl-text-body); font-weight: 650; line-height: 1.5; word-break: keep-all; overflow-wrap: anywhere; }
-#itineraryPage .itinerary-summary-dot { display: flex; position: relative; align-self: stretch; padding-top: 2px; }
-#itineraryPage .itinerary-summary-dot .ph { position: relative; z-index: 1; height: 16px; font-size: 16px; border-radius: 50%; background: var(--rd-blue); }
-#itineraryPage li:not(:last-child) .itinerary-summary-dot::after { content: ''; position: absolute; left: 7px; top: 18px; bottom: -16px; border-left: 1px solid #c6ccd6; }
-#itineraryPage li[data-theme=food] .itinerary-summary-dot .ph { background: var(--rd-pink); }
-#itineraryPage li[data-theme=sightseeing] .itinerary-summary-dot .ph { background: var(--rd-yellow); }
+#itineraryPage .summary-timeline-stop { position: relative; min-width: 0; padding: 0; }
+#itineraryPage .summary-timeline-stop::before { content: ''; position: absolute; top: 0; bottom: 0; left: 72px; border-left: 1px solid #c8d9e5; }
+#itineraryPage .summary-timeline-stop.has-missing::before { border-left-style: dashed; }
+#itineraryPage .summary-timeline-stop:first-child::before { top: 18px; }
+#itineraryPage .summary-timeline-stop:last-child::before { bottom: 18px; }
+#itineraryPage .summary-timeline-stop:only-child::before { display: none; }
+#itineraryPage .summary-stop-row { display: grid; grid-template-columns: 48px 28px minmax(0, 1fr); align-items: center; gap: 10px; min-height: 36px; }
+#itineraryPage .summary-stop-row time { font-size: 13px; font-weight: 650; font-variant-numeric: tabular-nums; line-height: 1.5; white-space: nowrap; }
+#itineraryPage .summary-stop-row strong { min-width: 0; color: var(--text); font-size: 14px; font-weight: 650; line-height: 1.5; word-break: keep-all; overflow-wrap: anywhere; }
+#itineraryPage .summary-stop-icon { display: grid; place-items: center; position: relative; z-index: 1; width: 28px; min-height: 32px; padding: 2px 0; background: #fff; }
+#itineraryPage .summary-stop-icon img { width: 28px; height: 28px; object-fit: contain; }
+#itineraryPage .summary-transit-strip { display: flex; align-items: center; position: relative; gap: 6px; min-width: 0; max-width: calc(100% - 56px); min-height: 42px; margin-left: 56px; padding: 4px 2px; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: #c5d8e8 transparent; }
+body.rd-app #itineraryPage .summary-transit-leg { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; gap: 5px; min-width: 28px; min-height: 32px; margin: 0; padding: 4px 3px; border: 0; border-radius: 4px; background: transparent; color: #47617a; box-shadow: none; font-size: 12px; font-weight: 600; line-height: 1.4; white-space: nowrap; }
+#itineraryPage .summary-transit-leg img { flex: 0 0 20px; width: 20px; height: 20px; object-fit: contain; }
+#itineraryPage .summary-transit-leg > .ph { font-size: 18px; }
+#itineraryPage .summary-transit-leg > span { display: inline-flex; align-items: center; }
+#itineraryPage .summary-transit-leg .summary-transit-line { display: block; max-width: 130px; overflow: hidden; text-overflow: ellipsis; }
+#itineraryPage .summary-transit-arrow { display: flex; flex: 0 0 14px; color: #90a7ba; font-size: 14px; }
+#itineraryPage .summary-transit-strip:focus-within { scrollbar-color: #8ab6d7 transparent; }
 #itineraryPage .itinerary-summary-unplanned { margin: 4px 0; font-size: var(--tl-text-label); line-height: 1.6; color: var(--muted); }
 #itineraryPage .itinerary-summary-empty { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 38px 20px; text-align: center; border: 1px dashed #c9d1dd; border-radius: 9px; }
 #itineraryPage .itinerary-summary-empty[hidden], #itineraryPage .itinerary-summary-copy-fallback[hidden], #itinerarySummaryCopyStatus[hidden] { display: none !important; }
@@ -62,21 +112,40 @@ body.rd-app #itinerarySummaryAdd { margin-top: 6px; padding: 9px 16px; min-heigh
 body.rd-app #itineraryPage .itinerary-summary-copy-fallback label { display: block; margin-bottom: 6px; font-size: var(--tl-text-label); }
 body.rd-app #itinerarySummaryCopyText { width: 100%; min-height: 150px; padding: 10px; border: 1.5px solid #969eaa; border-radius: 8px; background: #fff; color: var(--text); font: 400 var(--tl-text-input)/1.6 var(--font); resize: vertical; }
 #itinerarySummaryCopyText:focus { outline: 2px solid var(--rd-yellow); outline-offset: 1px; }
-#itineraryPage :where(.itinerary-view-switch button, .itinerary-summary-edit, .itinerary-summary-toggle, #itinerarySummaryCopy, #itinerarySummaryAdd):focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
-#itineraryPage :where(.itinerary-view-switch button, #itinerarySummaryCopy, #itinerarySummaryAdd):active { transform: translateY(1px); box-shadow: none; }
+#itineraryPage :where(.itinerary-view-switch button, .itinerary-summary-edit, .itinerary-summary-toggle, .summary-issue-badge, .summary-preview-place, .summary-preview-more, .summary-issue-action, .summary-issues-close, .summary-transit-leg, #itinerarySummaryCopy, #itinerarySummaryAdd):focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+#itineraryPage :where(.itinerary-view-switch button, .itinerary-summary-edit, #itinerarySummaryCopy, #itinerarySummaryAdd):active { transform: translateY(1px); box-shadow: none; }
 #itinerarySelectedDayTitle { scroll-margin-top: 16px; }
 #itinerarySelectedDayTitle:focus { outline: none; }
 @media (hover: hover) {
   body.rd-app #itineraryPage .itinerary-view-switch button:not([aria-selected=true]):hover { background: #fffbed; }
-  body.rd-app #itineraryPage :where(.itinerary-summary-edit, .itinerary-summary-toggle, #itinerarySummaryCopy):hover:not(:disabled) { background: #fff7c9; }
+  body.rd-app #itineraryPage :where(.itinerary-summary-toggle, #itinerarySummaryCopy):hover:not(:disabled) { background: #fff7c9; }
+  body.rd-app #itineraryPage .itinerary-summary-edit:hover { background: #fff7c9; color: var(--text); }
+  body.rd-app #itineraryPage .summary-issue-action:hover { border-color: #9fc5e6; background: #e5f2ff; }
+  body.rd-app #itineraryPage .summary-transit-leg:hover { color: #185f9d; background: transparent; }
+}
+@media (max-width: 699px) {
+  #itineraryPage .itinerary-summary-issues { margin-left: 10px; margin-right: 10px; }
+  #itineraryPage .itinerary-summary-issues li { grid-template-columns: minmax(0, 1fr) auto; gap: 5px 10px; padding: 10px; }
+  #itineraryPage .summary-issue-route { grid-template-columns: minmax(0, 1fr); gap: 3px; grid-row: span 2; }
+  #itineraryPage .itinerary-summary-issues[data-kind=time] li > .summary-issue-place { grid-row: span 2; }
+  #itineraryPage .summary-issue-arrow { display: none; }
+  #itineraryPage .summary-issue-route .summary-issue-place:last-child > span::before { content: '→ '; color: #829bb0; }
+  #itineraryPage .summary-issue-place { gap: 6px; font-size: 12px; }
+  #itineraryPage .summary-issue-place img { flex-basis: 24px; width: 24px; height: 24px; }
+  #itineraryPage .summary-issue-duration { justify-content: end; font-size: 12px; }
+  body.rd-app #itineraryPage .summary-issue-action { min-height: 36px; padding: 6px 8px; }
 }
 @media (max-width: 359px) {
   #itineraryPage .itinerary-view-switch { gap: 8px; }
   #itineraryPage .itinerary-summary-total { gap: 6px; padding: 8px; }
   #itineraryPage .itinerary-summary-total > .ph { display: none; }
-  #itineraryPage .itinerary-summary-day-head { gap: 2px; padding-left: 10px; padding-right: 4px; }
-  #itineraryPage .itinerary-summary-day-head h2 { gap: 1px 5px; }
-  body.rd-app #itineraryPage .itinerary-summary-toggle { width: 32px; }
+  #itineraryPage .itinerary-summary-day-head { padding-left: 10px; padding-right: 10px; }
+  #itineraryPage .itinerary-summary-day-meta { padding-left: 10px; padding-right: 10px; font-size: 13px; }
+  #itineraryPage .summary-day-metrics { gap: 5px 8px; }
+  #itineraryPage .itinerary-summary-route { padding-left: 10px; padding-right: 10px; }
+  #itineraryPage .summary-preview-place img { width: 32px; height: 32px; }
+  #itineraryPage .summary-route-link { top: 17px; left: calc(50% + 18px); width: calc(100% - 32px); }
+  body.rd-app #itineraryPage .summary-preview-place { font-size: 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
   #itineraryPage .itinerary-summary-day, #itineraryPage .itinerary-summary-toggle .ph { transition: none; }

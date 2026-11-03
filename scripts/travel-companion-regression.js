@@ -214,6 +214,9 @@ assert.ok(escaped.includes('&lt;script&gt;'));
 assert.ok(!escaped.includes('<img src=x'));
 
 const normalized = sandbox.normalizeTravelCompanion({ completedItineraryIds: ['a', 'a', 'missing'], lockedItineraryIds: [null, 'b'], timeZone: 'bad/timezone', reservations: [null, {}, ...wallet.travelCompanion.reservations, ...wallet.travelCompanion.reservations] }, trip.itineraryItems);
+const moneyReservation = { id: 'metadata', type: 'activity', title: '입장권', date: '2026-11-03', quotedAmount: 2700, quotedCurrency: 'JPY', linkedExpenseId: 'payment', ticketUrl: 'https://example.test/ticket', guests: '2', seats: 'A1' };
+const preservedReservation = sandbox.normalizeTravelCompanion({ reservations: [moneyReservation] }).reservations[0];
+for (const key of ['quotedAmount', 'quotedCurrency', 'linkedExpenseId', 'ticketUrl', 'guests', 'seats']) assert.equal(preservedReservation[key], moneyReservation[key], `Reservation metadata survives normalization: ${key}`);
 assert.deepEqual(clone(normalized.completedItineraryIds), ['a']);
 assert.deepEqual(clone(normalized.lockedItineraryIds), ['b']);
 assert.equal(normalized.reservations.length, 1);

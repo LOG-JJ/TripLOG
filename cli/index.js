@@ -56,7 +56,7 @@ async function dispatch(positionals, options) {
   validateOptions(group, action, subaction, options);
   if (group === 'schema') {
     if (!Object.hasOwn(Domain.fields, action)) fail('USAGE', 'schema 다음에 데이터 영역을 지정해 주세요.');
-    return { kind: action, fields: Domain.fields[action].split(' '), exampleInput: '--file input.json', managedFields: ['id', 'createdAt', 'expenseId', 'linkedReservationId'],
+    return { kind: action, fields: Domain.fields[action].split(' '), exampleInput: '--file input.json', managedFields: ['id', 'createdAt', 'expenseId', 'linkedReservationId', 'linkedExpenseId', 'reservationJourney'],
       ...(action === 'itinerary' ? { themeSubtypes: Object.fromEntries(Object.entries(ItineraryArt.themes).map(([theme, meta]) => [theme, { label: meta.label, types: Object.values(ItineraryArt.catalog).filter(row => row.group === theme).map(({ id, label }) => ({ id, label })) }])) } : {}) };
   }
   if (options.dryRun && (['auth', 'config', 'operation'].includes(group) || group === 'dev' && ['serve', 'doctor'].includes(action))) fail('USAGE', '이 명령은 --dry-run을 지원하지 않습니다.');

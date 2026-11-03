@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-31",
+  "stage": "image-mockup-only",
+  "status": "awaiting-user-feedback",
+  "prompt": "Refine the attached selected TripLOG reservation-wallet mockup to match the user's established requirements. Produce one revised mobile screen at 390 × 844 CSS pixels, preserving the reference's visual identity rather than introducing a new style. Remove the featured accommodation card entirely. The top section must be “오늘 필요한 예약” and include only non-accommodation reservations whose usage date matches the featured day; never promote ongoing stays, same-day hotel check-ins, or future bookings into it. Retain the reference's fictional example dates and booking content for comparison: October 28 is the sample featured day and October 31 is a later reservation; the actual client date is October 31, 2026, so these are prototype examples, not live data. Keep the attraction reservation's time and name prominent, with a small reusable category icon, one clearly copyable reservation number and a compact yellow “티켓 열기” action. Reduce card height and duplicate controls. Hide full addresses, participant and seat information inside “상세 보기”. Place other dates in a separate quieter “이후 예약” list, using compact rows and copy/open actions. Hotels remain available only through the full reservation list and lodging filter. Preserve search, a compact filter, a small add button, edit pencils and the existing five-item bottom navigation with 일정 selected. Keep a collapsed past-reservation row. Amounts are secondary metadata only; expense linking stays inside editing, without financial panels on the wallet screen. Use brief Korean labels, readable compact typography, clear alignment and practical touch targets. If no eligible reservation exists for the featured day, the design logic is a short empty message instead of substituting hotels or other dates.\n\nInput images:\n- codex-clipboard-b2af6825-4188-40d5-ad34-d101910c47a6.png: the user's selected reservation-wallet mockup to refine.",
+  "startedAt": "2026-10-30T15:36:48.385Z",
+  "mode": "I2I",
+  "inputs": [
+    {
+      "path": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-b2af6825-4188-40d5-ad34-d101910c47a6.png",
+      "role": "User-selected reservation-wallet mockup to refine",
+      "savedPath": "artifacts/design/20261031-wallet-selected-refinement/reference.png",
+      "sha256": "9b9e532c03f54c9006645957e0b7827a1306bbec5636dd071ecaee2ab55d8a09"
+    }
+  ],
+  "targetViewport": {
+    "width": 390,
+    "height": 844
+  },
+  "realDate": "2026-10-31",
+  "exampleDate": "2026-10-28",
+  "generationStartedAt": "2026-10-30T15:37:03.059Z",
+  "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-16659b73-e865-48df-a73e-b40a9d1815b7.png",
+  "savedPath": "artifacts/design/20261031-wallet-selected-refinement/refined-wallet.png",
+  "tool": "image_gen.imagegen",
+  "overwritten": false,
+  "sha256": "e4d9b670f326fc41b74ab48eec41f1eeec684550616467502ccad4c80a030505"
+}

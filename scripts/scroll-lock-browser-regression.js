@@ -33,6 +33,8 @@ async function main() {
         await frame();
         const state = await scrollState();
         assert.deepEqual(state.dialogs, [], label);
+        assert.notEqual(state.root, 'hidden', label);
+        if (state.height <= await page.evaluate(() => innerHeight + 1)) return;
         // Reset only the test starting point; actual movement below must come
         // from native input, not a programmatic scroll that bypasses overflow.
         await page.evaluate(() => scrollTo(0, 0)); await frame();
@@ -82,21 +84,25 @@ async function main() {
       await page.locator('#itinerarySubmitButton').click(); await editor.waitFor({ state: 'hidden' });
       await assertPageScrolls('Cancel then save editor');
 
-      // The same leak affected wallet -> itinerary and companion -> packing.
+      // Wallet -> itinerary -> wallet and inline packing must keep one valid scroll lock.
       await page.evaluate(async () => {
         state.travelCompanion.reservations.push({ id: 'scroll-reservation', type: 'activity', title: '스크롤 검증 입장권', date: state.startDate, reference: 'SCROLL-TICKET' });
         await saveAndRender(); window.TripLog.features.travelCompanion.workspace.open('wallet');
       });
-      await page.locator('[data-tt-action="reservation-detail"][data-id="manual:scroll-reservation"]').click();
+      await page.locator('#ttCompanion:not([hidden])').waitFor();
+      if (await page.locator('#ttCompanion .cx-past').count()) await page.locator('#ttCompanion .cx-past summary').click();
+      await page.locator('#ttCompanion .cx-booking-title[data-id="manual:scroll-reservation"]').click();
       await page.locator('#ttReservationDetail [data-tt-action="reservation-link"]').click(); await editor.waitFor({ state: 'visible' });
       await assertBackgroundLocked('Wallet to itinerary handoff');
       await page.keyboard.press('Escape'); await editor.waitFor({ state: 'hidden' });
-      await assertPageScrolls('Wallet to itinerary then Escape');
+      await page.locator('#ttCompanion:not([hidden])').waitFor(); await assertPageScrolls('Closing itinerary returns to the wallet page');
+      await page.locator('.rd-nav [data-trip-nav="itinerary"]').click(); await page.locator('#itineraryDayStrip [data-date]').first().click();
+      await assertPageScrolls('Wallet return then close');
 
       await page.evaluate(() => window.TripLog.features.travelCompanion.workspace.open('tools'));
-      await page.locator('#ttCompanion [data-tt-action="packing"]').click();
-      await page.locator('#itineraryToolsDialog').waitFor({ state: 'visible' }); await assertBackgroundLocked('Packing tools handoff');
-      await page.getByRole('button', { name: '준비물 닫기', exact: true }).click(); await assertPageScrolls('Close packing tools');
+      await page.locator('#ttCompanion [data-tt-action="packing-filter"][data-filter="all"]').click();
+      await page.locator('#ttPackingAdd').waitFor({ state: 'visible' }); await assertPageScrolls('Inline packing editor remains part of the travel page');
+      await page.locator('.rd-nav [data-trip-nav="itinerary"]').click(); await page.locator('#itineraryDayStrip [data-date]').first().click(); await assertPageScrolls('Close packing tools');
 
       await page.locator('#itineraryPageButton').click(); await page.locator('#triplogSyncStatus').waitFor({ state: 'visible' });
       await assertBackgroundLocked('Sync status dialog');

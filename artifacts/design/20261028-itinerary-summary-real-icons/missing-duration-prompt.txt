@@ -1,0 +1,9 @@
+Revise the selected TripLOG mobile itinerary-summary mockup. Preserve the selected layout, actual project category icons, short place names, dates, typography, white surfaces, navy outlines, yellow accents and blue journey connectors. The target remains 390 × 844 CSS pixels. Current date: 2026-10-28; preserve the example trip dates October 20–24, 2026.
+
+Replace the visible sentence “이동 시간 미입력 5구간” with a compact visual indicator on the Day 1 metadata row: a dotted-route icon combined with a small question mark, followed by the bold number “5”. Use a restrained pale amber background, navy ink and a small amber accent so the indicator feels informative rather than alarming. Place it beside the time range and stop count, with enough separation to distinguish it from the destination-count bubble “+5”. Do not label the indicator with a sentence.
+
+For route previews, express recorded travel durations with solid blue connectors and unknown durations with light dashed connectors and a small question-mark marker. These are partial route previews; do not invent a complete-route percentage or total segment count. Keep the existing remaining-stop counts unchanged. Show the Day 1 missing-duration indicator prominently enough to understand, without adding explanatory paragraphs, warning logs or expanded details. Preserve the existing generic category icons; add no landmark-specific illustrations. Output one app-content-only image without phone hardware or OS chrome.
+
+Input images:
+- color-journey.png: the selected second mockup to revise.
+- project-icon-reference.png: reference for the actual category icons already used in TripLOG.

@@ -1,0 +1,14 @@
+Create an image-generated mobile mockup of TripLOG’s collapsed itinerary summary at 390 × 844 CSS pixels. Use the existing project category icons from the supplied reference as the only destination graphics. Preserve their shapes, colors and proportions; reuse the same category icon for different places. Do not invent location-specific stickers, landmark illustrations or scenery.
+
+Keep TripLOG’s white background, navy text and fine outlines, small offset shadows, yellow #fff05a accents, pastel blue #bce6fb and pink #f7afc7. Use readable Korean typography around 14–16px. Compact header: TripLOG, “일정 계획”, “도쿄 여행”, “10.20–10.24”, “일정 편집 / 일정 요약”, with summary selected, and a copy icon. Bottom navigation: 개요 / 일정 / 지출 / 리포트 / 설정. Current date is 2026-10-28; retain the historical trip dates October 20–24, 2026.
+
+Remove log-like sentences, missing-input messages, explanatory copy and long arrow-separated place strings. Use category icons, time ranges, stop counts, short place names and expansion chevrons. No expanded itinerary, device hardware or OS chrome.
+
+Use a compact journey layout: three day panels with Day/date across the top and time/count immediately below. A single fine connecting line links three existing small category icons, with short names below and a remaining-count bubble at the end. Keep icon size around 28–36 CSS pixels. Give the route previews the clearest emphasis. Show all three panels comfortably.
+
+Day 1 / 10.20 화 / 13:00–21:20 / 8곳: airport icon + 나리타공항, restaurant icon + 멘야무사시, tower icon + 도쿄도청, +5.
+Day 2 / 10.21 수 / 09:15–22:00 / 12곳: shrine icon + 메이지신궁, shopping icon + 타케시타도리, tower icon + 시부야 스카이, +9.
+Day 3 / 10.22 목 / 06:53–22:20 / 13곳: island icon + 에노시마, temple icon + 고토쿠인, urban icon + 요코하마, +10.
+
+Input images:
+- project-icon-reference.png: reference for the actual category icons already used in the TripLOG project.

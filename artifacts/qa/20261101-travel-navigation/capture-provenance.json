@@ -1,0 +1,79 @@
+{
+  "source": "artifacts/design/20261101-travel-navigation/travel-navigation-three-tabs.png",
+  "sourceSize": [
+    1482,
+    1062
+  ],
+  "sourceSha256": "31c5fa7e5c22c7ecea4d0b0fe6f996daff95b25d83cfc8de9a0a7d690ff5be43",
+  "CSSViewport": [
+    390,
+    844
+  ],
+  "deviceScaleFactor": 1,
+  "normalizedPanels": [
+    [
+      "today",
+      [
+        18,
+        18,
+        489,
+        1044
+      ]
+    ],
+    [
+      "wallet",
+      [
+        506,
+        18,
+        976,
+        1044
+      ]
+    ],
+    [
+      "tools",
+      [
+        995,
+        18,
+        1466,
+        1044
+      ]
+    ]
+  ],
+  "captures": [
+    {
+      "original": "artifacts/tmp/20261101/travel-tabs-final/today-320.png",
+      "saved": "artifacts/qa/20261101-travel-navigation/today-320.png",
+      "sha256": "d1bff1802b8d7442f32c29263b7d45d3451753f0974b5325d838e68980da8d0e"
+    },
+    {
+      "original": "artifacts/tmp/20261101/travel-tabs-final/today-390.png",
+      "saved": "artifacts/qa/20261101-travel-navigation/today-390.png",
+      "sha256": "0fdbd1b7ecf08cc34d50374e0e62f80a5688bacd591f05aa080af6335522cc3b"
+    },
+    {
+      "original": "artifacts/tmp/20261101/travel-tabs-final/wallet-320.png",
+      "saved": "artifacts/qa/20261101-travel-navigation/wallet-320.png",
+      "sha256": "11cf2ec6510c07b781e329951f3e00765e879b2b26232d059f295d373ab186b7"
+    },
+    {
+      "original": "artifacts/tmp/20261101/travel-tabs-final/wallet-390.png",
+      "saved": "artifacts/qa/20261101-travel-navigation/wallet-390.png",
+      "sha256": "0f15c338b1ca486197100ec94278ad7e6727480ce24b44186a973ad513cb4fc3"
+    },
+    {
+      "original": "artifacts/tmp/20261101/travel-tabs-final/tools-320.png",
+      "saved": "artifacts/qa/20261101-travel-navigation/tools-320.png",
+      "sha256": "bdb542f881f1298c18d7d4c4f41f06378f98ac845ed82ad69f134b9c612044d3"
+    },
+    {
+      "original": "artifacts/tmp/20261101/travel-tabs-final/tools-390.png",
+      "saved": "artifacts/qa/20261101-travel-navigation/tools-390.png",
+      "sha256": "f7b91b6b20881568b1c35019f6532331af80303505647d8fb8aa29a4f8dc0d1b"
+    },
+    {
+      "original": "artifacts/tmp/20261101/travel-tabs-final/today-1440.png",
+      "saved": "artifacts/qa/20261101-travel-navigation/today-1440.png",
+      "sha256": "af25102c161494ff1bf03072ee7c3df8a30b21cd3461dc684604075e4fd64c83"
+    }
+  ]
+}

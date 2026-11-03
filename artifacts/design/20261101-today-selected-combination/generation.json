@@ -1,0 +1,125 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Seoul",
+  "stage": "selected-design-refinement-mockup",
+  "status": "implemented-locally-qa-passed",
+  "appSourceChanged": true,
+  "productionDataChanged": false,
+  "deployed": false,
+  "selectedComponents": {
+    "travelMain": {
+      "priorDisplayOrder": 1,
+      "id": "compact-overview"
+    },
+    "expenseDetail": {
+      "priorDisplayOrder": 3,
+      "id": "visual-summary"
+    }
+  },
+  "generationPath": "built-in image_gen",
+  "mode": "I2I",
+  "callCount": 1,
+  "overwrite": false,
+  "prompt": "Refine the user-selected TripLOG designs into one coherent combination mockup. Show three related 390 × 844 app-only states side by side on a 1218 × 884 board: initial today view, after one visit is completed, and the opened daily-expense detail. These are states of one design, not alternative directions. Use the selected main-view reference for the travel structure and the selected expense reference for the expense structure. Replace the main view’s photos with reusable colorful category emoji/icons.\n\nKeep the existing white, navy #0b1020, yellow #fff05a, pale blue #bce6fb and pink #f7afc7 design system, thin outlines, modest radii and restrained small offset shadows. Make typography visibly lighter and smaller: Pretendard-like body 13–14px at weight 400–500, destination 17–18px at weight 500–550, page titles 18px at weight 600, main money 22px at weight 600 maximum, secondary labels 11–12px regular. Do not use heavy 700–900 typography.\n\nAnchor dates to Sunday 2026-11-01. In both today states, show TripLOG and a compact title row: “오늘의 여행” on the left; on the right place “Undo” immediately LEFT of the date selector “Day 2 · 11.1 일”. Undo must look like a refined small back-navigation button with a plain left-pointing chevron, not a circular arrow, reload, refresh or spinner. It is quietly disabled initially and enabled after completion. Use one compact button surface, a small icon and medium-weight 12px English text.\n\nBelow, reuse the existing shared travel-identity component pattern: the supplied travel artwork, “1000일 순천”, and “2026.10.31 토–11.01 일 · 1박 2일”, with locally lighter type. Place a compact five-segment progress indicator directly beside this component on its right: five empty segments initially, one yellow segment after completion, and only a small supporting fraction “0/5” or “1/5”. Remove the old duplicated travel/city/past-schedule/completion sentence.\n\nInitial next place: 🌿 “09:30 순천만 국가정원”, small address, copy and pencil icons. Keep “방문 완료”, yellow “길찾기” and quiet “건너뛰기” aligned in compact 40–44px touch areas. The subsequent itinerary has 🍽️ 12:00 점심 식사, 🌾 15:00 순천만습지, ☕ 17:00 카페 and 🍽️ 18:30 저녁 식사. Beside “이후 일정”, use “Start here” in a refined small white/pale-blue capsule with one small play icon, balanced padding, thin navy outline and a subtle shadow; no separate inner icon box or heavy lettering. Include the small wallet row “이날 지출 44,000원 · 2건”. Navigation is exactly “개요 / 일정 / 지출 / 리포트 / 설정”, with 일정 active. After one visit, the next place becomes 12:00 점심 식사, the progress becomes 1/5, and Undo becomes available. Preserve scheduled times and order.\n\nThe expense sheet follows the selected donut structure with compact proportions and lighter typography: “이날 지출”, “11.1 (일) · 2건”, close control, approximately 160–176px donut with 44,000원 centered, pink 🍽️ 식비 32,000원 73%, blue 🚆 교통 12,000원 27%, then a smaller “전체 누적 286,800원 · 9건” and “사전구매 포함 195,600원”. Pre-purchases are included in the cumulative total, not additional money. Use only the short refund note “환불 차감 반영”; invent no refund amount. Finish with “지출 내역 보기”.\n\nNo photos, destination-specific artwork, nested icon boxes, device bodies, OS chrome or invented features. Keep existing functional controls and do not expand scope.\n\nInput images:\n- compact-overview.png: user-selected travel main view; use its main-screen structure.\n- visual-summary.png: user-selected expense detail; use its expense-detail structure.\n- trip-context-landscape.png: existing artwork from the shared travel-identity component the user requested.",
+  "inputImages": [
+    {
+      "originalPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261101-today-travel-refinement/compact-overview.png",
+      "role": "User-selected travel main structure",
+      "savedPath": "artifacts/design/20261101-today-travel-refinement/compact-overview.png",
+      "sha256": "8ae6aae733da5c8cb7709bb2ed015946e1f04c6f0640c54cb90890174dedee1d",
+      "sentToImageGen": true
+    },
+    {
+      "originalPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261101-today-travel-refinement/visual-summary.png",
+      "role": "User-selected expense-detail structure",
+      "savedPath": "artifacts/design/20261101-today-travel-refinement/visual-summary.png",
+      "sha256": "c964a4d2d96d910a67d23096d609a585b63afc7c97370bd699276e6c76a243f8",
+      "sentToImageGen": true
+    },
+    {
+      "originalPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/src/assets/trip-context-landscape.png",
+      "role": "Existing shared travel-identity component artwork",
+      "savedPath": "artifacts/design/20261101-today-selected-combination/trip-context-art-reference.png",
+      "sha256": "f38d7b6e80c52938d2639b3920fe9a5706319d129b227f237d4274bce7dac90e",
+      "sentToImageGen": true
+    }
+  ],
+  "sourcePolicy": "Explicit user selection of main 1 and expense 3 plus requested combination/changes. This is one source-referenced refinement call, not a chain of generated revisions.",
+  "output": {
+    "originalPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a14a76-7d13-7b52-8e8a-996a2d994f1e\\exec-87c5ee94-a028-47be-a8e5-1d200cf9c180.png",
+    "savedPath": "artifacts/design/20261101-today-selected-combination/combined-refinement.png",
+    "startedAtEpoch": 1793508357.79,
+    "sha256": "bf1e58b955e0187fad5387f4fa08f6ee5e585a58a70cda9cdcef9c435a0611d3",
+    "originalSha256": "bf1e58b955e0187fad5387f4fa08f6ee5e585a58a70cda9cdcef9c435a0611d3",
+    "startedAtUtc": "2026-11-01T04:45:57.790000+00:00"
+  },
+  "target": {
+    "viewports": {
+      "width": 390,
+      "height": 844,
+      "count": 3
+    },
+    "board": {
+      "width": 1218,
+      "height": 884
+    },
+    "states": [
+      "initial today view; 0/5 and Undo unavailable",
+      "one completed visit; 1/5 and Undo available",
+      "daily spending detail"
+    ]
+  },
+  "sharedComponent": {
+    "source": "src/app/ui/trip-context.js",
+    "stylesheet": "src/styles/trip-context.css",
+    "itineraryMount": "Travel.html [data-trip-context]"
+  },
+  "typeScale": {
+    "body": {
+      "px": "13–14",
+      "weight": "400–500"
+    },
+    "destination": {
+      "px": "17–18",
+      "weight": "500–550"
+    },
+    "heading": {
+      "px": 18,
+      "weight": 600
+    },
+    "money": {
+      "px": 22,
+      "weight": 600
+    },
+    "support": {
+      "px": "11–12",
+      "weight": 400
+    }
+  },
+  "newControls": {
+    "undo": {
+      "label": "Undo",
+      "icon": "left-pointing navigation chevron; no circular refresh/reload icon",
+      "position": "immediately left of date picker"
+    },
+    "start": {
+      "label": "Start here",
+      "icon": "small play triangle",
+      "placement": "beside upcoming-itinerary heading"
+    },
+    "progress": {
+      "style": "five small progress segments plus unobtrusive fraction",
+      "placement": "right of shared travel identity"
+    }
+  },
+  "approvalBoundary": "The existing main/expense selections are recorded, not re-requested. New toolbar, shared identity/progress placement and Start here styling are presented in this refined mockup before implementation, following the user's explicit mockup-first instruction.",
+  "implementationRequest": "구현ㄱㄱ",
+  "qa": "artifacts/qa/20261101-today-refinement-implementation/design-qa.md",
+  "followupRequest": "선택된 여행 정보 박스에 앱 디자인 톤과 맞는 테두리와 그림자 추가",
+  "paletteRefinement": {
+    "request": "박스 색을 디자인 톤에 맞게 변경",
+    "surfaces": "White cards, navy outlines, a small brand-yellow offset shadow, neutral gray progress and period surfaces",
+    "newImageGeneration": false,
+    "qa": "artifacts/qa/20261101-today-refinement-implementation/design-qa.md"
+  }
+}

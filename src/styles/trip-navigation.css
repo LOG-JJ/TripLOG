@@ -18,20 +18,26 @@ body.rd-app {
   isolation: isolate;
 }
 
+body.rd-app .tl-bottom-nav:is(.rd-nav, .itinerary-bottom-nav) {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
 /* A modal owns the interactive dock. Hide the background copy on wide screens
  * as well, where the sheet is narrower than the original navigation. */
 body.rd-app:has(#tripNavigationMenu[open]) :is(.rd-nav, .itinerary-bottom-nav) { visibility: hidden; }
 
 .rd-app .tl-bottom-nav button[data-trip-nav] {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: 24px 16px;
+  place-items: center;
+  align-content: center;
+  gap: 4px;
   min-width: 0;
   min-height: 52px;
-  padding: 3px 2px 7px;
+  padding: 4px 2px;
   margin: 0;
   border: 0;
   border-radius: 15px;
@@ -77,28 +83,34 @@ body.rd-app:has(#tripNavigationMenu[open]) :is(.rd-nav, .itinerary-bottom-nav) {
   transition: opacity 220ms var(--tl-nav-ease), transform 300ms var(--tl-nav-ease);
 }
 
-.rd-app .tl-bottom-nav button[data-trip-nav] .ph {
-  flex: none;
+.rd-app .tl-bottom-nav button[data-trip-nav] > .tl-nav-icon {
+  display: block;
+  width: 28px;
+  height: 24px;
   margin: 0;
+  padding: 0;
   border-radius: 0;
-  background: transparent;
-  font-size: 24px;
-  line-height: 1;
+  background: currentColor;
+  -webkit-mask: var(--tl-nav-icon) center / contain no-repeat;
+  mask: var(--tl-nav-icon) center / contain no-repeat;
   animation: none;
-  transition: transform 320ms var(--tl-nav-ease);
 }
 
 .rd-app .tl-bottom-nav button[data-trip-nav] > span:not(.tl-nav-expand) {
   display: block;
   max-width: 100%;
+  height: 16px;
+  margin: 0;
+  padding: 0;
   font-size: 12px;
+  font-weight: 600;
   line-height: 16px;
   white-space: nowrap;
 }
 
 .rd-app .tl-bottom-nav button[data-trip-nav][aria-current="page"] {
   color: #171b24;
-  font-weight: 750;
+  font-weight: 600;
 }
 
 .rd-app .tl-bottom-nav button[data-trip-nav][aria-current="page"]::after {

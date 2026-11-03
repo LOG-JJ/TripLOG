@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-31",
+  "topic": "Travel tools and itinerary analysis improvement concepts",
+  "status": "mockups-awaiting-user-review",
+  "scope": "Image mockups only. No app implementation, production data edits, build or deployment.",
+  "userRequest": "ㅇㅋ 이거좋네 keep 구현전에 한번에 구현하기 위해서 이번엔 여행도구, 일정분석 개선목업만들어야함",
+  "previousDecision": {
+    "folder": "../20261031-today-trip-interactions",
+    "status": "accepted-for-later-implementation"
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "mode": "T2I",
+    "imageInputs": [],
+    "referenceImagesAttached": false,
+    "subjectiveImageQA": false
+  },
+  "mockData": {
+    "file": "mock-data.json",
+    "illustrative": true,
+    "productionData": false
+  },
+  "assets": [
+    {
+      "file": "travel-tools-mobile.png",
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-43c167a6-cdf3-429a-8bae-8903a90efa10.png",
+      "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261031-travel-tools-itinerary-analysis/travel-tools-mobile.png",
+      "sha256": "3a136757f5baaddbe845e9a5fe71842da5430c0dc2f12c8ee985b0ecc90d4409",
+      "sourceHashVerified": true,
+      "mode": "T2I",
+      "imageInputs": [],
+      "finalPrompt": "Create a TripLOG “여행 도구” improvement board with three related 390 × 844 mobile screens side by side, total 1218 × 844 CSS pixels. Actual date anchor October 31, 2026; fictional example trip “도쿄 여행 · 11.2–11.6”. Match the existing app's white surfaces, navy #0b1020 Korean Pretendard-like type, yellow #fff05a primary actions, pale blue #bce6fb and pink #f7afc7 accents, crisp outlines, small offset shadows and reusable category icons. Screen “여행 도구”: prioritize a compact packing card “준비물 3/7”, a small progress line, four unchecked items 보조배터리, 상비약, 접이식 우산, 엔화 현금, and a small add/edit control. Below it, concise tools for “오프라인 여행정보” with file-save action, “캘린더 파일 저장”, and a quiet “여행지 시간대 · Asia/Tokyo” row. Do not imply calendar account sync. Screen “준비물”: the same seven-item list, checked 여권, eSIM, 충전기 and the four remaining items, “전체 / 남은 항목” filter and inline add field; no large save button for each check. Screen “오프라인 여행정보”: trip context, choices 일정 checked, 예약번호 checked, 경비 unchecked, a small content preview and one yellow “파일 저장” action with short “HTML 파일로 저장” metadata. Preserve global navigation “개요 · 일정 · 지출 · 리포트 · 설정”, 일정 selected. Keep the composition compact, readable and action-focused. No large cover artwork, reservation-wallet duplication, expense dashboard, weather, nearby search or unrelated new tools.",
+      "targetBoard": {
+        "width": 1218,
+        "height": 844
+      },
+      "targetScreens": {
+        "width": 390,
+        "height": 844,
+        "count": 3
+      },
+      "startedAt": "2026-10-30T16:25:54.338Z",
+      "screens": [
+        "여행 도구",
+        "준비물",
+        "오프라인 여행정보"
+      ]
+    },
+    {
+      "file": "itinerary-analysis-mobile.png",
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-2f9a9f12-4663-4c56-9d82-9c0eda51633f.png",
+      "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261031-travel-tools-itinerary-analysis/itinerary-analysis-mobile.png",
+      "sha256": "f249e7610462cdc16cafdeeb2fc4693531fffca55b4523b282adbd22577f1d72",
+      "sourceHashVerified": true,
+      "mode": "T2I",
+      "imageInputs": [],
+      "finalPrompt": "Create a TripLOG itinerary-analysis mobile board with three related 390 × 844 screens, total 1218 × 844 CSS pixels. Date anchor October 31, 2026; fictional planned trip “도쿄 여행 · 11.2–11.6”. Use white surfaces, navy Korean type, yellow #fff05a selected controls, pale blue #bce6fb stay bars, pink #f7afc7 travel bars, crisp outlines, modest shadows and reusable category icons. View “전체 일정 분석”: compact report tabs 지출 분석/일정 분석, period selector 전체 여행, visible “계획 기준” badge, metrics 계획 일정 34개, 입력된 체류 24시간, 기록된 이동 4시간30분. Show a simple zero-based horizontal stacked comparison “날짜별 체류·이동”: Day1 stay5h/travel1h10, Day2 6h/1h20, Day3 7h/1h, Day4 4h/40m, Day5 2h/20m. Direct-label values and legend; Day2 has separate missing-data markers. Add a compact place-duration ranking with sort control. View “Day 2”: metrics 8개/6시간/1시간20분, sort choices 일정순/긴순/짧은순, rows 메이지신궁2시간, 시부야 스카이1시간30분, 하라주쿠 점심1시간, 리저브 카페45분, 신주쿠 쇼핑30분, 신주쿠 산책15분, 키디랜드 미입력 last. Stay bars exclude lodging; show concise “숙소 제외 · 입력한 시간 합”. View “미입력 항목”: bottom sheet with stay time missing for 키디랜드 and two missing travel segments 리저브 카페→신주쿠 쇼핑 and 신주쿠 쇼핑→키디랜드, each with an input action. Do not represent unknown durations as zero or invent segments. Preserve navigation 개요/일정/지출/리포트/설정, 리포트 selected. No financial dashboard, actual-visit claims, schedule-check menu, automatic rescheduling or narrative recommendations.",
+      "targetBoard": {
+        "width": 1218,
+        "height": 844
+      },
+      "targetScreens": {
+        "width": 390,
+        "height": 844,
+        "count": 3
+      },
+      "startedAt": "2026-10-30T16:27:47.461Z",
+      "screens": [
+        "전체 일정 분석",
+        "Day 2",
+        "미입력 항목"
+      ]
+    },
+    {
+      "file": "desktop-companion.png",
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-9f4a20a6-6f06-47fe-a24e-f61c845a8849.png",
+      "savedPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261031-travel-tools-itinerary-analysis/desktop-companion.png",
+      "sha256": "60a16eff6f9a51cfd9ee67992c9683c8677ea4356d1a1cfa56dd1701d25e4c64",
+      "sourceHashVerified": true,
+      "mode": "T2I",
+      "imageInputs": [],
+      "finalPrompt": "Create one TripLOG desktop companion board containing two separate 1440 × 1024 desktop app views side by side, total 2928 × 1024 CSS pixels. Actual date anchor October 31, 2026; fictional planned trip “도쿄 여행 · 11.2–11.6”. Use the existing app's white background, navy #0b1020 Korean typography, yellow #fff05a accents, pale blue #bce6fb and pink #f7afc7, crisp outlines, small shadows and reusable category icons. Each viewport uses the current app's centered approximately 960px content area, compact TripLOG header and familiar five-item bottom navigation, not a new sidebar. Left viewport “여행 도구”: two columns, packing checklist 3/7 on the left with checked 여권/eSIM/충전기 and unchecked 보조배터리/상비약/접이식 우산/엔화 현금, compact edit/add; on the right offline travel-information file saving, calendar-file export and Asia/Tokyo timezone. Do not imply calendar account sync or add unrelated tools. Right viewport “일정 분석”: report tabs, period selector 전체 여행 and visible 계획 기준; metrics 34 planned entries, 24h entered stay, 4h30 recorded travel. Main two-column evidence layout: horizontal zero-based stacked day comparison on the left, compact sortable place-duration ranking on the right. Day labels and stay/travel values: 11.2 월 5h/1h10, 11.3 화 6h/1h20, 11.4 수 7h/1h, 11.5 목 4h/40m, 11.6 금 2h/20m. Use a common linear scale, direct values and legend; separate Day2 missing-data indicators. Ranking examples 메이지신궁2h, 시부야 스카이1h30, 하라주쿠 점심1h, 리저브 카페45m, 신주쿠 쇼핑30m, 신주쿠 산책15m, 키디랜드 미입력 last. Show “숙소 제외 · 입력한 시간 합” quietly. No actual-visit claims, financial charts, automatic rescheduling, decorative artwork or long prose.",
+      "targetBoard": {
+        "width": 2928,
+        "height": 1024
+      },
+      "targetScreens": {
+        "width": 1440,
+        "height": 1024,
+        "count": 2
+      },
+      "startedAt": "2026-10-30T16:29:54.997Z",
+      "screens": [
+        "여행 도구 PC",
+        "일정 분석 PC"
+      ]
+    }
+  ],
+  "notes": [
+    "The target screen sizes are prompt constraints; they are not a claim of rendered browser verification.",
+    "Generated figures, dates, weekdays, amounts, file sizes and visual details are illustrative. Use actual domain data and shared formatters on implementation.",
+    "A generated label such as 예상 경비 does not introduce a planned-budget feature. Cost export refers only to recorded expenses.",
+    "Unknown durations remain missing, never zero. All duration summaries describe planned, entered times, not actual visits.",
+    "Source originals were copied by exact returned paths and both sides compared with SHA256. No newest-file discovery was used."
+  ]
+}
+

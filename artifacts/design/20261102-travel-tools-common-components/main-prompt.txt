@@ -1,0 +1,13 @@
+Create a TripLOG travel-tools redesign mockup showing a 1280 CSS px desktop view and a 390 CSS px mobile view side by side. Follow the existing TripLOG shared components: white surfaces, dark navy #0b1020 text and 1.5px outlines, 9–14px corners, short navy offset shadows, yellow #fff05a primary actions and selected tabs, pale-blue #bce6fb secondary buttons, restrained pink accents, small reusable colored icons. Use compact Korean typography: 20px/600 page titles, 15px/600 section headings, 13–14px body, 12px metadata, and 16px input text. Icons sit naturally with their background without extra outlined icon boxes.
+
+Keep the TripLOG wordmark with LOG on a pink highlight, page title “여행”, the compact shared trip context “가을 도쿄 여행 / 2026.10.20 화 – 10.24 토 / 4박 5일”, and equal tabs “오늘의 여행 / 예약 지갑 / 여행 도구”, with “여행 도구” selected in yellow. Preserve the five equal bottom-navigation items “개요 / 일정 / 여행 / 지출 / 리포트”, with 여행 active.
+
+Prioritize a useful “준비물” section using the existing compact checkbox-list component. Show 3/7 progress, a thin blue progress bar, “전체 / 미완료 / 완료” filters, a small blue plus action, and unchecked rows “보조배터리”, “상비약”, “접이식 우산”, with discreet pencils. A small “전체 보기” action opens management.
+
+Below, show two compact practical tools: “환율 계산”, displaying the configured rate “100엔 = 950원” and a blue “계산하기” button; and “현지 시간”, showing 한국 14:30 and 도쿄 14:30 with “시차 0시간” and the existing timezone-selection control. These use small calculator and clock icons and the same standard button/dropdown styles.
+
+Add a “빠른 메모” section using the existing text-input and simple editable-row styles. Show “짐 보관함 A-126”, “eSIM 설치 링크”, a small copy/pencil action, and a single-line “새 메모” input with a blue plus button.
+
+Add “여행 자료” as three clean shared settings-list rows: “포켓노트 · HTML”, “캘린더 · ICS”, and “일정표 · PDF”, each with a small icon and right chevron. No file uploads.
+
+On desktop, place preparation and notes in the left column and the paired tools and export rows in the right column. On mobile, use the same sections vertically, with the two small tools in two columns. Keep the main content practical and compact, without repeated explanatory sentences, a large hero illustration, destination photos, weather, nearby search, or duplicated reservation/expense dashboards. Show app content without device hardware.

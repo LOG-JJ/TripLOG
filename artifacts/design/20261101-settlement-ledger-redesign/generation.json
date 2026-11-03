@@ -1,0 +1,96 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Seoul",
+  "status": "awaiting-user-review",
+  "scope": "Image mockups only; linked expense-led settlement redesign",
+  "generationPath": "built-in image_gen",
+  "imageInputs": [],
+  "callCount": 2,
+  "overwrite": false,
+  "appSourceChanged": false,
+  "productionDataChanged": false,
+  "deployed": false,
+  "images": [
+    {
+      "asset": "settlement-overview",
+      "mode": "T2I",
+      "startedAtUtc": "2026-11-01 14:09:42 UTC",
+      "promptFile": "artifacts/design/20261101-settlement-ledger-redesign/overview-prompt.txt",
+      "prompt": "Create a responsive redesign mockup of TripLOG’s expense settlement page, showing a 390×960 CSS px mobile view and a desktop view with a 1000px content area on one board. These are two sizes of the same proposal.\n\nMatch TripLOG’s existing expense ledger: white surfaces, navy #0b1020 outlines, 10–16px corners, yellow #fff05a primary highlights with short navy offset shadows, pale blue #bce6fb secondary controls, restrained pink #f7afc7 accents, and compact Pretendard-like typography. Use 20px/600 page headings, 13–14px body text, 12px secondary text and moderate weights. The TripLOG wordmark is black with LOG on a pink rounded rectangular highlight.\n\nAt the top show “경비 정산” and a compact pale-blue button with a left arrow and “지출로”. Beneath, reuse the expense page’s compact trip identity: “1000일 순천”, “2026.10.31 토 – 11.01 일”, “1박 2일”. Reuse the existing expense-summary card: wallet illustration, “여행 경비”, yellow-highlighted “180,000원”, plus “1인 평균 90,000원” and “기록한 지출 3건”. Keep this visually consistent with the expense page.\n\nBelow use two tabs, “정산 요약” selected in yellow and “항목별 분담” inactive. Show a clear “송금 안내” section with one compact horizontal row: a pink initial avatar for “윤디”, an arrow to a blue initial avatar for “JH”, and “45,000원”. Treat this as settlement guidance, without payment processing controls.\n\nUnder “멤버별 정산”, place a small “멤버 관리” action and two compact rows:\nJH — “결제 140,000원”, “분담 95,000원”, a blue “받을 돈 45,000원” status.\n윤디 — “결제 40,000원”, “분담 85,000원”, a pink “보낼 돈 45,000원” status.\nKeep paid amounts, owed shares and net balances distinct and readable.\n\nThe sample represents three existing expenses totaling 180,000원 and item-specific allocations. It is not a separate money-entry workflow. Do not include a second allocation editor, saved-backup source selector, extra-spending inputs, oversized balance typography or explanatory paragraphs. On desktop, use the width for the transfer guidance and member balances side by side below the same shared header and summary.\n\nRetain the shared bottom navigation “개요 / 일정 / 여행 / 지출 / 리포트”, with “지출” active. All five icons and labels use equal slots and spacing; there are no expansion carets. Render app content without device casing or a device status bar.",
+      "originalPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a14a76-7d13-7b52-8e8a-996a2d994f1e\\exec-14a63fb2-5fec-42c7-b911-481b7a19460e.png",
+      "savedPath": "artifacts/design/20261101-settlement-ledger-redesign/settlement-overview.png",
+      "sha256": "cee3bd6bea3bb1b7b6c5cecd7d57bfb381c41f96ffc4bebac41b48e15b61f865",
+      "originalSha256": "cee3bd6bea3bb1b7b6c5cecd7d57bfb381c41f96ffc4bebac41b48e15b61f865",
+      "exactSourceMatch": true,
+      "outputHint": "Generated images are saved to C:\\Users\\tbdk5\\.codex\\generated_images\\01a14a76-7d13-7b52-8e8a-996a2d994f1e as C:\\Users\\tbdk5\\.codex\\generated_images\\01a14a76-7d13-7b52-8e8a-996a2d994f1e\\exec-14a63fb2-5fec-42c7-b911-481b7a19460e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "asset": "settlement-item-flow",
+      "mode": "T2I",
+      "startedAtUtc": "2026-11-01 14:13:29 UTC",
+      "promptFile": "artifacts/design/20261101-settlement-ledger-redesign/flow-prompt.txt",
+      "prompt": "Create a TripLOG settlement-to-expense-edit flow mockup with two mobile long-page views, each 390 CSS px wide, side by side. Label them outside the app content “항목별 분담” and “기존 지출 수정”. They are two connected states of one flow.\n\nUse TripLOG’s existing expense design: white surfaces, navy #0b1020 thin outlines, 9–16px corners, yellow #fff05a selected controls and save actions with short navy offset shadows, pale blue #bce6fb secondary controls, restrained pink #f7afc7 accents, and compact Pretendard-like typography. Headings are around 20px/600, body text 13–14px, secondary text 12px, numeric inputs 16px/500. The black TripLOG wordmark has LOG on a pink rounded rectangular highlight.\n\nLEFT: The expense settlement page has “경비 정산”, a pale-blue left-arrow “지출로” button, and the compact trip identity “1000일 순천 / 2026.10.31 토 – 11.01 일 / 1박 2일”. Reuse the expense-summary card with wallet illustration, “여행 경비 180,000원”, “1인 평균 90,000원”, and “기록한 지출 3건”. Below are “정산 요약 / 항목별 분담” tabs, with “항목별 분담” selected in yellow.\n\nShow three compact ledger rows with small existing-style category icons, date “11.1”, amount on the right, and a pencil action:\n“저녁 식사”, “120,000원”, “결제 JH”, “균등”, and shares “JH 60,000원 · 윤디 60,000원”.\n“택시”, “40,000원”, “결제 윤디”, “직접 분담”, and shares “JH 30,000원 · 윤디 10,000원”.\n“카페”, “20,000원”, “결제 JH”, “직접 분담”, and shares “JH 5,000원 · 윤디 15,000원”.\nThese are the existing expense records and their saved allocations. Do not create an additional allocation-entry system or a backup/source selector. Retain the shared five-item bottom navigation with “지출” active and no expansion carets.\n\nRIGHT: Show the existing expense editor opened for “택시”, with a TripLOG brand header and close X. Use a scrolled form view that clearly shows the existing expense context “40,000원”, “택시”, category “교통”, the date pair “Day 2 · 11.1” and “11.1 (일)”, and the expanded “메모 · 결제자 · 분담” section. The payer dropdown is “윤디”. Immediately below it, reuse the existing “분담 설정” component with “균등 / 금액 / 비율” and “금액” selected. Two member rows show JH 30,000원 with calculated 75%, and 윤디 10,000원 with calculated 25%. Use small blue and pink initials avatars, navy-outlined inputs and thin row separators. End with a slim check row “분담 합계 40,000 / 40,000원”, optional memo field, and the existing yellow “변경 내용 저장” button. There is no second apply button. Saving this expense is intended to update the settlement and return to its item list.\n\nThis is an expense-led settlement flow, with the same payer and allocation controls already used by the expense editor. Keep text restrained, readable and compact. Render app content without device casing, hardware status bars, promotional illustrations, payment-transfer controls or explanatory paragraphs inside the app.",
+      "originalPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a14a76-7d13-7b52-8e8a-996a2d994f1e\\exec-7e942583-082f-446d-8809-7337bd3e8037.png",
+      "savedPath": "artifacts/design/20261101-settlement-ledger-redesign/settlement-item-flow.png",
+      "sha256": "c45ec8bf3471807e3c18eb64d9098649bca046f2730f8587bb63723541b87bdd",
+      "originalSha256": "c45ec8bf3471807e3c18eb64d9098649bca046f2730f8587bb63723541b87bdd",
+      "exactSourceMatch": true,
+      "outputHint": "Generated images are saved to C:\\Users\\tbdk5\\.codex\\generated_images\\01a14a76-7d13-7b52-8e8a-996a2d994f1e as C:\\Users\\tbdk5\\.codex\\generated_images\\01a14a76-7d13-7b52-8e8a-996a2d994f1e\\exec-7e942583-082f-446d-8809-7337bd3e8037.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ],
+  "sourceOfTruth": "Current trip expense entries, payerKey, settlement.itemSplits[current:<entryId>]. Existing expense allocation component; one persisted edit.",
+  "illustrativeFixture": {
+    "total": 180000,
+    "count": 3,
+    "memberCount": 2,
+    "perPersonAverage": 90000,
+    "expenses": [
+      {
+        "description": "저녁 식사",
+        "amount": 120000,
+        "payer": "JH",
+        "shares": {
+          "JH": 60000,
+          "윤디": 60000
+        }
+      },
+      {
+        "description": "택시",
+        "amount": 40000,
+        "payer": "윤디",
+        "shares": {
+          "JH": 30000,
+          "윤디": 10000
+        }
+      },
+      {
+        "description": "카페",
+        "amount": 20000,
+        "payer": "JH",
+        "shares": {
+          "JH": 5000,
+          "윤디": 15000
+        }
+      }
+    ],
+    "members": {
+      "JH": {
+        "paid": 140000,
+        "owed": 95000,
+        "balance": 45000
+      },
+      "윤디": {
+        "paid": 40000,
+        "owed": 85000,
+        "balance": -45000
+      }
+    },
+    "transfers": [
+      {
+        "from": "윤디",
+        "to": "JH",
+        "amount": 45000
+      }
+    ]
+  }
+}

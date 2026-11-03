@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-28",
+  "status": "superseded-payment-emphasis",
+  "stage": "image-mockup-and-behavior-proposal",
+  "mockData": true,
+  "options": [
+    {
+      "prompt": "Create a TripLOG reservation-wallet UI concept as two related 390 × 844 mobile screens side by side on an 820 × 844 board. Current date anchor: October 28, 2026; example trip October 27–31. Keep white surfaces, dark navy Korean typography, yellow #fff05a main buttons, pale blue and pink accents, crisp dark outlines, small offset shadows and reusable colorful category icons. Left: “예약 지갑”, compact search, “지금 필요한 예약”, type filters, an ongoing hotel card “니시스가모 호텔 / 10.27–10.31 · 4박”, reservation-number copy, address/navigation, “¥36,000 · 지출 연결됨”; a timed admission and upcoming return flight appear as short rows. Right: “예약 추가” showing the same hotel and dates, a prominent “예약 금액” field “JPY ¥36,000”, “결제 완료 / 현장 결제 / 일부 결제”, and an enabled “지출 자동 연동” switch. Below it show actual payment amount ¥36,000, payment date 2026.10.15, payer “나”, method “카드”, and “예시 환율 100엔 = 950원”. Show a compact linked-expense preview “숙소 · 사전구매 · 342,000원” and an alternative “기존 지출 연결”. Yellow save action: “예약·지출 함께 저장”. Visually separate stay dates from payment date and reserved price from actual payment. Keep both screens compact and readable, without file attachments, decorative ticket illustrations or explanatory paragraphs.",
+      "startedAt": "2026-10-28T09:18:19.291Z",
+      "mode": "T2I",
+      "inputs": [],
+      "name": "한 화면 등록",
+      "targetScreen": {
+        "width": 390,
+        "height": 844
+      },
+      "targetBoard": {
+        "width": 820,
+        "height": 844
+      },
+      "displayOrder": 1,
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-9bcf4f20-1500-4427-a5f5-39c4bbce4fdf.png",
+      "savedPath": "artifacts/design/20261028-wallet-expense-link/concept-1.png",
+      "tool": "image_gen.imagegen",
+      "overwritten": false,
+      "selected": false,
+      "sha256": "b769b67c6ef1919e376a722af348a870a5dd2991eb78f342429d0d4df8ea6615"
+    },
+    {
+      "prompt": "Create a TripLOG reservation-and-expense concept as two related 390 × 844 mobile screens on an 820 × 844 board. Date anchor October 28, 2026; example trip October 27–31. Use the existing white surfaces, dark navy Korean type, yellow #fff05a primary actions, pale blue and pink accents, dark outlines, small offset shadows and reusable colorful category icons. Left screen “예약 상세”: “니시스가모 호텔”, “숙박 중”, “10.27–10.31 · 4박”, reservation-number copy, address, “길찾기” and “예약 열기”. Organize a payment section around three concise values: “예약 총액 ¥36,000”, “결제한 금액 ¥10,000”, “남은 금액 ¥26,000”. Show enabled “지출 자동 연동”, one payment record dated “2026.10.15 / 카드 / 나 / ¥10,000”, a linked-expense icon, and “결제 기록 추가”. Right screen “연결된 지출”: one linked expense “니시스가모 호텔 예약금”, category “숙소”, “사전구매”, “95,000원”, original “JPY ¥10,000”, “예시 환율 100엔 = 950원”, payment date 2026.10.15, payer 나 and method 카드. Include a compact reservation backlink and a small payment-edit pencil. Mark the remaining ¥26,000 as unpaid and keep it outside recorded spending. Preserve global navigation “개요 · 일정 · 지출 · 리포트 · 설정”. Keep the payment relationship readable and visually primary without decorative ticket art, uploads or long descriptions.",
+      "startedAt": "2026-10-28T09:19:48.495Z",
+      "mode": "T2I",
+      "inputs": [],
+      "name": "예약 상세에서 결제 관리",
+      "targetScreen": {
+        "width": 390,
+        "height": 844
+      },
+      "targetBoard": {
+        "width": 820,
+        "height": 844
+      },
+      "displayOrder": 2,
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-4095c4c0-b06a-46f8-a528-8af280e54948.png",
+      "savedPath": "artifacts/design/20261028-wallet-expense-link/concept-2.png",
+      "tool": "image_gen.imagegen",
+      "overwritten": false,
+      "selected": false,
+      "sha256": "890d397026ecaac3515d6b3dd85fa7ca0b6e6ca119812efcad3e787bdcfd57ff"
+    },
+    {
+      "prompt": "Create a TripLOG reservation payment-linking UI concept as two related 390 × 844 mobile screens on an 820 × 844 board. Date anchor October 28, 2026; example trip October 27–31. Retain white backgrounds, dark navy Korean text, yellow #fff05a primary buttons, pale blue and pink accents, dark outlines, small offset shadows and reusable colorful category icons. Left: a compact “예약 지갑” with “숙박 중” hotel “니시스가모 호텔 / 10.27–10.31”, amount ¥36,000, copyable reservation number, plus small upcoming admission and flight rows. Overlay a mobile bottom sheet “결제 기록” for that hotel, with “결제 금액 JPY ¥36,000”, “결제일 2026.10.15”, payer “나”, method “카드”, enabled “지출 자동 연동”, a two-way selection “새 지출 기록 / 기존 지출 연결”, selecting existing, and a small “예시 환율 100엔 = 950원 / 342,000원” preview. Right: “기존 지출 연결”, a search input and compact selectable rows. Select “니시스가모 호텔 / 숙소 · 사전구매 / 2026.10.15 · 카드 · 나 / 342,000원 · JPY ¥36,000”; show an unrelated transport expense unselected. A concise link summary pairs the reservation with the selected expense. Yellow action “이 지출과 연결”. Use icons and short labels to communicate that the existing record is reused and no second expense is added. Avoid file uploads, decorative ticket art, lengthy instructions and unrelated app features.",
+      "startedAt": "2026-10-28T09:21:20.202Z",
+      "mode": "T2I",
+      "inputs": [],
+      "name": "빠른 결제 입력과 기존 지출 연결",
+      "targetScreen": {
+        "width": 390,
+        "height": 844
+      },
+      "targetBoard": {
+        "width": 820,
+        "height": 844
+      },
+      "displayOrder": 3,
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-62e96443-ef67-4b6d-83cd-aa48fe8dd497.png",
+      "savedPath": "artifacts/design/20261028-wallet-expense-link/concept-3.png",
+      "tool": "image_gen.imagegen",
+      "overwritten": false,
+      "selected": false,
+      "sha256": "938d3102cd3fc1cb128efda693e89ec8d3dcf725a3f23d3d87aea3dda4285fed"
+    }
+  ],
+  "supersededBy": "20261028-wallet-reservation-first",
+  "userFeedback": "Payment UI occupies too much of the concept; prioritize the original reservation-wallet usability proposal."
+}

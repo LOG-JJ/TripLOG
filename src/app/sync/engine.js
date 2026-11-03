@@ -66,7 +66,10 @@
           r.archivedAt = remote.archivedAt || null;
           r.snapshot.collaboration = { ...r.snapshot.collaboration, ownerId: remote.ownerId || r.snapshot.collaboration?.ownerId, privacy: M.clone(remote.privacy) };
           if (remote.role !== "owner" && remote.privacy?.shareItinerary === false) { r.snapshot.itineraryItems = []; r.snapshot.travelCompanion = {}; }
-          if (remote.role !== "owner" && remote.privacy?.shareExpenses === false) { r.snapshot.entries = []; r.snapshot.settlement = {}; }
+          if (remote.role !== "owner" && remote.privacy?.shareExpenses === false) {
+            r.snapshot.entries = []; r.snapshot.settlement = {};
+            for (const row of r.snapshot.travelCompanion?.reservations || []) for (const key of ['quotedAmount', 'quotedCurrency', 'linkedExpenseId']) delete row[key];
+          }
           return r;
         });
       }
@@ -162,10 +165,10 @@
           }
           await catchUp(record, token);
           record = await R.read(record.localId);
-          if (record.archivedAt || record.role === "viewer" || record.conflicts.some(c => c.source === "migration")) continue;
+          if (record.archivedAt || record.conflicts.some(c => c.source === "migration")) continue;
           for (let count = 0; count < 20; count++) {
             record = await R.read(record.localId);
-            const intent = record.queue.find(q => q.status === "queued" && q.dependsOn.every(id => !record.queue.some(parent => parent.id === id)));
+            const intent = record.queue.find(q => q.status === "queued" && (record.role !== "viewer" || M.splitOnly(q.patches)) && q.dependsOn.every(id => !record.queue.some(parent => parent.id === id)));
             if (!intent) break;
             if (!intent.request) {
               let prepared = M.clone(intent.patches);

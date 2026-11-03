@@ -19,7 +19,7 @@ function render({ pageOnly = false } = {}) {
   }
   if (activePage === 'itinerary') renderItineraryPage();
   window.TripLog.features.redesign.workspace.render({ pageOnly });
-  if (!pageOnly) window.TripLog.features.travelCompanion.workspace.render();
+  window.TripLog.features.travelCompanion.workspace.render();
 }
 
 window.TripLog.register('features.render.main', { render });

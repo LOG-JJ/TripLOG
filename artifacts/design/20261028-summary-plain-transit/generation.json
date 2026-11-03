@@ -1,0 +1,12 @@
+{
+  "mode": "T2I",
+  "inputs": [],
+  "prompt": "Create a mobile TripLOG itinerary summary UI concept at 390 CSS pixels wide. White day card, pale blue Day 1 badge, dark navy Korean text, compact category emoji icons. Show 13:00 나리타공항, 15:00 니시스가모 호텔, 16:40 멘야무사시 along a thin vertical timeline. Between stops, show small transport icons, route names and minutes in a horizontal sequence on the plain white card with no chip backgrounds, borders or enclosing boxes. A missing duration uses a small amber question mark. At the card bottom, use a compact button labeled “일정 다듬기” with a pencil icon and right chevron, using TripLOG's yellow accent, dark outline and small offset shadow. Keep the hierarchy compact, readable and consistent with the app.",
+  "startedAt": "2026-10-28T08:44:47.529Z",
+  "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-00fe1f22-9e08-4539-a0f6-66c948fe1b9e.png",
+  "savedPath": "artifacts/design/20261028-summary-plain-transit/summary-refinement.png",
+  "tool": "image_gen.imagegen",
+  "overwritten": false,
+  "implementation": "Retain current compact timeline and real runtime category SVGs. Apply plain transport rows and the yellow outlined itinerary action; do not add generated sample narration or date changes.",
+  "sha256": "06aff10320262244a7d1a5d57a2ff1899f9db5a7556576b1c162725139d20de7"
+}

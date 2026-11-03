@@ -158,6 +158,18 @@ triplog expense add --trip TRIP_ID --date 2026-11-07 --category 식비 --descrip
 
 예약 목록의 `manual:`은 직접 등록한 예약, `entry:`는 지출에서 파생된 예약, `plan:`은 일정에서 파생된 예약입니다. 직접 등록한 예약은 원래 ID 또는 `manual:ID`로 수정합니다. 파생 예약 수정은 원본 지출·일정 명령을 사용합니다. `reservation link --id entry:EXPENSE_ID`도 지원합니다. 숙소 예약은 숙박 날짜마다 일정을 만들고, 같은 예약을 다시 저장할 때 기존 일정 ID와 날짜별 수정 내용을 보존합니다.
 
+직접 등록한 예약은 JSON 입력으로 `ticketUrl`, `guests`(문자열), `seats`, `operator`, `serviceNumber`, `quotedAmount`(숫자), `quotedCurrency`를 보관합니다. 예약 금액만 입력하면 지출 합계는 바뀌지 않습니다. `payment`는 저장하지 않는 명령 입력이며 다음 형태를 지원합니다.
+
+| 입력 | 결과 |
+| --- | --- |
+| `{"mode":"none"}` | 예약 금액만 수정, 기존 실제 결제 유지 |
+| `{"mode":"link","expenseId":"기존 지출 ID"}` | 기존 지출 재사용 |
+| `{"mode":"create","expenseId":"새 고유 ID","entry":{…}}` | 유효한 지출 입력 객체로 한 건 생성하고 같은 변경에 연결 |
+| `{"mode":"update","entry":{…}}` | 현재 연결된 동일 지출 ID 갱신 |
+| `{"mode":"unlink"}` | 관계만 해제, 지출 보존 |
+
+`entry`는 `schema expense --json`의 입력 필드와 환산·결제자 검증을 따릅니다. 선결제는 `date: "__pretrip__"`와 실제 `paymentDate`를 함께 지정합니다. `linkedExpenseId`는 도메인이 관리하는 저장 필드입니다. 예약 삭제는 실제 지출을 자동 삭제하거나 환불하지 않습니다. 쓰기 전에는 기존 CLI 원본·프로필 확인과 `--dry-run --json` 절차를 따릅니다.
+
 복잡한 이동 구간, 호텔·항공권 정보, 영수증 메타데이터, 분담 설정은 JSON으로 입력합니다.
 
 ```powershell

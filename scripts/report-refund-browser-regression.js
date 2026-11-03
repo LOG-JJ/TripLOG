@@ -25,21 +25,21 @@ async function main() {
     await page.goto(`${origin}/Travel?page=report&trip=refund-review`);
     await waitForApp(page);
     assert.match(await page.locator('#rdReportSummary').innerText(), /80,000원/);
-    assert.deepEqual(await page.locator('.rd-bar-amount').allTextContents(), ['80,000원']);
-    assert.deepEqual(await page.locator('.rd-bar-percent').allTextContents(), ['100.0%']);
-    assert.match(await page.locator('.rd-category-section').innerText(), /환불 전 금액 기준/);
+    assert.deepEqual(await page.locator('#rdReportExpenses .rd-bar-amount').allTextContents(), ['80,000원']);
+    assert.deepEqual(await page.locator('#rdReportExpenses .rd-bar-percent').allTextContents(), ['100.0%']);
+    assert.match(await page.locator('#rdReportExpenses .rd-category-section').innerText(), /환불 전 금액 기준/);
     assert.equal(await page.locator('.rd-legacy, #triplogFormSources, #reportDailyBarChart, #expenseTableBody').count(), 0);
     const output = process.env.TRIPLOG_UI_SNAPSHOT_DIR || artifactDirectory('report-refund'); fs.mkdirSync(output, { recursive: true });
     await page.screenshot({ path: path.join(output, 'partial-refund-390.png'), fullPage: true });
 
     // A refund on another date is a signed bar below the zero baseline.
     await page.evaluate(() => { state.entries[1].paymentDate = '2026-10-14'; render(); });
-    assert.deepEqual(await page.locator('.rd-bar-amount').allTextContents(), ['100,000원', '-20,000원']);
-    assert.deepEqual(await page.locator('.rd-bar-percent').allTextContents(), ['125.0%', '-25.0%']);
-    assert.equal(await page.locator('.rd-bars-signed .is-refund').count(), 1);
+    assert.deepEqual(await page.locator('#rdReportExpenses .rd-bar-amount').allTextContents(), ['100,000원', '-20,000원']);
+    assert.deepEqual(await page.locator('#rdReportExpenses .rd-bar-percent').allTextContents(), ['125.0%', '-25.0%']);
+    assert.equal(await page.locator('#rdReportExpenses .rd-bars-signed .is-refund').count(), 1);
     for (const width of [390, 1440]) {
       await page.setViewportSize({ width, height: width === 390 ? 844 : 1000 });
-      const position = await page.locator('.is-refund').evaluate(item => ({
+      const position = await page.locator('#rdReportExpenses .is-refund').evaluate(item => ({
         middle: item.getBoundingClientRect().top + item.getBoundingClientRect().height / 2,
         top: item.querySelector('.rd-bar').getBoundingClientRect().top,
       }));
@@ -49,8 +49,8 @@ async function main() {
     }
     await page.evaluate(() => { state.entries[1].amount = -100000; render(); });
     assert.match(await page.locator('#rdReportSummary').innerText(), /0원/);
-    assert.deepEqual(await page.locator('.rd-bar-percent').allTextContents(), ['—', '—']);
-    assert.match(await page.locator('.rd-trend-note').innerText(), /0원 이하/);
+    assert.deepEqual(await page.locator('#rdReportExpenses .rd-bar-percent').allTextContents(), ['—', '—']);
+    assert.match(await page.locator('#rdReportExpenses .rd-trend-note').innerText(), /0원 이하/);
     assert.match(await page.locator('#rdDonut').getAttribute('aria-label'), /100%/);
     await page.locator('#rdReportItineraryTab').click();
     await page.locator('#rdReportExpenseTab').click();
@@ -66,18 +66,17 @@ async function main() {
       render();
     });
     await page.locator('.rd-nav [data-trip-nav="report"]').click();
-    await page.locator('#tripNavigationMenu [data-nav-item="report-expenses"]').click();
-    await page.locator('#tripNavigationMenu').waitFor({ state: 'hidden' });
+    await page.waitForFunction(() => activePage === 'report');
     await page.evaluate(() => document.fonts.ready);
-    const shares = () => page.locator('.rd-bar-percent').allTextContents();
+    const shares = () => page.locator('#rdReportExpenses .rd-bar-percent').allTextContents();
     assert.deepEqual(await shares(), ['68.2%', '16.5%', '15.3%']);
-    assert.deepEqual(await page.locator('.rd-bar-amount').allTextContents(), ['195,600원', '47,200원', '44,000원']);
-    assert.match(await page.locator('.rd-trend').innerText(), /9건의 지출 기록/);
+    assert.deepEqual(await page.locator('#rdReportExpenses .rd-bar-amount').allTextContents(), ['195,600원', '47,200원', '44,000원']);
+    assert.doesNotMatch(await page.locator('#rdReportExpenses .rd-trend').innerText(), /건의 지출 기록|결제일 기준|사전구매 별도 집계/);
     for (const width of [320, 390, 768, 1440]) {
       await page.setViewportSize({ width, height: width >= 768 ? 1000 : 844 });
-      await page.locator('.rd-trend').evaluate(node => window.scrollTo({ top: scrollY + node.getBoundingClientRect().top - 72, behavior: 'instant' }));
-      await page.locator('.rd-trend').screenshot({ path: path.join(output, `payment-share-${width}.png`), animations: 'disabled' });
-      const layout = await page.locator('.rd-bars').evaluate(chart => [...chart.children].map(item => {
+      await page.locator('#rdReportExpenses .rd-trend').evaluate(node => window.scrollTo({ top: scrollY + node.getBoundingClientRect().top - 72, behavior: 'instant' }));
+      await page.locator('#rdReportExpenses .rd-trend').screenshot({ path: path.join(output, `payment-share-${width}.png`), animations: 'disabled' });
+      const layout = await page.locator('#rdReportExpenses .rd-bars').evaluate(chart => [...chart.children].map(item => {
         const label = item.querySelector('.rd-bar-label'), amount = item.querySelector('.rd-bar-amount').getBoundingClientRect();
         const percent = item.querySelector('.rd-bar-percent').getBoundingClientRect(), bar = item.querySelector('.rd-bar').getBoundingClientRect();
         return { labelTop: label.getBoundingClientRect().top, labelBottom: label.getBoundingClientRect().bottom, chartTop: chart.getBoundingClientRect().top,
@@ -111,34 +110,34 @@ async function main() {
     const expectedDates = await page.evaluate(() => ['사전구매', ...['2026-10-13', '2026-10-14'].map(formatTripShortDate)]);
     for (const width of [390, 1440]) {
       await page.setViewportSize({ width, height: width === 390 ? 844 : 1000 });
-      assert.deepEqual(await page.locator('.rd-bar-date').allTextContents(), expectedDates, 'Pretrip purchases use one named group before ordinary payment dates');
-      assert.deepEqual(await page.locator('.rd-bar-amount').allTextContents(), ['95,000원', '10,000원', '20,000원']);
+      assert.deepEqual(await page.locator('#rdReportExpenses .rd-bar-date').allTextContents(), expectedDates, 'Pretrip purchases use one named group before ordinary payment dates');
+      assert.deepEqual(await page.locator('#rdReportExpenses .rd-bar-amount').allTextContents(), ['95,000원', '10,000원', '20,000원']);
       assert.deepEqual(await shares(), ['76.0%', '8.0%', '16.0%']);
       assert.match(await page.locator('#rdReportSummary').innerText(), /125,000원/);
-      assert.match(await page.locator('.rd-trend').innerText(), /사전구매 별도 집계/);
-      const labelFits = await page.locator('.rd-bar-date').first().evaluate(label => {
+      assert.doesNotMatch(await page.locator('#rdReportExpenses .rd-trend').innerText(), /사전구매 별도 집계/);
+      const labelFits = await page.locator('#rdReportExpenses .rd-bar-date').first().evaluate(label => {
         const rect = label.getBoundingClientRect(), chart = label.closest('.rd-bars').getBoundingClientRect();
         return rect.left >= chart.left && rect.right <= chart.right && label.clientHeight >= parseFloat(getComputedStyle(label).lineHeight);
       });
       assert(labelFits, `Pretrip label stays visible on one line at ${width}px`);
-      await page.locator('.rd-trend').evaluate(node => window.scrollTo({ top: scrollY + node.getBoundingClientRect().top - 72, behavior: 'instant' }));
-      await page.locator('.rd-trend').screenshot({ path: path.join(output, `pretrip-group-${width}.png`), animations: 'disabled' });
+      await page.locator('#rdReportExpenses .rd-trend').evaluate(node => window.scrollTo({ top: scrollY + node.getBoundingClientRect().top - 72, behavior: 'instant' }));
+      await page.locator('#rdReportExpenses .rd-trend').screenshot({ path: path.join(output, `pretrip-group-${width}.png`), animations: 'disabled' });
     }
     await page.locator('#rdReportItineraryTab').click();
     await page.locator('#rdReportExpenseTab').click();
-    assert.deepEqual(await page.locator('.rd-bar-date').allTextContents(), expectedDates);
+    assert.deepEqual(await page.locator('#rdReportExpenses .rd-bar-date').allTextContents(), expectedDates);
     assert.equal(await page.evaluate(() => JSON.stringify(state.entries)), pretripBefore, 'Report grouping preserves original expense records and payment dates');
     await page.evaluate(() => { state.entries = [{ id: 'pretrip-only-refund', date: '__pretrip__', paymentDate: '2026-10-13', amount: -1000 }]; render(); });
-    assert.deepEqual(await page.locator('.rd-bar-date').allTextContents(), ['사전구매']);
-    assert.deepEqual(await page.locator('.rd-bar-amount').allTextContents(), ['-1,000원']);
-    assert.equal(await page.locator('.is-refund').count(), 1);
+    assert.deepEqual(await page.locator('#rdReportExpenses .rd-bar-date').allTextContents(), ['사전구매']);
+    assert.deepEqual(await page.locator('#rdReportExpenses .rd-bar-amount').allTextContents(), ['-1,000원']);
+    assert.equal(await page.locator('#rdReportExpenses .is-refund').count(), 1);
     await page.evaluate(() => { state.entries = [{ id: 'only-refund', amount: -1000, date: '2026-10-13' }]; render(); });
     assert.deepEqual(await shares(), ['—']);
-    assert.match(await page.locator('.rd-trend-note').innerText(), /0원 이하/);
+    assert.match(await page.locator('#rdReportExpenses .rd-trend-note').innerText(), /0원 이하/);
     await page.evaluate(() => { state.entries = []; render(); });
-    assert.equal(await page.locator('.rd-bar-item').count(), 0);
-    assert.match(await page.locator('.rd-trend').innerText(), /지출을 기록하면/);
-    assert.doesNotMatch(await page.locator('.rd-trend').innerText(), /NaN|Infinity/);
+    assert.equal(await page.locator('#rdReportExpenses .rd-bar-item').count(), 0);
+    assert.match(await page.locator('#rdReportExpenses .rd-trend').innerText(), /지출을 기록하면/);
+    assert.doesNotMatch(await page.locator('#rdReportExpenses .rd-trend').innerText(), /NaN|Infinity/);
 
     // Sorting changes only the report view, with unknown durations last.
     const itineraryBefore = await page.evaluate(() => {
@@ -153,19 +152,19 @@ async function main() {
       render(); return JSON.stringify(state.itineraryItems);
     });
     await page.locator('#rdReportItineraryTab').click();
-    const stayIds = () => page.locator('.rd-analysis-place').evaluateAll(rows => rows.map(row => row.dataset.id));
+    const stayIds = () => page.locator('.rp-time-place').evaluateAll(rows => rows.map(row => row.dataset.analysisItem));
     const sort = async value => {
       await page.locator('#rdReportStaySortButton').click();
       await page.locator(`#rdReportStaySortMenu [data-value="${value}"]`).click();
     };
-    const metrics = await page.locator('.rd-analysis-metrics').innerText();
+    const metrics = await page.locator('.rp-summary-slot[aria-hidden="false"]').innerText();
     assert.deepEqual(await stayIds(), ['first', 'missing', 'short', 'equal', 'long']);
     await sort('longest');
     assert.deepEqual(await stayIds(), ['long', 'first', 'equal', 'short', 'missing']);
     assert.equal(await page.locator('#rdReportStaySortButton').evaluate(node => node === document.activeElement), true, 'Sort retains keyboard focus after rendering');
     await sort('shortest');
     assert.deepEqual(await stayIds(), ['short', 'first', 'equal', 'long', 'missing']);
-    assert.equal(await page.locator('.rd-analysis-metrics').innerText(), metrics, 'Sort does not change summary totals');
+    assert.equal(await page.locator('.rp-summary-slot[aria-hidden="false"]').innerText(), metrics, 'Sort does not change summary totals');
     await page.locator('#rdReportDay').selectOption('2026-10-13');
     assert.deepEqual(await stayIds(), ['short', 'first', 'equal', 'missing']);
     assert.equal(await page.locator('#rdReportStaySort').inputValue(), 'shortest');
@@ -173,15 +172,15 @@ async function main() {
     await page.locator('#rdReportItineraryTab').click();
     assert.deepEqual(await stayIds(), ['short', 'first', 'equal', 'missing']);
     await page.locator('#rdReportDay').selectOption('2026-10-15');
-    assert.equal(await page.locator('.rd-analysis-place').count(), 0);
-    assert.match(await page.locator('#rdPlanAnalytics').innerText(), /체류 시간을 기록할 일정이 없어요/);
+    assert.equal(await page.locator('.rp-time-place').count(), 0);
+    assert.match(await page.locator('#rdPlanAnalytics').innerText(), /분석할 장소 일정이 없어요/);
     await page.locator('#rdReportDay').selectOption('all');
     await sort('schedule');
     assert.deepEqual(await stayIds(), ['first', 'missing', 'short', 'equal', 'long']);
     await sort('longest');
     for (const width of [320, 390, 768, 1440]) {
       await page.setViewportSize({ width, height: width >= 768 ? 1000 : 844 });
-      const fits = await page.locator('.rd-analysis-heading').evaluate(node => {
+      const fits = await page.locator('.rp-panel-heading:has(#rdReportStaySort)').evaluate(node => {
         const rect = node.getBoundingClientRect(), select = node.querySelector('.custom-select-button').getBoundingClientRect();
         const heading = node.querySelector('h2').getBoundingClientRect();
         return select.left >= rect.left && select.right <= rect.right + 1 && select.height >= 40
@@ -195,7 +194,7 @@ async function main() {
       }
     }
     assert.equal(await page.evaluate(() => JSON.stringify(state.itineraryItems)), itineraryBefore, 'Report sorting never reorders or changes the saved itinerary');
-    await page.locator('.rd-analysis-place').first().click();
+    await page.locator('.rp-time-place').first().click();
     await page.waitForFunction(() => editingItineraryId === 'long' && document.getElementById('itineraryEditor').open);
     assert.deepEqual(errors, []);
     console.log('PASS reports: payment shares/pretrip/refunds, stay schedule/longest/shortest sorting, missing durations last, stable ties, date and tab persistence, unchanged itinerary/totals, edit navigation, 320/390/768/1440 layout and no runtime errors.');

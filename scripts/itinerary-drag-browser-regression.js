@@ -108,7 +108,9 @@ async function main(){
   assert.deepEqual(await page.evaluate(()=>getSortedItineraryItemsForPrint().map(i=>i.id)),['D','A','B','C']);
   assert.deepEqual(await page.evaluate(()=>window.TripLog.features.travelCompanion.model.dayItems(state,'2026-09-26').map(i=>i.id)),['D','A','B','C']);
   await page.locator('#itineraryMapButton').click();
-  await page.getByRole('button',{name:'전체 동선',exact:true}).click();
+  // The full-route button was removed; verify the retained route helper still
+  // receives the same ordered stops as summary/print/companion views.
+  await page.evaluate(()=>window.TripLog.features.itinerary.workspace.showFullRoute());
   const route=new URL(await page.locator('#googleMapsLink').getAttribute('href'));
   assert.match(route.searchParams.get('origin'),/교토 호텔/);assert.match(route.searchParams.get('destination'),/니시키 시장/);
   assert.match(route.searchParams.get('waypoints'),/교토역.*텐류지/);

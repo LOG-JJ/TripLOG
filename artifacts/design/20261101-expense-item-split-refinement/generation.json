@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Seoul",
+  "stage": "selected-expense-split-component-refinement",
+  "status": "awaiting-user-review",
+  "selection": {
+    "priorDisplayedOption": 1,
+    "concept": "inline-amount"
+  },
+  "generationPath": "built-in image_gen",
+  "mode": "I2I",
+  "callCount": 1,
+  "startedAtUtc": "2026-11-01 11:44:11 UTC",
+  "prompt": "Refine the user-selected first concept into a component-only mockup of “분담 설정”, intended to be inserted immediately below the existing payer field in TripLOG’s expense editor.\n\nShow two states of this same component side by side: amount entry and percentage entry. These are not alternative designs. Each component is 354 CSS px wide, sized for a 390px mobile expense form with 18px side padding, and approximately 300–340px tall. Keep the board tightly fitted to the two components.\n\nMatch the current project’s form controls: pure white background, navy #0b1020 1.5px input and button outlines, 9px corner radii, yellow #fff05a selected buttons with a tiny 1px by 2px navy offset shadow. Use restrained Pretendard-like text: field heading 14px/600, member names 13px/500, numeric input values 16px/500, secondary values 12px/400. The component should feel like another form field, without a large outer card or nested row boxes.\n\nIn both states, use a small “분담 설정” heading and three compact equal-width buttons “균등 / 금액 / 비율”. Below, use three aligned rows for JJ, JH, and 민지. Use small 22px pastel initials circles beside the names, not illustrated portraits. Inputs have 44px touch height. Separate rows with light hairlines.\n\nLeft state: “금액” is selected in yellow. Editable won inputs show JJ 60,000원, JH 36,000원, 민지 24,000원. Quiet calculated percentages are 50%, 30%, 20%.\nRight state: “비율” is selected in yellow. Percentage input fields show 50%, 30%, 20%, with the corresponding amounts 60,000원, 36,000원, 24,000원 presented as quiet calculated text. Clearly distinguish editable fields from calculated values.\n\nEnd each component with one slim white status row: a small green check and “분담 합계 120,000 / 120,000원”. Do not use a full green banner. Keep typography and spacing compact and readable.\n\nRender only the allocation components. Do not include the surrounding expense form, payer field, payment amount, category/date controls, logo, memo, extra badges, member-add controls, a new apply/save button, device body, status bar, or browser chrome. The existing expense editor’s final save action will save the allocation.\n\nInput images:\n- inline-amount.png: the user-selected first concept; refine only its allocation component for insertion beneath the existing payer field.",
+  "inputImages": [
+    {
+      "originalPath": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261101-expense-item-split/inline-amount.png",
+      "savedPath": "artifacts/design/20261101-expense-item-split/inline-amount.png",
+      "role": "User-selected first concept; refine only its allocation component below the existing payer field",
+      "sentToImageGen": true,
+      "sha256": "a028f0579f8611013345a1c3cf910aec2576f44f528778abb728aa82af2a4779"
+    }
+  ],
+  "output": {
+    "originalPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a14a76-7d13-7b52-8e8a-996a2d994f1e\\exec-58b02e23-819f-4e10-a29c-189144b199e6.png",
+    "savedPath": "artifacts/design/20261101-expense-item-split-refinement/allocation-component.png",
+    "sha256": "d7c057610132d56c1ed5c2f550e33177252de39584b8b8d189c6b763d0aa3f68",
+    "originalSha256": "d7c057610132d56c1ed5c2f550e33177252de39584b8b8d189c6b763d0aa3f68",
+    "size": [
+      1774,
+      887
+    ]
+  },
+  "appSourceChanged": false,
+  "productionDataChanged": false,
+  "deployed": false,
+  "overwrite": false,
+  "component": {
+    "widthCSS": 354,
+    "placement": "Immediately below the existing payer input",
+    "states": [
+      "amount entry",
+      "percentage entry"
+    ],
+    "saveAction": "Existing expense editor final save",
+    "existingFormRedesigned": false
+  }
+}

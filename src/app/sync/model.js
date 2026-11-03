@@ -157,6 +157,10 @@
       const e = clone(source);
       if (privacy.shareItinerary === false && ["itinerary", "progress", "reservation", "note_update", "comment"].includes(e.kind)) return [];
       if (privacy.shareExpenses === false) {
+        if (e.kind === 'reservation') {
+          delete e.fields['g:money'];
+          for (const field of ['quotedAmount', 'quotedCurrency', 'linkedExpenseId']) delete e.fields[`p:${field}`];
+        }
         if (["expense", "split", "share"].includes(e.kind) || (e.kind === "settings" && e.id === "settlement")) return [];
         if (e.kind === "participant") delete e.fields["p:individualSpent"];
         if (e.kind === "trip") delete e.fields["p:totalBudget"];
@@ -192,6 +196,10 @@
     return Object.fromEntries(Object.entries(entities).flatMap(([key, source]) => {
       const e = clone(source);
       if (scope === "itinerary") return ["itinerary", "reservation", "progress"].includes(e.kind) ? [[key,e]] : [];
+      if (e.kind === 'reservation') {
+        e.fields = Object.fromEntries(['p:quotedAmount', 'p:quotedCurrency', 'p:linkedExpenseId'].filter(field => Object.hasOwn(e.fields, field)).map(field => [field, e.fields[field]]));
+        return Object.keys(e.fields).length ? [[key, e]] : [];
+      }
       if (["expense", "split", "share"].includes(e.kind) || (e.kind === "settings" && e.id === "settlement")) return [[key,e]];
       const field = e.kind === "participant" ? "p:individualSpent" : e.kind === "trip" ? "p:totalBudget" : null;
       if (!field) return [];
@@ -224,5 +232,13 @@
   function fromRows(rows = []) {
     return Object.fromEntries(rows.map(row => [key(row.kind, row.entity_id || row.id), { kind: row.kind, id: row.entity_id || row.id, fields: clone(row.data || row.fields || {}), version: Number(row.version || 0), fieldVersions: clone(row.field_versions || row.fieldVersions || {}), deleted: Boolean(row.deleted_at || row.deleted) }]));
   }
-  return { clone, equal, signature, uuid, key, ensureIds, encode, decode, reposition, shared, selectScope, diff, apply, fromRows, collections };
+  // Every accepted trip member may edit allocations, including a viewer.
+  // Keep the exception narrow so it cannot grant expense/settings edits.
+  function splitOnly(patches) {
+    return Array.isArray(patches) && patches.length > 0 && patches.every(patch =>
+      patch.kind === 'split' && /^current:.+/.test(patch.id || '') &&
+      ['create', 'patch', 'delete'].includes(patch.action) &&
+      (patch.action === 'delete' || (patch.fields && Object.keys(patch.fields).length === 1 && Object.hasOwn(patch.fields, 'p:value'))));
+  }
+  return { clone, equal, signature, uuid, key, ensureIds, encode, decode, reposition, shared, selectScope, diff, apply, fromRows, collections, splitOnly };
 });

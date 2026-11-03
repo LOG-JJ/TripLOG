@@ -1,0 +1,21 @@
+Redesign the supplied expanded TripLOG day itinerary as one compact, readable mobile timeline component, 390 × 680 CSS pixels. Current date: 2026-10-28; preserve Day 1 of the example trip, October 20, 2026. Use the supplied current list as the content reference and the supplied project category-icon sheet for the actual existing icons.
+
+Keep the project’s white surface, navy typography, subtle pale-blue lines, small yellow and pink accents, and restrained elevation. Use a continuous list with clear alignment and gentle spacing, not a separate card around every stop. A small header can show “Day 1”, “10.20 화”, and “8곳”. App component only, with no phone, browser or OS chrome.
+
+Preserve these eight entries and their order:
+13:00 나리타공항 — airport category.
+15:00 니시스가모 호텔 — hotel category.
+16:40 멘야무사시 — restaurant category.
+18:00 도쿄도청 — tower category.
+19:00 신주쿠 쇼핑 — shopping category.
+20:00 저녁 카페 — cafe category.
+20:30 신주쿠 산책 — urban category.
+21:20 니시스가모 호텔 — hotel category.
+
+Align the times in a narrow left column using readable 13–14px tabular numerals. Replace the empty colored timeline dots with small 24–28px original category icons, naturally integrated along a fine vertical timeline. Place short, strong 14–15px location names beside the icons, with no nested icon frames or location-specific illustrations. Keep the repeated hotel entries; do not omit any stop.
+
+Between stops, show compact travel-status indicators rather than explanatory sentences. The restaurant-to-tower gap has a small train icon and “70분”; tower-to-shopping has a small train icon and “42분”. The other five gaps have a light dashed line and a tiny amber question-mark/route indicator. Do not invent end times, travel durations or booking details. Avoid log messages, repeated “구간 1”, long helper copy and oversized blank space. Show all eight stops comfortably in one coherent component.
+
+Input images:
+- codex-clipboard-82c6a10f-f81e-470b-99d1-6ff193272b71.png: the current expanded day list the user wants improved.
+- project-icon-reference.png: reference for the actual category icons already used in TripLOG.

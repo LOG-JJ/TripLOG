@@ -49,11 +49,11 @@ async function main() {
 
     const editReservation = async values => {
       await page.evaluate(() => window.TripLog.features.travelCompanion.workspace.open('wallet', 'stay'));
-      await page.locator(`[data-tt-action="reservation-detail"][data-id="manual:${hotelId}"]`).click();
+      await page.locator(`#ttCompanion .cx-booking-title[data-id="manual:${hotelId}"]`).click();
       await page.locator('#ttReservationDetail [data-tt-action="reservation-edit"]').click();
       await set(values); await submit(); await page.locator('#ttReservationEditor').waitFor({ state: 'hidden' });
       await page.locator('#ttReservationDetail [data-tt-action="close"]').click();
-      await page.locator('#ttCompanion [data-tt-action="close"]').click();
+      await page.locator('.rd-nav [data-trip-nav="itinerary"]').click();
     };
     await editReservation({ ttReservationReference: 'HOTEL-UPDATED' });
     assert.deepEqual((await snapshot()).items.map(item => item.id), initial.items.map(item => item.id), 'Re-saving does not duplicate a night');

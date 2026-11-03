@@ -1,0 +1,243 @@
+{
+  "date": "2026-11-01",
+  "passed": true,
+  "count": 47,
+  "method": "The initial full command stopped on obsolete pre-redesign selectors; these were updated and the failed suite plus remaining suites were resumed sequentially. No suite was omitted. Final scoped CSS changes were followed by today-tools, wallet and analysis reruns, plus report-refund.",
+  "cases": [
+    {
+      "file": "cli-browser-regression.js",
+      "passed": true,
+      "evidence": "Initial CLI browser run: successful output before navigation stopped on the old menu contract."
+    },
+    {
+      "file": "app-icon-browser-regression.js",
+      "passed": true,
+      "evidence": "Initial CLI browser run: successful output before navigation stopped on the old menu contract."
+    },
+    {
+      "file": "entry-splash-browser-regression.js",
+      "passed": true,
+      "evidence": "Initial CLI browser run: successful output before navigation stopped on the old menu contract."
+    },
+    {
+      "file": "trip-library-browser-regression.js",
+      "passed": true,
+      "evidence": "Initial CLI browser run: successful output before navigation stopped on the old menu contract."
+    },
+    {
+      "file": "trip-library-views-browser-regression.js",
+      "passed": true,
+      "evidence": "Initial CLI browser run: successful output before navigation stopped on the old menu contract."
+    },
+    {
+      "file": "trip-removal-browser-regression.js",
+      "passed": true,
+      "evidence": "Initial CLI browser run: successful output before navigation stopped on the old menu contract."
+    },
+    {
+      "file": "trip-navigation-browser-regression.js",
+      "passed": true,
+      "evidence": "Focused rerun after updating removed review menu and shared navigation assertions: exit 0."
+    },
+    {
+      "file": "itinerary-default-date-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation.log"
+    },
+    {
+      "file": "trip-header-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation.log"
+    },
+    {
+      "file": "trip-scene-art-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation.log"
+    },
+    {
+      "file": "trip-scene-cache-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation.log"
+    },
+    {
+      "file": "reservation-pockets-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-4.log"
+    },
+    {
+      "file": "transport-reservations-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-4.log"
+    },
+    {
+      "file": "stay-copy-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-5.log"
+    },
+    {
+      "file": "scroll-lock-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-6.log"
+    },
+    {
+      "file": "delete-dialogs-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-7.log"
+    },
+    {
+      "file": "settlement-name-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-7.log"
+    },
+    {
+      "file": "travel-costs-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-7.log"
+    },
+    {
+      "file": "report-refund-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "print-export-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "auth-session-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "sync-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "sync-offline-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "sync-navigation-recovery-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "sync-auto-update-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "trip-chooser-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "itinerary-drag-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "itinerary-touch-drag-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "controls-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "time-wheel-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "reservation-time-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "itinerary-controls-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "itinerary-editor-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "itinerary-summary-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "itinerary-subtypes-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "transit-journey-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "companion-passport-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "wallet-passbook-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "itinerary-analysis-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "map-provider-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "domestic-route-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "expense-ui-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "expense-order-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "manual-exchange-rate-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "reservation-expense-editor-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "expense-filter-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    },
+    {
+      "file": "receipt-json-browser-regression.js",
+      "passed": true,
+      "evidence": "browser-continuation-8.log"
+    }
+  ]
+}

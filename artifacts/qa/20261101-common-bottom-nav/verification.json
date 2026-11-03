@@ -1,0 +1,976 @@
+{
+  "origin": "http://127.0.0.1:5692",
+  "browser": "isolated Edge/Playwright",
+  "layouts": [
+    {
+      "width": 320,
+      "height": 568,
+      "geometry": [
+        {
+          "page": "overview",
+          "label": "개요",
+          "button": {
+            "x": 4,
+            "y": 508,
+            "width": 62.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 21.1875,
+            "y": 514,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/house.svg\")",
+          "text": {
+            "x": 24.8125,
+            "y": 542,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "itinerary",
+          "label": "일정",
+          "button": {
+            "x": 66.390625,
+            "y": 508,
+            "width": 62.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 83.59375,
+            "y": 514,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/calendar-blank.svg\")",
+          "text": {
+            "x": 87.21875,
+            "y": 542,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "travel",
+          "label": "여행",
+          "button": {
+            "x": 128.796875,
+            "y": 508,
+            "width": 62.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 145.984375,
+            "y": 514,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/suitcase-rolling.svg\")",
+          "text": {
+            "x": 149.609375,
+            "y": 542,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "1"
+          },
+          "popup": null
+        },
+        {
+          "page": "budget",
+          "label": "지출",
+          "button": {
+            "x": 191.1875,
+            "y": 508,
+            "width": 62.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 208.390625,
+            "y": 514,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/wallet.svg\")",
+          "text": {
+            "x": 212.015625,
+            "y": 542,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "report",
+          "label": "리포트",
+          "button": {
+            "x": 253.59375,
+            "y": 508,
+            "width": 62.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 270.796875,
+            "y": 514,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/chart-bar.svg\")",
+          "text": {
+            "x": 269.234375,
+            "y": 542,
+            "width": 31.125,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "geometry": [
+        {
+          "page": "overview",
+          "label": "개요",
+          "button": {
+            "x": 4,
+            "y": 680,
+            "width": 62.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 21.1875,
+            "y": 686,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/house.svg\")",
+          "text": {
+            "x": 24.8125,
+            "y": 714,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "itinerary",
+          "label": "일정",
+          "button": {
+            "x": 66.390625,
+            "y": 680,
+            "width": 62.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 83.59375,
+            "y": 686,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/calendar-blank.svg\")",
+          "text": {
+            "x": 87.21875,
+            "y": 714,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "travel",
+          "label": "여행",
+          "button": {
+            "x": 128.796875,
+            "y": 680,
+            "width": 62.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 145.984375,
+            "y": 686,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/suitcase-rolling.svg\")",
+          "text": {
+            "x": 149.609375,
+            "y": 714,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "1"
+          },
+          "popup": null
+        },
+        {
+          "page": "budget",
+          "label": "지출",
+          "button": {
+            "x": 191.1875,
+            "y": 680,
+            "width": 62.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 208.390625,
+            "y": 686,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/wallet.svg\")",
+          "text": {
+            "x": 212.015625,
+            "y": 714,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "report",
+          "label": "리포트",
+          "button": {
+            "x": 253.59375,
+            "y": 680,
+            "width": 62.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 270.796875,
+            "y": 686,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/chart-bar.svg\")",
+          "text": {
+            "x": 269.234375,
+            "y": 714,
+            "width": 31.125,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "geometry": [
+        {
+          "page": "overview",
+          "label": "개요",
+          "button": {
+            "x": 4,
+            "y": 784,
+            "width": 76.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 28.1875,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/house.svg\")",
+          "text": {
+            "x": 31.8125,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "itinerary",
+          "label": "일정",
+          "button": {
+            "x": 80.390625,
+            "y": 784,
+            "width": 76.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 104.59375,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/calendar-blank.svg\")",
+          "text": {
+            "x": 108.21875,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "travel",
+          "label": "여행",
+          "button": {
+            "x": 156.796875,
+            "y": 784,
+            "width": 76.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 180.984375,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/suitcase-rolling.svg\")",
+          "text": {
+            "x": 184.609375,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "1"
+          },
+          "popup": null
+        },
+        {
+          "page": "budget",
+          "label": "지출",
+          "button": {
+            "x": 233.1875,
+            "y": 784,
+            "width": 76.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 257.390625,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/wallet.svg\")",
+          "text": {
+            "x": 261.015625,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "report",
+          "label": "리포트",
+          "button": {
+            "x": 309.59375,
+            "y": 784,
+            "width": 76.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 333.796875,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/chart-bar.svg\")",
+          "text": {
+            "x": 332.234375,
+            "y": 818,
+            "width": 31.125,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        }
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "geometry": [
+        {
+          "page": "overview",
+          "label": "개요",
+          "button": {
+            "x": 76,
+            "y": 330,
+            "width": 138.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 131.1875,
+            "y": 336,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/house.svg\")",
+          "text": {
+            "x": 134.8125,
+            "y": 364,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "itinerary",
+          "label": "일정",
+          "button": {
+            "x": 214.390625,
+            "y": 330,
+            "width": 138.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 269.59375,
+            "y": 336,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/calendar-blank.svg\")",
+          "text": {
+            "x": 273.21875,
+            "y": 364,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "travel",
+          "label": "여행",
+          "button": {
+            "x": 352.796875,
+            "y": 330,
+            "width": 138.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 407.984375,
+            "y": 336,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/suitcase-rolling.svg\")",
+          "text": {
+            "x": 411.609375,
+            "y": 364,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "1"
+          },
+          "popup": null
+        },
+        {
+          "page": "budget",
+          "label": "지출",
+          "button": {
+            "x": 491.1875,
+            "y": 330,
+            "width": 138.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 546.390625,
+            "y": 336,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/wallet.svg\")",
+          "text": {
+            "x": 550.015625,
+            "y": 364,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "report",
+          "label": "리포트",
+          "button": {
+            "x": 629.59375,
+            "y": 330,
+            "width": 138.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 684.78125,
+            "y": 336,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/chart-bar.svg\")",
+          "text": {
+            "x": 683.21875,
+            "y": 364,
+            "width": 31.125,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "geometry": [
+        {
+          "page": "overview",
+          "label": "개요",
+          "button": {
+            "x": 164,
+            "y": 840,
+            "width": 190.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 245.1875,
+            "y": 846,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/house.svg\")",
+          "text": {
+            "x": 248.8125,
+            "y": 874,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "itinerary",
+          "label": "일정",
+          "button": {
+            "x": 354.390625,
+            "y": 840,
+            "width": 190.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 435.59375,
+            "y": 846,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/calendar-blank.svg\")",
+          "text": {
+            "x": 439.21875,
+            "y": 874,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "travel",
+          "label": "여행",
+          "button": {
+            "x": 544.796875,
+            "y": 840,
+            "width": 190.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 625.984375,
+            "y": 846,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/suitcase-rolling.svg\")",
+          "text": {
+            "x": 629.609375,
+            "y": 874,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "1"
+          },
+          "popup": null
+        },
+        {
+          "page": "budget",
+          "label": "지출",
+          "button": {
+            "x": 735.1875,
+            "y": 840,
+            "width": 190.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 816.390625,
+            "y": 846,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/wallet.svg\")",
+          "text": {
+            "x": 820.015625,
+            "y": 874,
+            "width": 20.75,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "report",
+          "label": "리포트",
+          "button": {
+            "x": 925.59375,
+            "y": 840,
+            "width": 190.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 1006.78125,
+            "y": 846,
+            "width": 28,
+            "height": 24
+          },
+          "mask": "url(\"http://127.0.0.1:5692/src/assets/navigation/chart-bar.svg\")",
+          "text": {
+            "x": 1005.21875,
+            "y": 874,
+            "width": 31.125,
+            "height": 16
+          },
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "consoleIssues": [],
+  "checks": [
+    "five direct destinations",
+    "travel alignment",
+    "no menus/history/scroll lock",
+    "Back/Forward",
+    "report tabs/PDF",
+    "editor preservation",
+    "travel reload/keyboard",
+    "expense actions and settlement",
+    "rapid navigation",
+    "legacy menu-marker cleanup",
+    "data preservation"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-01",
+  "synthetic": true,
+  "captures": [
+    {
+      "original": "artifacts\\tmp\\20261101-companion-redesign\\companion-experience-today-tools\\today-390.png",
+      "saved": "artifacts\\qa\\20261101-companion-redesign\\today-390.png",
+      "sha256": "0bbc83714de122b17b67e642d3ebbaa44d402dcaeba1ff2a3045b2fad562c65c"
+    },
+    {
+      "original": "artifacts\\tmp\\20261101-companion-redesign\\companion-experience-today-tools\\today-1440.png",
+      "saved": "artifacts\\qa\\20261101-companion-redesign\\today-1440.png",
+      "sha256": "d21f9f994f3e0a2c2b241ffae235ab84bbf783cc330504296b82402351383d52"
+    },
+    {
+      "original": "artifacts\\tmp\\20261101-companion-redesign\\companion-experience-wallet\\wallet-390.png",
+      "saved": "artifacts\\qa\\20261101-companion-redesign\\wallet-390.png",
+      "sha256": "4fe52e12f4c08f274eef9c1e0aae6692f3a55b24a363fa5782486e1af9fe93b8"
+    },
+    {
+      "original": "artifacts\\tmp\\20261101-companion-redesign\\companion-experience-wallet\\wallet-1440.png",
+      "saved": "artifacts\\qa\\20261101-companion-redesign\\wallet-1440.png",
+      "sha256": "a592d1a804c9fd396419c24bd1402365308b998fc77c234f6f022ff42e6ba118"
+    },
+    {
+      "original": "artifacts\\tmp\\20261101-companion-redesign\\companion-experience-today-tools\\tools-390.png",
+      "saved": "artifacts\\qa\\20261101-companion-redesign\\tools-390.png",
+      "sha256": "019b89cb1d2210aa6e0de30d0d8646bc446f2080e8b947a26f50a52bb73a9445"
+    },
+    {
+      "original": "artifacts\\tmp\\20261101-companion-redesign\\companion-experience-today-tools\\tools-1440.png",
+      "saved": "artifacts\\qa\\20261101-companion-redesign\\tools-1440.png",
+      "sha256": "a16bcdd248b35a219aeb22db96d55673ccdbf184fc94addf5f110b67bb892d97"
+    },
+    {
+      "original": "artifacts\\tmp\\20261101-companion-redesign\\companion-experience-analysis\\analysis-all-390.png",
+      "saved": "artifacts\\qa\\20261101-companion-redesign\\analysis-all-390.png",
+      "sha256": "82aead304798fc36ad6142f35c76116ef9f240ec7d4c7366ef8ce5dde301e2e8"
+    },
+    {
+      "original": "artifacts\\tmp\\20261101-companion-redesign\\companion-experience-analysis\\analysis-1440.png",
+      "saved": "artifacts\\qa\\20261101-companion-redesign\\analysis-1440.png",
+      "sha256": "3792efc3ca3a8533e18e489463ce5e497663d3d4c3dc08531e3185af2b4e12ac"
+    },
+    {
+      "original": "artifacts\\tmp\\20261101-companion-redesign\\companion-experience-today-tools\\quick-expense-390.png",
+      "saved": "artifacts\\qa\\20261101-companion-redesign\\quick-expense-390.png",
+      "sha256": "1b65af9ff44f4919f6f55a202fb5e38f651affab91b520b3a2421ba9b08f6c64"
+    },
+    {
+      "original": "artifacts\\tmp\\20261101-companion-redesign\\companion-experience-wallet\\reservation-detail-390.png",
+      "saved": "artifacts\\qa\\20261101-companion-redesign\\reservation-detail-390.png",
+      "sha256": "cbbee433b7cd759d60fa606a5c21cfe6a985da331068ae9c7b0860a1168fe069"
+    },
+    {
+      "original": "artifacts\\tmp\\20261101-companion-redesign\\companion-experience-wallet\\reservation-payment-390.png",
+      "saved": "artifacts\\qa\\20261101-companion-redesign\\reservation-payment-390.png",
+      "sha256": "e85c00ca083c1ac674dab0510a4c3fa92838062390e72ab248051c58529d5dac"
+    },
+    {
+      "original": "artifacts\\tmp\\20261101-companion-redesign\\companion-experience-today-tools\\offline-options-390.png",
+      "saved": "artifacts\\qa\\20261101-companion-redesign\\offline-options-390.png",
+      "sha256": "44b400a8a41fa8f33c1284c9aef1af6fb9d5b20492819d8a143683d848fe35df"
+    },
+    {
+      "original": "artifacts\\tmp\\20261101-companion-redesign\\companion-experience-analysis\\analysis-missing-390.png",
+      "saved": "artifacts\\qa\\20261101-companion-redesign\\analysis-missing-390.png",
+      "sha256": "c93c0b0e4b1a94b33e761979c3d9eeef7427ee557dedd359c9ff2890686e7ede"
+    }
+  ]
+}

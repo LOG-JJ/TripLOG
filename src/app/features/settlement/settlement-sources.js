@@ -46,6 +46,18 @@ function getSelectedSettlementExpenseSource(sources = getSettlementExpenseSource
   return selected;
 }
 
+function getSettlementLeaderName() {
+  const saved = String(state.settlement?.leaderName || '').trim();
+  if (saved && saved !== '여행 대표') return saved;
+  const collaboration = state.collaboration || {};
+  const people = window.TripLog.features?.collaboration?.tripCollaboration;
+  const owner = people?.getTripMembers?.().find(member => member.role === 'owner');
+  const account = people?.getCurrentAccount?.();
+  if (account?.id && [owner?.id, collaboration.ownerId].includes(account.id) && account.displayName?.trim()) return account.displayName.trim();
+  const ownerName = String(owner?.name || collaboration.ownerName || '').trim();
+  return ownerName && !['나', '여행 대표'].includes(ownerName) ? ownerName : '여행 대표';
+}
+
 function getSettlementMembers() {
   const companions = state.companions || [];
   const roster = window.TripLog.features?.collaboration?.tripCollaboration?.getTripMembers?.() || [];
@@ -56,7 +68,7 @@ function getSettlementMembers() {
     || (!companion.id && !companion.userId && !companion.accountId && companion.name === member.name)
   );
   return [
-    { key: "leader", name: state.settlement?.leaderName || "여행 대표", paid: 0, isLeader: true },
+    { key: "leader", name: getSettlementLeaderName(), paid: 0, isLeader: true },
     ...companions.map((companion) => ({
       key: getCompanionSettlementKey(companion),
       name: companion.name,
@@ -95,6 +107,7 @@ window.TripLog.register("features.settlement.sources", {
   getSettlementSettings,
   getSettlementExpenseSources,
   getSelectedSettlementExpenseSource,
+  getSettlementLeaderName,
   getSettlementMembers,
   getCompanionSettlementKey,
   getCompanionTotalSpent,

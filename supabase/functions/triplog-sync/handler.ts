@@ -318,6 +318,12 @@ export async function handleRequest(req: Request) {
       const redact = (e: any) => {
         if (current.role === "owner" || current.privacy?.shareExpenses !== false) return e;
         const row = structuredClone(e);
+        if (row.kind === 'reservation') {
+          for (const field of ['p:quotedAmount', 'p:quotedCurrency', 'p:linkedExpenseId']) {
+            if (row.data) delete row.data[field];
+            if (row.field_versions) delete row.field_versions[field];
+          }
+        }
         const field = row.kind === "participant" ? "p:individualSpent" : row.kind === "trip" ? "p:totalBudget" : null;
         if (field) { if (row.data) delete row.data[field]; if (row.field_versions) delete row.field_versions[field]; }
         return row;

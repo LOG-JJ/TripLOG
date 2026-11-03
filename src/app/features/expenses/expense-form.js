@@ -68,6 +68,9 @@ async function saveExpenseForm(event) {
   const reservationEditor = window.TripLog.features.expenses.reservationEditor;
   const reservationIssue = reservationEditor.validate();
   if (reservationIssue) { showToast(reservationIssue.message); reservationIssue.target?.focus(); return; }
+  const allocation = window.TripLog.features.expenses.allocation;
+  const allocationIssue = allocation.validate();
+  if (allocationIssue) { showToast(allocationIssue.message); allocationIssue.target?.focus(); return; }
   const receipt = receiptInput.metadata() || (editingId ? findEntry(editingId)?.receipt : null);
   const previousEntries = [...state.entries], previousItems = state.itineraryItems;
 
@@ -103,7 +106,8 @@ async function saveExpenseForm(event) {
     return;
   }
 
-  const entry = {
+  const allocationOnly = Boolean(editingId && !window.TripLog.features.redesign.workspace.canEditTripSettings());
+  const entry = allocationOnly ? findEntry(editingId) : {
     ...(editingId ? findEntry(editingId) : {}),
     id: editingId || createId(),
     date: els.daySelect.value,
@@ -131,18 +135,32 @@ async function saveExpenseForm(event) {
       showToast("이동 경비의 금액과 날짜는 일정의 이동 정보에서 변경해 주세요.");
       return;
     }
-    state.entries = state.entries.map((item) => (item.id === editingId ? entry : item));
-  } else {
-    state.entries.push(entry);
+    // The expense and its allocation enter the same persisted snapshot below.
   }
+  const allocationToken = allocation.stage();
+  const editingTravelMode = state.travelMode;
+  // The form temporarily adopts the expense's currency mode. Split-only saves
+  // preserve the trip metadata and original expense without adding default fields.
+  if (allocationOnly) state.travelMode = window.TripLogSyncRepository.cached(submitTrip)?.snapshot.travelMode || editingTravelMode;
+  try {
+  if (editingId && !allocationOnly) state.entries = state.entries.map((item) => (item.id === editingId ? entry : item));
+  else if (!editingId) state.entries.push(entry);
 
-  if (entry.pretripType === 'hotel') {
+  if (!allocationOnly && entry.pretripType === 'hotel') {
     const model = window.TripLog.features.travelCompanion.model, previous = previousEntries.find(row => row.id === entry.id);
     const stay = model.stayItinerary(state, model.stayFromEntry(entry), previous ? model.stayFromEntry(previous) : null);
     state.itineraryItems = stay.itineraryItems;
     stay.removedIds.forEach(id => window.TripLog.persistence.stateStorage.markDeletedEntity('itinerary', id));
   }
-  if (!await saveAndRender()) { if (state.id === submitTrip) { state.entries = previousEntries; state.itineraryItems = previousItems; } showToast("기기에 저장하지 못했어요. 입력 내용은 유지됩니다."); return; }
+  if (!allocationOnly && entry.pretripType === 'flight') state.itineraryItems = window.TripLog.features.travelCompanion.model.updateEntryItinerary(state, entry, previousEntries.find(row => row.id === entry.id));
+  const saved = allocationOnly ? await window.TripLog.ui.expenseAllocationEditor.persist(allocationToken) : await saveAndRender();
+  if (!saved) { if (state.id === submitTrip) { state.entries = previousEntries; state.itineraryItems = previousItems; if (allocationOnly) state.travelMode = editingTravelMode; } allocation.finish(allocationToken, false); showToast("기기에 저장하지 못했어요. 입력 내용은 유지됩니다."); return; }
+  } catch (error) {
+    if (state.id === submitTrip) { state.entries = previousEntries; state.itineraryItems = previousItems; if (allocationOnly) state.travelMode = editingTravelMode; }
+    allocation.finish(allocationToken, false);
+    showToast(error.message || '기기에 저장하지 못했어요. 입력 내용은 유지됩니다.'); return;
+  }
+  allocation.finish(allocationToken, true);
   if (state.id !== submitTrip) return;
   await window.TripLog.sync.drafts?.clear("expenseForm", submitTrip, submitEditingId);
   if (submitEditingId) clearEditMode(); else resetExpenseFormAfterSubmit();

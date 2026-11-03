@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-31",
+  "stage": "image-mockups-only",
+  "status": "awaiting-user-review",
+  "requestedScope": "Additional reservation detail, addition form and supporting component-state mockups before implementation",
+  "mockData": true,
+  "saveMethod": "Exact tool-returned original paths; no latest-file selection",
+  "assets": [
+    {
+      "prompt": "Create a TripLOG reservation-detail component mockup board with three related 390 × 844 mobile views side by side, total 1218 × 844 CSS pixels. They are type variants of the same bottom-sheet component, not alternative app designs. Match the attached user's selected design tone. Client date October 31, 2026; all reservation data is fictional. Each view has a subtle wallet backdrop, sheet handle, close icon, compact “예약 상세” header and small edit pencil. Admission variant: “시부야 스카이”, “10.28 수 18:30”, reference A1B2C3D4 with copy, full venue address with address-copy and map actions, “성인 2명”, a short memo, primary “티켓 열기”, secondary “예약 사이트”, and “연결된 일정 · Day 2 18:30” with itinerary-view action. Transport variant: “나리타 → 인천”, “10.31 토 10:20 → 13:10”, reference ZG123456 with copy, two passengers and seats 12A/12B, departure-location map action, primary “예약 열기” and linked-itinerary row. Stay variant: “니시스가모 호텔”, check-in 10.27 and check-out 10.31, 4 nights, reference copy, full address and memo, primary “길찾기”, secondary “예약 열기” and linked-stay itinerary access. The stay sheet is opened from the full reservation list, never a featured hotel hero. Use small reusable category icons, readable compact Korean labels and clear touch targets. Keep any amount/linked-expense status to one quiet optional row. No payment panels, uploads or additional features.\n\nInput images:\n- reference.png: the user's selected TripLOG mockup as the visual-tone reference for these additional reservation-detail screens.",
+      "date": "2026-10-31",
+      "mode": "I2I",
+      "inputs": [
+        {
+          "path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261031-wallet-selected-refinement/reference.png",
+          "role": "User-selected visual-tone reference",
+          "sha256": "9b9e532c03f54c9006645957e0b7827a1306bbec5636dd071ecaee2ab55d8a09"
+        }
+      ],
+      "targetBoard": {
+        "width": 1218,
+        "height": 844
+      },
+      "targetScreens": {
+        "width": 390,
+        "height": 844,
+        "count": 3
+      },
+      "mockData": true,
+      "startedAt": "2026-10-30T15:55:57.946Z",
+      "file": "detail-variants.png",
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-9f27fe48-3067-4771-9c5b-277c1c55924d.png",
+      "inputUsage": "style-reference",
+      "savedPath": "artifacts/design/20261031-wallet-detail-add-states/detail-variants.png",
+      "overwritten": false,
+      "tool": "image_gen.imagegen",
+      "sha256": "a890606708fddc4c309c96dd55216c4ff171587102addcb60e52d1a848812d47"
+    },
+    {
+      "prompt": "Create a TripLOG reservation-add form board showing three related 390 × 844 mobile views side by side, total 1218 × 844 CSS pixels. Match the attached user's selected visual tone. These are variants of one reusable form, not three design alternatives. Client date October 31, 2026; sample dates and references are fictional and retained for continuity. Each view has a compact “예약 추가” header, back/close control, small type selector “교통 / 숙소 / 입장권 / 기타”, short labels, compact readable inputs and one yellow “예약 저장” footer action. Transport selected: mode 항공, name “나리타 → 인천”, departure/arrival place fields, departure “10.31 10:20” and arrival “10.31 13:10” in aligned date/time rows, booking reference ZG123456 and optional reservation-site link. Stay selected: “니시스가모 호텔”, check-in 10.27 and check-out 10.31, optional check-in/out time, address field, booking reference and optional reservation link; a quiet note indicates stay-day itinerary creation. Admission selected: “시부야 스카이”, use date/time “10.28 18:30”, reference A1B2C3D4, optional venue/address, separate “원본 티켓 링크” and “예약 관리 링크”. All views finish with collapsed optional sections “메모 · 추가 정보” and “금액 · 지출 연동”; the existing expense-linking design is reached only when expanded. Keep payment controls hidden in this base form. Preserve shared visual hierarchy, edit/clock/calendar/link icons and compact spacing. No file attachments, payment dashboard, extra onboarding or decorative hero artwork.\n\nInput images:\n- reference.png: the user's selected TripLOG mockup as the visual-tone reference for the additional reservation-add screens.",
+      "date": "2026-10-31",
+      "mode": "I2I",
+      "inputs": [
+        {
+          "path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261031-wallet-selected-refinement/reference.png",
+          "role": "User-selected visual-tone reference",
+          "sha256": "9b9e532c03f54c9006645957e0b7827a1306bbec5636dd071ecaee2ab55d8a09"
+        }
+      ],
+      "targetBoard": {
+        "width": 1218,
+        "height": 844
+      },
+      "targetScreens": {
+        "width": 390,
+        "height": 844,
+        "count": 3
+      },
+      "mockData": true,
+      "startedAt": "2026-10-30T15:57:59.453Z",
+      "file": "add-variants.png",
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-628b0810-49b0-4166-b503-ffbdb9cc1ab8.png",
+      "inputUsage": "style-reference",
+      "savedPath": "artifacts/design/20261031-wallet-detail-add-states/add-variants.png",
+      "overwritten": false,
+      "tool": "image_gen.imagegen",
+      "sha256": "08b34eadb0301bb4f65d0af538593abaf8b0b9aaf339f40d892a9d29b42bb3ca"
+    },
+    {
+      "prompt": "Create a TripLOG reservation-wallet component-state board at 820 × 720 CSS pixels with four clearly separated compact component examples in a two-by-two arrangement, not four full app screens. Match the attached user's selected visual tone and existing reservation mockups. Client date October 31, 2026; dates and records are fictional examples. Upper left, caption “당일 예약 없음”: compact “오늘 필요한 예약 · 10.28 수”, one short empty message “오늘 사용할 예약이 없어요” and quiet “전체 예약 보기”; do not substitute a hotel or another date and do not add a large empty-state illustration. Upper right, caption “티켓 링크 없음”: compact “시부야 스카이 / 18:30”, reference A1B2C3D4 with copy, small edit pencil, subtle “티켓 링크 미등록”, and usable “예약정보 보기” action instead of a broken ticket-open button. Lower left, caption “상세 안의 지출 연결 표시”: one quiet row with chain icon, “지출 연결됨 · 25,650원” and “지출 보기”, surrounded by only enough reservation-detail context to show placement; no payment dashboard. Lower right, caption “일정 연결”: small selection sheet with “10.28 수”, radio rows “18:30 시부야 스카이” selected and “20:00 저녁 카페” unselected, yellow action “이 일정에 연결” and small secondary “새 일정에 추가”. Use concise Korean labels, reusable category icons, clear touch controls and consistent compact spacing. Preserve the supplied design language and avoid extra features, uploads or long instructions.\n\nInput images:\n- reference.png: the user's selected TripLOG mockup as the visual-tone reference for supporting reservation states.",
+      "date": "2026-10-31",
+      "mode": "I2I",
+      "inputs": [
+        {
+          "path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261031-wallet-selected-refinement/reference.png",
+          "role": "User-selected visual-tone reference",
+          "sha256": "9b9e532c03f54c9006645957e0b7827a1306bbec5636dd071ecaee2ab55d8a09"
+        }
+      ],
+      "targetBoard": {
+        "width": 820,
+        "height": 720
+      },
+      "componentStates": 4,
+      "mockData": true,
+      "startedAt": "2026-10-30T15:59:45.949Z",
+      "file": "supporting-states.png",
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-56e77b95-05d9-41a9-8e75-8f58c390dd36.png",
+      "inputUsage": "style-reference",
+      "savedPath": "artifacts/design/20261031-wallet-detail-add-states/supporting-states.png",
+      "overwritten": false,
+      "tool": "image_gen.imagegen",
+      "sha256": "6173dbcd33733ddb45ed1839faa737e933193577bc85009312e398a1698cd136"
+    }
+  ]
+}

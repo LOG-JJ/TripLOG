@@ -1,0 +1,52 @@
+{
+  "createdDate": "2026-11-02",
+  "timezone": "Asia/Seoul",
+  "startedAtUtc": "2026-11-02 14:31:54 UTC",
+  "mode": "T2I",
+  "generationPath": "built-in image_gen",
+  "inputImages": [],
+  "promptFile": "prompt.txt",
+  "prompt": "Create a TripLOG itinerary-analysis redesign mockup with a desktop view at 1280 CSS pixels wide and a mobile view at 390 CSS pixels wide, side by side. Match the existing TripLOG expense-analysis visual language: white surfaces, thin dark navy #0b1020 outlines, 10–14px corners, short subtle offset shadows, yellow #fff05a selected controls and highlights, pastel blue #bce6fb and pink #f7afc7 charts. Use compact Pretendard-like Korean typography: 20px/600 page headings, 15–16px/600 section headings, 13px/500 labels, and 22–24px/650 key figures. Keep text readable and restrained.\n\nUse the existing TripLOG wordmark with LOG on a pink highlight, the page title “여행 리포트”, trip context “가을 도쿄 여행 / 2026.10.20 화 – 10.24 토 / 4박 5일”, and tabs “지출 분석 / 일정 분석”, with “일정 분석” selected in yellow. The period filter is a compact existing-style dropdown “전체 여행”. A small “계획 기준” label and a compact clock-question icon with “미입력 3” sit nearby.\n\nA single compact outlined summary strip shows three evenly spaced facts with small colored category icons: “계획 일정 24개”, “체류 27시간 30분”, and “이동 4시간 20분”.\n\nThe first visualization is titled “시간을 어떻게 쓰나요?”. Reuse the expense report’s navy-outlined donut and clean legend style. Blue represents 체류, pink represents 이동. The center shows “31시간 50분” and “입력된 시간”. The legend clearly pairs blue “체류 27시간 30분 · 86%” and pink “이동 4시간 20분 · 14%”. Keep these two colors consistent in every time chart.\n\nThe next visualization is “날짜별 체류·이동”. Use stacked vertical bars in the existing expense trend-chart style, with thin navy outlines, softly rounded tops, subtle grid lines, and readable total-time labels above the bars. Five bars show: Day 1 / 10.20 / 5시간 10분, Day 2 / 10.21 / 7시간 10분, Day 3 / 10.22 / 5시간 50분, Day 4 / 10.23 / 8시간, Day 5 / 10.24 / 5시간 40분. Their blue stay portions are 4h, 6h30, 5h, 7h, 5h; pink travel portions are 1h10, 40m, 50m, 1h, 40m. Mark missing inputs using a small question indicator beside Day 3 rather than assigning them a fabricated duration. A quiet caption reads “입력한 시간 기준”.\n\nBelow is “장소별 체류 시간” with a compact “긴 순” dropdown. Show three readable horizontal ranking rows using TripLOG-style reusable colored category icons, place names, subtle date/time metadata, proportional pastel-blue bars, and right-aligned durations: “메이지신궁 — 2시간 30분”, “신주쿠 쇼핑 — 2시간”, “시부야 스카이 — 1시간 30분”. Use thin separators and clear alignment.\n\nOn desktop, place the donut and daily bars beside each other, with the place ranking spanning the width below. On mobile, stack the same sections with compact spacing and a two-column donut/legend arrangement. Retain the shared bottom navigation “개요 / 일정 / 여행 / 지출 / 리포트” with “리포트” active. Show app content directly without device hardware. Use only small reusable icons rather than destination-specific artwork.",
+  "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-d08ab100-2aeb-4060-af57-f7b2002a314d.png",
+  "savedPath": "artifacts/design/20261102-itinerary-report-tone/itinerary-report-redesign.png",
+  "overwritten": false,
+  "sample": {
+    "trip": "가을 도쿄 여행",
+    "days": 5,
+    "count": 24,
+    "stayMinutes": 1650,
+    "transitMinutes": 260,
+    "totalMinutes": 1910,
+    "stayPercent": 86,
+    "transitPercent": 14,
+    "missingInputs": 3,
+    "daily": [
+      {
+        "stay": 240,
+        "transit": 70
+      },
+      {
+        "stay": 390,
+        "transit": 40
+      },
+      {
+        "stay": 300,
+        "transit": 50
+      },
+      {
+        "stay": 420,
+        "transit": 60
+      },
+      {
+        "stay": 300,
+        "transit": 40
+      }
+    ]
+  },
+  "scope": "Image mockup only; no app source, runtime asset, travel data or deployment changes.",
+  "originalSha256": "29F89EE882441476F21658F7BE0C2660DADB365CD70C9B537564203911782096",
+  "savedSha256": "29F89EE882441476F21658F7BE0C2660DADB365CD70C9B537564203911782096",
+  "exactSourceMatch": true,
+  "status": "selected-for-implementation",
+  "approvedDate": "2026-11-03"
+}

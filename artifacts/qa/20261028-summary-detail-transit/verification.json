@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-28",
+  "fingerprint": "d02395fea375ccde14ab",
+  "localOnly": true,
+  "operatingDataChanged": false,
+  "suites": [
+    "itinerary-summary-browser-regression",
+    "transit-journey-browser-regression",
+    "dev test --suite source",
+    "dev build"
+  ],
+  "captures": [
+    {
+      "file": "mobile-390.png",
+      "source": "artifacts/tmp/20261028-summary-detail-transit/itinerary-summary/detail-viewport-390.png",
+      "sha256": "b3bd7c524afbb32ad5ee32b050b4be836d9d7d1f3a9a80d3a73899fb67a8fb2e"
+    },
+    {
+      "file": "desktop-1440.png",
+      "source": "artifacts/tmp/20261028-summary-detail-transit/itinerary-summary/detail-viewport-1440.png",
+      "sha256": "8b700d7863bc101baf1655d555a920a0b65c19eec70d289bd7d6d9e8a5117ebe"
+    },
+    {
+      "file": "timeline-390.png",
+      "source": "artifacts/tmp/20261028-summary-detail-transit/itinerary-summary/detail-transits-390.png",
+      "sha256": "01e612455edebd89be10b6e880d722dcfce4145ee15419f4a8e004098809b168"
+    },
+    {
+      "file": "timeline-1440.png",
+      "source": "artifacts/tmp/20261028-summary-detail-transit/itinerary-summary/detail-transits-1440.png",
+      "sha256": "12894629a2345afc5183ffcc75fe4abef29baa119e3d26127955f46b7126e62d"
+    },
+    {
+      "file": "missing-routes-390.png",
+      "source": "artifacts/tmp/20261028-summary-detail-transit/itinerary-summary/missing-segments-390.png",
+      "sha256": "3af11a019be700292e3030c030f5774c0d375f7c8ac738578d08862720225233"
+    }
+  ]
+}

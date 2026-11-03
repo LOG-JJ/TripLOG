@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-28",
+  "status": "passed",
+  "build": "60dfb7f50d398934216e",
+  "widths": [
+    320,
+    390,
+    767,
+    768,
+    899,
+    900,
+    1440
+  ],
+  "previewLimits": {
+    "mobile": 4,
+    "medium": 6,
+    "desktop": 8
+  },
+  "dateColumns": 1,
+  "tests": [
+    "itinerary-summary-browser-regression",
+    "itinerary-drag-browser-regression",
+    "CLI dev test source",
+    "CLI dev build"
+  ],
+  "operatingTripDataChanged": false,
+  "deployment": "local only",
+  "lodgingIncludedInPreview": true,
+  "day1DesktopPreviewCount": 8,
+  "latestRun": "artifacts/tmp/20261028-summary-include-stays/itinerary-summary"
+}

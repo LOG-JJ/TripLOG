@@ -30,6 +30,7 @@
     const result = { ...item, date: row.date, time: row.time || '', endTime: transport && row.source !== 'entry' ? row.endTime || '' : '', place: row.title, location: row.location || '', memo: row.note || '', theme: row.type === 'stay' ? 'lodging' : transport ? 'transport' : 'sightseeing', voucherName: row.title, voucherCode: row.reference || '' };
     if (transport) result.transportReservation = { kind: row.transportKind || '', from: row.from || '', to: row.to || '', arrivalDate: row.source === 'entry' ? '' : row.arrivalDate || '' };
     else delete result.transportReservation;
+    if (transport && row.source === 'entry') result.reservationJourney = row.returnJourney ? 'return' : 'outbound';
     if (result.place !== item.place || result.location !== item.location) {
       for (const key of ['lat', 'lon', 'mapQuery', 'coordinateSource', 'coordinateSignature', 'coordinatePrecision', 'coordinateAddress', 'googlePlaceId']) delete result[key];
     }
@@ -233,10 +234,13 @@
       const linked = row.type === 'transport' && asList(trip.itineraryItems).find(item => item.linkedReservationId === `manual:${row.id}` && item.theme === 'transport' && item.transportReservation);
       return { ...row, ...(linked ? transportFromItinerary(linked) : {}), id: `manual:${row.id}`, sourceId: row.id, source: 'manual', type: types[row.type] ? row.type : 'other' };
     });
+    const linkedExpenses = new Map(rows.filter(row => row.linkedExpenseId).map(row => [row.linkedExpenseId, row]));
     asList(trip.entries).forEach(entry => {
       const stay = entry.pretripType === 'hotel' || !!entry.hotelName;
       const transport = entry.pretripType === 'flight' || !!entry.flightNumber;
       if (!stay && !transport) return;
+      const linked = linkedExpenses.get(entry.id);
+      if (linked && linked.type === (stay ? 'stay' : 'transport')) return;
       rows.push({ id: `entry:${entry.id}`, sourceId: entry.id, source: 'entry', type: stay ? 'stay' : 'transport', title: (stay ? entry.hotelName : entry.description) || (stay ? '숙소 예약' : '교통 예약'), date: (stay ? entry.hotelCheckIn : entry.flightDepartDate) || '', endDate: (stay ? entry.hotelCheckOut : entry.flightReturnDate) || '', time: stay ? '' : entry.flightDepartTime || '', endTime: stay ? '' : entry.flightReturnDepartTime || '', reference: entry.bookingCode || '', location: stay ? entry.hotelAddress || '' : [entry.flightFrom, entry.flightTo].filter(Boolean).join(' → '), note: typeof entry.pretripMemo === 'string' ? entry.pretripMemo : entry.note || '', url: '', amount: entry.amount,
         // Presentation metadata only; historical transport purchases also used the flight form.
         transportKind: !stay && (entry.flightAirline || entry.flightNumber || /^항공권(?:\s|·)/.test(entry.description || '')) ? 'flight' : '',
@@ -264,8 +268,83 @@
       if (row.endTime && !row.time) return '출발 시간을 함께 입력해 주세요.';
       if (row.endTime && (!row.arrivalDate || row.arrivalDate === row.date) && minutes(row.endTime) <= minutes(row.time)) return '도착 시간이 출발보다 늦어야 해요. 다음 날 도착하면 도착일을 변경해 주세요.';
     }
-    if (row.url && !safeUrl(row.url)) return '예약 링크는 http:// 또는 https:// 주소로 입력해 주세요.';
+    if ([row.url, row.ticketUrl].some(url => url && !safeUrl(url))) return '예약 링크는 http:// 또는 https:// 주소로 입력해 주세요.';
+    if (row.quotedAmount !== undefined && (!Number.isFinite(row.quotedAmount) || row.quotedAmount < 0 || row.quotedAmount > Number.MAX_SAFE_INTEGER)) return '예약 금액을 확인해 주세요.';
+    if (row.quotedCurrency && !/^[A-Z]{3}$/.test(row.quotedCurrency)) return '예약 통화를 확인해 주세요.';
+    if (row.guests && (!/^\d{1,3}$/.test(String(row.guests)) || Number(row.guests) < 1)) return '인원은 1~999명으로 입력해 주세요.';
     return '';
+  }
+  // Display occurrences share their original reservation/expense identity.
+  function reservationOccurrences(trip) {
+    return reservations(trip).flatMap(row => {
+      const first = { ...row, occurrenceId: `${row.id}:outbound`, reservationId: row.id };
+      if (row.source !== 'entry' || row.type !== 'transport' || !validDate(row.endDate)) return [first];
+      return [{ ...first, endDate: '', endTime: '' }, { ...row, id: row.id, occurrenceId: `${row.id}:return`, reservationId: row.id,
+        date: row.endDate, time: row.endTime, endDate: '', endTime: '', from: row.to, to: row.from,
+        title: row.from && row.to ? `${row.to} → ${row.from}` : `${row.title} · 오는 편`, returnJourney: true }];
+    }).sort((a, b) => (a.date || '9999').localeCompare(b.date || '9999') || (a.time || '99:99').localeCompare(b.time || '99:99'));
+  }
+  function walletGroups(trip, date = dateInZone(defaultZone(trip) || undefined)) {
+    const rows = reservationOccurrences(trip);
+    const past = row => (row.type === 'stay' ? row.endDate || row.date : row.date) < date;
+    return { date, today: rows.filter(row => row.type !== 'stay' && row.date === date),
+      upcoming: rows.filter(row => !past(row) && (row.type === 'stay' || row.date !== date)), past: rows.filter(past) };
+  }
+  function progress(trip, date, personal = {}) {
+    const items = dayItems(trip, date), completed = flags(trip).completed;
+    const skipped = new Set((personal.skipped || []).filter(id => items.some(item => item.id === id) && !completed.has(id)));
+    const cursor = items.findIndex(item => item.id === personal.cursor);
+    const available = items.filter(item => !completed.has(item.id) && !skipped.has(item.id));
+    const next = cursor >= 0 ? items.slice(cursor).find(item => !completed.has(item.id) && !skipped.has(item.id)) : available[0];
+    return { items, next, completed: items.filter(item => completed.has(item.id)), skipped: items.filter(item => skipped.has(item.id)),
+      remaining: available.filter(item => item.id !== next?.id), earlier: next ? available.filter(item => items.indexOf(item) < items.indexOf(next)) : available,
+      allDone: items.length > 0 && items.every(item => completed.has(item.id)) };
+  }
+  function activeStays(trip, date) { return reservations(trip).filter(row => row.type === 'stay' && row.date <= date && row.endDate > date); }
+  function reservationForItem(trip, item) {
+    if (!item) return null;
+    const occurrence = reservationOccurrences(trip).find(row => row.id === item.linkedReservationId && row.date === item.date);
+    if (occurrence) return occurrence;
+    const all = reservations(trip);
+    return all.find(row => row.id === item.linkedReservationId || row.id === `plan:${item.id}` || row.linkedItineraryId === item.id) || null;
+  }
+  function itemDuration(item) {
+    const start = minutes(item.time), end = endMinutes(item);
+    return start !== null && end !== null && end > start ? end - start : null;
+  }
+  function updateEntryItinerary(trip, entry, previous) {
+    const id = `entry:${entry.id}`, occurrences = reservationOccurrences({ ...trip, travelCompanion: { reservations: [] }, entries: [entry], itineraryItems: [] });
+    const oldReturnDate = previous?.flightReturnDate;
+    return asList(trip.itineraryItems).map(item => {
+      if (item.linkedReservationId !== id) return item;
+      const returning = item.reservationJourney === 'return' || !item.reservationJourney && oldReturnDate && oldReturnDate !== previous.flightDepartDate && item.date === oldReturnDate;
+      const row = occurrences.find(row => Boolean(row.returnJourney) === Boolean(returning));
+      if (row) return itineraryForReservation(row, item);
+      const copy = { ...item }; delete copy.linkedReservationId; delete copy.reservationJourney; return copy;
+    });
+  }
+  function analysis(trip, date = 'all', sort = 'schedule') {
+    const all = orderItems(asList(trip.itineraryItems));
+    const groups = days(trip).map(day => {
+      const items = all.filter(item => item.date === day), missing = [], connections = [];
+      const stays = items.filter(item => !['lodging', 'transport'].includes(item.theme)).map(item => ({ ...item, minutes: itemDuration(item) }));
+      stays.filter(item => item.minutes === null).forEach(item => missing.push({ kind: 'stay', itemId: item.id, title: item.place }));
+      items.forEach((item, index) => {
+        if (!index) return;
+        const legs = asList(item.transits).length ? item.transits : [{ trans: item.trans || 'none', duration: item.duration || 0 }];
+        legs.forEach((leg, segmentIndex) => {
+          const value = Number(leg.duration), duration = Number.isFinite(value) && value > 0 ? Math.round(value) : null;
+          const row = { kind: 'transit', itemId: item.id, previousId: items[index - 1].id, from: items[index - 1].place, title: item.place, segmentIndex, leg, minutes: duration };
+          connections.push(row); if (duration === null) missing.push(row);
+        });
+      });
+      return { date: day, items, stays, connections, missing, stayMinutes: stays.reduce((n, row) => n + (row.minutes || 0), 0), transitMinutes: connections.reduce((n, row) => n + (row.minutes || 0), 0) };
+    });
+    const selected = date === 'all' ? groups : groups.filter(row => row.date === date);
+    const stays = selected.flatMap(row => row.stays);
+    if (sort !== 'schedule') stays.sort((a, b) => Number(a.minutes === null) - Number(b.minutes === null) || (sort === 'shortest' ? 1 : -1) * ((a.minutes || 0) - (b.minutes || 0)));
+    return { groups, selected, stays, count: selected.reduce((n, row) => n + row.items.length, 0),
+      stayMinutes: selected.reduce((n, row) => n + row.stayMinutes, 0), transitMinutes: selected.reduce((n, row) => n + row.transitMinutes, 0), missing: selected.flatMap(row => row.missing) };
   }
   function directions(item, trip) {
     if (isDomesticMapTrip(trip)) {
@@ -321,15 +400,16 @@
     lines.push('END:VCALENDAR');
     return lines.map(foldLine).join('\r\n') + '\r\n';
   }
-  function createPocketNote(trip, { itinerary = true, references = true, costs = false, budget = false, logo = '' } = {}) {
+  function createPocketNote(trip, { itinerary = true, references = true, reservations: includeReservations = true, costs = false, budget = false, logo = '' } = {}) {
     const cost = sharedCosts.summarize(trip);
     const items = orderItems(asList(trip.itineraryItems));
-    const wallet = reservations(trip), money = value => `${Math.round(Number(value) || 0).toLocaleString('ko-KR')}원`;
+    const wallet = includeReservations ? reservations(trip) : [], money = value => `${Math.round(Number(value) || 0).toLocaleString('ko-KR')}원`;
     const line = (label, content) => content ? `<p><b>${esc(label)}</b> ${esc(content)}</p>` : '';
     const header = /^data:image\/png;base64,[A-Za-z0-9+/=]+$/.test(logo) ? `<img width="108" alt="TripLOG" src="${logo}">` : '<strong class="logo">TRIP<span>LOG</span></strong>';
-    return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'"><title>${esc(trip.tripName)} · 포켓노트</title><style>*{box-sizing:border-box}body{margin:0;background:#fff;color:#0b1020;font:16px/1.6 system-ui,sans-serif}main{max-width:760px;margin:auto;padding:24px 18px}h1{font-size:32px;line-height:1.2;margin:28px 0 8px}h2{font-size:23px;margin-top:30px}h3{margin:0 0 6px;font-size:19px}p{margin:6px 0;overflow-wrap:anywhere}article{border:2px solid #0b1020;border-radius:10px;padding:16px;margin:12px 0;break-inside:avoid}.muted{color:#686b75}.badge{background:#fff05a;border:1px solid;border-radius:6px;padding:2px 8px;display:inline-block}.logo{font-size:24px}.logo span{background:#f7afc7;border:2px solid;border-radius:7px}.summary{background:#bce6fb}code{font:inherit;font-weight:700;overflow-wrap:anywhere}footer{margin-top:32px;border-top:1px solid #e4e5e9;padding-top:14px}@media print{main{max-width:none}article{box-shadow:none}}</style></head><body><main>${header}<h1>${esc(trip.tripName || '나의 여행')}</h1><p class="muted">${esc(trip.startDate)} – ${esc(trip.endDate)} · ${esc([trip.city, trip.country].filter(Boolean).join(' · '))}</p><span class="badge">오프라인 포켓노트</span><p class="muted">저장한 시점의 기록입니다. 변경한 일정은 다시 저장해 주세요.</p>${itinerary ? `<h2>여행 일정</h2>${items.length ? items.map(item => `<article><small>${esc(item.date)} · ${esc(item.time || '시간 미정')}${item.endTime ? ' – ' + esc(item.endTime) : ''}</small><h3>${esc(item.place)}</h3>${line('장소', item.location)}${line('메모', item.memo)}</article>`).join('') : '<p>등록된 일정이 없어요.</p>'}` : ''}<h2>예약 지갑</h2>${wallet.length ? wallet.map(row => `<article><span class="badge">${types[row.type].label}</span><h3>${esc(row.title)}</h3>${line('일자', [row.date, row.endDate ? '– ' + row.endDate : '', row.time].filter(Boolean).join(' '))}${line('장소', row.location)}${references ? line('예약번호', row.reference) : ''}${references ? line('메모', row.note) : ''}</article>`).join('') : '<p>등록된 예약이 없어요.</p>'}${costs || budget ? `<article class="summary"><h2>여행 경비</h2>${line('누적 지출', money(cost.total))}${line('기록한 지출', cost.count + '건')}</article>` : ''}<footer class="muted">TripLOG · 이 문서는 인터넷 연결 없이 열 수 있습니다. ${references ? '예약번호가 포함되어 있으니 개인 기기에 보관하세요.' : '예약번호와 예약 메모는 제외했습니다.'}</footer></main></body></html>`;
+    return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'"><title>${esc(trip.tripName)} · 포켓노트</title><style>*{box-sizing:border-box}body{margin:0;background:#fff;color:#0b1020;font:16px/1.6 system-ui,sans-serif}main{max-width:760px;margin:auto;padding:24px 18px}h1{font-size:32px;line-height:1.2;margin:28px 0 8px}h2{font-size:23px;margin-top:30px}h3{margin:0 0 6px;font-size:19px}p{margin:6px 0;overflow-wrap:anywhere}article{border:2px solid #0b1020;border-radius:10px;padding:16px;margin:12px 0;break-inside:avoid}.muted{color:#686b75}.badge{background:#fff05a;border:1px solid;border-radius:6px;padding:2px 8px;display:inline-block}.logo{font-size:24px}.logo span{background:#f7afc7;border:2px solid;border-radius:7px}.summary{background:#bce6fb}code{font:inherit;font-weight:700;overflow-wrap:anywhere}footer{margin-top:32px;border-top:1px solid #e4e5e9;padding-top:14px}@media print{main{max-width:none}article{box-shadow:none}}</style></head><body><main>${header}<h1>${esc(trip.tripName || '나의 여행')}</h1><p class="muted">${esc(trip.startDate)} – ${esc(trip.endDate)} · ${esc([trip.city, trip.country].filter(Boolean).join(' · '))}</p><span class="badge">오프라인 포켓노트</span><p class="muted">저장한 시점의 기록입니다. 변경한 일정은 다시 저장해 주세요.</p>${itinerary ? `<h2>여행 일정</h2>${items.length ? items.map(item => `<article><small>${esc(item.date)} · ${esc(item.time || '시간 미정')}${item.endTime ? ' – ' + esc(item.endTime) : ''}</small><h3>${esc(item.place)}</h3>${line('장소', item.location)}${line('메모', item.memo)}</article>`).join('') : '<p>등록된 일정이 없어요.</p>'}` : ''}${includeReservations ? `<h2>예약 지갑</h2>${wallet.length ? wallet.map(row => `<article><span class="badge">${types[row.type].label}</span><h3>${esc(row.title)}</h3>${line('일자', [row.date, row.endDate ? '– ' + row.endDate : '', row.time].filter(Boolean).join(' '))}${line('장소', row.location)}${references ? line('예약번호', row.reference) : ''}${references ? line('메모', row.note) : ''}</article>`).join('') : '<p>등록된 예약이 없어요.</p>'}` : ''}${costs || budget ? `<article class="summary"><h2>여행 경비</h2>${line('누적 지출', money(cost.total))}${line('기록한 지출', cost.count + '건')}</article>` : ''}<footer class="muted">TripLOG · 이 문서는 인터넷 연결 없이 열 수 있습니다. ${references ? '예약번호가 포함되어 있으니 개인 기기에 보관하세요.' : '예약번호와 예약 메모는 제외했습니다.'}</footer></main></body></html>`;
   }
   const api = { types, transportKinds, transportInfo, transportFromItinerary, itineraryForReservation, stayFromEntry, stayItinerary, defaultStayItinerary, arrivalDay, endMinutes, defaultItineraryDate, esc, validDate, minutes, clock, days, dayItems, flags, transitMinutes, dateInZone, defaultZone, today, dailySpending, reviewDay, outsideItems, signature, planAdjustment, applyAdjustment, undoAdjustment, safeUrl, reservations, validateReservation, directions, utcTime, foldLine, createCalendar, createPocketNote };
+  Object.assign(api, { reservationOccurrences, walletGroups, progress, activeStays, reservationForItem, itemDuration, analysis, updateEntryItinerary });
   if (node) module.exports = api;
   else window.TripLog.register('features.travelCompanion.model', api);
 })();

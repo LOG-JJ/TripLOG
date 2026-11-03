@@ -71,11 +71,18 @@ async function main() {
     await page.setViewportSize({ width: 390, height: 844 });
     await transport.click();
     const wallet = page.getByRole('dialog', { name: '예약 지갑', exact: true });
-    assert.equal(await wallet.locator('[data-reservation-id]').count(), 3);
-    assert.equal(await wallet.getByRole('button', { name: '교통 예약 3건', exact: true }).getAttribute('aria-pressed'), 'true');
-    assert.match(await wallet.innerText(), /간사이/, 'Airport qualifiers remain visible in full details');
+    await wallet.waitFor({ state: 'visible' });
+    assert.equal(await wallet.locator('[data-reservation-id]').count(), 6, 'Three roundtrip sources expose both outbound and return journeys');
+    assert.equal(await wallet.locator('[data-reservation-id]').evaluateAll(nodes => new Set(nodes.map(node => node.dataset.reservationId)).size), 3, 'Original reservations are not duplicated');
+    assert.equal(await wallet.locator('#ttWalletFilters').inputValue(), 'transport');
+    if (await wallet.locator('.cx-past').count()) await wallet.locator('.cx-past summary').click();
+    await wallet.locator('.cx-booking-title[data-occurrence="entry:flight-2:outbound"]').click();
+    await page.locator('#ttReservationDetail[open]').waitFor();
+    assert.match(await page.locator('#ttReservationDetailBody').innerText(), /간사이/, 'Airport qualifiers remain visible in full details');
+    await page.locator('#ttReservationDetail [data-tt-action="close"]').click();
     await wallet.getByRole('button', { name: '닫기', exact: true }).click();
     await stay.focus(); await stay.press('Enter');
+    await wallet.waitFor({ state: 'visible' });
     assert.equal(await wallet.locator('[data-reservation-id]').count(), 2);
     await wallet.getByRole('button', { name: '닫기', exact: true }).click();
     assert.equal(await stay.evaluate(el => el === document.activeElement), true);
@@ -135,6 +142,8 @@ async function main() {
     for (const [type, label] of [['transport', '교통'], ['stay', '숙소']]) {
       await page.getByRole('button', { name: `${label} 예약 0건, 예약 추가하기`, exact: true }).click();
       await editor.getByLabel('예약 이름').fill(`요약 UI 확인용 ${label} 예약`);
+      await editor.locator('[name="date"]').fill('2026-09-25');
+      if (type === 'stay') await editor.locator('[name="endDate"]').fill('2026-09-26');
       await editor.getByRole('button', { name: '예약 저장', exact: true }).click();
       await editor.waitFor({ state: 'hidden' });
       await page.getByRole('button', { name: `${label} 예약 1건, 예약 지갑 열기`, exact: true }).waitFor({ state: 'visible' });

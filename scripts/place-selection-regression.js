@@ -8,7 +8,7 @@ function element() {
     children: [], replaceChildren() { this.children = []; }, appendChild(child) { this.children.push(child); } };
 }
 const c = vm.createContext({
-  window: { TripLog: { core: { config: { STORAGE_KEY: 'fixture' } }, register() {} } },
+  window: { TripLog: { core: { config: { STORAGE_KEY: 'fixture' } }, features: { itinerary: { editorTools: { isAddressEditing: () => false } } }, register() {} } },
   document: { createElement: element }, URL,
   state: { city: '교토', country: '일본', travelMode: 'overseas', itineraryItems: [] },
   els: { placeSearchResults: element(), placeSearchStatus: element(), googleMapsLink: {} },

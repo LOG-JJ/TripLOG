@@ -1,0 +1,11 @@
+Redesign the supplied TripLOG missing-travel-duration panel as one focused UI mockup, 912 × 380 CSS pixels. Preserve all five origin–destination pairs from the supplied panel and their order. Current date: 2026-10-28. Show only the redesigned component, without a browser, device frame or app-page surroundings.
+
+Match the current TripLOG design language: white surface, navy typography, fine outlines, restrained shadow, pale blue action fills, yellow accents, and a small amber unknown-status badge. Use clear Korean typography around 14–16px. Use the existing category icons from the supplied project reference; reuse icons for repeated categories without creating location-specific stickers.
+
+Create an aligned, compact five-row list. Header: a route icon, “이동 확인”, a compact question-mark/count badge “5”, and a close control. Each row has an existing category icon and origin name, a short dashed connector with a directional arrow, an existing category icon and destination name, a small clock with “—분”, and one compact pencil action labeled “시간 입력”. Align endpoints and actions consistently across all rows so the panel reads quickly. Keep the destination names legible. Place icons directly on the surface without inner icon boxes.
+
+Remove the repeated “구간 1” labels, the long missing-duration sentence, explanatory paragraphs and oversized empty gaps. Keep row separators light. Give the time-entry actions enough definition to look clickable without overwhelming the route information. Output one cohesive component design.
+
+Input images:
+- codex-clipboard-83aa5565-8d25-467d-b455-2dcb336a61b7.png: the current panel the user wants improved.
+- project-icon-reference.png: reference for the actual category icons already used in TripLOG.

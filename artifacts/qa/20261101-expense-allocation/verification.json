@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "origin": "http://127.0.0.1:6880",
+  "checks": [
+    "draft/cancel",
+    "one expense only",
+    "settlement totals",
+    "reload",
+    "percentage validation",
+    "negative/precision rejection",
+    "won rounding",
+    "mode-only precision",
+    "false/throw rollback and retry",
+    "foreign conversion",
+    "stale edit",
+    "member change",
+    "equal reset",
+    "existing new-entry flow"
+  ],
+  "viewports": [
+    320,
+    390,
+    760,
+    1440
+  ],
+  "errors": []
+}

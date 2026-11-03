@@ -1,0 +1,88 @@
+{
+  "kind": "illustrative-mock-data",
+  "dateAnchor": "2026-10-31",
+  "trip": {
+    "name": "도쿄 여행",
+    "startDate": "2026-11-02",
+    "endDate": "2026-11-06",
+    "timeZone": "Asia/Tokyo"
+  },
+  "days": [
+    {
+      "day": 1,
+      "items": 8,
+      "stayMinutes": 300,
+      "transitMinutes": 70
+    },
+    {
+      "day": 2,
+      "items": 8,
+      "stayMinutes": 360,
+      "transitMinutes": 80,
+      "missingStay": 1,
+      "missingTransit": 2
+    },
+    {
+      "day": 3,
+      "items": 7,
+      "stayMinutes": 420,
+      "transitMinutes": 60
+    },
+    {
+      "day": 4,
+      "items": 6,
+      "stayMinutes": 240,
+      "transitMinutes": 40
+    },
+    {
+      "day": 5,
+      "items": 5,
+      "stayMinutes": 120,
+      "transitMinutes": 20
+    }
+  ],
+  "day2Stays": [
+    {
+      "name": "메이지신궁",
+      "minutes": 120
+    },
+    {
+      "name": "시부야 스카이",
+      "minutes": 90
+    },
+    {
+      "name": "하라주쿠 점심",
+      "minutes": 60
+    },
+    {
+      "name": "리저브 카페",
+      "minutes": 45
+    },
+    {
+      "name": "신주쿠 쇼핑",
+      "minutes": 30
+    },
+    {
+      "name": "신주쿠 산책",
+      "minutes": 15
+    },
+    {
+      "name": "키디랜드",
+      "minutes": null
+    }
+  ],
+  "packing": {
+    "completed": [
+      "여권",
+      "eSIM",
+      "충전기"
+    ],
+    "remaining": [
+      "보조배터리",
+      "상비약",
+      "접이식 우산",
+      "엔화 현금"
+    ]
+  }
+}
+

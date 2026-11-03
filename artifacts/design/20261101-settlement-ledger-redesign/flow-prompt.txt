@@ -1,0 +1,15 @@
+Create a TripLOG settlement-to-expense-edit flow mockup with two mobile long-page views, each 390 CSS px wide, side by side. Label them outside the app content “항목별 분담” and “기존 지출 수정”. They are two connected states of one flow.
+
+Use TripLOG’s existing expense design: white surfaces, navy #0b1020 thin outlines, 9–16px corners, yellow #fff05a selected controls and save actions with short navy offset shadows, pale blue #bce6fb secondary controls, restrained pink #f7afc7 accents, and compact Pretendard-like typography. Headings are around 20px/600, body text 13–14px, secondary text 12px, numeric inputs 16px/500. The black TripLOG wordmark has LOG on a pink rounded rectangular highlight.
+
+LEFT: The expense settlement page has “경비 정산”, a pale-blue left-arrow “지출로” button, and the compact trip identity “1000일 순천 / 2026.10.31 토 – 11.01 일 / 1박 2일”. Reuse the expense-summary card with wallet illustration, “여행 경비 180,000원”, “1인 평균 90,000원”, and “기록한 지출 3건”. Below are “정산 요약 / 항목별 분담” tabs, with “항목별 분담” selected in yellow.
+
+Show three compact ledger rows with small existing-style category icons, date “11.1”, amount on the right, and a pencil action:
+“저녁 식사”, “120,000원”, “결제 JH”, “균등”, and shares “JH 60,000원 · 윤디 60,000원”.
+“택시”, “40,000원”, “결제 윤디”, “직접 분담”, and shares “JH 30,000원 · 윤디 10,000원”.
+“카페”, “20,000원”, “결제 JH”, “직접 분담”, and shares “JH 5,000원 · 윤디 15,000원”.
+These are the existing expense records and their saved allocations. Do not create an additional allocation-entry system or a backup/source selector. Retain the shared five-item bottom navigation with “지출” active and no expansion carets.
+
+RIGHT: Show the existing expense editor opened for “택시”, with a TripLOG brand header and close X. Use a scrolled form view that clearly shows the existing expense context “40,000원”, “택시”, category “교통”, the date pair “Day 2 · 11.1” and “11.1 (일)”, and the expanded “메모 · 결제자 · 분담” section. The payer dropdown is “윤디”. Immediately below it, reuse the existing “분담 설정” component with “균등 / 금액 / 비율” and “금액” selected. Two member rows show JH 30,000원 with calculated 75%, and 윤디 10,000원 with calculated 25%. Use small blue and pink initials avatars, navy-outlined inputs and thin row separators. End with a slim check row “분담 합계 40,000 / 40,000원”, optional memo field, and the existing yellow “변경 내용 저장” button. There is no second apply button. Saving this expense is intended to update the settlement and return to its item list.
+
+This is an expense-led settlement flow, with the same payer and allocation controls already used by the expense editor. Keep text restrained, readable and compact. Render app content without device casing, hardware status bars, promotional illustrations, payment-transfer controls or explanatory paragraphs inside the app.

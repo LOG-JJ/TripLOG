@@ -1,0 +1,36 @@
+{
+  "prompt": "Create one companion TripLOG expense-linking mockup board with two related 390 × 844 mobile screens side by side, total 820 × 844 CSS pixels. Match the attached user-provided reference's established TripLOG design tone and component styling. The real client date is October 31, 2026; all booking/payment dates below are fictional example data. Left screen: “예약 편집”, retaining a compact reservation form for “시부야 스카이”, use date “10.28 수 18:30”, reference “A1B2C3D4”, and an original-ticket link. Integrate a small lower section “금액 · 지출 연동”, not a financial dashboard: amount field “JPY ¥2,700”, enabled “지출 자동 연동”, and concise choices “새 지출 기록 / 기존 지출 연결”. Collapse secondary payment options into one short row “10.15 · 카드 · 나” with a chevron. A quiet expense preview reads “관광 · 사전구매 · 25,650원”; show “예시 환율 100엔 = 950원” as small secondary text. Yellow footer action “저장”. Right screen: “기존 지출 연결”, a small reservation-context strip, search, and a concise selectable expense list. Select the matching “시부야 스카이 / 25,650원 / JPY ¥2,700 / 2026.10.15 · 카드 · 나 / 관광 · 사전구매”; show one unrelated expense row unselected. Use a compact linked-record summary and yellow “이 지출과 연결” footer action. The chosen existing expense is reused, without creating a duplicate. Keep short Korean labels, readable compact fields, small category icons, edit/copy/chevron conventions and restrained spacing consistent with the reference. Payment remains a secondary section inside reservation editing. Do not add reservation-total/remaining-balance panels, charts, payment histories, extra explanatory paragraphs, uploads, hotel hero cards or a redesigned main wallet.\n\nInput images:\n- reference.png: the user's selected TripLOG mockup, used as the design-tone reference for this related expense-linking flow.",
+  "mode": "I2I",
+  "inputs": [
+    {
+      "path": "C:/Users/tbdk5/Desktop/MAIN/0_Working/TripLOG/artifacts/design/20261031-wallet-selected-refinement/reference.png",
+      "role": "User-provided selected TripLOG mockup as design-tone reference",
+      "sha256": "9b9e532c03f54c9006645957e0b7827a1306bbec5636dd071ecaee2ab55d8a09"
+    }
+  ],
+  "targetScreens": {
+    "width": 390,
+    "height": 844,
+    "count": 2
+  },
+  "targetBoard": {
+    "width": 820,
+    "height": 844
+  },
+  "date": "2026-10-31",
+  "mockData": true,
+  "generationStartedAt": "2026-10-30T15:46:00.398Z",
+  "stage": "image-mockup-only",
+  "status": "awaiting-user-feedback",
+  "tool": "image_gen.imagegen",
+  "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-18ee6a50-c2a6-452f-a518-7a7d82e11d16.png",
+  "savedPath": "artifacts/design/20261031-wallet-expense-companion/expense-link-flow.png",
+  "relatedWallet": "artifacts/design/20261031-wallet-selected-refinement/refined-wallet.png",
+  "overwritten": false,
+  "notes": [
+    "Expense linkage stays inside reservation editing, not the wallet overview.",
+    "Reuse an explicitly selected existing expense instead of generating a duplicate.",
+    "Booking/payment dates, prices and exchange rate are illustrative."
+  ],
+  "sha256": "df2e7295ab81b8b82dbb2424384abe2d115a55ce127d3523cf8fb93faf171fca"
+}

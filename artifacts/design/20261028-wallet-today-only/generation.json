@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-28",
+  "status": "awaiting-user-selection",
+  "stage": "image-mockup-only",
+  "revisionOf": "20261028-wallet-reservation-first",
+  "userCorrection": "No featured accommodation. Needed reservations must be used on the current local date only.",
+  "rules": {
+    "featuredDate": "Usage/departure/entry date in the trip timezone, not booking creation or payment date",
+    "featuredTypes": "Transport, admissions, dining and other same-day reservations",
+    "accommodation": "Exclude all stays from featured reservations, even ongoing stays or same-day check-in; retain full list and lodging filter",
+    "otherDates": "Outside featured section",
+    "emptyToday": "Brief empty state; no replacement with stays or future reservations",
+    "payment": "Secondary within editing"
+  },
+  "mockData": true,
+  "options": [
+    {
+      "prompt": "Design a 390 × 844 mobile TripLOG “예약 지갑” screen. Today is October 28, 2026, in the trip's local timezone. The top section “오늘 필요한 예약” contains ONLY reservations used today: “19:00 시부야 스카이” with booking number SKY2819 and “20:30 저녁 식사” with DIN2030. Show no hotel, ongoing-stay card, accommodation feature, or future reservation in this top section. Use two compact full-width cards with reusable colorful category icons, readable time and venue, small edit pencil, booking-number copy, and direct “티켓 열기” or “예약 열기”. Add compact search, small yellow add button and “오늘 / 전체” navigation; hotels remain accessible only via 전체 and its 숙소 filter. Keep “예정된 예약” collapsed below. Preserve white surfaces, navy Korean text, yellow #fff05a actions, blue/pink accents, dark outlines and small offset shadows. Bottom navigation: “개요 · 일정 · 지출 · 리포트 · 설정”, 일정 selected. No payment UI, large illustrations or explanatory paragraphs.",
+      "startedAt": "2026-10-28T09:43:02.904Z",
+      "mode": "T2I",
+      "inputs": [],
+      "name": "오늘 예약 카드",
+      "targetViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "displayOrder": 1,
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-82da5122-073a-4496-9120-02815f146aee.png",
+      "savedPath": "artifacts/design/20261028-wallet-today-only/concept-1.png",
+      "tool": "image_gen.imagegen",
+      "overwritten": false,
+      "selected": false,
+      "sha256": "62f34ba585813ed1914b9b5982fb4d993182f446cc6360ac46ea9506a89fafc1"
+    },
+    {
+      "prompt": "Create a 390 × 844 TripLOG “예약 지갑” mobile UI with a compact chronological list of today's usable reservations. Date anchor October 28, 2026. Header: small TripLOG, title, search and add icon. “오늘 / 전체” switch, 오늘 selected. Show “오늘 필요한 예약 · 10.28 수”, then three short rows: “11:00 나리타 익스프레스 / NEX2811”, “19:00 시부야 스카이 / SKY2819”, “20:30 저녁 식사 / DIN2030”. Use reusable colorful train, attraction and dining category icons, restrained time markers, copy icons beside references, and direct “티켓 열기” or “예약 열기” actions. Allow a small edit pencil and details chevron. The featured list must exclude every hotel and every reservation used on another date, regardless of booking or payment date. Hotels remain available in 전체 with a 숙소 filter, without an accommodation hero or shortcut. Collapse future and past reservations into quiet rows. White surfaces, navy Korean type, yellow #fff05a actions, pale blue/pink accents, dark outlines and small shadows; no financial panels, large illustrations or narrative copy. Keep bottom navigation “개요 · 일정 · 지출 · 리포트 · 설정”, 일정 selected.",
+      "startedAt": "2026-10-28T09:44:00.171Z",
+      "mode": "T2I",
+      "inputs": [],
+      "name": "당일 예약 시간순 목록",
+      "targetViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "displayOrder": 2,
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-a10376ed-471d-4531-9812-e227fe6746b1.png",
+      "savedPath": "artifacts/design/20261028-wallet-today-only/concept-2.png",
+      "tool": "image_gen.imagegen",
+      "overwritten": false,
+      "selected": false,
+      "sha256": "b1b9bc3c226cc0e0a53fdf77276c1a5382cfbced75b98372558279aaa56a7647"
+    },
+    {
+      "prompt": "Design a 390 × 844 TripLOG “예약 지갑” screen with a simple two-column same-day reservation area. Date anchor October 28, 2026. Under “오늘 필요한 예약 · 10.28 수”, show ONLY two cards: “19:00 시부야 스카이 / SKY2819” with “티켓 열기”, and “20:30 저녁 식사 / DIN2030” with “예약 열기”. Each uses a small reusable colorful category icon, readable venue and time, reference-copy icon and small edit pencil. Hotels, even if currently occupied or checking in today, are completely excluded from the featured area; other dates are excluded too. Put “전체 예약 보기” and a quiet collapsed future/past list beneath the two cards; accommodation is accessible only in the full list and its 숙소 filter. Compact TripLOG header, search and add icon, white surface, navy Korean type, yellow #fff05a primary actions, restrained blue/pink accents, crisp outlines and small offset shadows. Preserve “개요 · 일정 · 지출 · 리포트 · 설정” navigation with 일정 selected. Keep the screen lightweight, without hotel hero cards, payment UI, large illustrations or explanatory copy.",
+      "startedAt": "2026-10-28T09:45:13.979Z",
+      "mode": "T2I",
+      "inputs": [],
+      "name": "당일 예약 간단한 두 열",
+      "targetViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "displayOrder": 3,
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-d371b7dd-5c84-4361-971c-5d5c0e0e952f.png",
+      "savedPath": "artifacts/design/20261028-wallet-today-only/concept-3.png",
+      "tool": "image_gen.imagegen",
+      "overwritten": false,
+      "selected": false,
+      "sha256": "541ec3aa571acd0b8131d24116d362e5b39e74b155476867a22ea539fccc22ac"
+    }
+  ]
+}

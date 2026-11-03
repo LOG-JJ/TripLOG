@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-28",
+  "status": "awaiting-user-selection",
+  "mockOnly": true,
+  "options": [
+    {
+      "prompt": "Design a 390 × 844 mobile screen for TripLOG, titled “오늘의 여행”, for travelers using saved plans during a trip. Current date anchor: October 28, 2026. Use a compact “Day 2 · 10.28 수 · 도쿄 18:05” header. Follow the existing product's white surfaces, dark navy Korean typography, yellow #fff05a primary buttons, pale blue and pink accents, dark outlines and small offset shadows. Use generic colorful category emoji icons that can be reused across destinations. Prioritize one compact current-destination card: “18:30 시부야 스카이”, a short address, a small pencil, “길찾기”, “방문 완료”, and a subtle skip action. Inside it, show a linked reservation strip with sample booking number “K82M7N”, copy icon and reservation link. Show a borderless horizontal transport sequence “도보 5분 → 지하철 12분 → 도보 3분”, then two small upcoming rows “19:30 저녁 식사” and “21:00 니시스가모 호텔”. Finish with compact “오늘 지출 86,000원 · 4건” and “+ 지출” plus an accessible hotel-return shortcut. Retain bottom navigation “개요 · 일정 · 지출 · 리포트 · 설정”. Keep text brief, readable and icon-led; omit schedule checking, large introductions, maps, photos and unique destination illustrations.",
+      "startedAt": "2026-10-28T09:04:14.595Z",
+      "mode": "T2I",
+      "inputs": [],
+      "name": "현재 장소 중심",
+      "displayOrder": 1,
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-9268732d-cbba-44e0-adce-72f7605cd1d6.png",
+      "savedPath": "artifacts/design/20261028-today-travel-redesign/concept-1.png",
+      "targetViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "tool": "image_gen.imagegen",
+      "selected": false,
+      "overwritten": false,
+      "sha256": "620bf982d63bac154f3773f728b761b430ae4332f51cd36e51689cc5b22471df"
+    },
+    {
+      "prompt": "Design a 390 × 844 mobile TripLOG “오늘의 여행” screen organized around one continuous compact timeline. Current date anchor: October 28, 2026. Header: “Day 2 · 10.28 수”, “도쿄 18:05”. Preserve TripLOG's white background, dark navy Korean text, yellow #fff05a primary actions, pale blue and pink accents, crisp dark outlines and small offset shadows. Use reusable colorful category emoji icons. A slim completed “17:30 카페” row leads to the expanded active “18:30 시부야 스카이” stop, with a short address, small pencil, yellow “길찾기”, “방문 완료” and subtle skip icon. Attach its reservation strip “K82M7N” with copy and open-link icons. Place borderless small walking and subway icons with “5분 → 12분 → 3분” between relevant stops. Continue with collapsed rows “19:30 저녁 식사” and “21:00 니시스가모 호텔”, allowing a start-from-here action on an upcoming stop. At the bottom place a compact two-column utility band for “오늘 지출 86,000원 · 4건 / + 지출” and “숙소로 / 길찾기”. Retain global navigation “개요 · 일정 · 지출 · 리포트 · 설정”. Fit the full hierarchy comfortably, using icons and short labels rather than explanatory sentences. Omit schedule checking, large travel headers, maps, photos and custom destination artwork.",
+      "startedAt": "2026-10-28T09:05:14.147Z",
+      "mode": "T2I",
+      "inputs": [],
+      "name": "타임라인 중심",
+      "displayOrder": 2,
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-7b089225-f355-4622-9c8c-5dfb706a0c06.png",
+      "savedPath": "artifacts/design/20261028-today-travel-redesign/concept-2.png",
+      "targetViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "tool": "image_gen.imagegen",
+      "selected": false,
+      "overwritten": false,
+      "sha256": "5ad9adfba237779b26534175274987b80fec74624d7996f6b145ace596fdfbc8"
+    },
+    {
+      "prompt": "Design a 390 × 844 mobile “오늘의 여행” screen for TripLOG emphasizing fast actions while traveling. Current date anchor: October 28, 2026. Show a compact TripLOG header and “Day 2 · 10.28 수 · 도쿄 18:05”. Match the existing app's white surfaces, dark navy Korean typography, yellow #fff05a main buttons, pale blue and pink accents, dark outlines and small offset shadows. Use reusable colorful category emoji icons. The top compact destination module shows “다음 장소”, “18:30 시부야 스카이”, a short address with copy icon, small pencil and a yellow “길찾기” action beside “방문 완료” and a subtle skip icon. Directly below, organize three compact useful actions in one row: “예약번호” with copy, “+ 지출”, and “숙소로” with navigation. A small reservation detail strip shows sample “K82M7N” and an open-link icon. Keep recorded travel visible as one borderless horizontal icon line “도보 5분 → 지하철 12분 → 도보 3분”. Below, show a concise remaining schedule with “19:30 저녁 식사”, “21:00 니시스가모 호텔” and a small start-from-here control. Show “오늘 지출 86,000원 · 4건” as one quiet summary row. Retain bottom navigation “개요 · 일정 · 지출 · 리포트 · 설정”. Use short labels and readable compact typography; omit schedule checking, explanatory paragraphs, large trip introductions, maps, photos and custom landmark illustrations.",
+      "startedAt": "2026-10-28T09:06:12.369Z",
+      "mode": "T2I",
+      "inputs": [],
+      "name": "빠른 동작 중심",
+      "displayOrder": 3,
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-1802be4c-1009-4cc3-b06a-a89b6c387d7a.png",
+      "savedPath": "artifacts/design/20261028-today-travel-redesign/concept-3.png",
+      "targetViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "tool": "image_gen.imagegen",
+      "selected": false,
+      "overwritten": false,
+      "sha256": "7f80a2e32c1740bc1e50af2a3690ccff0bf95112826f205a0e8a5aea3a6c2731"
+    }
+  ]
+}

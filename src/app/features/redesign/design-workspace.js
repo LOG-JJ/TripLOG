@@ -14,10 +14,14 @@
     const record = window.TripLogSyncRepository.cached(state.id);
     return record?.role !== 'viewer' && !record?.archivedAt;
   };
+  const canEditExpenseSplits = () => {
+    const record = window.TripLogSyncRepository.cached(state.id);
+    return !record?.archivedAt && !record?.removal;
+  };
   function prepareSettlementName() {
     const name = getSettlementSettings().leaderName, account = profileAccount();
     settlementNameDraft = { tripId: state.id, accountId: account?.id || '', name };
-    $('#rdSettlementName').value = name;
+    $('#rdSettlementName').value = getSettlementLeaderName();
     $('#rdSettlementNameError').textContent = '';
     $('#rdSettlementName').disabled = !canEditTripSettings();
     $('#rdSettlementNameSave').disabled = !canEditTripSettings();
@@ -126,12 +130,12 @@
     const url = window.TripLog.navigation.pageRouter.pageUrl(page);
     if (url.href !== location.href) history[replace ? 'replaceState' : 'pushState']({ page }, '', url);
     setActivePage(page);
-    if (samePage && page === 'itinerary') window.TripLog.features.render.main.render({ pageOnly: true });
+    if (samePage && ['itinerary', 'travel'].includes(page)) window.TripLog.features.render.main.render({ pageOnly: true });
   }
   function selectNavigationItem(key) {
     const companionTabs = { today: 'today', review: 'review', wallet: 'wallet', tools: 'tools' };
     if (companionTabs[key]) {
-      navigate('itinerary'); window.TripLog.features.travelCompanion.workspace.open(companionTabs[key]); return;
+      window.TripLog.features.travelCompanion.workspace.open(companionTabs[key]); return;
     }
     if (['expenses', 'expense-new', 'receipt', 'settlement'].includes(key)) {
       navigate(key === 'settlement' ? 'settlement' : 'budget');
@@ -214,6 +218,7 @@
     $('#rdPayer').innerHTML = payers.map(member => `<option value="${text(member.key)}">${text(member.name)}</option>`).join('');
     $('#rdPayer').value = payers.some(m => m.key === value) ? value : 'leader';
     syncCustomSelect($('#rdPayer'));
+    window.TripLog.features.expenses.allocation?.sync();
   }
   function newExpense() { expenseReturnMode = state.travelMode; clearEditMode(); openExpenseEditor(); }
   function expenseSaved() { if (!ready) return; if (window.TripLog.features.expenses.workspace?.afterSave()) return; $('#rdExpenseEditor').close(); showToast('지출을 저장했어요.'); }
@@ -270,7 +275,7 @@
     move($('#rdPrivacyMount label:last-child'),'#rdAdvancedMount');
     dialog('rdSettlementDetails','항목별 분담','<div id="rdSettlementSource"></div><div id="rdSettlementLedger"></div>');
     move($('#settlementExpenseSourceSelect').closest('label'),'#rdSettlementSource'); move($('#settlementSourceSummary'),'#rdSettlementSource'); move($('#settlementExpenseSplitList'),'#rdSettlementLedger');
-    dialog('rdCompanions','정산 멤버 관리',`<form id="rdSettlementNameForm" class="rd-settlement-name-form"><label for="rdSettlementName"><span>정산 이름</span><input id="rdSettlementName" type="text" maxlength="80" required autocomplete="off"></label><div class="rd-settlement-name-actions">${button('내 프로필 이름 사용','settlement-name-profile','','id="rdSettlementNameProfile"')}<button id="rdSettlementNameSave" type="submit" class="rd-button rd-secondary">이름 저장</button></div><p id="rdSettlementNameError" class="rd-muted" role="alert"></p></form><p>멤버가 따로 낸 추가 지출도 정산에 포함할 수 있어요.</p><div id="rdCompanionMount"></div>`);
+    dialog('rdCompanions','정산 멤버 관리',`<form id="rdSettlementNameForm" class="rd-settlement-name-form"><label for="rdSettlementName"><span>정산 이름</span><input id="rdSettlementName" type="text" maxlength="80" required autocomplete="off"></label><div class="rd-settlement-name-actions">${button('내 프로필 이름 사용','settlement-name-profile','','id="rdSettlementNameProfile"')}<button id="rdSettlementNameSave" type="submit" class="rd-button rd-secondary">이름 저장</button></div><p id="rdSettlementNameError" class="rd-muted" role="alert"></p></form><p>결제자와 분담은 지출 내역에서 함께 관리해요.</p><div id="rdCompanionMount"></div>`);
     $('#rdSettlementNameForm').addEventListener('submit', saveSettlementName);
     ['#settlementMemberForm','#settlementMembersList','#settlementIndividualSpentInputs'].forEach(s=>move(s,'#rdCompanionMount'));
   }
@@ -341,8 +346,8 @@
     addView('start',window.TripLog.features.home.tripLibrary.markup()+`<section class="rd-trip-edit" hidden><div class="rd-section-head"><h2>여행 수정</h2>${button('취소','trip-cancel','rd-text-button')}</div><p>내용을 바꾼 뒤 아래 여행 수정 버튼을 눌러 저장해 주세요.</p><div id="rdTripEditMount" class="rd-form-grid"></div></section><div class="rd-page-footer" id="rdTripEditFooter" hidden>${button('여행 수정','trip-save','rd-primary','id="rdTripSave" hidden')}</div>`);
     ['#tripNameInput','#startDateInput','#endDateInput'].forEach(s=>move($(s).closest('label'),'#rdTripEditMount'));els.tripNameInput.closest('label').hidden=false;
     addView('budget', '');
-    addView('settlement',heading('경비 정산')+'<div id="rdSettlement"></div>');
-    addView('report',heading('여행 리포트', '', { tripContext: true })+`<section id="rdReportSummary" class="cost-summary-host" aria-label="여행 경비 요약"></section><div class="rd-tabs">${button('지출 분석','report-expenses','active','id="rdReportExpenseTab"')}${button('일정 분석','report-itinerary','','id="rdReportItineraryTab"')}</div><div id="rdReportExpenses"></div><div id="rdReportItinerary" hidden></div><div class="rd-page-footer">${button(`${icon('file-pdf')} 리포트 PDF 저장`,'pdf-full','rd-secondary')}</div>`);
+    addView('settlement',`<div class="rd-heading trip-context-heading tl-page-heading"><div class="st-heading"><h1>경비 정산</h1><div class="ex-heading-actions">${window.TripLog.ui.markup.expenseAction('지출','arrow-left','nav-budget','st-back')}</div></div><div data-trip-context></div></div><section id="rdSettlementSummary" class="cost-summary-host" aria-label="여행 경비 요약"></section><div id="rdSettlement"></div>`);
+    addView('report',heading('여행 리포트', '', { tripContext: true })+`<section id="rdReportSummary" class="cost-summary-host" aria-label="여행 경비 요약"></section><div class="rd-tabs" role="group" aria-label="리포트 분석 선택">${button('지출 분석','report-expenses','active','id="rdReportExpenseTab"')}${button('일정 분석','report-itinerary','','id="rdReportItineraryTab"')}</div><div id="rdReportExpenses"></div><div id="rdReportItinerary" hidden></div><div class="rd-page-footer">${button(`${icon('file-pdf')} 리포트 PDF 저장`,'pdf-full','rd-secondary')}</div>`);
     $('#rdReportItinerary').innerHTML = '<div id="rdPlanAnalytics"></div>';
     addView('settings',heading('설정','여행을 내 방식대로')+`<div id="rdProfileSummary"></div><section class="rd-setting-group"><h2>여행 설정</h2><div id="rdSettingsTrip"></div></section><section class="rd-setting-group"><h2>공유 설정</h2><div id="rdPrivacyMount"></div></section><section class="rd-setting-group"><h2>기록 관리</h2>${row('저장 기록','bookmark-simple','history')}${row('백업·불러오기','download-simple','backup')}${row('PDF 저장','file-text','pdf')}</section>${row('고급 연결 설정','gear','advanced')}<button class="rd-logout" data-rd-action="logout" type="button">로그아웃</button>`);
     setupForms();setupSettings();setupExistingDialogs();setupAuth();setupTripChooser();
@@ -419,9 +424,10 @@
     const nav=event.target.closest('[data-rd-nav]');if(nav){event.preventDefault();navigate(nav.dataset.rdNav);return;}
     const el=event.target.closest('[data-rd-action]');if(!el)return;const action=el.dataset.rdAction;
     if(action.startsWith('nav-')){navigate(action.slice(4));return;}
-    const simple={profile:'rdProfile',currency:'rdCurrency',backup:'rdBackup',advanced:'rdAdvanced',split:'rdSettlementDetails',companions:'rdCompanions'};
+    const simple={profile:'rdProfile',currency:'rdCurrency',backup:'rdBackup',advanced:'rdAdvanced',companions:'rdCompanions'};
     if(simple[action]){open(simple[action]);return;}
     switch(action){
+      case 'split':navigate('settlement');window.TripLog.features.settlement.workspace.setTab('items');break;
       case 'pdf':closeAll();exportPdf(activePage === 'itinerary' ? 'itinerary' : 'expense');break;
       case 'settlement-name':open('rdCompanions');$('#rdSettlementName').focus();$('#rdSettlementName').select();break;
       case 'settlement-name-profile':{
@@ -508,6 +514,6 @@
       case 'plan':{const item=findItineraryItem(el.dataset.id);if(item){navigate('itinerary', { date: item.date });startItineraryEdit(item);}break;}
     }
   }
-  document.addEventListener('change',event=>{if(event.target.id==='rdReportDay'){window.TripLog.features.reports.workspace.setDay(event.target.value);}if(event.target.id==='rdReportStaySort'){window.TripLog.features.reports.workspace.setStaySort(event.target.value);}const id=event.target.dataset.rdPack;if(id){const item=state.packingList.find(i=>i.id===id);if(item){item.checked=event.target.checked;saveAndRender();}}});
-  window.TripLog.register('features.redesign.workspace',{setup,render,renderMembers,navigate,open,openExpenseEditor,openPretripEditor:showReservation,showSavedPretrip,expenseSaved,expenseMetadata,confirmAction,canEditTripSettings,isTripEditing,cancelTripEdit});
+  document.addEventListener('change',event=>{if(event.target.id==='rdReportDay'){window.TripLog.features.reports.workspace.setDay(event.target.value);}if(event.target.id==='rdReportStaySort'){window.TripLog.features.reports.workspace.setStaySort(event.target.value);}const id=event.target.dataset.rdPack;if(id){const item=state.packingList.find(i=>i.id===id);if(item){window.TripLog.features.packing.list.setChecked(id,event.target.checked).catch(error=>showToast(error.message));}}});
+  window.TripLog.register('features.redesign.workspace',{setup,render,renderMembers,navigate,open,openExpenseEditor,openPretripEditor:showReservation,showSavedPretrip,expenseSaved,expenseMetadata,confirmAction,canEditTripSettings,canEditExpenseSplits,isTripEditing,cancelTripEdit});
 })();

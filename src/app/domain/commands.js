@@ -15,15 +15,15 @@
     itinerary: 'date time endTime place location theme themeSubtype memo trans transits duration cost syncExpense lat lon mapQuery coordinateSource coordinateSignature coordinatePrecision coordinateAddress googlePlaceId voucherName voucherCode voucherFile voucherFileName transportReservation',
     expense: 'date category description amount note mode currency currencySymbol currencyUnit foreignAmount exchangeRate exchangeBase paymentDate paymentMethod payerKey pretripType pretripMemo bookingCode hotelName hotelAddress hotelCheckIn hotelCheckOut flightFrom flightTo flightAirline flightNumber flightDepartDate flightDepartTime flightReturnDate flightReturnDepartTime receipt',
     packing: 'name checked', companion: 'name individualSpent',
-    reservation: 'type title date endDate time endTime arrivalDate transportKind from to reference location note url',
+    reservation: 'type title date endDate time endTime arrivalDate transportKind from to reference location note url ticketUrl guests seats operator serviceNumber linkedItineraryId quotedAmount quotedCurrency payment',
     settlement: 'leaderName splitMode itemSplits customShares',
   };
   function problem(message, details) { const e = new Error(message); e.code = 'INVALID_INPUT'; e.exitCode = 2; e.details = details; throw e; }
   function input(kind, value) {
     if (!value || typeof value !== 'object' || Array.isArray(value)) problem('JSON 객체를 입력해 주세요.');
     const allowed = fields[kind]?.split(' ') || [];
-    const numbers = new Set('totalBudget exchangeBase exchangeRate amount foreignAmount duration cost lat lon individualSpent'.split(' '));
-    const structures = new Set(['transits', 'transportReservation', 'receipt', 'itemSplits', 'customShares']);
+    const numbers = new Set('totalBudget exchangeBase exchangeRate amount foreignAmount duration cost lat lon individualSpent quotedAmount'.split(' '));
+    const structures = new Set(['transits', 'transportReservation', 'receipt', 'itemSplits', 'customShares', 'payment']);
     for (const key of Object.keys(value)) {
       if (!allowed.includes(key)) problem(`지원하지 않는 ${kind} 필드: ${key}`);
       if (numbers.has(key)) { if (typeof value[key] !== 'number' || !Number.isFinite(value[key])) problem(`${key}는 숫자여야 합니다.`); }
@@ -134,7 +134,7 @@
       if (!row) problem('연결할 예약을 찾을 수 없습니다.');
       if (row.source === 'itinerary') return trip;
       if (row.type === 'stay') { const stay = Companion.stayItinerary(trip, row, row, uuid); if (!stay.itineraryItems.some(item => item.linkedReservationId === row.id)) problem('여행 기간 안에 숙박일이 없습니다.'); trip.itineraryItems = stay.itineraryItems; }
-      else if (!trip.itineraryItems.some(item => item.linkedReservationId === row.id)) {
+      else if (!trip.itineraryItems.some(item => item.linkedReservationId === row.id && item.date === row.date)) {
         if (!Companion.days(trip).includes(row.date)) problem('예약이 여행 기간 밖에 있습니다. 여행 날짜를 먼저 변경해 주세요.');
         trip.itineraryItems.push(Companion.itineraryForReservation(row, { id: uuid(), linkedReservationId: row.id, trans: 'none', transits: [], duration: 0, cost: 0, createdAt: Date.now() }));
       }
@@ -176,7 +176,35 @@
       if (!['add', 'update'].includes(action)) problem(`지원하지 않는 작업: ${action}`);
       const values = input(kind, data);
       const defaults = { itinerary: { time: '', endTime: '', location: '', memo: '', theme: 'sightseeing', trans: 'none', transits: [], cost: 0, duration: 0, syncExpense: false }, expense: { mode: 'domestic', paymentMethod: 'card', payerKey: 'leader', note: '' }, packing: { checked: false }, companion: { individualSpent: 0 }, reservation: { type: 'other', time: '', endTime: '', reference: '', note: '', location: '', url: '' } };
-      let next = { ...(item || { ...defaults[kind], id: uuid(), createdAt: Date.now() }), ...values };
+      if (action === 'add' && id && rows.some(row => row.id === id)) problem('같은 항목이 이미 저장됐어요. 다시 확인해 주세요.');
+      let next = { ...(item || { ...defaults[kind], id: id || uuid(), createdAt: Date.now() }), ...values };
+      if (kind === 'reservation') {
+        delete next.payment;
+        if (values.linkedItineraryId) {
+          const plan = find(trip, 'itinerary', values.linkedItineraryId);
+          if (plan.linkedReservationId && plan.linkedReservationId !== `manual:${next.id}`) problem('이 일정에는 다른 예약이 연결되어 있습니다.');
+          if (plan.date !== next.date) problem('같은 이용 날짜의 일정을 선택해 주세요.');
+          trip.itineraryItems = trip.itineraryItems.map(row => row.id === plan.id ? { ...row, linkedReservationId: `manual:${next.id}` } : row);
+        }
+        if (values.payment) {
+          const intent = values.payment;
+          if (!['none', 'create', 'link', 'update', 'unlink'].includes(intent.mode)) problem('지출 연결 방법을 확인해 주세요.');
+          if (intent.mode === 'unlink') next.linkedExpenseId = '';
+          if (intent.mode === 'link') { find(trip, 'expense', intent.expenseId); next.linkedExpenseId = intent.expenseId; }
+          if (['create', 'update'].includes(intent.mode)) {
+            const expenseId = intent.mode === 'update' ? item?.linkedExpenseId : intent.expenseId;
+            if (!expenseId || typeof expenseId !== 'string') problem('지출 ID를 확인해 주세요.');
+            const previous = trip.entries.find(row => row.id === expenseId);
+            if (intent.mode === 'update' && !previous) problem('연결된 지출이 없어졌어요. 다시 선택해 주세요.');
+            if (intent.mode === 'create' && previous) problem('같은 지출이 이미 저장됐어요. 기존 지출을 연결해 주세요.');
+            if (trip.itineraryItems.some(row => row.expenseId === expenseId && row.syncExpense)) problem('연결된 교통비는 일정의 이동 정보에서 수정해 주세요.');
+            const entry = normalizeExpense({ mode: 'domestic', paymentMethod: 'card', payerKey: 'leader', note: '', ...(previous || {}), ...input('expense', intent.entry), id: expenseId, createdAt: previous?.createdAt || Date.now() }, intent.entry);
+            validateItem('expense', entry, trip);
+            trip.entries = previous ? trip.entries.map(row => row.id === expenseId ? entry : row) : [...trip.entries, entry];
+            next.linkedExpenseId = expenseId;
+          }
+        }
+      }
       if (kind === 'itinerary') {
         if (Object.hasOwn(values, 'theme') && values.theme !== item?.theme && !Object.hasOwn(values, 'themeSubtype')) delete next.themeSubtype;
         if (!Object.hasOwn(values, 'transits') && ['trans', 'duration', 'cost'].some(key => Object.hasOwn(values, key))) next.transits = [{ trans: next.trans, duration: next.duration, cost: next.cost, memo: '' }];
@@ -194,7 +222,7 @@
       if (kind === 'expense' && item && trip.itineraryItems.some(row => row.linkedReservationId === `entry:${item.id}`)) {
         const row = Companion.reservations({ ...trip, entries: [next] }).find(row => row.id === `entry:${item.id}`);
         if (row?.type === 'stay') trip.itineraryItems = Companion.stayItinerary(trip, row, Companion.stayFromEntry(item), uuid).itineraryItems;
-        else if (row) trip.itineraryItems = trip.itineraryItems.map(plan => plan.linkedReservationId === row.id ? Companion.itineraryForReservation(row, plan) : plan);
+        else if (row) trip.itineraryItems = Companion.updateEntryItinerary(trip, next, item);
       }
       if (kind === 'reservation') {
         const linkedId = `manual:${next.id}`;

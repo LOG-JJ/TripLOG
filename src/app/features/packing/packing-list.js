@@ -57,4 +57,13 @@ window.TripLog.register("features.packing.list", {
   addPackingItem,
   deletePackingItem,
   resetPackingList,
+  async setChecked(id, checked) {
+    const tripId = state.id, previous = state.packingList;
+    const next = window.TripLog.domain.commands.mutate(state, 'packing', 'check', { id, checked });
+    state.packingList = next.packingList;
+    if (!await saveAndRender()) {
+      if (state.id === tripId) { state.packingList = window.TripLogSyncRepository.cached(tripId)?.snapshot.packingList || previous; render(); }
+      throw new Error('준비물을 저장하지 못했어요. 다시 시도해 주세요.');
+    }
+  },
 });

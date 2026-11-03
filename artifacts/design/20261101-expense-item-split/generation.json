@@ -1,0 +1,76 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Seoul",
+  "stage": "expense-item-split-mockups",
+  "status": "selected-for-refinement",
+  "generationPath": "built-in image_gen",
+  "callCount": 3,
+  "overwrite": false,
+  "appSourceChanged": false,
+  "productionDataChanged": false,
+  "deployed": false,
+  "displayOrderSource": "The three independent generated-image results displayed in this chat, in that order.",
+  "targetCSSViewport": [
+    390,
+    844
+  ],
+  "options": [
+    {
+      "displayOrder": 1,
+      "concept": "inline-amount",
+      "mode": "T2I",
+      "inputImages": [],
+      "prompt": "Create a single 390 × 844 app-only mobile UI mockup for TripLOG, matching its existing white surfaces, navy #0b1020 outlines, yellow #fff05a primary actions, small offset shadows, restrained corners, and small pastel member accents. Use Pretendard-like Korean type: 18px semibold title, 15px medium section labels, 13px regular/medium body, 22px semibold total. Avoid oversized or heavy lettering. Today is Sunday, November 1, 2026. All example people and expenses are fictional.\n\nShow the relevant portion of the existing scrollable “지출 수정” editor with its TripLOG wordmark, a small pink LOG accent and close control. Preserve the amount-first form: “결제 금액” 120,000 KRW, description “저녁 식사”, compact category/date/payment controls, and “결제한 사람 JJ”. Add an inline section “분담 설정” with a small “이 지출만” badge, directly above the optional memo.\n\nUse a three-way control “균등 / 금액 / 비율”, with “금액” selected. Three neat member rows contain small initials avatars, names, editable outlined won fields, and quiet automatically calculated percentages: JJ 60,000원 50%, JH 36,000원 30%, 민지 24,000원 20%. Keep numeric fields easy to tap and visually distinguish editable amounts from calculated percentages. Show a compact check-mark total “120,000원 / 120,000원”. End with the existing yellow “변경 내용 저장” action. Keep the section integrated with the existing editor and readable in one mobile viewport. Other existing fields may continue in the scrollable form. Do not show a keyboard, device body, OS status bar, or browser chrome.",
+      "startedAtUtc": "2026-11-01 06:16:00 UTC",
+      "output": {
+        "originalPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a14a76-7d13-7b52-8e8a-996a2d994f1e\\exec-45017a19-dc39-4a8a-b984-d102f7034d9c.png",
+        "savedPath": "artifacts/design/20261101-expense-item-split/inline-amount.png",
+        "sha256": "a028f0579f8611013345a1c3cf910aec2576f44f528778abb728aa82af2a4779",
+        "originalSha256": "a028f0579f8611013345a1c3cf910aec2576f44f528778abb728aa82af2a4779",
+        "size": [
+          853,
+          1844
+        ]
+      }
+    },
+    {
+      "displayOrder": 2,
+      "concept": "focused-sheet",
+      "mode": "T2I",
+      "inputImages": [],
+      "prompt": "Create a single 390 × 844 app-only mobile UI mockup for TripLOG, matching its existing white surfaces, navy #0b1020 outlines, yellow #fff05a primary actions, small offset shadows, restrained corners, and small pastel member accents. Use Pretendard-like Korean type: 18px semibold title, 15px medium section labels, 13px regular/medium body, 22px semibold total. Avoid oversized or heavy lettering. Today is Sunday, November 1, 2026. All example people and expenses are fictional.\n\nShow a focused “분담 설정” bottom sheet over the dimmed existing “지출 수정” editor. Keep the parent editor recognizable behind it with “결제 금액 120,000원”, “저녁 식사” and “결제한 사람 JJ”. The sheet has compact natural content height, a close control and a small drag handle.\n\nInside the sheet, show “저녁 식사 · 120,000원”, then a three-way control “균등 / 금액 / 비율” with “비율” selected. Provide three large enough percentage input rows with small member avatars and calculated won amounts beneath or beside them: JJ 50% / 60,000원, JH 30% / 36,000원, 민지 20% / 24,000원. Percentages are editable; won amounts are quieter calculated values. Show a concise “합계 100%” check indicator and a yellow “분담 적용” button. The sheet applies this expense’s allocation to the draft; the parent editor still uses its final save action. Keep the information clear, compact and aligned with TripLOG’s design. No keyboard, device body, OS status bar, or browser chrome.",
+      "startedAtUtc": "2026-11-01 06:16:36 UTC",
+      "output": {
+        "originalPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a14a76-7d13-7b52-8e8a-996a2d994f1e\\exec-d09652af-7274-4448-8a94-1d345c1c38aa.png",
+        "savedPath": "artifacts/design/20261101-expense-item-split/focused-sheet.png",
+        "sha256": "347780655745e039d32ebcf9d21ead006c045d26588e14b440ac3e6e4cd5c8a4",
+        "originalSha256": "347780655745e039d32ebcf9d21ead006c045d26588e14b440ac3e6e4cd5c8a4",
+        "size": [
+          853,
+          1844
+        ]
+      }
+    },
+    {
+      "displayOrder": 3,
+      "concept": "visual-ratio",
+      "mode": "T2I",
+      "inputImages": [],
+      "prompt": "Create a single 390 × 844 app-only mobile UI mockup for TripLOG, matching its existing white surfaces, navy #0b1020 outlines, yellow #fff05a primary actions, small offset shadows, restrained corners, and small pastel member accents. Use Pretendard-like Korean type: 18px semibold title, 15px medium section labels, 13px regular/medium body, 22px semibold total. Avoid oversized or heavy lettering. Today is Sunday, November 1, 2026. All example people and expenses are fictional.\n\nShow the existing “지출 수정” editor with a compact amount-first header: “결제 금액 120,000원”, “저녁 식사”, category “식비”, date “11.1 (일)” and separate payer “결제한 사람 JJ”. Focus the visible scrollable form on an inline “분담 설정” section marked “이 지출만”.\n\nUse “균등 / 금액 / 비율” with “비율” selected. Put a slim allocation bar above three member rows, using restrained pastel colors corresponding to their avatars and a neutral unallocated remainder. Each row has a clear percentage input and a quieter calculated won amount. Depict an unfinished edit: JJ 50% / 60,000원; JH 30% / 36,000원; 민지 10% / 12,000원. The bar represents 90% assigned and 10% remaining. A single compact amber line reads “10% 남음 · 12,000원”, alongside a clear allocation total “108,000원 / 120,000원”. Show the final “변경 내용 저장” action disabled in neutral gray until the total is complete. Make the mismatch immediately visible without explanatory paragraphs. Keep existing memo and other fields secondary. No keyboard, device body, OS status bar, or browser chrome.",
+      "startedAtUtc": "2026-11-01 06:17:05 UTC",
+      "output": {
+        "originalPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a14a76-7d13-7b52-8e8a-996a2d994f1e\\exec-f58ffc8d-2ba8-4b37-ac67-0f1e09bcfe09.png",
+        "savedPath": "artifacts/design/20261101-expense-item-split/visual-ratio.png",
+        "sha256": "1b07eb3d2933f73b906942ddcb0bb2903b72c42b28551683a20604caa829b29a",
+        "originalSha256": "1b07eb3d2933f73b906942ddcb0bb2903b72c42b28551683a20604caa829b29a",
+        "size": [
+          853,
+          1844
+        ]
+      }
+    }
+  ],
+  "selectedOption": 1,
+  "selectedConcept": "inline-amount",
+  "refinement": "artifacts/design/20261101-expense-item-split-refinement/generation.json"
+}

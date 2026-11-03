@@ -130,8 +130,7 @@ async function main() {
       await page.screenshot({path:path.join(output,page===a?'members-desktop.png':'members-mobile.png'),animations:'disabled'});
       await page.locator('#tripInviteCloseButton').click();
       await page.locator('.rd-nav [data-trip-nav="itinerary"]').click();
-      await page.locator('#tripNavigationMenu [data-nav-item="itinerary"]').click();
-      await page.locator('#tripNavigationMenu').waitFor({ state: 'hidden' });
+      await page.locator('#itineraryPage').waitFor({ state: 'visible' });
     }
     const stableRoster = await a.evaluate(()=>JSON.stringify(state.collaboration));
     await refreshMembers(a);

@@ -1,0 +1,107 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Seoul",
+  "status": "implemented-locally-qa-passed",
+  "request": "지금까지 만든 목업이미지로 구현계획 야무지게짜보자 구현전에",
+  "plan": "implementation-plan.md",
+  "acceptance": "acceptance-checklist.md",
+  "appCodeChanged": true,
+  "productionDataChanged": false,
+  "deployed": false,
+  "decisionPolicy": "The subsequent implementation request authorizes the unified plan and its recommended defaults. Original asset selection statuses and hashes remain historical records; final implementation evidence is in the QA report.",
+  "assets": [
+    {
+      "id": "today-main",
+      "file": "artifacts/design/20261031-today-trip-interactions/reference.png",
+      "status": "accepted",
+      "role": "오늘의 여행 기본",
+      "sha256": "b514399c7d44482d2a152a9f7625c32734aa96a134a82f4065dc5a97a04299f0"
+    },
+    {
+      "id": "today-progress",
+      "file": "artifacts/design/20261031-today-trip-interactions/progress-actions.png",
+      "status": "accepted",
+      "role": "완료·건너뛰기·시작",
+      "sha256": "80b9d38a375c6837f1ae63604a091896a5ec3abfdab943b9cb62dc00c36a85f6"
+    },
+    {
+      "id": "today-expense",
+      "file": "artifacts/design/20261031-today-trip-interactions/quick-expense.png",
+      "status": "accepted",
+      "role": "빠른 지출·키보드·저장",
+      "sha256": "86cb63732327e90918b91fa2bcd63d0a068d410d38fbd16e364fb44048292bc7"
+    },
+    {
+      "id": "today-states",
+      "file": "artifacts/design/20261031-today-trip-interactions/supporting-states.png",
+      "status": "accepted",
+      "role": "빈/완료/누락/여행 전후",
+      "sha256": "e0ff43e65a95ecfbc256ea84fdf62981e8a0378c4a68cc9e12d439f2804ed959"
+    },
+    {
+      "id": "wallet-main",
+      "file": "artifacts/design/20261031-wallet-selected-refinement/refined-wallet.png",
+      "status": "planning-baseline-pending-review",
+      "role": "오늘 숙소 외 예약 중심 목록",
+      "sha256": "e4d9b670f326fc41b74ab48eec41f1eeec684550616467502ccad4c80a030505"
+    },
+    {
+      "id": "wallet-detail",
+      "file": "artifacts/design/20261031-wallet-detail-add-states/detail-variants.png",
+      "status": "planning-baseline-pending-review",
+      "role": "공통 상세 종류별 필드",
+      "sha256": "a890606708fddc4c309c96dd55216c4ff171587102addcb60e52d1a848812d47"
+    },
+    {
+      "id": "wallet-add",
+      "file": "artifacts/design/20261031-wallet-detail-add-states/add-variants.png",
+      "status": "planning-baseline-pending-review",
+      "role": "공통 추가/편집",
+      "sha256": "08b34eadb0301bb4f65d0af538593abaf8b0b9aaf339f40d892a9d29b42bb3ca"
+    },
+    {
+      "id": "wallet-states",
+      "file": "artifacts/design/20261031-wallet-detail-add-states/supporting-states.png",
+      "status": "planning-baseline-pending-review",
+      "role": "누락/연결 상태",
+      "sha256": "6173dbcd33733ddb45ed1839faa737e933193577bc85009312e398a1698cd136"
+    },
+    {
+      "id": "wallet-expense",
+      "file": "artifacts/design/20261031-wallet-expense-companion/expense-link-flow.png",
+      "status": "planning-baseline-pending-review",
+      "role": "접힌 지출 연동·기존 지출 선택",
+      "sha256": "df2e7295ab81b8b82dbb2424384abe2d115a55ce127d3523cf8fb93faf171fca"
+    },
+    {
+      "id": "tools-mobile",
+      "file": "artifacts/design/20261031-travel-tools-itinerary-analysis/travel-tools-mobile.png",
+      "status": "planning-baseline-pending-review",
+      "role": "여행 도구·준비물·파일 옵션",
+      "sha256": "3a136757f5baaddbe845e9a5fe71842da5430c0dc2f12c8ee985b0ecc90d4409"
+    },
+    {
+      "id": "analysis-mobile",
+      "file": "artifacts/design/20261031-travel-tools-itinerary-analysis/itinerary-analysis-mobile.png",
+      "status": "planning-baseline-pending-review",
+      "role": "전체/날짜/미입력",
+      "sha256": "f249e7610462cdc16cafdeeb2fc4693531fffca55b4523b282adbd22577f1d72"
+    },
+    {
+      "id": "tools-analysis-desktop",
+      "file": "artifacts/design/20261031-travel-tools-itinerary-analysis/desktop-companion.png",
+      "status": "planning-baseline-pending-review",
+      "role": "PC 두 패널",
+      "sha256": "60a16eff6f9a51cfd9ee67992c9683c8677ea4356d1a1cfa56dd1701d25e4c64"
+    }
+  ],
+  "rules": [
+    "Do not restore payment-heavy wallet, featured lodging, nearby search or schedule-review UI.",
+    "Generated status bars, device frames, example data and keyboards are not runtime assets or product functionality.",
+    "No generated mockup is copied into runtime asset directories.",
+    "Detailed generation prompts and exact original paths remain in each source folder generation manifest."
+  ],
+  "implementationRequest": "구현해줘",
+  "qa": "artifacts/qa/20261101-companion-redesign/design-qa.md",
+  "qaResult": "passed"
+}

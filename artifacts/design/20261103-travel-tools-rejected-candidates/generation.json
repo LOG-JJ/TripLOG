@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-03",
+  "status": "rejected",
+  "userDecision": "음 다별로다 다른거 ㄱ 기능개별로인데",
+  "scope": "Generated calls had already finished when cancellation was attempted. These images are excluded from the new direction and must not be implemented.",
+  "assets": [
+    {
+      "asset": "overview",
+      "status": "rejected",
+      "mode": "T2I",
+      "inputImages": [],
+      "startedAtUtc": "2026-11-02 15:26:24 UTC",
+      "originalPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a14a76-7d13-7b52-8e8a-996a2d994f1e\\exec-0585411c-4f4e-4a26-84dd-be714b9b599f.png",
+      "savedPath": "artifacts/design/20261103-travel-tools-rejected-candidates/overview.png",
+      "prompt": "Create a TripLOG travel-tools concept mockup showing a 1280 CSS px desktop view and a 390 CSS px mobile view side by side. Present four genuinely new workflows: stored-belonging recovery, companion rendezvous, latest-departure calculation, and saved alternative-plan selection. Existing packing, currency conversion and file export appear only in a compact collapsed “기본 도구” row at the bottom.\n\nUse TripLOG’s shared visual language: white surfaces, thin navy #0b1020 outlines, 9–14px corners, short offset shadows, yellow #fff05a primary actions and selected tabs, pale-blue #bce6fb secondary actions, restrained pink accents and small reusable colored icons. Use compact Korean type: 20px/600 headings, 13–14px body, 12px metadata, 16px inputs. Reuse the pink-highlight TripLOG wordmark, compact trip context “도쿄 가을여행 / 2026.11.03 화 – 11.07 토 / 4박 5일”, tabs “오늘의 여행 / 예약 지갑 / 여행 도구” with 여행 도구 selected, and five equal bottom-navigation items “개요 / 일정 / 여행 / 지출 / 리포트” with 여행 active.\n\nShow a small reference time “18:20 기준”. The first tool, “출발 시각”, displays “19:30 저녁 예약”, an icon-based calculation of “이동 25분 + 여유 10분”, and a highlighted result “18:55 출발” with “35분 남음”. Include a compact “기준 수정” action and the quiet label “입력한 이동시간 기준”.\n\nThe “맡긴 물건” tool shows a suitcase icon, “캐리어 2개”, “숙소 프런트 · B-204”, “22:00 회수”, and the keeper JH. Include small copy/location actions and a compact “회수 완료” action.\n\nThe “다시 만나기” tool shows “18:40 · 역 2번 출구 앞”, two name avatars, 윤디 marked “도착” and JH marked “이동 중”, a 1/2 arrival count, and compact “길찾기 / 내 상태” actions. Status is manually updated, not GPS tracking.\n\nThe “대안 일정” tool shows a 20:30 slot, “야경 산책”, a clear arrow toward a saved “북카페” alternative, a “후보 2개” count, and “대안 보기”. Alternatives are saved by the user; do not depict live recommendations.\n\nUse a balanced two-column arrangement on desktop and stacked actionable sections on mobile. Do not add weather, nearby search, live traffic, automatic notifications, uploads, large hero art or promotional copy. The screen must make the four new jobs immediately understandable.",
+      "sha256": "7F59A3C4A829D9189A865D043FE3DB564F6750E8B8897CE491F5511BF9048611",
+      "exactSourceMatch": true
+    },
+    {
+      "asset": "details",
+      "status": "rejected",
+      "mode": "T2I",
+      "inputImages": [],
+      "startedAtUtc": "2026-11-02 15:26:24 UTC",
+      "originalPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a14a76-7d13-7b52-8e8a-996a2d994f1e\\exec-03dee165-7f20-441c-8f2a-9dceaca01111.png",
+      "savedPath": "artifacts/design/20261103-travel-tools-rejected-candidates/details.png",
+      "prompt": "Create four TripLOG mobile workflow mockups side by side, each targeting 390 CSS px width: “맡긴 물건”, “다시 만나기”, “출발 시각”, and “대안 일정”. Use the existing common dialog shell with the pink-highlight TripLOG wordmark, a top-right X, white backgrounds, thin navy outlines, compact 20px/600 headings, 13–14px body text, 16px inputs, yellow primary actions, pale-blue secondary buttons, shared dropdown/time-input styles and small colored icons. No device hardware or file attachments.\n\nStored belongings: show a filled editable record with “물건: 캐리어 2개”, “보관 장소: 숙소 프런트”, “보관 번호: B-204” with a copy icon, “회수 시각: 오늘 22:00”, “맡긴 사람: JH”, a compact location button, and the yellow “기록 저장” action. This tracks items left during travel, not a packing checklist.\n\nRendezvous: show “오늘 18:40”, “역 2번 출구 앞”, a small destination-pin illustration, and two companion rows. 윤디 is “도착 · 18:16 갱신”; JH is “이동 중 · 18:18 갱신”. Show “1/2 도착”, a shared three-choice status control “준비 중 / 이동 중 / 도착” with 이동 중 selected, and a pale-blue “만날 장소 길찾기” action. Label status changes as manual. Do not depict continuous location tracking or send messages automatically.\n\nDeparture calculation: show editable “도착할 시각 19:30”, “이동 시간 25분”, and “여유 시간 10분”. Use a clear visual subtraction chain leading to “18:55 출발” and “35분 남음”, based on the illustrative current time 18:20. Include “입력한 이동시간 기준” and a yellow “이 출발시각 사용” action. Do not promise background alarms or live travel estimates.\n\nAlternative plan: show the original slot “20:30–21:20 · 야경 산책”, two user-saved selectable alternatives “북카페” and “실내 전시”, with 북카페 selected. Show a compact before/after preview “야경 산책 → 북카페”, a “20:30–21:20 유지” badge, and a small “이동정보 확인 필요” indicator. End with “선택한 대안 적용”. This is an explicit change preview, not an automatic itinerary rewrite or booking cancellation.",
+      "sha256": "D8A3C86EAB2FC8DAF7F8004ABCA8B9FA7149EBF287CB6258EDEAD932DD61A007",
+      "exactSourceMatch": true
+    }
+  ]
+}

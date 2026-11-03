@@ -105,7 +105,7 @@
     return result;
   }
   async function removeTrip(localId, { accountId, projectId, operationId, serverDeleted = false } = {}) {
-    const result = await transaction(["trips", "snapshots", "drafts"], "readwrite", (tx, done, fail) => {
+    const result = await transaction(["trips", "snapshots", "drafts", "meta"], "readwrite", (tx, done, fail) => {
       const store = tx.objectStore("trips"), request = store.get(localId);
       request.onsuccess = () => {
         const old = request.result;
@@ -122,6 +122,9 @@
         snapshots.onsuccess = () => { const cursor = snapshots.result; if (cursor) { tx.objectStore("snapshots").delete(cursor.primaryKey); cursor.continue(); } };
         const drafts = tx.objectStore("drafts").openCursor();
         drafts.onsuccess = () => { const cursor = drafts.result; if (cursor) { if (cursor.value.value?.tripId === localId) cursor.delete(); cursor.continue(); } };
+        const personalPrefix = `personal:today:${old.accountId || accountId || 'device'}:${localId}:`;
+        const metadata = tx.objectStore('meta').openCursor();
+        metadata.onsuccess = () => { const cursor = metadata.result; if (cursor) { if (String(cursor.key).startsWith(personalPrefix)) cursor.delete(); cursor.continue(); } };
         done(next);
       };
     });
@@ -183,6 +186,16 @@
       result.travelCompanion = M.clone(record.snapshot.travelCompanion);
     }
     if (privacy.shareExpenses === false) {
+      result.travelCompanion.reservations = (result.travelCompanion.reservations || []).map(row => {
+        const local = record.snapshot.travelCompanion?.reservations?.find(item => item.id === row.id);
+        if (!local) return row;
+        const next = { ...row };
+        for (const key of ['quotedAmount', 'quotedCurrency', 'linkedExpenseId']) {
+          if (record.role && record.role !== 'owner') delete next[key];
+          else if (Object.hasOwn(local, key)) next[key] = M.clone(local[key]);
+        }
+        return next;
+      });
       result.entries = M.clone(record.snapshot.entries); result.settlement = M.clone(record.snapshot.settlement);
       result.totalBudget = record.snapshot.totalBudget;
       result.companions = result.companions.map(item => {
@@ -206,7 +219,7 @@
   async function reconcile(localId) {
     return update(localId, record => reconcileLegacy(record), { snapshot: true, source: "before-automatic-reconcile" });
   }
-  async function save(snapshot, observed, { deletions = [], sourceSnapshot = observed || snapshot } = {}) {
+  async function save(snapshot, observed, { deletions = [], sourceSnapshot = observed || snapshot, expectedScope } = {}) {
     const localId = snapshot.id;
     const before = M.encode(observed || snapshot);
     const ranked = M.reposition(snapshot, before);
@@ -217,9 +230,10 @@
     }
     return update(localId, old => {
       const record = old || makeRecord(ranked);
+      if (expectedScope && ['accountId','projectId','serverId'].some(key => (record[key] || '') !== (expectedScope[key] || ''))) throw new Error('여행이나 계정이 변경됐어요. 다시 열어 주세요.');
       if (record.removal) throw new Error("여행 삭제 결과를 먼저 확인해 주세요.");
       if (record.archivedAt && patches.length) throw new Error("보관된 여행입니다. 복구 기록에서 여행을 다시 열어 주세요.");
-      if (record.role === "viewer" && patches.length) throw new Error("보기 전용 여행입니다. 소유자에게 편집 권한을 요청해 주세요.");
+      if (record.role === "viewer" && patches.length && !M.splitOnly(patches)) throw new Error("보기 전용 여행입니다. 분담 외의 항목은 수정할 수 없어요.");
       const fresh = M.encode(record.snapshot);
       const merged = M.apply(fresh, patches, { check: true });
       const atomicConflict = patches.length > 1 && merged.conflicts.length > 0;
@@ -333,7 +347,7 @@
   async function enqueue(localId, patches) {
     return update(localId, record => {
       if (!record) throw new Error("여행을 찾지 못했습니다.");
-      if (record.removal || record.role === "viewer" || record.archivedAt) throw new Error("현재 여행은 읽기 전용입니다.");
+      if (record.removal || (record.role === "viewer" && !M.splitOnly(patches)) || record.archivedAt) throw new Error("현재 여행은 읽기 전용입니다.");
       const dependencies = record.queue.filter(q => q.patches.some(parent => patches.some(p => (p.kind === parent.kind && p.id === parent.id) || (p.kind === "comment" && p.fields?.["p:targetId"] === parent.id && parent.kind === "itinerary")))).map(q => q.id);
       record.queue.push({ id: M.uuid(), patches: M.clone(patches), status: "queued", createdAt: Date.now(), dependsOn: dependencies });
       record.localRevision++;
@@ -364,7 +378,15 @@
     return rows.filter(row => !localId || row.value.tripId === localId).sort((a, b) => b.savedAt - a.savedAt);
   }
   function close() { channel?.close(); channel = null; database?.close(); database = null; opening = null; }
+  async function personal(id, value) {
+    return transaction(['meta'], value === undefined ? 'readonly' : 'readwrite', (tx, done) => {
+      const store = tx.objectStore('meta'), key = `personal:${id}`;
+      if (value !== undefined) { store.put({ id: key, value: M.clone(value) }); done(value); }
+      else { const request = store.get(key); request.onsuccess = () => done(request.result?.value || null); }
+    });
+  }
   const api = { open, migrate, all, read, update, removeTrip, save, attach, reconcile, receive, acknowledge, enqueue, project, snapshots, draft, drafts, makeRecord, close, cached: id => M.clone(cache.get(id)), subscribe: fn => { listeners.add(fn); return () => listeners.delete(fn); } };
+  api.personal = personal;
   root.TripLog?.register("sync.repository", api);
   root.TripLogSyncRepository = api;
 })(typeof window === "undefined" ? globalThis : window);

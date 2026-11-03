@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Seoul",
+  "stage": "navigation-mockup",
+  "status": "implemented-locally-qa-passed",
+  "scope": "One accepted navigation structure with three tab states, not alternative concepts",
+  "mode": "T2I",
+  "generationPath": "built-in image_gen",
+  "startedAtUtc": "2026-11-01 05:41:38 UTC",
+  "callCount": 1,
+  "inputImages": [],
+  "appSourceChanged": true,
+  "productionDataChanged": false,
+  "deployed": false,
+  "overwrite": false,
+  "prompt": "Create one TripLOG mobile navigation mockup board with three 390 × 844 app screens side by side, showing the three states of one accepted design: “오늘의 여행”, “예약 지갑”, and “여행 도구”. Use a 1234 × 884 board. This is one consistent design, not competing alternatives.\n\nPreserve TripLOG’s white background, navy #0b1020 outlines, yellow #fff05a primary accents, small offset shadows, compact rounded corners, and colorful generic category icons. Use restrained Pretendard-like Korean typography: body 13–14px regular or medium, section titles 15px medium, page titles 18px semibold. Keep text readable and avoid heavy lettering.\n\nEvery screen has the TripLOG wordmark at top left and a settings gear at top right. Below it, show the same three-tab control with exact labels “오늘의 여행 / 예약 지갑 / 여행 도구”; activate the appropriate tab on each screen. Every screen has exactly one identical bottom navigation: “개요 / 일정 / 여행 / 지출 / 리포트”. Highlight “여행” with a suitcase icon on a small yellow background. “일정” is a plain calendar item that opens the itinerary directly. Settings appears only in the top header.\n\nUse fictional sample trip “1000일 순천”, October 31–November 1, 2026. Today is Sunday, November 1, 2026. The first screen shows the existing compact Today experience: small Undo and day controls, shared trip identity with five progress marks, a white outlined next-place card for “09:30 순천만 국가정원”, generic colorful category icon, “방문 완료 / 길찾기 / 건너뛰기”, compact upcoming section “다음 일정” with “12:00 순천 점심 식사” and “15:00 순천만습지”, and “오늘 지출 44,000원 · 2건”.\n\nThe second screen shows “오늘 필요한 예약” with two compact reservation cards in a mobile two-column layout: “순천만국가정원” at 09:30 and “생태체험” at 15:00. Include readable reservation references and “예약 열기” actions, small search/add controls, and a collapsed “지난 예약” row. Keep payments secondary and do not feature accommodation.\n\nThe third screen shows travel tools with a compact “준비물” checklist and “3/7” progress, followed by clear “캘린더” and “포켓노트” entries. Use real app content hierarchy, not a feature advertisement.\n\nRender app content only, without device bodies, OS status bars, browser chrome, photographs, file-upload controls, or nested bottom navigation.\n",
+  "output": {
+    "originalPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a14a76-7d13-7b52-8e8a-996a2d994f1e\\exec-5fe3bd88-fd38-45a1-b476-f9ea55bda778.png",
+    "savedPath": "artifacts/design/20261101-travel-navigation/travel-navigation-three-tabs.png",
+    "sha256": "31c5fa7e5c22c7ecea4d0b0fe6f996daff95b25d83cfc8de9a0a7d690ff5be43",
+    "originalSha256": "31c5fa7e5c22c7ecea4d0b0fe6f996daff95b25d83cfc8de9a0a7d690ff5be43",
+    "size": [
+      1482,
+      1062
+    ]
+  },
+  "navigation": {
+    "bottom": [
+      "개요",
+      "일정",
+      "여행",
+      "지출",
+      "리포트"
+    ],
+    "travelTabs": [
+      "오늘의 여행",
+      "예약 지갑",
+      "여행 도구"
+    ],
+    "settings": "Top header gear",
+    "itinerary": "Direct navigation; no grouped tool menu"
+  },
+  "sourcePolicy": "User AGENTS.md requires T2I for new concepts. No screenshots or old mockups were sent as image inputs. Sample content is fictional.",
+  "implementationRequest": "일단 이렇게 구현해보자",
+  "qa": "artifacts/qa/20261101-travel-navigation/design-qa.md",
+  "implementationScope": "Navigation structure only; preserve existing feature content and brand assets"
+}

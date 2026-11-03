@@ -1,0 +1,826 @@
+{
+  "origin": "http://127.0.0.1:6950",
+  "browser": "isolated Edge/Playwright",
+  "layouts": [
+    {
+      "width": 320,
+      "height": 568,
+      "geometry": [
+        {
+          "page": "overview",
+          "label": "개요",
+          "button": {
+            "x": 4,
+            "y": 508,
+            "width": 62.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 23.1875,
+            "y": 512.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 24.8125,
+            "y": 539.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "itinerary",
+          "label": "일정",
+          "button": {
+            "x": 66.390625,
+            "y": 508,
+            "width": 62.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 85.59375,
+            "y": 512.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 87.21875,
+            "y": 539.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "travel",
+          "label": "여행",
+          "button": {
+            "x": 128.796875,
+            "y": 508,
+            "width": 62.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 147.984375,
+            "y": 512.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 149.609375,
+            "y": 539.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "1"
+          },
+          "popup": null
+        },
+        {
+          "page": "budget",
+          "label": "지출",
+          "button": {
+            "x": 191.1875,
+            "y": 508,
+            "width": 62.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 210.390625,
+            "y": 512.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 212.015625,
+            "y": 539.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "report",
+          "label": "리포트",
+          "button": {
+            "x": 253.59375,
+            "y": 508,
+            "width": 62.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 272.796875,
+            "y": 512.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 269.234375,
+            "y": 539.5,
+            "width": 31.125,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "geometry": [
+        {
+          "page": "overview",
+          "label": "개요",
+          "button": {
+            "x": 4,
+            "y": 680,
+            "width": 62.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 23.1875,
+            "y": 684.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 24.8125,
+            "y": 711.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "itinerary",
+          "label": "일정",
+          "button": {
+            "x": 66.390625,
+            "y": 680,
+            "width": 62.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 85.59375,
+            "y": 684.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 87.21875,
+            "y": 711.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "travel",
+          "label": "여행",
+          "button": {
+            "x": 128.796875,
+            "y": 680,
+            "width": 62.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 147.984375,
+            "y": 684.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 149.609375,
+            "y": 711.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "1"
+          },
+          "popup": null
+        },
+        {
+          "page": "budget",
+          "label": "지출",
+          "button": {
+            "x": 191.1875,
+            "y": 680,
+            "width": 62.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 210.390625,
+            "y": 684.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 212.015625,
+            "y": 711.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "report",
+          "label": "리포트",
+          "button": {
+            "x": 253.59375,
+            "y": 680,
+            "width": 62.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 272.796875,
+            "y": 684.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 269.234375,
+            "y": 711.5,
+            "width": 31.125,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "geometry": [
+        {
+          "page": "overview",
+          "label": "개요",
+          "button": {
+            "x": 4,
+            "y": 784,
+            "width": 76.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 30.1875,
+            "y": 788.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 31.8125,
+            "y": 815.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "itinerary",
+          "label": "일정",
+          "button": {
+            "x": 80.390625,
+            "y": 784,
+            "width": 76.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 106.59375,
+            "y": 788.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 108.21875,
+            "y": 815.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "travel",
+          "label": "여행",
+          "button": {
+            "x": 156.796875,
+            "y": 784,
+            "width": 76.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 182.984375,
+            "y": 788.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 184.609375,
+            "y": 815.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "1"
+          },
+          "popup": null
+        },
+        {
+          "page": "budget",
+          "label": "지출",
+          "button": {
+            "x": 233.1875,
+            "y": 784,
+            "width": 76.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 259.390625,
+            "y": 788.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 261.015625,
+            "y": 815.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "report",
+          "label": "리포트",
+          "button": {
+            "x": 309.59375,
+            "y": 784,
+            "width": 76.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 335.796875,
+            "y": 788.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 332.234375,
+            "y": 815.5,
+            "width": 31.125,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        }
+      ]
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "geometry": [
+        {
+          "page": "overview",
+          "label": "개요",
+          "button": {
+            "x": 76,
+            "y": 330,
+            "width": 138.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 133.1875,
+            "y": 334.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 134.8125,
+            "y": 361.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "itinerary",
+          "label": "일정",
+          "button": {
+            "x": 214.390625,
+            "y": 330,
+            "width": 138.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 271.59375,
+            "y": 334.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 273.21875,
+            "y": 361.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "travel",
+          "label": "여행",
+          "button": {
+            "x": 352.796875,
+            "y": 330,
+            "width": 138.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 409.984375,
+            "y": 334.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 411.609375,
+            "y": 361.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "1"
+          },
+          "popup": null
+        },
+        {
+          "page": "budget",
+          "label": "지출",
+          "button": {
+            "x": 491.1875,
+            "y": 330,
+            "width": 138.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 548.390625,
+            "y": 334.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 550.015625,
+            "y": 361.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "report",
+          "label": "리포트",
+          "button": {
+            "x": 629.59375,
+            "y": 330,
+            "width": 138.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 686.78125,
+            "y": 334.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 683.21875,
+            "y": 361.5,
+            "width": 31.125,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "geometry": [
+        {
+          "page": "overview",
+          "label": "개요",
+          "button": {
+            "x": 164,
+            "y": 840,
+            "width": 190.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 247.1875,
+            "y": 844.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 248.8125,
+            "y": 871.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "itinerary",
+          "label": "일정",
+          "button": {
+            "x": 354.390625,
+            "y": 840,
+            "width": 190.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 437.59375,
+            "y": 844.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 439.21875,
+            "y": 871.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "travel",
+          "label": "여행",
+          "button": {
+            "x": 544.796875,
+            "y": 840,
+            "width": 190.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 627.984375,
+            "y": 844.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 629.609375,
+            "y": 871.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "1"
+          },
+          "popup": null
+        },
+        {
+          "page": "budget",
+          "label": "지출",
+          "button": {
+            "x": 735.1875,
+            "y": 840,
+            "width": 190.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 818.390625,
+            "y": 844.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 820.015625,
+            "y": 871.5,
+            "width": 20.75,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        },
+        {
+          "page": "report",
+          "label": "리포트",
+          "button": {
+            "x": 925.59375,
+            "y": 840,
+            "width": 190.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 1008.78125,
+            "y": 844.5,
+            "width": 24,
+            "height": 24
+          },
+          "text": {
+            "x": 1005.21875,
+            "y": 871.5,
+            "width": 31.125,
+            "height": 16
+          },
+          "highlight": {
+            "top": "0px",
+            "height": "56px"
+          },
+          "underline": {
+            "display": "block",
+            "opacity": "0"
+          },
+          "popup": null
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "consoleIssues": [],
+  "checks": [
+    "five direct destinations",
+    "travel alignment",
+    "no menus/history/scroll lock",
+    "Back/Forward",
+    "report tabs/PDF",
+    "editor preservation",
+    "travel reload/keyboard",
+    "expense actions and settlement",
+    "rapid navigation",
+    "legacy menu-marker cleanup",
+    "data preservation"
+  ]
+}

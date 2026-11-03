@@ -26,6 +26,9 @@ const motionLicenses = ['motion', 'framer-motion', 'motion-dom', 'motion-utils',
   return `${name}\n${fs.readFileSync(path.join(directory, license), 'utf8')}`;
 });
 fs.writeFileSync(path.join(root, 'vendor/motion-LICENSES.txt'), motionLicenses.join('\n\n---\n\n'));
+// Tiny offline tools are loaded only when sun/QR is opened. Never use a QR web service.
+esbuild.buildSync({ stdin: { contents: 'import sunCalc from "suncalc"; import qrcode from "qrcode-generator"; qrcode.stringToBytes = value => Array.from(new TextEncoder().encode(value)); export {sunCalc,qrcode};', resolveDir: root }, bundle: true, minify: true, format: 'iife', globalName: 'TripLogToolsVendor', outfile: path.join(root, 'vendor/travel-tools.min.js'), legalComments: 'eof' });
+fs.writeFileSync(path.join(root,'vendor/travel-tools-LICENSES.txt'), 'suncalc\n'+fs.readFileSync(path.join(root,'node_modules/suncalc/LICENSE'),'utf8')+'\n\nqrcode-generator\n'+fs.readFileSync(path.join(root,'node_modules/qrcode-generator/dist/qrcode.js'),'utf8').split('var qrcode')[0]);
 // Icon URLs follow the actual artwork so manifest/favicon caches update without
 // another hand-maintained release label when the app image changes.
 const iconFiles = ['favicon-32.png', 'apple-touch-icon.png', ...fs.readdirSync(path.join(root, 'icons')).filter(file => file.endsWith('.png') && !file.startsWith('apple-touch-icon-')).map(file => `icons/${file}`)].sort();

@@ -1,0 +1,16 @@
+Create a responsive redesign mockup of TripLOG’s expense settlement page, showing a 390×960 CSS px mobile view and a desktop view with a 1000px content area on one board. These are two sizes of the same proposal.
+
+Match TripLOG’s existing expense ledger: white surfaces, navy #0b1020 outlines, 10–16px corners, yellow #fff05a primary highlights with short navy offset shadows, pale blue #bce6fb secondary controls, restrained pink #f7afc7 accents, and compact Pretendard-like typography. Use 20px/600 page headings, 13–14px body text, 12px secondary text and moderate weights. The TripLOG wordmark is black with LOG on a pink rounded rectangular highlight.
+
+At the top show “경비 정산” and a compact pale-blue button with a left arrow and “지출로”. Beneath, reuse the expense page’s compact trip identity: “1000일 순천”, “2026.10.31 토 – 11.01 일”, “1박 2일”. Reuse the existing expense-summary card: wallet illustration, “여행 경비”, yellow-highlighted “180,000원”, plus “1인 평균 90,000원” and “기록한 지출 3건”. Keep this visually consistent with the expense page.
+
+Below use two tabs, “정산 요약” selected in yellow and “항목별 분담” inactive. Show a clear “송금 안내” section with one compact horizontal row: a pink initial avatar for “윤디”, an arrow to a blue initial avatar for “JH”, and “45,000원”. Treat this as settlement guidance, without payment processing controls.
+
+Under “멤버별 정산”, place a small “멤버 관리” action and two compact rows:
+JH — “결제 140,000원”, “분담 95,000원”, a blue “받을 돈 45,000원” status.
+윤디 — “결제 40,000원”, “분담 85,000원”, a pink “보낼 돈 45,000원” status.
+Keep paid amounts, owed shares and net balances distinct and readable.
+
+The sample represents three existing expenses totaling 180,000원 and item-specific allocations. It is not a separate money-entry workflow. Do not include a second allocation editor, saved-backup source selector, extra-spending inputs, oversized balance typography or explanatory paragraphs. On desktop, use the width for the transfer guidance and member balances side by side below the same shared header and summary.
+
+Retain the shared bottom navigation “개요 / 일정 / 여행 / 지출 / 리포트”, with “지출” active. All five icons and labels use equal slots and spacing; there are no expansion carets. Render app content without device casing or a device status bar.

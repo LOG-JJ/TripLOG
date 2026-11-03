@@ -1192,6 +1192,9 @@
     if (!privacy.shareItinerary) snapshot.itineraryItems = [];
     snapshot.travelCompanion = normalizeTravelCompanion(privacy.shareItinerary ? snapshot.travelCompanion : null, snapshot.itineraryItems);
     snapshot.travelCompanion.lastAdjustment = null;
+    if (!privacy.shareExpenses) for (const row of snapshot.travelCompanion.reservations) {
+      for (const key of ['quotedAmount', 'quotedCurrency', 'linkedExpenseId']) delete row[key];
+    }
     return snapshot;
   }
 

@@ -25,9 +25,11 @@
     "test:edge": "node scripts/run-edge-regressions.js",
     "test:maps": "node scripts/coordinate-cache-regression.js && node scripts/place-selection-regression.js",
     "test:order": "node scripts/itinerary-order-regression.js && node scripts/expense-order-regression.js",
+    "test:allocation": "node scripts/expense-allocation-regression.js && node scripts/settlement-ledger-regression.js",
     "test:print": "node scripts/print-report-regression.js && node scripts/print-export-browser-regression.js",
-    "test": "npm run test:source && npm run test:sync && node scripts/sync-navigation-regression.js && node scripts/persistence-backup-regression.js && node scripts/travel-companion-regression.js && node scripts/redesign-regression.js && npm run test:maps && npm run test:order && node scripts/country-search-regression.js && node scripts/destination-scenes-regression.js && node scripts/time-picker-regression.js && node scripts/receipt-parser-regression.js && node scripts/receipt-json-regression.js && node scripts/print-report-regression.js && node scripts/travel-costs-regression.js && node scripts/itinerary-art-regression.js && npm run test:cli && npm run test:terminal",
-    "test:source": "node scripts/source-integrity-regression.js && node scripts/cli-source-regression.js"
+    "test": "npm run test:source && npm run test:sync && node scripts/sync-navigation-regression.js && node scripts/persistence-backup-regression.js && node scripts/travel-companion-regression.js && node scripts/travel-tools-regression.js && node scripts/member-splits-regression.js && node scripts/companion-experience-regression.js && node scripts/redesign-regression.js && npm run test:maps && npm run test:order && npm run test:allocation && node scripts/country-search-regression.js && node scripts/destination-scenes-regression.js && node scripts/time-picker-regression.js && node scripts/receipt-parser-regression.js && node scripts/receipt-json-regression.js && node scripts/print-report-regression.js && node scripts/travel-costs-regression.js && node scripts/itinerary-art-regression.js && npm run test:cli && npm run test:terminal",
+    "test:source": "node scripts/source-integrity-regression.js && node scripts/cli-source-regression.js",
+    "test:tools": "node scripts/travel-tools-regression.js"
   },
   "devDependencies": {
     "@electric-sql/pglite": "0.5.8",
@@ -42,6 +44,8 @@
     "@dnd-kit/dom": "0.5.1",
     "@supabase/supabase-js": "2.107.0",
     "motion": "14.3.0",
+    "qrcode-generator": "2.0.4",
+    "suncalc": "1.9.0",
     "yjs": "13.6.32"
   }
 }

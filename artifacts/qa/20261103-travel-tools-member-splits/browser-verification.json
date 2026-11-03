@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "origin": "http://127.0.0.1:1870",
+  "viewports": [
+    320,
+    390,
+    1440
+  ],
+  "checks": [
+    "seven tools",
+    "packing save",
+    "timezone save",
+    "filtered ICS",
+    "solar",
+    "date/time rollover",
+    "Wi-Fi QR and clear on close",
+    "unit direction",
+    "viewer split save",
+    "category count 3/4/5/6"
+  ],
+  "errors": []
+}

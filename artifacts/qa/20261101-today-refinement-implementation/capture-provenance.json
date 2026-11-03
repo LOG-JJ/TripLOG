@@ -1,0 +1,91 @@
+{
+  "source": "artifacts/design/20261101-today-selected-combination/combined-refinement.png",
+  "sourceSize": [
+    1471,
+    1069
+  ],
+  "CSSViewport": [
+    390,
+    844
+  ],
+  "deviceScaleFactor": 1,
+  "normalizedSourcePanels": [
+    [
+      "initial",
+      [
+        36,
+        54,
+        477,
+        1020
+      ],
+      "today-initial-390.png"
+    ],
+    [
+      "completed",
+      [
+        512,
+        54,
+        960,
+        1020
+      ],
+      "today-completed-390.png"
+    ],
+    [
+      "spending",
+      [
+        998,
+        79,
+        1436,
+        1017
+      ],
+      "spending-390.png"
+    ]
+  ],
+  "captures": [
+    {
+      "original": "artifacts/tmp/20261101-today-refinement-implementation/today-refinement/today-initial-390.png",
+      "saved": "artifacts/qa/20261101-today-refinement-implementation/today-initial-390.png",
+      "sha256": "81cad47357f66c10d421f8a20bcb046d17cc299998b7141cce0fa855e53a0f40"
+    },
+    {
+      "original": "artifacts/tmp/20261101-today-refinement-implementation/today-refinement/today-completed-390.png",
+      "saved": "artifacts/qa/20261101-today-refinement-implementation/today-completed-390.png",
+      "sha256": "f08bcfd59dc2e93834181df7b64d3b3e0e8cc0c0b9b8166358ee2f03040707ef"
+    },
+    {
+      "original": "artifacts/tmp/20261101-today-refinement-implementation/today-refinement/spending-390.png",
+      "saved": "artifacts/qa/20261101-today-refinement-implementation/spending-390.png",
+      "sha256": "f79f9783bf4a4fbfe7da06de8ce44ac8b31f9af852b709c425d8c4698c6e7f06"
+    },
+    {
+      "original": "artifacts/tmp/20261101-today-refinement-implementation/today-refinement/today-320.png",
+      "saved": "artifacts/qa/20261101-today-refinement-implementation/today-320.png",
+      "sha256": "6a17daedf8df0d214048ed4612a6b1f345cee1ca93ea3ec3e6ea9492692d834a"
+    },
+    {
+      "original": "artifacts/tmp/20261101-today-refinement-implementation/today-refinement/today-1440.png",
+      "saved": "artifacts/qa/20261101-today-refinement-implementation/today-1440.png",
+      "sha256": "8675901b8643d9a73c3b196e1c056839cb4f3f4761410e07cf1ecb40d895fa7e"
+    },
+    {
+      "original": "artifacts/tmp/20261101-today-refinement-implementation/today-refinement/spending-320.png",
+      "saved": "artifacts/qa/20261101-today-refinement-implementation/spending-320.png",
+      "sha256": "d3d00e7e2d56bb9483ca46b158a7c61b3a5599fadad388b287ec1c86d84c39df"
+    },
+    {
+      "original": "artifacts/tmp/20261101-today-refinement-implementation/today-refinement/spending-1440.png",
+      "saved": "artifacts/qa/20261101-today-refinement-implementation/spending-1440.png",
+      "sha256": "a9a1a5b46e149052792c2d253e91dec273e8b0ba58464aa36e75f7fe251edda4"
+    },
+    {
+      "original": "artifacts/tmp/20261101-today-refinement-implementation/today-refinement/today-long-320.png",
+      "saved": "artifacts/qa/20261101-today-refinement-implementation/today-long-320.png",
+      "sha256": "46dd32bded0e091a4ca2305b2a00aabf263ac4d06a6176b743ac04635061efd2"
+    },
+    {
+      "original": "artifacts/tmp/20261101-today-refinement-implementation/today-refinement/spending-empty-320.png",
+      "saved": "artifacts/qa/20261101-today-refinement-implementation/spending-empty-320.png",
+      "sha256": "9dccf64366dd356ac2efdd860c50fec7840b888a7a1ec86291dc9ea719753961"
+    }
+  ]
+}

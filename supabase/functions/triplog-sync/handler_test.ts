@@ -1,5 +1,40 @@
 import { handleRequest } from "./handler.ts";
 
+Deno.test("private reservation money is redacted from both sides of history and retained for its owner", async () => {
+  const previousFetch = globalThis.fetch, previousInfo = console.info;
+  Deno.env.set('SUPABASE_URL', 'http://reservation-history.test');
+  Deno.env.set('SUPABASE_ANON_KEY', 'fixture-public');
+  Deno.env.set('SUPABASE_SERVICE_ROLE_KEY', 'fixture-server');
+  let role = 'editor';
+  const tripId = crypto.randomUUID();
+  const row = { kind: 'reservation', entity_id: 'booking', data: { 'p:title': '입장권', 'p:quotedAmount': 2700, 'p:quotedCurrency': 'JPY', 'p:linkedExpenseId': 'secret-payment' }, field_versions: { 'p:title': 1, 'p:quotedAmount': 1, 'p:quotedCurrency': 1, 'p:linkedExpenseId': 1 } };
+  globalThis.fetch = async (input) => {
+    const url = new URL(typeof input === 'string' ? input : input instanceof URL ? input.href : input.url);
+    let result;
+    if (url.pathname === '/auth/v1/user') result = { id: actor, user_metadata: {} };
+    else if (url.pathname.endsWith('triplog_rate_limit')) result = true;
+    else if (url.pathname.endsWith('triplog_sync_role')) result = role;
+    else if (url.pathname.endsWith('triplog_read_sync')) result = { role, privacy: { shareItinerary: true, shareExpenses: false }, entities: [] };
+    else if (url.pathname === '/rest/v1/triplog_change_log') result = [{ sequence: 1, actor_id: actor, changes: [row], before_changes: [row], created_at: '2026-11-01T00:00:00Z' }];
+    else throw new Error('Unexpected fixture request ' + url.pathname);
+    return new Response(JSON.stringify(result), { headers: { 'Content-Type': 'application/json' } });
+  };
+  console.info = () => {};
+  const request = () => new Request('http://reservation-history.test', { method: 'POST', headers: { Authorization: 'Bearer fixture', 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'history', tripId }) });
+  try {
+    const response = await handleRequest(request());
+    assert(response.status === 200, 'Member can read permitted reservation history');
+    const body = await response.json();
+    for (const entry of [body.history[0].changes[0], body.history[0].before_changes[0]]) {
+      assert(entry.data['p:title'] === '입장권', 'Nonfinancial metadata remains readable');
+      for (const key of ['p:quotedAmount', 'p:quotedCurrency', 'p:linkedExpenseId']) assert(!(key in entry.data) && !(key in entry.field_versions), 'Money values and versions are private');
+    }
+    role = 'owner';
+    const owner = await (await handleRequest(request())).json();
+    assert(owner.history[0].changes[0].data['p:quotedAmount'] === 2700, 'Owner retains their private financial history');
+  } finally { globalThis.fetch = previousFetch; console.info = previousInfo; }
+});
+
 Deno.test("trip removal uses verified identity, replays after membership deletion, and awaits physical attachment cleanup", async () => {
   const originalFetch=globalThis.fetch, originalInfo=console.info;
   Deno.env.set("SUPABASE_URL","http://removal.test"); Deno.env.set("SUPABASE_ANON_KEY","fixture-public"); Deno.env.set("SUPABASE_SERVICE_ROLE_KEY","fixture-server");

@@ -28,6 +28,10 @@ async function main() {
   const ready = () => page.waitForFunction(() => document.documentElement.dataset.appReady === 'true' && document.documentElement.dataset.auth === 'signed-in');
   const dialog = page.locator('#rdExpenseEditor');
   const open = async id => {
+    if (await page.evaluate(() => activePage !== 'budget')) {
+      await page.locator('.tl-bottom-nav:visible [data-trip-nav="budget"]').last().click();
+      await page.waitForFunction(() => activePage === 'budget');
+    }
     await page.locator(`#rdExpenseList .ex-entry-title[data-id="${id}"]`).click();
     assert.equal(await page.locator('#rdReservation').isVisible(), false, 'No old edit dialog for existing reservations');
     assert(await dialog.locator('#exAmountGroup').isVisible(), 'Use the current amount-first expense editor');
@@ -80,7 +84,10 @@ async function main() {
     assert.equal((await row('currency-less-hotel')).amount, 401711); assert.equal((await row('currency-less-hotel')).currency, 'KRW');
     // The reservation wallet's missing-reference shortcut must land in the same editor and focus the new field.
     await page.evaluate(() => window.TripLog.features.travelCompanion.workspace.open('wallet'));
-    await page.locator('[data-tt-action="reservation-detail"][data-id="entry:old-flight"]').click();
+    await page.locator('#ttCompanion:not([hidden])').waitFor();
+    const past = page.locator('#ttCompanion .cx-past');
+    if (await past.count() && await past.getAttribute('open') === null) await past.locator('summary').click();
+    await page.locator('.cx-booking-title[data-occurrence="entry:old-flight:outbound"]').click();
     await page.locator('#ttReservationDetail [data-tt-action="reservation-source"][data-field="reference"]').click();
     assert.equal(await dialog.isVisible(), true); assert.equal(await page.locator('#rdReservation').isVisible(), false);
     assert.equal(await page.evaluate(() => document.activeElement.id), 'exReservation_bookingCode');

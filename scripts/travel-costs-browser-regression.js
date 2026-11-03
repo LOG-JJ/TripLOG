@@ -146,14 +146,15 @@ async function main() {
     await page.reload(); await ready(); await acrossPages(506000, 16);
     assert.equal(await page.evaluate(() => state.totalBudget), 999999999, 'The legacy field is preserved without affecting costs');
     await page.evaluate(() => window.TripLog.features.travelCompanion.workspace.open('today'));
-    await page.locator('#ttCompanion [data-date="2026-10-09"]').click();
-    assert.match(await page.locator('.pp-cost-strip').innerText(), /181,000원/);
-    await page.locator('.pp-cost-strip').click();
+    await page.locator('#ttCompanion:not([hidden])').waitFor();
+    await page.locator('#ttDay').selectOption('2026-10-09');
+    assert.match(await page.locator('.cx-cost-strip').innerText(), /181,000원/);
+    await page.locator('.cx-cost-strip').click();
     const detail = await page.locator('#ttCostInfo').innerText();
     assert.match(detail, /181,000원/); assert.match(detail, /506,000원/); assert.match(detail, /25,000원/);
     assert.doesNotMatch(detail, /예산|가용|초과/);
     await page.locator('#ttCostInfo [data-tt-action="close"]').first().click();
-    await page.locator('#ttCompanion [data-tt-action="close"]').first().click();
+    await page.locator('.rd-nav [data-trip-nav="report"]').click(); await page.waitForFunction(() => activePage === 'report');
     await page.evaluate(() => deleteEntry('cost-added'));
     await page.waitForFunction(() => document.querySelector('#rdReportSummary').textContent.includes('481,000원'));
     await page.evaluate(() => deleteEntry('cost-refund'));
@@ -196,13 +197,16 @@ async function main() {
           within: box.left >= row.left && box.right <= row.right + 1 && share.right <= row.right + 1,
           disjoint: box.right <= share.left && Math.abs((box.top + box.bottom) / 2 - (share.top + share.bottom) / 2) <= 1 };
       }));
+      const cells = await page.locator('.tc-category').evaluateAll(nodes => nodes.map(node => { const r = node.getBoundingClientRect(); return { x: r.x, y: r.y }; }));
+      assert.equal(new Set(cells.map(cell => cell.x)).size, 3, 'Mobile composition has three columns');
+      assert.equal(new Set(cells.map(cell => cell.y)).size, 2, 'Six mobile categories use two rows');
       assert(labels.every(label => label.lines === 1 && label.fits && label.within && label.disjoint), `Horizontal mobile categories at ${width}, enlarged=${enlarged}: ${JSON.stringify(labels)}`);
       await capture('.tc-card', `cost-six-categories-${width}${enlarged ? '-large-text' : ''}.png`);
     }
     await page.setViewportSize({width:320,height:844});
     await page.evaluate(()=>{state.entries=[{id:'huge',amount:123456789012,category:'아주 긴 분류 이름 <img src=x onerror=alert(1)>',description:'많은 금액'},{id:'tiny',amount:1,category:'교통',description:'작은 금액'}];render();});
     assert.equal(await page.locator('.tc-card img').count(), 0, 'Imported category names remain text');
-    assert.match(await page.locator('.tc-category[data-category="교통"]').innerText(), /1% 미만/);
+    assert.match(await page.locator('.tc-category[data-category="교통"]').innerText(), /<1%/);
     assert.match(await page.locator('.tc-composition').getAttribute('aria-label'), /1% 미만/);
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
     assert(await page.locator('.tc-card').evaluate(node=>node.scrollWidth<=node.clientWidth+1));

@@ -1,5 +1,5 @@
 (() => {
-  let dialog, form, draft = null, serial = 0, submitting = false;
+  let dialog, form, draft = null, serial = 0, submitting = false, returnFocus = null;
   let routeMode = 'transit', activeView = 'route', routeKey = '', routeFrames = new Map();
   const navigationKey = 'triplog.transitMapDraft.v1';
   let pendingNavigation = null, navigationObserver;
@@ -233,7 +233,8 @@
       cost: Number(segment.cost) || 0, memo: String(segment.memo || '').trim() };
   }
   function returnButton() {
-    return [...document.querySelectorAll('[data-transit-open]')].find(button => button.dataset.id === draft?.id);
+    const target = returnFocus?.();
+    return target?.isConnected ? target : [...document.querySelectorAll('[data-transit-open]')].find(button => button.dataset.id === draft?.id);
   }
   function fitViewport() {
     if (!dialog) return;
@@ -444,15 +445,18 @@
     dialog.addEventListener('close', () => {
       if (dialog.open) return;
       hideEmbeddedDomesticMap(find('#itineraryTransitDomesticMap'));
-      const target = returnButton(); target?.setAttribute('aria-expanded', 'false'); target?.focus({ preventScroll: true });
+      const target = returnButton();
+      if (target?.matches('[data-transit-open], [data-summary-transit]')) target.setAttribute('aria-expanded', 'false');
+      target?.focus({ preventScroll: true });
       clearNavigation(); routeFrames.forEach(entry => clearTimeout(entry.timer));
-      draft = null;
+      draft = null; returnFocus = null;
     });
   }
-  function open(id, previousId, preferredMode) {
+  function open(id, previousId, preferredMode, options = {}) {
     setup(); if (dialog.open) return;
     const source = context(id);
     if (!source || source.previous.id !== previousId) { showToast('이동 구간이 변경됐어요. 일정을 다시 확인해 주세요.'); return; }
+    returnFocus = typeof options.returnFocus === 'function' ? options.returnFocus : null;
     const rows = getItineraryTransits(source.item).map(segment => ({ ...clone(segment), key: ++serial,
       durationInput: Number(segment.duration) > 0 ? String(segment.duration) : '' }));
     draft = { id, tripId: state.id, previous: clone(source.previous), item: clone(source.item),
@@ -462,8 +466,9 @@
       : isDomesticMapTrip() && !rows.some(row => ['bus', 'train', 'flight'].includes(row.trans)) ? 'driving' : 'transit';
     clearError(); renderRows(); find('.transit-editor-scroll').scrollTop = 0;
     returnButton()?.setAttribute('aria-expanded', 'true'); fitViewport(); dialog.showModal();
-    selectView('route');
-    find('#itineraryTransitTitle').focus({ preventScroll: true });
+    selectView(options.initialView);
+    const input = activeView === 'manual' && rows[Math.max(0, Math.min(rows.length - 1, options.segmentIndex || 0))];
+    (input ? find(`#transitDuration${input.key}`) : find('#itineraryTransitTitle')).focus({ preventScroll: true });
   }
   async function save(event) {
     event.preventDefault(); if (!draft || !dialog.open || submitting) return;

@@ -1,0 +1,138 @@
+[
+  {
+    "original": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-settlement-entry\\expense-entry-placement\\budget-320.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-settlement-entry\\budget-320.png",
+    "sha256": "c1c7abbf76b0b3dd95c5d48c0883f8e106a9ce59a9f423a51334e4c4d5344dab"
+  },
+  {
+    "original": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-settlement-entry\\expense-entry-placement\\budget-390.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-settlement-entry\\budget-390.png",
+    "sha256": "53829f13b881032a6a4fa1bc9264c391e67c3f488e80881af9bb77779d3e0774"
+  },
+  {
+    "original": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-settlement-entry\\expense-entry-placement\\budget-1440.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-settlement-entry\\budget-1440.png",
+    "sha256": "901239541f30fccb3496c6dfefd345fa7d32885fc451433b0d0330ed38038a21"
+  },
+  {
+    "original": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-settlement-entry\\expense-entry-placement\\heading-320.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-settlement-entry\\heading-320.png",
+    "sha256": "3dfa932f56490a2ee852c5f3e4a23da205e284e4689218c04cdb935c4cb4c1f9"
+  },
+  {
+    "original": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-settlement-entry\\expense-entry-placement\\heading-390.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-settlement-entry\\heading-390.png",
+    "sha256": "5a6f7d19e7fa22880e28aea81b2e98eafdf0bd4285e38fa3cb6d22b2823f264c"
+  },
+  {
+    "original": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-settlement-entry\\expense-entry-placement\\heading-1440.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-settlement-entry\\heading-1440.png",
+    "sha256": "0189e908f1e44df76012ac57a71824e76185b4f346bee24a3de579223c2efe53"
+  },
+  {
+    "original": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-settlement-entry\\expense-entry-placement\\dock-390.png",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-settlement-entry\\dock-390.png",
+    "sha256": "21d3a3ed7e9fb9ff5f71616cd45409cb021101fe49f2f76543f32639c0c880f1"
+  },
+  {
+    "original": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\tmp\\20261101-expense-settlement-entry\\expense-entry-placement\\layout.json",
+    "saved": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\qa\\20261101-expense-settlement-entry\\layout.json",
+    "sha256": "2cc82bf28030a53c9b2caba9aeed0299d388eefe4746e59575ebaea06fd203fb"
+  },
+  {
+    "comparison": "mobile-comparison.png",
+    "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261101-expense-settlement-entry\\expense-settlement-placement.png",
+    "sourcePixels": [
+      1536,
+      1024
+    ],
+    "sourceCrop": [
+      29,
+      45,
+      427,
+      1001
+    ],
+    "referenceNormalized": [
+      390,
+      937
+    ],
+    "implementationPixels": [
+      390,
+      844
+    ],
+    "normalization": "same width; preserve aspect ratio",
+    "scope": "header action placement and expense direct navigation only"
+  },
+  {
+    "comparison": "mobile-heading-comparison.png",
+    "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261101-expense-settlement-entry\\expense-settlement-placement.png",
+    "sourcePixels": [
+      1536,
+      1024
+    ],
+    "sourceCrop": [
+      45,
+      129,
+      411,
+      178
+    ],
+    "referenceNormalized": [
+      350,
+      47
+    ],
+    "implementationPixels": [
+      350,
+      44
+    ],
+    "normalization": "same width; preserve aspect ratio",
+    "scope": "header action placement and expense direct navigation only"
+  },
+  {
+    "comparison": "desktop-heading-comparison.png",
+    "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261101-expense-settlement-entry\\expense-settlement-placement.png",
+    "sourcePixels": [
+      1536,
+      1024
+    ],
+    "sourceCrop": [
+      474,
+      129,
+      1491,
+      183
+    ],
+    "referenceNormalized": [
+      912,
+      48
+    ],
+    "implementationPixels": [
+      912,
+      54
+    ],
+    "normalization": "same width; preserve aspect ratio",
+    "scope": "header action placement and expense direct navigation only"
+  },
+  {
+    "comparison": "dock-comparison.png",
+    "source": "C:\\Users\\tbdk5\\Desktop\\MAIN\\0_Working\\TripLOG\\artifacts\\design\\20261101-expense-settlement-entry\\expense-settlement-placement.png",
+    "sourcePixels": [
+      1536,
+      1024
+    ],
+    "sourceCrop": [
+      29,
+      912,
+      427,
+      1001
+    ],
+    "referenceNormalized": [
+      390,
+      87
+    ],
+    "implementationPixels": [
+      390,
+      66
+    ],
+    "normalization": "same width; preserve aspect ratio",
+    "scope": "header action placement and expense direct navigation only"
+  }
+]

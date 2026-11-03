@@ -19,14 +19,21 @@ async function deleteCompanion(index) {
   const tripId = state.id;
   const member = state.companions[index];
   if (!member) return false;
+  if (Number(member.individualSpent || 0) !== 0) {
+    showToast('예전 추가 지출을 지출 내역으로 먼저 옮겨 주세요.'); return false;
+  }
   const hasPayments = () => state.entries.some(entry => entry.payerKey === getCompanionSettlementKey(member));
   if (hasPayments()) {
     showToast("이 동행이 결제한 지출이 있어요. 결제자를 먼저 바꿔 주세요."); return false;
   }
+  const hasShares = () => Object.values(state.settlement?.itemSplits || {}).some(split => split?.mode === 'custom' && Number(split.shares?.[getCompanionSettlementKey(member)] || 0) !== 0);
+  if (hasShares()) { showToast('이 동행의 분담액을 지출 내역에서 먼저 조정해 주세요.'); return false; }
   if (!await window.TripLog.ui.confirmation.ask({ kind: 'companion', subject: member.name }) || state.id !== tripId) return false;
   const current = state.companions.find(item => item.id === member.id);
   if (!current) return false;
+  if (Number(current.individualSpent || 0) !== 0) { showToast('추가 지출이 바뀌었어요. 금액을 먼저 확인해 주세요.'); return false; }
   if (hasPayments()) { showToast('결제 내역이 바뀌었어요. 결제자를 먼저 확인해 주세요.'); return false; }
+  if (hasShares()) { showToast('분담 내역이 바뀌었어요. 분담액을 먼저 확인해 주세요.'); return false; }
   const previous = { companions: state.companions, settlement: state.settlement };
   state.companions = state.companions.filter(item => item.id !== current.id);
   state.settlement = JSON.parse(JSON.stringify(state.settlement || {}));

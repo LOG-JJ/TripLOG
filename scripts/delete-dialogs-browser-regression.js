@@ -155,13 +155,14 @@ async function main() {
     await page.setViewportSize({ width: 390, height: 844 });
     recordFlow('Long names, safe text, duplicate opens and 200% text at 320px');
 
-    // Draft-only removals do not change saved records until the editor is saved.
+    // Existing attachments remain accessible; the retired upload/removal controls stay hidden.
     await editItinerary('castle');
     if (!await page.locator('#itineraryExtraDetails').evaluate(node => node.open)) await page.locator('#itineraryExtraDetails > summary').click();
-    await page.locator('.ticket-file-row').locator('..').screenshot({ path: path.join(output, 'voucher-removal-390.png'), animations: 'disabled' });
-    await page.locator('#ticketFileResetBtn').click();
+    await page.locator('#itineraryLegacyFileOpen').screenshot({ path: path.join(output, 'voucher-existing-390.png'), animations: 'disabled' });
+    assert(await page.locator('#itineraryLegacyFileOpen').isVisible());
+    assert.equal(await page.locator('#ticketFileResetBtn').isVisible(), false);
     assert.equal(await confirm.isVisible(), false);
-    assert.equal(await page.locator('#ticketFileNameDisplay').textContent(), '선택된 파일 없음');
+    assert.equal(await page.locator('#ticketFileNameDisplay').textContent(), '호텔 예약.pdf');
     assert.equal(await page.evaluate(() => findItineraryItem('castle').voucherFileName), '호텔 예약.pdf');
     await page.locator('#itineraryEditorClose').click();
     await page.waitForFunction(() => !editingItineraryId && !document.querySelector('#itineraryEditor').open);
@@ -175,7 +176,7 @@ async function main() {
     assert.equal(await confirm.isVisible(), false);
     assert.equal(await page.locator('.transit-segment').count(), 1);
     assert.equal(await page.evaluate(() => findItineraryItem('airport').transits.length), 2);
-    await closes(); recordFlow('Attachment and transit removal stay in the unsaved editor');
+    await closes(); recordFlow('Existing attachments stay accessible and transit removal stays in the unsaved editor');
 
     await editItinerary('castle'); await page.locator('#itineraryDeleteButton').click(); await accept('itineraryEditor');
     await page.locator('#itineraryEditor').waitFor({ state: 'hidden' }); assert.equal(await page.evaluate(() => !!findItineraryItem('castle')), false);
@@ -214,6 +215,11 @@ async function main() {
     await page.locator('[data-rd-action="packing-reset"]').click(); await accept();
     assert.equal(await page.evaluate(() => state.packingList.length === 6 && state.packingList.every(item => !item.checked)), true);
     await closes(); await show('rdCompanions');
+    await page.locator('.companion-delete-btn').click();
+    assert.equal(await confirm.isVisible(), false, 'Legacy money must be migrated before a member can be deleted');
+    assert.equal(await page.evaluate(() => state.companions[0].individualSpent), 5000);
+    // Clear only the synthetic legacy figure to exercise the member confirmation itself.
+    await page.evaluate(() => { state.companions[0].individualSpent = 0; });
     await page.locator('.companion-delete-btn').click(); await askKind('companion'); await cancel();
     assert.equal(await page.evaluate(() => state.companions.length), 1);
     await page.locator('.companion-delete-btn').click(); await accept();
@@ -221,7 +227,9 @@ async function main() {
     recordFlow('Preparation item, default list reset and settlement companion cancel/commit');
 
     await closes(); await page.evaluate(() => window.TripLog.features.travelCompanion.workspace.open('wallet'));
-    await page.locator('[data-tt-action="reservation-detail"][data-id="manual:manual-hotel"]').click();
+    await page.locator('#ttCompanion:not([hidden])').waitFor();
+    if (await page.locator('#ttCompanion .cx-past').count()) await page.locator('#ttCompanion .cx-past summary').click();
+    await page.locator('#ttCompanion .cx-booking-title[data-id="manual:manual-hotel"]').click();
     await page.locator('[data-tt-action="reservation-delete"]').click(); await askKind('reservation'); await cancel();
     assert(await page.locator('#ttReservationDetail').isVisible());
     await page.locator('[data-tt-action="reservation-delete"]').click(); await accept('ttReservationDetail');

@@ -13,14 +13,16 @@ body.rd-app #overviewPage .tc-composition { display: flex; width: 100%; height: 
 body.rd-app #overviewPage .tc-composition > span { flex-basis: 0; min-width: 0; background: var(--tc-color); }
 body.rd-app #overviewPage .tc-category-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 8px; list-style: none; padding: 0; margin: 0; }
 body.rd-app #overviewPage .tc-category-list li { min-width: 0; }
-body.rd-app #overviewPage .tc-category { display: flex; align-items: center; justify-content: space-between; gap: 4px; width: 100%; min-height: 44px; padding: 5px 0; border: 0; border-radius: 5px; box-shadow: none; background: transparent; color: var(--text); text-align: left; font-size: 12px; font-weight: 550; line-height: 1.4; }
-body.rd-app #overviewPage .tc-category-name { display: flex; align-items: center; gap: 5px; min-width: 0; }
+body.rd-app #overviewPage .tc-category-list[data-count="1"] { grid-template-columns: 1fr; }
+body.rd-app #overviewPage .tc-category-list[data-count="2"],
+body.rd-app #overviewPage .tc-category-list[data-count="4"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+body.rd-app #overviewPage .tc-category { display: flex; align-items: center; justify-content: space-between; gap: 3px; width: 100%; min-height: 44px; padding: 5px 0; border: 0; border-radius: 5px; box-shadow: none; background: transparent; color: var(--text); text-align: left; font-size: 12px; font-weight: 550; line-height: 1.4; }
+body.rd-app #overviewPage .tc-category-name { display: flex; align-items: center; gap: 4px; min-width: calc(2em + 10px); }
 body.rd-app #overviewPage .tc-category-name > span:last-child { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-body.rd-app #overviewPage .tc-color-dot { flex: 0 0 8px; height: 8px; border-radius: 50%; background: var(--tc-color); }
+body.rd-app #overviewPage .tc-color-dot { flex: 0 0 6px; height: 6px; border-radius: 50%; background: var(--tc-color); }
 body.rd-app #overviewPage .tc-category-percent { flex-shrink: 0; color: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
 @media (max-width: 600px) {
-  /* Two columns leave room for a horizontal name and its share on small phones. */
-  body.rd-app #overviewPage .tc-category-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; }
+  body.rd-app #overviewPage .tc-category-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 6px; }
 }
 body.rd-app #overviewPage .tc-empty { padding: 2px 0; }
 body.rd-app #overviewPage .tc-empty p, body.rd-app #overviewPage .tc-refund-note { margin: 7px 0 0; padding: 0; border: 0; color: var(--muted); font-size: 11px; font-weight: 500; line-height: 1.5; overflow-wrap: anywhere; }

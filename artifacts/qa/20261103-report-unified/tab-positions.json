@@ -1,0 +1,38 @@
+{
+  "ok": true,
+  "positions": [
+    {
+      "width": 354,
+      "tab": "expenses",
+      "x": 18,
+      "y": 447.953125,
+      "height": 42,
+      "viewportWidth": 390
+    },
+    {
+      "width": 354,
+      "tab": "itinerary",
+      "x": 18,
+      "y": 447.953125,
+      "height": 42,
+      "viewportWidth": 390
+    },
+    {
+      "width": 912,
+      "tab": "expenses",
+      "x": 264,
+      "y": 344.765625,
+      "height": 42,
+      "viewportWidth": 1440
+    },
+    {
+      "width": 912,
+      "tab": "itinerary",
+      "x": 264,
+      "y": 344.765625,
+      "height": 42,
+      "viewportWidth": 1440
+    }
+  ],
+  "errors": []
+}

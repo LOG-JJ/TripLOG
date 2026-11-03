@@ -1,0 +1,65 @@
+{
+  "purpose": "Raster reference sheet of existing runtime SVG assets for image generation; no UI mockup HTML saved.",
+  "assets": [
+    {
+      "id": "airport",
+      "path": "src/assets/noto-emoji/emoji_u2708.svg",
+      "sha256": "95d4e5e64dec4cd5a68cd61116467f0ccef6471b75e729f876cc262717533018"
+    },
+    {
+      "id": "shrine",
+      "path": "src/assets/noto-emoji/emoji_u26e9.svg",
+      "sha256": "c7d6d61ad0603083388f8dc612532b879ab100d308de24a7d6af32ec1910bbe6"
+    },
+    {
+      "id": "restaurant",
+      "path": "src/assets/noto-emoji/emoji_u1f37d.svg",
+      "sha256": "c040ddcf88aac7a18a144ff45cc381f3a45ef9d480e811d7908a6859aeb8b199"
+    },
+    {
+      "id": "tower",
+      "path": "src/assets/noto-emoji/emoji_u1f5fc.svg",
+      "sha256": "b4f1ec82a0483ce5b0c5005380e66479ccee18188a2f39a92a657655f4912015"
+    },
+    {
+      "id": "island",
+      "path": "src/assets/noto-emoji/emoji_u1f3dd.svg",
+      "sha256": "11577612fa1f952ad66cf7a6b4e00d266625083bc480e8a9a6f37546932d0b81"
+    },
+    {
+      "id": "temple",
+      "path": "src/assets/noto-emoji/emoji_u1f6d5.svg",
+      "sha256": "08c494227690787de678eb4d666f472b11f8bad63039033d0373973ec9b818ba"
+    },
+    {
+      "id": "urban",
+      "path": "src/assets/noto-emoji/emoji_u1f3d9.svg",
+      "sha256": "e69a35109641876c1793cff622b16666ecb9fcd49a66bf3c2b6ee7eab2b1dbf9"
+    },
+    {
+      "id": "shopping",
+      "path": "src/assets/noto-emoji/emoji_u1f6cd.svg",
+      "sha256": "d1868389e1dc9ccc616f19249653ceb65f2e83f6edcebc4d382ad4a9ecdb8482"
+    },
+    {
+      "id": "hotel",
+      "path": "src/assets/noto-emoji/emoji_u1f3e8.svg",
+      "sha256": "f5c3c3e530c628cc0c833640b802b6455bbefe1768633abb8b7d5d37711cc0b3"
+    },
+    {
+      "id": "train",
+      "path": "src/assets/noto-emoji/emoji_u1f686.svg",
+      "sha256": "fdf99e3b3921b9a540ccca6ee7d80192203da6b86487831dcdd79886611747b0"
+    },
+    {
+      "id": "cafe",
+      "path": "src/assets/noto-emoji/emoji_u2615.svg",
+      "sha256": "5830ae818458ee3c51208af6196a8a6c3d2a27e652aed2380c0b26a39d13d9dc"
+    },
+    {
+      "id": "museum",
+      "path": "src/assets/noto-emoji/emoji_u1f3db.svg",
+      "sha256": "3a28155e99b8b81568b65f33fce22809142b69efeb38443f7a5ca861c578a9fc"
+    }
+  ]
+}

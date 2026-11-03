@@ -1,13 +1,14 @@
 function pageUrl(page) {
   const url = new URL(location.href);
   url.searchParams.set('page', page);
-  if (['overview', 'itinerary', 'budget', 'settlement', 'report', 'settings'].includes(page) && typeof state !== 'undefined' && state.id) url.searchParams.set('trip', state.id);
+  if (page !== 'travel') url.searchParams.delete('travelTab');
+  if (['overview', 'itinerary', 'travel', 'budget', 'settlement', 'report', 'settings'].includes(page) && typeof state !== 'undefined' && state.id) url.searchParams.set('trip', state.id);
   else url.searchParams.delete('trip');
   return url;
 }
 
 function setActivePage(page) {
-  const allowedPages = ["start", "overview", "itinerary", "budget", "settlement", "report", "settings"];
+  const allowedPages = ["start", "overview", "itinerary", "travel", "budget", "settlement", "report", "settings"];
   const nextPage = allowedPages.includes(page) ? page : "start";
   if (nextPage === activePage && !isPageTransitioning) return;
 
@@ -40,6 +41,7 @@ function syncPageVisibility() {
   els.startPage.hidden = activePage !== "start";
   els.overviewPage.hidden = activePage !== "overview";
   els.itineraryPage.hidden = activePage !== "itinerary";
+  els.travelPage.hidden = activePage !== "travel";
   els.budgetPage.hidden = activePage !== "budget";
   els.settlementPage.hidden = activePage !== "settlement";
   els.reportPage.hidden = activePage !== "report";
@@ -48,6 +50,7 @@ function syncPageVisibility() {
   els.startPage.classList.toggle("page-active", activePage === "start");
   els.overviewPage.classList.toggle("page-active", activePage === "overview");
   els.itineraryPage.classList.toggle("page-active", activePage === "itinerary");
+  els.travelPage.classList.toggle("page-active", activePage === "travel");
   els.budgetPage.classList.toggle("page-active", activePage === "budget");
   els.settlementPage.classList.toggle("page-active", activePage === "settlement");
   els.reportPage.classList.toggle("page-active", activePage === "report");

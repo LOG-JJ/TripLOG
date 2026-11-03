@@ -1,0 +1,109 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Seoul",
+  "stage": "image-mockups-only",
+  "status": "component-selections-revision-requested",
+  "userRequest": "오늘의 여행 텍스트 크기·굵기와 버튼 톤, 이날 지출 상세 가독성 개선 목업. 앞으로 해당 목업이 없는 경우 구현 전에 사용자에게 확인.",
+  "appSourceChanged": false,
+  "productionDataChanged": false,
+  "deployed": false,
+  "workflow": "TripLOG + image-first-frontend-design + image-creator + Product Design ideate",
+  "generationPath": "built-in image_gen",
+  "generationMode": "T2I",
+  "imageInputs": [],
+  "sourcePolicy": "Attached screenshots were read as task context, not passed as image inputs, following the project's T2I default. Each variant was generated independently, never from another generated image.",
+  "viewports": {
+    "width": 390,
+    "height": 844,
+    "states": 2,
+    "requestedBoard": {
+      "width": 820,
+      "height": 884
+    }
+  },
+  "displayOrderAuthority": "The exact order in which generatedImage outputs appeared in this chat; all calls were sequential.",
+  "selectedVariant": null,
+  "overwrite": false,
+  "assets": [
+    {
+      "id": "compact-overview",
+      "displayOrder": 1,
+      "prompt": "Create a Korean TripLOG UI mockup for the “오늘의 여행” flow, in one compact daily-overview direction. Show two aligned 390 × 844 app-only views on an 820 × 884 board: the main screen and its opened “이날 지출” detail sheet. Use white surfaces, navy #0b1020, yellow #fff05a for the primary action, pastel blue #bce6fb and pink #f7afc7, thin outlines and restrained small offset shadows, matching the existing project. Use Pretendard-like Korean typography: body 13–14px regular/medium, place name 18px semibold, money 22px semibold, secondary labels 12px. Avoid oversized heavy text. Use reusable colorful category emoji and small consistent line icons, without extra icon containers.\n\nCurrent date anchor: 2026-11-01, Sunday. The main screen shows TripLOG, “오늘의 여행”, “Day 1 · 11.1 (일) · 순천”, and a compact next-place surface: “09:30”, “순천만 국가정원”, “전남 순천시 · 순천만 국가정원”, copy and pencil icons. Group “방문 완료”, yellow “길찾기”, and small “건너뛰기” with 40–44px touch areas. Make “여기부터 시작” a quiet inline play-icon action beside “이후 일정”. Show 12:00 점심 식사 and 15:00 순천만습지, then a compact wallet row “이날 지출 44,000원 · 2건”, and the existing five-item navigation.\n\nThe detail sheet prioritizes 44,000원 and 2건, with a clear two-part horizontal category bar and icon rows: 🍽️ 식비 32,000원, 🚆 교통 12,000원. Put “전체 누적 286,800원 · 9건” and its included “사전구매 195,600원” in a smaller separate summary. Do not add overlapping totals together. Replace long explanatory text with concise labels and a small refund-minus cue. Finish with “지출 내역 보기”. No device frame or OS chrome. No image inputs.",
+      "mode": "T2I",
+      "inputImages": [],
+      "startedAtEpoch": 1793507338.227,
+      "originalPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a14a76-7d13-7b52-8e8a-996a2d994f1e\\exec-61ed1085-0225-40f5-82aa-c71832ae4d9f.png",
+      "savedPath": "artifacts/design/20261101-today-travel-refinement/compact-overview.png",
+      "sha256": "8ae6aae733da5c8cb7709bb2ed015946e1f04c6f0640c54cb90890174dedee1d",
+      "originalSha256": "8ae6aae733da5c8cb7709bb2ed015946e1f04c6f0640c54cb90890174dedee1d",
+      "startedAtUtc": "2026-11-01T04:28:58.227000+00:00"
+    },
+    {
+      "id": "timeline-flow",
+      "displayOrder": 2,
+      "prompt": "Create one coherent timeline-led redesign of the Korean TripLOG “오늘의 여행” flow. Show two aligned 390 × 844 app-content views on an 820 × 884 board: today’s screen and its expense detail. Keep the project’s white background, navy #0b1020, primary yellow #fff05a, pastel blue #bce6fb and pink #f7afc7, thin borders and small restrained offset shadows. Use compact Pretendard-like type: regular/medium 13–14px body, 18px semibold destination, 22px semibold main amount, 12px secondary information. Avoid extra-bold text and oversized controls. Use existing-style colorful category emoji and consistent small line icons; no photographs, destination-specific illustrations or inner icon boxes.\n\nAnchor mock dates to Sunday 2026-11-01. Main: TripLOG, “오늘의 여행”, “Day 1 · 11.1 (일) · 순천”. Make 09:30 “순천만 국가정원” the active stop in a continuous itinerary, with the compact address “전남 순천시 · 순천만 국가정원”, copy and edit icons, and a neatly aligned action row: “방문 완료”, yellow “길찾기”, “건너뛰기”. Continue with 12:00 “점심 식사” and 15:00 “순천만습지”. “여기부터 시작” is a small play-icon text action beside “이후 일정”, not a large yellow button. Include a slim wallet strip “이날 지출 44,000원 · 2건”. Bottom navigation must be exactly “개요 / 일정 / 지출 / 리포트 / 설정”.\n\nExpense detail: title “이날 지출”, close control, “11.1 (일)”, 44,000원 and 2건. Prioritize two airy ledger rows with colorful symbols: 🍽️ 점심 식사 / 식비 / 32,000원 and 🚆 이동 / 교통 / 12,000원. Add a small two-color spending-composition strip, then a compact lower group “전체 누적 286,800원 · 9건” with “사전구매 포함 195,600원”. Make it clear pre-purchases are included in the cumulative total, not additional money. Keep refund information to “환불 차감 반영”, without inventing a refund amount. Finish with “지출 내역 보기”. No OS chrome, device frame, new features or image inputs.",
+      "mode": "T2I",
+      "inputImages": [],
+      "startedAtEpoch": 1793507434.302,
+      "originalPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a14a76-7d13-7b52-8e8a-996a2d994f1e\\exec-ce9d4de6-54a4-4224-94d7-1fcd6e05d784.png",
+      "savedPath": "artifacts/design/20261101-today-travel-refinement/timeline-flow.png",
+      "sha256": "eb47d81bad7676807a5cad53f96fdfc902738ae9cd228f886833134d5f87468d",
+      "originalSha256": "eb47d81bad7676807a5cad53f96fdfc902738ae9cd228f886833134d5f87468d",
+      "startedAtUtc": "2026-11-01T04:30:34.302000+00:00"
+    },
+    {
+      "id": "visual-summary",
+      "displayOrder": 3,
+      "prompt": "Create one coherent compact visual-summary direction for the Korean TripLOG “오늘의 여행” flow. Present its main screen and opened expense sheet as two aligned 390 × 844 app-only views on an 820 × 884 board. Preserve the existing white surface, navy #0b1020, primary yellow #fff05a, pastel blue #bce6fb and pastel pink #f7afc7, thin outlines, modest radii and small offset shadows. Typography should feel lighter than a heavy bold dashboard: Pretendard-like 13–14px regular/medium body, destination 18px semibold, main money 22px semibold, secondary information 12px. Use small reusable colorful category emoji with consistent line icons, without additional square icon frames, photographs or landmark-specific artwork.\n\nMock date anchor is Sunday 2026-11-01. Main content: TripLOG, “오늘의 여행”, “Day 1 · 11.1 (일) · 순천”. A shallow pale-blue next-place panel has a small “다음 장소” label, “09:30 순천만 국가정원”, “전남 순천시 · 순천만 국가정원”, copy and pencil icons. Its compact 40–44px action row contains white “방문 완료”, primary yellow “길찾기” and quiet “건너뛰기”. Below it, use a grouped list with category emoji: 12:00 점심 식사 and 15:00 순천만습지. Position the understated play-icon action “여기부터 시작” beside “이후 일정”, without a large filled button. End with a slim pink-accent wallet summary “이날 지출 44,000원 · 2건”. Navigation must read exactly “개요 / 일정 / 지출 / 리포트 / 설정”.\n\nExpense sheet: clear “이날 지출” heading, “11.1 (일) · 2건”, close control, and a restrained donut visualization with 44,000원 in its center. Two directly labeled color-keyed rows show 🍽️ 식비 32,000원 73% in pink and 🚆 교통 12,000원 27% in blue. Beneath a divider, show “전체 누적 286,800원 · 9건” with a small ticket-icon line “사전구매 포함 195,600원”, clearly a subset of that total. Keep explanation to “환불 차감 반영”, without invented refund figures. Finish with “지출 내역 보기”. No extra features, device frame, OS chrome or input images.",
+      "mode": "T2I",
+      "inputImages": [],
+      "startedAtEpoch": 1793507492.469,
+      "originalPath": "C:\\Users\\tbdk5\\.codex\\generated_images\\01a14a76-7d13-7b52-8e8a-996a2d994f1e\\exec-d4ab0ff1-5dad-4afd-a77e-655ab078b4dd.png",
+      "savedPath": "artifacts/design/20261101-today-travel-refinement/visual-summary.png",
+      "sha256": "c964a4d2d96d910a67d23096d609a585b63afc7c97370bd699276e6c76a243f8",
+      "originalSha256": "c964a4d2d96d910a67d23096d609a585b63afc7c97370bd699276e6c76a243f8",
+      "startedAtUtc": "2026-11-01T04:31:32.469000+00:00"
+    }
+  ],
+  "taskContextScreenshots": [
+    {
+      "originalPath": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-ed132aa7-1d37-4feb-9f2e-66cc1f6e15e0.png",
+      "savedPath": "artifacts/design/20261101-today-travel-refinement/current-next-place.png",
+      "role": "User-reported oversized heavy destination typography and mismatched action buttons",
+      "sentToImageGen": false,
+      "sha256": "bfd59996ffd7dc7b3417ebaa939e832c2d8f94355e60fc497963830ce71b6c41"
+    },
+    {
+      "originalPath": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-3c980eb0-a332-4896-ac12-a7514ab6fda7.png",
+      "savedPath": "artifacts/design/20261101-today-travel-refinement/current-start-button.png",
+      "role": "User-reported start-position action styling",
+      "sentToImageGen": false,
+      "sha256": "fa4cd34c66ee5f3e58d595894286291aba3b766a7aadb638db112d3882ba24ec"
+    },
+    {
+      "originalPath": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-c20496e8-7904-46f1-a008-10afe1c50e5f.png",
+      "savedPath": "artifacts/design/20261101-today-travel-refinement/current-spending-detail-expanded.png",
+      "role": "User-reported low-readability text-only expense detail",
+      "sentToImageGen": false,
+      "sha256": "2b2a82bf15d89e098230ddea20ab57130e9e617e9747747c4ba40dc1650901a6"
+    },
+    {
+      "originalPath": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-4054ae54-2dbd-44d0-a72d-0e1789efc69a.png",
+      "savedPath": "artifacts/design/20261101-today-travel-refinement/current-spending-detail.png",
+      "role": "User-reported expense detail compact screenshot",
+      "sentToImageGen": false,
+      "sha256": "6afde418270fd79af3a3db8457635d92432b566308f2bdb8384b07f317454abd"
+    }
+  ],
+  "selectedComponents": {
+    "travel": {
+      "displayOrder": 1,
+      "id": "compact-overview"
+    },
+    "expenseDetail": {
+      "displayOrder": 3,
+      "id": "visual-summary"
+    }
+  },
+  "revisionBrief": "artifacts/design/20261101-today-selected-combination/brief.md"
+}

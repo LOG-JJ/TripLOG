@@ -39,7 +39,7 @@ async function main() {
       await selected(dates[1]); await page.evaluate(() => render()); await selected(dates[1]);
       // Reopening Schedule through the actual dock/menu resets to the current date.
       await page.locator('.tl-bottom-nav:not(.tl-nav-dock) [data-trip-nav="itinerary"]').last().click();
-      await page.locator('#tripNavigationMenu [data-nav-item="itinerary"]').click(); await selected(date);
+      await selected(date);
       cases.push({ now, date, title });
     }
     await page.clock.setFixedTime(new Date('2026-10-26T09:00:00+09:00'));

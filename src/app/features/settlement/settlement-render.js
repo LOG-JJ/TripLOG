@@ -36,45 +36,11 @@ function getSettlementEntryStatus(entry, sourceState) {
   };
 }
 
-function renderSettlementEditors(totals) {
-  const membersListWrap = document.querySelector("#settlementMembersList");
-  const individualInputsWrap = document.querySelector("#settlementIndividualSpentInputs");
-  const sourceSelect = document.querySelector("#settlementExpenseSourceSelect");
-  const sourceSummary = document.querySelector("#settlementSourceSummary");
-  const expenseSplitList = document.querySelector("#settlementExpenseSplitList");
-
-  if (!membersListWrap || !individualInputsWrap || !expenseSplitList) return;
-
-  const sources = getSettlementExpenseSources(totals);
-  const selectedSource = getSelectedSettlementExpenseSource(sources);
-  const sourceState = selectedSource.state || state;
-  const companions = state.companions || [];
-  const settings = getSettlementSettings();
-  const settlementModel = buildSettlementModel(selectedSource);
-  const { members, entryRows } = settlementModel;
-  const expandedEntryKey = entryRows.some((row) => row.key === settings.expandedEntryKey) ? settings.expandedEntryKey : "";
-  if (settings.expandedEntryKey && !expandedEntryKey) settings.expandedEntryKey = "";
-
-  if (sourceSelect) {
-    sourceSelect.replaceChildren();
-    sources.forEach((source) => {
-      const option = document.createElement("option");
-      option.value = source.id;
-      option.textContent = source.label;
-      sourceSelect.appendChild(option);
-    });
-    sourceSelect.value = selectedSource.id;
-    syncCustomSelect(sourceSelect, { rebuild: true });
-  }
-
-  if (sourceSummary) {
-    const prefix = selectedSource.isCurrent ? "현재 여행" : "저장 기록";
-    sourceSummary.textContent = `${prefix}에서 ${entryRows.length}건의 지출을 불러왔습니다.`;
-  }
-
-  renderSettlementMemberChips(membersListWrap, companions);
-  renderCompanionSpentInputs(individualInputsWrap, companions);
-  renderSettlementExpenseLedger(expenseSplitList, entryRows, members, sourceState, expandedEntryKey);
+function renderSettlementEditors() {
+  const members = document.querySelector('#settlementMembersList');
+  const legacy = document.querySelector('#settlementIndividualSpentInputs');
+  if (members) renderSettlementMemberChips(members, state.companions || []);
+  if (legacy) renderCompanionSpentInputs(legacy, state.companions || []);
 }
 
 function renderSettlementMemberChips(membersListWrap, companions) {
@@ -103,33 +69,15 @@ function renderSettlementMemberChips(membersListWrap, companions) {
   });
 }
 
-function renderCompanionSpentInputs(individualInputsWrap, companions) {
-  individualInputsWrap.replaceChildren();
-
-  if (companions.length === 0) {
-    const empty = document.createElement("div");
-    empty.className = "settlement-empty-inline";
-    empty.textContent = "멤버를 추가하면 개인 지출 입력 칸이 표시됩니다.";
-    individualInputsWrap.appendChild(empty);
-    return;
-  }
-
-  companions.forEach((companion, index) => {
-    const row = document.createElement("div");
-    row.className = "member-spent-row";
-    row.innerHTML = `
-      <span><em>${getCompanionEmoji(index)}</em> ${escapeHtml(companion.name)} 님의 개인 지출</span>
-      <div class="member-spent-input-wrap">
-        <input type="text" inputmode="numeric" class="companion-spent-input" data-index="${index}" value="${formatNumberWithCommas(companion.individualSpent || 0)}" placeholder="0" />
-        <span>원</span>
-      </div>
-    `;
-    row.querySelector(".companion-spent-input").addEventListener("change", (event) => {
-      updateCompanionSpent(index, parseFormattedNumber(event.target.value));
-    });
-    individualInputsWrap.appendChild(row);
-  });
-  setupCommaNumberInputs(individualInputsWrap.querySelectorAll(".companion-spent-input"));
+function renderCompanionSpentInputs(mount, companions) {
+  const pending = companions.filter(person => Number(person.individualSpent || 0) !== 0);
+  mount.replaceChildren();
+  mount.hidden = !pending.length;
+  if (!pending.length) return;
+  const note = document.createElement('p');
+  note.className = 'rd-muted';
+  note.textContent = '예전 추가 지출: ' + pending.map(person => person.name + ' ' + formatWon(person.individualSpent)).join(' · ') + '. 정산 화면에서 확인 후 지출 내역으로 옮겨 주세요.';
+  mount.appendChild(note);
 }
 
 function renderSettlementExpenseLedger(expenseSplitList, entryRows, members, sourceState, expandedEntryKey) {

@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-31",
+  "stage": "image-mockups-only",
+  "status": "accepted-for-later-implementation",
+  "mockData": true,
+  "referenceRole": "User-selected Today’s Trip main screen",
+  "sourceDatePolicy": "Client date 2026-10-31; scene dates, Day labels, money and references are illustrative and must not be hard-coded.",
+  "saveMethod": "Exact tool-returned original paths and SHA256 comparison",
+  "assets": [
+    {
+      "prompt": "Create a TripLOG “오늘의 여행” progress-interaction mockup board with three related 390 × 844 mobile views side by side, total 1218 × 844 CSS pixels. Match the attached user's selected main-screen design. Actual client date is October 31, 2026; retain the reference's fictional Day 2, October 28 Tokyo examples for continuity. These are sequential behavior states, not competing visual designs. Caption the views “방문 완료 후”, “건너뛴 후”, and “여기부터 시작”. In the completed state, the former 18:30 시부야 스카이 is in a compact completed section, and the next destination becomes 19:30 저녁 식사 with the same place-card actions. Show a small “방문 완료 · 되돌리기” toast above navigation. In the skipped state, show the same next destination but preserve the former place in a separate compact skipped section, with “건너뛰었어요 · 되돌리기”; do not mark it visited. Keep the original planned times and order intact. In the start-selection state, show a bottom sheet over the main screen with radio choices “19:30 저녁 식사” and “21:00 니시스가모 호텔”, a yellow “이 일정부터 시작” action and a close control. Earlier unchecked places remain unchecked. Retain the main layout's quick actions and daily cost summary when applicable; do not add reservation data where none exists. Label planned transport “이동 정보”, not “이동한 기록”. Use short Korean labels, compact type and the reference's components, with no extra settings or explanatory paragraphs.\n\nInput images:\n- codex-clipboard-220bccb0-a22b-42ef-9845-0a69bd8f9869.png: the user's selected Today’s Trip main screen and visual target for these interaction states.",
+      "date": "2026-10-31",
+      "mode": "I2I",
+      "inputs": [
+        {
+          "path": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-220bccb0-a22b-42ef-9845-0a69bd8f9869.png",
+          "role": "User-selected Today’s Trip visual target",
+          "savedPath": "artifacts/design/20261031-today-trip-interactions/reference.png",
+          "sha256": "b514399c7d44482d2a152a9f7625c32734aa96a134a82f4065dc5a97a04299f0"
+        }
+      ],
+      "targetBoard": {
+        "width": 1218,
+        "height": 844
+      },
+      "targetScreens": {
+        "width": 390,
+        "height": 844,
+        "count": 3
+      },
+      "mockData": true,
+      "startedAt": "2026-10-30T16:09:15.056Z",
+      "file": "progress-actions.png",
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-e422c23c-44e1-4a0e-95f1-cb0b9a8a8e1e.png",
+      "savedPath": "artifacts/design/20261031-today-trip-interactions/progress-actions.png",
+      "tool": "image_gen.imagegen",
+      "overwritten": false,
+      "sha256": "80b9d38a375c6837f1ae63604a091896a5ec3abfdab943b9cb62dc00c36a85f6"
+    },
+    {
+      "prompt": "Create a TripLOG quick-expense interaction mockup board with three related 390 × 844 mobile views side by side, total 1218 × 844 CSS pixels. Match the attached user's selected Today’s Trip design. Actual client date October 31, 2026; the reference's October 28 Day 2 Tokyo scenario is fictional example content. Caption the states “빠른 지출”, “금액 입력 중”, “저장 후”. First state: show a compact “지출 기록” bottom sheet over the Today’s Trip screen, prefilled with date 10.28, selected place “시부야 스카이”, category “관광”, and a prominent editable amount “JPY ¥2,700”. Currency can be changed beside the amount; date/place/category remain editable. Keep “카드 · 나” as one short expandable payment row and optional memo collapsed. A quiet small line shows “예시 환율 100엔 = 950원 · 25,650원”. Yellow action “지출 저장”. Second state: show the same sheet with the amount focused and a mobile numeric keyboard visible; recompose the sheet so the amount and save action stay visible above the keyboard, with reduced optional content. Do not render a keypad as an app feature. Third state: close the sheet, retain the same selected place and itinerary progress, update the daily expense strip from “86,000원 · 4건” to “111,650원 · 5건”, and show a small “지출을 기록했어요 · 보기” toast above navigation. Reuse the original main-screen hierarchy and components; no reservation editing, payment dashboard, uploads, extra forms or large illustrations.\n\nInput images:\n- codex-clipboard-220bccb0-a22b-42ef-9845-0a69bd8f9869.png: the user's selected Today’s Trip main screen as the visual target for quick expense capture.",
+      "date": "2026-10-31",
+      "mode": "I2I",
+      "inputs": [
+        {
+          "path": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-220bccb0-a22b-42ef-9845-0a69bd8f9869.png",
+          "role": "User-selected Today’s Trip visual target",
+          "savedPath": "artifacts/design/20261031-today-trip-interactions/reference.png",
+          "sha256": "b514399c7d44482d2a152a9f7625c32734aa96a134a82f4065dc5a97a04299f0"
+        }
+      ],
+      "targetBoard": {
+        "width": 1218,
+        "height": 844
+      },
+      "targetScreens": {
+        "width": 390,
+        "height": 844,
+        "count": 3
+      },
+      "mockData": true,
+      "startedAt": "2026-10-30T16:10:43.015Z",
+      "file": "quick-expense.png",
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-1ba46ca4-b56c-43d8-8f47-552a20f5d8a4.png",
+      "savedPath": "artifacts/design/20261031-today-trip-interactions/quick-expense.png",
+      "tool": "image_gen.imagegen",
+      "overwritten": false,
+      "sha256": "86cb63732327e90918b91fa2bcd63d0a068d410d38fbd16e364fb44048292bc7"
+    },
+    {
+      "prompt": "Create a TripLOG Today’s Trip supporting-state board at 1218 × 750 CSS pixels, arranged as six compact UI component examples in a three-by-two grid. Match the attached user's selected Today’s Trip design, not a new visual direction. Actual client date October 31, 2026; all displayed sample dates and values are fictional. These are component-state examples, not full app screens or alternative designs. Label each example outside its UI. “일정 없음”: short “오늘 등록된 일정이 없어요” and yellow “일정 추가”, without unrelated bookings or decorative art. “하루 완료”: concise “오늘 일정 완료”, eight completed places, a quiet “오늘 지출 86,000원 · 4건” row and expandable completed list, without a next-destination card. “예약 없음”: demonstrate the quick-action row reflowing to just “+ 지출” and “숙소로”; omit both reservation-copy shortcut and booking strip. “숙소 없음”: quick-action row contains just “예약번호” and “+ 지출”, without a dead hotel shortcut or placeholder. “이동시간 미입력”: compact “이동 정보”, known endpoints “카페 → 시부야 스카이”, a question-mark missing-time cue and “시간 입력”; never invent a travel duration or mode. “여행 전후”: two small date-header variants, “여행 전 · Day 1 미리보기” and “여행 후 · 마지막 날 기록”, conveying first-day preview before travel and last-day record after travel. Use small reusable category icons, concise Korean labels, accessible touch controls and the reference's original component hierarchy. Keep missing-information states lightweight and do not add settings, payment dashboards or large explanatory paragraphs.\n\nInput images:\n- codex-clipboard-220bccb0-a22b-42ef-9845-0a69bd8f9869.png: the user's selected Today’s Trip main screen as the visual target for supporting states.",
+      "date": "2026-10-31",
+      "mode": "I2I",
+      "inputs": [
+        {
+          "path": "C:/Users/tbdk5/AppData/Local/Temp/codex-clipboard-220bccb0-a22b-42ef-9845-0a69bd8f9869.png",
+          "role": "User-selected Today’s Trip visual target",
+          "savedPath": "artifacts/design/20261031-today-trip-interactions/reference.png",
+          "sha256": "b514399c7d44482d2a152a9f7625c32734aa96a134a82f4065dc5a97a04299f0"
+        }
+      ],
+      "targetBoard": {
+        "width": 1218,
+        "height": 750
+      },
+      "componentStates": 6,
+      "mockData": true,
+      "startedAt": "2026-10-30T16:12:53.516Z",
+      "file": "supporting-states.png",
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-c80de54e-5584-441e-ac6e-1c71b8638deb.png",
+      "savedPath": "artifacts/design/20261031-today-trip-interactions/supporting-states.png",
+      "tool": "image_gen.imagegen",
+      "overwritten": false,
+      "sha256": "e0ff43e65a95ecfbc256ea84fdf62981e8a0378c4a68cc9e12d439f2804ed959"
+    }
+  ],
+  "userDecision": {
+    "date": "2026-10-31",
+    "instruction": "ㅇㅋ 이거좋네 keep 구현전에 한번에 구현하기 위해서 이번엔 여행도구, 일정분석 개선목업만들어야함",
+    "scope": "Keep Today’s Trip main reference, progress states, quick expense and supporting-state mockups as the later implementation baseline. Continue mockups only."
+  }
+}

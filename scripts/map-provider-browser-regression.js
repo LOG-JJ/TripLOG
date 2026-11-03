@@ -92,8 +92,10 @@ async function main() {
       await page.locator('#itineraryTransitDialog [data-transit-cancel]').first().click();
 
       await page.evaluate(() => window.TripLog.features.travelCompanion.workspace.open('today'));
-      assert.equal(new URL(await page.locator('#ttPrimary a').getAttribute('href')).hostname, 'map.naver.com');
+      await page.locator('#ttCompanion:not([hidden])').waitFor();
+      assert.equal(new URL(await page.locator('#ttCompanion .cx-next-actions a').getAttribute('href')).hostname, 'map.naver.com');
       await page.evaluate(() => window.TripLog.features.travelCompanion.workspace.open('wallet'));
+      if (await page.locator('#ttCompanion .cx-past').count()) await page.locator('#ttCompanion .cx-past summary').click();
       await page.locator('[data-tt-action="reservation-detail"]').first().click();
       assert.match(await page.locator('.tt-detail-map').innerText(), /네이버지도/);
       assert.equal(new URL(await page.locator('.tt-detail-map').getAttribute('href')).hostname, 'map.naver.com');

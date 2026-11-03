@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Seoul",
+  "stage": "expense-settlement-entry-placement",
+  "status": "awaiting-user-review",
+  "generationPath": "built-in image_gen",
+  "mode": "T2I",
+  "callCount": 1,
+  "startedAtUtc": "2026-11-01 12:25:17 UTC",
+  "prompt": "Create a placement mockup for TripLOG’s existing expense ledger, showing the same proposed layout at mobile and desktop sizes on one board. Show a 390×844 CSS px mobile screen on the left and a desktop expense-ledger header and upper table with a 960px content area on the right. Label the two views “모바일” and “PC” outside the app content.\n\nThe requested change is to place a compact “경비 정산” button immediately to the left of the existing “영수증” button. Reuse the same appearance for these two secondary buttons: pale blue #bce6fb fill, navy #0b1020 thin outline, 9px corners, 42–44px height, restrained 13px Korean text, and 18px Phosphor-style outline icons. Use a users-three icon for “경비 정산” and a receipt icon for “영수증”. Keep a small gap between them. On desktop, retain the yellow “+ 지출 추가” button to their right. On mobile, keep the yellow “+ 지출 추가” action near the bottom above navigation.\n\nPreserve the current TripLOG design language: white surfaces, navy outlines, compact Pretendard-like typography, yellow #fff05a primary and selected controls, pale blue secondary controls, and short offset shadows on primary actions. Show the TripLOG wordmark with its pink LOG highlight, a small sync-status icon, and a settings gear in the app header. Keep the “지출 기록” page heading around 20px with moderate weight, not oversized or extra bold. On mobile, position the two compact secondary actions to the heading’s right without wrapping either button label.\n\nUnder the heading, retain the shared trip identity with a small travel illustration, “1000일 순천”, “2026.10.31 토 – 11.01 일”, and “1박 2일”. Retain the existing travel-cost summary showing “여행 경비”, “286,800원”, and “기록한 지출 9건”, followed by the search/filter controls, the tabs “전체 9 / 사전구매 3 / 여행 중 6”, and compact expense entries. Use sample entries “점심 식사” with “32,000원” and “식비”, and “이동” with “12,000원” and “교통”. Use the existing compact row hierarchy, light separators, edit pencils and reorder handles. The desktop view uses the existing table-style ledger.\n\nThe mobile bottom navigation has five items in order: “개요 / 일정 / 여행 / 지출 / 리포트”. Select “지출”. The expense tab is a direct destination with no expansion caret and no open submenu. Retain the report expansion caret. Do not add a separate settlement tab, settlement dialog, new summary cards, explanatory banners, phone casing, or device status bar. This is one placement proposal shown responsively, not alternative visual directions.",
+  "inputImages": [],
+  "output": {
+    "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-58458766-ab47-4944-8061-2f9147e0b46d.png",
+    "savedPath": "artifacts/design/20261101-expense-settlement-entry/expense-settlement-placement.png",
+    "sha256": "fcca09d07857e20fa52ad1a29b0ab2539a3cda25f72131f018c5f467fae8cd35",
+    "originalSha256": "fcca09d07857e20fa52ad1a29b0ab2539a3cda25f72131f018c5f467fae8cd35",
+    "exactSourceMatch": true
+  },
+  "overwrite": false,
+  "appSourceChanged": false,
+  "productionDataChanged": false,
+  "deployed": false,
+  "reviewScope": [
+    "Expense header: settlement immediately left of receipt using existing secondary-button style",
+    "Desktop retains expense-add to the right",
+    "Expense bottom-navigation direct destination without submenu or expansion caret"
+  ],
+  "viewports": {
+    "mobileCSS": [
+      390,
+      844
+    ],
+    "desktopContentCSS": 960
+  },
+  "userDecision": "User requested placement mockup before implementation."
+}

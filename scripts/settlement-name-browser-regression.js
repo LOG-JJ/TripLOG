@@ -30,7 +30,7 @@ async function main() {
     const dialog = page.locator('#rdCompanions');
     const open = async () => { await page.locator('#rdSettlement [data-rd-action="settlement-name"]').click(); await dialog.waitFor({ state: 'visible' }); };
     const close = async () => { await dialog.locator('.rd-dialog-head [data-rd-action="close"]').click(); await dialog.waitFor({ state: 'hidden' }); };
-    const name = () => page.locator('#rdSettlement .rd-settlement-name b').innerText();
+    const name = () => page.locator('#rdSettlement .st-member-identity').first().getAttribute('aria-label');
     const details = () => page.evaluate(() => ({ name: state.settlement.leaderName, entries: structuredClone(state.entries), shares: structuredClone(state.settlement.itemSplits), members: buildSettlementModel({ id: 'current', state }).memberSummaries.map(({ key, paid, owed, balance }) => ({ key, paid, owed, balance })) }));
     await page.goto(`${origin}/Travel?page=settlement&trip=reservation-empty-fixture`); await ready();
     assert.equal(await page.title(), '여행 가계부'); assert.match(page.url(), /page=settlement/);
@@ -41,9 +41,18 @@ async function main() {
       await saveAndRender();
     });
     const before = await details();
+    assert.equal(await name(), 'JH', 'Default leader label resolves the actual owner profile');
+    await page.evaluate(() => { window.TripLog.features.redesign.workspace.navigate('budget'); startEdit(findEntry('hotel')); });
+    assert.equal(await page.locator('#rdPayer option[value="leader"]').textContent(), 'JH', 'Expense payer uses the same owner-name fallback');
+    assert.equal(await page.locator('#rdPayer').inputValue(), 'leader', 'Display names do not replace stable payer keys');
+    await page.locator('#rdExpenseMemo').evaluate(node => { node.open = true; });
+    await page.locator('#rdExpenseMemo label').filter({has:page.locator('#rdPayer')}).screenshot({path:path.join(output,'profile-payer-JH-390.png'),animations:'disabled'});
+    await page.locator('#rdExpenseEditor .rd-dialog-head [data-rd-action="close"]').click();
+    await page.evaluate(() => window.TripLog.features.redesign.workspace.navigate('settlement'));
     await open(); await page.locator('#rdSettlementNameProfile').click();
     assert.equal(await page.locator('#rdSettlementName').inputValue(), 'JH');
-    await close(); assert.equal(await name(), '여행 대표', 'Cancel does not save a profile choice');
+    await close(); assert.equal(await name(), 'JH');
+    assert.equal((await details()).name, '여행 대표', 'Display fallback does not silently rename the shared trip');
     await open(); await page.locator('#rdSettlementName').fill('');
     await page.locator('#rdSettlementNameSave').click(); assert(await dialog.isVisible());
     assert.equal(await page.locator('#rdSettlementName').evaluate(el => el.validity.valueMissing), true);
@@ -56,7 +65,7 @@ async function main() {
     await page.locator('#rdSettlementNameSave').click(); await dialog.waitFor({ state: 'hidden' });
     assert.equal(await name(), 'JH');
     const after = await details(); assert.deepEqual({ ...after, name: before.name }, before, 'Renaming keeps payer IDs, money and all shares intact');
-    assert.match(await page.locator('.rd-transfers').innerText(), /동행 → JH/);
+    assert.match(await page.locator('.rd-transfers .st-transfer').getAttribute('aria-label'), /동행 → JH/);
     await open(); assert.equal(await page.locator('#settlementMembersList .leader').innerText(), 'JH'); await close();
     await page.reload(); await ready(); assert.equal(await name(), 'JH', 'Name survives reload');
     await page.evaluate(() => { window.TripLog.features.redesign.workspace.navigate('budget'); startEdit(findEntry('hotel')); });
@@ -78,6 +87,17 @@ async function main() {
     await page.evaluate(async () => { state.settlement.leaderName = '다른 기기 이름'; await saveAndRender(); });
     await page.locator('#rdSettlementNameSave').click(); assert.match(await page.locator('#rdSettlementNameError').innerText(), /다른 곳에서 이름이 변경/); await close();
     assert.equal(await name(), '다른 기기 이름');
+    const fallbacks = await page.evaluate(() => {
+      const previous = { name: state.settlement.leaderName, collaboration: structuredClone(state.collaboration) };
+      state.settlement.leaderName = '여행 대표';
+      state.collaboration.ownerId = 'different-trip-owner'; state.collaboration.ownerName = '원래 여행장';
+      const otherOwner = getSettlementLeaderName();
+      state.settlement.leaderName = '저장한 정산 이름'; const explicit = getSettlementLeaderName();
+      state.collaboration.ownerName = '나'; state.settlement.leaderName = '여행 대표'; const unknown = getSettlementLeaderName();
+      state.settlement.leaderName = previous.name; state.collaboration = previous.collaboration;
+      return { otherOwner, explicit, unknown };
+    });
+    assert.deepEqual(fallbacks, { otherOwner: '원래 여행장', explicit: '저장한 정산 이름', unknown: '여행 대표' }, 'Never replace another owner with the viewing account profile');
     await page.evaluate(async () => { await window.TripLogSyncRepository.update(state.id, record => ({ ...record, role: 'viewer' })); render(); });
     assert(await page.locator('#rdSettlement [data-rd-action="settlement-name"]').isDisabled());
     await page.locator('#rdSettlement [data-rd-action="companions"]').click();

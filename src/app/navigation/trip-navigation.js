@@ -3,28 +3,10 @@
   const { icon, text } = window.TripLog.ui.markup;
   const tabs = [
     ['overview', 'house', '개요'], ['itinerary', 'calendar-blank', '일정'],
-    ['budget', 'wallet', '지출'], ['report', 'chart-bar', '리포트'], ['settings', 'gear', '설정'],
+    ['travel', 'suitcase-rolling', '여행'], ['budget', 'wallet', '지출'], ['report', 'chart-bar', '리포트'],
   ];
-  const menus = {
-    itinerary: [
-      ['itinerary', 'calendar-blank', '일정표 보기', '날짜별 일정과 전체 동선', 'yellow'],
-      ['today', 'sun', '오늘의 여행', '지금 필요한 일정', 'pink'],
-      ['review', 'list-checks', '일정 점검', '겹치는 시간과 이동 확인', 'mint'],
-      ['wallet', 'ticket', '예약 지갑', '교통·숙소 예약 모아보기', 'blue'],
-      ['tools', 'suitcase-rolling', '여행 도구', '준비물·캘린더·포켓노트', 'mint'],
-    ],
-    budget: [
-      ['expenses', 'wallet', '지출 내역', '여행 경비를 한눈에', 'yellow'],
-      ['expense-new', 'plus-circle', '지출 추가', '새 지출 기록하기', 'mint'],
-      ['receipt', 'receipt', '영수증 가져오기', '사진이나 텍스트로 입력', 'pink'],
-      ['settlement', 'users-three', '경비 정산', '함께 쓴 돈 나누기', 'mint'],
-    ],
-    report: [
-      ['report-expenses', 'chart-pie', '지출 분석', '어디에 얼마나 썼는지', 'yellow'],
-      ['report-itinerary', 'chart-line-up', '일정 분석', '여행 일정 돌아보기', 'blue'],
-      ['pdf', 'file-pdf', 'PDF 내보내기', '여행 리포트 저장하기', 'blue'],
-    ],
-  };
+  // All tabs navigate directly; retain cleanup for restored legacy menu history.
+  const menus = {};
   let dialog, panel, content, shade, dock, surface, sourceDock, group = '', returnFocus, baseUrl = '', closing = false;
   let onNavigate, onSelect, historyReturn, pendingTab, rootOverflow = '', transition = 0;
   const animations = new Set();
@@ -33,7 +15,7 @@
   const easing = [.16, 1, .3, 1];
 
   function buttons() {
-    return tabs.map(([page, name, label]) => `<button type="button" data-trip-nav="${page}"${menus[page] ? ' aria-haspopup="dialog" aria-controls="tripNavigationMenu" aria-expanded="false"' : ''}>${icon(name)}<span>${label}</span>${menus[page] ? `<span class="tl-nav-expand" aria-hidden="true">${icon('caret-up')}</span>` : ''}</button>`).join('');
+    return tabs.map(([page, name, label]) => `<button type="button" data-trip-nav="${page}"${menus[page] ? ' aria-haspopup="dialog" aria-controls="tripNavigationMenu" aria-expanded="false"' : ''}><i class="tl-nav-icon" style="--tl-nav-icon:url('/src/assets/navigation/${name}.svg')" aria-hidden="true"></i><span>${label}</span>${menus[page] ? `<span class="tl-nav-expand" aria-hidden="true">${icon('caret-up')}</span>` : ''}</button>`).join('');
   }
   function animate(element, frames, options = {}) {
     const engine = window.TripLogMotion;

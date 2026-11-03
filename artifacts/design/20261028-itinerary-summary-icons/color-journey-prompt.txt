@@ -1,0 +1,11 @@
+Create one production-quality TripLOG mobile itinerary-summary concept, 390 × 844 CSS pixels, app content only. Current date: 2026-10-28; retain the historical example trip dates October 20–24, 2026.
+
+Use white backgrounds, navy typography and confident fine outlines, small offset shadows, yellow #fff05a, pastel blue #bce6fb and pink #f7afc7. Keep Korean labels readable at a 14–16px product scale. Show TripLOG branding, “일정 계획”, “도쿄 여행”, “10.20–10.24”, the “일정 편집 / 일정 요약” tabs, a compact copy action, and bottom navigation 개요 / 일정 / 지출 / 리포트 / 설정.
+
+Explore a compact illustrated journey layout. Three collapsed day panels form the main content. Each has Day and date across the top, a time range and stop count grouped as crisp icon-and-value pairs, then a small horizontal journey of colorful emoji-style destination icons connected by a fine line. Place short names beneath the icons rather than in a sentence. A remaining-count bubble and chevron indicate more stops. Keep destination icons naturally integrated without enclosing every icon in another bordered box.
+
+Day 1: 10.20 화, 13:00–21:20, 8곳; airport, ramen, observation tower; names 나리타공항 / 멘야무사시 / 도쿄도청; +5.
+Day 2: 10.21 수, 09:15–22:00, 12곳; shrine, shopping, skyline; names 메이지신궁 / 타케시타도리 / 시부야 스카이; +9.
+Day 3: 10.22 목, 06:53–22:20, 13곳; island, Buddha, harbor; names 에노시마 / 고토쿠인 / 요코하마; +10.
+
+Use expressive colorful pictograms and strong visual grouping. Show all three day panels comfortably. No expanded lists, log-like sentences, missing-input notices, helper paragraphs, long arrow-separated place strings, photographs, phone hardware or OS chrome. One coherent screen only.

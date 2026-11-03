@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-28",
+  "status": "superseded-featured-stay",
+  "stage": "image-mockup-only",
+  "mockData": true,
+  "revisionOf": "20261028-wallet-expense-link",
+  "userCorrection": "Reservation usability is primary. Payment UI is too prominent and complicated. Return to the original reservation-first proposal.",
+  "priorities": [
+    "Current stays and today's reservations first",
+    "Direct reservation-number copy, original ticket/reservation opening and map directions",
+    "Compact upcoming list and collapsed past reservations",
+    "Amounts only as small optional metadata; payment and expense linking inside editing"
+  ],
+  "options": [
+    {
+      "prompt": "Create a 390 × 844 mobile TripLOG “예약 지갑” screen. Date anchor: October 28, 2026. Prioritize practical reservation retrieval: “지금 필요한 예약”, upcoming reservations, collapsed past reservations. Compact TripLOG header, small add button, search and type filters. White surfaces, navy Korean type, yellow #fff05a primary actions, pale blue/pink accents, crisp outlines and small offset shadows. Use reusable colorful hotel, ticket and airplane category icons. Show an ongoing “니시스가모 호텔 / 10.27–10.31 · 4박” card with copyable booking number, short address, “길찾기” and “예약 열기”. Show “오늘 18:30 시부야 스카이” with “티켓 열기” and number copy. Show compact upcoming “10.31 나리타 → 인천” with departure time and booking number. Prices are tiny optional metadata only. Keep payment, expense-link settings and editing behind small pencil icons; show no payment forms, balances or expense panels. Preserve bottom navigation “개요 · 일정 · 지출 · 리포트 · 설정”. Fit several readable reservations, without decorative illustrations or explanatory paragraphs.",
+      "startedAt": "2026-10-28T09:30:22.460Z",
+      "mode": "T2I",
+      "inputs": [],
+      "name": "필요한 예약 우선",
+      "targetViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "displayOrder": 1,
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-16f87a97-c008-4868-b207-ea58bba5133d.png",
+      "savedPath": "artifacts/design/20261028-wallet-reservation-first/concept-1.png",
+      "tool": "image_gen.imagegen",
+      "overwritten": false,
+      "selected": false,
+      "sha256": "c4eabfca06e7e6596240d057817c5732a774c0d96c7d6d45097047ce7504412b"
+    },
+    {
+      "prompt": "Design a 390 × 844 TripLOG “예약 지갑” mobile screen centered on a compact date-grouped reservation list. Date anchor October 28, 2026. Use white backgrounds, dark navy Korean typography, yellow #fff05a action buttons, pale blue and pink status accents, dark outlines and modest offset shadows. Small TripLOG header without a slogan, search, compact type filter and add icon. Pin a concise ongoing “니시스가모 호텔 / 10.27–10.31 · 숙박 중” section with booking-number copy, address copy, “길찾기” and “예약 열기”. Below, date groups “오늘 10.28 수” and “10.31 토” contain “18:30 시부야 스카이” and “10:20 나리타 → 인천”. Give each row a reusable colorful category icon, short useful details, copyable number and direct ticket/reservation-open action. Include a small itinerary-link icon and edit pencil. Collapse “지난 예약” at the bottom. A price may appear only as tiny secondary metadata. Payment and expense-link settings stay inside editing and are absent from this screen. Bottom navigation reads “개요 · 일정 · 지출 · 리포트 · 설정”, with 일정 selected. Keep text short and information dense without crowding; no payment forms, expense summaries or large decorative art.",
+      "startedAt": "2026-10-28T09:31:30.688Z",
+      "mode": "T2I",
+      "inputs": [],
+      "name": "날짜별 간결한 목록",
+      "targetViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "displayOrder": 2,
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-fb987a47-4bc8-490b-a382-d3ca6a122eba.png",
+      "savedPath": "artifacts/design/20261028-wallet-reservation-first/concept-2.png",
+      "tool": "image_gen.imagegen",
+      "overwritten": false,
+      "selected": false,
+      "sha256": "f75a7e4e71830d32f451468c42408085ecc56d34dc3cdb82a2d5bbad4ac798bd"
+    },
+    {
+      "prompt": "Create a compact 390 × 844 TripLOG “예약 지갑” mobile screen. Date anchor October 28, 2026. Focus on finding and using reservations, with white surfaces, navy Korean type, yellow #fff05a primary actions, pale blue/pink accents, crisp outlines and small offset shadows. Small header, title, add pencil/plus icon, search and compact filters. Under “지금 필요한 예약”, place two readable cards in a mobile two-column layout: “숙박 중 / 니시스가모 호텔 / 10.27–10.31” with generic colorful hotel icon, booking-number copy and “길찾기”; “오늘 18:30 / 시부야 스카이” with colorful ticket icon, booking-number copy and “티켓 열기”. Each card has a small detail/edit icon; keep labels short and typography readable. Below, full-width concise date-ordered rows show “내일 12:00 식당 예약” and “10.31 10:20 나리타 → 인천”, with reference copy and reservation-open icons. Add collapsed “지난 예약”. Keep prices inconspicuous, and keep all payment and expense-link controls inside the edit screen rather than this wallet. Retain navigation “개요 · 일정 · 지출 · 리포트 · 설정”, 일정 selected. No slogan, large artwork, explanatory paragraphs or financial panels.",
+      "startedAt": "2026-10-28T09:32:45.485Z",
+      "mode": "T2I",
+      "inputs": [],
+      "name": "작은 카드로 빠르게 열기",
+      "targetViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "displayOrder": 3,
+      "originalPath": "C:/Users/tbdk5/.codex/generated_images/01a14a76-7d13-7b52-8e8a-996a2d994f1e/exec-a8cf4927-95ed-49d1-875e-9e3ff0da99fc.png",
+      "savedPath": "artifacts/design/20261028-wallet-reservation-first/concept-3.png",
+      "tool": "image_gen.imagegen",
+      "overwritten": false,
+      "selected": false,
+      "sha256": "63d525cda99515a0eb49bc3d6a3d31fc56b04eacce3cf9f04e77e901ba717a85"
+    }
+  ],
+  "supersededBy": "20261028-wallet-today-only",
+  "userFeedback": "Do not feature accommodation. Needed reservations must be for today only."
+}

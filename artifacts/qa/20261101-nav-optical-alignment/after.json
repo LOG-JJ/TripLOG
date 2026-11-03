@@ -1,0 +1,396 @@
+[
+  {
+    "width": 390,
+    "dpr": 1,
+    "nav": {
+      "x": 0,
+      "y": 778,
+      "width": 390,
+      "height": 66
+    },
+    "rows": [
+      {
+        "page": "overview",
+        "button": {
+          "x": 4,
+          "y": 784,
+          "width": 76.390625,
+          "height": 56
+        },
+        "icon": {
+          "x": 30.1875,
+          "y": 788.5,
+          "width": 24,
+          "height": 24
+        },
+        "label": {
+          "x": 31.8125,
+          "y": 815.5,
+          "width": 20.75,
+          "height": 16
+        },
+        "font": "24px Phosphor",
+        "glyph": "",
+        "metrics": {
+          "ascent": 21,
+          "descent": -1,
+          "left": -2,
+          "right": 22,
+          "fontAscent": 23,
+          "fontDescent": 2
+        },
+        "before": {
+          "display": "inline",
+          "lineHeight": "24px",
+          "verticalAlign": "baseline"
+        },
+        "transform": "none"
+      },
+      {
+        "page": "itinerary",
+        "button": {
+          "x": 80.390625,
+          "y": 784,
+          "width": 76.40625,
+          "height": 56
+        },
+        "icon": {
+          "x": 106.59375,
+          "y": 788.5,
+          "width": 24,
+          "height": 24
+        },
+        "label": {
+          "x": 108.21875,
+          "y": 815.5,
+          "width": 20.75,
+          "height": 16
+        },
+        "font": "24px Phosphor",
+        "glyph": "",
+        "metrics": {
+          "ascent": 21,
+          "descent": -1,
+          "left": -2,
+          "right": 22,
+          "fontAscent": 23,
+          "fontDescent": 2
+        },
+        "before": {
+          "display": "inline",
+          "lineHeight": "24px",
+          "verticalAlign": "baseline"
+        },
+        "transform": "none"
+      },
+      {
+        "page": "travel",
+        "button": {
+          "x": 156.796875,
+          "y": 784,
+          "width": 76.390625,
+          "height": 56
+        },
+        "icon": {
+          "x": 182.984375,
+          "y": 788.5,
+          "width": 24,
+          "height": 24
+        },
+        "label": {
+          "x": 184.609375,
+          "y": 815.5,
+          "width": 20.75,
+          "height": 16
+        },
+        "font": "20px Phosphor",
+        "glyph": "",
+        "metrics": {
+          "ascent": 19,
+          "descent": 1,
+          "left": -3,
+          "right": 17,
+          "fontAscent": 19,
+          "fontDescent": 1
+        },
+        "before": {
+          "display": "block",
+          "lineHeight": "20px",
+          "verticalAlign": "baseline"
+        },
+        "transform": "none"
+      },
+      {
+        "page": "budget",
+        "button": {
+          "x": 233.1875,
+          "y": 784,
+          "width": 76.40625,
+          "height": 56
+        },
+        "icon": {
+          "x": 259.390625,
+          "y": 788.5,
+          "width": 24,
+          "height": 24
+        },
+        "label": {
+          "x": 261.015625,
+          "y": 815.5,
+          "width": 20.75,
+          "height": 16
+        },
+        "font": "24px Phosphor",
+        "glyph": "",
+        "metrics": {
+          "ascent": 20,
+          "descent": -3,
+          "left": -2,
+          "right": 23,
+          "fontAscent": 23,
+          "fontDescent": 2
+        },
+        "before": {
+          "display": "inline",
+          "lineHeight": "24px",
+          "verticalAlign": "baseline"
+        },
+        "transform": "none"
+      },
+      {
+        "page": "report",
+        "button": {
+          "x": 309.59375,
+          "y": 784,
+          "width": 76.40625,
+          "height": 56
+        },
+        "icon": {
+          "x": 335.796875,
+          "y": 788.5,
+          "width": 24,
+          "height": 24
+        },
+        "label": {
+          "x": 332.234375,
+          "y": 815.5,
+          "width": 31.125,
+          "height": 16
+        },
+        "font": "24px Phosphor",
+        "glyph": "",
+        "metrics": {
+          "ascent": 20,
+          "descent": -2,
+          "left": -1,
+          "right": 23,
+          "fontAscent": 23,
+          "fontDescent": 2
+        },
+        "before": {
+          "display": "inline",
+          "lineHeight": "24px",
+          "verticalAlign": "baseline"
+        },
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "dpr": 1.5,
+    "nav": {
+      "x": 240,
+      "y": 778,
+      "width": 960,
+      "height": 66
+    },
+    "rows": [
+      {
+        "page": "overview",
+        "button": {
+          "x": 244,
+          "y": 784,
+          "width": 190.390625,
+          "height": 56
+        },
+        "icon": {
+          "x": 327.1875,
+          "y": 788.5,
+          "width": 24,
+          "height": 24
+        },
+        "label": {
+          "x": 328.8125,
+          "y": 815.5,
+          "width": 20.75,
+          "height": 16
+        },
+        "font": "24px Phosphor",
+        "glyph": "",
+        "metrics": {
+          "ascent": 21,
+          "descent": -1,
+          "left": -2,
+          "right": 22,
+          "fontAscent": 23,
+          "fontDescent": 2
+        },
+        "before": {
+          "display": "inline",
+          "lineHeight": "24px",
+          "verticalAlign": "baseline"
+        },
+        "transform": "none"
+      },
+      {
+        "page": "itinerary",
+        "button": {
+          "x": 434.390625,
+          "y": 784,
+          "width": 190.40625,
+          "height": 56
+        },
+        "icon": {
+          "x": 517.59375,
+          "y": 788.5,
+          "width": 24,
+          "height": 24
+        },
+        "label": {
+          "x": 519.21875,
+          "y": 815.5,
+          "width": 20.75,
+          "height": 16
+        },
+        "font": "24px Phosphor",
+        "glyph": "",
+        "metrics": {
+          "ascent": 21,
+          "descent": -1,
+          "left": -2,
+          "right": 22,
+          "fontAscent": 23,
+          "fontDescent": 2
+        },
+        "before": {
+          "display": "inline",
+          "lineHeight": "24px",
+          "verticalAlign": "baseline"
+        },
+        "transform": "none"
+      },
+      {
+        "page": "travel",
+        "button": {
+          "x": 624.796875,
+          "y": 784,
+          "width": 190.390625,
+          "height": 56
+        },
+        "icon": {
+          "x": 707.984375,
+          "y": 788.5,
+          "width": 24,
+          "height": 24
+        },
+        "label": {
+          "x": 709.609375,
+          "y": 815.5,
+          "width": 20.75,
+          "height": 16
+        },
+        "font": "20px Phosphor",
+        "glyph": "",
+        "metrics": {
+          "ascent": 19,
+          "descent": 1,
+          "left": -3,
+          "right": 17,
+          "fontAscent": 19,
+          "fontDescent": 1
+        },
+        "before": {
+          "display": "block",
+          "lineHeight": "20px",
+          "verticalAlign": "baseline"
+        },
+        "transform": "none"
+      },
+      {
+        "page": "budget",
+        "button": {
+          "x": 815.1875,
+          "y": 784,
+          "width": 190.40625,
+          "height": 56
+        },
+        "icon": {
+          "x": 898.390625,
+          "y": 788.5,
+          "width": 24,
+          "height": 24
+        },
+        "label": {
+          "x": 900.015625,
+          "y": 815.5,
+          "width": 20.75,
+          "height": 16
+        },
+        "font": "24px Phosphor",
+        "glyph": "",
+        "metrics": {
+          "ascent": 20,
+          "descent": -3,
+          "left": -2,
+          "right": 23,
+          "fontAscent": 23,
+          "fontDescent": 2
+        },
+        "before": {
+          "display": "inline",
+          "lineHeight": "24px",
+          "verticalAlign": "baseline"
+        },
+        "transform": "none"
+      },
+      {
+        "page": "report",
+        "button": {
+          "x": 1005.59375,
+          "y": 784,
+          "width": 190.390625,
+          "height": 56
+        },
+        "icon": {
+          "x": 1088.78125,
+          "y": 788.5,
+          "width": 24,
+          "height": 24
+        },
+        "label": {
+          "x": 1085.21875,
+          "y": 815.5,
+          "width": 31.125,
+          "height": 16
+        },
+        "font": "24px Phosphor",
+        "glyph": "",
+        "metrics": {
+          "ascent": 20,
+          "descent": -2,
+          "left": -1,
+          "right": 23,
+          "fontAscent": 23,
+          "fontDescent": 2
+        },
+        "before": {
+          "display": "inline",
+          "lineHeight": "24px",
+          "verticalAlign": "baseline"
+        },
+        "transform": "none"
+      }
+    ]
+  }
+]

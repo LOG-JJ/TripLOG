@@ -34,11 +34,12 @@ async function main() {
     const openWallet = async () => {
       await page.evaluate(() => window.TripLog.features.redesign.workspace.navigate('overview'));
       await page.locator('[data-rd-action="companion-transport"]').click();
+      await page.locator('#ttCompanion[data-tab="wallet"]:not([hidden])').waitFor({ state: 'visible' });
     };
-    const openDetail = async () => { await openWallet(); await page.locator('#ttCompanion [data-tt-action="reservation-detail"]').first().click(); };
+    const openDetail = async () => { await openWallet(); const past = page.locator('#ttCompanion .cx-past'); if (await past.count() && await past.getAttribute('open') === null) await past.locator('summary').click(); await page.locator('#ttCompanion [data-tt-action="reservation-detail"]').first().click(); };
     const closeWallet = async () => {
       if (await page.locator('#ttReservationDetail').isVisible()) await page.locator('#ttReservationDetail [data-tt-action="close"]').click();
-      if (await page.locator('#ttCompanion').isVisible()) await page.locator('#ttCompanion [data-tt-action="close"]').first().click();
+      if (await page.locator('#ttCompanion').isVisible()) await page.locator('.rd-nav [data-trip-nav="itinerary"]').click();
     };
     await page.goto(`${origin}/Travel?page=overview&trip=reservation-empty-fixture`); await ready();
     assert.equal(await page.title(), '여행 가계부');

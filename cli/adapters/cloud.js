@@ -25,12 +25,11 @@ class CloudAdapter {
     if (matches.length !== 1) fail(matches.length ? 'CONFLICT' : 'NOT_FOUND', matches.length ? '여행 ID가 중복됩니다. 서버 ID로 지정해 주세요.' : '접근 가능한 여행을 찾을 수 없습니다.');
     return this.record(await this.send({ action: 'read', tripId: matches[0].id }));
   }
-  writable(record) {
-    if (record.role === 'viewer') fail('FORBIDDEN', '조회 전용 여행입니다.');
+  writable(record, patches) {
+    if (record.role === 'viewer' && !M.splitOnly(patches)) fail('FORBIDDEN', '조회 전용 여행입니다.');
     if (record.archivedAt) fail('FORBIDDEN', '보관된 여행을 먼저 복원해 주세요.');
   }
   plan(record, next) {
-    this.writable(record);
     // Compare displayed snapshots, but use exact server versions for conflict checks.
     // This deliberately leaves note/comment entities and normalization defaults alone.
     const before = M.encode(record.snapshot), after = M.encode(next);
@@ -38,7 +37,7 @@ class CloudAdapter {
     return this.planPatches(record, patches);
   }
   planPatches(record, patches) {
-    this.writable(record);
+    this.writable(record, patches);
     if (patches.length > 500) fail('INVALID_INPUT', '한 번에 최대 500개 항목까지 변경할 수 있습니다.');
     for (const patch of patches) {
       if (record.privacy.shareItinerary === false && ['itinerary', 'reservation', 'progress', 'note_update', 'comment'].includes(patch.kind)) fail('FORBIDDEN', '이 여행은 일정 데이터를 서버에 공유하지 않습니다. 파일 모드로 작업해 주세요.');

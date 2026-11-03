@@ -1,0 +1,72 @@
+{
+  "source": "vendor\\phosphor-2.1.1\\Phosphor.woff2",
+  "sourceSha256": "c2ea45ea05ff5c7df1936770c104725f2a68f43fd343f35f3da23a30b27de32a",
+  "method": "Identical export for all glyphs: exact original paths, tight viewBox, no item-specific scale/offset",
+  "icons": [
+    {
+      "name": "house",
+      "codepoint": "0xe2c2",
+      "sourceGlyph": "uniE2C2",
+      "originalBounds": [
+        128,
+        64,
+        896,
+        864
+      ],
+      "saved": "src\\assets\\navigation\\house.svg",
+      "sha256": "b2ae7cbd47beddf2c34b57430e83c6fb01f903a48d9ba865b3e5e807d6f53687"
+    },
+    {
+      "name": "calendar-blank",
+      "codepoint": "0xe10a",
+      "sourceGlyph": "uniE10A",
+      "originalBounds": [
+        128,
+        64,
+        896,
+        896
+      ],
+      "saved": "src\\assets\\navigation\\calendar-blank.svg",
+      "sha256": "5c22737c491581295dacf2cebe8da661f758a0f64abf20eab5595be9fe68da58"
+    },
+    {
+      "name": "suitcase-rolling",
+      "codepoint": "0xe9b0",
+      "sourceGlyph": "uniE9B0",
+      "originalBounds": [
+        192,
+        -32,
+        832,
+        960
+      ],
+      "saved": "src\\assets\\navigation\\suitcase-rolling.svg",
+      "sha256": "ac9f6679f55b588198c1b3eedd2b0bb66c1f60cd04c2ea361c96d0142877603d"
+    },
+    {
+      "name": "wallet",
+      "codepoint": "0xe68a",
+      "sourceGlyph": "uniE68A",
+      "originalBounds": [
+        128,
+        128,
+        928,
+        832
+      ],
+      "saved": "src\\assets\\navigation\\wallet.svg",
+      "sha256": "19e5c10a9aced85a8604bbc7f0ff54645546b1dbece9380c0a0e438415064af8"
+    },
+    {
+      "name": "chart-bar",
+      "codepoint": "0xe150",
+      "sourceGlyph": "uniE150",
+      "originalBounds": [
+        96,
+        96,
+        928,
+        832
+      ],
+      "saved": "src\\assets\\navigation\\chart-bar.svg",
+      "sha256": "f1c1205d529fc6ff1b6e080d2d703a27d762830042ef93cf2e1c42e12136acbf"
+    }
+  ]
+}

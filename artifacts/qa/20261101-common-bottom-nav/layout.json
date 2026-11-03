@@ -1,0 +1,961 @@
+{
+  "records": [
+    {
+      "width": 320,
+      "dpr": 1,
+      "nav": {
+        "x": 0,
+        "y": 778,
+        "width": 320,
+        "height": 66
+      },
+      "data": [
+        {
+          "page": "overview",
+          "button": {
+            "x": 4,
+            "y": 784,
+            "width": 62.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 21.1875,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 24.8125,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/house.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "itinerary",
+          "button": {
+            "x": 66.390625,
+            "y": 784,
+            "width": 62.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 83.59375,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 87.21875,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/calendar-blank.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "travel",
+          "button": {
+            "x": 128.796875,
+            "y": 784,
+            "width": 62.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 145.984375,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 149.609375,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/suitcase-rolling.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "budget",
+          "button": {
+            "x": 191.1875,
+            "y": 784,
+            "width": 62.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 208.390625,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 212.015625,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/wallet.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "report",
+          "button": {
+            "x": 253.59375,
+            "y": 784,
+            "width": 62.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 270.796875,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 269.234375,
+            "y": 818,
+            "width": 31.125,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/chart-bar.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        }
+      ],
+      "editor": [
+        {
+          "iconWidth": 28,
+          "iconHeight": 24,
+          "gap": 4,
+          "labelHeight": 16,
+          "weight": "600"
+        },
+        {
+          "iconWidth": 28,
+          "iconHeight": 24,
+          "gap": 4,
+          "labelHeight": 16,
+          "weight": "600"
+        },
+        {
+          "iconWidth": 28,
+          "iconHeight": 24,
+          "gap": 4,
+          "labelHeight": 16,
+          "weight": "600"
+        },
+        {
+          "iconWidth": 28,
+          "iconHeight": 24,
+          "gap": 4,
+          "labelHeight": 16,
+          "weight": "600"
+        },
+        {
+          "iconWidth": 28,
+          "iconHeight": 24,
+          "gap": 4,
+          "labelHeight": 16,
+          "weight": "600"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "dpr": 1,
+      "nav": {
+        "x": 0,
+        "y": 778,
+        "width": 390,
+        "height": 66
+      },
+      "data": [
+        {
+          "page": "overview",
+          "button": {
+            "x": 4,
+            "y": 784,
+            "width": 76.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 28.1875,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 31.8125,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/house.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "itinerary",
+          "button": {
+            "x": 80.390625,
+            "y": 784,
+            "width": 76.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 104.59375,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 108.21875,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/calendar-blank.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "travel",
+          "button": {
+            "x": 156.796875,
+            "y": 784,
+            "width": 76.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 180.984375,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 184.609375,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/suitcase-rolling.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "budget",
+          "button": {
+            "x": 233.1875,
+            "y": 784,
+            "width": 76.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 257.390625,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 261.015625,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/wallet.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "report",
+          "button": {
+            "x": 309.59375,
+            "y": 784,
+            "width": 76.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 333.796875,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 332.234375,
+            "y": 818,
+            "width": 31.125,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/chart-bar.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        }
+      ],
+      "editor": [
+        {
+          "iconWidth": 28,
+          "iconHeight": 24,
+          "gap": 4,
+          "labelHeight": 16,
+          "weight": "600"
+        },
+        {
+          "iconWidth": 28,
+          "iconHeight": 24,
+          "gap": 4,
+          "labelHeight": 16,
+          "weight": "600"
+        },
+        {
+          "iconWidth": 28,
+          "iconHeight": 24,
+          "gap": 4,
+          "labelHeight": 16,
+          "weight": "600"
+        },
+        {
+          "iconWidth": 28,
+          "iconHeight": 24,
+          "gap": 4,
+          "labelHeight": 16,
+          "weight": "600"
+        },
+        {
+          "iconWidth": 28,
+          "iconHeight": 24,
+          "gap": 4,
+          "labelHeight": 16,
+          "weight": "600"
+        }
+      ]
+    },
+    {
+      "width": 760,
+      "dpr": 1,
+      "nav": {
+        "x": 30,
+        "y": 778,
+        "width": 700,
+        "height": 66
+      },
+      "data": [
+        {
+          "page": "overview",
+          "button": {
+            "x": 34,
+            "y": 784,
+            "width": 138.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 89.1875,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 92.8125,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/house.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "itinerary",
+          "button": {
+            "x": 172.390625,
+            "y": 784,
+            "width": 138.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 227.59375,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 231.21875,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/calendar-blank.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "travel",
+          "button": {
+            "x": 310.796875,
+            "y": 784,
+            "width": 138.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 365.984375,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 369.609375,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/suitcase-rolling.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "budget",
+          "button": {
+            "x": 449.1875,
+            "y": 784,
+            "width": 138.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 504.390625,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 508.015625,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/wallet.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "report",
+          "button": {
+            "x": 587.59375,
+            "y": 784,
+            "width": 138.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 642.78125,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 641.21875,
+            "y": 818,
+            "width": 31.125,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/chart-bar.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        }
+      ]
+    },
+    {
+      "width": 850,
+      "dpr": 1,
+      "nav": {
+        "x": 0,
+        "y": 778,
+        "width": 850,
+        "height": 66
+      },
+      "data": [
+        {
+          "page": "overview",
+          "button": {
+            "x": 4,
+            "y": 784,
+            "width": 168.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 74.1875,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 77.8125,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/house.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "itinerary",
+          "button": {
+            "x": 172.390625,
+            "y": 784,
+            "width": 168.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 242.59375,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 246.21875,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/calendar-blank.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "travel",
+          "button": {
+            "x": 340.796875,
+            "y": 784,
+            "width": 168.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 410.984375,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 414.609375,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/suitcase-rolling.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "budget",
+          "button": {
+            "x": 509.1875,
+            "y": 784,
+            "width": 168.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 579.390625,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 583.015625,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/wallet.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "report",
+          "button": {
+            "x": 677.59375,
+            "y": 784,
+            "width": 168.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 747.78125,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 746.21875,
+            "y": 818,
+            "width": 31.125,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/chart-bar.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "dpr": 1,
+      "nav": {
+        "x": 240,
+        "y": 778,
+        "width": 960,
+        "height": 66
+      },
+      "data": [
+        {
+          "page": "overview",
+          "button": {
+            "x": 244,
+            "y": 784,
+            "width": 190.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 325.1875,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 328.8125,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/house.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "itinerary",
+          "button": {
+            "x": 434.390625,
+            "y": 784,
+            "width": 190.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 515.59375,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 519.21875,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/calendar-blank.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "travel",
+          "button": {
+            "x": 624.796875,
+            "y": 784,
+            "width": 190.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 705.984375,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 709.609375,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/suitcase-rolling.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "budget",
+          "button": {
+            "x": 815.1875,
+            "y": 784,
+            "width": 190.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 896.390625,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 900.015625,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/wallet.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "report",
+          "button": {
+            "x": 1005.59375,
+            "y": 784,
+            "width": 190.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 1086.78125,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 1085.21875,
+            "y": 818,
+            "width": 31.125,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/chart-bar.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "dpr": 1.5,
+      "nav": {
+        "x": 240,
+        "y": 778,
+        "width": 960,
+        "height": 66
+      },
+      "data": [
+        {
+          "page": "overview",
+          "button": {
+            "x": 244,
+            "y": 784,
+            "width": 190.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 325.1875,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 328.8125,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/house.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "itinerary",
+          "button": {
+            "x": 434.390625,
+            "y": 784,
+            "width": 190.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 515.59375,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 519.21875,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/calendar-blank.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "travel",
+          "button": {
+            "x": 624.796875,
+            "y": 784,
+            "width": 190.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 705.984375,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 709.609375,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/suitcase-rolling.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "budget",
+          "button": {
+            "x": 815.1875,
+            "y": 784,
+            "width": 190.40625,
+            "height": 56
+          },
+          "icon": {
+            "x": 896.390625,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 900.015625,
+            "y": 818,
+            "width": 20.75,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/wallet.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        },
+        {
+          "page": "report",
+          "button": {
+            "x": 1005.59375,
+            "y": 784,
+            "width": 190.390625,
+            "height": 56
+          },
+          "icon": {
+            "x": 1086.78125,
+            "y": 790,
+            "width": 28,
+            "height": 24
+          },
+          "label": {
+            "x": 1085.21875,
+            "y": 818,
+            "width": 31.125,
+            "height": 16
+          },
+          "mask": "url(\"http://127.0.0.1:5568/src/assets/navigation/chart-bar.svg\")",
+          "typography": {
+            "size": "12px",
+            "weight": "600",
+            "lineHeight": "16px"
+          }
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

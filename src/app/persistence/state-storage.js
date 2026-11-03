@@ -124,6 +124,9 @@ function normalizeTravelCompanion(value, items) {
     title: row.title.trim(), date: string(row.date), endDate: string(row.endDate), time: string(row.time),
     endTime: string(row.endTime), arrivalDate: string(row.arrivalDate), transportKind: string(row.transportKind), from: string(row.from), to: string(row.to),
     reference: string(row.reference), location: string(row.location), url: string(row.url), note: string(row.note),
+    ticketUrl: string(row.ticketUrl), guests: string(row.guests), seats: string(row.seats), operator: string(row.operator), serviceNumber: string(row.serviceNumber),
+    linkedExpenseId: string(row.linkedExpenseId), linkedItineraryId: string(row.linkedItineraryId),
+    quotedAmount: Number.isFinite(row.quotedAmount) && row.quotedAmount >= 0 ? row.quotedAmount : 0, quotedCurrency: string(row.quotedCurrency),
   }));
   // A linked transport schedule owns its route and times. Persist the same values
   // in the wallet after any itinerary edit (including quick time adjustments).

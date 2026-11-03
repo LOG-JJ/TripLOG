@@ -53,7 +53,7 @@ async function main() {
       await page.evaluate(() => window.TripLog.features.redesign.workspace.navigate('overview'));
       await page.locator('[data-rd-action="companion-transport-new"]').click();
       await page.locator('#ttReservationName').fill('KTX 순천 → 용산');
-      await setFields({ ttReservationTime: '20:44', ttReservationArrivalTime: '06:00', ttReservationArrivalDate: '2026-09-26' });
+      await setFields({ ttReservationDate: '2026-09-25', ttReservationTime: '20:44', ttReservationArrivalTime: '06:00', ttReservationArrivalDate: '2026-09-26' });
       await open('ttReservationArrivalTime');
       const panel = panelFor('ttReservationArrivalTime');
       await panel.screenshot({ path: path.join(output, `arrival-${width}.png`), animations: 'disabled' });

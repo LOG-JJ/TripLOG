@@ -1,0 +1,151 @@
+{
+  "ok": true,
+  "origin": "http://127.0.0.1:11738",
+  "browser": "isolated Edge/Playwright",
+  "layout": [
+    {
+      "viewport": 320,
+      "title": {
+        "left": 14,
+        "right": 130.0625,
+        "top": 82,
+        "bottom": 108,
+        "width": 116.0625,
+        "height": 26,
+        "scrollWidth": 116,
+        "clientWidth": 116
+      },
+      "settlement": {
+        "left": 142.0625,
+        "right": 228.6875,
+        "top": 74,
+        "bottom": 116,
+        "width": 86.625,
+        "height": 42,
+        "scrollWidth": 85,
+        "clientWidth": 85
+      },
+      "receipt": {
+        "left": 234.6875,
+        "right": 306,
+        "top": 74,
+        "bottom": 116,
+        "width": 71.3125,
+        "height": 42,
+        "scrollWidth": 69,
+        "clientWidth": 69
+      },
+      "overflow": false
+    },
+    {
+      "viewport": 390,
+      "title": {
+        "left": 20,
+        "right": 156.0625,
+        "top": 82,
+        "bottom": 108,
+        "width": 136.0625,
+        "height": 26,
+        "scrollWidth": 136,
+        "clientWidth": 136
+      },
+      "settlement": {
+        "left": 168.0625,
+        "right": 271.6875,
+        "top": 74,
+        "bottom": 116,
+        "width": 103.625,
+        "height": 42,
+        "scrollWidth": 102,
+        "clientWidth": 102
+      },
+      "receipt": {
+        "left": 281.6875,
+        "right": 370,
+        "top": 74,
+        "bottom": 116,
+        "width": 88.3125,
+        "height": 42,
+        "scrollWidth": 86,
+        "clientWidth": 86
+      },
+      "overflow": false
+    },
+    {
+      "viewport": 760,
+      "title": {
+        "left": 20,
+        "right": 526.0625,
+        "top": 82,
+        "bottom": 108,
+        "width": 506.0625,
+        "height": 26,
+        "scrollWidth": 506,
+        "clientWidth": 506
+      },
+      "settlement": {
+        "left": 538.0625,
+        "right": 641.6875,
+        "top": 74,
+        "bottom": 116,
+        "width": 103.625,
+        "height": 42,
+        "scrollWidth": 102,
+        "clientWidth": 102
+      },
+      "receipt": {
+        "left": 651.6875,
+        "right": 740,
+        "top": 74,
+        "bottom": 116,
+        "width": 88.3125,
+        "height": 42,
+        "scrollWidth": 86,
+        "clientWidth": 86
+      },
+      "overflow": false
+    },
+    {
+      "viewport": 1440,
+      "title": {
+        "left": 264,
+        "right": 836.4375,
+        "top": 75.25,
+        "bottom": 102.75,
+        "width": 572.4375,
+        "height": 27.5,
+        "scrollWidth": 572,
+        "clientWidth": 572
+      },
+      "settlement": {
+        "left": 848.4375,
+        "right": 956.0625,
+        "top": 67,
+        "bottom": 111,
+        "width": 107.625,
+        "height": 44,
+        "scrollWidth": 106,
+        "clientWidth": 106
+      },
+      "receipt": {
+        "left": 966.0625,
+        "right": 1058.375,
+        "top": 67,
+        "bottom": 111,
+        "width": 92.3125,
+        "height": 44,
+        "scrollWidth": 90,
+        "clientWidth": 90
+      },
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "direct expenses without menu/history marker",
+    "header ordering and fit",
+    "settlement and Back",
+    "receipt dialog",
+    "expense data preserved"
+  ]
+}
