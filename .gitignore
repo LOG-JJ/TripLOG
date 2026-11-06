@@ -6,3 +6,14 @@ node_modules/
 artifacts/tmp/
 .playwright-cli/
 supabase/.temp/
+
+# Local credentials and private CLI state must never enter Git.
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+*.p12
+*.pfx
+*.dpapi

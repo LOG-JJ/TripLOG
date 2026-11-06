@@ -19,11 +19,11 @@ Browser 플러그인을 사용할 수 없어 프로젝트의 Playwright/Edge 격
 
 | 검사 | 실제 결과 |
 | --- | --- |
-| `node scripts/travel-costs-browser-regression.js` | 통과: 6개 분류 가로 표시, 확대 글자, 비율·색상·합계, 기존 카드 높이·PC 배열, 키보드 내역 이동, 추가·수정·삭제·환불·저장·새로고침, 320~1440px |
-| `node scripts/transit-journey-browser-regression.js` | 통과: 내용이 같은 동기화 후 기차 저장/새로고침, 실제 충돌 다섯 종류 차단·현재 값 보존, 기존 색상·구간·시간·입력 검사, 지도 왕복 임시 기록, 320~1536px |
-| `node scripts/domestic-route-browser-regression.js` | PC·모바일 통과: 국내 지도, 캐시·위치 조회·변경·실패·닫힌 창 보호, 네이버지도 왕복 임시 기록 |
-| `node scripts/map-provider-browser-regression.js` | PC·모바일 통과: 국내/해외 지도·이동 수단·좌표 없음·전일 구간·오늘·예약·임시 기록 |
-| `node scripts/travel-costs-regression.js` | 통과: 합계·외화 환산·선구매·환불·공통 집계·작은 비율 |
+| `node tests/travel-costs-browser-regression.js` | 통과: 6개 분류 가로 표시, 확대 글자, 비율·색상·합계, 기존 카드 높이·PC 배열, 키보드 내역 이동, 추가·수정·삭제·환불·저장·새로고침, 320~1440px |
+| `node tests/transit-journey-browser-regression.js` | 통과: 내용이 같은 동기화 후 기차 저장/새로고침, 실제 충돌 다섯 종류 차단·현재 값 보존, 기존 색상·구간·시간·입력 검사, 지도 왕복 임시 기록, 320~1536px |
+| `node tests/domestic-route-browser-regression.js` | PC·모바일 통과: 국내 지도, 캐시·위치 조회·변경·실패·닫힌 창 보호, 네이버지도 왕복 임시 기록 |
+| `node tests/map-provider-browser-regression.js` | PC·모바일 통과: 국내/해외 지도·이동 수단·좌표 없음·전일 구간·오늘·예약·임시 기록 |
+| `node tests/travel-costs-regression.js` | 통과: 합계·외화 환산·선구매·환불·공통 집계·작은 비율 |
 | `node bin/triplog.js dev test --suite sync --json` | 종료 0, `ok: true`; 실제 충돌·재시도·오프라인·다중 탭·연결 지출 원자성·정규화 검사 포함 |
 | `node bin/triplog.js dev test --suite source --json` | 종료 0, `ok: true` |
 | `node bin/triplog.js dev build --json` | 종료 0, `ok: true`; Travel.html·sw.js 빌드 지문 갱신 |

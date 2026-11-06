@@ -16,7 +16,7 @@ npm run cli -- dev doctor
 
 ## 대화형 터미널
 
-프로젝트 폴더의 `TripLOG.cmd`를 더블클릭하거나 PowerShell / Windows Terminal에서 다음 명령을 사용합니다. 최초 준비에는 위의 `npm ci`가 필요합니다.
+[TripLOG.cmd](../scripts/windows/TripLOG.cmd)를 더블클릭하거나 PowerShell / Windows Terminal에서 다음 명령을 사용합니다. 최초 준비에는 위의 `npm ci`가 필요합니다.
 
 ```powershell
 npm run terminal
@@ -273,6 +273,8 @@ triplog dev artifacts
 ```
 
 `dev serve`는 로컬 미리보기이며 Ctrl+C로 종료합니다. 테스트·빌드는 `package.json`의 기존 명령을 실행하고 종료 코드를 전달합니다. Edge Function 검사는 Deno가 필요합니다. 테스트 출력은 `scripts/helpers/artifact-output.js`와 `TRIPLOG_ARTIFACT_RUN`을 사용합니다.
+
+회귀 테스트·fixture·테스트 인증 도구는 `tests/`에 있습니다. 빌드·미리보기·자산 제작 도구는 `scripts/`에 있습니다. `npm run security:check`는 비공개 키 형식·민감한 추적 파일·배포 범위를 검사하며 소스 검사에도 포함됩니다. 네트워크 의존성 감사는 `npm run security:audit`로 실행합니다. 상세 기준은 [개발 구조](development.md)와 [보안 관리](security.md)에 있습니다.
 
 ```powershell
 triplog dev deploy plan --files cli/index.js --files README.md

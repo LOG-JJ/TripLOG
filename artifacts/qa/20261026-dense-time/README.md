@@ -14,8 +14,8 @@
 
 | 검사 | 결과 |
 | --- | --- |
-| `node scripts/time-wheel-browser-regression.js` | 통과: 5줄·폰트, 바깥 행 선택, 중간 애니메이션, 연속 키 입력, 마우스 스크롤·드래그·관성, CDP 터치 스크롤·중앙 편집, 시간 경계 순환, 입력·범위 보정, 확인·취소·시간 없음, 동작 줄이기, 열린 창 크기 변경, 저장 후 재조회 |
-| `node scripts/reservation-time-browser-regression.js` | 1440·390·320px 통과: 일정·예약 공통 스타일, 출발·도착 독립성, 입력·휠·확인·취소·시간 없음, 익일 도착 저장·재조회 |
+| `node tests/time-wheel-browser-regression.js` | 통과: 5줄·폰트, 바깥 행 선택, 중간 애니메이션, 연속 키 입력, 마우스 스크롤·드래그·관성, CDP 터치 스크롤·중앙 편집, 시간 경계 순환, 입력·범위 보정, 확인·취소·시간 없음, 동작 줄이기, 열린 창 크기 변경, 저장 후 재조회 |
+| `node tests/reservation-time-browser-regression.js` | 1440·390·320px 통과: 일정·예약 공통 스타일, 출발·도착 독립성, 입력·휠·확인·취소·시간 없음, 익일 도착 저장·재조회 |
 | `node bin/triplog.js dev test --suite source --json` | 종료 0, `ok: true` |
 | `node bin/triplog.js dev build --json` | 종료 0, `ok: true` |
 | `node bin/triplog.js dev artifacts --json` | 종료 0, `ok: true` |

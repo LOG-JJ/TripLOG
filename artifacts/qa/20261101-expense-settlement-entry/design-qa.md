@@ -15,7 +15,7 @@ final result: passed
 - [모바일 상단 비교](mobile-heading-comparison.png), [PC 상단 비교](desktop-heading-comparison.png): 제목 오른쪽의 경비 정산 → 영수증, PC의 지출 추가 순서 확인.
 - [하단바 비교](dock-comparison.png): 지출의 펼침 표시 제거와 활성 상태 확인.
 - 실제 [320px](budget-320.png), [390px](budget-390.png), [1440px](budget-1440.png).
-- 원본·캡처의 좌표/크기/정규화 방법과 보존본 SHA256: [capture-provenance.json](capture-provenance.json). 실제 화면 측정: [layout.json](layout.json).
+- 원본·캡처의 좌표/크기/정규화 방법과 보존본 SHA256: [capture-provenance.json](capture-provenance.json). 실제 화면 측정: [layout.json](../../tmp/20261101-expense-settlement-entry/relocated-20261104/layout.json).
 
 | 표면 | 검토 결과 |
 | --- | --- |

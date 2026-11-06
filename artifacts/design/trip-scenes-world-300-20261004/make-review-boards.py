@@ -4,7 +4,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 HERE = Path(__file__).resolve().parent
 PREVIOUS = HERE.parent / 'trip-scenes-expansion-20261004' / 'browser-cities'
-CURRENT = HERE / 'browser-cities'
+CURRENT = HERE.parent.parent / 'tmp' / '20261004-world-300-captures' / 'browser-cities'
 font = ImageFont.truetype('C:/Windows/Fonts/malgun.ttf', 17)
 
 def board(name, entries, columns=2):

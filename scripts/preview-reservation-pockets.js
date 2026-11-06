@@ -3,7 +3,7 @@ const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 const { createServer } = require('./serve-test');
-const fixture = require('./fixtures/reservation-pockets');
+const fixture = require('../tests/fixtures/reservation-pockets');
 const emptyFixture = { ...fixture, id: 'reservation-empty-fixture', tripName: '예약을 준비하는 여행', entries: [], travelCompanion: { reservations: [] } };
 const root = path.resolve(__dirname, '..');
 function createReservationPocketPreview() {

@@ -19,11 +19,11 @@ Browser plugin not available. 저장소의 Playwright·Edge 격리 fixture 사�
 | 실행 | 결과 |
 | --- | --- |
 | `node bin/triplog.js dev test --suite source --json` | 종료 코드 0, `ok: true` |
-| `node scripts/travel-tools-regression.js` | 날짜 넘김, DST 중복·결손, 30분 시차, 일출·일몰/극야·백야, 단위, Wi-Fi 이스케이프·길이·UTF-8 QR 통과 |
-| `node scripts/member-splits-regression.js` | 로컬 viewer 분담 저장, 계정 전환 거부, 격리 PostgreSQL 마이그레이션·저장·동일 요청 재시도·외부 계정/비공개 지출 거부 통과 |
-| `node scripts/sync-client-regression.js` | 동기화/오프라인/계정 전환/충돌 회귀 통과 |
-| `node scripts/travel-tools-browser-regression.js` | 7개 상세, 준비물/시간대 저장, 날짜 선택 ICS, QR 생성과 닫기 초기화, 단위/시간 변환, viewer 지출창 분담 저장, 개요 3~6개 배치 통과 |
-| `node scripts/settlement-ledger-browser-regression.js` | 공통 표 분담 저장·취소·실패·중복 방지·오래된 원본/멤버 검사·마이그레이션 회귀 통과 |
+| `node tests/travel-tools-regression.js` | 날짜 넘김, DST 중복·결손, 30분 시차, 일출·일몰/극야·백야, 단위, Wi-Fi 이스케이프·길이·UTF-8 QR 통과 |
+| `node tests/member-splits-regression.js` | 로컬 viewer 분담 저장, 계정 전환 거부, 격리 PostgreSQL 마이그레이션·저장·동일 요청 재시도·외부 계정/비공개 지출 거부 통과 |
+| `node tests/sync-client-regression.js` | 동기화/오프라인/계정 전환/충돌 회귀 통과 |
+| `node tests/travel-tools-browser-regression.js` | 7개 상세, 준비물/시간대 저장, 날짜 선택 ICS, QR 생성과 닫기 초기화, 단위/시간 변환, viewer 지출창 분담 저장, 개요 3~6개 배치 통과 |
+| `node tests/settlement-ledger-browser-regression.js` | 공통 표 분담 저장·취소·실패·중복 방지·오래된 원본/멤버 검사·마이그레이션 회귀 통과 |
 | `node bin/triplog.js dev build --json` | 종료 코드 0, `ok: true` |
 
 도구 화면 320/390/1440px에서 가로 넘침 확인. 정산 기존 회귀는 320/390/760/851/1440px 포함. 최종 태양 SVG 높이 145px와 비밀번호 없는 QR 상태를 별도 짧은 렌더링 확인으로 검증. 페이지 오류 없음. 관련 검증을 선택했고 전체 테스트/브라우저 묶음을 반복 실행하지 않음.

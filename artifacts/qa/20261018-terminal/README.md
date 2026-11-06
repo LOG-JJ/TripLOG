@@ -23,7 +23,7 @@
 - `npm test`: 전체 통과. 기존 CLI의 **204개 프로세스 검증**과 SQL·권한·재시도·백업·배포 계획 회귀 검사를 포함한다. 마지막 입력 복구·도움말·미리보기 문구 수정 뒤 해당 터미널·소스 검사를 다시 통과했다.
 - `npm run test:terminal`: 통과. [terminal-result.json](terminal-result.json)에 시나리오 목록을 기록했다. 4개 창 크기의 메뉴·본문, 미리보기·취소·저장, 한글·이모지 편집, 비밀번호의 정확한 문자 보존, 붙여넣기 격리, 파일·서버 충돌, 공유 설정의 동시 변경, 취소된 연결 결과 무시, 새 여행 파일, 숙소 날짜별 일정, 외화 수정, 준비물·동행인, 메모·댓글, 백업·정산, 보관·복원, 번호 메뉴, TTY 복구와 하위 작업 종료를 검사했다.
 - `npm run test:terminal:visual`: **13개 화면 통과**. 실제 ANSI 출력과 xterm 문자 셀을 전부 비교했으며 화면 밖 스크롤·페이지 오류가 없었다. [visual-result.json](visual-result.json).
-- PowerShell PTY: `S` → 한글 `검증 산책` 입력 → `Ctrl+S` 확인 화면 → `Esc`로 입력 보존 확인. `Q` 종료에서 원래 화면·커서 복구를 확인했다. 별도 계측에서 Node의 정상 종료 코드 0을 확인했다. [native-exit.txt](native-exit.txt). 실행 도구의 PTY 래퍼는 1을 보고했지만 Node 자체의 종료 로그는 0이었다.
+- PowerShell PTY: `S` → 한글 `검증 산책` 입력 → `Ctrl+S` 확인 화면 → `Esc`로 입력 보존 확인. `Q` 종료에서 원래 화면·커서 복구를 확인했다. 별도 계측에서 Node의 정상 종료 코드 0을 확인했다. [native-exit.txt](../../tmp/20261018-terminal/native-exit.txt). 실행 도구의 PTY 래퍼는 1을 보고했지만 Node 자체의 종료 로그는 0이었다.
 - `npm run test:source`, `npm run artifacts:check`, `npm run build`: 통과. 빌드 산출물에 CLI·테스트 목업을 포함하지 않는다. `Travel.html`과 `sw.js`의 생성 변경을 유지했다.
 - 기존 작업 14개는 작업 전 diff와 비교해 보존을 확인했다.
 

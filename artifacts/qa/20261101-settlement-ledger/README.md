@@ -3,7 +3,7 @@
 선택된 정산 요약 / 항목별 분담 목업을 구현했다. 작업은 2026-11-01 시작, 2026-11-02 검증 완료. 운영 여행 데이터 및 서버 스키마는 변경하지 않았다. 배포하지 않았다.
 
 - 기준 목업: [정산 요약](../../design/20261101-settlement-ledger-redesign/settlement-overview.png), [항목별 분담 → 기존 편집창](../../design/20261101-settlement-ledger-redesign/settlement-item-flow.png)
-- [목업과 실제 화면 비교](mockup-comparison.png), [원본 크기 비교 HTML](comparison.html)
+- [목업과 실제 화면 비교](mockup-comparison.png), [원본 크기 비교 HTML](../../tmp/20261101-settlement-ledger/relocated-20261104/comparison.html)
 - 실제 공통 로고·여행 컨텍스트·경비 요약·하단 메뉴를 재사용했다. 목업의 임의로 그려진 상단 메뉴/여행 그림/새 편집창은 별도로 만들지 않았다.
 - 모바일은 요약/멤버 카드를 세로로, PC는 두 열로 표시한다. 320px에서 금액을 읽기 좋게 재배치하고 긴 이름·큰 금액도 줄바꿈으로 보존한다.
 
@@ -19,15 +19,15 @@
 
 모든 아래 검사가 통과했다. Browser 플러그인이 제공되지 않아 AGENTS.md에서 허용한 격리 Edge/Playwright fixture를 사용했다. 외부 서비스 및 운영 여행을 수정하지 않았다.
 
-- `node scripts/settlement-ledger-regression.js`: 180,000원 목업 수치, 멤버별 140,000/40,000원 결제, 95,000/85,000원 분담, 윤디→JH 45,000원 송금 안내. 읽기 순수성, 음수 환불, 원 단위 나머지, 불완전/낡은 분담, 합계 초과, 빈 목록.
-- `node scripts/settlement-ledger-browser-regression.js`: 공통 헤더/합계, 항목 탭, 편집 취소/저장 실패/비율 저장, 지출로 이동, 추가 지출 전환 취소/변경 충돌/false/throw/재시도/중복/새로고침, 환불 전용 표시, 빈 목록/긴 이름/큰 금액.
+- `node tests/settlement-ledger-regression.js`: 180,000원 목업 수치, 멤버별 140,000/40,000원 결제, 95,000/85,000원 분담, 윤디→JH 45,000원 송금 안내. 읽기 순수성, 음수 환불, 원 단위 나머지, 불완전/낡은 분담, 합계 초과, 빈 목록.
+- `node tests/settlement-ledger-browser-regression.js`: 공통 헤더/합계, 항목 탭, 편집 취소/저장 실패/비율 저장, 지출로 이동, 추가 지출 전환 취소/변경 충돌/false/throw/재시도/중복/새로고침, 환불 전용 표시, 빈 목록/긴 이름/큰 금액.
 - 화면 폭: 320/390/760/851/1440px. 추가 긴 이름·큰 금액: 320/390/850/1440px.
-- `node scripts/settlement-name-browser-regression.js`: JH 이름, 대표/동행, 저장·취소·실패·권한·낡은 편집·여행 구분.
-- `node scripts/expense-allocation-browser-regression.js`: 기존 균등/금액/비율, 정확한 원화, 외화, 원자적 저장/실패/취소, 다른 곳의 변경.
-- `node scripts/trip-navigation-browser-regression.js`: 기존 지출/여행/리포트 이동과 뒤로/앞으로.
-- `node scripts/travel-costs-browser-regression.js`: 공통 경비 요약 및 지출·리포트·오늘 화면 회귀.
-- `node scripts/delete-dialogs-browser-regression.js`: 멤버 삭제의 추가 지출 보호 및 기존 삭제 확인 흐름.
-- `node scripts/redesign-regression.js`
+- `node tests/settlement-name-browser-regression.js`: JH 이름, 대표/동행, 저장·취소·실패·권한·낡은 편집·여행 구분.
+- `node tests/expense-allocation-browser-regression.js`: 기존 균등/금액/비율, 정확한 원화, 외화, 원자적 저장/실패/취소, 다른 곳의 변경.
+- `node tests/trip-navigation-browser-regression.js`: 기존 지출/여행/리포트 이동과 뒤로/앞으로.
+- `node tests/travel-costs-browser-regression.js`: 공통 경비 요약 및 지출·리포트·오늘 화면 회귀.
+- `node tests/delete-dialogs-browser-regression.js`: 멤버 삭제의 추가 지출 보호 및 기존 삭제 확인 흐름.
+- `node tests/redesign-regression.js`
 - `node bin/triplog.js dev test --suite source --json`: 종료 코드 0, `ok: true`.
 - `node bin/triplog.js dev artifacts --json`: 종료 코드 0, `ok: true`.
 - `node bin/triplog.js dev build --json`: 종료 코드 0, `ok: true`. 새 정산 CSS가 dist에 포함됨.

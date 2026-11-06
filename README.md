@@ -1,6 +1,6 @@
 # TripLOG
 
-TripLOG는 여행 일정, 지출, 정산, 저장 기록, 리포트를 관리하는 한국어 여행 앱입니다. 프런트엔드는 `Travel.html`, `styles.css`, `app.js`, `src/app/`의 브라우저 전역 구조를 유지하며, 협업 버전은 IndexedDB 저장소와 Supabase 명령 API를 사용합니다. npm은 버전이 고정된 공동 메모·일정 드래그 라이브러리, 테스트, 배포 자산 생성에 사용합니다.
+TripLOG는 여행 일정, 지출, 정산, 저장 기록, 리포트를 관리하는 한국어 여행 앱입니다. 프런트엔드는 `Travel.html`, `src/entry/`, `src/styles/`, `src/app/`의 브라우저 전역 구조를 사용하며, 협업 버전은 IndexedDB 저장소와 Supabase 명령 API를 사용합니다. npm은 버전이 고정된 공동 메모·일정 드래그 라이브러리, 테스트, 배포 자산 생성에 사용합니다.
 
 자동 저장·공동 편집 구현과 실제 검증 범위, 운영 전환 순서는 [협업 구현 및 배포 기록](docs/collaboration-implementation.md)을 확인하세요. 저장 상태 버튼은 상태·충돌·복구 화면을 엽니다. 변경 전송을 시작하는 수동 동기화 버튼은 없습니다.
 
@@ -12,13 +12,13 @@ TripLOG는 여행 일정, 지출, 정산, 저장 기록, 리포트를 관리하�
 
 앱은 여권 모양의 **내 여행 보관함**에서 시작합니다. 여행 이름·여행지 검색과 예정/진행/지난 여행 필터를 사용하고, 표지를 눌러 해당 여행의 개요를 엽니다. 기존 `page=overview` 홈 북마크도 여행 ID가 없으면 보관함으로 연결됩니다. 선택한 여행의 URL에는 `trip`이 포함되어 새로고침·뒤로가기에서도 선택을 유지합니다. 상단 로고로 보관함에 돌아갈 수 있으며, 여행 메뉴에서 정보 수정과 기존 여행 바꾸기/삭제 흐름을 사용할 수 있습니다. 설치형 앱의 시작 주소도 보관함입니다.
 
-여행 목록의 **삭제**는 보관과 구분합니다. 동행 계정이 남아 있으면 내 참여와 내 목록만 삭제하고 공유 여행은 유지하며, 여행장이 나가면 남은 멤버에게 소유권을 이전합니다. 마지막 멤버가 삭제하면 서버 여행·일정·지출·예약·공유 기록과 첨부파일을 삭제합니다. 초대 대기자와 정산용 이름은 참여 계정 수에 포함하지 않습니다. 내 목록의 마지막 여행도 삭제할 수 있고, 통신 실패 시 같은 요청 ID로 결과를 재확인합니다. 이 기능의 운영 반영에는 `supabase/migrations/20261026065147_trip_removal_lifecycle.sql`, `triplog-sync` Edge Function, 프런트엔드가 함께 필요합니다. Git 프런트엔드 자동 배포만으로 DB·함수 반영이 완료되지는 않습니다. 격리 검증은 `node scripts/trip-removal-browser-regression.js`와 동기화·Edge 회귀 테스트에서 실행합니다.
+여행 목록의 **삭제**는 보관과 구분합니다. 동행 계정이 남아 있으면 내 참여와 내 목록만 삭제하고 공유 여행은 유지하며, 여행장이 나가면 남은 멤버에게 소유권을 이전합니다. 마지막 멤버가 삭제하면 서버 여행·일정·지출·예약·공유 기록과 첨부파일을 삭제합니다. 초대 대기자와 정산용 이름은 참여 계정 수에 포함하지 않습니다. 내 목록의 마지막 여행도 삭제할 수 있고, 통신 실패 시 같은 요청 ID로 결과를 재확인합니다. 이 기능의 운영 반영에는 `supabase/migrations/20261026065147_trip_removal_lifecycle.sql`, `triplog-sync` Edge Function, 프런트엔드가 함께 필요합니다. Git 프런트엔드 자동 배포만으로 DB·함수 반영이 완료되지는 않습니다. 격리 검증은 `node tests/trip-removal-browser-regression.js`와 동기화·Edge 회귀 테스트에서 실행합니다.
 
-선택한 [1안 원본](artifacts/design/20261003/triplog-home-passport-library-20261003.png)과 [구현 비교 및 QA](artifacts/design/home-passport-20261003/design-qa.md)를 보관합니다. 목업의 예시 여행은 운영 데이터로 넣지 않습니다. 격리된 시각 미리보기는 `node scripts/preview-trip-library.js`, 기능 검증은 `node scripts/trip-library-browser-regression.js`로 실행합니다.
+선택한 [1안 원본](artifacts/design/20261003/triplog-home-passport-library-20261003.png)과 [구현 비교 및 QA](artifacts/design/home-passport-20261003/design-qa.md)를 보관합니다. 목업의 예시 여행은 운영 데이터로 넣지 않습니다. 격리된 시각 미리보기는 `node scripts/preview-trip-library.js`, 기능 검증은 `node tests/trip-library-browser-regression.js`로 실행합니다.
 
-검색·기간 필터 아래의 **여권 / 목록** 버튼으로 보기 방식을 바꿀 수 있습니다. 목록은 작은 목적지 그림과 여행명·여행지·날짜·상태를 간결하게 표시하고, 여행 열기·제거·새 여행 만들기는 두 보기에서 동일하게 동작합니다. 보기 전환 중에도 검색어와 필터가 유지되며, 마지막 선택은 기기의 `triplog.tripLibraryView.v1` 설정으로 기억합니다. 이 설정은 여행 데이터나 동기화 명령을 변경하지 않습니다. [목업](artifacts/design/20261017-trip-library-views/passport-list-toggle.png), [검증 자료](artifacts/qa/20261017-trip-library-views/)를 보관하며, `node scripts/trip-library-views-browser-regression.js`로 전환·설정 복원·목록 동작·접근성·반응형을 검증합니다.
+검색·기간 필터 아래의 **여권 / 목록** 버튼으로 보기 방식을 바꿀 수 있습니다. 목록은 작은 목적지 그림과 여행명·여행지·날짜·상태를 간결하게 표시하고, 여행 열기·제거·새 여행 만들기는 두 보기에서 동일하게 동작합니다. 보기 전환 중에도 검색어와 필터가 유지되며, 마지막 선택은 기기의 `triplog.tripLibraryView.v1` 설정으로 기억합니다. 이 설정은 여행 데이터나 동기화 명령을 변경하지 않습니다. [목업](artifacts/design/20261017-trip-library-views/passport-list-toggle.png), [검증 자료](artifacts/qa/20261017-trip-library-views)를 보관하며, `node tests/trip-library-views-browser-regression.js`로 전환·설정 복원·목록 동작·접근성·반응형을 검증합니다.
 
-일반 앱 진입에는 [선택한 스플래시 목업](artifacts/design/20261017-main-splash/triplog-splash-to-trip-selection-v2-brand.png)을 바탕으로 로고·여권 등장과 내 여행 전환이 이어집니다. Motion 14.3.0을 앱 내부에 고정 버전으로 포함해 외부 CDN 없이 재생하며, 기존 로고와 여권 자산을 재사용합니다. 준비된 화면은 보통 약 3초 안에 열리고, 동작 줄이기 설정에서는 장식 애니메이션과 최소 대기를 생략합니다. 로그인이 필요하면 로그인 화면을 표시하고, 여행 직접 링크·초대·비밀번호 복구·브라우저 뒤로가기는 원래 목적지를 유지합니다. 메뉴 이동으로는 재생하지 않습니다. 로딩이 길면 이동 버튼을 제공하며 최대 8초 후에는 스플래시를 해제합니다. 격리 검증은 `node scripts/entry-splash-browser-regression.js`, 대표 근거는 `artifacts/qa/20261017-main-splash/`에 보관합니다.
+일반 앱 진입에는 [선택한 스플래시 목업](artifacts/design/20261017-main-splash/triplog-splash-to-trip-selection-v2-brand.png)을 바탕으로 로고·여권 등장과 내 여행 전환이 이어집니다. Motion 14.3.0을 앱 내부에 고정 버전으로 포함해 외부 CDN 없이 재생하며, 기존 로고와 여권 자산을 재사용합니다. 준비된 화면은 보통 약 3초 안에 열리고, 동작 줄이기 설정에서는 장식 애니메이션과 최소 대기를 생략합니다. 로그인이 필요하면 로그인 화면을 표시하고, 여행 직접 링크·초대·비밀번호 복구·브라우저 뒤로가기는 원래 목적지를 유지합니다. 메뉴 이동으로는 재생하지 않습니다. 로딩이 길면 이동 버튼을 제공하며 최대 8초 후에는 스플래시를 해제합니다. 격리 검증은 `node tests/entry-splash-browser-regression.js`, 대표 근거는 `artifacts/qa/20261017-main-splash/`에 보관합니다.
 
 하단 탐색은 **개요 / 일정 / 여행 / 지출 / 리포트**이며 모두 해당 화면으로 바로 이동합니다. 지출·리포트의 펼침 메뉴·애니메이션·화살표를 제거했습니다. 지출 기록 상단의 영수증 왼쪽에 **경비 정산**을 배치하고, PC에서는 경비 정산 / 영수증 / 지출 추가 순서입니다. 정산에서도 하단 지출이 활성 표시됩니다. 리포트의 지출 분석·일정 분석·PDF 저장은 리포트 화면의 기존 버튼을 사용합니다. 여행은 **오늘의 여행 / 예약 지갑 / 여행 도구** 3개 탭을 한 페이지에서 전환하며, 하단 선택 배경과 밑줄은 다른 항목과 같은 공통 정렬을 사용합니다. 설정은 상단 톱니바퀴에서 엽니다. 여행 링크는 `page=travel&travelTab=today|wallet|tools`로 선택한 탭을 복원합니다. [여행 탐색 목업](artifacts/design/20261101-travel-navigation/travel-navigation-three-tabs.png)과 [여행 탐색 QA](artifacts/qa/20261101-travel-navigation/design-qa.md), 후속 [정산 버튼 배치 목업](artifacts/design/20261101-expense-settlement-entry/expense-settlement-placement.png)과 [구현 QA](artifacts/qa/20261101-expense-settlement-entry/design-qa.md), [리포트 직접 진입·여행 정렬 검증](artifacts/qa/20261101-report-direct-nav/README.md)을 보관합니다.
 
@@ -38,7 +38,7 @@ iPhone·iPad의 홈 화면 아이콘은 기존 승인 이미지를 그대로 사
 
 ### 로컬 실행
 
-Windows에서는 프로젝트 루트의 **`로컬실행.bat`**을 더블클릭하면 로컬 서버를 켜고 준비된 뒤 일정 화면을 브라우저에서 자동으로 엽니다. 서버 창을 열어 두고 사용하며, 종료할 때는 `Ctrl+C`를 누르거나 창을 닫습니다. 이미 로컬 서버가 실행 중이면 중복 실행하지 않고 브라우저만 엽니다.
+Windows에서는 [로컬실행.bat](scripts/windows/로컬실행.bat)을 더블클릭하면 로컬 서버를 켜고 일정 화면을 브라우저에서 자동으로 엽니다. 서버 창에서 `Ctrl+C`를 누르거나 창을 닫으면 종료합니다. 이미 로컬 서버가 실행 중이면 브라우저만 엽니다.
 
 ```powershell
 npm ci
@@ -66,7 +66,7 @@ npm run preview
 - **일정 복사**: 일정 이름 옆 복사 아이콘을 누르면 장소·날짜·시간·메모·티켓을 독립적인 새 일정으로 즉시 저장합니다. 편집창은 열리지 않으며, 수동 정렬한 날에는 원본 바로 다음에 놓습니다. 저장 중 이중 클릭은 하나만 처리하고, 이전 장소에서 오는 이동 정보와 연결 지출은 복제하지 않습니다.
 - **공통 화면 바탕**: 메인과 메뉴·카드·예약 지갑·입력 영역은 같은 흰색 바탕을 사용합니다. 노란 주요 버튼과 선택·드래그 등 조작 피드백은 유지합니다.
 - **일정 사이 지도와 길찾기**: 국내는 앱 안의 OpenStreetMap 지도에 출발지·도착지 핀을 표시하고 확대·축소·이동할 수 있습니다. 별도 가입·결제 등록·API 키가 필요하지 않습니다. 상세 자동차·대중교통·도보 길찾기는 네이버지도로 연결합니다. 이름만 저장된 장소도 여행 지역과 함께 자동 조회합니다. 기록된 이동 수단이 없으면 국내는 자동차를 기본으로 사용합니다. 조회 결과는 원본 일정·시간·좌표 선택을 덮어쓰지 않으며, 통신 실패는 다시 시도할 수 있습니다. 해외는 기존 Google 미리보기를 유지하고, 모바일 외부 지도에서 돌아오면 작성 중인 기록을 복원합니다.
-- **일정 요약**: 일정 화면의 `일정 편집 / 일정 요약`으로 같은 화면의 목록을 전환합니다. 날짜 카드는 모바일·PC 모두 1열이며, 기존 소분류 컬러 SVG로 방문지 동선을 미리 보여줍니다. 작은 화면은 최대 4곳, 중간 화면은 6곳, 넓은 PC는 8곳까지 표시하고 나머지는 `+숫자`로 펼칩니다. 숙소를 포함한 모든 종류의 일정을 원래 순서대로 미리보기·전체 목록·개수·복사에 반영합니다. 펼친 목록은 시간·소분류 아이콘·장소명으로 구성하며, 장소 사이의 모든 교통수단·노선·소요시간을 저장 순서대로 오른쪽으로 이어 표시합니다. 긴 교통 줄은 내부에서 가로 스크롤하며 키보드 좌우·Home·End로도 탐색합니다. 이동 시간 미입력은 경로·물음표·개수 배지와 점선, 시각 미입력은 시계·물음표·개수로 표시합니다. 배지를 누르면 출발·도착 아이콘과 입력 버튼이 있는 목록이 열리고, `시간 입력` 또는 개별 교통 항목은 기존 직접 기록 창의 해당 구간으로 연결합니다. 저장 후 미입력 목록·개수를 갱신하며 일정 시각은 이동시키지 않습니다. 상세 펼치기·접기·해당 날짜 편집·전체 요약 복사를 제공하며, 단순 조회·펼치기·복사는 일정 데이터를 변경하지 않습니다. 보기 방식과 펼친 날짜는 기기 세션에 보관하고, 편집 화면의 날짜 목록 옆 목록 아이콘으로 기존 전체 일정 보기도 사용할 수 있습니다. 격리 미리보기는 `node scripts/preview-itinerary-summary.js`, 검증은 `node scripts/itinerary-summary-browser-regression.js`입니다.
+- **일정 요약**: 일정 화면의 `일정 편집 / 일정 요약`으로 같은 화면의 목록을 전환합니다. 날짜 카드는 모바일·PC 모두 1열이며, 기존 소분류 컬러 SVG로 방문지 동선을 미리 보여줍니다. 작은 화면은 최대 4곳, 중간 화면은 6곳, 넓은 PC는 8곳까지 표시하고 나머지는 `+숫자`로 펼칩니다. 숙소를 포함한 모든 종류의 일정을 원래 순서대로 미리보기·전체 목록·개수·복사에 반영합니다. 펼친 목록은 시간·소분류 아이콘·장소명으로 구성하며, 장소 사이의 모든 교통수단·노선·소요시간을 저장 순서대로 오른쪽으로 이어 표시합니다. 긴 교통 줄은 내부에서 가로 스크롤하며 키보드 좌우·Home·End로도 탐색합니다. 이동 시간 미입력은 경로·물음표·개수 배지와 점선, 시각 미입력은 시계·물음표·개수로 표시합니다. 배지를 누르면 출발·도착 아이콘과 입력 버튼이 있는 목록이 열리고, `시간 입력` 또는 개별 교통 항목은 기존 직접 기록 창의 해당 구간으로 연결합니다. 저장 후 미입력 목록·개수를 갱신하며 일정 시각은 이동시키지 않습니다. 상세 펼치기·접기·해당 날짜 편집·전체 요약 복사를 제공하며, 단순 조회·펼치기·복사는 일정 데이터를 변경하지 않습니다. 보기 방식과 펼친 날짜는 기기 세션에 보관하고, 편집 화면의 날짜 목록 옆 목록 아이콘으로 기존 전체 일정 보기도 사용할 수 있습니다. 격리 미리보기는 `node scripts/preview-itinerary-summary.js`, 검증은 `node tests/itinerary-summary-browser-regression.js`입니다.
 - **지도와 동선**: 국내는 일정 장소와 전체 동선을 앱 안 지도에서 확인하고, 번호 핀 아래에 구간별 네이버 링크를 표시합니다. 지도에는 확인된 장소 위치를 표시하며 실제 이동 경로는 네이버에서 확인합니다. Leaflet 1.9.4는 앱에 포함하고, 지도 타일은 현재 보이는 영역만 요청하며 OpenStreetMap 출처와 정상 HTTP 캐시를 유지합니다. 지도 오프라인 다운로드나 영역 사전 수집은 하지 않습니다. 해외는 Google 미리보기와 전체 경로를 사용합니다.
 - **모바일 지도 열기**: 지도 아래 버튼은 선택된 지도 서비스로 직접 연결합니다. 돌아오면 세션에 임시 보관한 일정 입력값을 복원하고, 저장하거나 닫으면 임시 입력값을 삭제합니다.
 - **지출 기록과 입력**: 목업을 기준으로 날짜·내용·카테고리·결제 수단·금액을 정렬하고 검색/필터/정렬을 제공합니다. 원화와 외화는 하나의 결제 금액 영역에서 입력하며, 환산 금액과 환율을 바로 확인합니다. `저장 후 계속`은 입력 조건을 유지하고 다음 지출을 받습니다. 설계와 검증은 `artifacts/design/legacy-ui/expense-ui-design.md`, `artifacts/design/legacy-ui/expense-ui-verification.md`에 정리했습니다.
@@ -91,7 +91,7 @@ npm run preview
 
 여행 도구는 [선택한 7개 도구 목업](artifacts/design/20261103-travel-tools-selected-seven/README.md)을 기준으로 준비물, 여행지 시간대, ICS 파일, 도시별 일출·일몰, 한국↔현지 시간, Wi-Fi 공유 QR, 온도·거리·무게 변환을 제공합니다. 공통 대화상자·버튼·날짜/시간·드롭다운과 기존 준비물 저장을 재사용합니다. 천문 계산·QR은 약 25KB의 로컬 번들을 해당 상세를 처음 열 때만 실행하며 외부 API를 호출하지 않습니다. Wi-Fi 정보는 창을 닫으면 지우고 서버·로컬 저장소에 보관하지 않습니다. 일출·일몰은 내장 도시 중심 좌표 또는 저장된 여행지 좌표를 사용합니다.
 
-여행 멤버는 보기 전용 역할이어도 지출 수정창과 정산 표에서 항목별 분담을 수정할 수 있습니다. 분담만 저장하는 공통 경로는 원본 지출·결제자·여행 설정을 유지하고 계정·멤버·원본 변경을 확인합니다. 서버에도 적용하려면 `20261103090000_member_expense_splits.sql` 마이그레이션이 필요합니다. 개요 지출 구성은 3개=3열 1행, 4개=2열 2행, 5개=3+2, 6개=3+3으로 표시합니다. 관련 검증은 `node scripts/travel-tools-regression.js`, `node scripts/member-splits-regression.js`, `node scripts/travel-tools-browser-regression.js`입니다.
+여행 멤버는 보기 전용 역할이어도 지출 수정창과 정산 표에서 항목별 분담을 수정할 수 있습니다. 분담만 저장하는 공통 경로는 원본 지출·결제자·여행 설정을 유지하고 계정·멤버·원본 변경을 확인합니다. 서버에도 적용하려면 `20261103090000_member_expense_splits.sql` 마이그레이션이 필요합니다. 개요 지출 구성은 3개=3열 1행, 4개=2열 2행, 5개=3+2, 6개=3+3으로 표시합니다. 관련 검증은 `node tests/travel-tools-regression.js`, `node tests/member-splits-regression.js`, `node tests/travel-tools-browser-regression.js`입니다.
 
 PDF 내보내기는 일정 목업 4번(시간표형)과 지출 목업 1번(비중 시각화형)을 기준으로 구성했습니다. 지출 내역은 발췌하지 않으며 외화 원금·원화 환산금액, 환불과 긴 메모도 보존합니다. 오프라인에서도 같은 글꼴과 목적지 삽화를 사용하며, PDF 저장은 브라우저 인쇄 창의 `PDF로 저장`을 이용합니다. 예시 데이터만 사용하는 격리 미리보기는 `node scripts/preview-export-reports.js` (`http://127.0.0.1:18112/Travel?page=settings&trip=export-suncheon`), 계산·페이지 나눔·모바일·전체 내역 검증은 `npm run test:print`입니다.
 
@@ -107,9 +107,9 @@ PDF 내보내기는 일정 목업 4번(시간표형)과 지출 목업 1번(비�
 
 여행 개요 상단은 선택한 [포스트카드 목업](artifacts/design/20261004/triplog-trip-header-postcard-20261004.png)을 기준으로 여행명·D-day·날짜·인원과 목적지 일러스트를 함께 표시합니다. 국내 95곳·해외 540곳의 국가/도시/별칭을 구분하며, 모든 등록 목적지는 각각의 PC·모바일 전용 그림을 사용합니다. [국가별 540곳 목록](artifacts/design/20261017-world-city-expansion-500/catalog-index.md)은 방문객 순위가 아닌 관광 목적지 편집 목록이며 도시·소도시·섬·지역을 구분합니다. 기존 300곳에 주요 관광도시 200곳을 추가한 다음 국가·지역별 누락 40곳을 보완했습니다. 한국을 제외한 UN 회원국·옵서버 194개국과 별도 선택 지역을 합친 242개 해외 코드에 최소 한 도시·정착지를 연결하며, 기존 섬 그림과 도시 그림을 별도로 유지합니다. 삿포로의 눈축제와 오사카 도톤보리의 글리코 간판 풍경은 유지합니다. 저장된 목적지만 사용하고 여행 제목으로 도시를 추측하지 않습니다. 국내에서는 도·시 전체 이름, 특례시 및 영문 별칭을 인식하며, 경기 광주·종전 광주 도시권·전남광주통합특별시와 제주도·제주시·서귀포시를 각각 구분합니다. `광주`처럼 동명이거나 여러 곳을 함께 입력하면 공통 그림을 표시합니다. 호놀룰루·오아후·하와이는 서로 구분하고, 워싱턴은 D.C.가 명시된 이름에만 전용 그림을 연결합니다. 긴 여행명은 두 줄로 줄이고 전체 이름은 접근성 이름·도움말과 기존 여행 선택 창에서 확인할 수 있습니다.
 
-도시 그림은 현재 화면에 필요한 가로 또는 세로 한 장만 내려받아 최대 48개 이미지 파일을 별도 캐시에 보관합니다. 공통 테마의 가로·세로 20장은 앱에 포함되어, 오프라인에서 아직 받지 않은 도시 그림도 대체 표시됩니다. 여행 데이터나 인증 응답을 그림 캐시에 넣지 않습니다. 도시·별칭·테마의 기준은 `src/app/data/destination-scenes.js`, 선택 규칙은 `src/app/shared/destination-scenes.js`입니다. 격리 미리보기는 `node scripts/preview-trip-header.js`, 검증은 `node scripts/destination-scenes-regression.js`, `node scripts/trip-header-browser-regression.js`, `node scripts/trip-scene-art-browser-regression.js`, `npm run prepare:sync && node scripts/trip-scene-cache-browser-regression.js`입니다.
+도시 그림은 현재 화면에 필요한 가로 또는 세로 한 장만 내려받아 최대 48개 이미지 파일을 별도 캐시에 보관합니다. 공통 테마의 가로·세로 20장은 앱에 포함되어, 오프라인에서 아직 받지 않은 도시 그림도 대체 표시됩니다. 여행 데이터나 인증 응답을 그림 캐시에 넣지 않습니다. 도시·별칭·테마의 기준은 `src/app/data/destination-scenes.js`, 선택 규칙은 `src/app/shared/destination-scenes.js`입니다. 격리 미리보기는 `node scripts/preview-trip-header.js`, 검증은 `node tests/destination-scenes-regression.js`, `node tests/trip-header-browser-regression.js`, `node tests/trip-scene-art-browser-regression.js`, `npm run prepare:sync && node tests/trip-scene-cache-browser-regression.js`입니다.
 
-여행 개요의 교통·숙소 예약은 모바일에서도 나란한 **2열 요약**으로 표시합니다. 제목 옆 노란 배지는 전체 예약 수이며, 교통은 날짜순 첫 예약의 노선·항공사·기간을, 숙소는 최대 두 곳의 이름·기간·박수를 미리 보여줍니다. 긴 이름은 한 줄로 줄이고 상세 시각과 나머지 예약은 각 열의 `전체 보기`에서 확인합니다. 예약을 합치거나 원본을 변경하지 않으며, 공항 구분과 모든 예약 정보는 기존 예약 지갑에 보존됩니다. 예약이 없는 열의 `예약 추가`는 해당 종류가 선택된 입력창을 바로 엽니다. 선택된 [목업 원본](artifacts/design/20261004/triplog-reservation-t2i-brand-editorial-20261004.png), [구현 비교와 검증](artifacts/design/reservation-summary-20261004/design-qa.md)을 확인하세요. 격리된 시각 미리보기는 `node scripts/preview-reservation-pockets.js`, 기능 검증은 `node scripts/reservation-pockets-browser-regression.js`로 실행합니다.
+여행 개요의 교통·숙소 예약은 모바일에서도 나란한 **2열 요약**으로 표시합니다. 제목 옆 노란 배지는 전체 예약 수이며, 교통은 날짜순 첫 예약의 노선·항공사·기간을, 숙소는 최대 두 곳의 이름·기간·박수를 미리 보여줍니다. 긴 이름은 한 줄로 줄이고 상세 시각과 나머지 예약은 각 열의 `전체 보기`에서 확인합니다. 예약을 합치거나 원본을 변경하지 않으며, 공항 구분과 모든 예약 정보는 기존 예약 지갑에 보존됩니다. 예약이 없는 열의 `예약 추가`는 해당 종류가 선택된 입력창을 바로 엽니다. 선택된 [목업 원본](artifacts/design/20261004/triplog-reservation-t2i-brand-editorial-20261004.png), [구현 비교와 검증](artifacts/design/reservation-summary-20261004/design-qa.md)을 확인하세요. 격리된 시각 미리보기는 `node scripts/preview-reservation-pockets.js`, 기능 검증은 `node tests/reservation-pockets-browser-regression.js`로 실행합니다.
 
 승인된 [13개 목업](artifacts/design/redesign-20260913/README.md)을 기준으로 공통 메뉴, 6개 주요 페이지, 로그인과 입력·준비물·초대·기록 화면을 구현했습니다. 일정 타임라인과 지도 편집 창도 같은 색상 체계를 사용합니다.
 
@@ -128,8 +128,8 @@ PDF 내보내기는 일정 목업 4번(시간표형)과 지출 목업 1번(비�
 TripLOG/
 ├─ index.html                 # Travel.html로 이동
 ├─ Travel.html                # 페이지 마운트, 재사용할 폼, 모달, 지도 연결
-├─ styles.css                 # 기본 UI와 반응형 스타일
-├─ app.js                     # src/app 스크립트 순차 로더
+├─ sw.js                      # 생성된 루트 범위 서비스 워커
+├─ _headers, _redirects       # 정적 호스트 설정
 ├─ src/app/
 │  ├─ core/                   # 네임스페이스, 설정, DOM 캐시, runtime 전역
 │  ├─ data/                   # 국가·목적지·카테고리 정보와 화면별 표현
@@ -140,8 +140,16 @@ TripLOG/
 │  ├─ shared/                 # 공통 경비 집계, 날짜, 포맷, 데이터 생성
 │  ├─ services/maps/          # 지도 쿼리, 지오코딩, 좌표·거리 계산
 │  └─ features/               # 개요·지출·정산·리포트·준비물별 화면과 동작
-├─ scripts/browser-suites.js  # 브라우저 회귀 테스트 실행 목록
-├─ scripts/helpers/          # 격리된 브라우저·서버·테스트 로그인 준비
+├─ src/entry/                # 앱 로더·접속 복구·설치 매니페스트
+├─ src/styles/               # 기본 및 기능별 스타일
+├─ icons/                    # 설치 아이콘·파비콘
+├─ tests/                    # 회귀 테스트와 실행 목록
+│  ├─ browser-suites.js       # 브라우저 회귀 테스트 등록
+│  ├─ fixtures/              # 합성 여행·UI 시나리오
+│  └─ helpers/               # 격리 서버·브라우저·테스트 인증 준비
+├─ scripts/                  # 빌드·미리보기·자산 제작·저장소 검사
+├─ scripts/windows/          # Windows 더블클릭 실행 파일
+├─ scripts/helpers/          # 공통 산출물·아이콘·브라우저 실행 도구
 ├─ scripts/app-assets.js      # 빌드·오프라인 캐시가 공유하는 자산 목록
 ├─ scripts/helpers/artifact-output.js # 테스트 산출물 공통 경로
 └─ artifacts/                # 목업·원본·검증·임시 파일의 공통 보관 위치
@@ -171,23 +179,24 @@ TripLOG의 런타임 상태는 전역 `state` 객체입니다. `await saveAndRen
 
 ## 개발 규칙
 
+- 작업 위치·의존성 경계·검증 명령은 [개발 구조 안내](docs/development.md), 인증·배포 파일·보안 검사 기준은 [보안 관리](docs/security.md)를 참고합니다. 회귀 테스트는 `tests/`, 실행 도구는 `scripts/`, 테스트 데이터는 `tests/fixtures/`에 추가합니다.
 - 생성 산출물은 [artifacts 보관 기준](artifacts/README.md)에 따라 한 곳에서 관리합니다. 루트·`docs/`에 새 목업이나 임시 파일을 만들지 않습니다. `npm run artifacts:check`로 배치를 확인하며, 같은 검사를 소스 회귀 테스트에서도 실행합니다.
 - UI는 브라우저 전역 구조를 유지합니다. Yjs 번들과 서버용 공통 모델, 오프라인 앱 자산은 `npm run prepare:sync`로 생성합니다.
-- `app.js`의 `scriptFiles` 순서가 의존성 순서입니다. 새 모듈은 필요한 전역 함수보다 뒤에, 호출 지점보다 앞에 넣습니다.
+- `src/entry/app.js`의 `scriptFiles` 순서가 의존성 순서입니다. 새 모듈은 필요한 전역 함수보다 뒤에, 호출 지점보다 앞에 넣습니다. 브라우저에는 기존 `/app.js` 주소로 제공됩니다.
 - 화면은 해당 기능의 `*-workspace.js`가 소유합니다. 중앙 렌더러는 공통 상태와 현재 페이지를 갱신하고, 정산·준비물 편집은 열린 대화상자를 갱신합니다. 기존 페이지 전체를 숨겨 두고 새 페이지를 덧붙이지 않습니다. `Travel.html`의 `triplogFormSources`는 시작 시 실제 폼을 한 번 옮기는 임시 마운트이며 초기화 후 제거됩니다.
 - 경비 계산은 `shared/travel-costs.js`를 사용합니다. 누적 금액과 날짜별 합계는 환불을 차감하고, 항목별 구성은 환불 전 지출과 그 합계를 사용합니다. 환불이 있으면 화면에 구성 기준을 표시합니다. 화면 리포트는 결제일, PDF의 일별 내역은 저장된 여행 일자를 기준으로 묶습니다.
 - 카테고리 이름·기본 아이콘·화면별 색상은 `data/expense-categories.js`, 다이얼로그 열기·닫기·포커스 복원은 `ui/dialog.js`, 경비 요약 표시는 `ui/cost-summary.js`에서 관리합니다. 화면별 표현 차이는 명시된 옵션으로 유지합니다.
-- 삭제·초기화 확인창은 `ui/confirmation.js`를 사용합니다. `ask({ kind, subject, message })`로 대상과 필요한 영향만 전달하며, 입력 폼의 전체 화면 레이아웃을 재사용하지 않습니다. [18가지 삭제·제거 경로](artifacts/design/20261017-delete-dialogs/README.md)에 [앱 색상과 맞춘 목업](artifacts/design/20261017-confirmation-polish/README.md)을 적용했습니다. 48px 버튼, 동작 아이콘, 취소 기본 포커스와 긴 파일명 반응형을 제공하며, `node scripts/delete-dialogs-browser-regression.js`로 크기·문구·취소·저장 결과를 검증합니다.
+- 삭제·초기화 확인창은 `ui/confirmation.js`를 사용합니다. `ask({ kind, subject, message })`로 대상과 필요한 영향만 전달하며, 입력 폼의 전체 화면 레이아웃을 재사용하지 않습니다. [18가지 삭제·제거 경로](artifacts/design/20261017-delete-dialogs/README.md)에 [앱 색상과 맞춘 목업](artifacts/design/20261017-confirmation-polish/README.md)을 적용했습니다. 48px 버튼, 동작 아이콘, 취소 기본 포커스와 긴 파일명 반응형을 제공하며, `node tests/delete-dialogs-browser-regression.js`로 크기·문구·취소·저장 결과를 검증합니다.
 - 목적지 그림은 `scripts/app-assets.js`가 현재 카탈로그의 파일만 배포 목록에 포함합니다. 도시 그림은 필요할 때 받고 공통 테마만 앱 캐시에 포함합니다. 과거 원본과 목업은 현재 실행 자산으로 추가하지 않습니다.
 - 모듈은 `window.TripLog.register("영역.이름", { ... })`로 등록합니다. DevTools에서 `window.TripLog.registry`와 `document.documentElement.dataset.triplogLastModule`로 로드 상태를 확인할 수 있습니다.
 - DOM 요소를 추가하면 `Travel.html`의 ID, `src/app/core/runtime.js`의 `els`, 이벤트 연결 위치, 렌더 함수 위치를 함께 맞춥니다.
 - 상태 스키마를 바꾸면 `getFallbackState()`, 기존 저장값 정규화/마이그레이션, 샘플 데이터, 저장/복원, 관련 렌더링을 같이 확인합니다.
 - 지도 서비스는 `shared/map-links.js`에서 여행 유형으로 선택합니다. 해외는 Google 프레임, 국내는 `services/maps/domestic-map.js`의 OpenStreetMap 지도와 네이버 길찾기 링크를 사용합니다. 주소 후보 조회는 별도로 진행하며 기존 좌표 출처 검증을 유지합니다. 국내 지도 표시에 네이버 클라우드 키나 유료 API는 사용하지 않습니다.
-- 캐시 때문에 변경이 보이지 않으면 브라우저 강력 새로고침을 하거나 `app.js`의 `scriptVersion`, `Travel.html`의 CSS/앱 쿼리 버전을 갱신합니다.
+- 빌드 지문과 캐시는 `npm run build`가 생성합니다. 수동 버전 값을 추가하지 않고 생성된 `Travel.html`·`sw.js`와 실제 배포 빌드가 일치하는지 확인합니다.
 
 ## 터미널 메뉴와 CLI
 
-명령어 없이 사용하는 터미널 화면은 프로젝트 폴더의 **`TripLOG.cmd`를 더블클릭**하거나 `npm run terminal`로 실행합니다. Windows Terminal·PowerShell에서 방향키로 여행을 고르고 일정·지출·예약 등을 입력할 수 있습니다. 첫 화면에서 로그인, JSON 파일 열기, 새 파일 만들기, 예시 체험을 선택합니다.
+터미널 화면은 [TripLOG.cmd](scripts/windows/TripLOG.cmd)를 더블클릭하거나 `npm run terminal`로 실행합니다. Windows Terminal·PowerShell에서 방향키로 여행을 고르고 일정·지출·예약 등을 입력할 수 있습니다. 첫 화면에서 로그인, JSON 파일 열기, 새 파일 만들기, 예시 체험을 선택합니다.
 
 ```powershell
 npm run terminal
@@ -211,15 +220,15 @@ npm run cli -- dev test --suite cli
 
 `dev serve/test/build/doctor/artifacts`는 기존 프로젝트 작업에 연결합니다. `dev deploy plan/run/status`는 명시한 파일을 검증·커밋·푸시하고 운영 빌드 일치를 별도로 확인합니다. 관련 없는 변경과 기존 미푸시 커밋이 있으면 배포를 중단합니다. Supabase DB·Edge Function 자체 배포는 포함하지 않습니다.
 
-CLI 회귀 검증은 `npm run test:cli`, 터미널 동작 검증은 `npm run test:terminal`이며 모두 `npm test`에 포함됩니다. 실제 SQL 함수와 격리 HTTP 서버로 변경·충돌·재시도·권한·백업 왕복을 확인합니다. `npm run test:terminal:visual`은 실제 ANSI 출력을 xterm에서 렌더링해 화면을 검증합니다. `node scripts/cli-browser-regression.js`는 CLI↔웹앱 편집과 PDF/HTML 내보내기를 검증하며 전체 브라우저 실행 목록에도 등록되어 있습니다.
+CLI 회귀 검증은 `npm run test:cli`, 터미널 동작 검증은 `npm run test:terminal`이며 모두 `npm test`에 포함됩니다. 실제 SQL 함수와 격리 HTTP 서버로 변경·충돌·재시도·권한·백업 왕복을 확인합니다. `npm run test:terminal:visual`은 실제 ANSI 출력을 xterm에서 렌더링해 화면을 검증합니다. `node tests/cli-browser-regression.js`는 CLI↔웹앱 편집과 PDF/HTML 내보내기를 검증하며 전체 브라우저 실행 목록에도 등록되어 있습니다.
 
 ## 검증
 
 `npm test`는 PostgreSQL(PGlite)·IndexedDB·독립 기기 동기화 및 기존 기능 회귀 테스트를 실행합니다. `npm run test:browser`는 별도 로컬 서버와 격리된 브라우저 두 개로 화면·오프라인 앱·초안을 확인합니다. Windows에서는 설치된 Edge, 다른 OS에서는 `npx playwright install chromium`으로 설치한 Chromium을 사용합니다.
 
-`npm run test:source`는 앱 모듈 로드 대상, JavaScript·CSS 문법, 브라우저 테스트 등록 누락과 현재 그림의 배포 포함 여부를 검사하며 `npm test`에도 포함됩니다. 새 브라우저 테스트는 `scripts/browser-suites.js`에 등록하고 `scripts/helpers/browser-fixture.js`의 브라우저 실행·서버·테스트 토큰·요청 차단 도우미를 사용합니다. 일반 테스트는 실행기의 로컬 서버를 재사용하며, 별도 응답이 필요한 인증·동기화 시나리오는 자체 목 서버를 유지합니다. 환불 리포트 검증은 `node scripts/report-refund-browser-regression.js`, 수동 환율 검증은 `node scripts/manual-exchange-rate-browser-regression.js`이며 둘 다 전체 브라우저 실행 목록에 포함됩니다.
+`npm run test:source`는 앱 모듈 로드 대상, JavaScript·CSS 문법, 브라우저 테스트 등록 누락과 현재 그림의 배포 포함 여부를 검사하며 `npm test`에도 포함됩니다. 새 브라우저 테스트는 `tests/browser-suites.js`에 등록하고 `tests/helpers/browser-fixture.js`의 브라우저 실행·서버·테스트 토큰·요청 차단 도우미를 사용합니다. 일반 테스트는 실행기의 로컬 서버를 재사용하며, 별도 응답이 필요한 인증·동기화 시나리오는 자체 목 서버를 유지합니다. 환불 리포트 검증은 `node tests/report-refund-browser-regression.js`, 수동 환율 검증은 `node tests/manual-exchange-rate-browser-regression.js`이며 둘 다 전체 브라우저 실행 목록에 포함됩니다.
 
-로그인만 검증하려면 `node scripts/auth-session-browser-regression.js`를 실행합니다. 배포용 Supabase SDK와 가상 인증 서버로 429/5xx/통신 실패, 동시 확인, 오래된 응답, 실제 만료 후 초안 보존, 이메일 복구 링크, 연결 초기화와 여러 탭의 로그아웃을 검사합니다. 실제 계정과 서버 데이터는 사용하지 않습니다.
+로그인만 검증하려면 `node tests/auth-session-browser-regression.js`를 실행합니다. 배포용 Supabase SDK와 가상 인증 서버로 429/5xx/통신 실패, 동시 확인, 오래된 응답, 실제 만료 후 초안 보존, 이메일 복구 링크, 연결 초기화와 여러 탭의 로그아웃을 검사합니다. 실제 계정과 서버 데이터는 사용하지 않습니다.
 
 Edge Function 경계 검증: Deno가 설치된 환경에서 `npm run test:edge`를 실행합니다. CI는 Deno 2.9.6을 사용합니다. 이 실행기는 서버 코드에 명시된 고정 버전 의존성만 해석하고 프런트엔드의 `package.json`·`node_modules`와 분리합니다. Deno의 기본 신규 의존성 대기 정책은 유지합니다. 별도 실행 파일은 `DENO_BINARY`로 지정할 수 있습니다. 배포 파일 생성: `npm run build`.
 
@@ -248,7 +257,7 @@ await TripLogSyncRepository.read(TripLog.persistence.stateStorage.getActiveTripI
 - 사진과 원문 전체는 저장/업로드하지 않습니다. 저장한 지출에는 중복 확인용 파일 해시와 확인한 결제일만 `receipt` 메타데이터로 추가됩니다. 기존 지출 수정·JSON 내보내기·여행 동기화 시 함께 유지됩니다.
 - iPhone 14 Pro의 393×852 화면을 기준으로 구성했습니다. 데스크톱 브라우저의 모바일 크기 검증과 실제 iOS Safari의 성능 검증은 구분해야 합니다.
 
-추출 로직 회귀 검증: `node scripts/receipt-parser-regression.js`. 배포 파일 생성: `npm run build`.
+추출 로직 회귀 검증: `node tests/receipt-parser-regression.js`. 배포 파일 생성: `npm run build`.
 
 ## Codex Skill
 

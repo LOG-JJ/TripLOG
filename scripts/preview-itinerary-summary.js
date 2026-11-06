@@ -3,7 +3,7 @@ const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 const { createServer } = require('./serve-test');
-const fixture = require('./fixtures/itinerary-summary');
+const fixture = require('../tests/fixtures/itinerary-summary');
 const root = path.resolve(__dirname, '..');
 function createSummaryPreview() {
   const files = createServer({ pagesRedirects: true });

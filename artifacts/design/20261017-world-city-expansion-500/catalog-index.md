@@ -2,7 +2,7 @@
 
 기존 300곳을 보존하고 1차 200곳을 추가해 500곳을 만든 뒤, 국가·지역별 정착지 공백 40곳을 보완했다. 모든 항목에는 PC·모바일 전용 그림이 있다. 관광 목적지 편집 목록이며 도시·소도시·섬·권역을 구분한다.
 
-[국가별 최소 등록 검증](country-coverage-final.md) · [추가 240곳과 소재 출처](expansion-plan.json) · [최종 프롬프트](jobs/)
+[국가별 최소 등록 검증](country-coverage-final.md) · [추가 240곳과 소재 출처](expansion-plan.json) · [최종 프롬프트](jobs)
 
 ## 안도라 (AD)
 

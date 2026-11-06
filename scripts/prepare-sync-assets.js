@@ -31,9 +31,9 @@ esbuild.buildSync({ stdin: { contents: 'import sunCalc from "suncalc"; import qr
 fs.writeFileSync(path.join(root,'vendor/travel-tools-LICENSES.txt'), 'suncalc\n'+fs.readFileSync(path.join(root,'node_modules/suncalc/LICENSE'),'utf8')+'\n\nqrcode-generator\n'+fs.readFileSync(path.join(root,'node_modules/qrcode-generator/dist/qrcode.js'),'utf8').split('var qrcode')[0]);
 // Icon URLs follow the actual artwork so manifest/favicon caches update without
 // another hand-maintained release label when the app image changes.
-const iconFiles = ['favicon-32.png', 'apple-touch-icon.png', ...fs.readdirSync(path.join(root, 'icons')).filter(file => file.endsWith('.png') && !file.startsWith('apple-touch-icon-')).map(file => `icons/${file}`)].sort();
+const iconFiles = ['favicon-32.png', 'apple-touch-icon.png', ...assets.deploymentFiles().filter(file => /^icons\/[^/]+\.png$/.test(file) && !file.startsWith('icons/apple-touch-icon-'))].sort();
 const iconDigest = crypto.createHash('sha256');
-for (const file of iconFiles) { iconDigest.update(file); iconDigest.update(fs.readFileSync(path.join(root, file))); }
+for (const file of iconFiles) { iconDigest.update(file); iconDigest.update(fs.readFileSync(path.join(root, assets.sourceFile(file)))); }
 const iconVersion = iconDigest.digest('hex').slice(0, 12);
 // File-based fallbacks follow artwork revisions; the iPhone declaration embeds
 // the same PNG so the Home Screen installer needs no separate icon request.
@@ -42,7 +42,7 @@ const updateIconLinks = html => applyAppleIconLinks(html, appleIcons, root)
   .replace(/(href="\/(?:site\.webmanifest|favicon-32\.png|apple-touch-icon\.png|icons\/triplog-icon-\d+\.png))(?:\?[^"]*)?(")/g, (_, prefix, suffix) => `${prefix}?v=${iconVersion}${suffix}`);
 const indexPath = path.join(root, 'index.html');
 fs.writeFileSync(indexPath, updateIconLinks(fs.readFileSync(indexPath, 'utf8')));
-const manifestPath = path.join(root, 'site.webmanifest');
+const manifestPath = path.join(root, assets.sourceFile('site.webmanifest'));
 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 for (const icon of manifest.icons || []) {
   if (/^\/icons\/triplog-icon-\d+\.png(?:\?.*)?$/.test(icon.src)) icon.src = `${icon.src.split('?')[0]}?v=${iconVersion}`;
@@ -58,11 +58,21 @@ const versionedAsset = /((?:href|src)="(?:\.\/)?(?:app\.js|styles\.css|(?:src|ve
 const htmlTemplate = updateIconLinks(fs.readFileSync(path.join(root,'Travel.html'),'utf8'))
   .replace(/(<meta name="triplog-build" content=")[^"]*("\s*\/>)/, '$1development$2')
   .replace(versionedAsset, '$1development$2');
+// Git can check out the same text with different line endings on Windows and on
+// the build host. Keep the release ID stable without changing the deployed bytes.
+const textAsset = /(?:\.(?:html|js|css|svg|json|webmanifest|txt|md)|\/(?:LICENSE|NOTICE))$/;
+const normalizeLineEndings = content => content.toString('utf8').replaceAll('\r\n', '\n');
 const digest = crypto.createHash('sha256');
-for(const file of files){digest.update(file);digest.update(file==='Travel.html'?htmlTemplate:fs.readFileSync(path.join(root,file)));}
+for (const file of files) {
+  const content = file === 'Travel.html' ? htmlTemplate : fs.readFileSync(path.join(root, assets.sourceFile(file)));
+  // Vendored OCR files are checksum-pinned byte for byte.
+  const normalize = textAsset.test(file) && !file.startsWith('vendor/receipt-ocr/');
+  digest.update(file);
+  digest.update(normalize ? normalizeLineEndings(content) : content);
+}
 const template = fs.readFileSync(path.join(__dirname,'service-worker-template.js'),'utf8');
 // Worker-only repairs must not overwrite the active version's cache in place.
-digest.update(template);
+digest.update(normalizeLineEndings(template));
 const buildId = digest.digest('hex').slice(0,20);
 fs.writeFileSync(path.join(root,'Travel.html'),htmlTemplate
   .replace('name="triplog-build" content="development"',`name="triplog-build" content="${buildId}"`)

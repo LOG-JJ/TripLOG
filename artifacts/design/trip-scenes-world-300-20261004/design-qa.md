@@ -2,6 +2,8 @@
 
 final result: passed
 
+2026-11-04 보관 정리: 아래 `browser-cities/`, `browser-header/`, `browser-chooser/`는 당시 실행 출력 이름입니다. 전체 원본 캡처와 결과는 현재 `artifacts/tmp/20261004-world-300-captures/`에 있으며 Git에서 제외합니다. 이 폴더의 대표 비교판·제작 원본·프롬프트는 보존합니다. 개별 이전·현재 경로와 SHA256은 [이동 기록](../../relocations-20261104.json)에 있습니다.
+
 해외 300곳 모두 각각의 PC·모바일 전용 그림을 사용합니다. 이번 제작은 기존 공통 그림을 쓰던 25곳과 새 목적지 217곳, 총 242쌍·484장입니다. 국내 30곳을 포함한 목록은 330곳이며, 국내 전용 15쌍·해외 전용 300쌍·공통 테마 10쌍을 합쳐 활성 WebP 파일은 650개입니다.
 
 ## 시각 기준과 비교
@@ -33,11 +35,11 @@ final result: passed
 
 - `python scripts/prepare-trip-scene-redraw.py --batch artifacts/design/trip-scenes-world-300-20261004 --contacts`: 484/484, 미완료 0. 각 생성 원본·저장본·프롬프트·고정 참조와 SHA256 대조 완료. 새 WebP 합계 43,709,772 bytes.
 - `npm test`: 전체 통과. 국가 선택기의 한글·영문 이름, 목적지 별칭, 국가 충돌 방지, 데이터 비변경, 활성 650개 파일을 포함합니다.
-- `node scripts/trip-scene-art-browser-regression.js`: 전용 315곳 × 4개 너비 = 1,260개 조합 통과. 전체 결과는 `browser-cities/results.json`입니다.
-- `node scripts/trip-header-browser-regression.js`: 320/360/390/480/599/600/613/767/768/1024/1440, 긴 제목·알 수 없는 목적지·이미지 실패 대체·여행/멤버 선택·다시 열기 통과.
-- `node scripts/trip-chooser-browser-regression.js`: 320/390/1440, 선택·검색·닫기·다시 열기와 기존 보호 동작 통과. 격리된 테스트 데이터만 사용했습니다.
+- `node tests/trip-scene-art-browser-regression.js`: 전용 315곳 × 4개 너비 = 1,260개 조합 통과. 전체 결과는 `browser-cities/results.json`입니다.
+- `node tests/trip-header-browser-regression.js`: 320/360/390/480/599/600/613/767/768/1024/1440, 긴 제목·알 수 없는 목적지·이미지 실패 대체·여행/멤버 선택·다시 열기 통과.
+- `node tests/trip-chooser-browser-regression.js`: 320/390/1440, 선택·검색·닫기·다시 열기와 기존 보호 동작 통과. 격리된 테스트 데이터만 사용했습니다.
 - `npm run build`: 통과. 로컬 빌드 `379edcd1b111269f5c49`. 생성된 Travel.html 및 sw.js 지문을 함께 반영합니다.
-- 빌드 후 `node scripts/trip-scene-cache-browser-regression.js`: 선택한 그림만 로드, 오프라인 재방문·대체 그림·온라인 복구, 동시 요청의 48개 캐시 제한, API/비이미지 응답 제외, 앱 셸 유지 통과.
+- 빌드 후 `node tests/trip-scene-cache-browser-regression.js`: 선택한 그림만 로드, 오프라인 재방문·대체 그림·온라인 복구, 동시 요청의 48개 캐시 제한, API/비이미지 응답 제외, 앱 셸 유지 통과.
 - 인앱 브라우저의 격리 미리보기에서 순천 → 오사카를 실제 선택했습니다. 헤더·기간·인원·그림 전환과 오류 로그 0건을 확인했습니다. `in-app-osaka.jpg`에 저장했고 미리보기 탭을 유지했습니다.
 - `git diff --check`: 통과.
 

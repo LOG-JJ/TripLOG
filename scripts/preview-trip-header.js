@@ -3,7 +3,7 @@ const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 const { createServer } = require('./serve-test');
-const fixtures = require('./fixtures/trip-header');
+const fixtures = require('../tests/fixtures/trip-header');
 const root = path.resolve(__dirname, '..');
 function createTripHeaderPreview({ serviceWorkers = false } = {}) {
   const staticFiles = createServer({ pagesRedirects: true });

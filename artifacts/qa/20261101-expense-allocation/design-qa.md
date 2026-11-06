@@ -46,7 +46,7 @@ final result: passed
 ## 실행한 검사
 
 - `npm run test:allocation`: 정수 합계 보존, 1원/0원/최대 안전 정수, 나머지 배분, 0원 분담, 잘못된 값과 합계 초과 검사 통과.
-- `node scripts/expense-allocation-browser-regression.js`: 기존 폼 내 위치, 금액/비율/균등, 취소, 해당 항목만 저장, 실제 정산 합계, 새로고침, 총액 변경, 모드 전환 정밀도, false/예외 저장 실패와 재시도, 외화 원금 보존, 오래된 분담·멤버 변경 차단, 새 입력 흐름 보존 검사 통과. [실행 결과](verification.json).
+- `node tests/expense-allocation-browser-regression.js`: 기존 폼 내 위치, 금액/비율/균등, 취소, 해당 항목만 저장, 실제 정산 합계, 새로고침, 총액 변경, 모드 전환 정밀도, false/예외 저장 실패와 재시도, 외화 원금 보존, 오래된 분담·멤버 변경 차단, 새 입력 흐름 보존 검사 통과. [실행 결과](verification.json).
 - 기존 `expense-ui-browser-regression.js`, `reservation-expense-editor-browser-regression.js` 통과. 원화·외화·환율·숙박 분할·예약 편집·취소·저장/재로드 흐름을 확인했다.
 - CLI `dev test --suite cli --json`: 222개 프로세스 assertions 및 인증·HTTP 회귀 통과.
 - CLI `dev test --suite sync --json`: DB·클라이언트·서비스·충돌 표시 검사 통과.

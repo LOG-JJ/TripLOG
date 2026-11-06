@@ -2,7 +2,7 @@ const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 const { createServer } = require('./serve-test');
-const fixture = require('./fixtures/companion-experience');
+const fixture = require('../tests/fixtures/companion-experience');
 const root = path.resolve(__dirname, '..');
 function createExperiencePreview({ trip = fixture, now = '2026-11-03T09:05:00Z' } = {}) {
   const files = createServer({ pagesRedirects: true });

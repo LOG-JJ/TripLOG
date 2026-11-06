@@ -85,9 +85,18 @@ function setNewTripCountryFlag(country) {
     return;
   }
   els.newTripCountryFlag.innerHTML = `
-    <img src="${escapeHtml(country.flagImage)}" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false;" />
-    <span class="country-flag-fallback" hidden>${country.flag}</span>
+    <img src="${escapeHtml(country.flagImage)}" alt="" loading="lazy" />
+    <span class="country-flag-fallback" hidden>${escapeHtml(country.flag)}</span>
   `;
+  bindCountryFlagFallback(els.newTripCountryFlag);
+}
+
+function bindCountryFlagFallback(container) {
+  const image = container.querySelector('img');
+  if (!image) return;
+  const fallback = () => { image.hidden = true; if (image.nextElementSibling) image.nextElementSibling.hidden = false; };
+  image.addEventListener('error', fallback, { once: true });
+  if (image.complete && !image.naturalWidth) fallback();
 }
 
 function closeNewTripCountryList() {
@@ -150,12 +159,13 @@ function renderNewTripCountryList(query = "") {
       option.dataset.countryCode = country.code;
       option.innerHTML = `
         <span class="country-flag" aria-hidden="true">
-          <img src="${escapeHtml(country.flagImage)}" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false;" />
-          <span class="country-flag-fallback" hidden>${country.flag}</span>
+          <img src="${escapeHtml(country.flagImage)}" alt="" loading="lazy" />
+          <span class="country-flag-fallback" hidden>${escapeHtml(country.flag)}</span>
         </span>
         <span class="country-name"><span lang="${englishInput?'en':'ko'}">${escapeHtml(primary)}</span>${secondary&&secondary!==primary?`<small lang="${englishInput?'ko':'en'}">${escapeHtml(secondary)}</small>`:''}</span>
-        <span class="country-code">${country.code}</span>
+        <span class="country-code">${escapeHtml(country.code)}</span>
       `;
+      bindCountryFlagFallback(option);
       option.addEventListener("mousedown", (event) => event.preventDefault());
       option.addEventListener("click", () => selectNewTripCountry(country));
       option.addEventListener('keydown', event => {

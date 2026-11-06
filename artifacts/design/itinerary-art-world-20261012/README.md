@@ -23,19 +23,19 @@
 - 교통: 이동, 공항·항공, 철도, 버스, 배·항구, 차량, 자전거, 도보.
 - 기타: 공통 여행 기록.
 
-38개는 이미지 입력 없이 각각 독립 T2I로 생성했고, 12개는 승인된 기존 앱 자산을 재사용했다. [생성 원본 PNG와 프롬프트](assets-original/)는 그대로 보존했다. 각 호출이 반환한 정확한 원본 경로를 프롬프트 기록에 남겼고 38개 모두 원본과 저장 PNG의 SHA256 일치를 확인했다. 최신 파일 검색으로 원본을 추정하지 않았다.
+38개는 이미지 입력 없이 각각 독립 T2I로 생성했고, 12개는 승인된 기존 앱 자산을 재사용했다. [생성 원본 PNG와 프롬프트](assets-original)는 그대로 보존했다. 각 호출이 반환한 정확한 원본 경로를 프롬프트 기록에 남겼고 38개 모두 원본과 저장 PNG의 SHA256 일치를 확인했다. 최신 파일 검색으로 원본을 추정하지 않았다.
 
 `scripts/prepare-itinerary-art.py`는 이 일치를 재확인한 뒤 투명도를 보존하고 비율을 유지해 최대 360×240px WebP로 인코딩한다. 런타임 50개 합계는 **1,484,576 bytes**다. 적용 자산은 `src/assets/itinerary-art/v1/`에 있으며 빌드와 앱 셸 캐시에 포함한다. 실행 중 이미지 생성·추가 API 호출·여행 데이터 전송은 하지 않는다.
 
 ## 실제 적용과 검증
 
-- [일정 PDF](exports/sample-itinerary.pdf), [지출 PDF](exports/sample-expense.pdf), [137건 지출 PDF](exports/all-137-expenses.pdf).
-- [일정 첫 페이지](exports/itinerary-print-1.png), [상세 일정](../export-reports-20261012/itinerary-print-2.png), [지출 첫 페이지](exports/expense-print-1.png), [이어지는 전체 내역](../export-reports-20261012/expense-print-2.png), [390px 날짜별 펼침](exports/itinerary-390-expanded.png).
+- [일정 PDF](../../tmp/20261012-itinerary-exports/sample-itinerary.pdf), [지출 PDF](../../tmp/20261012-itinerary-exports/sample-expense.pdf), [137건 지출 PDF](../../tmp/20261012-itinerary-exports/all-137-expenses.pdf).
+- [일정 첫 페이지](../../tmp/20261012-itinerary-exports/itinerary-print-1.png), [상세 일정](../../qa/20261012-export-reports/itinerary-print-2.png), [지출 첫 페이지](../../tmp/20261012-itinerary-exports/expense-print-1.png), [이어지는 전체 내역](../../qa/20261012-export-reports/expense-print-2.png), [390px 날짜별 펼침](../../tmp/20261012-itinerary-exports/itinerary-390-expanded.png).
 - 50종 전체를 한 목록에서 확인해 그림의 투명 배경·작은 크기에서의 구분·기존 손그림 계열과의 조화를 검사했다. 유형 그림은 건축 양식의 정확성을 보장하지 않으며 실제 장소 사진처럼 제시하지 않는다.
-- `node scripts/itinerary-art-regression.js`: 다국어 이름, 일정 분류 우선, 모호한 이름, 잘못된 메타데이터, 국가별 동일한 결과, 입력 불변과 50개 실제 파일 존재 통과.
+- `node tests/itinerary-art-regression.js`: 다국어 이름, 일정 분류 우선, 모호한 이름, 잘못된 메타데이터, 국가별 동일한 결과, 입력 불변과 50개 실제 파일 존재 통과.
 - `npm run test:print`: 브라우저에서 50개 WebP 디코딩, 유형별 시간표 그림, 특정 그림과 분류 그림을 동시에 차단했을 때 공통 여행 그림 복구, 137건 전체 지출, 외화·환불·긴 메모·100줄 메모, A4 페이지 경계, 320/390/599/759/760/1024/1440px 검사 통과.
 - 일정 2페이지·지출 2페이지의 실제 PDF를 110dpi PNG로 렌더링해 모든 페이지를 확인했다. 지출 전체 137건은 9페이지이며 누락과 중복이 없음을 텍스트 및 DOM 경계로 검사한다.
 - 이전에 선택한 일정 4번 시간표와 지출 1번 비중 차트·모든 내역 구성은 유지했다. 이번 변경의 앱 경비 기능은 [별도 기록](../travel-costs-20261012/README.md)에 정리했다.
-- 전체 `npm test`, `npm run test:browser`, `npm run build`와 `git diff --check`도 통과했다. 최종 로컬 빌드는 `4d617d35402242cdd073`이며 [빌드 파일 검증](build-verification.json), [PDF 용지·텍스트 검사](exports/pdf-verification.json)를 보관했다.
+- 전체 `npm test`, `npm run test:browser`, `npm run build`와 `git diff --check`도 통과했다. 최종 로컬 빌드는 `4d617d35402242cdd073`이며 [빌드 파일 검증](build-verification.json), [PDF 용지·텍스트 검사](../../tmp/20261012-itinerary-exports/pdf-verification.json)를 보관했다.
 
 실기기 iOS/Android 및 Safari 인쇄 대화상자는 별도 미검증이다. 로컬 구현·검증을 완료했으며 커밋·푸시·운영 배포는 수행하지 않았다.

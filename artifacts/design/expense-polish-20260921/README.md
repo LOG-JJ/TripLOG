@@ -26,7 +26,7 @@
 
 ## 검증 범위
 
-`scripts/expense-ui-browser-regression.js`는 외부 요청을 차단한 격리된 fixture만 사용한다. 실제 사용자 계정/여행은 수정하지 않는다. Browser plugin unavailable: 기존 Playwright/Edge 경로를 사용했다.
+`tests/expense-ui-browser-regression.js`는 외부 요청을 차단한 격리된 fixture만 사용한다. 실제 사용자 계정/여행은 수정하지 않는다. Browser plugin unavailable: 기존 Playwright/Edge 경로를 사용했다.
 
 - JPY 2,400 × 환율 900원/100엔 → 21,600원 표시, 저장, 새로고침 후 재편집.
 - 환율 누락 제출 차단, KRW 전환 시 환산 띠 숨김, 결제수단과 메모/결제일 보존.

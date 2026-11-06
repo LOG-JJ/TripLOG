@@ -33,8 +33,8 @@ final result: passed
 
 ## 실행 검사
 
-- `node scripts/itinerary-summary-browser-regression.js` 통과.
-- `node scripts/itinerary-drag-browser-regression.js` 통과.
+- `node tests/itinerary-summary-browser-regression.js` 통과.
+- `node tests/itinerary-drag-browser-regression.js` 통과.
 - `node bin/triplog.js dev test --suite source --json` 종료 코드 0, ok true.
 - `node bin/triplog.js dev build --json` 종료 코드 0, ok true.
 - 로컬 구현만 완료. 커밋·푸시·운영 배포는 실행하지 않음.

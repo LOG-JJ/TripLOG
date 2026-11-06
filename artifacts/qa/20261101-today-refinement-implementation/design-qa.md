@@ -3,9 +3,9 @@
 2026-11-01 · Asia/Seoul  
 final result: passed
 
-목록 제목 후속 수정: 완료 목록의 ‘방문 완료’를 ‘완료 일정’으로 변경했다. 다음 일정·취소 일정·완료 일정 제목을 같은 Today 전용 규칙으로 묶어 Pretendard 15px/550, 줄 높이 20.25px, 남색을 동일 적용하고 개수 표시도 12px/500으로 맞췄다. 격리 fixture에서 완료·건너뛰기를 실행해 세 제목이 함께 있는 390/1440px 화면의 computed style 일치를 확인했다. [글꼴 측정](today-section-heading-typography.json), [PC 캡처](today-section-headings-1440.png). 원본은 `artifacts/tmp/20261101-today-completed-heading/heading-typography/`에 생성하고 SHA256 일치를 확인해 보존했다. 소스 검사·Today 브라우저 회귀·빌드 통과.
+목록 제목 후속 수정: 완료 목록의 ‘방문 완료’를 ‘완료 일정’으로 변경했다. 다음 일정·취소 일정·완료 일정 제목을 같은 Today 전용 규칙으로 묶어 Pretendard 15px/550, 줄 높이 20.25px, 남색을 동일 적용하고 개수 표시도 12px/500으로 맞췄다. 격리 fixture에서 완료·건너뛰기를 실행해 세 제목이 함께 있는 390/1440px 화면의 computed style 일치를 확인했다. [글꼴 측정](../../tmp/20261101-today-refinement-implementation/relocated-20261104/today-section-heading-typography.json), [PC 캡처](today-section-headings-1440.png). 원본은 `artifacts/tmp/20261101-today-completed-heading/heading-typography/`에 생성하고 SHA256 일치를 확인해 보존했다. 소스 검사·Today 브라우저 회귀·빌드 통과.
 
-상세창 크기·위치 후속 수정: 사용자 요청에 따라 `#ttCostInfo`에만 `height:fit-content`, 중앙 자동 여백, 화면 가장자리 16px 제한을 적용했다. 본문 flex 확장을 막아 내용 아래의 큰 빈 공간을 없애고 모바일 하단 시트 규칙 대신 같은 중앙 모달 배치를 사용한다. 긴 내용은 본문에서 스크롤하고 닫기·하단 동작은 창 안에 유지한다. 소스 검사·Today 브라우저 회귀·빌드 통과. 추가 격리 브라우저 측정에서 390×844/320×568/844×390/1440×1024의 세로 중앙 오차 1px 미만, 창·하단 버튼의 화면 내 위치를 확인했다. [측정값](spending-centered-geometry.json), [모바일](spending-centered-390.png), [PC](spending-centered-1440.png). 추가 캡처는 reduced-motion 상태에서 `artifacts/tmp/20261101/expense-dialog-layout/`에 생성 후 SHA256 일치를 확인해 보존했다.
+상세창 크기·위치 후속 수정: 사용자 요청에 따라 `#ttCostInfo`에만 `height:fit-content`, 중앙 자동 여백, 화면 가장자리 16px 제한을 적용했다. 본문 flex 확장을 막아 내용 아래의 큰 빈 공간을 없애고 모바일 하단 시트 규칙 대신 같은 중앙 모달 배치를 사용한다. 긴 내용은 본문에서 스크롤하고 닫기·하단 동작은 창 안에 유지한다. 소스 검사·Today 브라우저 회귀·빌드 통과. 추가 격리 브라우저 측정에서 390×844/320×568/844×390/1440×1024의 세로 중앙 오차 1px 미만, 창·하단 버튼의 화면 내 위치를 확인했다. [측정값](../../tmp/20261101-today-refinement-implementation/relocated-20261104/spending-centered-geometry.json), [모바일](spending-centered-390.png), [PC](spending-centered-1440.png). 추가 캡처는 reduced-motion 상태에서 `artifacts/tmp/20261101/expense-dialog-layout/`에 생성 후 SHA256 일치를 확인해 보존했다.
 
 지출 상세 후속 수정: 사용자 요청대로 상세창 제목을 ‘지출 상세’로 변경하고 도넛 중심의 ‘오늘 지출/오늘 순지출’ 보조 라벨을 제거했다. 날짜·건수는 공통 `trip-context-meta`/`trip-context-duration` 스타일을 재사용해 달력 아이콘·13px 날짜·회색 건수 배지로 정리했다. 도넛은 금액과 건수, 환불 설명은 기존 하단 문구로 표시한다. 소스 검사·Today 브라우저 회귀·빌드 통과. [최신 실제 상세창](spending-detail-refined-390.png)은 `artifacts/tmp/20261101-expense-detail-heading/today-refinement/spending-390.png`에서 SHA256 일치를 확인해 보존했다.
 
@@ -26,7 +26,7 @@ final result: passed
 | 초기 화면, 0/5, Undo 비활성 | [initial-comparison.png](initial-comparison.png) | [390px](today-initial-390.png), [320px](today-320.png), [1440px](today-1440.png) |
 | 방문 완료 후, 1/5, Undo 활성 | [completed-comparison.png](completed-comparison.png) | [today-completed-390.png](today-completed-390.png) |
 | 이날 지출 상세 | [spending-comparison.png](spending-comparison.png) | [390px](spending-390.png), [320px](spending-320.png), [1440px](spending-1440.png) |
-| 상단·진행 표시·Start here | [controls-comparison.png](controls-comparison.png) | 실제 CSS 측정 [typography.json](typography.json) |
+| 상단·진행 표시·Start here | [controls-comparison.png](controls-comparison.png) | 실제 CSS 측정 [typography.json](../../tmp/20261101-today-refinement-implementation/relocated-20261104/typography.json) |
 | 긴 여행명/주소, 빈 지출 | 기존 컴포넌트의 정상 데이터 경계 검증 | [긴 이름 320px](today-long-320.png), [빈 지출 320px](spending-empty-320.png) |
 
 ## 확인한 표면과 수정 이력
@@ -53,11 +53,11 @@ final result: passed
 아래 검사는 이번 변경 후 실제 실행했다. 전체 48개 브라우저 suite를 재실행했다고 주장하지 않는다.
 
 - `node bin/triplog.js dev test --suite source --json`: 종료 코드 0, `ok: true`. 앱 모듈 115개·스타일 31개·브라우저 suite 48개·CLI 모듈 28개 확인.
-- `node scripts/today-refinement-browser-regression.js`: 통과. 공통 여행 정보, 0/5→1/5→Undo 복구, 시작 위치 선택/Undo, 시각·원본 지출 불변, 실제 캔버스·분류 금액/비중, 전체/사전구매 합계, 지출 목록 이동, 부분 환불·환불만 있는 날·0원·긴 이름·빈 일정, 320/390/759/760/1440px 검증.
-- `node scripts/companion-passport-browser-regression.js`: 통과. 기존 빠른 지출·개인 건너뛰기·재열기·완료/Undo·HTML/ICS·도구 동작 및 반응형 보존.
-- `node scripts/report-refund-browser-regression.js`: 통과. 공통 도넛의 기본 리포트 동작, 지출/환불, 정렬·날짜·편집 복귀 및 모바일/PC 보존.
-- `node scripts/travel-costs-browser-regression.js`: 통과. 개요/지출/리포트/오늘의 합계 일치, 추가·수정·삭제·사전구매·환불·재열기, 분류와 기간, 여러 화면 크기 확인.
-- `node scripts/travel-companion-regression.js`, `node scripts/travel-costs-regression.js`: 모두 통과. 기존 날짜·진행·원자적 수정/되돌리기·환불/합계·공통 결제 구성 계산 보존.
+- `node tests/today-refinement-browser-regression.js`: 통과. 공통 여행 정보, 0/5→1/5→Undo 복구, 시작 위치 선택/Undo, 시각·원본 지출 불변, 실제 캔버스·분류 금액/비중, 전체/사전구매 합계, 지출 목록 이동, 부분 환불·환불만 있는 날·0원·긴 이름·빈 일정, 320/390/759/760/1440px 검증.
+- `node tests/companion-passport-browser-regression.js`: 통과. 기존 빠른 지출·개인 건너뛰기·재열기·완료/Undo·HTML/ICS·도구 동작 및 반응형 보존.
+- `node tests/report-refund-browser-regression.js`: 통과. 공통 도넛의 기본 리포트 동작, 지출/환불, 정렬·날짜·편집 복귀 및 모바일/PC 보존.
+- `node tests/travel-costs-browser-regression.js`: 통과. 개요/지출/리포트/오늘의 합계 일치, 추가·수정·삭제·사전구매·환불·재열기, 분류와 기간, 여러 화면 크기 확인.
+- `node tests/travel-companion-regression.js`, `node tests/travel-costs-regression.js`: 모두 통과. 기존 날짜·진행·원자적 수정/되돌리기·환불/합계·공통 결제 구성 계산 보존.
 - IAB에서도 일정 메뉴→오늘의 여행→방문 완료→Undo를 실제 눌러 상태 변경과 복원을 확인했다. 자동 브라우저 검사는 사용자 AGENTS 지침에 따라 저장소의 격리 Edge/Playwright fixture를 사용했다.
 - `node bin/triplog.js dev build --json`: 종료 코드 0, `ok: true`. 최종 앱/공유 자산과 Travel.html/sw.js 생성.
 - `node bin/triplog.js dev artifacts --json`, `git diff --check`: 통과.

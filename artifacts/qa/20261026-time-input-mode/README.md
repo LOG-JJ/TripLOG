@@ -28,10 +28,10 @@ Browser 플러그인을 사용할 수 없어 기존 Playwright/Edge 격리 fixtu
 
 | 명령 | 결과 |
 | --- | --- |
-| `node scripts/time-wheel-browser-regression.js` | 통과: CDP 실제 터치 이벤트로 스크롤·가운데·이웃 숫자 선택·확인·없음에서 편집 가능한 입력칸 포커스 0회. 입력 버튼에서만 원래 시간칸 포커스, 선택창 닫힘·부모 유지, 숫자 포맷·완료·한 번 확정·취소·blur, 부모 닫기/재열기, PC 키보드·중앙 편집, 휠·애니메이션·경계·동작 줄이기·저장/재조회 통과 |
-| `node scripts/reservation-time-browser-regression.js` | 1440·390·320px 통과: 공통 스타일, 입력 버튼 → 원래 도착 시간칸 → Enter, 부모 예약창 유지, 출발·도착 독립성, 휠·취소·없음, 익일 도착 저장/재조회 |
-| `node scripts/itinerary-controls-browser-regression.js` | 기존 일정 테마·폭·반복 열기/닫기·키보드·스크롤 통과 |
-| `node scripts/controls-browser-regression.js` | 320·390·768·1440px 공통 컨트롤·시간·달력·목록·폼 저장/재조회 통과 |
+| `node tests/time-wheel-browser-regression.js` | 통과: CDP 실제 터치 이벤트로 스크롤·가운데·이웃 숫자 선택·확인·없음에서 편집 가능한 입력칸 포커스 0회. 입력 버튼에서만 원래 시간칸 포커스, 선택창 닫힘·부모 유지, 숫자 포맷·완료·한 번 확정·취소·blur, 부모 닫기/재열기, PC 키보드·중앙 편집, 휠·애니메이션·경계·동작 줄이기·저장/재조회 통과 |
+| `node tests/reservation-time-browser-regression.js` | 1440·390·320px 통과: 공통 스타일, 입력 버튼 → 원래 도착 시간칸 → Enter, 부모 예약창 유지, 출발·도착 독립성, 휠·취소·없음, 익일 도착 저장/재조회 |
+| `node tests/itinerary-controls-browser-regression.js` | 기존 일정 테마·폭·반복 열기/닫기·키보드·스크롤 통과 |
+| `node tests/controls-browser-regression.js` | 320·390·768·1440px 공통 컨트롤·시간·달력·목록·폼 저장/재조회 통과 |
 | `node bin/triplog.js dev test --suite source --json` | 종료 0, `ok: true` |
 | `node bin/triplog.js dev build --json` | 종료 0, `ok: true` |
 | `node bin/triplog.js dev artifacts --json` | 종료 0, `ok: true` |

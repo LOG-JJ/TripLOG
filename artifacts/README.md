@@ -20,7 +20,7 @@
 
 ## 테스트 출력
 
-브라우저 테스트는 `scripts/helpers/artifact-output.js`를 통해 기본적으로 `tmp/<실행일>/<테스트명>/`에 출력합니다. 실행 묶음을 지정하려면 PowerShell에서 다음처럼 실행합니다.
+브라우저 테스트는 `scripts/helpers/artifact-output.js`를 통해 기본적으로 한국 시간 기준 `tmp/<실행일>/<테스트명>/`에 출력합니다. 실행 묶음을 지정하려면 PowerShell에서 다음처럼 실행합니다.
 
 ```powershell
 $env:TRIPLOG_ARTIFACT_RUN = '20261016-repository-cleanup'
@@ -30,12 +30,16 @@ Remove-Item Env:TRIPLOG_ARTIFACT_RUN
 
 기존 `TRIPLOG_UI_SNAPSHOT_DIR` 또는 `TRIPLOG_TEST_OUTPUT`을 명시하면 해당 경로를 사용합니다. 새 경로도 이 폴더 아래에 지정하는 것을 기본으로 합니다. GitHub Actions는 `artifacts/tmp/`를 테스트 결과로 수집합니다.
 
-`npm run artifacts:check`는 루트·`docs/`에 잘못 놓인 산출물을 찾습니다. 같은 검사를 `npm run test:source`와 `npm test`에서도 실행합니다.
+`npm run artifacts:check`는 루트·`docs/`의 산출물, `design/` 내부의 QA·브라우저 캡처·exports 폴더, 영구 보관 영역의 로그·PDF·ZIP과 QA 실행 스크립트를 검사합니다. 재생성에 필요한 디자인 도구와 원본·프롬프트는 `design/`에 보존합니다. 같은 검사를 `npm run test:source`와 `npm test`에서도 실행합니다.
+
+2026-11-04에 전체 캡처·PDF·실행 뷰어·기하 진단 등 1,316개를 `tmp/`로 옮기고, 디자인 자료에 섞인 완료된 QA 56개를 `qa/`로 분리했습니다. 임시 자료는 로컬에 남으며 Git에서 제외됩니다. 이를 가리키는 과거 기록의 링크는 해당 로컬 자료가 있을 때만 열립니다. 원본 생성 기록과 이전 감사 JSON 내부의 경로는 당시 출처로 유지합니다. 현재 위치는 아래 이동 목록에서 확인할 수 있습니다.
 
 ## 이전 자료 찾기
 
-- [날짜·주제별 디자인 자료](design/)
+- [날짜·주제별 디자인 자료](design)
 - [기존 전체 디자인 검증 기록](design/design-qa.md)
 - [2026-10-16 이동·중복 통합 목록](relocations-20261016.json): 이전 경로, 현재 경로, 원본 해시와 처리 내역
+- [2026-11-04 테스트·QA·임시 자료 이동 목록](relocations-20261104.json): 1,477개 파일의 이전·현재 경로와 이동 전후 검증 해시
+- [2026-11-06 루트 파일 이동 목록](relocations-20261106.json): 8개 파일의 이전·현재 경로와 이동 해시
 
 기존 생성 기록의 외부 원본 경로는 당시 호출의 출처입니다. 프로젝트 내부 저장 경로는 현재 보관 위치에 맞췄고, 최종 프롬프트 문자열은 유지했습니다.

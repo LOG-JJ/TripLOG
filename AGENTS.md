@@ -13,6 +13,7 @@
 ## 개발
 
 - 현재 `package.json`과 README를 실행·검증 명령의 기준으로 삼는다. npm 의존성과 빌드 단계가 존재한다.
+- 회귀 테스트·격리 fixture는 `tests/`에, 빌드·미리보기·검사 도구는 `scripts/`에 둔다. 테스트 출력은 기존 `scripts/helpers/artifact-output.js`를 사용한다. 상세 경계와 검증은 `docs/development.md`, 보안 기준은 `docs/security.md`를 따른다.
 - 사용자 작업과 무관한 변경을 보존하고, 오래된 배포 이력보다 현재 사용자 지시와 이 문서를 우선한다.
 
 ## AI 작업과 CLI 활용 (2026-10-18 사용자 요청)

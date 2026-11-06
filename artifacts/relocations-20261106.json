@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-06",
+  "files": [
+    {
+      "from": "app.js",
+      "to": "src/entry/app.js",
+      "sha256BeforeMove": "a627d51325eb28bd37934cf35f0bd8e5ff58d1552cc1fed7d8c20bc1212e47bd",
+      "sha256AfterEdits": "a627d51325eb28bd37934cf35f0bd8e5ff58d1552cc1fed7d8c20bc1212e47bd",
+      "publicUrl": "/app.js"
+    },
+    {
+      "from": "styles.css",
+      "to": "src/styles/base.css",
+      "sha256BeforeMove": "8cfac44b4cc5ac4bee7a800284c22f8a6d2c7e1b8bf938957ad4de1b9e13d1e9",
+      "sha256AfterEdits": "8cfac44b4cc5ac4bee7a800284c22f8a6d2c7e1b8bf938957ad4de1b9e13d1e9",
+      "publicUrl": "/styles.css"
+    },
+    {
+      "from": "repair.html",
+      "to": "src/entry/repair.html",
+      "sha256BeforeMove": "99b35fd9c279ad3e327a815c22556f7eb944b398f638269d88532fa9e781fbc3",
+      "sha256AfterEdits": "99b35fd9c279ad3e327a815c22556f7eb944b398f638269d88532fa9e781fbc3",
+      "publicUrl": "/repair.html"
+    },
+    {
+      "from": "site.webmanifest",
+      "to": "src/entry/site.webmanifest",
+      "sha256BeforeMove": "1a4929c1eb1d914956a1a53131c0df8f23a25be126087cabec119f1c2424590b",
+      "sha256AfterEdits": "1a4929c1eb1d914956a1a53131c0df8f23a25be126087cabec119f1c2424590b",
+      "publicUrl": "/site.webmanifest"
+    },
+    {
+      "from": "apple-touch-icon.png",
+      "to": "icons/apple-touch-icon.png",
+      "sha256BeforeMove": "76ffa94052a4bb98c066401832d699c6edff444c04d2c20c56f21865d7c71045",
+      "sha256AfterEdits": "76ffa94052a4bb98c066401832d699c6edff444c04d2c20c56f21865d7c71045",
+      "publicUrl": "/apple-touch-icon.png"
+    },
+    {
+      "from": "favicon-32.png",
+      "to": "icons/favicon-32.png",
+      "sha256BeforeMove": "2da47d796404894195d782bef647fb178148760707fef930ca44fdd74d012394",
+      "sha256AfterEdits": "2da47d796404894195d782bef647fb178148760707fef930ca44fdd74d012394",
+      "publicUrl": "/favicon-32.png"
+    },
+    {
+      "from": "TripLOG.cmd",
+      "to": "scripts/windows/TripLOG.cmd",
+      "sha256BeforeMove": "987ee543b6e6d0b2178d97e5ed16ace9032e44e34db420e912c49c60d8f8d56d",
+      "sha256AfterEdits": "34a6f5362afc1ab8c3acc6cdb3c6a54a136dcd47dfa857191a650310013c94fa"
+    },
+    {
+      "from": "로컬실행.bat",
+      "to": "scripts/windows/로컬실행.bat",
+      "sha256BeforeMove": "34b52c3c39b490e3e14d7760c6982b41059031215772e291271576de0806ddfc",
+      "sha256AfterEdits": "b78714ee55f77ded245311f9417a79718af784a5d0c3bb128ae2a029c2d1a965"
+    }
+  ],
+  "deploymentBuild": "9f03da4778c52ca3abe0"
+}

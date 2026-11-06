@@ -24,8 +24,8 @@ Core에서 11장을 다시 생성했다. 안도라라베야는 Casa de la Vall�
 
 - 보완 7개 도시를 320·390·1440px에서 렌더링한 21개 조합이 통과했다. 반응형 이미지 선택, 투명도, 정보와 그림의 좌우 배치, 넘침, 실제 그림의 오른쪽·하단 연결, 기존 여행 데이터 불변을 검사했다.
 - 산후안·콕번타운의 320px 및 1440px 최종 캡처 4장을 직접 확인했으며 이 폴더의 `worker-a-pr-san-juan-*` 및 `worker-a-tc-cockburn-town-*` 파일에 보존했다.
-- `node scripts/destination-scenes-regression.js --skip-assets`: 635개 전용 목적지(국내 95, 해외 540), 원본 395개 객체 불변, 필수 국가·거주 지역 누락 0, 250개 국가 선택기 이름·별칭, 모호함·미지정·복수·지역 폴백 통과. 이 명령의 파일 존재 검사는 최종 합본 이미지 감사와 분리했다.
-- `node scripts/country-search-regression.js`: 250개 영어 국가명, 한글·영문·코드 별칭, 대소문자·문장부호·부분 검색·잘못된 입력 통과.
+- `node tests/destination-scenes-regression.js --skip-assets`: 635개 전용 목적지(국내 95, 해외 540), 원본 395개 객체 불변, 필수 국가·거주 지역 누락 0, 250개 국가 선택기 이름·별칭, 모호함·미지정·복수·지역 폴백 통과. 이 명령의 파일 존재 검사는 최종 합본 이미지 감사와 분리했다.
+- `node tests/country-search-regression.js`: 250개 영어 국가명, 한글·영문·코드 별칭, 대소문자·문장부호·부분 검색·잘못된 입력 통과.
 - 담당 런타임 및 회귀 파일의 `git diff --check` 통과.
 
 실행 로그·전체 접촉 시트·전체 캡처는 Git 제외 경로인 `artifacts/tmp/20261017-world-city-expansion-500/`에 둔다. 이 보고서는 로컬 생성·검증 결과이며 Git 푸시 또는 운영 자동 배포 완료를 뜻하지 않는다.

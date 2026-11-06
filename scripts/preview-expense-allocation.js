@@ -1,5 +1,5 @@
 const { createExperiencePreview } = require('./preview-companion-experience');
-const fixture = require('./fixtures/expense-allocation');
+const fixture = require('../tests/fixtures/expense-allocation');
 const createAllocationPreview = () => createExperiencePreview({ trip: fixture, now: '2026-11-01T09:10:00+09:00' });
 if (require.main === module) {
   const port = Number(process.env.PORT || 18134), server = createAllocationPreview();

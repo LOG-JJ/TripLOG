@@ -27,8 +27,8 @@ final result: passed
 
 ## 실행 결과
 
-- `node scripts/itinerary-summary-browser-regression.js`: 통과.
-- `node scripts/transit-journey-browser-regression.js`: 통과. 기존 지도/직접 기록 기본 동작과 저장 충돌 방어 유지.
+- `node tests/itinerary-summary-browser-regression.js`: 통과.
+- `node tests/transit-journey-browser-regression.js`: 통과. 기존 지도/직접 기록 기본 동작과 저장 충돌 방어 유지.
 - `node bin/triplog.js dev test --suite source --json`: 종료 코드 0, `ok: true`.
 - `node bin/triplog.js dev build --json`: 종료 코드 0, `ok: true`.
 - 로컬 구현 완료. 이번 요청에서 Git 커밋·푸시·운영 배포는 실행하지 않았다.

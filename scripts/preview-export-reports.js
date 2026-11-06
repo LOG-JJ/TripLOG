@@ -3,7 +3,7 @@ const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 const { createServer } = require('./serve-test');
-const fixtures = require('./fixtures/export-reports');
+const fixtures = require('../tests/fixtures/export-reports');
 const root = path.resolve(__dirname, '..');
 function createExportPreview() {
   const files = createServer({ pagesRedirects: true });

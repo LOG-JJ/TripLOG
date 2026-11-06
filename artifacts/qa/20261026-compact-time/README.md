@@ -26,10 +26,10 @@
 
 | 검사 | 결과 |
 | --- | --- |
-| `node scripts/time-wheel-browser-regression.js` | 통과: 3줄, 중간 애니메이션, 연속 키 입력, 마우스 드래그·관성, 실제 CDP 터치 스크롤·중앙 편집, 23/00·59/00 경계, 직접 입력·범위 보정, 확인·취소·시간 없음, 동작 줄이기, 저장 후 재열기, 열린 창 반응형 크기 |
-| `node scripts/reservation-time-browser-regression.js` | 1440·390·320px 통과: 일정/예약 동일한 휠, 출발·도착 독립성, 입력·휠·취소·확인·시간 없음, 익일 도착 저장·재조회 |
-| `node scripts/itinerary-controls-browser-regression.js` | 입력칸·선택창, 클릭·키보드 열기/닫기, 기존 일정 테마·스크롤 통과 |
-| `node scripts/controls-browser-regression.js` | 320·390·768·1440px 통과: 시간·달력·목록 공통 컨트롤, 경계·취소·저장·새로고침 |
+| `node tests/time-wheel-browser-regression.js` | 통과: 3줄, 중간 애니메이션, 연속 키 입력, 마우스 드래그·관성, 실제 CDP 터치 스크롤·중앙 편집, 23/00·59/00 경계, 직접 입력·범위 보정, 확인·취소·시간 없음, 동작 줄이기, 저장 후 재열기, 열린 창 반응형 크기 |
+| `node tests/reservation-time-browser-regression.js` | 1440·390·320px 통과: 일정/예약 동일한 휠, 출발·도착 독립성, 입력·휠·취소·확인·시간 없음, 익일 도착 저장·재조회 |
+| `node tests/itinerary-controls-browser-regression.js` | 입력칸·선택창, 클릭·키보드 열기/닫기, 기존 일정 테마·스크롤 통과 |
+| `node tests/controls-browser-regression.js` | 320·390·768·1440px 통과: 시간·달력·목록 공통 컨트롤, 경계·취소·저장·새로고침 |
 | `node bin/triplog.js dev test --suite source --json` | 종료 0, `ok: true` |
 | `node bin/triplog.js dev build --json` | 종료 0, `ok: true`; Travel.html·sw.js는 빌드 지문만 갱신 |
 | `node bin/triplog.js dev artifacts --json` | 종료 0, `ok: true` |

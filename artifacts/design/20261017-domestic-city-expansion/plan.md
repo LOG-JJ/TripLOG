@@ -128,10 +128,10 @@
 3. 별칭, 동명이인 도시, 신·구 행정명칭, 제주 부모지역 관계를 검증한다. 광주 테스트는 명확한 canonical 입력을 사용하고 모호한 단독 이름 테스트를 별도로 둔다.
 4. 95개 목적지를 320·390·599·1440px에서 검사한다. 767/768px 전환점과 599/600px 경계, 613px 중간 폭, PC 패널, 긴 여행명도 확인한다. 실제 채색 픽셀의 하단·우측 공백, 테두리 연결, 피사체 잘림을 비교한다.
 5. 이미지 실패·미캐시 오프라인·온라인 복귀, 필요한 한 장만 요청하는 동작과 48파일 캐시 한도를 확인한다.
-6. `node scripts/destination-scenes-regression.js`, `node scripts/trip-scene-art-browser-regression.js`, `node scripts/trip-header-browser-regression.js`, `npm run prepare:sync` 후 `node scripts/trip-scene-cache-browser-regression.js`, `npm run artifacts:check`, `npm run test:source`를 실행한다. 전체 연결 완료 시 `npm test`와 `npm run build`를 수행하고 생성된 빌드 지문도 검토한다.
+6. `node tests/destination-scenes-regression.js`, `node tests/trip-scene-art-browser-regression.js`, `node tests/trip-header-browser-regression.js`, `npm run prepare:sync` 후 `node tests/trip-scene-cache-browser-regression.js`, `npm run artifacts:check`, `npm run test:source`를 실행한다. 전체 연결 완료 시 `npm test`와 `npm run build`를 수행하고 생성된 빌드 지문도 검토한다.
 
-기존 테스트의 서귀포→제주 지역 기대와 평창→공통 산악 기대는 새 전용 그림에 맞게 분리한다. `scripts/fixtures/trip-header.js`, `scripts/destination-scenes-regression.js`, `scripts/trip-header-browser-regression.js`, `scripts/trip-scene-art-browser-regression.js`의 fixture·카운트·표시명 입력도 함께 갱신한다. 테스트 산출물은 공통 artifact helper와 `TRIPLOG_ARTIFACT_RUN`으로 관리한다.
+기존 테스트의 서귀포→제주 지역 기대와 평창→공통 산악 기대는 새 전용 그림에 맞게 분리한다. `tests/fixtures/trip-header.js`, `tests/destination-scenes-regression.js`, `tests/trip-header-browser-regression.js`, `tests/trip-scene-art-browser-regression.js`의 fixture·카운트·표시명 입력도 함께 갱신한다. 테스트 산출물은 공통 artifact helper와 `TRIPLOG_ARTIFACT_RUN`으로 관리한다.
 
-이번 계획 자료를 검사한 결과 공식 명부 85개와 계획의 지역·시명 집합이 일치하고 누락·추가·중복은 0개였다. 전체 계획은 95개 고유 ID이며, 기존 30개 항목이 모두 보존되고 사람용 체크리스트도 95행으로 일치한다. 신규 등록 65개·새 제작 80쌍·160장의 산수와 JSON 파싱을 확인했다. `npm run artifacts:check`, `npm run test:source`, 현재 자산에 대한 `node scripts/destination-scenes-regression.js`가 통과했다. 실제 신규 이미지 품질과 운영 반영 여부는 이후 제작·구현 단계에서 확인한다.
+이번 계획 자료를 검사한 결과 공식 명부 85개와 계획의 지역·시명 집합이 일치하고 누락·추가·중복은 0개였다. 전체 계획은 95개 고유 ID이며, 기존 30개 항목이 모두 보존되고 사람용 체크리스트도 95행으로 일치한다. 신규 등록 65개·새 제작 80쌍·160장의 산수와 JSON 파싱을 확인했다. `npm run artifacts:check`, `npm run test:source`, 현재 자산에 대한 `node tests/destination-scenes-regression.js`가 통과했다. 실제 신규 이미지 품질과 운영 반영 여부는 이후 제작·구현 단계에서 확인한다.
 
 배포 요청이 있을 때 현재 저장소 지침의 Git 커밋·푸시 → 연결 자동 배포 절차를 따른다. 로컬 검증 완료, 푸시 완료, 운영 파일 확인을 각각 구분한다.

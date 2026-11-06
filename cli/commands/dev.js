@@ -73,7 +73,7 @@ async function deployRun(options, { runner = run, npmRunner = npm, status = depl
   if (scoped.files.some(file => file.startsWith('supabase/'))) await npmRunner(['run', 'test:edge']);
   await npmRunner(['run', 'build']);
   const after = await deployPlan({ ...options, files: scoped.files }, runner);
-  const isGenerated = file => ['Travel.html', 'sw.js', 'index.html', 'site.webmanifest'].includes(file) || file.startsWith('supabase/functions/_shared/') || file.startsWith('vendor/') || /^icons\/apple-touch-icon-/.test(file);
+  const isGenerated = file => ['Travel.html', 'sw.js', 'index.html', 'src/entry/site.webmanifest'].includes(file) || file.startsWith('supabase/functions/_shared/') || file.startsWith('vendor/') || /^icons\/apple-touch-icon-/.test(file);
   if (after.head !== scoped.head || after.branch !== scoped.branch || after.remote !== scoped.remote || scoped.files.some(file => !isGenerated(file) && after.fileHashes[file] !== scoped.fileHashes[file])) fail('CONFLICT', '검증 도중 소스나 Git 상태가 변경됐습니다. 새 상태로 다시 검증해 주세요.');
   const generated = after.unselected.filter(isGenerated);
   if (after.unselected.some(file => !generated.includes(file))) fail('CONFLICT', '검증 중 새로운 변경이 발생했습니다. 파일 목록을 다시 확인해 주세요.', { files: after.unselected });

@@ -59,6 +59,6 @@
 - 긴 이름·댓글은 실제 내용을 안전한 텍스트로 표시합니다. 좁은 화면·큰 글자에서도 버튼이 잘리지 않아야 합니다.
 - 동작 중 여행·대상·연결 상태가 바뀌면 새 대상을 지우지 않도록 재확인합니다. 완료 안내는 저장 성공 후 표시합니다.
 
-공통 구현은 [confirmation.js](../../../src/app/ui/confirmation.js), 외형은 [redesign.css](../../../src/styles/redesign.css), 회귀 검증은 [delete-dialogs-browser-regression.js](../../../scripts/delete-dialogs-browser-regression.js)에 있습니다. 각 기능은 `TripLog.ui.confirmation.ask({ kind, subject, message })`로 정확한 대상과 영향만 전달합니다. 복원·소유권 이전 등 비삭제 확인도 같은 작은 확인창을 사용하며 동작 이름과 중립색 버튼을 표시합니다.
+공통 구현은 [confirmation.js](../../../src/app/ui/confirmation.js), 외형은 [redesign.css](../../../src/styles/redesign.css), 회귀 검증은 [delete-dialogs-browser-regression.js](../../../tests/delete-dialogs-browser-regression.js)에 있습니다. 각 기능은 `TripLog.ui.confirmation.ask({ kind, subject, message })`로 정확한 대상과 영향만 전달합니다. 복원·소유권 이전 등 비삭제 확인도 같은 작은 확인창을 사용하며 동작 이름과 중립색 버튼을 표시합니다.
 
 최종 결과와 대표 캡처는 `artifacts/qa/20261017-delete-dialogs/`에 보관합니다.

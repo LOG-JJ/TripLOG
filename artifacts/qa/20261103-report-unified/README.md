@@ -18,8 +18,8 @@ Browser plugin not available. 저장소의 Playwright/Edge 격리 fixture 사용
 
 | 실행 | 결과 |
 | --- | --- |
-| `node scripts/itinerary-analysis-browser-regression.js` | 320/390/768/1440px 탭 위치·크기 동일, 큰 금액/빈 일정, 모바일 도넛 합계 표시, 날짜·정렬·미입력 수정 후 복귀 통과 |
-| `node scripts/report-refund-browser-regression.js` | 환불·0원·사전구매·결제일별 금액/비중, 정렬과 안정적인 동률 순서, 빈 날짜, 원본 일정/합계 유지, 편집 연결, 반응형 넘침 검사 통과 |
+| `node tests/itinerary-analysis-browser-regression.js` | 320/390/768/1440px 탭 위치·크기 동일, 큰 금액/빈 일정, 모바일 도넛 합계 표시, 날짜·정렬·미입력 수정 후 복귀 통과 |
+| `node tests/report-refund-browser-regression.js` | 환불·0원·사전구매·결제일별 금액/비중, 정렬과 안정적인 동률 순서, 빈 날짜, 원본 일정/합계 유지, 편집 연결, 반응형 넘침 검사 통과 |
 | `node bin/triplog.js dev test --suite source --json` | 종료 코드 0, `ok: true`, 소스/CLI 검사 통과 |
 | `node bin/triplog.js dev build --json` | 종료 코드 0, `ok: true`, 최종 빌드 통과 |
 

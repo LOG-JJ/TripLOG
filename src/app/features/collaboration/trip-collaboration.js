@@ -2,7 +2,7 @@
   const ACCOUNT_STORAGE_KEY = "domesticTravelExpensePlanner.account.v1";
   const SUPABASE_CONFIG_STORAGE_KEY = "domesticTravelExpensePlanner.supabaseConfig.v1";
   const AUTH_PENDING_EMAIL_KEY = "domesticTravelExpensePlanner.authPendingEmail.v1";
-  const SUPABASE_CDN_URL = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.107.0/dist/umd/supabase.min.js";
+  const SUPABASE_SCRIPT_URL = "/vendor/supabase-js-2.107.0.min.js";
   const DEFAULT_SUPABASE_CONFIG = window.TripLog.data.serviceConfig;
   const INVITE_PARAM = "invite";
   const AUTH_PASSWORD_MIN_LENGTH = 8;
@@ -171,7 +171,7 @@
     supabaseScriptPromise = new Promise((resolve, reject) => {
       const script = document.createElement("script");
       const timeoutId = window.setTimeout(() => reject(new Error("Supabase 클라이언트 로딩 시간이 초과되었습니다.")), 8000);
-      script.src = SUPABASE_CDN_URL;
+      script.src = SUPABASE_SCRIPT_URL;
       script.async = true;
       script.onload = () => {
         window.clearTimeout(timeoutId);

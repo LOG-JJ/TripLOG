@@ -6,7 +6,7 @@
 
 - 리포트의 하단 메뉴 정의를 제거해 즉시 리포트 페이지로 이동한다. 펼침 화살표·ARIA popup 속성·메뉴 히스토리가 생성되지 않는다. 모든 하단 항목이 직접 진입한다.
 - 여행에만 적용됐던 `::before`의 top 1px / height 34px 및 `::after` 숨김 예외를 제거했다. 공통 top 0 / height 56px 선택 배경과 공통 밑줄을 사용한다. 아이콘 24px, 레이블 16px 높이와 중앙 위치는 원래 공통 규칙을 따르고 있었다.
-- [수정 전/후 비교](alignment-comparison.png), [수정 전 측정](before-layout.json), [수정 후 측정](after-layout.json)을 보존했다. 같은 390×844 CSS px / DPR 1의 동일 fixture·선택 상태에서 비교했다.
+- [수정 전/후 비교](alignment-comparison.png), [수정 전 측정](../../tmp/20261101-report-direct-nav/relocated-20261104/before-layout.json), [수정 후 측정](../../tmp/20261101-report-direct-nav/relocated-20261104/after-layout.json)을 보존했다. 같은 390×844 CSS px / DPR 1의 동일 fixture·선택 상태에서 비교했다.
 - 실제 [여행 390px](travel-390.png), [리포트 390px](report-390.png), [리포트 320px](report-320.png). 원본·보존본 SHA256은 [capture-provenance.json](capture-provenance.json)에 기록했다.
 
 ## 검증

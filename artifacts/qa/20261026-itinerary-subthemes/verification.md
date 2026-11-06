@@ -24,13 +24,13 @@ Browser plugin not available: 저장소의 Playwright / 설치된 Edge로 로컬
 | --- | --- |
 | `node bin/triplog.js dev test --suite all --json` | 종료 코드 0, `ok: true`: 소스·SQL/동기화·복구/백업·지도 모델·일정 순서·PDF 모델·CLI·터미널 |
 | `node bin/triplog.js dev test --suite cli --json` | 종료 코드 0, `ok: true`: 로컬 파일 및 cloud fixture의 세부 분류 저장·조회, 테마 전환, 잘못된 조합 거부 포함 |
-| `node scripts/itinerary-art-regression.js` | 50개 유형·그림·실제 아이콘, 수동 우선순위, 잘못된 유형의 자동 대체, 50개 동기화 직렬화 왕복 |
-| `node scripts/itinerary-subtypes-browser-regression.js` | 선택 → 저장 → 새로고침 → 메모 수정 → 독립 복사 → PDF → 자동 전환 → 테마 변경 → 기존 항목 보존 → 초안 복원 |
-| `node scripts/itinerary-controls-browser-regression.js` | 테마 팝업·시간·키보드·이동 편집 |
-| `node scripts/controls-browser-regression.js` | 공통 선택창·시간·통화·날짜·숙소 저장/복원, 모바일·PC |
-| `node scripts/map-provider-browser-regression.js` | 모바일 외부 지도 복귀 후 카페 세부 분류 복원, 국내/해외 지도 흐름 |
-| `node scripts/stay-copy-browser-regression.js` | 숙소 예약 자동 일정·수정·복사·저장 실패 복구 |
-| `node scripts/print-export-browser-regression.js` | PDF 전체 회귀, 50종 그림·실패 시 대체, 겹침·긴 일정·금액·모바일/PC |
+| `node tests/itinerary-art-regression.js` | 50개 유형·그림·실제 아이콘, 수동 우선순위, 잘못된 유형의 자동 대체, 50개 동기화 직렬화 왕복 |
+| `node tests/itinerary-subtypes-browser-regression.js` | 선택 → 저장 → 새로고침 → 메모 수정 → 독립 복사 → PDF → 자동 전환 → 테마 변경 → 기존 항목 보존 → 초안 복원 |
+| `node tests/itinerary-controls-browser-regression.js` | 테마 팝업·시간·키보드·이동 편집 |
+| `node tests/controls-browser-regression.js` | 공통 선택창·시간·통화·날짜·숙소 저장/복원, 모바일·PC |
+| `node tests/map-provider-browser-regression.js` | 모바일 외부 지도 복귀 후 카페 세부 분류 복원, 국내/해외 지도 흐름 |
+| `node tests/stay-copy-browser-regression.js` | 숙소 예약 자동 일정·수정·복사·저장 실패 복구 |
+| `node tests/print-export-browser-regression.js` | PDF 전체 회귀, 50종 그림·실패 시 대체, 겹침·긴 일정·금액·모바일/PC |
 | `node bin/triplog.js dev build --json` | 종료 코드 0, `ok: true`, HTML·서비스 워커·dist 생성 |
 | `node bin/triplog.js dev artifacts --json` | 종료 코드 0, `ok: true`, artifacts 보관 규칙 통과 |
 

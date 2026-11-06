@@ -105,7 +105,7 @@ for (const code of requiredAllCodes) {
 
 추가로 대표 도시의 한글·영문 alias를 교차 검사하고, 동일 이름이 여러 국가에 있을 때 국가코드 필터가 정확히 동작하는지 확인한다. 국가 미지정·잘못된 명시 국가·여러 도시 입력은 기존 unknown/ambiguous/multiple 계약을 유지해야 한다. `IL,PS` 같은 보조 관계만으로 PS의 최소 국가 요건을 통과시키면 실패하도록 명시 검사를 둔다.
 
-반복 가능한 검증은 기존 `scripts/destination-scenes-regression.js`에 연결할 수 있다. 도시는 최소 한 대표를 국가별로 검사하되 자산 존재와 크기·투명도·고유성은 최종 신규 자산 전수 검사로 별도 수행한다. 실제 헤더는 기존 브라우저 회귀 도구로 선택된 이미지, 320·390·599·1440px 배치, 텍스트 간섭과 그림 하단 연결을 검사한다. `npm run test:source`, 관련 회귀 테스트, `npm run artifacts:check` 이후 전체 통합 단계에서 `npm test`와 `npm run build`를 실행한다.
+반복 가능한 검증은 기존 `tests/destination-scenes-regression.js`에 연결할 수 있다. 도시는 최소 한 대표를 국가별로 검사하되 자산 존재와 크기·투명도·고유성은 최종 신규 자산 전수 검사로 별도 수행한다. 실제 헤더는 기존 브라우저 회귀 도구로 선택된 이미지, 320·390·599·1440px 배치, 텍스트 간섭과 그림 하단 연결을 검사한다. `npm run test:source`, 관련 회귀 테스트, `npm run artifacts:check` 이후 전체 통합 단계에서 `npm test`와 `npm run build`를 실행한다.
 
 ## 300개 기준선의 정확한 누락 목록
 

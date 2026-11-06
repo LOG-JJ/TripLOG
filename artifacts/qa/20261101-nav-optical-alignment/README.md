@@ -6,7 +6,7 @@
 
 ## 원인과 수정
 
-- 제공 캡처의 캐리어 그림은 y26~60, 높이 35px였다. 집은 y29~57 / 29px, 달력은 y28~57 / 30px였다. 다섯 레이블은 모두 y70~85로 같았다. 원본 이미지 픽셀 기준이며 사용자 화면의 CSS 배율을 추정해 적용한 값이 아니다. [측정](reference-paint-bounds.json).
+- 제공 캡처의 캐리어 그림은 y26~60, 높이 35px였다. 집은 y29~57 / 29px, 달력은 y28~57 / 30px였다. 다섯 레이블은 모두 y70~85로 같았다. 원본 이미지 픽셀 기준이며 사용자 화면의 CSS 배율을 추정해 적용한 값이 아니다. [측정](../../tmp/20261101-nav-optical-alignment/reference-paint-bounds.json).
 - 기존 Phosphor 캐리어 glyph는 em 전체를 쓰고, 집·달력은 내부 여백이 있다. 모두 font-size 24px / 24×24px 칸이어도 실제 그림 높이는 캐리어 24 CSS px, 집·달력 20 CSS px의 font metric이었다. DOM 사각형 비교만으로는 차이를 검출할 수 없었다.
 - 공통 24×24px 아이콘 칸 안에서 캐리어를 20px로 표시하고 grid 중앙 배치했다. 버튼·레이블·선택 배경·밑줄의 공통 배치는 바꾸지 않았다. 새 아이콘·라이브러리·화면 디자인은 추가하지 않았다.
 
@@ -14,7 +14,7 @@
 
 [수정 전/후 2배 확대 비교](alignment-comparison.png), [수정 후 선택 상태](after-390-1.png), [비선택 상태](inactive-travel-390.png).
 
-같은 fixture·폰트·상태에서 캡처한 실제 이미지의 어두운 픽셀 영역을 측정했다. 판정은 max(R,G,B)<180이며 아이콘/레이블의 실제 위치 주변만 검사해 배경·밑줄을 제외했다. [픽셀 측정값](paint-bounds.json), [수정 전 DOM/font metric](before.json), [수정 후 DOM/font metric](after.json).
+같은 fixture·폰트·상태에서 캡처한 실제 이미지의 어두운 픽셀 영역을 측정했다. 판정은 max(R,G,B)<180이며 아이콘/레이블의 실제 위치 주변만 검사해 배경·밑줄을 제외했다. [픽셀 측정값](../../tmp/20261101-nav-optical-alignment/relocated-20261104/paint-bounds.json), [수정 전 DOM/font metric](../../tmp/20261101-nav-optical-alignment/relocated-20261104/before.json), [수정 후 DOM/font metric](../../tmp/20261101-nav-optical-alignment/relocated-20261104/after.json).
 
 | 조건 | 수정 전 캐리어 그림 | 수정 후 캐리어 그림 | 비교 대상 |
 | --- | --- | --- | --- |

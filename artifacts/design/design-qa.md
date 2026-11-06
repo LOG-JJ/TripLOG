@@ -30,7 +30,7 @@ final result: passed
 - 일정은 공통 시간축과 날짜별 열, 모바일 날짜별 펼침 목록, 상세 일정으로 구현했습니다. 지출은 비중 차트와 일자별 그래프 아래 모든 내역을 이어 출력합니다.
 - 전체 지출 137건·외화·환불·긴 메모·100줄 메모·A4 페이지 나눔과 320/390/599/759/760/1024/1440px 검증을 통과했습니다. 예시 일정/지출 PDF는 각각 2페이지, 137건 지출은 9페이지입니다.
 - `npm test`, `npm run test:print`, 관련 스크롤·컨트롤 회귀 검사, `npm run build`가 통과했습니다. 로컬 빌드 `56655d7a187fda625ad0`. 커밋·푸시·운영 배포는 아직 하지 않았습니다.
-- [선택 목업·시각 비교·검증·예시 PDF](export-reports-20261012/design-qa.md).
+- [선택 목업·시각 비교·검증·예시 PDF](../qa/20261012-export-reports/design-qa.md).
 
 ---
 
@@ -253,7 +253,7 @@ final result: passed
 - 제품에 맞춘 차이: 목업의 임의 숫자 뱃지는 넣지 않고 실제 선택값을 표시한다. 작은 모바일 화면에서는 기존 검색/필터 펼치기 흐름을 유지하고 메뉴 두 개를 다음 줄에 배치한다. 모바일 입력 글씨는 iOS 확대 방지를 위해 16px, 힌트와 메뉴 글씨는 12px이다.
 - 지출 제목·카테고리 표시·기존 항공권을 열고 취소/저장해도 명시적으로 선택한 필터·검색어·정렬·탭을 보존한다. 사전구매 열기/저장의 강제 카테고리 전환 및 검색어/탭 초기화를 제거했다. 저장 후 현재 조건에 보이는 항목만 강조한다.
 - 격리된 가상 여행으로 새 항공권/숙소 저장까지 검증했다. 실제 계정은 메뉴의 읽기 전용 확인에만 사용했으며 실제 지출을 수정하지 않았다. Browser plugin 부재로 저장/동작 검증은 기존 Playwright/Edge 경로를 사용했다.
-- `../../scripts/expense-filter-browser-regression.js`: 320/390/1440px에서 팝업 너비/높이/글씨/전체 페이지 넘침, 명시적 선택, 방향키/Enter/Escape/포커스 복귀, 외부 클릭 닫기, 필터 유지 통과. 기본 브라우저 회귀 실행 목록에 추가했다.
+- `../../tests/expense-filter-browser-regression.js`: 320/390/1440px에서 팝업 너비/높이/글씨/전체 페이지 넘침, 명시적 선택, 방향키/Enter/Escape/포커스 복귀, 외부 클릭 닫기, 필터 유지 통과. 기본 브라우저 회귀 실행 목록에 추가했다.
 - `npm test`, `npm run test:browser`, `npm run build` 전체 통과. 운영 배포 `https://cfeebed2.triplog-5qs.pages.dev`, 빌드 `cfc969ccfecf628160c4`. 운영 HTML·변경 JS/CSS·서비스 워커 7개 파일 모두 HTTP 200 및 로컬 빌드와 SHA-256 일치. 운영 origin의 격리 브라우저 회귀도 통과했다.
 
 ---
@@ -329,7 +329,7 @@ final result: passed
 
 - `npm test`: 전체 데이터/동기화/계산/기존 기능 단위 회귀 통과.
 - `npm run test:browser`: 전체 브라우저 회귀 통과. 동기화, 오프라인 시작, 자동 업데이트, 드래그, 폼/시간 컨트롤, 이동 정보, 국내/해외 지도, 지출과 신규 passport 검사 포함.
-- 신규 `../../scripts/companion-passport-browser-regression.js`: 완료/취소, 접기 상태, 날짜 전환, 조정안 읽기 무변경, 잠금, 적용/되돌리기, 이동 정보 연결, 준비물 재접속 유지, 저장 실패 복원, 포켓노트 선택 정보 제외, ICS 시간대, 예약 탭, 긴 이름/빈 일정/미정 시간/초과 예산/빈 준비물, 4개 폭과 자산 로딩 통과.
+- 신규 `../../tests/companion-passport-browser-regression.js`: 완료/취소, 접기 상태, 날짜 전환, 조정안 읽기 무변경, 잠금, 적용/되돌리기, 이동 정보 연결, 준비물 재접속 유지, 저장 실패 복원, 포켓노트 선택 정보 제외, ICS 시간대, 예약 탭, 긴 이름/빈 일정/미정 시간/초과 예산/빈 준비물, 4개 폭과 자산 로딩 통과.
 - 마지막 CSS 해시 연결 후 자동 업데이트 및 오프라인 시작 검사를 재실행하여 통과했다. 독립 오프라인 검사의 첫 시도는 테스트 서버 미기동으로 연결하지 못했으며, 전용 임시 서버를 사용한 재실행에서 통과했다.
 - `npm run build`: 배포용 dist 생성 통과. 새 CSS와 두 이미지가 빌드에 포함되는 것을 확인했다. 이 작업에서는 로컬 구현 및 미리보기까지 완료했다.
 - 시안 비교, 좁은 화면, 주요 상호작용, 오류/빈 상태, 기존 기능 회귀, 빌드 및 사용 가능한 미리보기 확인 완료.
@@ -524,7 +524,7 @@ final result: passed (검증 범위: 아래 명시)
 
 - `npm test` 통과: 동기화 DB/client/service/presentation, 백업, 일정 순서·지도 위치, 여행 도우미, 지출 모델 등.
 - `npm run test:browser` 통과: 실제 두 브라우저 동기화, 오프라인 저장/복원, ERR_FAILED 서비스워커 복구, 일정 드래그 애니메이션 및 새 컨트롤 회귀 검사.
-- `../../scripts/controls-browser-regression.js`를 Edge/Chrome과 운영 주소의 격리 컨텍스트에서 실행. 실제 계정/여행 서버 데이터는 변경하지 않음.
+- `../../tests/controls-browser-regression.js`를 Edge/Chrome과 운영 주소의 격리 컨텍스트에서 실행. 실제 계정/여행 서버 데이터는 변경하지 않음.
 - 1440/768/390/320px 및 높이 420px에서 패널 경계·가로 넘침 확인. 통화 긴 목록은 검색창을 유지하며 내부 스크롤.
 - 실제 마우스 휠, 직접 입력, 59→00 경계, Esc 취소, 시간 없음, 테마별 종료 시각 숨김/복귀, 통화 검색/빈 결과/선택, 여행 일차 및 결제일 저장 검증.
 - 일정(숙소 09:00, 종료 시각 없음)과 지출(KRW 12,000, 여행일 9/26, 결제일 9/27)을 실제 폼으로 저장하고 새로고침 후 보존 확인.
@@ -611,21 +611,21 @@ Source visual truth는 `artifacts/design/redesign-20260913/`의 승인된 13개 
 
 | 화면 | 원본 pixels | CSS viewport | 비교 이미지 | 비교 pixels |
 | --- | --- | --- | --- | --- |
-| overview | 853 × 1844 | 393 × 850 | [overview-comparison.jpg](redesign-20260913/qa/overview-comparison.jpg) | 1063 × 1125 |
-| start | 853 × 1844 | 393 × 850 | [start-comparison.jpg](redesign-20260913/qa/start-comparison.jpg) | 1063 × 1125 |
-| budget | 853 × 1844 | 393 × 850 | [budget-comparison.jpg](redesign-20260913/qa/budget-comparison.jpg) | 1581 × 889 |
-| settlement | 853 × 1844 | 393 × 850 | [settlement-comparison.jpg](redesign-20260913/qa/settlement-comparison.jpg) | 1063 × 1125 |
-| report | 853 × 1844 | 393 × 850 | [report-comparison.jpg](redesign-20260913/qa/report-comparison.jpg) | 1063 × 1125 |
-| settings | 853 × 1844 | 393 × 850 | [settings-comparison.jpg](redesign-20260913/qa/settings-comparison.jpg) | 1063 × 1125 |
-| login | 934 × 1684 | 393 × 709 | [login-comparison.jpg](redesign-20260913/qa/login-comparison.jpg) | 1063 × 1125 |
-| new-trip | 934 × 1684 | 393 × 709 | [new-trip-comparison.jpg](redesign-20260913/qa/new-trip-comparison.jpg) | 1063 × 1125 |
-| expense-add | 853 × 1844 | 393 × 850 | [expense-add-comparison.jpg](redesign-20260913/qa/expense-add-comparison.jpg) | 1063 × 1125 |
-| receipt | 853 × 1844 | 393 × 850 | [receipt-comparison.jpg](redesign-20260913/qa/receipt-comparison.jpg) | 1063 × 1125 |
-| packing | 934 × 1685 | 393 × 709 | [packing-comparison.jpg](redesign-20260913/qa/packing-comparison.jpg) | 1063 × 1125 |
-| invite | 853 × 1844 | 393 × 850 | [invite-comparison.jpg](redesign-20260913/qa/invite-comparison.jpg) | 1063 × 1125 |
-| history | 852 × 1846 | 393 × 851 | [history-comparison.jpg](redesign-20260913/qa/history-comparison.jpg) | 1063 × 1125 |
+| overview | 853 × 1844 | 393 × 850 | [overview-comparison.jpg](../qa/20260913-redesign/overview-comparison.jpg) | 1063 × 1125 |
+| start | 853 × 1844 | 393 × 850 | [start-comparison.jpg](../qa/20260913-redesign/start-comparison.jpg) | 1063 × 1125 |
+| budget | 853 × 1844 | 393 × 850 | [budget-comparison.jpg](../qa/20260913-redesign/budget-comparison.jpg) | 1581 × 889 |
+| settlement | 853 × 1844 | 393 × 850 | [settlement-comparison.jpg](../qa/20260913-redesign/settlement-comparison.jpg) | 1063 × 1125 |
+| report | 853 × 1844 | 393 × 850 | [report-comparison.jpg](../qa/20260913-redesign/report-comparison.jpg) | 1063 × 1125 |
+| settings | 853 × 1844 | 393 × 850 | [settings-comparison.jpg](../qa/20260913-redesign/settings-comparison.jpg) | 1063 × 1125 |
+| login | 934 × 1684 | 393 × 709 | [login-comparison.jpg](../qa/20260913-redesign/login-comparison.jpg) | 1063 × 1125 |
+| new-trip | 934 × 1684 | 393 × 709 | [new-trip-comparison.jpg](../qa/20260913-redesign/new-trip-comparison.jpg) | 1063 × 1125 |
+| expense-add | 853 × 1844 | 393 × 850 | [expense-add-comparison.jpg](../qa/20260913-redesign/expense-add-comparison.jpg) | 1063 × 1125 |
+| receipt | 853 × 1844 | 393 × 850 | [receipt-comparison.jpg](../qa/20260913-redesign/receipt-comparison.jpg) | 1063 × 1125 |
+| packing | 934 × 1685 | 393 × 709 | [packing-comparison.jpg](../qa/20260913-redesign/packing-comparison.jpg) | 1063 × 1125 |
+| invite | 853 × 1844 | 393 × 850 | [invite-comparison.jpg](../qa/20260913-redesign/invite-comparison.jpg) | 1063 × 1125 |
+| history | 852 × 1846 | 393 × 851 | [history-comparison.jpg](../qa/20260913-redesign/history-comparison.jpg) | 1063 × 1125 |
 
-추가 증거: [320px 지출](redesign-20260913/qa/mobile-320-budget.jpg), [1280px 개요](redesign-20260913/qa/desktop-overview.jpg), [일정 회귀](redesign-20260913/qa/itinerary-regression.jpg), [지도 편집](redesign-20260913/qa/itinerary-editor-regression.jpg). 일정 원본과 기존 비교는 [이전 QA](itinerary-design/design-qa-20260913.md)에 보관했습니다.
+추가 증거: [320px 지출](../qa/20260913-redesign/mobile-320-budget.jpg), [1280px 개요](../qa/20260913-redesign/desktop-overview.jpg), [일정 회귀](../qa/20260913-redesign/itinerary-regression.jpg), [지도 편집](../qa/20260913-redesign/itinerary-editor-regression.jpg). 일정 원본과 기존 비교는 [이전 QA](itinerary-design/design-qa-20260913.md)에 보관했습니다.
 
 ## 발견·수정·재비교 이력
 
@@ -705,7 +705,7 @@ Source visual truth는 `artifacts/design/redesign-20260913/`의 승인된 13개 
 
 생성/전환 데이터 검증은 사용자 샘플 미리보기와 저장 공간이 분리된 `127.0.0.1:8012`에서 진행했습니다. 긴 목록 검증용 임시 10개 여행은 제거했습니다. 비교용 임시 iframe 페이지 전환 중 관찰자 오류 1건이 있어 최종 앱 직접 로드의 새 이벤트 구간을 별도로 확인했으며, 해당 구간은 오류가 없습니다. 변경한 JS 문법 검사와 정산/리포트·백업 회귀가 통과했습니다.
 
-화면 증거: [모바일 개요](redesign-20260913/qa/trip-switch-overview-mobile.jpg), [모바일 선택 창](redesign-20260913/qa/trip-switch-chooser-mobile.jpg), [320px 긴 목록](redesign-20260913/qa/trip-switch-chooser-320.jpg), [PC 개요](redesign-20260913/qa/trip-switch-overview-desktop.jpg), [PC 선택 창](redesign-20260913/qa/trip-switch-chooser-desktop.jpg).
+화면 증거: [모바일 개요](../qa/20260913-redesign/trip-switch-overview-mobile.jpg), [모바일 선택 창](../qa/20260913-redesign/trip-switch-chooser-mobile.jpg), [320px 긴 목록](../qa/20260913-redesign/trip-switch-chooser-320.jpg), [PC 개요](../qa/20260913-redesign/trip-switch-overview-desktop.jpg), [PC 선택 창](../qa/20260913-redesign/trip-switch-chooser-desktop.jpg).
 
 최종 빌드, 저장소 기본 줄바꿈 설정에서의 diff 검사, 변경한 런타임 파일 5개의 소스/배포 산출물 해시 일치를 확인했습니다. 모바일 393px 화면 캡처 파일은 브라우저 배율에 따라 491×1065px로 저장되며, 320px 캡처는 320×852px, PC 캡처는 1627×1590px입니다.
 
@@ -750,7 +750,7 @@ in-app browser의 CDP `Input.imeSetComposition`은 지원되지 않아 실제 �
 영문 국가명 입력에서는 한국어·영어 결과를 함께 표시하고, 영어로 검색하면 영어 이름을 먼저 표시합니다. 영어 검색 결과를 선택해도 입력값을 영어 이름으로 유지합니다. `Japan`, 국가 코드, 대소문자, `USA`, `UK`, `Turkey`/`Türkiye`, `Czech Republic`, `Hong Kong`, `Macau` 등을 처리합니다.
 
 - 브라우저: `Jap` 입력 → `Japan / 일본` 결과 → 선택 후 값 `Japan`, 코드 `JP` 확인.
-- `../../scripts/country-search-regression.js`: 250개 영문 국가명, 한국어·영어·코드·약칭, 대소문자/구두점, 부분·잘못된 입력 검증 통과.
+- `../../tests/country-search-regression.js`: 250개 영문 국가명, 한국어·영어·코드·약칭, 대소문자/구두점, 부분·잘못된 입력 검증 통과.
 - 빌드·JS 문법·diff·런타임 파일 7개의 소스/산출물 해시 일치 확인.
 - Chrome 및 인앱 브라우저에 작성 중이던 폼 값을 복원했습니다. 폼 제출과 운영 배포는 하지 않았습니다.
 
@@ -766,19 +766,19 @@ final result: passed
 
 | 화면 | 비교 이미지 | 결과 |
 | --- | --- | --- |
-| 오늘의 여행 | [비교](travel-companion-20260914/qa/today-comparison.png) | 다음 장소·진행률·가용 예산·고정 하단 동작 확인 |
-| 일정 점검 | [비교](travel-companion-20260914/qa/review-comparison.png) | 이동 부족·중복 시간 경고, 시간 잠금 확인 |
-| 예약 지갑 | [비교](travel-companion-20260914/qa/wallet-comparison.png) | 교통·숙소·입장권 카드와 복사 동작 확인 |
-| 여행 도구 | [비교](travel-companion-20260914/qa/tools-comparison.png) | 시간대·ICS·오프라인 저장·준비물 연결 확인 |
-| 시간 조정 미리보기 | [비교](travel-companion-20260914/qa/adjustment-comparison.png) | 변경 전후 시간과 적용·취소 확인 |
-| 예약 입력 | [비교](travel-companion-20260914/qa/reservation-editor-comparison.png) | 종류·날짜·번호·주소·메모와 저장·취소 확인 |
+| 오늘의 여행 | [비교](../qa/20260914-travel-companion/today-comparison.png) | 다음 장소·진행률·가용 예산·고정 하단 동작 확인 |
+| 일정 점검 | [비교](../qa/20260914-travel-companion/review-comparison.png) | 이동 부족·중복 시간 경고, 시간 잠금 확인 |
+| 예약 지갑 | [비교](../qa/20260914-travel-companion/wallet-comparison.png) | 교통·숙소·입장권 카드와 복사 동작 확인 |
+| 여행 도구 | [비교](../qa/20260914-travel-companion/tools-comparison.png) | 시간대·ICS·오프라인 저장·준비물 연결 확인 |
+| 시간 조정 미리보기 | [비교](../qa/20260914-travel-companion/adjustment-comparison.png) | 변경 전후 시간과 적용·취소 확인 |
+| 예약 입력 | [비교](../qa/20260914-travel-companion/reservation-editor-comparison.png) | 종류·날짜·번호·주소·메모와 저장·취소 확인 |
 
 흰색/검정 외곽선, 노랑 기본 동작, 파랑·분홍 포인트, 기존 TripLOG 로고와 서울 타워, Phosphor 아이콘을 사용했습니다. 공통 대화상자 스타일이 새 제목·체크박스·폼에 영향을 주던 문제를 전용 CSS 범위에서 수정했습니다. 목업의 예산 설명은 계산에 맞게 ‘오늘 사용’으로 보정했으며, 예약일은 실제 요일을 사용합니다.
 
 393×852 CSS viewport에서 6개 화면을 확인했습니다. 기본 예제의 활성 스크롤 영역은 콘텐츠 높이와 같으며, 가로 넘침은 없습니다. 비교 PNG는 브라우저 캡처 배율을 포함하므로 PNG 픽셀 수를 CSS viewport로 간주하지 않습니다. 화면 폭은 DOM에서 별도 확인했습니다.
 
-- 320px: [예약 입력](travel-companion-20260914/qa/reservation-editor-320.png), [여행 도구](travel-companion-20260914/qa/tools-320.png), [시간 조정](travel-companion-20260914/qa/adjustment-320.png)에서 가로 넘침과 버튼 잘림 없음. 날짜 입력칸 각각 141px 확인.
-- 1280px: [PC 오늘의 여행](travel-companion-20260914/qa/today-desktop.png). 중앙 대화상자 안에서 일정과 예산을 두 열로 배치해 모두 표시합니다. 중앙 정렬과 가로 넘침 없음 확인.
+- 320px: [예약 입력](../qa/20260914-travel-companion/reservation-editor-320.png), [여행 도구](../qa/20260914-travel-companion/tools-320.png), [시간 조정](../qa/20260914-travel-companion/adjustment-320.png)에서 가로 넘침과 버튼 잘림 없음. 날짜 입력칸 각각 141px 확인.
+- 1280px: [PC 오늘의 여행](../qa/20260914-travel-companion/today-desktop.png). 중앙 대화상자 안에서 일정과 예산을 두 열로 배치해 모두 표시합니다. 중앙 정렬과 가로 넘침 없음 확인.
 - 일정이 많거나 검증 오류가 길어지면 본문을 스크롤하고 하단 주요 동작은 유지합니다.
 
 ### 브라우저 기능 검증
@@ -798,7 +798,7 @@ final result: passed
 
 ### 코드 및 데이터 검증
 
-- `../../scripts/travel-companion-regression.js`: 날짜/윤년, 다음 장소, 예산 이월, 중첩 중복 일정, 이동 시간, 완료·잠금 보호, 적용·되돌리기, 미리보기 후 변경 감지, 자정 초과, 예약 집계·검증, 링크 검증, DST 중복/누락, UTF-8 ICS 줄 접기·이스케이프, 오프라인 문서의 이스케이프·정보 제외, 상태 정규화, 공유 범위와 백업 복원 통과.
+- `../../tests/travel-companion-regression.js`: 날짜/윤년, 다음 장소, 예산 이월, 중첩 중복 일정, 이동 시간, 완료·잠금 보호, 적용·되돌리기, 미리보기 후 변경 감지, 자정 초과, 예약 집계·검증, 링크 검증, DST 중복/누락, UTF-8 ICS 줄 접기·이스케이프, 오프라인 문서의 이스케이프·정보 제외, 상태 정규화, 공유 범위와 백업 복원 통과.
 - 기존 `persistence-backup-regression.js`, `redesign-regression.js`, `country-search-regression.js` 통과.
 - 변경한 JavaScript 10개 문법 검사, `git diff --check` 통과.
 - 안전한 경로 확인 후 정적 배포 파일 생성. 런타임 12개 파일의 소스/산출물 해시 일치. QA·문서 파일이 배포 파일에 포함되지 않음 확인.
@@ -835,7 +835,7 @@ final result: passed
 
 **Implementation checklist**
 
-- [x] `npm test`, `npm run test:source`, `../../scripts/print-export-browser-regression.js`, `npm run build`, `git diff --check` 통과.
+- [x] `npm test`, `npm run test:source`, `../../tests/print-export-browser-regression.js`, `npm run build`, `git diff --check` 통과.
 - [x] PDF 전환·기간 선택·인쇄 흐름·포커스 복귀·원본 데이터 불변, 137행·긴 메모·환불·빈 상태 회귀 검증 통과.
 - [x] 320/390/599/759/760/1024/1440px 레이아웃, 큰 금액, A4 2쪽 PDF의 텍스트와 페이지 크기·잘림 검증 통과. 브라우저 오류 검사 통과.
 - [x] 최종 캡처 후 시안과 다시 비교. 새로운 시안 생성이나 이미지 입력 재사용 없음.
@@ -931,7 +931,7 @@ final result: passed
 3. User refinement removed the caption and reduced spacing, icon size and type hierarchy together. Final combined comparison accepted these intentional differences from the original mockup.
 4. Final in-app checks cover 320, 390, 599, 659, 660, 700, 759, 760, 761, 849, 850, 920, 1024 and 1440 px. Both page summaries fit their containers. Normal amounts remain on one line through the intermediate-width transitions. Component markup equality was verified on both routes at eleven widths.
 5. Entering `식사` returns three expense rows while the summary remains 486,000원 / 243,000원 / 14건. Switching report expense/itinerary tabs preserves the summary. Browser console warnings/errors: none on the inspected preview.
-6. `npm test`, `../../scripts/travel-costs-browser-regression.js` and `../../scripts/report-refund-browser-regression.js` passed. Cost regression includes add/edit/delete, refunds, pre-trip purchases, reload, trip isolation, member averages, long values, empty data and responsive layout.
+6. `npm test`, `../../tests/travel-costs-browser-regression.js` and `../../tests/report-refund-browser-regression.js` passed. Cost regression includes add/edit/delete, refunds, pre-trip purchases, reload, trip isolation, member averages, long values, empty data and responsive layout.
 
 Remaining limit: browser visual verification used Chromium; Safari/Firefox were not directly exercised.
 

@@ -1,0 +1,20 @@
+{
+  "scope": "local security and repository maintenance",
+  "sourceChecks": "passed",
+  "coreRegression": "passed",
+  "artifactLayout": "passed",
+  "dependencyAudit": { "knownNpmVulnerabilities": 0 },
+  "edgeRegression": { "deno": "2.9.6", "passed": 4 },
+  "browserRegression": {
+    "registered": 52,
+    "passedAcrossInitialAndFollowUpRuns": 52,
+    "reservationPockets": "passed after updating the wallet navigation test",
+    "scrollLock": "passed after updating the packing sheet and scroll distance test",
+    "mapProvider": "passed after adding the transition back to the itinerary page",
+    "expenseOrder": "passed on an isolated rerun after a zero-size geometry result",
+    "cityViewportCombinations": 2540,
+    "ocrFixture": "TOTAL 12345"
+  },
+  "build": { "id": "9f03da4778c52ca3abe0", "deploymentFiles": 1642, "sourceBytesMatched": true },
+  "deployment": "not requested or run"
+}

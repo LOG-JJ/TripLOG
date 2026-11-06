@@ -27,10 +27,10 @@ Browser 플러그인과 `browser` 스킬이 제공되지 않아 기존 Playwrigh
 | 실행 | 결과 |
 | --- | --- |
 | `npm test` | 분리 환경에서 통과 |
-| `node scripts/delete-dialogs-browser-regression.js` | 분리 환경에서 96개 화면·13개 동작 그룹 통과 |
-| `node scripts/scroll-lock-browser-regression.js` | 분리 환경에서 320/390/1440px 스크롤·취소·저장·포커스 통과 |
-| `node scripts/trip-chooser-browser-regression.js` | 여행 선택·삭제·보관·복구 검사 통과 |
-| `node scripts/transit-journey-browser-regression.js` | 이동 편집·저장·취소·모바일 배치 통과 |
+| `node tests/delete-dialogs-browser-regression.js` | 분리 환경에서 96개 화면·13개 동작 그룹 통과 |
+| `node tests/scroll-lock-browser-regression.js` | 분리 환경에서 320/390/1440px 스크롤·취소·저장·포커스 통과 |
+| `node tests/trip-chooser-browser-regression.js` | 여행 선택·삭제·보관·복구 검사 통과 |
+| `node tests/transit-journey-browser-regression.js` | 이동 편집·저장·취소·모바일 배치 통과 |
 | 추가 시각 검사 | Chromium 12개 화면, 대비, 200% 글자, 짧은 화면, 긴 파일명과 파일 교체·제거 통과 |
 | `npm run build` | 분리 환경에서 통과. 빌드 파일 912개와 배포 출력의 바이트 일치 확인 |
 | 산출물 | 디자인·검증 자료는 `artifacts/`에 보관하며 배포·서비스 워커 캐시에서 제외 |

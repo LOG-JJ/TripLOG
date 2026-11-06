@@ -18,20 +18,20 @@ Browser 플러그인이 제공되지 않아 AGENTS.md에서 허용한 격리 Edg
 
 통과한 검사:
 
-- `scripts/settlement-ledger-browser-regression.js`: 공유 표의 필드 일치, 기존 지출 데이터 불변, 행 안 금액·비율 수정/불완전 합계/취소, false/throw 복원, 중복 제출 방지, 배경 렌더 초안·포커스, 금액·동행·viewer 권한 변경, 기존 편집창과 저장값 일치, 예전 추가 지출 전환 및 새로고침.
+- `tests/settlement-ledger-browser-regression.js`: 공유 표의 필드 일치, 기존 지출 데이터 불변, 행 안 금액·비율 수정/불완전 합계/취소, false/throw 복원, 중복 제출 방지, 배경 렌더 초안·포커스, 금액·동행·viewer 권한 변경, 기존 편집창과 저장값 일치, 예전 추가 지출 전환 및 새로고침.
 - 정산 화면 폭 320/390/760/851/1440px. 인라인 입력 폭·16px 폰트·모바일/PC 배치 확인.
-- `scripts/expense-allocation-browser-regression.js`: 기존 수정창 균등/금액/비율, 정확한 원화 및 외화 분담, 저장·실패·취소, 낡은 분담/동행 방어, 320/390/760/1440px.
-- `scripts/expense-order-browser-regression.js`: 공통 표 추출 후 순서 이동·정렬·취소·권한·실패 회귀.
-- `scripts/expense-filter-browser-regression.js`: 검색·필터·정렬·예약/일반 지출 편집 유지.
-- `scripts/expense-ui-browser-regression.js`: 환산·환율 검증·저장/수정/새로고침·숙소 분할·계속 입력·검색·필터·빈 화면·320px. 예전 ‘여행 대표’ 고정 기대값은 이미 구현된 실제 소유자 프로필 이름 계약에 맞춰 fixture의 표시 이름을 사용하도록 갱신했다.
-- `scripts/settlement-name-browser-regression.js`, `scripts/trip-navigation-browser-regression.js`.
-- `scripts/expense-allocation-regression.js`, `scripts/settlement-ledger-regression.js`.
+- `tests/expense-allocation-browser-regression.js`: 기존 수정창 균등/금액/비율, 정확한 원화 및 외화 분담, 저장·실패·취소, 낡은 분담/동행 방어, 320/390/760/1440px.
+- `tests/expense-order-browser-regression.js`: 공통 표 추출 후 순서 이동·정렬·취소·권한·실패 회귀.
+- `tests/expense-filter-browser-regression.js`: 검색·필터·정렬·예약/일반 지출 편집 유지.
+- `tests/expense-ui-browser-regression.js`: 환산·환율 검증·저장/수정/새로고침·숙소 분할·계속 입력·검색·필터·빈 화면·320px. 예전 ‘여행 대표’ 고정 기대값은 이미 구현된 실제 소유자 프로필 이름 계약에 맞춰 fixture의 표시 이름을 사용하도록 갱신했다.
+- `tests/settlement-name-browser-regression.js`, `tests/trip-navigation-browser-regression.js`.
+- `tests/expense-allocation-regression.js`, `tests/settlement-ledger-regression.js`.
 - CLI `dev test --suite source --json`: 종료 코드 0, `ok: true`, 119개 앱 모듈/32개 스타일/50개 브라우저 스위트 검사.
 - CLI `dev artifacts --json`, `dev build --json`: 종료 코드 0, `ok: true`. 공통 UI 두 모듈이 dist 및 앱 셸에 포함됨. 빌드 지문 `cb166931dea75018af96`.
 
 ## 화면 근거
 
-- [승인 목업과 구현 비교](mockup-comparison.png) · [비교 HTML](comparison.html)
+- [승인 목업과 구현 비교](mockup-comparison.png) · [비교 HTML](../../tmp/20261102-settlement-inline/relocated-20261104/comparison.html)
 - [모바일 금액](amount-mobile.png) · [모바일 비율](percent-mobile.png) · [공통 표 모바일](shared-table-mobile.png) · [PC 금액](amount-desktop.png)
 
 실제 공통 로고·여행 컨텍스트·경비 요약·메뉴를 유지했다. 목업의 임의 헤더나 경비 요약 그림을 별도로 만들지 않았다. 최종 캡처는 합성 데이터의 저녁 식사 120,000원, 택시 40,000원(30,000/10,000원), 카페 20,000원을 사용한다. 전체 테스트 캡처·임시 작업 자료는 `artifacts/tmp/20261102-settlement-inline/`에 있다.

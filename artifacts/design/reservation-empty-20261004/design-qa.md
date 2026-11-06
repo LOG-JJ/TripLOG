@@ -30,7 +30,7 @@ final result: passed
 ## Behavior and verification
 
 - `npm test` passed.
-- `scripts/reservation-pockets-browser-regression.js` passed at 320, 390, 480, 600, 768 and 1440 px. Checks cover real font and image loading, total/group counts, grouping guards, full-width content, text/edge clearance, long and escaped names, one-way and generic transport, extra records, empty header/count separation and matched empty-action positions.
+- `tests/reservation-pockets-browser-regression.js` passed at 320, 390, 480, 600, 768 and 1440 px. Checks cover real font and image loading, total/group counts, grouping guards, full-width content, text/edge clearance, long and escaped names, one-way and generic transport, extra records, empty header/count separation and matched empty-action positions.
 - The empty-card flow opens the correct type directly, cancels without changing saved state, returns keyboard focus, saves transport and accommodation records, replaces each empty card and survives reload. These persistence checks use a separate untouched empty fixture after the deliberately malformed rendering fixtures, so rendering-only mutations cannot contaminate save validation.
 - Existing wallet/passbook and reservation expense editor browser regressions passed. The original source reservations survive navigation and reload.
 - The in-app browser verified page identity, nonblank content, actual artwork, direct transport-form entry and local save. Application error logs are empty. Exchange-rate warnings and connection retries are expected because the synthetic preview intentionally blocks external services.

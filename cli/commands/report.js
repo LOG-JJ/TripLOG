@@ -26,7 +26,7 @@ function htmlReport(trip, type = 'full', options = {}) {
   return html.replace('</style>', 'table{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed}th,td{padding:6px;text-align:left;border-bottom:1px solid #ddd;overflow-wrap:anywhere}thead{display:table-header-group}tr{break-inside:avoid}@page{size:A4;margin:14mm}</style>');
 }
 async function pdfBytes(html) {
-  const { launchBrowser } = require('../../scripts/helpers/browser-fixture');
+  const { launchBrowser } = require('../../scripts/helpers/browser-launcher');
   const browser = await launchBrowser();
   try {
     const context = await browser.newContext(); await context.route('**/*', route => route.abort());

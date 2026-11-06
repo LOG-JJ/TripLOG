@@ -26,9 +26,9 @@ final result: passed
 ## 검증 범위
 
 - `npm test` 통과.
-- `node scripts/travel-costs-browser-regression.js` 통과: 공통 프레임/제목, 높이 절반 이하, 일정 5개/6개 이상, PC 높이 일치, 모든 경비 화면, CRUD/재접속/여행별 분리, 환불/작은 비율/긴 값/HTML 형태 문자열, 항목 이동/필터/키보드, 9개 화면 너비.
-- `node scripts/trip-header-browser-regression.js` 통과: 정보 왼쪽/그림 오른쪽, 긴 제목, 도시/지역/테마 선택, 새로고침과 데이터 보존, 11개 화면 너비.
-- `node scripts/reservation-pockets-browser-regression.js` 통과: 모바일 2열 요약, 모든 예약 원본 유지, 지갑/추가/취소/저장/새로고침, 긴 이름/빈 예약, 7개 화면 너비.
+- `node tests/travel-costs-browser-regression.js` 통과: 공통 프레임/제목, 높이 절반 이하, 일정 5개/6개 이상, PC 높이 일치, 모든 경비 화면, CRUD/재접속/여행별 분리, 환불/작은 비율/긴 값/HTML 형태 문자열, 항목 이동/필터/키보드, 9개 화면 너비.
+- `node tests/trip-header-browser-regression.js` 통과: 정보 왼쪽/그림 오른쪽, 긴 제목, 도시/지역/테마 선택, 새로고침과 데이터 보존, 11개 화면 너비.
+- `node tests/reservation-pockets-browser-regression.js` 통과: 모바일 2열 요약, 모든 예약 원본 유지, 지갑/추가/취소/저장/새로고침, 긴 이름/빈 예약, 7개 화면 너비.
 - 관련 지출 필터 브라우저 검사도 통과했다. 전체 브라우저 묶음은 직전 누적 경비 작업에서 통과했고 이번 변경에서는 위 영향 범위를 다시 검사했다.
 - 인앱 브라우저에서 실제 개요의 5개 공통 카드 외관, 일정 5개, 식비 목록 이동 및 포커스를 확인했다. 임시 뷰포트 설정은 해제했다.
 - `npm run build` 및 `git diff --check` 통과. 최종 빌드 `b9762f0aae1b4c424c28`.
